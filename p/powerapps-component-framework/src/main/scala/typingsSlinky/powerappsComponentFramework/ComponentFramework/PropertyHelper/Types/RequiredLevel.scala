@@ -2,7 +2,7 @@ package typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Attribute required level
@@ -20,17 +20,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`3`
 */
 trait RequiredLevel extends js.Object
-
 object RequiredLevel {
+  
   @scala.inline
   def `-1`: typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`-1` = -1.asInstanceOf[typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`-1`]
+  
   @scala.inline
   def `0`: typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`0` = 0.asInstanceOf[typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`0`]
+  
   @scala.inline
   def `1`: typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`1` = 1.asInstanceOf[typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`1`]
+  
   @scala.inline
   def `2`: typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`2` = 2.asInstanceOf[typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`2`]
+  
   @scala.inline
   def `3`: typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`3` = 3.asInstanceOf[typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`3`]
 }
-

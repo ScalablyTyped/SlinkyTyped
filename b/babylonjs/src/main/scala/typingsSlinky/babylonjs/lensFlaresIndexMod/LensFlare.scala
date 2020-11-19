@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.lensFlaresIndexMod
 import typingsSlinky.babylonjs.mathColorMod.Color3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/LensFlares/index", "LensFlare")
 @js.native
@@ -34,11 +34,11 @@ class LensFlare protected ()
     system: typingsSlinky.babylonjs.lensFlareSystemMod.LensFlareSystem
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/LensFlares/index", "LensFlare")
 @js.native
 object LensFlare extends js.Object {
+  
   /**
     * Creates a new Lens Flare.
     * This represents one of the lens effect in a `lensFlareSystem`.
@@ -59,4 +59,3 @@ object LensFlare extends js.Object {
     system: typingsSlinky.babylonjs.lensFlareSystemMod.LensFlareSystem
   ): typingsSlinky.babylonjs.lensFlareMod.LensFlare = js.native
 }
-

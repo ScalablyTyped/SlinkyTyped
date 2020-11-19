@@ -3,26 +3,11 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`base-elevation`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BaseElevationLayer extends Layer {
-  /**
-    * The spatial reference of the layer.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseElevationLayer.html#spatialReference)
-    *
-    * @default {@link module:esri/geometry/SpatialReference#WebMercator SpatialReference.WebMercator}
-    */
-  var spatialReference: SpatialReference = js.native
-  /**
-    * The tiling scheme information for the layer.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseElevationLayer.html#tileInfo)
-    */
-  var tileInfo: TileInfo = js.native
-  @JSName("type")
-  val type_BaseElevationLayer: `base-elevation` = js.native
+  
   /**
     * Adds a promise to the layer's [loadable](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#loadable) chain. This is typically used in the [load()](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseElevationLayer.html#load) method to ensure that all [loadable](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#loadable) resources required for the layer to function are loaded prior to this layer resolving and becoming [loaded](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseElevationLayer.html#loaded).
     *
@@ -32,6 +17,7 @@ trait BaseElevationLayer extends Layer {
     *
     */
   def addResolvingPromise(promiseToLoad: js.Promise[_]): js.Promise[_] = js.native
+  
   /**
     * Creates an elevation sampler for the given [Extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html) by querying the service layer for elevation data and caching it so values may be sampled quickly afterwards. The resolution of the cached data can be set using the `demResolution` option. In many cases, `auto` demResolution can be used to get high quality elevation samples without the need to know exactly where the data in the service is located. This is particularly useful for services which combine elevation data from many sources (such as the world elevation service). If more control, or higher quality samples are required, use either `finest-contiguous` or a fixed `{number}` resolution.
     *
@@ -45,6 +31,7 @@ trait BaseElevationLayer extends Layer {
     */
   def createElevationSampler(extent: Extent): js.Promise[ElevationSampler] = js.native
   def createElevationSampler(extent: Extent, options: BaseElevationLayerCreateElevationSamplerOptions): js.Promise[ElevationSampler] = js.native
+  
   /**
     * Fetches a tile at the given level, row, and column present in the view. This method must be overwritten to display custom elevation values in the [Map.ground](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#ground). Note that this method must return a promise that resolves to an object with the properties defined in [ElevationTileData](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseElevationLayer.html#ElevationTileData).  See the following samples for examples of how to overwrite this method:
     *   * [Sample - Custom ElevationLayer: Exaggerating elevation](https://developers.arcgis.com/javascript/latest/sample-code/layers-custom-elevation-exaggerated/index.html)
@@ -62,6 +49,7 @@ trait BaseElevationLayer extends Layer {
     */
   def fetchTile(level: Double, row: Double, column: Double): js.Promise[ElevationTileData] = js.native
   def fetchTile(level: Double, row: Double, column: Double, options: BaseElevationLayerFetchTileOptions): js.Promise[ElevationTileData] = js.native
+  
   /**
     * Returns the bounds of the tile as an array of four numbers that can be readily converted to an [Extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html) object. See the table in the `returns` section below for more details about the values returned by this method.  This function can be used inside [fetchTile()](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseElevationLayer.html#fetchTile) so you can get the bounds of the current tile, convert it to an extent object, and request the desired data for the given extent. See the [Custom ElevationLayer: Thematic data as elevation](https://developers.arcgis.com/javascript/latest/sample-code/layers-custom-elevation-thematic/index.html) sample for an example of how this method works.
     *
@@ -75,6 +63,7 @@ trait BaseElevationLayer extends Layer {
     */
   def getTileBounds(level: Double, row: Double, column: Double): js.Array[Double] = js.native
   def getTileBounds(level: Double, row: Double, column: Double, out: js.Array[Double]): js.Array[Double] = js.native
+  
   def queryElevation(geometry: Multipoint): js.Promise[ElevationLayerElevationQueryResult] = js.native
   def queryElevation(geometry: Multipoint, options: BaseElevationLayerQueryElevationOptions): js.Promise[ElevationLayerElevationQueryResult] = js.native
   /**
@@ -100,5 +89,23 @@ trait BaseElevationLayer extends Layer {
   def queryElevation(geometry: Point, options: BaseElevationLayerQueryElevationOptions): js.Promise[ElevationLayerElevationQueryResult] = js.native
   def queryElevation(geometry: Polyline): js.Promise[ElevationLayerElevationQueryResult] = js.native
   def queryElevation(geometry: Polyline, options: BaseElevationLayerQueryElevationOptions): js.Promise[ElevationLayerElevationQueryResult] = js.native
+  
+  /**
+    * The spatial reference of the layer.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseElevationLayer.html#spatialReference)
+    *
+    * @default {@link module:esri/geometry/SpatialReference#WebMercator SpatialReference.WebMercator}
+    */
+  var spatialReference: SpatialReference = js.native
+  
+  /**
+    * The tiling scheme information for the layer.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseElevationLayer.html#tileInfo)
+    */
+  var tileInfo: TileInfo = js.native
+  
+  @JSName("type")
+  val type_BaseElevationLayer: `base-elevation` = js.native
 }
-

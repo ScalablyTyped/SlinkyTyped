@@ -29,15 +29,15 @@ import typingsSlinky.babelTypes.babelTypesStrings.in
 import typingsSlinky.babelTypes.babelTypesStrings.instanceof
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.BinaryExpression_
   - typingsSlinky.babelTypes.mod.LogicalExpression_
 */
 trait Binary extends _Node
-
 object Binary {
+  
   @scala.inline
   def BinaryExpression_(
     left: Expression | PrivateName_,
@@ -49,6 +49,7 @@ object Binary {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Binary]
   }
+  
   @scala.inline
   def LogicalExpression_(
     left: Expression,
@@ -61,4 +62,3 @@ object Binary {
     __obj.asInstanceOf[Binary]
   }
 }
-

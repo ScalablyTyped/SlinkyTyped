@@ -2,7 +2,7 @@ package typingsSlinky.openui5.global.sap.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Defines the accessible landmark roles for ARIA support. This enumeration is used with the
@@ -12,14 +12,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("sap.ui.core.AccessibleLandmarkRole")
 @js.native
 object AccessibleLandmarkRole extends js.Object {
-  /* 0 */ val Banner: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Banner with Double = js.native
-  /* 1 */ val Complementary: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Complementary with Double = js.native
-  /* 2 */ val Main: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Main with Double = js.native
-  /* 3 */ val Navigation: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Navigation with Double = js.native
-  /* 4 */ val None: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.None with Double = js.native
-  /* 5 */ val Region: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Region with Double = js.native
-  /* 6 */ val Search: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Search with Double = js.native
+  
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole with Double] = js.native
+  
+  /* 0 */ val Banner: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Banner with Double = js.native
+  
+  /* 1 */ val Complementary: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Complementary with Double = js.native
+  
+  /* 2 */ val Main: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Main with Double = js.native
+  
+  /* 3 */ val Navigation: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Navigation with Double = js.native
+  
+  /* 4 */ val None: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.None with Double = js.native
+  
+  /* 5 */ val Region: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Region with Double = js.native
+  
+  /* 6 */ val Search: typingsSlinky.openui5.sap.ui.core.AccessibleLandmarkRole.Search with Double = js.native
 }
-

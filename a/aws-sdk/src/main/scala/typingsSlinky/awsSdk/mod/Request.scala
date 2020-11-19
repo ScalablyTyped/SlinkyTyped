@@ -2,7 +2,7 @@ package typingsSlinky.awsSdk.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "Request")
 @js.native
@@ -18,4 +18,3 @@ class Request[D, E] protected ()
   def this(service: typingsSlinky.awsSdk.serviceMod.Service, operation: String) = this()
   def this(service: typingsSlinky.awsSdk.serviceMod.Service, operation: String, params: js.Any) = this()
 }
-

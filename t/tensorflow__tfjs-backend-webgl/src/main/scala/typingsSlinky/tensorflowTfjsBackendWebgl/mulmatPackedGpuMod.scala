@@ -3,11 +3,12 @@ package typingsSlinky.tensorflowTfjsBackendWebgl
 import typingsSlinky.tensorflowTfjsBackendWebgl.gpgpuMathMod.GPGPUProgram
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-backend-webgl/dist/mulmat_packed_gpu", JSImport.Namespace)
 @js.native
 object mulmatPackedGpuMod extends js.Object {
+  
   @js.native
   class MatMulPackedProgram protected () extends GPGPUProgram {
     def this(aShape: js.Tuple3[Double, Double, Double], outputShape: js.Tuple3[Double, Double, Double]) = this()
@@ -264,11 +265,11 @@ object mulmatPackedGpuMod extends js.Object {
       activation: String,
       hasPreluActivation: Boolean
     ) = this()
+    
     @JSName("packedInputs")
     var packedInputs_MatMulPackedProgram: Boolean = js.native
+    
     @JSName("packedOutput")
     var packedOutput_MatMulPackedProgram: Boolean = js.native
   }
-  
 }
-

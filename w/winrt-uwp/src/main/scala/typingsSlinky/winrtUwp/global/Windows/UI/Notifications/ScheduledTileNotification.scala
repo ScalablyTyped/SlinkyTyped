@@ -3,7 +3,7 @@ package typingsSlinky.winrtUwp.global.Windows.UI.Notifications
 import typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Defines the visual content and timing for a single, non-recurring scheduled update to a tile. */
 @JSGlobal("Windows.UI.Notifications.ScheduledTileNotification")
@@ -17,4 +17,3 @@ class ScheduledTileNotification protected ()
     */
   def this(content: XmlDocument, deliveryTime: js.Date) = this()
 }
-

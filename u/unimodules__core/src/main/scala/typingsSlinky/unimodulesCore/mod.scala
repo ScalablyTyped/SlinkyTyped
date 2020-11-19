@@ -12,11 +12,19 @@ import typingsSlinky.unimodulesReactNativeAdapter.eventEmitterMod.NativeModule
 import typingsSlinky.unimodulesReactNativeAdapter.nativeModulesProxyTypesMod.ProxyNativeModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@unimodules/core", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  val SyntheticPlatformEmitter: typingsSlinky.unimodulesReactNativeAdapter.syntheticPlatformEmitterMod.SyntheticPlatformEmitter = js.native
+  
+  def deprecate(library: String, deprecatedAPI: String): Unit = js.native
+  def deprecate(library: String, deprecatedAPI: String, options: CurrentVersion): Unit = js.native
+  
+  def requireNativeViewManager[P](viewName: String): ReactComponentClass[P] = js.native
+  
   @js.native
   class CodedError protected ()
     extends typingsSlinky.unimodulesCore.adapterProxyMod.CodedError {
@@ -30,22 +38,17 @@ object mod extends js.Object {
   }
   
   @js.native
-  class UnavailabilityError protected ()
-    extends typingsSlinky.unimodulesCore.adapterProxyMod.UnavailabilityError {
-    def this(moduleName: String, propertyName: String) = this()
-  }
-  
-  val SyntheticPlatformEmitter: typingsSlinky.unimodulesReactNativeAdapter.syntheticPlatformEmitterMod.SyntheticPlatformEmitter = js.native
-  def deprecate(library: String, deprecatedAPI: String): Unit = js.native
-  def deprecate(library: String, deprecatedAPI: String, options: CurrentVersion): Unit = js.native
-  def requireNativeViewManager[P](viewName: String): ReactComponentClass[P] = js.native
-  @js.native
   object NativeModulesProxy extends /* moduleName */ StringDictionary[ProxyNativeModule]
   
   @js.native
   object Platform extends js.Object {
+    
     var OS: ios | android | windows | macos | web = js.native
   }
   
+  @js.native
+  class UnavailabilityError protected ()
+    extends typingsSlinky.unimodulesCore.adapterProxyMod.UnavailabilityError {
+    def this(moduleName: String, propertyName: String) = this()
+  }
 }
-

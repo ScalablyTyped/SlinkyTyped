@@ -6,9 +6,8 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.SVGProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/components", "Polygon")
 @js.native
 object Polygon extends TopLevel[ReactComponentClass[SVGProps[SVGPolygonElement]]]
-

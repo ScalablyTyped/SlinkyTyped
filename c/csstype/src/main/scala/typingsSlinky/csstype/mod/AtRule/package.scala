@@ -2,11 +2,14 @@ package typingsSlinky.csstype.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object AtRule {
+  
   type FontFeatureSettings = typingsSlinky.csstype.csstypeStrings.normal | (java.lang.String with js.Object)
+  
   type FontStretch = typingsSlinky.csstype.mod.DataType.FontStretchAbsolute | (java.lang.String with js.Object)
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.csstype.csstypeStrings.italic
     - typingsSlinky.csstype.csstypeStrings.normal
@@ -14,6 +17,7 @@ package object AtRule {
     - java.lang.String with js.Object
   */
   type FontStyle = typingsSlinky.csstype.mod.AtRule._FontStyle | (java.lang.String with js.Object)
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.csstype.mod.DataType.EastAsianVariantValues
     - typingsSlinky.csstype.csstypeStrings.`all-petite-caps`
@@ -47,15 +51,25 @@ package object AtRule {
     - java.lang.String with js.Object
   */
   type FontVariant = typingsSlinky.csstype.mod.AtRule._FontVariant | (java.lang.String with js.Object)
+  
   type FontVariationSettings = typingsSlinky.csstype.csstypeStrings.normal | (java.lang.String with js.Object)
+  
   type FontWeight = typingsSlinky.csstype.mod.DataType.FontWeightAbsolute | (java.lang.String with js.Object)
+  
   type Height[TLength] = typingsSlinky.csstype.mod.DataType.ViewportLength[TLength] | (java.lang.String with js.Object)
+  
   type MaxHeight[TLength] = typingsSlinky.csstype.mod.DataType.ViewportLength[TLength]
+  
   type MaxWidth[TLength] = typingsSlinky.csstype.mod.DataType.ViewportLength[TLength]
+  
   type MaxZoom = typingsSlinky.csstype.csstypeStrings.auto | (java.lang.String with js.Object) | (scala.Double with js.Object)
+  
   type MinHeight[TLength] = typingsSlinky.csstype.mod.DataType.ViewportLength[TLength]
+  
   type MinWidth[TLength] = typingsSlinky.csstype.mod.DataType.ViewportLength[TLength]
+  
   type MinZoom = typingsSlinky.csstype.csstypeStrings.auto | (java.lang.String with js.Object) | (scala.Double with js.Object)
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.csstype.csstypeStrings.auto
     - typingsSlinky.csstype.csstypeStrings.infinite
@@ -63,6 +77,7 @@ package object AtRule {
     - scala.Double with js.Object
   */
   type Range = typingsSlinky.csstype.mod.AtRule._Range | (java.lang.String with js.Object) | (scala.Double with js.Object)
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.csstype.csstypeStrings.auto
     - typingsSlinky.csstype.csstypeStrings.bullets
@@ -72,6 +87,7 @@ package object AtRule {
     - java.lang.String with js.Object
   */
   type SpeakAs = typingsSlinky.csstype.mod.AtRule._SpeakAs | (java.lang.String with js.Object)
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.csstype.csstypeStrings.additive
     - typingsSlinky.csstype.csstypeStrings.alphabetic
@@ -82,6 +98,8 @@ package object AtRule {
     - java.lang.String with js.Object
   */
   type System = typingsSlinky.csstype.mod.AtRule._System | (java.lang.String with js.Object)
+  
   type Width[TLength] = typingsSlinky.csstype.mod.DataType.ViewportLength[TLength] | (java.lang.String with js.Object)
+  
   type Zoom = typingsSlinky.csstype.csstypeStrings.auto | (java.lang.String with js.Object) | (scala.Double with js.Object)
 }

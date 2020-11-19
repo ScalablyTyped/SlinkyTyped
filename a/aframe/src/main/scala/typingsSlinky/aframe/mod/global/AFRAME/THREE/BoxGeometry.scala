@@ -2,7 +2,7 @@ package typingsSlinky.aframe.mod.global.AFRAME.THREE
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AFRAME.THREE.BoxGeometry")
 @js.native
@@ -25,4 +25,3 @@ class BoxGeometry protected ()
     depthSegments: js.UndefOr[Double]
   ) = this()
 }
-

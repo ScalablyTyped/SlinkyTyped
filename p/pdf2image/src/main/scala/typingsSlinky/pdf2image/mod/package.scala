@@ -2,9 +2,10 @@ package typingsSlinky.pdf2image
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type OutputFormat = (js.Function7[
     /* pageNum */ scala.Double, 
     /* pageIndex */ scala.Double, 

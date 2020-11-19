@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ej.RecurrenceEditor")
 @js.native
@@ -15,12 +15,12 @@ class RecurrenceEditor protected ()
   def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.RecurrenceEditor.Model) = this()
   def this(element: Element, options: typingsSlinky.ejWebAll.ej.RecurrenceEditor.Model) = this()
 }
-
 /* static members */
 @JSGlobal("ej.RecurrenceEditor")
 @js.native
 object RecurrenceEditor extends js.Object {
+  
   var Locale: js.Any = js.native
+  
   var fn: typingsSlinky.ejWebAll.ej.RecurrenceEditor = js.native
 }
-

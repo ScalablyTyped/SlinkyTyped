@@ -18,24 +18,32 @@ import typingsSlinky.algoliasearchHelper.mod.SearchForFacetValues.Result
 import typingsSlinky.events.mod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("algoliasearch-helper", "AlgoliaSearchHelper")
 @js.native
 class AlgoliaSearchHelper () extends EventEmitter {
-  var derivedHelpers: js.Array[DerivedHelper] = js.native
-  var lastResults: SearchResults[_] | Null = js.native
-  var state: SearchParameters = js.native
+  
   def addDisjunctiveFacetRefinement(args: js.Any*): js.Any = js.native
+  
   def addDisjunctiveRefine(args: js.Any*): js.Any = js.native
+  
   def addExclude(args: js.Any*): js.Any = js.native
+  
   def addFacetExclusion(args: js.Any*): js.Any = js.native
+  
   def addFacetRefinement(args: js.Any*): js.Any = js.native
+  
   def addHierarchicalFacetRefinement(args: js.Any*): js.Any = js.native
+  
   def addNumericRefinement(args: js.Any*): js.Any = js.native
+  
   def addRefine(args: js.Any*): js.Any = js.native
+  
   def addTag(args: js.Any*): js.Any = js.native
+  
   def clearCache(args: js.Any*): js.Any = js.native
+  
   /**
     * Remove all the types of refinements except tags. A string can be provided to remove
     * only the refinements of a specific attribute. For more advanced use case, you can
@@ -62,6 +70,7 @@ class AlgoliaSearchHelper () extends EventEmitter {
   def clearRefinements(): this.type = js.native
   def clearRefinements(func: js.Function3[/* value */ js.Any, /* attribute */ String, /* type */ String, Boolean]): this.type = js.native
   def clearRefinements(name: String): this.type = js.native
+  
   /**
     * Remove all the tag filters.
     *
@@ -71,30 +80,55 @@ class AlgoliaSearchHelper () extends EventEmitter {
     * @chainable
     */
   def clearTags(): this.type = js.native
+  
   def containsRefinement(args: js.Any*): js.Any = js.native
+  
   def derive(deriveFn: js.Function1[/* oldParams */ SearchParameters, SearchParameters]): DerivedHelper = js.native
+  
+  var derivedHelpers: js.Array[DerivedHelper] = js.native
+  
   def detachDerivedHelper(derivedHelper: DerivedHelper): Unit = js.native
+  
   def getClient(): SearchClient = js.native
+  
   def getCurrentPage(args: js.Any*): js.Any = js.native
+  
   def getHierarchicalFacetBreadcrumb(facetName: String): js.Array[String] = js.native
+  
   def getIndex(args: js.Any*): js.Any = js.native
+  
   def getNumericRefinement(args: js.Any*): js.Any = js.native
+  
   def getPage(args: js.Any*): js.Any = js.native
+  
   /**
     * Gets the search query parameters that would be sent to the Algolia Client
     * for the hits
     */
   def getQuery(): SearchOptions = js.native
+  
   def getRefinements(args: js.Any*): js.Any = js.native
+  
   def getTags(args: js.Any*): js.Any = js.native
+  
   def hasPendingRequests(args: js.Any*): js.Any = js.native
+  
   def hasRefinements(args: js.Any*): js.Any = js.native
+  
   def hasTag(args: js.Any*): js.Any = js.native
+  
   def isDisjunctiveRefined(args: js.Any*): js.Any = js.native
+  
   def isExcluded(args: js.Any*): js.Any = js.native
+  
   def isRefined(args: js.Any*): js.Any = js.native
+  
   def isTagRefined(args: js.Any*): js.Any = js.native
+  
+  var lastResults: SearchResults[_] | Null = js.native
+  
   def nextPage(args: js.Any*): js.Any = js.native
+  
   @JSName("on")
   def on_change(event: change, cb: js.Function1[/* res */ IsPageReset, Unit]): this.type = js.native
   @JSName("on")
@@ -109,17 +143,29 @@ class AlgoliaSearchHelper () extends EventEmitter {
   def on_searchOnce(event: searchOnce, cb: js.Function1[/* res */ State, Unit]): this.type = js.native
   @JSName("on")
   def on_searchQueueEmpty(event: searchQueueEmpty, cb: js.Function0[Unit]): this.type = js.native
+  
   def overrideStateWithoutTriggeringChangeEvent(args: js.Any*): js.Any = js.native
+  
   def previousPage(args: js.Any*): js.Any = js.native
+  
   def removeDisjunctiveFacetRefinement(args: js.Any*): js.Any = js.native
+  
   def removeDisjunctiveRefine(args: js.Any*): js.Any = js.native
+  
   def removeExclude(args: js.Any*): js.Any = js.native
+  
   def removeFacetExclusion(args: js.Any*): js.Any = js.native
+  
   def removeFacetRefinement(args: js.Any*): js.Any = js.native
+  
   def removeHierarchicalFacetRefinement(args: js.Any*): js.Any = js.native
+  
   def removeNumericRefinement(args: js.Any*): js.Any = js.native
+  
   def removeRefine(args: js.Any*): js.Any = js.native
+  
   def removeTag(args: js.Any*): js.Any = js.native
+  
   /**
     * Start the search with the parameters set in the state. When the
     * method is called, it triggers a `search` event. The results will
@@ -132,6 +178,7 @@ class AlgoliaSearchHelper () extends EventEmitter {
     * @chainable
     */
   def search(): this.type = js.native
+  
   /**
     * Search for facet values based on an query and the name of a faceted attribute. This
     * triggers a search and will return a promise. On top of using the query, it also sends
@@ -147,6 +194,7 @@ class AlgoliaSearchHelper () extends EventEmitter {
     */
   def searchForFacetValues(facet: String, query: String, maxFacetHits: Double): js.Promise[Result] = js.native
   def searchForFacetValues(facet: String, query: String, maxFacetHits: Double, userState: PlainSearchParameters): js.Promise[Result] = js.native
+  
   /**
     * Start a search using a modified version of the current state. This method does
     * not trigger the helper lifecycle and does not modify the state kept internally
@@ -193,12 +241,16 @@ class AlgoliaSearchHelper () extends EventEmitter {
       Unit
     ]
   ): Unit = js.native
+  
   /**
     * Private method to only search on derived helpers
     */
   def searchOnlyWithDerivedHelpers(): this.type = js.native
+  
   def setClient(client: SearchClient): this.type = js.native
+  
   def setCurrentPage(args: js.Any*): js.Any = js.native
+  
   /**
     * Updates the name of the index that will be targeted by the query.
     *
@@ -209,7 +261,9 @@ class AlgoliaSearchHelper () extends EventEmitter {
     * @chainable
     */
   def setIndex(name: String): this.type = js.native
+  
   def setPage(args: js.Any*): js.Any = js.native
+  
   /**
     * Sets the text query used for the search.
     *
@@ -220,7 +274,9 @@ class AlgoliaSearchHelper () extends EventEmitter {
     * @chainable
     */
   def setQuery(q: String): this.type = js.native
+  
   def setQueryParameter(args: js.Any*): js.Any = js.native
+  
   /**
     * Set the whole state (warning: will erase previous state)
     * @param newState the whole new state
@@ -229,11 +285,18 @@ class AlgoliaSearchHelper () extends EventEmitter {
     * @chainable
     */
   def setState(newState: PlainSearchParameters): this.type = js.native
+  
+  var state: SearchParameters = js.native
+  
   def toggleExclude(args: js.Any*): js.Any = js.native
+  
   def toggleFacetExclusion(args: js.Any*): js.Any = js.native
+  
   def toggleFacetRefinement(args: js.Any*): js.Any = js.native
+  
   def toggleRefine(args: js.Any*): js.Any = js.native
+  
   def toggleRefinement(args: js.Any*): js.Any = js.native
+  
   def toggleTag(args: js.Any*): js.Any = js.native
 }
-

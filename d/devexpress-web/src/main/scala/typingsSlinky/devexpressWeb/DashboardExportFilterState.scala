@@ -2,11 +2,10 @@ package typingsSlinky.devexpressWeb
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Lists constants used to identify the filter state&amp;#39;s location on the exported document.
   */
 @js.native
 trait DashboardExportFilterState extends js.Object
-

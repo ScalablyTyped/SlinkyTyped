@@ -4,11 +4,12 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.wordpressData.anon.Select
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/data", "withDispatch")
 @js.native
 object withDispatch extends js.Object {
+  
   def apply[DP, P, IP](
     mapDispatchToProps: js.Function3[
       /* disp */ js.Function1[/* key */ String, DispatcherMap], 
@@ -18,4 +19,3 @@ object withDispatch extends js.Object {
     ]
   ): js.Function1[/* component */ ReactComponentClass[P with IP with DP], ReactComponentClass[P]] = js.native
 }
-

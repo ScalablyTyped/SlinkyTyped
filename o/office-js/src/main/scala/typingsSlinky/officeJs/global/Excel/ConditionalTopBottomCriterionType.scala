@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.global.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,12 +13,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.ConditionalTopBottomCriterionType")
 @js.native
 object ConditionalTopBottomCriterionType extends js.Object {
-  /* "BottomItems" */ val bottomItems: typingsSlinky.officeJs.Excel.ConditionalTopBottomCriterionType.bottomItems with String = js.native
-  /* "BottomPercent" */ val bottomPercent: typingsSlinky.officeJs.Excel.ConditionalTopBottomCriterionType.bottomPercent with String = js.native
-  /* "Invalid" */ val invalid: typingsSlinky.officeJs.Excel.ConditionalTopBottomCriterionType.invalid with String = js.native
-  /* "TopItems" */ val topItems: typingsSlinky.officeJs.Excel.ConditionalTopBottomCriterionType.topItems with String = js.native
-  /* "TopPercent" */ val topPercent: typingsSlinky.officeJs.Excel.ConditionalTopBottomCriterionType.topPercent with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Excel.ConditionalTopBottomCriterionType with String] = js.native
+  
+  /* "BottomItems" */ val bottomItems: typingsSlinky.officeJs.Excel.ConditionalTopBottomCriterionType.bottomItems with String = js.native
+  
+  /* "BottomPercent" */ val bottomPercent: typingsSlinky.officeJs.Excel.ConditionalTopBottomCriterionType.bottomPercent with String = js.native
+  
+  /* "Invalid" */ val invalid: typingsSlinky.officeJs.Excel.ConditionalTopBottomCriterionType.invalid with String = js.native
+  
+  /* "TopItems" */ val topItems: typingsSlinky.officeJs.Excel.ConditionalTopBottomCriterionType.topItems with String = js.native
+  
+  /* "TopPercent" */ val topPercent: typingsSlinky.officeJs.Excel.ConditionalTopBottomCriterionType.topPercent with String = js.native
 }
-

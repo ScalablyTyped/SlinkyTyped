@@ -2,9 +2,10 @@ package typingsSlinky.algoliaClientCommon
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type ClientTransporterOptions = (typingsSlinky.std.Pick[
     typingsSlinky.algoliaTransporter.mod.TransporterOptions, 
     (typingsSlinky.std.Exclude[
@@ -18,6 +19,7 @@ package object mod {
       typingsSlinky.algoliaClientCommon.algoliaClientCommonStrings.hosts
     ])
   ]) with typingsSlinky.algoliaClientCommon.anon.Headers
+  
   type CreateClient[TClient, TOptions] = js.Function1[
     /* options */ TOptions with (typingsSlinky.algoliaClientCommon.anon.Methods[
       org.scalablytyped.runtime.StringDictionary[js.Function1[/* base */ TClient, js.Function1[/* args */ _, _]]], 
@@ -25,6 +27,7 @@ package object mod {
     ]), 
     TClient with typingsSlinky.algoliaClientCommon.algoliaClientCommonStrings.CreateClient with org.scalablytyped.runtime.TopLevel[js.Any]
   ]
+  
   type Wait[TResponse] = js.Function2[
     /* response */ TResponse, 
     /* requestOptions */ js.UndefOr[typingsSlinky.algoliaTransporter.mod.RequestOptions], 

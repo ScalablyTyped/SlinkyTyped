@@ -6,11 +6,12 @@ import typingsSlinky.reactRelay.reactRelayStrings.extraProps
 import typingsSlinky.reactRelay.reactRelayStrings.queries
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined react-relay.react-relay/lib/relay-experimental/EntryPointTypes.InternalEntryPointRepresentation<TEntryPointParams, react.react.<global>.JSX.LibraryManagedAttributes<TEntryPointComponent, 'queries'>, react.react.<global>.JSX.LibraryManagedAttributes<TEntryPointComponent, 'entryPoints'>, react.react.<global>.JSX.LibraryManagedAttributes<TEntryPointComponent, 'props'>, react.react.<global>.JSX.LibraryManagedAttributes<TEntryPointComponent, 'extraProps'>> */
 @js.native
 trait EntryPoint[TEntryPointParams, TEntryPointComponent] extends js.Object {
+  
   val getPreloadProps: js.Function1[
     /* entryPointParams */ TEntryPointParams, 
     PreloadProps[
@@ -21,10 +22,11 @@ trait EntryPoint[TEntryPointParams, TEntryPointComponent] extends js.Object {
       EnvironmentProviderOptions
     ]
   ] = js.native
+  
   val root: js.Any = js.native
 }
-
 object EntryPoint {
+  
   @scala.inline
   def apply[TEntryPointParams, TEntryPointComponent](
     getPreloadProps: /* entryPointParams */ TEntryPointParams => PreloadProps[
@@ -39,17 +41,22 @@ object EntryPoint {
     val __obj = js.Dynamic.literal(getPreloadProps = js.Any.fromFunction1(getPreloadProps), root = root.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntryPoint[TEntryPointParams, TEntryPointComponent]]
   }
+  
   @scala.inline
   implicit class EntryPointOps[Self <: EntryPoint[_, _], TEntryPointParams, TEntryPointComponent] (val x: Self with (EntryPoint[TEntryPointParams, TEntryPointComponent])) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setGetPreloadProps(
       value: /* entryPointParams */ TEntryPointParams => PreloadProps[
@@ -60,9 +67,8 @@ object EntryPoint {
           EnvironmentProviderOptions
         ]
     ): Self = this.set("getPreloadProps", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setRoot(value: js.Any): Self = this.set("root", value.asInstanceOf[js.Any])
   }
-  
 }
-

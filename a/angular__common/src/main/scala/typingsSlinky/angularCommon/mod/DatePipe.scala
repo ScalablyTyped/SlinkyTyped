@@ -3,13 +3,15 @@ package typingsSlinky.angularCommon.mod
 import typingsSlinky.angularCore.mod.PipeTransform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/common", "DatePipe")
 @js.native
 class DatePipe protected () extends PipeTransform {
   def this(locale: String) = this()
+  
   var locale: js.Any = js.native
+  
   /**
     * @param value The date expression: a `Date` object,  a number
     * (milliseconds since UTC epoch), or an ISO string (https://www.w3.org/TR/NOTE-datetime).
@@ -37,4 +39,3 @@ class DatePipe protected () extends PipeTransform {
   def transform(value: js.Any, format: String, timezone: String): String | Null = js.native
   def transform(value: js.Any, format: String, timezone: String, locale: String): String | Null = js.native
 }
-

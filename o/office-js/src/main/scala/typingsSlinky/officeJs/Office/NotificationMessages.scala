@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.Office
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `NotificationMessages` object is returned as the `notificationMessages` property of an item.
@@ -17,6 +17,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait NotificationMessages extends js.Object {
+  
   /**
     * Adds a notification to an item.
     *
@@ -58,6 +59,7 @@ trait NotificationMessages extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  
   /**
     * Returns all keys and messages for an item.
     *
@@ -85,6 +87,7 @@ trait NotificationMessages extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[NotificationMessageDetails]], Unit]
   ): Unit = js.native
+  
   /**
     * Removes a notification message for an item.
     *
@@ -115,6 +118,7 @@ trait NotificationMessages extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  
   /**
     * Replaces a notification message that has a given key with another message.
     *
@@ -156,4 +160,3 @@ trait NotificationMessages extends js.Object {
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
 }
-

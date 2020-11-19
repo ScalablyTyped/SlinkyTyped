@@ -12,11 +12,12 @@ import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-s3-node/commands/PutBucketWebsiteCommand", JSImport.Namespace)
 @js.native
 object putBucketWebsiteCommandMod extends js.Object {
+  
   @js.native
   class PutBucketWebsiteCommand protected () extends Command[
           InputTypesUnion, 
@@ -27,13 +28,14 @@ object putBucketWebsiteCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutBucketWebsiteInput) = this()
+    
     val middlewareStack: MiddlewareStack[PutBucketWebsiteInput, PutBucketWebsiteOutput, Readable] = js.native
+    
     val model: OperationModel = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[PutBucketWebsiteInput, PutBucketWebsiteOutput] = js.native
   }
-  
 }
-

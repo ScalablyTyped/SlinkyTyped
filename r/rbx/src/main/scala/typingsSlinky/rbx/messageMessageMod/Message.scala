@@ -51,19 +51,12 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx/components/message/message", "Message")
 @js.native
 object Message extends js.Object {
-  var Body: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-  @JSName("$$typeof")
-  var DollarDollartypeof: js.Symbol = js.native
-  var Header: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-  var defaultProps: AsElementType with (Partial[
-    HelpersPropsOverrides with PickBadgeHelpersPropsFloa with MessageModifierProps with (Pick[_, String | Double | js.Symbol])
-  ]) = js.native
-  var displayName: js.UndefOr[String] = js.native
+  
   def apply[TAsComponent /* <: ReactElement */](
     props: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with MessageModifierProps with (Pick[
       ComponentProps[TAsComponent], 
@@ -73,5 +66,17 @@ object Message extends js.Object {
       ]
     ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
   ): ReactElement | Null = js.native
+  
+  var Body: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+  
+  @JSName("$$typeof")
+  var DollarDollartypeof: js.Symbol = js.native
+  
+  var Header: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+  
+  var defaultProps: AsElementType with (Partial[
+    HelpersPropsOverrides with PickBadgeHelpersPropsFloa with MessageModifierProps with (Pick[_, String | Double | js.Symbol])
+  ]) = js.native
+  
+  var displayName: js.UndefOr[String] = js.native
 }
-

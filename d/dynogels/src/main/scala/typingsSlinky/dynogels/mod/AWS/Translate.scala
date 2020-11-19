@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.translateMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.Translate")
 @js.native
@@ -14,4 +14,3 @@ class Translate ()
   extends typingsSlinky.awsSdk.mod.Translate {
   def this(options: ClientConfiguration) = this()
 }
-

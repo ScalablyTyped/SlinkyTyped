@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "updatePropertyAccessChain")
 @js.native
 object updatePropertyAccessChain extends js.Object {
+  
   def apply(
     node: PropertyAccessChain,
     expression: Expression,
@@ -20,4 +21,3 @@ object updatePropertyAccessChain extends js.Object {
     name: Identifier
   ): PropertyAccessChain = js.native
 }
-

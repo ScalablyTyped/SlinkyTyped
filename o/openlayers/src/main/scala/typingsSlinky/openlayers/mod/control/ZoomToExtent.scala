@@ -3,7 +3,7 @@ package typingsSlinky.openlayers.mod.control
 import typingsSlinky.openlayers.mod.olx.control.ZoomToExtentOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @classdesc
@@ -26,4 +26,3 @@ import scala.scalajs.js.annotation._
 class ZoomToExtent () extends Control {
   def this(opt_options: ZoomToExtentOptions) = this()
 }
-

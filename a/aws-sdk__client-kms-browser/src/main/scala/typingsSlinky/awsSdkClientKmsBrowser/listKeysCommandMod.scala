@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/commands/ListKeysCommand", JSImport.Namespace)
 @js.native
 object listKeysCommandMod extends js.Object {
+  
   @js.native
   class ListKeysCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object listKeysCommandMod extends js.Object {
           Blob
         ] {
     def this(input: ListKeysInput) = this()
+    
     val middlewareStack: MiddlewareStack[ListKeysInput, ListKeysOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[ListKeysInput, ListKeysOutput] = js.native
   }
-  
 }
-

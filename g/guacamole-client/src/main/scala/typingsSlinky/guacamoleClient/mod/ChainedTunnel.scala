@@ -2,7 +2,7 @@ package typingsSlinky.guacamoleClient.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("guacamole-client", "ChainedTunnel")
 @js.native
@@ -13,4 +13,3 @@ class ChainedTunnel protected ()
     */
   def this(tunnels: typingsSlinky.guacamoleClient.tunnelMod.Tunnel*) = this()
 }
-

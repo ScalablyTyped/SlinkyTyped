@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.database
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A `Reference` represents a specific location in your Database and can be used
@@ -19,6 +19,28 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Reference extends Query {
+  
+  /**
+    * Gets a `Reference` for the location at the specified relative path.
+    *
+    * The relative path can either be a simple child name (for example, "ada") or
+    * a deeper slash-separated path (for example, "ada/name/first").
+    *
+    * @example
+    * ```javascript
+    * var usersRef = firebase.database().ref('users');
+    * var adaRef = usersRef.child('ada');
+    * var adaFirstNameRef = adaRef.child('name/first');
+    * var path = adaFirstNameRef.toString();
+    * // path is now 'https://sample-app.firebaseio.com/users/ada/name/first'
+    * ```
+    *
+    * @param path A relative path from this location to the desired child
+    *   location.
+    * @return The specified child location.
+    */
+  def child(path: String): Reference = js.native
+  
   /**
     * The last part of the `Reference`'s path.
     *
@@ -43,6 +65,16 @@ trait Reference extends Query {
     * ```
     */
   var key: String | Null = js.native
+  
+  /**
+    * Returns an `OnDisconnect` object - see
+    * {@link
+    *   https://firebase.google.com/docs/database/web/offline-capabilities
+    *   Enabling Offline Capabilities in JavaScript} for more information on how
+    * to use it.
+    */
+  def onDisconnect(): OnDisconnect = js.native
+  
   /**
     * The parent location of a `Reference`.
     *
@@ -64,52 +96,7 @@ trait Reference extends Query {
     * ```
     */
   var parent: Reference | Null = js.native
-  /**
-    * The root `Reference` of the Database.
-    *
-    * @example
-    * ```javascript
-    * // The root of a root reference is itself
-    * var rootRef = firebase.database().ref();
-    * // rootRef and rootRef.root represent the same location
-    * ```
-    *
-    * @example
-    * ```javascript
-    * // The root of any non-root reference is the root location
-    * var adaRef = firebase.database().ref("users/ada");
-    * // rootRef and adaRef.root represent the same location
-    * ```
-    */
-  var root: Reference = js.native
-  /**
-    * Gets a `Reference` for the location at the specified relative path.
-    *
-    * The relative path can either be a simple child name (for example, "ada") or
-    * a deeper slash-separated path (for example, "ada/name/first").
-    *
-    * @example
-    * ```javascript
-    * var usersRef = firebase.database().ref('users');
-    * var adaRef = usersRef.child('ada');
-    * var adaFirstNameRef = adaRef.child('name/first');
-    * var path = adaFirstNameRef.toString();
-    * // path is now 'https://sample-app.firebaseio.com/users/ada/name/first'
-    * ```
-    *
-    * @param path A relative path from this location to the desired child
-    *   location.
-    * @return The specified child location.
-    */
-  def child(path: String): Reference = js.native
-  /**
-    * Returns an `OnDisconnect` object - see
-    * {@link
-    *   https://firebase.google.com/docs/database/web/offline-capabilities
-    *   Enabling Offline Capabilities in JavaScript} for more information on how
-    * to use it.
-    */
-  def onDisconnect(): OnDisconnect = js.native
+  
   /**
     * Generates a new child location using a unique key and returns its
     * `Reference`.
@@ -159,6 +146,7 @@ trait Reference extends Query {
   def push(value: js.UndefOr[scala.Nothing], onComplete: js.Function1[/* a */ js.Error | Null, _]): ThenableReference = js.native
   def push(value: js.Any): ThenableReference = js.native
   def push(value: js.Any, onComplete: js.Function1[/* a */ js.Error | Null, _]): ThenableReference = js.native
+  
   /**
     * Removes the data at this Database location.
     *
@@ -188,6 +176,26 @@ trait Reference extends Query {
     */
   def remove(): js.Promise[_] = js.native
   def remove(onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
+  
+  /**
+    * The root `Reference` of the Database.
+    *
+    * @example
+    * ```javascript
+    * // The root of a root reference is itself
+    * var rootRef = firebase.database().ref();
+    * // rootRef and rootRef.root represent the same location
+    * ```
+    *
+    * @example
+    * ```javascript
+    * // The root of any non-root reference is the root location
+    * var adaRef = firebase.database().ref("users/ada");
+    * // rootRef and adaRef.root represent the same location
+    * ```
+    */
+  var root: Reference = js.native
+  
   /**
     * Writes data to this Database location.
     *
@@ -249,6 +257,7 @@ trait Reference extends Query {
     */
   def set(value: js.Any): js.Promise[_] = js.native
   def set(value: js.Any, onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
+  
   /**
     * Sets a priority for the data at this Database location.
     *
@@ -261,6 +270,7 @@ trait Reference extends Query {
   def setPriority(priority: String, onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
   def setPriority(priority: Double, onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
   def setPriority(priority: Null, onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
+  
   /**
     * Writes data the Database location. Like `set()` but also specifies the
     * priority for that data.
@@ -277,6 +287,7 @@ trait Reference extends Query {
   def setWithPriority(newVal: js.Any, newPriority: Double): js.Promise[_] = js.native
   def setWithPriority(newVal: js.Any, newPriority: Double, onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
   def setWithPriority(newVal: js.Any, newPriority: Null, onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
+  
   /**
     * Atomically modifies the data at this location.
     *
@@ -377,6 +388,7 @@ trait Reference extends Query {
     onComplete: js.Function3[/* a */ js.Error | Null, /* b */ Boolean, /* c */ DataSnapshot | Null, _],
     applyLocally: Boolean
   ): js.Promise[_] = js.native
+  
   /**
     * Writes multiple values to the Database at once.
     *
@@ -426,4 +438,3 @@ trait Reference extends Query {
   def update(values: js.Object): js.Promise[_] = js.native
   def update(values: js.Object, onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
 }
-

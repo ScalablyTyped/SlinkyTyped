@@ -10,12 +10,13 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.text
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.water
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Symbol3DLayer
   extends Accessor
      with JSONSupport {
+  
   /**
     * The 3D symbol layer type. See the table below for a list of possible values.
     *
@@ -35,4 +36,3 @@ trait Symbol3DLayer
     */
   val `type`: icon | `object` | line | path | fill | water | extrude | text = js.native
 }
-

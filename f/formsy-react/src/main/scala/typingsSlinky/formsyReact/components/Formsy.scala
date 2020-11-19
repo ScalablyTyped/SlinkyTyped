@@ -6,14 +6,16 @@ import typingsSlinky.formsyReact.interfacesMod.IResetModel
 import typingsSlinky.formsyReact.interfacesMod.IUpdateInputsWithError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Formsy {
+  
   @JSImport("formsy-react/dist/Formsy", "Formsy")
   @js.native
   object component extends js.Object
   
   def withProps(p: FormsyProps): SharedBuilder_FormsyProps1359109082[typingsSlinky.formsyReact.formsyMod.Formsy] = new SharedBuilder_FormsyProps1359109082[typingsSlinky.formsyReact.formsyMod.Formsy](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     disabled: Boolean,
@@ -26,4 +28,3 @@ object Formsy {
     new SharedBuilder_FormsyProps1359109082[typingsSlinky.formsyReact.formsyMod.Formsy](js.Array(this.component, __props.asInstanceOf[FormsyProps]))
   }
 }
-

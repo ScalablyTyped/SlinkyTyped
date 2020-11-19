@@ -5,7 +5,7 @@ import typingsSlinky.materialBase.typesMod.SpecificEventListener
 import typingsSlinky.materialTextfield.typesMod.MDCTextFieldNativeInputElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MDCTextFieldAdapter
@@ -14,8 +14,8 @@ trait MDCTextFieldAdapter
      with MDCTextFieldLabelAdapter
      with MDCTextFieldLineRippleAdapter
      with MDCTextFieldOutlineAdapter
-
 object MDCTextFieldAdapter {
+  
   @scala.inline
   def apply(
     activateLineRipple: () => Unit,
@@ -45,4 +45,3 @@ object MDCTextFieldAdapter {
     __obj.asInstanceOf[MDCTextFieldAdapter]
   }
 }
-

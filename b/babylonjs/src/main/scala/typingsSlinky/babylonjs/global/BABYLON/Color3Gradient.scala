@@ -2,21 +2,9 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.Color3Gradient")
 @js.native
 class Color3Gradient ()
-  extends typingsSlinky.babylonjs.BABYLON.Color3Gradient {
-  /**
-    * Gets or sets the associated color
-    */
-  /* CompleteClass */
-  override var color: typingsSlinky.babylonjs.BABYLON.Color3 = js.native
-  /**
-    * Gets or sets the gradient value (between 0 and 1)
-    */
-  /* CompleteClass */
-  override var gradient: Double = js.native
-}
-
+  extends typingsSlinky.babylonjs.BABYLON.Color3Gradient

@@ -2,11 +2,12 @@ package typingsSlinky.vscodeLanguageserver.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageserver", "DocumentSymbol")
 @js.native
 object DocumentSymbol extends js.Object {
+  
   def create(
     name: String,
     detail: js.UndefOr[scala.Nothing],
@@ -47,9 +48,9 @@ object DocumentSymbol extends js.Object {
     selectionRange: typingsSlinky.vscodeLanguageserverTypes.mod.Range,
     children: js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.DocumentSymbol]
   ): typingsSlinky.vscodeLanguageserverTypes.mod.DocumentSymbol = js.native
+  
   /**
     * Checks whether the given literal conforms to the [DocumentSymbol](#DocumentSymbol) interface.
     */
   def is(value: js.Any): /* is vscode-languageserver-types.vscode-languageserver-types.DocumentSymbol */ Boolean = js.native
 }
-

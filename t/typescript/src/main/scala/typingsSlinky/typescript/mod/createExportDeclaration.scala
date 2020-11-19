@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "createExportDeclaration")
 @js.native
 object createExportDeclaration extends js.Object {
+  
   def apply(): ExportDeclaration = js.native
   def apply(
     decorators: js.UndefOr[scala.Nothing],
@@ -188,4 +189,3 @@ object createExportDeclaration extends js.Object {
     isTypeOnly: Boolean
   ): ExportDeclaration = js.native
 }
-

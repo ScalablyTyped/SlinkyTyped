@@ -7,7 +7,7 @@ import typingsSlinky.avoscloudSdk.mod.Query.FirstOptions
 import typingsSlinky.avoscloudSdk.mod.Query.GetOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new AV AV.Query for the given AV.Object subclass.
@@ -69,58 +69,97 @@ import scala.scalajs.js.annotation._
 @js.native
 class Query_ protected () extends BaseObject {
   def this(objectClass: js.Any) = this()
-  var className: String = js.native
-  var objectClass: js.Any = js.native
+  
   def addAscending(key: String): Query = js.native
   def addAscending(key: js.Array[String]): Query = js.native
+  
   def addDescending(key: String): Query = js.native
   def addDescending(key: js.Array[String]): Query = js.native
+  
   def ascending(key: String): Query = js.native
   def ascending(key: js.Array[String]): Query = js.native
+  
+  var className: String = js.native
+  
   def collection(): Collection[Object] = js.native
   def collection(items: js.UndefOr[scala.Nothing], options: Options): Collection[Object] = js.native
   def collection(items: js.Array[Object]): Collection[Object] = js.native
   def collection(items: js.Array[Object], options: Options): Collection[Object] = js.native
+  
   def containedIn(key: String, values: js.Array[_]): Query = js.native
+  
   def contains(key: String, substring: String): Query = js.native
+  
   def containsAll(key: String, values: js.Array[_]): Query = js.native
+  
   def count[T](): Promise[T] = js.native
   def count[T](options: CountOptions): Promise[T] = js.native
+  
   def descending(key: String): Query = js.native
   def descending(key: js.Array[String]): Query = js.native
+  
   def doesNotExist(key: String): Query = js.native
+  
   def doesNotMatchKeyInQuery(key: String, queryKey: String, query: Query): Query = js.native
+  
   def doesNotMatchQuery(key: String, query: Query): Query = js.native
+  
   def each[T](callback: js.Function): Promise[T] = js.native
   def each[T](callback: js.Function, options: SuccessFailureOptions): Promise[T] = js.native
+  
   def endsWith(key: String, suffix: String): Query = js.native
+  
   def equalTo(key: String, value: js.Any): Query = js.native
+  
   def exists(key: String): Query = js.native
+  
   def find[T](): Promise[T] = js.native
   def find[T](options: FindOptions): Promise[T] = js.native
+  
   def first[T](): Promise[T] = js.native
   def first[T](options: FirstOptions): Promise[T] = js.native
+  
   def get(objectId: String): Promise[_] = js.native
   def get(objectId: String, options: GetOptions): Promise[_] = js.native
+  
   def greaterThan(key: String, value: js.Any): Query = js.native
+  
   def greaterThanOrEqualTo(key: String, value: js.Any): Query = js.native
+  
   def include(key: String): Query = js.native
   def include(keys: js.Array[String]): Query = js.native
+  
   def lessThan(key: String, value: js.Any): Query = js.native
+  
   def lessThanOrEqualTo(key: String, value: js.Any): Query = js.native
+  
   def limit(n: Double): Query = js.native
+  
   def matches(key: String, regex: js.RegExp, modifiers: js.Any): Query = js.native
+  
   def matchesKeyInQuery(key: String, queryKey: String, query: Query): Query = js.native
+  
   def matchesQuery(key: String, query: Query): Query = js.native
+  
   def near(key: String, point: GeoPoint): Query = js.native
+  
   def notContainedIn(key: String, values: js.Array[_]): Query = js.native
+  
   def notEqualTo(key: String, value: js.Any): Query = js.native
+  
+  var objectClass: js.Any = js.native
+  
   def select(keys: String*): Query = js.native
+  
   def skip(n: Double): Query = js.native
+  
   def startsWith(key: String, prefix: String): Query = js.native
+  
   def withinGeoBox(key: String, southwest: GeoPoint, northeast: GeoPoint): Query = js.native
+  
   def withinKilometers(key: String, point: GeoPoint, maxDistance: Double): Query = js.native
+  
   def withinMiles(key: String, point: GeoPoint, maxDistance: Double): Query = js.native
+  
   def withinRadians(key: String, point: GeoPoint, maxDistance: Double): Query = js.native
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "updateSetAccessor")
 @js.native
 object updateSetAccessor extends js.Object {
+  
   def apply(
     node: SetAccessorDeclaration,
     decorators: js.UndefOr[scala.Nothing],
@@ -68,4 +69,3 @@ object updateSetAccessor extends js.Object {
     body: Block
   ): SetAccessorDeclaration = js.native
 }
-

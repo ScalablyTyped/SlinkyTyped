@@ -5,7 +5,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.beans.PropertyState
 import typingsSlinky.std.SafeArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * provides write access to a dynamic homogeneous set of values or nested trees within a hierarchy.
@@ -21,6 +21,7 @@ import scala.scalajs.js.annotation._
 trait SetUpdate
   extends SimpleSetUpdate
      with HierarchyAccess {
+  
   /**
     * @param aPropertyName specifies the names of the properties. All names must be unique. This sequence must be alphabetically sorted.
     * @returns a sequence of the states of the properties which are specified by their names.  The order of the states is correlating to the order of the given
@@ -28,4 +29,3 @@ trait SetUpdate
   /* InferMemberOverrides */
   override def getPropertyStates(aPropertyName: SeqEquiv[String]): SafeArray[PropertyState] = js.native
 }
-

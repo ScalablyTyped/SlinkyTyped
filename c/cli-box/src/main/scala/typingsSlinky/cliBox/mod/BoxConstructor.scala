@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BoxConstructor
@@ -14,12 +14,13 @@ trait BoxConstructor
       (/* text */ String) | (/* text */ Text), 
       Box
     ] {
-  var defaults: typingsSlinky.cliBox.anon.Marks = js.native
+  
   def apply(options: String): Box = js.native
   def apply(options: String, text: String): Box = js.native
   def apply(options: String, text: Text): Box = js.native
   def apply(options: Options): Box = js.native
   def apply(options: Options, text: String): Box = js.native
   def apply(options: Options, text: Text): Box = js.native
+  
+  var defaults: typingsSlinky.cliBox.anon.Marks = js.native
 }
-

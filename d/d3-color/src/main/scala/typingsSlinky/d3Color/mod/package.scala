@@ -2,9 +2,10 @@ package typingsSlinky.d3Color
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type GrayColorFactory = /**
     * Constructs a new Lab color with the specified l value and a = b = 0.
     *

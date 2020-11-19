@@ -2,11 +2,12 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("playcanvas", "reprojectTexture")
 @js.native
 object reprojectTexture extends js.Object {
+  
   /**
     * This function reprojects textures between cubemap and equirectangular formats. The
     * function can read and write textures with pixel data in RGBE, RGBM, linear and sRGB formats. When
@@ -31,4 +32,3 @@ object reprojectTexture extends js.Object {
     specularPower: Double
   ): Unit = js.native
 }
-

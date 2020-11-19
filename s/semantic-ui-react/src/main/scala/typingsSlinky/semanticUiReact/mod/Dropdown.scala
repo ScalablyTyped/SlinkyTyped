@@ -6,7 +6,7 @@ import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownComponent
 import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semantic-ui-react", "Dropdown")
 @js.native
@@ -15,8 +15,6 @@ class Dropdown protected ()
   def this(props: DropdownProps) = this()
   def this(props: DropdownProps, context: js.Any) = this()
 }
-
 @JSImport("semantic-ui-react", "Dropdown")
 @js.native
 object Dropdown extends TopLevel[DropdownComponent]
-

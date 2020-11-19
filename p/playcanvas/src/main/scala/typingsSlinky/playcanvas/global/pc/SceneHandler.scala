@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.global.pc
 import typingsSlinky.playcanvas.pc.ResourceHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Resource handler used for loading {@link pc.Scene} resources.
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 class SceneHandler protected () extends ResourceHandler {
   def this(app: typingsSlinky.playcanvas.pc.Application) = this()
 }
-

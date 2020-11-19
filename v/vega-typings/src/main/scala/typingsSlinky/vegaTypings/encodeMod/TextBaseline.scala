@@ -2,7 +2,7 @@ package typingsSlinky.vegaTypings.encodeMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.vegaTypings.vegaTypingsStrings.alphabetic
@@ -13,19 +13,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.vegaTypingsStrings.bottom
 */
 trait TextBaseline extends js.Object
-
 object TextBaseline {
+  
   @scala.inline
   def alphabetic: typingsSlinky.vegaTypings.vegaTypingsStrings.alphabetic = "alphabetic".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.alphabetic]
+  
   @scala.inline
   def bottom: typingsSlinky.vegaTypings.vegaTypingsStrings.bottom = "bottom".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.bottom]
+  
   @scala.inline
   def `line-bottom`: typingsSlinky.vegaTypings.vegaTypingsStrings.`line-bottom` = "line-bottom".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`line-bottom`]
+  
   @scala.inline
   def `line-top`: typingsSlinky.vegaTypings.vegaTypingsStrings.`line-top` = "line-top".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`line-top`]
+  
   @scala.inline
   def middle: typingsSlinky.vegaTypings.vegaTypingsStrings.middle = "middle".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.middle]
+  
   @scala.inline
   def top: typingsSlinky.vegaTypings.vegaTypingsStrings.top = "top".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.top]
 }
-

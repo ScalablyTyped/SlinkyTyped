@@ -10,9 +10,10 @@ import typingsSlinky.conductorAnimate.mod.Config
 import typingsSlinky.react.mod.ReactNodeArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Conductor {
+  
   @JSImport("conductor-animate", "Conductor")
   @js.native
   object component extends js.Object
@@ -21,13 +22,16 @@ object Conductor {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.conductorAnimate.mod.Conductor] {
+    
     @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def children(value: ReactElement | ReactNodeArray): this.type = set("children", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ConductorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     animations: Animations,
@@ -37,4 +41,3 @@ object Conductor {
     new Builder(js.Array(this.component, __props.asInstanceOf[ConductorProps]))
   }
 }
-

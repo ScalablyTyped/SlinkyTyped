@@ -16,12 +16,14 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx/base", JSImport.Namespace)
 @js.native
 object baseMod extends js.Object {
+  
   val Generic: ForwardRefAsExoticComponent[PreferHelpersPropsOverrid, ReactElement] = js.native
+  
   def forwardRefAs[TOwnProps, TDefaultComponent /* <: ReactType[_] */](
     factory: ReactComponentClass[HTMLElement | SVGElement | ReactComponentClass[js.Object]],
     defaultProps: Partial[
@@ -32,4 +34,3 @@ object baseMod extends js.Object {
     ]
   ): ForwardRefAsExoticComponent[TOwnProps, TDefaultComponent] = js.native
 }
-

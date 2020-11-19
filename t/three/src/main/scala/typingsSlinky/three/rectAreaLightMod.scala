@@ -5,11 +5,12 @@ import typingsSlinky.three.lightMod.Light
 import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/lights/RectAreaLight", JSImport.Namespace)
 @js.native
 object rectAreaLightMod extends js.Object {
+  
   @js.native
   class RectAreaLight () extends Light {
     def this(color: String) = this()
@@ -73,10 +74,11 @@ object rectAreaLightMod extends js.Object {
     def this(color: Color, intensity: js.UndefOr[scala.Nothing], width: Double, height: Double) = this()
     def this(color: Color, intensity: Double, width: js.UndefOr[scala.Nothing], height: Double) = this()
     def this(color: Color, intensity: Double, width: Double, height: Double) = this()
+    
     var height: Double = js.native
+    
     val isRectAreaLight: `true` = js.native
+    
     var width: Double = js.native
   }
-  
 }
-

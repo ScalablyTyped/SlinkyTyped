@@ -9,11 +9,12 @@ import typingsSlinky.xstate.typesMod.StateSchema
 import typingsSlinky.xstate.typesMod.Typestate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xstate/lib/Machine", JSImport.Namespace)
 @js.native
 object machineMod extends js.Object {
+  
   def Machine[TContext, TEvent /* <: EventObject */](config: MachineConfig[TContext, _, TEvent]): StateMachine[TContext, _, TEvent, _] = js.native
   def Machine[TContext, TEvent /* <: EventObject */](
     config: MachineConfig[TContext, _, TEvent],
@@ -45,7 +46,7 @@ object machineMod extends js.Object {
     options: Partial[MachineOptions[TContext, TEvent]],
     initialContext: TContext
   ): StateMachine[TContext, TStateSchema, TEvent, _] = js.native
+  
   def createMachine[TContext, TEvent /* <: EventObject */, TTypestate /* <: Typestate[TContext] */](config: MachineConfig[TContext, _, TEvent]): StateMachine[TContext, _, TEvent, TTypestate] = js.native
   def createMachine[TContext, TEvent /* <: EventObject */, TTypestate /* <: Typestate[TContext] */](config: MachineConfig[TContext, _, TEvent], options: Partial[MachineOptions[TContext, TEvent]]): StateMachine[TContext, _, TEvent, TTypestate] = js.native
 }
-

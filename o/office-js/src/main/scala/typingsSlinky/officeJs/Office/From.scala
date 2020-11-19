@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.Office
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides a method to get the from value of a message in an Outlook add-in.
@@ -17,6 +17,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait From extends js.Object {
+  
   /**
     * Gets the from value of a message.
     * 
@@ -65,4 +66,3 @@ trait From extends js.Object {
     callback: js.Function1[/* asyncResult */ AsyncResult[EmailAddressDetails], Unit]
   ): Unit = js.native
 }
-

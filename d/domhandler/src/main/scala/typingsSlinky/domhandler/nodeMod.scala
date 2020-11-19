@@ -11,11 +11,12 @@ import typingsSlinky.domhandler.domhandlerStrings.tag
 import typingsSlinky.domhandler.domhandlerStrings.text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("domhandler/lib/node", JSImport.Namespace)
 @js.native
 object nodeMod extends js.Object {
+  
   @js.native
   class DataNode protected () extends Node {
     /**
@@ -26,7 +27,9 @@ object nodeMod extends js.Object {
     def this(`type`: comment, data: String) = this()
     def this(`type`: directive, data: String) = this()
     def this(`type`: text, data: String) = this()
+    
     var data: String = js.native
+    
     var nodeValue: String = js.native
   }
   
@@ -38,8 +41,11 @@ object nodeMod extends js.Object {
       * @param attribs Object mapping attribute names to attribute values
       */
     def this(name: String, attribs: StringDictionary[String]) = this()
+    
     var attribs: StringDictionary[String] = js.native
+    
     var name: String = js.native
+    
     var tagName: String = js.native
   }
   
@@ -50,20 +56,30 @@ object nodeMod extends js.Object {
       * @param type The type of the node.
       */
     def this(`type`: ElementType) = this()
+    
     /** The end index of the node. Requires `withEndIndices` on the handler to be `true. */
     var endIndex: Double | Null = js.native
+    
     /** Next sibling */
     var next: Node | Null = js.native
+    
     var nextSibling: Node | Null = js.native
+    
     val nodeType: Double = js.native
+    
     /** Parent of the node */
     var parent: NodeWithChildren | Null = js.native
+    
     var parentNode: NodeWithChildren | Null = js.native
+    
     /** Previous sibling */
     var prev: Node | Null = js.native
+    
     var previousSibling: Node | Null = js.native
+    
     /** The start index of the node. Requires `withStartIndices` on the handler to be `true. */
     var startIndex: Double | Null = js.native
+    
     var `type`: ElementType = js.native
   }
   
@@ -78,17 +94,20 @@ object nodeMod extends js.Object {
     def this(`type`: script, children: js.Array[Node]) = this()
     def this(`type`: style, children: js.Array[Node]) = this()
     def this(`type`: tag, children: js.Array[Node]) = this()
+    
     var childNodes: js.Array[Node] = js.native
+    
     var children: js.Array[Node] = js.native
+    
     val firstChild: Node | Null = js.native
+    
     val lastChild: Node | Null = js.native
   }
   
   @js.native
   class ProcessingInstruction protected () extends DataNode {
     def this(name: String, data: String) = this()
+    
     var name: String = js.native
   }
-  
 }
-

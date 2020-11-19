@@ -6,11 +6,13 @@ import typingsSlinky.kurentoClient.kurentoClientStrings.Recording
 import typingsSlinky.kurentoClient.kurentoClientStrings.Stopped
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ClientInstance extends js.Object {
+  
   def close(): Unit = js.native
+  
   @JSName("create")
   def create_MediaPipeline(`type`: typingsSlinky.kurentoClient.kurentoClientStrings.MediaPipeline): js.Promise[MediaPipeline] = js.native
   @JSName("create")
@@ -20,9 +22,12 @@ trait ClientInstance extends js.Object {
   ): js.Promise[RecorderEndpoint] = js.native
   @JSName("create")
   def create_WebRtcEndpoint(`type`: typingsSlinky.kurentoClient.kurentoClientStrings.WebRtcEndpoint): js.Promise[WebRtcEndpoint] = js.native
+  
   def getMediaobjectById(objectId: String): js.Promise[MediaPipeline | WebRtcEndpoint | RecorderEndpoint] = js.native
+  
   def getServerManager(): js.Promise[MediaServer] = js.native
   def getServerManager(callback: Callback[MediaServer]): js.Promise[MediaServer] = js.native
+  
   @JSName("on")
   def on_Error(
     event: typingsSlinky.kurentoClient.kurentoClientStrings.Error,
@@ -37,4 +42,3 @@ trait ClientInstance extends js.Object {
   @JSName("on")
   def on_Stopped(event: Stopped, callback: js.Function0[Unit]): Unit = js.native
 }
-

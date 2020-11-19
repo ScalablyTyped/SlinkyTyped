@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.database
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A `DataSnapshot` contains data from a Database location.
@@ -21,47 +21,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait DataSnapshot extends js.Object {
-  /**
-    * The key (last part of the path) of the location of this `DataSnapshot`.
-    *
-    * The last token in a Database location is considered its key. For example,
-    * "ada" is the key for the /users/ada/ node. Accessing the key on any
-    * `DataSnapshot` will return the key for the location that generated it.
-    * However, accessing the key on the root URL of a Database will return `null`.
-    *
-    * @example
-    * ```javascript
-    * // Assume we have the following data in the Database:
-    * {
-    *   "name": {
-    *     "first": "Ada",
-    *     "last": "Lovelace"
-    *   }
-    * }
-    *
-    * var ref = firebase.database().ref("users/ada");
-    * ref.once("value")
-    *   .then(function(snapshot) {
-    *     var key = snapshot.key; // "ada"
-    *     var childKey = snapshot.child("name/last").key; // "last"
-    *   });
-    * ```
-    *
-    * @example
-    * ```javascript
-    * var rootRef = firebase.database().ref();
-    * rootRef.once("value")
-    *   .then(function(snapshot) {
-    *     var key = snapshot.key; // null
-    *     var childKey = snapshot.child("users/ada").key; // "ada"
-    *   });
-    * ```
-    */
-  var key: String | Null = js.native
-  /**
-    * The `Reference` for the location that generated this `DataSnapshot`.
-    */
-  var ref: Reference = js.native
+  
   /**
     * Gets another `DataSnapshot` for the location at the specified relative path.
     *
@@ -96,6 +56,7 @@ trait DataSnapshot extends js.Object {
     * @param path A relative path to the location of child data.
     */
   def child(path: String): DataSnapshot = js.native
+  
   /**
     * Returns true if this `DataSnapshot` contains any data. It is slightly more
     * efficient than using `snapshot.val() !== null`.
@@ -122,6 +83,7 @@ trait DataSnapshot extends js.Object {
     * ```
     */
   def exists(): Boolean = js.native
+  
   /**
     * Exports the entire contents of the DataSnapshot as a JavaScript object.
     *
@@ -132,6 +94,7 @@ trait DataSnapshot extends js.Object {
     *   Array, string, number, boolean, or `null`).
     */
   def exportVal(): js.Any = js.native
+  
   /**
     * Enumerates the top-level children in the `DataSnapshot`.
     *
@@ -200,6 +163,7 @@ trait DataSnapshot extends js.Object {
     *   returning true.
     */
   def forEach(action: js.Function1[/* a */ this.type, Boolean | Unit]): Boolean = js.native
+  
   /**
     * Gets the priority value of the data in this `DataSnapshot`.
     *
@@ -210,6 +174,7 @@ trait DataSnapshot extends js.Object {
     *  Sorting and filtering data}).
     */
   def getPriority(): String | Double | Null = js.native
+  
   /**
     * Returns true if the specified child path has (non-null) data.
     *
@@ -237,6 +202,7 @@ trait DataSnapshot extends js.Object {
     *  `false`.
     */
   def hasChild(path: String): Boolean = js.native
+  
   /**
     * Returns whether or not the `DataSnapshot` has any non-`null` child
     * properties.
@@ -269,6 +235,45 @@ trait DataSnapshot extends js.Object {
     * @return true if this snapshot has any children; else false.
     */
   def hasChildren(): Boolean = js.native
+  
+  /**
+    * The key (last part of the path) of the location of this `DataSnapshot`.
+    *
+    * The last token in a Database location is considered its key. For example,
+    * "ada" is the key for the /users/ada/ node. Accessing the key on any
+    * `DataSnapshot` will return the key for the location that generated it.
+    * However, accessing the key on the root URL of a Database will return `null`.
+    *
+    * @example
+    * ```javascript
+    * // Assume we have the following data in the Database:
+    * {
+    *   "name": {
+    *     "first": "Ada",
+    *     "last": "Lovelace"
+    *   }
+    * }
+    *
+    * var ref = firebase.database().ref("users/ada");
+    * ref.once("value")
+    *   .then(function(snapshot) {
+    *     var key = snapshot.key; // "ada"
+    *     var childKey = snapshot.child("name/last").key; // "last"
+    *   });
+    * ```
+    *
+    * @example
+    * ```javascript
+    * var rootRef = firebase.database().ref();
+    * rootRef.once("value")
+    *   .then(function(snapshot) {
+    *     var key = snapshot.key; // null
+    *     var childKey = snapshot.child("users/ada").key; // "ada"
+    *   });
+    * ```
+    */
+  var key: String | Null = js.native
+  
   /**
     * Returns the number of child properties of this `DataSnapshot`.
     *
@@ -292,10 +297,17 @@ trait DataSnapshot extends js.Object {
     * ```
     */
   def numChildren(): Double = js.native
+  
+  /**
+    * The `Reference` for the location that generated this `DataSnapshot`.
+    */
+  var ref: Reference = js.native
+  
   /**
     * Returns a JSON-serializable representation of this object.
     */
   def toJSON(): js.Object | Null = js.native
+  
   /**
     * Extracts a JavaScript value from a `DataSnapshot`.
     *
@@ -335,8 +347,8 @@ trait DataSnapshot extends js.Object {
     */
   def `val`(): js.Any = js.native
 }
-
 object DataSnapshot {
+  
   @scala.inline
   def apply(
     child: String => DataSnapshot,
@@ -355,44 +367,59 @@ object DataSnapshot {
     __obj.updateDynamic("val")(js.Any.fromFunction0(`val`))
     __obj.asInstanceOf[DataSnapshot]
   }
+  
   @scala.inline
   implicit class DataSnapshotOps[Self <: DataSnapshot] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setChild(value: String => DataSnapshot): Self = this.set("child", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setExists(value: () => Boolean): Self = this.set("exists", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setExportVal(value: () => js.Any): Self = this.set("exportVal", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setForEach(value: js.Function1[DataSnapshot, Boolean | Unit] => Boolean): Self = this.set("forEach", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGetPriority(value: () => String | Double | Null): Self = this.set("getPriority", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setHasChild(value: String => Boolean): Self = this.set("hasChild", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setHasChildren(value: () => Boolean): Self = this.set("hasChildren", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setNumChildren(value: () => Double): Self = this.set("numChildren", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setRef(value: Reference): Self = this.set("ref", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setToJSON(value: () => js.Object | Null): Self = this.set("toJSON", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setVal(value: () => js.Any): Self = this.set("val", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setKeyNull: Self = this.set("key", null)
   }
-  
 }
-

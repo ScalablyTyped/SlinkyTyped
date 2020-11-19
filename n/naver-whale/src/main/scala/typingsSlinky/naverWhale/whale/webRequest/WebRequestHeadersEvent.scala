@@ -3,7 +3,7 @@ package typingsSlinky.naverWhale.whale.webRequest
 import typingsSlinky.chrome.chrome.events.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait WebRequestHeadersEvent
@@ -13,6 +13,7 @@ trait WebRequestHeadersEvent
         Unit
       ]
     ] {
+  
   def addListener(
     callback: js.Function1[
       /* details */ typingsSlinky.chrome.chrome.webRequest.WebRequestHeadersDetails, 
@@ -37,4 +38,3 @@ trait WebRequestHeadersEvent
     opt_extraInfoSpec: js.Array[String]
   ): Unit = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.Office
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents recipients of an item. Compose mode only.
@@ -17,6 +17,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Recipients extends js.Object {
+  
   /**
     * Adds a recipient list to the existing recipients for an appointment or message.
     *
@@ -62,6 +63,7 @@ trait Recipients extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  
   /**
     * Gets a recipient list for an appointment or message.
     *
@@ -103,6 +105,7 @@ trait Recipients extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[EmailAddressDetails]], Unit]
   ): Unit = js.native
+  
   /**
     * Sets a recipient list for an appointment or message.
     *
@@ -175,4 +178,3 @@ trait Recipients extends js.Object {
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
 }
-

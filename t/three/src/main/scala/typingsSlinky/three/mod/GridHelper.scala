@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "GridHelper")
 @js.native
@@ -35,4 +35,3 @@ class GridHelper protected ()
     color2: typingsSlinky.three.colorMod.Color
   ) = this()
 }
-

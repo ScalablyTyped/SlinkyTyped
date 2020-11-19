@@ -19,11 +19,12 @@ import typingsSlinky.kendoUi.kendo.dataviz.drawing.TextOptions
 import typingsSlinky.kendoUi.kendo.geometry.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("kendo.dataviz.drawing")
 @js.native
 object drawing extends js.Object {
+  
   @js.native
   class Arc protected ()
     extends typingsSlinky.kendoUi.kendo.dataviz.drawing.Arc {
@@ -98,6 +99,22 @@ object drawing extends js.Object {
     extends typingsSlinky.kendoUi.kendo.dataviz.drawing.Path {
     def this(options: PathOptions) = this()
   }
+  /* static members */
+  @js.native
+  object Path extends js.Object {
+    
+    def fromArc(arc: typingsSlinky.kendoUi.kendo.geometry.Arc): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
+    def fromArc(arc: typingsSlinky.kendoUi.kendo.geometry.Arc, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
+    
+    def fromPoints(points: js.Any): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
+    def fromPoints(points: js.Any, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
+    
+    def fromRect(rect: typingsSlinky.kendoUi.kendo.geometry.Rect): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
+    def fromRect(rect: typingsSlinky.kendoUi.kendo.geometry.Rect, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
+    
+    def parse(svgPath: String): typingsSlinky.kendoUi.kendo.drawing.MultiPath = js.native
+    def parse(svgPath: String, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.MultiPath = js.native
+  }
   
   @js.native
   class RadialGradient ()
@@ -123,6 +140,15 @@ object drawing extends js.Object {
     extends typingsSlinky.kendoUi.kendo.dataviz.drawing.Surface {
     def this(options: SurfaceOptions) = this()
   }
+  /* static members */
+  @js.native
+  object Surface extends js.Object {
+    
+    def create(element: JQuery): typingsSlinky.kendoUi.kendo.drawing.Surface = js.native
+    def create(element: JQuery, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.Surface = js.native
+    def create(element: typingsSlinky.kendoUi.kendo.dataviz.drawing.Element): typingsSlinky.kendoUi.kendo.drawing.Surface = js.native
+    def create(element: typingsSlinky.kendoUi.kendo.dataviz.drawing.Element, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.Surface = js.native
+  }
   
   @js.native
   class Text protected ()
@@ -130,28 +156,4 @@ object drawing extends js.Object {
     def this(content: String, position: Point) = this()
     def this(content: String, position: Point, options: TextOptions) = this()
   }
-  
-  /* static members */
-  @js.native
-  object Path extends js.Object {
-    def fromArc(arc: typingsSlinky.kendoUi.kendo.geometry.Arc): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
-    def fromArc(arc: typingsSlinky.kendoUi.kendo.geometry.Arc, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
-    def fromPoints(points: js.Any): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
-    def fromPoints(points: js.Any, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
-    def fromRect(rect: typingsSlinky.kendoUi.kendo.geometry.Rect): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
-    def fromRect(rect: typingsSlinky.kendoUi.kendo.geometry.Rect, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.Path = js.native
-    def parse(svgPath: String): typingsSlinky.kendoUi.kendo.drawing.MultiPath = js.native
-    def parse(svgPath: String, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.MultiPath = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object Surface extends js.Object {
-    def create(element: JQuery): typingsSlinky.kendoUi.kendo.drawing.Surface = js.native
-    def create(element: JQuery, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.Surface = js.native
-    def create(element: typingsSlinky.kendoUi.kendo.dataviz.drawing.Element): typingsSlinky.kendoUi.kendo.drawing.Surface = js.native
-    def create(element: typingsSlinky.kendoUi.kendo.dataviz.drawing.Element, options: js.Any): typingsSlinky.kendoUi.kendo.drawing.Surface = js.native
-  }
-  
 }
-

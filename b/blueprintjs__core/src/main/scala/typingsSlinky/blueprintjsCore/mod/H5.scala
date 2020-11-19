@@ -7,11 +7,10 @@ import typingsSlinky.blueprintjsCore.htmlMod.IElementRefProps
 import typingsSlinky.react.mod.HTMLProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@blueprintjs/core", "H5")
 @js.native
 object H5 extends TopLevel[
       ReactComponentClass[HTMLProps[HTMLHeadingElement] with IElementRefProps[HTMLHeadingElement]]
     ]
-

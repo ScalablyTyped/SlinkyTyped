@@ -9,11 +9,12 @@ import typingsSlinky.expressServeStaticCore.mod.Response
 import typingsSlinky.qs.mod.ParsedQs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("express-async-wrap", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def default(
     handler: js.Function3[
       /* req */ Request[ParamsDictionary, _, _, ParsedQs], 
@@ -32,4 +33,3 @@ object mod extends js.Object {
     ]
   ): ErrorRequestHandler[ParamsDictionary, _, _, ParsedQs] = js.native
 }
-

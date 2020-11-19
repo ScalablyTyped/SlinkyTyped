@@ -5,31 +5,29 @@ import typingsSlinky.angularHttp.headersMod.Headers
 import typingsSlinky.angularHttp.interfacesMod.ResponseOptionsArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/http/src/base_response_options", JSImport.Namespace)
 @js.native
 object baseResponseOptionsMod extends js.Object {
+  
   @js.native
   class BaseResponseOptions () extends ResponseOptions
   
   @js.native
   class ResponseOptions () extends js.Object {
     def this(opts: ResponseOptionsArgs) = this()
+    
     /**
       * String, Object, ArrayBuffer or Blob representing the body of the {@link Response}.
       */
     var body: String | js.Object | js.typedarray.ArrayBuffer | Blob | Null = js.native
+    
     /**
       * Response {@link Headers headers}
       */
     var headers: Headers | Null = js.native
-    /**
-      * Http {@link http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html status code}
-      * associated with the response.
-      */
-    var status: Double | Null = js.native
-    var url: String | Null = js.native
+    
     /**
       * Creates a copy of the `ResponseOptions` instance, using the optional input as values to
       * override
@@ -58,7 +56,13 @@ object baseResponseOptionsMod extends js.Object {
       */
     def merge(): ResponseOptions = js.native
     def merge(options: ResponseOptionsArgs): ResponseOptions = js.native
+    
+    /**
+      * Http {@link http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html status code}
+      * associated with the response.
+      */
+    var status: Double | Null = js.native
+    
+    var url: String | Null = js.native
   }
-  
 }
-

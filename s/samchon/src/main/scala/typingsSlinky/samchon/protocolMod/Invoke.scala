@@ -3,7 +3,7 @@ package typingsSlinky.samchon.protocolMod
 import typingsSlinky.sxml.mod.XML
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("samchon/protocol", "Invoke")
 @js.native
@@ -27,4 +27,3 @@ class Invoke ()
     */
   def this(listener: String, parameters: (Boolean | Double | String | XML | js.typedarray.Uint8Array)*) = this()
 }
-

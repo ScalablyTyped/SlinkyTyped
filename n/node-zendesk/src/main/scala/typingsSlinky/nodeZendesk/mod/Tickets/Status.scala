@@ -2,7 +2,7 @@ package typingsSlinky.nodeZendesk.mod.Tickets
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.nodeZendesk.nodeZendeskStrings.`new`
@@ -13,19 +13,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.nodeZendesk.nodeZendeskStrings.closed
 */
 trait Status extends js.Object
-
 object Status {
+  
   @scala.inline
   def closed: typingsSlinky.nodeZendesk.nodeZendeskStrings.closed = "closed".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.closed]
+  
   @scala.inline
   def hold: typingsSlinky.nodeZendesk.nodeZendeskStrings.hold = "hold".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.hold]
+  
   @scala.inline
   def `new`: typingsSlinky.nodeZendesk.nodeZendeskStrings.`new` = "new".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.`new`]
+  
   @scala.inline
   def open: typingsSlinky.nodeZendesk.nodeZendeskStrings.open = "open".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.open]
+  
   @scala.inline
   def pending: typingsSlinky.nodeZendesk.nodeZendeskStrings.pending = "pending".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.pending]
+  
   @scala.inline
   def solved: typingsSlinky.nodeZendesk.nodeZendeskStrings.solved = "solved".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.solved]
 }
-

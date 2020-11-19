@@ -3,7 +3,7 @@ package typingsSlinky.uirouterAngularjs.mod.core
 import typingsSlinky.uirouterCore.urlInterfaceMod.UrlMatcherCompileConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@uirouter/angularjs", "core.UrlMatcher")
 @js.native
@@ -27,13 +27,11 @@ class UrlMatcher protected ()
     config: UrlMatcherCompileConfig
   ) = this()
 }
-
 /* static members */
 @JSImport("@uirouter/angularjs", "core.UrlMatcher")
 @js.native
 object UrlMatcher extends js.Object {
-  /** @internal */
-  var nameValidator: js.RegExp = js.native
+  
   /**
     * Compare two UrlMatchers
     *
@@ -47,11 +45,16 @@ object UrlMatcher extends js.Object {
     a: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher,
     b: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher
   ): Double = js.native
+  
   /** @internal */
   def encodeDashes(str: String): String = js.native
+  
+  /** @internal */
+  var nameValidator: js.RegExp = js.native
+  
   /** @internal Given a matcher, return an array with the matcher's path segments and path params, in order */
   def pathSegmentsAndParams(matcher: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher): js.Any = js.native
+  
   /** @internal Given a matcher, return an array with the matcher's query params */
   def queryParams(matcher: typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher): js.Array[typingsSlinky.uirouterCore.paramMod.Param] = js.native
 }
-

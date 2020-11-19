@@ -11,9 +11,10 @@ import typingsSlinky.reactImgix.mod.ImgixHTMLAttributes
 import typingsSlinky.std.HTMLPictureElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Picture {
+  
   @JSImport("react-imgix", "Picture")
   @js.native
   object component extends js.Object
@@ -22,10 +23,13 @@ object Picture {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactImgix.mod.Picture] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def htmlAttributes(value: ImgixHTMLAttributes): this.type = set("htmlAttributes", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onMounted(
       value: /* ref */ js.UndefOr[ReactRef[HTMLPictureElement | HTMLImageElement | HTMLSourceElement]] => Unit
@@ -33,6 +37,6 @@ object Picture {
   }
   
   def withProps(p: PropsWithChildren[CommonProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Picture.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

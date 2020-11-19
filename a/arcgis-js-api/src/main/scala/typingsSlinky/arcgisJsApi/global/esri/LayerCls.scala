@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.LayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Layer")
 @js.native
@@ -16,4 +16,3 @@ class LayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.Layer {
   def this(properties: LayerProperties) = this()
 }
-

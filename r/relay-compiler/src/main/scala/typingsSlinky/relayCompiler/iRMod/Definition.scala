@@ -8,7 +8,7 @@ import typingsSlinky.relayCompiler.schemaMod.TypeID
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.relayCompiler.iRMod.Fragment
@@ -16,8 +16,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.relayCompiler.iRMod.SplitOperation
 */
 trait Definition extends js.Object
-
 object Definition {
+  
   @scala.inline
   def Fragment(
     argumentDefinitions: js.Array[ArgumentDefinition],
@@ -32,6 +32,7 @@ object Definition {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Definition]
   }
+  
   @scala.inline
   def Root(
     argumentDefinitions: js.Array[LocalArgumentDefinition],
@@ -47,6 +48,7 @@ object Definition {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Definition]
   }
+  
   @scala.inline
   def SplitOperation(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.SplitOperation,
@@ -61,4 +63,3 @@ object Definition {
     __obj.asInstanceOf[Definition]
   }
 }
-

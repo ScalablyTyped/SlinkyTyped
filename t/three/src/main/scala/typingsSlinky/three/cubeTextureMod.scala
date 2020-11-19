@@ -9,11 +9,12 @@ import typingsSlinky.three.constantsMod.Wrapping
 import typingsSlinky.three.textureMod.Texture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/textures/CubeTexture", JSImport.Namespace)
 @js.native
 object cubeTextureMod extends js.Object {
+  
   @js.native
   class CubeTexture protected () extends Texture {
     def this(
@@ -29,8 +30,7 @@ object cubeTextureMod extends js.Object {
       anisotropy: js.UndefOr[Double],
       encoding: js.UndefOr[TextureEncoding]
     ) = this()
+    
     var images: js.Any = js.native
   }
-  
 }
-

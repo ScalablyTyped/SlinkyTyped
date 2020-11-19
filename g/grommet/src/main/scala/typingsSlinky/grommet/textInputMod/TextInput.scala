@@ -12,7 +12,7 @@ import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.InputHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/TextInput", "TextInput")
 @js.native
@@ -37,7 +37,6 @@ class TextInput protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("grommet/es6/components/TextInput", "TextInput")
 @js.native
 object TextInput extends TopLevel[
@@ -48,4 +47,3 @@ object TextInput extends TopLevel[
         ])
       ]
     ]
-

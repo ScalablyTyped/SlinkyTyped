@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait WorkMailMessageFlow extends Service {
+  
   @JSName("config")
   var config_WorkMailMessageFlow: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Retrieves the raw content of an in-transit email message, in MIME format. 
     */
@@ -26,4 +28,3 @@ trait WorkMailMessageFlow extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ GetRawMessageContentResponse, Unit]
   ): Request[GetRawMessageContentResponse, AWSError] = js.native
 }
-

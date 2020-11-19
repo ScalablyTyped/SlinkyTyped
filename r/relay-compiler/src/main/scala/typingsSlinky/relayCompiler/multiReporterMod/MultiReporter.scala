@@ -3,12 +3,12 @@ package typingsSlinky.relayCompiler.multiReporterMod
 import typingsSlinky.relayCompiler.reporterMod.Reporter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MultiReporter extends Reporter
-
 object MultiReporter {
+  
   @scala.inline
   def apply(
     reportError: (String, js.Error) => Unit,
@@ -19,4 +19,3 @@ object MultiReporter {
     __obj.asInstanceOf[MultiReporter]
   }
 }
-

@@ -6,11 +6,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.BuildMiddleware
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/apply-body-checksum-middleware", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def applyBodyChecksumMiddleware[StreamType](headerName: String, hashCtor: Instantiable, encoder: Encoder): BuildMiddleware[_, _, StreamType] = js.native
   def applyBodyChecksumMiddleware[StreamType](
     headerName: String,
@@ -19,4 +20,3 @@ object mod extends js.Object {
     streamHasher: StreamHasher[StreamType]
   ): BuildMiddleware[_, _, StreamType] = js.native
 }
-

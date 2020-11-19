@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.BasemapGalleryProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.BasemapGallery")
 @js.native
@@ -16,4 +16,3 @@ class BasemapGalleryCls ()
   extends typingsSlinky.arcgisJsApi.esri.BasemapGallery {
   def this(properties: BasemapGalleryProperties) = this()
 }
-

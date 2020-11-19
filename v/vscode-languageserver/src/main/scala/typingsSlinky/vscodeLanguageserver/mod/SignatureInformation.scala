@@ -2,11 +2,12 @@ package typingsSlinky.vscodeLanguageserver.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageserver", "SignatureInformation")
 @js.native
 object SignatureInformation extends js.Object {
+  
   def create(
     label: String,
     documentation: js.UndefOr[scala.Nothing],
@@ -18,4 +19,3 @@ object SignatureInformation extends js.Object {
     parameters: typingsSlinky.vscodeLanguageserverTypes.mod.ParameterInformation*
   ): typingsSlinky.vscodeLanguageserverTypes.mod.SignatureInformation = js.native
 }
-

@@ -7,11 +7,12 @@ import typingsSlinky.typescript.mod.Identifier
 import typingsSlinky.typescript.mod.Modifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateEnumDeclaration")
 @js.native
 object updateEnumDeclaration extends js.Object {
+  
   def apply(
     node: EnumDeclaration,
     decorators: js.UndefOr[scala.Nothing],
@@ -41,4 +42,3 @@ object updateEnumDeclaration extends js.Object {
     members: js.Array[EnumMember]
   ): EnumDeclaration = js.native
 }
-

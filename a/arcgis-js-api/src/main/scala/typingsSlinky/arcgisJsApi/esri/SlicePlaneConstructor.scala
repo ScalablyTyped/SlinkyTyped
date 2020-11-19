@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SlicePlaneConstructor
@@ -15,6 +15,6 @@ trait SlicePlaneConstructor
   */
 Instantiable0[SlicePlane]
      with Instantiable1[/* properties */ SlicePlaneProperties, SlicePlane] {
+  
   def fromJSON(json: js.Any): SlicePlane = js.native
 }
-

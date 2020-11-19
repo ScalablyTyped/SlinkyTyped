@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "updateTypeAliasDeclaration")
 @js.native
 object updateTypeAliasDeclaration extends js.Object {
+  
   def apply(
     node: TypeAliasDeclaration,
     decorators: js.UndefOr[scala.Nothing],
@@ -72,4 +73,3 @@ object updateTypeAliasDeclaration extends js.Object {
     `type`: TypeNode
   ): TypeAliasDeclaration = js.native
 }
-

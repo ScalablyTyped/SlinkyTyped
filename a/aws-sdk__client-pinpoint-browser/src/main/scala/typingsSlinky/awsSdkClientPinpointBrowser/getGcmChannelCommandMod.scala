@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/GetGcmChannelCommand", JSImport.Namespace)
 @js.native
 object getGcmChannelCommandMod extends js.Object {
+  
   @js.native
   class GetGcmChannelCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getGcmChannelCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetGcmChannelInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetGcmChannelInput, GetGcmChannelOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[GetGcmChannelInput, GetGcmChannelOutput] = js.native
   }
-  
 }
-

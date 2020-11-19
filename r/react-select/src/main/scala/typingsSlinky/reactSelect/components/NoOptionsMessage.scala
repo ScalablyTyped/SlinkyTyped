@@ -8,14 +8,16 @@ import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.ValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object NoOptionsMessage {
+  
   @JSImport("react-select", "components.NoOptionsMessage")
   @js.native
   object component extends js.Object
   
   def withProps(p: NoticeProps[js.Any]): SharedBuilder_NoticeProps1503326161 = new SharedBuilder_NoticeProps1503326161(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     clearValue: () => Unit,
@@ -33,4 +35,3 @@ object NoOptionsMessage {
     new SharedBuilder_NoticeProps1503326161(js.Array(this.component, __props.asInstanceOf[NoticeProps[js.Any]]))
   }
 }
-

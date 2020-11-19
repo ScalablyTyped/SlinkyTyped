@@ -5,11 +5,12 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.geometryLayoutMod.GeometryLayout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/geom", JSImport.Namespace)
 @js.native
 object geomMod extends js.Object {
+  
   @js.native
   class Circle protected () extends default {
     def this(center: Coordinate) = this()
@@ -112,6 +113,4 @@ object geomMod extends js.Object {
       opt_ends: js.Array[Double]
     ) = this()
   }
-  
 }
-

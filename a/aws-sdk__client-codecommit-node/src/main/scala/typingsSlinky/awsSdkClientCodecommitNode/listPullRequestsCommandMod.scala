@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/ListPullRequestsCommand", JSImport.Namespace)
 @js.native
 object listPullRequestsCommandMod extends js.Object {
+  
   @js.native
   class ListPullRequestsCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object listPullRequestsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ListPullRequestsInput) = this()
+    
     val middlewareStack: MiddlewareStack[ListPullRequestsInput, ListPullRequestsOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[ListPullRequestsInput, ListPullRequestsOutput] = js.native
   }
-  
 }
-

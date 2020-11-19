@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxOverlayOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxOverlay")
 @js.native
@@ -16,10 +16,9 @@ class dxOverlay protected ()
   def this(element: JQuery, options: dxOverlayOptions[typingsSlinky.devextreme.mod.DevExpress.ui.dxOverlay]) = this()
   def this(element: Element, options: dxOverlayOptions[typingsSlinky.devextreme.mod.DevExpress.ui.dxOverlay]) = this()
 }
-
 @JSImport("devextreme", "ui.dxOverlay")
 @js.native
 object dxOverlay extends js.Object {
+  
   def baseZIndex(zIndex: Double): Unit = js.native
 }
-

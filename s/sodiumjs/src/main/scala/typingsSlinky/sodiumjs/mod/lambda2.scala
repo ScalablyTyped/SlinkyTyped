@@ -3,11 +3,12 @@ package typingsSlinky.sodiumjs.mod
 import typingsSlinky.sodiumjs.lambdaMod.Lambda2_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sodiumjs", "lambda2")
 @js.native
 object lambda2 extends js.Object {
+  
   def apply[A, B, C](
     f: js.Function2[/* a */ A, /* b */ B, C],
     deps: js.Array[
@@ -15,4 +16,3 @@ object lambda2 extends js.Object {
     ]
   ): Lambda2_[A, B, C] = js.native
 }
-

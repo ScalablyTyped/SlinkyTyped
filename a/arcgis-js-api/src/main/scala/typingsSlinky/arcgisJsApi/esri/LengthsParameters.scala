@@ -5,12 +5,13 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.geodesic
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.planar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LengthsParameters
   extends Accessor
      with JSONSupport {
+  
   /**
     * Defines the type of calculation for the geometry. The type can be one of the following:
     *
@@ -24,18 +25,21 @@ trait LengthsParameters
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-LengthsParameters.html#calculationType)
     */
   var calculationType: planar | geodesic | `preserve-shape` = js.native
+  
   /**
     * If polylines are in a geographic coordinate system, then geodesic needs to be set to `true` in order to calculate the ellipsoidal shortest path distance between each pair of the vertices in the polylines. If `lengthUnit` is not specified, the output is returned in meters.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-LengthsParameters.html#geodesic)
     */
   var geodesic: Boolean = js.native
+  
   /**
     * The length unit in which perimeters of polygons will be calculated. For a list of valid units, see [linear unit codes](https://developers.arcgis.com/java/api-reference/constant-values.html#com.esri.core.geometry.LinearUnit.Code.CENTIMETER).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-LengthsParameters.html#lengthUnit)
     */
   var lengthUnit: Double | String = js.native
+  
   /**
     * The array of polylines whose lengths are to be computed. The structure of each polyline in the array is same as the structure of the JSON polyline objects returned by the ArcGIS REST API.
     *
@@ -43,4 +47,3 @@ trait LengthsParameters
     */
   var polylines: js.Array[Polyline] = js.native
 }
-

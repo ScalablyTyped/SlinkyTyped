@@ -4,12 +4,12 @@ import typingsSlinky.chartmogulNode.commonMod.Entries
 import typingsSlinky.chartmogulNode.mod.Config
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("chartmogul-node", "Customer.all")
 @js.native
 object all extends js.Object {
+  
   def apply(config: Config): js.Promise[Entries[typingsSlinky.chartmogulNode.mod.Customer.Customer]] = js.native
   def apply(config: Config, params: ListCustomersParams): js.Promise[Entries[typingsSlinky.chartmogulNode.mod.Customer.Customer]] = js.native
 }
-

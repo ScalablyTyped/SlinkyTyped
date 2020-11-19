@@ -11,10 +11,11 @@ import typingsSlinky.reactNativeZeroconf.reactNativeZeroconfStrings.stop
 import typingsSlinky.reactNativeZeroconf.reactNativeZeroconfStrings.update
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Zeroconf extends EventEmitter {
+  
   /**
     * Add listeners
     *
@@ -22,6 +23,7 @@ trait Zeroconf extends EventEmitter {
     * on.
     */
   def addDeviceListeners(): Unit = js.native
+  
   /**
     * Returns resolved services.
     *
@@ -29,6 +31,7 @@ trait Zeroconf extends EventEmitter {
     * resolved.
     */
   def getServices(): StringDictionary[Service] = js.native
+  
   /**
     * Triggered when an error occurs.
     */
@@ -53,6 +56,7 @@ trait Zeroconf extends EventEmitter {
   def on_stop(e: stop, listener: js.Function0[_]): this.type = js.native
   @JSName("on")
   def on_update(e: update, listener: js.Function0[_]): this.type = js.native
+  
   /**
     * Publish a service.
     *
@@ -80,6 +84,7 @@ trait Zeroconf extends EventEmitter {
   def publishService(`type`: String, protocol: String, domain: String, name: js.UndefOr[scala.Nothing], port: Double): Unit = js.native
   def publishService(`type`: String, protocol: String, domain: String, name: String): Unit = js.native
   def publishService(`type`: String, protocol: String, domain: String, name: String, port: Double): Unit = js.native
+  
   /**
     * Remove listeners.
     *
@@ -89,6 +94,7 @@ trait Zeroconf extends EventEmitter {
     * @see https://github.com/balthazar/react-native-zeroconf/issues/33
     */
   def removeDeviceListeners(): Unit = js.native
+  
   /**
     * Start the zeroconf scan.
     *
@@ -107,12 +113,14 @@ trait Zeroconf extends EventEmitter {
   def scan(`type`: String, protocol: js.UndefOr[scala.Nothing], domain: String): Unit = js.native
   def scan(`type`: String, protocol: String): Unit = js.native
   def scan(`type`: String, protocol: String, domain: String): Unit = js.native
+  
   /**
     * Stop the scan.
     *
     * @description If any scan is running, stop it. Otherwise do nothing.
     */
   def stop(): Unit = js.native
+  
   /**
     * Unpublish a service.
     *
@@ -123,4 +131,3 @@ trait Zeroconf extends EventEmitter {
     */
   def unpublishService(name: String): Unit = js.native
 }
-

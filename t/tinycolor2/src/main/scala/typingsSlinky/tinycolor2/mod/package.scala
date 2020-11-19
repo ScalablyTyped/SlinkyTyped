@@ -2,14 +2,16 @@ package typingsSlinky.tinycolor2
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.tinycolor2.mod.ColorInputWithoutInstance
     - typingsSlinky.tinycolor2.mod.Instance
   */
   type ColorInput = typingsSlinky.tinycolor2.mod._ColorInput | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - typingsSlinky.tinycolor2.mod.ColorFormats.PRGB

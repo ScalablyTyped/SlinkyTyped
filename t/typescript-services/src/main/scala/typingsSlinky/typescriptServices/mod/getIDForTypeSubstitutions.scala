@@ -3,11 +3,12 @@ package typingsSlinky.typescriptServices.mod
 import typingsSlinky.typescriptServices.TypeScript.TypeArgumentMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "getIDForTypeSubstitutions")
 @js.native
 object getIDForTypeSubstitutions extends js.Object {
+  
   def apply(
     instantiatingSignature: typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol,
     typeArgumentMap: TypeArgumentMap
@@ -17,4 +18,3 @@ object getIDForTypeSubstitutions extends js.Object {
     typeArgumentMap: TypeArgumentMap
   ): String = js.native
 }
-

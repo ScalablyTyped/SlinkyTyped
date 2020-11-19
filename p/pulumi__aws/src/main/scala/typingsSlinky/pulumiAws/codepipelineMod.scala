@@ -9,11 +9,12 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws/codepipeline", JSImport.Namespace)
 @js.native
 object codepipelineMod extends js.Object {
+  
   @js.native
   class Pipeline protected ()
     extends typingsSlinky.pulumiAws.pipelineMod.Pipeline {
@@ -26,6 +27,30 @@ object codepipelineMod extends js.Object {
       */
     def this(name: String, args: PipelineArgs) = this()
     def this(name: String, args: PipelineArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object Pipeline extends js.Object {
+    
+    /**
+      * Get an existing Pipeline resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.pipelineMod.Pipeline = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.pipelineMod.Pipeline = js.native
+    def get(name: String, id: Input[ID], state: PipelineState): typingsSlinky.pulumiAws.pipelineMod.Pipeline = js.native
+    def get(name: String, id: Input[ID], state: PipelineState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.pipelineMod.Pipeline = js.native
+    
+    /**
+      * Returns true if the given object is an instance of Pipeline.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codepipeline/pipeline.Pipeline */ Boolean = js.native
   }
   
   @js.native
@@ -41,33 +66,10 @@ object codepipelineMod extends js.Object {
     def this(name: String, args: WebhookArgs) = this()
     def this(name: String, args: WebhookArgs, opts: CustomResourceOptions) = this()
   }
-  
-  /* static members */
-  @js.native
-  object Pipeline extends js.Object {
-    /**
-      * Get an existing Pipeline resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.pipelineMod.Pipeline = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.pipelineMod.Pipeline = js.native
-    def get(name: String, id: Input[ID], state: PipelineState): typingsSlinky.pulumiAws.pipelineMod.Pipeline = js.native
-    def get(name: String, id: Input[ID], state: PipelineState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.pipelineMod.Pipeline = js.native
-    /**
-      * Returns true if the given object is an instance of Pipeline.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codepipeline/pipeline.Pipeline */ Boolean = js.native
-  }
-  
   /* static members */
   @js.native
   object Webhook extends js.Object {
+    
     /**
       * Get an existing Webhook resource's state with the given name, ID, and optional extra
       * properties used to qualify the lookup.
@@ -81,12 +83,11 @@ object codepipelineMod extends js.Object {
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.codepipelineWebhookMod.Webhook = js.native
     def get(name: String, id: Input[ID], state: WebhookState): typingsSlinky.pulumiAws.codepipelineWebhookMod.Webhook = js.native
     def get(name: String, id: Input[ID], state: WebhookState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.codepipelineWebhookMod.Webhook = js.native
+    
     /**
       * Returns true if the given object is an instance of Webhook.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codepipeline/webhook.Webhook */ Boolean = js.native
   }
-  
 }
-

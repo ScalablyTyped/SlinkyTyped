@@ -2,18 +2,21 @@ package typingsSlinky.gapiClientReseller.anon
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CommitmentInterval extends js.Object {
+  
   /** In this version of the API, annual commitment plan's interval is one year. */
   var commitmentInterval: js.UndefOr[EndTime] = js.native
+  
   /**
     * The isCommitmentPlan property's boolean value identifies the plan as an annual commitment plan:
     * - true — The subscription's plan is an annual commitment plan.
     * - false — The plan is not an annual commitment plan.
     */
   var isCommitmentPlan: js.UndefOr[Boolean] = js.native
+  
   /**
     * The planName property is required. This is the name of the subscription's plan. For more information about the Google payment plans, see the API
     * concepts.
@@ -28,37 +31,45 @@ trait CommitmentInterval extends js.Object {
     */
   var planName: js.UndefOr[String] = js.native
 }
-
 object CommitmentInterval {
+  
   @scala.inline
   def apply(): CommitmentInterval = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CommitmentInterval]
   }
+  
   @scala.inline
   implicit class CommitmentIntervalOps[Self <: CommitmentInterval] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCommitmentInterval(value: EndTime): Self = this.set("commitmentInterval", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteCommitmentInterval: Self = this.set("commitmentInterval", js.undefined)
+    
     @scala.inline
     def setIsCommitmentPlan(value: Boolean): Self = this.set("isCommitmentPlan", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteIsCommitmentPlan: Self = this.set("isCommitmentPlan", js.undefined)
+    
     @scala.inline
     def setPlanName(value: String): Self = this.set("planName", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deletePlanName: Self = this.set("planName", js.undefined)
   }
-  
 }
-

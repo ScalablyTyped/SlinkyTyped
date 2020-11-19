@@ -2,13 +2,15 @@ package typingsSlinky.ol.bingMapsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BingMaps
   extends typingsSlinky.ol.tileImageMod.default {
+  
   def getApiKey(): String = js.native
+  
   def getImagerySet(): String = js.native
+  
   def handleImageryMetadataResponse(response: BingMapsImageryMetadataResponse): Unit = js.native
 }
-

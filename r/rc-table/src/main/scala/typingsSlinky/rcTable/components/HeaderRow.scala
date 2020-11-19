@@ -11,9 +11,10 @@ import typingsSlinky.rcTable.interfaceMod.StickyOffsets
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object HeaderRow {
+  
   @JSImport("rc-table/lib/Header/HeaderRow", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -24,6 +25,7 @@ object HeaderRow {
        with StBuildingComponent[tag.type, js.Object]
   
   def withProps[RecordType](p: RowProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[RecordType](
     cellComponent: CustomizeComponent,
@@ -38,4 +40,3 @@ object HeaderRow {
     new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[RowProps[RecordType]]))
   }
 }
-

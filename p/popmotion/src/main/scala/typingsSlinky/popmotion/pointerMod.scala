@@ -5,12 +5,12 @@ import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
 import typingsSlinky.popmotion.pointerTypesMod.PointerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("popmotion/lib/input/pointer", JSImport.Namespace)
 @js.native
 object pointerMod extends js.Object {
+  
   def default(): Action[ColdSubscription] = js.native
   def default(hasXYProps: PointerProps): Action[ColdSubscription] = js.native
 }
-

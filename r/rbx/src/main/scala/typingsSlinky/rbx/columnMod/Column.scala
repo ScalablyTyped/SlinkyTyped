@@ -59,18 +59,12 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx/grid/columns/column", "Column")
 @js.native
 object Column extends js.Object {
-  @JSName("$$typeof")
-  var DollarDollartypeof: js.Symbol = js.native
-  var Group: ForwardRefAsExoticComponent[ColumnGroupPropsBackgroundColor, ReactElement] = js.native
-  var defaultProps: AsElementType with (Partial[
-    HelpersPropsOverrides with PickBadgeHelpersPropsFloa with Fullhd with ColumnBreakpointOptions with (Pick[_, String | Double | js.Symbol])
-  ]) = js.native
-  var displayName: js.UndefOr[String] = js.native
+  
   def apply[TAsComponent /* <: ReactElement */](
     props: Desktop[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with ColumnBreakpointOptions with (Pick[
       ComponentProps[TAsComponent], 
@@ -80,5 +74,15 @@ object Column extends js.Object {
       ]
     ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
   ): ReactElement | Null = js.native
+  
+  @JSName("$$typeof")
+  var DollarDollartypeof: js.Symbol = js.native
+  
+  var Group: ForwardRefAsExoticComponent[ColumnGroupPropsBackgroundColor, ReactElement] = js.native
+  
+  var defaultProps: AsElementType with (Partial[
+    HelpersPropsOverrides with PickBadgeHelpersPropsFloa with Fullhd with ColumnBreakpointOptions with (Pick[_, String | Double | js.Symbol])
+  ]) = js.native
+  
+  var displayName: js.UndefOr[String] = js.native
 }
-

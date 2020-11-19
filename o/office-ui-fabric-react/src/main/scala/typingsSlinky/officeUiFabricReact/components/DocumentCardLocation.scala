@@ -15,9 +15,10 @@ import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DocumentCardLocation {
+  
   @JSImport("office-ui-fabric-react", "DocumentCardLocation")
   @js.native
   object component extends js.Object
@@ -29,33 +30,43 @@ object DocumentCardLocation {
           tag.type, 
           typingsSlinky.officeUiFabricReact.documentCardLocationBaseMod.DocumentCardLocationBase
         ] {
+    
     @scala.inline
     def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def componentRefFunction1(value: /* ref */ IDocumentCardLocation | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def componentRefRefObject(value: ReactRef[IDocumentCardLocation]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def componentRef(value: IRefObject[IDocumentCardLocation]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def locationHref(value: String): this.type = set("locationHref", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onClick(value: /* ev */ js.UndefOr[SyntheticMouseEvent[HTMLElement]] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    
     @scala.inline
     def stylesFunction1(value: IDocumentCardLocationStyleProps => DeepPartial[IDocumentCardLocationStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IDocumentCardLocationStyleProps, IDocumentCardLocationStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IDocumentCardLocationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(location: String): Builder = {
     val __props = js.Dynamic.literal(location = location.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[IDocumentCardLocationProps]))
   }
 }
-

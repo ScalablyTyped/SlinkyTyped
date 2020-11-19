@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A chip is a simplified and condensed button component that be used to create
@@ -18,4 +18,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/chip/types/Chip", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[ChipProps with RefAttributes[HTMLButtonElement]]]
-

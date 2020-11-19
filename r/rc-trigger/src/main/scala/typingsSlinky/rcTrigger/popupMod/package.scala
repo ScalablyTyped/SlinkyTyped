@@ -2,9 +2,10 @@ package typingsSlinky.rcTrigger
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object popupMod {
+  
   /**
     * Popup should follow the steps for each component work correctly:
     * measure - check for the current stretch size

@@ -3,7 +3,7 @@ package typingsSlinky.strange.treeMod
 import typingsSlinky.strange.mod.Range
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create an interval tree node.
@@ -32,10 +32,10 @@ class ^[T /* <: js.Date | Double | String */] protected () extends RangeTree[T] 
   def this(ranges: Range[T], left: Null, right: RangeTree[T]) = this()
   def this(ranges: Range[T], left: RangeTree[T], right: RangeTree[T]) = this()
 }
-
 @JSImport("strange/tree", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Create an interval tree (implemented as an augmented binary search tree)
     * from an array of ranges.
@@ -51,4 +51,3 @@ object ^ extends js.Object {
     */
   def from[U /* <: js.Date | Double | String */](ranges: js.Array[Range[U]]): RangeTree[U] = js.native
 }
-

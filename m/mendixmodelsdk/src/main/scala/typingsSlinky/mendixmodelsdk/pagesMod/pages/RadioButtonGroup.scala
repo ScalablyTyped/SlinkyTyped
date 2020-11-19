@@ -11,7 +11,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/radio-buttons relevant section in reference guide}
@@ -27,24 +27,25 @@ class RadioButtonGroup protected () extends AttributeWidget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FRadioButtonGroup: IModel = js.native
+  
   def renderHorizontal: Boolean = js.native
   def renderHorizontal_=(newValue: Boolean): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.RadioButtonGroup")
 @js.native
 object RadioButtonGroup extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -54,6 +55,7 @@ object RadioButtonGroup extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: BuildingBlock): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -63,6 +65,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: BuildingBlock): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'footerWidget' property
@@ -72,6 +75,7 @@ object RadioButtonGroup extends js.Object {
     *  6.7.0 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'footerWidgets' property
@@ -81,6 +85,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: DataView): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -90,6 +95,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDataViewUnderWidget(container: DataView): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -99,6 +105,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: DataView): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -108,6 +115,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -117,6 +125,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: DivContainer): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -126,6 +135,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -135,6 +145,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: GroupBox): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'leftWidget' property
@@ -144,6 +155,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: Header): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'leftWidgets' property
@@ -153,6 +165,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: Header): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'rightWidget' property
@@ -162,6 +175,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: Header): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'rightWidgets' property
@@ -171,6 +185,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: Header): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -180,6 +195,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -189,6 +205,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: LayoutCallArgument): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -198,6 +215,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -207,6 +225,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: LayoutGridColumn): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -216,6 +235,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutUnderWidget(container: Layout): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -225,6 +245,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: Layout): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -234,6 +255,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -243,6 +265,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: ListViewTemplate): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -252,6 +275,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewUnderWidget(container: ListView): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -261,6 +285,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: ListView): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -270,6 +295,7 @@ object RadioButtonGroup extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: MasterDetailRegion): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -279,6 +305,7 @@ object RadioButtonGroup extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'sidebarWidgets' property
@@ -288,6 +315,7 @@ object RadioButtonGroup extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -297,6 +325,7 @@ object RadioButtonGroup extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: NativeLayoutContent): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'headerWidget' property
@@ -306,6 +335,7 @@ object RadioButtonGroup extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -315,6 +345,7 @@ object RadioButtonGroup extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -324,6 +355,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -333,6 +365,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: NavigationListItem): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'parameterWidget' property
@@ -342,6 +375,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'reportWidget' property
@@ -351,6 +385,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -360,6 +395,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -369,6 +405,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: ScrollContainerRegion): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -378,6 +415,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSnippetUnderWidget(container: Snippet): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -387,6 +425,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: Snippet): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'firstWidget' property
@@ -396,6 +435,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'firstWidgets' property
@@ -405,6 +445,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: SplitPane): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'secondWidget' property
@@ -414,6 +455,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'secondWidgets' property
@@ -423,6 +465,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: SplitPane): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -432,6 +475,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTabPageUnderWidget(container: TabPage): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -441,6 +485,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: TabPage): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -450,6 +495,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTableCellUnderWidget(container: TableCell): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -459,6 +505,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: TableCell): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widget' property
@@ -468,6 +515,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -477,6 +525,7 @@ object RadioButtonGroup extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: TemplateGridContents): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -486,6 +535,7 @@ object RadioButtonGroup extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -495,6 +545,7 @@ object RadioButtonGroup extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: WebLayoutContent): RadioButtonGroup = js.native
+  
   /**
     * Creates and returns a new RadioButtonGroup instance in the SDK and on the server.
     * The new RadioButtonGroup will be automatically stored in the 'widgets' property
@@ -504,5 +555,8 @@ object RadioButtonGroup extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): RadioButtonGroup = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

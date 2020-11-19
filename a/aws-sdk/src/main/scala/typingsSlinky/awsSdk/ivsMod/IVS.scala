@@ -6,12 +6,11 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IVS extends Service {
-  @JSName("config")
-  var config_IVS: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Performs GetChannel on multiple ARNs simultaneously.
     */
@@ -25,6 +24,7 @@ trait IVS extends Service {
     params: BatchGetChannelRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchGetChannelResponse, Unit]
   ): Request[BatchGetChannelResponse, AWSError] = js.native
+  
   /**
     * Performs GetStreamKey on multiple ARNs simultaneously.
     */
@@ -38,6 +38,10 @@ trait IVS extends Service {
     params: BatchGetStreamKeyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchGetStreamKeyResponse, Unit]
   ): Request[BatchGetStreamKeyResponse, AWSError] = js.native
+  
+  @JSName("config")
+  var config_IVS: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates a new channel and an associated stream key to start streaming.
     */
@@ -51,6 +55,7 @@ trait IVS extends Service {
     params: CreateChannelRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateChannelResponse, Unit]
   ): Request[CreateChannelResponse, AWSError] = js.native
+  
   /**
     * Creates a stream key, used to initiate a stream, for the specified channel ARN. Note that CreateChannel creates a stream key. If you subsequently use CreateStreamKey on the same channel, it will fail because a stream key already exists and there is a limit of 1 stream key per channel. To reset the stream key on a channel, use DeleteStreamKey and then CreateStreamKey.
     */
@@ -64,6 +69,7 @@ trait IVS extends Service {
     params: CreateStreamKeyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateStreamKeyResponse, Unit]
   ): Request[CreateStreamKeyResponse, AWSError] = js.native
+  
   /**
     * Deletes the specified channel and its associated stream keys.
     */
@@ -77,6 +83,7 @@ trait IVS extends Service {
     params: DeleteChannelRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Deletes the stream key for the specified ARN, so it can no longer be used to stream.
     */
@@ -90,6 +97,7 @@ trait IVS extends Service {
     params: DeleteStreamKeyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Gets the channel configuration for the specified channel ARN. See also BatchGetChannel.
     */
@@ -103,6 +111,7 @@ trait IVS extends Service {
     params: GetChannelRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetChannelResponse, Unit]
   ): Request[GetChannelResponse, AWSError] = js.native
+  
   /**
     * Gets information about the active (live) stream on a specified channel.
     */
@@ -116,6 +125,7 @@ trait IVS extends Service {
     params: GetStreamRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetStreamResponse, Unit]
   ): Request[GetStreamResponse, AWSError] = js.native
+  
   /**
     * Gets stream-key information for a specified ARN.
     */
@@ -129,6 +139,7 @@ trait IVS extends Service {
     params: GetStreamKeyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetStreamKeyResponse, Unit]
   ): Request[GetStreamKeyResponse, AWSError] = js.native
+  
   /**
     * Gets summary information about all channels in your account, in the AWS region where the API request is processed. This list can be filtered to match a specified string.
     */
@@ -142,6 +153,7 @@ trait IVS extends Service {
     params: ListChannelsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListChannelsResponse, Unit]
   ): Request[ListChannelsResponse, AWSError] = js.native
+  
   /**
     * Gets summary information about stream keys for the specified channel.
     */
@@ -155,6 +167,7 @@ trait IVS extends Service {
     params: ListStreamKeysRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListStreamKeysResponse, Unit]
   ): Request[ListStreamKeysResponse, AWSError] = js.native
+  
   /**
     * Gets summary information about live streams in your account, in the AWS region where the API request is processed.
     */
@@ -168,6 +181,7 @@ trait IVS extends Service {
     params: ListStreamsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListStreamsResponse, Unit]
   ): Request[ListStreamsResponse, AWSError] = js.native
+  
   /**
     * Gets information about AWS tags for the specified ARN.
     */
@@ -181,6 +195,7 @@ trait IVS extends Service {
     params: ListTagsForResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
   ): Request[ListTagsForResourceResponse, AWSError] = js.native
+  
   /**
     * Inserts metadata into an RTMPS stream for the specified channel. A maximum of 5 requests per second per channel is allowed, each with a maximum 1KB payload.
     */
@@ -191,6 +206,7 @@ trait IVS extends Service {
     */
   def putMetadata(params: PutMetadataRequest): Request[js.Object, AWSError] = js.native
   def putMetadata(params: PutMetadataRequest, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  
   /**
     * Disconnects the incoming RTMPS stream for the specified channel. Can be used in conjunction with DeleteStreamKey to prevent further streaming to a channel.  Many streaming client-software libraries automatically reconnect a dropped RTMPS session, so to stop the stream permanently, you may want to first revoke the streamKey attached to the channel. 
     */
@@ -204,6 +220,7 @@ trait IVS extends Service {
     params: StopStreamRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopStreamResponse, Unit]
   ): Request[StopStreamResponse, AWSError] = js.native
+  
   /**
     * Adds or updates tags for the AWS resource with the specified ARN.
     */
@@ -217,6 +234,7 @@ trait IVS extends Service {
     params: TagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]
   ): Request[TagResourceResponse, AWSError] = js.native
+  
   /**
     * Removes tags from the resource with the specified ARN.
     */
@@ -230,6 +248,7 @@ trait IVS extends Service {
     params: UntagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceResponse, Unit]
   ): Request[UntagResourceResponse, AWSError] = js.native
+  
   /**
     * Updates a channel's configuration. This does not affect an ongoing stream of this channel. You must stop and restart the stream for the changes to take effect.
     */
@@ -244,4 +263,3 @@ trait IVS extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateChannelResponse, Unit]
   ): Request[UpdateChannelResponse, AWSError] = js.native
 }
-

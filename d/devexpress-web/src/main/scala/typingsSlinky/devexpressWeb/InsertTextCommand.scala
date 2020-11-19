@@ -2,13 +2,14 @@ package typingsSlinky.devexpressWeb
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A command to insert text at the current position in the document.
   */
 @js.native
 trait InsertTextCommand extends CommandWithSimpleStateBase {
+  
   /**
     * Executes the InsertTextCommand command with the specified parameters. true if the command has been successfully executed; false if the command execution has failed.
     * @param text A string value specifying a text to insert.
@@ -21,4 +22,3 @@ trait InsertTextCommand extends CommandWithSimpleStateBase {
   def execute(text: String, interval: Interval): Boolean = js.native
   def execute(text: String, interval: Interval, subDocumentId: Double): Boolean = js.native
 }
-

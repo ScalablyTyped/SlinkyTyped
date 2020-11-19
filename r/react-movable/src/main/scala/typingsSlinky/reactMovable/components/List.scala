@@ -12,9 +12,10 @@ import typingsSlinky.reactMovable.typesMod.IProps
 import typingsSlinky.reactMovable.typesMod.IVoiceover
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object List {
+  
   @JSImport("react-movable", "List")
   @js.native
   object component extends js.Object
@@ -23,15 +24,19 @@ object List {
   class Builder[Value] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactMovable.mod.List[Value]] {
+    
     @scala.inline
     def beforeDrag(value: /* params */ Elements => Unit): this.type = set("beforeDrag", js.Any.fromFunction1(value))
+    
     @scala.inline
     def container(value: Element): this.type = set("container", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def containerNull: this.type = set("container", null)
   }
   
   def withProps[Value](p: IProps[Value]): Builder[Value] = new Builder[Value](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[Value](
     lockVertically: Boolean,
@@ -47,4 +52,3 @@ object List {
     new Builder[Value](js.Array(this.component, __props.asInstanceOf[IProps[Value]]))
   }
 }
-

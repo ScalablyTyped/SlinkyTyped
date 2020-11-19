@@ -3,7 +3,7 @@ package typingsSlinky.typescriptServices.mod
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "IndexSignatureSyntax")
 @js.native
@@ -17,16 +17,16 @@ class IndexSignatureSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSImport("typescript-services", "IndexSignatureSyntax")
 @js.native
 object IndexSignatureSyntax extends js.Object {
+  
   def create(
     openBracketToken: ISyntaxToken,
     parameter: typingsSlinky.typescriptServices.TypeScript.ParameterSyntax,
     closeBracketToken: ISyntaxToken
   ): typingsSlinky.typescriptServices.TypeScript.IndexSignatureSyntax = js.native
+  
   def create1(parameter: typingsSlinky.typescriptServices.TypeScript.ParameterSyntax): typingsSlinky.typescriptServices.TypeScript.IndexSignatureSyntax = js.native
 }
-

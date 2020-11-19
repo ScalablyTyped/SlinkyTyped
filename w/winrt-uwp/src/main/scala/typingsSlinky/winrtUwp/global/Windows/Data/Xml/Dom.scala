@@ -5,12 +5,13 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import typingsSlinky.winrtUwp.Windows.Storage.IStorageFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides support for the XML Document Object Model (DOM). */
 @JSGlobal("Windows.Data.Xml.Dom")
 @js.native
 object Dom extends js.Object {
+  
   /** Represents a parsed or unparsed entity in the XML document. */
   @js.native
   abstract class DtdEntity ()
@@ -20,6 +21,40 @@ object Dom extends js.Object {
   @js.native
   abstract class DtdNotation ()
     extends typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.DtdNotation
+  
+  /** The type of an IXmlNode, as returned by the NodeType property. */
+  @js.native
+  object NodeType extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType with Double] = js.native
+    
+    /* 2 */ val attributeNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.attributeNode with Double = js.native
+    
+    /* 8 */ val commentNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.commentNode with Double = js.native
+    
+    /* 4 */ val dataSectionNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.dataSectionNode with Double = js.native
+    
+    /* 11 */ val documentFragmentNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.documentFragmentNode with Double = js.native
+    
+    /* 9 */ val documentNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.documentNode with Double = js.native
+    
+    /* 10 */ val documentTypeNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.documentTypeNode with Double = js.native
+    
+    /* 1 */ val elementNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.elementNode with Double = js.native
+    
+    /* 6 */ val entityNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.entityNode with Double = js.native
+    
+    /* 5 */ val entityReferenceNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.entityReferenceNode with Double = js.native
+    
+    /* 0 */ val invalid: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.invalid with Double = js.native
+    
+    /* 12 */ val notationNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.notationNode with Double = js.native
+    
+    /* 7 */ val processingInstructionNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.processingInstructionNode with Double = js.native
+    
+    /* 3 */ val textNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.textNode with Double = js.native
+  }
   
   /** Represents an attribute of an XmlElement. Valid and default values for the attribute are defined in a document type definition (DTD) or schema. */
   @js.native
@@ -41,6 +76,38 @@ object Dom extends js.Object {
   /** Creates a new instance of the XmlDocument class. */
   class XmlDocument ()
     extends typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument
+  /* static members */
+  @js.native
+  object XmlDocument extends js.Object {
+    
+    /**
+      * Asynchronously loads an XML document from the specified file. The document is parsed using the default parser settings.
+      * @param file The file from which to load the document.
+      * @return The object that must be used to start the operation.
+      */
+    def loadFromFileAsync(file: IStorageFile): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument] = js.native
+    /**
+      * Asynchronously loads an XML document from the specified file. The document is parsed using the provided settings.
+      * @param file The file from which to load the document.
+      * @param loadSettings Settings for customizing parser behavior.
+      * @return The object that must be used to start the operation.
+      */
+    def loadFromFileAsync(file: IStorageFile, loadSettings: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlLoadSettings): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument] = js.native
+    
+    /**
+      * Asynchronously loads an XML document from the specified location. The document is parsed using the default parser settings.
+      * @param uri A URL that specifies the location of the XML file.
+      * @return The object that must be used to start the operation.
+      */
+    def loadFromUriAsync(uri: Uri): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument] = js.native
+    /**
+      * Asynchronously loads an XML document from the specified location. The document is parsed using the provided settings.
+      * @param uri A URL that specifies the location of the XML file.
+      * @param loadSettings Customizes parser behavior.
+      * @return An object that must be used to start the operation.
+      */
+    def loadFromUriAsync(uri: Uri, loadSettings: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlLoadSettings): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument] = js.native
+  }
   
   /** Represents a lightweight object that is useful for tree insertion operations. */
   @js.native
@@ -92,57 +159,4 @@ object Dom extends js.Object {
   @js.native
   abstract class XmlText ()
     extends typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlText
-  
-  /** The type of an IXmlNode, as returned by the NodeType property. */
-  @js.native
-  object NodeType extends js.Object {
-    /* 2 */ val attributeNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.attributeNode with Double = js.native
-    /* 8 */ val commentNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.commentNode with Double = js.native
-    /* 4 */ val dataSectionNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.dataSectionNode with Double = js.native
-    /* 11 */ val documentFragmentNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.documentFragmentNode with Double = js.native
-    /* 9 */ val documentNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.documentNode with Double = js.native
-    /* 10 */ val documentTypeNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.documentTypeNode with Double = js.native
-    /* 1 */ val elementNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.elementNode with Double = js.native
-    /* 6 */ val entityNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.entityNode with Double = js.native
-    /* 5 */ val entityReferenceNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.entityReferenceNode with Double = js.native
-    /* 0 */ val invalid: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.invalid with Double = js.native
-    /* 12 */ val notationNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.notationNode with Double = js.native
-    /* 7 */ val processingInstructionNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.processingInstructionNode with Double = js.native
-    /* 3 */ val textNode: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType.textNode with Double = js.native
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.NodeType with Double] = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object XmlDocument extends js.Object {
-    /**
-      * Asynchronously loads an XML document from the specified file. The document is parsed using the default parser settings.
-      * @param file The file from which to load the document.
-      * @return The object that must be used to start the operation.
-      */
-    def loadFromFileAsync(file: IStorageFile): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument] = js.native
-    /**
-      * Asynchronously loads an XML document from the specified file. The document is parsed using the provided settings.
-      * @param file The file from which to load the document.
-      * @param loadSettings Settings for customizing parser behavior.
-      * @return The object that must be used to start the operation.
-      */
-    def loadFromFileAsync(file: IStorageFile, loadSettings: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlLoadSettings): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument] = js.native
-    /**
-      * Asynchronously loads an XML document from the specified location. The document is parsed using the default parser settings.
-      * @param uri A URL that specifies the location of the XML file.
-      * @return The object that must be used to start the operation.
-      */
-    def loadFromUriAsync(uri: Uri): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument] = js.native
-    /**
-      * Asynchronously loads an XML document from the specified location. The document is parsed using the provided settings.
-      * @param uri A URL that specifies the location of the XML file.
-      * @param loadSettings Customizes parser behavior.
-      * @return An object that must be used to start the operation.
-      */
-    def loadFromUriAsync(uri: Uri, loadSettings: typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlLoadSettings): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument] = js.native
-  }
-  
 }
-

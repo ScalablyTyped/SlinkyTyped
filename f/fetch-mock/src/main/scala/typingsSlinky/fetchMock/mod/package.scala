@@ -2,9 +2,10 @@ package typingsSlinky.fetchMock
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /**
     * Inspection filter. Can be one of the following:
     * boolean:
@@ -26,12 +27,14 @@ package object mod {
     *   the calls arbitrarily.
     */
   type InspectionFilter = typingsSlinky.fetchMock.mod.MockMatcher | scala.Boolean
+  
   /**
     * Either an object compatible with the mocking api or a string specifying
     * a http method to filter by. This will be used to filter the list of
     * calls further.
     */
   type InspectionOptions = typingsSlinky.fetchMock.mod.MockOptions | java.lang.String
+  
   /**
     * Mock matcher. Can be one of following:
     * string: Either
@@ -46,6 +49,7 @@ package object mod {
     *  the Request instance)
     */
   type MockMatcher = java.lang.String | js.RegExp | typingsSlinky.fetchMock.mod.MockMatcherFunction
+  
   /**
     * Mock matcher function
     */
@@ -54,7 +58,9 @@ package object mod {
     /* opts */ typingsSlinky.fetchMock.mod.MockRequest, 
     scala.Boolean
   ]
+  
   type MockRequest = org.scalajs.dom.experimental.Request | org.scalajs.dom.experimental.RequestInit
+  
   /**
     * Response: A Response instance - will be used unaltered
     * number: Creates a response with this status
@@ -68,6 +74,7 @@ package object mod {
   type MockResponse = org.scalajs.dom.experimental.Response | (js.Promise[
     scala.Double | typingsSlinky.fetchMock.mod.MockResponseObject | js.Object | org.scalajs.dom.experimental.Response | java.lang.String
   ]) | scala.Double | java.lang.String | js.Object | typingsSlinky.fetchMock.mod.MockResponseObject
+  
   /**
     * Mock response function
     */

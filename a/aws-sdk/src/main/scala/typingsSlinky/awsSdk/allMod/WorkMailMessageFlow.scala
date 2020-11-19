@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.workmailmessageflowMod.ClientConfiguration
 import typingsSlinky.awsSdk.workmailmessageflowMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/clients/all", "WorkMailMessageFlow")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 class WorkMailMessageFlow () extends ^ {
   def this(options: ClientConfiguration) = this()
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Gizmos/planeRotationGizmo", JSImport.Namespace)
 @js.native
 object planeRotationGizmoMod extends js.Object {
+  
   @js.native
   class PlaneRotationGizmo protected () extends Gizmo {
     /**
@@ -28,8 +29,71 @@ object planeRotationGizmoMod extends js.Object {
       */
     def this(planeNormal: Vector3) = this()
     def this(planeNormal: Vector3, color: Color3) = this()
+    def this(planeNormal: Vector3, color: js.UndefOr[scala.Nothing], gizmoLayer: UtilityLayerRenderer) = this()
     def this(planeNormal: Vector3, color: Color3, gizmoLayer: UtilityLayerRenderer) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: Double
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: Double
+    ) = this()
+    def this(planeNormal: Vector3, color: Color3, gizmoLayer: js.UndefOr[scala.Nothing], tessellation: Double) = this()
     def this(planeNormal: Vector3, color: Color3, gizmoLayer: UtilityLayerRenderer, tessellation: Double) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: Nullable[RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: Double,
+      parent: Nullable[RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: Nullable[RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: Double,
+      parent: Nullable[RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: Nullable[RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: Double,
+      parent: Nullable[RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: Nullable[RotationGizmo]
+    ) = this()
     def this(
       planeNormal: Vector3,
       color: Color3,
@@ -39,34 +103,95 @@ object planeRotationGizmoMod extends js.Object {
     ) = this()
     def this(
       planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: js.UndefOr[Nullable[RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: Double,
+      parent: js.UndefOr[Nullable[RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: js.UndefOr[Nullable[RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: Double,
+      parent: js.UndefOr[Nullable[RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: js.UndefOr[Nullable[RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: Double,
+      parent: js.UndefOr[Nullable[RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: js.UndefOr[Nullable[RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
       color: Color3,
       gizmoLayer: UtilityLayerRenderer,
       tessellation: Double,
-      parent: Nullable[RotationGizmo],
+      parent: js.UndefOr[Nullable[RotationGizmo]],
       useEulerRotation: Boolean
     ) = this()
+    
     var _isEnabled: js.Any = js.native
+    
     var _parent: js.Any = js.native
+    
     var _pointerObserver: js.Any = js.native
+    
     /**
       * Drag behavior responsible for the gizmos dragging interactions
       */
     var dragBehavior: PointerDragBehavior = js.native
+    
+    def isEnabled: Boolean = js.native
+    /**
+      * If the gizmo is enabled
+      */
+    def isEnabled_=(value: Boolean): Unit = js.native
+    
     /**
       * Event that fires each time the gizmo snaps to a new location.
       * * snapDistance is the the change in distance
       */
     var onSnapObservable: Observable[SnapDistance] = js.native
+    
     /**
       * Rotation distance in radians that the gizmo will snap to (Default: 0)
       */
     var snapDistance: Double = js.native
-    def isEnabled: Boolean = js.native
-    /**
-      * If the gizmo is enabled
-      */
-    def isEnabled(value: Boolean): js.Any = js.native
   }
-  
 }
-

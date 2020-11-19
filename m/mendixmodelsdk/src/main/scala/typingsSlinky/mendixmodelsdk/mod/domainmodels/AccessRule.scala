@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.securityMod.security.AccessRuleContainerBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interfaces and instance classes for types from the Mendix sub meta model `DomainModels`.
@@ -29,30 +29,33 @@ class AccessRule protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "domainmodels.AccessRule")
 @js.native
 object AccessRule extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new AccessRule instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.AccessRule = js.native
+  
   /**
     * Creates and returns a new AccessRule instance in the SDK and on the server.
     * The new AccessRule will be automatically stored in the 'accessRules' property
     * of the parent security.AccessRuleContainerBase element passed as argument.
     */
   def createInAccessRuleContainerBaseUnderAccessRules(container: AccessRuleContainerBase): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.AccessRule = js.native
+  
   /**
     * Creates and returns a new AccessRule instance in the SDK and on the server.
     * The new AccessRule will be automatically stored in the 'accessRules' property
     * of the parent Entity element passed as argument.
     */
   def createInEntityUnderAccessRules(container: typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.Entity): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.AccessRule = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -10,9 +10,10 @@ import typingsSlinky.antd.tableInterfaceMod.TableLocale
 import typingsSlinky.antd.useFilterMod.FilterState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FilterDropdown {
+  
   @JSImport("antd/lib/table/hooks/useFilter/FilterDropdown", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -21,13 +22,16 @@ object FilterDropdown {
   class Builder[RecordType] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def filterState(value: FilterState[RecordType]): this.type = set("filterState", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def getPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
   }
   
   def withProps[RecordType](p: FilterDropdownProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[RecordType](
     column: ColumnType[RecordType],
@@ -42,4 +46,3 @@ object FilterDropdown {
     new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[FilterDropdownProps[RecordType]]))
   }
 }
-

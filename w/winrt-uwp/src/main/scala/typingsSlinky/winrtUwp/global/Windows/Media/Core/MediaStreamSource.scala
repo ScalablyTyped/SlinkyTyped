@@ -3,7 +3,7 @@ package typingsSlinky.winrtUwp.global.Windows.Media.Core
 import typingsSlinky.winrtUwp.Windows.Media.Core.IMediaStreamDescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a media source that delivers media samples directly to the media pipeline. */
 @JSGlobal("Windows.Media.Core.MediaStreamSource")
@@ -22,4 +22,3 @@ class MediaStreamSource protected ()
     */
   def this(descriptor: IMediaStreamDescriptor, descriptor2: IMediaStreamDescriptor) = this()
 }
-

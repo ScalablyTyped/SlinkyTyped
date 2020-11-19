@@ -6,13 +6,14 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("baseui/side-navigation", "NavItem")
 @js.native
 class NavItem ()
   extends Component[NavItemProps, js.Object, js.Any] {
+  
   def handleClick(event: SyntheticMouseEvent[Element]): Unit = js.native
+  
   def handleKeyDown(event: SyntheticKeyboardEvent[Element]): Unit = js.native
 }
-

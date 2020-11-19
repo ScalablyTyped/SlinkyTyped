@@ -6,59 +6,19 @@ import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/PostProcesses/index", "FxaaPostProcess")
 @js.native
 class FxaaPostProcess protected ()
   extends typingsSlinky.babylonjs.fxaaPostProcessMod.FxaaPostProcess {
-  def this(name: String, options: Double) = this()
-  def this(name: String, options: PostProcessOptions) = this()
-  def this(name: String, options: Double, camera: Nullable[Camera]) = this()
-  def this(name: String, options: PostProcessOptions, camera: Nullable[Camera]) = this()
-  def this(name: String, options: Double, camera: Nullable[Camera], samplingMode: Double) = this()
-  def this(name: String, options: PostProcessOptions, camera: Nullable[Camera], samplingMode: Double) = this()
-  def this(name: String, options: Double, camera: Nullable[Camera], samplingMode: Double, engine: Engine) = this()
   def this(
     name: String,
-    options: PostProcessOptions,
-    camera: Nullable[Camera],
-    samplingMode: Double,
-    engine: Engine
-  ) = this()
-  def this(
-    name: String,
-    options: Double,
-    camera: Nullable[Camera],
-    samplingMode: Double,
-    engine: Engine,
-    reusable: Boolean
-  ) = this()
-  def this(
-    name: String,
-    options: PostProcessOptions,
-    camera: Nullable[Camera],
-    samplingMode: Double,
-    engine: Engine,
-    reusable: Boolean
-  ) = this()
-  def this(
-    name: String,
-    options: Double,
-    camera: Nullable[Camera],
-    samplingMode: Double,
-    engine: Engine,
-    reusable: Boolean,
-    textureType: Double
-  ) = this()
-  def this(
-    name: String,
-    options: PostProcessOptions,
-    camera: Nullable[Camera],
-    samplingMode: Double,
-    engine: Engine,
-    reusable: Boolean,
-    textureType: Double
+    options: Double | PostProcessOptions,
+    camera: js.UndefOr[Nullable[Camera]],
+    samplingMode: js.UndefOr[Double],
+    engine: js.UndefOr[Engine],
+    reusable: js.UndefOr[Boolean],
+    textureType: js.UndefOr[Double]
   ) = this()
 }
-

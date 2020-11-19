@@ -2,16 +2,16 @@ package typingsSlinky.paper.global.paper
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("paper.Shape")
 @js.native
 class Shape ()
   extends typingsSlinky.paper.paper.Shape
-
 @JSGlobal("paper.Shape")
 @js.native
 object Shape extends js.Object {
+  
   @js.native
   class Circle protected ()
     extends typingsSlinky.paper.paper.Shape {
@@ -88,6 +88,4 @@ object Shape extends js.Object {
     def this(point: typingsSlinky.paper.paper.Point, size: typingsSlinky.paper.paper.Size) = this()
     def this(rectangle: typingsSlinky.paper.paper.Rectangle, radius: typingsSlinky.paper.paper.Size) = this()
   }
-  
 }
-

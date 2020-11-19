@@ -2,11 +2,12 @@ package typingsSlinky.babelTypes.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babel-types", "typeAlias")
 @js.native
 object typeAlias extends js.Object {
+  
   def apply(): TypeAlias_ = js.native
   def apply(
     id: js.UndefOr[scala.Nothing],
@@ -24,4 +25,3 @@ object typeAlias extends js.Object {
   def apply(id: Identifier_, typeParameters: TypeParameterDeclaration_): TypeAlias_ = js.native
   def apply(id: Identifier_, typeParameters: TypeParameterDeclaration_, right: FlowTypeAnnotation): TypeAlias_ = js.native
 }
-

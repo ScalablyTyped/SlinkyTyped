@@ -3,7 +3,7 @@ package typingsSlinky.domhandler.mod
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("domhandler/lib", "Element")
 @js.native
@@ -16,4 +16,3 @@ class Element protected ()
     */
   def this(name: String, attribs: StringDictionary[String]) = this()
 }
-

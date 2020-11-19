@@ -5,7 +5,7 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/Select", "Select")
 @js.native
@@ -14,8 +14,6 @@ class Select protected ()
   def this(props: SelectProps) = this()
   def this(props: SelectProps, context: js.Any) = this()
 }
-
 @JSImport("grommet/es6/components/Select", "Select")
 @js.native
 object Select extends TopLevel[ReactComponentClass[SelectProps]]
-

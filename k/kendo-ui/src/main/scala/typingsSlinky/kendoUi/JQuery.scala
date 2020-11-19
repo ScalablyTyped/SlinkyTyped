@@ -291,10 +291,11 @@ import typingsSlinky.kendoUi.kendoUiStrings.kendoValidator
 import typingsSlinky.kendoUi.kendoUiStrings.kendoWindow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
+  
   def data(key: js.Any): js.Any = js.native
   @JSName("data")
   def data_kendoAlert(key: kendoAlert): Alert = js.native
@@ -498,207 +499,307 @@ trait JQuery extends js.Object {
   def data_kendoValidator(key: kendoValidator): Validator = js.native
   @JSName("data")
   def data_kendoWindow(key: kendoWindow): Window = js.native
+  
   def kendoAlert(): JQuery = js.native
   def kendoAlert(options: AlertOptions): JQuery = js.native
+  
   def kendoArcGauge(): JQuery = js.native
   def kendoArcGauge(options: ArcGaugeOptions): JQuery = js.native
+  
   def kendoAutoComplete(): JQuery = js.native
   def kendoAutoComplete(options: AutoCompleteOptions): JQuery = js.native
+  
   def kendoBarcode(): JQuery = js.native
   def kendoBarcode(options: BarcodeOptions): JQuery = js.native
+  
   def kendoButton(): JQuery = js.native
   def kendoButton(options: ButtonOptions): JQuery = js.native
+  
   def kendoButtonGroup(): JQuery = js.native
   def kendoButtonGroup(options: ButtonGroupOptions): JQuery = js.native
+  
   def kendoCalendar(): JQuery = js.native
   def kendoCalendar(options: CalendarOptions): JQuery = js.native
+  
   def kendoChart(): JQuery = js.native
   def kendoChart(options: ChartOptions): JQuery = js.native
+  
   def kendoChat(): JQuery = js.native
   def kendoChat(options: ChatOptions): JQuery = js.native
+  
   def kendoColorPalette(): JQuery = js.native
   def kendoColorPalette(options: ColorPaletteOptions): JQuery = js.native
+  
   def kendoColorPicker(): JQuery = js.native
   def kendoColorPicker(options: ColorPickerOptions): JQuery = js.native
+  
   def kendoComboBox(): JQuery = js.native
   def kendoComboBox(options: ComboBoxOptions): JQuery = js.native
+  
   def kendoConfirm(): JQuery = js.native
   def kendoConfirm(options: ConfirmOptions): JQuery = js.native
+  
   def kendoContextMenu(): JQuery = js.native
   def kendoContextMenu(options: ContextMenuOptions): JQuery = js.native
+  
   def kendoDateInput(): JQuery = js.native
   def kendoDateInput(options: DateInputOptions): JQuery = js.native
+  
   def kendoDatePicker(): JQuery = js.native
   def kendoDatePicker(options: DatePickerOptions): JQuery = js.native
+  
   def kendoDateRangePicker(): JQuery = js.native
   def kendoDateRangePicker(options: DateRangePickerOptions): JQuery = js.native
+  
   def kendoDateTimePicker(): JQuery = js.native
   def kendoDateTimePicker(options: DateTimePickerOptions): JQuery = js.native
+  
   def kendoDiagram(): JQuery = js.native
   def kendoDiagram(options: DiagramOptions): JQuery = js.native
+  
   def kendoDialog(): JQuery = js.native
   def kendoDialog(options: DialogOptions): JQuery = js.native
+  
   def kendoDraggable(): JQuery = js.native
   def kendoDraggable(options: DraggableOptions): JQuery = js.native
+  
   def kendoDrawer(): JQuery = js.native
   def kendoDrawer(options: DrawerOptions): JQuery = js.native
+  
   def kendoDropDownList(): JQuery = js.native
   def kendoDropDownList(options: DropDownListOptions): JQuery = js.native
+  
   def kendoDropDownTree(): JQuery = js.native
   def kendoDropDownTree(options: DropDownTreeOptions): JQuery = js.native
+  
   def kendoDropTarget(): JQuery = js.native
   def kendoDropTarget(options: DropTargetOptions): JQuery = js.native
+  
   def kendoDropTargetArea(): JQuery = js.native
   def kendoDropTargetArea(options: DropTargetAreaOptions): JQuery = js.native
+  
   def kendoEditor(): JQuery = js.native
   def kendoEditor(options: EditorOptions): JQuery = js.native
+  
   def kendoFilter(): JQuery = js.native
   def kendoFilter(options: FilterOptions): JQuery = js.native
+  
   def kendoFilterMenu(): JQuery = js.native
   def kendoFilterMenu(options: FilterMenuOptions): JQuery = js.native
+  
   def kendoFlatColorPicker(): JQuery = js.native
   def kendoFlatColorPicker(options: FlatColorPickerOptions): JQuery = js.native
+  
   def kendoGantt(): JQuery = js.native
   def kendoGantt(options: GanttOptions): JQuery = js.native
+  
   def kendoGrid(): JQuery = js.native
   def kendoGrid(options: GridOptions): JQuery = js.native
+  
   def kendoLinearGauge(): JQuery = js.native
   def kendoLinearGauge(options: LinearGaugeOptions): JQuery = js.native
+  
   def kendoListBox(): JQuery = js.native
   def kendoListBox(options: ListBoxOptions): JQuery = js.native
+  
   def kendoListView(): JQuery = js.native
   def kendoListView(options: ListViewOptions): JQuery = js.native
+  
   def kendoMap(): JQuery = js.native
   def kendoMap(options: MapOptions): JQuery = js.native
+  
   def kendoMaskedTextBox(): JQuery = js.native
   def kendoMaskedTextBox(options: MaskedTextBoxOptions): JQuery = js.native
+  
   def kendoMediaPlayer(): JQuery = js.native
   def kendoMediaPlayer(options: MediaPlayerOptions): JQuery = js.native
+  
   def kendoMenu(): JQuery = js.native
   def kendoMenu(options: MenuOptions): JQuery = js.native
+  
   def kendoMobileActionSheet(): JQuery = js.native
   def kendoMobileActionSheet(options: ActionSheetOptions): JQuery = js.native
+  
   def kendoMobileBackButton(): JQuery = js.native
   def kendoMobileBackButton(options: BackButtonOptions): JQuery = js.native
+  
   def kendoMobileButton(): JQuery = js.native
   def kendoMobileButton(options: typingsSlinky.kendoUi.kendo.mobile.ui.ButtonOptions): JQuery = js.native
+  
   def kendoMobileButtonGroup(): JQuery = js.native
   def kendoMobileButtonGroup(options: typingsSlinky.kendoUi.kendo.mobile.ui.ButtonGroupOptions): JQuery = js.native
+  
   def kendoMobileCollapsible(): JQuery = js.native
   def kendoMobileCollapsible(options: CollapsibleOptions): JQuery = js.native
+  
   def kendoMobileDetailButton(): JQuery = js.native
   def kendoMobileDetailButton(options: DetailButtonOptions): JQuery = js.native
+  
   def kendoMobileDrawer(): JQuery = js.native
   def kendoMobileDrawer(options: typingsSlinky.kendoUi.kendo.mobile.ui.DrawerOptions): JQuery = js.native
+  
   def kendoMobileLayout(): JQuery = js.native
   def kendoMobileLayout(options: LayoutOptions): JQuery = js.native
+  
   def kendoMobileListView(): JQuery = js.native
   def kendoMobileListView(options: typingsSlinky.kendoUi.kendo.mobile.ui.ListViewOptions): JQuery = js.native
+  
   def kendoMobileLoader(): JQuery = js.native
   def kendoMobileLoader(options: LoaderOptions): JQuery = js.native
+  
   def kendoMobileModalView(): JQuery = js.native
   def kendoMobileModalView(options: ModalViewOptions): JQuery = js.native
+  
   def kendoMobileNavBar(): JQuery = js.native
   def kendoMobileNavBar(options: NavBarOptions): JQuery = js.native
+  
   def kendoMobilePane(): JQuery = js.native
   def kendoMobilePane(options: PaneOptions): JQuery = js.native
+  
   def kendoMobilePopOver(): JQuery = js.native
   def kendoMobilePopOver(options: PopOverOptions): JQuery = js.native
+  
   def kendoMobileScrollView(): JQuery = js.native
   def kendoMobileScrollView(options: ScrollViewOptions): JQuery = js.native
+  
   def kendoMobileScroller(): JQuery = js.native
   def kendoMobileScroller(options: ScrollerOptions): JQuery = js.native
+  
   def kendoMobileSplitView(): JQuery = js.native
   def kendoMobileSplitView(options: SplitViewOptions): JQuery = js.native
+  
   def kendoMobileSwitch(): JQuery = js.native
   def kendoMobileSwitch(options: SwitchOptions): JQuery = js.native
+  
   def kendoMobileTabStrip(): JQuery = js.native
   def kendoMobileTabStrip(options: TabStripOptions): JQuery = js.native
+  
   def kendoMobileView(): JQuery = js.native
   def kendoMobileView(options: ViewOptions): JQuery = js.native
+  
   def kendoMultiColumnComboBox(): JQuery = js.native
   def kendoMultiColumnComboBox(options: MultiColumnComboBoxOptions): JQuery = js.native
+  
   def kendoMultiSelect(): JQuery = js.native
   def kendoMultiSelect(options: MultiSelectOptions): JQuery = js.native
+  
   def kendoMultiViewCalendar(): JQuery = js.native
   def kendoMultiViewCalendar(options: MultiViewCalendarOptions): JQuery = js.native
+  
   def kendoNotification(): JQuery = js.native
   def kendoNotification(options: NotificationOptions): JQuery = js.native
+  
   def kendoNumericTextBox(): JQuery = js.native
   def kendoNumericTextBox(options: NumericTextBoxOptions): JQuery = js.native
+  
   def kendoPDFViewer(): JQuery = js.native
   def kendoPDFViewer(options: PDFViewerOptions): JQuery = js.native
+  
   def kendoPager(): JQuery = js.native
   def kendoPager(options: PagerOptions): JQuery = js.native
+  
   def kendoPanelBar(): JQuery = js.native
   def kendoPanelBar(options: PanelBarOptions): JQuery = js.native
+  
   def kendoPivotConfigurator(): JQuery = js.native
   def kendoPivotConfigurator(options: PivotConfiguratorOptions): JQuery = js.native
+  
   def kendoPivotGrid(): JQuery = js.native
   def kendoPivotGrid(options: PivotGridOptions): JQuery = js.native
+  
   def kendoPopup(): JQuery = js.native
   def kendoPopup(options: PopupOptions): JQuery = js.native
+  
   def kendoProgressBar(): JQuery = js.native
   def kendoProgressBar(options: ProgressBarOptions): JQuery = js.native
+  
   def kendoPrompt(): JQuery = js.native
   def kendoPrompt(options: PromptOptions): JQuery = js.native
+  
   def kendoQRCode(): JQuery = js.native
   def kendoQRCode(options: QRCodeOptions): JQuery = js.native
+  
   def kendoRadialGauge(): JQuery = js.native
   def kendoRadialGauge(options: RadialGaugeOptions): JQuery = js.native
+  
   def kendoRangeSlider(): JQuery = js.native
   def kendoRangeSlider(options: RangeSliderOptions): JQuery = js.native
+  
   def kendoRating(): JQuery = js.native
   def kendoRating(options: RatingOptions): JQuery = js.native
+  
   def kendoResponsivePanel(): JQuery = js.native
   def kendoResponsivePanel(options: ResponsivePanelOptions): JQuery = js.native
+  
   def kendoScheduler(): JQuery = js.native
   def kendoScheduler(options: SchedulerOptions): JQuery = js.native
+  
   def kendoScrollView(): JQuery = js.native
   def kendoScrollView(options: typingsSlinky.kendoUi.kendo.ui.ScrollViewOptions): JQuery = js.native
+  
   def kendoSlider(): JQuery = js.native
   def kendoSlider(options: SliderOptions): JQuery = js.native
+  
   def kendoSortable(): JQuery = js.native
   def kendoSortable(options: SortableOptions): JQuery = js.native
+  
   def kendoSparkline(): JQuery = js.native
   def kendoSparkline(options: SparklineOptions): JQuery = js.native
+  
   def kendoSplitter(): JQuery = js.native
   def kendoSplitter(options: SplitterOptions): JQuery = js.native
+  
   def kendoSpreadsheet(): JQuery = js.native
   def kendoSpreadsheet(options: SpreadsheetOptions): JQuery = js.native
+  
   def kendoStepper(): JQuery = js.native
   def kendoStepper(options: StepperOptions): JQuery = js.native
+  
   def kendoStockChart(): JQuery = js.native
   def kendoStockChart(options: StockChartOptions): JQuery = js.native
+  
   def kendoSwitch(): JQuery = js.native
   def kendoSwitch(options: typingsSlinky.kendoUi.kendo.ui.SwitchOptions): JQuery = js.native
+  
   def kendoTabStrip(): JQuery = js.native
   def kendoTabStrip(options: typingsSlinky.kendoUi.kendo.ui.TabStripOptions): JQuery = js.native
+  
   def kendoTextBox(): JQuery = js.native
   def kendoTextBox(options: TextBoxOptions): JQuery = js.native
+  
   def kendoTileLayout(): JQuery = js.native
   def kendoTileLayout(options: TileLayoutOptions): JQuery = js.native
+  
   def kendoTimePicker(): JQuery = js.native
   def kendoTimePicker(options: TimePickerOptions): JQuery = js.native
+  
   def kendoTimeline(): JQuery = js.native
   def kendoTimeline(options: TimelineOptions): JQuery = js.native
+  
   def kendoToolBar(): JQuery = js.native
   def kendoToolBar(options: ToolBarOptions): JQuery = js.native
+  
   def kendoTooltip(): JQuery = js.native
   def kendoTooltip(options: TooltipOptions): JQuery = js.native
+  
   def kendoTouch(): JQuery = js.native
   def kendoTouch(options: TouchOptions): JQuery = js.native
+  
   def kendoTreeList(): JQuery = js.native
   def kendoTreeList(options: TreeListOptions): JQuery = js.native
+  
   def kendoTreeMap(): JQuery = js.native
   def kendoTreeMap(options: TreeMapOptions): JQuery = js.native
+  
   def kendoTreeView(): JQuery = js.native
   def kendoTreeView(options: TreeViewOptions): JQuery = js.native
+  
   def kendoUpload(): JQuery = js.native
   def kendoUpload(options: UploadOptions): JQuery = js.native
+  
   def kendoValidator(): JQuery = js.native
   def kendoValidator(options: ValidatorOptions): JQuery = js.native
+  
   def kendoWindow(): JQuery = js.native
   def kendoWindow(options: WindowOptions): JQuery = js.native
 }
-

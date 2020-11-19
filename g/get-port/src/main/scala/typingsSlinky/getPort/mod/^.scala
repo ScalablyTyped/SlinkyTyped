@@ -2,11 +2,12 @@ package typingsSlinky.getPort.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("get-port", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   	Get an available TCP port number.
   	@returns Port number.
@@ -27,6 +28,7 @@ object ^ extends js.Object {
   	*/
   def apply(): js.Promise[Double] = js.native
   def apply(options: Options): js.Promise[Double] = js.native
+  
   /**
   	Make a range of ports `from`...`to`.
   	@param from - First port of the range. Must be in the range `1024`...`65535`.
@@ -43,4 +45,3 @@ object ^ extends js.Object {
   	*/
   def makeRange(from: Double, to: Double): js.Iterable[Double] = js.native
 }
-

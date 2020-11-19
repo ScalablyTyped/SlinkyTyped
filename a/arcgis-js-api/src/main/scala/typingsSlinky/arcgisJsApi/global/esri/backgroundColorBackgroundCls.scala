@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.backgroundColorBackgroundProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.backgroundColorBackground")
 @js.native
@@ -16,4 +16,3 @@ class backgroundColorBackgroundCls ()
   extends typingsSlinky.arcgisJsApi.esri.backgroundColorBackground {
   def this(properties: backgroundColorBackgroundProperties) = this()
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.pullStream
 import typingsSlinky.pullStream.mod.Sink
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pull-stream/sinks/reduce", JSImport.Namespace)
 @js.native
 object reduceMod extends js.Object {
+  
   /**
     * Reduce stream into single value, then callback.
     */
@@ -21,4 +22,3 @@ object reduceMod extends js.Object {
     cb: js.Function2[/* err */ js.Error | Null, /* result */ U, _]
   ): Sink[T] = js.native
 }
-

@@ -7,17 +7,12 @@ import typingsSlinky.loopback.mod.Model
 import typingsSlinky.loopback.mod.RemoteMethodOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofModel
   extends Instantiable1[/* data */ js.Any, Model] {
-  /** Data source to which the model is connected, if any. */
-  var dataSource: js.Any = js.native
-  /** The name of the model. */
-  var modelName: String = js.native
-  /** The `strong-remoting` */
-  var sharedMethod: js.Any = js.native
+  
   /**
     * Check if the given access token can invoke the specified method
     * @param {AccessToken} token The access token.
@@ -35,6 +30,10 @@ trait TypeofModel
     ctx: js.Any,
     callback: js.Function2[/* err */ String | js.Error, /* allowed */ Boolean, Unit]
   ): Unit = js.native
+  
+  /** Data source to which the model is connected, if any. */
+  var dataSource: js.Any = js.native
+  
   /**
     * Disable remote invocation for the method with the given name
     * @param {string} name The name of the method.
@@ -43,12 +42,14 @@ trait TypeofModel
     * `MyModel.prototype.myMethod`)
     */
   def disableRemoteMethod(name: String, isStatic: Boolean): Unit = js.native
+  
   /**
     * Disable remote invocation for the method with the given name.
     * @param {string} name The name of the method.
     * The name of the method (include "prototype." if the method is defined on the prototype).
     */
   def disableRemoteMethodByName(name: String): Unit = js.native
+  
   /**
     * Get the `Application` object to which the Model is attached
     * @callback {() => void} callback Callback function called with `(err, app)` arguments.
@@ -57,6 +58,10 @@ trait TypeofModel
     * @end
     */
   def getApp(callback: js.Function2[/* err */ js.Error, /* app */ Application, Unit]): Unit = js.native
+  
+  /** The name of the model. */
+  var modelName: String = js.native
+  
   /**
     * Enabled deeply-nested queries of related models via REST API
     * @param {string} relationName Name of the nested relation.
@@ -107,6 +112,7 @@ trait TypeofModel
     options: js.Object,
     filterCallback: js.Function2[/* SharedMethod */ js.Any, /* RelationDefinition */ js.Any, Unit]
   ): Unit = js.native
+  
   /**
     * Enable remote invocation for the specified method.
     * See [Remote methods](docs.strongloop.com/display/LB/Remote+methods) for more information
@@ -120,11 +126,14 @@ trait TypeofModel
     * See [Remote methods - Options](docs.strongloop.com/display/LB/Remote+methods#Remotemethods-Options)
     */
   def remoteMethod(name: String, options: RemoteMethodOptions): Unit = js.native
+  
   /**
     * The `loopback.Model.extend()` method calls this when you create a model that extends another model.
     * Add any setup or configuration code you want executed when the model is created.
     * See  [Setting up a custom model](docs.strongloop.com/display/LB/Extending+built-in+models#Extendingbuilt-inmodels-Settingupacustommodel)
     */
   def setup(): Unit = js.native
+  
+  /** The `strong-remoting` */
+  var sharedMethod: js.Any = js.native
 }
-

@@ -2,12 +2,11 @@ package typingsSlinky.select2.anon
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Require extends js.Object {
-  @JSName("require")
-  var require_Original: typingsSlinky.requirejs.Require = js.native
+  
   /**
     * CommonJS require call
     * @param module Module to load
@@ -31,5 +30,6 @@ trait Require extends js.Object {
     * @param ready Called when required modules are ready.
     **/
   def require(modules: js.Array[String], ready: js.Function, errback: js.Function): Unit = js.native
+  @JSName("require")
+  var require_Original: typingsSlinky.requirejs.Require = js.native
 }
-

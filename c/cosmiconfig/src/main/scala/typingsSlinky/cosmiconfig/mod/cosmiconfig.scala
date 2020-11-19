@@ -3,12 +3,12 @@ package typingsSlinky.cosmiconfig.mod
 import typingsSlinky.cosmiconfig.anon.ClearCaches
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cosmiconfig", "cosmiconfig")
 @js.native
 object cosmiconfig extends js.Object {
+  
   def apply(moduleName: String): ClearCaches = js.native
   def apply(moduleName: String, options: Options): ClearCaches = js.native
 }
-

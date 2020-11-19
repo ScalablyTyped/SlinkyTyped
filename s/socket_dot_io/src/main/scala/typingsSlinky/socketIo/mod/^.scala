@@ -3,7 +3,7 @@ package typingsSlinky.socketIo.mod
 import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("socket.io", JSImport.Namespace)
 @js.native
@@ -35,8 +35,6 @@ class ^ () extends Server {
   def this(srv: typingsSlinky.node.httpMod.Server, opts: ServerOptions) = this()
   def this(srv: typingsSlinky.node.httpsMod.Server, opts: ServerOptions) = this()
 }
-
 @JSImport("socket.io", JSImport.Namespace)
 @js.native
 object ^ extends TopLevel[SocketIOStatic]
-

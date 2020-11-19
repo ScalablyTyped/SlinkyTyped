@@ -10,9 +10,10 @@ import typingsSlinky.rmcPullToRefresh.rmcPullToRefreshStrings.down
 import typingsSlinky.rmcPullToRefresh.rmcPullToRefreshStrings.up
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PullToRefresh {
+  
   @JSImport("antd-mobile", "PullToRefresh")
   @js.native
   object component extends js.Object
@@ -21,21 +22,28 @@ object PullToRefresh {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.antdMobile.mod.PullToRefresh] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def damping(value: Double): this.type = set("damping", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def refreshing(value: Boolean): this.type = set("refreshing", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def scale(value: Double): this.type = set("scale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     direction: down | up,
@@ -48,4 +56,3 @@ object PullToRefresh {
     new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
   }
 }
-

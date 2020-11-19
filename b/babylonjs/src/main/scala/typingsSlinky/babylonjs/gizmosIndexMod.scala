@@ -10,11 +10,12 @@ import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Gizmos/index", JSImport.Namespace)
 @js.native
 object gizmosIndexMod extends js.Object {
+  
   @js.native
   class AxisDragGizmo protected ()
     extends typingsSlinky.babylonjs.axisDragGizmoMod.AxisDragGizmo {
@@ -26,13 +27,42 @@ object gizmosIndexMod extends js.Object {
       */
     def this(dragAxis: Vector3) = this()
     def this(dragAxis: Vector3, color: Color3) = this()
+    def this(dragAxis: Vector3, color: js.UndefOr[scala.Nothing], gizmoLayer: UtilityLayerRenderer) = this()
     def this(dragAxis: Vector3, color: Color3, gizmoLayer: UtilityLayerRenderer) = this()
+    def this(
+      dragAxis: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      parent: Nullable[typingsSlinky.babylonjs.positionGizmoMod.PositionGizmo]
+    ) = this()
+    def this(
+      dragAxis: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      parent: Nullable[typingsSlinky.babylonjs.positionGizmoMod.PositionGizmo]
+    ) = this()
+    def this(
+      dragAxis: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      parent: Nullable[typingsSlinky.babylonjs.positionGizmoMod.PositionGizmo]
+    ) = this()
     def this(
       dragAxis: Vector3,
       color: Color3,
       gizmoLayer: UtilityLayerRenderer,
       parent: Nullable[typingsSlinky.babylonjs.positionGizmoMod.PositionGizmo]
     ) = this()
+  }
+  /* static members */
+  @js.native
+  object AxisDragGizmo extends js.Object {
+    
+    /** @hidden */
+    def _CreateArrow(scene: Scene, material: StandardMaterial): TransformNode = js.native
+    
+    /** @hidden */
+    def _CreateArrowInstance(scene: Scene, arrow: TransformNode): TransformNode = js.native
   }
   
   @js.native
@@ -46,7 +76,26 @@ object gizmosIndexMod extends js.Object {
       */
     def this(dragAxis: Vector3) = this()
     def this(dragAxis: Vector3, color: Color3) = this()
+    def this(dragAxis: Vector3, color: js.UndefOr[scala.Nothing], gizmoLayer: UtilityLayerRenderer) = this()
     def this(dragAxis: Vector3, color: Color3, gizmoLayer: UtilityLayerRenderer) = this()
+    def this(
+      dragAxis: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      parent: Nullable[typingsSlinky.babylonjs.scaleGizmoMod.ScaleGizmo]
+    ) = this()
+    def this(
+      dragAxis: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      parent: Nullable[typingsSlinky.babylonjs.scaleGizmoMod.ScaleGizmo]
+    ) = this()
+    def this(
+      dragAxis: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      parent: Nullable[typingsSlinky.babylonjs.scaleGizmoMod.ScaleGizmo]
+    ) = this()
     def this(
       dragAxis: Vector3,
       color: Color3,
@@ -64,7 +113,19 @@ object gizmosIndexMod extends js.Object {
   class BoundingBoxGizmo ()
     extends typingsSlinky.babylonjs.boundingBoxGizmoMod.BoundingBoxGizmo {
     def this(color: Color3) = this()
+    def this(color: js.UndefOr[scala.Nothing], gizmoLayer: UtilityLayerRenderer) = this()
     def this(color: Color3, gizmoLayer: UtilityLayerRenderer) = this()
+  }
+  /* static members */
+  @js.native
+  object BoundingBoxGizmo extends js.Object {
+    
+    /**
+      * Makes a mesh not pickable and wraps the mesh inside of a bounding box mesh that is pickable. (This is useful to avoid picking within complex geometry)
+      * @param mesh the mesh to wrap in the bounding box mesh and make not pickable
+      * @returns the bounding box mesh with the passed in mesh as a child
+      */
+    def MakeNotPickableAndWrapInBoundingBox(mesh: Mesh): Mesh = js.native
   }
   
   @js.native
@@ -97,6 +158,25 @@ object gizmosIndexMod extends js.Object {
     extends typingsSlinky.babylonjs.lightGizmoMod.LightGizmo {
     def this(gizmoLayer: UtilityLayerRenderer) = this()
   }
+  /* static members */
+  @js.native
+  object LightGizmo extends js.Object {
+    
+    var _CreateDirectionalLightMesh: js.Any = js.native
+    
+    var _CreateHemisphericLightMesh: js.Any = js.native
+    
+    /**
+      * Creates the lines for a light mesh
+      */
+    var _CreateLightLines: js.Any = js.native
+    
+    var _CreatePointLightMesh: js.Any = js.native
+    
+    var _CreateSpotLightMesh: js.Any = js.native
+    
+    var _Scale: js.Any = js.native
+  }
   
   @js.native
   class PlaneDragGizmo protected ()
@@ -109,13 +189,42 @@ object gizmosIndexMod extends js.Object {
       */
     def this(dragPlaneNormal: Vector3) = this()
     def this(dragPlaneNormal: Vector3, color: Color3) = this()
+    def this(dragPlaneNormal: Vector3, color: js.UndefOr[scala.Nothing], gizmoLayer: UtilityLayerRenderer) = this()
     def this(dragPlaneNormal: Vector3, color: Color3, gizmoLayer: UtilityLayerRenderer) = this()
+    def this(
+      dragPlaneNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      parent: Nullable[typingsSlinky.babylonjs.positionGizmoMod.PositionGizmo]
+    ) = this()
+    def this(
+      dragPlaneNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      parent: Nullable[typingsSlinky.babylonjs.positionGizmoMod.PositionGizmo]
+    ) = this()
+    def this(
+      dragPlaneNormal: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      parent: Nullable[typingsSlinky.babylonjs.positionGizmoMod.PositionGizmo]
+    ) = this()
     def this(
       dragPlaneNormal: Vector3,
       color: Color3,
       gizmoLayer: UtilityLayerRenderer,
       parent: Nullable[typingsSlinky.babylonjs.positionGizmoMod.PositionGizmo]
     ) = this()
+  }
+  /* static members */
+  @js.native
+  object PlaneDragGizmo extends js.Object {
+    
+    /** @hidden */
+    def _CreateArrowInstance(scene: Scene, arrow: TransformNode): TransformNode = js.native
+    
+    /** @hidden */
+    def _CreatePlane(scene: Scene, material: StandardMaterial): TransformNode = js.native
   }
   
   @js.native
@@ -131,8 +240,71 @@ object gizmosIndexMod extends js.Object {
       */
     def this(planeNormal: Vector3) = this()
     def this(planeNormal: Vector3, color: Color3) = this()
+    def this(planeNormal: Vector3, color: js.UndefOr[scala.Nothing], gizmoLayer: UtilityLayerRenderer) = this()
     def this(planeNormal: Vector3, color: Color3, gizmoLayer: UtilityLayerRenderer) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: Double
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: Double
+    ) = this()
+    def this(planeNormal: Vector3, color: Color3, gizmoLayer: js.UndefOr[scala.Nothing], tessellation: Double) = this()
     def this(planeNormal: Vector3, color: Color3, gizmoLayer: UtilityLayerRenderer, tessellation: Double) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: Double,
+      parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: Double,
+      parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: Double,
+      parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+    ) = this()
     def this(
       planeNormal: Vector3,
       color: Color3,
@@ -142,10 +314,66 @@ object gizmosIndexMod extends js.Object {
     ) = this()
     def this(
       planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: Double,
+      parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: Double,
+      parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: Double,
+      parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
+      color: Color3,
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: js.UndefOr[scala.Nothing],
+      parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(
+      planeNormal: Vector3,
       color: Color3,
       gizmoLayer: UtilityLayerRenderer,
       tessellation: Double,
-      parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo],
+      parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
       useEulerRotation: Boolean
     ) = this()
   }
@@ -170,7 +398,19 @@ object gizmosIndexMod extends js.Object {
   class RotationGizmo ()
     extends typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo {
     def this(gizmoLayer: UtilityLayerRenderer) = this()
+    def this(gizmoLayer: js.UndefOr[scala.Nothing], tessellation: Double) = this()
     def this(gizmoLayer: UtilityLayerRenderer, tessellation: Double) = this()
+    def this(
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      tessellation: js.UndefOr[scala.Nothing],
+      useEulerRotation: Boolean
+    ) = this()
+    def this(gizmoLayer: js.UndefOr[scala.Nothing], tessellation: Double, useEulerRotation: Boolean) = this()
+    def this(
+      gizmoLayer: UtilityLayerRenderer,
+      tessellation: js.UndefOr[scala.Nothing],
+      useEulerRotation: Boolean
+    ) = this()
     def this(gizmoLayer: UtilityLayerRenderer, tessellation: Double, useEulerRotation: Boolean) = this()
   }
   
@@ -183,49 +423,4 @@ object gizmosIndexMod extends js.Object {
     extends typingsSlinky.babylonjs.scaleGizmoMod.ScaleGizmo {
     def this(gizmoLayer: UtilityLayerRenderer) = this()
   }
-  
-  /* static members */
-  @js.native
-  object AxisDragGizmo extends js.Object {
-    /** @hidden */
-    def _CreateArrow(scene: Scene, material: StandardMaterial): TransformNode = js.native
-    /** @hidden */
-    def _CreateArrowInstance(scene: Scene, arrow: TransformNode): TransformNode = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object BoundingBoxGizmo extends js.Object {
-    /**
-      * Makes a mesh not pickable and wraps the mesh inside of a bounding box mesh that is pickable. (This is useful to avoid picking within complex geometry)
-      * @param mesh the mesh to wrap in the bounding box mesh and make not pickable
-      * @returns the bounding box mesh with the passed in mesh as a child
-      */
-    def MakeNotPickableAndWrapInBoundingBox(mesh: Mesh): Mesh = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object LightGizmo extends js.Object {
-    var _CreateDirectionalLightMesh: js.Any = js.native
-    var _CreateHemisphericLightMesh: js.Any = js.native
-    /**
-      * Creates the lines for a light mesh
-      */
-    var _CreateLightLines: js.Any = js.native
-    var _CreatePointLightMesh: js.Any = js.native
-    var _CreateSpotLightMesh: js.Any = js.native
-    var _Scale: js.Any = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object PlaneDragGizmo extends js.Object {
-    /** @hidden */
-    def _CreateArrowInstance(scene: Scene, arrow: TransformNode): TransformNode = js.native
-    /** @hidden */
-    def _CreatePlane(scene: Scene, material: StandardMaterial): TransformNode = js.native
-  }
-  
 }
-

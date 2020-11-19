@@ -3,10 +3,11 @@ package typingsSlinky.ariClient.mod
 import typingsSlinky.ariClient.anon.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Events extends js.Object {
+  
   /**
     * WebSocket connection for events.
     *
@@ -23,6 +24,7 @@ trait Events extends js.Object {
     * subscriptions. Default is false.
     */
   def eventWebsocket(params: App, callback: js.Function2[/* err */ js.Error, /* message */ Message, Unit]): Unit = js.native
+  
   /**
     * Generate a user event.
     *
@@ -42,4 +44,3 @@ trait Events extends js.Object {
     */
   def userEvent(params: typingsSlinky.ariClient.anon.Application, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.applepayjs.ApplePayJS
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Payment pass activation states.
@@ -15,17 +15,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.applepayjs.applepayjsStrings.deactivated
 */
 trait ApplePayPaymentPassActivationState extends js.Object
-
 object ApplePayPaymentPassActivationState {
+  
   @scala.inline
   def activated: typingsSlinky.applepayjs.applepayjsStrings.activated = "activated".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.activated]
+  
   @scala.inline
   def activating: typingsSlinky.applepayjs.applepayjsStrings.activating = "activating".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.activating]
+  
   @scala.inline
   def deactivated: typingsSlinky.applepayjs.applepayjsStrings.deactivated = "deactivated".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.deactivated]
+  
   @scala.inline
   def requiresActivation: typingsSlinky.applepayjs.applepayjsStrings.requiresActivation = "requiresActivation".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.requiresActivation]
+  
   @scala.inline
   def suspended: typingsSlinky.applepayjs.applepayjsStrings.suspended = "suspended".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.suspended]
 }
-

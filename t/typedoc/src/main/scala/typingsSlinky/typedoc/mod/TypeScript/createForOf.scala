@@ -7,11 +7,12 @@ import typingsSlinky.typescript.mod.ForOfStatement
 import typingsSlinky.typescript.mod.Statement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createForOf")
 @js.native
 object createForOf extends js.Object {
+  
   def apply(
     awaitModifier: js.UndefOr[scala.Nothing],
     initializer: ForInitializer,
@@ -25,4 +26,3 @@ object createForOf extends js.Object {
     statement: Statement
   ): ForOfStatement = js.native
 }
-

@@ -6,9 +6,106 @@ import typingsSlinky.reactNavigationStack.vendorTypesMod.StackCardMode
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackHeaderMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object reactNavigationStackStrings {
+  
+  @scala.inline
+  def assertive: assertive = "assertive".asInstanceOf[assertive]
+  
+  @scala.inline
+  def auto: auto = "auto".asInstanceOf[auto]
+  
+  @scala.inline
+  def `box-none`: `box-none` = "box-none".asInstanceOf[`box-none`]
+  
+  @scala.inline
+  def `box-only`: `box-only` = "box-only".asInstanceOf[`box-only`]
+  
+  @scala.inline
+  def button: button = "button".asInstanceOf[button]
+  
+  @scala.inline
+  def card: card = "card".asInstanceOf[card]
+  
+  @scala.inline
+  def center: center = "center".asInstanceOf[center]
+  
+  @scala.inline
+  def didBlur: didBlur = "didBlur".asInstanceOf[didBlur]
+  
+  @scala.inline
+  def didFocus: didFocus = "didFocus".asInstanceOf[didFocus]
+  
+  @scala.inline
+  def float: float = "float".asInstanceOf[float]
+  
+  @scala.inline
+  def horizontal: horizontal = "horizontal".asInstanceOf[horizontal]
+  
+  @scala.inline
+  def `horizontal-inverted`: `horizontal-inverted` = "horizontal-inverted".asInstanceOf[`horizontal-inverted`]
+  
+  @scala.inline
+  def key: key = "key".asInstanceOf[key]
+  
+  @scala.inline
+  def left: left = "left".asInstanceOf[left]
+  
+  @scala.inline
+  def modal: modal = "modal".asInstanceOf[modal]
+  
+  @scala.inline
+  def no: no = "no".asInstanceOf[no]
+  
+  @scala.inline
+  def `no-hide-descendants`: `no-hide-descendants` = "no-hide-descendants".asInstanceOf[`no-hide-descendants`]
+  
+  @scala.inline
+  def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def polite: polite = "polite".asInstanceOf[polite]
+  
+  @scala.inline
+  def pop: pop = "pop".asInstanceOf[pop]
+  
+  @scala.inline
+  def push: push = "push".asInstanceOf[push]
+  
+  @scala.inline
+  def radiobutton_checked: radiobutton_checked = "radiobutton_checked".asInstanceOf[radiobutton_checked]
+  
+  @scala.inline
+  def radiobutton_unchecked: radiobutton_unchecked = "radiobutton_unchecked".asInstanceOf[radiobutton_unchecked]
+  
+  @scala.inline
+  def refocus: refocus = "refocus".asInstanceOf[refocus]
+  
+  @scala.inline
+  def screen: screen = "screen".asInstanceOf[screen]
+  
+  @scala.inline
+  def spring: spring = "spring".asInstanceOf[spring]
+  
+  @scala.inline
+  def timing: timing = "timing".asInstanceOf[timing]
+  
+  @scala.inline
+  def vertical: vertical = "vertical".asInstanceOf[vertical]
+  
+  @scala.inline
+  def `vertical-inverted`: `vertical-inverted` = "vertical-inverted".asInstanceOf[`vertical-inverted`]
+  
+  @scala.inline
+  def willBlur: willBlur = "willBlur".asInstanceOf[willBlur]
+  
+  @scala.inline
+  def willFocus: willFocus = "willFocus".asInstanceOf[willFocus]
+  
+  @scala.inline
+  def yes: yes = "yes".asInstanceOf[yes]
+  
   @js.native
   sealed trait assertive extends js.Object
   
@@ -104,70 +201,4 @@ object reactNavigationStackStrings {
   
   @js.native
   sealed trait yes extends js.Object
-  
-  @scala.inline
-  def assertive: assertive = "assertive".asInstanceOf[assertive]
-  @scala.inline
-  def auto: auto = "auto".asInstanceOf[auto]
-  @scala.inline
-  def `box-none`: `box-none` = "box-none".asInstanceOf[`box-none`]
-  @scala.inline
-  def `box-only`: `box-only` = "box-only".asInstanceOf[`box-only`]
-  @scala.inline
-  def button: button = "button".asInstanceOf[button]
-  @scala.inline
-  def card: card = "card".asInstanceOf[card]
-  @scala.inline
-  def center: center = "center".asInstanceOf[center]
-  @scala.inline
-  def didBlur: didBlur = "didBlur".asInstanceOf[didBlur]
-  @scala.inline
-  def didFocus: didFocus = "didFocus".asInstanceOf[didFocus]
-  @scala.inline
-  def float: float = "float".asInstanceOf[float]
-  @scala.inline
-  def horizontal: horizontal = "horizontal".asInstanceOf[horizontal]
-  @scala.inline
-  def `horizontal-inverted`: `horizontal-inverted` = "horizontal-inverted".asInstanceOf[`horizontal-inverted`]
-  @scala.inline
-  def key: key = "key".asInstanceOf[key]
-  @scala.inline
-  def left: left = "left".asInstanceOf[left]
-  @scala.inline
-  def modal: modal = "modal".asInstanceOf[modal]
-  @scala.inline
-  def no: no = "no".asInstanceOf[no]
-  @scala.inline
-  def `no-hide-descendants`: `no-hide-descendants` = "no-hide-descendants".asInstanceOf[`no-hide-descendants`]
-  @scala.inline
-  def none: none = "none".asInstanceOf[none]
-  @scala.inline
-  def polite: polite = "polite".asInstanceOf[polite]
-  @scala.inline
-  def pop: pop = "pop".asInstanceOf[pop]
-  @scala.inline
-  def push: push = "push".asInstanceOf[push]
-  @scala.inline
-  def radiobutton_checked: radiobutton_checked = "radiobutton_checked".asInstanceOf[radiobutton_checked]
-  @scala.inline
-  def radiobutton_unchecked: radiobutton_unchecked = "radiobutton_unchecked".asInstanceOf[radiobutton_unchecked]
-  @scala.inline
-  def refocus: refocus = "refocus".asInstanceOf[refocus]
-  @scala.inline
-  def screen: screen = "screen".asInstanceOf[screen]
-  @scala.inline
-  def spring: spring = "spring".asInstanceOf[spring]
-  @scala.inline
-  def timing: timing = "timing".asInstanceOf[timing]
-  @scala.inline
-  def vertical: vertical = "vertical".asInstanceOf[vertical]
-  @scala.inline
-  def `vertical-inverted`: `vertical-inverted` = "vertical-inverted".asInstanceOf[`vertical-inverted`]
-  @scala.inline
-  def willBlur: willBlur = "willBlur".asInstanceOf[willBlur]
-  @scala.inline
-  def willFocus: willFocus = "willFocus".asInstanceOf[willFocus]
-  @scala.inline
-  def yes: yes = "yes".asInstanceOf[yes]
 }
-

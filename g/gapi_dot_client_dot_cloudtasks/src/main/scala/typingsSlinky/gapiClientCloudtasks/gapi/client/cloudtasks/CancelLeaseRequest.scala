@@ -2,10 +2,11 @@ package typingsSlinky.gapiClientCloudtasks.gapi.client.cloudtasks
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CancelLeaseRequest extends js.Object {
+  
   /**
     * The response_view specifies which subset of the Task will be
     * returned.
@@ -21,6 +22,7 @@ trait CancelLeaseRequest extends js.Object {
     * Task.name resource.
     */
   var responseView: js.UndefOr[String] = js.native
+  
   /**
     * Required.
     *
@@ -31,33 +33,39 @@ trait CancelLeaseRequest extends js.Object {
     */
   var scheduleTime: js.UndefOr[String] = js.native
 }
-
 object CancelLeaseRequest {
+  
   @scala.inline
   def apply(): CancelLeaseRequest = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CancelLeaseRequest]
   }
+  
   @scala.inline
   implicit class CancelLeaseRequestOps[Self <: CancelLeaseRequest] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setResponseView(value: String): Self = this.set("responseView", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteResponseView: Self = this.set("responseView", js.undefined)
+    
     @scala.inline
     def setScheduleTime(value: String): Self = this.set("scheduleTime", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteScheduleTime: Self = this.set("scheduleTime", js.undefined)
   }
-  
 }
-

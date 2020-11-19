@@ -2,7 +2,7 @@ package typingsSlinky.rx.rxBindingMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rx.binding", "Subject")
 @js.native
@@ -11,4 +11,3 @@ import scala.scalajs.js.annotation._
   */
 class SubjectCls[T] ()
   extends typingsSlinky.rx.Rx.Subject[T]
-

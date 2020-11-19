@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.SceneLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.SceneLayer")
 @js.native
@@ -16,4 +16,3 @@ class SceneLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.SceneLayer {
   def this(properties: SceneLayerProperties) = this()
 }
-

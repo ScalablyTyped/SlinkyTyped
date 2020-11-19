@@ -3,16 +3,15 @@ package typingsSlinky.minappEnv.ICloud
 import typingsSlinky.minappEnv.IAPIParam
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ICloudAPIParam[T] extends IAPIParam[T]
-
 object ICloudAPIParam {
+  
   @scala.inline
   def apply[T](): ICloudAPIParam[T] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ICloudAPIParam[T]]
   }
 }
-

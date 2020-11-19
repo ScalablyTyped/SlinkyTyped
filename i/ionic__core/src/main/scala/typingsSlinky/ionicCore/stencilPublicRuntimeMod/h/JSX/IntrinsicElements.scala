@@ -115,15 +115,15 @@ import typingsSlinky.std.HTMLTableHeaderCellElement
 import typingsSlinky.std.HTMLTimeElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IntrinsicElements
   extends typingsSlinky.ionicCore.stencilPublicRuntimeMod.LocalJSX.IntrinsicElements
      with typingsSlinky.ionicCore.stencilPublicRuntimeMod.JSXBase.IntrinsicElements
      with /* tagName */ StringDictionary[js.Any]
-
 object IntrinsicElements {
+  
   @scala.inline
   def apply(
     a: AnchorHTMLAttributes[HTMLAnchorElement],
@@ -302,4 +302,3 @@ object IntrinsicElements {
     __obj.asInstanceOf[IntrinsicElements]
   }
 }
-

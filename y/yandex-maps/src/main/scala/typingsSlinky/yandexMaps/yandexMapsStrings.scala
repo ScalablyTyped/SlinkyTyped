@@ -7,9 +7,223 @@ import typingsSlinky.yandexMaps.mod._InteractivityModelKey
 import typingsSlinky.yandexMaps.mod._OverlayKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object yandexMapsStrings {
+  
+  @scala.inline
+  def always: always = "always".asInstanceOf[always]
+  
+  @scala.inline
+  def auto: auto = "auto".asInstanceOf[auto]
+  
+  @scala.inline
+  def clusterNumbersignballoonAccordion: clusterNumbersignballoonAccordion = "cluster#balloonAccordion".asInstanceOf[clusterNumbersignballoonAccordion]
+  
+  @scala.inline
+  def clusterNumbersignballoonCarousel: clusterNumbersignballoonCarousel = "cluster#balloonCarousel".asInstanceOf[clusterNumbersignballoonCarousel]
+  
+  @scala.inline
+  def clusterNumbersignballoonTwoColumns: clusterNumbersignballoonTwoColumns = "cluster#balloonTwoColumns".asInstanceOf[clusterNumbersignballoonTwoColumns]
+  
+  @scala.inline
+  def default: default = "default".asInstanceOf[default]
+  
+  @scala.inline
+  def defaultNumbersigncircle: defaultNumbersigncircle = "default#circle".asInstanceOf[defaultNumbersigncircle]
+  
+  @scala.inline
+  def defaultNumbersigngeoObject: defaultNumbersigngeoObject = "default#geoObject".asInstanceOf[defaultNumbersigngeoObject]
+  
+  @scala.inline
+  def defaultNumbersignlayer: defaultNumbersignlayer = "default#layer".asInstanceOf[defaultNumbersignlayer]
+  
+  @scala.inline
+  def defaultNumbersignopaque: defaultNumbersignopaque = "default#opaque".asInstanceOf[defaultNumbersignopaque]
+  
+  @scala.inline
+  def defaultNumbersignpin: defaultNumbersignpin = "default#pin".asInstanceOf[defaultNumbersignpin]
+  
+  @scala.inline
+  def defaultNumbersignplacemark: defaultNumbersignplacemark = "default#placemark".asInstanceOf[defaultNumbersignplacemark]
+  
+  @scala.inline
+  def defaultNumbersignpolygon: defaultNumbersignpolygon = "default#polygon".asInstanceOf[defaultNumbersignpolygon]
+  
+  @scala.inline
+  def defaultNumbersignpolyline: defaultNumbersignpolyline = "default#polyline".asInstanceOf[defaultNumbersignpolyline]
+  
+  @scala.inline
+  def defaultNumbersignrectangle: defaultNumbersignrectangle = "default#rectangle".asInstanceOf[defaultNumbersignrectangle]
+  
+  @scala.inline
+  def defaultNumbersignsilent: defaultNumbersignsilent = "default#silent".asInstanceOf[defaultNumbersignsilent]
+  
+  @scala.inline
+  def defaultNumbersigntransparent: defaultNumbersigntransparent = "default#transparent".asInstanceOf[defaultNumbersigntransparent]
+  
+  @scala.inline
+  def district: district = "district".asInstanceOf[district]
+  
+  @scala.inline
+  def evenOdd: evenOdd = "evenOdd".asInstanceOf[evenOdd]
+  
+  @scala.inline
+  def fullscreenControl: fullscreenControl = "fullscreenControl".asInstanceOf[fullscreenControl]
+  
+  @scala.inline
+  def geolocationControl: geolocationControl = "geolocationControl".asInstanceOf[geolocationControl]
+  
+  @scala.inline
+  def hidden: hidden = "hidden".asInstanceOf[hidden]
+  
+  @scala.inline
+  def hotspotNumbersigncircle: hotspotNumbersigncircle = "hotspot#circle".asInstanceOf[hotspotNumbersigncircle]
+  
+  @scala.inline
+  def hotspotNumbersignplacemark: hotspotNumbersignplacemark = "hotspot#placemark".asInstanceOf[hotspotNumbersignplacemark]
+  
+  @scala.inline
+  def hotspotNumbersignpolygon: hotspotNumbersignpolygon = "hotspot#polygon".asInstanceOf[hotspotNumbersignpolygon]
+  
+  @scala.inline
+  def hotspotNumbersignpolyline: hotspotNumbersignpolyline = "hotspot#polyline".asInstanceOf[hotspotNumbersignpolyline]
+  
+  @scala.inline
+  def hotspotNumbersignrectangle: hotspotNumbersignrectangle = "hotspot#rectangle".asInstanceOf[hotspotNumbersignrectangle]
+  
+  @scala.inline
+  def house: house = "house".asInstanceOf[house]
+  
+  @scala.inline
+  def htmlNumbersignballoon: htmlNumbersignballoon = "html#balloon".asInstanceOf[htmlNumbersignballoon]
+  
+  @scala.inline
+  def htmlNumbersignhint: htmlNumbersignhint = "html#hint".asInstanceOf[htmlNumbersignhint]
+  
+  @scala.inline
+  def htmlNumbersignplacemark: htmlNumbersignplacemark = "html#placemark".asInstanceOf[htmlNumbersignplacemark]
+  
+  @scala.inline
+  def htmlNumbersignrectangle: htmlNumbersignrectangle = "html#rectangle".asInstanceOf[htmlNumbersignrectangle]
+  
+  @scala.inline
+  def ifNull: ifNull = "ifNull".asInstanceOf[ifNull]
+  
+  @scala.inline
+  def jumpy: jumpy = "jumpy".asInstanceOf[jumpy]
+  
+  @scala.inline
+  def large: large = "large".asInstanceOf[large]
+  
+  @scala.inline
+  def largeMapDefaultSet: largeMapDefaultSet = "largeMapDefaultSet".asInstanceOf[largeMapDefaultSet]
+  
+  @scala.inline
+  def latlong: latlong = "latlong".asInstanceOf[latlong]
+  
+  @scala.inline
+  def left: left = "left".asInstanceOf[left]
+  
+  @scala.inline
+  def locality: locality = "locality".asInstanceOf[locality]
+  
+  @scala.inline
+  def longlat: longlat = "longlat".asInstanceOf[longlat]
+  
+  @scala.inline
+  def masstransit: masstransit = "masstransit".asInstanceOf[masstransit]
+  
+  @scala.inline
+  def medium: medium = "medium".asInstanceOf[medium]
+  
+  @scala.inline
+  def mediumMapDefaultSet: mediumMapDefaultSet = "mediumMapDefaultSet".asInstanceOf[mediumMapDefaultSet]
+  
+  @scala.inline
+  def metro: metro = "metro".asInstanceOf[metro]
+  
+  @scala.inline
+  def nonZero: nonZero = "nonZero".asInstanceOf[nonZero]
+  
+  @scala.inline
+  def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def pedestrian: pedestrian = "pedestrian".asInstanceOf[pedestrian]
+  
+  @scala.inline
+  def right: right = "right".asInstanceOf[right]
+  
+  @scala.inline
+  def routeEditor: routeEditor = "routeEditor".asInstanceOf[routeEditor]
+  
+  @scala.inline
+  def rulerControl: rulerControl = "rulerControl".asInstanceOf[rulerControl]
+  
+  @scala.inline
+  def searchControl: searchControl = "searchControl".asInstanceOf[searchControl]
+  
+  @scala.inline
+  def selectable: selectable = "selectable".asInstanceOf[selectable]
+  
+  @scala.inline
+  def separator: separator = "separator".asInstanceOf[separator]
+  
+  @scala.inline
+  def shortestPath: shortestPath = "shortestPath".asInstanceOf[shortestPath]
+  
+  @scala.inline
+  def small: small = "small".asInstanceOf[small]
+  
+  @scala.inline
+  def smallMapDefaultSet: smallMapDefaultSet = "smallMapDefaultSet".asInstanceOf[smallMapDefaultSet]
+  
+  @scala.inline
+  def static: static = "static".asInstanceOf[static]
+  
+  @scala.inline
+  def straightPath: straightPath = "straightPath".asInstanceOf[straightPath]
+  
+  @scala.inline
+  def street: street = "street".asInstanceOf[street]
+  
+  @scala.inline
+  def stretch: stretch = "stretch".asInstanceOf[stretch]
+  
+  @scala.inline
+  def tile: tile = "tile".asInstanceOf[tile]
+  
+  @scala.inline
+  def trafficControl: trafficControl = "trafficControl".asInstanceOf[trafficControl]
+  
+  @scala.inline
+  def typeSelector: typeSelector = "typeSelector".asInstanceOf[typeSelector]
+  
+  @scala.inline
+  def visible: visible = "visible".asInstanceOf[visible]
+  
+  @scala.inline
+  def yandexNumbersignairPanorama: yandexNumbersignairPanorama = "yandex#airPanorama".asInstanceOf[yandexNumbersignairPanorama]
+  
+  @scala.inline
+  def yandexNumbersignhybrid: yandexNumbersignhybrid = "yandex#hybrid".asInstanceOf[yandexNumbersignhybrid]
+  
+  @scala.inline
+  def yandexNumbersignmap: yandexNumbersignmap = "yandex#map".asInstanceOf[yandexNumbersignmap]
+  
+  @scala.inline
+  def yandexNumbersignpanorama: yandexNumbersignpanorama = "yandex#panorama".asInstanceOf[yandexNumbersignpanorama]
+  
+  @scala.inline
+  def yandexNumbersignsatellite: yandexNumbersignsatellite = "yandex#satellite".asInstanceOf[yandexNumbersignsatellite]
+  
+  @scala.inline
+  def yandexNumbersignsearch: yandexNumbersignsearch = "yandex#search".asInstanceOf[yandexNumbersignsearch]
+  
+  @scala.inline
+  def zoomControl: zoomControl = "zoomControl".asInstanceOf[zoomControl]
+  
   @js.native
   sealed trait always extends js.Object
   
@@ -246,148 +460,4 @@ object yandexMapsStrings {
   sealed trait zoomControl
     extends ControlKey
        with ControlSingleKey
-  
-  @scala.inline
-  def always: always = "always".asInstanceOf[always]
-  @scala.inline
-  def auto: auto = "auto".asInstanceOf[auto]
-  @scala.inline
-  def clusterNumbersignballoonAccordion: clusterNumbersignballoonAccordion = "cluster#balloonAccordion".asInstanceOf[clusterNumbersignballoonAccordion]
-  @scala.inline
-  def clusterNumbersignballoonCarousel: clusterNumbersignballoonCarousel = "cluster#balloonCarousel".asInstanceOf[clusterNumbersignballoonCarousel]
-  @scala.inline
-  def clusterNumbersignballoonTwoColumns: clusterNumbersignballoonTwoColumns = "cluster#balloonTwoColumns".asInstanceOf[clusterNumbersignballoonTwoColumns]
-  @scala.inline
-  def default: default = "default".asInstanceOf[default]
-  @scala.inline
-  def defaultNumbersigncircle: defaultNumbersigncircle = "default#circle".asInstanceOf[defaultNumbersigncircle]
-  @scala.inline
-  def defaultNumbersigngeoObject: defaultNumbersigngeoObject = "default#geoObject".asInstanceOf[defaultNumbersigngeoObject]
-  @scala.inline
-  def defaultNumbersignlayer: defaultNumbersignlayer = "default#layer".asInstanceOf[defaultNumbersignlayer]
-  @scala.inline
-  def defaultNumbersignopaque: defaultNumbersignopaque = "default#opaque".asInstanceOf[defaultNumbersignopaque]
-  @scala.inline
-  def defaultNumbersignpin: defaultNumbersignpin = "default#pin".asInstanceOf[defaultNumbersignpin]
-  @scala.inline
-  def defaultNumbersignplacemark: defaultNumbersignplacemark = "default#placemark".asInstanceOf[defaultNumbersignplacemark]
-  @scala.inline
-  def defaultNumbersignpolygon: defaultNumbersignpolygon = "default#polygon".asInstanceOf[defaultNumbersignpolygon]
-  @scala.inline
-  def defaultNumbersignpolyline: defaultNumbersignpolyline = "default#polyline".asInstanceOf[defaultNumbersignpolyline]
-  @scala.inline
-  def defaultNumbersignrectangle: defaultNumbersignrectangle = "default#rectangle".asInstanceOf[defaultNumbersignrectangle]
-  @scala.inline
-  def defaultNumbersignsilent: defaultNumbersignsilent = "default#silent".asInstanceOf[defaultNumbersignsilent]
-  @scala.inline
-  def defaultNumbersigntransparent: defaultNumbersigntransparent = "default#transparent".asInstanceOf[defaultNumbersigntransparent]
-  @scala.inline
-  def district: district = "district".asInstanceOf[district]
-  @scala.inline
-  def evenOdd: evenOdd = "evenOdd".asInstanceOf[evenOdd]
-  @scala.inline
-  def fullscreenControl: fullscreenControl = "fullscreenControl".asInstanceOf[fullscreenControl]
-  @scala.inline
-  def geolocationControl: geolocationControl = "geolocationControl".asInstanceOf[geolocationControl]
-  @scala.inline
-  def hidden: hidden = "hidden".asInstanceOf[hidden]
-  @scala.inline
-  def hotspotNumbersigncircle: hotspotNumbersigncircle = "hotspot#circle".asInstanceOf[hotspotNumbersigncircle]
-  @scala.inline
-  def hotspotNumbersignplacemark: hotspotNumbersignplacemark = "hotspot#placemark".asInstanceOf[hotspotNumbersignplacemark]
-  @scala.inline
-  def hotspotNumbersignpolygon: hotspotNumbersignpolygon = "hotspot#polygon".asInstanceOf[hotspotNumbersignpolygon]
-  @scala.inline
-  def hotspotNumbersignpolyline: hotspotNumbersignpolyline = "hotspot#polyline".asInstanceOf[hotspotNumbersignpolyline]
-  @scala.inline
-  def hotspotNumbersignrectangle: hotspotNumbersignrectangle = "hotspot#rectangle".asInstanceOf[hotspotNumbersignrectangle]
-  @scala.inline
-  def house: house = "house".asInstanceOf[house]
-  @scala.inline
-  def htmlNumbersignballoon: htmlNumbersignballoon = "html#balloon".asInstanceOf[htmlNumbersignballoon]
-  @scala.inline
-  def htmlNumbersignhint: htmlNumbersignhint = "html#hint".asInstanceOf[htmlNumbersignhint]
-  @scala.inline
-  def htmlNumbersignplacemark: htmlNumbersignplacemark = "html#placemark".asInstanceOf[htmlNumbersignplacemark]
-  @scala.inline
-  def htmlNumbersignrectangle: htmlNumbersignrectangle = "html#rectangle".asInstanceOf[htmlNumbersignrectangle]
-  @scala.inline
-  def ifNull: ifNull = "ifNull".asInstanceOf[ifNull]
-  @scala.inline
-  def jumpy: jumpy = "jumpy".asInstanceOf[jumpy]
-  @scala.inline
-  def large: large = "large".asInstanceOf[large]
-  @scala.inline
-  def largeMapDefaultSet: largeMapDefaultSet = "largeMapDefaultSet".asInstanceOf[largeMapDefaultSet]
-  @scala.inline
-  def latlong: latlong = "latlong".asInstanceOf[latlong]
-  @scala.inline
-  def left: left = "left".asInstanceOf[left]
-  @scala.inline
-  def locality: locality = "locality".asInstanceOf[locality]
-  @scala.inline
-  def longlat: longlat = "longlat".asInstanceOf[longlat]
-  @scala.inline
-  def masstransit: masstransit = "masstransit".asInstanceOf[masstransit]
-  @scala.inline
-  def medium: medium = "medium".asInstanceOf[medium]
-  @scala.inline
-  def mediumMapDefaultSet: mediumMapDefaultSet = "mediumMapDefaultSet".asInstanceOf[mediumMapDefaultSet]
-  @scala.inline
-  def metro: metro = "metro".asInstanceOf[metro]
-  @scala.inline
-  def nonZero: nonZero = "nonZero".asInstanceOf[nonZero]
-  @scala.inline
-  def none: none = "none".asInstanceOf[none]
-  @scala.inline
-  def pedestrian: pedestrian = "pedestrian".asInstanceOf[pedestrian]
-  @scala.inline
-  def right: right = "right".asInstanceOf[right]
-  @scala.inline
-  def routeEditor: routeEditor = "routeEditor".asInstanceOf[routeEditor]
-  @scala.inline
-  def rulerControl: rulerControl = "rulerControl".asInstanceOf[rulerControl]
-  @scala.inline
-  def searchControl: searchControl = "searchControl".asInstanceOf[searchControl]
-  @scala.inline
-  def selectable: selectable = "selectable".asInstanceOf[selectable]
-  @scala.inline
-  def separator: separator = "separator".asInstanceOf[separator]
-  @scala.inline
-  def shortestPath: shortestPath = "shortestPath".asInstanceOf[shortestPath]
-  @scala.inline
-  def small: small = "small".asInstanceOf[small]
-  @scala.inline
-  def smallMapDefaultSet: smallMapDefaultSet = "smallMapDefaultSet".asInstanceOf[smallMapDefaultSet]
-  @scala.inline
-  def static: static = "static".asInstanceOf[static]
-  @scala.inline
-  def straightPath: straightPath = "straightPath".asInstanceOf[straightPath]
-  @scala.inline
-  def street: street = "street".asInstanceOf[street]
-  @scala.inline
-  def stretch: stretch = "stretch".asInstanceOf[stretch]
-  @scala.inline
-  def tile: tile = "tile".asInstanceOf[tile]
-  @scala.inline
-  def trafficControl: trafficControl = "trafficControl".asInstanceOf[trafficControl]
-  @scala.inline
-  def typeSelector: typeSelector = "typeSelector".asInstanceOf[typeSelector]
-  @scala.inline
-  def visible: visible = "visible".asInstanceOf[visible]
-  @scala.inline
-  def yandexNumbersignairPanorama: yandexNumbersignairPanorama = "yandex#airPanorama".asInstanceOf[yandexNumbersignairPanorama]
-  @scala.inline
-  def yandexNumbersignhybrid: yandexNumbersignhybrid = "yandex#hybrid".asInstanceOf[yandexNumbersignhybrid]
-  @scala.inline
-  def yandexNumbersignmap: yandexNumbersignmap = "yandex#map".asInstanceOf[yandexNumbersignmap]
-  @scala.inline
-  def yandexNumbersignpanorama: yandexNumbersignpanorama = "yandex#panorama".asInstanceOf[yandexNumbersignpanorama]
-  @scala.inline
-  def yandexNumbersignsatellite: yandexNumbersignsatellite = "yandex#satellite".asInstanceOf[yandexNumbersignsatellite]
-  @scala.inline
-  def yandexNumbersignsearch: yandexNumbersignsearch = "yandex#search".asInstanceOf[yandexNumbersignsearch]
-  @scala.inline
-  def zoomControl: zoomControl = "zoomControl".asInstanceOf[zoomControl]
 }
-

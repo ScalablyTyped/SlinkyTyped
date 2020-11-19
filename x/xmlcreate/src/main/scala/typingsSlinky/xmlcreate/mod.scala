@@ -1,7 +1,6 @@
 package typingsSlinky.xmlcreate
 
 import typingsSlinky.xmlcreate.xmlAttributeMod.IXmlAttributeOptions
-import typingsSlinky.xmlcreate.xmlAttributeMod.default
 import typingsSlinky.xmlcreate.xmlAttributeTextMod.IXmlAttributeTextOptions
 import typingsSlinky.xmlcreate.xmlCdataMod.IXmlCdataOptions
 import typingsSlinky.xmlcreate.xmlCharDataMod.IXmlCharDataOptions
@@ -9,6 +8,7 @@ import typingsSlinky.xmlcreate.xmlCharRefMod.IXmlCharRefOptions
 import typingsSlinky.xmlcreate.xmlCommentMod.IXmlCommentOptions
 import typingsSlinky.xmlcreate.xmlDeclMod.IXmlDeclOptions
 import typingsSlinky.xmlcreate.xmlDocumentMod.IXmlDocumentOptions
+import typingsSlinky.xmlcreate.xmlDocumentMod.default
 import typingsSlinky.xmlcreate.xmlDtdAttlistMod.IXmlDtdAttlistOptions
 import typingsSlinky.xmlcreate.xmlDtdElementMod.IXmlDtdElementOptions
 import typingsSlinky.xmlcreate.xmlDtdEntityMod.IXmlDtdEntityOptions
@@ -20,13 +20,18 @@ import typingsSlinky.xmlcreate.xmlEntityRefMod.IXmlEntityRefOptions
 import typingsSlinky.xmlcreate.xmlProcInstMod.IXmlProcInstOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xmlcreate", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  def document(): default = js.native
+  def document(options: IXmlDocumentOptions): default = js.native
+  
   @js.native
-  class XmlAttribute[Parent] protected () extends default[Parent] {
+  class XmlAttribute[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlAttributeMod.default[Parent] {
     def this(parent: Parent, validation: Boolean, options: IXmlAttributeOptions) = this()
   }
   
@@ -67,8 +72,7 @@ object mod extends js.Object {
   }
   
   @js.native
-  class XmlDocument protected ()
-    extends typingsSlinky.xmlcreate.xmlDocumentMod.default {
+  class XmlDocument protected () extends default {
     def this(options: IXmlDocumentOptions) = this()
   }
   
@@ -125,8 +129,4 @@ object mod extends js.Object {
     extends typingsSlinky.xmlcreate.xmlProcInstMod.default[Parent] {
     def this(parent: Parent, validation: Boolean, options: IXmlProcInstOptions) = this()
   }
-  
-  def document(): typingsSlinky.xmlcreate.xmlDocumentMod.default = js.native
-  def document(options: IXmlDocumentOptions): typingsSlinky.xmlcreate.xmlDocumentMod.default = js.native
 }
-

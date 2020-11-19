@@ -1,9 +1,8 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
-import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.CustomProceduralTexture")
 @js.native
@@ -34,13 +33,15 @@ class CustomProceduralTexture protected ()
     texturePath: String,
     size: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    fallbackTexture: js.UndefOr[scala.Nothing],
+    generateMipMaps: Boolean
+  ) = this()
+  def this(
+    name: String,
+    texturePath: String,
+    size: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
     fallbackTexture: typingsSlinky.babylonjs.BABYLON.Texture,
     generateMipMaps: Boolean
   ) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-

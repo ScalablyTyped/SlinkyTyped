@@ -2,17 +2,17 @@ package typingsSlinky.nodegit.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("nodegit", "Blame")
 @js.native
 class Blame ()
   extends typingsSlinky.nodegit.blameMod.Blame
-
 /* static members */
 @JSImport("nodegit", "Blame")
 @js.native
 object Blame extends js.Object {
+  
   /**
     * Retrieve the blame of a file
     *
@@ -26,10 +26,10 @@ object Blame extends js.Object {
     path: String,
     options: typingsSlinky.nodegit.blameOptionsMod.BlameOptions
   ): typingsSlinky.nodegit.blameMod.Blame = js.native
+  
   /**
     * @param opts - The git_blame_options struct to initialize
     * @param version - Version of struct; pass GIT_BLAME_OPTIONS_VERSION
     */
   def initOptions(opts: typingsSlinky.nodegit.blameOptionsMod.BlameOptions, version: Double): Double = js.native
 }
-

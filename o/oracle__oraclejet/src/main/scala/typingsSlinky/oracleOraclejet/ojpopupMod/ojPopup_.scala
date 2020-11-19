@@ -37,31 +37,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.tailChanged
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojPopup_ extends baseComponent[ojPopupSettableProperties] {
-  var autoDismiss: none | focusLoss = js.native
-  var chrome: default | none = js.native
-  var initialFocus: auto | none | firstFocusable | popup = js.native
-  var modality: modeless | modal = js.native
-  var onAutoDismissChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onChromeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onInitialFocusChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onModalityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeClose: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeOpen: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjClose: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjFocus: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjOpen: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onTailChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var position: Position = js.native
-  var tail: none | simple = js.native
-  @JSName("translations")
-  var translations_ojPopup_ : AriaCloseSkipLink = js.native
+  
   def addEventListener(`type`: autoDismissChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: autoDismissChanged,
@@ -156,7 +136,13 @@ trait ojPopup_ extends baseComponent[ojPopupSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var autoDismiss: none | focusLoss = js.native
+  
+  var chrome: default | none = js.native
+  
   def close(): Unit = js.native
+  
   @JSName("getProperty")
   def getProperty_autoDismiss(property: autoDismiss): none | focusLoss = js.native
   @JSName("getProperty")
@@ -169,12 +155,48 @@ trait ojPopup_ extends baseComponent[ojPopupSettableProperties] {
   def getProperty_position(property: position): Position = js.native
   @JSName("getProperty")
   def getProperty_tail(property: tail): none | simple = js.native
+  
+  var initialFocus: auto | none | firstFocusable | popup = js.native
+  
   def isOpen(): Boolean = js.native
+  
+  var modality: modeless | modal = js.native
+  
+  var onAutoDismissChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onChromeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onInitialFocusChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onModalityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeClose: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeOpen: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjClose: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjFocus: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjOpen: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onTailChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def open(launcher: String): Unit = js.native
   def open(launcher: String, position: Position): Unit = js.native
   def open(launcher: Element): Unit = js.native
   def open(launcher: Element, position: Position): Unit = js.native
+  
+  var position: Position = js.native
+  
   def setProperties(properties: ojPopupSettablePropertiesLenient): Unit = js.native
+  
   def setProperty(property: autoDismiss, value: focusLoss): Unit = js.native
   def setProperty(property: autoDismiss, value: none): Unit = js.native
   def setProperty(property: chrome, value: default): Unit = js.native
@@ -191,5 +213,9 @@ trait ojPopup_ extends baseComponent[ojPopupSettableProperties] {
   def setProperty_position(property: position, value: Position): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: AriaCloseSkipLink): Unit = js.native
+  
+  var tail: none | simple = js.native
+  
+  @JSName("translations")
+  var translations_ojPopup_ : AriaCloseSkipLink = js.native
 }
-

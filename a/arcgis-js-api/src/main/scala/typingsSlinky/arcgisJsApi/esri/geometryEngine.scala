@@ -6,10 +6,11 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.round
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.square
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait geometryEngine extends js.Object {
+  
   def buffer(geometry: js.Array[Geometry_], distance: js.Array[Double], unit: Double): Polygon | js.Array[Polygon] = js.native
   def buffer(geometry: js.Array[Geometry_], distance: js.Array[Double], unit: Double, unionResults: Boolean): Polygon | js.Array[Polygon] = js.native
   def buffer(geometry: js.Array[Geometry_], distance: js.Array[Double], unit: LinearUnits): Polygon | js.Array[Polygon] = js.native
@@ -42,6 +43,7 @@ trait geometryEngine extends js.Object {
     */
   def buffer(geometry: Geometry_, distance: Double, unit: LinearUnits): Polygon | js.Array[Polygon] = js.native
   def buffer(geometry: Geometry_, distance: Double, unit: LinearUnits, unionResults: Boolean): Polygon | js.Array[Polygon] = js.native
+  
   /**
     * Calculates the clipped geometry from a target geometry by an envelope.
     *
@@ -52,6 +54,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def clip(geometry: Geometry_, envelope: Extent): Geometry_ = js.native
+  
   /**
     * Indicates if one geometry contains another geometry.
     *
@@ -62,6 +65,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def contains(containerGeometry: Geometry_, insideGeometry: Geometry_): Boolean = js.native
+  
   /**
     * Calculates the convex hull of the input geometry. A convex hull is the smallest convex polygon that encloses a group of Objects, such as points. The input geometry can be a point, multipoint, polyline or polygon. The hull is typically a polygon but can also be a polyline or point in degenerate cases.
     *
@@ -73,6 +77,7 @@ trait geometryEngine extends js.Object {
     */
   def convexHull(geometry: Geometry_): Geometry_ | js.Array[Geometry_] = js.native
   def convexHull(geometry: Geometry_, merge: Boolean): Geometry_ | js.Array[Geometry_] = js.native
+  
   /**
     * Indicates if one geometry crosses another geometry.
     *
@@ -83,6 +88,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def crosses(geometry1: Geometry_, geometry2: Geometry_): Boolean = js.native
+  
   /**
     * Split the input Polyline or Polygon where it crosses a cutting Polyline. For Polylines, all left cuts are grouped together in the first Geometry. Right cuts and coincident cuts are grouped in the second Geometry and each undefined cut, along with any uncut parts, are output as separate Polylines. For Polygons, all left cuts are grouped in the first Polygon, all right cuts are grouped in the second Polygon, and each undefined cut, along with any left-over parts after cutting, are output as a separate Polygon. If no cuts are returned then the array will be empty. An undefined cut will only be produced if a left cut or right cut was produced and there was a part left over after cutting, or a cut is bounded to the left and right of the cutter.
     *
@@ -93,6 +99,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def cut(geometry: Geometry_, cutter: Polyline): js.Array[Geometry_] = js.native
+  
   def densify(geometry: Geometry_, maxSegmentLength: Double, maxSegmentLengthUnit: Double): Geometry_ = js.native
   /**
     * Densify geometries by plotting points between existing vertices.
@@ -105,6 +112,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def densify(geometry: Geometry_, maxSegmentLength: Double, maxSegmentLengthUnit: LinearUnits): Geometry_ = js.native
+  
   def difference(inputGeometry: js.Array[Geometry_], subtractor: Geometry_): Geometry_ | js.Array[Geometry_] = js.native
   /**
     * Creates the difference of two geometries. The resultant geometry is the portion of `inputGeometry` not in the `subtractor`. The dimension of the `subtractor` has to be equal to or greater than that of the `inputGeometry`.
@@ -116,6 +124,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def difference(inputGeometry: Geometry_, subtractor: Geometry_): Geometry_ | js.Array[Geometry_] = js.native
+  
   /**
     * Indicates if one geometry is disjoint (doesn't intersect in any way) with another geometry.
     *
@@ -126,6 +135,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def disjoint(geometry1: Geometry_, geometry2: Geometry_): Boolean = js.native
+  
   def distance(geometry1: Geometry_, geometry2: Geometry_, distanceUnit: Double): Double = js.native
   /**
     * Calculates the shortest planar distance between two geometries. Distance is reported in the linear units specified by `distanceUnit` or, if `distanceUnit` is null, the units of the spatialReference of input geometry.
@@ -139,6 +149,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def distance(geometry1: Geometry_, geometry2: Geometry_, distanceUnit: LinearUnits): Double = js.native
+  
   /**
     * Indicates if two geometries are equal.
     *
@@ -149,6 +160,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def equals(geometry1: Geometry_, geometry2: Geometry_): Boolean = js.native
+  
   /**
     * Returns an Object containing additional information about the input spatial reference.
     *
@@ -158,6 +170,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def extendedSpatialReferenceInfo(spatialReference: SpatialReference): SpatialReferenceInfo = js.native
+  
   /**
     * Flips a geometry on the horizontal axis. Can optionally be flipped around a point.
     *
@@ -169,6 +182,7 @@ trait geometryEngine extends js.Object {
     */
   def flipHorizontal(geometry: Geometry_): Geometry_ = js.native
   def flipHorizontal(geometry: Geometry_, flipOrigin: Point): Geometry_ = js.native
+  
   /**
     * Flips a geometry on the vertical axis. Can optionally be flipped around a point.
     *
@@ -180,6 +194,7 @@ trait geometryEngine extends js.Object {
     */
   def flipVertical(geometry: Geometry_): Geometry_ = js.native
   def flipVertical(geometry: Geometry_, flipOrigin: Point): Geometry_ = js.native
+  
   /**
     * Performs the generalize operation on the geometries in the cursor. Point and Multipoint geometries are left unchanged. Envelope is converted to a Polygon and then generalized.
     *
@@ -217,6 +232,7 @@ trait geometryEngine extends js.Object {
     removeDegenerateParts: Boolean,
     maxDeviationUnit: LinearUnits
   ): Geometry_ = js.native
+  
   def geodesicArea(geometry: Polygon, unit: Double): Double = js.native
   /**
     * Calculates the area of the input geometry. As opposed to [planarArea()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-geometryEngine.html#planarArea), geodesicArea takes into account the curvature of the earth when performing this calculation. Therefore, when using input geometries with a spatial reference of either WGS84 (wkid: 4326) or [Web Mercator](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#isWebMercator), it is best practice to calculate areas using geodesicArea(). If the input geometries have a projected coordinate system other than Web Mercator, use [planarArea()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-geometryEngine.html#planarArea) instead.  This method only works with WGS84 (wkid: 4326) and [Web Mercator](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#isWebMercator) spatial references.
@@ -228,6 +244,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def geodesicArea(geometry: Polygon, unit: ArealUnits): Double = js.native
+  
   def geodesicBuffer(geometry: js.Array[Geometry_], distance: js.Array[Double], unit: Double): Polygon | js.Array[Polygon] = js.native
   def geodesicBuffer(geometry: js.Array[Geometry_], distance: js.Array[Double], unit: Double, unionResults: Boolean): Polygon | js.Array[Polygon] = js.native
   def geodesicBuffer(geometry: js.Array[Geometry_], distance: js.Array[Double], unit: LinearUnits): Polygon | js.Array[Polygon] = js.native
@@ -260,6 +277,7 @@ trait geometryEngine extends js.Object {
     */
   def geodesicBuffer(geometry: Geometry_, distance: Double, unit: LinearUnits): Polygon | js.Array[Polygon] = js.native
   def geodesicBuffer(geometry: Geometry_, distance: Double, unit: LinearUnits, unionResults: Boolean): Polygon | js.Array[Polygon] = js.native
+  
   def geodesicDensify(geometry: Polygon, maxSegmentLength: Double): Geometry_ = js.native
   def geodesicDensify(geometry: Polygon, maxSegmentLength: Double, maxSegmentLengthUnit: Double): Geometry_ = js.native
   def geodesicDensify(geometry: Polygon, maxSegmentLength: Double, maxSegmentLengthUnit: LinearUnits): Geometry_ = js.native
@@ -276,6 +294,7 @@ trait geometryEngine extends js.Object {
   def geodesicDensify(geometry: Polyline, maxSegmentLength: Double): Geometry_ = js.native
   def geodesicDensify(geometry: Polyline, maxSegmentLength: Double, maxSegmentLengthUnit: Double): Geometry_ = js.native
   def geodesicDensify(geometry: Polyline, maxSegmentLength: Double, maxSegmentLengthUnit: LinearUnits): Geometry_ = js.native
+  
   def geodesicLength(geometry: Geometry_, unit: Double): Double = js.native
   /**
     * Calculates the length of the input geometry. As opposed to [planarLength()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-geometryEngine.html#planarLength), geodesicLength() takes into account the curvature of the earth when performing this calculation. Therefore, when using input geometries with a spatial reference of either WGS84 (wkid: 4326) or [Web Mercator](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#isWebMercator), it is best practice to calculate lengths using geodesicLength(). If the input geometries have a projected coordinate system other than Web Mercator, use [planarLength()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-geometryEngine.html#planarLength) instead.  This method only works with WGS84 (wkid: 4326) and [Web Mercator](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#isWebMercator) spatial references.
@@ -287,6 +306,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def geodesicLength(geometry: Geometry_, unit: LinearUnits): Double = js.native
+  
   def intersect(geometry: js.Array[Geometry_], intersector: Geometry_): Geometry_ | js.Array[Geometry_] = js.native
   /**
     * Creates a new geometry through intersection between two geometries.
@@ -298,6 +318,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def intersect(geometry: Geometry_, intersector: Geometry_): Geometry_ | js.Array[Geometry_] = js.native
+  
   /**
     * Indicates if one geometry intersects another geometry.
     *
@@ -308,6 +329,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def intersects(geometry1: Geometry_, geometry2: Geometry_): Boolean = js.native
+  
   /**
     * Indicates if the given geometry is topologically simple.
     *
@@ -317,6 +339,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def isSimple(geometry: Geometry_): Boolean = js.native
+  
   /**
     * Finds the coordinate of the geometry that is closest to the specified point.
     *
@@ -327,6 +350,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def nearestCoordinate(geometry: Geometry_, inputPoint: Point): NearestPointResult = js.native
+  
   /**
     * Finds the vertex on the geometry nearest to the specified point.
     *
@@ -337,6 +361,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def nearestVertex(geometry: Geometry_, inputPoint: Point): NearestPointResult = js.native
+  
   /**
     * Finds all vertices in the given distance from the specified point, sorted from the closest to the furthest and returns them as an array of Objects.
     *
@@ -349,6 +374,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def nearestVertices(geometry: Geometry_, inputPoint: Point, searchRadius: Double, maxVertexCountToReturn: Double): js.Array[NearestPointResult] = js.native
+  
   /**
     * The offset operation creates a geometry that is a constant planar distance from an input polyline or polygon. It is similar to buffering, but produces a one-sided result.
     *
@@ -370,6 +396,7 @@ trait geometryEngine extends js.Object {
     bevelRatio: js.UndefOr[Double],
     flattenError: js.UndefOr[Double]
   ): Geometry_ | js.Array[Geometry_] = js.native
+  
   /**
     * Indicates if one geometry overlaps another geometry.
     *
@@ -380,6 +407,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def overlaps(geometry1: Geometry_, geometry2: Geometry_): Boolean = js.native
+  
   def planarArea(geometry: Polygon, unit: Double): Double = js.native
   /**
     * Calculates the area of the input geometry. As opposed to [geodesicArea()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-geometryEngine.html#geodesicArea), planarArea() performs this calculation using projected coordinates and does not take into account the earth's curvature. When using input geometries with a spatial reference of either WGS84 (wkid: 4326) or [Web Mercator](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#isWebMercator), it is best practice to calculate areas using [geodesicArea()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-geometryEngine.html#geodesicArea). If the input geometries have a projected coordinate system other than Web Mercator, use planarArea() instead.
@@ -391,6 +419,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def planarArea(geometry: Polygon, unit: ArealUnits): Double = js.native
+  
   def planarLength(geometry: Geometry_, unit: Double): Double = js.native
   /**
     * Calculates the length of the input geometry. As opposed to [geodesicLength()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-geometryEngine.html#geodesicLength), planarLength() uses projected coordinates and does not take into account the curvature of the earth when performing this calculation. When using input geometries with a spatial reference of either WGS84 (wkid: 4326) or [Web Mercator](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#isWebMercator), it is best practice to calculate lengths using [geodesicLength()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-geometryEngine.html#geodesicLength). If the input geometries have a projected coordinate system other than Web Mercator, use planarLength() instead.
@@ -402,6 +431,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def planarLength(geometry: Geometry_, unit: LinearUnits): Double = js.native
+  
   /**
     * Indicates if the given DE-9IM relation holds for the two geometries.
     *
@@ -413,6 +443,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def relate(geometry1: Geometry_, geometry2: Geometry_, relation: String): Boolean = js.native
+  
   /**
     * Rotates a geometry counterclockwise by the specified number of degrees. Rotation is around the centroid, or a given rotation point.
     *
@@ -425,6 +456,7 @@ trait geometryEngine extends js.Object {
     */
   def rotate(geometry: Geometry_, angle: Double): Geometry_ = js.native
   def rotate(geometry: Geometry_, angle: Double, rotationOrigin: Point): Geometry_ = js.native
+  
   /**
     * Performs the simplify operation on the geometry which alters the given geometries to make their definitions topologically legal with respect to their geometry type.
     *
@@ -434,6 +466,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def simplify(geometry: Geometry_): Geometry_ = js.native
+  
   def symmetricDifference(leftGeometry: js.Array[Geometry_], rightGeometry: Geometry_): Geometry_ | js.Array[Geometry_] = js.native
   /**
     * Creates the symmetric difference of two geometries. The symmetric difference includes the parts that are in either of the sets, but not in both.
@@ -445,6 +478,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def symmetricDifference(leftGeometry: Geometry_, rightGeometry: Geometry_): Geometry_ | js.Array[Geometry_] = js.native
+  
   /**
     * Indicates if one geometry touches another geometry.
     *
@@ -455,6 +489,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def touches(geometry1: Geometry_, geometry2: Geometry_): Boolean = js.native
+  
   /**
     * All inputs must be of the same type of geometries and share one spatial reference.
     *
@@ -464,6 +499,7 @@ trait geometryEngine extends js.Object {
     *
     */
   def union(geometries: js.Array[Geometry_]): Geometry_ = js.native
+  
   /**
     * Indicates if one geometry is within another geometry.
     *
@@ -475,4 +511,3 @@ trait geometryEngine extends js.Object {
     */
   def within(innerGeometry: Geometry_, outerGeometry: Geometry_): Boolean = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.cloudhsmMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.CloudHSM")
 @js.native
@@ -14,4 +14,3 @@ class CloudHSM ()
   extends typingsSlinky.awsSdk.mod.CloudHSM {
   def this(options: ClientConfiguration) = this()
 }
-

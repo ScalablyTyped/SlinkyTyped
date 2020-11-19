@@ -2,7 +2,7 @@ package typingsSlinky.chrome.global.chrome.cast
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("chrome.cast.Receiver")
 @js.native
@@ -35,4 +35,3 @@ class Receiver protected ()
     volume: typingsSlinky.chrome.chrome.cast.Volume
   ) = this()
 }
-

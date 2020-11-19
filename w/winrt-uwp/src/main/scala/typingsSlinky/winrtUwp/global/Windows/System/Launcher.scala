@@ -10,24 +10,25 @@ import typingsSlinky.winrtUwp.Windows.Storage.IStorageFolder
 import typingsSlinky.winrtUwp.Windows.Storage.StorageFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Starts the default app associated with the specified file or URI. */
 @JSGlobal("Windows.System.Launcher")
 @js.native
 abstract class Launcher ()
   extends typingsSlinky.winrtUwp.Windows.System.Launcher
-
 /* static members */
 @JSGlobal("Windows.System.Launcher")
 @js.native
 object Launcher extends js.Object {
+  
   /**
     * Enumerate the file handlers on the device.
     * @param extension The file extension that you want to find handlers for. For example, ".bat". Include the leading period '.'.
     * @return A list of AppInfo s for each application that handles the specified file extension.
     */
   def findFileHandlersAsync(extension: String): IPromiseWithIAsyncOperation[IVectorView[AppInfo]] = js.native
+  
   /**
     * Enumerates the
     * @param scheme The scheme name that you find to find handlers for. For example, "ms-lens".
@@ -44,6 +45,7 @@ object Launcher extends js.Object {
     scheme: String,
     launchQuerySupportType: typingsSlinky.winrtUwp.Windows.System.LaunchQuerySupportType
   ): IPromiseWithIAsyncOperation[IVectorView[AppInfo]] = js.native
+  
   /**
     * Starts the default app associated with the specified file.
     * @param file The file.
@@ -57,6 +59,7 @@ object Launcher extends js.Object {
     * @return The launch operation.
     */
   def launchFileAsync(file: IStorageFile, options: typingsSlinky.winrtUwp.Windows.System.LauncherOptions): IPromiseWithIAsyncOperation[Boolean] = js.native
+  
   /**
     * Launches File Explorer and displays the contents of the specified folder.
     * @param folder The folder to display in File Explorer.
@@ -70,6 +73,7 @@ object Launcher extends js.Object {
     * @return The result of the operation.
     */
   def launchFolderAsync(folder: IStorageFolder, options: typingsSlinky.winrtUwp.Windows.System.FolderLauncherOptions): IPromiseWithIAsyncOperation[Boolean] = js.native
+  
   /**
     * Starts the default app associated with the URI scheme name for the specified URI.
     * @param uri The URI.
@@ -91,6 +95,7 @@ object Launcher extends js.Object {
     * @return The launch operation.
     */
   def launchUriAsync(uri: Uri, options: typingsSlinky.winrtUwp.Windows.System.LauncherOptions, inputData: ValueSet): IPromiseWithIAsyncOperation[Boolean] = js.native
+  
   /**
     * Asynchronously starts the default app associated with the URI scheme name for the specified URI, using the specified options.
     * @param uri The Uri to launch.
@@ -106,6 +111,7 @@ object Launcher extends js.Object {
     * @return When this method completes, it returns the results of the launch.
     */
   def launchUriForResultsAsync(uri: Uri, options: typingsSlinky.winrtUwp.Windows.System.LauncherOptions, inputData: ValueSet): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.System.LaunchUriResult] = js.native
+  
   /**
     * Asynchronously query whether an app can be activated for the specified file.
     * @param file The file for which to query support.
@@ -119,6 +125,7 @@ object Launcher extends js.Object {
     * @return A value that indicates whether an application can be activated for the file.
     */
   def queryFileSupportAsync(file: StorageFile, packageFamilyName: String): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.System.LaunchQuerySupportStatus] = js.native
+  
   /**
     * Asynchronously query whether an app can be activated for the specified URI and launch type.
     * @param uri The URI for which to query support.
@@ -139,4 +146,3 @@ object Launcher extends js.Object {
     packageFamilyName: String
   ): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.System.LaunchQuerySupportStatus] = js.native
 }
-

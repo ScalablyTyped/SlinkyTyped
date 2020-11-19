@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri.pointCloudRenderers
 import typingsSlinky.arcgisJsApi.esri.PointCloudRGBRendererProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.pointCloudRenderers.PointCloudRGBRenderer")
 @js.native
@@ -16,4 +16,3 @@ class PointCloudRGBRendererCls ()
   extends typingsSlinky.arcgisJsApi.esri.PointCloudRGBRenderer {
   def this(properties: PointCloudRGBRendererProperties) = this()
 }
-

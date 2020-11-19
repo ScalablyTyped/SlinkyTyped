@@ -4,18 +4,20 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BasemapToggleViewModel
   extends Accessor
      with Evented {
+  
   /**
     * The map's [basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapToggle-BasemapToggleViewModel.html#activeBasemap)
     */
   val activeBasemap: Basemap = js.native
+  
   /**
     * The next basemap for toggling. One of the following values may be set to this property:
     *   * The [string ID](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap) of any Esri basemap.
@@ -24,6 +26,7 @@ trait BasemapToggleViewModel
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapToggle-BasemapToggleViewModel.html#nextBasemap)
     */
   var nextBasemap: Basemap = js.native
+  
   /**
     * The view model's state.
     *
@@ -32,12 +35,7 @@ trait BasemapToggleViewModel
     * @default disabled
     */
   val state: ready | disabled = js.native
-  /**
-    * The view from which the widget will operate. This view provides access to the initial [basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap) to toggle from via the view's [map](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#map) property.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapToggle-BasemapToggleViewModel.html#view)
-    */
-  var view: MapView | SceneView = js.native
+  
   /**
     * Toggles to the [next basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapToggle-BasemapToggleViewModel.html#nextBasemap).
     *
@@ -46,5 +44,11 @@ trait BasemapToggleViewModel
     *
     */
   def toggle(): Unit = js.native
+  
+  /**
+    * The view from which the widget will operate. This view provides access to the initial [basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap) to toggle from via the view's [map](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#map) property.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapToggle-BasemapToggleViewModel.html#view)
+    */
+  var view: MapView | SceneView = js.native
 }
-

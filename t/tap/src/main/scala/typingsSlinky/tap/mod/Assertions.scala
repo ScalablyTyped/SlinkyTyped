@@ -5,13 +5,15 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.tap.mod.Options.Assert
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tap", "Assertions")
 @js.native
 object Assertions extends js.Object {
+  
   @js.native
   trait Throws extends js.Object {
+    
     def apply(): Boolean = js.native
     def apply(
       fn: js.UndefOr[scala.Nothing],
@@ -87,12 +89,14 @@ object Assertions extends js.Object {
     /* extra */ js.UndefOr[Assert], 
     Boolean
   ]
+  
   type DoesNotThrow = js.Function3[
     /* fn */ js.UndefOr[js.Function1[/* repeated */ js.Any, js.Any]], 
     /* message */ js.UndefOr[String], 
     /* extra */ js.UndefOr[Assert], 
     Boolean
   ]
+  
   type Equal = js.Function4[
     /* found */ js.Any, 
     /* wanted */ js.Any, 
@@ -100,6 +104,7 @@ object Assertions extends js.Object {
     /* extra */ js.UndefOr[Assert], 
     Boolean
   ]
+  
   type Match = js.Function4[
     /* found */ js.Any, 
     /* pattern */ String | js.RegExp | StringDictionary[js.RegExp], 
@@ -107,6 +112,7 @@ object Assertions extends js.Object {
     /* extra */ js.UndefOr[Assert], 
     Boolean
   ]
+  
   type NotEqual = js.Function4[
     /* found */ js.Any, 
     /* notWanted */ js.Any, 
@@ -114,6 +120,7 @@ object Assertions extends js.Object {
     /* extra */ js.UndefOr[Assert], 
     Boolean
   ]
+  
   type Type = js.Function4[
     /* found */ js.Any, 
     /* type */ String | (Instantiable1[/* args (repeated) */ js.Any, js.Object]), 
@@ -122,4 +129,3 @@ object Assertions extends js.Object {
     Boolean
   ]
 }
-

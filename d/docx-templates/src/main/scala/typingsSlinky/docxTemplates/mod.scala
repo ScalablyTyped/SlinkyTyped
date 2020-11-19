@@ -8,11 +8,12 @@ import typingsSlinky.docxTemplates.typesMod.UserOptions
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("docx-templates", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * Create Report from docx template
     *
@@ -48,6 +49,7 @@ object mod extends js.Object {
     */
   @JSName("createReport")
   def createReport_XML(options: UserOptions, _probe: XML): js.Promise[String] = js.native
+  
   /**
     * Create Report from docx template
     *
@@ -83,8 +85,8 @@ object mod extends js.Object {
     */
   @JSName("default")
   def default_XML(options: UserOptions, _probe: XML): js.Promise[String] = js.native
+  
   def listCommands(template: Buffer): js.Promise[js.Array[CommandSummary]] = js.native
   def listCommands(template: Buffer, delimiter: String): js.Promise[js.Array[CommandSummary]] = js.native
   def listCommands(template: Buffer, delimiter: js.Tuple2[String, String]): js.Promise[js.Array[CommandSummary]] = js.native
 }
-

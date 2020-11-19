@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Audio/index", "AudioEngine")
 @js.native
@@ -19,4 +19,3 @@ class AudioEngine ()
   extends typingsSlinky.babylonjs.audioEngineMod.AudioEngine {
   def this(hostElement: Nullable[HTMLElement]) = this()
 }
-

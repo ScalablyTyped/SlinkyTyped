@@ -7,11 +7,12 @@ import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/PostProcesses/passPostProcess", JSImport.Namespace)
 @js.native
 object passPostProcessMod extends js.Object {
+  
   @js.native
   class PassCubePostProcess protected () extends PostProcess {
     /**
@@ -27,7 +28,7 @@ object passPostProcessMod extends js.Object {
       */
     def this(
       name: String,
-      options: Double,
+      options: Double | PostProcessOptions,
       camera: js.UndefOr[Nullable[Camera]],
       samplingMode: js.UndefOr[Double],
       engine: js.UndefOr[Engine],
@@ -35,17 +36,9 @@ object passPostProcessMod extends js.Object {
       textureType: js.UndefOr[Double],
       blockCompilation: js.UndefOr[Boolean]
     ) = this()
-    def this(
-      name: String,
-      options: PostProcessOptions,
-      camera: js.UndefOr[Nullable[Camera]],
-      samplingMode: js.UndefOr[Double],
-      engine: js.UndefOr[Engine],
-      reusable: js.UndefOr[Boolean],
-      textureType: js.UndefOr[Double],
-      blockCompilation: js.UndefOr[Boolean]
-    ) = this()
+    
     var _face: js.Any = js.native
+    
     /**
       * Gets or sets the cube face to display.
       *  * 0 is +X
@@ -56,7 +49,7 @@ object passPostProcessMod extends js.Object {
       *  * 5 is -Z
       */
     def face: Double = js.native
-    def face(value: Double): js.Any = js.native
+    def face_=(value: Double): Unit = js.native
   }
   
   @js.native
@@ -74,17 +67,7 @@ object passPostProcessMod extends js.Object {
       */
     def this(
       name: String,
-      options: Double,
-      camera: js.UndefOr[Nullable[Camera]],
-      samplingMode: js.UndefOr[Double],
-      engine: js.UndefOr[Engine],
-      reusable: js.UndefOr[Boolean],
-      textureType: js.UndefOr[Double],
-      blockCompilation: js.UndefOr[Boolean]
-    ) = this()
-    def this(
-      name: String,
-      options: PostProcessOptions,
+      options: Double | PostProcessOptions,
       camera: js.UndefOr[Nullable[Camera]],
       samplingMode: js.UndefOr[Double],
       engine: js.UndefOr[Engine],
@@ -93,6 +76,4 @@ object passPostProcessMod extends js.Object {
       blockCompilation: js.UndefOr[Boolean]
     ) = this()
   }
-  
 }
-

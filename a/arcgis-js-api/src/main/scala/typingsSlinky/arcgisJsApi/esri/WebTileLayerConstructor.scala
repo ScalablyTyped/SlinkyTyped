@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait WebTileLayerConstructor
@@ -15,6 +15,6 @@ trait WebTileLayerConstructor
   */
 Instantiable0[WebTileLayer]
      with Instantiable1[/* properties */ WebTileLayerProperties, WebTileLayer] {
+  
   def fromJSON(json: js.Any): WebTileLayer = js.native
 }
-

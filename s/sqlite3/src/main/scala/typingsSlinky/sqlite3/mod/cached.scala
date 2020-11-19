@@ -2,11 +2,12 @@ package typingsSlinky.sqlite3.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sqlite3", "cached")
 @js.native
 object cached extends js.Object {
+  
   def Database(filename: String): typingsSlinky.sqlite3.mod.Database = js.native
   def Database(
     filename: String,
@@ -24,4 +25,3 @@ object cached extends js.Object {
     callback: js.ThisFunction1[/* this */ typingsSlinky.sqlite3.mod.Database, /* err */ js.Error | Null, Unit]
   ): typingsSlinky.sqlite3.mod.Database = js.native
 }
-

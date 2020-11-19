@@ -6,11 +6,12 @@ import typingsSlinky.rdflib.tfTypesMod.NamedNode
 import typingsSlinky.rdflib.typesMod.ContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rdflib/lib/serialize", JSImport.Namespace)
 @js.native
 object serializeMod extends js.Object {
+  
   def default(
     /** The graph or nodes that should be serialized */
   target: typingsSlinky.rdflib.formulaMod.default | NamedNode | BlankNode,
@@ -28,4 +29,3 @@ object serializeMod extends js.Object {
     options: js.UndefOr[Flags]
   ): js.UndefOr[String] = js.native
 }
-

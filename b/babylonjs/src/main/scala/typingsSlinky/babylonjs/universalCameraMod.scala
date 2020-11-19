@@ -5,11 +5,12 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.touchCameraMod.TouchCamera
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Cameras/universalCamera", JSImport.Namespace)
 @js.native
 object universalCameraMod extends js.Object {
+  
   @js.native
   class UniversalCamera protected () extends TouchCamera {
     /**
@@ -21,19 +22,19 @@ object universalCameraMod extends js.Object {
       * @param scene Define the scene the camera belongs to
       */
     def this(name: String, position: Vector3, scene: Scene) = this()
+    
     /**
       * Defines the gamepad rotation sensiblity.
       * This is the threshold from when rotation starts to be accounted for to prevent jittering.
       */
     def gamepadAngularSensibility: Double = js.native
-    def gamepadAngularSensibility(value: Double): js.Any = js.native
+    def gamepadAngularSensibility_=(value: Double): Unit = js.native
+    
     /**
       * Defines the gamepad move sensiblity.
       * This is the threshold from when moving starts to be accounted for for to prevent jittering.
       */
     def gamepadMoveSensibility: Double = js.native
-    def gamepadMoveSensibility(value: Double): js.Any = js.native
+    def gamepadMoveSensibility_=(value: Double): Unit = js.native
   }
-  
 }
-

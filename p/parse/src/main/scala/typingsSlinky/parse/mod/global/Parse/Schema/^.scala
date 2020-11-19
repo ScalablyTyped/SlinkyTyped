@@ -2,11 +2,12 @@ package typingsSlinky.parse.mod.global.Parse.Schema
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Parse.Schema")
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Static method to get all schemas
     *
@@ -15,4 +16,3 @@ object ^ extends js.Object {
     */
   def all(): js.Promise[js.Array[typingsSlinky.parse.mod.global.Parse.Schema]] = js.native
 }
-

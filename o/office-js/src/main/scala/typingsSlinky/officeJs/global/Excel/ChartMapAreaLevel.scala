@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.global.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,15 +13,23 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.ChartMapAreaLevel")
 @js.native
 object ChartMapAreaLevel extends js.Object {
-  /* "Automatic" */ val automatic: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.automatic with String = js.native
-  /* "City" */ val city: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.city with String = js.native
-  /* "Continent" */ val continent: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.continent with String = js.native
-  /* "Country" */ val country: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.country with String = js.native
-  /* "County" */ val county: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.county with String = js.native
-  /* "DataOnly" */ val dataOnly: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.dataOnly with String = js.native
-  /* "State" */ val state: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.state with String = js.native
-  /* "World" */ val world: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.world with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Excel.ChartMapAreaLevel with String] = js.native
+  
+  /* "Automatic" */ val automatic: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.automatic with String = js.native
+  
+  /* "City" */ val city: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.city with String = js.native
+  
+  /* "Continent" */ val continent: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.continent with String = js.native
+  
+  /* "Country" */ val country: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.country with String = js.native
+  
+  /* "County" */ val county: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.county with String = js.native
+  
+  /* "DataOnly" */ val dataOnly: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.dataOnly with String = js.native
+  
+  /* "State" */ val state: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.state with String = js.native
+  
+  /* "World" */ val world: typingsSlinky.officeJs.Excel.ChartMapAreaLevel.world with String = js.native
 }
-

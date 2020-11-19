@@ -2,7 +2,7 @@ package typingsSlinky.cleanCss.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Union type for both types of minifier functions
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.cleanCss.mod.MinifierPromise
 */
 trait Minifier extends js.Object
-

@@ -4,7 +4,7 @@ import typingsSlinky.angularCompiler.compileMetadataMod.CompilePipeSummary
 import typingsSlinky.angularCompiler.templateAstMod.TemplateAst
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler", "TemplateParseResult")
 @js.native
@@ -34,4 +34,3 @@ class TemplateParseResult ()
     errors: js.Array[typingsSlinky.angularCompiler.srcParseUtilMod.ParseError]
   ) = this()
 }
-

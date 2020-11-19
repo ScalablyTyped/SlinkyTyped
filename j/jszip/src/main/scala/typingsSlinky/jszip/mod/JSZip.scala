@@ -20,7 +20,7 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JSZip
@@ -37,11 +37,11 @@ trait JSZip
 Instantiable0[JSZip]
      with Instantiable1[/* data */ InputFileFormat, JSZip]
      with Instantiable2[js.UndefOr[/* data */ InputFileFormat], /* options */ JSZipLoadOptions, JSZip] {
-  var external: Promise = js.native
-  var files: StringDictionary[JSZipObject] = js.native
-  var support: JSZipSupport = js.native
-  var version: String = js.native
+  
   def apply(): JSZip = js.native
+  
+  var external: Promise = js.native
+  
   def file(path: String): this.type = js.native
   /**
     * Add a file to the archive
@@ -92,6 +92,9 @@ Instantiable0[JSZip]
     */
   @JSName("file")
   def file_Union(path: String): JSZipObject | Null = js.native
+  
+  var files: StringDictionary[JSZipObject] = js.native
+  
   /**
     * Get all files which match the given filter function
     *
@@ -99,6 +102,7 @@ Instantiable0[JSZip]
     * @return Array of matched elements
     */
   def filter(predicate: js.Function2[/* relativePath */ String, /* file */ JSZipObject, Boolean]): js.Array[JSZipObject] = js.native
+  
   /**
     * Returns an new JSZip instance with the given folder as root
     *
@@ -113,12 +117,14 @@ Instantiable0[JSZip]
     * @return New array of JSZipFile objects which match the RegExp
     */
   def folder(name: js.RegExp): js.Array[JSZipObject] = js.native
+  
   /**
     * Call a callback function for each entry at this folder level.
     *
     * @param callback function
     */
   def forEach(callback: js.Function2[/* relativePath */ String, /* file */ JSZipObject, Unit]): Unit = js.native
+  
   /**
     * Generates a new archive asynchronously
     *
@@ -164,6 +170,7 @@ Instantiable0[JSZip]
   def generateAsync_uint8array(options: JSZipGeneratorOptions[uint8array]): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("generateAsync")
   def generateAsync_uint8array(options: JSZipGeneratorOptions[uint8array], onUpdate: OnUpdateCallback): js.Promise[js.typedarray.Uint8Array] = js.native
+  
   /**
     * Generates a new archive asynchronously
     *
@@ -177,6 +184,7 @@ Instantiable0[JSZip]
   def generateNodeStream_nodebuffer(options: JSZipGeneratorOptions[nodebuffer]): ReadableStream = js.native
   @JSName("generateNodeStream")
   def generateNodeStream_nodebuffer(options: JSZipGeneratorOptions[nodebuffer], onUpdate: OnUpdateCallback): ReadableStream = js.native
+  
   /**
     * Deserialize zip file asynchronously
     *
@@ -186,6 +194,7 @@ Instantiable0[JSZip]
     */
   def loadAsync(data: InputFileFormat): js.Promise[JSZip] = js.native
   def loadAsync(data: InputFileFormat, options: JSZipLoadOptions): js.Promise[JSZip] = js.native
+  
   /**
     * Removes the file or folder from the archive
     *
@@ -193,5 +202,8 @@ Instantiable0[JSZip]
     * @return Returns the JSZip instance
     */
   def remove(path: String): JSZip = js.native
+  
+  var support: JSZipSupport = js.native
+  
+  var version: String = js.native
 }
-

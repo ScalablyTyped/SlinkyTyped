@@ -3,7 +3,7 @@ package typingsSlinky.nodeXmppClient.mod
 import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Stanza
@@ -12,9 +12,12 @@ trait Stanza
 // contribute.
 // tslint:disable-next-line
 Instantiable2[/* name */ String, /* attr */ js.Any, Stanza] {
+  
   var from: String = js.native
+  
   var id: String = js.native
+  
   var to: String = js.native
+  
   var `type`: String = js.native
 }
-

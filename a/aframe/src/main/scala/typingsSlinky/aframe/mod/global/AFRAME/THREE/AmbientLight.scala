@@ -2,7 +2,7 @@ package typingsSlinky.aframe.mod.global.AFRAME.THREE
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AFRAME.THREE.AmbientLight")
 @js.native
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
 	 */
 class AmbientLight ()
   extends typingsSlinky.three.mod.AmbientLight
-

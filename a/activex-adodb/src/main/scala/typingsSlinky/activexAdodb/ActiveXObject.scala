@@ -53,10 +53,11 @@ import typingsSlinky.activexAdodb.anon.PError
 import typingsSlinky.activexAdodb.anon.PRecordset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ActiveXObject extends js.Object {
+  
   def on(
     obj: Connection,
     event: BeginTransComplete,
@@ -184,7 +185,7 @@ trait ActiveXObject extends js.Object {
     argNames: ConnectionWillExecuteArgNames,
     handler: js.ThisFunction1[/* this */ Connection, /* parameter */ ConnectionWillExecuteParameter, Unit]
   ): Unit = js.native
+  
   @JSName("set")
   def set_Collect(obj: Recordset, propertyName: Collect, parameterTypes: js.Array[_], newValue: js.Any): Unit = js.native
 }
-

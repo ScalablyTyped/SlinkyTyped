@@ -4,11 +4,12 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ckeditor.CKEDITOR.ui.dialog.definitions.fieldSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("CKEDITOR.ui.dialog")
 @js.native
 object dialog extends js.Object {
+  
   @js.native
   class button protected ()
     extends typingsSlinky.ckeditor.CKEDITOR.ui.dialog.button {
@@ -284,6 +285,4 @@ object dialog extends js.Object {
       elementDefinition: typingsSlinky.ckeditor.CKEDITOR.ui.dialog.definitions.vbox
     ) = this()
   }
-  
 }
-

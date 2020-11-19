@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("promise-polyfill", JSImport.Namespace)
 @js.native
@@ -21,8 +21,6 @@ class ^[T] protected () extends Promise[T] {
         Unit
       ]) = this()
 }
-
 @JSImport("promise-polyfill", JSImport.Namespace)
 @js.native
 object ^ extends TopLevel[PromisePolyfillConstructor]
-

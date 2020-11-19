@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "jupyterlab__observables"
-version := "2.4.0-c720ff"
-scalaVersion := "2.13.2"
+version := "3.2.0-9ccc69"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "phosphor__algorithm" % "1.2.0-787f4c",
-  "org.scalablytyped.slinky" %%% "phosphor__coreutils" % "1.3.1-3c6f75",
-  "org.scalablytyped.slinky" %%% "phosphor__disposable" % "1.3.1-42e33c",
-  "org.scalablytyped.slinky" %%% "phosphor__messaging" % "1.3.0-3dd3f4",
-  "org.scalablytyped.slinky" %%% "phosphor__signaling" % "1.3.1-06b254",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "lumino__algorithm" % "1.3.3-5cf99d",
+  "org.scalablytyped.slinky" %%% "lumino__coreutils" % "1.5.3-9bc078",
+  "org.scalablytyped.slinky" %%% "lumino__disposable" % "1.4.3-d5389d",
+  "org.scalablytyped.slinky" %%% "lumino__messaging" % "1.4.3-e2c74a",
+  "org.scalablytyped.slinky" %%% "lumino__signaling" % "1.4.3-f9af4e",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

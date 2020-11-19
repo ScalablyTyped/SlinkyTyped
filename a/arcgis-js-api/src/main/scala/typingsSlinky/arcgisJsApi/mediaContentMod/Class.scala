@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.MediaContent
 import typingsSlinky.arcgisJsApi.esri.MediaContentProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/popup/content/MediaContent", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends MediaContent {
   def this(properties: MediaContentProperties) = this()
 }
-

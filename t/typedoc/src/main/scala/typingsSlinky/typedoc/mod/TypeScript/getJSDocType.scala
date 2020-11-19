@@ -4,11 +4,12 @@ import typingsSlinky.typescript.mod.Node
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.getJSDocType")
 @js.native
 object getJSDocType extends js.Object {
+  
   /**
     * Gets the type node for the node if provided via JSDoc.
     *
@@ -22,4 +23,3 @@ object getJSDocType extends js.Object {
     */
   def apply(node: Node): js.UndefOr[TypeNode] = js.native
 }
-

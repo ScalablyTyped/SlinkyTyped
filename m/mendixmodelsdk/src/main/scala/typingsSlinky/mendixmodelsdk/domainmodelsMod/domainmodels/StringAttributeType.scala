@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.rest.ODataKeyPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -27,30 +27,34 @@ class StringAttributeType protected () extends AttributeType {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FStringAttributeType: IModel = js.native
+  
   @JSName("containerAsAttribute")
   def containerAsAttribute_MStringAttributeType: Attribute = js.native
+  
   @JSName("containerAsEntityKeyPart")
   def containerAsEntityKeyPart_MStringAttributeType: EntityKeyPart = js.native
+  
   @JSName("containerAsODataKeyPart")
   def containerAsODataKeyPart_MStringAttributeType: ODataKeyPart = js.native
+  
   def length: Double = js.native
   def length_=(newValue: Double): Unit = js.native
+  
+  @JSName("model")
+  var model_FStringAttributeType: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.StringAttributeType")
 @js.native
 object StringAttributeType extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new StringAttributeType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): StringAttributeType = js.native
+  
   /**
     * Creates and returns a new StringAttributeType instance in the SDK and on the server.
     * The new StringAttributeType will be automatically stored in the 'type' property
@@ -60,12 +64,14 @@ object StringAttributeType extends js.Object {
     *  6.0.0 to 8.8.0
     */
   def createIn(container: Attribute): StringAttributeType = js.native
+  
   /**
     * Creates and returns a new StringAttributeType instance in the SDK and on the server.
     * The new StringAttributeType will be automatically stored in the 'type' property
     * of the parent Attribute element passed as argument.
     */
   def createInAttributeUnderType(container: Attribute): StringAttributeType = js.native
+  
   /**
     * Creates and returns a new StringAttributeType instance in the SDK and on the server.
     * The new StringAttributeType will be automatically stored in the 'type' property
@@ -75,6 +81,7 @@ object StringAttributeType extends js.Object {
     *  8.9.0 and higher
     */
   def createInEntityKeyPartUnderType(container: EntityKeyPart): StringAttributeType = js.native
+  
   /**
     * Creates and returns a new StringAttributeType instance in the SDK and on the server.
     * The new StringAttributeType will be automatically stored in the 'type' property
@@ -84,5 +91,8 @@ object StringAttributeType extends js.Object {
     *  8.9.0 and higher
     */
   def createInODataKeyPartUnderType(container: ODataKeyPart): StringAttributeType = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

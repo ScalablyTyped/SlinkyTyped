@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.FeatureTableProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.FeatureTable")
 @js.native
@@ -16,4 +16,3 @@ class FeatureTableCls ()
   extends typingsSlinky.arcgisJsApi.esri.FeatureTable {
   def this(properties: FeatureTableProperties) = this()
 }
-

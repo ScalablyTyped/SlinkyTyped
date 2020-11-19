@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.ssooidcMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.SSOOIDC")
 @js.native
@@ -14,4 +14,3 @@ class SSOOIDC ()
   extends typingsSlinky.awsSdk.mod.SSOOIDC {
   def this(options: ClientConfiguration) = this()
 }
-

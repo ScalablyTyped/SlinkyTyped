@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This object contains a helper method for generating data-driven visualizations with continuous opacity based on data returned from a field value or expression in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html).
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait opacity extends js.Object {
+  
   /**
     * This method generates an opacity visual variable with default alpha values optimally mapped to data values based on the statistics queried for the indicated field or expression.  There are several ways this method may be called. The most common case is by providing a `layer` and a `field`. This is the scenario where the statistics of the data aren't well known and the user doesn't know the which alpha values to map to data values. You can optionally use a `valueExpression` instead of a field to visualize features based on a numeric value returned from a script executed at runtime.  The other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the stats in the `statistics` parameter to avoid making an extra call to the server.
     *
@@ -34,27 +35,30 @@ trait opacity extends js.Object {
     */
   def createVisualVariable(params: opacityCreateVisualVariableParams): js.Promise[opacityVisualVariableResult] = js.native
 }
-
 object opacity {
+  
   @scala.inline
   def apply(createVisualVariable: opacityCreateVisualVariableParams => js.Promise[opacityVisualVariableResult]): opacity = {
     val __obj = js.Dynamic.literal(createVisualVariable = js.Any.fromFunction1(createVisualVariable))
     __obj.asInstanceOf[opacity]
   }
+  
   @scala.inline
   implicit class opacityOps[Self <: opacity] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreateVisualVariable(value: opacityCreateVisualVariableParams => js.Promise[opacityVisualVariableResult]): Self = this.set("createVisualVariable", js.Any.fromFunction1(value))
   }
-  
 }
-

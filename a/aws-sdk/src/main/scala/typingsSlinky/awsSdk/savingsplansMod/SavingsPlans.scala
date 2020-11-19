@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SavingsPlans extends Service {
+  
   @JSName("config")
   var config_SavingsPlans: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates a Savings Plan.
     */
@@ -25,6 +27,7 @@ trait SavingsPlans extends Service {
     params: CreateSavingsPlanRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateSavingsPlanResponse, Unit]
   ): Request[CreateSavingsPlanResponse, AWSError] = js.native
+  
   /**
     * Describes the specified Savings Plans rates.
     */
@@ -38,6 +41,7 @@ trait SavingsPlans extends Service {
     params: DescribeSavingsPlanRatesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeSavingsPlanRatesResponse, Unit]
   ): Request[DescribeSavingsPlanRatesResponse, AWSError] = js.native
+  
   /**
     * Describes the specified Savings Plans.
     */
@@ -51,6 +55,7 @@ trait SavingsPlans extends Service {
     params: DescribeSavingsPlansRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeSavingsPlansResponse, Unit]
   ): Request[DescribeSavingsPlansResponse, AWSError] = js.native
+  
   /**
     * Describes the specified Savings Plans offering rates.
     */
@@ -66,6 +71,7 @@ trait SavingsPlans extends Service {
     params: DescribeSavingsPlansOfferingRatesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeSavingsPlansOfferingRatesResponse, Unit]
   ): Request[DescribeSavingsPlansOfferingRatesResponse, AWSError] = js.native
+  
   /**
     * Describes the specified Savings Plans offerings.
     */
@@ -79,6 +85,7 @@ trait SavingsPlans extends Service {
     params: DescribeSavingsPlansOfferingsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeSavingsPlansOfferingsResponse, Unit]
   ): Request[DescribeSavingsPlansOfferingsResponse, AWSError] = js.native
+  
   /**
     * Lists the tags for the specified resource.
     */
@@ -92,6 +99,7 @@ trait SavingsPlans extends Service {
     params: ListTagsForResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
   ): Request[ListTagsForResourceResponse, AWSError] = js.native
+  
   /**
     * Adds the specified tags to the specified resource.
     */
@@ -105,6 +113,7 @@ trait SavingsPlans extends Service {
     params: TagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]
   ): Request[TagResourceResponse, AWSError] = js.native
+  
   /**
     * Removes the specified tags from the specified resource.
     */
@@ -119,4 +128,3 @@ trait SavingsPlans extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceResponse, Unit]
   ): Request[UntagResourceResponse, AWSError] = js.native
 }
-

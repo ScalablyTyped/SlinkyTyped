@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "CatmullRomCurve3")
 @js.native
@@ -63,4 +63,3 @@ class CatmullRomCurve3 ()
     tension: Double
   ) = this()
 }
-

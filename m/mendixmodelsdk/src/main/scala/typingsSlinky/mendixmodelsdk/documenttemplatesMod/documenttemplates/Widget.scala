@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interfaces and instance classes for types from the Mendix sub meta model `DocumentTemplates`.
@@ -24,19 +24,23 @@ abstract class Widget protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsDocumentTemplate: DocumentTemplate = js.native
+  
+  def containerAsDropZone: DropZone = js.native
+  
   @JSName("model")
   var model_FWidget: IModel = js.native
-  def containerAsDocumentTemplate: DocumentTemplate = js.native
-  def containerAsDropZone: DropZone = js.native
+  
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.Widget")
 @js.native
 object Widget extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

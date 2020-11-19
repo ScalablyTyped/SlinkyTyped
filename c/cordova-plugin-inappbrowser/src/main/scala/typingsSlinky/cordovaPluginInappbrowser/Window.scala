@@ -2,10 +2,11 @@ package typingsSlinky.cordovaPluginInappbrowser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Window extends js.Object {
+  
   /**
     * Opens a URL in a new InAppBrowser instance, the current browser instance, or the system browser.
     * @param  url     The URL to load.
@@ -19,4 +20,3 @@ trait Window extends js.Object {
   def open(url: String, target: String): InAppBrowser = js.native
   def open(url: String, target: String, options: String): InAppBrowser = js.native
 }
-

@@ -5,11 +5,12 @@ import typingsSlinky.typescript.mod.NodeArray
 import typingsSlinky.typescript.mod.Visitor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.visitNode")
 @js.native
 object visitNode extends js.Object {
+  
   /**
     * Visits a Node using the supplied visitor, possibly returning a new Node in its place.
     *
@@ -79,4 +80,3 @@ object visitNode extends js.Object {
     lift: js.Function1[/* node */ NodeArray[Node], T]
   ): T = js.native
 }
-

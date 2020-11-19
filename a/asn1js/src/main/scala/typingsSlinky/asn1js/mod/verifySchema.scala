@@ -3,11 +3,12 @@ package typingsSlinky.asn1js.mod
 import typingsSlinky.asn1js.anon.Result
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("asn1js", "verifySchema")
 @js.native
 object verifySchema extends js.Object {
+  
   /**
     * ASN.1 schema verification for ArrayBuffer data
     * 
@@ -17,4 +18,3 @@ object verifySchema extends js.Object {
     */
   def apply(inputBuffer: js.typedarray.ArrayBuffer, inputSchema: js.Any): Result = js.native
 }
-

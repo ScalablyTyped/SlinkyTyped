@@ -2,7 +2,7 @@ package typingsSlinky.node.asyncHooksMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * When having multiple instances of `AsyncLocalStorage`, they are independent
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("async_hooks", "AsyncLocalStorage")
 @js.native
 class AsyncLocalStorage[T] () extends js.Object {
+  
   /**
     * This method disables the instance of `AsyncLocalStorage`. All subsequent calls
     * to `asyncLocalStorage.getStore()` will return `undefined` until
@@ -29,12 +30,14 @@ class AsyncLocalStorage[T] () extends js.Object {
     * in the current process.
     */
   def disable(): Unit = js.native
+  
   /**
     * Calling `asyncLocalStorage.enterWith(store)` will transition into the context
     * for the remainder of the current synchronous execution and will persist
     * through any following asynchronous calls.
     */
   def enterWith(store: T): Unit = js.native
+  
   /**
     * Calling `asyncLocalStorage.exit(callback)` will create a new asynchronous
     * context.
@@ -49,6 +52,7 @@ class AsyncLocalStorage[T] () extends js.Object {
     * Also, the stacktrace will be impacted by the asynchronous call.
     */
   def exit(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Unit = js.native
+  
   /**
     * This method returns the current store.
     * If this method is called outside of an asynchronous context initialized by
@@ -56,6 +60,7 @@ class AsyncLocalStorage[T] () extends js.Object {
     * return `undefined`.
     */
   def getStore(): js.UndefOr[T] = js.native
+  
   /**
     * Calling `asyncLocalStorage.run(callback)` will create a new asynchronous
     * context.
@@ -74,4 +79,3 @@ class AsyncLocalStorage[T] () extends js.Object {
   // TODO: Apply generic vararg once available
   def run(store: T, callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Unit = js.native
 }
-

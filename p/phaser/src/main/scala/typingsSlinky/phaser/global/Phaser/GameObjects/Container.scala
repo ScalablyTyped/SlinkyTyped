@@ -3,7 +3,7 @@ package typingsSlinky.phaser.global.Phaser.GameObjects
 import typingsSlinky.phaser.Phaser.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A Container Game Object.
@@ -84,4 +84,3 @@ class Container protected ()
     children: js.Array[typingsSlinky.phaser.Phaser.GameObjects.GameObject]
   ) = this()
 }
-

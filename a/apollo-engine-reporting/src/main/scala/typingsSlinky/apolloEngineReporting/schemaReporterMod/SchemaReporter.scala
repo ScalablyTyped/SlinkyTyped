@@ -4,7 +4,7 @@ import typingsSlinky.apolloEngineReporting.reportingOperationTypesMod.EdgeServer
 import typingsSlinky.apolloServerTypes.mod.Logger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-engine-reporting/dist/schemaReporter", "SchemaReporter")
 @js.native
@@ -23,15 +23,24 @@ class SchemaReporter protected () extends js.Object {
     schemaReportingEndpoint: String,
     logger: Logger
   ) = this()
+  
   val executableSchemaDocument: js.Any = js.native
+  
   var graphManagerQuery: js.Any = js.native
+  
   val headers: js.Any = js.native
+  
   var isStopped: js.Any = js.native
+  
   val logger: js.Any = js.native
-  val serverInfo: js.Any = js.native
-  val url: js.Any = js.native
+  
   def reportServerInfo(withExecutableSchema: Boolean): js.Promise[ReportInfoResult] = js.native
+  
+  val serverInfo: js.Any = js.native
+  
   def stop(): Unit = js.native
+  
   def stopped(): Boolean = js.native
+  
+  val url: js.Any = js.native
 }
-

@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.std.CompositionEventInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("CompositionEvent")
 @js.native
@@ -14,7 +14,6 @@ class CompositionEvent protected ()
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: CompositionEventInit) = this()
 }
-
 @JSGlobal("CompositionEvent")
 @js.native
 object CompositionEvent
@@ -24,4 +23,3 @@ object CompositionEvent
       /* eventInitDict */ CompositionEventInit, 
       org.scalajs.dom.raw.CompositionEvent
     ]
-

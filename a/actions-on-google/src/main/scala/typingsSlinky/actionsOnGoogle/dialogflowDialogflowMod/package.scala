@@ -2,9 +2,10 @@ package typingsSlinky.actionsOnGoogle
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object dialogflowDialogflowMod {
+  
   type DialogflowIntentHandler[TConvData, TUserStorage, TContexts /* <: typingsSlinky.actionsOnGoogle.contextMod.Contexts */, TConversation /* <: typingsSlinky.actionsOnGoogle.dialogflowConvMod.DialogflowConversation[TConvData, TUserStorage, TContexts] */, TParameters /* <: typingsSlinky.actionsOnGoogle.contextMod.Parameters */, TArgument /* <: typingsSlinky.actionsOnGoogle.argumentArgumentMod.Argument */] = js.Function4[
     /* conv */ TConversation, 
     /* params */ TParameters, 
@@ -12,7 +13,9 @@ package object dialogflowDialogflowMod {
     /* status */ js.UndefOr[typingsSlinky.actionsOnGoogle.v2Mod.GoogleRpcStatus], 
     js.Promise[js.Any] | js.Any
   ]
+  
   type DialogflowIntentHandlers = org.scalablytyped.runtime.StringDictionary[js.UndefOr[js.Function | java.lang.String]]
+  
   type DialogflowMiddleware[TConversationPlugin /* <: typingsSlinky.actionsOnGoogle.dialogflowConvMod.DialogflowConversation[
     typingsSlinky.actionsOnGoogle.commonMod.JsonObject, 
     typingsSlinky.actionsOnGoogle.commonMod.JsonObject, 
@@ -36,6 +39,7 @@ package object dialogflowDialogflowMod {
       ]) with TConversationPlugin) | scala.Unit
     ])
   ]
+  
   type DialogflowVerificationHeaders = /**
     * A header key value pair to check against.
     * @public

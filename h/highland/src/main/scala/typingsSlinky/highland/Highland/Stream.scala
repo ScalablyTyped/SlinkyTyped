@@ -13,7 +13,7 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 /**
@@ -21,6 +21,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Stream[R] extends EventEmitter {
+  
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   // TRANSFORMS
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -34,6 +35,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def append(y: R): Stream[R] = js.native
+  
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   // CONSUMPTION
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -49,6 +51,7 @@ trait Stream[R] extends EventEmitter {
   // TODO what to do here?
   @JSName("apply")
   def apply(f: js.Function): Unit = js.native
+  
   /**
     * Takes one Stream and batches incoming data into arrays of given length
     *
@@ -61,6 +64,7 @@ trait Stream[R] extends EventEmitter {
     * _([1, 2, 3, 4, 5]).batch(2)  // => [1, 2], [3, 4], [5]
     */
   def batch(n: Double): Stream[js.Array[R]] = js.native
+  
   /**
     * Takes one Stream and batches incoming data within a maximum time frame
     * into arrays of a maximum length.
@@ -82,6 +86,7 @@ trait Stream[R] extends EventEmitter {
     * // => [1, 2], [3], [4]
     */
   def batchWithTimeOrCount(ms: Double, n: Double): Stream[js.Array[R]] = js.native
+  
   /**
     * Groups all values into an Array and passes down the stream as a single
     * data event. This is a bit like doing [toArray](#toArray), but instead
@@ -93,6 +98,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def collect(): Stream[js.Array[R]] = js.native
+  
   /**
     * Filters a Stream to drop all non-truthy values.
     *
@@ -102,6 +108,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def compact(): Stream[R] = js.native
+  
   def concat(ys: js.Array[R]): Stream[R] = js.native
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   // HIGHER-ORDER STREAMS
@@ -120,6 +127,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def concat(ys: Stream[R]): Stream[R] = js.native
+  
   /**
     * Consumes values from a Stream (once resumed) and returns a new Stream for
     * you to optionally push values onto using the provided push / next functions.
@@ -143,6 +151,7 @@ trait Stream[R] extends EventEmitter {
       Unit
     ]
   ): Stream[U] = js.native
+  
   /**
     * Holds off pushing data events downstream until there has been no more
     * data for `ms` milliseconds. Sends the last value that occurred before
@@ -155,6 +164,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def debounce(ms: Double): Stream[R] = js.native
+  
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   // STREAM OBJECTS
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -171,6 +181,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def destroy(): Unit = js.native
+  
   /**
     * Calls a function once the Stream has ended. This method consumes the stream.
     * If the Stream has already ended, the function is called immediately.
@@ -196,6 +207,7 @@ trait Stream[R] extends EventEmitter {
     * });
     */
   def done(f: js.Function0[Unit]): Unit = js.native
+  
   /**
     * Creates a new Stream which applies a function to each value from the source
     * and re-emits the source value. Useful when you want to mutate the value or
@@ -218,6 +230,7 @@ trait Stream[R] extends EventEmitter {
     * // => 1, 2, 3
     */
   def doto(f: js.Function1[/* x */ R, Unit]): Stream[R] = js.native
+  
   /**
     * Acts as the inverse of [`take(n)`](#take) - instead of returning the first `n` values, it ignores the
     * first `n` values and then emits the rest. `n` must be of type `Number`, if not the whole stream will
@@ -232,6 +245,7 @@ trait Stream[R] extends EventEmitter {
     * _([1, 2, 3, 4]).drop(2) // => 3, 4
     */
   def drop(n: Double): Stream[R] = js.native
+  
   /**
     * Iterates over every value from the Stream, calling the iterator function
     * on each of them. This function causes a **thunk**.
@@ -246,6 +260,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def each(f: js.Function1[/* x */ R, Unit]): Pick[Stream[R], done] = js.native
+  
   /**
     * Ends a Stream. This is the same as sending a [nil](#nil) value as data.
     * You shouldn't need to call this directly, rather it will be called by
@@ -258,6 +273,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def end(): Unit = js.native
+  
   /**
     * Extracts errors from a Stream and applies them to an error handler
     * function. Returns a new Stream with the errors removed (unless the error
@@ -277,6 +293,7 @@ trait Stream[R] extends EventEmitter {
       Unit
     ]
   ): Stream[R] = js.native
+  
   def filter(f: js.Function1[/* x */ R, Boolean]): Stream[R] = js.native
   /**
     * Creates a new Stream including only the values which pass a truth test.
@@ -289,6 +306,7 @@ trait Stream[R] extends EventEmitter {
     */
   @JSName("filter")
   def filter_S_R[S /* <: R */](f: js.Function1[/* x */ R, /* is S */ Boolean]): Stream[S] = js.native
+  
   /**
     * A convenient form of filter, which returns the first object from a
     * Stream that passes the provided truth test
@@ -300,6 +318,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def find(f: js.Function1[/* x */ R, Boolean]): Stream[R] = js.native
+  
   /**
     * A convenient form of [where](#where), which returns the first object from a
     * Stream that matches a set of property values. findWhere is to [where](#where) as [find](#find) is to [filter](#filter).
@@ -326,6 +345,7 @@ trait Stream[R] extends EventEmitter {
     * // => {type: 'blogpost', title: 'foo'}
     */
   def findWhere(props: Partial[R]): Stream[R] = js.native
+  
   /**
     * Filters using a predicate which returns a Stream. If you need to check
     * against an asynchronous data source when filtering a Stream, this can
@@ -340,6 +360,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def flatFilter(f: js.Function1[/* x */ R, Stream[Boolean]]): Stream[R] = js.native
+  
   /**
     * Creates a new Stream of values by applying each item in a Stream to an
     * iterator function which must return a (possibly empty) Stream. Each
@@ -354,6 +375,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def flatMap[U](f: js.Function1[/* x */ R, Stream[U] | U]): Stream[U] = js.native
+  
   /**
     * Recursively reads values from a Stream which may contain nested Streams
     * or Arrays. As values or errors are encountered, they are emitted on a
@@ -365,6 +387,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def flatten[U /* <: Flattened[R] */](): Stream[U] = js.native
+  
   /**
     * Forks a stream, allowing you to add additional consumers with shared
     * back-pressure. A stream forked to multiple consumers will only pull values
@@ -376,6 +399,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def fork(): Stream[R] = js.native
+  
   /**
     * A convenient form of reduce, which groups items based on a function or property name
     *
@@ -389,6 +413,7 @@ trait Stream[R] extends EventEmitter {
   // TODO verify this
   def group(f: js.Function1[/* x */ R, String]): Stream[StringDictionary[js.Array[R]]] = js.native
   def group(prop: String): Stream[StringDictionary[js.Array[R]]] = js.native
+  
   /**
     * Creates a new Stream with only the first value from the source.
     *
@@ -400,6 +425,7 @@ trait Stream[R] extends EventEmitter {
     * _([1, 2, 3, 4]).head() // => 1
     */
   def head(): Stream[R] = js.native
+  
   /**
     * Creates a new Stream with the separator interspersed between the elements of the source.
     *
@@ -412,6 +438,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def intersperse[U](separator: U): Stream[R | U] = js.native
+  
   /**
     * Calls a named method on each object from the Stream - returning
     * a new stream with the result of those calls.
@@ -424,6 +451,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def invoke[U](method: String, args: js.Array[_]): Stream[U] = js.native
+  
   /**
     * Drops all values from the Stream apart from the last one (if any).
     *
@@ -433,6 +461,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def last(): Stream[R] = js.native
+  
   /**
     * Creates a new Stream, which when read from, only returns the last
     * seen value from the source. The source stream does not experience
@@ -445,6 +474,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def latest(): Stream[R] = js.native
+  
   /**
     * Creates a new Stream of transformed values by applying a function to each
     * value from the source. The transformation function can be replaced with
@@ -458,6 +488,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def map[U](f: js.Function1[/* x */ R, U]): Stream[U] = js.native
+  
   /**
     * Takes a Stream of Streams and merges their values and errors into a
     * single new Stream. The merged stream ends when all source streams have
@@ -480,6 +511,7 @@ trait Stream[R] extends EventEmitter {
     * // => contents of foo.txt, bar.txt and baz.txt in the order they were read
     */
   def merge[U](): Stream[U] = js.native
+  
   /**
     * Takes a Stream of Streams and merges their values and errors into a
     * single new Stream, limitting the number of unpaused streams that can
@@ -508,6 +540,7 @@ trait Stream[R] extends EventEmitter {
     * // has completely been read or baz.md has been read
     */
   def mergeWithLimit[U](n: Double): Stream[U] = js.native
+  
   /**
     * Observes a stream, allowing you to handle values as they are emitted, without
     * adding back-pressure or causing data to be pulled from the source. This can
@@ -521,6 +554,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def observe(): Stream[R] = js.native
+  
   /**
     * Switches source to an alternate Stream if the current Stream is empty.
     *
@@ -531,6 +565,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def otherwise(ys: Stream[R]): Stream[R] = js.native
+  
   /**
     * Takes a Stream of Streams and reads from them in parallel, buffering
     * the results until they can be returned to the consumer in their original
@@ -543,6 +578,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def parallel[U](n: Double): Stream[U] = js.native
+  
   /**
     * Pauses the stream. All Highland Streams start in the paused state.
     *
@@ -552,6 +588,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def pause(): Unit = js.native
+  
   /**
     *
     * Retrieves copies of all elements in the collection,
@@ -565,6 +602,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def pick[Prop /* <: /* keyof R */ String */](props: js.Array[Prop]): Stream[Pick[R, Prop]] = js.native
+  
   /**
     *
     * Retrieves copies of all the elements in the collection
@@ -585,6 +623,7 @@ trait Stream[R] extends EventEmitter {
       Boolean
     ]
   ): Stream[Partial[R]] = js.native
+  
   def pipe[U /* <: WritableStream */](dest: U): U = js.native
   def pipe[U /* <: WritableStream */](dest: U, options: End): U = js.native
   /**
@@ -621,6 +660,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def pipe[U](dest: Stream[U]): Stream[U] = js.native
+  
   /**
     * Retrieves values associated with a given property from all elements in
     * the collection.
@@ -635,6 +675,7 @@ trait Stream[R] extends EventEmitter {
     /* import warning: importer.ImportType#apply Failed type conversion: R[Prop] */ js.Any
   ] = js.native
   def pluck[U](prop: String): Stream[U] = js.native
+  
   /**
     * Consumes a single item from the Stream. Unlike consume, this function will
     * not provide a new stream for you to push values onto, and it will unsubscribe
@@ -650,6 +691,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def pull(f: js.Function2[/* err */ js.Error, /* x */ R, Unit]): Unit = js.native
+  
   /**
     * Limits number of values through the stream to a maximum of number of values
     * per window. Errors are not limited but allowed to pass through as soon as
@@ -669,6 +711,7 @@ trait Stream[R] extends EventEmitter {
     * // after 200ms => 1, 2, 3, 4, 5
     */
   def ratelimit(num: Double, ms: Double): Stream[R] = js.native
+  
   /**
     * Boils down a Stream to a single value. The memo is the initial state
     * of the reduction, and each successive step of it should be returned by
@@ -683,6 +726,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def reduce[U](memo: U, iterator: js.Function2[/* memo */ U, /* x */ R, U]): Stream[U] = js.native
+  
   /**
     * Same as [reduce](#reduce), but uses the first element as the initial
     * state instead of passing in a `memo` value.
@@ -694,6 +738,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def reduce1[U](iterator: js.Function2[/* memo */ R | U, /* x */ R, U]): Stream[U] = js.native
+  
   /**
     * The inverse of [filter](#filter).
     *
@@ -708,6 +753,7 @@ trait Stream[R] extends EventEmitter {
     * });
     */
   def reject(f: js.Function1[/* x */ R, Boolean]): Stream[R] = js.native
+  
   /**
     * Resumes a paused Stream. This will either read from the Stream's incoming
     * buffer or request more data from an upstream source.
@@ -718,6 +764,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def resume(): Unit = js.native
+  
   /**
     * Like [reduce](#reduce), but emits each intermediate value of the
     * reduction as it is calculated.
@@ -730,6 +777,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def scan[U](memo: U, iterator: js.Function2[/* memo */ U, /* x */ R, U]): Stream[U] = js.native
+  
   /**
     * Same as [scan](#scan), but uses the first element as the initial
     * state instead of passing in a `memo` value.
@@ -743,6 +791,7 @@ trait Stream[R] extends EventEmitter {
     * _([1, 2, 3, 4]).scan1(add) // => 1, 3, 6, 10
     */
   def scan1[U](iterator: js.Function2[/* memo */ R | U, /* x */ R, U]): Stream[U] = js.native
+  
   /**
     * Reads values from a Stream of Streams, emitting them on a Single output
     * Stream. This can be thought of as a flatten, just one level deep. Often
@@ -755,6 +804,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def sequence[U](): Stream[U] = js.native
+  
   /**
     * An alias for the [sequence](#sequence) method.
     *
@@ -764,6 +814,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def series[U](): Stream[U] = js.native
+  
   /**
     * Creates a new Stream with the values from the source in the range of `start` (inclusive) to `end` (exclusive).
     * `start` and `end` must be of type `Number`, if `start` is not a `Number` it will default to `0`
@@ -778,6 +829,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def slice(start: Double, end: Double): Stream[R] = js.native
+  
   /**
     * Collects all values together then emits each value individually but in sorted order.
     * The method for sorting the elements is ascending lexical.
@@ -791,6 +843,7 @@ trait Stream[R] extends EventEmitter {
     * // => ['b', 'g', 'r', 'z']
     */
   def sort(): Stream[R] = js.native
+  
   /**
     * Collects all values together then emits each value individually in sorted
     * order. The method for sorting the elements is defined by the comparator
@@ -813,6 +866,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def sortBy(f: js.Function2[/* a */ R, /* b */ R, Double]): Stream[R] = js.native
+  
   /**
     * [splitBy](#splitBy) over newlines.
     *
@@ -822,6 +876,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def split(): Stream[String] = js.native
+  
   /**
     * Splits the source Stream by a separator and emits the pieces in between, much like splitting a string.
     *
@@ -835,6 +890,7 @@ trait Stream[R] extends EventEmitter {
     */
   def splitBy(sep: String): Stream[String] = js.native
   def splitBy(sep: js.RegExp): Stream[String] = js.native
+  
   /**
     * Like the [errors](#errors) method, but emits a Stream end marker after
     * an Error is encountered.
@@ -846,6 +902,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def stopOnError(f: js.Function1[/* err */ js.Error, Unit]): Stream[R] = js.native
+  
   /**
     * Creates a new Stream with the first `n` values from the source.
     *
@@ -856,6 +913,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def take(n: Double): Stream[R] = js.native
+  
   /**
     * An alias for the [doto](#doto) method.
     *
@@ -868,6 +926,7 @@ trait Stream[R] extends EventEmitter {
     * _([1, 2, 3]).tap(console.log)
     */
   def tap(f: js.Function1[/* x */ R, Unit]): Stream[R] = js.native
+  
   /**
     * Ensures that only one data event is push downstream (or into the buffer)
     * every `ms` milliseconds, any other values are dropped.
@@ -879,6 +938,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def throttle(ms: Double): Stream[R] = js.native
+  
   def through(thru: ReadWriteStream): Stream[_] = js.native
   /**
     * Transforms a stream using an arbitrary target transform.
@@ -940,6 +1000,7 @@ trait Stream[R] extends EventEmitter {
     * });
     */
   def through[U](f: js.Function1[/* x */ Stream[R], U]): U = js.native
+  
   /**
     * Collects all values from a Stream into an Array and calls a function with
     * once with the result. This function causes a **thunk**.
@@ -954,6 +1015,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def toArray(f: js.Function1[/* arr */ js.Array[R], Unit]): Unit = js.native
+  
   /**
     * Returns the result of a stream to a nodejs-style callback function.
     *
@@ -977,6 +1039,7 @@ trait Stream[R] extends EventEmitter {
     * });
     */
   def toCallback(cb: js.Function2[/* err */ js.UndefOr[js.Error], /* x */ js.UndefOr[R], Unit]): Unit = js.native
+  
   /**
     * Converts the stream to a node Readable Stream for use in methods
     * or pipes that depend on the native stream type.
@@ -996,6 +1059,7 @@ trait Stream[R] extends EventEmitter {
     */
   def toNodeStream(): ReadableStream = js.native
   def toNodeStream(options: js.Object): ReadableStream = js.native
+  
   /**
     * Converts the result of a stream to Promise.
     *
@@ -1018,6 +1082,7 @@ trait Stream[R] extends EventEmitter {
     * });
     */
   def toPromise[P /* <: js.Thenable[R] */](PromiseCtor: PConstructor[R, P]): P = js.native
+  
   /**
     * Filters out all duplicate values from the stream and keeps only the first
     * occurence of each value, using === to define equality.
@@ -1028,6 +1093,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def uniq(): Stream[R] = js.native
+  
   /**
     * Filters out all duplicate values from the stream and keeps only the first
     * occurence of each value, using the provided function to define equality.
@@ -1038,6 +1104,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def uniqBy(f: js.Function2[/* a */ R, /* b */ R, Boolean]): Stream[R] = js.native
+  
   /**
     * A convenient form of filter, which returns all objects from a Stream
     * match a set of property values.
@@ -1049,6 +1116,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def where(props: Partial[R]): Stream[R] = js.native
+  
   /**
     * Writes a value to the Stream. If the Stream is paused it will go into the
     * Stream's incoming buffer, otherwise it will be immediately processed and
@@ -1065,6 +1133,7 @@ trait Stream[R] extends EventEmitter {
     * @api public
     */
   def write(x: R): Boolean = js.native
+  
   /**
     * Takes two Streams and returns a Stream of corresponding pairs.
     *
@@ -1076,6 +1145,7 @@ trait Stream[R] extends EventEmitter {
     */
   def zip[U](ys: js.Array[U]): Stream[js.Tuple2[R, U]] = js.native
   def zip[U](ys: Stream[U]): Stream[js.Tuple2[R, U]] = js.native
+  
   /**
     * Takes a stream and a *finite* stream of `N` streams
     * and returns a stream of the corresponding `(N+1)`-tuples.
@@ -1091,6 +1161,7 @@ trait Stream[R] extends EventEmitter {
     */
   def zipAll[U](ys: js.Array[js.Array[U]]): Stream[js.Array[R | U]] = js.native
   def zipAll[U](ys: Stream[js.Array[U] | Stream[U]]): Stream[js.Array[R | U]] = js.native
+  
   /**
     * Takes a *finite* stream of streams and returns a stream where the first
     * element from each separate stream is combined into a single data event,
@@ -1107,4 +1178,3 @@ trait Stream[R] extends EventEmitter {
     */
   def zipAll0[T](): Stream[js.Array[T]] = js.native
 }
-

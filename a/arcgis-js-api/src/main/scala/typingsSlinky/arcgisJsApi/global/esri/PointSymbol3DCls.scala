@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.PointSymbol3DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.PointSymbol3D")
 @js.native
@@ -16,4 +16,3 @@ class PointSymbol3DCls ()
   extends typingsSlinky.arcgisJsApi.esri.PointSymbol3D {
   def this(properties: PointSymbol3DProperties) = this()
 }
-

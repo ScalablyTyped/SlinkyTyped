@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `ListItem` creates a clickable and focusable `<li>` within a `List` that
@@ -15,4 +15,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/list/types/ListItem", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[ListItemProps with RefAttributes[HTMLLIElement]]]
-

@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.semanticUiReact.breadcrumbSectionMod.BreadcrumbSectionProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semantic-ui-react", "BreadcrumbSection")
 @js.native
@@ -15,8 +15,6 @@ class BreadcrumbSection protected ()
   def this(props: BreadcrumbSectionProps) = this()
   def this(props: BreadcrumbSectionProps, context: js.Any) = this()
 }
-
 @JSImport("semantic-ui-react", "BreadcrumbSection")
 @js.native
 object BreadcrumbSection extends TopLevel[ReactComponentClass[BreadcrumbSectionProps]]
-

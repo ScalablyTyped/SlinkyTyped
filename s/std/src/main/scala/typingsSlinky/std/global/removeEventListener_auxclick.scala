@@ -5,11 +5,12 @@ import org.scalajs.dom.raw.Window
 import typingsSlinky.std.stdStrings.auxclick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("removeEventListener")
 @js.native
 object removeEventListener_auxclick extends js.Object {
+  
   def apply(
     `type`: auxclick,
     listener: js.ThisFunction1[/* this */ Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
@@ -25,4 +26,3 @@ object removeEventListener_auxclick extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
 }
-

@@ -5,12 +5,12 @@ import typingsSlinky.babelTraverse.mod.Scope
 import typingsSlinky.babelTraverse.mod.TraverseOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@babel/core", "traverse")
 @js.native
 object traverse extends js.Object {
-  var visitors: Merge = js.native
+  
   def apply(
     parent: js.Array[typingsSlinky.babelTraverse.mod.Node],
     opts: TraverseOptions[typingsSlinky.babelTraverse.mod.Node]
@@ -156,5 +156,6 @@ object traverse extends js.Object {
     state: S,
     parentPath: typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTraverse.mod.Node]
   ): Unit = js.native
+  
+  var visitors: Merge = js.native
 }
-

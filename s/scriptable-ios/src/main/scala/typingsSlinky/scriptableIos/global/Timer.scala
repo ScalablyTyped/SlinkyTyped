@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _A timer that fires after a time interval have elapsed._
@@ -20,11 +20,11 @@ import scala.scalajs.js.annotation._
   */
 class Timer ()
   extends typingsSlinky.scriptableIos.Timer
-
 /* static members */
 @JSGlobal("Timer")
 @js.native
 object Timer extends js.Object {
+  
   /**
     * _Schedules a timer._
     *
@@ -36,4 +36,3 @@ object Timer extends js.Object {
     */
   def schedule(timeInterval: Double, repeats: Boolean, callback: js.Function0[Unit]): typingsSlinky.scriptableIos.Timer = js.native
 }
-

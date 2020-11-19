@@ -4,10 +4,11 @@ import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SubmitHandler[FormData, P, ErrorType] extends js.Object {
+  
   def apply(event: SyntheticEvent[Event, _]): Unit = js.native
   def apply(submit: FormSubmitHandler[FormData, P, ErrorType]): js.Any = js.native
   def apply(
@@ -105,4 +106,3 @@ trait SubmitHandler[FormData, P, ErrorType] extends js.Object {
     fields: js.Array[String]
   ): js.Any = js.native
 }
-

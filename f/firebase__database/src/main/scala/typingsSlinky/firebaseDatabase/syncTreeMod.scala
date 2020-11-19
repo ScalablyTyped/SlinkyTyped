@@ -8,13 +8,15 @@ import typingsSlinky.firebaseDatabase.pathMod.Path
 import typingsSlinky.firebaseDatabase.queryMod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@firebase/database/dist/src/core/SyncTree", JSImport.Namespace)
 @js.native
 object syncTreeMod extends js.Object {
+  
   @js.native
   trait ListenProvider extends js.Object {
+    
     def startListening(
       query: Query,
       tag: Double,
@@ -27,6 +29,7 @@ object syncTreeMod extends js.Object {
       hashFn: js.Function0[String],
       onComplete: js.Function2[/* a */ String, /* b */ js.UndefOr[js.Any], js.Array[Event]]
     ): js.Array[Event] = js.native
+    
     def stopListening(a: Query): Unit = js.native
     def stopListening(a: Query, b: Double): Unit = js.native
   }
@@ -38,14 +41,40 @@ object syncTreeMod extends js.Object {
       *   to server data.
       */
     def this(listenProvider_ : ListenProvider) = this()
+    
+    /**
+      * Acknowledge a pending user write that was previously registered with applyUserOverwrite() or applyUserMerge().
+      *
+      * @param revert True if the given write failed and needs to be reverted
+      * @return Events to raise.
+      */
+    def ackUserWrite(writeId: Double): js.Array[Event] = js.native
+    def ackUserWrite(writeId: Double, revert: Boolean): js.Array[Event] = js.native
+    
+    /**
+      * Add an event callback for the specified query.
+      *
+      * @return Events to raise.
+      */
+    def addEventRegistration(query: Query, eventRegistration: EventRegistration): js.Array[Event] = js.native
+    
+    /**
+      * Apply a listen complete for a query
+      *
+      * @return Events to raise.
+      */
+    def applyListenComplete(path: Path): js.Array[Event] = js.native
+    
     /**
       * Recursive helper for applyOperationToSyncPoints_
       */
     var applyOperationDescendantsHelper_ : js.Any = js.native
+    
     /**
       * Recursive helper for applyOperationToSyncPoints_
       */
     var applyOperationHelper_ : js.Any = js.native
+    
     /**
       * A helper method that visits all descendant and ancestor SyncPoints, applying the operation.
       *
@@ -60,98 +89,54 @@ object syncTreeMod extends js.Object {
       * - We concatenate all of the events returned by each SyncPoint and return the result.
       */
     var applyOperationToSyncPoints_ : js.Any = js.native
-    /**
-      * A helper method to apply tagged operations
-      */
-    var applyTaggedOperation_ : js.Any = js.native
-    /**
-      * This collapses multiple unfiltered views into a single view, since we only need a single
-      * listener for them.
-      */
-    var collectDistinctViewsForSubTree_ : js.Any = js.native
-    var createListenerForView_ : js.Any = js.native
-    var listenProvider_ : js.Any = js.native
-    /**
-      * A tree of all pending user writes (user-initiated set()'s, transaction()'s, update()'s, etc.).
-      */
-    var pendingWriteTree_ : js.Any = js.native
-    /**
-      * Return the query associated with the given tag, if we have one
-      */
-    var queryKeyForTag_ : js.Any = js.native
-    val queryToTagMap: js.Any = js.native
-    var removeTags_ : js.Any = js.native
-    /**
-      * For a given new listen, manage the de-duplication of outstanding subscriptions.
-      *
-      * @return This method can return events to support synchronous data sources
-      */
-    var setupListener_ : js.Any = js.native
-    /**
-      * Tree of SyncPoints.  There's a SyncPoint at any location that has 1 or more views.
-      */
-    var syncPointTree_ : js.Any = js.native
-    /**
-      * Return the tag associated with the given query.
-      */
-    var tagForQuery_ : js.Any = js.native
-    val tagToQueryMap: js.Any = js.native
-    /**
-      * Acknowledge a pending user write that was previously registered with applyUserOverwrite() or applyUserMerge().
-      *
-      * @param revert True if the given write failed and needs to be reverted
-      * @return Events to raise.
-      */
-    def ackUserWrite(writeId: Double): js.Array[Event] = js.native
-    def ackUserWrite(writeId: Double, revert: Boolean): js.Array[Event] = js.native
-    /**
-      * Add an event callback for the specified query.
-      *
-      * @return Events to raise.
-      */
-    def addEventRegistration(query: Query, eventRegistration: EventRegistration): js.Array[Event] = js.native
-    /**
-      * Apply a listen complete for a query
-      *
-      * @return Events to raise.
-      */
-    def applyListenComplete(path: Path): js.Array[Event] = js.native
+    
     /**
       * Apply new server data to be merged in at the specified path.
       *
       * @return Events to raise.
       */
     def applyServerMerge(path: Path, changedChildren: StringDictionary[Node]): js.Array[Event] = js.native
+    
     /**
       * Apply new server data for the specified path..
       *
       * @return Events to raise.
       */
     def applyServerOverwrite(path: Path, newData: Node): js.Array[Event] = js.native
+    
     /**
       * Apply a listen complete for a tagged query
       *
       * @return Events to raise.
       */
     def applyTaggedListenComplete(path: Path, tag: Double): js.Array[Event] = js.native
+    
+    /**
+      * A helper method to apply tagged operations
+      */
+    var applyTaggedOperation_ : js.Any = js.native
+    
     /**
       * Apply server data to be merged in for the specified tagged query.
       *
       * @return Events to raise.
       */
     def applyTaggedQueryMerge(path: Path, changedChildren: StringDictionary[Node], tag: Double): js.Array[Event] = js.native
+    
     /**
       * Apply new server data for the specified tagged query.
       *
       * @return Events to raise.
       */
     def applyTaggedQueryOverwrite(path: Path, snap: Node, tag: Double): js.Array[Event] = js.native
+    
     /**
       * Apply the data from a user-generated update() call
       *
       * @return Events to raise.
       */
     def applyUserMerge(path: Path, changedChildren: StringDictionary[Node], writeId: Double): js.Array[Event] = js.native
+    
     /**
       * Apply the data changes for a user-generated set() or transaction() call.
       *
@@ -159,6 +144,7 @@ object syncTreeMod extends js.Object {
       */
     def applyUserOverwrite(path: Path, newData: Node, writeId: Double): js.Array[Event] = js.native
     def applyUserOverwrite(path: Path, newData: Node, writeId: Double, visible: Boolean): js.Array[Event] = js.native
+    
     /**
       * Returns a complete cache, if we have one, of the data at a particular path. If the location does not have a
       * listener above it, we will get a false "null". This shouldn't be a problem because transactions will always
@@ -172,6 +158,29 @@ object syncTreeMod extends js.Object {
       */
     def calcCompleteEventCache(path: Path): Node = js.native
     def calcCompleteEventCache(path: Path, writeIdsToExclude: js.Array[Double]): Node = js.native
+    
+    /**
+      * This collapses multiple unfiltered views into a single view, since we only need a single
+      * listener for them.
+      */
+    var collectDistinctViewsForSubTree_ : js.Any = js.native
+    
+    var createListenerForView_ : js.Any = js.native
+    
+    var listenProvider_ : js.Any = js.native
+    
+    /**
+      * A tree of all pending user writes (user-initiated set()'s, transaction()'s, update()'s, etc.).
+      */
+    var pendingWriteTree_ : js.Any = js.native
+    
+    /**
+      * Return the query associated with the given tag, if we have one
+      */
+    var queryKeyForTag_ : js.Any = js.native
+    
+    val queryToTagMap: js.Any = js.native
+    
     /**
       * Remove event callback(s).
       *
@@ -186,27 +195,52 @@ object syncTreeMod extends js.Object {
     def removeEventRegistration(query: Query, eventRegistration: Null, cancelError: js.Error): js.Array[Event] = js.native
     def removeEventRegistration(query: Query, eventRegistration: EventRegistration): js.Array[Event] = js.native
     def removeEventRegistration(query: Query, eventRegistration: EventRegistration, cancelError: js.Error): js.Array[Event] = js.native
+    
+    var removeTags_ : js.Any = js.native
+    
+    /**
+      * For a given new listen, manage the de-duplication of outstanding subscriptions.
+      *
+      * @return This method can return events to support synchronous data sources
+      */
+    var setupListener_ : js.Any = js.native
+    
+    /**
+      * Tree of SyncPoints.  There's a SyncPoint at any location that has 1 or more views.
+      */
+    var syncPointTree_ : js.Any = js.native
+    
+    /**
+      * Return the tag associated with the given query.
+      */
+    var tagForQuery_ : js.Any = js.native
+    
+    val tagToQueryMap: js.Any = js.native
   }
-  
   /* static members */
   @js.native
   object SyncTree extends js.Object {
+    
     /**
       * Static accessor for query tags.
       */
     var getNextQueryTag_ : js.Any = js.native
+    
     /**
       * Given a query, computes a "queryKey" suitable for use in our queryToTagMap_.
       */
     var makeQueryKey_ : js.Any = js.native
+    
     /**
       * Static tracker for next query tag.
       */
     var nextQueryTag_ : js.Any = js.native
+    
     /**
       * Given a queryKey (created by makeQueryKey), parse it back into a path and queryId.
       */
     var parseQueryKey_ : js.Any = js.native
+    
     /**
       * Normalizes a query to a query we send the server for listening
       *
@@ -214,6 +248,4 @@ object syncTreeMod extends js.Object {
       */
     var queryForListening_ : js.Any = js.native
   }
-  
 }
-

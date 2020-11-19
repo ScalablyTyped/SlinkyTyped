@@ -10,7 +10,7 @@ import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/RangeSelector", "RangeSelector")
 @js.native
@@ -26,7 +26,6 @@ class RangeSelector protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("grommet/es6/components/RangeSelector", "RangeSelector")
 @js.native
 object RangeSelector extends TopLevel[
@@ -34,4 +33,3 @@ object RangeSelector extends TopLevel[
         RangeSelectorProps with (Omit[DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], color])
       ]
     ]
-

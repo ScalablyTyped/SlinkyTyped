@@ -3,12 +3,12 @@ package typingsSlinky.winrt.Windows.Graphics.Imaging
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BitmapCodecInformation extends IBitmapCodecInformation
-
 object BitmapCodecInformation {
+  
   @scala.inline
   def apply(
     codecId: String,
@@ -20,4 +20,3 @@ object BitmapCodecInformation {
     __obj.asInstanceOf[BitmapCodecInformation]
   }
 }
-

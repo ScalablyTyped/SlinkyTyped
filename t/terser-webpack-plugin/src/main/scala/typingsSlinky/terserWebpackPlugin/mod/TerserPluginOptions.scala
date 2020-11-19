@@ -3,10 +3,11 @@ package typingsSlinky.terserWebpackPlugin.mod
 import typingsSlinky.terser.mod.MinifyOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TerserPluginOptions extends js.Object {
+  
   /**
     * ⚠ Ignored in webpack 5! Please use {@link webpack.js.org/configuration/other-options/#cache.}
     * Enable/disable file caching.
@@ -14,16 +15,19 @@ trait TerserPluginOptions extends js.Object {
     * @default true
     */
   var cache: js.UndefOr[Boolean | String] = js.native
+  
   /**
     * ⚠ Ignored in webpack 5! Please use {@link webpack.js.org/configuration/other-options/#cache}.
     * Allows you to override default cache keys.
     */
   var cacheKeys: js.UndefOr[js.Function2[/* defaultCacheKeys */ js.Any, /* file */ js.Any, js.Object]] = js.native
+  
   /**
     * Files to exclude.
     * @default undefined
     */
   var exclude: js.UndefOr[String | js.RegExp | (js.Array[String | js.RegExp])] = js.native
+  
   /**
     * Whether comments shall be extracted to a separate file, (see details).
     * By default extract only comments using /^\**!|@preserve|@license|@cc_on/i regexp condition and remove remaining comments.
@@ -33,38 +37,45 @@ trait TerserPluginOptions extends js.Object {
     * @default true
     */
   var extractComments: js.UndefOr[Boolean | String | js.RegExp | ExtractCommentFn | ExtractCommentOptions] = js.native
+  
   /**
     * Files to include.
     * @default undefined
     */
   var include: js.UndefOr[String | js.RegExp | (js.Array[String | js.RegExp])] = js.native
+  
   /**
     * Allows you to override default minify function.
     * By default plugin uses terser package. Useful for using and testing unpublished versions or forks
     * @default undefined
     */
   var minify: js.UndefOr[js.Function2[/* file */ js.Any, /* sourceMap */ js.Any, MinifyResult]] = js.native
+  
   /**
     * Enable/disable multi-process parallel running.
     * Use multi-process parallel running to improve the build speed. Default number of concurrent runs: os.cpus().length - 1.
     * @default true
     */
   var parallel: js.UndefOr[Boolean | Double] = js.native
+  
   /**
     * Use source maps to map error message locations to modules (this slows down the compilation).
     * If you use your own minify function please read the minify section for handling source maps correctly.
     * @default false
     */
   var sourceMap: js.UndefOr[Boolean] = js.native
+  
   /**
     * Terser minify {@link https://github.com/terser/terser#minify-options|options}.
     */
   var terserOptions: js.UndefOr[MinifyOptions] = js.native
+  
   /**
     * Test to match files against.
     * @default /\.m?js(\?.*)?$/i
     */
   var test: js.UndefOr[String | js.RegExp | (js.Array[String | js.RegExp])] = js.native
+  
   /**
     * Allow to filter terser warnings.
     * ⚠️ The source argument will contain undefined if you don't use source maps.
@@ -79,87 +90,119 @@ trait TerserPluginOptions extends js.Object {
     ]
   ] = js.native
 }
-
 object TerserPluginOptions {
+  
   @scala.inline
   def apply(): TerserPluginOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[TerserPluginOptions]
   }
+  
   @scala.inline
   implicit class TerserPluginOptionsOps[Self <: TerserPluginOptions] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCache(value: Boolean | String): Self = this.set("cache", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteCache: Self = this.set("cache", js.undefined)
+    
     @scala.inline
     def setCacheKeys(value: (/* defaultCacheKeys */ js.Any, /* file */ js.Any) => js.Object): Self = this.set("cacheKeys", js.Any.fromFunction2(value))
+    
     @scala.inline
     def deleteCacheKeys: Self = this.set("cacheKeys", js.undefined)
+    
     @scala.inline
     def setExcludeVarargs(value: (String | js.RegExp)*): Self = this.set("exclude", js.Array(value :_*))
+    
     @scala.inline
     def setExcludeRegExp(value: js.RegExp): Self = this.set("exclude", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setExclude(value: String | js.RegExp | (js.Array[String | js.RegExp])): Self = this.set("exclude", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteExclude: Self = this.set("exclude", js.undefined)
+    
     @scala.inline
     def setExtractCommentsFunction2(value: (/* astNode */ js.Any, /* comment */ js.Any) => Boolean | js.Object): Self = this.set("extractComments", js.Any.fromFunction2(value))
+    
     @scala.inline
     def setExtractCommentsRegExp(value: js.RegExp): Self = this.set("extractComments", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setExtractComments(value: Boolean | String | js.RegExp | ExtractCommentFn | ExtractCommentOptions): Self = this.set("extractComments", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteExtractComments: Self = this.set("extractComments", js.undefined)
+    
     @scala.inline
     def setIncludeVarargs(value: (String | js.RegExp)*): Self = this.set("include", js.Array(value :_*))
+    
     @scala.inline
     def setIncludeRegExp(value: js.RegExp): Self = this.set("include", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setInclude(value: String | js.RegExp | (js.Array[String | js.RegExp])): Self = this.set("include", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteInclude: Self = this.set("include", js.undefined)
+    
     @scala.inline
     def setMinify(value: (/* file */ js.Any, /* sourceMap */ js.Any) => MinifyResult): Self = this.set("minify", js.Any.fromFunction2(value))
+    
     @scala.inline
     def deleteMinify: Self = this.set("minify", js.undefined)
+    
     @scala.inline
     def setParallel(value: Boolean | Double): Self = this.set("parallel", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteParallel: Self = this.set("parallel", js.undefined)
+    
     @scala.inline
     def setSourceMap(value: Boolean): Self = this.set("sourceMap", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteSourceMap: Self = this.set("sourceMap", js.undefined)
+    
     @scala.inline
     def setTerserOptions(value: MinifyOptions): Self = this.set("terserOptions", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteTerserOptions: Self = this.set("terserOptions", js.undefined)
+    
     @scala.inline
     def setTestVarargs(value: (String | js.RegExp)*): Self = this.set("test", js.Array(value :_*))
+    
     @scala.inline
     def setTestRegExp(value: js.RegExp): Self = this.set("test", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTest(value: String | js.RegExp | (js.Array[String | js.RegExp])): Self = this.set("test", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteTest: Self = this.set("test", js.undefined)
+    
     @scala.inline
     def setWarningsFilter(
       value: (/* warning */ String, /* file */ String, /* source */ js.UndefOr[String]) => js.UndefOr[Boolean | Null]
     ): Self = this.set("warningsFilter", js.Any.fromFunction3(value))
+    
     @scala.inline
     def deleteWarningsFilter: Self = this.set("warningsFilter", js.undefined)
   }
-  
 }
-

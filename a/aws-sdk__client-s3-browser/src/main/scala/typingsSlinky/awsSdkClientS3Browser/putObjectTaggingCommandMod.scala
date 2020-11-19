@@ -12,11 +12,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-s3-browser/commands/PutObjectTaggingCommand", JSImport.Namespace)
 @js.native
 object putObjectTaggingCommandMod extends js.Object {
+  
   @js.native
   class PutObjectTaggingCommand protected () extends Command[
           InputTypesUnion, 
@@ -27,13 +28,14 @@ object putObjectTaggingCommandMod extends js.Object {
           Blob
         ] {
     def this(input: PutObjectTaggingInput) = this()
+    
     val middlewareStack: MiddlewareStack[PutObjectTaggingInput, PutObjectTaggingOutput, Blob] = js.native
+    
     val model: OperationModel = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: S3ResolvedConfiguration
     ): Handler[PutObjectTaggingInput, PutObjectTaggingOutput] = js.native
   }
-  
 }
-

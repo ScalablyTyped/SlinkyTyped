@@ -11,15 +11,18 @@ import typingsSlinky.nodeResque.nodeResqueStrings.transferredJob
 import typingsSlinky.nodeResque.nodeResqueStrings.workingTimestamp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("node-resque", "Scheduler")
 @js.native
 class Scheduler protected () extends EventEmitter {
   def this(options: SchedulerOptions) = this()
   def this(options: SchedulerOptions, jobs: JobsHash) = this()
+  
   def connect(): js.Promise[Unit] = js.native
+  
   def end(): js.Promise[Unit] = js.native
+  
   @JSName("on")
   def on_cleanStuckWorker(
     event: cleanStuckWorker,
@@ -39,6 +42,7 @@ class Scheduler protected () extends EventEmitter {
   def on_transferredJob(event: transferredJob, cb: js.Function2[/* timestamp */ Double, /* job */ Job[_], Unit]): this.type = js.native
   @JSName("on")
   def on_workingTimestamp(event: workingTimestamp, cb: js.Function1[/* timestamp */ Double, Unit]): this.type = js.native
+  
   @JSName("once")
   def once_cleanStuckWorker(
     event: cleanStuckWorker,
@@ -58,7 +62,8 @@ class Scheduler protected () extends EventEmitter {
   def once_transferredJob(event: transferredJob, cb: js.Function2[/* timestamp */ Double, /* job */ Job[_], Unit]): this.type = js.native
   @JSName("once")
   def once_workingTimestamp(event: workingTimestamp, cb: js.Function1[/* timestamp */ Double, Unit]): this.type = js.native
+  
   def removeAllListeners(event: SchedulerEvent): this.type = js.native
+  
   def start(): js.Promise[Unit] = js.native
 }
-

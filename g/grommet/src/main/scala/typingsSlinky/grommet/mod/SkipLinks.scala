@@ -5,9 +5,8 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.skipLinksMod.SkipLinksProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6", "SkipLinks")
 @js.native
 object SkipLinks extends TopLevel[ReactComponentClass[SkipLinksProps]]
-

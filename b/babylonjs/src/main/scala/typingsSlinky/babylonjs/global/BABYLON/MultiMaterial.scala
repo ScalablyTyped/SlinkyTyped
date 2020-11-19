@@ -1,9 +1,8 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
-import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.MultiMaterial")
 @js.native
@@ -18,17 +17,12 @@ class MultiMaterial protected ()
     * @param scene Define the scene the material belongs to
     */
   def this(name: String, scene: typingsSlinky.babylonjs.BABYLON.Scene) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.MultiMaterial")
 @js.native
 object MultiMaterial extends js.Object {
+  
   /**
     * Creates a MultiMaterial from parsed MultiMaterial data.
     * @param parsedMultiMaterial defines parsed MultiMaterial data.
@@ -37,4 +31,3 @@ object MultiMaterial extends js.Object {
     */
   def ParseMultiMaterial(parsedMultiMaterial: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene): typingsSlinky.babylonjs.BABYLON.MultiMaterial = js.native
 }
-

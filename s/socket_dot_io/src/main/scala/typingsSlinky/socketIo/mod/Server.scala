@@ -6,31 +6,11 @@ import typingsSlinky.socketIo.socketIoStrings.connect
 import typingsSlinky.socketIo.socketIoStrings.connection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Server extends js.Object {
-  var engine: Ws = js.native
-  /**
-    * Sets the 'json' flag when emitting an event
-    */
-  var json: Server = js.native
-  /**
-    * Sets a modifier for a subsequent event emission that the event data will only be broadcast to the current node
-    */
-  var local: Server = js.native
-  /**
-    * A dictionary of all the namespaces currently on this Server
-    */
-  var nsps: StringDictionary[Namespace] = js.native
-  /**
-    * The default '/' Namespace
-    */
-  var sockets: Namespace = js.native
-  /**
-    * Sets a modifier for a subsequent event emission that the event data may be lost if the clients are not ready to receive messages
-    */
-  var volatile: Server = js.native
+  
   /**
     * Gets the adapter that we're going to use for handling rooms
     * @default typeof Adapter
@@ -43,6 +23,7 @@ trait Server extends js.Object {
     * @return This Server
     */
   def adapter(v: js.Any): Server = js.native
+  
   // Socket inherits the following methods from NodeJS.EventEmitter
   // https://github.com/socketio/socket.io/blob/2.1.1/lib/socket.js#L81
   /**
@@ -55,6 +36,7 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): Namespace = js.native
+  
   /**
     * Attaches socket.io to a port
     * @param port The port that we want to attach to
@@ -73,12 +55,14 @@ trait Server extends js.Object {
   def attach(srv: typingsSlinky.node.httpMod.Server, opts: ServerOptions): Server = js.native
   def attach(srv: typingsSlinky.node.httpsMod.Server): Server = js.native
   def attach(srv: typingsSlinky.node.httpsMod.Server, opts: ServerOptions): Server = js.native
+  
   /**
     * Binds socket.io to an engine.io instance
     * @param src The Engine.io (or compatible) server to bind to
     * @return This Server
     */
   def bind(srv: js.Any): Server = js.native
+  
   /**
     * Server request verification function, that checks for allowed origins
     * @param req The http.IncomingMessage request
@@ -87,21 +71,25 @@ trait Server extends js.Object {
     * of type boolean
     */
   def checkRequest(req: js.Any, fn: js.Function2[/* err */ js.Any, /* success */ Boolean, Unit]): Unit = js.native
+  
   /**
     * Gets a list of clients
     * @return The default '/' Namespace
     */
   def clients(args: js.Any*): Namespace = js.native
+  
   /**
     * Closes the server connection
     */
   def close(): Unit = js.native
   def close(fn: js.Function0[Unit]): Unit = js.native
+  
   /**
     * Sets the compress flag
     * @return The default '/' Namespace
     */
   def compress(args: js.Any*): Namespace = js.native
+  
   /**
     * Emits an event to the default Namespace
     * @param event The event that we want to emit
@@ -111,6 +99,9 @@ trait Server extends js.Object {
     * @return The default '/' Namespace
     */
   def emit(event: String, args: js.Any*): Namespace = js.native
+  
+  var engine: Ws = js.native
+  
   /**
     * Gets an array of events for which listeners have been registered
     * @param event The event that we want to add a listener for
@@ -119,6 +110,7 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def eventNames(): js.Array[String] = js.native
+  
   /**
     * Gets the max amount of event listeners
     * @return The max amount of allowed event listeners.
@@ -126,10 +118,17 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def getMaxListeners(): Double = js.native
+  
   /**
     * @see to( room )
     */
   def in(room: String): Namespace = js.native
+  
+  /**
+    * Sets the 'json' flag when emitting an event
+    */
+  var json: Server = js.native
+  
   /**
     * @see attach( port, opts )
     */
@@ -142,6 +141,7 @@ trait Server extends js.Object {
   def listen(srv: typingsSlinky.node.httpMod.Server, opts: ServerOptions): Server = js.native
   def listen(srv: typingsSlinky.node.httpsMod.Server): Server = js.native
   def listen(srv: typingsSlinky.node.httpsMod.Server, opts: ServerOptions): Server = js.native
+  
   /**
     * Gets the number of listeners listening to the event.
     * @param event The event to retrieve the total listener count for
@@ -150,6 +150,7 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def listenerCount(`type`: String): Double = js.native
+  
   /**
     * Gets a copy of all listeners for an event.
     * @param event The event to retrieve all listeners for
@@ -158,6 +159,17 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def listeners(event: String): js.Array[js.Function] = js.native
+  
+  /**
+    * Sets a modifier for a subsequent event emission that the event data will only be broadcast to the current node
+    */
+  var local: Server = js.native
+  
+  /**
+    * A dictionary of all the namespaces currently on this Server
+    */
+  var nsps: StringDictionary[Namespace] = js.native
+  
   /**
     * Looks up/creates a Namespace
     * @param nsp The name of the NameSpace to look up/create. Should start
@@ -167,6 +179,7 @@ trait Server extends js.Object {
   def of(nsp: String): Namespace = js.native
   def of(nsp: js.Function): Namespace = js.native
   def of(nsp: js.RegExp): Namespace = js.native
+  
   /**
     * Alias for `removeListener`
     * @param event The event that we want to add a listener for
@@ -177,6 +190,7 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def off(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): Namespace = js.native
+  
   /**
     * Base 'on' method to add a listener for an event
     * @param event The event that we want to add a listener for
@@ -198,6 +212,7 @@ trait Server extends js.Object {
     */
   @JSName("on")
   def on_connection(event: connection, listener: js.Function1[/* socket */ Socket, Unit]): Namespace = js.native
+  
   /**
     * Adds a one-time listener for an event
     * @param event The event that we want to add a listener for
@@ -208,12 +223,14 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): Namespace = js.native
+  
   /**
     * Called with each incoming connection
     * @param socket The Engine.io Socket
     * @return This Server
     */
   def onconnection(socket: js.Any): Server = js.native
+  
   /**
     * Gets the allowed origins for requests
     * @default "*:*"
@@ -243,6 +260,7 @@ trait Server extends js.Object {
     */
   def origins(v: String): Server = js.native
   def origins(v: js.Array[String]): Server = js.native
+  
   /**
     * Gets the client serving path
     * @default '/socket.io'
@@ -255,6 +273,7 @@ trait Server extends js.Object {
     * @return This Server
     */
   def path(v: String): Server = js.native
+  
   /**
     * Adds the listener function to the _beginning_ of the listeners array for the event
     * @param event The event that we want to add a listener for
@@ -265,6 +284,7 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): Namespace = js.native
+  
   /**
     * Adds a one-time listener function to the _beginning_ of the listeners array for the event
     * @param event The event that we want to add a listener for
@@ -275,6 +295,7 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): Namespace = js.native
+  
   /**
     * Get a copy of all listeners for an event, including one-time events.
     * @param event The event to retrieve all listeners for
@@ -284,6 +305,7 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def rawListeners(event: String): js.Array[js.Function] = js.native
+  
   /**
     * Removes all listeners, or those of the specified event
     * @param event The event to remove all listeners for, if omitted
@@ -294,6 +316,7 @@ trait Server extends js.Object {
     */
   def removeAllListeners(): Namespace = js.native
   def removeAllListeners(event: String): Namespace = js.native
+  
   /**
     * Removes a specific listener for an event
     * @param event The event that we want to add a listener for
@@ -304,12 +327,14 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def removeListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): Namespace = js.native
+  
   /**
     * Sends a 'message' event
     * @see emit( event, ...args )
     * @return The default '/' Namespace
     */
   def send(args: js.Any*): Namespace = js.native
+  
   /**
     * Gets whether we're serving the client.js file or not
     * @default true
@@ -322,6 +347,7 @@ trait Server extends js.Object {
     * @return This Server
     */
   def serveClient(v: Boolean): Server = js.native
+  
   /**
     * Sets the max amount of event listeners
     * @param n The max amount of allowed event listeners.
@@ -330,12 +356,19 @@ trait Server extends js.Object {
     * _Inherited from EventEmitter - https://nodejs.org/api/events.html_
     */
   def setMaxListeners(n: Double): Namespace = js.native
+  
+  /**
+    * The default '/' Namespace
+    */
+  var sockets: Namespace = js.native
+  
   /**
     * Targets a room when emitting to the default '/' Namespace
     * @param room The name of the room that we're targeting
     * @return The default '/' Namespace
     */
   def to(room: String): Namespace = js.native
+  
   /**
     * Registers a middleware function, which is a function that gets executed
     * for every incoming Socket, on the default '/' Namespace
@@ -349,9 +382,14 @@ trait Server extends js.Object {
   def use(
     fn: js.Function2[/* socket */ Socket, /* fn */ js.Function1[/* err */ js.UndefOr[js.Any], Unit], Unit]
   ): Namespace = js.native
+  
+  /**
+    * Sets a modifier for a subsequent event emission that the event data may be lost if the clients are not ready to receive messages
+    */
+  var volatile: Server = js.native
+  
   /**
     * @see send( ...args )
     */
   def write(args: js.Any*): Namespace = js.native
 }
-

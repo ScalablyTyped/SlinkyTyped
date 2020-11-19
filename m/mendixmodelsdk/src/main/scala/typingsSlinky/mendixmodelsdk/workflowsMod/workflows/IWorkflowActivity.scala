@@ -4,7 +4,7 @@ import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.elementsMod.IElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interfaces and instance classes for types from the Mendix sub meta model `Workflows`.
@@ -16,12 +16,14 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IWorkflowActivity extends IElement {
+  
   /**
     * In version 8.12.0: added public
     */
   val caption: String = js.native
+  
   val containerAsWorkflow: IWorkflow = js.native
+  
   @JSName("model")
   val model_IWorkflowActivity: IModel = js.native
 }
-

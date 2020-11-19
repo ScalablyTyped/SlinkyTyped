@@ -2,11 +2,12 @@ package typingsSlinky.antlr4
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antlr4/error", JSImport.Namespace)
 @js.native
 object errorMod extends js.Object {
+  
   @js.native
   class BailErrorStrategy ()
     extends typingsSlinky.antlr4.errorStrategyMod.ErrorStrategy
@@ -54,6 +55,4 @@ object errorMod extends js.Object {
   @js.native
   class RecognitionException ()
     extends typingsSlinky.antlr4.errorsMod.RecognitionException
-  
 }
-

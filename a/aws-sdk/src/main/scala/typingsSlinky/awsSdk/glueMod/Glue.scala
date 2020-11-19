@@ -6,12 +6,11 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Glue extends Service {
-  @JSName("config")
-  var config_Glue: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates one or more partitions in a batch operation.
     */
@@ -25,6 +24,7 @@ trait Glue extends Service {
     params: BatchCreatePartitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchCreatePartitionResponse, Unit]
   ): Request[BatchCreatePartitionResponse, AWSError] = js.native
+  
   /**
     * Deletes a list of connection definitions from the Data Catalog.
     */
@@ -38,6 +38,7 @@ trait Glue extends Service {
     params: BatchDeleteConnectionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchDeleteConnectionResponse, Unit]
   ): Request[BatchDeleteConnectionResponse, AWSError] = js.native
+  
   /**
     * Deletes one or more partitions in a batch operation.
     */
@@ -51,6 +52,7 @@ trait Glue extends Service {
     params: BatchDeletePartitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchDeletePartitionResponse, Unit]
   ): Request[BatchDeletePartitionResponse, AWSError] = js.native
+  
   /**
     * Deletes multiple tables at once.  After completing this operation, you no longer have access to the table versions and partitions that belong to the deleted table. AWS Glue deletes these "orphaned" resources asynchronously in a timely manner, at the discretion of the service. To ensure the immediate deletion of all related resources, before calling BatchDeleteTable, use DeleteTableVersion or BatchDeleteTableVersion, and DeletePartition or BatchDeletePartition, to delete any resources that belong to the table. 
     */
@@ -64,6 +66,7 @@ trait Glue extends Service {
     params: BatchDeleteTableRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchDeleteTableResponse, Unit]
   ): Request[BatchDeleteTableResponse, AWSError] = js.native
+  
   /**
     * Deletes a specified batch of versions of a table.
     */
@@ -77,6 +80,7 @@ trait Glue extends Service {
     params: BatchDeleteTableVersionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchDeleteTableVersionResponse, Unit]
   ): Request[BatchDeleteTableVersionResponse, AWSError] = js.native
+  
   /**
     * Returns a list of resource metadata for a given list of crawler names. After calling the ListCrawlers operation, you can call this operation to access the data to which you have been granted permissions. This operation supports all IAM permissions, including permission conditions that uses tags.
     */
@@ -90,6 +94,7 @@ trait Glue extends Service {
     params: BatchGetCrawlersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchGetCrawlersResponse, Unit]
   ): Request[BatchGetCrawlersResponse, AWSError] = js.native
+  
   /**
     * Returns a list of resource metadata for a given list of development endpoint names. After calling the ListDevEndpoints operation, you can call this operation to access the data to which you have been granted permissions. This operation supports all IAM permissions, including permission conditions that uses tags.
     */
@@ -103,6 +108,7 @@ trait Glue extends Service {
     params: BatchGetDevEndpointsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchGetDevEndpointsResponse, Unit]
   ): Request[BatchGetDevEndpointsResponse, AWSError] = js.native
+  
   /**
     * Returns a list of resource metadata for a given list of job names. After calling the ListJobs operation, you can call this operation to access the data to which you have been granted permissions. This operation supports all IAM permissions, including permission conditions that uses tags. 
     */
@@ -116,6 +122,7 @@ trait Glue extends Service {
     params: BatchGetJobsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchGetJobsResponse, Unit]
   ): Request[BatchGetJobsResponse, AWSError] = js.native
+  
   /**
     * Retrieves partitions in a batch request.
     */
@@ -129,6 +136,7 @@ trait Glue extends Service {
     params: BatchGetPartitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchGetPartitionResponse, Unit]
   ): Request[BatchGetPartitionResponse, AWSError] = js.native
+  
   /**
     * Returns a list of resource metadata for a given list of trigger names. After calling the ListTriggers operation, you can call this operation to access the data to which you have been granted permissions. This operation supports all IAM permissions, including permission conditions that uses tags.
     */
@@ -142,6 +150,7 @@ trait Glue extends Service {
     params: BatchGetTriggersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchGetTriggersResponse, Unit]
   ): Request[BatchGetTriggersResponse, AWSError] = js.native
+  
   /**
     * Returns a list of resource metadata for a given list of workflow names. After calling the ListWorkflows operation, you can call this operation to access the data to which you have been granted permissions. This operation supports all IAM permissions, including permission conditions that uses tags.
     */
@@ -155,6 +164,7 @@ trait Glue extends Service {
     params: BatchGetWorkflowsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchGetWorkflowsResponse, Unit]
   ): Request[BatchGetWorkflowsResponse, AWSError] = js.native
+  
   /**
     * Stops one or more job runs for a specified job definition.
     */
@@ -168,6 +178,7 @@ trait Glue extends Service {
     params: BatchStopJobRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchStopJobRunResponse, Unit]
   ): Request[BatchStopJobRunResponse, AWSError] = js.native
+  
   /**
     * Cancels (stops) a task run. Machine learning task runs are asynchronous tasks that AWS Glue runs on your behalf as part of various machine learning workflows. You can cancel a machine learning task run at any time by calling CancelMLTaskRun with a task run's parent transform's TransformID and the task run's TaskRunId. 
     */
@@ -181,6 +192,10 @@ trait Glue extends Service {
     params: CancelMLTaskRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CancelMLTaskRunResponse, Unit]
   ): Request[CancelMLTaskRunResponse, AWSError] = js.native
+  
+  @JSName("config")
+  var config_Glue: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates a classifier in the user's account. This can be a GrokClassifier, an XMLClassifier, a JsonClassifier, or a CsvClassifier, depending on which field of the request is present.
     */
@@ -194,6 +209,7 @@ trait Glue extends Service {
     params: CreateClassifierRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateClassifierResponse, Unit]
   ): Request[CreateClassifierResponse, AWSError] = js.native
+  
   /**
     * Creates a connection definition in the Data Catalog.
     */
@@ -207,6 +223,7 @@ trait Glue extends Service {
     params: CreateConnectionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateConnectionResponse, Unit]
   ): Request[CreateConnectionResponse, AWSError] = js.native
+  
   /**
     * Creates a new crawler with specified targets, role, configuration, and optional schedule. At least one crawl target must be specified, in the s3Targets field, the jdbcTargets field, or the DynamoDBTargets field.
     */
@@ -220,6 +237,7 @@ trait Glue extends Service {
     params: CreateCrawlerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateCrawlerResponse, Unit]
   ): Request[CreateCrawlerResponse, AWSError] = js.native
+  
   /**
     * Creates a new database in a Data Catalog.
     */
@@ -233,6 +251,7 @@ trait Glue extends Service {
     params: CreateDatabaseRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateDatabaseResponse, Unit]
   ): Request[CreateDatabaseResponse, AWSError] = js.native
+  
   /**
     * Creates a new development endpoint.
     */
@@ -246,6 +265,7 @@ trait Glue extends Service {
     params: CreateDevEndpointRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateDevEndpointResponse, Unit]
   ): Request[CreateDevEndpointResponse, AWSError] = js.native
+  
   /**
     * Creates a new job definition.
     */
@@ -259,6 +279,7 @@ trait Glue extends Service {
     params: CreateJobRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateJobResponse, Unit]
   ): Request[CreateJobResponse, AWSError] = js.native
+  
   /**
     * Creates an AWS Glue machine learning transform. This operation creates the transform and all the necessary parameters to train it. Call this operation as the first step in the process of using a machine learning transform (such as the FindMatches transform) for deduplicating data. You can provide an optional Description, in addition to the parameters that you want to use for your algorithm. You must also specify certain parameters for the tasks that AWS Glue runs on your behalf as part of learning from your data and creating a high-quality machine learning transform. These parameters include Role, and optionally, AllocatedCapacity, Timeout, and MaxRetries. For more information, see Jobs.
     */
@@ -272,6 +293,7 @@ trait Glue extends Service {
     params: CreateMLTransformRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateMLTransformResponse, Unit]
   ): Request[CreateMLTransformResponse, AWSError] = js.native
+  
   /**
     * Creates a new partition.
     */
@@ -285,6 +307,7 @@ trait Glue extends Service {
     params: CreatePartitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreatePartitionResponse, Unit]
   ): Request[CreatePartitionResponse, AWSError] = js.native
+  
   /**
     * Transforms a directed acyclic graph (DAG) into code.
     */
@@ -298,6 +321,7 @@ trait Glue extends Service {
     params: CreateScriptRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateScriptResponse, Unit]
   ): Request[CreateScriptResponse, AWSError] = js.native
+  
   /**
     * Creates a new security configuration. A security configuration is a set of security properties that can be used by AWS Glue. You can use a security configuration to encrypt data at rest. For information about using security configurations in AWS Glue, see Encrypting Data Written by Crawlers, Jobs, and Development Endpoints.
     */
@@ -311,6 +335,7 @@ trait Glue extends Service {
     params: CreateSecurityConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateSecurityConfigurationResponse, Unit]
   ): Request[CreateSecurityConfigurationResponse, AWSError] = js.native
+  
   /**
     * Creates a new table definition in the Data Catalog.
     */
@@ -324,6 +349,7 @@ trait Glue extends Service {
     params: CreateTableRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateTableResponse, Unit]
   ): Request[CreateTableResponse, AWSError] = js.native
+  
   /**
     * Creates a new trigger.
     */
@@ -337,6 +363,7 @@ trait Glue extends Service {
     params: CreateTriggerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateTriggerResponse, Unit]
   ): Request[CreateTriggerResponse, AWSError] = js.native
+  
   /**
     * Creates a new function definition in the Data Catalog.
     */
@@ -350,6 +377,7 @@ trait Glue extends Service {
     params: CreateUserDefinedFunctionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateUserDefinedFunctionResponse, Unit]
   ): Request[CreateUserDefinedFunctionResponse, AWSError] = js.native
+  
   /**
     * Creates a new workflow.
     */
@@ -363,6 +391,7 @@ trait Glue extends Service {
     params: CreateWorkflowRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateWorkflowResponse, Unit]
   ): Request[CreateWorkflowResponse, AWSError] = js.native
+  
   /**
     * Removes a classifier from the Data Catalog.
     */
@@ -376,6 +405,7 @@ trait Glue extends Service {
     params: DeleteClassifierRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteClassifierResponse, Unit]
   ): Request[DeleteClassifierResponse, AWSError] = js.native
+  
   /**
     * Delete the partition column statistics of a column.
     */
@@ -391,6 +421,7 @@ trait Glue extends Service {
     params: DeleteColumnStatisticsForPartitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteColumnStatisticsForPartitionResponse, Unit]
   ): Request[DeleteColumnStatisticsForPartitionResponse, AWSError] = js.native
+  
   /**
     * Retrieves table statistics of columns.
     */
@@ -406,6 +437,7 @@ trait Glue extends Service {
     params: DeleteColumnStatisticsForTableRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteColumnStatisticsForTableResponse, Unit]
   ): Request[DeleteColumnStatisticsForTableResponse, AWSError] = js.native
+  
   /**
     * Deletes a connection from the Data Catalog.
     */
@@ -419,6 +451,7 @@ trait Glue extends Service {
     params: DeleteConnectionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteConnectionResponse, Unit]
   ): Request[DeleteConnectionResponse, AWSError] = js.native
+  
   /**
     * Removes a specified crawler from the AWS Glue Data Catalog, unless the crawler state is RUNNING.
     */
@@ -432,6 +465,7 @@ trait Glue extends Service {
     params: DeleteCrawlerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteCrawlerResponse, Unit]
   ): Request[DeleteCrawlerResponse, AWSError] = js.native
+  
   /**
     * Removes a specified database from a Data Catalog.  After completing this operation, you no longer have access to the tables (and all table versions and partitions that might belong to the tables) and the user-defined functions in the deleted database. AWS Glue deletes these "orphaned" resources asynchronously in a timely manner, at the discretion of the service. To ensure the immediate deletion of all related resources, before calling DeleteDatabase, use DeleteTableVersion or BatchDeleteTableVersion, DeletePartition or BatchDeletePartition, DeleteUserDefinedFunction, and DeleteTable or BatchDeleteTable, to delete any resources that belong to the database. 
     */
@@ -445,6 +479,7 @@ trait Glue extends Service {
     params: DeleteDatabaseRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteDatabaseResponse, Unit]
   ): Request[DeleteDatabaseResponse, AWSError] = js.native
+  
   /**
     * Deletes a specified development endpoint.
     */
@@ -458,6 +493,7 @@ trait Glue extends Service {
     params: DeleteDevEndpointRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteDevEndpointResponse, Unit]
   ): Request[DeleteDevEndpointResponse, AWSError] = js.native
+  
   /**
     * Deletes a specified job definition. If the job definition is not found, no exception is thrown.
     */
@@ -471,6 +507,7 @@ trait Glue extends Service {
     params: DeleteJobRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteJobResponse, Unit]
   ): Request[DeleteJobResponse, AWSError] = js.native
+  
   /**
     * Deletes an AWS Glue machine learning transform. Machine learning transforms are a special type of transform that use machine learning to learn the details of the transformation to be performed by learning from examples provided by humans. These transformations are then saved by AWS Glue. If you no longer need a transform, you can delete it by calling DeleteMLTransforms. However, any AWS Glue jobs that still reference the deleted transform will no longer succeed.
     */
@@ -484,6 +521,7 @@ trait Glue extends Service {
     params: DeleteMLTransformRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteMLTransformResponse, Unit]
   ): Request[DeleteMLTransformResponse, AWSError] = js.native
+  
   /**
     * Deletes a specified partition.
     */
@@ -497,6 +535,7 @@ trait Glue extends Service {
     params: DeletePartitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeletePartitionResponse, Unit]
   ): Request[DeletePartitionResponse, AWSError] = js.native
+  
   /**
     * Deletes a specified policy.
     */
@@ -510,6 +549,7 @@ trait Glue extends Service {
     params: DeleteResourcePolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteResourcePolicyResponse, Unit]
   ): Request[DeleteResourcePolicyResponse, AWSError] = js.native
+  
   /**
     * Deletes a specified security configuration.
     */
@@ -523,6 +563,7 @@ trait Glue extends Service {
     params: DeleteSecurityConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteSecurityConfigurationResponse, Unit]
   ): Request[DeleteSecurityConfigurationResponse, AWSError] = js.native
+  
   /**
     * Removes a table definition from the Data Catalog.  After completing this operation, you no longer have access to the table versions and partitions that belong to the deleted table. AWS Glue deletes these "orphaned" resources asynchronously in a timely manner, at the discretion of the service. To ensure the immediate deletion of all related resources, before calling DeleteTable, use DeleteTableVersion or BatchDeleteTableVersion, and DeletePartition or BatchDeletePartition, to delete any resources that belong to the table. 
     */
@@ -536,6 +577,7 @@ trait Glue extends Service {
     params: DeleteTableRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteTableResponse, Unit]
   ): Request[DeleteTableResponse, AWSError] = js.native
+  
   /**
     * Deletes a specified version of a table.
     */
@@ -549,6 +591,7 @@ trait Glue extends Service {
     params: DeleteTableVersionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteTableVersionResponse, Unit]
   ): Request[DeleteTableVersionResponse, AWSError] = js.native
+  
   /**
     * Deletes a specified trigger. If the trigger is not found, no exception is thrown.
     */
@@ -562,6 +605,7 @@ trait Glue extends Service {
     params: DeleteTriggerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteTriggerResponse, Unit]
   ): Request[DeleteTriggerResponse, AWSError] = js.native
+  
   /**
     * Deletes an existing function definition from the Data Catalog.
     */
@@ -575,6 +619,7 @@ trait Glue extends Service {
     params: DeleteUserDefinedFunctionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteUserDefinedFunctionResponse, Unit]
   ): Request[DeleteUserDefinedFunctionResponse, AWSError] = js.native
+  
   /**
     * Deletes a workflow.
     */
@@ -588,6 +633,7 @@ trait Glue extends Service {
     params: DeleteWorkflowRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteWorkflowResponse, Unit]
   ): Request[DeleteWorkflowResponse, AWSError] = js.native
+  
   /**
     * Retrieves the status of a migration operation.
     */
@@ -601,6 +647,7 @@ trait Glue extends Service {
     params: GetCatalogImportStatusRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetCatalogImportStatusResponse, Unit]
   ): Request[GetCatalogImportStatusResponse, AWSError] = js.native
+  
   /**
     * Retrieve a classifier by name.
     */
@@ -614,6 +661,7 @@ trait Glue extends Service {
     params: GetClassifierRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetClassifierResponse, Unit]
   ): Request[GetClassifierResponse, AWSError] = js.native
+  
   /**
     * Lists all classifier objects in the Data Catalog.
     */
@@ -627,6 +675,7 @@ trait Glue extends Service {
     params: GetClassifiersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetClassifiersResponse, Unit]
   ): Request[GetClassifiersResponse, AWSError] = js.native
+  
   /**
     * Retrieves partition statistics of columns.
     */
@@ -642,6 +691,7 @@ trait Glue extends Service {
     params: GetColumnStatisticsForPartitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetColumnStatisticsForPartitionResponse, Unit]
   ): Request[GetColumnStatisticsForPartitionResponse, AWSError] = js.native
+  
   /**
     * Retrieves table statistics of columns.
     */
@@ -655,6 +705,7 @@ trait Glue extends Service {
     params: GetColumnStatisticsForTableRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetColumnStatisticsForTableResponse, Unit]
   ): Request[GetColumnStatisticsForTableResponse, AWSError] = js.native
+  
   /**
     * Retrieves a connection definition from the Data Catalog.
     */
@@ -668,6 +719,7 @@ trait Glue extends Service {
     params: GetConnectionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetConnectionResponse, Unit]
   ): Request[GetConnectionResponse, AWSError] = js.native
+  
   /**
     * Retrieves a list of connection definitions from the Data Catalog.
     */
@@ -681,6 +733,7 @@ trait Glue extends Service {
     params: GetConnectionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetConnectionsResponse, Unit]
   ): Request[GetConnectionsResponse, AWSError] = js.native
+  
   /**
     * Retrieves metadata for a specified crawler.
     */
@@ -694,6 +747,7 @@ trait Glue extends Service {
     params: GetCrawlerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetCrawlerResponse, Unit]
   ): Request[GetCrawlerResponse, AWSError] = js.native
+  
   /**
     * Retrieves metrics about specified crawlers.
     */
@@ -707,6 +761,7 @@ trait Glue extends Service {
     params: GetCrawlerMetricsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetCrawlerMetricsResponse, Unit]
   ): Request[GetCrawlerMetricsResponse, AWSError] = js.native
+  
   /**
     * Retrieves metadata for all crawlers defined in the customer account.
     */
@@ -720,6 +775,7 @@ trait Glue extends Service {
     params: GetCrawlersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetCrawlersResponse, Unit]
   ): Request[GetCrawlersResponse, AWSError] = js.native
+  
   /**
     * Retrieves the security configuration for a specified catalog.
     */
@@ -735,6 +791,7 @@ trait Glue extends Service {
     params: GetDataCatalogEncryptionSettingsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetDataCatalogEncryptionSettingsResponse, Unit]
   ): Request[GetDataCatalogEncryptionSettingsResponse, AWSError] = js.native
+  
   /**
     * Retrieves the definition of a specified database.
     */
@@ -748,6 +805,7 @@ trait Glue extends Service {
     params: GetDatabaseRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetDatabaseResponse, Unit]
   ): Request[GetDatabaseResponse, AWSError] = js.native
+  
   /**
     * Retrieves all databases defined in a given Data Catalog.
     */
@@ -761,6 +819,7 @@ trait Glue extends Service {
     params: GetDatabasesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetDatabasesResponse, Unit]
   ): Request[GetDatabasesResponse, AWSError] = js.native
+  
   /**
     * Transforms a Python script into a directed acyclic graph (DAG). 
     */
@@ -774,6 +833,7 @@ trait Glue extends Service {
     params: GetDataflowGraphRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetDataflowGraphResponse, Unit]
   ): Request[GetDataflowGraphResponse, AWSError] = js.native
+  
   /**
     * Retrieves information about a specified development endpoint.  When you create a development endpoint in a virtual private cloud (VPC), AWS Glue returns only a private IP address, and the public IP address field is not populated. When you create a non-VPC development endpoint, AWS Glue returns only a public IP address. 
     */
@@ -787,6 +847,7 @@ trait Glue extends Service {
     params: GetDevEndpointRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetDevEndpointResponse, Unit]
   ): Request[GetDevEndpointResponse, AWSError] = js.native
+  
   /**
     * Retrieves all the development endpoints in this AWS account.  When you create a development endpoint in a virtual private cloud (VPC), AWS Glue returns only a private IP address and the public IP address field is not populated. When you create a non-VPC development endpoint, AWS Glue returns only a public IP address. 
     */
@@ -800,6 +861,7 @@ trait Glue extends Service {
     params: GetDevEndpointsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetDevEndpointsResponse, Unit]
   ): Request[GetDevEndpointsResponse, AWSError] = js.native
+  
   /**
     * Retrieves an existing job definition.
     */
@@ -810,6 +872,7 @@ trait Glue extends Service {
     */
   def getJob(params: GetJobRequest): Request[GetJobResponse, AWSError] = js.native
   def getJob(params: GetJobRequest, callback: js.Function2[/* err */ AWSError, /* data */ GetJobResponse, Unit]): Request[GetJobResponse, AWSError] = js.native
+  
   /**
     * Returns information on a job bookmark entry.
     */
@@ -823,6 +886,7 @@ trait Glue extends Service {
     params: GetJobBookmarkRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetJobBookmarkResponse, Unit]
   ): Request[GetJobBookmarkResponse, AWSError] = js.native
+  
   /**
     * Retrieves the metadata for a given job run.
     */
@@ -836,6 +900,7 @@ trait Glue extends Service {
     params: GetJobRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetJobRunResponse, Unit]
   ): Request[GetJobRunResponse, AWSError] = js.native
+  
   /**
     * Retrieves metadata for all runs of a given job definition.
     */
@@ -849,6 +914,7 @@ trait Glue extends Service {
     params: GetJobRunsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetJobRunsResponse, Unit]
   ): Request[GetJobRunsResponse, AWSError] = js.native
+  
   /**
     * Retrieves all current job definitions.
     */
@@ -862,6 +928,7 @@ trait Glue extends Service {
     params: GetJobsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetJobsResponse, Unit]
   ): Request[GetJobsResponse, AWSError] = js.native
+  
   /**
     * Gets details for a specific task run on a machine learning transform. Machine learning task runs are asynchronous tasks that AWS Glue runs on your behalf as part of various machine learning workflows. You can check the stats of any task run by calling GetMLTaskRun with the TaskRunID and its parent transform's TransformID.
     */
@@ -875,6 +942,7 @@ trait Glue extends Service {
     params: GetMLTaskRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetMLTaskRunResponse, Unit]
   ): Request[GetMLTaskRunResponse, AWSError] = js.native
+  
   /**
     * Gets a list of runs for a machine learning transform. Machine learning task runs are asynchronous tasks that AWS Glue runs on your behalf as part of various machine learning workflows. You can get a sortable, filterable list of machine learning task runs by calling GetMLTaskRuns with their parent transform's TransformID and other optional parameters as documented in this section. This operation returns a list of historic runs and must be paginated.
     */
@@ -888,6 +956,7 @@ trait Glue extends Service {
     params: GetMLTaskRunsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetMLTaskRunsResponse, Unit]
   ): Request[GetMLTaskRunsResponse, AWSError] = js.native
+  
   /**
     * Gets an AWS Glue machine learning transform artifact and all its corresponding metadata. Machine learning transforms are a special type of transform that use machine learning to learn the details of the transformation to be performed by learning from examples provided by humans. These transformations are then saved by AWS Glue. You can retrieve their metadata by calling GetMLTransform.
     */
@@ -901,6 +970,7 @@ trait Glue extends Service {
     params: GetMLTransformRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetMLTransformResponse, Unit]
   ): Request[GetMLTransformResponse, AWSError] = js.native
+  
   /**
     * Gets a sortable, filterable list of existing AWS Glue machine learning transforms. Machine learning transforms are a special type of transform that use machine learning to learn the details of the transformation to be performed by learning from examples provided by humans. These transformations are then saved by AWS Glue, and you can retrieve their metadata by calling GetMLTransforms.
     */
@@ -914,6 +984,7 @@ trait Glue extends Service {
     params: GetMLTransformsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetMLTransformsResponse, Unit]
   ): Request[GetMLTransformsResponse, AWSError] = js.native
+  
   /**
     * Creates mappings.
     */
@@ -927,6 +998,7 @@ trait Glue extends Service {
     params: GetMappingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetMappingResponse, Unit]
   ): Request[GetMappingResponse, AWSError] = js.native
+  
   /**
     * Retrieves information about a specified partition.
     */
@@ -940,6 +1012,7 @@ trait Glue extends Service {
     params: GetPartitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetPartitionResponse, Unit]
   ): Request[GetPartitionResponse, AWSError] = js.native
+  
   /**
     * Retrieves information about the partitions in a table.
     */
@@ -953,6 +1026,7 @@ trait Glue extends Service {
     params: GetPartitionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetPartitionsResponse, Unit]
   ): Request[GetPartitionsResponse, AWSError] = js.native
+  
   /**
     * Gets code to perform a specified mapping.
     */
@@ -966,6 +1040,7 @@ trait Glue extends Service {
     params: GetPlanRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetPlanResponse, Unit]
   ): Request[GetPlanResponse, AWSError] = js.native
+  
   /**
     * Retrieves the security configurations for the resource policies set on individual resources, and also the account-level policy. This operation also returns the Data Catalog resource policy. However, if you enabled metadata encryption in Data Catalog settings, and you do not have permission on the AWS KMS key, the operation can't return the Data Catalog resource policy.
     */
@@ -979,6 +1054,7 @@ trait Glue extends Service {
     params: GetResourcePoliciesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetResourcePoliciesResponse, Unit]
   ): Request[GetResourcePoliciesResponse, AWSError] = js.native
+  
   /**
     * Retrieves a specified resource policy.
     */
@@ -992,6 +1068,7 @@ trait Glue extends Service {
     params: GetResourcePolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetResourcePolicyResponse, Unit]
   ): Request[GetResourcePolicyResponse, AWSError] = js.native
+  
   /**
     * Retrieves a specified security configuration.
     */
@@ -1005,6 +1082,7 @@ trait Glue extends Service {
     params: GetSecurityConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetSecurityConfigurationResponse, Unit]
   ): Request[GetSecurityConfigurationResponse, AWSError] = js.native
+  
   /**
     * Retrieves a list of all security configurations.
     */
@@ -1018,6 +1096,7 @@ trait Glue extends Service {
     params: GetSecurityConfigurationsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetSecurityConfigurationsResponse, Unit]
   ): Request[GetSecurityConfigurationsResponse, AWSError] = js.native
+  
   /**
     * Retrieves the Table definition in a Data Catalog for a specified table.
     */
@@ -1031,6 +1110,7 @@ trait Glue extends Service {
     params: GetTableRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetTableResponse, Unit]
   ): Request[GetTableResponse, AWSError] = js.native
+  
   /**
     * Retrieves a specified version of a table.
     */
@@ -1044,6 +1124,7 @@ trait Glue extends Service {
     params: GetTableVersionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetTableVersionResponse, Unit]
   ): Request[GetTableVersionResponse, AWSError] = js.native
+  
   /**
     * Retrieves a list of strings that identify available versions of a specified table.
     */
@@ -1057,6 +1138,7 @@ trait Glue extends Service {
     params: GetTableVersionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetTableVersionsResponse, Unit]
   ): Request[GetTableVersionsResponse, AWSError] = js.native
+  
   /**
     * Retrieves the definitions of some or all of the tables in a given Database.
     */
@@ -1070,6 +1152,7 @@ trait Glue extends Service {
     params: GetTablesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetTablesResponse, Unit]
   ): Request[GetTablesResponse, AWSError] = js.native
+  
   /**
     * Retrieves a list of tags associated with a resource.
     */
@@ -1083,6 +1166,7 @@ trait Glue extends Service {
     params: GetTagsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetTagsResponse, Unit]
   ): Request[GetTagsResponse, AWSError] = js.native
+  
   /**
     * Retrieves the definition of a trigger.
     */
@@ -1096,6 +1180,7 @@ trait Glue extends Service {
     params: GetTriggerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetTriggerResponse, Unit]
   ): Request[GetTriggerResponse, AWSError] = js.native
+  
   /**
     * Gets all the triggers associated with a job.
     */
@@ -1109,6 +1194,7 @@ trait Glue extends Service {
     params: GetTriggersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetTriggersResponse, Unit]
   ): Request[GetTriggersResponse, AWSError] = js.native
+  
   /**
     * Retrieves a specified function definition from the Data Catalog.
     */
@@ -1122,6 +1208,7 @@ trait Glue extends Service {
     params: GetUserDefinedFunctionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetUserDefinedFunctionResponse, Unit]
   ): Request[GetUserDefinedFunctionResponse, AWSError] = js.native
+  
   /**
     * Retrieves multiple function definitions from the Data Catalog.
     */
@@ -1135,6 +1222,7 @@ trait Glue extends Service {
     params: GetUserDefinedFunctionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetUserDefinedFunctionsResponse, Unit]
   ): Request[GetUserDefinedFunctionsResponse, AWSError] = js.native
+  
   /**
     * Retrieves resource metadata for a workflow.
     */
@@ -1148,6 +1236,7 @@ trait Glue extends Service {
     params: GetWorkflowRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetWorkflowResponse, Unit]
   ): Request[GetWorkflowResponse, AWSError] = js.native
+  
   /**
     * Retrieves the metadata for a given workflow run. 
     */
@@ -1161,6 +1250,7 @@ trait Glue extends Service {
     params: GetWorkflowRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetWorkflowRunResponse, Unit]
   ): Request[GetWorkflowRunResponse, AWSError] = js.native
+  
   /**
     * Retrieves the workflow run properties which were set during the run.
     */
@@ -1174,6 +1264,7 @@ trait Glue extends Service {
     params: GetWorkflowRunPropertiesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetWorkflowRunPropertiesResponse, Unit]
   ): Request[GetWorkflowRunPropertiesResponse, AWSError] = js.native
+  
   /**
     * Retrieves metadata for all runs of a given workflow.
     */
@@ -1187,6 +1278,7 @@ trait Glue extends Service {
     params: GetWorkflowRunsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetWorkflowRunsResponse, Unit]
   ): Request[GetWorkflowRunsResponse, AWSError] = js.native
+  
   /**
     * Imports an existing Amazon Athena Data Catalog to AWS Glue
     */
@@ -1200,6 +1292,7 @@ trait Glue extends Service {
     params: ImportCatalogToGlueRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ImportCatalogToGlueResponse, Unit]
   ): Request[ImportCatalogToGlueResponse, AWSError] = js.native
+  
   /**
     * Retrieves the names of all crawler resources in this AWS account, or the resources with the specified tag. This operation allows you to see which resources are available in your account, and their names. This operation takes the optional Tags field, which you can use as a filter on the response so that tagged resources can be retrieved as a group. If you choose to use tags filtering, only resources with the tag are retrieved.
     */
@@ -1213,6 +1306,7 @@ trait Glue extends Service {
     params: ListCrawlersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListCrawlersResponse, Unit]
   ): Request[ListCrawlersResponse, AWSError] = js.native
+  
   /**
     * Retrieves the names of all DevEndpoint resources in this AWS account, or the resources with the specified tag. This operation allows you to see which resources are available in your account, and their names. This operation takes the optional Tags field, which you can use as a filter on the response so that tagged resources can be retrieved as a group. If you choose to use tags filtering, only resources with the tag are retrieved.
     */
@@ -1226,6 +1320,7 @@ trait Glue extends Service {
     params: ListDevEndpointsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListDevEndpointsResponse, Unit]
   ): Request[ListDevEndpointsResponse, AWSError] = js.native
+  
   /**
     * Retrieves the names of all job resources in this AWS account, or the resources with the specified tag. This operation allows you to see which resources are available in your account, and their names. This operation takes the optional Tags field, which you can use as a filter on the response so that tagged resources can be retrieved as a group. If you choose to use tags filtering, only resources with the tag are retrieved.
     */
@@ -1239,6 +1334,7 @@ trait Glue extends Service {
     params: ListJobsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListJobsResponse, Unit]
   ): Request[ListJobsResponse, AWSError] = js.native
+  
   /**
     *  Retrieves a sortable, filterable list of existing AWS Glue machine learning transforms in this AWS account, or the resources with the specified tag. This operation takes the optional Tags field, which you can use as a filter of the responses so that tagged resources can be retrieved as a group. If you choose to use tag filtering, only resources with the tags are retrieved. 
     */
@@ -1252,6 +1348,7 @@ trait Glue extends Service {
     params: ListMLTransformsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListMLTransformsResponse, Unit]
   ): Request[ListMLTransformsResponse, AWSError] = js.native
+  
   /**
     * Retrieves the names of all trigger resources in this AWS account, or the resources with the specified tag. This operation allows you to see which resources are available in your account, and their names. This operation takes the optional Tags field, which you can use as a filter on the response so that tagged resources can be retrieved as a group. If you choose to use tags filtering, only resources with the tag are retrieved.
     */
@@ -1265,6 +1362,7 @@ trait Glue extends Service {
     params: ListTriggersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTriggersResponse, Unit]
   ): Request[ListTriggersResponse, AWSError] = js.native
+  
   /**
     * Lists names of workflows created in the account.
     */
@@ -1278,6 +1376,7 @@ trait Glue extends Service {
     params: ListWorkflowsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListWorkflowsResponse, Unit]
   ): Request[ListWorkflowsResponse, AWSError] = js.native
+  
   /**
     * Sets the security configuration for a specified catalog. After the configuration has been set, the specified encryption is applied to every catalog write thereafter.
     */
@@ -1293,6 +1392,7 @@ trait Glue extends Service {
     params: PutDataCatalogEncryptionSettingsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutDataCatalogEncryptionSettingsResponse, Unit]
   ): Request[PutDataCatalogEncryptionSettingsResponse, AWSError] = js.native
+  
   /**
     * Sets the Data Catalog resource policy for access control.
     */
@@ -1306,6 +1406,7 @@ trait Glue extends Service {
     params: PutResourcePolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutResourcePolicyResponse, Unit]
   ): Request[PutResourcePolicyResponse, AWSError] = js.native
+  
   /**
     * Puts the specified workflow run properties for the given workflow run. If a property already exists for the specified run, then it overrides the value otherwise adds the property to existing properties.
     */
@@ -1319,6 +1420,7 @@ trait Glue extends Service {
     params: PutWorkflowRunPropertiesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutWorkflowRunPropertiesResponse, Unit]
   ): Request[PutWorkflowRunPropertiesResponse, AWSError] = js.native
+  
   /**
     * Resets a bookmark entry.
     */
@@ -1332,6 +1434,7 @@ trait Glue extends Service {
     params: ResetJobBookmarkRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ResetJobBookmarkResponse, Unit]
   ): Request[ResetJobBookmarkResponse, AWSError] = js.native
+  
   /**
     * Restarts any completed nodes in a workflow run and resumes the run execution.
     */
@@ -1345,6 +1448,7 @@ trait Glue extends Service {
     params: ResumeWorkflowRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ResumeWorkflowRunResponse, Unit]
   ): Request[ResumeWorkflowRunResponse, AWSError] = js.native
+  
   /**
     * Searches a set of tables based on properties in the table metadata as well as on the parent database. You can search against text or filter conditions.  You can only get tables that you have access to based on the security policies defined in Lake Formation. You need at least a read-only access to the table for it to be returned. If you do not have access to all the columns in the table, these columns will not be searched against when returning the list of tables back to you. If you have access to the columns but not the data in the columns, those columns and the associated metadata for those columns will be included in the search. 
     */
@@ -1358,6 +1462,7 @@ trait Glue extends Service {
     params: SearchTablesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ SearchTablesResponse, Unit]
   ): Request[SearchTablesResponse, AWSError] = js.native
+  
   /**
     * Starts a crawl using the specified crawler, regardless of what is scheduled. If the crawler is already running, returns a CrawlerRunningException.
     */
@@ -1371,6 +1476,7 @@ trait Glue extends Service {
     params: StartCrawlerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartCrawlerResponse, Unit]
   ): Request[StartCrawlerResponse, AWSError] = js.native
+  
   /**
     * Changes the schedule state of the specified crawler to SCHEDULED, unless the crawler is already running or the schedule state is already SCHEDULED.
     */
@@ -1384,6 +1490,7 @@ trait Glue extends Service {
     params: StartCrawlerScheduleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartCrawlerScheduleResponse, Unit]
   ): Request[StartCrawlerScheduleResponse, AWSError] = js.native
+  
   /**
     * Begins an asynchronous task to export all labeled data for a particular transform. This task is the only label-related API call that is not part of the typical active learning workflow. You typically use StartExportLabelsTaskRun when you want to work with all of your existing labels at the same time, such as when you want to remove or change labels that were previously submitted as truth. This API operation accepts the TransformId whose labels you want to export and an Amazon Simple Storage Service (Amazon S3) path to export the labels to. The operation returns a TaskRunId. You can check on the status of your task run by calling the GetMLTaskRun API.
     */
@@ -1397,6 +1504,7 @@ trait Glue extends Service {
     params: StartExportLabelsTaskRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartExportLabelsTaskRunResponse, Unit]
   ): Request[StartExportLabelsTaskRunResponse, AWSError] = js.native
+  
   /**
     * Enables you to provide additional labels (examples of truth) to be used to teach the machine learning transform and improve its quality. This API operation is generally used as part of the active learning workflow that starts with the StartMLLabelingSetGenerationTaskRun call and that ultimately results in improving the quality of your machine learning transform.  After the StartMLLabelingSetGenerationTaskRun finishes, AWS Glue machine learning will have generated a series of questions for humans to answer. (Answering these questions is often called 'labeling' in the machine learning workflows). In the case of the FindMatches transform, these questions are of the form, “What is the correct way to group these rows together into groups composed entirely of matching records?” After the labeling process is finished, users upload their answers/labels with a call to StartImportLabelsTaskRun. After StartImportLabelsTaskRun finishes, all future runs of the machine learning transform use the new and improved labels and perform a higher-quality transformation. By default, StartMLLabelingSetGenerationTaskRun continually learns from and combines all labels that you upload unless you set Replace to true. If you set Replace to true, StartImportLabelsTaskRun deletes and forgets all previously uploaded labels and learns only from the exact set that you upload. Replacing labels can be helpful if you realize that you previously uploaded incorrect labels, and you believe that they are having a negative effect on your transform quality. You can check on the status of your task run by calling the GetMLTaskRun operation. 
     */
@@ -1410,6 +1518,7 @@ trait Glue extends Service {
     params: StartImportLabelsTaskRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartImportLabelsTaskRunResponse, Unit]
   ): Request[StartImportLabelsTaskRunResponse, AWSError] = js.native
+  
   /**
     * Starts a job run using a job definition.
     */
@@ -1423,6 +1532,7 @@ trait Glue extends Service {
     params: StartJobRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartJobRunResponse, Unit]
   ): Request[StartJobRunResponse, AWSError] = js.native
+  
   /**
     * Starts a task to estimate the quality of the transform.  When you provide label sets as examples of truth, AWS Glue machine learning uses some of those examples to learn from them. The rest of the labels are used as a test to estimate quality. Returns a unique identifier for the run. You can call GetMLTaskRun to get more information about the stats of the EvaluationTaskRun.
     */
@@ -1436,6 +1546,7 @@ trait Glue extends Service {
     params: StartMLEvaluationTaskRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartMLEvaluationTaskRunResponse, Unit]
   ): Request[StartMLEvaluationTaskRunResponse, AWSError] = js.native
+  
   /**
     * Starts the active learning workflow for your machine learning transform to improve the transform's quality by generating label sets and adding labels. When the StartMLLabelingSetGenerationTaskRun finishes, AWS Glue will have generated a "labeling set" or a set of questions for humans to answer. In the case of the FindMatches transform, these questions are of the form, “What is the correct way to group these rows together into groups composed entirely of matching records?”  After the labeling process is finished, you can upload your labels with a call to StartImportLabelsTaskRun. After StartImportLabelsTaskRun finishes, all future runs of the machine learning transform will use the new and improved labels and perform a higher-quality transformation.
     */
@@ -1451,6 +1562,7 @@ trait Glue extends Service {
     params: StartMLLabelingSetGenerationTaskRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartMLLabelingSetGenerationTaskRunResponse, Unit]
   ): Request[StartMLLabelingSetGenerationTaskRunResponse, AWSError] = js.native
+  
   /**
     * Starts an existing trigger. See Triggering Jobs for information about how different types of trigger are started.
     */
@@ -1464,6 +1576,7 @@ trait Glue extends Service {
     params: StartTriggerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartTriggerResponse, Unit]
   ): Request[StartTriggerResponse, AWSError] = js.native
+  
   /**
     * Starts a new run of the specified workflow.
     */
@@ -1477,6 +1590,7 @@ trait Glue extends Service {
     params: StartWorkflowRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartWorkflowRunResponse, Unit]
   ): Request[StartWorkflowRunResponse, AWSError] = js.native
+  
   /**
     * If the specified crawler is running, stops the crawl.
     */
@@ -1490,6 +1604,7 @@ trait Glue extends Service {
     params: StopCrawlerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopCrawlerResponse, Unit]
   ): Request[StopCrawlerResponse, AWSError] = js.native
+  
   /**
     * Sets the schedule state of the specified crawler to NOT_SCHEDULED, but does not stop the crawler if it is already running.
     */
@@ -1503,6 +1618,7 @@ trait Glue extends Service {
     params: StopCrawlerScheduleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopCrawlerScheduleResponse, Unit]
   ): Request[StopCrawlerScheduleResponse, AWSError] = js.native
+  
   /**
     * Stops a specified trigger.
     */
@@ -1516,6 +1632,7 @@ trait Glue extends Service {
     params: StopTriggerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopTriggerResponse, Unit]
   ): Request[StopTriggerResponse, AWSError] = js.native
+  
   /**
     * Stops the execution of the specified workflow run.
     */
@@ -1529,6 +1646,7 @@ trait Glue extends Service {
     params: StopWorkflowRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopWorkflowRunResponse, Unit]
   ): Request[StopWorkflowRunResponse, AWSError] = js.native
+  
   /**
     * Adds tags to a resource. A tag is a label you can assign to an AWS resource. In AWS Glue, you can tag only certain resources. For information about what resources you can tag, see AWS Tags in AWS Glue.
     */
@@ -1542,6 +1660,7 @@ trait Glue extends Service {
     params: TagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]
   ): Request[TagResourceResponse, AWSError] = js.native
+  
   /**
     * Removes tags from a resource.
     */
@@ -1555,6 +1674,7 @@ trait Glue extends Service {
     params: UntagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceResponse, Unit]
   ): Request[UntagResourceResponse, AWSError] = js.native
+  
   /**
     * Modifies an existing classifier (a GrokClassifier, an XMLClassifier, a JsonClassifier, or a CsvClassifier, depending on which field is present).
     */
@@ -1568,6 +1688,7 @@ trait Glue extends Service {
     params: UpdateClassifierRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateClassifierResponse, Unit]
   ): Request[UpdateClassifierResponse, AWSError] = js.native
+  
   /**
     * Creates or updates partition statistics of columns.
     */
@@ -1583,6 +1704,7 @@ trait Glue extends Service {
     params: UpdateColumnStatisticsForPartitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateColumnStatisticsForPartitionResponse, Unit]
   ): Request[UpdateColumnStatisticsForPartitionResponse, AWSError] = js.native
+  
   /**
     * Creates or updates table statistics of columns.
     */
@@ -1598,6 +1720,7 @@ trait Glue extends Service {
     params: UpdateColumnStatisticsForTableRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateColumnStatisticsForTableResponse, Unit]
   ): Request[UpdateColumnStatisticsForTableResponse, AWSError] = js.native
+  
   /**
     * Updates a connection definition in the Data Catalog.
     */
@@ -1611,6 +1734,7 @@ trait Glue extends Service {
     params: UpdateConnectionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateConnectionResponse, Unit]
   ): Request[UpdateConnectionResponse, AWSError] = js.native
+  
   /**
     * Updates a crawler. If a crawler is running, you must stop it using StopCrawler before updating it.
     */
@@ -1624,6 +1748,7 @@ trait Glue extends Service {
     params: UpdateCrawlerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateCrawlerResponse, Unit]
   ): Request[UpdateCrawlerResponse, AWSError] = js.native
+  
   /**
     * Updates the schedule of a crawler using a cron expression. 
     */
@@ -1637,6 +1762,7 @@ trait Glue extends Service {
     params: UpdateCrawlerScheduleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateCrawlerScheduleResponse, Unit]
   ): Request[UpdateCrawlerScheduleResponse, AWSError] = js.native
+  
   /**
     * Updates an existing database definition in a Data Catalog.
     */
@@ -1650,6 +1776,7 @@ trait Glue extends Service {
     params: UpdateDatabaseRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateDatabaseResponse, Unit]
   ): Request[UpdateDatabaseResponse, AWSError] = js.native
+  
   /**
     * Updates a specified development endpoint.
     */
@@ -1663,6 +1790,7 @@ trait Glue extends Service {
     params: UpdateDevEndpointRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateDevEndpointResponse, Unit]
   ): Request[UpdateDevEndpointResponse, AWSError] = js.native
+  
   /**
     * Updates an existing job definition.
     */
@@ -1676,6 +1804,7 @@ trait Glue extends Service {
     params: UpdateJobRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateJobResponse, Unit]
   ): Request[UpdateJobResponse, AWSError] = js.native
+  
   /**
     * Updates an existing machine learning transform. Call this operation to tune the algorithm parameters to achieve better results. After calling this operation, you can call the StartMLEvaluationTaskRun operation to assess how well your new parameters achieved your goals (such as improving the quality of your machine learning transform, or making it more cost-effective).
     */
@@ -1689,6 +1818,7 @@ trait Glue extends Service {
     params: UpdateMLTransformRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateMLTransformResponse, Unit]
   ): Request[UpdateMLTransformResponse, AWSError] = js.native
+  
   /**
     * Updates a partition.
     */
@@ -1702,6 +1832,7 @@ trait Glue extends Service {
     params: UpdatePartitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdatePartitionResponse, Unit]
   ): Request[UpdatePartitionResponse, AWSError] = js.native
+  
   /**
     * Updates a metadata table in the Data Catalog.
     */
@@ -1715,6 +1846,7 @@ trait Glue extends Service {
     params: UpdateTableRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateTableResponse, Unit]
   ): Request[UpdateTableResponse, AWSError] = js.native
+  
   /**
     * Updates a trigger definition.
     */
@@ -1728,6 +1860,7 @@ trait Glue extends Service {
     params: UpdateTriggerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateTriggerResponse, Unit]
   ): Request[UpdateTriggerResponse, AWSError] = js.native
+  
   /**
     * Updates an existing function definition in the Data Catalog.
     */
@@ -1741,6 +1874,7 @@ trait Glue extends Service {
     params: UpdateUserDefinedFunctionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateUserDefinedFunctionResponse, Unit]
   ): Request[UpdateUserDefinedFunctionResponse, AWSError] = js.native
+  
   /**
     * Updates an existing workflow.
     */
@@ -1755,4 +1889,3 @@ trait Glue extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateWorkflowResponse, Unit]
   ): Request[UpdateWorkflowResponse, AWSError] = js.native
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "visitParameterList")
 @js.native
 object visitParameterList extends js.Object {
+  
   def apply(nodes: js.UndefOr[scala.Nothing], visitor: Visitor, context: TransformationContext): js.UndefOr[NodeArray[ParameterDeclaration]] = js.native
   def apply(
     nodes: js.UndefOr[scala.Nothing],
@@ -36,4 +37,3 @@ object visitParameterList extends js.Object {
     ]
   ): js.UndefOr[NodeArray[ParameterDeclaration]] = js.native
 }
-

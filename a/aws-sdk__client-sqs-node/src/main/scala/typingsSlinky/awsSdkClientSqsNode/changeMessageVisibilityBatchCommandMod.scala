@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-sqs-node/commands/ChangeMessageVisibilityBatchCommand", JSImport.Namespace)
 @js.native
 object changeMessageVisibilityBatchCommandMod extends js.Object {
+  
   @js.native
   class ChangeMessageVisibilityBatchCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object changeMessageVisibilityBatchCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ChangeMessageVisibilityBatchInput) = this()
+    
     val middlewareStack: MiddlewareStack[ChangeMessageVisibilityBatchInput, ChangeMessageVisibilityBatchOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: SQSResolvedConfiguration
     ): Handler[ChangeMessageVisibilityBatchInput, ChangeMessageVisibilityBatchOutput] = js.native
   }
-  
 }
-

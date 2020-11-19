@@ -3,11 +3,12 @@ package typingsSlinky.reactMdTransition.scaleTransitionMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/transition/types/ScaleTransition", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   /**
     * This `ScaleTransition` component is used to trigger an animation that
     * switches between an opacity of `0` and `1` and using a `transform: scale(0)`
@@ -22,19 +23,28 @@ object default extends js.Object {
   def apply(
     hasVisibleChildrenClassNamesVerticalTimeoutPortalPortalIntoPortalIntoIdMountOnEnterUnmountOnExitProps: ScaleTransitionProps
   ): ReactElement = js.native
+  
   @js.native
   object propTypes extends js.Object {
+    
     var children: js.Any = js.native
+    
     var classNames: js.Any = js.native
+    
     var mountOnEnter: js.Any = js.native
+    
     var portal: js.Any = js.native
+    
     var portalInto: js.Any = js.native
+    
     var portalIntoId: js.Any = js.native
+    
     var timeout: js.Any = js.native
+    
     var unmountOnExit: js.Any = js.native
+    
     var vertical: js.Any = js.native
+    
     var visible: js.Any = js.native
   }
-  
 }
-

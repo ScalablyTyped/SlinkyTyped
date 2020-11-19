@@ -29,7 +29,7 @@ import typingsSlinky.std.Intl.DateTimeFormatOptions
 import typingsSlinky.std.Intl.NumberFormatOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This module provides date and number formatting methods and supporting utilities.
@@ -38,6 +38,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait intl extends js.Object {
+  
   /**
     * Converts a [web map date format string](https://developers.arcgis.com/web-map-specification/objects/format/) to an [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat#Parameters) options object.
     *
@@ -97,6 +98,7 @@ trait intl extends js.Object {
   def convertDateFormatToIntlOptions_shorttime(format: `short-time`): DateTimeFormatOptions = js.native
   @JSName("convertDateFormatToIntlOptions")
   def convertDateFormatToIntlOptions_year(format: year): DateTimeFormatOptions = js.native
+  
   /**
     * Converts a [NumberFormat](https://developers.arcgis.com/javascript/latest/api-reference/esri-intl.html#NumberFormat) to an [Intl.NumberFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat#Parameters) object.
     *
@@ -107,6 +109,7 @@ trait intl extends js.Object {
     */
   def convertNumberFormatToIntlOptions(): NumberFormatOptions = js.native
   def convertNumberFormatToIntlOptions(format: NumberFormat): NumberFormatOptions = js.native
+  
   def formatDate(value: Double): String = js.native
   def formatDate(value: Double, formatOptions: DateTimeFormatOptions): String = js.native
   /**
@@ -121,6 +124,7 @@ trait intl extends js.Object {
     */
   def formatDate(value: js.Date): String = js.native
   def formatDate(value: js.Date, formatOptions: DateTimeFormatOptions): String = js.native
+  
   /**
     * Formats a `Number` value to a string in the current locale.
     * > Internally `formatNumber` creates [Intl formatter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) instances for the current locale. The formatters are cached using their `options` as a cache key. Reuse the same `options` objects for best performance.
@@ -133,6 +137,7 @@ trait intl extends js.Object {
     */
   def formatNumber(value: Double): String = js.native
   def formatNumber(value: Double, formatOptions: NumberFormatOptions): String = js.native
+  
   /**
     * Returns the current locale used by the API. The API reads this information in a specified order. This order is described as follows:  1. What is initialized using the global `esriConfig` variable, which also initializes the `esri/config` module. 2. What is set in `dojoConfig.locale` for [backward compatibility](https://developers.arcgis.com/javascript/3/jshelp/localization.html) 3. What is set [`navigator.language`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language), the locale defined by the web browser's user's preferences.  The preferred way of setting a locale is via the [`setLocale()`](https://developers.arcgis.com/javascript/latest/api-reference/esri-intl.html#setLocale) method. A callback can be invoked to notify when the locale changes by using [`onLocaleChange()`](https://developers.arcgis.com/javascript/latest/api-reference/esri-intl.html#onLocaleChange).
     * > The locale defaults to `en` (English).
@@ -142,6 +147,7 @@ trait intl extends js.Object {
     *
     */
   def getLocale(): String = js.native
+  
   /**
     * Evokes a callback to notify when the locale changes. This happens when [setLocale()](https://developers.arcgis.com/javascript/latest/api-reference/esri-intl.html#setLocale) is called, or when the web browser locale changes by the user and the current locale is the web browser's value.
     *
@@ -151,6 +157,7 @@ trait intl extends js.Object {
     *
     */
   def onLocaleChange(listener: js.Function): js.Any = js.native
+  
   /**
     * Provides right-to-left preference for input locale.
     *
@@ -161,6 +168,7 @@ trait intl extends js.Object {
     */
   def prefersRTL(): Boolean = js.native
   def prefersRTL(locale: String): Boolean = js.native
+  
   /**
     * Sets the locale used by the API. This is the preferred method for setting the API locale.  When the locale changes, the subscribed callbacks for [`onLocaleChange()`](https://developers.arcgis.com/javascript/latest/api-reference/esri-intl.html#onLocaleChange) are called.
     * > The JavaScript API widgets react when the locale changes at runtime. Please note that this is considered experimental.
@@ -172,6 +180,7 @@ trait intl extends js.Object {
     *
     */
   def setLocale(locale: String): Unit = js.native
+  
   /**
     * Use this to substitute keys in a `template` string with values from the argument `data`. `null` or `undefined` values aren't printed in the output result.  The formatting of the values from `data` can be specified. By default the values will be formatted based on their native JavaScript type.
     * > Internally `substitute` creates [Intl formatter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) instances for the current locale. The formatters are cached using the `options` as a cache key. Reuse the same `options` objects for best performance.
@@ -186,4 +195,3 @@ trait intl extends js.Object {
   def substitute(template: String, data: js.Any): String = js.native
   def substitute(template: String, data: js.Any, options: SubstituteOptions): String = js.native
 }
-

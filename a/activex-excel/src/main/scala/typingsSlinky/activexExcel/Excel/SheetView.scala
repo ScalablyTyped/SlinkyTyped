@@ -2,15 +2,15 @@ package typingsSlinky.activexExcel.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.activexExcel.Excel.WorksheetView
   - typingsSlinky.activexExcel.Excel.DialogSheetView
 */
 trait SheetView extends js.Object
-
 object SheetView {
+  
   @scala.inline
   def WorksheetView(
     Application: Application,
@@ -28,6 +28,7 @@ object SheetView {
     __obj.updateDynamic("Excel.WorksheetView_typekey")(ExcelDotWorksheetView_typekey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SheetView]
   }
+  
   @scala.inline
   def DialogSheetView(
     Application: Application,
@@ -41,4 +42,3 @@ object SheetView {
     __obj.asInstanceOf[SheetView]
   }
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.three.mod
 import org.scalajs.dom.raw.HTMLVideoElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "VideoTexture")
 @js.native
@@ -21,4 +21,3 @@ class VideoTexture protected ()
     anisotropy: js.UndefOr[Double]
   ) = this()
 }
-

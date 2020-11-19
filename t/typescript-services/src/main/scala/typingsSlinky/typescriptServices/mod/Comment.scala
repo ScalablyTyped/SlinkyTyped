@@ -3,7 +3,7 @@ package typingsSlinky.typescriptServices.mod
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxTrivia
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "Comment")
 @js.native
@@ -11,4 +11,3 @@ class Comment protected ()
   extends typingsSlinky.typescriptServices.TypeScript.Comment {
   def this(_trivia: ISyntaxTrivia, endsLine: Boolean, _start: Double, _end: Double) = this()
 }
-

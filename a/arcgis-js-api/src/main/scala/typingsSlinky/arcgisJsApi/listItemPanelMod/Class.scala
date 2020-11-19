@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.listItemPanelMod
 import typingsSlinky.arcgisJsApi.esri.ListItemPanel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/LayerList/ListItemPanel", JSImport.Namespace)
 @js.native
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItemPanel.html)
   */
 class Class () extends ListItemPanel
-

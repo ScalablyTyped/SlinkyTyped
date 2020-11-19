@@ -88,64 +88,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.visualEffectsChanged
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.zero
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojSparkChart_[K, D] extends dvtBaseComponent[ojSparkChartSettableProperties[K, D]] {
-  var animationDuration: Double | Null = js.native
-  var animationOnDataChange: auto | none = js.native
-  var animationOnDisplay: auto | none = js.native
-  var areaColor: String = js.native
-  var areaSvgClassName: String = js.native
-  var areaSvgStyle: js.Object = js.native
-  var as: String = js.native
-  var barGapRatio: Double = js.native
-  var baselineScaling: zero | min = js.native
-  var color: String = js.native
-  var data: (DataProvider[K, D]) | Null = js.native
-  var firstColor: String = js.native
-  var highColor: String = js.native
-  var lastColor: String = js.native
-  var lineStyle: dotted | dashed | solid = js.native
-  var lineType: curved | stepped | centeredStepped | segmented | centeredSegmented | none | straight = js.native
-  var lineWidth: Double = js.native
-  var lowColor: String = js.native
-  var markerShape: auto | circle | diamond | human | plus | square | star | triangleDown | triangleUp | String = js.native
-  var markerSize: Double = js.native
-  var onAnimationDurationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onAnimationOnDataChangeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onAnimationOnDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onAreaColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onAreaSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onAreaSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onBarGapRatioChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onBaselineScalingChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onFirstColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHighColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLastColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLineStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLineTypeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLineWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLowColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onMarkerShapeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onMarkerSizeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onReferenceObjectsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onTooltipChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onTypeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onVisualEffectsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var referenceObjects: js.Array[ReferenceObject] = js.native
-  var svgClassName: String = js.native
-  var svgStyle: js.Object = js.native
-  var tooltip: `0` = js.native
-  @JSName("translations")
-  var translations_ojSparkChart_ : LabelAndValue = js.native
-  var `type`: area | lineWithArea | bar | line = js.native
-  var visualEffects: none | auto = js.native
+  
   def addEventListener(
     `type`: animationOnDataChangeChanged,
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
@@ -349,7 +296,33 @@ trait ojSparkChart_[K, D] extends dvtBaseComponent[ojSparkChartSettablePropertie
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var animationDuration: Double | Null = js.native
+  
+  var animationOnDataChange: auto | none = js.native
+  
+  var animationOnDisplay: auto | none = js.native
+  
+  var areaColor: String = js.native
+  
+  var areaSvgClassName: String = js.native
+  
+  var areaSvgStyle: js.Object = js.native
+  
+  var as: String = js.native
+  
+  var barGapRatio: Double = js.native
+  
+  var baselineScaling: zero | min = js.native
+  
+  var color: String = js.native
+  
+  var data: (DataProvider[K, D]) | Null = js.native
+  
+  var firstColor: String = js.native
+  
   def getDataItem(itemIndex: Double): ItemContext | Null = js.native
+  
   @JSName("getProperty")
   def getProperty_animationDuration(property: animationDuration): Double | Null = js.native
   @JSName("getProperty")
@@ -402,7 +375,79 @@ trait ojSparkChart_[K, D] extends dvtBaseComponent[ojSparkChartSettablePropertie
   def getProperty_type(property: `type`): area | lineWithArea | bar | line = js.native
   @JSName("getProperty")
   def getProperty_visualEffects(property: visualEffects): none | auto = js.native
+  
+  var highColor: String = js.native
+  
+  var lastColor: String = js.native
+  
+  var lineStyle: dotted | dashed | solid = js.native
+  
+  var lineType: curved | stepped | centeredStepped | segmented | centeredSegmented | none | straight = js.native
+  
+  var lineWidth: Double = js.native
+  
+  var lowColor: String = js.native
+  
+  var markerShape: auto | circle | diamond | human | plus | square | star | triangleDown | triangleUp | String = js.native
+  
+  var markerSize: Double = js.native
+  
+  var onAnimationDurationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onAnimationOnDataChangeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onAnimationOnDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onAreaColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onAreaSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onAreaSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onBarGapRatioChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onBaselineScalingChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onFirstColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHighColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLastColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLineStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLineTypeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLineWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLowColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onMarkerShapeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onMarkerSizeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onReferenceObjectsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onTooltipChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onTypeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onVisualEffectsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var referenceObjects: js.Array[ReferenceObject] = js.native
+  
   def setProperties(properties: ojSparkChartSettablePropertiesLenient[K, D]): Unit = js.native
+  
   def setProperty(property: `type`, value: area): Unit = js.native
   def setProperty(property: `type`, value: bar): Unit = js.native
   def setProperty(property: `type`, value: line): Unit = js.native
@@ -478,5 +523,17 @@ trait ojSparkChart_[K, D] extends dvtBaseComponent[ojSparkChartSettablePropertie
   def setProperty_tooltip(property: tooltip, value: `0`): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: LabelAndValue): Unit = js.native
+  
+  var svgClassName: String = js.native
+  
+  var svgStyle: js.Object = js.native
+  
+  var tooltip: `0` = js.native
+  
+  @JSName("translations")
+  var translations_ojSparkChart_ : LabelAndValue = js.native
+  
+  var `type`: area | lineWithArea | bar | line = js.native
+  
+  var visualEffects: none | auto = js.native
 }
-

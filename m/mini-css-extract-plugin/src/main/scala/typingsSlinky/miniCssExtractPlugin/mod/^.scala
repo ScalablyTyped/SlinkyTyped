@@ -3,7 +3,7 @@ package typingsSlinky.miniCssExtractPlugin.mod
 import typingsSlinky.std.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Lightweight CSS extraction webpack plugin
@@ -15,11 +15,10 @@ import scala.scalajs.js.annotation._
 class ^ () extends Plugin {
   def this(options: PluginOptions) = this()
 }
-
 @JSImport("mini-css-extract-plugin", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /** webpack loader used always at the end of loaders list */
   var loader: String = js.native
 }
-

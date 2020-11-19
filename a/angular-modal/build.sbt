@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "angular-modal"
-version := "0.5.0-dt-20200515Z-7b55c8"
+version := "0.5.0-dt-20200515Z-07660b"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "angular" % "1.7-dt-20200624Z-5a5175",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "angular" % "1.7-dt-20200624Z-d88272",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

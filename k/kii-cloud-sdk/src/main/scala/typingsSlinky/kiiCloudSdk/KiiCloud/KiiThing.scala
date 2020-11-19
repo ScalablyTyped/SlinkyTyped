@@ -8,18 +8,14 @@ import typingsSlinky.kiiCloudSdk.anon.`28`
 import typingsSlinky.kiiCloudSdk.anon.`4`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents a Thing object
   */
 @js.native
 trait KiiThing extends KiiACLSubject {
-  /**
-    * of this thing.
-    * For details refer to {@link KiiThing.register}
-    */
-  var fields: KiiThingFields = js.native
+  
   /**
     * Instantiate bucket belongs to this thing.
     *
@@ -28,6 +24,7 @@ trait KiiThing extends KiiACLSubject {
     * @return bucket instance.
     */
   def bucketWithName(bucketName: String): KiiBucket = js.native
+  
   /**
     * Delete registered thing in Kii Cloud.
     * <br>This API is authorized by owner of thing.
@@ -78,6 +75,7 @@ trait KiiThing extends KiiACLSubject {
     */
   def deleteThing(): js.Promise[KiiThing] = js.native
   def deleteThing(callbacks: `1`): js.Promise[KiiThing] = js.native
+  
   /**
     * Disable the thing.
     * <br>This API is authorized by owner of thing.
@@ -129,6 +127,7 @@ trait KiiThing extends KiiACLSubject {
     */
   def disable(): js.Promise[KiiThing] = js.native
   def disable(callbacks: `1`): js.Promise[KiiThing] = js.native
+  
   /**
     * Enable the thing.
     * <br>This API is authorized by owner of thing.
@@ -180,6 +179,7 @@ trait KiiThing extends KiiACLSubject {
     */
   def enable(): js.Promise[KiiThing] = js.native
   def enable(callbacks: `1`): js.Promise[KiiThing] = js.native
+  
   /**
     * Creates a reference to a encrypted bucket for this thing
     *
@@ -194,48 +194,62 @@ trait KiiThing extends KiiACLSubject {
     *     var bucket = thing.encryptedBucketWithName("myBucket");
     */
   def encryptedBucketWithName(bucketName: String): KiiBucket = js.native
+  
+  /**
+    * of this thing.
+    * For details refer to {@link KiiThing.register}
+    */
+  var fields: KiiThingFields = js.native
+  
   /**
     * Get access token of this thing.
     *
     * @return access token of this thing.
     */
   def getAccessToken(): String = js.native
+  
   /**
     * Get created time of this thing.
     *
     * @return created time of this thing.
     */
   def getCreated(): js.Date = js.native
+  
   /**
     * Get disabled status of this thing.
     *
     * @return true if thing is disabled, false otherwise.
     */
   def getDisabled(): Boolean = js.native
+  
   /**
     * Get online status modified date of the thing.
     *
     * @return online status modified time of this thing. The date will be null initially until the thing is connected for the first time.
     */
   def getOnlineStatusModifiedAt(): js.Date = js.native
+  
   /**
     * Get thing ID.
     *
     * @return thing id
     */
   def getThingID(): String = js.native
+  
   /**
     * Get vendor thing ID.
     *
     * @return vendor thing id
     */
   def getVendorThingID(): String = js.native
+  
   /**
     * Get online status of the thing.
     *
     * @return true if the thing is online, false otherwise. The return value will be null initially until the thing is connected for the first time.
     */
   def isOnline(): Boolean = js.native
+  
   def isOwner(owner: KiiGroup): js.Promise[js.Tuple3[KiiThing, KiiGroup, Boolean]] = js.native
   def isOwner(owner: KiiGroup, callbacks: `26`): js.Promise[js.Tuple3[KiiThing, KiiGroup, Boolean]] = js.native
   /**
@@ -304,6 +318,7 @@ trait KiiThing extends KiiACLSubject {
     */
   def isOwner(owner: KiiUser): js.Promise[js.Tuple3[KiiThing, KiiUser, Boolean]] = js.native
   def isOwner(owner: KiiUser, callbacks: `25`): js.Promise[js.Tuple3[KiiThing, KiiUser, Boolean]] = js.native
+  
   /**
     * Gets a list of topics in this thing scope
     *
@@ -374,12 +389,14 @@ trait KiiThing extends KiiACLSubject {
   def listTopics(callbacks: js.UndefOr[scala.Nothing], paginationKey: String): js.Promise[js.Tuple2[js.Array[KiiTopic], String]] = js.native
   def listTopics(callbacks: `4`): js.Promise[js.Tuple2[js.Array[KiiTopic], String]] = js.native
   def listTopics(callbacks: `4`, paginationKey: String): js.Promise[js.Tuple2[js.Array[KiiTopic], String]] = js.native
+  
   /**
     * Instantiate push subscription for this thing.
     *
     * @return push subscription object.
     */
   def pushSubscription(): KiiPushSubscription = js.native
+  
   /**
     * Retrieve the latest thing information from KiiCloud.
     * <br>This API is authorized by owner of thing.
@@ -426,6 +443,7 @@ trait KiiThing extends KiiACLSubject {
     */
   def refresh(): js.Promise[KiiThing] = js.native
   def refresh(callbacks: `1`): js.Promise[KiiThing] = js.native
+  
   def registerOwner(owner: KiiGroup): js.Promise[js.Tuple2[KiiThing, KiiGroup]] = js.native
   def registerOwner(owner: KiiGroup, callbacks: `28`): js.Promise[js.Tuple2[KiiThing, KiiGroup]] = js.native
   /**
@@ -482,6 +500,7 @@ trait KiiThing extends KiiACLSubject {
     */
   def registerOwner(owner: KiiUser): js.Promise[js.Tuple2[KiiThing, KiiUser]] = js.native
   def registerOwner(owner: KiiUser, callbacks: `27`): js.Promise[js.Tuple2[KiiThing, KiiUser]] = js.native
+  
   /**
     * Instantiate topic belongs to this thing.
     *
@@ -490,6 +509,7 @@ trait KiiThing extends KiiACLSubject {
     * @return topic instance.
     */
   def topicWithName(topicName: String): KiiTopic = js.native
+  
   def unregisterOwner(owner: KiiGroup): js.Promise[js.Tuple2[KiiThing, KiiGroup]] = js.native
   def unregisterOwner(owner: KiiGroup, callbacks: `28`): js.Promise[js.Tuple2[KiiThing, KiiGroup]] = js.native
   /**
@@ -545,6 +565,7 @@ trait KiiThing extends KiiACLSubject {
     */
   def unregisterOwner(owner: KiiUser): js.Promise[js.Tuple2[KiiThing, KiiUser]] = js.native
   def unregisterOwner(owner: KiiUser, callbacks: `27`): js.Promise[js.Tuple2[KiiThing, KiiUser]] = js.native
+  
   /**
     * Update registered thing information in Kii Cloud
     * <br>This API is authorized by owner of thing.
@@ -604,4 +625,3 @@ trait KiiThing extends KiiACLSubject {
   def update(): js.Promise[KiiThing] = js.native
   def update(callbacks: `1`): js.Promise[KiiThing] = js.native
 }
-

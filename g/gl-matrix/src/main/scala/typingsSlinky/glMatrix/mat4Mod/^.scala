@@ -6,15 +6,15 @@ import typingsSlinky.glMatrix.mod.quat
 import typingsSlinky.glMatrix.mod.vec3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gl-matrix/src/gl-matrix/mat4", JSImport.Namespace)
 @js.native
 class ^ () extends mat4
-
 @JSImport("gl-matrix/src/gl-matrix/mat4", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Adds two mat4's
     *
@@ -24,6 +24,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def add(out: mat4, a: mat4, b: mat4): mat4 = js.native
+  
   /**
     * Calculates the adjugate of a mat4
     *
@@ -32,6 +33,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def adjoint(out: mat4, a: mat4): mat4 = js.native
+  
   /**
     * Creates a new mat4 initialized with values from an existing matrix
     *
@@ -39,6 +41,7 @@ object ^ extends js.Object {
     * @returns a new 4x4 matrix
     */
   def clone(a: mat4): mat4 = js.native
+  
   /**
     * Copy the values from one mat4 to another
     *
@@ -47,12 +50,14 @@ object ^ extends js.Object {
     * @returns out
     */
   def copy(out: mat4, a: mat4): mat4 = js.native
+  
   /**
     * Creates a new identity mat4
     *
     * @returns a new 4x4 matrix
     */
   def create(): mat4 = js.native
+  
   /**
     * Calculates the determinant of a mat4
     *
@@ -60,6 +65,7 @@ object ^ extends js.Object {
     * @returns determinant of a
     */
   def determinant(a: mat4): Double = js.native
+  
   /**
     * Returns whether or not the matrices have approximately the same elements in the same position.
     *
@@ -68,6 +74,7 @@ object ^ extends js.Object {
     * @returns {boolean} True if the matrices are equal, false otherwise.
     */
   def equals(a: mat4, b: mat4): Boolean = js.native
+  
   /**
     * Returns whether or not the matrices have exactly the same elements in the same position (when compared with ===)
     *
@@ -76,6 +83,7 @@ object ^ extends js.Object {
     * @returns {boolean} True if the matrices are equal, false otherwise.
     */
   def exactEquals(a: mat4, b: mat4): Boolean = js.native
+  
   /**
     * Returns Frobenius norm of a mat4
     *
@@ -83,6 +91,7 @@ object ^ extends js.Object {
     * @returns Frobenius norm
     */
   def frob(a: mat4): Double = js.native
+  
   /**
     * Calculates a 4x4 matrix from the given quaternion
     *
@@ -92,6 +101,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def fromQuat(out: mat4, q: quat): mat4 = js.native
+  
   def fromRotation(out: mat4, rad: Double, axis: js.Array[Double]): mat4 = js.native
   /**
     * Creates a matrix from a given angle around a given axis
@@ -106,6 +116,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def fromRotation(out: mat4, rad: Double, axis: vec3): mat4 = js.native
+  
   def fromRotationTranslation(out: mat4, q: quat, v: js.Array[Double]): mat4 = js.native
   /**
     * Creates a matrix from a quaternion rotation and vector translation
@@ -123,6 +134,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def fromRotationTranslation(out: mat4, q: quat, v: vec3): mat4 = js.native
+  
   def fromRotationTranslationScale(out: mat4, q: quat, v: js.Array[Double], s: js.Array[Double]): mat4 = js.native
   def fromRotationTranslationScale(out: mat4, q: quat, v: js.Array[Double], s: vec3): mat4 = js.native
   def fromRotationTranslationScale(out: mat4, q: quat, v: vec3, s: js.Array[Double]): mat4 = js.native
@@ -144,6 +156,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def fromRotationTranslationScale(out: mat4, q: quat, v: vec3, s: vec3): mat4 = js.native
+  
   def fromRotationTranslationScaleOrigin(out: mat4, q: quat, v: js.Array[Double], s: js.Array[Double], o: js.Array[Double]): mat4 = js.native
   def fromRotationTranslationScaleOrigin(out: mat4, q: quat, v: js.Array[Double], s: js.Array[Double], o: vec3): mat4 = js.native
   def fromRotationTranslationScaleOrigin(out: mat4, q: quat, v: js.Array[Double], s: vec3, o: js.Array[Double]): mat4 = js.native
@@ -172,6 +185,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def fromRotationTranslationScaleOrigin(out: mat4, q: quat, v: vec3, s: vec3, o: vec3): mat4 = js.native
+  
   def fromScaling(out: mat4, v: js.Array[Double]): mat4 = js.native
   /**
     * Creates a matrix from a vector scaling
@@ -185,6 +199,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def fromScaling(out: mat4, v: vec3): mat4 = js.native
+  
   def fromTranslation(out: mat4, v: js.Array[Double]): mat4 = js.native
   /**
     * Creates a matrix from a vector translation
@@ -198,6 +213,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def fromTranslation(out: mat4, v: vec3): mat4 = js.native
+  
   /**
     * Create a new mat4 with the given values
     *
@@ -237,6 +253,7 @@ object ^ extends js.Object {
     m32: Double,
     m33: Double
   ): mat4 = js.native
+  
   /**
     * Creates a matrix from the given angle around the X axis
     * This is equivalent to (but much faster than):
@@ -249,6 +266,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def fromXRotation(out: mat4, rad: Double): mat4 = js.native
+  
   /**
     * Creates a matrix from the given angle around the Y axis
     * This is equivalent to (but much faster than):
@@ -261,6 +279,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def fromYRotation(out: mat4, rad: Double): mat4 = js.native
+  
   /**
     * Creates a matrix from the given angle around the Z axis
     * This is equivalent to (but much faster than):
@@ -273,6 +292,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def fromZRotation(out: mat4, rad: Double): mat4 = js.native
+  
   /**
     * Generates a frustum matrix with the given bounds
     *
@@ -286,6 +306,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def frustum(out: mat4, left: Double, right: Double, bottom: Double, top: Double, near: Double, far: Double): mat4 = js.native
+  
   /**
     * Returns a quaternion representing the rotational component
     *  of a transformation matrix. If a matrix is built with
@@ -296,6 +317,7 @@ object ^ extends js.Object {
     * @return {quat} out
     */
   def getRotation(out: quat, mat: mat4): quat = js.native
+  
   /**
     * Returns the scaling factor component of a transformation matrix.
     * If a matrix is built with fromRotationTranslationScale with a
@@ -306,6 +328,7 @@ object ^ extends js.Object {
     * @return {vec3} out
     */
   def getScaling(out: vec3, mat: mat4): vec3 = js.native
+  
   /**
     * Returns the translation vector component of a transformation
     *  matrix. If a matrix is built with fromRotationTranslation,
@@ -316,6 +339,7 @@ object ^ extends js.Object {
     * @return {vec3} out
     */
   def getTranslation(out: vec3, mat: mat4): vec3 = js.native
+  
   /**
     * Set a mat4 to the identity matrix
     *
@@ -323,6 +347,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def identity(out: mat4): mat4 = js.native
+  
   /**
     * Inverts a mat4
     *
@@ -331,6 +356,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def invert(out: mat4, a: mat4): mat4 | Null = js.native
+  
   def lookAt(out: mat4, eye: js.Array[Double], center: js.Array[Double], up: js.Array[Double]): mat4 = js.native
   def lookAt(out: mat4, eye: js.Array[Double], center: js.Array[Double], up: vec3): mat4 = js.native
   def lookAt(out: mat4, eye: js.Array[Double], center: vec3, up: js.Array[Double]): mat4 = js.native
@@ -348,6 +374,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def lookAt(out: mat4, eye: vec3, center: vec3, up: vec3): mat4 = js.native
+  
   /**
     * Multiplies two mat4's
     *
@@ -357,6 +384,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def mul(out: mat4, a: mat4, b: mat4): mat4 = js.native
+  
   /**
     * Multiplies two mat4's
     *
@@ -366,6 +394,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def multiply(out: mat4, a: mat4, b: mat4): mat4 = js.native
+  
   /**
     * Multiply each element of the matrix by a scalar.
     *
@@ -375,6 +404,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def multiplyScalar(out: mat4, a: mat4, b: Double): mat4 = js.native
+  
   /**
     * Adds two mat4's after multiplying each element of the second operand by a scalar value.
     *
@@ -385,6 +415,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def multiplyScalarAndAdd(out: mat4, a: mat4, b: mat4, scale: Double): mat4 = js.native
+  
   /**
     * Generates a orthogonal projection matrix with the given bounds
     *
@@ -398,6 +429,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def ortho(out: mat4, left: Double, right: Double, bottom: Double, top: Double, near: Double, far: Double): mat4 = js.native
+  
   /**
     * Generates a perspective projection matrix with the given bounds
     *
@@ -409,6 +441,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def perspective(out: mat4, fovy: Double, aspect: Double, near: Double, far: Double): mat4 = js.native
+  
   /**
     * Generates a perspective projection matrix with the given field of view.
     * This is primarily useful for generating projection matrices to be used
@@ -421,6 +454,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def perspectiveFromFieldOfView(out: mat4, fov: DownDegrees, near: Double, far: Double): mat4 = js.native
+  
   def rotate(out: mat4, a: mat4, rad: Double, axis: js.Array[Double]): mat4 = js.native
   /**
     * Rotates a mat4 by the given angle
@@ -432,6 +466,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def rotate(out: mat4, a: mat4, rad: Double, axis: vec3): mat4 = js.native
+  
   /**
     * Rotates a matrix by the given angle around the X axis
     *
@@ -441,6 +476,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def rotateX(out: mat4, a: mat4, rad: Double): mat4 = js.native
+  
   /**
     * Rotates a matrix by the given angle around the Y axis
     *
@@ -450,6 +486,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def rotateY(out: mat4, a: mat4, rad: Double): mat4 = js.native
+  
   /**
     * Rotates a matrix by the given angle around the Z axis
     *
@@ -459,6 +496,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def rotateZ(out: mat4, a: mat4, rad: Double): mat4 = js.native
+  
   def scale(out: mat4, a: mat4, v: js.Array[Double]): mat4 = js.native
   /**
     * Scales the mat4 by the dimensions in the given vec3
@@ -469,6 +507,7 @@ object ^ extends js.Object {
     * @returns out
     **/
   def scale(out: mat4, a: mat4, v: vec3): mat4 = js.native
+  
   /**
     * Set the components of a mat4 to the given values
     *
@@ -510,6 +549,7 @@ object ^ extends js.Object {
     m32: Double,
     m33: Double
   ): mat4 = js.native
+  
   /**
     * Returns a string representation of a mat4
     *
@@ -517,6 +557,7 @@ object ^ extends js.Object {
     * @returns string representation of the matrix
     */
   def str(mat: mat4): String = js.native
+  
   /**
     * Subtracts matrix b from matrix a
     *
@@ -526,6 +567,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def sub(out: mat4, a: mat4, b: mat4): mat4 = js.native
+  
   /**
     * Subtracts matrix b from matrix a
     *
@@ -535,6 +577,7 @@ object ^ extends js.Object {
     * @returns {mat4} out
     */
   def subtract(out: mat4, a: mat4, b: mat4): mat4 = js.native
+  
   def targetTo(out: mat4, eye: js.Array[Double], target: js.Array[Double], up: js.Array[Double]): mat4 = js.native
   def targetTo(out: mat4, eye: js.Array[Double], target: js.Array[Double], up: vec3): mat4 = js.native
   def targetTo(out: mat4, eye: js.Array[Double], target: vec3, up: js.Array[Double]): mat4 = js.native
@@ -552,6 +595,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def targetTo(out: mat4, eye: vec3, target: vec3, up: vec3): mat4 = js.native
+  
   def translate(out: mat4, a: mat4, v: js.Array[Double]): mat4 = js.native
   /**
     * Translate a mat4 by the given vector
@@ -562,6 +606,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def translate(out: mat4, a: mat4, v: vec3): mat4 = js.native
+  
   /**
     * Transpose the values of a mat4
     *
@@ -571,4 +616,3 @@ object ^ extends js.Object {
     */
   def transpose(out: mat4, a: mat4): mat4 = js.native
 }
-

@@ -5,27 +5,26 @@ import typingsSlinky.asn1js.mod.BitString
 import typingsSlinky.asn1js.mod.Sequence
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pkijs/src/CertificationRequest", JSImport.Namespace)
 @js.native
 object certificationRequestMod extends js.Object {
+  
   @js.native
   trait CertificationRequest extends js.Object {
+    
     var attributes: js.UndefOr[js.Array[typingsSlinky.pkijs.attributeMod.default]] = js.native
-    var signatureAlgorithm: typingsSlinky.pkijs.algorithmIdentifierMod.default = js.native
-    var signatureValue: BitString = js.native
-    var subject: typingsSlinky.pkijs.relativeDistinguishedNamesMod.default = js.native
-    var subjectPublicKeyInfo: typingsSlinky.pkijs.publicKeyInfoMod.default = js.native
-    var tbs: js.typedarray.ArrayBuffer = js.native
-    var version: Double = js.native
+    
     /**
       * Aux function making ASN1js Sequence from current TBS
       *
       * @returns {Sequence}
       */
     def encodeTBS(): Sequence = js.native
+    
     def fromSchema(schema: js.Any): Unit = js.native
+    
     /**
       * Makes signature for currect certification request
       *
@@ -37,7 +36,19 @@ object certificationRequestMod extends js.Object {
       */
     def sign(privateKey: CryptoKey): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     def sign(privateKey: CryptoKey, hashAlgorithm: String): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    
+    var signatureAlgorithm: typingsSlinky.pkijs.algorithmIdentifierMod.default = js.native
+    
+    var signatureValue: BitString = js.native
+    
+    var subject: typingsSlinky.pkijs.relativeDistinguishedNamesMod.default = js.native
+    
+    var subjectPublicKeyInfo: typingsSlinky.pkijs.publicKeyInfoMod.default = js.native
+    
+    var tbs: js.typedarray.ArrayBuffer = js.native
+    
     def toJSON(): js.Any = js.native
+    
     /**
       * Convert current object to asn1js object and set correct values
       *
@@ -46,6 +57,7 @@ object certificationRequestMod extends js.Object {
       */
     def toSchema(): js.Any = js.native
     def toSchema(encodeFlag: Boolean): js.Any = js.native
+    
     /**
       * Verify existing certification request signature
       *
@@ -54,20 +66,21 @@ object certificationRequestMod extends js.Object {
       * @memberOf CertificationRequest
       */
     def verify(): js.Thenable[Boolean] = js.native
+    
+    var version: Double = js.native
   }
   
   @js.native
   class default () extends CertificationRequest {
     def this(params: js.Any) = this()
   }
-  
   /* static members */
   @js.native
   object default extends js.Object {
+    
     def defaultValues(memberName: String): js.Any = js.native
+    
     def schema(): js.Any = js.native
     def schema(parameters: js.Any): js.Any = js.native
   }
-  
 }
-

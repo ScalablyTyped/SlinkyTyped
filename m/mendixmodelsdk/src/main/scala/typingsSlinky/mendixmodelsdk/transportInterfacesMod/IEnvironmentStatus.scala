@@ -4,15 +4,15 @@ import typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.fail
 import typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.success_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.mendixmodelsdk.anon.AppType
   - typingsSlinky.mendixmodelsdk.anon.Cause
 */
 trait IEnvironmentStatus extends js.Object
-
 object IEnvironmentStatus {
+  
   @scala.inline
   def AppType(
     disk: Double,
@@ -30,6 +30,7 @@ object IEnvironmentStatus {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEnvironmentStatus]
   }
+  
   @scala.inline
   def Cause(state: CannotFixAppState, `type`: fail): IEnvironmentStatus = {
     val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any])
@@ -37,4 +38,3 @@ object IEnvironmentStatus {
     __obj.asInstanceOf[IEnvironmentStatus]
   }
 }
-

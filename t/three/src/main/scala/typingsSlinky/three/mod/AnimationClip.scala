@@ -3,7 +3,7 @@ package typingsSlinky.three.mod
 import typingsSlinky.three.geometryMod.MorphTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "AnimationClip")
 @js.native
@@ -81,16 +81,20 @@ class AnimationClip ()
     blendMode: typingsSlinky.three.constantsMod.AnimationBlendMode
   ) = this()
 }
-
 /* static members */
 @JSImport("three", "AnimationClip")
 @js.native
 object AnimationClip extends js.Object {
+  
   def CreateClipsFromMorphTargetSequences(morphTargets: js.Array[MorphTarget], fps: Double, noLoop: Boolean): js.Array[typingsSlinky.three.animationClipMod.AnimationClip] = js.native
+  
   def CreateFromMorphTargetSequence(name: String, morphTargetSequence: js.Array[MorphTarget], fps: Double, noLoop: Boolean): typingsSlinky.three.animationClipMod.AnimationClip = js.native
+  
   def findByName(clipArray: js.Array[typingsSlinky.three.animationClipMod.AnimationClip], name: String): typingsSlinky.three.animationClipMod.AnimationClip = js.native
+  
   def parse(json: js.Any): typingsSlinky.three.animationClipMod.AnimationClip = js.native
+  
   def parseAnimation(animation: js.Any, bones: js.Array[typingsSlinky.three.boneMod.Bone]): typingsSlinky.three.animationClipMod.AnimationClip = js.native
+  
   def toJSON(): js.Any = js.native
 }
-

@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.DataFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/layers/convolutional", "conv3dWithBias")
 @js.native
 object conv3dWithBias extends js.Object {
+  
   def apply(x: Tensor[Rank], kernel: Tensor[Rank], bias: Tensor[Rank]): Tensor[Rank] = js.native
   def apply(
     x: Tensor[Rank],
@@ -131,4 +132,3 @@ object conv3dWithBias extends js.Object {
     dilationRate: js.Tuple3[Double, Double, Double]
   ): Tensor[Rank] = js.native
 }
-

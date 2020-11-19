@@ -4,13 +4,15 @@ import typingsSlinky.dateFns.anon.RoundingMethod
 import typingsSlinky.dateFns.anon.Unit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("date-fns/esm/formatDistanceStrict", JSImport.Namespace)
 @js.native
 object formatDistanceStrictMod extends js.Object {
+  
   @js.native
   object default extends js.Object {
+    
     def apply(date: Double, baseDate: Double): String = js.native
     def apply(date: Double, baseDate: Double, options: RoundingMethod): String = js.native
     def apply(date: Double, baseDate: Double, options: Unit): String = js.native
@@ -24,6 +26,4 @@ object formatDistanceStrictMod extends js.Object {
     def apply(date: js.Date, baseDate: js.Date, options: RoundingMethod): String = js.native
     def apply(date: js.Date, baseDate: js.Date, options: Unit): String = js.native
   }
-  
 }
-

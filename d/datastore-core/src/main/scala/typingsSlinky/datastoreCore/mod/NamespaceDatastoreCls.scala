@@ -5,11 +5,10 @@ import typingsSlinky.interfaceDatastore.mod.Key
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("datastore-core", "NamespaceDatastore")
 @js.native
 class NamespaceDatastoreCls protected () extends NamespaceDatastore[Buffer] {
   def this(child: Datastore[_], prefix: Key) = this()
 }
-

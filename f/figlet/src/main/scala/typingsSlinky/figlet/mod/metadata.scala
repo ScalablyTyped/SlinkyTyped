@@ -2,11 +2,12 @@ package typingsSlinky.figlet.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("figlet", "metadata")
 @js.native
 object metadata extends js.Object {
+  
   def apply(
     font: Fonts_,
     cb: js.Function3[
@@ -17,4 +18,3 @@ object metadata extends js.Object {
     ]
   ): Unit = js.native
 }
-

@@ -3,22 +3,12 @@ package typingsSlinky.immutable.mod
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Seq[K, V]
   extends typingsSlinky.immutable.Immutable.Collection[K, V] {
-  /**
-    * Some Seqs can describe their size lazily. When this is the case,
-    * size will be an integer. Otherwise it will be undefined.
-    *
-    * For example, Seqs returned from `map()` or `reverse()`
-    * preserve the size of the original `Seq` while `filter()` does not.
-    *
-    * Note: `Range`, `Repeat` and `Seq`s made from `Array`s and `Object`s will
-    * always have a size.
-    */
-  val size: js.UndefOr[Double] = js.native
+  
   // Force evaluation
   /**
     * Because Sequences are lazy and designed to be chained together, they do
@@ -41,6 +31,7 @@ trait Seq[K, V]
     * Note: after calling `cacheResult`, a Seq will always have a `size`.
     */
   def cacheResult(): this.type = js.native
+  
   /**
     * Returns a new Seq with only the values for which the `predicate`
     * function returns true.
@@ -55,25 +46,22 @@ trait Seq[K, V]
     predicate: js.Function3[/* value */ V, /* key */ K, /* iter */ this.type, /* is F */ Boolean],
     context: js.Any
   ): typingsSlinky.immutable.Immutable.Seq[K, F] = js.native
+  
+  /**
+    * Some Seqs can describe their size lazily. When this is the case,
+    * size will be an integer. Otherwise it will be undefined.
+    *
+    * For example, Seqs returned from `map()` or `reverse()`
+    * preserve the size of the original `Seq` while `filter()` does not.
+    *
+    * Note: `Range`, `Repeat` and `Seq`s made from `Array`s and `Object`s will
+    * always have a size.
+    */
+  val size: js.UndefOr[Double] = js.native
 }
-
 @JSImport("immutable", "Seq")
 @js.native
 object Seq extends js.Object {
-  @js.native
-  trait Indexed[T]
-    extends typingsSlinky.immutable.Immutable.Seq[Double, T]
-       with typingsSlinky.immutable.Immutable.Collection.Indexed[T]
-  
-  @js.native
-  trait Keyed[K, V]
-    extends typingsSlinky.immutable.Immutable.Seq[K, V]
-       with typingsSlinky.immutable.Immutable.Collection.Keyed[K, V]
-  
-  @js.native
-  trait Set[T]
-    extends typingsSlinky.immutable.Immutable.Seq[T, T]
-       with typingsSlinky.immutable.Immutable.Collection.Set[T]
   
   def apply(): typingsSlinky.immutable.Immutable.Seq[_, _] = js.native
   def apply[T](collection: typingsSlinky.immutable.Immutable.Collection.Indexed[T]): typingsSlinky.immutable.Immutable.Seq.Indexed[T] = js.native
@@ -82,18 +70,26 @@ object Seq extends js.Object {
   def apply[V](obj: StringDictionary[V]): typingsSlinky.immutable.Immutable.Seq.Keyed[String, V] = js.native
   def apply[S /* <: typingsSlinky.immutable.Immutable.Seq[_, _] */](seq: S): S = js.native
   def apply[K, V](collection: typingsSlinky.immutable.Immutable.Collection.Keyed[K, V]): typingsSlinky.immutable.Immutable.Seq.Keyed[K, V] = js.native
+  
   /**
     * True if `maybeSeq` is a Seq, it is not backed by a concrete
     * structure such as Map, List, or Set.
     */
   def isSeq(maybeSeq: js.Any): Boolean = js.native
+  
+  @js.native
+  trait Indexed[T]
+    extends typingsSlinky.immutable.Immutable.Seq[Double, T]
+       with typingsSlinky.immutable.Immutable.Collection.Indexed[T]
   /**
     * `Seq` which represents an ordered indexed list of values.
     */
   @js.native
   object Indexed extends js.Object {
+    
     def apply(): typingsSlinky.immutable.Immutable.Seq.Indexed[_] = js.native
     def apply[T](collection: js.Iterable[T]): typingsSlinky.immutable.Immutable.Seq.Indexed[T] = js.native
+    
     /**
       * Provides an Seq.Indexed of the values provided.
       */
@@ -101,21 +97,30 @@ object Seq extends js.Object {
   }
   
   @js.native
+  trait Keyed[K, V]
+    extends typingsSlinky.immutable.Immutable.Seq[K, V]
+       with typingsSlinky.immutable.Immutable.Collection.Keyed[K, V]
+  @js.native
   object Keyed extends js.Object {
+    
     def apply(): typingsSlinky.immutable.Immutable.Seq.Keyed[_, _] = js.native
     def apply[V](obj: StringDictionary[V]): typingsSlinky.immutable.Immutable.Seq.Keyed[String, V] = js.native
     def apply[K, V](collection: js.Iterable[js.Tuple2[K, V]]): typingsSlinky.immutable.Immutable.Seq.Keyed[K, V] = js.native
   }
   
   @js.native
+  trait Set[T]
+    extends typingsSlinky.immutable.Immutable.Seq[T, T]
+       with typingsSlinky.immutable.Immutable.Collection.Set[T]
+  @js.native
   object Set extends js.Object {
+    
     def apply(): typingsSlinky.immutable.Immutable.Seq.Set[_] = js.native
     def apply[T](collection: js.Iterable[T]): typingsSlinky.immutable.Immutable.Seq.Set[T] = js.native
+    
     /**
       * Returns a Seq.Set of the provided values
       */
     def of[T](values: T*): typingsSlinky.immutable.Immutable.Seq.Set[T] = js.native
   }
-  
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-lambda-node/commands/RemovePermissionCommand", JSImport.Namespace)
 @js.native
 object removePermissionCommandMod extends js.Object {
+  
   @js.native
   class RemovePermissionCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object removePermissionCommandMod extends js.Object {
           Readable
         ] {
     def this(input: RemovePermissionInput) = this()
+    
     val middlewareStack: MiddlewareStack[RemovePermissionInput, RemovePermissionOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[RemovePermissionInput, RemovePermissionOutput] = js.native
   }
-  
 }
-

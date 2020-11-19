@@ -4,14 +4,16 @@ import typingsSlinky.babylonjs.effectFallbacksMod.EffectFallbacks
 import typingsSlinky.babylonjs.effectMod.Effect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
 @JSImport("babylonjs/Engines/engine", JSImport.Namespace)
 @js.native
 object babylonjsEnginesEngineAugmentingMod extends js.Object {
+  
   @js.native
   trait Engine extends js.Object {
+    
     /**
       * Create an effect to use with particle systems.
       * Please note that some parameters like animation sheets or not being billboard are not supported in this configuration
@@ -30,7 +32,42 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       uniformsNames: js.Array[String],
       samplers: js.Array[String],
       defines: String,
+      fallbacks: js.UndefOr[scala.Nothing],
+      onCompiled: js.UndefOr[scala.Nothing],
+      onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit]
+    ): Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
+      fallbacks: js.UndefOr[scala.Nothing],
+      onCompiled: js.Function1[/* effect */ Effect, Unit]
+    ): Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
+      fallbacks: js.UndefOr[scala.Nothing],
+      onCompiled: js.Function1[/* effect */ Effect, Unit],
+      onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit]
+    ): Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
       fallbacks: EffectFallbacks
+    ): Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
+      fallbacks: EffectFallbacks,
+      onCompiled: js.UndefOr[scala.Nothing],
+      onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit]
     ): Effect = js.native
     def createEffectForParticles(
       fragmentName: String,
@@ -50,6 +87,4 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit]
     ): Effect = js.native
   }
-  
 }
-

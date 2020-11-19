@@ -2,7 +2,7 @@ package typingsSlinky.jsqrcode.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ECBlocks")
 @js.native
@@ -15,4 +15,3 @@ class ECBlocks protected ()
     ecBlocks2: typingsSlinky.jsqrcode.ECB
   ) = this()
 }
-

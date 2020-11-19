@@ -2,7 +2,7 @@ package typingsSlinky.keystonejsFields.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.keystonejsFields.mod.AutoIncrement
@@ -32,4 +32,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.keystonejsFields.mod.Wysiwyg
 */
 trait FieldType extends js.Object
-

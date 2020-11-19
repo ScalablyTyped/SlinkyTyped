@@ -2,7 +2,7 @@ package typingsSlinky.reactSketchapp.propsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactSketchapp.reactSketchappStrings.start
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactSketchapp.reactSketchappStrings.end
 */
 trait TextAnchor extends js.Object
-
 object TextAnchor {
+  
   @scala.inline
   def end: typingsSlinky.reactSketchapp.reactSketchappStrings.end = "end".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.end]
+  
   @scala.inline
   def middle: typingsSlinky.reactSketchapp.reactSketchappStrings.middle = "middle".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.middle]
+  
   @scala.inline
   def start: typingsSlinky.reactSketchapp.reactSketchappStrings.start = "start".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.start]
 }
-

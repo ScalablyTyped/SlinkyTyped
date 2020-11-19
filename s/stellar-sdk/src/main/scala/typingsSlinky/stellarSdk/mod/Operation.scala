@@ -31,25 +31,39 @@ import typingsSlinky.stellarBase.mod.OperationOptions.SetOptions
 import typingsSlinky.stellarBase.mod.SignerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stellar-sdk", "Operation")
 @js.native
 object Operation extends js.Object {
+  
   def accountMerge(options: AccountMerge): typingsSlinky.stellarBase.xdrMod.default.Operation[AccountMerge_] = js.native
+  
   def allowTrust(options: AllowTrust): typingsSlinky.stellarBase.xdrMod.default.Operation[AllowTrust_] = js.native
+  
   def bumpSequence(options: BumpSequence): typingsSlinky.stellarBase.xdrMod.default.Operation[BumpSequence_] = js.native
+  
   def changeTrust(options: ChangeTrust): typingsSlinky.stellarBase.xdrMod.default.Operation[ChangeTrust_] = js.native
+  
   def createAccount(options: CreateAccount): typingsSlinky.stellarBase.xdrMod.default.Operation[CreateAccount_] = js.native
+  
   def createPassiveSellOffer(options: CreatePassiveSellOffer): typingsSlinky.stellarBase.xdrMod.default.Operation[CreatePassiveSellOffer_] = js.native
+  
   def fromXDRObject[T /* <: typingsSlinky.stellarBase.mod.Operation */](xdrOperation: typingsSlinky.stellarBase.xdrMod.default.Operation[T]): T = js.native
+  
   def inflation(options: Inflation): typingsSlinky.stellarBase.xdrMod.default.Operation[Inflation_] = js.native
+  
   def manageBuyOffer(options: ManageBuyOffer): typingsSlinky.stellarBase.xdrMod.default.Operation[ManageBuyOffer_] = js.native
+  
   def manageData(options: ManageData): typingsSlinky.stellarBase.xdrMod.default.Operation[ManageData_] = js.native
+  
   def manageSellOffer(options: ManageSellOffer): typingsSlinky.stellarBase.xdrMod.default.Operation[ManageSellOffer_] = js.native
+  
   def pathPaymentStrictReceive(options: PathPaymentStrictReceive): typingsSlinky.stellarBase.xdrMod.default.Operation[PathPaymentStrictReceive_] = js.native
+  
   def pathPaymentStrictSend(options: PathPaymentStrictSend): typingsSlinky.stellarBase.xdrMod.default.Operation[PathPaymentStrictSend_] = js.native
+  
   def payment(options: Payment): typingsSlinky.stellarBase.xdrMod.default.Operation[Payment_] = js.native
+  
   def setOptions[T /* <: SignerOptions */](options: SetOptions[T]): typingsSlinky.stellarBase.xdrMod.default.Operation[SetOptions_[T]] = js.native
 }
-

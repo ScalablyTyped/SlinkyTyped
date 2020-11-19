@@ -6,11 +6,12 @@ import typingsSlinky.typescript.mod.TemplateLiteral
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateTaggedTemplate")
 @js.native
 object updateTaggedTemplate extends js.Object {
+  
   /** @deprecated */ def apply(node: TaggedTemplateExpression, tag: Expression, template: TemplateLiteral): TaggedTemplateExpression = js.native
   def apply(
     node: TaggedTemplateExpression,
@@ -25,4 +26,3 @@ object updateTaggedTemplate extends js.Object {
     template: TemplateLiteral
   ): TaggedTemplateExpression = js.native
 }
-

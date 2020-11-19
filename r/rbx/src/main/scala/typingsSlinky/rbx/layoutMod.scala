@@ -56,25 +56,21 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx/layout", JSImport.Namespace)
 @js.native
 object layoutMod extends js.Object {
+  
   val Divider: ForwardRefAsExoticComponent[DividerProps, ReactElement] = js.native
+  
   val Footer: ForwardRefAsExoticComponent[PreferHelpersPropsOverrid, ReactElement] = js.native
+  
   val Section: ForwardRefAsExoticComponent[SectionProps, ReactElement] = js.native
+  
   @js.native
   object Hero extends js.Object {
-    var Body: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    @JSName("$$typeof")
-    var DollarDollartypeof: js.Symbol = js.native
-    var Foot: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var Head: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var defaultProps: AsElementType with (Partial[
-        HelpersPropsOverrides with PickBadgeHelpersPropsFloa with HeroModifierProps with (Pick[_, String | Double | js.Symbol])
-      ]) = js.native
-    var displayName: js.UndefOr[String] = js.native
+    
     def apply[TAsComponent /* <: ReactElement */](
       props: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with HeroModifierProps with (Pick[
           ComponentProps[TAsComponent], 
@@ -84,7 +80,20 @@ object layoutMod extends js.Object {
           ]
         ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
     ): ReactElement | Null = js.native
+    
+    var Body: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+    
+    @JSName("$$typeof")
+    var DollarDollartypeof: js.Symbol = js.native
+    
+    var Foot: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+    
+    var Head: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+    
+    var defaultProps: AsElementType with (Partial[
+        HelpersPropsOverrides with PickBadgeHelpersPropsFloa with HeroModifierProps with (Pick[_, String | Double | js.Symbol])
+      ]) = js.native
+    
+    var displayName: js.UndefOr[String] = js.native
   }
-  
 }
-

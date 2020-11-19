@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `Cardtitle` component should normally be used within the `CardHeader` to
@@ -17,4 +17,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/card/types/CardTitle", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[CardTitleProps with RefAttributes[HTMLHeadingElement]]]
-

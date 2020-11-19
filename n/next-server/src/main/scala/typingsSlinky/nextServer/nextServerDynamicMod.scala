@@ -8,15 +8,16 @@ import typingsSlinky.nextServer.dynamicMod.LoadableOptions
 import typingsSlinky.nextServer.dynamicMod.Loader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("next-server/dynamic", JSImport.Namespace)
 @js.native
 object nextServerDynamicMod extends js.Object {
+  
   def default[P](dynamicOptions: DynamicOptions[P]): ReactComponentClass[P] = js.native
   def default[P](dynamicOptions: DynamicOptions[P], options: DynamicOptions[P]): ReactComponentClass[P] = js.native
   def default[P](dynamicOptions: Loader[P]): ReactComponentClass[P] = js.native
   def default[P](dynamicOptions: Loader[P], options: DynamicOptions[P]): ReactComponentClass[P] = js.native
+  
   def noSSR[P](LoadableInitializer: LoadableFn[P], loadableOptions: LoadableOptions[P]): ReactComponentClass[P] | js.Function0[ReactElement] = js.native
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.pulumiAws.logGroupMixinsMod.LogGroupEventSubscriptionArgs
 import typingsSlinky.pulumiPulumi.resourceMod.ComponentResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws", "cloudwatch.LogGroupEventSubscription")
 @js.native
@@ -37,4 +37,3 @@ class LogGroupEventSubscription protected ()
     opts: ComponentResourceOptions
   ) = this()
 }
-

@@ -4,11 +4,12 @@ import org.scalajs.dom.raw.PointerEvent
 import typingsSlinky.ol.pluggableMapMod.FrameState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/MapBrowserPointerEvent", JSImport.Namespace)
 @js.native
 object mapBrowserPointerEventMod extends js.Object {
+  
   @js.native
   class default protected ()
     extends typingsSlinky.ol.mapBrowserEventMod.default {
@@ -37,4 +38,3 @@ object mapBrowserPointerEventMod extends js.Object {
   
   type MapBrowserPointerEvent = typingsSlinky.ol.mapBrowserEventMod.default
 }
-

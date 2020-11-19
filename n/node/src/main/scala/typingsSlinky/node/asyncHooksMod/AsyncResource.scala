@@ -2,7 +2,7 @@ package typingsSlinky.node.asyncHooksMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The class AsyncResource was designed to be extended by the embedder's async resources.
@@ -23,14 +23,17 @@ class AsyncResource protected () extends js.Object {
   def this(`type`: String) = this()
   def this(`type`: String, triggerAsyncId: Double) = this()
   def this(`type`: String, triggerAsyncId: AsyncResourceOptions) = this()
+  
   /**
     * @return the unique ID assigned to this AsyncResource instance.
     */
   def asyncId(): Double = js.native
+  
   /**
     * Call AsyncHooks destroy callbacks.
     */
   def emitDestroy(): Unit = js.native
+  
   /**
     * Call the provided function with the provided arguments in the
     * execution context of the async resource. This will establish the
@@ -48,9 +51,9 @@ class AsyncResource protected () extends js.Object {
     thisArg: js.UndefOr[scala.Nothing],
     args: js.Any*
   ): Result = js.native
+  
   /**
     * @return the trigger ID for this AsyncResource instance.
     */
   def triggerAsyncId(): Double = js.native
 }
-

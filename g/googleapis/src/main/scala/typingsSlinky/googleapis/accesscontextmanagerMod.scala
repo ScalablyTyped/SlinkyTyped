@@ -12,32 +12,27 @@ import typingsSlinky.googleapisCommon.apiMod.GoogleConfigurable
 import typingsSlinky.googleapisCommon.mod.AuthPlus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("googleapis/build/src/apis/accesscontextmanager", JSImport.Namespace)
 @js.native
 object accesscontextmanagerMod extends js.Object {
+  
   def accesscontextmanager(options: Options): Accesscontextmanager = js.native
   def accesscontextmanager(options: typingsSlinky.googleapis.v1betaMod.accesscontextmanagerV1beta.Options): typingsSlinky.googleapis.v1betaMod.accesscontextmanagerV1beta.Accesscontextmanager = js.native
   @JSName("accesscontextmanager")
   def accesscontextmanager_v1(version: v1): Accesscontextmanager = js.native
   @JSName("accesscontextmanager")
   def accesscontextmanager_v1beta(version: v1beta): typingsSlinky.googleapis.v1betaMod.accesscontextmanagerV1beta.Accesscontextmanager = js.native
+  
   @js.native
   object VERSIONS extends js.Object {
+    
     @js.native
     class v1 protected () extends Accesscontextmanager {
       def this(options: GlobalOptions) = this()
       def this(options: GlobalOptions, google: GoogleConfigurable) = this()
     }
-    
-    @js.native
-    class v1beta protected ()
-      extends typingsSlinky.googleapis.v1betaMod.accesscontextmanagerV1beta.Accesscontextmanager {
-      def this(options: GlobalOptions) = this()
-      def this(options: GlobalOptions, google: GoogleConfigurable) = this()
-    }
-    
     @js.native
     object v1
       extends TopLevel[
@@ -49,6 +44,12 @@ object accesscontextmanagerMod extends js.Object {
             ]
     
     @js.native
+    class v1beta protected ()
+      extends typingsSlinky.googleapis.v1betaMod.accesscontextmanagerV1beta.Accesscontextmanager {
+      def this(options: GlobalOptions) = this()
+      def this(options: GlobalOptions, google: GoogleConfigurable) = this()
+    }
+    @js.native
     object v1beta
       extends TopLevel[
               Instantiable2[
@@ -57,11 +58,11 @@ object accesscontextmanagerMod extends js.Object {
                 typingsSlinky.googleapis.v1betaMod.accesscontextmanagerV1beta.Accesscontextmanager
               ]
             ]
-    
   }
   
   @js.native
   object auth extends TopLevel[AuthPlus] {
+    
     @js.native
     /**
       * Google Compute Engine service account credentials.
@@ -89,8 +90,5 @@ object accesscontextmanagerMod extends js.Object {
         */
       def this(options: JWTOptions) = this()
     }
-    
   }
-  
 }
-

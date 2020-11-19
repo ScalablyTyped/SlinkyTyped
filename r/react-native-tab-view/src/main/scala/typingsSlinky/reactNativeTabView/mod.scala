@@ -12,17 +12,32 @@ import typingsSlinky.reactNativeTabView.scrollPagerMod.default
 import typingsSlinky.reactNativeTabView.typesMod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-tab-view", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  def SceneMap[T /* <: js.Any */](scenes: StringDictionary[ReactComponentClass[T]]): js.Function1[/* hasRouteJumpToPosition */ SceneRendererPropsroutean, ReactElement] = js.native
+  
   @js.native
   class ScrollPager[T /* <: Route */] () extends default[T]
+  /* static members */
+  @js.native
+  object ScrollPager extends js.Object {
+    
+    var defaultProps: Bounces = js.native
+  }
   
   @js.native
   class TabBar[T /* <: Route */] ()
     extends typingsSlinky.reactNativeTabView.tabBarMod.default[T]
+  /* static members */
+  @js.native
+  object TabBar extends js.Object {
+    
+    var defaultProps: GetAccessibilityLabel = js.native
+  }
   
   @js.native
   class TabBarIndicator[T /* <: Route */] ()
@@ -35,35 +50,20 @@ object mod extends js.Object {
   @js.native
   class TabView[T /* <: Route */] ()
     extends typingsSlinky.reactNativeTabView.tabViewMod.default[T]
+  /* static members */
+  @js.native
+  object TabView extends js.Object {
+    
+    var defaultProps: GestureHandlerProps = js.native
+  }
   
   @js.native
   class TouchableItem ()
     extends typingsSlinky.reactNativeTabView.touchableItemMod.default
-  
-  def SceneMap[T /* <: js.Any */](scenes: StringDictionary[ReactComponentClass[T]]): js.Function1[/* hasRouteJumpToPosition */ SceneRendererPropsroutean, ReactElement] = js.native
-  /* static members */
-  @js.native
-  object ScrollPager extends js.Object {
-    var defaultProps: Bounces = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object TabBar extends js.Object {
-    var defaultProps: GetAccessibilityLabel = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object TabView extends js.Object {
-    var defaultProps: GestureHandlerProps = js.native
-  }
-  
   /* static members */
   @js.native
   object TouchableItem extends js.Object {
+    
     var defaultProps: PressColor = js.native
   }
-  
 }
-

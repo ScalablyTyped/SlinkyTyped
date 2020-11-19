@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-lambda-node/commands/GetPolicyCommand", JSImport.Namespace)
 @js.native
 object getPolicyCommandMod extends js.Object {
+  
   @js.native
   class GetPolicyCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getPolicyCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetPolicyInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetPolicyInput, GetPolicyOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[GetPolicyInput, GetPolicyOutput] = js.native
   }
-  
 }
-

@@ -10,11 +10,12 @@ import typingsSlinky.typescript.mod.WatchCompilerHostOfFilesAndCompilerOptions
 import typingsSlinky.typescript.mod.WatchStatusReporter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fork-ts-checker-webpack-plugin/lib/typescript-reporter/reporter/ControlledWatchCompilerHost", JSImport.Namespace)
 @js.native
 object controlledWatchCompilerHostMod extends js.Object {
+  
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](parsedCommandLine: ParsedCommandLine, system: ControlledTypeScriptSystem): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
     parsedCommandLine: ParsedCommandLine,
@@ -270,4 +271,3 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
 }
-

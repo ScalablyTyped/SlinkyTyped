@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeSvg.mod
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-svg", "ForeignObject")
 @js.native
@@ -12,4 +12,3 @@ class ForeignObjectCls protected ()
   def this(props: ForeignObjectProps) = this()
   def this(props: ForeignObjectProps, context: js.Any) = this()
 }
-

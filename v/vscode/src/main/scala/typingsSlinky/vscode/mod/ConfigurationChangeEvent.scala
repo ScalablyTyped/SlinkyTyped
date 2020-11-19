@@ -2,10 +2,11 @@ package typingsSlinky.vscode.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ConfigurationChangeEvent extends js.Object {
+  
   /**
     * Returns `true` if the given section is affected in the provided scope.
     *
@@ -16,4 +17,3 @@ trait ConfigurationChangeEvent extends js.Object {
   def affectsConfiguration(section: String): Boolean = js.native
   def affectsConfiguration(section: String, scope: ConfigurationScope): Boolean = js.native
 }
-

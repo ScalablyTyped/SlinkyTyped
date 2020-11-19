@@ -4,11 +4,11 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.expansionPanelActionsExpansionPanelActionsMod.ExpansionPanelActionsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@material-ui/core/ExpansionPanelActions", JSImport.Namespace)
 @js.native
 object expansionPanelActionsMod extends js.Object {
+  
   val default: ReactComponentClass[ExpansionPanelActionsProps] = js.native
 }
-

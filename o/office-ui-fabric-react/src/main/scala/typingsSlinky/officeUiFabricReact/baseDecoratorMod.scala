@@ -4,17 +4,21 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/utilities/decorators/BaseDecorator", JSImport.Namespace)
 @js.native
 object baseDecoratorMod extends js.Object {
+  
   @js.native
   class BaseDecorator[TProps, TState] protected ()
     extends Component[TProps, TState, js.Any] {
     def this(props: TProps) = this()
+    
     var _composedComponentInstance: ReactComponentClass[TProps] = js.native
+    
     var _hoisted: js.Any = js.native
+    
     /**
       * Updates the ref to the component composed by the decorator, which will also take care of hoisting
       * (and unhoisting as appropriate) methods from said component.
@@ -23,6 +27,4 @@ object baseDecoratorMod extends js.Object {
       */
     /* protected */ def _updateComposedComponentRef(composedComponentInstance: ReactComponentClass[TProps]): Unit = js.native
   }
-  
 }
-

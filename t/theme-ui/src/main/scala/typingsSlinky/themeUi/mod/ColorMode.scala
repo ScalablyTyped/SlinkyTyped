@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ColorMode
@@ -14,22 +14,26 @@ trait ColorMode
         /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ _
       ])
     ] {
+  
   /**
     * A contrast color for emphasizing UI
     */
   var accent: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
   ] = js.native
+  
   /**
     * Body background color
     */
   var background: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any = js.native
+  
   /**
     * A background color for highlighting text
     */
   var highlight: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
   ] = js.native
+  
   /**
     * A faint color for backgrounds, borders, and accents that do not require
     * high contrast with the background color
@@ -37,26 +41,27 @@ trait ColorMode
   var muted: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
   ] = js.native
+  
   /**
     * Primary brand color for links, buttons, etc.
     */
   var primary: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
   ] = js.native
+  
   /**
     * A secondary brand color for alternative styling
     */
   var secondary: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
   ] = js.native
+  
   /**
     * Body foreground color
     */
   var text: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any = js.native
 }
-
 @JSImport("theme-ui", "ColorMode")
 @js.native
 object ColorMode
   extends TopLevel[ReactComponentClass[js.Object]]
-

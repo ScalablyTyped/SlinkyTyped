@@ -60,14 +60,14 @@ import typingsSlinky.std.HTMLTableHeaderCellElement
 import typingsSlinky.std.HTMLTemplateElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ReactDOM
   extends ReactHTML
      with ReactSVG
-
 object ReactDOM {
+  
   @scala.inline
   def apply(
     a: DetailedHTMLFactory[AnchorHTMLAttributes[HTMLAnchorElement], HTMLAnchorElement],
@@ -248,4 +248,3 @@ object ReactDOM {
     __obj.asInstanceOf[ReactDOM]
   }
 }
-

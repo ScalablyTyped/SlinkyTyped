@@ -2,10 +2,12 @@ package typingsSlinky.reactDayPicker
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object modifiersMod {
+  
   type FunctionModifier = js.Function1[/* date */ js.Date, scala.Boolean]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.std.Date
     - typingsSlinky.reactDayPicker.modifiersMod.RangeModifier

@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Sublayer
 import typingsSlinky.arcgisJsApi.esri.SublayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/layers/support/Sublayer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Sublayer {
   def this(properties: SublayerProperties) = this()
 }
-

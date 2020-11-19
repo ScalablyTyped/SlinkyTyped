@@ -10,11 +10,12 @@ import typingsSlinky.typescript.mod.TypeNode
 import typingsSlinky.typescript.mod.TypeParameterDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createFunctionExpression")
 @js.native
 object createFunctionExpression extends js.Object {
+  
   def apply(
     modifiers: js.UndefOr[js.Array[Modifier]],
     asteriskToken: js.UndefOr[AsteriskToken],
@@ -25,4 +26,3 @@ object createFunctionExpression extends js.Object {
     body: Block
   ): FunctionExpression = js.native
 }
-

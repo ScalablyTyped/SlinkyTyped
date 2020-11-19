@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.MapNotesLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.MapNotesLayer")
 @js.native
@@ -16,4 +16,3 @@ class MapNotesLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.MapNotesLayer {
   def this(properties: MapNotesLayerProperties) = this()
 }
-

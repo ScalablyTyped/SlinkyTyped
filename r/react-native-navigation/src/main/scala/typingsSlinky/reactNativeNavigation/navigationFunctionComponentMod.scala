@@ -5,15 +5,15 @@ import typingsSlinky.reactNativeNavigation.navigationComponentPropsMod.Navigatio
 import typingsSlinky.reactNativeNavigation.optionsMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-navigation/lib/dist/interfaces/NavigationFunctionComponent", JSImport.Namespace)
 @js.native
 object navigationFunctionComponentMod extends js.Object {
+  
   @js.native
   trait NavigationFunctionComponent[Props] extends FunctionComponent[Props with NavigationComponentProps] {
+    
     var options: js.UndefOr[(js.Function1[/* props */ Props, Options]) | Options] = js.native
   }
-  
 }
-

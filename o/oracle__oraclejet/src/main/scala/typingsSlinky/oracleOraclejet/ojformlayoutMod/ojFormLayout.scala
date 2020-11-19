@@ -129,20 +129,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wrap
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojFormLayout extends JetElement[ojFormLayoutSettableProperties] {
-  var direction: column | row = js.native
-  var labelEdge: start | top = js.native
-  var labelWidth: String = js.native
-  var labelWrapping: truncate | wrap = js.native
-  var maxColumns: Double = js.native
-  var onDirectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelEdgeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelWrappingChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onMaxColumnsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def addEventListener(`type`: directionChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: directionChanged,
@@ -949,6 +940,9 @@ trait ojFormLayout extends JetElement[ojFormLayoutSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var direction: column | row = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_direction(property: direction): column | row = js.native
@@ -960,8 +954,29 @@ trait ojFormLayout extends JetElement[ojFormLayoutSettableProperties] {
   def getProperty_labelWrapping(property: labelWrapping): truncate | wrap = js.native
   @JSName("getProperty")
   def getProperty_maxColumns(property: maxColumns): Double = js.native
+  
+  var labelEdge: start | top = js.native
+  
+  var labelWidth: String = js.native
+  
+  var labelWrapping: truncate | wrap = js.native
+  
+  var maxColumns: Double = js.native
+  
+  var onDirectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelEdgeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelWrappingChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onMaxColumnsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def refresh(): Unit = js.native
+  
   def setProperties(properties: ojFormLayoutSettablePropertiesLenient): Unit = js.native
+  
   def setProperty(property: direction, value: column): Unit = js.native
   def setProperty(property: direction, value: row): Unit = js.native
   def setProperty(property: labelEdge, value: start): Unit = js.native
@@ -974,4 +989,3 @@ trait ojFormLayout extends JetElement[ojFormLayoutSettableProperties] {
   @JSName("setProperty")
   def setProperty_maxColumns(property: maxColumns, value: Double): Unit = js.native
 }
-

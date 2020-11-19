@@ -4,17 +4,17 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.bingmaps.Microsoft.Maps.IDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Microsoft.Maps.ConfigurableMap")
 @js.native
 class ConfigurableMap ()
   extends typingsSlinky.bingmaps.Microsoft.Maps.ConfigurableMap
-
 /* static members */
 @JSGlobal("Microsoft.Maps.ConfigurableMap")
 @js.native
 object ConfigurableMap extends js.Object {
+  
   /**
     * A static function that loads a map using a JSON configuraiton file.
     * @param element The parent element of the map as a CSS selector string or HTMLElement.
@@ -131,4 +131,3 @@ object ConfigurableMap extends js.Object {
     errorCallback: js.Function1[/* errorMsg */ String, Unit]
   ): Unit = js.native
 }
-

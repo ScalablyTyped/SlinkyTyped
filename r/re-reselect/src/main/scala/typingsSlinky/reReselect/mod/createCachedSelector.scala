@@ -2,21 +2,22 @@ package typingsSlinky.reReselect.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("re-reselect", "createCachedSelector")
 @js.native
 object createCachedSelector extends js.Object {
+  
   /*
-    * Heterogeneous selectors, array argument
+    * Homogeneous selectors, array argument
     */
   /* one selector */
-  def apply[S1, R1, T](selectors: js.Array[Selector[S1, R1]], combiner: js.Function1[/* res */ R1, T]): OutputCachedSelector[S1, T, js.Function1[/* res */ R1, T], js.Array[Selector[S1, R1]]] = js.native
+  def apply[S, R1, T](selectors: js.Array[Selector[S, R1]], combiner: js.Function1[/* res */ R1, T]): OutputCachedSelector[S, T, js.Function1[/* res */ R1, T], js.Array[Selector[S, R1]]] = js.native
   /*
-    * Homogeneous selectors, parameter types
+    * Heterogeneous selectors, parameter types
     */
   /* one selector */
-  def apply[S, R1, T](selector: Selector[S, R1], combiner: js.Function1[/* res */ R1, T]): OutputCachedSelector[S, T, js.Function1[/* res */ R1, T], js.Array[Selector[S, R1]]] = js.native
+  def apply[S1, R1, T](selector: Selector[S1, R1], combiner: js.Function1[/* res */ R1, T]): OutputCachedSelector[S1, T, js.Function1[/* res */ R1, T], js.Array[Selector[S1, R1]]] = js.native
   /* two selectors */
   def apply[S, R1, R2, T](
     selector1: Selector[S, R1],
@@ -38,7 +39,7 @@ object createCachedSelector extends js.Object {
     js.Function2[/* res1 */ R1, /* res2 */ R2, T], 
     js.Tuple2[Selector[S, R1], Selector[S, R2]]
   ] = js.native
-  def apply[S1, P1, R1, T](selector: ParametricSelector[S1, P1, R1], combiner: js.Function1[/* res */ R1, T]): OutputParametricCachedSelector[S1, P1, T, js.Function1[/* res */ R1, T], js.Array[ParametricSelector[S1, P1, R1]]] = js.native
+  def apply[S, P, R1, T](selector: ParametricSelector[S, P, R1], combiner: js.Function1[/* res */ R1, T]): OutputParametricCachedSelector[S, P, T, js.Function1[/* res */ R1, T], js.Array[ParametricSelector[S, P, R1]]] = js.native
   def apply[S, P, R1, R2, T](
     selector1: ParametricSelector[S, P, R1],
     selector2: ParametricSelector[S, P, R2],
@@ -1190,4 +1191,3 @@ object createCachedSelector extends js.Object {
     ]
   ] = js.native
 }
-

@@ -22,9 +22,10 @@ import typingsSlinky.antd.progressProgressMod.SuccessProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Line {
+  
   @JSImport("antd/lib/progress/Line", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -33,49 +34,67 @@ object Line {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def format(value: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => ReactElement): this.type = set("format", js.Any.fromFunction2(value))
+    
     @scala.inline
     def gapDegree(value: Double): this.type = set("gapDegree", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def gapPosition(value: top | bottom | left | right): this.type = set("gapPosition", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def percent(value: Double): this.type = set("percent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def showInfo(value: Boolean): this.type = set("showInfo", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def size(value: ProgressSize): this.type = set("size", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def status(value: normal | exception | active | success): this.type = set("status", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def steps(value: Double): this.type = set("steps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def strokeColor(value: String | ProgressGradient): this.type = set("strokeColor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def strokeLinecap(value: butt | square | round): this.type = set("strokeLinecap", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def strokeWidth(value: Double): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def success(value: SuccessProps): this.type = set("success", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def successPercent(value: Double): this.type = set("successPercent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def trailColor(value: String): this.type = set("trailColor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def `type`(value: ProgressType): this.type = set("type", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: LineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(prefixCls: String): Builder = {
     val __props = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[LineProps]))
   }
 }
-

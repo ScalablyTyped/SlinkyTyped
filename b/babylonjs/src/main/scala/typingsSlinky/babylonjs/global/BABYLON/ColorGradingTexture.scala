@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.ColorGradingTexture")
 @js.native
@@ -16,21 +16,12 @@ class ColorGradingTexture protected ()
     * @param scene The scene the texture will be used in
     */
   def this(url: String, scene: typingsSlinky.babylonjs.BABYLON.Scene) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.ColorGradingTexture")
 @js.native
 object ColorGradingTexture extends js.Object {
-  /**
-    * Empty line regex stored for GC.
-    */
-  var _noneEmptyLineRegex: js.Any = js.native
+  
   /**
     * Parses a color grading texture serialized by Babylon.
     * @param parsedTexture The texture information being parsedTexture
@@ -39,5 +30,9 @@ object ColorGradingTexture extends js.Object {
     * @return A color gradind texture
     */
   def Parse(parsedTexture: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene): Nullable[typingsSlinky.babylonjs.BABYLON.ColorGradingTexture] = js.native
+  
+  /**
+    * Empty line regex stored for GC.
+    */
+  var _noneEmptyLineRegex: js.Any = js.native
 }
-

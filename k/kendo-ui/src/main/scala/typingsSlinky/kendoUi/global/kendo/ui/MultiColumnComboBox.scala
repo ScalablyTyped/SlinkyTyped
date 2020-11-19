@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.ui.MultiColumnComboBoxOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("kendo.ui.MultiColumnComboBox")
 @js.native
@@ -13,12 +13,12 @@ class MultiColumnComboBox protected ()
   def this(element: Element) = this()
   def this(element: Element, options: MultiColumnComboBoxOptions) = this()
 }
-
 /* static members */
 @JSGlobal("kendo.ui.MultiColumnComboBox")
 @js.native
 object MultiColumnComboBox extends js.Object {
-  var fn: typingsSlinky.kendoUi.kendo.ui.MultiColumnComboBox = js.native
+  
   def extend(proto: js.Object): typingsSlinky.kendoUi.kendo.ui.MultiColumnComboBox = js.native
+  
+  var fn: typingsSlinky.kendoUi.kendo.ui.MultiColumnComboBox = js.native
 }
-

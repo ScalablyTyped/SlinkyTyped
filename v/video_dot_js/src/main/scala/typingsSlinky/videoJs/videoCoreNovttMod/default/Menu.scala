@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.videoJs.mod.videojs.MenuOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js/dist/alt/video.core.novtt", "Menu")
 @js.native
@@ -29,4 +29,3 @@ Instantiable1[
       /* options */ MenuOptions, 
       typingsSlinky.videoJs.mod.videojs.Menu
     ]
-

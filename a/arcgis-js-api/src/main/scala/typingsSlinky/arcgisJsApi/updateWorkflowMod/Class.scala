@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.UpdateWorkflow
 import typingsSlinky.arcgisJsApi.esri.UpdateWorkflowProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Editor/UpdateWorkflow", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends UpdateWorkflow {
   def this(properties: UpdateWorkflowProperties) = this()
 }
-

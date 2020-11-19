@@ -3,11 +3,12 @@ package typingsSlinky.ckeditor.global.CKEDITOR.plugins
 import org.scalajs.dom.raw.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("CKEDITOR.plugins.cloudservices")
 @js.native
 object cloudservices extends js.Object {
+  
   @js.native
   class cloudServicesLoader protected ()
     extends typingsSlinky.ckeditor.CKEDITOR.plugins.cloudservices.cloudServicesLoader {
@@ -35,6 +36,4 @@ object cloudservices extends js.Object {
     ) = this()
     def this(editor: typingsSlinky.ckeditor.CKEDITOR.editor, fileOrData: Blob, fileName: String, token: String) = this()
   }
-  
 }
-

@@ -6,17 +6,17 @@ import typingsSlinky.babylonjs.anon.Points
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "LinesBuilder")
 @js.native
 class LinesBuilder ()
   extends typingsSlinky.babylonjs.babylonjsIndexMod.LinesBuilder
-
 /* static members */
 @JSImport("babylonjs/index", "LinesBuilder")
 @js.native
 object LinesBuilder extends js.Object {
+  
   /**
     * Creates a dashed line mesh
     * * A dashed line mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of points as an input parameter
@@ -37,6 +37,7 @@ object LinesBuilder extends js.Object {
     */
   def CreateDashedLines(name: String, options: DashSize): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
   def CreateDashedLines(name: String, options: DashSize, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  
   /**
     * Creates a line system mesh. A line system is a pool of many lines gathered in a single mesh
     * * A line system mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of lines as an input parameter
@@ -55,6 +56,7 @@ object LinesBuilder extends js.Object {
     * @returns a new line system mesh
     */
   def CreateLineSystem(name: String, options: Instance, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  
   /**
     * Creates a line mesh
     * A line mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of points as an input parameter
@@ -74,4 +76,3 @@ object LinesBuilder extends js.Object {
   def CreateLines(name: String, options: Points): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
   def CreateLines(name: String, options: Points, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
 }
-

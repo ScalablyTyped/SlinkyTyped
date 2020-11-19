@@ -2,7 +2,7 @@ package typingsSlinky.cesium.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cesium", "TerrainMesh")
 @js.native
@@ -45,13 +45,20 @@ class TerrainMesh protected () extends js.Object {
     occludeePointInScaledSpace: Cartesian3,
     vertexStride: Double
   ) = this()
+  
   var boundingSphere3D: BoundingSphere = js.native
+  
   var center: Cartesian3 = js.native
+  
   var indices: js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
+  
   var maximumHeight: Double = js.native
+  
   var minimumHeight: Double = js.native
+  
   var occludeePointInScaledSpace: Cartesian3 = js.native
+  
   var stride: Double = js.native
+  
   var vertices: js.typedarray.Float32Array = js.native
 }
-

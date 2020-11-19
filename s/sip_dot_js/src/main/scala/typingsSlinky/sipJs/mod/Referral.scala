@@ -3,7 +3,7 @@ package typingsSlinky.sipJs.mod
 import typingsSlinky.sipJs.referMod.IncomingReferRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js", "Referral")
 @js.native
@@ -12,4 +12,3 @@ class Referral protected ()
   /** @internal */
   def this(incomingReferRequest: IncomingReferRequest, session: typingsSlinky.sipJs.sessionMod.Session) = this()
 }
-

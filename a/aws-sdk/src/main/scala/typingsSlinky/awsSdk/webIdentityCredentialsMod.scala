@@ -7,11 +7,12 @@ import typingsSlinky.awsSdk.stsMod.AssumeRoleWithWebIdentityResponse
 import typingsSlinky.awsSdk.webIdentityCredentialsMod.WebIdentityCredentials.WebIdentityCredentialsOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/lib/credentials/web_identity_credentials", JSImport.Namespace)
 @js.native
 object webIdentityCredentialsMod extends js.Object {
+  
   @js.native
   /**
     * Creates a new credentials object.
@@ -25,16 +26,17 @@ object webIdentityCredentialsMod extends js.Object {
       */
     def this(options: WebIdentityCredentialsOptions) = this()
     def this(options: WebIdentityCredentialsOptions, clientConfig: ConfigurationOptions) = this()
+    
     var data: AssumeRoleWithWebIdentityResponse = js.native
+    
     var params: AssumeRoleWithWebIdentityRequest = js.native
   }
-  
   // Needed to expose interfaces on the class
   @js.native
   object WebIdentityCredentials extends js.Object {
+    
     type ClientConfiguration = ConfigurationOptions
+    
     type WebIdentityCredentialsOptions = AssumeRoleWithWebIdentityRequest
   }
-  
 }
-

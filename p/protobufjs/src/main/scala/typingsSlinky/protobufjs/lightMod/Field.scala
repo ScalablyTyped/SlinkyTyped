@@ -25,7 +25,7 @@ import typingsSlinky.protobufjs.protobufjsStrings.uint32
 import typingsSlinky.protobufjs.protobufjsStrings.uint64
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("protobufjs/light", "Field")
 @js.native
@@ -134,11 +134,11 @@ class Field protected ()
     options: StringDictionary[js.Any]
   ) = this()
 }
-
 /* static members */
 @JSImport("protobufjs/light", "Field")
 @js.native
 object Field extends js.Object {
+  
   /**
     * Field decorator (TypeScript).
     * @param fieldId Field id
@@ -174,6 +174,7 @@ object Field extends js.Object {
   def d_required[T /* <: typingsSlinky.protobufjs.mod.Message[T] */](fieldId: Double, fieldType: String, fieldRule: required): FieldDecorator = js.native
   @JSName("d")
   def d_required[T /* <: typingsSlinky.protobufjs.mod.Message[T] */](fieldId: Double, fieldType: Constructor[T], fieldRule: required): FieldDecorator = js.native
+  
   /**
     * Constructs a field from a field descriptor.
     * @param name Field name
@@ -183,4 +184,3 @@ object Field extends js.Object {
     */
   def fromJSON(name: String, json: IField): typingsSlinky.protobufjs.mod.Field = js.native
 }
-

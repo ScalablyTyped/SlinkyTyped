@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 6.6.0: added public
@@ -30,34 +30,42 @@ class CalculatedValue protected () extends ValueType {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FCalculatedValue: IModel = js.native
+  
   @JSName("containerAsAttribute")
   def containerAsAttribute_MCalculatedValue: Attribute = js.native
+  
   def microflow: IMicroflow | Null = js.native
+  
   def microflowQualifiedName: String | Null = js.native
+  
   def microflow_=(newValue: IMicroflow | Null): Unit = js.native
+  
+  @JSName("model")
+  var model_FCalculatedValue: IModel = js.native
+  
   def passEntity: Boolean = js.native
   def passEntity_=(newValue: Boolean): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.CalculatedValue")
 @js.native
 object CalculatedValue extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new CalculatedValue instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): CalculatedValue = js.native
+  
   /**
     * Creates and returns a new CalculatedValue instance in the SDK and on the server.
     * The new CalculatedValue will be automatically stored in the 'value' property
     * of the parent Attribute element passed as argument.
     */
   def createIn(container: Attribute): CalculatedValue = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

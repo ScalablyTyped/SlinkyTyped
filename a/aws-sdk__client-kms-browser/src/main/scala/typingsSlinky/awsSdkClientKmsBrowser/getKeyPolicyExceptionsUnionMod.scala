@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientKmsBrowser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/types/GetKeyPolicyExceptionsUnion", JSImport.Namespace)
 @js.native
 object getKeyPolicyExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientKmsBrowser.typesNotFoundExceptionMod.NotFoundException
     - typingsSlinky.awsSdkClientKmsBrowser.typesInvalidArnExceptionMod.InvalidArnException
@@ -15,6 +16,4 @@ object getKeyPolicyExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientKmsBrowser.typesKmsinvalidstateexceptionMod.KMSInvalidStateException
   */
   trait GetKeyPolicyExceptionsUnion extends js.Object
-  
 }
-

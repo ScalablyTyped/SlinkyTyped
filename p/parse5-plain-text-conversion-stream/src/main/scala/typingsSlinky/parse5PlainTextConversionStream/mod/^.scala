@@ -2,7 +2,7 @@ package typingsSlinky.parse5PlainTextConversionStream.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Converts plain text files into HTML document as required by [HTML specification](https://html.spec.whatwg.org/#read-text).
@@ -30,4 +30,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^[TDocument] ()
   extends typingsSlinky.parse5ParserStream.mod.^[TDocument]
-

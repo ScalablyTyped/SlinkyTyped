@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "layers.globalMaxPool1d")
 @js.native
@@ -15,4 +15,3 @@ object globalMaxPool1d
         typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
       ]
     ]
-

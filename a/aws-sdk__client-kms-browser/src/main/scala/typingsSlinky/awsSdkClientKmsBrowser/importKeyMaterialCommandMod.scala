@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/commands/ImportKeyMaterialCommand", JSImport.Namespace)
 @js.native
 object importKeyMaterialCommandMod extends js.Object {
+  
   @js.native
   class ImportKeyMaterialCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object importKeyMaterialCommandMod extends js.Object {
           Blob
         ] {
     def this(input: ImportKeyMaterialInput) = this()
+    
     val middlewareStack: MiddlewareStack[ImportKeyMaterialInput, ImportKeyMaterialOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[ImportKeyMaterialInput, ImportKeyMaterialOutput] = js.native
   }
-  
 }
-

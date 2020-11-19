@@ -4,14 +4,13 @@ import typingsSlinky.std.stdStrings.blocked
 import typingsSlinky.std.stdStrings.upgradeneeded
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Also inherits methods from its parents IDBRequest and EventTarget. */
 @js.native
 trait IDBOpenDBRequest
   extends IDBRequest[org.scalajs.dom.raw.IDBDatabase] {
-  var onblocked: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onupgradeneeded: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.IDBVersionChangeEvent, _]) | Null = js.native
+  
   @JSName("addEventListener")
   def addEventListener_blocked(
     `type`: blocked,
@@ -46,6 +45,11 @@ trait IDBOpenDBRequest
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.IDBVersionChangeEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
+  
+  var onblocked: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  var onupgradeneeded: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.IDBVersionChangeEvent, _]) | Null = js.native
+  
   @JSName("removeEventListener")
   def removeEventListener_blocked(
     `type`: blocked,
@@ -81,4 +85,3 @@ trait IDBOpenDBRequest
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-

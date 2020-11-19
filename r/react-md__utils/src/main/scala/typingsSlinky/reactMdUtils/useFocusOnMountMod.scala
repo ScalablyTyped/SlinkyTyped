@@ -4,11 +4,12 @@ import typingsSlinky.reactMdUtils.focusElementWithinMod.Focus
 import typingsSlinky.reactMdUtils.getInstanceMod.RefOrInstance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/utils/types/wia-aria/useFocusOnMount", JSImport.Namespace)
 @js.native
 object useFocusOnMountMod extends js.Object {
+  
   def default(refOrInstance: RefOrInstance, defaultFocus: Focus): Unit = js.native
   def default(
     refOrInstance: RefOrInstance,
@@ -47,4 +48,3 @@ object useFocusOnMountMod extends js.Object {
     disabled: Boolean
   ): Unit = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Cell in a UITableRow._
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class UITableCell ()
   extends typingsSlinky.scriptableIos.UITableCell
-
 /* static members */
 @JSGlobal("UITableCell")
 @js.native
 object UITableCell extends js.Object {
+  
   /**
     * _Constructs a button cell._
     *
@@ -25,6 +25,7 @@ object UITableCell extends js.Object {
     * @see https://docs.scriptable.app/uitablecell/#button
     */
   def button(title: String): typingsSlinky.scriptableIos.UITableCell = js.native
+  
   /**
     * _Constructs an image cell._
     *
@@ -33,6 +34,7 @@ object UITableCell extends js.Object {
     * @see https://docs.scriptable.app/uitablecell/#image
     */
   def image(image: typingsSlinky.scriptableIos.Image): typingsSlinky.scriptableIos.UITableCell = js.native
+  
   /**
     * _Constructs an image cell._
     *
@@ -41,6 +43,7 @@ object UITableCell extends js.Object {
     * @see https://docs.scriptable.app/uitablecell/#imageaturl
     */
   def imageAtURL(url: String): typingsSlinky.scriptableIos.UITableCell = js.native
+  
   /**
     * _Constructs a text cell._
     *
@@ -54,4 +57,3 @@ object UITableCell extends js.Object {
   def text(title: String): typingsSlinky.scriptableIos.UITableCell = js.native
   def text(title: String, subtitle: String): typingsSlinky.scriptableIos.UITableCell = js.native
 }
-

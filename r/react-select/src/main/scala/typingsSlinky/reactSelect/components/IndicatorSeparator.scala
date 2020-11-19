@@ -8,14 +8,16 @@ import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.ValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object IndicatorSeparator {
+  
   @JSImport("react-select/src/components/indicators", "IndicatorSeparator")
   @js.native
   object component extends js.Object
   
   def withProps(p: IndicatorProps[js.Any]): SharedBuilder_IndicatorProps_1609693056 = new SharedBuilder_IndicatorProps_1609693056(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     clearValue: () => Unit,
@@ -36,4 +38,3 @@ object IndicatorSeparator {
     new SharedBuilder_IndicatorProps_1609693056(js.Array(this.component, __props.asInstanceOf[IndicatorProps[js.Any]]))
   }
 }
-

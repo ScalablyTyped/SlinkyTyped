@@ -2,7 +2,7 @@ package typingsSlinky.std
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait HTMLFrameSetElementEventMap
@@ -10,8 +10,8 @@ trait HTMLFrameSetElementEventMap
      with GlobalEventHandlersEventMap
      with DocumentAndElementEventHandlersEventMap
      with WindowEventHandlersEventMap
-
 object HTMLFrameSetElementEventMap {
+  
   @scala.inline
   def apply(
     abort: org.scalajs.dom.raw.UIEvent,
@@ -127,4 +127,3 @@ object HTMLFrameSetElementEventMap {
     __obj.asInstanceOf[HTMLFrameSetElementEventMap]
   }
 }
-

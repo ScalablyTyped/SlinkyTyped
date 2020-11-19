@@ -18,7 +18,7 @@ import typingsSlinky.enquirer.enquirerStrings.survey
 import typingsSlinky.enquirer.enquirerStrings.text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.enquirer.mod.BasePromptOptions
@@ -30,8 +30,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.enquirer.mod.SortPromptOptions
 */
 trait PromptOptions extends js.Object
-
 object PromptOptions {
+  
   @scala.inline
   def NumberPromptOptions(
     message: String | (js.Function0[js.Promise[String] | String]),
@@ -42,6 +42,7 @@ object PromptOptions {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PromptOptions]
   }
+  
   @scala.inline
   def StringPromptOptions(
     message: String | (js.Function0[js.Promise[String] | String]),
@@ -52,6 +53,7 @@ object PromptOptions {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PromptOptions]
   }
+  
   @scala.inline
   def SortPromptOptions(
     message: String | (js.Function0[js.Promise[String] | String]),
@@ -62,6 +64,7 @@ object PromptOptions {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PromptOptions]
   }
+  
   @scala.inline
   def BasePromptOptions(
     message: String | (js.Function0[js.Promise[String] | String]),
@@ -72,6 +75,7 @@ object PromptOptions {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PromptOptions]
   }
+  
   @scala.inline
   def ArrayPromptOptions(
     choices: js.Array[Choice | String],
@@ -83,6 +87,7 @@ object PromptOptions {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PromptOptions]
   }
+  
   @scala.inline
   def SnippetPromptOptions(
     message: String | (js.Function0[js.Promise[String] | String]),
@@ -93,6 +98,7 @@ object PromptOptions {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PromptOptions]
   }
+  
   @scala.inline
   def BooleanPromptOptions(
     message: String | (js.Function0[js.Promise[String] | String]),
@@ -104,4 +110,3 @@ object PromptOptions {
     __obj.asInstanceOf[PromptOptions]
   }
 }
-

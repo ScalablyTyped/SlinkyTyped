@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.rdsMod
 import typingsSlinky.awsSdk.rdsSignerMod.Signer.SignerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/clients/rds", "Signer")
 @js.native
@@ -14,4 +14,3 @@ class Signer ()
   extends typingsSlinky.awsSdk.rdsSignerMod.Signer {
   def this(options: SignerOptions) = this()
 }
-

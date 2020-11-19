@@ -11,10 +11,11 @@ import typingsSlinky.gapiClientClassroom.anon.UploadType
 import typingsSlinky.gapiClientClassroom.anon.Uploadprotocol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait StudentSubmissionsResource extends js.Object {
+  
   /**
     * Returns a student submission.
     *
@@ -27,6 +28,7 @@ trait StudentSubmissionsResource extends js.Object {
     */
   def get(): Request[StudentSubmission] = js.native
   def get(request: CourseWorkId): Request[StudentSubmission] = js.native
+  
   /**
     * Returns a list of student submissions that the requester is permitted to
     * view, factoring in the OAuth scopes of the request.
@@ -45,6 +47,7 @@ trait StudentSubmissionsResource extends js.Object {
     */
   def list(): Request[ListStudentSubmissionsResponse] = js.native
   def list(request: Late): Request[ListStudentSubmissionsResponse] = js.native
+  
   def modifyAttachments(request: CourseWorkId, body: ModifyAttachmentsRequest): Request[StudentSubmission] = js.native
   /**
     * Modifies attachments of student submission.
@@ -67,6 +70,7 @@ trait StudentSubmissionsResource extends js.Object {
     * does not exist.
     */
   def modifyAttachments(request: PrettyPrint): Request[StudentSubmission] = js.native
+  
   /**
     * Updates one or more fields of a student submission.
     *
@@ -89,6 +93,7 @@ trait StudentSubmissionsResource extends js.Object {
     */
   def patch(request: QuotaUser): Request[StudentSubmission] = js.native
   def patch(request: UpdateMask, body: StudentSubmission): Request[StudentSubmission] = js.native
+  
   def reclaim(request: CourseWorkId, body: ReclaimStudentSubmissionRequest): Request[js.Object] = js.native
   /**
     * Reclaims a student submission on behalf of the student that owns it.
@@ -114,6 +119,7 @@ trait StudentSubmissionsResource extends js.Object {
     * does not exist.
     */
   def reclaim(request: Resource): Request[js.Object] = js.native
+  
   def `return`(request: CourseWorkId, body: ReturnStudentSubmissionRequest): Request[js.Object] = js.native
   /**
     * Returns a student submission.
@@ -140,6 +146,7 @@ trait StudentSubmissionsResource extends js.Object {
     * does not exist.
     */
   def `return`(request: UploadType): Request[js.Object] = js.native
+  
   def turnIn(request: CourseWorkId, body: TurnInStudentSubmissionRequest): Request[js.Object] = js.native
   /**
     * Turns in a student submission.
@@ -165,4 +172,3 @@ trait StudentSubmissionsResource extends js.Object {
     */
   def turnIn(request: Uploadprotocol): Request[js.Object] = js.native
 }
-

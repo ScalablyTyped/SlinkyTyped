@@ -2,18 +2,20 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait OAuthInfo
   extends Accessor
      with JSONSupport {
+  
   /**
     * The registered application id.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-OAuthInfo.html#appId)
     */
   var appId: String = js.native
+  
   /**
     * Applications with the same value will share the stored token on the same host.
     *
@@ -22,6 +24,7 @@ trait OAuthInfo
     * @default / (forward slash)
     */
   var authNamespace: String = js.native
+  
   /**
     * The number of minutes that the token is valid.
     *
@@ -30,6 +33,7 @@ trait OAuthInfo
     * @default 20160 (two weeks)
     */
   var expiration: Double = js.native
+  
   /**
     * The locale for the OAuth sign in page. The default locale is based on your browser/OS and the organization locale. You can use the locale property to change this. The locale needs to follow the language dash country code syntax supported by ArcGIS.com.
     *
@@ -38,6 +42,7 @@ trait OAuthInfo
     * @default Based on your browser/OS and the organization locale.
     */
   var locale: String = js.native
+  
   /**
     * The minimum time in minutes before a saved token is due to expire that it should still be considered valid for use.
     *
@@ -46,6 +51,7 @@ trait OAuthInfo
     * @default 30
     */
   var minTimeUntilExpiration: Double = js.native
+  
   /**
     * Set to `true` to show the OAuth sign in page in a popup window.
     *
@@ -54,6 +60,7 @@ trait OAuthInfo
     * @default false
     */
   var popup: Boolean = js.native
+  
   /**
     * Applicable if working with the popup user-login workflow. This is a relative page URL that redirects the user back to the secured application after successful login.
     *
@@ -62,6 +69,7 @@ trait OAuthInfo
     * @default "oauth-callback.html"
     */
   var popupCallbackUrl: String = js.native
+  
   /**
     * The window features passed to [window.open()](https://developer.mozilla.org/en-US/docs/Web/API/Window/open).
     *
@@ -70,6 +78,7 @@ trait OAuthInfo
     * @default height=490,width=800,resizable,scrollbars,status
     */
   var popupWindowFeatures: String = js.native
+  
   /**
     * The ArcGIS Enterprise portal URL.
     *
@@ -78,6 +87,7 @@ trait OAuthInfo
     * @default "https://www.arcgis.com"
     */
   var portalUrl: String = js.native
+  
   /**
     * Set this property to `true` when [popup](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-OAuthInfo.html#popup) is `false` in order to have the window's location hash value restored after signing in.
     *
@@ -87,4 +97,3 @@ trait OAuthInfo
     */
   var preserveUrlHash: Boolean = js.native
 }
-

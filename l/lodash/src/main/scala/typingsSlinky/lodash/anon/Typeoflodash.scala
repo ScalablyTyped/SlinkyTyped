@@ -3,10 +3,11 @@ package typingsSlinky.lodash.anon
 import typingsSlinky.lodash.mod.LoDashImplicitWrapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Typeoflodash extends js.Object {
+  
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -77,4 +78,3 @@ trait Typeoflodash extends js.Object {
     **/
   def apply[T](value: T): LoDashImplicitWrapper[T] = js.native
 }
-

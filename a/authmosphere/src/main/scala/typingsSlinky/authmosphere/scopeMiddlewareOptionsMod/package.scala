@@ -2,9 +2,10 @@ package typingsSlinky.authmosphere
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object scopeMiddlewareOptionsMod {
+  
   type onAuthorizationFailedHandler = js.Function5[
     /* request */ typingsSlinky.express.mod.Request_[
       typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 

@@ -3,7 +3,7 @@ package typingsSlinky.openlayers.mod.source
 import typingsSlinky.openlayers.mod.olx.source.ImageStaticOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @classdesc
@@ -24,4 +24,3 @@ class ImageStatic protected () extends Image {
     */
   def this(options: ImageStaticOptions) = this()
 }
-

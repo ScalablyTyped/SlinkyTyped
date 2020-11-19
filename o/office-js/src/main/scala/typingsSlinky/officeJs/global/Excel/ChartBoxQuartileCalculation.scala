@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.global.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,9 +13,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.ChartBoxQuartileCalculation")
 @js.native
 object ChartBoxQuartileCalculation extends js.Object {
-  /* "Exclusive" */ val exclusive: typingsSlinky.officeJs.Excel.ChartBoxQuartileCalculation.exclusive with String = js.native
-  /* "Inclusive" */ val inclusive: typingsSlinky.officeJs.Excel.ChartBoxQuartileCalculation.inclusive with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Excel.ChartBoxQuartileCalculation with String] = js.native
+  
+  /* "Exclusive" */ val exclusive: typingsSlinky.officeJs.Excel.ChartBoxQuartileCalculation.exclusive with String = js.native
+  
+  /* "Inclusive" */ val inclusive: typingsSlinky.officeJs.Excel.ChartBoxQuartileCalculation.inclusive with String = js.native
 }
-

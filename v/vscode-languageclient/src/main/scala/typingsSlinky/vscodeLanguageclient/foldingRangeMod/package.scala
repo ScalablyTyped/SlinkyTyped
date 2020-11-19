@@ -2,9 +2,10 @@ package typingsSlinky.vscodeLanguageclient
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object foldingRangeMod {
+  
   type ProvideFoldingRangeSignature = js.ThisFunction3[
     /* this */ scala.Unit, 
     /* document */ typingsSlinky.vscode.mod.TextDocument, 

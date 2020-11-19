@@ -2,7 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactNative.reactNativeStrings.cover
@@ -12,17 +12,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactNative.reactNativeStrings.center
 */
 trait ImageResizeMode extends js.Object
-
 object ImageResizeMode {
+  
   @scala.inline
   def center: typingsSlinky.reactNative.reactNativeStrings.center = "center".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.center]
+  
   @scala.inline
   def contain: typingsSlinky.reactNative.reactNativeStrings.contain = "contain".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.contain]
+  
   @scala.inline
   def cover: typingsSlinky.reactNative.reactNativeStrings.cover = "cover".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.cover]
+  
   @scala.inline
   def repeat: typingsSlinky.reactNative.reactNativeStrings.repeat = "repeat".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.repeat]
+  
   @scala.inline
   def stretch: typingsSlinky.reactNative.reactNativeStrings.stretch = "stretch".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.stretch]
 }
-

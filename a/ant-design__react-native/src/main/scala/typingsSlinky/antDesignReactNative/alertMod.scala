@@ -6,11 +6,12 @@ import typingsSlinky.antDesignReactNative.modalPropsTypeMod.CallbackOnBackHandle
 import typingsSlinky.reactNative.mod.TextStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ant-design/react-native/lib/modal/alert", JSImport.Namespace)
 @js.native
 object alertMod extends js.Object {
+  
   def default(title: ReactElement, content: ReactElement): Double = js.native
   def default(
     title: ReactElement,
@@ -26,4 +27,3 @@ object alertMod extends js.Object {
     onBackHandler: CallbackOnBackHandler
   ): Double = js.native
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.elbMod.ClientConfiguration
 import typingsSlinky.awsSdk.elbMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/clients/all", "ELB")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 class ELB () extends ^ {
   def this(options: ClientConfiguration) = this()
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.typescriptServices.global.TypeScript
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.CallSignatureSyntax")
 @js.native
@@ -15,12 +15,12 @@ class CallSignatureSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSGlobal("TypeScript.CallSignatureSyntax")
 @js.native
 object CallSignatureSyntax extends js.Object {
+  
   def create(parameterList: typingsSlinky.typescriptServices.TypeScript.ParameterListSyntax): typingsSlinky.typescriptServices.TypeScript.CallSignatureSyntax = js.native
+  
   def create1(): typingsSlinky.typescriptServices.TypeScript.CallSignatureSyntax = js.native
 }
-

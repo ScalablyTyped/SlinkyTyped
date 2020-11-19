@@ -2,7 +2,7 @@ package typingsSlinky.tablesorter.filterBoxMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.tablesorter.tablesorterStrings.search
@@ -11,15 +11,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.tablesorter.tablesorterStrings.to
 */
 trait FilterBox extends js.Object
-
 object FilterBox {
+  
   @scala.inline
   def from: typingsSlinky.tablesorter.tablesorterStrings.from = "from".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.from]
+  
   @scala.inline
   def search: typingsSlinky.tablesorter.tablesorterStrings.search = "search".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.search]
+  
   @scala.inline
   def select: typingsSlinky.tablesorter.tablesorterStrings.select = "select".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.select]
+  
   @scala.inline
   def to: typingsSlinky.tablesorter.tablesorterStrings.to = "to".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.to]
 }
-

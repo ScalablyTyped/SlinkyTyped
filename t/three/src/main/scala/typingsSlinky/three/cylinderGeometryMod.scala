@@ -5,11 +5,12 @@ import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/CylinderGeometry", JSImport.Namespace)
 @js.native
 object cylinderGeometryMod extends js.Object {
+  
   @js.native
   class CylinderBufferGeometry protected () extends BufferGeometry {
     def this(
@@ -22,6 +23,7 @@ object cylinderGeometryMod extends js.Object {
       thetaStart: js.UndefOr[Double],
       thetaLength: js.UndefOr[Double]
     ) = this()
+    
     var parameters: HeightSegments = js.native
   }
   
@@ -45,8 +47,7 @@ object cylinderGeometryMod extends js.Object {
       thetaStart: js.UndefOr[Double],
       thetaLength: js.UndefOr[Double]
     ) = this()
+    
     var parameters: HeightSegments = js.native
   }
-  
 }
-

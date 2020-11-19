@@ -9,9 +9,10 @@ import typingsSlinky.urql.subscriptionMod.SubscriptionProps
 import typingsSlinky.urql.subscriptionMod.SubscriptionState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Subscription {
+  
   @JSImport("urql", "Subscription")
   @js.native
   object component extends js.Object
@@ -20,21 +21,25 @@ object Subscription {
   class Builder[T, R, V] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def context(value: PartialOperationContext): this.type = set("context", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def handler(value: (/* prev */ js.UndefOr[R], T) => R): this.type = set("handler", js.Any.fromFunction2(value))
+    
     @scala.inline
     def pause(value: Boolean): this.type = set("pause", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def variables(value: V): this.type = set("variables", value.asInstanceOf[js.Any])
   }
   
   def withProps[T, R, V](p: SubscriptionProps[T, R, V]): Builder[T, R, V] = new Builder[T, R, V](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[T, R, V](children: SubscriptionState[R] => ReactElement, query: DocumentNode | String): Builder[T, R, V] = {
     val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), query = query.asInstanceOf[js.Any])
     new Builder[T, R, V](js.Array(this.component, __props.asInstanceOf[SubscriptionProps[T, R, V]]))
   }
 }
-

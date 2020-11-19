@@ -5,7 +5,7 @@ import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -14,11 +14,13 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IWorkflow extends IDocument {
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
   val activities: IList[IWorkflowActivity] = js.native
+  
   val contextEntity: IEntity | Null = js.native
+  
   val contextEntityQualifiedName: String | Null = js.native
 }
-

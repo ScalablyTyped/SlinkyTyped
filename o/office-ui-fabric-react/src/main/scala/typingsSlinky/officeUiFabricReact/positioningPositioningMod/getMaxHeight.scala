@@ -7,11 +7,12 @@ import typingsSlinky.officeUiFabricReact.positioningTypesMod.Point
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/utilities/positioning/positioning", "getMaxHeight")
 @js.native
 object getMaxHeight extends js.Object {
+  
   def apply(target: Point, targetEdge: DirectionalHint): Double = js.native
   def apply(
     target: Point,
@@ -124,4 +125,3 @@ object getMaxHeight extends js.Object {
     coverTarget: Boolean
   ): Double = js.native
 }
-

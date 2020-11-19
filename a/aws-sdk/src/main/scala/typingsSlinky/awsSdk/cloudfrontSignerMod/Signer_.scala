@@ -6,7 +6,7 @@ import typingsSlinky.awsSdk.cloudfrontSignerMod.Signer.SignerOptionsWithPolicy
 import typingsSlinky.awsSdk.cloudfrontSignerMod.Signer.SignerOptionsWithoutPolicy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/lib/cloudfront/signer", "Signer")
 @js.native
@@ -18,6 +18,7 @@ class Signer_ protected () extends js.Object {
     * @param {string} privateKey - A private key in RSA format.
     */
   def this(keyPairId: String, privateKey: String) = this()
+  
   /**
     * Create a signed Amazon CloudFront Cookie.
     */
@@ -40,6 +41,7 @@ class Signer_ protected () extends js.Object {
     options: SignerOptionsWithoutPolicy,
     callback: js.Function2[/* err */ js.Error, /* cookie */ CannedPolicy, Unit]
   ): Unit = js.native
+  
   /**
     * Create a signed Amazon CloudFront URL.
     * Keep in mind that URLs meant for use in media/flash players may have different requirements for URL formats (e.g. some require that the extension be removed, some require the file name to be prefixed - mp4:, some require you to add "/cfx/st" into your URL).
@@ -59,4 +61,3 @@ class Signer_ protected () extends js.Object {
     callback: js.Function2[/* err */ js.Error, /* url */ String, Unit]
   ): Unit = js.native
 }
-

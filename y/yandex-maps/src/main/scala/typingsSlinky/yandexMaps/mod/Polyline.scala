@@ -2,7 +2,7 @@ package typingsSlinky.yandexMaps.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("yandex-maps", "Polyline")
 @js.native
@@ -30,4 +30,3 @@ class Polyline protected () extends GeoObject_ {
   def this(geometry: ILineStringGeometry, properties: js.Object, options: IPolylineOptions) = this()
   def this(geometry: ILineStringGeometry, properties: IDataManager, options: IPolylineOptions) = this()
 }
-

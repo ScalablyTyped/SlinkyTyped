@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.global.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,10 +13,13 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.ChartGradientStyleType")
 @js.native
 object ChartGradientStyleType extends js.Object {
-  /* "ExtremeValue" */ val extremeValue: typingsSlinky.officeJs.Excel.ChartGradientStyleType.extremeValue with String = js.native
-  /* "Number" */ val number: typingsSlinky.officeJs.Excel.ChartGradientStyleType.number with String = js.native
-  /* "Percent" */ val percent: typingsSlinky.officeJs.Excel.ChartGradientStyleType.percent with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Excel.ChartGradientStyleType with String] = js.native
+  
+  /* "ExtremeValue" */ val extremeValue: typingsSlinky.officeJs.Excel.ChartGradientStyleType.extremeValue with String = js.native
+  
+  /* "Number" */ val number: typingsSlinky.officeJs.Excel.ChartGradientStyleType.number with String = js.native
+  
+  /* "Percent" */ val percent: typingsSlinky.officeJs.Excel.ChartGradientStyleType.percent with String = js.native
 }
-

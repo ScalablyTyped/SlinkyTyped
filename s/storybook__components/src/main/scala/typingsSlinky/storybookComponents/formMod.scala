@@ -357,25 +357,38 @@ import typingsSlinky.storybookComponents.storybookComponentsStrings.webview
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/components/dist/form", JSImport.Namespace)
 @js.native
 object formMod extends js.Object {
+  
   @js.native
   object Form extends js.Object {
-    var Button: ReactComponentClass[_] = js.native
-    var Field: ReactComponentClass[FieldProps] = js.native
-    var Input: StyledComponentPickPickHT = js.native
-    var Select: StyledComponentPickSelect = js.native
-    var Textarea: StyledComponentPickPickTe = js.native
-    var __emotion_styles: js.Any = js.native
-    var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
-    var defaultProps: js.UndefOr[PartialDetailedHTMLPropsF] = js.native
-    var displayName: js.UndefOr[String] = js.native
-    var propTypes: js.UndefOr[WeakValidationMapDetailed] = js.native
+    
     def apply(props: PropsWithChildrenDetailed): ReactElement | Null = js.native
     def apply(props: PropsWithChildrenDetailed, context: js.Any): ReactElement | Null = js.native
+    
+    var Button: ReactComponentClass[_] = js.native
+    
+    var Field: ReactComponentClass[FieldProps] = js.native
+    
+    var Input: StyledComponentPickPickHT = js.native
+    
+    var Select: StyledComponentPickSelect = js.native
+    
+    var Textarea: StyledComponentPickPickTe = js.native
+    
+    var __emotion_styles: js.Any = js.native
+    
+    var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
+    
+    var defaultProps: js.UndefOr[PartialDetailedHTMLPropsF] = js.native
+    
+    var displayName: js.UndefOr[String] = js.native
+    
+    var propTypes: js.UndefOr[WeakValidationMapDetailed] = js.native
+    
     def withComponent[Tag /* <: ReactComponentClass[_] */](tag: Tag): StyledComponent[PropsOf[Tag], PickDetailedHTMLPropsForm, Theme] = js.native
     /**
       * @desc this method is type-unsafe
@@ -1199,6 +1212,4 @@ object formMod extends js.Object {
         Theme
       ] = js.native
   }
-  
 }
-

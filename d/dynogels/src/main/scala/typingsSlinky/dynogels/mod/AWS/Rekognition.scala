@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.rekognitionMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.Rekognition")
 @js.native
@@ -14,4 +14,3 @@ class Rekognition ()
   extends typingsSlinky.awsSdk.mod.Rekognition {
   def this(options: ClientConfiguration) = this()
 }
-

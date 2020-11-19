@@ -3,7 +3,7 @@ package typingsSlinky.scriptableIos.global
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Arguments passed to the script._
@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("args")
 @js.native
 object args extends js.Object {
+  
   /**
     * _File URLs supplied by a share sheet or a shortcut action._
     *
@@ -25,6 +26,7 @@ object args extends js.Object {
     * @see https://docs.scriptable.app/args/#fileurls
     */
   var fileURLs: js.Array[String] = js.native
+  
   /**
     * _Images supplied by a share sheet or a shortcut action._
     *
@@ -37,6 +39,7 @@ object args extends js.Object {
     * @see https://docs.scriptable.app/args/#images
     */
   var images: js.Array[typingsSlinky.scriptableIos.Image] = js.native
+  
   /**
     * _Notification being handled by the script._
     *
@@ -47,6 +50,7 @@ object args extends js.Object {
     * @see https://docs.scriptable.app/args/#notification
     */
   var notification: typingsSlinky.scriptableIos.Notification = js.native
+  
   /**
     * _Plain texts supplied by a share sheet or a shortcut action._
     *
@@ -56,6 +60,7 @@ object args extends js.Object {
     * @see https://docs.scriptable.app/args/#plaintexts
     */
   var plainTexts: js.Array[String] = js.native
+  
   /**
     * _Query parameters from a URL scheme._
     *
@@ -63,6 +68,7 @@ object args extends js.Object {
     * @see https://docs.scriptable.app/args/#queryparameters
     */
   var queryParameters: StringDictionary[String] = js.native
+  
   /**
     * _Parameter passed to a Shortcut._
     *
@@ -73,6 +79,7 @@ object args extends js.Object {
     * @see https://docs.scriptable.app/args/#shortcutparameter
     */
   var shortcutParameter: js.Any = js.native
+  
   /**
     * _URLs supplied by a share sheet or a shortcut action.._
     *
@@ -83,4 +90,3 @@ object args extends js.Object {
     */
   var urls: js.Array[String] = js.native
 }
-

@@ -5,10 +5,11 @@ import typingsSlinky.lodash.mod.Many
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashFlatMap extends LodashConvertible {
+  
   def apply(iteratee: String): LodashFlatMap3x1 = js.native
   def apply(iteratee: String, collection: js.Object): js.Array[_] = js.native
   def apply(iteratee: js.Object): js.Array[Boolean] = js.native
@@ -32,4 +33,3 @@ trait LodashFlatMap extends LodashConvertible {
   ): js.Array[TResult] = js.native
   def apply[T, TResult](iteratee: js.Function1[/* value */ T, Many[TResult]], collection: List[T]): js.Array[TResult] = js.native
 }
-

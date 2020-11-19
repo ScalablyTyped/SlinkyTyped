@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Entity is the core primitive of a PlayCanvas game. Generally speaking an object in your game will consist of an {@link pc.Entity},
@@ -68,4 +68,3 @@ class Entity ()
   def this(name: js.UndefOr[scala.Nothing], app: typingsSlinky.playcanvas.pc.Application) = this()
   def this(name: String, app: typingsSlinky.playcanvas.pc.Application) = this()
 }
-

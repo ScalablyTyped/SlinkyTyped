@@ -4,11 +4,12 @@ import typingsSlinky.esfxEquatable.distMod.Equaler
 import typingsSlinky.esfxEquatable.distMod.EqualityComparison
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@esfx/collections-linkedlist", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class LinkedList[T] ()
     extends typingsSlinky.esfxCollectionsLinkedlist.distMod.LinkedList[T] {
@@ -26,6 +27,4 @@ object mod extends js.Object {
     extends typingsSlinky.esfxCollectionsLinkedlist.distMod.LinkedListNode[T] {
     def this(value: T) = this()
   }
-  
 }
-

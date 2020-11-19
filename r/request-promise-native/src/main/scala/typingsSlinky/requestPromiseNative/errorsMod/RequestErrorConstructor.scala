@@ -5,11 +5,11 @@ import typingsSlinky.requestPromiseNative.mod.FullResponse
 import typingsSlinky.requestPromiseNative.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RequestErrorConstructor
   extends Instantiable3[/* cause */ js.Any, /* options */ Options, /* response */ FullResponse, RequestError] {
+  
   def apply(cause: js.Any, options: Options, response: FullResponse): RequestError = js.native
 }
-

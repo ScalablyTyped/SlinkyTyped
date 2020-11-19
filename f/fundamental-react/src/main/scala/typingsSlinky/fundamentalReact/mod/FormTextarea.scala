@@ -5,9 +5,8 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.fundamentalReact.formTextareaMod.FormTextareaProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fundamental-react", "FormTextarea")
 @js.native
 object FormTextarea extends TopLevel[ReactComponentClass[FormTextareaProps]]
-

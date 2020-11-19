@@ -2,7 +2,7 @@ package typingsSlinky.pixiJs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Base for a common object renderer that can be used as a
@@ -18,4 +18,3 @@ class ObjectRenderer protected ()
   extends typingsSlinky.pixiJs.PIXI.ObjectRenderer {
   def this(renderer: typingsSlinky.pixiJs.PIXI.Renderer) = this()
 }
-

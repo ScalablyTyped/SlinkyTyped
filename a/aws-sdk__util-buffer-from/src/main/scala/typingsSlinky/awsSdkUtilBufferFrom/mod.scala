@@ -11,15 +11,17 @@ import typingsSlinky.awsSdkUtilBufferFrom.awsSdkUtilBufferFromStrings.utf8
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/util-buffer-from", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def fromArrayBuffer(input: js.typedarray.ArrayBuffer): Buffer = js.native
   def fromArrayBuffer(input: js.typedarray.ArrayBuffer, offset: js.UndefOr[scala.Nothing], length: Double): Buffer = js.native
   def fromArrayBuffer(input: js.typedarray.ArrayBuffer, offset: Double): Buffer = js.native
   def fromArrayBuffer(input: js.typedarray.ArrayBuffer, offset: Double, length: Double): Buffer = js.native
+  
   def fromString(input: String): Buffer = js.native
   def fromString(input: String, encoding: String): Buffer = js.native
   @JSName("fromString")
@@ -39,4 +41,3 @@ object mod extends js.Object {
   @JSName("fromString")
   def fromString_utf8(input: String, encoding: utf8): Buffer = js.native
 }
-

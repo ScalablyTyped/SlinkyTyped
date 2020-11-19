@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "PBRMetallicRoughnessMaterial")
 @js.native
@@ -16,14 +16,13 @@ class PBRMetallicRoughnessMaterial protected ()
     */
   def this(name: String, scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/index", "PBRMetallicRoughnessMaterial")
 @js.native
 object PBRMetallicRoughnessMaterial extends js.Object {
+  
   /**
     * Parses a JSON object correponding to the serialize function.
     */
   def Parse(source: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): typingsSlinky.babylonjs.pbrMetallicRoughnessMaterialMod.PBRMetallicRoughnessMaterial = js.native
 }
-

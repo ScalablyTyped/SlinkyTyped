@@ -2,14 +2,14 @@ package typingsSlinky.applicationinsightsJs.AI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait SeverityLevel extends js.Object
-
 @JSGlobal("AI.SeverityLevel")
 @js.native
 object SeverityLevel extends js.Object {
+  
   @js.native
   sealed trait Critical extends SeverityLevel
   
@@ -24,6 +24,4 @@ object SeverityLevel extends js.Object {
   
   @js.native
   sealed trait Warning extends SeverityLevel
-  
 }
-

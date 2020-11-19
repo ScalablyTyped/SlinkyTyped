@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SimpleMarkerSymbolConstructor
@@ -15,6 +15,6 @@ trait SimpleMarkerSymbolConstructor
   */
 Instantiable0[SimpleMarkerSymbol]
      with Instantiable1[/* properties */ SimpleMarkerSymbolProperties, SimpleMarkerSymbol] {
+  
   def fromJSON(json: js.Any): SimpleMarkerSymbol = js.native
 }
-

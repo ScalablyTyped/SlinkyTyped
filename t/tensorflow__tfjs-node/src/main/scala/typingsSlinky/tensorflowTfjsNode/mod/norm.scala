@@ -7,7 +7,7 @@ import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.euclidean
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.fro
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-node", "norm")
 @js.native
@@ -21,4 +21,3 @@ object norm
         Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
       ]
     ]
-

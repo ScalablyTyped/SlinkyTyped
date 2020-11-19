@@ -7,11 +7,12 @@ import typingsSlinky.libsodiumWrappers.mod.StringOutputFormat
 import typingsSlinky.libsodiumWrappers.mod.Uint8ArrayOutputFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("libsodium-wrappers-sumo", "crypto_secretstream_xchacha20poly1305_pull")
 @js.native
 object cryptoSecretstreamXchacha20poly1305Pull extends js.Object {
+  
   def apply(state_address: StateAddress, cipher: String): MessageTag = js.native
   def apply(
     state_address: StateAddress,
@@ -83,4 +84,3 @@ object cryptoSecretstreamXchacha20poly1305Pull extends js.Object {
     outputFormat: Uint8ArrayOutputFormat
   ): MessageTag = js.native
 }
-

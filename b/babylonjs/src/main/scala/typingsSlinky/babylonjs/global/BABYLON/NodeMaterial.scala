@@ -1,10 +1,9 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
-import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.PartialINodeMaterialOptio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.NodeMaterial")
 @js.native
@@ -18,23 +17,14 @@ class NodeMaterial protected ()
     */
   def this(name: String) = this()
   def this(name: String, scene: typingsSlinky.babylonjs.BABYLON.Scene) = this()
+  def this(name: String, scene: js.UndefOr[scala.Nothing], options: PartialINodeMaterialOptio) = this()
   def this(name: String, scene: typingsSlinky.babylonjs.BABYLON.Scene, options: PartialINodeMaterialOptio) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.NodeMaterial")
 @js.native
 object NodeMaterial extends js.Object {
-  /** Define the Url to load node editor script */
-  var EditorURL: String = js.native
-  /** Define the Url to load snippets */
-  var SnippetUrl: String = js.native
-  var _BuildIdGenerator: js.Any = js.native
+  
   /**
     * Creates a new node material set to default basic configuration
     * @param name defines the name of the material
@@ -43,6 +33,10 @@ object NodeMaterial extends js.Object {
     */
   def CreateDefault(name: String): typingsSlinky.babylonjs.BABYLON.NodeMaterial = js.native
   def CreateDefault(name: String, scene: typingsSlinky.babylonjs.BABYLON.Scene): typingsSlinky.babylonjs.BABYLON.NodeMaterial = js.native
+  
+  /** Define the Url to load node editor script */
+  var EditorURL: String = js.native
+  
   /**
     * Creates a node material from parsed material data
     * @param source defines the JSON representation of the material
@@ -52,6 +46,7 @@ object NodeMaterial extends js.Object {
     */
   def Parse(source: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene): typingsSlinky.babylonjs.BABYLON.NodeMaterial = js.native
   def Parse(source: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): typingsSlinky.babylonjs.BABYLON.NodeMaterial = js.native
+  
   /**
     * Creates a node material from a snippet saved in a remote file
     * @param name defines the name of the material to create
@@ -60,6 +55,7 @@ object NodeMaterial extends js.Object {
     * @returns a promise that will resolve to the new node material
     */
   def ParseFromFileAsync(name: String, url: String, scene: typingsSlinky.babylonjs.BABYLON.Scene): js.Promise[typingsSlinky.babylonjs.BABYLON.NodeMaterial] = js.native
+  
   /**
     * Creates a node material from a snippet saved by the node material editor
     * @param snippetId defines the snippet to load
@@ -69,5 +65,9 @@ object NodeMaterial extends js.Object {
     */
   def ParseFromSnippetAsync(snippetId: String, scene: typingsSlinky.babylonjs.BABYLON.Scene): js.Promise[typingsSlinky.babylonjs.BABYLON.NodeMaterial] = js.native
   def ParseFromSnippetAsync(snippetId: String, scene: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): js.Promise[typingsSlinky.babylonjs.BABYLON.NodeMaterial] = js.native
+  
+  /** Define the Url to load snippets */
+  var SnippetUrl: String = js.native
+  
+  var _BuildIdGenerator: js.Any = js.native
 }
-

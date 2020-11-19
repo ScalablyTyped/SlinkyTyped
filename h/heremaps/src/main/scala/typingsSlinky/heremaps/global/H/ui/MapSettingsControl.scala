@@ -3,7 +3,7 @@ package typingsSlinky.heremaps.global.H.ui
 import typingsSlinky.heremaps.H.ui.MapSettingsControl.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This class represents a menu control allowing to control which map type the map shows, etc.
@@ -18,4 +18,3 @@ class MapSettingsControl ()
   extends typingsSlinky.heremaps.H.ui.MapSettingsControl {
   def this(opt_options: Options) = this()
 }
-

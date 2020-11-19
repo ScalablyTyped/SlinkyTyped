@@ -1,11 +1,11 @@
 organization := "org.scalablytyped.slinky"
 name := "overload-protection"
-version := "1.2-dt-20200309Z-db06a1"
+version := "1.2-dt-20200309Z-01f1cb"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5")
+  "me.shadaj" %%% "slinky-web" % "0.6.6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

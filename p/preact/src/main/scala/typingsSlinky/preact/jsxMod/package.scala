@@ -2,9 +2,10 @@ package typingsSlinky.preact
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object jsxMod {
+  
   type Defaultize[Props, Defaults] = (typingsSlinky.std.Partial[
     typingsSlinky.std.Pick[
       Props, 

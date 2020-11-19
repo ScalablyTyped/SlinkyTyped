@@ -2,10 +2,12 @@ package typingsSlinky.svgSprite
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type CompileCallback = js.Function3[/* error */ js.Error, /* result */ js.Any, /* data */ js.Any, js.Any]
+  
   /**
     * Custom callback transformation
     */
@@ -17,10 +19,13 @@ package object mod {
       js.Any
     ]
   ]
+  
   /**
     * Pre-defined shape transformation with custom configuration
     */
   type CustomConfigurationTransform = org.scalablytyped.runtime.StringDictionary[typingsSlinky.svgSprite.anon.Plugins]
+  
   type GetShapesCallback = js.Function2[/* error */ js.Error, /* result */ js.Array[typingsSlinky.vinyl.mod.File], js.Any]
+  
   type SvgTransformer = js.Function1[/* svg */ java.lang.String, java.lang.String]
 }

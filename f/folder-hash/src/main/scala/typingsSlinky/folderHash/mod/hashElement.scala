@@ -2,11 +2,12 @@ package typingsSlinky.folderHash.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("folder-hash", "hashElement")
 @js.native
 object hashElement extends js.Object {
+  
   def apply(path: String): Unit = js.native
   def apply(
     path: String,
@@ -37,4 +38,3 @@ object hashElement extends js.Object {
   ): Unit = js.native
   def apply(path: String, options: HashElementOptions): js.Promise[HashElementNode] = js.native
 }
-

@@ -11,7 +11,7 @@ import typingsSlinky.react.mod.FormHTMLAttributes
 import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6", "Form")
 @js.native
@@ -27,7 +27,6 @@ class Form protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("grommet/es6", "Form")
 @js.native
 object Form
@@ -36,4 +35,3 @@ object Form
         FormProps[js.Any] with (Omit[DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], onChange])
       ]
     ]
-

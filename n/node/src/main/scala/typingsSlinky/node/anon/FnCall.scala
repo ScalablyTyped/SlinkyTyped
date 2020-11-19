@@ -18,10 +18,11 @@ import typingsSlinky.node.nodeStrings.SRV
 import typingsSlinky.node.nodeStrings.TXT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCall extends js.Object {
+  
   def apply(hostname: String): js.Promise[js.Array[String]] = js.native
   def apply(hostname: String, rrtype: String): js.Promise[
     (js.Array[AnyRecord | js.Array[String] | MxRecord | NaptrRecord | SrvRecord | String]) | SoaRecord
@@ -38,4 +39,3 @@ trait FnCall extends js.Object {
   def apply(hostname: String, rrtype: SRV): js.Promise[js.Array[SrvRecord]] = js.native
   def apply(hostname: String, rrtype: TXT): js.Promise[js.Array[js.Array[String]]] = js.native
 }
-

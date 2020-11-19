@@ -5,10 +5,11 @@ import org.scalajs.dom.raw.HTMLDocument
 import typingsSlinky.prettyFormat.mod.OptionsReceived
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Debug extends js.Object {
+  
   /**
     * Convenience function for `pretty-dom` which also allows an array
     * of elements
@@ -34,4 +35,3 @@ trait Debug extends js.Object {
   def debug(element: HTMLDocument, maxLength: Double): Unit = js.native
   def debug(element: HTMLDocument, maxLength: Double, options: OptionsReceived): Unit = js.native
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.textract.mod
 import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("textract", "fromUrl")
 @js.native
 object fromUrl extends js.Object {
+  
   def apply(url: String, callback: js.Function2[/* error */ js.Error, /* text */ String, Unit]): Unit = js.native
   def apply(
     url: String,
@@ -21,4 +22,3 @@ object fromUrl extends js.Object {
     callback: js.Function2[/* error */ js.Error, /* text */ String, Unit]
   ): Unit = js.native
 }
-

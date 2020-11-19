@@ -6,7 +6,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a Values. */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "Trace.HTTP.Values")
@@ -17,20 +17,22 @@ import scala.scalajs.js.annotation._
   */
 class Values () extends IValues {
   def this(properties: IValues) = this()
-  /** Values value. */
-  @JSName("value")
-  var value_Values: js.Array[String] = js.native
+  
   /**
     * Converts this Values to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
+  
+  /** Values value. */
+  @JSName("value")
+  var value_Values: js.Array[String] = js.native
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "Trace.HTTP.Values")
 @js.native
 object Values extends js.Object {
+  
   /**
     * Creates a new Values instance using the specified properties.
     * @param [properties] Properties to set
@@ -38,6 +40,7 @@ object Values extends js.Object {
     */
   def create(): Values = js.native
   def create(properties: IValues): Values = js.native
+  
   /**
     * Decodes a Values message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -50,6 +53,7 @@ object Values extends js.Object {
   def decode(reader: Reader, length: Double): Values = js.native
   def decode(reader: js.typedarray.Uint8Array): Values = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): Values = js.native
+  
   /**
     * Decodes a Values message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -59,6 +63,7 @@ object Values extends js.Object {
     */
   def decodeDelimited(reader: Reader): Values = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): Values = js.native
+  
   /**
     * Encodes the specified Values message. Does not implicitly {@link Trace.HTTP.Values.verify|verify} messages.
     * @param message Values message or plain object to encode
@@ -67,6 +72,7 @@ object Values extends js.Object {
     */
   def encode(message: IValues): Writer = js.native
   def encode(message: IValues, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified Values message, length delimited. Does not implicitly {@link Trace.HTTP.Values.verify|verify} messages.
     * @param message Values message or plain object to encode
@@ -75,12 +81,14 @@ object Values extends js.Object {
     */
   def encodeDelimited(message: IValues): Writer = js.native
   def encodeDelimited(message: IValues, writer: Writer): Writer = js.native
+  
   /**
     * Creates a Values message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns Values
     */
   def fromObject(`object`: StringDictionary[js.Any]): Values = js.native
+  
   /**
     * Creates a plain object from a Values message. Also converts values to other types if specified.
     * @param message Values
@@ -89,6 +97,7 @@ object Values extends js.Object {
     */
   def toObject(message: Values): StringDictionary[js.Any] = js.native
   def toObject(message: Values, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a Values message.
     * @param message Plain object to verify
@@ -96,4 +105,3 @@ object Values extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

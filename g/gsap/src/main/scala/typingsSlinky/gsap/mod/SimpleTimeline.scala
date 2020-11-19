@@ -2,7 +2,7 @@ package typingsSlinky.gsap.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gsap", "SimpleTimeline")
 @js.native
@@ -14,4 +14,3 @@ class SimpleTimeline ()
   extends typingsSlinky.gsap.gsap.SimpleTimeline {
   def this(vars: js.Any) = this()
 }
-

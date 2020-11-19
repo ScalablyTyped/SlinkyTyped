@@ -4,13 +4,15 @@ import typingsSlinky.dateFns.anon.AddSuffix
 import typingsSlinky.dateFns.anon.IncludeSeconds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("date-fns/esm/formatDistance", JSImport.Namespace)
 @js.native
 object formatDistanceMod extends js.Object {
+  
   @js.native
   object default extends js.Object {
+    
     def apply(date: Double, baseDate: Double): String = js.native
     def apply(date: Double, baseDate: Double, options: AddSuffix): String = js.native
     def apply(date: Double, baseDate: Double, options: IncludeSeconds): String = js.native
@@ -24,6 +26,4 @@ object formatDistanceMod extends js.Object {
     def apply(date: js.Date, baseDate: js.Date, options: AddSuffix): String = js.native
     def apply(date: js.Date, baseDate: js.Date, options: IncludeSeconds): String = js.native
   }
-  
 }
-

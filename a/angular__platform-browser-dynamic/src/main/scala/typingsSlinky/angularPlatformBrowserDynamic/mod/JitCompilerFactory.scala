@@ -3,11 +3,11 @@ package typingsSlinky.angularPlatformBrowserDynamic.mod
 import typingsSlinky.angularCore.mod.CompilerFactory
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/platform-browser-dynamic", "JitCompilerFactory")
 @js.native
 class JitCompilerFactory () extends CompilerFactory {
+  
   var _defaultOptions: js.Any = js.native
 }
-

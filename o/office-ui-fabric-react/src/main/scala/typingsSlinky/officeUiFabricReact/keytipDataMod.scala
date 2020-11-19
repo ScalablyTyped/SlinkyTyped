@@ -8,12 +8,13 @@ import typingsSlinky.react.mod.Ref
 import typingsSlinky.uifabricUtilities.irendercomponentMod.IRenderComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/KeytipData", JSImport.Namespace)
 @js.native
 object keytipDataMod extends js.Object {
+  
   val KeytipData: ReactComponentClass[IKeytipDataProps with IRenderComponent[js.Object]] = js.native
+  
   def useKeytipRef[TElement /* <: HTMLElement */](options: KeytipDataOptions): Ref[TElement] = js.native
 }
-

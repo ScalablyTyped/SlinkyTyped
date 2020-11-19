@@ -177,10 +177,11 @@ import typingsSlinky.styledComponents.styledComponentsStrings.wbr
 import typingsSlinky.styledComponents.styledComponentsStrings.webview
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ThemedBaseStyledInterface[T /* <: js.Object */] extends ThemedStyledComponentFactories[T] {
+  
   def apply(
     // unfortunately using a conditional type to validate that it can receive a `theme?: Theme`
   // causes tests to fail in TS 3.1
@@ -1063,4 +1064,3 @@ trait ThemedBaseStyledInterface[T /* <: js.Object */] extends ThemedStyledCompon
     StyledComponentInnerAttrs[C]
   ] = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.materialsIndexMod
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/index", "RawTexture2DArray")
 @js.native
@@ -49,8 +49,55 @@ class RawTexture2DArray protected ()
     /** Gets or sets the texture format to use */
   format: Double,
     scene: Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    depth: Double,
+    /** Gets or sets the texture format to use */
+  format: Double,
+    scene: Scene,
     generateMipMaps: Boolean,
     invertY: Boolean
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    depth: Double,
+    /** Gets or sets the texture format to use */
+  format: Double,
+    scene: Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    depth: Double,
+    /** Gets or sets the texture format to use */
+  format: Double,
+    scene: Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    depth: Double,
+    /** Gets or sets the texture format to use */
+  format: Double,
+    scene: Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
   ) = this()
   def this(
     data: js.typedarray.ArrayBufferView,
@@ -72,10 +119,100 @@ class RawTexture2DArray protected ()
     /** Gets or sets the texture format to use */
   format: Double,
     scene: Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: js.UndefOr[scala.Nothing],
+    textureType: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    depth: Double,
+    /** Gets or sets the texture format to use */
+  format: Double,
+    scene: Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double,
+    textureType: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    depth: Double,
+    /** Gets or sets the texture format to use */
+  format: Double,
+    scene: Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    textureType: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    depth: Double,
+    /** Gets or sets the texture format to use */
+  format: Double,
+    scene: Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double,
+    textureType: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    depth: Double,
+    /** Gets or sets the texture format to use */
+  format: Double,
+    scene: Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: js.UndefOr[scala.Nothing],
+    textureType: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    depth: Double,
+    /** Gets or sets the texture format to use */
+  format: Double,
+    scene: Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double,
+    textureType: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    depth: Double,
+    /** Gets or sets the texture format to use */
+  format: Double,
+    scene: Scene,
+    generateMipMaps: Boolean,
+    invertY: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    textureType: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    depth: Double,
+    /** Gets or sets the texture format to use */
+  format: Double,
+    scene: Scene,
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double,
     textureType: Double
   ) = this()
 }
-

@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -26,18 +26,20 @@ abstract class GeneralizationBase protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsEntity: Entity = js.native
   @JSName("containerAsEntity")
   val containerAsEntity_FGeneralizationBase: IEntity = js.native
+  
   @JSName("model")
   var model_FGeneralizationBase: IModel = js.native
-  def containerAsEntity: Entity = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.GeneralizationBase")
 @js.native
 object GeneralizationBase extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

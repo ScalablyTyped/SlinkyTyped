@@ -2,11 +2,12 @@ package typingsSlinky.vscodeLanguageclient.clientMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageclient/lib/client", "SymbolInformation")
 @js.native
 object SymbolInformation extends js.Object {
+  
   /**
     * Creates a new symbol information literal.
     *
@@ -42,4 +43,3 @@ object SymbolInformation extends js.Object {
     containerName: String
   ): typingsSlinky.vscodeLanguageserverTypes.mod.SymbolInformation = js.native
 }
-

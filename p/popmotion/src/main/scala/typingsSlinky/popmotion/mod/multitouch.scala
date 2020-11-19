@@ -5,12 +5,12 @@ import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
 import typingsSlinky.popmotion.pointerTypesMod.PointerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("popmotion", "multitouch")
 @js.native
 object multitouch extends js.Object {
+  
   def apply(): Action[ColdSubscription] = js.native
   def apply(hasPreventDefaultScaleRotate: PointerProps): Action[ColdSubscription] = js.native
 }
-

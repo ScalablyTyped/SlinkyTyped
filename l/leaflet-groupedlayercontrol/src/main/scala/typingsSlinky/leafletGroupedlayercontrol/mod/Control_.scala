@@ -5,11 +5,12 @@ import typingsSlinky.leaflet.mod.Layer
 import typingsSlinky.leaflet.mod.LayerGroup_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("leaflet", "Control")
 @js.native
 object Control_ extends js.Object {
+  
   @js.native
   class GroupedLayers protected ()
     extends typingsSlinky.leaflet.mod.Control_ {
@@ -19,6 +20,4 @@ object Control_ extends js.Object {
       options: GroupedLayersOptions
     ) = this()
   }
-  
 }
-

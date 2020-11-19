@@ -12,10 +12,11 @@ import typingsSlinky.activexVbide.activexVbideStrings.Reference
 import typingsSlinky.activexVbide.activexVbideStrings.handled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ActiveXObject extends js.Object {
+  
   def on(
     obj: CommandBarEvents,
     event: Click,
@@ -67,4 +68,3 @@ trait ActiveXObject extends js.Object {
     ]
   ): Unit = js.native
 }
-

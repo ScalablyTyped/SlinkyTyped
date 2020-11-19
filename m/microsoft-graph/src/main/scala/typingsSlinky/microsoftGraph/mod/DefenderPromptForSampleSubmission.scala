@@ -2,7 +2,7 @@ package typingsSlinky.microsoftGraph.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined
@@ -12,17 +12,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.sendAllDataWithoutPrompting
 */
 trait DefenderPromptForSampleSubmission extends js.Object
-
 object DefenderPromptForSampleSubmission {
+  
   @scala.inline
   def alwaysPrompt: typingsSlinky.microsoftGraph.microsoftGraphStrings.alwaysPrompt = "alwaysPrompt".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.alwaysPrompt]
+  
   @scala.inline
   def neverSendData: typingsSlinky.microsoftGraph.microsoftGraphStrings.neverSendData = "neverSendData".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.neverSendData]
+  
   @scala.inline
   def promptBeforeSendingPersonalData: typingsSlinky.microsoftGraph.microsoftGraphStrings.promptBeforeSendingPersonalData = "promptBeforeSendingPersonalData".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.promptBeforeSendingPersonalData]
+  
   @scala.inline
   def sendAllDataWithoutPrompting: typingsSlinky.microsoftGraph.microsoftGraphStrings.sendAllDataWithoutPrompting = "sendAllDataWithoutPrompting".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.sendAllDataWithoutPrompting]
+  
   @scala.inline
   def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = "userDefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined]
 }
-

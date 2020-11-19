@@ -2,16 +2,19 @@ package typingsSlinky.prismaBinding
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object typesMod {
+  
   type Exists = org.scalablytyped.runtime.StringDictionary[
     js.Function1[
       /* filter */ typingsSlinky.prismaBinding.typesMod.Filter, 
       js.Promise[scala.Boolean]
     ]
   ]
+  
   type Filter = org.scalablytyped.runtime.StringDictionary[js.Any]
+  
   type QueryMap = org.scalablytyped.runtime.StringDictionary[
     js.Function2[
       /* args */ js.UndefOr[org.scalablytyped.runtime.StringDictionary[js.Any]], 
@@ -19,6 +22,7 @@ package object typesMod {
       js.Promise[js.Any]
     ]
   ]
+  
   type SubscriptionMap = org.scalablytyped.runtime.StringDictionary[
     js.Function2[
       /* args */ js.UndefOr[js.Any], 

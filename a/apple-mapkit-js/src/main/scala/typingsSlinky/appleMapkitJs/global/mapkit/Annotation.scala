@@ -6,7 +6,7 @@ import typingsSlinky.appleMapkitJs.anon.High
 import typingsSlinky.appleMapkitJs.mapkit.AnnotationConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The base annotation object, used for creating custom annotations.
@@ -41,20 +41,20 @@ class Annotation protected ()
     options: AnnotationConstructorOptions
   ) = this()
 }
-
 /* static members */
 @JSGlobal("mapkit.Annotation")
 @js.native
 object Annotation extends js.Object {
+  
   /**
     * Constants indicating how to interpret the collision frame rectangle of
     * an annotation view.
     */
   val CollisionMode: Circle = js.native
+  
   /**
     * Constant values used to provide a hint the map uses to prioritize
     * displaying annotations.
     */
   val DisplayPriority: High = js.native
 }
-

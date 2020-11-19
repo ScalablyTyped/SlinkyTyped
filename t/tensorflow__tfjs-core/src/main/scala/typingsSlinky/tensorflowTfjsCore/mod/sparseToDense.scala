@@ -6,11 +6,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core", "sparseToDense")
 @js.native
 object sparseToDense extends js.Object {
+  
   def apply[R /* <: typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank */](
     sparseIndices: TensorLike,
     sparseValues: TensorLike,
@@ -80,4 +81,3 @@ object sparseToDense extends js.Object {
     defaultValue: Scalar
   ): Tensor[R] = js.native
 }
-

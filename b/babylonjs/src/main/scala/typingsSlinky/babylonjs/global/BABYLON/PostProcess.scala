@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.BABYLON.PostProcessOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.PostProcess")
 @js.native
@@ -34,25 +34,7 @@ class PostProcess protected ()
     fragmentUrl: String,
     parameters: Nullable[js.Array[String]],
     samplers: Nullable[js.Array[String]],
-    options: Double,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    samplingMode: js.UndefOr[Double],
-    engine: js.UndefOr[typingsSlinky.babylonjs.BABYLON.Engine],
-    reusable: js.UndefOr[Boolean],
-    defines: js.UndefOr[Nullable[String]],
-    textureType: js.UndefOr[Double],
-    vertexUrl: js.UndefOr[String],
-    indexParameters: js.UndefOr[js.Any],
-    blockCompilation: js.UndefOr[Boolean],
-    textureFormat: js.UndefOr[Double]
-  ) = this()
-  def this(
-    /** Name of the PostProcess. */
-  name: String,
-    fragmentUrl: String,
-    parameters: Nullable[js.Array[String]],
-    samplers: Nullable[js.Array[String]],
-    options: PostProcessOptions,
+    options: Double | PostProcessOptions,
     camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
     samplingMode: js.UndefOr[Double],
     engine: js.UndefOr[typingsSlinky.babylonjs.BABYLON.Engine],
@@ -65,4 +47,3 @@ class PostProcess protected ()
     textureFormat: js.UndefOr[Double]
   ) = this()
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.pullStream
 import typingsSlinky.pullStream.mod.Source
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pull-stream/sources/once", JSImport.Namespace)
 @js.native
 object onceMod extends js.Object {
+  
   /**
     * Create a stream with a single value.
     */
@@ -16,4 +17,3 @@ object onceMod extends js.Object {
   def apply[T](value: T, onAbort: js.Function1[/* err */ js.UndefOr[js.Error | Null], _]): Source[T] = js.native
   def apply[T](value: js.UndefOr[scala.Nothing], onAbort: js.Function1[/* err */ js.UndefOr[js.Error | Null], _]): Source[T] = js.native
 }
-

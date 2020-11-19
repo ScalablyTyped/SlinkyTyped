@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.sesMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "SES")
 @js.native
@@ -14,4 +14,3 @@ class SES ()
   extends typingsSlinky.awsSdk.mod.SES {
   def this(options: ClientConfiguration) = this()
 }
-

@@ -9,11 +9,35 @@ import typingsSlinky.electronPublish.mod.PublishOptions
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("electron-builder", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  val DEFAULT_TARGET: /* "default" */ String = js.native
+  
+  val DIR_TARGET: /* "dir" */ String = js.native
+  
+  def archFromString(name: String): Arch = js.native
+  
+  def build(): js.Promise[js.Array[String]] = js.native
+  def build(rawOptions: CliOptions): js.Promise[js.Array[String]] = js.native
+  
+  def buildForge(forgeOptions: ForgeOptions, options: PackagerOptions): js.Promise[js.Array[String]] = js.native
+  
+  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform]): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
+  def createTargets(
+    platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform],
+    `type`: js.UndefOr[scala.Nothing],
+    arch: String
+  ): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
+  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
+  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: String, arch: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
+  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: Null, arch: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
+  
+  def getArchSuffix(arch: Arch): String = js.native
+  
   @js.native
   class AppInfo protected ()
     extends typingsSlinky.appBuilderLib.mod.AppInfo {
@@ -34,6 +58,21 @@ object mod extends js.Object {
       buildVersion: Null,
       platformSpecificOptions: PlatformSpecificBuildOptions
     ) = this()
+  }
+  
+  @js.native
+  object Arch extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.builderUtil.archMod.Arch with Double] = js.native
+    
+    /* 3 */ val arm64: typingsSlinky.builderUtil.archMod.Arch.arm64 with Double = js.native
+    
+    /* 2 */ val armv7l: typingsSlinky.builderUtil.archMod.Arch.armv7l with Double = js.native
+    
+    /* 0 */ val ia32: typingsSlinky.builderUtil.archMod.Arch.ia32 with Double = js.native
+    
+    /* 1 */ val x64: typingsSlinky.builderUtil.archMod.Arch.x64 with Double = js.native
   }
   
   @js.native
@@ -61,6 +100,20 @@ object mod extends js.Object {
       nodeName: typingsSlinky.node.processMod.global.NodeJS.Platform
     ) = this()
   }
+  /* static members */
+  @js.native
+  object Platform extends js.Object {
+    
+    var LINUX: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    
+    var MAC: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    
+    var WINDOWS: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    
+    def current(): typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    
+    def fromString(name: String): typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+  }
   
   @js.native
   class PublishManager protected ()
@@ -79,42 +132,4 @@ object mod extends js.Object {
     protected def this(name: String) = this()
     protected def this(name: String, isAsyncSupported: Boolean) = this()
   }
-  
-  val DEFAULT_TARGET: /* "default" */ String = js.native
-  val DIR_TARGET: /* "dir" */ String = js.native
-  def archFromString(name: String): Arch = js.native
-  def build(): js.Promise[js.Array[String]] = js.native
-  def build(rawOptions: CliOptions): js.Promise[js.Array[String]] = js.native
-  def buildForge(forgeOptions: ForgeOptions, options: PackagerOptions): js.Promise[js.Array[String]] = js.native
-  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform]): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
-  def createTargets(
-    platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform],
-    `type`: js.UndefOr[scala.Nothing],
-    arch: String
-  ): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
-  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
-  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: String, arch: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
-  def createTargets(platforms: js.Array[typingsSlinky.appBuilderLib.mod.Platform], `type`: Null, arch: String): Map[typingsSlinky.appBuilderLib.mod.Platform, Map[Arch, js.Array[String]]] = js.native
-  def getArchSuffix(arch: Arch): String = js.native
-  @js.native
-  object Arch extends js.Object {
-    /* 3 */ val arm64: typingsSlinky.builderUtil.archMod.Arch.arm64 with Double = js.native
-    /* 2 */ val armv7l: typingsSlinky.builderUtil.archMod.Arch.armv7l with Double = js.native
-    /* 0 */ val ia32: typingsSlinky.builderUtil.archMod.Arch.ia32 with Double = js.native
-    /* 1 */ val x64: typingsSlinky.builderUtil.archMod.Arch.x64 with Double = js.native
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[typingsSlinky.builderUtil.archMod.Arch with Double] = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object Platform extends js.Object {
-    var LINUX: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
-    var MAC: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
-    var WINDOWS: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
-    def current(): typingsSlinky.appBuilderLib.coreMod.Platform = js.native
-    def fromString(name: String): typingsSlinky.appBuilderLib.coreMod.Platform = js.native
-  }
-  
 }
-

@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.21.0: deleted
@@ -26,19 +26,18 @@ class EnumerationType protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "javaactions.EnumerationType")
 @js.native
 object EnumerationType extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new EnumerationType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.EnumerationType = js.native
+  
   /**
     * Creates and returns a new EnumerationType instance in the SDK and on the server.
     * The new EnumerationType will be automatically stored in the 'type' property
@@ -48,6 +47,7 @@ object EnumerationType extends js.Object {
     *  6.7.0 to 7.20.0
     */
   def createInBasicParameterTypeUnderType(container: typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.BasicParameterType): typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.EnumerationType = js.native
+  
   /**
     * Creates and returns a new EnumerationType instance in the SDK and on the server.
     * The new EnumerationType will be automatically stored in the 'javaType' property
@@ -57,6 +57,7 @@ object EnumerationType extends js.Object {
     *  6.6.0 to 6.6.0
     */
   def createInJavaActionParameterUnderJavaType(container: typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.JavaActionParameter): typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.EnumerationType = js.native
+  
   /**
     * Creates and returns a new EnumerationType instance in the SDK and on the server.
     * The new EnumerationType will be automatically stored in the 'javaReturnType' property
@@ -66,5 +67,8 @@ object EnumerationType extends js.Object {
     *  6.6.0 to 7.20.0
     */
   def createInJavaActionUnderJavaReturnType(container: typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.JavaAction): typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.EnumerationType = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

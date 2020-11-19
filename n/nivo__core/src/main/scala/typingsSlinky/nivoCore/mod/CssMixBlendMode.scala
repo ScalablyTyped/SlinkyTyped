@@ -2,7 +2,7 @@ package typingsSlinky.nivoCore.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.nivoCore.nivoCoreStrings.normal
@@ -23,39 +23,53 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.nivoCore.nivoCoreStrings.luminosity
 */
 trait CssMixBlendMode extends js.Object
-
 object CssMixBlendMode {
+  
   @scala.inline
   def color: typingsSlinky.nivoCore.nivoCoreStrings.color = "color".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.color]
+  
   @scala.inline
   def `color-burn`: typingsSlinky.nivoCore.nivoCoreStrings.`color-burn` = "color-burn".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`color-burn`]
+  
   @scala.inline
   def `color-dodge`: typingsSlinky.nivoCore.nivoCoreStrings.`color-dodge` = "color-dodge".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`color-dodge`]
+  
   @scala.inline
   def darken: typingsSlinky.nivoCore.nivoCoreStrings.darken = "darken".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.darken]
+  
   @scala.inline
   def difference: typingsSlinky.nivoCore.nivoCoreStrings.difference = "difference".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.difference]
+  
   @scala.inline
   def exclusion: typingsSlinky.nivoCore.nivoCoreStrings.exclusion = "exclusion".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.exclusion]
+  
   @scala.inline
   def `hard-light`: typingsSlinky.nivoCore.nivoCoreStrings.`hard-light` = "hard-light".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`hard-light`]
+  
   @scala.inline
   def hue: typingsSlinky.nivoCore.nivoCoreStrings.hue = "hue".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.hue]
+  
   @scala.inline
   def lighten: typingsSlinky.nivoCore.nivoCoreStrings.lighten = "lighten".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.lighten]
+  
   @scala.inline
   def luminosity: typingsSlinky.nivoCore.nivoCoreStrings.luminosity = "luminosity".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.luminosity]
+  
   @scala.inline
   def multiply: typingsSlinky.nivoCore.nivoCoreStrings.multiply = "multiply".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.multiply]
+  
   @scala.inline
   def normal: typingsSlinky.nivoCore.nivoCoreStrings.normal = "normal".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.normal]
+  
   @scala.inline
   def overlay: typingsSlinky.nivoCore.nivoCoreStrings.overlay = "overlay".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.overlay]
+  
   @scala.inline
   def saturation: typingsSlinky.nivoCore.nivoCoreStrings.saturation = "saturation".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.saturation]
+  
   @scala.inline
   def screen: typingsSlinky.nivoCore.nivoCoreStrings.screen = "screen".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.screen]
+  
   @scala.inline
   def `soft-light`: typingsSlinky.nivoCore.nivoCoreStrings.`soft-light` = "soft-light".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`soft-light`]
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.FeatureFilter
 import typingsSlinky.arcgisJsApi.esri.FeatureFilterProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/views/layers/support/FeatureFilter", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends FeatureFilter {
   def this(properties: FeatureFilterProperties) = this()
 }
-

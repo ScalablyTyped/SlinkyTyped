@@ -2,15 +2,17 @@ package typingsSlinky.bowser.mod.Parser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Parser extends js.Object {
+  
   /**
     * Get parsed browser object
     * @return {BrowserDetails} Browser's details
     */
   def getBrowser(): BrowserDetails = js.native
+  
   /**
     * Get browser's name
     * @param {Boolean} [toLowerCase] return lower-cased value
@@ -18,16 +20,19 @@ trait Parser extends js.Object {
     */
   def getBrowserName(): String = js.native
   def getBrowserName(toLowerCase: Boolean): String = js.native
+  
   /**
     * Get browser's version
     * @return {String} version of browser
     */
   def getBrowserVersion(): String = js.native
+  
   /**
     * Get parsed engine
     * @returns {EngineDetails}
     */
   def getEngine(): EngineDetails = js.native
+  
   /**
     * Get OS
     * @return {OSDetails} - OS Details
@@ -39,6 +44,7 @@ trait Parser extends js.Object {
     * // }
     */
   def getOS(): OSDetails = js.native
+  
   /**
     * Get OS name
     * @param {Boolean} [toLowerCase] return lower-cased value
@@ -46,32 +52,38 @@ trait Parser extends js.Object {
     */
   def getOSName(): String = js.native
   def getOSName(toLowerCase: Boolean): String = js.native
+  
   /**
     * Get OS version
     * @return {String} full version with dots ('10.11.12', '5.6', etc)
     */
   def getOSVersion(): String = js.native
+  
   /**
     * Get parsed platform
     * @returns {PlatformDetails}
     */
   def getPlatform(): PlatformDetails = js.native
+  
   /**
     * Get platform name
     * @param {boolean} toLowerCase
     */
   def getPlatformType(): String = js.native
   def getPlatformType(toLowerCase: Boolean): String = js.native
+  
   /**
     * Get parsed result
     * @return {ParsedResult}
     */
   def getResult(): ParsedResult = js.native
+  
   /**
     * Get UserAgent string of current Parser instance
     * @return {String} User-Agent String of the current <Parser> object
     */
   def getUA(): String = js.native
+  
   /**
     * Is anything? Check if the browser is called "anything",
     * the OS called "anything" or the platform called "anything"
@@ -79,6 +91,7 @@ trait Parser extends js.Object {
     * @returns {Boolean}
     */
   def is(anything: js.Any): Boolean = js.native
+  
   /**
     * Check if the browser name equals the passed string
     * @param browserName The string to compare with the browser name
@@ -87,30 +100,36 @@ trait Parser extends js.Object {
     */
   def isBrowser(browserName: String): Boolean = js.native
   def isBrowser(browserName: String, includingAlias: Boolean): Boolean = js.native
+  
   /**
     * Parse full information about the browser
     */
   def parse(): Unit = js.native
+  
   /**
     * Get parsed browser object
     * @returns {BrowserDetails}
     */
   def parseBrowser(): BrowserDetails = js.native
+  
   /**
     * Get parsed engine
     * @returns {EngineDetails}
     */
   def parseEngine(): EngineDetails = js.native
+  
   /**
     * Parse OS and save it to this.parsedResult.os
     * @returns {OSDetails}
     */
   def parseOS(): OSDetails = js.native
+  
   /**
     * Get parsed platform
     * @returns {PlatformDetails}
     */
   def parsePlatform(): PlatformDetails = js.native
+  
   /**
     * Check if parsed browser matches certain conditions
     *
@@ -130,12 +149,14 @@ trait Parser extends js.Object {
     * if (browser.check({desktop: { chrome: '>118.01.1322' } }))
     */
   def satisfies(checkTree: checkTree): js.UndefOr[Boolean] = js.native
+  
   /**
     * Check if any of the given values satifies `.is(anything)`
     * @param {string[]} anythings
     * @returns {boolean} true if at least one condition is satisfied, false otherwise.
     */
   def some(anythings: js.Array[String]): js.UndefOr[Boolean] = js.native
+  
   /**
     * Test a UA string for a regexp
     * @param regex
@@ -143,4 +164,3 @@ trait Parser extends js.Object {
     */
   def test(regex: js.RegExp): Boolean = js.native
 }
-

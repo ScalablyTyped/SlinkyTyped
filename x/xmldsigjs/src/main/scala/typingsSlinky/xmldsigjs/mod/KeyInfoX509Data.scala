@@ -2,7 +2,7 @@ package typingsSlinky.xmldsigjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xmldsigjs", "KeyInfoX509Data")
 @js.native
@@ -15,4 +15,3 @@ class KeyInfoX509Data ()
     includeOptions: typingsSlinky.xmldsigjs.x509DataMod.X509IncludeOption
   ) = this()
 }
-

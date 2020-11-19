@@ -5,14 +5,15 @@ import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.react.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Fragment {
+  
   @JSImport("@wordpress/element", "Fragment")
   @js.native
   object component extends js.Object
   
   def withProps(p: Children): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Fragment.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
-

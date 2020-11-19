@@ -7,27 +7,29 @@ import typingsSlinky.rbx.exoticMod.FromReactType
 import typingsSlinky.rbx.tagGroupMod.TagGroupProps
 import typingsSlinky.rbx.typesMod.Prefer
 import typingsSlinky.react.mod.ComponentProps
+import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for (typingsSlinky.rbx.typesMod.Prefer[
 typingsSlinky.rbx.anon.As[TAsComponent] with typingsSlinky.rbx.tagGroupMod.TagGroupProps, 
 typingsSlinky.react.mod.ComponentProps[TAsComponent]]) with (typingsSlinky.react.mod.RefAttributes[TAsComponent | typingsSlinky.rbx.exoticMod.FromReactType[TAsComponent]]) because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
 object TagGroup {
+  
   @JSImport("rbx/elements/tag/tag-group", "TagGroup")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[/* <: typingsSlinky.react.mod.ReactType[js.Any] */ TAsComponent] (val args: js.Array[js.Any])
+  class Builder[TAsComponent /* <: ReactType[js.Any] */] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object]
   
-  def apply[/* <: typingsSlinky.react.mod.ReactType[js.Any] */ TAsComponent](
+  def apply[TAsComponent /* <: ReactType[js.Any] */](
     p: (Prefer[As[TAsComponent] with TagGroupProps, ComponentProps[TAsComponent]]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
   ): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[/* <: typingsSlinky.react.mod.ReactType[js.Any] */ TAsComponent](companion: TagGroup.type): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, js.Dictionary.empty))()
+  
+  implicit def make[TAsComponent /* <: ReactType[js.Any] */](companion: TagGroup.type): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, js.Dictionary.empty))()
 }
-

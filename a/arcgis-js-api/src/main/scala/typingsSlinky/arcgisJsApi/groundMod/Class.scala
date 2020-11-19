@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Ground
 import typingsSlinky.arcgisJsApi.esri.GroundProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/Ground", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Ground {
   def this(properties: GroundProperties) = this()
 }
-

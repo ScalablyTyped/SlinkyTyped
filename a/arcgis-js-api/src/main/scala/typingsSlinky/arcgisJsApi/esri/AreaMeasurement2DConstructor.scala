@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AreaMeasurement2DConstructor
@@ -15,4 +15,3 @@ trait AreaMeasurement2DConstructor
   */
 Instantiable0[AreaMeasurement2D]
      with Instantiable1[/* properties */ AreaMeasurement2DProperties, AreaMeasurement2D]
-

@@ -6,7 +6,7 @@ import typingsSlinky.graphql.maybeMod.Maybe
 import typingsSlinky.graphql.schemaMod.GraphQLSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/validation/ValidationContext", "SDLValidationContext")
 @js.native
@@ -16,6 +16,6 @@ class SDLValidationContext protected () extends ASTValidationContext {
     schema: Maybe[GraphQLSchema],
     onError: js.Function1[/* err */ GraphQLError, Unit]
   ) = this()
+  
   def getSchema(): Maybe[GraphQLSchema] = js.native
 }
-

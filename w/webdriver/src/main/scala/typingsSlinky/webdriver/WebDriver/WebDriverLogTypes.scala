@@ -3,7 +3,7 @@ package typingsSlinky.webdriver.WebDriver
 import typingsSlinky.webdriver.webdriverStrings.info_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.webdriver.webdriverStrings.trace
@@ -14,19 +14,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.webdriver.webdriverStrings.silent
 */
 trait WebDriverLogTypes extends js.Object
-
 object WebDriverLogTypes {
+  
   @scala.inline
   def debug: typingsSlinky.webdriver.webdriverStrings.debug = "debug".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.debug]
+  
   @scala.inline
   def error: typingsSlinky.webdriver.webdriverStrings.error = "error".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.error]
+  
   @scala.inline
   def info: info_ = "info".asInstanceOf[info_]
+  
   @scala.inline
   def silent: typingsSlinky.webdriver.webdriverStrings.silent = "silent".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.silent]
+  
   @scala.inline
   def trace: typingsSlinky.webdriver.webdriverStrings.trace = "trace".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.trace]
+  
   @scala.inline
   def warn: typingsSlinky.webdriver.webdriverStrings.warn = "warn".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.warn]
 }
-

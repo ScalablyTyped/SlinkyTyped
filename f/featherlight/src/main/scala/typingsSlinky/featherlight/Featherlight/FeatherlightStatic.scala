@@ -8,7 +8,7 @@ import typingsSlinky.featherlight.JQuery
 import typingsSlinky.jquery.JQueryPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FeatherlightStatic
@@ -22,27 +22,38 @@ trait FeatherlightStatic
       /* config */ Config, 
       typingsSlinky.featherlight.Featherlight.Featherlight
     ] {
-  var autoBind: Boolean | String = js.native
-  var contentFilters: ContentFilters = js.native
-  var defaults: Config = js.native
-  var functionAttributes: js.Array[String] = js.native
-  var id: Double = js.native
+  
   def apply(): typingsSlinky.featherlight.Featherlight.Featherlight = js.native
   def apply($content: String): typingsSlinky.featherlight.Featherlight.Featherlight = js.native
   def apply($content: String, config: Config): typingsSlinky.featherlight.Featherlight.Featherlight = js.native
   def apply($content: JQuery): typingsSlinky.featherlight.Featherlight.Featherlight = js.native
   def apply($content: JQuery, config: Config): typingsSlinky.featherlight.Featherlight.Featherlight = js.native
   def apply(config: Config): typingsSlinky.featherlight.Featherlight.Featherlight = js.native
+  
   def attach($source: JQuery): JQuery = js.native
   def attach($source: JQuery, $content: String): JQuery = js.native
   def attach($source: JQuery, $content: String, config: Config): JQuery = js.native
   def attach($source: JQuery, $content: JQuery): JQuery = js.native
   def attach($source: JQuery, $content: JQuery, config: Config): JQuery = js.native
   def attach($source: JQuery, config: Config): JQuery = js.native
+  
+  var autoBind: Boolean | String = js.native
+  
   def close(): JQueryPromise[JQuery] = js.native
+  
+  var contentFilters: ContentFilters = js.native
+  
   def current(): typingsSlinky.featherlight.Featherlight.Featherlight = js.native
+  
+  var defaults: Config = js.native
+  
   def extend(child: js.Any, defaults: js.Any): js.Any = js.native
+  
+  var functionAttributes: js.Array[String] = js.native
+  
+  var id: Double = js.native
+  
   def opened(): js.Array[typingsSlinky.featherlight.Featherlight.Featherlight] = js.native
+  
   def readElementConfig(element: HTMLElement, namespace: String): js.Any = js.native
 }
-

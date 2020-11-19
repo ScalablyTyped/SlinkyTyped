@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.BABYLON.DeepImmutable
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.Quaternion")
 @js.native
@@ -21,9 +21,39 @@ class Quaternion ()
   x: Double) = this()
   def this(
     /** defines the first component (0 by default) */
+  x: js.UndefOr[scala.Nothing],
+    /** defines the second component (0 by default) */
+  y: Double
+  ) = this()
+  def this(
+    /** defines the first component (0 by default) */
   x: Double,
     /** defines the second component (0 by default) */
   y: Double
+  ) = this()
+  def this(
+    /** defines the first component (0 by default) */
+  x: js.UndefOr[scala.Nothing],
+    /** defines the second component (0 by default) */
+  y: js.UndefOr[scala.Nothing],
+    /** defines the third component (0 by default) */
+  z: Double
+  ) = this()
+  def this(
+    /** defines the first component (0 by default) */
+  x: js.UndefOr[scala.Nothing],
+    /** defines the second component (0 by default) */
+  y: Double,
+    /** defines the third component (0 by default) */
+  z: Double
+  ) = this()
+  def this(
+    /** defines the first component (0 by default) */
+  x: Double,
+    /** defines the second component (0 by default) */
+  y: js.UndefOr[scala.Nothing],
+    /** defines the third component (0 by default) */
+  z: Double
   ) = this()
   def this(
     /** defines the first component (0 by default) */
@@ -32,6 +62,76 @@ class Quaternion ()
   y: Double,
     /** defines the third component (0 by default) */
   z: Double
+  ) = this()
+  def this(
+    /** defines the first component (0 by default) */
+  x: js.UndefOr[scala.Nothing],
+    /** defines the second component (0 by default) */
+  y: js.UndefOr[scala.Nothing],
+    /** defines the third component (0 by default) */
+  z: js.UndefOr[scala.Nothing],
+    /** defines the fourth component (1.0 by default) */
+  w: Double
+  ) = this()
+  def this(
+    /** defines the first component (0 by default) */
+  x: js.UndefOr[scala.Nothing],
+    /** defines the second component (0 by default) */
+  y: js.UndefOr[scala.Nothing],
+    /** defines the third component (0 by default) */
+  z: Double,
+    /** defines the fourth component (1.0 by default) */
+  w: Double
+  ) = this()
+  def this(
+    /** defines the first component (0 by default) */
+  x: js.UndefOr[scala.Nothing],
+    /** defines the second component (0 by default) */
+  y: Double,
+    /** defines the third component (0 by default) */
+  z: js.UndefOr[scala.Nothing],
+    /** defines the fourth component (1.0 by default) */
+  w: Double
+  ) = this()
+  def this(
+    /** defines the first component (0 by default) */
+  x: js.UndefOr[scala.Nothing],
+    /** defines the second component (0 by default) */
+  y: Double,
+    /** defines the third component (0 by default) */
+  z: Double,
+    /** defines the fourth component (1.0 by default) */
+  w: Double
+  ) = this()
+  def this(
+    /** defines the first component (0 by default) */
+  x: Double,
+    /** defines the second component (0 by default) */
+  y: js.UndefOr[scala.Nothing],
+    /** defines the third component (0 by default) */
+  z: js.UndefOr[scala.Nothing],
+    /** defines the fourth component (1.0 by default) */
+  w: Double
+  ) = this()
+  def this(
+    /** defines the first component (0 by default) */
+  x: Double,
+    /** defines the second component (0 by default) */
+  y: js.UndefOr[scala.Nothing],
+    /** defines the third component (0 by default) */
+  z: Double,
+    /** defines the fourth component (1.0 by default) */
+  w: Double
+  ) = this()
+  def this(
+    /** defines the first component (0 by default) */
+  x: Double,
+    /** defines the second component (0 by default) */
+  y: Double,
+    /** defines the third component (0 by default) */
+  z: js.UndefOr[scala.Nothing],
+    /** defines the fourth component (1.0 by default) */
+  w: Double
   ) = this()
   def this(
     /** defines the first component (0 by default) */
@@ -44,11 +144,11 @@ class Quaternion ()
   w: Double
   ) = this()
 }
-
 /* static members */
 @JSGlobal("BABYLON.Quaternion")
 @js.native
 object Quaternion extends js.Object {
+  
   /**
     * Checks if the two quaternions are close to each other
     * @param quat0 defines the first quaternion to check
@@ -59,6 +159,7 @@ object Quaternion extends js.Object {
     quat0: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Quaternion],
     quat1: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Quaternion]
   ): Boolean = js.native
+  
   /**
     * Returns the dot product (float) between the quaternions "left" and "right"
     * @param left defines the left operand
@@ -69,6 +170,7 @@ object Quaternion extends js.Object {
     left: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Quaternion],
     right: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Quaternion]
   ): Double = js.native
+  
   /**
     * Creates a new quaternion from data stored into an array
     * @param array defines the data source
@@ -77,6 +179,7 @@ object Quaternion extends js.Object {
     */
   def FromArray(array: DeepImmutable[ArrayLike[Double]]): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Create a quaternion from Euler rotation angles
     * @param x Pitch
@@ -85,6 +188,7 @@ object Quaternion extends js.Object {
     * @returns the new Quaternion
     */
   def FromEulerAngles(x: Double, y: Double, z: Double): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Updates a quaternion from Euler rotation angles
     * @param x Pitch
@@ -94,12 +198,14 @@ object Quaternion extends js.Object {
     * @returns the updated quaternion
     */
   def FromEulerAnglesToRef(x: Double, y: Double, z: Double, result: typingsSlinky.babylonjs.BABYLON.Quaternion): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Create a quaternion from Euler rotation vector
     * @param vec the Euler vector (x Pitch, y Yaw, z Roll)
     * @returns the new Quaternion
     */
   def FromEulerVector(vec: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3]): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Updates a quaternion from Euler rotation vector
     * @param vec the Euler vector (x Pitch, y Yaw, z Roll)
@@ -110,12 +216,14 @@ object Quaternion extends js.Object {
     vec: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3],
     result: typingsSlinky.babylonjs.BABYLON.Quaternion
   ): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Creates a new quaternion from a rotation matrix
     * @param matrix defines the source matrix
     * @returns a new quaternion created from the given rotation matrix values
     */
   def FromRotationMatrix(matrix: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Matrix]): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Updates the given quaternion with the given rotation matrix values
     * @param matrix defines the source matrix
@@ -125,6 +233,7 @@ object Quaternion extends js.Object {
     matrix: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Matrix],
     result: typingsSlinky.babylonjs.BABYLON.Quaternion
   ): Unit = js.native
+  
   /**
     * Interpolate between two quaternions using Hermite interpolation
     * @param value1 defines first quaternion
@@ -141,17 +250,20 @@ object Quaternion extends js.Object {
     tangent2: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Quaternion],
     amount: Double
   ): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Creates an identity quaternion
     * @returns the identity quaternion
     */
   def Identity(): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Inverse a given quaternion
     * @param q defines the source quaternion
     * @returns a new quaternion as the inverted current quaternion
     */
   def Inverse(q: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Quaternion]): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Inverse a given quaternion
     * @param q defines the source quaternion
@@ -159,12 +271,14 @@ object Quaternion extends js.Object {
     * @returns the result quaternion
     */
   def InverseToRef(q: typingsSlinky.babylonjs.BABYLON.Quaternion, result: typingsSlinky.babylonjs.BABYLON.Quaternion): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Gets a boolean indicating if the given quaternion is identity
     * @param quaternion defines the quaternion to check
     * @returns true if the quaternion is identity
     */
   def IsIdentity(quaternion: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Quaternion]): Boolean = js.native
+  
   /**
     * Creates a new quaternion from the given Euler float angles expressed in z-x-z orientation
     * @param alpha defines the rotation around first axis
@@ -173,6 +287,7 @@ object Quaternion extends js.Object {
     * @returns the new quaternion
     */
   def RotationAlphaBetaGamma(alpha: Double, beta: Double, gamma: Double): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Creates a new quaternion from the given Euler float angles expressed in z-x-z orientation and stores it in the target quaternion
     * @param alpha defines the rotation around first axis
@@ -181,6 +296,7 @@ object Quaternion extends js.Object {
     * @param result defines the target quaternion
     */
   def RotationAlphaBetaGammaToRef(alpha: Double, beta: Double, gamma: Double, result: typingsSlinky.babylonjs.BABYLON.Quaternion): Unit = js.native
+  
   /**
     * Creates a quaternion from a rotation around an axis
     * @param axis defines the axis to use
@@ -188,6 +304,7 @@ object Quaternion extends js.Object {
     * @returns a new quaternion created from the given axis (Vector3) and angle in radians (float)
     */
   def RotationAxis(axis: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3], angle: Double): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Creates a rotation around an axis and stores it into the given quaternion
     * @param axis defines the axis to use
@@ -200,6 +317,7 @@ object Quaternion extends js.Object {
     angle: Double,
     result: typingsSlinky.babylonjs.BABYLON.Quaternion
   ): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Creates a new quaternion containing the rotation value to reach the target (axis1, axis2, axis3) orientation as a rotated XYZ system (axis1, axis2 and axis3 are normalized during this operation)
     * @param axis1 defines the first axis
@@ -212,6 +330,7 @@ object Quaternion extends js.Object {
     axis2: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3],
     axis3: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3]
   ): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Creates a rotation value to reach the target (axis1, axis2, axis3) orientation as a rotated XYZ system (axis1, axis2 and axis3 are normalized during this operation) and stores it in the target quaternion
     * @param axis1 defines the first axis
@@ -225,6 +344,7 @@ object Quaternion extends js.Object {
     axis3: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3],
     ref: typingsSlinky.babylonjs.BABYLON.Quaternion
   ): Unit = js.native
+  
   /**
     * Creates a new quaternion from the given Euler float angles (y, x, z)
     * @param yaw defines the rotation around Y axis
@@ -233,6 +353,7 @@ object Quaternion extends js.Object {
     * @returns the new quaternion
     */
   def RotationYawPitchRoll(yaw: Double, pitch: Double, roll: Double): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Creates a new rotation from the given Euler float angles (y, x, z) and stores it in the target quaternion
     * @param yaw defines the rotation around Y axis
@@ -241,6 +362,7 @@ object Quaternion extends js.Object {
     * @param result defines the target quaternion
     */
   def RotationYawPitchRollToRef(yaw: Double, pitch: Double, roll: Double, result: typingsSlinky.babylonjs.BABYLON.Quaternion): Unit = js.native
+  
   /**
     * Interpolates between two quaternions
     * @param left defines first quaternion
@@ -253,6 +375,7 @@ object Quaternion extends js.Object {
     right: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Quaternion],
     amount: Double
   ): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
   /**
     * Interpolates between two quaternions and stores it into a target quaternion
     * @param left defines first quaternion
@@ -266,10 +389,10 @@ object Quaternion extends js.Object {
     amount: Double,
     result: typingsSlinky.babylonjs.BABYLON.Quaternion
   ): Unit = js.native
+  
   /**
     * Creates an empty quaternion
     * @returns a new quaternion set to (0.0, 0.0, 0.0)
     */
   def Zero(): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
 }
-

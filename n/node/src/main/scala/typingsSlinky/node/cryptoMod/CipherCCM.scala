@@ -4,11 +4,12 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.anon.PlaintextLength
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CipherCCM extends Cipher {
+  
   def getAuthTag(): Buffer = js.native
+  
   def setAAD(buffer: Buffer, options: PlaintextLength): this.type = js.native
 }
-

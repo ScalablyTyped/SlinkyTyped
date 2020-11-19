@@ -7,7 +7,7 @@ import typingsSlinky.graphql.graphqlStrings.SCALAR
 import typingsSlinky.graphql.graphqlStrings.UNION
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.graphql.getIntrospectionQueryMod.IntrospectionScalarType
@@ -17,8 +17,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.graphql.getIntrospectionQueryMod.IntrospectionEnumType
 */
 trait IntrospectionOutputType extends js.Object
-
 object IntrospectionOutputType {
+  
   @scala.inline
   def IntrospectionUnionType(
     kind: UNION,
@@ -28,6 +28,7 @@ object IntrospectionOutputType {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], possibleTypes = possibleTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrospectionOutputType]
   }
+  
   @scala.inline
   def IntrospectionInterfaceType(
     fields: js.Array[IntrospectionField],
@@ -41,16 +42,19 @@ object IntrospectionOutputType {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], interfaces = interfaces.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], possibleTypes = possibleTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrospectionOutputType]
   }
+  
   @scala.inline
   def IntrospectionScalarType(kind: SCALAR, name: String): IntrospectionOutputType = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrospectionOutputType]
   }
+  
   @scala.inline
   def IntrospectionEnumType(enumValues: js.Array[IntrospectionEnumValue], kind: ENUM, name: String): IntrospectionOutputType = {
     val __obj = js.Dynamic.literal(enumValues = enumValues.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrospectionOutputType]
   }
+  
   @scala.inline
   def IntrospectionObjectType(
     fields: js.Array[IntrospectionField],
@@ -62,4 +66,3 @@ object IntrospectionOutputType {
     __obj.asInstanceOf[IntrospectionOutputType]
   }
 }
-

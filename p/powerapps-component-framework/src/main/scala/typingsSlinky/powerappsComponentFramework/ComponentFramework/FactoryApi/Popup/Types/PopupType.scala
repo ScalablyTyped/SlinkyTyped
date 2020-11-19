@@ -2,7 +2,7 @@ package typingsSlinky.powerappsComponentFramework.ComponentFramework.FactoryApi.
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Root popup in the popup stack
@@ -14,11 +14,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`2`
 */
 trait PopupType extends js.Object
-
 object PopupType {
+  
   @scala.inline
   def `1`: typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`1` = 1.asInstanceOf[typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`1`]
+  
   @scala.inline
   def `2`: typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`2` = 2.asInstanceOf[typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`2`]
 }
-

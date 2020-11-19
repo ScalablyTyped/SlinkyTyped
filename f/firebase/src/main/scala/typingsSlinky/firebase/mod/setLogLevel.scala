@@ -2,11 +2,12 @@ package typingsSlinky.firebase.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "setLogLevel")
 @js.native
 object setLogLevel extends js.Object {
+  
   /**
     * Sets log level for all Firebase packages.
     *
@@ -16,4 +17,3 @@ object setLogLevel extends js.Object {
     */
   def apply(logLevel: LogLevel): Unit = js.native
 }
-

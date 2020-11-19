@@ -4,10 +4,11 @@ import typingsSlinky.d3Force.d3ForceStrings.end
 import typingsSlinky.d3Force.d3ForceStrings.tick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.UndefOr[SimulationLinkDatum[NodeDatum]] */] extends js.Object {
+  
   /**
     * Return the current alpha of the simulation, which defaults to 1.
     */
@@ -19,6 +20,7 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     * @param alpha Current alpha of simulation.
     */
   def alpha(alpha: Double): this.type = js.native
+  
   /**
     * Return the current alpha decay rate, which defaults to 0.0228… = 1 - pow(0.001, 1 / 300) where 0.001 is the default minimum alpha.
     */
@@ -37,6 +39,7 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     * @param decay Alpha decay rate.
     */
   def alphaDecay(decay: Double): this.type = js.native
+  
   /**
     * Return the current minimum alpha value, which defaults to 0.001.
     */
@@ -49,6 +52,7 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     * @param min Minimum alpha of simulation.
     */
   def alphaMin(min: Double): this.type = js.native
+  
   /**
     * Returns the current target alpha value, which defaults to 0.
     */
@@ -60,6 +64,7 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     * @param target Alpha target value.
     */
   def alphaTarget(target: Double): this.type = js.native
+  
   /**
     * Return the node closest to the position [x,y] with the given search radius.
     * If radius is not specified, it defaults to infinity.
@@ -71,6 +76,7 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     */
   def find(x: Double, y: Double): js.UndefOr[NodeDatum] = js.native
   def find(x: Double, y: Double, radius: Double): js.UndefOr[NodeDatum] = js.native
+  
   /**
     * Remove a previously registered force.
     *
@@ -96,6 +102,7 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     * @param name Name of the registered force.
     */
   def force[F /* <: Force[NodeDatum, LinkDatum] */](name: String): js.UndefOr[F] = js.native
+  
   /**
     * Returns the simulation’s array of nodes as specified to the constructor.
     */
@@ -128,6 +135,7 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     * the simulation does not make a defensive copy of the specified array.
     */
   def nodes(nodesData: js.Array[NodeDatum]): this.type = js.native
+  
   def on(typenames: String): this.type = js.native
   def on(typenames: String, listener: js.ThisFunction0[/* this */ this.type, Unit]): this.type = js.native
   @JSName("on")
@@ -181,17 +189,20 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     */
   @JSName("on")
   def on_tick_Union(typenames: tick): js.UndefOr[js.ThisFunction0[/* this */ Simulation[NodeDatum, LinkDatum], Unit]] = js.native
+  
   /**
     * Restart the simulation’s internal timer and return the simulation.
     * In conjunction with simulation.alphaTarget or simulation.alpha, this method can be used to “reheat” the simulation during interaction,
     * such as when dragging a node, or to resume the simulation after temporarily pausing it with simulation.stop.
     */
   def restart(): this.type = js.native
+  
   /**
     * Stop the simulation’s internal timer, if it is running, and return the simulation. If the timer is already stopped, this method does nothing.
     * This method is useful for running the simulation manually; see simulation.tick.
     */
   def stop(): this.type = js.native
+  
   /**
     * Manually steps the simulation by the specified number of *iterations*, and returns the simulation. If *iterations* is not specified, it defaults to 1 (single step).
     *
@@ -204,6 +215,7 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     */
   def tick(): Unit = js.native
   def tick(iterations: Double): Unit = js.native
+  
   /**
     * Return the current target alpha value, which defaults to 0.4.
     */
@@ -220,4 +232,3 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     */
   def velocityDecay(decay: Double): this.type = js.native
 }
-

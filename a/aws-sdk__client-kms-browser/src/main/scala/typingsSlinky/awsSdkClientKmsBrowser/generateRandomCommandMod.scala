@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/commands/GenerateRandomCommand", JSImport.Namespace)
 @js.native
 object generateRandomCommandMod extends js.Object {
+  
   @js.native
   class GenerateRandomCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object generateRandomCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GenerateRandomInput) = this()
+    
     val middlewareStack: MiddlewareStack[GenerateRandomInput, GenerateRandomOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[GenerateRandomInput, GenerateRandomOutput] = js.native
   }
-  
 }
-

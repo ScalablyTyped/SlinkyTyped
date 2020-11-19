@@ -12,7 +12,7 @@ import typingsSlinky.reactNative.anon.ReadonlyNativeMethods
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent std.Pick<react.react.ComponentClass<P, react.react.ComponentState>, std.Exclude<keyof react.react.ComponentClass<P, react.react.ComponentState>, 'new'>> */
 @js.native
@@ -23,17 +23,24 @@ trait HostComponent[P]
       /* context */ js.Any, 
       ReactComponentClass[P] with ReadonlyNativeMethods
     ] {
+  
   var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native
+  
   var contextType: js.UndefOr[Context[_]] = js.native
+  
   var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
+  
   var defaultProps: js.UndefOr[Partial[typingsSlinky.reactNative.reactNativeStrings.defaultProps]] = js.native
+  
   var displayName: js.UndefOr[String] = js.native
+  
   var getDerivedStateFromError: js.UndefOr[
     GetDerivedStateFromError[typingsSlinky.reactNative.reactNativeStrings.getDerivedStateFromError, js.Object]
   ] = js.native
+  
   var getDerivedStateFromProps: js.UndefOr[
     GetDerivedStateFromProps[typingsSlinky.reactNative.reactNativeStrings.getDerivedStateFromProps, js.Object]
   ] = js.native
+  
   var propTypes: js.UndefOr[WeakValidationMap[typingsSlinky.reactNative.reactNativeStrings.propTypes]] = js.native
 }
-

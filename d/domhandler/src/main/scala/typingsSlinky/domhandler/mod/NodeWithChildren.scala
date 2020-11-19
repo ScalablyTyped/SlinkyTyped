@@ -6,7 +6,7 @@ import typingsSlinky.domhandler.domhandlerStrings.style
 import typingsSlinky.domhandler.domhandlerStrings.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("domhandler/lib", "NodeWithChildren")
 @js.native
@@ -22,4 +22,3 @@ class NodeWithChildren protected ()
   def this(`type`: style, children: js.Array[typingsSlinky.domhandler.nodeMod.Node]) = this()
   def this(`type`: tag, children: js.Array[typingsSlinky.domhandler.nodeMod.Node]) = this()
 }
-

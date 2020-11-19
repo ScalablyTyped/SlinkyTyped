@@ -15,9 +15,10 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OptionList {
+  
   @JSImport("rc-tree-select/es/OptionList", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -26,19 +27,25 @@ object OptionList {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, RefOptionListProps] {
+    
     @scala.inline
     def defaultActiveFirstOption(value: Boolean): this.type = set("defaultActiveFirstOption", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def menuItemSelectedIcon(value: js.Any): this.type = set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: OptionListProps[js.Array[DataNode]] with RefAttributes[RefOptionListProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     childrenAsData: Boolean,
@@ -62,4 +69,3 @@ object OptionList {
     new Builder(js.Array(this.component, __props.asInstanceOf[OptionListProps[js.Array[DataNode]] with RefAttributes[RefOptionListProps]]))
   }
 }
-

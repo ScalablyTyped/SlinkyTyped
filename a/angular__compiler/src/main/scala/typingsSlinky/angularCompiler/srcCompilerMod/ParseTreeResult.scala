@@ -3,7 +3,7 @@ package typingsSlinky.angularCompiler.srcCompilerMod
 import typingsSlinky.angularCompiler.mlParserAstMod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.angularCompiler.mlParserParserMod.ParseTreeResult because Already inherited
@@ -16,4 +16,3 @@ class ParseTreeResult protected ()
     errors: js.Array[typingsSlinky.angularCompiler.srcParseUtilMod.ParseError]
   ) = this()
 }
-

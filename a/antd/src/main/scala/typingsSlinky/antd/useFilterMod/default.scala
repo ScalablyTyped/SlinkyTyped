@@ -5,11 +5,12 @@ import typingsSlinky.antd.tableInterfaceMod.TransformColumns
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd/lib/table/hooks/useFilter", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   def apply[RecordType](
     hasPrefixClsDropdownPrefixClsMergedColumnsOnFilterChangeGetPopupContainerLocale: FilterConfig[RecordType]
   ): js.Tuple3[
@@ -18,4 +19,3 @@ object default extends js.Object {
     js.Function0[Record[String, js.Array[Key] | Null]]
   ] = js.native
 }
-

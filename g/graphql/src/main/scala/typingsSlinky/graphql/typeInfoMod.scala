@@ -59,11 +59,23 @@ import typingsSlinky.graphql.schemaMod.GraphQLSchema
 import typingsSlinky.graphql.visitorMod.Visitor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/utilities/TypeInfo", JSImport.Namespace)
 @js.native
 object typeInfoMod extends js.Object {
+  
+  def visitWithTypeInfo(
+    typeInfo: TypeInfo,
+    visitor: Visitor[
+      ASTKindToNode, 
+      EnumValueDefinitionNode | ObjectValueNode | FieldDefinitionNode | SchemaDefinitionNode | InputObjectTypeDefinitionNode | DocumentNode | DirectiveDefinitionNode | InputValueDefinitionNode | ListValueNode | ScalarTypeDefinitionNode | IntValueNode | OperationDefinitionNode | ArgumentNode | FragmentDefinitionNode | OperationTypeDefinitionNode | FieldNode | StringValueNode | NameNode | ObjectFieldNode | EnumValueNode | SchemaExtensionNode | UnionTypeExtensionNode | VariableDefinitionNode | VariableNode | ObjectTypeDefinitionNode | EnumTypeExtensionNode | InterfaceTypeDefinitionNode | FloatValueNode | NonNullTypeNode | DirectiveNode | SelectionSetNode | InputObjectTypeExtensionNode | ScalarTypeExtensionNode | UnionTypeDefinitionNode | NullValueNode | InterfaceTypeExtensionNode | InlineFragmentNode | EnumTypeDefinitionNode | NamedTypeNode | BooleanValueNode | ListTypeNode | ObjectTypeExtensionNode | FragmentSpreadNode
+    ]
+  ): Visitor[
+    ASTKindToNode, 
+    EnumValueDefinitionNode | ObjectValueNode | FieldDefinitionNode | SchemaDefinitionNode | InputObjectTypeDefinitionNode | DocumentNode | DirectiveDefinitionNode | InputValueDefinitionNode | ListValueNode | ScalarTypeDefinitionNode | IntValueNode | OperationDefinitionNode | ArgumentNode | FragmentDefinitionNode | OperationTypeDefinitionNode | FieldNode | StringValueNode | NameNode | ObjectFieldNode | EnumValueNode | SchemaExtensionNode | UnionTypeExtensionNode | VariableDefinitionNode | VariableNode | ObjectTypeDefinitionNode | EnumTypeExtensionNode | InterfaceTypeDefinitionNode | FloatValueNode | NonNullTypeNode | DirectiveNode | SelectionSetNode | InputObjectTypeExtensionNode | ScalarTypeExtensionNode | UnionTypeDefinitionNode | NullValueNode | InterfaceTypeExtensionNode | InlineFragmentNode | EnumTypeDefinitionNode | NamedTypeNode | BooleanValueNode | ListTypeNode | ObjectTypeExtensionNode | FragmentSpreadNode
+  ] = js.native
+  
   @js.native
   class TypeInfo protected () extends js.Object {
     def this(schema: GraphQLSchema) = this()
@@ -94,29 +106,30 @@ object typeInfoMod extends js.Object {
     // beginning somewhere other than documents.
     initialType: GraphQLType
     ) = this()
+    
     def enter(node: ASTNode): js.Any = js.native
+    
     def getArgument(): Maybe[GraphQLArgument] = js.native
+    
     def getDefaultValue(): Maybe[_] = js.native
+    
     def getDirective(): Maybe[GraphQLDirective] = js.native
+    
     def getEnumValue(): Maybe[GraphQLEnumValue] = js.native
+    
     def getFieldDef(): GraphQLField[_, Maybe[_], StringDictionary[_]] = js.native
+    
     def getInputType(): Maybe[GraphQLInputType] = js.native
+    
     def getParentInputType(): Maybe[GraphQLInputType] = js.native
+    
     def getParentType(): Maybe[GraphQLCompositeType] = js.native
+    
     def getType(): Maybe[GraphQLOutputType] = js.native
+    
     def leave(node: ASTNode): js.Any = js.native
   }
   
-  def visitWithTypeInfo(
-    typeInfo: TypeInfo,
-    visitor: Visitor[
-      ASTKindToNode, 
-      EnumValueDefinitionNode | ObjectValueNode | FieldDefinitionNode | SchemaDefinitionNode | InputObjectTypeDefinitionNode | DocumentNode | DirectiveDefinitionNode | InputValueDefinitionNode | ListValueNode | ScalarTypeDefinitionNode | IntValueNode | OperationDefinitionNode | ArgumentNode | FragmentDefinitionNode | OperationTypeDefinitionNode | FieldNode | StringValueNode | NameNode | ObjectFieldNode | EnumValueNode | SchemaExtensionNode | UnionTypeExtensionNode | VariableDefinitionNode | VariableNode | ObjectTypeDefinitionNode | EnumTypeExtensionNode | InterfaceTypeDefinitionNode | FloatValueNode | NonNullTypeNode | DirectiveNode | SelectionSetNode | InputObjectTypeExtensionNode | ScalarTypeExtensionNode | UnionTypeDefinitionNode | NullValueNode | InterfaceTypeExtensionNode | InlineFragmentNode | EnumTypeDefinitionNode | NamedTypeNode | BooleanValueNode | ListTypeNode | ObjectTypeExtensionNode | FragmentSpreadNode
-    ]
-  ): Visitor[
-    ASTKindToNode, 
-    EnumValueDefinitionNode | ObjectValueNode | FieldDefinitionNode | SchemaDefinitionNode | InputObjectTypeDefinitionNode | DocumentNode | DirectiveDefinitionNode | InputValueDefinitionNode | ListValueNode | ScalarTypeDefinitionNode | IntValueNode | OperationDefinitionNode | ArgumentNode | FragmentDefinitionNode | OperationTypeDefinitionNode | FieldNode | StringValueNode | NameNode | ObjectFieldNode | EnumValueNode | SchemaExtensionNode | UnionTypeExtensionNode | VariableDefinitionNode | VariableNode | ObjectTypeDefinitionNode | EnumTypeExtensionNode | InterfaceTypeDefinitionNode | FloatValueNode | NonNullTypeNode | DirectiveNode | SelectionSetNode | InputObjectTypeExtensionNode | ScalarTypeExtensionNode | UnionTypeDefinitionNode | NullValueNode | InterfaceTypeExtensionNode | InlineFragmentNode | EnumTypeDefinitionNode | NamedTypeNode | BooleanValueNode | ListTypeNode | ObjectTypeExtensionNode | FragmentSpreadNode
-  ] = js.native
   type getFieldDef = js.Function3[
     /* schema */ GraphQLSchema, 
     /* parentType */ GraphQLType, 
@@ -124,4 +137,3 @@ object typeInfoMod extends js.Object {
     Maybe[GraphQLField[js.Any, js.Any, StringDictionary[js.Any]]]
   ]
 }
-

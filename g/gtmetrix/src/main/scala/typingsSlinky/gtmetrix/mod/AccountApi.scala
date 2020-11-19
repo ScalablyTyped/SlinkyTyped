@@ -3,10 +3,11 @@ package typingsSlinky.gtmetrix.mod
 import typingsSlinky.gtmetrix.anon.ReadonlyAccountStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AccountApi extends js.Object {
+  
   /**
     * Get account status
     */
@@ -15,4 +16,3 @@ trait AccountApi extends js.Object {
   @JSName("status")
   def status_Promise(): js.Promise[ReadonlyAccountStatus] = js.native
 }
-

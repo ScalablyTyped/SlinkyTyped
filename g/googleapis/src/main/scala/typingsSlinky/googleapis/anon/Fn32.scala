@@ -6,13 +6,13 @@ import typingsSlinky.googleapis.googleapisStrings.v1
 import typingsSlinky.googleapis.googleapisStrings.v1beta2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Fn32 extends js.Object {
+  
   def apply(options: Options): Cloudfunctions = js.native
   def apply(options: typingsSlinky.googleapis.v1beta2Mod.cloudfunctionsV1beta2.Options): typingsSlinky.googleapis.v1beta2Mod.cloudfunctionsV1beta2.Cloudfunctions = js.native
   def apply(version: v1): Cloudfunctions = js.native
   def apply(version: v1beta2): typingsSlinky.googleapis.v1beta2Mod.cloudfunctionsV1beta2.Cloudfunctions = js.native
 }
-

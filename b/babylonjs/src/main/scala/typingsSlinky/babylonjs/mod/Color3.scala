@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.typesMod.DeepImmutable
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "Color3")
 @js.native
@@ -24,11 +24,63 @@ class Color3 ()
     /**
     * Defines the red component (between 0 and 1, default is 0)
     */
+  r: js.UndefOr[scala.Nothing],
+    /**
+    * Defines the green component (between 0 and 1, default is 0)
+    */
+  g: Double
+  ) = this()
+  def this(
+    /**
+    * Defines the red component (between 0 and 1, default is 0)
+    */
   r: Double,
     /**
     * Defines the green component (between 0 and 1, default is 0)
     */
   g: Double
+  ) = this()
+  def this(
+    /**
+    * Defines the red component (between 0 and 1, default is 0)
+    */
+  r: js.UndefOr[scala.Nothing],
+    /**
+    * Defines the green component (between 0 and 1, default is 0)
+    */
+  g: js.UndefOr[scala.Nothing],
+    /**
+    * Defines the blue component (between 0 and 1, default is 0)
+    */
+  b: Double
+  ) = this()
+  def this(
+    /**
+    * Defines the red component (between 0 and 1, default is 0)
+    */
+  r: js.UndefOr[scala.Nothing],
+    /**
+    * Defines the green component (between 0 and 1, default is 0)
+    */
+  g: Double,
+    /**
+    * Defines the blue component (between 0 and 1, default is 0)
+    */
+  b: Double
+  ) = this()
+  def this(
+    /**
+    * Defines the red component (between 0 and 1, default is 0)
+    */
+  r: Double,
+    /**
+    * Defines the green component (between 0 and 1, default is 0)
+    */
+  g: js.UndefOr[scala.Nothing],
+    /**
+    * Defines the blue component (between 0 and 1, default is 0)
+    */
+  b: Double
   ) = this()
   def this(
     /**
@@ -45,26 +97,28 @@ class Color3 ()
   b: Double
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs", "Color3")
 @js.native
 object Color3 extends js.Object {
-  var _BlackReadOnly: js.Any = js.native
+  
   /**
     * Returns a Color3 value containing a black color
     * @returns a new Color3 object
     */
   def Black(): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Gets a Color3 value containing a black color that must not be updated
     */
   def BlackReadOnly: DeepImmutable[typingsSlinky.babylonjs.mathColorMod.Color3] = js.native
+  
   /**
     * Returns a Color3 value containing a blue color
     * @returns a new Color3 object
     */
   def Blue(): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Creates a new Color3 from the starting index of the given array
     * @param array defines the source array
@@ -73,12 +127,14 @@ object Color3 extends js.Object {
     */
   def FromArray(array: DeepImmutable[ArrayLike[Double]]): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Creates a new Color3 from the string containing valid hexadecimal values
     * @param hex defines a string containing valid hexadecimal values
     * @returns a new Color3 object
     */
   def FromHexString(hex: String): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Creates a new Color3 from integer values (< 256)
     * @param r defines the red component to read from (value between 0 and 255)
@@ -87,16 +143,19 @@ object Color3 extends js.Object {
     * @returns a new Color3 object
     */
   def FromInts(r: Double, g: Double, b: Double): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Returns a Color3 value containing a gray color
     * @returns a new Color3 object
     */
   def Gray(): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Returns a Color3 value containing a green color
     * @returns a new Color3 object
     */
   def Green(): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Convert Hue, saturation and value to a Color3 (RGB)
     * @param hue defines the hue
@@ -110,6 +169,7 @@ object Color3 extends js.Object {
     value: Double,
     result: typingsSlinky.babylonjs.mathColorMod.Color3
   ): Unit = js.native
+  
   /**
     * Creates a new Color3 with values linearly interpolated of "amount" between the start Color3 and the end Color3
     * @param start defines the start Color3 value
@@ -122,6 +182,7 @@ object Color3 extends js.Object {
     end: DeepImmutable[typingsSlinky.babylonjs.mathColorMod.Color3],
     amount: Double
   ): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Creates a new Color3 with values linearly interpolated of "amount" between the start Color3 and the end Color3
     * @param left defines the start value
@@ -135,40 +196,48 @@ object Color3 extends js.Object {
     amount: Double,
     result: typingsSlinky.babylonjs.mathColorMod.Color3
   ): Unit = js.native
+  
   /**
     * Returns a Color3 value containing a magenta color
     * @returns a new Color3 object
     */
   def Magenta(): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Returns a Color3 value containing a purple color
     * @returns a new Color3 object
     */
   def Purple(): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Returns a Color3 value containing a random color
     * @returns a new Color3 object
     */
   def Random(): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Returns a Color3 value containing a red color
     * @returns a new Color3 object
     */
   def Red(): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Returns a Color3 value containing a teal color
     * @returns a new Color3 object
     */
   def Teal(): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Returns a Color3 value containing a white color
     * @returns a new Color3 object
     */
   def White(): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
   /**
     * Returns a Color3 value containing a yellow color
     * @returns a new Color3 object
     */
   def Yellow(): typingsSlinky.babylonjs.mathColorMod.Color3 = js.native
+  
+  var _BlackReadOnly: js.Any = js.native
 }
-

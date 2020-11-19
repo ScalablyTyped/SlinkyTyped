@@ -2,7 +2,7 @@ package typingsSlinky.devexpressWeb.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides data for client events which relate to mouse hovering (such as entering or leaving) over menu items.
@@ -18,4 +18,3 @@ class ASPxClientMenuItemMouseEventArgs protected ()
     */
   def this(item: typingsSlinky.devexpressWeb.ASPxClientMenuItem, htmlElement: js.Any) = this()
 }
-

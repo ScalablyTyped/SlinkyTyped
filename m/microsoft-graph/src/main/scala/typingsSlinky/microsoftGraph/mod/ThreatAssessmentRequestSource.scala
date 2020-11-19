@@ -2,7 +2,7 @@ package typingsSlinky.microsoftGraph.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.undefined
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.administrator
 */
 trait ThreatAssessmentRequestSource extends js.Object
-
 object ThreatAssessmentRequestSource {
+  
   @scala.inline
   def administrator: typingsSlinky.microsoftGraph.microsoftGraphStrings.administrator = "administrator".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.administrator]
+  
   @scala.inline
   def undefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.undefined = "undefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.undefined]
+  
   @scala.inline
   def user: typingsSlinky.microsoftGraph.microsoftGraphStrings.user = "user".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.user]
 }
-

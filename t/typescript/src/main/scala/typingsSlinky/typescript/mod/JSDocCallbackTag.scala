@@ -2,7 +2,7 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typescript.mod.TextRange because Already inherited
@@ -11,15 +11,21 @@ import scala.scalajs.js.annotation._
 trait JSDocCallbackTag
   extends NamedDeclaration
      with DeclarationWithTypeParameters {
+  
   var comment: js.UndefOr[java.lang.String] = js.native
+  
   var fullName: js.UndefOr[JSDocNamespaceDeclaration | Identifier] = js.native
+  
   @JSName("kind")
   var kind_JSDocCallbackTag: typingsSlinky.typescript.mod.SyntaxKind.JSDocCallbackTag = js.native
+  
   @JSName("name")
   var name_JSDocCallbackTag: js.UndefOr[Identifier] = js.native
+  
   @JSName("parent")
   var parent_JSDocCallbackTag: JSDoc = js.native
+  
   var tagName: Identifier = js.native
+  
   var typeExpression: JSDocSignature = js.native
 }
-

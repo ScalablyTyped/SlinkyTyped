@@ -2,7 +2,7 @@ package typingsSlinky.loopback.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Resource owner grants/delegates permissions to client application
@@ -14,11 +14,11 @@ import scala.scalajs.js.annotation._
 @JSImport("loopback", "Scope")
 @js.native
 class Scope () extends js.Object
-
 /* static members */
 @JSImport("loopback", "Scope")
 @js.native
 object Scope extends js.Object {
+  
   /**
     * Check if the given scope is allowed to access the model/property
     * @param {string} scope The scope name
@@ -37,4 +37,3 @@ object Scope extends js.Object {
     callback: js.Function2[/* err */ String | js.Error, /* result */ AccessRequest, Unit]
   ): Unit = js.native
 }
-

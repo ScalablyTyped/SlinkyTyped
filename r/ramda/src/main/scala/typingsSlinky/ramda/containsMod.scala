@@ -3,11 +3,12 @@ package typingsSlinky.ramda
 import typingsSlinky.ramda.toolsMod.Placeholder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ramda/src/contains", JSImport.Namespace)
 @js.native
 object containsMod extends js.Object {
+  
   def default(__ : Placeholder): js.Function2[/* list */ String, /* a */ String, Boolean] = js.native
   def default(__ : Placeholder, list: String): js.Function1[/* a */ String, Boolean] = js.native
   def default(a: String): js.Function1[/* list */ String, Boolean] = js.native
@@ -18,4 +19,3 @@ object containsMod extends js.Object {
   @JSName("default")
   def default_T[T](__ : Placeholder): js.Function2[/* list */ js.Array[T], /* a */ T, Boolean] = js.native
 }
-

@@ -5,11 +5,12 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.universalCameraMod.UniversalCamera
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Cameras/gamepadCamera", JSImport.Namespace)
 @js.native
 object gamepadCameraMod extends js.Object {
+  
   @js.native
   class GamepadCamera protected () extends UniversalCamera {
     /**
@@ -23,6 +24,4 @@ object gamepadCameraMod extends js.Object {
       */
     def this(name: String, position: Vector3, scene: Scene) = this()
   }
-  
 }
-

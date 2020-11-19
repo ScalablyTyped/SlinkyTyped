@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.AlgorithmicColorRamp
 import typingsSlinky.arcgisJsApi.esri.AlgorithmicColorRampProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/tasks/support/AlgorithmicColorRamp", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends AlgorithmicColorRamp {
   def this(properties: AlgorithmicColorRampProperties) = this()
 }
-

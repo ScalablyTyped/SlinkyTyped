@@ -6,7 +6,7 @@ import typingsSlinky.tensorflowTfjsCore.lstmMod.LSTMCellFunc
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core", "multiRNNCell")
 @js.native
@@ -20,4 +20,3 @@ object multiRNNCell
         js.Tuple2[js.Array[Tensor2D], js.Array[Tensor2D]]
       ]
     ]
-

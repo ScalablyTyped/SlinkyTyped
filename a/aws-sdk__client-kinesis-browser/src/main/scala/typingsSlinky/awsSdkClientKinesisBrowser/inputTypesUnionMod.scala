@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientKinesisBrowser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kinesis-browser/types/InputTypesUnion", JSImport.Namespace)
 @js.native
 object inputTypesUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientKinesisBrowser.typesAddTagsToStreamInputMod.AddTagsToStreamInput
     - typingsSlinky.awsSdkClientKinesisBrowser.typesCreateStreamInputMod.CreateStreamInput
@@ -37,6 +38,4 @@ object inputTypesUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientKinesisBrowser.typesUpdateShardCountInputMod.UpdateShardCountInput
   */
   trait InputTypesUnion extends js.Object
-  
 }
-

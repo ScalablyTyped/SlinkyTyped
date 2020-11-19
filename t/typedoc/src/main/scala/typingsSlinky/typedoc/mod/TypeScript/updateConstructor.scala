@@ -7,11 +7,12 @@ import typingsSlinky.typescript.mod.Modifier
 import typingsSlinky.typescript.mod.ParameterDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateConstructor")
 @js.native
 object updateConstructor extends js.Object {
+  
   def apply(
     node: ConstructorDeclaration,
     decorators: js.UndefOr[scala.Nothing],
@@ -65,4 +66,3 @@ object updateConstructor extends js.Object {
     body: Block
   ): ConstructorDeclaration = js.native
 }
-

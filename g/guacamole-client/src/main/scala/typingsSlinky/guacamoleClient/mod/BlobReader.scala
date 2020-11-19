@@ -3,7 +3,7 @@ package typingsSlinky.guacamoleClient.mod
 import typingsSlinky.guacamoleClient.guacCommonMod.Mimetype
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("guacamole-client", "BlobReader")
 @js.native
@@ -15,4 +15,3 @@ class BlobReader protected ()
     */
   def this(stream: typingsSlinky.guacamoleClient.inputStreamMod.InputStream, mimetype: Mimetype) = this()
 }
-

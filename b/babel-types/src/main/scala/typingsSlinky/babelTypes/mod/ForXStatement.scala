@@ -4,15 +4,15 @@ import typingsSlinky.babelTypes.babelTypesStrings.ForInStatement
 import typingsSlinky.babelTypes.babelTypesStrings.ForOfStatement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ForInStatement_
   - typingsSlinky.babelTypes.mod.ForOfStatement_
 */
 trait ForXStatement extends js.Object
-
 object ForXStatement {
+  
   @scala.inline
   def ForInStatement_(
     body: Statement,
@@ -27,6 +27,7 @@ object ForXStatement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForXStatement]
   }
+  
   @scala.inline
   def ForOfStatement_(
     body: Statement,
@@ -42,4 +43,3 @@ object ForXStatement {
     __obj.asInstanceOf[ForXStatement]
   }
 }
-

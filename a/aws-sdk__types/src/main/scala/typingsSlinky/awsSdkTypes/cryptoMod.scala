@@ -8,18 +8,21 @@ import typingsSlinky.awsSdkTypes.awsSdkTypesStrings.latin1
 import typingsSlinky.awsSdkTypes.awsSdkTypesStrings.utf8
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/types/build/crypto", JSImport.Namespace)
 @js.native
 object cryptoMod extends js.Object {
+  
   @js.native
   trait Hash extends js.Object {
+    
     /**
       * Finalizes the hash and provides a promise that will be fulfilled with the
       * raw bytes of the calculated hash.
       */
     def digest(): js.Promise[js.typedarray.Uint8Array] = js.native
+    
     /**
       * Adds a chunk of data to the hash. If a buffer is provided, the `encoding`
       * argument will be ignored. If a string is provided without a specified
@@ -43,11 +46,12 @@ object cryptoMod extends js.Object {
        with Instantiable1[/* secret */ SourceData, Hash]
   
   type SourceData = String | js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView
+  
   type StreamHasher[StreamType] = js.Function2[
     /* hashCtor */ Instantiable, 
     /* stream */ StreamType, 
     js.Promise[js.typedarray.Uint8Array]
   ]
+  
   type randomValues = js.Function1[/* byteLength */ Double, js.Promise[js.typedarray.Uint8Array]]
 }
-

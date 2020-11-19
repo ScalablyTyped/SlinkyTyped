@@ -14,9 +14,10 @@ import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
 import typingsSlinky.blueprintjsTable.locatorMod.ILocator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ColumnHeader {
+  
   @JSImport("@blueprintjs/table/lib/esm/headers/columnHeader", "ColumnHeader")
   @js.native
   object component extends js.Object
@@ -25,35 +26,48 @@ object ColumnHeader {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.columnHeaderMod.ColumnHeader] {
+    
     @scala.inline
     def defaultColumnWidth(value: Double): this.type = set("defaultColumnWidth", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def enableMultipleSelection(value: Boolean): this.type = set("enableMultipleSelection", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def focusedCell(value: IFocusedCellCoordinates): this.type = set("focusedCell", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def isResizable(value: Boolean): this.type = set("isResizable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def maxColumnWidth(value: Double): this.type = set("maxColumnWidth", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def measurableElementRef(value: /* ref */ HTMLElement | Null => Unit): this.type = set("measurableElementRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def minColumnWidth(value: Double): this.type = set("minColumnWidth", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onSelectionEnd(value: /* regions */ js.Array[IRegion] => Unit): this.type = set("onSelectionEnd", js.Any.fromFunction1(value))
+    
     @scala.inline
     def selectedRegionTransform(
       value: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion
     ): this.type = set("selectedRegionTransform", js.Any.fromFunction3(value))
+    
     @scala.inline
     def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
+    
     @scala.inline
     def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IColumnHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     cellRenderer: /* columnIndex */ Double => ReactElement,
@@ -73,4 +87,3 @@ object ColumnHeader {
     new Builder(js.Array(this.component, __props.asInstanceOf[IColumnHeaderProps]))
   }
 }
-

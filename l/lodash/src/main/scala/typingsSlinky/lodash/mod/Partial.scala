@@ -2,12 +2,11 @@ package typingsSlinky.lodash.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Partial extends js.Object {
-  @JSName("placeholder")
-  var placeholder_Original: __ = js.native
+  
   // catch-all
   def apply(func: js.Function1[/* repeated */ js.Any, _], args: js.Any*): js.Function1[/* repeated */ js.Any, _] = js.native
   // arity 0
@@ -46,6 +45,7 @@ trait Partial extends js.Object {
   def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R], plc1: __, plc2: __, arg3: T3): Function3[T1, T2, T4, R] = js.native
   def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R], plc1: __, plc2: __, arg3: T3, arg4: T4): Function2[T1, T2, R] = js.native
   def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R], plc1: __, plc2: __, plc3: __, arg4: T4): Function3[T1, T2, T3, R] = js.native
+  
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -115,5 +115,6 @@ trait Partial extends js.Object {
     * upperFirst, value, and words.
     **/
   def placeholder[T](value: T): LoDashImplicitWrapper[T] = js.native
+  @JSName("placeholder")
+  var placeholder_Original: __ = js.native
 }
-

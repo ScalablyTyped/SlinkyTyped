@@ -10,10 +10,11 @@ import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Cancel extends js.Object {
+  
   def cancel[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def cancel[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def cancel[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -21,6 +22,7 @@ trait Cancel extends js.Object {
   def cancel[TResponse, TContext](params: TasksCancel, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def cancel[TResponse, TContext](params: TasksCancel, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def cancel[TResponse, TContext](params: TasksCancel, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def get[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -28,6 +30,7 @@ trait Cancel extends js.Object {
   def get[TResponse, TContext](params: TasksGet, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get[TResponse, TContext](params: TasksGet, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get[TResponse, TContext](params: TasksGet, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def list[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def list[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def list[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -36,4 +39,3 @@ trait Cancel extends js.Object {
   def list[TResponse, TContext](params: TasksList, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def list[TResponse, TContext](params: TasksList, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
 }
-

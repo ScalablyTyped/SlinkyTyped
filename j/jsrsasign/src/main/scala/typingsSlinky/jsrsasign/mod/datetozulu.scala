@@ -2,11 +2,12 @@ package typingsSlinky.jsrsasign.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jsrsasign", "datetozulu")
 @js.native
 object datetozulu extends js.Object {
+  
   /**
     * Date object to zulu time string
     * @param d Date object for specified time
@@ -28,4 +29,3 @@ object datetozulu extends js.Object {
     */
   def apply(d: js.Date, flagUTCTime: Boolean, flagMilli: Boolean): String = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri.symbols
 import typingsSlinky.arcgisJsApi.esri.PathSymbol3DLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.symbols.PathSymbol3DLayer")
 @js.native
@@ -16,4 +16,3 @@ class PathSymbol3DLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.PathSymbol3DLayer {
   def this(properties: PathSymbol3DLayerProperties) = this()
 }
-

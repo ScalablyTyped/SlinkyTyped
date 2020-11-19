@@ -5,7 +5,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.reactMdTransition.anon.PickCrossFadePropshiddenc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `Collapse` is really just a convenience wrapper for the `useCrossFade`
@@ -26,4 +26,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/transition/types/CrossFade", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[PickCrossFadePropshiddenc]]
-

@@ -2,9 +2,11 @@ package typingsSlinky.reduxActionUtils
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type ActionCreator_[T] = js.Function1[/* repeated */ js.Any, typingsSlinky.reduxActionUtils.mod.Action with T]
+  
   type OptionsActionCreator_[T] = js.Function1[/* data */ T, typingsSlinky.reduxActionUtils.mod.Action with T]
 }

@@ -2,11 +2,12 @@ package typingsSlinky.pMemoize.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("p-memoize", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   	[Memoize](https://en.wikipedia.org/wiki/Memoization) promise-returning & async functions.
   	@param fn - Promise-returning or async function to be memoized.
@@ -33,10 +34,10 @@ object ^ extends js.Object {
     fn: js.Function1[/* arguments */ ArgumentsType, js.Thenable[ReturnType]],
     options: Options[ArgumentsType, CacheKeyType, ReturnType]
   ): js.Function1[/* arguments */ ArgumentsType, js.Promise[ReturnType]] = js.native
+  
   /**
   	Clear all cached data of a memoized function.
   	@param memoized - A function that was previously memoized. Will throw if passed a non-memoized function.
   	*/
   def clear(memoized: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
 }
-

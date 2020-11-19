@@ -2,11 +2,10 @@ package typingsSlinky.officeJsPreview.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait NumberFormatCategory extends js.Object
-
 /**
   *
   * Represents a category of number formats.
@@ -17,6 +16,7 @@ sealed trait NumberFormatCategory extends js.Object
 @JSGlobal("Excel.NumberFormatCategory")
 @js.native
 object NumberFormatCategory extends js.Object {
+  
   /**
     * Accounting formats line up the currency symbols and decimal points in a column.
     *
@@ -100,6 +100,4 @@ object NumberFormatCategory extends js.Object {
     */
   @js.native
   sealed trait time extends NumberFormatCategory
-  
 }
-

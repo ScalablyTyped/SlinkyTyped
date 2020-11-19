@@ -4,25 +4,29 @@ import org.scalajs.dom.crypto.CryptoKey
 import typingsSlinky.std.BufferSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SignedData extends js.Object {
+  
   var certificates: js.UndefOr[
     js.Array[
       typingsSlinky.pkijs.certificateMod.default | typingsSlinky.pkijs.otherCertificateFormatMod.default
     ]
   ] = js.native
+  
   var crls: js.UndefOr[
     js.Array[
       typingsSlinky.pkijs.certificateRevocationListMod.default | typingsSlinky.pkijs.otherRevocationInfoFormatMod.default
     ]
   ] = js.native
+  
   var digestAlgorithms: js.Array[typingsSlinky.pkijs.algorithmIdentifierMod.default] = js.native
+  
   var encapContentInfo: typingsSlinky.pkijs.encapsulatedContentInfoMod.default = js.native
-  var signerInfos: js.Array[typingsSlinky.pkijs.signerInfoMod.default] = js.native
-  var version: Double = js.native
+  
   def fromSchema(schema: js.Any): Unit = js.native
+  
   /**
     * Signing current SignedData
     *
@@ -43,7 +47,11 @@ trait SignedData extends js.Object {
   ): js.typedarray.ArrayBuffer = js.native
   def sign(privateKey: CryptoKey, signerIndex: Double, hashAlgorithm: String): js.typedarray.ArrayBuffer = js.native
   def sign(privateKey: CryptoKey, signerIndex: Double, hashAlgorithm: String, data: BufferSource): js.typedarray.ArrayBuffer = js.native
+  
+  var signerInfos: js.Array[typingsSlinky.pkijs.signerInfoMod.default] = js.native
+  
   def toJSON(): js.Any = js.native
+  
   /**
     * Convert current object to asn1js object and set correct values
     *
@@ -52,6 +60,8 @@ trait SignedData extends js.Object {
     */
   def toSchema(): js.Any = js.native
   def toSchema(encodeFlag: Boolean): js.Any = js.native
+  
   def verify(options: VerifyParams): js.Thenable[VerifyResult] = js.native
+  
+  var version: Double = js.native
 }
-

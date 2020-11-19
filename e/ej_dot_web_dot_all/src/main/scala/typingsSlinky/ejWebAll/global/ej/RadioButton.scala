@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ej.RadioButton")
 @js.native
@@ -15,12 +15,12 @@ class RadioButton protected ()
   def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.RadioButton.Model) = this()
   def this(element: Element, options: typingsSlinky.ejWebAll.ej.RadioButton.Model) = this()
 }
-
 /* static members */
 @JSGlobal("ej.RadioButton")
 @js.native
 object RadioButton extends js.Object {
+  
   var Locale: js.Any = js.native
+  
   var fn: typingsSlinky.ejWebAll.ej.RadioButton = js.native
 }
-

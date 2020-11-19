@@ -4,11 +4,12 @@ import typingsSlinky.yadda.libMod.StepFn
 import typingsSlinky.yadda.macroMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Library
   extends typingsSlinky.yadda.languageMod.Library {
+  
   def define(signatures: String): this.type = js.native
   def define(
     signatures: String,
@@ -1143,4 +1144,3 @@ trait Library
     options: Options
   ): this.type = js.native
 }
-

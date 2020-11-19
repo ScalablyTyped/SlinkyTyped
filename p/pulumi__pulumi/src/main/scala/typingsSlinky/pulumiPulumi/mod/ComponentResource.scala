@@ -4,7 +4,7 @@ import typingsSlinky.pulumiPulumi.outputMod.Inputs
 import typingsSlinky.pulumiPulumi.resourceMod.ComponentResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/pulumi", "ComponentResource")
 @js.native
@@ -27,15 +27,14 @@ class ComponentResource[TData] protected ()
   def this(`type`: String, name: String, args: js.UndefOr[scala.Nothing], opts: ComponentResourceOptions) = this()
   def this(`type`: String, name: String, args: Inputs, opts: ComponentResourceOptions) = this()
 }
-
 /* static members */
 @JSImport("@pulumi/pulumi", "ComponentResource")
 @js.native
 object ComponentResource extends js.Object {
+  
   /**
     * Returns true if the given object is an instance of CustomResource.  This is designed to work even when
     * multiple copies of the Pulumi SDK have been loaded into the same process.
     */
   def isInstance(obj: js.Any): /* is @pulumi/pulumi.@pulumi/pulumi/resource.ComponentResource<any> */ Boolean = js.native
 }
-

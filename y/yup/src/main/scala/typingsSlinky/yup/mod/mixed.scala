@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.yup.anon.Dictkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("yup", "mixed")
 @js.native
@@ -12,8 +12,6 @@ import scala.scalajs.js.annotation._
 class mixed[T] () extends MixedSchema[T] {
   def this(options: Dictkey) = this()
 }
-
 @JSImport("yup", "mixed")
 @js.native
 object mixed extends TopLevel[MixedSchemaConstructor]
-

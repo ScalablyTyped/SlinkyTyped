@@ -2,9 +2,10 @@ package typingsSlinky.reactPortalTooltip.cardMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object Card {
+  
   /* Rewritten from type alias, can be one of: 
     - scala.Null
     - typingsSlinky.reactPortalTooltip.reactPortalTooltipStrings.center
@@ -12,6 +13,7 @@ package object Card {
     - typingsSlinky.reactPortalTooltip.reactPortalTooltipStrings.left
   */
   type Align = typingsSlinky.reactPortalTooltip.cardMod.Card._Align | scala.Null
+  
   /* Rewritten from type alias, can be one of: 
     - scala.Null
     - typingsSlinky.reactPortalTooltip.reactPortalTooltipStrings.center

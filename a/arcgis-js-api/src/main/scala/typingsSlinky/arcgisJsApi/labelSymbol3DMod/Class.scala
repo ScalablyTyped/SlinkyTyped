@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.LabelSymbol3D
 import typingsSlinky.arcgisJsApi.esri.LabelSymbol3DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols/LabelSymbol3D", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends LabelSymbol3D {
   def this(properties: LabelSymbol3DProperties) = this()
 }
-

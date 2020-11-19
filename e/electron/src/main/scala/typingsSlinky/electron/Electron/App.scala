@@ -59,10 +59,11 @@ import typingsSlinky.electron.electronStrings.videos
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait App extends EventEmitter {
+  
   /**
     * A `Boolean` property that's `true` if Chrome's accessibility support is enabled,
     * `false` otherwise. This property will be `true` if the use of assistive
@@ -80,76 +81,7 @@ trait App extends EventEmitter {
     * @platform darwin,win32
     */
   var accessibilitySupportEnabled: Boolean = js.native
-  /**
-    * A `Boolean` which when `true` disables the overrides that Electron has in place
-    * to ensure renderer processes are restarted on every navigation.  The current
-    * default value for this property is `true`.
-    *
-    * The intention is for these overrides to become disabled by default and then at
-    * some point in the future this property will be removed.  This property impacts
-    * which native modules you can use in the renderer process.  For more information
-    * on the direction Electron is going with renderer process restarts and usage of
-    * native modules in the renderer process please check out this Tracking Issue.
-    */
-  var allowRendererProcessReuse: Boolean = js.native
-  /**
-    * A `Menu | null` property that returns `Menu` if one has been set and `null`
-    * otherwise. Users can pass a Menu to set this property.
-    */
-  var applicationMenu: Menu | Null = js.native
-  /**
-    * An `Integer` property that returns the badge count for current app. Setting the
-    * count to `0` will hide the badge.
-    *
-    * On macOS, setting this with any nonzero integer shows on the dock icon. On
-    * Linux, this property only works for Unity launcher.
-    *
-    * **Note:** Unity launcher requires the existence of a `.desktop` file to work,
-    * for more information please read Desktop Environment Integration.
-    *
-    * @platform linux,darwin
-    */
-  var badgeCount: Double = js.native
-  /**
-    * A `CommandLine` object that allows you to read and manipulate the command line
-    * arguments that Chromium uses.
-    *
-    */
-  val commandLine: CommandLine = js.native
-  /**
-    * A `Dock` `| undefined` object that allows you to perform actions on your app
-    * icon in the user's dock on macOS.
-    *
-    * @platform darwin
-    */
-  val dock: Dock = js.native
-  /**
-    * A `Boolean` property that returns  `true` if the app is packaged, `false`
-    * otherwise. For many apps, this property can be used to distinguish development
-    * and production environments.
-    *
-    */
-  val isPackaged: Boolean = js.native
-  /**
-    * A `String` property that indicates the current application's name, which is the
-    * name in the application's `package.json` file.
-    *
-    * Usually the `name` field of `package.json` is a short lowercase name, according
-    * to the npm modules spec. You should usually also specify a `productName` field,
-    * which is your application's full capitalized name, and which will be preferred
-    * over `name` by Electron.
-    */
-  var name: String = js.native
-  /**
-    * A `String` which is the user agent string Electron will use as a global
-    * fallback.
-    *
-    * This is the user agent that will be used when no user agent is set at the
-    * `webContents` or `session` level.  It is useful for ensuring that your entire
-    * app has the same user agent.  Set to a custom value as early as possible in your
-    * app's initialization to ensure that your overridden value is used.
-    */
-  var userAgentFallback: String = js.native
+  
   @JSName("addListener")
   def addListener_accessibilitysupportchanged(
     event: `accessibility-support-changed`,
@@ -311,6 +243,7 @@ trait App extends EventEmitter {
   def addListener_willquit(event: `will-quit`, listener: js.Function1[/* event */ Event, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_windowallclosed(event: `window-all-closed`, listener: js.Function): this.type = js.native
+  
   /**
     * Adds `path` to the recent documents list.
     *
@@ -320,12 +253,54 @@ trait App extends EventEmitter {
     * @platform darwin,win32
     */
   def addRecentDocument(path: String): Unit = js.native
+  
+  /**
+    * A `Boolean` which when `true` disables the overrides that Electron has in place
+    * to ensure renderer processes are restarted on every navigation.  The current
+    * default value for this property is `true`.
+    *
+    * The intention is for these overrides to become disabled by default and then at
+    * some point in the future this property will be removed.  This property impacts
+    * which native modules you can use in the renderer process.  For more information
+    * on the direction Electron is going with renderer process restarts and usage of
+    * native modules in the renderer process please check out this Tracking Issue.
+    */
+  var allowRendererProcessReuse: Boolean = js.native
+  
+  /**
+    * A `Menu | null` property that returns `Menu` if one has been set and `null`
+    * otherwise. Users can pass a Menu to set this property.
+    */
+  var applicationMenu: Menu | Null = js.native
+  
+  /**
+    * An `Integer` property that returns the badge count for current app. Setting the
+    * count to `0` will hide the badge.
+    *
+    * On macOS, setting this with any nonzero integer shows on the dock icon. On
+    * Linux, this property only works for Unity launcher.
+    *
+    * **Note:** Unity launcher requires the existence of a `.desktop` file to work,
+    * for more information please read Desktop Environment Integration.
+    *
+    * @platform linux,darwin
+    */
+  var badgeCount: Double = js.native
+  
   /**
     * Clears the recent documents list.
     *
     * @platform darwin,win32
     */
   def clearRecentDocuments(): Unit = js.native
+  
+  /**
+    * A `CommandLine` object that allows you to read and manipulate the command line
+    * arguments that Chromium uses.
+    *
+    */
+  val commandLine: CommandLine = js.native
+  
   /**
     * By default, Chromium disables 3D APIs (e.g. WebGL) until restart on a per domain
     * basis if the GPU processes crashes too frequently. This function disables that
@@ -333,12 +308,22 @@ trait App extends EventEmitter {
   This method can only be called before app is ready.
     */
   def disableDomainBlockingFor3DAPIs(): Unit = js.native
+  
   /**
     * Disables hardware acceleration for current app.
     * 
   This method can only be called before app is ready.
     */
   def disableHardwareAcceleration(): Unit = js.native
+  
+  /**
+    * A `Dock` `| undefined` object that allows you to perform actions on your app
+    * icon in the user's dock on macOS.
+    *
+    * @platform darwin
+    */
+  val dock: Dock = js.native
+  
   /**
     * Enables full sandbox mode on the app.
     * 
@@ -347,6 +332,7 @@ trait App extends EventEmitter {
     * @experimental
     */
   def enableSandbox(): Unit = js.native
+  
   /**
     * Exits immediately with `exitCode`. `exitCode` defaults to 0.
     *
@@ -355,6 +341,7 @@ trait App extends EventEmitter {
     */
   def exit(): Unit = js.native
   def exit(exitCode: Double): Unit = js.native
+  
   /**
     * On Linux, focuses on the first visible window. On macOS, makes the application
     * the active app. On Windows, focuses on the application's first window.
@@ -363,15 +350,18 @@ trait App extends EventEmitter {
     */
   def focus(): Unit = js.native
   def focus(options: FocusOptions): Unit = js.native
+  
   /**
     * Array of `ProcessMetric` objects that correspond to memory and CPU usage
     * statistics of all the processes associated with the app.
     */
   def getAppMetrics(): js.Array[ProcessMetric] = js.native
+  
   /**
     * The current application directory.
     */
   def getAppPath(): String = js.native
+  
   /**
     * Name of the application handling the protocol, or an empty string if there is no
     * handler. For instance, if Electron is the default handler of the URL, this could
@@ -383,18 +373,21 @@ trait App extends EventEmitter {
     * (aka URI scheme) of a URL.
     */
   def getApplicationNameForProtocol(url: String): String = js.native
+  
   /**
     * The current value displayed in the counter badge.
     *
     * @platform linux,darwin
     */
   def getBadgeCount(): Double = js.native
+  
   /**
     * The type of the currently running activity.
     *
     * @platform darwin
     */
   def getCurrentActivityType(): String = js.native
+  
   /**
     * fulfilled with the app's icon, which is a NativeImage.
     *
@@ -410,6 +403,7 @@ trait App extends EventEmitter {
     */
   def getFileIcon(path: String): js.Promise[NativeImage_] = js.native
   def getFileIcon(path: String, options: FileIconOptions): js.Promise[NativeImage_] = js.native
+  
   /**
     * The Graphics Feature Status from `chrome://gpu/`.
     *
@@ -417,6 +411,7 @@ trait App extends EventEmitter {
     * emitted.
     */
   def getGPUFeatureStatus(): GPUFeatureStatus = js.native
+  
   /**
     * For `infoType` equal to `complete`: Promise is fulfilled with `Object`
     * containing all the GPU Information as in chromium's GPUInfo object. This
@@ -433,6 +428,7 @@ trait App extends EventEmitter {
   def getGPUInfo_basic(infoType: basic): js.Promise[_] = js.native
   @JSName("getGPUInfo")
   def getGPUInfo_complete(infoType: complete): js.Promise[_] = js.native
+  
   /**
     * * `minItems` Integer - The minimum number of items that will be shown in the
     * Jump List (for a more detailed description of this value see the MSDN docs).
@@ -445,6 +441,7 @@ trait App extends EventEmitter {
     * @platform win32
     */
   def getJumpListSettings(): JumpListSettings = js.native
+  
   /**
     * The current application locale. Possible return values are documented here.
     *
@@ -457,6 +454,7 @@ trait App extends EventEmitter {
     * **Note:** On Windows, you have to call it after the `ready` events gets emitted.
     */
   def getLocale(): String = js.native
+  
   /**
     * User operating system's locale two-letter ISO 3166 country code. The value is
     * taken from native OS APIs.
@@ -464,6 +462,7 @@ trait App extends EventEmitter {
   **Note:** When unable to detect locale country code, it returns empty string.
     */
   def getLocaleCountryCode(): String = js.native
+  
   /**
     * If you provided `path` and `args` options to `app.setLoginItemSettings`, then
     * you need to pass the same arguments here for `openAtLogin` to be set correctly.
@@ -486,6 +485,7 @@ trait App extends EventEmitter {
     */
   def getLoginItemSettings(): LoginItemSettings = js.native
   def getLoginItemSettings(options: LoginItemSettingsOptions): LoginItemSettings = js.native
+  
   /**
     * The current application's name, which is the name in the application's
     * `package.json` file.
@@ -496,6 +496,7 @@ trait App extends EventEmitter {
     * over `name` by Electron.
     */
   def getName(): String = js.native
+  
   @JSName("getPath")
   def getPath_appData(name: appData): String = js.native
   @JSName("getPath")
@@ -536,12 +537,14 @@ trait App extends EventEmitter {
   def getPath_userData(name: userData): String = js.native
   @JSName("getPath")
   def getPath_videos(name: videos): String = js.native
+  
   /**
     * The version of the loaded application. If no version is found in the
     * application's `package.json` file, the version of the current bundle or
     * executable is returned.
     */
   def getVersion(): String = js.native
+  
   /**
     * This method returns whether or not this instance of your app is currently
     * holding the single instance lock.  You can request the lock with
@@ -549,12 +552,14 @@ trait App extends EventEmitter {
     * `app.releaseSingleInstanceLock()`
     */
   def hasSingleInstanceLock(): Boolean = js.native
+  
   /**
     * Hides all application windows without minimizing them.
     *
     * @platform darwin
     */
   def hide(): Unit = js.native
+  
   /**
     * Imports the certificate in pkcs12 format into the platform certificate store.
     * `callback` is called with the `result` of import operation, a value of `0`
@@ -564,12 +569,14 @@ trait App extends EventEmitter {
     * @platform linux
     */
   def importCertificate(options: ImportCertificateOptions, callback: js.Function1[/* result */ Double, Unit]): Unit = js.native
+  
   /**
     * Invalidates the current Handoff user activity.
     *
     * @platform darwin
     */
   def invalidateCurrentActivity(): Unit = js.native
+  
   /**
     * `true` if Chrome's accessibility support is enabled, `false` otherwise. This API
     * will return `true` if the use of assistive technologies, such as screen readers,
@@ -580,6 +587,7 @@ trait App extends EventEmitter {
     * @platform darwin,win32
     */
   def isAccessibilitySupportEnabled(): Boolean = js.native
+  
   /**
     * Whether the current executable is the default handler for a protocol (aka URI
     * scheme).
@@ -596,10 +604,12 @@ trait App extends EventEmitter {
   def isDefaultProtocolClient(protocol: String, path: js.UndefOr[scala.Nothing], args: js.Array[String]): Boolean = js.native
   def isDefaultProtocolClient(protocol: String, path: String): Boolean = js.native
   def isDefaultProtocolClient(protocol: String, path: String, args: js.Array[String]): Boolean = js.native
+  
   /**
     * whether or not the current OS version allows for native emoji pickers.
     */
   def isEmojiPanelSupported(): Boolean = js.native
+  
   /**
     * Whether the application is currently running from the systems Application
     * folder. Use in combination with `app.moveToApplicationsFolder()`
@@ -607,17 +617,28 @@ trait App extends EventEmitter {
     * @platform darwin
     */
   def isInApplicationsFolder(): Boolean = js.native
+  
+  /**
+    * A `Boolean` property that returns  `true` if the app is packaged, `false`
+    * otherwise. For many apps, this property can be used to distinguish development
+    * and production environments.
+    *
+    */
+  val isPackaged: Boolean = js.native
+  
   /**
     * `true` if Electron has finished initializing, `false` otherwise. See also
     * `app.whenReady()`.
     */
   def isReady(): Boolean = js.native
+  
   /**
     * Whether the current desktop environment is Unity launcher.
     *
     * @platform linux
     */
   def isUnityRunning(): Boolean = js.native
+  
   /**
     * Whether the move was successful. Please note that if the move is successful,
     * your application will quit and relaunch.
@@ -652,6 +673,18 @@ trait App extends EventEmitter {
     */
   def moveToApplicationsFolder(): Boolean = js.native
   def moveToApplicationsFolder(options: MoveToApplicationsFolderOptions): Boolean = js.native
+  
+  /**
+    * A `String` property that indicates the current application's name, which is the
+    * name in the application's `package.json` file.
+    *
+    * Usually the `name` field of `package.json` is a short lowercase name, according
+    * to the npm modules spec. You should usually also specify a `productName` field,
+    * which is your application's full capitalized name, and which will be preferred
+    * over `name` by Electron.
+    */
+  var name: String = js.native
+  
   // Docs: http://electronjs.org/docs/api/app
   /**
     * Emitted when Chrome's accessibility support changes. This event fires when
@@ -1048,6 +1081,7 @@ trait App extends EventEmitter {
     */
   @JSName("on")
   def on_windowallclosed(event: `window-all-closed`, listener: js.Function): this.type = js.native
+  
   @JSName("once")
   def once_accessibilitysupportchanged(
     event: `accessibility-support-changed`,
@@ -1209,6 +1243,7 @@ trait App extends EventEmitter {
   def once_willquit(event: `will-quit`, listener: js.Function1[/* event */ Event, Unit]): this.type = js.native
   @JSName("once")
   def once_windowallclosed(event: `window-all-closed`, listener: js.Function): this.type = js.native
+  
   /**
     * Try to close all windows. The `before-quit` event will be emitted first. If all
     * windows are successfully closed, the `will-quit` event will be emitted and by
@@ -1219,6 +1254,7 @@ trait App extends EventEmitter {
     * returning `false` in the `beforeunload` event handler.
     */
   def quit(): Unit = js.native
+  
   /**
     * Relaunches the app when current instance exits.
     *
@@ -1238,11 +1274,13 @@ trait App extends EventEmitter {
     */
   def relaunch(): Unit = js.native
   def relaunch(options: RelaunchOptions): Unit = js.native
+  
   /**
     * Releases all locks that were created by `requestSingleInstanceLock`. This will
     * allow multiple instances of the application to once again run side by side.
     */
   def releaseSingleInstanceLock(): Unit = js.native
+  
   /**
     * Whether the call succeeded.
     *
@@ -1255,6 +1293,7 @@ trait App extends EventEmitter {
   def removeAsDefaultProtocolClient(protocol: String, path: js.UndefOr[scala.Nothing], args: js.Array[String]): Boolean = js.native
   def removeAsDefaultProtocolClient(protocol: String, path: String): Boolean = js.native
   def removeAsDefaultProtocolClient(protocol: String, path: String, args: js.Array[String]): Boolean = js.native
+  
   @JSName("removeListener")
   def removeListener_accessibilitysupportchanged(
     event: `accessibility-support-changed`,
@@ -1416,6 +1455,7 @@ trait App extends EventEmitter {
   def removeListener_willquit(event: `will-quit`, listener: js.Function1[/* event */ Event, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_windowallclosed(event: `window-all-closed`, listener: js.Function): this.type = js.native
+  
   /**
     * The return value of this method indicates whether or not this instance of your
     * application successfully obtained the lock.  If it failed to obtain the lock,
@@ -1437,12 +1477,14 @@ trait App extends EventEmitter {
     * starts:
     */
   def requestSingleInstanceLock(): Boolean = js.native
+  
   /**
     * Marks the current Handoff user activity as inactive without invalidating it.
     *
     * @platform darwin
     */
   def resignCurrentActivity(): Unit = js.native
+  
   /**
     * Set the about panel options. This will override the values defined in the app's
     * `.plist` file on macOS. See the Apple docs for more details. On Linux, values
@@ -1455,6 +1497,7 @@ trait App extends EventEmitter {
     * documentation for more information.
     */
   def setAboutPanelOptions(options: AboutPanelOptionsOptions): Unit = js.native
+  
   /**
     * Manually enables Chrome's accessibility support, allowing to expose
     * accessibility switch to users in application settings. See Chromium's
@@ -1468,6 +1511,7 @@ trait App extends EventEmitter {
     * @platform darwin,win32
     */
   def setAccessibilitySupportEnabled(enabled: Boolean): Unit = js.native
+  
   @JSName("setActivationPolicy")
   def setActivationPolicy_accessory(policy: accessory): Unit = js.native
   @JSName("setActivationPolicy")
@@ -1489,6 +1533,7 @@ trait App extends EventEmitter {
     */
   @JSName("setActivationPolicy")
   def setActivationPolicy_regular(policy: regular): Unit = js.native
+  
   /**
     * Sets or creates a directory your app's logs which can then be manipulated with
     * `app.getPath()` or `app.setPath(pathName, newPath)`.
@@ -1499,12 +1544,14 @@ trait App extends EventEmitter {
     */
   def setAppLogsPath(): Unit = js.native
   def setAppLogsPath(path: String): Unit = js.native
+  
   /**
     * Changes the Application User Model ID to `id`.
     *
     * @platform win32
     */
   def setAppUserModelId(id: String): Unit = js.native
+  
   /**
     * Whether the call succeeded.
     *
@@ -1533,6 +1580,7 @@ trait App extends EventEmitter {
   def setAsDefaultProtocolClient(protocol: String, path: js.UndefOr[scala.Nothing], args: js.Array[String]): Boolean = js.native
   def setAsDefaultProtocolClient(protocol: String, path: String): Boolean = js.native
   def setAsDefaultProtocolClient(protocol: String, path: String, args: js.Array[String]): Boolean = js.native
+  
   /**
     * Whether the call succeeded.
     *
@@ -1547,6 +1595,7 @@ trait App extends EventEmitter {
     * @platform linux,darwin
     */
   def setBadgeCount(count: Double): Boolean = js.native
+  
   /**
     * Sets or removes a custom Jump List for the application, and returns one of the
     * following strings:
@@ -1583,6 +1632,7 @@ trait App extends EventEmitter {
     */
   def setJumpList(): Unit = js.native
   def setJumpList(categories: js.Array[JumpListCategory]): Unit = js.native
+  
   /**
     * Set the app's login item settings.
     *
@@ -1593,6 +1643,7 @@ trait App extends EventEmitter {
     * @platform darwin,win32
     */
   def setLoginItemSettings(settings: Settings): Unit = js.native
+  
   /**
     * Overrides the current application's name.
     *
@@ -1600,6 +1651,7 @@ trait App extends EventEmitter {
     * not affect the name that the OS uses.
     */
   def setName(name: String): Unit = js.native
+  
   /**
     * Overrides the `path` to a special directory or file associated with `name`. If
     * the path specifies a directory that does not exist, an `Error` is thrown. In
@@ -1612,6 +1664,7 @@ trait App extends EventEmitter {
     * `userData` path before the `ready` event of the `app` module is emitted.
     */
   def setPath(name: String, path: String): Unit = js.native
+  
   /**
     * Creates an `NSUserActivity` and sets it as the current activity. The activity is
     * eligible for Handoff to another device afterward.
@@ -1620,6 +1673,7 @@ trait App extends EventEmitter {
     */
   def setUserActivity(`type`: String, userInfo: js.Any): Unit = js.native
   def setUserActivity(`type`: String, userInfo: js.Any, webpageURL: String): Unit = js.native
+  
   /**
     * Adds `tasks` to the Tasks category of the Jump List on Windows.
     *
@@ -1633,6 +1687,7 @@ trait App extends EventEmitter {
     * @platform win32
     */
   def setUserTasks(tasks: js.Array[Task]): Boolean = js.native
+  
   /**
     * Shows application windows after they were hidden. Does not automatically focus
     * them.
@@ -1640,17 +1695,20 @@ trait App extends EventEmitter {
     * @platform darwin
     */
   def show(): Unit = js.native
+  
   /**
     * Show the app's about panel options. These options can be overridden with
     * `app.setAboutPanelOptions(options)`.
     */
   def showAboutPanel(): Unit = js.native
+  
   /**
     * Show the platform's native emoji picker.
     *
     * @platform darwin,win32
     */
   def showEmojiPanel(): Unit = js.native
+  
   /**
     * This function **must** be called once you have finished accessing the security
     * scoped file. If you do not remember to stop accessing the bookmark, kernel
@@ -1665,6 +1723,7 @@ trait App extends EventEmitter {
     * @platform mas
     */
   def startAccessingSecurityScopedResource(bookmarkData: String): js.Function = js.native
+  
   /**
     * Updates the current activity if its type matches `type`, merging the entries
     * from `userInfo` into its current `userInfo` dictionary.
@@ -1672,6 +1731,18 @@ trait App extends EventEmitter {
     * @platform darwin
     */
   def updateCurrentActivity(`type`: String, userInfo: js.Any): Unit = js.native
+  
+  /**
+    * A `String` which is the user agent string Electron will use as a global
+    * fallback.
+    *
+    * This is the user agent that will be used when no user agent is set at the
+    * `webContents` or `session` level.  It is useful for ensuring that your entire
+    * app has the same user agent.  Set to a custom value as early as possible in your
+    * app's initialization to ensure that your overridden value is used.
+    */
+  var userAgentFallback: String = js.native
+  
   /**
     * fulfilled when Electron is initialized. May be used as a convenient alternative
     * to checking `app.isReady()` and subscribing to the `ready` event if the app is
@@ -1679,4 +1750,3 @@ trait App extends EventEmitter {
     */
   def whenReady(): js.Promise[Unit] = js.native
 }
-

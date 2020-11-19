@@ -2,7 +2,7 @@ package typingsSlinky.xrm.Xrm.Attributes
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Date attribute formats for Attributes.Attribute.getFormat(), used by {@link Attributes.DateAttribute DateAttribute}.
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.datetime
 */
 trait DateAttributeFormat extends js.Object
-
 object DateAttributeFormat {
+  
   @scala.inline
   def date: typingsSlinky.xrm.xrmStrings.date = "date".asInstanceOf[typingsSlinky.xrm.xrmStrings.date]
+  
   @scala.inline
   def datetime: typingsSlinky.xrm.xrmStrings.datetime = "datetime".asInstanceOf[typingsSlinky.xrm.xrmStrings.datetime]
 }
-

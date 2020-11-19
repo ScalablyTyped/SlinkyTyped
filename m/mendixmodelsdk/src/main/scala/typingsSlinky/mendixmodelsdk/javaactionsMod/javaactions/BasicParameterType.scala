@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.21.0: deleted
@@ -30,31 +30,33 @@ class BasicParameterType protected () extends ParameterType {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  @JSName("containerAsJavaActionParameter")
+  def containerAsJavaActionParameter_MBasicParameterType: JavaActionParameter = js.native
+  
   @JSName("model")
   var model_FBasicParameterType: IModel = js.native
+  
+  def `type`: Type = js.native
+  def type_=(newValue: Type): Unit = js.native
   /**
     * This property is required and cannot be set to null.
     */
   @JSName("type")
   val type_FBasicParameterType: IType = js.native
-  @JSName("containerAsJavaActionParameter")
-  def containerAsJavaActionParameter_MBasicParameterType: JavaActionParameter = js.native
-  def `type`: Type = js.native
-  def type_=(newValue: Type): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/javaactions", "javaactions.BasicParameterType")
 @js.native
 object BasicParameterType extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new BasicParameterType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): BasicParameterType = js.native
+  
   /**
     * Creates and returns a new BasicParameterType instance in the SDK and on the server.
     * The new BasicParameterType will be automatically stored in the 'parameterType' property
@@ -64,5 +66,8 @@ object BasicParameterType extends js.Object {
     *  6.7.0 to 7.20.0
     */
   def createIn(container: JavaActionParameter): BasicParameterType = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.inquirer.baseUIMod
 import typingsSlinky.inquirer.mod.StreamOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents a ui.
@@ -19,4 +19,3 @@ import scala.scalajs.js.annotation._
 class ^ () extends UI {
   def this(options: StreamOptions) = this()
 }
-

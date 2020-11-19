@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "ConsensusCommitBlockRequest")
 @js.native
@@ -16,20 +16,22 @@ import scala.scalajs.js.annotation._
   */
 class ConsensusCommitBlockRequest () extends IConsensusCommitBlockRequest {
   def this(properties: IConsensusCommitBlockRequest) = this()
+  
   /** ConsensusCommitBlockRequest blockId. */
   @JSName("blockId")
   var blockId_ConsensusCommitBlockRequest: js.typedarray.Uint8Array = js.native
+  
   /**
     * Converts this ConsensusCommitBlockRequest to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "ConsensusCommitBlockRequest")
 @js.native
 object ConsensusCommitBlockRequest extends js.Object {
+  
   /**
     * Creates a new ConsensusCommitBlockRequest instance using the specified properties.
     * @param [properties] Properties to set
@@ -37,6 +39,7 @@ object ConsensusCommitBlockRequest extends js.Object {
     */
   def create(): ConsensusCommitBlockRequest = js.native
   def create(properties: IConsensusCommitBlockRequest): ConsensusCommitBlockRequest = js.native
+  
   /**
     * Decodes a ConsensusCommitBlockRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -49,6 +52,7 @@ object ConsensusCommitBlockRequest extends js.Object {
   def decode(reader: Reader, length: Double): ConsensusCommitBlockRequest = js.native
   def decode(reader: js.typedarray.Uint8Array): ConsensusCommitBlockRequest = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusCommitBlockRequest = js.native
+  
   /**
     * Decodes a ConsensusCommitBlockRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -58,6 +62,7 @@ object ConsensusCommitBlockRequest extends js.Object {
     */
   def decodeDelimited(reader: Reader): ConsensusCommitBlockRequest = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusCommitBlockRequest = js.native
+  
   /**
     * Encodes the specified ConsensusCommitBlockRequest message. Does not implicitly {@link ConsensusCommitBlockRequest.verify|verify} messages.
     * @param message ConsensusCommitBlockRequest message or plain object to encode
@@ -66,6 +71,7 @@ object ConsensusCommitBlockRequest extends js.Object {
     */
   def encode(message: IConsensusCommitBlockRequest): Writer = js.native
   def encode(message: IConsensusCommitBlockRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ConsensusCommitBlockRequest message, length delimited. Does not implicitly {@link ConsensusCommitBlockRequest.verify|verify} messages.
     * @param message ConsensusCommitBlockRequest message or plain object to encode
@@ -74,12 +80,14 @@ object ConsensusCommitBlockRequest extends js.Object {
     */
   def encodeDelimited(message: IConsensusCommitBlockRequest): Writer = js.native
   def encodeDelimited(message: IConsensusCommitBlockRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ConsensusCommitBlockRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ConsensusCommitBlockRequest
     */
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusCommitBlockRequest = js.native
+  
   /**
     * Creates a plain object from a ConsensusCommitBlockRequest message. Also converts values to other types if specified.
     * @param message ConsensusCommitBlockRequest
@@ -88,6 +96,7 @@ object ConsensusCommitBlockRequest extends js.Object {
     */
   def toObject(message: ConsensusCommitBlockRequest): StringDictionary[js.Any] = js.native
   def toObject(message: ConsensusCommitBlockRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ConsensusCommitBlockRequest message.
     * @param message Plain object to verify
@@ -95,4 +104,3 @@ object ConsensusCommitBlockRequest extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

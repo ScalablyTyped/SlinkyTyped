@@ -2,13 +2,16 @@ package typingsSlinky.reactRelay
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object entryPointTypesMod {
+  
   type EntryPointComponent[TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps] = slinky.core.ReactComponentClass[
     typingsSlinky.reactRelay.entryPointTypesMod.EntryPointProps[TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps]
   ]
+  
   type EnvironmentProviderOptions = org.scalablytyped.runtime.StringDictionary[js.Any]
+  
   type ExtractEntryPointTypeHelper[TEntryPointParams] = js.Function1[
     /* entryPoint */ js.UndefOr[
       typingsSlinky.reactRelay.entryPointTypesMod.PreloadedEntryPoint[js.Any] | scala.Null
@@ -20,6 +23,7 @@ package object entryPointTypesMod {
       ]) | scala.Null
     ]
   ]
+  
   type ExtractQueryTypeHelper[TEnvironmentProviderOptions] = js.Function1[
     /* query */ typingsSlinky.reactRelay.entryPointTypesMod.PreloadedQuery[
       typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType, 
@@ -30,5 +34,6 @@ package object entryPointTypesMod {
       TEnvironmentProviderOptions
     ]
   ]
+  
   type PreloadableConcreteRequest[TQuery /* <: typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType */] = js.Object
 }

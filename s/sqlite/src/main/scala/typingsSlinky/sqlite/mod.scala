@@ -3,11 +3,22 @@ package typingsSlinky.sqlite
 import typingsSlinky.sqlite.interfacesMod.ISqlite.Config
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sqlite", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  /**
+    * Opens a database for manipulation. Most users will call this to get started.
+    */
+  def open[Driver /* <: typingsSlinky.sqlite.sqlite3Mod.Database */, Stmt /* <: typingsSlinky.sqlite.sqlite3Mod.Statement */](config: Config): js.Promise[
+    typingsSlinky.sqlite.databaseMod.Database[
+      typingsSlinky.sqlite.sqlite3Mod.Database, 
+      typingsSlinky.sqlite.sqlite3Mod.Statement
+    ]
+  ] = js.native
+  
   @js.native
   class Database[Driver /* <: typingsSlinky.sqlite.sqlite3Mod.Database */, Stmt /* <: typingsSlinky.sqlite.sqlite3Mod.Statement */] protected ()
     extends typingsSlinky.sqlite.databaseMod.Database[Driver, Stmt] {
@@ -19,15 +30,4 @@ object mod extends js.Object {
     extends typingsSlinky.sqlite.statementMod.Statement[S] {
     def this(stmt: S) = this()
   }
-  
-  /**
-    * Opens a database for manipulation. Most users will call this to get started.
-    */
-  def open[Driver /* <: typingsSlinky.sqlite.sqlite3Mod.Database */, Stmt /* <: typingsSlinky.sqlite.sqlite3Mod.Statement */](config: Config): js.Promise[
-    typingsSlinky.sqlite.databaseMod.Database[
-      typingsSlinky.sqlite.sqlite3Mod.Database, 
-      typingsSlinky.sqlite.sqlite3Mod.Statement
-    ]
-  ] = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.LineOfSightProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.LineOfSight")
 @js.native
@@ -16,4 +16,3 @@ class LineOfSightCls ()
   extends typingsSlinky.arcgisJsApi.esri.LineOfSight {
   def this(properties: LineOfSightProperties) = this()
 }
-

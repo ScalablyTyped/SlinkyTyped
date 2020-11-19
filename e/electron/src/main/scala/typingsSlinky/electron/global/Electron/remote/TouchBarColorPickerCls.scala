@@ -4,7 +4,7 @@ import typingsSlinky.electron.Electron.TouchBarColorPicker
 import typingsSlinky.electron.Electron.TouchBarColorPickerConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Electron.remote.TouchBarColorPicker")
 @js.native
@@ -15,4 +15,3 @@ class TouchBarColorPickerCls protected () extends TouchBarColorPicker {
     */
   def this(options: TouchBarColorPickerConstructorOptions) = this()
 }
-

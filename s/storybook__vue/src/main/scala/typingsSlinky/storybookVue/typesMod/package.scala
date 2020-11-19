@@ -2,9 +2,10 @@ package typingsSlinky.storybookVue
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object typesMod {
+  
   type StoryFnVueReturnType = java.lang.String | (typingsSlinky.vue.optionsMod.Component[
     typingsSlinky.vue.optionsMod.DefaultData[scala.Nothing], 
     typingsSlinky.vue.optionsMod.DefaultMethods[scala.Nothing], 

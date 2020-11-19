@@ -2,14 +2,16 @@ package typingsSlinky.vscodeLanguageserver.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RemoteClient extends js.Object {
+  
   /**
     * The connection this remote is attached to.
     */
   var connection: IConnection = js.native
+  
   /**
     * Registers a set of listeners.
     * @param registrations the bulk registration
@@ -90,4 +92,3 @@ trait RemoteClient extends js.Object {
     registerParams: RO
   ): js.Promise[BulkUnregistration] = js.native
 }
-

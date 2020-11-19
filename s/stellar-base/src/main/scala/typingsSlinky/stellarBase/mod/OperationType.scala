@@ -16,24 +16,37 @@ import typingsSlinky.stellarBase.stellarBaseStrings.payment
 import typingsSlinky.stellarBase.stellarBaseStrings.setOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stellar-base", "OperationType")
 @js.native
 object OperationType extends js.Object {
+  
   type AccountMerge = accountMerge
+  
   type AllowTrust = allowTrust
+  
   type BumpSequence = bumpSequence
+  
   type ChangeTrust = changeTrust
+  
   type CreateAccount = createAccount
+  
   type CreatePassiveSellOffer = createPassiveSellOffer
+  
   type Inflation = inflation
+  
   type ManageBuyOffer = manageBuyOffer
+  
   type ManageData = manageData
+  
   type ManageSellOffer = manageSellOffer
+  
   type PathPaymentStrictReceive = pathPaymentStrictReceive
+  
   type PathPaymentStrictSend = pathPaymentStrictSend
+  
   type Payment = payment
+  
   type SetOptions = setOptions
 }
-

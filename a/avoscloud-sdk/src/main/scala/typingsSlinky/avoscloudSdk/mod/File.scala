@@ -2,7 +2,7 @@ package typingsSlinky.avoscloudSdk.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A AV.File is a local representation of a file that is saved to the AV
@@ -38,9 +38,11 @@ import scala.scalajs.js.annotation._
 class File protected () extends js.Object {
   def this(name: String, data: js.Any) = this()
   def this(name: String, data: js.Any, `type`: String) = this()
+  
   def name(): String = js.native
+  
   def save[T](): Promise[T] = js.native
   def save[T](options: SuccessFailureOptions): Promise[T] = js.native
+  
   def url(): String = js.native
 }
-

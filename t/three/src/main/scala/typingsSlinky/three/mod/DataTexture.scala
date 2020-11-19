@@ -3,7 +3,7 @@ package typingsSlinky.three.mod
 import typingsSlinky.three.polyfillsMod.TypedArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "DataTexture")
 @js.native
@@ -24,4 +24,3 @@ class DataTexture protected ()
     encoding: js.UndefOr[typingsSlinky.three.constantsMod.TextureEncoding]
   ) = this()
 }
-

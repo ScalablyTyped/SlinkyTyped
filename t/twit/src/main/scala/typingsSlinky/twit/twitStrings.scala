@@ -4,9 +4,49 @@ import typingsSlinky.twit.mod.StreamEndpoint
 import typingsSlinky.twit.mod.Twitter.ResultType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object twitStrings {
+  
+  @scala.inline
+  def crop: crop = "crop".asInstanceOf[crop]
+  
+  @scala.inline
+  def fit: fit = "fit".asInstanceOf[fit]
+  
+  @scala.inline
+  def low: low = "low".asInstanceOf[low]
+  
+  @scala.inline
+  def medium: medium = "medium".asInstanceOf[medium]
+  
+  @scala.inline
+  def mixed: mixed = "mixed".asInstanceOf[mixed]
+  
+  @scala.inline
+  def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def popular: popular = "popular".asInstanceOf[popular]
+  
+  @scala.inline
+  def recent: recent = "recent".asInstanceOf[recent]
+  
+  @scala.inline
+  def site: site = "site".asInstanceOf[site]
+  
+  @scala.inline
+  def statusesSlashfilter: statusesSlashfilter = "statuses/filter".asInstanceOf[statusesSlashfilter]
+  
+  @scala.inline
+  def statusesSlashfirehose: statusesSlashfirehose = "statuses/firehose".asInstanceOf[statusesSlashfirehose]
+  
+  @scala.inline
+  def statusesSlashsample: statusesSlashsample = "statuses/sample".asInstanceOf[statusesSlashsample]
+  
+  @scala.inline
+  def user: user = "user".asInstanceOf[user]
+  
   @js.native
   sealed trait crop extends js.Object
   
@@ -45,32 +85,4 @@ object twitStrings {
   
   @js.native
   sealed trait user extends StreamEndpoint
-  
-  @scala.inline
-  def crop: crop = "crop".asInstanceOf[crop]
-  @scala.inline
-  def fit: fit = "fit".asInstanceOf[fit]
-  @scala.inline
-  def low: low = "low".asInstanceOf[low]
-  @scala.inline
-  def medium: medium = "medium".asInstanceOf[medium]
-  @scala.inline
-  def mixed: mixed = "mixed".asInstanceOf[mixed]
-  @scala.inline
-  def none: none = "none".asInstanceOf[none]
-  @scala.inline
-  def popular: popular = "popular".asInstanceOf[popular]
-  @scala.inline
-  def recent: recent = "recent".asInstanceOf[recent]
-  @scala.inline
-  def site: site = "site".asInstanceOf[site]
-  @scala.inline
-  def statusesSlashfilter: statusesSlashfilter = "statuses/filter".asInstanceOf[statusesSlashfilter]
-  @scala.inline
-  def statusesSlashfirehose: statusesSlashfirehose = "statuses/firehose".asInstanceOf[statusesSlashfirehose]
-  @scala.inline
-  def statusesSlashsample: statusesSlashsample = "statuses/sample".asInstanceOf[statusesSlashsample]
-  @scala.inline
-  def user: user = "user".asInstanceOf[user]
 }
-

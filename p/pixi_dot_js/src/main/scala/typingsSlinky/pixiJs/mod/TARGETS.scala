@@ -2,7 +2,7 @@ package typingsSlinky.pixiJs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Various GL target types.
@@ -24,16 +24,25 @@ import scala.scalajs.js.annotation._
 @JSImport("pixi.js", "TARGETS")
 @js.native
 object TARGETS extends js.Object {
-  /* 0 */ val TEXTURE_2D: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_2D with Double = js.native
-  /* 2 */ val TEXTURE_2D_ARRAY: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_2D_ARRAY with Double = js.native
-  /* 1 */ val TEXTURE_CUBE_MAP: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP with Double = js.native
-  /* 4 */ val TEXTURE_CUBE_MAP_NEGATIVE_X: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_NEGATIVE_X with Double = js.native
-  /* 6 */ val TEXTURE_CUBE_MAP_NEGATIVE_Y: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_NEGATIVE_Y with Double = js.native
-  /* 8 */ val TEXTURE_CUBE_MAP_NEGATIVE_Z: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_NEGATIVE_Z with Double = js.native
-  /* 3 */ val TEXTURE_CUBE_MAP_POSITIVE_X: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_POSITIVE_X with Double = js.native
-  /* 5 */ val TEXTURE_CUBE_MAP_POSITIVE_Y: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_POSITIVE_Y with Double = js.native
-  /* 7 */ val TEXTURE_CUBE_MAP_POSITIVE_Z: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_POSITIVE_Z with Double = js.native
+  
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.pixiJs.PIXI.TARGETS with Double] = js.native
+  
+  /* 0 */ val TEXTURE_2D: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_2D with Double = js.native
+  
+  /* 2 */ val TEXTURE_2D_ARRAY: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_2D_ARRAY with Double = js.native
+  
+  /* 1 */ val TEXTURE_CUBE_MAP: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP with Double = js.native
+  
+  /* 4 */ val TEXTURE_CUBE_MAP_NEGATIVE_X: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_NEGATIVE_X with Double = js.native
+  
+  /* 6 */ val TEXTURE_CUBE_MAP_NEGATIVE_Y: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_NEGATIVE_Y with Double = js.native
+  
+  /* 8 */ val TEXTURE_CUBE_MAP_NEGATIVE_Z: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_NEGATIVE_Z with Double = js.native
+  
+  /* 3 */ val TEXTURE_CUBE_MAP_POSITIVE_X: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_POSITIVE_X with Double = js.native
+  
+  /* 5 */ val TEXTURE_CUBE_MAP_POSITIVE_Y: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_POSITIVE_Y with Double = js.native
+  
+  /* 7 */ val TEXTURE_CUBE_MAP_POSITIVE_Z: typingsSlinky.pixiJs.PIXI.TARGETS.TEXTURE_CUBE_MAP_POSITIVE_Z with Double = js.native
 }
-

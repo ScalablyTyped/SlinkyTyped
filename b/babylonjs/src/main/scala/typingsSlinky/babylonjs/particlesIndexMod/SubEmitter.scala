@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.particlesIndexMod
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Particles/index", "SubEmitter")
 @js.native
@@ -18,11 +18,11 @@ class SubEmitter protected ()
     */
   particleSystem: typingsSlinky.babylonjs.particleSystemMod.ParticleSystem) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Particles/index", "SubEmitter")
 @js.native
 object SubEmitter extends js.Object {
+  
   /**
     * Creates a new SubEmitter from a serialized JSON version
     * @param serializationObject defines the JSON object to read from
@@ -31,7 +31,7 @@ object SubEmitter extends js.Object {
     * @returns a new SubEmitter
     */
   def Parse(serializationObject: js.Any, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.subEmitterMod.SubEmitter = js.native
+  
   /** @hidden */
   def _ParseParticleSystem(system: js.Any, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.particleSystemMod.ParticleSystem = js.native
 }
-

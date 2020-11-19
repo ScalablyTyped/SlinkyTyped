@@ -5,7 +5,7 @@ import typingsSlinky.roslib.anon.StringString
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("roslib", "UrdfModel")
 @js.native
@@ -20,8 +20,10 @@ class UrdfModel protected () extends js.Object {
     */
   def this(options: String) = this()
   def this(options: StringString) = this()
+  
   var joints: Record[java.lang.String, UrdfJoint] = js.native
+  
   var links: Record[java.lang.String, UrdfLink] = js.native
+  
   var materials: Record[java.lang.String, UrdfMaterial] = js.native
 }
-

@@ -5,15 +5,15 @@ import typingsSlinky.muicss.reactMod.ColProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("muicss/lib/react/col", JSImport.Namespace)
 @js.native
 object colMod extends js.Object {
+  
   @js.native
   class default ()
     extends Component[ColProps, js.Object, js.Any]
   
   type Col = ReactComponentClass[ColProps]
 }
-

@@ -10,7 +10,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.DetailedHTMLProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/Tab", "Tab")
 @js.native
@@ -35,7 +35,6 @@ class Tab protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("grommet/es6/components/Tab", "Tab")
 @js.native
 object Tab extends TopLevel[
@@ -46,4 +45,3 @@ object Tab extends TopLevel[
         ])
       ]
     ]
-

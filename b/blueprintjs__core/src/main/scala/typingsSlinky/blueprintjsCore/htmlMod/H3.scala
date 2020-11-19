@@ -6,11 +6,10 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.HTMLProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@blueprintjs/core/lib/esm/components/html/html", "H3")
 @js.native
 object H3 extends TopLevel[
       ReactComponentClass[HTMLProps[HTMLHeadingElement] with IElementRefProps[HTMLHeadingElement]]
     ]
-

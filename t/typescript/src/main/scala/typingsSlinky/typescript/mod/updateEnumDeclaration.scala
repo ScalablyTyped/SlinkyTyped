@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "updateEnumDeclaration")
 @js.native
 object updateEnumDeclaration extends js.Object {
+  
   def apply(
     node: EnumDeclaration,
     decorators: js.UndefOr[scala.Nothing],
@@ -36,4 +37,3 @@ object updateEnumDeclaration extends js.Object {
     members: js.Array[EnumMember]
   ): EnumDeclaration = js.native
 }
-

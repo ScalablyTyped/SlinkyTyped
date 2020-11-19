@@ -2,16 +2,18 @@ package typingsSlinky.nodeRed.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Nodes extends js.Object {
+  
   /**
     * Adds a set of credentials for the given node id.
     * @param id the node id for the credentials
     * @param creds an object of credential key/value pairs
     */
   def addCredentials(id: NodeId, creds: js.Object): Unit = js.native
+  
   /**
     * Node constructor functions must call this to
     * finish setting up the node. Among other things
@@ -23,11 +25,13 @@ trait Nodes extends js.Object {
     * the node instance definition.
     */
   def createNode(node: Node, props: NodeProperties): Unit = js.native
+  
   /**
     * Deletes the credentials for the given node id.
     * @param id the node id for the credentials
     */
   def deleteCredentials(id: NodeId): Unit = js.native
+  
   /**
     * Cycle through all node definition objects.
     *
@@ -35,12 +39,14 @@ trait Nodes extends js.Object {
     * from the definition object.
     */
   def eachNode(callback: js.Function1[/* node */ NodeProperties, _]): Unit = js.native
+  
   /**
     * Gets the credentials for the given node id.
     * @param id the node id for the credentials
     * @return the credentials
     */
   def getCredentials(id: NodeId): js.Object = js.native
+  
   /**
     * Get a node by NodeID.
     *
@@ -51,6 +57,7 @@ trait Nodes extends js.Object {
     * @return - the node matching the given id, or null if it does not exist.
     */
   def getNode(id: NodeId): Node | Null = js.native
+  
   /**
     * Registers a node constructor.
     *
@@ -70,4 +77,3 @@ trait Nodes extends js.Object {
   def registerType[T /* <: NodeProperties */](`type`: String, constructor: js.Function1[/* props */ T, _]): Unit = js.native
   def registerType[T /* <: NodeProperties */](`type`: String, constructor: js.Function1[/* props */ T, _], opts: js.Any): Unit = js.native
 }
-

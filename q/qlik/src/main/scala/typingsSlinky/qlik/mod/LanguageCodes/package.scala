@@ -2,9 +2,10 @@ package typingsSlinky.qlik.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object LanguageCodes {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.qlik.mod.LanguageCodes.German
     - typingsSlinky.qlik.mod.LanguageCodes.English
@@ -23,6 +24,8 @@ package object LanguageCodes {
     - typingsSlinky.qlik.mod.LanguageCodes.TraditionalChinese
   */
   type ALL = typingsSlinky.qlik.mod.LanguageCodes._ALL | typingsSlinky.qlik.mod.LanguageCodes.SimplifiedChinese | typingsSlinky.qlik.mod.LanguageCodes.TraditionalChinese
+  
   type SimplifiedChinese = typingsSlinky.qlik.qlikStrings.`zh-CN`
+  
   type TraditionalChinese = typingsSlinky.qlik.qlikStrings.`zh-TW`
 }

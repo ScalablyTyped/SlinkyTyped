@@ -2,12 +2,12 @@ package typingsSlinky.apolloUtilities
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-utilities/lib/util/filterInPlace", JSImport.Namespace)
 @js.native
 object filterInPlaceMod extends js.Object {
+  
   def filterInPlace[T](array: js.Array[T], test: js.Function1[/* elem */ T, Boolean]): js.Array[T] = js.native
   def filterInPlace[T](array: js.Array[T], test: js.Function1[/* elem */ T, Boolean], context: js.Any): js.Array[T] = js.native
 }
-

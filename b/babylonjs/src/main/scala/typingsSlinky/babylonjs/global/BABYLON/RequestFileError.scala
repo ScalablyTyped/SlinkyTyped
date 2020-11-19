@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.RequestFileError")
 @js.native
@@ -14,11 +14,4 @@ class RequestFileError protected ()
     * @param request defines the optional web request
     */
   def this(message: String, request: typingsSlinky.babylonjs.BABYLON.WebRequest) = this()
-  /* CompleteClass */
-  override var message: String = js.native
-  /* CompleteClass */
-  override var name: String = js.native
-  /* CompleteClass */
-  override var request: typingsSlinky.babylonjs.BABYLON.WebRequest = js.native
 }
-

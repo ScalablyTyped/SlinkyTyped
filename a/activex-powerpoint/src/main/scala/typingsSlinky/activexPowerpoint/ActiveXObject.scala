@@ -51,10 +51,11 @@ import typingsSlinky.activexPowerpoint.anon.PresWn
 import typingsSlinky.activexPowerpoint.anon.SelSelection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ActiveXObject extends js.Object {
+  
   def on(
     obj: Application,
     event: AfterNewPresentation,
@@ -358,4 +359,3 @@ trait ActiveXObject extends js.Object {
     handler: js.ThisFunction1[/* this */ OLEControl, /* parameter */ js.Object, Unit]
   ): Unit = js.native
 }
-

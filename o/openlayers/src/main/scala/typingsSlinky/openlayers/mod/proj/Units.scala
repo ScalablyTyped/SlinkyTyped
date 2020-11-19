@@ -2,7 +2,7 @@ package typingsSlinky.openlayers.mod.proj
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Projection units: `'degrees'`, `'ft'`, `'m'`, `'pixels'`, `'tile-pixels'` or
@@ -17,19 +17,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.openlayers.openlayersStrings.`us-ft`
 */
 trait Units extends js.Object
-
 object Units {
+  
   @scala.inline
   def degrees: typingsSlinky.openlayers.openlayersStrings.degrees = "degrees".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.degrees]
+  
   @scala.inline
   def ft: typingsSlinky.openlayers.openlayersStrings.ft = "ft".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.ft]
+  
   @scala.inline
   def m: typingsSlinky.openlayers.openlayersStrings.m = "m".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.m]
+  
   @scala.inline
   def pixels: typingsSlinky.openlayers.openlayersStrings.pixels = "pixels".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.pixels]
+  
   @scala.inline
   def `tile-pixels`: typingsSlinky.openlayers.openlayersStrings.`tile-pixels` = "tile-pixels".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.`tile-pixels`]
+  
   @scala.inline
   def `us-ft`: typingsSlinky.openlayers.openlayersStrings.`us-ft` = "us-ft".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.`us-ft`]
 }
-

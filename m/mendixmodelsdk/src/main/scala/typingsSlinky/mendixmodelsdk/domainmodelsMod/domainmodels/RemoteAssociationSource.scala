@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 8.10.0: introduced
@@ -29,17 +29,19 @@ abstract class RemoteAssociationSource protected () extends AssociationSource {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FRemoteAssociationSource: IModel = js.native
+  
   @JSName("containerAsAssociationBase")
   def containerAsAssociationBase_MRemoteAssociationSource: AssociationBase = js.native
+  
+  @JSName("model")
+  var model_FRemoteAssociationSource: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.RemoteAssociationSource")
 @js.native
 object RemoteAssociationSource extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

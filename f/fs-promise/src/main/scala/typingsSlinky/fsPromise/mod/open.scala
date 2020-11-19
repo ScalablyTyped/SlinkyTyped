@@ -5,11 +5,12 @@ import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs-promise", "open")
 @js.native
 object open extends js.Object {
+  
   def apply(path: String, flags: String): js.Promise[Double] = js.native
   def apply(
     path: String,
@@ -127,4 +128,3 @@ object open extends js.Object {
     callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
   ): Unit = js.native
 }
-

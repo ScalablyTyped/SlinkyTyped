@@ -5,11 +5,39 @@ import typingsSlinky.expoConstants.constantsTypesMod.AppManifest
 import typingsSlinky.fbemitter.mod.EventSubscription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("expo/build/Updates/Updates", JSImport.Namespace)
 @js.native
 object updatesMod extends js.Object {
+  
+  def addListener(listener: js.Function): EventSubscription = js.native
+  
+  def checkForUpdateAsync(): js.Promise[UpdateCheckResult] = js.native
+  
+  def clearUpdateCacheExperimentalAsync(abiVersion: String): js.Promise[Unit] = js.native
+  
+  def fetchUpdateAsync(): js.Promise[UpdateFetchResult] = js.native
+  def fetchUpdateAsync(hasEventListener: EventListener): js.Promise[UpdateFetchResult] = js.native
+  
+  def reload(): js.Promise[Unit] = js.native
+  
+  def reloadFromCache(): js.Promise[Unit] = js.native
+  
+  @js.native
+  object EventType extends js.Object {
+    
+    var DOWNLOAD_FINISHED: String = js.native
+    
+    var DOWNLOAD_PROGRESS: String = js.native
+    
+    var DOWNLOAD_STARTED: String = js.native
+    
+    var ERROR: String = js.native
+    
+    var NO_UPDATE_AVAILABLE: String = js.native
+  }
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.expo.anon.IsAvailable
     - typingsSlinky.expo.anon.Manifest
@@ -29,23 +57,7 @@ object updatesMod extends js.Object {
   */
   trait UpdateFetchResult extends js.Object
   
-  def addListener(listener: js.Function): EventSubscription = js.native
-  def checkForUpdateAsync(): js.Promise[UpdateCheckResult] = js.native
-  def clearUpdateCacheExperimentalAsync(abiVersion: String): js.Promise[Unit] = js.native
-  def fetchUpdateAsync(): js.Promise[UpdateFetchResult] = js.native
-  def fetchUpdateAsync(hasEventListener: EventListener): js.Promise[UpdateFetchResult] = js.native
-  def reload(): js.Promise[Unit] = js.native
-  def reloadFromCache(): js.Promise[Unit] = js.native
-  @js.native
-  object EventType extends js.Object {
-    var DOWNLOAD_FINISHED: String = js.native
-    var DOWNLOAD_PROGRESS: String = js.native
-    var DOWNLOAD_STARTED: String = js.native
-    var ERROR: String = js.native
-    var NO_UPDATE_AVAILABLE: String = js.native
-  }
-  
   type Manifest = AppManifest
+  
   type UpdateEventListener = js.Function1[/* event */ UpdateEvent, Unit]
 }
-

@@ -5,15 +5,16 @@ import typingsSlinky.swig.mod.lexer.TYPES
 import typingsSlinky.swig.mod.parser.ParseReturn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("swig", "Swig")
 @js.native
 class Swig () extends js.Object {
   def this(options: SwigOptions) = this()
-  var loaders: Typeofloaders = js.native
+  
   def compile(source: String): js.Function1[/* locals */ js.UndefOr[js.Any], String] = js.native
   def compile(source: String, options: SwigOptions): js.Function1[/* locals */ js.UndefOr[js.Any], String] = js.native
+  
   def compileFile(pathname: String): js.Function1[/* locals */ js.UndefOr[js.Any], String] = js.native
   def compileFile(pathname: String, options: SwigOptions): js.Function1[/* locals */ js.UndefOr[js.Any], String] = js.native
   def compileFile(
@@ -25,22 +26,33 @@ class Swig () extends js.Object {
       Unit
     ]
   ): Unit = js.native
+  
   def invalidateCache(): Unit = js.native
+  
+  var loaders: Typeofloaders = js.native
+  
   def parseFile(pathName: String): ParseReturn = js.native
   def parseFile(pathName: String, options: js.Any): ParseReturn = js.native
+  
   def precompile(source: String): js.Any = js.native
   def precompile(source: String, options: SwigOptions): js.Any = js.native
+  
   def render(source: String): String = js.native
   def render(source: String, options: SwigOptions): String = js.native
+  
   def renderFile(pathName: String): String = js.native
   def renderFile(pathName: String, locals: js.Any): String = js.native
   def renderFile(pathName: String, locals: js.Any, cb: js.Function2[/* err */ js.Error, /* output */ String, Unit]): Unit = js.native
+  
   def run(templateFn: js.Function): String = js.native
   def run(templateFn: js.Function, locals: js.UndefOr[scala.Nothing], filePath: String): String = js.native
   def run(templateFn: js.Function, locals: js.Any): String = js.native
   def run(templateFn: js.Function, locals: js.Any, filePath: String): String = js.native
+  
   def setExtension(name: String, `object`: js.Any): Unit = js.native
+  
   def setFilter(name: String, method: js.Function2[/* input */ js.Any, /* repeated */ js.Any, String]): Unit = js.native
+  
   def setTag(
     name: String,
     parse: js.Function7[
@@ -167,4 +179,3 @@ class Swig () extends js.Object {
     blockLevel: Boolean
   ): Unit = js.native
 }
-

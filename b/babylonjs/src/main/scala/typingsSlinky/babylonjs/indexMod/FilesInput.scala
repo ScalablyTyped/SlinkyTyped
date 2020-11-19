@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.indexMod
 import org.scalajs.dom.raw.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "FilesInput")
 @js.native
@@ -41,14 +41,13 @@ class FilesInput protected ()
       ]
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/index", "FilesInput")
 @js.native
 object FilesInput extends js.Object {
+  
   /**
     * List of files ready to be loaded
     */
   def FilesToLoad: org.scalablytyped.runtime.StringDictionary[File] = js.native
 }
-

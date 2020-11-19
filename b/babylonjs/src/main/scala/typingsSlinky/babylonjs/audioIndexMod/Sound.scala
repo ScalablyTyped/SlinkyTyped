@@ -5,7 +5,7 @@ import typingsSlinky.babylonjs.soundMod.ISoundOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Audio/index", "Sound")
 @js.native
@@ -30,15 +30,15 @@ class Sound protected ()
     name: String,
     urlOrArrayBuffer: js.Any,
     scene: Scene,
-    readyToPlayCallback: Nullable[js.Function0[Unit]],
+    readyToPlayCallback: js.UndefOr[Nullable[js.Function0[Unit]]],
     options: ISoundOptions
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Audio/index", "Sound")
 @js.native
 object Sound extends js.Object {
+  
   /**
     * Parse a JSON representation of a sound to innstantiate in a given scene
     * @param parsedSound Define the JSON representation of the sound (usually coming from the serialize method)
@@ -54,7 +54,7 @@ object Sound extends js.Object {
     rootUrl: String,
     sourceSound: typingsSlinky.babylonjs.soundMod.Sound
   ): typingsSlinky.babylonjs.soundMod.Sound = js.native
+  
   /** @hidden */
   def _SceneComponentInitialization(scene: Scene): Unit = js.native
 }
-

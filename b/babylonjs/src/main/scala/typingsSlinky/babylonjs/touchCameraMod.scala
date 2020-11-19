@@ -5,11 +5,12 @@ import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Cameras/touchCamera", JSImport.Namespace)
 @js.native
 object touchCameraMod extends js.Object {
+  
   @js.native
   class TouchCamera protected () extends FreeCamera {
     /**
@@ -22,19 +23,19 @@ object touchCameraMod extends js.Object {
       * @param scene Define the scene the camera belongs to
       */
     def this(name: String, position: Vector3, scene: Scene) = this()
+    
     /**
       * Defines the touch sensibility for rotation.
       * The higher the faster.
       */
     def touchAngularSensibility: Double = js.native
-    def touchAngularSensibility(value: Double): js.Any = js.native
+    def touchAngularSensibility_=(value: Double): Unit = js.native
+    
     /**
       * Defines the touch sensibility for move.
       * The higher the faster.
       */
     def touchMoveSensibility: Double = js.native
-    def touchMoveSensibility(value: Double): js.Any = js.native
+    def touchMoveSensibility_=(value: Double): Unit = js.native
   }
-  
 }
-

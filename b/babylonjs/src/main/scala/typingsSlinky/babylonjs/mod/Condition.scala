@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "Condition")
 @js.native
@@ -14,4 +14,3 @@ class Condition protected ()
     */
   def this(actionManager: typingsSlinky.babylonjs.actionManagerMod.ActionManager) = this()
 }
-

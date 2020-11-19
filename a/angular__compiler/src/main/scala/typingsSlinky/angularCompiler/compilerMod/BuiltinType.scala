@@ -3,7 +3,7 @@ package typingsSlinky.angularCompiler.compilerMod
 import typingsSlinky.angularCompiler.outputAstMod.TypeModifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/compiler", "BuiltinType")
 @js.native
@@ -15,4 +15,3 @@ class BuiltinType protected ()
     modifiers: js.Array[TypeModifier]
   ) = this()
 }
-

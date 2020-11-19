@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.WidgetProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Widget")
 @js.native
@@ -16,4 +16,3 @@ class WidgetCls ()
   extends typingsSlinky.arcgisJsApi.esri.Widget_ {
   def this(properties: WidgetProperties) = this()
 }
-

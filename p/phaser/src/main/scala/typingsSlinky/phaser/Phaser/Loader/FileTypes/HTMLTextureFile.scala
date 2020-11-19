@@ -11,7 +11,7 @@ import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A single HTML File suitable for loading by the Loader.
@@ -22,8 +22,8 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait HTMLTextureFile extends File
-
 object HTMLTextureFile {
+  
   @scala.inline
   def apply(
     addToCache: () => Unit,
@@ -61,4 +61,3 @@ object HTMLTextureFile {
     __obj.asInstanceOf[HTMLTextureFile]
   }
 }
-

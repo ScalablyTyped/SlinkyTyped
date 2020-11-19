@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.GeometryServiceProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.GeometryService")
 @js.native
@@ -16,4 +16,3 @@ class GeometryServiceCls ()
   extends typingsSlinky.arcgisJsApi.esri.GeometryService {
   def this(properties: GeometryServiceProperties) = this()
 }
-

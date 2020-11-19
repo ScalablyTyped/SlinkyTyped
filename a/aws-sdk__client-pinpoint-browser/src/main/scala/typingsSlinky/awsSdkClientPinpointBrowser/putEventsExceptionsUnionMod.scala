@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientPinpointBrowser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/types/PutEventsExceptionsUnion", JSImport.Namespace)
 @js.native
 object putEventsExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientPinpointBrowser.typesBadRequestExceptionMod.BadRequestException
     - typingsSlinky.awsSdkClientPinpointBrowser.typesInternalServerErrorExceptionMod.InternalServerErrorException
@@ -16,6 +17,4 @@ object putEventsExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientPinpointBrowser.typesTooManyRequestsExceptionMod.TooManyRequestsException
   */
   trait PutEventsExceptionsUnion extends js.Object
-  
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.node.cryptoMod
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("crypto", "verify")
 @js.native
 object verify extends js.Object {
+  
   def apply(
     algorithm: js.UndefOr[scala.Nothing],
     data: ArrayBufferView,
@@ -33,4 +34,3 @@ object verify extends js.Object {
   def apply(algorithm: Null, data: ArrayBufferView, key: KeyLike, signature: ArrayBufferView): Boolean = js.native
   def apply(algorithm: Null, data: ArrayBufferView, key: VerifyKeyWithOptions, signature: ArrayBufferView): Boolean = js.native
 }
-

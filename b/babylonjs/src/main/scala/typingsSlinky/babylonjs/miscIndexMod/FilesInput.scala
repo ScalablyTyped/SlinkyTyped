@@ -6,7 +6,7 @@ import typingsSlinky.babylonjs.sceneLoaderMod.SceneLoaderProgressEvent
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Misc/index", "FilesInput")
 @js.native
@@ -36,14 +36,13 @@ class FilesInput protected ()
     errorCallback: js.Function3[/* sceneFile */ File, /* scene */ Scene, /* message */ String, Unit]
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Misc/index", "FilesInput")
 @js.native
 object FilesInput extends js.Object {
+  
   /**
     * List of files ready to be loaded
     */
   def FilesToLoad: org.scalablytyped.runtime.StringDictionary[File] = js.native
 }
-

@@ -116,12 +116,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojProgressList extends JetElement[ojProgressListSettableProperties] {
-  var data: (DataProvider[_, _]) | Null = js.native
-  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   @JSName("addEventListener")
   def addEventListener_abort(`type`: abort, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ UIEvent, _]): Unit = js.native
   @JSName("addEventListener")
@@ -902,14 +901,20 @@ trait ojProgressList extends JetElement[ojProgressListSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var data: (DataProvider[_, _]) | Null = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_data(property: data): (DataProvider[_, _]) | Null = js.native
+  
+  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def setProperties(properties: ojProgressListSettablePropertiesLenient): Unit = js.native
+  
   def setProperty[T /* <: String */](property: T, value: JetSetPropertyType[T, ojProgressListSettableProperties]): Unit = js.native
   @JSName("setProperty")
   def setProperty_data(property: data): Unit = js.native
   @JSName("setProperty")
   def setProperty_data(property: data, value: DataProvider[_, _]): Unit = js.native
 }
-

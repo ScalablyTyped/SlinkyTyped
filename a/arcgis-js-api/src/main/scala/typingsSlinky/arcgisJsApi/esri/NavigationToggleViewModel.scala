@@ -6,10 +6,11 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.rotate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait NavigationToggleViewModel extends Accessor {
+  
   /**
     * The navigation mode of the [view](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-NavigationToggle-NavigationToggleViewModel.html#view). See the table below for a list of possible values.
     *
@@ -24,6 +25,7 @@ trait NavigationToggleViewModel extends Accessor {
     * @default pan
     */
   var navigationMode: pan | rotate = js.native
+  
   /**
     * The state of the widget.
     *
@@ -32,12 +34,7 @@ trait NavigationToggleViewModel extends Accessor {
     * @default disabled
     */
   val state: disabled | ready = js.native
-  /**
-    * The view associated with the widget.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-NavigationToggle-NavigationToggleViewModel.html#view)
-    */
-  var view: SceneView = js.native
+  
   /**
     * Toggles the navigation mode of the [view](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-NavigationToggle-NavigationToggleViewModel.html#view) from `pan` to `rotate` or vice versa.
     *
@@ -46,5 +43,11 @@ trait NavigationToggleViewModel extends Accessor {
     *
     */
   def toggle(): Unit = js.native
+  
+  /**
+    * The view associated with the widget.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-NavigationToggle-NavigationToggleViewModel.html#view)
+    */
+  var view: SceneView = js.native
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-node/commands/UntagResourceCommand", JSImport.Namespace)
 @js.native
 object untagResourceCommandMod extends js.Object {
+  
   @js.native
   class UntagResourceCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object untagResourceCommandMod extends js.Object {
           Readable
         ] {
     def this(input: UntagResourceInput) = this()
+    
     val middlewareStack: MiddlewareStack[UntagResourceInput, UntagResourceOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[UntagResourceInput, UntagResourceOutput] = js.native
   }
-  
 }
-

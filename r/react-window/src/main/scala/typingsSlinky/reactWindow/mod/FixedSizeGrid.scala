@@ -4,16 +4,18 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.reactWindow.anon.ScrollLeft
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-window", "FixedSizeGrid")
 @js.native
 class FixedSizeGrid ()
   extends Component[FixedSizeGridProps, js.Object, js.Any] {
+  
   /**
     * Scroll to the specified offsets.
     */
   def scrollTo(params: ScrollLeft): Unit = js.native
+  
   /**
     * Scroll to the specified item.
     *
@@ -33,4 +35,3 @@ class FixedSizeGrid ()
     */
   def scrollToItem(params: typingsSlinky.reactWindow.anon.Align): Unit = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.Security.Cryptography.Certificates
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides info about a subject alternative name. */
 @JSGlobal("Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo")
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
 /** Creates a new instance of the SubjectAlternativeNameInfo class. */
 class SubjectAlternativeNameInfo ()
   extends typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo
-

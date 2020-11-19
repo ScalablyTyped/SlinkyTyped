@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "BloomEffect")
 @js.native
@@ -35,8 +35,15 @@ class BloomEffect protected ()
     bloomScale: Double,
     bloomWeight: Double,
     bloomKernel: Double,
+    pipelineTextureType: js.UndefOr[scala.Nothing],
+    blockCompilation: Boolean
+  ) = this()
+  def this(
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    bloomScale: Double,
+    bloomWeight: Double,
+    bloomKernel: Double,
     pipelineTextureType: Double,
     blockCompilation: Boolean
   ) = this()
 }
-

@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SizeSliderConstructor
@@ -15,6 +15,7 @@ trait SizeSliderConstructor
   */
 Instantiable0[SizeSlider]
      with Instantiable1[/* properties */ SizeSliderProperties, SizeSlider] {
+  
   /**
     * A convenience function used to create a SizeSlider widget instance from the [result](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-size.html#ContinuousRendererResult) of the [createContinuousRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-size.html#createContinuousRenderer) method.  This method sets the slider [stops](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-SizeSlider.html#stops), [min](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-SizeSlider.html#min), [max](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-SizeSlider.html#maxDataValue), and [histogramConfig](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-SizeSlider.html#histogramConfig). It is still the developer's responsibility to assign it a proper [container](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-SizeSlider.html#container) and any other optional properties.
     *
@@ -27,4 +28,3 @@ Instantiable0[SizeSlider]
   def fromRendererResult(rendererResult: sizeContinuousRendererResult): SizeSlider = js.native
   def fromRendererResult(rendererResult: sizeContinuousRendererResult, histogramResult: HistogramResult): SizeSlider = js.native
 }
-

@@ -3,9 +3,37 @@ package typingsSlinky.nodePdftk
 import typingsSlinky.nodePdftk.mod.Permission
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodePdftkStrings {
+  
+  @scala.inline
+  def AllFeatures: AllFeatures = "AllFeatures".asInstanceOf[AllFeatures]
+  
+  @scala.inline
+  def Assembly: Assembly = "Assembly".asInstanceOf[Assembly]
+  
+  @scala.inline
+  def CopyContents: CopyContents = "CopyContents".asInstanceOf[CopyContents]
+  
+  @scala.inline
+  def DegradedPrintin: DegradedPrintin = "DegradedPrintin".asInstanceOf[DegradedPrintin]
+  
+  @scala.inline
+  def FillIn: FillIn = "FillIn".asInstanceOf[FillIn]
+  
+  @scala.inline
+  def ModifyAnnotations: ModifyAnnotations = "ModifyAnnotations".asInstanceOf[ModifyAnnotations]
+  
+  @scala.inline
+  def ModifyContents: ModifyContents = "ModifyContents".asInstanceOf[ModifyContents]
+  
+  @scala.inline
+  def Printing: Printing = "Printing".asInstanceOf[Printing]
+  
+  @scala.inline
+  def ScreenReaders: ScreenReaders = "ScreenReaders".asInstanceOf[ScreenReaders]
+  
   @js.native
   sealed trait AllFeatures extends Permission
   
@@ -32,24 +60,4 @@ object nodePdftkStrings {
   
   @js.native
   sealed trait ScreenReaders extends Permission
-  
-  @scala.inline
-  def AllFeatures: AllFeatures = "AllFeatures".asInstanceOf[AllFeatures]
-  @scala.inline
-  def Assembly: Assembly = "Assembly".asInstanceOf[Assembly]
-  @scala.inline
-  def CopyContents: CopyContents = "CopyContents".asInstanceOf[CopyContents]
-  @scala.inline
-  def DegradedPrintin: DegradedPrintin = "DegradedPrintin".asInstanceOf[DegradedPrintin]
-  @scala.inline
-  def FillIn: FillIn = "FillIn".asInstanceOf[FillIn]
-  @scala.inline
-  def ModifyAnnotations: ModifyAnnotations = "ModifyAnnotations".asInstanceOf[ModifyAnnotations]
-  @scala.inline
-  def ModifyContents: ModifyContents = "ModifyContents".asInstanceOf[ModifyContents]
-  @scala.inline
-  def Printing: Printing = "Printing".asInstanceOf[Printing]
-  @scala.inline
-  def ScreenReaders: ScreenReaders = "ScreenReaders".asInstanceOf[ScreenReaders]
 }
-

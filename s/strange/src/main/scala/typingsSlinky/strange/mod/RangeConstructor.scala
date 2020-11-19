@@ -9,7 +9,7 @@ import typingsSlinky.strange.strangeNumbers.`0`
 import typingsSlinky.strange.strangeNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RangeConstructor
@@ -32,6 +32,7 @@ Instantiable0[org.scalajs.dom.raw.Range]
       /* bounds */ Bounds, 
       org.scalajs.dom.raw.Range
     ] {
+  
   /**
     *
     * @param begin Range's beginning, or left endpoint.
@@ -52,6 +53,7 @@ Instantiable0[org.scalajs.dom.raw.Range]
   def apply[T /* <: Endpoint */](begin: Null, end: T, bounds: Bounds): org.scalajs.dom.raw.Range = js.native
   def apply[T /* <: Endpoint */](begin: Null, end: js.UndefOr[scala.Nothing], bounds: Bounds): org.scalajs.dom.raw.Range = js.native
   def apply[T /* <: Endpoint */](begin: Null, end: Null, bounds: Bounds): org.scalajs.dom.raw.Range = js.native
+  
   /**
     * Compares two range's beginnings.
     * Returns `-1` if `a` begins before `b` begins, `0` if they're equal and `1`
@@ -63,6 +65,7 @@ Instantiable0[org.scalajs.dom.raw.Range]
     * Range.compareBeginToBegin(new Range(0, 10), new Range(0, 15, "()")) // => 1
     */
   def compareBeginToBegin[U /* <: Endpoint */](a: org.scalajs.dom.raw.Range, b: org.scalajs.dom.raw.Range): `-1` | `0` | `1` = js.native
+  
   /**
     * Compares the first range's beginning to the second's end.
     * Returns `<0` if `a` begins before `b` ends, `0` if one starts where the other
@@ -74,6 +77,7 @@ Instantiable0[org.scalajs.dom.raw.Range]
     * Range.compareBeginToEnd(new Range(0, 10), new Range(-10, -5)) // => 1
     */
   def compareBeginToEnd[U /* <: Endpoint */](a: org.scalajs.dom.raw.Range, b: org.scalajs.dom.raw.Range): `-1` | `0` | `1` = js.native
+  
   /**
     * Compares two range's endings.
     * Returns `-1` if `a` ends before `b` ends, `0` if they're equal and `1`
@@ -85,6 +89,7 @@ Instantiable0[org.scalajs.dom.raw.Range]
     * Range.compareEndToEnd(new Range(0, 10), new Range(5, 10, "()")) // => 1
     */
   def compareEndToEnd[U /* <: Endpoint */](a: org.scalajs.dom.raw.Range, b: org.scalajs.dom.raw.Range): `-1` | `0` | `1` = js.native
+  
   /**
     * Parses a string stringified by
     * [`Range.prototype.toString`](#Range.prototype.toString).
@@ -115,6 +120,7 @@ Instantiable0[org.scalajs.dom.raw.Range]
     * Range.parse("(,3.14]", Number) // => new Range(-Infinity, 3.14, "(]")
     */
   def parse[U /* <: Endpoint */](range: String, parse: js.Function1[/* endpoint */ String, U]): org.scalajs.dom.raw.Range = js.native
+  
   /**
     * Merges two ranges and returns a range that encompasses both of them.
     * The ranges don't have to be intersecting.
@@ -129,4 +135,3 @@ Instantiable0[org.scalajs.dom.raw.Range]
     */
   def union[U /* <: Endpoint */](a: org.scalajs.dom.raw.Range, b: org.scalajs.dom.raw.Range): org.scalajs.dom.raw.Range = js.native
 }
-

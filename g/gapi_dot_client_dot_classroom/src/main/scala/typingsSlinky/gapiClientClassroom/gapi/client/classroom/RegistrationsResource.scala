@@ -6,10 +6,11 @@ import typingsSlinky.gapiClientClassroom.anon.RegistrationId
 import typingsSlinky.gapiClientClassroom.anon.UploadTypeUploadprotocol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RegistrationsResource extends js.Object {
+  
   def create(request: KeyOauthtoken, body: Registration): Request[Registration] = js.native
   /**
     * Creates a `Registration`, causing Classroom to start sending notifications
@@ -45,6 +46,7 @@ trait RegistrationsResource extends js.Object {
     * not been granted permission to publish to it.
     */
   def create(request: UploadTypeUploadprotocol): Request[Registration] = js.native
+  
   /**
     * Deletes a `Registration`, causing Classroom to stop sending notifications
     * for that `Registration`.
@@ -52,4 +54,3 @@ trait RegistrationsResource extends js.Object {
   def delete(): Request[js.Object] = js.native
   def delete(request: RegistrationId): Request[js.Object] = js.native
 }
-

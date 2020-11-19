@@ -2,7 +2,7 @@ package typingsSlinky.gitlab.notificationSettingsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.gitlab.gitlabStrings.disabled
@@ -13,19 +13,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.gitlab.gitlabStrings.custom
 */
 trait NotificationSettingLevel extends js.Object
-
 object NotificationSettingLevel {
+  
   @scala.inline
   def custom: typingsSlinky.gitlab.gitlabStrings.custom = "custom".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.custom]
+  
   @scala.inline
   def disabled: typingsSlinky.gitlab.gitlabStrings.disabled = "disabled".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.disabled]
+  
   @scala.inline
   def global: typingsSlinky.gitlab.gitlabStrings.global = "global".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.global]
+  
   @scala.inline
   def mention: typingsSlinky.gitlab.gitlabStrings.mention = "mention".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.mention]
+  
   @scala.inline
   def participating: typingsSlinky.gitlab.gitlabStrings.participating = "participating".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.participating]
+  
   @scala.inline
   def watch: typingsSlinky.gitlab.gitlabStrings.watch = "watch".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.watch]
 }
-

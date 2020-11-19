@@ -5,11 +5,12 @@ import typingsSlinky.msRestAzure.mod.AzureServiceClientOptions
 import typingsSlinky.msRestAzure.mod.CloudErrorParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("azure-arm-resource", "SubscriptionClient")
 @js.native
 object SubscriptionClient extends js.Object {
+  
   @js.native
   class SubscriptionClient protected ()
     extends typingsSlinky.azureArmResource.subscriptionClientMod.SubscriptionClient {
@@ -49,6 +50,20 @@ object SubscriptionClient extends js.Object {
   }
   
   @js.native
+  object SubscriptionModels extends js.Object {
+    
+    @js.native
+    class BaseResource ()
+      extends typingsSlinky.msRestAzure.mod.BaseResource
+    
+    @js.native
+    class CloudError protected ()
+      extends typingsSlinky.azureArmResource.subscriptionClientMod.SubscriptionModels.CloudError {
+      def this(parameters: CloudErrorParameters) = this()
+    }
+  }
+  
+  @js.native
   class default protected ()
     extends typingsSlinky.azureArmResource.subscriptionClientMod.default {
     /**
@@ -85,20 +100,4 @@ object SubscriptionClient extends js.Object {
     ) = this()
     def this(credentials: ServiceClientCredentials, baseUri: String, options: AzureServiceClientOptions) = this()
   }
-  
-  @js.native
-  object SubscriptionModels extends js.Object {
-    @js.native
-    class BaseResource ()
-      extends typingsSlinky.msRestAzure.mod.BaseResource
-    
-    @js.native
-    class CloudError protected ()
-      extends typingsSlinky.azureArmResource.subscriptionClientMod.SubscriptionModels.CloudError {
-      def this(parameters: CloudErrorParameters) = this()
-    }
-    
-  }
-  
 }
-

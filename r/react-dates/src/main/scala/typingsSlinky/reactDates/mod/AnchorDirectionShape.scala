@@ -2,7 +2,7 @@ package typingsSlinky.reactDates.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // SHAPES
 //
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactDates.reactDatesStrings.right
 */
 trait AnchorDirectionShape extends js.Object
-
 object AnchorDirectionShape {
+  
   @scala.inline
   def left: typingsSlinky.reactDates.reactDatesStrings.left = "left".asInstanceOf[typingsSlinky.reactDates.reactDatesStrings.left]
+  
   @scala.inline
   def right: typingsSlinky.reactDates.reactDatesStrings.right = "right".asInstanceOf[typingsSlinky.reactDates.reactDatesStrings.right]
 }
-

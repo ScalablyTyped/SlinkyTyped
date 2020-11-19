@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This object contains a helper method for creating a renderer for exploring the relationship between two numeric attributes. This is commonly known as a [bivariate choropleth](http://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/) visualization. This renderer classifies each variable in either 2, 3, or 4 classes along separate color ramps. One of those ramps is rotated 90 degrees and overlaid on the other to create a 2x2, 3x3, or 4x4 square grid. The x-axis indicates the range of values for one variable, and the y-axis indicates the range for the second variable. The squares running diagonal from the lower left corner to the upper right corner indicate features where the two variables may be related or in agreement with one another.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait relationship extends js.Object {
+  
   /**
     * Generates a relationship renderer (bivariate choropleth) based on a set of competing numeric fields.  Each feature's category is determined based on the result of an Arcade expression generated internally by this method. You are required provide a `layer`, `view`, `field1` name, and `field2` name to generate this renderer. Optionally, you can set the `focus` to change the rotation of the legend and the `numClasses` parameter to change the grid size of the legend.  Other options are provided for convenience for more involved custom visualization authoring applications.
     *
@@ -68,6 +69,7 @@ trait relationship extends js.Object {
     *
     */
   def createRenderer(params: relationshipCreateRendererParams): js.Promise[relationshipRendererResult] = js.native
+  
   /**
     * Updates a relationship renderer (bivariate choropleth) generated from [createRenderer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-relationship.html#createRenderer) based on the given input parameters.
     *
@@ -100,8 +102,8 @@ trait relationship extends js.Object {
     */
   def updateRenderer(params: relationshipUpdateRendererParams): js.Promise[UniqueValueRenderer] = js.native
 }
-
 object relationship {
+  
   @scala.inline
   def apply(
     createRenderer: relationshipCreateRendererParams => js.Promise[relationshipRendererResult],
@@ -110,22 +112,26 @@ object relationship {
     val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer), updateRenderer = js.Any.fromFunction1(updateRenderer))
     __obj.asInstanceOf[relationship]
   }
+  
   @scala.inline
   implicit class relationshipOps[Self <: relationship] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreateRenderer(value: relationshipCreateRendererParams => js.Promise[relationshipRendererResult]): Self = this.set("createRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setUpdateRenderer(value: relationshipUpdateRendererParams => js.Promise[UniqueValueRenderer]): Self = this.set("updateRenderer", js.Any.fromFunction1(value))
   }
-  
 }
-

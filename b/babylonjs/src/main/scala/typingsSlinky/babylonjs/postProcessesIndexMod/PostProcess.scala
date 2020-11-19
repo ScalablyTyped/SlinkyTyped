@@ -6,7 +6,7 @@ import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/PostProcesses/index", "PostProcess")
 @js.native
@@ -36,25 +36,7 @@ class PostProcess protected ()
     fragmentUrl: String,
     parameters: Nullable[js.Array[String]],
     samplers: Nullable[js.Array[String]],
-    options: Double,
-    camera: Nullable[Camera],
-    samplingMode: js.UndefOr[Double],
-    engine: js.UndefOr[Engine],
-    reusable: js.UndefOr[Boolean],
-    defines: js.UndefOr[Nullable[String]],
-    textureType: js.UndefOr[Double],
-    vertexUrl: js.UndefOr[String],
-    indexParameters: js.UndefOr[js.Any],
-    blockCompilation: js.UndefOr[Boolean],
-    textureFormat: js.UndefOr[Double]
-  ) = this()
-  def this(
-    /** Name of the PostProcess. */
-  name: String,
-    fragmentUrl: String,
-    parameters: Nullable[js.Array[String]],
-    samplers: Nullable[js.Array[String]],
-    options: PostProcessOptions,
+    options: Double | PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[Double],
     engine: js.UndefOr[Engine],
@@ -67,4 +49,3 @@ class PostProcess protected ()
     textureFormat: js.UndefOr[Double]
   ) = this()
 }
-

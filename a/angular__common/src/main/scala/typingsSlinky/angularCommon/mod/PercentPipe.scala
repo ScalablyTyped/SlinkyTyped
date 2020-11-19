@@ -3,13 +3,15 @@ package typingsSlinky.angularCommon.mod
 import typingsSlinky.angularCore.mod.PipeTransform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/common", "PercentPipe")
 @js.native
 class PercentPipe protected () extends PipeTransform {
   def this(_locale: String) = this()
+  
   var _locale: js.Any = js.native
+  
   /**
     *
     * @param value The number to be formatted as a percentage.
@@ -31,4 +33,3 @@ class PercentPipe protected () extends PipeTransform {
   def transform(value: js.Any, digitsInfo: String): String | Null = js.native
   def transform(value: js.Any, digitsInfo: String, locale: String): String | Null = js.native
 }
-

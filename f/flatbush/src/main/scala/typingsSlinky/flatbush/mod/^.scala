@@ -2,7 +2,7 @@ package typingsSlinky.flatbush.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("flatbush", JSImport.Namespace)
 @js.native
@@ -17,14 +17,13 @@ class ^ protected () extends FlatbushClass {
   def this(numItems: Double, nodeSize: js.UndefOr[scala.Nothing], arrayType: TypedArrayConstructor) = this()
   def this(numItems: Double, nodeSize: Double, arrayType: TypedArrayConstructor) = this()
 }
-
 @JSImport("flatbush", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Recreates a Flatbush index from raw ArrayBuffer data (that's exposed as index.data on a previously indexed Flatbush instance).
     * Very useful for transferring indices between threads or storing them in a file.
     */
   def from(data: js.typedarray.ArrayBuffer): FlatbushClass = js.native
 }
-

@@ -4,21 +4,22 @@ import typingsSlinky.babylonjs.BABYLON.IParticleSystem
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.ParticleHelper")
 @js.native
 class ParticleHelper ()
   extends typingsSlinky.babylonjs.BABYLON.ParticleHelper
-
 /* static members */
 @JSGlobal("BABYLON.ParticleHelper")
 @js.native
 object ParticleHelper extends js.Object {
+  
   /**
     * Gets or sets base Assets URL
     */
   var BaseAssetsUrl: String = js.native
+  
   /**
     * This is the main static method (one-liner) of this helper to create different particle systems
     * @param type This string represents the type to the particle system to create
@@ -28,6 +29,7 @@ object ParticleHelper extends js.Object {
     */
   def CreateAsync(`type`: String, scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]): js.Promise[typingsSlinky.babylonjs.BABYLON.ParticleSystemSet] = js.native
   def CreateAsync(`type`: String, scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene], gpu: Boolean): js.Promise[typingsSlinky.babylonjs.BABYLON.ParticleSystemSet] = js.native
+  
   /**
     * Create a default particle system that you can tweak
     * @param emitter defines the emitter to use
@@ -45,7 +47,38 @@ object ParticleHelper extends js.Object {
     emitter: Nullable[
       typingsSlinky.babylonjs.BABYLON.AbstractMesh | typingsSlinky.babylonjs.BABYLON.Vector3
     ],
+    capacity: js.UndefOr[scala.Nothing],
+    scene: js.UndefOr[scala.Nothing],
+    useGPU: Boolean
+  ): IParticleSystem = js.native
+  def CreateDefault(
+    emitter: Nullable[
+      typingsSlinky.babylonjs.BABYLON.AbstractMesh | typingsSlinky.babylonjs.BABYLON.Vector3
+    ],
+    capacity: js.UndefOr[scala.Nothing],
+    scene: typingsSlinky.babylonjs.BABYLON.Scene
+  ): IParticleSystem = js.native
+  def CreateDefault(
+    emitter: Nullable[
+      typingsSlinky.babylonjs.BABYLON.AbstractMesh | typingsSlinky.babylonjs.BABYLON.Vector3
+    ],
+    capacity: js.UndefOr[scala.Nothing],
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    useGPU: Boolean
+  ): IParticleSystem = js.native
+  def CreateDefault(
+    emitter: Nullable[
+      typingsSlinky.babylonjs.BABYLON.AbstractMesh | typingsSlinky.babylonjs.BABYLON.Vector3
+    ],
     capacity: Double
+  ): IParticleSystem = js.native
+  def CreateDefault(
+    emitter: Nullable[
+      typingsSlinky.babylonjs.BABYLON.AbstractMesh | typingsSlinky.babylonjs.BABYLON.Vector3
+    ],
+    capacity: Double,
+    scene: js.UndefOr[scala.Nothing],
+    useGPU: Boolean
   ): IParticleSystem = js.native
   def CreateDefault(
     emitter: Nullable[
@@ -62,6 +95,7 @@ object ParticleHelper extends js.Object {
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     useGPU: Boolean
   ): IParticleSystem = js.native
+  
   /**
     * Static function used to export a particle system to a ParticleSystemSet variable.
     * Please note that the emitter shape is not exported
@@ -70,4 +104,3 @@ object ParticleHelper extends js.Object {
     */
   def ExportSet(systems: js.Array[IParticleSystem]): typingsSlinky.babylonjs.BABYLON.ParticleSystemSet = js.native
 }
-

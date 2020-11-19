@@ -7,7 +7,7 @@ import typingsSlinky.std.BlobPart
 import typingsSlinky.std.FilePropertyBag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantiableFile
@@ -18,4 +18,3 @@ trait InstantiableFile
       /* options */ FilePropertyBag, 
       File
     ]
-

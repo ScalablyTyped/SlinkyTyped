@@ -2,7 +2,7 @@ package typingsSlinky.hapiHapi.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.hapiHapi.hapiHapiStrings.onRequest
@@ -14,21 +14,26 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.hapiHapi.hapiHapiStrings.onPreResponse
 */
 trait ServerRequestExtType extends js.Object
-
 object ServerRequestExtType {
+  
   @scala.inline
   def onCredentials: typingsSlinky.hapiHapi.hapiHapiStrings.onCredentials = "onCredentials".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onCredentials]
+  
   @scala.inline
   def onPostAuth: typingsSlinky.hapiHapi.hapiHapiStrings.onPostAuth = "onPostAuth".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPostAuth]
+  
   @scala.inline
   def onPostHandler: typingsSlinky.hapiHapi.hapiHapiStrings.onPostHandler = "onPostHandler".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPostHandler]
+  
   @scala.inline
   def onPreAuth: typingsSlinky.hapiHapi.hapiHapiStrings.onPreAuth = "onPreAuth".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPreAuth]
+  
   @scala.inline
   def onPreHandler: typingsSlinky.hapiHapi.hapiHapiStrings.onPreHandler = "onPreHandler".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPreHandler]
+  
   @scala.inline
   def onPreResponse: typingsSlinky.hapiHapi.hapiHapiStrings.onPreResponse = "onPreResponse".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPreResponse]
+  
   @scala.inline
   def onRequest: typingsSlinky.hapiHapi.hapiHapiStrings.onRequest = "onRequest".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onRequest]
 }
-

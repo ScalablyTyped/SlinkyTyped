@@ -6,11 +6,12 @@ import typingsSlinky.graphqlToolsBatchDelegate.typesMod.BatchDelegateOptionsFn
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-tools", "createBatchDelegateFn")
 @js.native
 object createBatchDelegateFn extends js.Object {
+  
   def apply[K, V, C](
     argFn: js.Function1[/* args */ js.Array[K], Record[String, _]],
     batchDelegateOptionsFn: BatchDelegateOptionsFn[Record[String, _], _]
@@ -21,4 +22,3 @@ object createBatchDelegateFn extends js.Object {
     dataLoaderOptions: Options[K, V, C]
   ): BatchDelegateFn[K, _] = js.native
 }
-

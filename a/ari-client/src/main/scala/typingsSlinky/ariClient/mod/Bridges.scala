@@ -11,10 +11,11 @@ import typingsSlinky.ariClient.anon.MohClass
 import typingsSlinky.ariClient.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Bridges extends js.Object {
+  
   /**
     * Add a channel to a bridge.
     *
@@ -35,6 +36,7 @@ trait Bridges extends js.Object {
     * @param [params.mute] - Mute audio from this channel, preventing it to pass through to the bridge.
     */
   def addChannel(params: AbsorbDTMF, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Removes any explicit video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants. When no explicit video source is set, talk
     * detection will be used to determine the active video stream.
@@ -49,6 +51,7 @@ trait Bridges extends js.Object {
     * @param params.bridgeId - Bridges id.
     */
   def clearVideoSource(params: BridgeIdString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Create a new bridge.
     * This bridge persists until it has been shut down, or Asterisk has been shut down.
@@ -73,6 +76,7 @@ trait Bridges extends js.Object {
     * @param [params.name] - Name to give to the bridge being created.
     */
   def create(params: BridgeId, callback: js.Function2[/* err */ js.Error, /* bridge */ Bridge, Unit]): Unit = js.native
+  
   /**
     * Create a new bridge or updates an existing one.
     * This bridge persists until it has been shut down, or Asterisk has been shut down.
@@ -91,6 +95,7 @@ trait Bridges extends js.Object {
     * @param [params.name] - Set the name of the bridge.
     */
   def createWithId(params: Name, callback: js.Function2[/* err */ js.Error, /* bridge */ Bridge, Unit]): Unit = js.native
+  
   /**
     * Shut down a bridge.
     * If any channels are in this bridge, they will be removed and resume whatever they were doing beforehand.
@@ -105,6 +110,7 @@ trait Bridges extends js.Object {
     * @param params.bridgeId - Bridges id.
     */
   def destroy(params: BridgeIdString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Get bridge details.
     *
@@ -117,6 +123,7 @@ trait Bridges extends js.Object {
     * @param params.bridgeId - Bridges id.
     */
   def get(params: BridgeIdString, callback: js.Function2[/* err */ js.Error, /* bridge */ Bridge, Unit]): Unit = js.native
+  
   /**
     * List all active bridges in Asterisk.
     */
@@ -125,6 +132,7 @@ trait Bridges extends js.Object {
     * List all active bridges in Asterisk.
     */
   def list(callback: js.Function2[/* err */ js.Error, /* bridges */ js.Array[Bridge], Unit]): Unit = js.native
+  
   /**
     * Start playback of media on a bridge.
     * The media URI may be any of a number of URIs. Currently sound:, recording:, number:, digits:, characters:, and tone: URIs are supported. This operation creates a playback resource
@@ -151,6 +159,7 @@ trait Bridges extends js.Object {
     * @param [params.playbackId] - Playback Id.
     */
   def play(params: Lang, callback: js.Function2[/* err */ js.Error, /* playback */ Playback, Unit]): Unit = js.native
+  
   /**
     * Start playback of media on a bridge.
     * The media URI may be any of a number of URIs. Currently sound:, recording:, number:, digits:, characters:, and tone: URIs are supported. This operation creates a playback resource
@@ -177,6 +186,7 @@ trait Bridges extends js.Object {
     * @param [params.skipms] - Number of milliseconds to skip for forward/reverse operations.
     */
   def playWithId(params: Media, callback: js.Function2[/* err */ js.Error, /* playback */ Playback, Unit]): Unit = js.native
+  
   /**
     * Start a recording.
     * This records the mixed audio from all channels participating in this bridge.
@@ -205,6 +215,7 @@ trait Bridges extends js.Object {
     * @param [params.terminateOn] - DTMF input to terminate recording.
     */
   def record(params: Beep, callback: js.Function2[/* err */ js.Error, /* liverecording */ LiveRecording, Unit]): Unit = js.native
+  
   /**
     * Remove a channel from a bridge.
     *
@@ -219,6 +230,7 @@ trait Bridges extends js.Object {
     * @param params.channel - Ids of channels to remove from bridge.
     */
   def removeChannel(params: typingsSlinky.ariClient.anon.Channel, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Set a channel as the video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants.
     *
@@ -233,6 +245,7 @@ trait Bridges extends js.Object {
     * @param params.channelId - Channels id.
     */
   def setVideoSource(params: ChannelId, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Play music on hold to a bridge or change the MOH class that is playing.
     *
@@ -247,6 +260,7 @@ trait Bridges extends js.Object {
     * @param [params.mohClass] - Channels id.
     */
   def startMoh(params: MohClass, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Stop playing music on hold to a bridge.
     * This will only stop music on hold being played via POST bridges/{bridgeId}/moh.
@@ -262,4 +276,3 @@ trait Bridges extends js.Object {
     */
   def stopMoh(params: BridgeIdString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
-

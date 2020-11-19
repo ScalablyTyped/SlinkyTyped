@@ -2,7 +2,7 @@ package typingsSlinky.qlikEngineapi.EngineAPI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * One of:
@@ -16,13 +16,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CONNECT_32
 */
 trait MachineModeType extends js.Object
-
 object MachineModeType {
+  
   @scala.inline
   def CONNECT_32: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CONNECT_32 = "CONNECT_32".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CONNECT_32]
+  
   @scala.inline
   def CONNECT_64: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CONNECT_64 = "CONNECT_64".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CONNECT_64]
+  
   @scala.inline
   def CONNECT_DEFAULT: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CONNECT_DEFAULT = "CONNECT_DEFAULT".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CONNECT_DEFAULT]
 }
-

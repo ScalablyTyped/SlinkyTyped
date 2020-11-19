@@ -3,7 +3,7 @@ package typingsSlinky.firebase.mod.database
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Firebase Database service interface.
@@ -19,6 +19,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Database extends js.Object {
+  
   /**
     * The {@link firebase.app.App app} associated with the `Database` service
     * instance.
@@ -29,6 +30,7 @@ trait Database extends js.Object {
     * ```
     */
   var app: App = js.native
+  
   /**
     * Disconnects from the server (all Database operations will be completed
     * offline).
@@ -54,6 +56,7 @@ trait Database extends js.Object {
     * ```
     */
   def goOffline(): js.Any = js.native
+  
   /**
     * Reconnects to the server and synchronizes the offline Database state
     * with the server state.
@@ -69,6 +72,7 @@ trait Database extends js.Object {
     * ```
     */
   def goOnline(): js.Any = js.native
+  
   /**
     * Returns a `Reference` representing the location in the Database
     * corresponding to the provided path. If no path is provided, the `Reference`
@@ -98,6 +102,7 @@ trait Database extends js.Object {
     */
   def ref(): Reference = js.native
   def ref(path: String): Reference = js.native
+  
   /**
     * Returns a `Reference` representing the location in the Database
     * corresponding to the provided Firebase URL.
@@ -127,4 +132,3 @@ trait Database extends js.Object {
     */
   def refFromURL(url: String): Reference = js.native
 }
-

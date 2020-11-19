@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.esToPrimitive.anon.ES2015
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("es-to-primitive", JSImport.Namespace)
 @js.native
@@ -18,4 +18,3 @@ object mod
         js.UndefOr[String | Double | Boolean | js.Symbol | Null]
       ]) with ES2015
     ]
-

@@ -2,12 +2,12 @@ package typingsSlinky.winrt.Windows.Networking.Connectivity
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DataPlanStatus extends IDataPlanStatus
-
 object DataPlanStatus {
+  
   @scala.inline
   def apply(
     dataLimitInMegabytes: Double,
@@ -21,4 +21,3 @@ object DataPlanStatus {
     __obj.asInstanceOf[DataPlanStatus]
   }
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typescript.mod.TextRange because Already inherited
@@ -14,8 +14,9 @@ import scala.scalajs.js.annotation._
 trait ClassDeclaration
   extends ClassLikeDeclarationBase
      with ClassLikeDeclaration {
+  
   var _statementBrand: js.Any = js.native
+  
   @JSName("kind")
   var kind_ClassDeclaration: typingsSlinky.typescript.mod.SyntaxKind.ClassDeclaration = js.native
 }
-

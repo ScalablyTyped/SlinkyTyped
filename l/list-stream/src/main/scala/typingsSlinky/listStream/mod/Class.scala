@@ -3,7 +3,7 @@ package typingsSlinky.listStream.mod
 import typingsSlinky.node.streamMod.DuplexOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("list-stream", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ class Class () extends ListStream {
   ) = this()
   def this(options: DuplexOptions, callback: js.Function2[/* err */ js.Error, /* data */ js.Array[_], Unit]) = this()
 }
-

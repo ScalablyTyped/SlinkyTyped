@@ -2,7 +2,7 @@ package typingsSlinky.openlayers.mod.olx.layer
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Render mode for vector layers:
@@ -19,11 +19,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.openlayers.openlayersStrings.vector
 */
 trait VectorRenderType extends js.Object
-
 object VectorRenderType {
+  
   @scala.inline
   def image: typingsSlinky.openlayers.openlayersStrings.image = "image".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.image]
+  
   @scala.inline
   def vector: typingsSlinky.openlayers.openlayersStrings.vector = "vector".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.vector]
 }
-

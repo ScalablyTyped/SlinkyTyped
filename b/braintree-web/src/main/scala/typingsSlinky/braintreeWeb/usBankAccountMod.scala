@@ -5,20 +5,25 @@ import typingsSlinky.braintreeWeb.anon.Client
 import typingsSlinky.braintreeWeb.coreMod.callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("braintree-web/modules/us-bank-account", JSImport.Namespace)
 @js.native
 object usBankAccountMod extends js.Object {
+  
   @js.native
   trait USBankAccount extends js.Object {
+    
     var VERSION: String = js.native
+    
     def create(options: Client, callback: callback): Unit = js.native
+    
     /**
       * Cleanly tear down anything set up by {@link module:braintree-web/us-bank-account.create|create}.
       */
     def teardown(): Unit = js.native
     def teardown(callback: callback): Unit = js.native
+    
     /**
       * Tokenizes bank information to return a payment method nonce. You can tokenize bank details by providing
       * information like account and routing numbers. You can also tokenize with a bank login UI that prompts
@@ -83,6 +88,4 @@ object usBankAccountMod extends js.Object {
       */
     def tokenize(options: BankDetails, callback: callback): Unit = js.native
   }
-  
 }
-

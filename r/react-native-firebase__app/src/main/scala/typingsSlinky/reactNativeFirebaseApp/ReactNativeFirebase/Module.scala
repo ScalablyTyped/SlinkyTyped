@@ -2,18 +2,16 @@ package typingsSlinky.reactNativeFirebaseApp.ReactNativeFirebase
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Module extends js.Object {
+  
   /**
     * The current React Native Firebase version.
     */
   val SDK_VERSION: String = js.native
-  /**
-    * A (read-only) array of all the initialized Apps.
-    */
-  var apps: js.Array[FirebaseApp] = js.native
+  
   /**
     * Retrieve an instance of a FirebaseApp.
     *
@@ -26,6 +24,12 @@ trait Module extends js.Object {
     */
   def app(): FirebaseApp = js.native
   def app(name: String): FirebaseApp = js.native
+  
+  /**
+    * A (read-only) array of all the initialized Apps.
+    */
+  var apps: js.Array[FirebaseApp] = js.native
+  
   /**
     * Create (and initialize) a FirebaseApp.
     *
@@ -36,4 +40,3 @@ trait Module extends js.Object {
   def initializeApp(options: FirebaseAppOptions, config: FirebaseAppConfig): FirebaseApp = js.native
   def initializeApp(options: FirebaseAppOptions, name: String): FirebaseApp = js.native
 }
-

@@ -2,10 +2,11 @@ package typingsSlinky.reactNativeFirebaseApp.Utils
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FilePath extends js.Object {
+  
   /**
     * Returns an absolute path to the application specific cache directory on the filesystem.
     *
@@ -16,6 +17,7 @@ trait FilePath extends js.Object {
     * ```
     */
   var CACHES_DIRECTORY: String = js.native
+  
   /**
     * Returns an absolute path to the users Documents directory.
     *
@@ -26,6 +28,7 @@ trait FilePath extends js.Object {
     * ```
     */
   var DOCUMENT_DIRECTORY: String = js.native
+  
   /**
     * Returns an absolute path to the directory on the primary shared/external storage device.
     *
@@ -40,6 +43,7 @@ trait FilePath extends js.Object {
     * @android Android only - iOS returns null
     */
   var EXTERNAL_DIRECTORY: String | Null = js.native
+  
   /**
     * Returns an absolute path to the primary shared/external storage directory.
     *
@@ -54,6 +58,7 @@ trait FilePath extends js.Object {
     * @android Android only - iOS returns null
     */
   var EXTERNAL_STORAGE_DIRECTORY: String | Null = js.native
+  
   /**
     * Returns an absolute path to the apps library/resources directory.
     *
@@ -64,6 +69,7 @@ trait FilePath extends js.Object {
     * ```
     */
   var LIBRARY_DIRECTORY: String = js.native
+  
   /**
     * Returns an absolute path to the applications main bundle.
     *
@@ -74,6 +80,7 @@ trait FilePath extends js.Object {
     * @ios iOS only
     */
   var MAIN_BUNDLE: String = js.native
+  
   /**
     * Returns an absolute path to a directory in which to place movies that are available to the user.
     *
@@ -82,6 +89,7 @@ trait FilePath extends js.Object {
     * ```
     */
   var MOVIES_DIRECTORY: String = js.native
+  
   /**
     * Returns an absolute path to a directory in which to place pictures that are available to the user.
     *
@@ -90,6 +98,7 @@ trait FilePath extends js.Object {
     * ```
     */
   var PICTURES_DIRECTORY: String = js.native
+  
   /**
     * Returns an absolute path to a temporary directory.
     *
@@ -101,8 +110,8 @@ trait FilePath extends js.Object {
     */
   var TEMP_DIRECTORY: String = js.native
 }
-
 object FilePath {
+  
   @scala.inline
   def apply(
     CACHES_DIRECTORY: String,
@@ -116,40 +125,53 @@ object FilePath {
     val __obj = js.Dynamic.literal(CACHES_DIRECTORY = CACHES_DIRECTORY.asInstanceOf[js.Any], DOCUMENT_DIRECTORY = DOCUMENT_DIRECTORY.asInstanceOf[js.Any], LIBRARY_DIRECTORY = LIBRARY_DIRECTORY.asInstanceOf[js.Any], MAIN_BUNDLE = MAIN_BUNDLE.asInstanceOf[js.Any], MOVIES_DIRECTORY = MOVIES_DIRECTORY.asInstanceOf[js.Any], PICTURES_DIRECTORY = PICTURES_DIRECTORY.asInstanceOf[js.Any], TEMP_DIRECTORY = TEMP_DIRECTORY.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilePath]
   }
+  
   @scala.inline
   implicit class FilePathOps[Self <: FilePath] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCACHES_DIRECTORY(value: String): Self = this.set("CACHES_DIRECTORY", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setDOCUMENT_DIRECTORY(value: String): Self = this.set("DOCUMENT_DIRECTORY", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLIBRARY_DIRECTORY(value: String): Self = this.set("LIBRARY_DIRECTORY", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMAIN_BUNDLE(value: String): Self = this.set("MAIN_BUNDLE", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMOVIES_DIRECTORY(value: String): Self = this.set("MOVIES_DIRECTORY", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setPICTURES_DIRECTORY(value: String): Self = this.set("PICTURES_DIRECTORY", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTEMP_DIRECTORY(value: String): Self = this.set("TEMP_DIRECTORY", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setEXTERNAL_DIRECTORY(value: String): Self = this.set("EXTERNAL_DIRECTORY", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setEXTERNAL_DIRECTORYNull: Self = this.set("EXTERNAL_DIRECTORY", null)
+    
     @scala.inline
     def setEXTERNAL_STORAGE_DIRECTORY(value: String): Self = this.set("EXTERNAL_STORAGE_DIRECTORY", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setEXTERNAL_STORAGE_DIRECTORYNull: Self = this.set("EXTERNAL_STORAGE_DIRECTORY", null)
   }
-  
 }
-

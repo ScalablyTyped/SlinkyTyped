@@ -177,1061 +177,12 @@ import typingsSlinky.styledComponents.styledComponentsStrings.wbr
 import typingsSlinky.styledComponents.styledComponentsStrings.webview
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined styled-components.styled-components.ThemedStyledInterface<styled-components.styled-components.DefaultTheme> */
 @js.native
 trait StyledInterface extends js.Object {
-  var a: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.a, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var abbr: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.abbr, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var address: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.address, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var animate: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.animate, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var animateMotion: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.animateMotion, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var animateTransform: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.animateTransform, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var area: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.area, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var article: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.article, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var aside: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.aside, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var audio: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.audio, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var b: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.b, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var base: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.base, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var bdi: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.bdi, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var bdo: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.bdo, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var big: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.big, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var blockquote: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.blockquote, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var body: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.body, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var br: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.br, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var button: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.button, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var canvas: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.canvas, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var caption: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.caption, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var circle: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.circle, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var cite: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.cite, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var clipPath: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.clipPath, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var code: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.code, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var col: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.col, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var colgroup: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.colgroup, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var data: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.data, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var datalist: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.datalist, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var dd: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.dd, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var defs: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.defs, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var del: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.del, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var desc: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.desc, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var details: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.details, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var dfn: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.dfn, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var dialog: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.dialog, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var div: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.div, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var dl: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.dl, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var dt: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.dt, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var ellipse: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.ellipse, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var em: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.em, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var embed: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.embed, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feBlend: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feBlend, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feColorMatrix: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feColorMatrix, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feComponentTransfer: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feComponentTransfer, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feComposite: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feComposite, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feConvolveMatrix: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feConvolveMatrix, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feDiffuseLighting: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feDiffuseLighting, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feDisplacementMap: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feDisplacementMap, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feDistantLight: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feDistantLight, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feDropShadow: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feDropShadow, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feFlood: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feFlood, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feFuncA: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feFuncA, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feFuncB: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feFuncB, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feFuncG: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feFuncG, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feFuncR: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feFuncR, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feGaussianBlur: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feGaussianBlur, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feImage: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feImage, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feMerge: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feMerge, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feMergeNode: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feMergeNode, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feMorphology: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feMorphology, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feOffset: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feOffset, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var fePointLight: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.fePointLight, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feSpecularLighting: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feSpecularLighting, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feSpotLight: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feSpotLight, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feTile: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feTile, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var feTurbulence: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.feTurbulence, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var fieldset: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.fieldset, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var figcaption: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.figcaption, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var figure: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.figure, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var filter: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.filter, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var footer: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.footer, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var foreignObject: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.foreignObject, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var form: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.form, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var g: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.g, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var h1: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.h1, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var h2: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.h2, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var h3: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.h3, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var h4: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.h4, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var h5: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.h5, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var h6: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.h6, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var head: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.head, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var header: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.header, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var hgroup: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.hgroup, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var hr: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.hr, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var html: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.html, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var i: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.i, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var iframe: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.iframe, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var image: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.image, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var img: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.img, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var input: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.input, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var ins: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.ins, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var kbd: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.kbd, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var keygen: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.keygen, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var label: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.label, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var legend: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.legend, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var li: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.li, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var line: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.line, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var linearGradient: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.linearGradient, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var link: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.link, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var main: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.main, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var map: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.map, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var mark: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.mark, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var marker: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.marker, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var mask: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.mask, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var menu: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.menu, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var menuitem: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.menuitem, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var meta: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.meta, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var metadata: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.metadata, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var meter: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.meter, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var mpath: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.mpath, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var nav: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.nav, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var noindex: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.noindex, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var noscript: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.noscript, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var `object`: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.`object`, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var ol: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.ol, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var optgroup: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.optgroup, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var option: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.option, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var output: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.output, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var p: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.p, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var param: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.param, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var path: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.path, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var pattern: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.pattern, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var picture: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.picture, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var polygon: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.polygon, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var polyline: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.polyline, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var pre: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.pre, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var progress: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.progress, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var q: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.q, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var radialGradient: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.radialGradient, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var rect: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.rect, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var rp: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.rp, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var rt: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.rt, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var ruby: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.ruby, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var s: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.s, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var samp: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.samp, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var script: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.script, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var section: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.section, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var select: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.select, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var slot: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.slot, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var small: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.small, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var source: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.source, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var span: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.span, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var stop: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.stop, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var strong: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.strong, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var style: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.style, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var sub: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.sub, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var summary: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.summary, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var sup: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.sup, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var svg: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.svg, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var switch: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.switch, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var symbol: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.symbol, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var table: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.table, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var tbody: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.tbody, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var td: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.td, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var template: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.template, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var text: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.text, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var textPath: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.textPath, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var textarea: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.textarea, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var tfoot: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.tfoot, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var th: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.th, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var thead: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.thead, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var time: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.time, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var title: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.title, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var tr: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.tr, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var track: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.track, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var tspan: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.tspan, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var u: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.u, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var ul: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.ul, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var use: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.use, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var `var`: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.`var`, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var video: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.video, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var view: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.view, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var wbr: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.wbr, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
-  var webview: ThemedStyledFunction[
-    typingsSlinky.styledComponents.styledComponentsStrings.webview, 
-    AnyIfEmpty[DefaultTheme], 
-    js.Object, 
-    scala.Nothing
-  ] = js.native
+  
   def apply(
     // unfortunately using a conditional type to validate that it can receive a `theme?: Theme`
   // causes tests to fail in TS 3.1
@@ -2113,5 +1064,1229 @@ trait StyledInterface extends js.Object {
     StyledComponentInnerOtherProps[C], 
     StyledComponentInnerAttrs[C]
   ] = js.native
+  
+  var a: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.a, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var abbr: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.abbr, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var address: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.address, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var animate: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.animate, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var animateMotion: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.animateMotion, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var animateTransform: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.animateTransform, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var area: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.area, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var article: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.article, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var aside: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.aside, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var audio: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.audio, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var b: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.b, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var base: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.base, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var bdi: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.bdi, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var bdo: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.bdo, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var big: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.big, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var blockquote: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.blockquote, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var body: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.body, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var br: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.br, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var button: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.button, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var canvas: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.canvas, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var caption: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.caption, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var circle: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.circle, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var cite: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.cite, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var clipPath: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.clipPath, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var code: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.code, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var col: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.col, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var colgroup: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.colgroup, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var data: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.data, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var datalist: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.datalist, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var dd: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.dd, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var defs: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.defs, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var del: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.del, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var desc: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.desc, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var details: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.details, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var dfn: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.dfn, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var dialog: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.dialog, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var div: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.div, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var dl: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.dl, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var dt: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.dt, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var ellipse: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.ellipse, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var em: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.em, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var embed: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.embed, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feBlend: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feBlend, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feColorMatrix: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feColorMatrix, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feComponentTransfer: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feComponentTransfer, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feComposite: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feComposite, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feConvolveMatrix: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feConvolveMatrix, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feDiffuseLighting: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feDiffuseLighting, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feDisplacementMap: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feDisplacementMap, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feDistantLight: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feDistantLight, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feDropShadow: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feDropShadow, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feFlood: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feFlood, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feFuncA: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feFuncA, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feFuncB: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feFuncB, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feFuncG: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feFuncG, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feFuncR: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feFuncR, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feGaussianBlur: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feGaussianBlur, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feImage: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feImage, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feMerge: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feMerge, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feMergeNode: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feMergeNode, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feMorphology: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feMorphology, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feOffset: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feOffset, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var fePointLight: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.fePointLight, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feSpecularLighting: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feSpecularLighting, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feSpotLight: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feSpotLight, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feTile: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feTile, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var feTurbulence: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.feTurbulence, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var fieldset: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.fieldset, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var figcaption: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.figcaption, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var figure: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.figure, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var filter: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.filter, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var footer: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.footer, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var foreignObject: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.foreignObject, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var form: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.form, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var g: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.g, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var h1: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.h1, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var h2: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.h2, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var h3: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.h3, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var h4: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.h4, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var h5: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.h5, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var h6: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.h6, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var head: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.head, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var header: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.header, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var hgroup: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.hgroup, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var hr: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.hr, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var html: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.html, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var i: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.i, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var iframe: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.iframe, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var image: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.image, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var img: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.img, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var input: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.input, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var ins: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.ins, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var kbd: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.kbd, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var keygen: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.keygen, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var label: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.label, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var legend: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.legend, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var li: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.li, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var line: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.line, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var linearGradient: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.linearGradient, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var link: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.link, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var main: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.main, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var map: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.map, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var mark: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.mark, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var marker: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.marker, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var mask: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.mask, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var menu: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.menu, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var menuitem: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.menuitem, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var meta: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.meta, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var metadata: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.metadata, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var meter: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.meter, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var mpath: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.mpath, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var nav: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.nav, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var noindex: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.noindex, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var noscript: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.noscript, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var `object`: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.`object`, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var ol: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.ol, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var optgroup: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.optgroup, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var option: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.option, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var output: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.output, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var p: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.p, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var param: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.param, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var path: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.path, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var pattern: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.pattern, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var picture: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.picture, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var polygon: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.polygon, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var polyline: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.polyline, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var pre: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.pre, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var progress: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.progress, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var q: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.q, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var radialGradient: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.radialGradient, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var rect: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.rect, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var rp: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.rp, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var rt: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.rt, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var ruby: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.ruby, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var s: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.s, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var samp: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.samp, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var script: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.script, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var section: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.section, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var select: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.select, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var slot: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.slot, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var small: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.small, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var source: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.source, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var span: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.span, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var stop: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.stop, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var strong: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.strong, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var style: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.style, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var sub: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.sub, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var summary: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.summary, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var sup: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.sup, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var svg: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.svg, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var switch: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.switch, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var symbol: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.symbol, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var table: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.table, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var tbody: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.tbody, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var td: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.td, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var template: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.template, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var text: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.text, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var textPath: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.textPath, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var textarea: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.textarea, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var tfoot: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.tfoot, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var th: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.th, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var thead: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.thead, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var time: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.time, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var title: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.title, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var tr: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.tr, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var track: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.track, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var tspan: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.tspan, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var u: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.u, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var ul: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.ul, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var use: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.use, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var `var`: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.`var`, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var video: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.video, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var view: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.view, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var wbr: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.wbr, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
+  
+  var webview: ThemedStyledFunction[
+    typingsSlinky.styledComponents.styledComponentsStrings.webview, 
+    AnyIfEmpty[DefaultTheme], 
+    js.Object, 
+    scala.Nothing
+  ] = js.native
 }
-

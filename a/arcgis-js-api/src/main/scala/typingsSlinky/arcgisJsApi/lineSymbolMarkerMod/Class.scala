@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.LineSymbolMarker
 import typingsSlinky.arcgisJsApi.esri.LineSymbolMarkerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols/LineSymbolMarker", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends LineSymbolMarker {
   def this(properties: LineSymbolMarkerProperties) = this()
 }
-

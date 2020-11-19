@@ -2,7 +2,7 @@ package typingsSlinky.weappApi.mod.wx
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.weappApi.weappApiStrings.develop
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.weappApi.weappApiStrings.release
 */
 trait envVersion extends js.Object
-
 object envVersion {
+  
   @scala.inline
   def develop: typingsSlinky.weappApi.weappApiStrings.develop = "develop".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.develop]
+  
   @scala.inline
   def release: typingsSlinky.weappApi.weappApiStrings.release = "release".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.release]
+  
   @scala.inline
   def trial: typingsSlinky.weappApi.weappApiStrings.trial = "trial".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.trial]
 }
-

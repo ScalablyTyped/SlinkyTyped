@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.workflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -35,32 +35,37 @@ abstract class WorkflowTask protected ()
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  @JSName("containerAsWorkflow")
+  def containerAsWorkflow_MWorkflowTask: Workflow = js.native
+  
   @JSName("model")
   var model_FWorkflowTask: IModel = js.native
+  
+  def name: String = js.native
+  def name_=(newValue: String): Unit = js.native
   @JSName("name")
   val name_FWorkflowTask: String = js.native
+  
+  /**
+    * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    */
+  def possibleOutcomes: IList[WorkflowTaskOutcome] = js.native
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
   @JSName("possibleOutcomes")
   val possibleOutcomes_FWorkflowTask: IList[IWorkflowTaskOutcome] = js.native
-  @JSName("containerAsWorkflow")
-  def containerAsWorkflow_MWorkflowTask: Workflow = js.native
-  def name: String = js.native
-  def name_=(newValue: String): Unit = js.native
-  /**
-    * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
-    */
-  def possibleOutcomes: IList[WorkflowTaskOutcome] = js.native
+  
   @JSName("qualifiedName")
   def qualifiedName_MWorkflowTask: String | Null = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.WorkflowTask")
 @js.native
 object WorkflowTask extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

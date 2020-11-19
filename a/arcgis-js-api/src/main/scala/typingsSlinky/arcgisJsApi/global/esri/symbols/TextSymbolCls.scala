@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri.symbols
 import typingsSlinky.arcgisJsApi.esri.TextSymbolProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.symbols.TextSymbol")
 @js.native
@@ -16,4 +16,3 @@ class TextSymbolCls ()
   extends typingsSlinky.arcgisJsApi.esri.TextSymbol {
   def this(properties: TextSymbolProperties) = this()
 }
-

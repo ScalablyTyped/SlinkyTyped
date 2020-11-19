@@ -2,10 +2,11 @@ package typingsSlinky.electron.Electron
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Net extends js.Object {
+  
   def request(options: String): ClientRequest = js.native
   // Docs: http://electronjs.org/docs/api/net
   /**
@@ -16,4 +17,3 @@ trait Net extends js.Object {
     */
   def request(options: ClientRequestConstructorOptions): ClientRequest = js.native
 }
-

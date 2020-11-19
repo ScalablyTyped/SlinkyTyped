@@ -8,13 +8,14 @@ import typingsSlinky.ejWebAll.ej.Button
 import typingsSlinky.ejWebAll.ej.Button.Model
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofButton
   extends Instantiable1[(/* element */ Element) | (/* element */ JQuery), Button]
      with Instantiable2[(/* element */ Element) | (/* element */ JQuery), /* options */ Model, Button] {
+  
   var Locale: js.Any = js.native
+  
   var fn: Button = js.native
 }
-

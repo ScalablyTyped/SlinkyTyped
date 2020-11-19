@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-node/commands/DecryptCommand", JSImport.Namespace)
 @js.native
 object decryptCommandMod extends js.Object {
+  
   @js.native
   class DecryptCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object decryptCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DecryptInput) = this()
+    
     val middlewareStack: MiddlewareStack[DecryptInput, DecryptOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[DecryptInput, DecryptOutput] = js.native
   }
-  
 }
-

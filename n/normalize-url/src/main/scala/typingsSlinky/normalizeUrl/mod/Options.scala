@@ -2,14 +2,16 @@ package typingsSlinky.normalizeUrl.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Options extends js.Object {
+  
   /**
   		@default 'http:'
   		*/
   val defaultProtocol: js.UndefOr[String] = js.native
+  
   /**
   		Normalizes `https:` URLs to `http:`.
   		@default false
@@ -22,6 +24,7 @@ trait Options extends js.Object {
   		```
   		*/
   val forceHttp: js.UndefOr[Boolean] = js.native
+  
   /**
   		Normalizes `http:` URLs to `https:`.
   		This option can't be used with the `forceHttp` option at the same time.
@@ -35,6 +38,7 @@ trait Options extends js.Object {
   		```
   		*/
   val forceHttps: js.UndefOr[Boolean] = js.native
+  
   /**
   		Prepends `defaultProtocol` to the URL if it's protocol-relative.
   		@default true
@@ -47,6 +51,7 @@ trait Options extends js.Object {
   		```
   		*/
   val normalizeProtocol: js.UndefOr[Boolean] = js.native
+  
   /**
   		Removes the default directory index file from path that matches any of the provided strings or regexes.
   		When `true`, the regex `/^index\.[a-z]+$/` is used.
@@ -60,6 +65,7 @@ trait Options extends js.Object {
   		```
   		*/
   val removeDirectoryIndex: js.UndefOr[js.Array[js.RegExp | String]] = js.native
+  
   /**
   		Removes query parameters that matches any of the provided strings or regexes.
   		@default [/^utm_\w+/i]
@@ -72,6 +78,7 @@ trait Options extends js.Object {
   		```
   		*/
   val removeQueryParameters: js.UndefOr[js.Array[js.RegExp | String]] = js.native
+  
   /**
   		Removes trailing slash.
   		__Note__: Trailing slash is always removed if the URL doesn't have a pathname.
@@ -87,6 +94,7 @@ trait Options extends js.Object {
   		```
   		*/
   val removeTrailingSlash: js.UndefOr[Boolean] = js.native
+  
   /**
   		Sorts the query parameters alphabetically by key.
   		@default true
@@ -99,6 +107,7 @@ trait Options extends js.Object {
   		```
   		*/
   val sortQueryParameters: js.UndefOr[Boolean] = js.native
+  
   /**
   		Strip the [authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) part of a URL.
   		@default true
@@ -111,6 +120,7 @@ trait Options extends js.Object {
   		```
   		*/
   val stripAuthentication: js.UndefOr[Boolean] = js.native
+  
   /**
   		Removes hash from the URL.
   		@default false
@@ -123,6 +133,7 @@ trait Options extends js.Object {
   		```
   		*/
   val stripHash: js.UndefOr[Boolean] = js.native
+  
   /**
   		Removes HTTP(S) protocol from an URL `http://sindresorhus.com` → `sindresorhus.com`.
   		@default false
@@ -135,6 +146,7 @@ trait Options extends js.Object {
   		```
   		*/
   val stripProtocol: js.UndefOr[Boolean] = js.native
+  
   /**
   		Removes `www.` from the URL.
   		@default true
@@ -148,77 +160,105 @@ trait Options extends js.Object {
   		*/
   val stripWWW: js.UndefOr[Boolean] = js.native
 }
-
 object Options {
+  
   @scala.inline
   def apply(): Options = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Options]
   }
+  
   @scala.inline
   implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setDefaultProtocol(value: String): Self = this.set("defaultProtocol", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteDefaultProtocol: Self = this.set("defaultProtocol", js.undefined)
+    
     @scala.inline
     def setForceHttp(value: Boolean): Self = this.set("forceHttp", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteForceHttp: Self = this.set("forceHttp", js.undefined)
+    
     @scala.inline
     def setForceHttps(value: Boolean): Self = this.set("forceHttps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteForceHttps: Self = this.set("forceHttps", js.undefined)
+    
     @scala.inline
     def setNormalizeProtocol(value: Boolean): Self = this.set("normalizeProtocol", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteNormalizeProtocol: Self = this.set("normalizeProtocol", js.undefined)
+    
     @scala.inline
     def setRemoveDirectoryIndexVarargs(value: (js.RegExp | String)*): Self = this.set("removeDirectoryIndex", js.Array(value :_*))
+    
     @scala.inline
     def setRemoveDirectoryIndex(value: js.Array[js.RegExp | String]): Self = this.set("removeDirectoryIndex", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteRemoveDirectoryIndex: Self = this.set("removeDirectoryIndex", js.undefined)
+    
     @scala.inline
     def setRemoveQueryParametersVarargs(value: (js.RegExp | String)*): Self = this.set("removeQueryParameters", js.Array(value :_*))
+    
     @scala.inline
     def setRemoveQueryParameters(value: js.Array[js.RegExp | String]): Self = this.set("removeQueryParameters", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteRemoveQueryParameters: Self = this.set("removeQueryParameters", js.undefined)
+    
     @scala.inline
     def setRemoveTrailingSlash(value: Boolean): Self = this.set("removeTrailingSlash", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteRemoveTrailingSlash: Self = this.set("removeTrailingSlash", js.undefined)
+    
     @scala.inline
     def setSortQueryParameters(value: Boolean): Self = this.set("sortQueryParameters", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteSortQueryParameters: Self = this.set("sortQueryParameters", js.undefined)
+    
     @scala.inline
     def setStripAuthentication(value: Boolean): Self = this.set("stripAuthentication", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteStripAuthentication: Self = this.set("stripAuthentication", js.undefined)
+    
     @scala.inline
     def setStripHash(value: Boolean): Self = this.set("stripHash", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteStripHash: Self = this.set("stripHash", js.undefined)
+    
     @scala.inline
     def setStripProtocol(value: Boolean): Self = this.set("stripProtocol", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteStripProtocol: Self = this.set("stripProtocol", js.undefined)
+    
     @scala.inline
     def setStripWWW(value: Boolean): Self = this.set("stripWWW", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteStripWWW: Self = this.set("stripWWW", js.undefined)
   }
-  
 }
-

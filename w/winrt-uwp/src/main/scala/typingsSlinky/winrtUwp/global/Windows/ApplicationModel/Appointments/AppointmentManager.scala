@@ -6,24 +6,25 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Rect
 import typingsSlinky.winrtUwp.Windows.UI.Popups.Placement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides APIs to interact with the user’s Appointments provider app (for example, the Calendar app). Call static methods to display provider-specific UI so that the user can perform tasks. */
 @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager")
 @js.native
 abstract class AppointmentManager ()
   extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentManager
-
 /* static members */
 @JSGlobal("Windows.ApplicationModel.Appointments.AppointmentManager")
 @js.native
 object AppointmentManager extends js.Object {
+  
   /**
     * Requests the AppointmentStore object associated with the calling application.
     * @param options An AppointmentStoreAccessType value indicating the level of access the returned appointment store will have.
     * @return An asynchronous operation that returns an AppointmentStore upon successful completion.
     */
   def requestStoreAsync(options: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStoreAccessType): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.AppointmentStore] = js.native
+  
   /**
     * Shows the Appointments provider Add Appointment UI, to enable the user to add an appointment.
     * @param appointment The object representing the information for the appointment to add.
@@ -46,6 +47,7 @@ object AppointmentManager extends js.Object {
     selection: Rect,
     preferredPlacement: Placement
   ): IPromiseWithIAsyncOperation[String] = js.native
+  
   /**
     * Shows the Appointments provider Appointment Details UI, to enable the user to view the specified appointment.
     * @param appointmentId The LocalId of the appointment to be displayed.
@@ -59,12 +61,14 @@ object AppointmentManager extends js.Object {
     * @return An asynchronous action.
     */
   def showAppointmentDetailsAsync(appointmentId: String, instanceStartDate: js.Date): IPromiseWithIAsyncAction = js.native
+  
   /**
     * Shows the Appointments provider Add Appointment UI including the full edit experience, to enable the user to add an appointment.
     * @param appointment The appointment to be added.
     * @return An asynchronous operation that returns a string containing an appointment ID upon successful completion.
     */
   def showEditNewAppointmentAsync(appointment: typingsSlinky.winrtUwp.Windows.ApplicationModel.Appointments.Appointment): IPromiseWithIAsyncOperation[String] = js.native
+  
   /**
     * Shows the Appointments provider Remove Appointment UI, to enable the user to remove an appointment.
     * @param appointmentId The appointment identifier. This is typically obtained from the async return value of a previous ShowAddAppointmentAsync call.
@@ -89,6 +93,7 @@ object AppointmentManager extends js.Object {
     * @return When this method completes, it returns a Boolean value that indicates whether the Appointment provider app removed the appointment.
     */
   def showRemoveAppointmentAsync(appointmentId: String, selection: Rect, preferredPlacement: Placement, instanceStartDate: js.Date): IPromiseWithIAsyncOperation[Boolean] = js.native
+  
   /**
     * Shows the Appointments provider Replace Appointment UI, to enable the user to replace an appointment.
     * @param appointmentId The appointment identifier of the current appointment. This is typically obtained from the async return value of a previous ShowAddAppointmentAsync or ShowReplaceAppointmentAsync call.
@@ -131,6 +136,7 @@ object AppointmentManager extends js.Object {
     preferredPlacement: Placement,
     instanceStartDate: js.Date
   ): IPromiseWithIAsyncOperation[String] = js.native
+  
   /**
     * Shows the Appointments provider app's primary UI. This typically displays a time frame from an appointments calendar.
     * @param timeToShow A date and time object that specifies the beginning of the time frame that the Appointments provider app should display.
@@ -139,4 +145,3 @@ object AppointmentManager extends js.Object {
     */
   def showTimeFrameAsync(timeToShow: js.Date, duration: Double): IPromiseWithIAsyncAction = js.native
 }
-

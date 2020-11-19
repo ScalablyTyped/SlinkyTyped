@@ -7,7 +7,7 @@ import typingsSlinky.graphqlToolsDelegate.typesMod.SubschemaConfig
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server/dist/exports", "CheckResultAndHandleErrors")
 @js.native
@@ -231,4 +231,3 @@ class CheckResultAndHandleErrors_ protected ()
     typeMerge: Boolean
   ) = this()
 }
-

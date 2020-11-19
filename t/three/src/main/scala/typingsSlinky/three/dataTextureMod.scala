@@ -11,11 +11,12 @@ import typingsSlinky.three.polyfillsMod.TypedArray
 import typingsSlinky.three.textureMod.Texture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/textures/DataTexture", JSImport.Namespace)
 @js.native
 object dataTextureMod extends js.Object {
+  
   @js.native
   class DataTexture protected () extends Texture {
     def this(
@@ -32,9 +33,8 @@ object dataTextureMod extends js.Object {
       anisotropy: js.UndefOr[Double],
       encoding: js.UndefOr[TextureEncoding]
     ) = this()
+    
     @JSName("image")
     var image_DataTexture: ImageData = js.native
   }
-  
 }
-

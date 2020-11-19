@@ -4,11 +4,11 @@ import typingsSlinky.officeUiFabricReact.shimmerGapTypesMod.IShimmerGapStyleProp
 import typingsSlinky.officeUiFabricReact.shimmerGapTypesMod.IShimmerGapStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/Shimmer/ShimmerGap/ShimmerGap.styles", JSImport.Namespace)
 @js.native
 object shimmerGapStylesMod extends js.Object {
+  
   def getStyles(props: IShimmerGapStyleProps): IShimmerGapStyles = js.native
 }
-

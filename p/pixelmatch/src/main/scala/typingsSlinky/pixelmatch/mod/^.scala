@@ -3,11 +3,12 @@ package typingsSlinky.pixelmatch.mod
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pixelmatch", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   def apply(
     /** Image data of the first image to compare. Note: image dimensions must be equal. */
   img1: Buffer | js.typedarray.Uint8Array | js.typedarray.Uint8ClampedArray,
@@ -23,4 +24,3 @@ object ^ extends js.Object {
   options: js.UndefOr[Options]
   ): Double = js.native
 }
-

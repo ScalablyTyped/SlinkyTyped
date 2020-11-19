@@ -2,11 +2,12 @@ package typingsSlinky.reactDevUtils
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-dev-utils/getCSSModuleLocalIdent", JSImport.Namespace)
 @js.native
 object getCSSModuleLocalIdentMod extends js.Object {
+  
   /**
     * Creates a class name for CSS Modules that uses either the filename or folder
     * name if named `index.module.css`.
@@ -22,4 +23,3 @@ object getCSSModuleLocalIdentMod extends js.Object {
     options: js.Object
   ): String = js.native
 }
-

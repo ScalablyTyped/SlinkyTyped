@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-xray-node/commands/PutEncryptionConfigCommand", JSImport.Namespace)
 @js.native
 object putEncryptionConfigCommandMod extends js.Object {
+  
   @js.native
   class PutEncryptionConfigCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object putEncryptionConfigCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutEncryptionConfigInput) = this()
+    
     val middlewareStack: MiddlewareStack[PutEncryptionConfigInput, PutEncryptionConfigOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: XRayResolvedConfiguration
     ): Handler[PutEncryptionConfigInput, PutEncryptionConfigOutput] = js.native
   }
-  
 }
-

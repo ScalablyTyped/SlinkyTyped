@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.esri
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ColorConstructor
@@ -11,6 +11,7 @@ trait ColorConstructor
       (/* color */ js.Any) | (/* color */ js.Array[Double]) | (/* color */ String), 
       Color_
     ] {
+  
   /**
     * Creates a new color object by passing either a hex, rgb(a), hsl(a) or [named color value](https://www.w3.org/wiki/CSS/Properties/color/keywords). Hex, hsl(a) and named color values can be passed as a string:
     *
@@ -29,6 +30,7 @@ trait ColorConstructor
     */
   def blendColors(start: Color_, end: Color_, weight: Double): Color_ = js.native
   def blendColors(start: Color_, end: Color_, weight: Double, out: Color_): Color_ = js.native
+  
   /**
     * Creates a Color instance using a 3 or 4 element array, mapping each element in sequence to the rgb(a) values of the color. Optionally accepts a Color object to update with the color value and return instead of creating a new object.
     *
@@ -40,6 +42,7 @@ trait ColorConstructor
     */
   def fromArray(a: js.Array[Double]): Color_ = js.native
   def fromArray(a: js.Array[Double], obj: Color_): Color_ = js.native
+  
   /**
     * Creates a Color instance from a hex string with a '#' prefix. Supports 12-bit #rgb shorthand. Optionally accepts a Color object to update with the parsed value and return instead of creating a new object.
     *
@@ -51,6 +54,7 @@ trait ColorConstructor
     */
   def fromHex(color: String): Color_ = js.native
   def fromHex(color: String, obj: Color_): Color_ = js.native
+  
   /**
     * Creates a new Color instance, and initializes it with values from a JSON object.
     *
@@ -60,6 +64,7 @@ trait ColorConstructor
     *
     */
   def fromJSON(json: js.Any): Color_ = js.native
+  
   /**
     * Creates a Color instance from a string of the form "rgb()" or "rgba()". Optionally accepts a Color object to update with the parsed value and return instead of creating a new object.
     *
@@ -71,6 +76,7 @@ trait ColorConstructor
     */
   def fromRgb(color: String): Color_ = js.native
   def fromRgb(color: String, out: Color_): Color_ = js.native
+  
   /**
     * Creates a Color instance by parsing a generic string. Accepts hex, rgb, and rgba style color values. Optionally accepts a Color object to update with the parsed value and return instead of creating a new object.
     *
@@ -83,4 +89,3 @@ trait ColorConstructor
   def fromString(str: String): Color_ = js.native
   def fromString(str: String, obj: Color_): Color_ = js.native
 }
-

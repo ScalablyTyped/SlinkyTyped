@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.WebMap
 import typingsSlinky.arcgisJsApi.esri.WebMapProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/WebMap", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends WebMap {
   def this(properties: WebMapProperties) = this()
 }
-

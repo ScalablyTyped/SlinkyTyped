@@ -4,22 +4,29 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.geometryLayoutMod.GeometryLayout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/geom/MultiLineString", JSImport.Namespace)
 @js.native
 object multiLineStringMod extends js.Object {
+  
   @js.native
   trait MultiLineString
     extends typingsSlinky.ol.simpleGeometryMod.default {
+    
     def appendLineString(lineString: typingsSlinky.ol.lineStringMod.default): Unit = js.native
+    
     def getCoordinateAtM(m: Double): Coordinate = js.native
     def getCoordinateAtM(m: Double, opt_extrapolate: js.UndefOr[scala.Nothing], opt_interpolate: Boolean): Coordinate = js.native
     def getCoordinateAtM(m: Double, opt_extrapolate: Boolean): Coordinate = js.native
     def getCoordinateAtM(m: Double, opt_extrapolate: Boolean, opt_interpolate: Boolean): Coordinate = js.native
+    
     def getEnds(): js.Array[Double] = js.native
+    
     def getFlatMidpoints(): js.Array[Double] = js.native
+    
     def getLineString(index: Double): typingsSlinky.ol.lineStringMod.default = js.native
+    
     def getLineStrings(): js.Array[typingsSlinky.ol.lineStringMod.default] = js.native
   }
   
@@ -41,6 +48,4 @@ object multiLineStringMod extends js.Object {
       opt_ends: js.Array[Double]
     ) = this()
   }
-  
 }
-

@@ -2,25 +2,30 @@ package typingsSlinky.xregexp
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /**
     * An array of valid items to use for chain matching.
     */
   type MatchChainArray = js.Array[typingsSlinky.xregexp.mod.ChainArrayElement | js.RegExp]
+  
   /**
     * Valid match or replacement scopes for when doing a match or replace.
     */
   type MatchScope = typingsSlinky.xregexp.mod.MatchScopeOne | typingsSlinky.xregexp.mod.MatchScopeAll
+  
   /**
     * Match or replacement scope that will match or replace all occurances.
     */
   type MatchScopeAll = typingsSlinky.xregexp.xregexpStrings.all
+  
   /**
     * Match or replacement scope that will only match or replace the first occurance.
     */
   type MatchScopeOne = typingsSlinky.xregexp.xregexpStrings.one
+  
   /**
     * Repesents a list of named capture groups. Only valid if the `namespacing` feature is turned on.
     */
@@ -28,14 +33,17 @@ package object mod {
     * Named capture groups are accessible as properties.
     */
   org.scalablytyped.runtime.StringDictionary[java.lang.String]
+  
   /**
     * Valid ways os specifying a pattern to use.
     */
   type Pattern = js.RegExp | java.lang.String
+  
   /**
     * Special helper type that sets only specific properties to required.
     */
   type PickRequired[T, K /* <: /* keyof T */ java.lang.String */] = T with (typingsSlinky.std.Required[typingsSlinky.std.Pick[T, K]])
+  
   /**
     *   Replacement functions are invoked with three or more arguments:
     *     - {string}        substring  - The matched substring (corresponds to `$&` above). Named backreferences are accessible as
@@ -51,6 +59,7 @@ package object mod {
     /* repeated */ java.lang.String | scala.Double | typingsSlinky.xregexp.mod.NamedGroupsArray, 
     java.lang.String
   ]
+  
   /**
     *   Replacement strings can include special replacement syntax:
     *     - `$$` - Inserts a literal $ character.

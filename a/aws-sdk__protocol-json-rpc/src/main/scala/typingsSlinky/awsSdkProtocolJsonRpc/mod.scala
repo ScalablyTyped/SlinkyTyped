@@ -8,11 +8,12 @@ import typingsSlinky.awsSdkTypes.unmarshallerMod.StreamCollector
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/protocol-json-rpc", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class JsonRpcParser[StreamType] protected ()
     extends typingsSlinky.awsSdkProtocolJsonRpc.jsonRpcParserMod.JsonRpcParser[StreamType] {
@@ -29,6 +30,4 @@ object mod extends js.Object {
     extends typingsSlinky.awsSdkProtocolJsonRpc.jsonRpcSerializerMod.JsonRpcSerializer[StreamType] {
     def this(endpoint: HttpEndpoint, bodySerializer: BodySerializer[String]) = this()
   }
-  
 }
-

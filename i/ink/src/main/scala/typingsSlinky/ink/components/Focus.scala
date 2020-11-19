@@ -8,14 +8,16 @@ import typingsSlinky.node.processMod.global.NodeJS.ReadStream
 import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Focus {
+  
   @JSImport("ink/build/components/Focus", JSImport.Default)
   @js.native
   object component extends js.Object
   
   def withProps(p: Props): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     exitOnCtrlC: Boolean,
@@ -30,4 +32,3 @@ object Focus {
     new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
-

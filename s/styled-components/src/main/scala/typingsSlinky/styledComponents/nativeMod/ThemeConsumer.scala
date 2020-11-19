@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ConsumerProps
 import typingsSlinky.styledComponents.styledComponentsMod.DefaultTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("styled-components/native", "ThemeConsumer")
 @js.native
@@ -16,4 +16,3 @@ object ThemeConsumer
         ConsumerProps[typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[DefaultTheme]]
       ]
     ]
-

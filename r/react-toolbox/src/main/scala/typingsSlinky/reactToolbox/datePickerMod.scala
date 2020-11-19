@@ -4,11 +4,12 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.reactToolbox.datePickerDatePickerMod.DatePickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-toolbox/components/date_picker", JSImport.Namespace)
 @js.native
 object datePickerMod extends js.Object {
+  
   @js.native
   class DatePicker ()
     extends Component[DatePickerProps, js.Object, js.Any]
@@ -16,6 +17,4 @@ object datePickerMod extends js.Object {
   @js.native
   class default ()
     extends Component[DatePickerProps, js.Object, js.Any]
-  
 }
-

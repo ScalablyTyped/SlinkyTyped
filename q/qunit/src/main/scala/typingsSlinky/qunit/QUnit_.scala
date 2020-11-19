@@ -10,10 +10,11 @@ import typingsSlinky.qunit.anon.Failed
 import typingsSlinky.qunit.anon.MaxDepth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait QUnit_ extends js.Object {
+  
   /**
     * Namespace for QUnit assertions
     *
@@ -24,6 +25,16 @@ trait QUnit_ extends js.Object {
     * This object has properties for each of QUnit's built-in assertion methods.
     */
   var assert: Assert = js.native
+  
+  /**
+    * Register a callback to fire whenever the test suite begins.
+    *
+    * `QUnit.begin()` is called once before running any tests.
+    *
+    * @callback callback Callback to execute.
+    */
+  def begin(callback: js.Function1[/* details */ BeginDetails, Unit]): Unit = js.native
+  
   /**
     * Configuration for QUnit
     *
@@ -31,6 +42,14 @@ trait QUnit_ extends js.Object {
     * useful to override. Check the description for each option for details.
     */
   var config: Config = js.native
+  
+  /**
+    * Register a callback to fire whenever the test suite ends.
+    *
+    * @param callback Callback to execute
+    */
+  def done(callback: js.Function1[/* details */ DoneDetails, Unit]): Unit = js.native
+  
   /**
     * Advanced and extensible data dumping for JavaScript.
     *
@@ -47,68 +66,7 @@ trait QUnit_ extends js.Object {
     * QUnit.dump. The old property will be removed in QUnit 3.0.
     */
   var dump: MaxDepth = js.native
-  /**
-    * Are the test running from the server or not.
-    */
-  var isLocal: Boolean = js.native
-  /**
-    * Group related tests under a single label.
-    *
-    * You can use the module name to organize, select, and filter tests to run.
-    *
-    * All tests inside a module callback function will be grouped into that
-    * module. The test names will all be preceded by the module name in the
-    * test results. Other modules can be nested inside this callback function,
-    * where their tests' names will be labeled by their names recursively
-    * prefixed by their parent modules.
-    *
-    * If `QUnit.module` is defined without a `nested` callback argument, all
-    * subsequently defined tests will be grouped into the module until another
-    * module is defined.
-    *
-    * Modules with test group functions allow you to define nested modules, and
-    * QUnit will run tests on the parent module before going deep on the nested
-    * ones, even if they're declared first. Additionally, any hook callbacks on
-    * a parent module will wrap the hooks on a nested module. In other words,
-    * `before` and `beforeEach` callbacks will form a queue while the
-    * `afterEach` and `after` callbacks will form a stack.
-    *
-    * You can specify code to run before and after tests using the hooks
-    * argument, and also to create properties that will be shared on the
-    * testing context. Any additional properties on the `hooks` object will be
-    * added to that context. The `hooks` argument is still optional if you call
-    * `QUnit.module` with a callback argument.
-    *
-    * The module's callback is invoked with the test environment as its `this`
-    * context, with the environment's properties copied to the module's tests,
-    * hooks, and nested modules. Note that changes on tests' `this` are not
-    * preserved between sibling tests, where `this` will be reset to the initial
-    * value for each test.
-    *
-    * @param {string} name Label for this group of tests
-    * @param hookds Callbacks to run during test execution
-    * @param nested A callback with grouped tests and nested modules to run under the current module label
-    */
-  @JSName("module")
-  var module_Original: moduleFunc1 with moduleFunc2 with ModuleOnly = js.native
-  /**
-    * QUnit version
-    */
-  var version: String = js.native
-  /**
-    * Register a callback to fire whenever the test suite begins.
-    *
-    * `QUnit.begin()` is called once before running any tests.
-    *
-    * @callback callback Callback to execute.
-    */
-  def begin(callback: js.Function1[/* details */ BeginDetails, Unit]): Unit = js.native
-  /**
-    * Register a callback to fire whenever the test suite ends.
-    *
-    * @param callback Callback to execute
-    */
-  def done(callback: js.Function1[/* details */ DoneDetails, Unit]): Unit = js.native
+  
   /**
     * Compares two values. Returns true if they are equivalent.
     *
@@ -116,6 +74,7 @@ trait QUnit_ extends js.Object {
     * @param b The second value
     */
   def equiv[T](a: T, b: T): Boolean = js.native
+  
   /**
     * Copy the properties defined by the `mixin` object into the `target` object.
     *
@@ -128,6 +87,12 @@ trait QUnit_ extends js.Object {
     * @param mixin An object describing which properties should be modified
     */
   def extend(target: js.Any, mixin: js.Any): Unit = js.native
+  
+  /**
+    * Are the test running from the server or not.
+    */
+  var isLocal: Boolean = js.native
+  
   /**
     * Register a callback to fire whenever an assertion completes.
     *
@@ -138,6 +103,7 @@ trait QUnit_ extends js.Object {
     * @param callback Callback to execute
     */
   def log(callback: js.Function1[/* details */ LogDetails, Unit]): Unit = js.native
+  
   /**
     * Group related tests under a single label.
     *
@@ -185,18 +151,62 @@ trait QUnit_ extends js.Object {
   def module(name: String, hooks: Hooks): Unit = js.native
   def module(name: String, hooks: Hooks, nested: js.Function1[/* hooks */ NestedHooks, Unit]): Unit = js.native
   def module(name: String, nested: js.Function1[/* hooks */ NestedHooks, Unit]): Unit = js.native
+  
   /**
     * Register a callback to fire whenever a module ends.
     *
     * @param callback Callback to execute
     */
   def moduleDone(callback: js.Function1[/* details */ ModuleDoneDetails, Unit]): Unit = js.native
+  
   /**
     * Register a callback to fire whenever a module begins.
     *
     * @param callback Callback to execute
     */
   def moduleStart(callback: js.Function1[/* details */ ModuleStartDetails, Unit]): Unit = js.native
+  
+  /**
+    * Group related tests under a single label.
+    *
+    * You can use the module name to organize, select, and filter tests to run.
+    *
+    * All tests inside a module callback function will be grouped into that
+    * module. The test names will all be preceded by the module name in the
+    * test results. Other modules can be nested inside this callback function,
+    * where their tests' names will be labeled by their names recursively
+    * prefixed by their parent modules.
+    *
+    * If `QUnit.module` is defined without a `nested` callback argument, all
+    * subsequently defined tests will be grouped into the module until another
+    * module is defined.
+    *
+    * Modules with test group functions allow you to define nested modules, and
+    * QUnit will run tests on the parent module before going deep on the nested
+    * ones, even if they're declared first. Additionally, any hook callbacks on
+    * a parent module will wrap the hooks on a nested module. In other words,
+    * `before` and `beforeEach` callbacks will form a queue while the
+    * `afterEach` and `after` callbacks will form a stack.
+    *
+    * You can specify code to run before and after tests using the hooks
+    * argument, and also to create properties that will be shared on the
+    * testing context. Any additional properties on the `hooks` object will be
+    * added to that context. The `hooks` argument is still optional if you call
+    * `QUnit.module` with a callback argument.
+    *
+    * The module's callback is invoked with the test environment as its `this`
+    * context, with the environment's properties copied to the module's tests,
+    * hooks, and nested modules. Note that changes on tests' `this` are not
+    * preserved between sibling tests, where `this` will be reset to the initial
+    * value for each test.
+    *
+    * @param {string} name Label for this group of tests
+    * @param hookds Callbacks to run during test execution
+    * @param nested A callback with grouped tests and nested modules to run under the current module label
+    */
+  @JSName("module")
+  var module_Original: moduleFunc1 with moduleFunc2 with ModuleOnly = js.native
+  
   /**
     * Adds a test to exclusively run, preventing all other tests from running.
     *
@@ -214,6 +224,7 @@ trait QUnit_ extends js.Object {
     * @param callback Function to close over assertions
     */
   def only(name: String, callback: js.Function1[/* assert */ Assert, Unit | js.Promise[_]]): Unit = js.native
+  
   /**
     * DEPRECATED: Report the result of a custom assertion.
     *
@@ -230,6 +241,7 @@ trait QUnit_ extends js.Object {
     * @deprecated
     */
   def push(result: Boolean, actual: js.Any, expected: js.Any, message: String): Unit = js.native
+  
   /**
     * Adds a test like object to be skipped.
     *
@@ -244,6 +256,7 @@ trait QUnit_ extends js.Object {
     */
   def skip(name: String): Unit = js.native
   def skip(name: String, callback: js.Function1[/* assert */ Assert, Unit | js.Promise[_]]): Unit = js.native
+  
   /**
     * Returns a single line string representing the stacktrace (call stack).
     *
@@ -261,6 +274,7 @@ trait QUnit_ extends js.Object {
     */
   def stack(): String = js.native
   def stack(offset: Double): String = js.native
+  
   /**
     * `QUnit.start()` must be used to start a test run that has
     * `QUnit.config.autostart` set to `false`.
@@ -272,6 +286,7 @@ trait QUnit_ extends js.Object {
     * corresponding number of `QUnit.stop()` increments.
     */
   def start(): Unit = js.native
+  
   /**
     * Add a test to run.
     *
@@ -288,18 +303,21 @@ trait QUnit_ extends js.Object {
     * @param callback Function to close over assertions
     */
   def test(name: String, callback: js.Function1[/* assert */ Assert, Unit | js.Promise[_]]): Unit = js.native
+  
   /**
     * Register a callback to fire whenever a test ends.
     *
     * @param callback Callback to execute
     */
   def testDone(callback: js.Function1[/* details */ Failed, Unit]): Unit = js.native
+  
   /**
     * Register a callback to fire whenever a test begins.
     *
     * @param callback Callback to execute
     */
   def testStart(callback: js.Function1[/* details */ TestStartDetails, Unit]): Unit = js.native
+  
   /**
     * Adds a test which expects at least one failing assertion during its run.
     *
@@ -315,5 +333,9 @@ trait QUnit_ extends js.Object {
     */
   def todo(name: String): Unit = js.native
   def todo(name: String, callback: js.Function1[/* assert */ Assert, Unit]): Unit = js.native
+  
+  /**
+    * QUnit version
+    */
+  var version: String = js.native
 }
-

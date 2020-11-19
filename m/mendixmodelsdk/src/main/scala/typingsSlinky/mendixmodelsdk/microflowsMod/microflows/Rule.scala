@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/rules relevant section in reference guide}
@@ -33,22 +33,25 @@ class Rule protected () extends ServerSideMicroflow {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
-  @JSName("model")
-  var model_FRule: IModel = js.native
+  
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MRule: FolderBase = js.native
+  
+  @JSName("model")
+  var model_FRule: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.Rule")
 @js.native
 object Rule extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates a new Rule unit in the SDK and on the server.
     * Expects one argument, the projects.IFolderBase in which this unit is contained.
     */
   def createIn(container: IFolderBase): Rule = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

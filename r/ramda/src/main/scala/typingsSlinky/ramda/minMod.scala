@@ -2,11 +2,12 @@ package typingsSlinky.ramda
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ramda/src/min", JSImport.Namespace)
 @js.native
 object minMod extends js.Object {
+  
   def default(a: String): js.Function1[/* b */ String, String] = js.native
   def default(a: String, b: String): String = js.native
   def default(a: Boolean): js.Function1[/* b */ Boolean, Boolean] = js.native
@@ -16,4 +17,3 @@ object minMod extends js.Object {
   def default(a: js.Date): js.Function1[/* b */ js.Date, js.Date] = js.native
   def default(a: js.Date, b: js.Date): js.Date = js.native
 }
-

@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/batchnorm2d", JSImport.Namespace)
 @js.native
 object batchnorm2dMod extends js.Object {
+  
   val batchNorm2d: js.Function6[
     /* x */ Tensor2D | TensorLike, 
     /* mean */ Tensor2D | Tensor1D | TensorLike, 
@@ -20,4 +21,3 @@ object batchnorm2dMod extends js.Object {
     Tensor2D
   ] = js.native
 }
-

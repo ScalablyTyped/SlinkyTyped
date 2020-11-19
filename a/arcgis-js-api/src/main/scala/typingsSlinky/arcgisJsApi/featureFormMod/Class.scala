@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.FeatureForm
 import typingsSlinky.arcgisJsApi.esri.FeatureFormProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/FeatureForm", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends FeatureForm {
   def this(properties: FeatureFormProperties) = this()
 }
-

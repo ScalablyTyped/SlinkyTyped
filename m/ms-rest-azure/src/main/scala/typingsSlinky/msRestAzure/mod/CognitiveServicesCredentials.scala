@@ -3,7 +3,7 @@ package typingsSlinky.msRestAzure.mod
 import typingsSlinky.msRest.mod.ApiKeyCredentials
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ms-rest-azure", "CognitiveServicesCredentials")
 @js.native
@@ -16,4 +16,3 @@ class CognitiveServicesCredentials protected () extends ApiKeyCredentials {
     */
   def this(subscriptionKey: String) = this()
 }
-

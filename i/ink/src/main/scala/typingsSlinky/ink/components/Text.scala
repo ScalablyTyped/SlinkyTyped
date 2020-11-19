@@ -12,9 +12,10 @@ import typingsSlinky.ink.textMod.Props
 import typingsSlinky.typeFest.literalUnionMod.LiteralUnion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Text {
+  
   @JSImport("ink", "Text")
   @js.native
   object component extends js.Object
@@ -23,6 +24,7 @@ object Text {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def backgroundColor(
       value: LiteralUnion[
@@ -30,8 +32,10 @@ object Text {
           String
         ]
     ): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def bold(value: Boolean): this.type = set("bold", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def color(
       value: LiteralUnion[
@@ -39,14 +43,19 @@ object Text {
           String
         ]
     ): this.type = set("color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def dimColor(value: Boolean): this.type = set("dimColor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def italic(value: Boolean): this.type = set("italic", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def strikethrough(value: Boolean): this.type = set("strikethrough", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def underline(value: Boolean): this.type = set("underline", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def wrap(
       value: typingsSlinky.ink.inkStrings.wrap | end | middle | `truncate-end` | truncate | `truncate-middle` | `truncate-start`
@@ -54,6 +63,6 @@ object Text {
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Text.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

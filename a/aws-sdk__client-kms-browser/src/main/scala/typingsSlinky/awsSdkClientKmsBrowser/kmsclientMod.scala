@@ -9,17 +9,22 @@ import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/KMSClient", JSImport.Namespace)
 @js.native
 object kmsclientMod extends js.Object {
+  
   @js.native
   class KMSClient protected () extends js.Object {
     def this(configuration: KMSConfiguration) = this()
+    
     val config: KMSResolvedConfiguration = js.native
-    val middlewareStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob] = js.native
+    
     def destroy(): Unit = js.native
+    
+    val middlewareStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob] = js.native
+    
     /**
       * This will need to be revised when the command interface lands.
       */
@@ -31,6 +36,4 @@ object kmsclientMod extends js.Object {
       cb: js.Function2[/* err */ js.Any, /* data */ js.UndefOr[OutputType], Unit]
     ): Unit = js.native
   }
-  
 }
-

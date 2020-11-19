@@ -5,7 +5,7 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/ops", "pad1d")
 @js.native
@@ -18,4 +18,3 @@ object pad1d
         Tensor1D
       ]
     ]
-

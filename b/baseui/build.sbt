@@ -1,20 +1,20 @@
 organization := "org.scalablytyped.slinky"
 name := "baseui"
-version := "9.91.0-a6ecec"
+version := "9.91.0-2fac92"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "card-validator" % "8.0.0-91c155",
-  "org.scalablytyped.slinky" %%% "credit-card-type" % "9.0.1-6bcf82",
-  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-c880b4",
-  "org.scalablytyped.slinky" %%% "date-fns" % "2.15.0-60d899",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-9fd6d8",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-c528cd",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8",
-  "org.scalablytyped.slinky" %%% "styletron-react" % "5.0-dt-20190925Z-761de9",
-  "org.scalablytyped.slinky" %%% "styletron-standard" % "2.0-dt-20190514Z-6382ef")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "card-validator" % "8.0.0-9c066c",
+  "org.scalablytyped.slinky" %%% "credit-card-type" % "9.0.1-966552",
+  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-fce754",
+  "org.scalablytyped.slinky" %%% "date-fns" % "2.15.0-627b76",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ce652f",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a9854",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
+  "org.scalablytyped.slinky" %%% "styletron-react" % "5.0-dt-20190925Z-21c9d7",
+  "org.scalablytyped.slinky" %%% "styletron-standard" % "2.0-dt-20190514Z-9141d9")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

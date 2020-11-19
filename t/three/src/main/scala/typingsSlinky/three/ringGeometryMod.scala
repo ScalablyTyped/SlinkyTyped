@@ -5,11 +5,12 @@ import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/RingGeometry", JSImport.Namespace)
 @js.native
 object ringGeometryMod extends js.Object {
+  
   @js.native
   class RingBufferGeometry protected () extends BufferGeometry {
     def this(
@@ -20,6 +21,7 @@ object ringGeometryMod extends js.Object {
       thetaStart: js.UndefOr[Double],
       thetaLength: js.UndefOr[Double]
     ) = this()
+    
     var parameters: InnerRadius = js.native
   }
   
@@ -33,8 +35,7 @@ object ringGeometryMod extends js.Object {
       thetaStart: js.UndefOr[Double],
       thetaLength: js.UndefOr[Double]
     ) = this()
+    
     var parameters: InnerRadius = js.native
   }
-  
 }
-

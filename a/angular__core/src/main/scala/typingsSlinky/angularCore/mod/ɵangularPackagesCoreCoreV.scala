@@ -2,11 +2,12 @@ package typingsSlinky.angularCore.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/core", "\u0275angular_packages_core_core_v")
 @js.native
 object ɵangularPackagesCoreCoreV extends js.Object {
+  
   def apply(
     checkIndex: Double,
     flags: ɵNodeFlags,
@@ -90,4 +91,3 @@ object ɵangularPackagesCoreCoreV extends js.Object {
     outputs: js.Array[OutputDef]
   ): NodeDef = js.native
 }
-

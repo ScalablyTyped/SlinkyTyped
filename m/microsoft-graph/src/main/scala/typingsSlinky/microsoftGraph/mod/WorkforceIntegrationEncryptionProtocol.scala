@@ -2,18 +2,18 @@ package typingsSlinky.microsoftGraph.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.sharedSecret
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue
 */
 trait WorkforceIntegrationEncryptionProtocol extends js.Object
-
 object WorkforceIntegrationEncryptionProtocol {
+  
   @scala.inline
   def sharedSecret: typingsSlinky.microsoftGraph.microsoftGraphStrings.sharedSecret = "sharedSecret".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.sharedSecret]
+  
   @scala.inline
   def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
-

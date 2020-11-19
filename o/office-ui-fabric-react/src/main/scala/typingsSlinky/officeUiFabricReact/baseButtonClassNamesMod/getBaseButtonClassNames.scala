@@ -4,11 +4,12 @@ import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonStyles
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/Button/BaseButton.classNames", "getBaseButtonClassNames")
 @js.native
 object getBaseButtonClassNames extends js.Object {
+  
   def apply(
     theme: ITheme,
     styles: IButtonStyles,
@@ -110,4 +111,3 @@ object getBaseButtonClassNames extends js.Object {
     isSplit: Boolean
   ): IButtonClassNames = js.native
 }
-

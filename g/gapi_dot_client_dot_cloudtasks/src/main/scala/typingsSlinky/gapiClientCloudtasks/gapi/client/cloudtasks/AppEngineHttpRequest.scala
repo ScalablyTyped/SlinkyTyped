@@ -3,10 +3,11 @@ package typingsSlinky.gapiClientCloudtasks.gapi.client.cloudtasks
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AppEngineHttpRequest extends js.Object {
+  
   /**
     * Task-level setting for App Engine routing.
     *
@@ -15,6 +16,7 @@ trait AppEngineHttpRequest extends js.Object {
     * task-level app_engine_routing.
     */
   var appEngineRouting: js.UndefOr[AppEngineRouting] = js.native
+  
   /**
     * HTTP request headers.
     *
@@ -53,6 +55,7 @@ trait AppEngineHttpRequest extends js.Object {
     * [request headers](/appengine/docs/python/taskqueue/push/creating-handlers#reading_request_headers).
     */
   var headers: js.UndefOr[Record[String, String]] = js.native
+  
   /**
     * The HTTP method to use for the request. The default is POST.
     *
@@ -67,6 +70,7 @@ trait AppEngineHttpRequest extends js.Object {
     * [python RequestHandler](/appengine/docs/python/tools/webapp/requesthandlerclass).
     */
   var httpMethod: js.UndefOr[String] = js.native
+  
   /**
     * Payload.
     *
@@ -76,6 +80,7 @@ trait AppEngineHttpRequest extends js.Object {
     * an incompatible HttpMethod.
     */
   var payload: js.UndefOr[String] = js.native
+  
   /**
     * The relative URL.
     *
@@ -86,45 +91,57 @@ trait AppEngineHttpRequest extends js.Object {
     */
   var relativeUrl: js.UndefOr[String] = js.native
 }
-
 object AppEngineHttpRequest {
+  
   @scala.inline
   def apply(): AppEngineHttpRequest = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[AppEngineHttpRequest]
   }
+  
   @scala.inline
   implicit class AppEngineHttpRequestOps[Self <: AppEngineHttpRequest] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setAppEngineRouting(value: AppEngineRouting): Self = this.set("appEngineRouting", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAppEngineRouting: Self = this.set("appEngineRouting", js.undefined)
+    
     @scala.inline
     def setHeaders(value: Record[String, String]): Self = this.set("headers", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteHeaders: Self = this.set("headers", js.undefined)
+    
     @scala.inline
     def setHttpMethod(value: String): Self = this.set("httpMethod", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteHttpMethod: Self = this.set("httpMethod", js.undefined)
+    
     @scala.inline
     def setPayload(value: String): Self = this.set("payload", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deletePayload: Self = this.set("payload", js.undefined)
+    
     @scala.inline
     def setRelativeUrl(value: String): Self = this.set("relativeUrl", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteRelativeUrl: Self = this.set("relativeUrl", js.undefined)
   }
-  
 }
-

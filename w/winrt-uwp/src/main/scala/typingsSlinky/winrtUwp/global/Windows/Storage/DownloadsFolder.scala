@@ -4,18 +4,18 @@ import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.System.User
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Creates files and folders inside the Downloads folder. */
 @JSGlobal("Windows.Storage.DownloadsFolder")
 @js.native
 abstract class DownloadsFolder ()
   extends typingsSlinky.winrtUwp.Windows.Storage.DownloadsFolder
-
 /* static members */
 @JSGlobal("Windows.Storage.DownloadsFolder")
 @js.native
 object DownloadsFolder extends js.Object {
+  
   /**
     * Creates a new file inside the Downloads folder.
     * @param desiredName The desired name of the file to create.
@@ -29,6 +29,7 @@ object DownloadsFolder extends js.Object {
     * @return When this method completes, it returns the new file as a StorageFile object.
     */
   def createFileAsync(desiredName: String, option: typingsSlinky.winrtUwp.Windows.Storage.CreationCollisionOption): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Storage.StorageFile] = js.native
+  
   /**
     * Creates a new file inside the Downloads folder of a specific User .
     * @param user The User for which the file is created.
@@ -48,6 +49,7 @@ object DownloadsFolder extends js.Object {
     desiredName: String,
     option: typingsSlinky.winrtUwp.Windows.Storage.CreationCollisionOption
   ): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Storage.StorageFile] = js.native
+  
   /**
     * Creates a new subfolder in the Downloads folder.
     * @param desiredName The desired name of the subfolder to create.
@@ -61,6 +63,7 @@ object DownloadsFolder extends js.Object {
     * @return When this method completes, it returns the new subfolder as a StorageFolder .
     */
   def createFolderAsync(desiredName: String, option: typingsSlinky.winrtUwp.Windows.Storage.CreationCollisionOption): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Storage.StorageFolder] = js.native
+  
   /**
     * Creates a new subfolder inside the Downloads folder of a specific User .
     * @param user The User for which the folder is created.
@@ -81,4 +84,3 @@ object DownloadsFolder extends js.Object {
     option: typingsSlinky.winrtUwp.Windows.Storage.CreationCollisionOption
   ): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Storage.StorageFolder] = js.native
 }
-

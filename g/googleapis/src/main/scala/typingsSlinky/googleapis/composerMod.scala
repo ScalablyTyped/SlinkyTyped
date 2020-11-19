@@ -12,24 +12,32 @@ import typingsSlinky.googleapisCommon.apiMod.GoogleConfigurable
 import typingsSlinky.googleapisCommon.mod.AuthPlus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("googleapis/build/src/apis/composer", JSImport.Namespace)
 @js.native
 object composerMod extends js.Object {
+  
   def composer(options: Options): Composer = js.native
   def composer(options: typingsSlinky.googleapis.composerV1beta1Mod.composerV1beta1.Options): typingsSlinky.googleapis.composerV1beta1Mod.composerV1beta1.Composer = js.native
   @JSName("composer")
   def composer_v1(version: v1): Composer = js.native
   @JSName("composer")
   def composer_v1beta1(version: v1beta1): typingsSlinky.googleapis.composerV1beta1Mod.composerV1beta1.Composer = js.native
+  
   @js.native
   object VERSIONS extends js.Object {
+    
     @js.native
     class v1 protected () extends Composer {
       def this(options: GlobalOptions) = this()
       def this(options: GlobalOptions, google: GoogleConfigurable) = this()
     }
+    @js.native
+    object v1
+      extends TopLevel[
+              Instantiable2[/* options */ GlobalOptions, /* google */ js.UndefOr[GoogleConfigurable], Composer]
+            ]
     
     @js.native
     class v1beta1 protected ()
@@ -37,13 +45,6 @@ object composerMod extends js.Object {
       def this(options: GlobalOptions) = this()
       def this(options: GlobalOptions, google: GoogleConfigurable) = this()
     }
-    
-    @js.native
-    object v1
-      extends TopLevel[
-              Instantiable2[/* options */ GlobalOptions, /* google */ js.UndefOr[GoogleConfigurable], Composer]
-            ]
-    
     @js.native
     object v1beta1
       extends TopLevel[
@@ -53,11 +54,11 @@ object composerMod extends js.Object {
                 typingsSlinky.googleapis.composerV1beta1Mod.composerV1beta1.Composer
               ]
             ]
-    
   }
   
   @js.native
   object auth extends TopLevel[AuthPlus] {
+    
     @js.native
     /**
       * Google Compute Engine service account credentials.
@@ -85,8 +86,5 @@ object composerMod extends js.Object {
         */
       def this(options: JWTOptions) = this()
     }
-    
   }
-  
 }
-

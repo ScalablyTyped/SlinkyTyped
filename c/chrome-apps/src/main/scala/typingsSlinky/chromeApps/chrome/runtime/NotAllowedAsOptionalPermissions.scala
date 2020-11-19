@@ -2,7 +2,7 @@ package typingsSlinky.chromeApps.chrome.runtime
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.chromeApps.chromeAppsStrings.debugger
@@ -14,21 +14,26 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.chromeApps.chromeAppsStrings.wallpaper
 */
 trait NotAllowedAsOptionalPermissions extends js.Object
-
 object NotAllowedAsOptionalPermissions {
+  
   @scala.inline
   def debugger: typingsSlinky.chromeApps.chromeAppsStrings.debugger = "debugger".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.debugger]
+  
   @scala.inline
   def experimental: typingsSlinky.chromeApps.chromeAppsStrings.experimental = "experimental".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.experimental]
+  
   @scala.inline
   def geolocation: typingsSlinky.chromeApps.chromeAppsStrings.geolocation = "geolocation".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.geolocation]
+  
   @scala.inline
   def mdns: typingsSlinky.chromeApps.chromeAppsStrings.mdns = "mdns".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.mdns]
+  
   @scala.inline
   def proxy: typingsSlinky.chromeApps.chromeAppsStrings.proxy = "proxy".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.proxy]
+  
   @scala.inline
   def tts: typingsSlinky.chromeApps.chromeAppsStrings.tts = "tts".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.tts]
+  
   @scala.inline
   def wallpaper: typingsSlinky.chromeApps.chromeAppsStrings.wallpaper = "wallpaper".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.wallpaper]
 }
-

@@ -6,11 +6,11 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.svgiconMod.SVGIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/material-icons/types/PhoneBluetoothSpeakerSVGIcon", JSImport.Namespace)
 @js.native
 object phoneBluetoothSpeakerSVGIconMod extends js.Object {
+  
   val default: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
 }
-

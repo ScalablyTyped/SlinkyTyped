@@ -5,11 +5,12 @@ import typingsSlinky.typescript.mod.Expression
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateCall")
 @js.native
 object updateCall extends js.Object {
+  
   def apply(
     node: CallExpression,
     expression: Expression,
@@ -23,4 +24,3 @@ object updateCall extends js.Object {
     argumentsArray: js.Array[Expression]
   ): CallExpression = js.native
 }
-

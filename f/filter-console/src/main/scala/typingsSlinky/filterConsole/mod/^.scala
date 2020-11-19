@@ -2,11 +2,12 @@ package typingsSlinky.filterConsole.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("filter-console", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   Filter out unwanted `console.log()` output.
   Can be useful when you don't control the output, for example, filtering out PropType warnings from a third-party React component.
@@ -45,4 +46,3 @@ object ^ extends js.Object {
     options: Options
   ): js.Function0[Unit] = js.native
 }
-

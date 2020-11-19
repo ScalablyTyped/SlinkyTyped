@@ -2,11 +2,12 @@ package typingsSlinky.squareConnect.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("square-connect", "RetrieveCatalogObjectRequest")
 @js.native
 class RetrieveCatalogObjectRequest () extends js.Object {
+  
   /**
     * If `true`, the response will include additional objects that are related to the requested object, as follows:
     *  - If the `object` field of the response contains a CatalogItem, its associated CatalogCategory, CatalogTax objects,
@@ -17,4 +18,3 @@ class RetrieveCatalogObjectRequest () extends js.Object {
     */
   var include_related_objects: js.UndefOr[Boolean] = js.native
 }
-

@@ -3,10 +3,11 @@ package typingsSlinky.unsplashJs.mod.UnsplashApi
 import org.scalajs.dom.experimental.Response
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Users extends js.Object {
+  
   def collections(username: String): js.Promise[Response] = js.native
   def collections(
     username: String,
@@ -20,6 +21,7 @@ trait Users extends js.Object {
   def collections(username: String, page: Double, perPage: js.UndefOr[scala.Nothing], orderBy: String): js.Promise[Response] = js.native
   def collections(username: String, page: Double, perPage: Double): js.Promise[Response] = js.native
   def collections(username: String, page: Double, perPage: Double, orderBy: String): js.Promise[Response] = js.native
+  
   def likes(username: String): js.Promise[Response] = js.native
   def likes(
     username: String,
@@ -33,6 +35,7 @@ trait Users extends js.Object {
   def likes(username: String, page: Double, perPage: js.UndefOr[scala.Nothing], orderBy: String): js.Promise[Response] = js.native
   def likes(username: String, page: Double, perPage: Double): js.Promise[Response] = js.native
   def likes(username: String, page: Double, perPage: Double, orderBy: String): js.Promise[Response] = js.native
+  
   def photos(username: String): js.Promise[Response] = js.native
   def photos(
     username: String,
@@ -96,10 +99,11 @@ trait Users extends js.Object {
   ): js.Promise[Response] = js.native
   def photos(username: String, page: Double, perPage: Double, orderBy: String): js.Promise[Response] = js.native
   def photos(username: String, page: Double, perPage: Double, orderBy: String, stats: Boolean): js.Promise[Response] = js.native
+  
   def profile(username: String): js.Promise[Response] = js.native
+  
   def statistics(username: String): js.Promise[Response] = js.native
   def statistics(username: String, resolution: js.UndefOr[scala.Nothing], quantity: Double): js.Promise[Response] = js.native
   def statistics(username: String, resolution: String): js.Promise[Response] = js.native
   def statistics(username: String, resolution: String, quantity: Double): js.Promise[Response] = js.native
 }
-

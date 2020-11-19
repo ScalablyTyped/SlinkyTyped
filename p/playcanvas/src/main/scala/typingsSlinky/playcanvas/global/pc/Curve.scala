@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new curve.
@@ -24,4 +24,3 @@ class Curve ()
   extends typingsSlinky.playcanvas.pc.Curve {
   def this(data: js.Array[Double]) = this()
 }
-

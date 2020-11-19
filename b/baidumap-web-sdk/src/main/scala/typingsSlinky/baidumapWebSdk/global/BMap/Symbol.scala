@@ -4,7 +4,7 @@ import typingsSlinky.baidumapWebSdk.BMap.SymbolOptions
 import typingsSlinky.baidumapWebSdk.BMap.SymbolShapeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BMap.Symbol")
 @js.native
@@ -15,4 +15,3 @@ class Symbol protected ()
   def this(path: String, opts: SymbolOptions) = this()
   def this(path: SymbolShapeType, opts: SymbolOptions) = this()
 }
-

@@ -2,16 +2,19 @@ package typingsSlinky.helmet
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type HelmetCspDirectiveValue = java.lang.String | typingsSlinky.helmet.mod.IHelmetContentSecurityPolicyDirectiveFunction
+  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - typingsSlinky.helmet.helmetStrings.script
     - typingsSlinky.helmet.helmetStrings.style
   */
   type HelmetCspRequireSriForValue = typingsSlinky.helmet.mod._HelmetCspRequireSriForValue | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - typingsSlinky.helmet.helmetStrings.`allow-forms`
@@ -26,6 +29,7 @@ package object mod {
     - typingsSlinky.helmet.helmetStrings.`allow-top-navigation`
   */
   type HelmetCspSandboxDirective = typingsSlinky.helmet.mod._HelmetCspSandboxDirective | java.lang.String
+  
   type IHelmetContentSecurityPolicyDirectiveFunction = js.Function2[
     /* req */ typingsSlinky.express.mod.Request_[
       typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
@@ -36,6 +40,7 @@ package object mod {
     /* res */ typingsSlinky.express.mod.Response_[js.Any], 
     java.lang.String
   ]
+  
   type IHelmetSetIfFunction = js.Function2[
     /* req */ typingsSlinky.express.mod.Request_[
       typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 

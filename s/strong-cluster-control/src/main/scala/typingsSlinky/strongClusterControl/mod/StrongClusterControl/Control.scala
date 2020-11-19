@@ -12,13 +12,15 @@ import typingsSlinky.strongClusterControl.strongClusterControlStrings.stop
 import typingsSlinky.strongClusterControl.strongClusterControlStrings.stopWorker
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Control extends EventEmitter {
+  
   val CPUS: Double = js.native
+  
   val cmd: CMD = js.native
-  val options: StartOptions = js.native
+  
   @JSName("on")
   def on_error(event: error, handler: js.Function1[/* error */ js.Error | js.Array[js.Error], _]): this.type = js.native
   @JSName("on")
@@ -40,21 +42,27 @@ trait Control extends EventEmitter {
     event: stopWorker,
     handler: js.Function3[/* worker */ ClusterWorker, /* code */ Double, /* signal */ String, _]
   ): this.type = js.native
+  
+  val options: StartOptions = js.native
+  
   /**
     * @description Restart workers one by one, until all current workers have been restarted.
     */
   def restart(): this.type = js.native
+  
   /**
     * @description Set the size of the cluster.
     * @param N - The size of the cluster is the number of workers that should be maintained online.
     */
   def setSize(): this.type = js.native
   def setSize(N: Double): this.type = js.native
+  
   /**
     * @description Disconnect worker id and take increasingly agressive action until it exits.
     * @param id - Cluster worker ID,
     */
   def shutdown(id: Double): this.type = js.native
+  
   /**
     * @description Start the controller
     * @param [options] - An options object, no default, and options object is not required.
@@ -69,19 +77,21 @@ trait Control extends EventEmitter {
   def start(options: js.UndefOr[scala.Nothing], callback: js.Function0[_]): this.type = js.native
   def start(options: StartOptions): this.type = js.native
   def start(options: StartOptions, callback: js.Function0[_]): this.type = js.native
+  
   /**
     * @description Returns the current cluster status
     */
   def status(): ClusterStatus = js.native
+  
   /**
     * @description Stop the controller, after stopping workers (if the size is being controlled, see setSize()).
     */
   def stop(): this.type = js.native
   def stop(callback: js.Function0[_]): this.type = js.native
+  
   /**
     * @description Disconnect worker id and take increasingly agressive action until it exits.
     * @param id - Cluster worker ID,
     */
   def terminate(id: Double): this.type = js.native
 }
-

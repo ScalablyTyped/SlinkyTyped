@@ -2,7 +2,7 @@ package typingsSlinky.avoscloudSdk.leanengineMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents a Role on the AV server. Roles represent groupings of
@@ -23,4 +23,3 @@ class Role protected ()
   extends typingsSlinky.avoscloudSdk.mod.Role {
   def this(name: String, acl: typingsSlinky.avoscloudSdk.mod.ACL) = this()
 }
-

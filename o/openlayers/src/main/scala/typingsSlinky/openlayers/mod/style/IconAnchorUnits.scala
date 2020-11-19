@@ -2,7 +2,7 @@ package typingsSlinky.openlayers.mod.style
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Icon anchor units. One of 'fraction', 'pixels'.
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.openlayers.openlayersStrings.pixels
 */
 trait IconAnchorUnits extends js.Object
-
 object IconAnchorUnits {
+  
   @scala.inline
   def fraction: typingsSlinky.openlayers.openlayersStrings.fraction = "fraction".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.fraction]
+  
   @scala.inline
   def pixels: typingsSlinky.openlayers.openlayersStrings.pixels = "pixels".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.pixels]
 }
-

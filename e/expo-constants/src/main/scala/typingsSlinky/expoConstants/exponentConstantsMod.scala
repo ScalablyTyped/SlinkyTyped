@@ -3,11 +3,11 @@ package typingsSlinky.expoConstants
 import typingsSlinky.unimodulesReactNativeAdapter.nativeModulesProxyTypesMod.ProxyNativeModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("expo-constants/build/ExponentConstants", JSImport.Namespace)
 @js.native
 object exponentConstantsMod extends js.Object {
+  
   val default: ProxyNativeModule = js.native
 }
-

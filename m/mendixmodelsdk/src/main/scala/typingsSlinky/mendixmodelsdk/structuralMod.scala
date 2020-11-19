@@ -9,11 +9,12 @@ import typingsSlinky.mendixmodelsdk.unitsMod.StructuralUnit
 import typingsSlinky.mobx.observablevalueMod.IObservableValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/sdk/internal/properties/structural", JSImport.Namespace)
 @js.native
 object structuralMod extends js.Object {
+  
   @js.native
   class StructuralChildListProperty[T /* <: IStructuralUnit | IModelUnit */] protected ()
     extends AbstractProperty[js.Array[T], IList[T]] {
@@ -25,10 +26,15 @@ object structuralMod extends js.Object {
       value: js.Array[T],
       targetRefType: String
     ) = this()
+    
     def deepCopyInto(): Unit = js.native
+    
     def detachChild(child: T): Unit = js.native
+    
     def processChildAddition(index: Double): Unit = js.native
+    
     def processChildRemoval(unit: T): Unit = js.native
+    
     def removeChild(child: T): Boolean = js.native
   }
   
@@ -44,11 +50,12 @@ object structuralMod extends js.Object {
       value: Null,
       targetRefType: String
     ) = this()
+    
     def deepCopyInto(): Unit = js.native
+    
     def detachValue(): Unit = js.native
+    
     def set(): Unit = js.native
     def set(value: T): Unit = js.native
   }
-  
 }
-

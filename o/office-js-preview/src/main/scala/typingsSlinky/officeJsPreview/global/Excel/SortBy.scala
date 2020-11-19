@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.global.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,9 +13,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.SortBy")
 @js.native
 object SortBy extends js.Object {
-  /* "Ascending" */ val ascending: typingsSlinky.officeJsPreview.Excel.SortBy.ascending with String = js.native
-  /* "Descending" */ val descending: typingsSlinky.officeJsPreview.Excel.SortBy.descending with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJsPreview.Excel.SortBy with String] = js.native
+  
+  /* "Ascending" */ val ascending: typingsSlinky.officeJsPreview.Excel.SortBy.ascending with String = js.native
+  
+  /* "Descending" */ val descending: typingsSlinky.officeJsPreview.Excel.SortBy.descending with String = js.native
 }
-

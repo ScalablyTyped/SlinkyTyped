@@ -7,7 +7,7 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws/cloudwatch", "EventPermission")
 @js.native
@@ -23,11 +23,11 @@ class EventPermission protected ()
   def this(name: String, args: EventPermissionArgs) = this()
   def this(name: String, args: EventPermissionArgs, opts: CustomResourceOptions) = this()
 }
-
 /* static members */
 @JSImport("@pulumi/aws/cloudwatch", "EventPermission")
 @js.native
 object EventPermission extends js.Object {
+  
   /**
     * Get an existing EventPermission resource's state with the given name, ID, and optional extra
     * properties used to qualify the lookup.
@@ -41,10 +41,10 @@ object EventPermission extends js.Object {
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.eventPermissionMod.EventPermission = js.native
   def get(name: String, id: Input[ID], state: EventPermissionState): typingsSlinky.pulumiAws.eventPermissionMod.EventPermission = js.native
   def get(name: String, id: Input[ID], state: EventPermissionState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.eventPermissionMod.EventPermission = js.native
+  
   /**
     * Returns true if the given object is an instance of EventPermission.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/cloudwatch/eventPermission.EventPermission */ Boolean = js.native
 }
-

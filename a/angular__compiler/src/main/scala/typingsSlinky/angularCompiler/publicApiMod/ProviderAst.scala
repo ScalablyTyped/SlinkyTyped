@@ -5,7 +5,7 @@ import typingsSlinky.angularCompiler.compileMetadataMod.CompileTokenMetadata
 import typingsSlinky.angularCompiler.lifecycleReflectorMod.LifecycleHooks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/public_api", "ProviderAst")
 @js.native
@@ -22,4 +22,3 @@ class ProviderAst protected ()
     isModule: Boolean
   ) = this()
 }
-

@@ -10,9 +10,10 @@ import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Title {
+  
   @JSImport("@storybook/components", "Title")
   @js.native
   object component extends js.Object
@@ -22,6 +23,6 @@ object Title {
       (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with (Omit[js.Object, theme]) with `0`[Theme]
     ]
   ): SharedBuilder_PropsWithChildren_1724821862[HTMLHeadingElement] = new SharedBuilder_PropsWithChildren_1724821862[HTMLHeadingElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Title.type): SharedBuilder_PropsWithChildren_1724821862[HTMLHeadingElement] = new SharedBuilder_PropsWithChildren_1724821862[HTMLHeadingElement](js.Array(this.component, js.Dictionary.empty))()
 }
-

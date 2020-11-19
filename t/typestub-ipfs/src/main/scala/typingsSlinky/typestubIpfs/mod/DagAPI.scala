@@ -2,10 +2,11 @@ package typingsSlinky.typestubIpfs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DagAPI extends js.Object {
+  
   def get(cid: String): js.Promise[_] = js.native
   def get(cid: String, callback: Callback[_]): Unit = js.native
   def get(cid: String, path: String): js.Promise[_] = js.native
@@ -18,8 +19,10 @@ trait DagAPI extends js.Object {
   def get(cid: CID, path: String, callback: Callback[_]): Unit = js.native
   def get(cid: CID, path: String, options: js.Any): js.Promise[_] = js.native
   def get(cid: CID, path: String, options: js.Any, callback: Callback[_]): Unit = js.native
+  
   def put(dagNode: js.Any, options: js.Any): js.Promise[_] = js.native
   def put(dagNode: js.Any, options: js.Any, callback: Callback[_]): Unit = js.native
+  
   def tree(cid: String): js.Promise[_] = js.native
   def tree(cid: String, callback: Callback[_]): Unit = js.native
   def tree(cid: String, options: js.Any): js.Promise[_] = js.native
@@ -37,4 +40,3 @@ trait DagAPI extends js.Object {
   def tree(cid: CID, path: String, options: js.Any): js.Promise[_] = js.native
   def tree(cid: CID, path: String, options: js.Any, callback: Callback[_]): Unit = js.native
 }
-

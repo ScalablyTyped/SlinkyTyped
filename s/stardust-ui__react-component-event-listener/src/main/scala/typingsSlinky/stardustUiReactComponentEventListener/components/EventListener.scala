@@ -104,9 +104,10 @@ import typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactCompon
 import typingsSlinky.stardustUiReactComponentEventListener.typesMod.EventListenerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object EventListener {
+  
   @JSImport("@stardust-ui/react-component-event-listener", "EventListener")
   @js.native
   object component extends js.Object
@@ -115,6 +116,7 @@ object EventListener {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def capture(value: Boolean): this.type = set("capture", value.asInstanceOf[js.Any])
   }
@@ -124,6 +126,7 @@ object EventListener {
       abort | animationcancel | animationend | animationiteration | animationstart | auxclick | blur | cancel | canplay | canplaythrough | change | click | close | contextmenu | copy | cuechange | cut | dblclick | drag | dragend | dragenter | dragexit | dragleave | dragover | dragstart | drop | durationchange | emptied | ended | error | focus | focusin | focusout | fullscreenchange | fullscreenerror | gotpointercapture | input | invalid | keydown | keypress | keyup | load | loadeddata | loadedmetadata | loadstart | lostpointercapture | mousedown | mouseenter | mouseleave | mousemove | mouseout | mouseover | mouseup | paste | pause | play | playing | pointercancel | pointerdown | pointerenter | pointerleave | pointerlockchange | pointerlockerror | pointermove | pointerout | pointerover | pointerup | progress | ratechange | readystatechange | reset | resize | scroll | securitypolicyviolation | seeked | seeking | select | selectionchange | selectstart | stalled | submit | suspend | timeupdate | toggle | touchcancel | touchend | touchmove | touchstart | transitioncancel | transitionend | transitionrun | transitionstart | visibilitychange | volumechange | waiting | wheel
     ]
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     listener: /* import warning: importer.ImportType#apply Failed type conversion: std.DocumentEventMap[T] */ /* e */ js.Any => Unit,
@@ -133,8 +136,7 @@ object EventListener {
     val __props = js.Dynamic.literal(listener = js.Any.fromFunction1(listener), targetRef = targetRef.asInstanceOf[js.Any])
     __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[EventListenerOptions[
-      abort | animationcancel | animationend | animationiteration | animationstart | auxclick | blur | cancel | canplay | canplaythrough | change | click | close | contextmenu | copy | cuechange | cut | dblclick | drag | dragend | dragenter | dragexit | dragleave | dragover | dragstart | drop | durationchange | emptied | ended | error | focus | focusin | focusout | fullscreenchange | fullscreenerror | gotpointercapture | input | invalid | keydown | keypress | keyup | load | loadeddata | loadedmetadata | loadstart | lostpointercapture | mousedown | mouseenter | mouseleave | mousemove | mouseout | mouseover | mouseup | paste | pause | play | playing | pointercancel | pointerdown | pointerenter | pointerleave | pointerlockchange | pointerlockerror | pointermove | pointerout | pointerover | pointerup | progress | ratechange | readystatechange | reset | resize | scroll | securitypolicyviolation | seeked | seeking | select | selectionchange | selectstart | stalled | submit | suspend | timeupdate | toggle | touchcancel | touchend | touchmove | touchstart | transitioncancel | transitionend | transitionrun | transitionstart | visibilitychange | volumechange | waiting | wheel
-    ]]))
+    abort | animationcancel | animationend | animationiteration | animationstart | auxclick | blur | cancel | canplay | canplaythrough | change | click | close | contextmenu | copy | cuechange | cut | dblclick | drag | dragend | dragenter | dragexit | dragleave | dragover | dragstart | drop | durationchange | emptied | ended | error | focus | focusin | focusout | fullscreenchange | fullscreenerror | gotpointercapture | input | invalid | keydown | keypress | keyup | load | loadeddata | loadedmetadata | loadstart | lostpointercapture | mousedown | mouseenter | mouseleave | mousemove | mouseout | mouseover | mouseup | paste | pause | play | playing | pointercancel | pointerdown | pointerenter | pointerleave | pointerlockchange | pointerlockerror | pointermove | pointerout | pointerover | pointerup | progress | ratechange | readystatechange | reset | resize | scroll | securitypolicyviolation | seeked | seeking | select | selectionchange | selectstart | stalled | submit | suspend | timeupdate | toggle | touchcancel | touchend | touchmove | touchstart | transitioncancel | transitionend | transitionrun | transitionstart | visibilitychange | volumechange | waiting | wheel
+  ]]))
   }
 }
-

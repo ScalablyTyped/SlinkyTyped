@@ -11,10 +11,11 @@ import typingsSlinky.mongoose.mod.QueryFindOneAndUpdateOptions
 import typingsSlinky.mongoose.mod.UpdateQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCallConditionsUpdateOptionsCallback extends js.Object {
+  
   def apply(): DocumentQueryanynullanyAll = js.native
   def apply(conditions: FilterQuery[_], update: UpdateQuery[_]): DocumentQueryanynullanyAll = js.native
   def apply(
@@ -68,4 +69,3 @@ trait FnCallConditionsUpdateOptionsCallback extends js.Object {
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
   ): DocumentQueryanynullanyAll = js.native
 }
-

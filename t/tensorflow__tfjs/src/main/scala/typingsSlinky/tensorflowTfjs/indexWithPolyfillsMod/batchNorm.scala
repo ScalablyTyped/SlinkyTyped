@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs/dist/index_with_polyfills", "batchNorm")
 @js.native
 object batchNorm extends js.Object {
+  
   def apply[R /* <: typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank */](
     x: Tensor[R] | TensorLike,
     mean: Tensor[R] | Tensor1D | TensorLike,
@@ -19,4 +20,3 @@ object batchNorm extends js.Object {
     varianceEpsilon: js.UndefOr[Double]
   ): Tensor[R] = js.native
 }
-

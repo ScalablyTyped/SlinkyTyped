@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.ViewProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.View")
 @js.native
@@ -16,4 +16,3 @@ class ViewCls ()
   extends typingsSlinky.arcgisJsApi.esri.View {
   def this(properties: ViewProperties) = this()
 }
-

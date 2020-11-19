@@ -2,7 +2,7 @@ package typingsSlinky.avoscloudSdk.leanengineMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A AV.File is a local representation of a file that is saved to the AV
@@ -40,4 +40,3 @@ class File protected ()
   def this(name: String, data: js.Any) = this()
   def this(name: String, data: js.Any, `type`: String) = this()
 }
-

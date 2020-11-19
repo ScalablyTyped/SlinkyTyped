@@ -3,7 +3,7 @@ package typingsSlinky.winrtUwp.global.Windows.Devices.AllJoyn
 import typingsSlinky.winrtUwp.Windows.Devices.AllJoyn.IAllJoynAcceptSessionJoiner
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Contains information about a join session request that is used to determine if the request will be accepted and initiate the session connection. */
 @JSGlobal("Windows.Devices.AllJoyn.AllJoynAcceptSessionJoinerEventArgs")
@@ -26,4 +26,3 @@ class AllJoynAcceptSessionJoinerEventArgs protected ()
     acceptSessionJoiner: IAllJoynAcceptSessionJoiner
   ) = this()
 }
-

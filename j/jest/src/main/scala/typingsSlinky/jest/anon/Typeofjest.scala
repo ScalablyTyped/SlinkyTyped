@@ -18,20 +18,23 @@ import typingsSlinky.std.Required
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Typeofjest extends js.Object {
+  
   /**
     * Provides a way to add Jasmine-compatible matchers into your Jest context.
     */
   def addMatchers(matchers: CustomMatcherFactories): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Advances all timers by msToRun milliseconds. All pending "macro-tasks" that have been
     * queued via setTimeout() or setInterval(), and would be executed within this timeframe
     * will be executed.
     */
   def advanceTimersByTime(msToRun: Double): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Advances all timers by the needed milliseconds so that only the next
     * timeouts/intervals will run. Optionally, you can provide steps, so it
@@ -39,34 +42,41 @@ trait Typeofjest extends js.Object {
     */
   def advanceTimersToNextTimer(): Unit = js.native
   def advanceTimersToNextTimer(step: Double): Unit = js.native
+  
   /**
     * Disables automatic mocking in the module loader.
     */
   def autoMockOff(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Enables automatic mocking in the module loader.
     */
   def autoMockOn(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Clears the mock.calls and mock.instances properties of all mocks.
     * Equivalent to calling .mockClear() on every mocked function.
     */
   def clearAllMocks(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Removes any pending timers from the timer system. If any timers have
     * been scheduled, they will be cleared and will never have the opportunity
     * to execute in the future.
     */
   def clearAllTimers(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Indicates that the module system should never return a mocked version
     * of the specified module, including all of the specificied module's dependencies.
     */
   def deepUnmock(moduleName: String): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Disables automatic mocking in the module loader.
     */
   def disableAutomock(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Mocks a module with an auto-mocked version when it is being required.
     */
@@ -74,15 +84,18 @@ trait Typeofjest extends js.Object {
   def doMock(moduleName: String, factory: js.UndefOr[scala.Nothing], options: MockOptions): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
   def doMock(moduleName: String, factory: js.Function0[_]): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
   def doMock(moduleName: String, factory: js.Function0[_], options: MockOptions): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Indicates that the module system should never return a mocked version
     * of the specified module from require() (e.g. that it should always return the real module).
     */
   def dontMock(moduleName: String): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Enables automatic mocking in the module loader.
     */
   def enableAutomock(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Creates a mock function. Optionally takes a mock implementation.
     */
@@ -93,11 +106,13 @@ trait Typeofjest extends js.Object {
     */
   @JSName("fn")
   def fn_TY_ArrayWildcard[T, Y /* <: js.Array[_] */](): Mock_[T, Y] = js.native
+  
   /**
     * Use the automatic mocking system to generate a mocked version of the given module.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def genMockFromModule[T](moduleName: String): T = js.native
+  
   /**
     * When mocking time, Date.now() will also be mocked. If you for some
     * reason need access to the real current time, you can invoke this
@@ -107,19 +122,23 @@ trait Typeofjest extends js.Object {
     * > implementation
     */
   def getRealSystemTime(): Double = js.native
+  
   /**
     * Returns the number of fake timers still left to run.
     */
   def getTimerCount(): Double = js.native
+  
   /**
     * Returns whether the given function is a mock function.
     */
   def isMockFunction(fn: js.Any): /* is jest.jest.jest.Mock<any, any> */ Boolean = js.native
+  
   /**
     * Creates a sandbox registry for the modules that are loaded inside the callback function..
     * This is useful to isolate specific modules for every test so that local module state doesn't conflict between tests.
     */
   def isolateModules(fn: js.Function0[Unit]): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Mocks a module with an auto-mocked version when it is being required.
     */
@@ -127,33 +146,39 @@ trait Typeofjest extends js.Object {
   def mock(moduleName: String, factory: js.UndefOr[scala.Nothing], options: MockOptions): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
   def mock(moduleName: String, factory: js.Function0[_]): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
   def mock(moduleName: String, factory: js.Function0[_], options: MockOptions): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Returns the actual module instead of a mock, bypassing all checks on
     * whether the module should receive a mock implementation or not.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def requireActual[TModule](moduleName: String): TModule = js.native
+  
   /**
     * Returns a mock module instead of the actual module, bypassing all checks
     * on whether the module should be required normally or not.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def requireMock[TModule](moduleName: String): TModule = js.native
+  
   /**
     * Resets the state of all mocks.
     * Equivalent to calling .mockReset() on every mocked function.
     */
   def resetAllMocks(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Resets the module registry - the cache of all required modules. This is
     * useful to isolate modules where local state might conflict between tests.
     */
   def resetModuleRegistry(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Resets the module registry - the cache of all required modules. This is
     * useful to isolate modules where local state might conflict between tests.
     */
   def resetModules(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * available since Jest 21.1.0
     * Restores all mocks back to their original value.
@@ -162,23 +187,28 @@ trait Typeofjest extends js.Object {
     * jest.spyOn; other mocks will require you to manually restore them.
     */
   def restoreAllMocks(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Runs failed tests n-times until they pass or until the max number of retries is exhausted.
     * This only works with jest-circus!
     */
   def retryTimes(numRetries: Double): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Exhausts tasks queued by setImmediate().
     */
   def runAllImmediates(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Exhausts the micro-task queue (usually interfaced in node via process.nextTick).
     */
   def runAllTicks(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Exhausts the macro-task queue (i.e., all tasks queued by setTimeout() and setInterval()).
     */
   def runAllTimers(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Executes only the macro-tasks that are currently pending (i.e., only the
     * tasks that have been queued by setTimeout() or setInterval() up to this point).
@@ -186,17 +216,20 @@ trait Typeofjest extends js.Object {
     * those new tasks will not be executed by this call.
     */
   def runOnlyPendingTimers(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * (renamed to `advanceTimersByTime` in Jest 21.3.0+) Executes only the macro
     * task queue (i.e. all tasks queued by setTimeout() or setInterval() and setImmediate()).
     */
   def runTimersToTime(msToRun: Double): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Explicitly supplies the mock object that the module system should return
     * for the specified module.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def setMock[T](moduleName: String, moduleExports: T): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Set the current system time used by fake timers. Simulates a user
     * changing the system clock while your program is running. It affects the
@@ -210,11 +243,13 @@ trait Typeofjest extends js.Object {
   def setSystemTime(): Unit = js.native
   def setSystemTime(now: Double): Unit = js.native
   def setSystemTime(now: js.Date): Unit = js.native
+  
   /**
     * Set the default timeout interval for tests and before/after hooks in milliseconds.
     * Note: The default timeout interval is 5 seconds if this method is not called.
     */
   def setTimeout(timeout: Double): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   def spyOn[T /* <: js.Object */, M /* <: FunctionPropertyNames[Required[T]] */](`object`: T, method: M): SpyInstance[
     ReturnType[
       /* import warning: importer.ImportType#apply Failed type conversion: std.Required<T>[M] */ js.Any
@@ -265,11 +300,13 @@ trait Typeofjest extends js.Object {
       /* import warning: importer.ImportType#apply Failed type conversion: std.Required<T>[M] */ js.Any
     ]
   ] = js.native
+  
   /**
     * Indicates that the module system should never return a mocked version of
     * the specified module from require() (e.g. that it should always return the real module).
     */
   def unmock(moduleName: String): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Instructs Jest to use fake versions of the standard timer functions.
     */
@@ -278,9 +315,9 @@ trait Typeofjest extends js.Object {
   def useFakeTimers_legacy(implementation: legacy): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
   @JSName("useFakeTimers")
   def useFakeTimers_modern(implementation: modern): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
+  
   /**
     * Instructs Jest to use the real versions of the standard timer functions.
     */
   def useRealTimers(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
 }
-

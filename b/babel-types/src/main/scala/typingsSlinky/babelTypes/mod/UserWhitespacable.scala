@@ -10,7 +10,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.method
 import typingsSlinky.babelTypes.babelTypesStrings.set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ObjectMethod_
@@ -20,8 +20,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ObjectTypeProperty_
 */
 trait UserWhitespacable extends js.Object
-
 object UserWhitespacable {
+  
   @scala.inline
   def ObjectTypeCallProperty_(
     end: Double,
@@ -34,6 +34,7 @@ object UserWhitespacable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserWhitespacable]
   }
+  
   @scala.inline
   def ObjectMethod_(
     async: Boolean,
@@ -55,6 +56,7 @@ object UserWhitespacable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserWhitespacable]
   }
+  
   @scala.inline
   def ObjectTypeProperty_(
     end: Double,
@@ -68,6 +70,7 @@ object UserWhitespacable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserWhitespacable]
   }
+  
   @scala.inline
   def ObjectProperty_(
     computed: Boolean,
@@ -83,6 +86,7 @@ object UserWhitespacable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserWhitespacable]
   }
+  
   @scala.inline
   def ObjectTypeIndexer_(
     end: Double,
@@ -98,4 +102,3 @@ object UserWhitespacable {
     __obj.asInstanceOf[UserWhitespacable]
   }
 }
-

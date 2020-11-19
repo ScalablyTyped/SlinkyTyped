@@ -4,17 +4,17 @@ import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.AlignVerticalBackUVs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.TiledPlaneBuilder")
 @js.native
 class TiledPlaneBuilder ()
   extends typingsSlinky.babylonjs.BABYLON.TiledPlaneBuilder
-
 /* static members */
 @JSGlobal("BABYLON.TiledPlaneBuilder")
 @js.native
 object TiledPlaneBuilder extends js.Object {
+  
   /**
     * Creates a tiled plane mesh
     * * The parameter `pattern` will, depending on value, do nothing or
@@ -43,4 +43,3 @@ object TiledPlaneBuilder extends js.Object {
     scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]
   ): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
 }
-

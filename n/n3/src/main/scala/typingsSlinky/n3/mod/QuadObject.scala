@@ -2,7 +2,7 @@ package typingsSlinky.n3.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.n3.mod.NamedNode
@@ -11,4 +11,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.n3.mod.Variable
 */
 trait QuadObject extends js.Object
-

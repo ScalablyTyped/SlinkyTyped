@@ -3,7 +3,7 @@ package typingsSlinky.ytPlayer.mod
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Simple, robust, blazing-fast YouTube Player API
@@ -27,4 +27,3 @@ class ^ protected () extends YouTubePlayer {
   def this(element: String, options: YouTubePlayerOptions) = this()
   def this(element: HTMLElement, options: YouTubePlayerOptions) = this()
 }
-

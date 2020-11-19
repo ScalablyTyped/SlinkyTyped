@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.animationsIndexMod
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Animations/index", "Animatable")
 @js.native
@@ -39,4 +39,3 @@ class Animatable protected ()
   onAnimationLoop: js.UndefOr[js.Function0[Unit] | Null]
   ) = this()
 }
-

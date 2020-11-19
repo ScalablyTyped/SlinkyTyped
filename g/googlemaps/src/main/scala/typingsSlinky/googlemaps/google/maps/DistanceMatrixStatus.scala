@@ -2,14 +2,14 @@ package typingsSlinky.googlemaps.google.maps
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait DistanceMatrixStatus extends js.Object
-
 @JSGlobal("google.maps.DistanceMatrixStatus")
 @js.native
 object DistanceMatrixStatus extends js.Object {
+  
   @js.native
   sealed trait INVALID_REQUEST extends DistanceMatrixStatus
   
@@ -30,6 +30,4 @@ object DistanceMatrixStatus extends js.Object {
   
   @js.native
   sealed trait UNKNOWN_ERROR extends DistanceMatrixStatus
-  
 }
-

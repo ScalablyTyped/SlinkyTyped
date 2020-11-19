@@ -4,7 +4,7 @@ import typingsSlinky.xrm.xrmStrings.filter
 import typingsSlinky.xrm.xrmStrings.run
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Constant Enum: Report Open Action options for Xrm.Url.ReportOpenParameters.actions.
@@ -15,11 +15,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.run
 */
 trait ReportAction extends js.Object
-
 object ReportAction {
+  
   @scala.inline
   def Filter: filter = "filter".asInstanceOf[filter]
+  
   @scala.inline
   def Run: run = "run".asInstanceOf[run]
 }
-

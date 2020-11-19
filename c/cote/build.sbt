@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "cote"
-version := "0.19-dt-20200515Z-ff2a25"
+version := "0.19-dt-20200515Z-9bd2e0"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "engine_dot_io" % "3.1-dt-20200530Z-81d35e",
-  "org.scalablytyped.slinky" %%% "eventemitter2" % "6.4.3-991a53",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-df8c17",
-  "org.scalablytyped.slinky" %%% "socket_dot_io" % "2.1-dt-20200721Z-25d828",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "engine_dot_io" % "3.1-dt-20200530Z-fdaa75",
+  "org.scalablytyped.slinky" %%% "eventemitter2" % "6.4.3-c10e52",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
+  "org.scalablytyped.slinky" %%% "socket_dot_io" % "2.1-dt-20200721Z-fd2553",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

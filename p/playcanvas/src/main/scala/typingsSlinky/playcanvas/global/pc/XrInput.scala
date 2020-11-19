@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides access to input sources for WebXR.
@@ -15,4 +15,3 @@ class XrInput protected ()
   extends typingsSlinky.playcanvas.pc.XrInput {
   def this(manager: typingsSlinky.playcanvas.pc.XrManager) = this()
 }
-

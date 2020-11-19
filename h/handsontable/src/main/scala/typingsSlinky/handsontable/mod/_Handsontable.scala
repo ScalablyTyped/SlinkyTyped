@@ -302,22 +302,16 @@ import typingsSlinky.handsontable.mod.Handsontable.wot.CellRange
 import typingsSlinky.std.HTMLTableHeaderCellElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>; // TS >= 2.8
 @JSImport("handsontable", "_Handsontable")
 @js.native
 object _Handsontable extends js.Object {
+  
   @js.native
   trait Core extends js.Object {
-    var container: HTMLElement = js.native
-    var forceFullRender: Boolean = js.native
-    var isDestroyed: Boolean = js.native
-    var renderCall: Boolean = js.native
-    var rootDocument: Document = js.native
-    var rootElement: HTMLElement = js.native
-    var rootWindow: Window = js.native
-    var table: HTMLTableElement = js.native
+    
     def addHook(
       key: afterModifyTransformEnd,
       callback: js.UndefOr[
@@ -466,6 +460,7 @@ object _Handsontable extends js.Object {
           ]
         ]
     ): Unit = js.native
+    
     def addHookOnce(
       key: afterModifyTransformEnd,
       callback: js.UndefOr[
@@ -2873,6 +2868,7 @@ object _Handsontable extends js.Object {
     def addHookOnce_unmodifyRow(key: unmodifyRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]]): Unit = js.native
     @JSName("addHookOnce")
     def addHookOnce_unmodifyRow(key: unmodifyRow, callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]]): Unit = js.native
+    
     @JSName("addHook")
     def addHook_afterAddChild(
       key: afterAddChild,
@@ -5132,6 +5128,7 @@ object _Handsontable extends js.Object {
     def addHook_unmodifyRow(key: unmodifyRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]]): Unit = js.native
     @JSName("addHook")
     def addHook_unmodifyRow(key: unmodifyRow, callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]]): Unit = js.native
+    
     def alter(
       action: insert_row | insert_col | remove_row | remove_col,
       index: js.UndefOr[Double | (js.Array[js.Tuple2[Double, Double]])],
@@ -5139,47 +5136,82 @@ object _Handsontable extends js.Object {
       source: js.UndefOr[String],
       keepEmptyRows: js.UndefOr[Boolean]
     ): Unit = js.native
+    
     def clear(): Unit = js.native
+    
     def colOffset(): Double = js.native
+    
     def colToProp(col: Double): String | Double = js.native
+    
+    var container: HTMLElement = js.native
+    
     def countCols(): Double = js.native
+    
     def countEmptyCols(): Double = js.native
     def countEmptyCols(ending: Boolean): Double = js.native
+    
     def countEmptyRows(): Double = js.native
     def countEmptyRows(ending: Boolean): Double = js.native
+    
     def countRenderedCols(): Double = js.native
+    
     def countRenderedRows(): Double = js.native
+    
     def countRows(): Double = js.native
+    
     def countSourceCols(): Double = js.native
+    
     def countSourceRows(): Double = js.native
+    
     def countVisibleCols(): Double = js.native
+    
     def countVisibleRows(): Double = js.native
+    
     def deselectCell(): Unit = js.native
+    
     def destroy(): Unit = js.native
+    
     def destroyEditor(): Unit = js.native
     def destroyEditor(revertOriginal: js.UndefOr[scala.Nothing], prepareEditorIfNeeded: Boolean): Unit = js.native
     def destroyEditor(revertOriginal: Boolean): Unit = js.native
     def destroyEditor(revertOriginal: Boolean, prepareEditorIfNeeded: Boolean): Unit = js.native
+    
     def emptySelectedCells(): Unit = js.native
+    
+    var forceFullRender: Boolean = js.native
+    
     def getActiveEditor[T /* <: Base */](): js.UndefOr[T] = js.native
+    
     def getCell(row: Double, col: Double): HTMLTableCellElement | Null = js.native
     def getCell(row: Double, col: Double, topmost: Boolean): HTMLTableCellElement | Null = js.native
+    
     def getCellEditor[T /* <: Base */](cellMeta: CellMeta): T = js.native
     def getCellEditor[T /* <: Base */](row: Double, col: Double): T = js.native
+    
     def getCellMeta(row: Double, col: Double): CellProperties = js.native
+    
     def getCellMetaAtRow(row: Double): js.Array[CellProperties] = js.native
+    
     def getCellRenderer(cellMeta: CellMeta): typingsSlinky.handsontable.mod.Handsontable.renderers.Base = js.native
     def getCellRenderer(row: Double, col: Double): typingsSlinky.handsontable.mod.Handsontable.renderers.Base = js.native
+    
     def getCellValidator(cellMeta: CellMeta): js.UndefOr[typingsSlinky.handsontable.mod.Handsontable.validators.Base | js.RegExp] = js.native
     def getCellValidator(row: Double, col: Double): js.UndefOr[typingsSlinky.handsontable.mod.Handsontable.validators.Base | js.RegExp] = js.native
+    
     def getCellsMeta(): js.Array[CellProperties] = js.native
+    
     def getColHeader(): js.Array[Double | String] = js.native
     def getColHeader(col: Double): Double | String = js.native
+    
     def getColWidth(col: Double): Double = js.native
+    
     def getCoords(): CellCoords = js.native
     def getCoords(elem: Element): CellCoords = js.native
+    
     def getCopyableData(row: Double, column: Double): String = js.native
+    
     def getCopyableText(startRow: Double, startCol: Double, endRow: Double, endCol: Double): String = js.native
+    
     def getData(): js.Array[CellValue] = js.native
     def getData(
       row: js.UndefOr[scala.Nothing],
@@ -5201,14 +5233,22 @@ object _Handsontable extends js.Object {
     def getData(row: Double, column: Double, row2: js.UndefOr[scala.Nothing], column2: Double): js.Array[CellValue] = js.native
     def getData(row: Double, column: Double, row2: Double): js.Array[CellValue] = js.native
     def getData(row: Double, column: Double, row2: Double, column2: Double): js.Array[CellValue] = js.native
+    
     def getDataAtCell(row: Double, column: Double): CellValue = js.native
+    
     def getDataAtCol(column: Double): js.Array[CellValue] = js.native
+    
     def getDataAtProp(prop: String): js.Array[CellValue] = js.native
     def getDataAtProp(prop: Double): js.Array[CellValue] = js.native
+    
     def getDataAtRow(row: Double): js.Array[CellValue] = js.native
+    
     def getDataAtRowProp(row: Double, prop: String): CellValue = js.native
+    
     def getDataType(rowFrom: Double, columnFrom: Double, rowTo: Double, columnTo: Double): CellType | mixed = js.native
+    
     def getInstance(): Handsontable = js.native
+    
     @JSName("getPlugin")
     def getPlugin_autoColumnSize(pluginName: autoColumnSize): AutoColumnSize = js.native
     @JSName("getPlugin")
@@ -5279,15 +5319,24 @@ object _Handsontable extends js.Object {
     def getPlugin_touchScroll(pluginName: touchScroll): TouchScroll = js.native
     @JSName("getPlugin")
     def getPlugin_trimRows(pluginName: trimRows): TrimRows = js.native
+    
     def getRowHeader(): js.Array[String | Double] = js.native
     def getRowHeader(row: Double): String | Double = js.native
+    
     def getRowHeight(row: Double): Double = js.native
+    
     def getSchema(): RowObject = js.native
+    
     def getSelected(): js.UndefOr[js.Array[js.Tuple4[Double, Double, Double, Double]]] = js.native
+    
     def getSelectedLast(): js.UndefOr[js.Array[Double]] = js.native
+    
     def getSelectedRange(): js.UndefOr[js.Array[CellRange]] = js.native
+    
     def getSelectedRangeLast(): js.UndefOr[CellRange] = js.native
+    
     def getSettings(): GridSettings = js.native
+    
     def getSourceData(): js.Array[js.Array[CellValue] | RowObject] = js.native
     def getSourceData(
       row: js.UndefOr[scala.Nothing],
@@ -5309,6 +5358,7 @@ object _Handsontable extends js.Object {
     def getSourceData(row: Double, column: Double, row2: js.UndefOr[scala.Nothing], column2: Double): js.Array[js.Array[CellValue] | RowObject] = js.native
     def getSourceData(row: Double, column: Double, row2: Double): js.Array[js.Array[CellValue] | RowObject] = js.native
     def getSourceData(row: Double, column: Double, row2: Double, column2: Double): js.Array[js.Array[CellValue] | RowObject] = js.native
+    
     def getSourceDataArray(): js.Array[js.Array[CellValue]] = js.native
     def getSourceDataArray(
       row: js.UndefOr[scala.Nothing],
@@ -5330,21 +5380,39 @@ object _Handsontable extends js.Object {
     def getSourceDataArray(row: Double, column: Double, row2: js.UndefOr[scala.Nothing], ccolumn2: Double): js.Array[js.Array[CellValue]] = js.native
     def getSourceDataArray(row: Double, column: Double, row2: Double): js.Array[js.Array[CellValue]] = js.native
     def getSourceDataArray(row: Double, column: Double, row2: Double, ccolumn2: Double): js.Array[js.Array[CellValue]] = js.native
+    
     def getSourceDataAtCell(row: Double, column: Double): CellValue = js.native
+    
     def getSourceDataAtCol(column: Double): js.Array[CellValue] = js.native
+    
     def getSourceDataAtRow(row: Double): js.Array[CellValue] | RowObject = js.native
+    
     def getTranslatedPhrase(dictionaryKey: String, extraArguments: js.Any): String | Null = js.native
+    
     def getValue(): CellValue = js.native
+    
     def hasColHeaders(): Boolean = js.native
+    
     def hasHook(key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any): Boolean = js.native
+    
     def hasRowHeaders(): Boolean = js.native
+    
     def init(): js.Function0[Unit] = js.native
+    
     def isColumnModificationAllowed(): Boolean = js.native
+    
+    var isDestroyed: Boolean = js.native
+    
     def isEmptyCol(col: Double): Boolean = js.native
+    
     def isEmptyRow(row: Double): Boolean = js.native
+    
     def isListening(): Boolean = js.native
+    
     def listen(): Unit = js.native
+    
     def loadData(data: js.Array[js.Array[CellValue] | RowObject]): Unit = js.native
+    
     def populateFromArray(
       row: Double,
       col: Double,
@@ -5356,9 +5424,12 @@ object _Handsontable extends js.Object {
       direction: js.UndefOr[left | right | up | down],
       deltas: js.UndefOr[js.Array[_]]
     ): Unit = js.native
+    
     def propToCol(prop: String): Double = js.native
     def propToCol(prop: Double): Double = js.native
+    
     def refreshDimensions(): Unit = js.native
+    
     def removeCellMeta(row: Double, col: Double, key: String): Unit = js.native
     @JSName("removeCellMeta")
     def removeCellMeta_comment(row: Double, col: Double, key: comment): Unit = js.native
@@ -5370,6 +5441,7 @@ object _Handsontable extends js.Object {
     def removeCellMeta_skipRowOnPaste(row: Double, col: Double, key: skipRowOnPaste): Unit = js.native
     @JSName("removeCellMeta")
     def removeCellMeta_valid(row: Double, col: Double, key: valid): Unit = js.native
+    
     def removeHook(
       key: afterModifyTransformEnd,
       callback: js.Function3[
@@ -6588,8 +6660,19 @@ object _Handsontable extends js.Object {
     def removeHook_unmodifyRow(key: unmodifyRow): Unit = js.native
     @JSName("removeHook")
     def removeHook_unmodifyRow(key: unmodifyRow, callback: js.Function1[/* row */ Double, Unit]): Unit = js.native
+    
     def render(): Unit = js.native
+    
+    var renderCall: Boolean = js.native
+    
+    var rootDocument: Document = js.native
+    
+    var rootElement: HTMLElement = js.native
+    
+    var rootWindow: Window = js.native
+    
     def rowOffset(): Double = js.native
+    
     def runHooks(
       key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any,
       p1: js.UndefOr[js.Any],
@@ -6599,6 +6682,7 @@ object _Handsontable extends js.Object {
       p5: js.UndefOr[js.Any],
       p6: js.UndefOr[js.Any]
     ): js.Any = js.native
+    
     // Requires TS 3.0:
     // runHooks<K extends keyof Handsontable.Events>(key: K, ...params: Parameters<Handsontable.Events[K]>): ReturnType<Handsontable.Events[K]>;
     def scrollViewportTo(): Boolean = js.native
@@ -6637,7 +6721,9 @@ object _Handsontable extends js.Object {
     def scrollViewportTo(row: Double, column: Double, snapToBottom: js.UndefOr[scala.Nothing], snapToRight: Boolean): Boolean = js.native
     def scrollViewportTo(row: Double, column: Double, snapToBottom: Boolean): Boolean = js.native
     def scrollViewportTo(row: Double, column: Double, snapToBottom: Boolean, snapToRight: Boolean): Boolean = js.native
+    
     def selectAll(): Unit = js.native
+    
     def selectCell(row: Double, col: Double): Boolean = js.native
     def selectCell(
       row: Double,
@@ -6716,6 +6802,7 @@ object _Handsontable extends js.Object {
       scrollToCell: Boolean,
       changeListener: Boolean
     ): Boolean = js.native
+    
     def selectCellByProp(row: Double, prop: String): Boolean = js.native
     def selectCellByProp(
       row: Double,
@@ -6742,6 +6829,7 @@ object _Handsontable extends js.Object {
     ): Boolean = js.native
     def selectCellByProp(row: Double, prop: String, endRow: Double, endProp: String): Boolean = js.native
     def selectCellByProp(row: Double, prop: String, endRow: Double, endProp: String, scrollToCell: Boolean): Boolean = js.native
+    
     def selectCells(coords: js.Array[CellRange | (js.Tuple4[Double, Double | String, Double, Double | String])]): Boolean = js.native
     def selectCells(
       coords: js.Array[CellRange | (js.Tuple4[Double, Double | String, Double, Double | String])],
@@ -6757,16 +6845,21 @@ object _Handsontable extends js.Object {
       scrollToCell: Boolean,
       changeListener: Boolean
     ): Boolean = js.native
+    
     def selectColumns(startColumn: String): Boolean = js.native
     def selectColumns(startColumn: String, endColumn: String): Boolean = js.native
     def selectColumns(startColumn: String, endColumn: Double): Boolean = js.native
     def selectColumns(startColumn: Double): Boolean = js.native
     def selectColumns(startColumn: Double, endColumn: String): Boolean = js.native
     def selectColumns(startColumn: Double, endColumn: Double): Boolean = js.native
+    
     def selectRows(startRow: Double): Boolean = js.native
     def selectRows(startRow: Double, endRow: Double): Boolean = js.native
+    
     def setCellMeta(row: Double, col: Double, key: String, `val`: js.Any): Unit = js.native
+    
     def setCellMetaObject[T /* <: CellMeta */](row: Double, col: Double, prop: T): Unit = js.native
+    
     @JSName("setCellMeta")
     def setCellMeta_comment(row: Double, col: Double, key: comment): Unit = js.native
     @JSName("setCellMeta")
@@ -6795,40 +6888,56 @@ object _Handsontable extends js.Object {
     def setCellMeta_valid(row: Double, col: Double, key: valid): Unit = js.native
     @JSName("setCellMeta")
     def setCellMeta_valid(row: Double, col: Double, key: valid, `val`: Boolean): Unit = js.native
+    
     def setDataAtCell(changes: js.Array[js.Tuple3[Double, String | Double, CellValue]]): Unit = js.native
     def setDataAtCell(changes: js.Array[js.Tuple3[Double, String | Double, CellValue]], source: String): Unit = js.native
     def setDataAtCell(row: Double, col: String, value: CellValue): Unit = js.native
     def setDataAtCell(row: Double, col: String, value: CellValue, source: String): Unit = js.native
     def setDataAtCell(row: Double, col: Double, value: CellValue): Unit = js.native
     def setDataAtCell(row: Double, col: Double, value: CellValue, source: String): Unit = js.native
+    
     def setDataAtRowProp(changes: js.Array[js.Tuple3[Double, String | Double, CellValue]]): Unit = js.native
     def setDataAtRowProp(changes: js.Array[js.Tuple3[Double, String | Double, CellValue]], source: String): Unit = js.native
     def setDataAtRowProp(row: Double, prop: String, value: CellValue): Unit = js.native
     def setDataAtRowProp(row: Double, prop: String, value: CellValue, source: String): Unit = js.native
+    
     def spliceCol(col: Double, index: Double, amount: Double, elements: CellValue*): Unit = js.native
+    
     def spliceRow(row: Double, index: Double, amount: Double, elements: CellValue*): Unit = js.native
+    
+    var table: HTMLTableElement = js.native
+    
     def toHTML(): String = js.native
+    
     def toPhysicalColumn(column: Double): Double = js.native
+    
     def toPhysicalRow(row: Double): Double = js.native
+    
     def toTableElement(): HTMLTableElement = js.native
+    
     def toVisualColumn(column: Double): Double = js.native
+    
     def toVisualRow(row: Double): Double = js.native
+    
     def unlisten(): Unit = js.native
+    
     def updateSettings(settings: GridSettings): Unit = js.native
     def updateSettings(settings: GridSettings, init: Boolean): Unit = js.native
+    
     def validateCell(
       value: js.Any,
       cellProperties: CellProperties,
       callback: js.Function1[/* valid */ Boolean, Unit],
       source: String
     ): Unit = js.native
+    
     def validateCells(): Unit = js.native
     def validateCells(callback: js.Function1[/* valid */ Boolean, Unit]): Unit = js.native
+    
     def validateColumns(columns: js.Array[Double]): Unit = js.native
     def validateColumns(columns: js.Array[Double], callback: js.Function1[/* valid */ Boolean, Unit]): Unit = js.native
+    
     def validateRows(rows: js.Array[Double]): Unit = js.native
     def validateRows(rows: js.Array[Double], callback: js.Function1[/* valid */ Boolean, Unit]): Unit = js.native
   }
-  
 }
-

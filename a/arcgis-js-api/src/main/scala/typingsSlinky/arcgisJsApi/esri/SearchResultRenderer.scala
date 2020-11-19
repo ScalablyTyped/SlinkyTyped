@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SearchResultRenderer extends Widget_ {
+  
   /**
     * Indicates whether to display the `Show more results` link within the search result's popup. A value of `true` will not display the link in the popup.
     *
@@ -14,6 +15,7 @@ trait SearchResultRenderer extends Widget_ {
     * @default false
     */
   var showMoreResultsOpen: Boolean = js.native
+  
   /**
     * The view model for this Search widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [SearchViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search-SearchViewModel.html) class to access all properties and methods on the widget.
     *
@@ -21,4 +23,3 @@ trait SearchResultRenderer extends Widget_ {
     */
   var viewModel: SearchViewModel = js.native
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.PictureMarkerSymbol
 import typingsSlinky.arcgisJsApi.esri.PictureMarkerSymbolProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols/PictureMarkerSymbol", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends PictureMarkerSymbol {
   def this(properties: PictureMarkerSymbolProperties) = this()
 }
-

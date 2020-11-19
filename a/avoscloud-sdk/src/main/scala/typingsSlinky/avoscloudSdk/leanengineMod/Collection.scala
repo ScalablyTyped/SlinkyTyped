@@ -3,7 +3,7 @@ package typingsSlinky.avoscloudSdk.leanengineMod
 import typingsSlinky.avoscloudSdk.mod.Collection.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new instance with the given models and options.  Typically, you
@@ -36,11 +36,10 @@ class Collection[T] ()
   def this(models: js.UndefOr[scala.Nothing], options: Options) = this()
   def this(models: js.Array[typingsSlinky.avoscloudSdk.mod.Object], options: Options) = this()
 }
-
 /* static members */
 @JSImport("leanengine", "Collection")
 @js.native
 object Collection extends js.Object {
+  
   def extend(instanceProps: js.Any, classProps: js.Any): js.Any = js.native
 }
-

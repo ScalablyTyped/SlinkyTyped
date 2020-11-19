@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.s3controlMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "S3Control")
 @js.native
@@ -14,4 +14,3 @@ class S3Control ()
   extends typingsSlinky.awsSdk.allMod.S3Control {
   def this(options: ClientConfiguration) = this()
 }
-

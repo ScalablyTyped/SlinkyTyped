@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.DrawActionProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.DrawAction")
 @js.native
@@ -16,4 +16,3 @@ class DrawActionCls ()
   extends typingsSlinky.arcgisJsApi.esri.DrawAction {
   def this(properties: DrawActionProperties) = this()
 }
-

@@ -4,12 +4,13 @@ import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.graphqlToolsSchema.anon.Definitions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/schema/extensionDefinitions", JSImport.Namespace)
 @js.native
 object extensionDefinitionsMod extends js.Object {
+  
   def extractExtensionDefinitions(ast: DocumentNode): Definitions = js.native
+  
   def filterExtensionDefinitions(ast: DocumentNode): Definitions = js.native
 }
-

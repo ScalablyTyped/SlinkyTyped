@@ -6,14 +6,14 @@ import typingsSlinky.node.childProcessMod.ExecSyncOptionsWithBufferEncoding
 import typingsSlinky.node.childProcessMod.ExecSyncOptionsWithStringEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mz/child_process", "execSync")
 @js.native
 object execSync extends js.Object {
+  
   def apply(command: String): String = js.native
   def apply(command: String, options: ExecSyncOptions): Buffer = js.native
   def apply(command: String, options: ExecSyncOptionsWithBufferEncoding): Buffer = js.native
   def apply(command: String, options: ExecSyncOptionsWithStringEncoding): String = js.native
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.relayCompiler.schemaMod.TypeID
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.relayCompiler.iRMod.Fragment
@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.relayCompiler.iRMod.SplitOperation
 */
 trait GeneratedDefinition extends js.Object
-
 object GeneratedDefinition {
+  
   @scala.inline
   def Fragment(
     argumentDefinitions: js.Array[ArgumentDefinition],
@@ -29,6 +29,7 @@ object GeneratedDefinition {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeneratedDefinition]
   }
+  
   @scala.inline
   def Request(
     fragment: Fragment,
@@ -40,6 +41,7 @@ object GeneratedDefinition {
     val __obj = js.Dynamic.literal(fragment = fragment.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeneratedDefinition]
   }
+  
   @scala.inline
   def SplitOperation(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.SplitOperation,
@@ -54,4 +56,3 @@ object GeneratedDefinition {
     __obj.asInstanceOf[GeneratedDefinition]
   }
 }
-

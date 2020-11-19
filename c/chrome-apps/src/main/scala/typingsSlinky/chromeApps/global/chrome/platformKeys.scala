@@ -10,7 +10,7 @@ import typingsSlinky.chromeApps.chromeAppsStrings.ecdsaSign
 import typingsSlinky.chromeApps.chromeAppsStrings.rsaSign
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // #endregion
 // #region chrome.platformKeys
@@ -30,6 +30,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.platformKeys")
 @js.native
 object platformKeys extends js.Object {
+  
   /**
     * @description
     * Passes the key pair of *certificate* for usage with
@@ -58,6 +59,7 @@ object platformKeys extends js.Object {
     parameters: js.Object,
     callback: js.Function2[/* publicKey */ CryptoKey, /* privateKey */ CryptoKey | Null, Unit]
   ): Unit = js.native
+  
   /**
     * This function filters from a list of client certificates the ones that
     * are known to the platform, match *request* and for which the
@@ -70,6 +72,7 @@ object platformKeys extends js.Object {
     *                 app has permission for and, if *interactive* is true, that were selected by the user.
     */
   def selectClientCertificates(details: SelectDetails, callback: js.Function1[/* matches */ js.Array[Match], Unit]): Unit = js.native
+  
   /**
     * An implementation of WebCrypto's SubtleCrypto
     * that allows crypto operations on keys of client
@@ -77,6 +80,7 @@ object platformKeys extends js.Object {
     * @see[SubtleCrypto]{@link http://www.w3.org/TR/WebCryptoAPI/#subtlecrypto-interface}
     */
   def subtleCrypto(): SubtleCrypto = js.native
+  
   /**
     * Checks whether *details.serverCertificateChain* can be trusted
     * for *details.hostname* according to the trust settings of the
@@ -89,14 +93,15 @@ object platformKeys extends js.Object {
     * support subject alternative names.
     */
   def verifyTLSServerCertificate(details: VerificationDetails, callback: js.Function1[/* result */ VerificationResult, Unit]): Unit = js.native
+  
   /**
     * @enum
     */
   @js.native
   object ClientCertificateType extends js.Object {
+    
     var ECDSA_SIGN: ecdsaSign = js.native
+    
     var RSA_SIGN: rsaSign = js.native
   }
-  
 }
-

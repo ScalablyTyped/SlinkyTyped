@@ -5,13 +5,14 @@ import typingsSlinky.reactAxe.anon.TypeofReact
 import typingsSlinky.reactAxe.anon.TypeofReactDOM
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-axe", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def apply(react: TypeofReact, reactDOM: TypeofReactDOM, timeout: Double): Unit = js.native
   def apply(react: TypeofReact, reactDOM: TypeofReactDOM, timeout: Double, config: ReactAxeConfig): Unit = js.native
+  
   type ReactAxeConfig = Spec
 }
-

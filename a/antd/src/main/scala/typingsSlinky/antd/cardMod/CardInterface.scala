@@ -6,11 +6,12 @@ import typingsSlinky.antd.metaMod.CardMetaProps
 import typingsSlinky.react.mod.FunctionComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CardInterface extends FunctionComponent[CardProps] {
+  
   var Grid: ReactComponentClass[CardGridProps] = js.native
+  
   var Meta: ReactComponentClass[CardMetaProps] = js.native
 }
-

@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.reactDevUtils.anon.TypeofHtmlWebpackPlugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This Webpack plugin lets us interpolate custom variables into `index.html`.
@@ -15,4 +15,3 @@ import scala.scalajs.js.annotation._
 class ^ protected () extends js.Object {
   def this(htmlWebpackPlugin: TypeofHtmlWebpackPlugin, replacements: StringDictionary[String]) = this()
 }
-

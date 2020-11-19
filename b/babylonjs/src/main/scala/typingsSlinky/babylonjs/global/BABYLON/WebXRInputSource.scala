@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.BABYLON.IWebXRControllerOptions
 import typingsSlinky.babylonjs.XRInputSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.WebXRInputSource")
 @js.native
@@ -29,4 +29,3 @@ class WebXRInputSource protected ()
     _options: IWebXRControllerOptions
   ) = this()
 }
-

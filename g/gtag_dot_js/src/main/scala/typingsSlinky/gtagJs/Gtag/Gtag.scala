@@ -6,10 +6,11 @@ import typingsSlinky.gtagJs.gtagJsStrings.js_
 import typingsSlinky.gtagJs.gtagJsStrings.set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Gtag extends js.Object {
+  
   def apply(command: config, targetId: String): Unit = js.native
   def apply(command: config, targetId: String, config: ControlParams): Unit = js.native
   def apply(command: config, targetId: String, config: CustomParams): Unit = js.native
@@ -25,4 +26,3 @@ trait Gtag extends js.Object {
   def apply(command: js_, config: js.Date): Unit = js.native
   def apply(command: set, config: CustomParams): Unit = js.native
 }
-

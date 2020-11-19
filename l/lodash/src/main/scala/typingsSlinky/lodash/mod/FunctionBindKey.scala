@@ -2,14 +2,14 @@ package typingsSlinky.lodash.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // bindKey
 @js.native
 trait FunctionBindKey extends js.Object {
-  @JSName("placeholder")
-  var placeholder_Original: __ = js.native
+  
   def apply(`object`: js.Object, key: String, partials: js.Any*): js.Function1[/* repeated */ js.Any, _] = js.native
+  
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -79,5 +79,6 @@ trait FunctionBindKey extends js.Object {
     * upperFirst, value, and words.
     **/
   def placeholder[T](value: T): LoDashImplicitWrapper[T] = js.native
+  @JSName("placeholder")
+  var placeholder_Original: __ = js.native
 }
-

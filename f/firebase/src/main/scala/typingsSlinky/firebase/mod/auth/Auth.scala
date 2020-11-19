@@ -7,7 +7,7 @@ import typingsSlinky.firebase.mod.app.App
 import typingsSlinky.firebase.mod.auth.Auth.Persistence
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Firebase Auth service interface.
@@ -22,6 +22,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Auth extends js.Object {
+  
   /**
     * The {@link firebase.app.App app} associated with the `Auth` service
     * instance.
@@ -32,48 +33,7 @@ trait Auth extends js.Object {
     * ```
     */
   var app: App = js.native
-  /**
-    * The currently signed-in user (or null).
-    */
-  var currentUser: User | Null = js.native
-  /**
-    * The current Auth instance's language code. This is a readable/writable
-    * property. When set to null, the default Firebase Console language setting
-    * is applied. The language code will propagate to email action templates
-    * (password reset, email verification and email change revocation), SMS
-    * templates for phone authentication, reCAPTCHA verifier and OAuth
-    * popup/redirect operations provided the specified providers support
-    * localization with the language code specified.
-    */
-  var languageCode: String | Null = js.native
-  /**
-    * The current Auth instance's settings. This is used to edit/read configuration
-    * related options like app verification mode for phone authentication.
-    */
-  var settings: AuthSettings = js.native
-  /**
-    * The current Auth instance's tenant ID. This is a readable/writable
-    * property. When you set the tenant ID of an Auth instance, all future
-    * sign-in/sign-up operations will pass this tenant ID and sign in or
-    * sign up users to the specified tenant project.
-    * When set to null, users are signed in to the parent project. By default,
-    * this is set to null.
-    *
-    * @example
-    * ```javascript
-    * // Set the tenant ID on Auth instance.
-    * firebase.auth().tenantId = ‘TENANT_PROJECT_ID’;
-    *
-    * // All future sign-in request now include tenant ID.
-    * firebase.auth().signInWithEmailAndPassword(email, password)
-    *   .then(function(result) {
-    *     // result.user.tenantId should be ‘TENANT_PROJECT_ID’.
-    *   }).catch(function(error) {
-    *     // Handle error.
-    *   });
-    * ```
-    */
-  var tenantId: String | Null = js.native
+  
   /**
     * Applies a verification code sent to the user by email or other out-of-band
     * mechanism.
@@ -97,6 +57,7 @@ trait Auth extends js.Object {
     * @param code A verification code sent to the user.
     */
   def applyActionCode(code: String): js.Promise[Unit] = js.native
+  
   /**
     * Checks a verification code sent to the user by email or other out-of-band
     * mechanism.
@@ -122,6 +83,7 @@ trait Auth extends js.Object {
     * @param code A verification code sent to the user.
     */
   def checkActionCode(code: String): js.Promise[ActionCodeInfo] = js.native
+  
   /**
     * Completes the password reset process, given a confirmation code and new
     * password.
@@ -148,6 +110,7 @@ trait Auth extends js.Object {
     * @param newPassword The new password.
     */
   def confirmPasswordReset(code: String, newPassword: String): js.Promise[Unit] = js.native
+  
   /**
     * Creates a new user account associated with the specified email address and
     * password.
@@ -195,6 +158,12 @@ trait Auth extends js.Object {
     * @param password The user's chosen password.
     */
   def createUserWithEmailAndPassword(email: String, password: String): js.Promise[UserCredential] = js.native
+  
+  /**
+    * The currently signed-in user (or null).
+    */
+  var currentUser: User | Null = js.native
+  
   /**
     * Gets the list of possible sign in methods for the given email address. This
     * is useful to differentiate methods of sign-in for the same provider,
@@ -208,6 +177,7 @@ trait Auth extends js.Object {
     * </dl>
     */
   def fetchSignInMethodsForEmail(email: String): js.Promise[js.Array[String]] = js.native
+  
   /**
     * Returns a UserCredential from the redirect-based sign-in flow.
     *
@@ -316,10 +286,23 @@ trait Auth extends js.Object {
     * ```
     */
   def getRedirectResult(): js.Promise[UserCredential] = js.native
+  
   /**
     * Checks if an incoming link is a sign-in with email link.
     */
   def isSignInWithEmailLink(emailLink: String): Boolean = js.native
+  
+  /**
+    * The current Auth instance's language code. This is a readable/writable
+    * property. When set to null, the default Firebase Console language setting
+    * is applied. The language code will propagate to email action templates
+    * (password reset, email verification and email change revocation), SMS
+    * templates for phone authentication, reCAPTCHA verifier and OAuth
+    * popup/redirect operations provided the specified providers support
+    * localization with the language code specified.
+    */
+  var languageCode: String | Null = js.native
+  
   def onAuthStateChanged(nextOrObserver: js.Function1[/* a */ User | Null, _]): Unsubscribe = js.native
   def onAuthStateChanged(
     nextOrObserver: js.Function1[/* a */ User | Null, _],
@@ -359,6 +342,7 @@ trait Auth extends js.Object {
     error: js.Function1[/* a */ Error, _],
     completed: Unsubscribe
   ): Unsubscribe = js.native
+  
   def onIdTokenChanged(nextOrObserver: js.Function1[/* a */ User | Null, _]): Unsubscribe = js.native
   def onIdTokenChanged(
     nextOrObserver: js.Function1[/* a */ User | Null, _],
@@ -399,6 +383,7 @@ trait Auth extends js.Object {
     error: js.Function1[/* a */ Error, _],
     completed: Unsubscribe
   ): Unsubscribe = js.native
+  
   /**
     * Sends a password reset email to the given email address.
     *
@@ -467,6 +452,7 @@ trait Auth extends js.Object {
     */
   def sendPasswordResetEmail(email: String): js.Promise[Unit] = js.native
   def sendPasswordResetEmail(email: String, actionCodeSettings: ActionCodeSettings): js.Promise[Unit] = js.native
+  
   /**
     * Sends a sign-in email link to the user with the specified email.
     *
@@ -539,6 +525,7 @@ trait Auth extends js.Object {
     *     are configured in the same Firebase Auth project used.
     */
   def sendSignInLinkToEmail(email: String, actionCodeSettings: ActionCodeSettings): js.Promise[Unit] = js.native
+  
   /**
     * Changes the current type of persistence on the current Auth instance for the
     * currently saved Auth session and applies this type of persistence for
@@ -577,6 +564,13 @@ trait Auth extends js.Object {
     * ```
     */
   def setPersistence(persistence: Persistence): js.Promise[Unit] = js.native
+  
+  /**
+    * The current Auth instance's settings. This is used to edit/read configuration
+    * related options like app verification mode for phone authentication.
+    */
+  var settings: AuthSettings = js.native
+  
   /**
     * Asynchronously signs in with the given credentials, and returns any available
     * additional user information, such as user name.
@@ -632,6 +626,7 @@ trait Auth extends js.Object {
     * @param credential The auth credential.
     */
   def signInAndRetrieveDataWithCredential(credential: AuthCredential): js.Promise[UserCredential] = js.native
+  
   /**
     * Asynchronously signs in as an anonymous user.
     *
@@ -662,6 +657,7 @@ trait Auth extends js.Object {
     * ```
     */
   def signInAnonymously(): js.Promise[UserCredential] = js.native
+  
   /**
     * Asynchronously signs in with the given credentials.
     *
@@ -724,6 +720,7 @@ trait Auth extends js.Object {
     * @param credential The auth credential.
     */
   def signInWithCredential(credential: AuthCredential): js.Promise[UserCredential] = js.native
+  
   /**
     * Asynchronously signs in using a custom token.
     *
@@ -758,6 +755,7 @@ trait Auth extends js.Object {
     * @param token The custom token to sign in with.
     */
   def signInWithCustomToken(token: String): js.Promise[UserCredential] = js.native
+  
   /**
     * Asynchronously signs in using an email and password.
     *
@@ -803,6 +801,7 @@ trait Auth extends js.Object {
     * @param password The users password.
     */
   def signInWithEmailAndPassword(email: String, password: String): js.Promise[UserCredential] = js.native
+  
   /**
     * Asynchronously signs in using an email and sign-in email link. If no link
     * is passed, the link is inferred from the current URL.
@@ -840,6 +839,7 @@ trait Auth extends js.Object {
     */
   def signInWithEmailLink(email: String): js.Promise[UserCredential] = js.native
   def signInWithEmailLink(email: String, emailLink: String): js.Promise[UserCredential] = js.native
+  
   /**
     * Asynchronously signs in using a phone number. This method sends a code via
     * SMS to the given phone number, and returns a
@@ -892,6 +892,7 @@ trait Auth extends js.Object {
     * @param applicationVerifier
     */
   def signInWithPhoneNumber(phoneNumber: String, applicationVerifier: ApplicationVerifier): js.Promise[ConfirmationResult] = js.native
+  
   /**
     * Authenticates a Firebase client using a popup-based OAuth authentication
     * flow.
@@ -983,6 +984,7 @@ trait Auth extends js.Object {
     *     firebase.auth.EmailAuthProvider} will throw an error.
     */
   def signInWithPopup(provider: AuthProvider): js.Promise[UserCredential] = js.native
+  
   /**
     * Authenticates a Firebase client using a full-page redirect flow. To handle
     * the results and errors for this operation, refer to {@link
@@ -1011,10 +1013,36 @@ trait Auth extends js.Object {
     *     firebase.auth.EmailAuthProvider} will throw an error.
     */
   def signInWithRedirect(provider: AuthProvider): js.Promise[Unit] = js.native
+  
   /**
     * Signs out the current user.
     */
   def signOut(): js.Promise[Unit] = js.native
+  
+  /**
+    * The current Auth instance's tenant ID. This is a readable/writable
+    * property. When you set the tenant ID of an Auth instance, all future
+    * sign-in/sign-up operations will pass this tenant ID and sign in or
+    * sign up users to the specified tenant project.
+    * When set to null, users are signed in to the parent project. By default,
+    * this is set to null.
+    *
+    * @example
+    * ```javascript
+    * // Set the tenant ID on Auth instance.
+    * firebase.auth().tenantId = ‘TENANT_PROJECT_ID’;
+    *
+    * // All future sign-in request now include tenant ID.
+    * firebase.auth().signInWithEmailAndPassword(email, password)
+    *   .then(function(result) {
+    *     // result.user.tenantId should be ‘TENANT_PROJECT_ID’.
+    *   }).catch(function(error) {
+    *     // Handle error.
+    *   });
+    * ```
+    */
+  var tenantId: String | Null = js.native
+  
   /**
     * Asynchronously sets the provided user as `currentUser` on the current Auth
     * instance. A new instance copy of the user provided will be made and set as
@@ -1043,10 +1071,12 @@ trait Auth extends js.Object {
     */
   def updateCurrentUser(): js.Promise[Unit] = js.native
   def updateCurrentUser(user: User): js.Promise[Unit] = js.native
+  
   /**
     * Sets the current language to the default device/browser preference.
     */
   def useDeviceLanguage(): Unit = js.native
+  
   /**
     * Checks a password reset code sent to the user by email or other out-of-band
     * mechanism.
@@ -1073,32 +1103,33 @@ trait Auth extends js.Object {
     */
   def verifyPasswordResetCode(code: String): js.Promise[String] = js.native
 }
-
 @JSImport("firebase", "auth.Auth")
 @js.native
 object Auth extends js.Object {
+  
   /**
     * An enumeration of the possible persistence mechanism types.
     */
   @js.native
   object Persistence extends js.Object {
+    
     /**
       * Indicates that the state will be persisted even when the browser window is
       * closed or the activity is destroyed in react-native.
       */
     var LOCAL: Persistence = js.native
+    
     /**
       * Indicates that the state will only be stored in memory and will be cleared
       * when the window or activity is refreshed.
       */
     var NONE: Persistence = js.native
+    
     /**
       * Indicates that the state will only persist in current session/tab, relevant
       * to web only, and will be cleared when the tab is closed.
       */
     var SESSION: Persistence = js.native
   }
-  
   type Persistence = String
 }
-

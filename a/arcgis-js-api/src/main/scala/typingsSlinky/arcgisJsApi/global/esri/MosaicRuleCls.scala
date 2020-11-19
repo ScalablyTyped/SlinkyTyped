@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.MosaicRuleProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.MosaicRule")
 @js.native
@@ -16,4 +16,3 @@ class MosaicRuleCls ()
   extends typingsSlinky.arcgisJsApi.esri.MosaicRule {
   def this(properties: MosaicRuleProperties) = this()
 }
-

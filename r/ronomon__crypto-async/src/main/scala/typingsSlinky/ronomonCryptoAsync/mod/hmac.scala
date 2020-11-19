@@ -3,11 +3,12 @@ package typingsSlinky.ronomonCryptoAsync.mod
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ronomon/crypto-async", "hmac")
 @js.native
 object hmac extends js.Object {
+  
   def apply(
     algorithm: String,
     key: Buffer,
@@ -27,4 +28,3 @@ object hmac extends js.Object {
     cb: js.Function2[/* error */ js.UndefOr[js.Error], /* hmac */ Buffer, Unit]
   ): Unit = js.native
 }
-

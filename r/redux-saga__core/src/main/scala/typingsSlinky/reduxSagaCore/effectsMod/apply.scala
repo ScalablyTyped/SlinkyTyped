@@ -4,11 +4,12 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Parameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@redux-saga/core/types/effects", "apply")
 @js.native
 object apply extends js.Object {
+  
   def apply[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
     */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.apply with TopLevel[js.Any] */, Name /* <: String */](
@@ -19,4 +20,3 @@ object apply extends js.Object {
     ]
   ): CallEffect = js.native
 }
-

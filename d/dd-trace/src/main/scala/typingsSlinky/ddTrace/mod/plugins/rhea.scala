@@ -3,7 +3,7 @@ package typingsSlinky.ddTrace.mod.plugins
 import typingsSlinky.ddTrace.mod.Analyzable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This plugin automatically instruments the
@@ -13,12 +13,11 @@ import scala.scalajs.js.annotation._
 trait rhea
   extends Integration
      with Analyzable
-
 object rhea {
+  
   @scala.inline
   def apply(): rhea = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[rhea]
   }
 }
-

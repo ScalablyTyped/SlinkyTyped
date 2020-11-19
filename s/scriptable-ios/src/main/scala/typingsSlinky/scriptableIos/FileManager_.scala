@@ -3,7 +3,7 @@ package typingsSlinky.scriptableIos
 import typingsSlinky.scriptableIos.FileManager.AllFileBookmarks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Read and write files on disk._
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait FileManager_ extends js.Object {
+  
   /**
     * _Adds a tag to a file._
     *
@@ -24,6 +25,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-addtag
     */
   def addTag(filePath: String, tag: String): Unit = js.native
+  
   /**
     * _Reads all extended attributes on a file._
     *
@@ -32,6 +34,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-allextendedattributes
     */
   def allExtendedAttributes(filePath: String): js.Array[String] = js.native
+  
   /**
     * _Reads all file bookmarks created in settings._
     *
@@ -48,6 +51,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-allfilebookmarks
     */
   def allFileBookmarks(): js.Array[AllFileBookmarks] = js.native
+  
   /**
     * _Reads all tags from a file._
     *
@@ -59,6 +63,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-alltags
     */
   def allTags(filePath: String): js.Array[String] = js.native
+  
   /**
     * _Check if a bookmark exists._
     *
@@ -72,6 +77,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-bookmarkexists
     */
   def bookmarkExists(name: String): Boolean = js.native
+  
   /**
     * _Get path to a bookmarked file or folder._
     *
@@ -87,6 +93,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-bookmarkedpath
     */
   def bookmarkedPath(name: String): String = js.native
+  
   /**
     * _Copies a file._
     *
@@ -96,6 +103,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-copy
     */
   def copy(sourceFilePath: String, destinationFilePath: String): Unit = js.native
+  
   /**
     * _Creates a directory at the specified path._
     *
@@ -106,6 +114,7 @@ trait FileManager_ extends js.Object {
     */
   def createDirectory(path: String): Unit = js.native
   def createDirectory(path: String, intermediateDirectories: Boolean): Unit = js.native
+  
   /**
     * _Reads the creation date of a file._
     *
@@ -114,6 +123,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-creationdate
     */
   def creationDate(filePath: String): js.Date = js.native
+  
   /**
     * _Path of documents directory._
     *
@@ -123,6 +133,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-documentsdirectory
     */
   def documentsDirectory(): String = js.native
+  
   /**
     * _Download file from iCloud if necessary._
     *
@@ -132,6 +143,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-downloadfilefromicloud
     */
   def downloadFileFromiCloud(filePath: String): js.Promise[Unit] = js.native
+  
   /**
     * _Checks if a file exists._
     *
@@ -141,6 +153,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-fileexists
     */
   def fileExists(filePath: String): Boolean = js.native
+  
   /**
     * _Get extension of a file._
     *
@@ -149,6 +162,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-fileextension
     */
   def fileExtension(filePath: String): String = js.native
+  
   /**
     * _Get name of a file._
     *
@@ -159,6 +173,7 @@ trait FileManager_ extends js.Object {
     */
   def fileName(filePath: String): String = js.native
   def fileName(filePath: String, includeFileExtension: Boolean): String = js.native
+  
   /**
     * _Size of the file in kilobytes._
     *
@@ -167,6 +182,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-filesize
     */
   def fileSize(filePath: String): Double = js.native
+  
   /**
     * _Gets the UTI of the specified file._
     *
@@ -175,12 +191,14 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-getuti
     */
   def getUTI(filePath: String): String = js.native
+  
   /**
     * _Checks if a path points to a directory._
     * @param path - Path to examine.
     * @see https://docs.scriptable.app/filemanager/#-isdirectory
     */
   def isDirectory(path: String): Boolean = js.native
+  
   /**
     * _Checks if a file have been downloaded._
     *
@@ -192,6 +210,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-isfiledownloaded
     */
   def isFileDownloaded(filePath: String): Boolean = js.native
+  
   /**
     * _Checks if a file is stored in iCloud._
     *
@@ -200,6 +219,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-isfilestoredinicloud
     */
   def isFileStoredIniCloud(filePath: String): Boolean = js.native
+  
   /**
     * _Joins two path components._
     *
@@ -210,6 +230,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-joinpath
     */
   def joinPath(lhsPath: String, rhsPath: String): String = js.native
+  
   /**
     * _Path of library directory._
     *
@@ -217,6 +238,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-librarydirectory
     */
   def libraryDirectory(): String = js.native
+  
   /**
     * _Lists content of directory._
     *
@@ -225,6 +247,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-listcontents
     */
   def listContents(directoryPath: String): js.Array[String] = js.native
+  
   /**
     * _Reads the modification date of a file._
     *
@@ -233,6 +256,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-modificationdate
     */
   def modificationDate(filePath: String): js.Date = js.native
+  
   /**
     * _Moves a file._
     *
@@ -242,6 +266,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-move
     */
   def move(sourceFilePath: String, destinationFilePath: String): Unit = js.native
+  
   /**
     * _Read contents of a file as data._
     *
@@ -253,6 +278,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-read
     */
   def read(filePath: String): Data = js.native
+  
   /**
     * _Reads an extended attribute from a file._
     *
@@ -267,6 +293,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-readextendedattribute
     */
   def readExtendedAttribute(filePath: String, name: String): String = js.native
+  
   /**
     * _Read contents of a file as an image._
     *
@@ -278,6 +305,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-readimage
     */
   def readImage(filePath: String): Image = js.native
+  
   /**
     * _Read contents of a file as string._
     *
@@ -287,6 +315,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-readstring
     */
   def readString(filePath: String): String = js.native
+  
   /**
     * _Removes a file._
     *
@@ -295,6 +324,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-remove
     */
   def remove(filePath: String): Unit = js.native
+  
   /**
     * _Removes an extended attribute from a file._
     *
@@ -307,6 +337,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-removeextendedattribute
     */
   def removeExtendedAttribute(filePath: String, name: String): Unit = js.native
+  
   /**
     * _Removes a tag from a file._
     *
@@ -317,6 +348,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-removetag
     */
   def removeTag(filePath: String, tag: String): Unit = js.native
+  
   /**
     * _Path of temporary directory._
     *
@@ -325,6 +357,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-temporarydirectory
     */
   def temporaryDirectory(): String = js.native
+  
   /**
     * _Write data to a file._
     * @param filePath - Path of file to write to.
@@ -332,6 +365,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-write
     */
   def write(filePath: String, content: Data): Unit = js.native
+  
   /**
     * _Writes an extended attribute to a file._
     *
@@ -345,6 +379,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-writeextendedattribute
     */
   def writeExtendedAttribute(filePath: String, value: String, name: String): Unit = js.native
+  
   /**
     * _Write an image to a file._
     *
@@ -355,6 +390,7 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-writeimage
     */
   def writeImage(filePath: String, image: Image): Unit = js.native
+  
   /**
     * _Write a string to a file._
     *
@@ -366,4 +402,3 @@ trait FileManager_ extends js.Object {
     */
   def writeString(filePath: String, content: String): Unit = js.native
 }
-

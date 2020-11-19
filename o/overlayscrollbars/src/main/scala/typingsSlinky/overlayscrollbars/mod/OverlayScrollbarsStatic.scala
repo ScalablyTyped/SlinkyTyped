@@ -7,10 +7,11 @@ import org.scalajs.dom.raw.NodeListOf
 import typingsSlinky.overlayscrollbars.anon.Dictindex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait OverlayScrollbarsStatic extends js.Object {
+  
   def apply(): js.UndefOr[OverlayScrollbars] = js.native
   def apply(elements: js.Array[Element]): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
   def apply(elements: js.Array[Element], filter: String): js.UndefOr[OverlayScrollbars | js.Array[OverlayScrollbars]] = js.native
@@ -42,8 +43,10 @@ trait OverlayScrollbarsStatic extends js.Object {
   def apply(element: HTMLElement): js.UndefOr[OverlayScrollbars] = js.native
   def apply(element: HTMLElement, options: Options): OverlayScrollbars = js.native
   def apply(element: HTMLElement, options: Options, extensions: Extensions): OverlayScrollbars = js.native
+  
   def defaultOptions(): Options = js.native
   def defaultOptions(newDefaultOptions: Options): Unit = js.native
+  
   def extension(): Dictindex = js.native
   def extension(extensionName: String): Unit = js.native
   def extension(
@@ -69,7 +72,8 @@ trait OverlayScrollbarsStatic extends js.Object {
   ): Unit = js.native
   @JSName("extension")
   def extension_ExtensionInfo(extensionName: String): ExtensionInfo = js.native
+  
   def globals(): Globals = js.native
+  
   def valid(osInstance: js.Any): Boolean = js.native
 }
-

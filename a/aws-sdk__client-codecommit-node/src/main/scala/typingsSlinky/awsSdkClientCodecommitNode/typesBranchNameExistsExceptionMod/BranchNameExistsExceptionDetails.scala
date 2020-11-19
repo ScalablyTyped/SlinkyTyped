@@ -2,8 +2,7 @@ package typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameExistsExceptionM
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BranchNameExistsExceptionDetails extends js.Object
-

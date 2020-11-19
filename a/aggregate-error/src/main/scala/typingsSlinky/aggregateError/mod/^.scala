@@ -3,7 +3,7 @@ package typingsSlinky.aggregateError.mod
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aggregate-error", JSImport.Namespace)
 @js.native
@@ -43,4 +43,3 @@ class ^ protected () extends AggregateError {
   	*/
   def this(errors: js.Array[js.Error | StringDictionary[_] | String]) = this()
 }
-

@@ -12,14 +12,17 @@ import typingsSlinky.storybookUi.anon.IsExpandable
 import typingsSlinky.storybookUi.storybookUiStrings.span
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/ui/dist/components/sidebar/SidebarItem", JSImport.Namespace)
 @js.native
 object sidebarItemMod extends js.Object {
+  
   val Item: StyledComponent[js.Any, Pick[js.Any, String | Double | js.Symbol], Theme] = js.native
+  
   def default(hasNameIsComponentIsLeafIsExpandedIsSelectedProps: js.Any): ReactElement = js.native
+  
   type ExpanderProps = ComponentProps[span] with IsExpandable
+  
   type IconProps = ComponentProps[ReactComponentClass[IconsProps]] with ClassName
 }
-

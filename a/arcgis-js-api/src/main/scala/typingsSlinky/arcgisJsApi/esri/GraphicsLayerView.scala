@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GraphicsLayerView extends LayerView {
+  
   /**
     * Highlights the given feature(s).
     *
@@ -18,6 +19,7 @@ trait GraphicsLayerView extends LayerView {
   def highlight(target: js.Array[Double | Graphic]): Handle = js.native
   def highlight(target: Double): Handle = js.native
   def highlight(target: Graphic): Handle = js.native
+  
   /**
     * Returns all graphics available for drawing in the layer view as a [collection](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Collection.html).
     *
@@ -27,4 +29,3 @@ trait GraphicsLayerView extends LayerView {
     */
   def queryGraphics(): Collection[Graphic] = js.native
 }
-

@@ -7,7 +7,7 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core", "basicLSTMCell")
 @js.native
@@ -23,4 +23,3 @@ object basicLSTMCell
         js.Tuple2[Tensor2D, Tensor2D]
       ]
     ]
-

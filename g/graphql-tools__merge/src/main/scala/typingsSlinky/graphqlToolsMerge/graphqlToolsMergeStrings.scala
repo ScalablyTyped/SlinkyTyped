@@ -2,9 +2,28 @@ package typingsSlinky.graphqlToolsMerge
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object graphqlToolsMergeStrings {
+  
+  @scala.inline
+  def enum: enum = "enum".asInstanceOf[enum]
+  
+  @scala.inline
+  def input: input = "input".asInstanceOf[input]
+  
+  @scala.inline
+  def interface: interface = "interface".asInstanceOf[interface]
+  
+  @scala.inline
+  def `object`: `object` = "object".asInstanceOf[`object`]
+  
+  @scala.inline
+  def scalar: scalar = "scalar".asInstanceOf[scalar]
+  
+  @scala.inline
+  def union: union = "union".asInstanceOf[union]
+  
   @js.native
   sealed trait enum extends js.Object
   
@@ -22,18 +41,4 @@ object graphqlToolsMergeStrings {
   
   @js.native
   sealed trait union extends js.Object
-  
-  @scala.inline
-  def enum: enum = "enum".asInstanceOf[enum]
-  @scala.inline
-  def input: input = "input".asInstanceOf[input]
-  @scala.inline
-  def interface: interface = "interface".asInstanceOf[interface]
-  @scala.inline
-  def `object`: `object` = "object".asInstanceOf[`object`]
-  @scala.inline
-  def scalar: scalar = "scalar".asInstanceOf[scalar]
-  @scala.inline
-  def union: union = "union".asInstanceOf[union]
 }
-

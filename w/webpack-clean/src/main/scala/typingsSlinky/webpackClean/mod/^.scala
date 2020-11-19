@@ -3,7 +3,7 @@ package typingsSlinky.webpackClean.mod
 import typingsSlinky.std.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A webpack plugin to clean specified files after build
@@ -20,4 +20,3 @@ class ^ protected () extends Plugin {
   def this(files: String, options: Options) = this()
   def this(files: js.Array[String], options: Options) = this()
 }
-

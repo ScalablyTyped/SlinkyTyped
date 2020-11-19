@@ -22,17 +22,19 @@ import typingsSlinky.reactMdTable.tableRowMod.TableRowProps
 import typingsSlinky.std.HTMLTableDataCellElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/table", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * This component is really just a simple wrapper for applying the `<caption>`
     * typography styles and probably doesn't have much real use if you don't use
     * captions.
     */
   val Caption: ForwardRefExoticComponent[CaptionProps with RefAttributes[HTMLTableCaptionElement]] = js.native
+  
   /**
     * Creates a `<table>` element with some default styles and a quick way to
     * configure the other styles within a table. That being said, styling tables is
@@ -47,11 +49,13 @@ object mod extends js.Object {
     * help display all the required data.
     */
   val Table: ForwardRefExoticComponent[TableProps with RefAttributes[HTMLTableElement]] = js.native
+  
   /**
     * Creates a `<tbody>` element that also allows for overriding all the child
     * `TableCell` components with additional styling behavior.
     */
   val TableBody: ForwardRefExoticComponent[TableBodyProps with RefAttributes[HTMLTableSectionElement]] = js.native
+  
   /**
     * Creates a `<th>` or `<td>` cell with sensible styled defaults. You can create
     * a `<th>` element by enabling the `header` prop OR having a `TableCell` as a
@@ -63,6 +67,7 @@ object mod extends js.Object {
     * readers.
     */
   val TableCell: ForwardRefExoticComponent[TableCellProps with RefAttributes[TableCellElement]] = js.native
+  
   /**
     * This is mostly an internal component since it is automatically used within
     * the `TableCell` component but this will conditionally wrap the `children`
@@ -70,6 +75,7 @@ object mod extends js.Object {
     * with sort behavior within headers.
     */
   val TableCellContent: ForwardRefExoticComponent[TableCellContentProps with RefAttributes[HTMLButtonElement]] = js.native
+  
   /**
     * This is a simple wrapper for the `Checkbox` component that allows you to
     * render a nicely styled `Checkbox` within a `TableCell` element. This will
@@ -78,6 +84,7 @@ object mod extends js.Object {
     * it's more for selection.
     */
   val TableCheckbox: ForwardRefExoticComponent[TableCheckboxProps with RefAttributes[HTMLTableDataCellElement]] = js.native
+  
   /**
     * An extremely "useful" component that should be used with the `Table`
     * component if you want to make a responsive table within the page. If you
@@ -85,6 +92,7 @@ object mod extends js.Object {
     * parent element of the table.
     */
   val TableContainer: ForwardRefExoticComponent[TableContainerProps with RefAttributes[HTMLDivElement]] = js.native
+  
   /**
     * Creates a `<tfoot>` element with some basic styles. This component will
     * disable the hover effect and line wrapping by default, but the hover effect
@@ -92,6 +100,7 @@ object mod extends js.Object {
     * `disableNoWrap` props.
     */
   val TableFooter: ForwardRefExoticComponent[TableFooterProps with RefAttributes[HTMLTableSectionElement]] = js.native
+  
   /**
     * Creates a `<thead>` element with some basic styles. This component will also
     * update the table configuration so that all the `TableCell` children will
@@ -101,10 +110,10 @@ object mod extends js.Object {
     * `disableNoWrap` props.
     */
   val TableHeader: ForwardRefExoticComponent[TableHeaderProps with RefAttributes[HTMLTableSectionElement]] = js.native
+  
   /**
     * Creates a `<tr>` element with some general styles that are inherited from the
     * base table configuration.
     */
   val TableRow: ForwardRefExoticComponent[TableRowProps with RefAttributes[HTMLTableRowElement]] = js.native
 }
-

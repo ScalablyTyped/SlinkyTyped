@@ -13,7 +13,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.typeof
 import typingsSlinky.babelTypes.babelTypesStrings.void
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.UnaryExpression_
@@ -22,8 +22,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.SpreadProperty_
 */
 trait UnaryLike extends js.Object
-
 object UnaryLike {
+  
   @scala.inline
   def UnaryExpression_(
     argument: Expression,
@@ -38,18 +38,21 @@ object UnaryLike {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnaryLike]
   }
+  
   @scala.inline
   def SpreadElement_(argument: Expression, end: Double, loc: SourceLocation, start: Double, `type`: SpreadElement): UnaryLike = {
     val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnaryLike]
   }
+  
   @scala.inline
   def RestProperty_(argument: LVal, end: Double, loc: SourceLocation, start: Double, `type`: RestProperty): UnaryLike = {
     val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnaryLike]
   }
+  
   @scala.inline
   def SpreadProperty_(argument: Expression, end: Double, loc: SourceLocation, start: Double, `type`: SpreadProperty): UnaryLike = {
     val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
@@ -57,4 +60,3 @@ object UnaryLike {
     __obj.asInstanceOf[UnaryLike]
   }
 }
-

@@ -3,15 +3,15 @@ package typingsSlinky.fortawesomeFontawesomeSvgCore.mod
 import org.scalajs.dom.raw.HTMLCollection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.fortawesomeFontawesomeSvgCore.mod.Icon_
   - typingsSlinky.fortawesomeFontawesomeSvgCore.mod.Text_
 */
 trait IconOrText extends js.Object
-
 object IconOrText {
+  
   @scala.inline
   def Text_(
     `abstract`: js.Array[AbstractElement],
@@ -25,4 +25,3 @@ object IconOrText {
     __obj.asInstanceOf[IconOrText]
   }
 }
-

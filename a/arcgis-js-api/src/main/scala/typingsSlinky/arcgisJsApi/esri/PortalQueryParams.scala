@@ -14,10 +14,11 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.uploaded
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.username
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PortalQueryParams extends Accessor {
+  
   /**
     * An array of categories stored within the item. Use this property to filter the results from [Portal.queryItems()](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#queryItems) and [PortalGroup.queryItems()](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html#queryItems). It accepts an array of:
     *   * individual string elements or
@@ -30,12 +31,14 @@ trait PortalQueryParams extends Accessor {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#categories)
     */
   var categories: js.Array[String | js.Array[String]] = js.native
+  
   /**
     * Only relevant when querying for [PortalItems](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html). When specified, restricts the results of the query to the extent defined here.  The [spatial reference](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#spatialReference) of the given extent must be WGS84 (wkid 4326) or Web Mercator (wkid 3857).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#extent)
     */
   var extent: Extent = js.native
+  
   /**
     * The maximum number of results to be included in the [result](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryResult.html#results) set response. The maximum value allowed is `100`. The [start](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#start) property combined with the `num` property can be used to paginate the search results.
     *
@@ -44,12 +47,14 @@ trait PortalQueryParams extends Accessor {
     * @default 10
     */
   var num: Double = js.native
+  
   /**
     * The query string used for the search. View the [ArcGIS REST API Search Reference](https://developers.arcgis.com/rest/users-groups-and-items/search-reference.htm) for details on constructing a valid query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#query)
     */
   var query: String = js.native
+  
   /**
     * A comma-delimited list of fields to sort. Field names may vary depending on what is being queried. For example, the fields allowed for a user query are much more limited than if performing a basic search query for portal items. A list of possible field names is listed below. These names correspond to either item (search), group, and/or user queries.
     *
@@ -71,6 +76,7 @@ trait PortalQueryParams extends Accessor {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#sortField)
     */
   var sortField: title | uploaded | modified | username | created | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`type` | owner | `avg-rating` | `num-ratings` | `num-comments` | `num-views` = js.native
+  
   /**
     * The order in which to sort the results.
     *
@@ -85,6 +91,7 @@ trait PortalQueryParams extends Accessor {
     * @default asc
     */
   var sortOrder: asc_ | desc_ = js.native
+  
   /**
     * The index of the first entry in the result set response. The index is 1-based. The [start](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#start) property, along with the [num](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html#num) property can be used to paginate the search results.
     *
@@ -94,4 +101,3 @@ trait PortalQueryParams extends Accessor {
     */
   var start: Double = js.native
 }
-

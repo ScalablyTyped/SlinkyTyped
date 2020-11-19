@@ -5,7 +5,7 @@ import typingsSlinky.pulumiAws.sqsMixinsMod.QueueEventSubscriptionArgs
 import typingsSlinky.pulumiPulumi.resourceMod.ComponentResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws", "sqs.QueueEventSubscription")
 @js.native
@@ -33,4 +33,3 @@ class QueueEventSubscription protected ()
     opts: ComponentResourceOptions
   ) = this()
 }
-

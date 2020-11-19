@@ -2,12 +2,12 @@ package typingsSlinky.tstl.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "Pair")
 @js.native
 class Pair[First, Second] protected ()
-  extends typingsSlinky.tstl.utilityMod.Pair[First, Second] {
+  extends typingsSlinky.tstl.tstlModuleMod.Pair[First, Second] {
   /**
     * Initializer Constructor.
     *
@@ -16,4 +16,3 @@ class Pair[First, Second] protected ()
     */
   def this(first: First, second: Second) = this()
 }
-

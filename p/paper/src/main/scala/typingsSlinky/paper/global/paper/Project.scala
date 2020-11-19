@@ -3,7 +3,7 @@ package typingsSlinky.paper.global.paper
 import org.scalajs.dom.raw.HTMLCanvasElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** 
   * A Project object in Paper.js is what usually is referred to as the
@@ -43,4 +43,3 @@ class Project protected ()
     */
   def this(element: HTMLCanvasElement) = this()
 }
-

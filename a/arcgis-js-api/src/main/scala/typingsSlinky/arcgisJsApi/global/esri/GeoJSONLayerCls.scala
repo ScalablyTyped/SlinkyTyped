@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.GeoJSONLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.GeoJSONLayer")
 @js.native
@@ -16,4 +16,3 @@ class GeoJSONLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.GeoJSONLayer {
   def this(properties: GeoJSONLayerProperties) = this()
 }
-

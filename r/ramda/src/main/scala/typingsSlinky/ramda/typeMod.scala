@@ -11,11 +11,11 @@ import typingsSlinky.ramda.ramdaStrings.String
 import typingsSlinky.ramda.ramdaStrings.Undefined
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ramda/src/type", JSImport.Namespace)
 @js.native
 object typeMod extends js.Object {
+  
   def default(`val`: js.Any): Object | Number | Boolean | String | Null | Array | RegExp | Function | Undefined = js.native
 }
-

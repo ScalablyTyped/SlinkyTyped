@@ -5,15 +5,18 @@ import typingsSlinky.braintreeWeb.anon.Nonce
 import typingsSlinky.braintreeWeb.coreMod.callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AmericanExpress extends js.Object {
+  
   /**
     * @description The current version of the SDK, i.e. `3.0.2`.
     */
   var VERSION: String = js.native
+  
   def create(options: Client, callback: callback): Unit = js.native
+  
   /**
     * Gets the Express Checkout nonce profile given a nonce from American Express.     * @example
     * var americanExpress = require('braintree-web/american-express');
@@ -31,6 +34,7 @@ trait AmericanExpress extends js.Object {
     * });
     */
   def getExpressCheckoutProfile(options: Nonce, callback: callback): Unit = js.native
+  
   /**
     * Gets the rewards balance associated with a Braintree nonce.     * @example
     * var americanExpress = require('braintree-web/american-express');
@@ -49,8 +53,8 @@ trait AmericanExpress extends js.Object {
     */
   def getRewardsBalance(options: Nonce, callback: callback): Unit = js.native
 }
-
 object AmericanExpress {
+  
   @scala.inline
   def apply(
     VERSION: String,
@@ -61,26 +65,32 @@ object AmericanExpress {
     val __obj = js.Dynamic.literal(VERSION = VERSION.asInstanceOf[js.Any], create = js.Any.fromFunction2(create), getExpressCheckoutProfile = js.Any.fromFunction2(getExpressCheckoutProfile), getRewardsBalance = js.Any.fromFunction2(getRewardsBalance))
     __obj.asInstanceOf[AmericanExpress]
   }
+  
   @scala.inline
   implicit class AmericanExpressOps[Self <: AmericanExpress] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setVERSION(value: String): Self = this.set("VERSION", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setCreate(value: (Client, callback) => Unit): Self = this.set("create", js.Any.fromFunction2(value))
+    
     @scala.inline
     def setGetExpressCheckoutProfile(value: (Nonce, callback) => Unit): Self = this.set("getExpressCheckoutProfile", js.Any.fromFunction2(value))
+    
     @scala.inline
     def setGetRewardsBalance(value: (Nonce, callback) => Unit): Self = this.set("getRewardsBalance", js.Any.fromFunction2(value))
   }
-  
 }
-

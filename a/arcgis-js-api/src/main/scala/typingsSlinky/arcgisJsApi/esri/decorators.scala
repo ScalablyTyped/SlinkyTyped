@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait decorators extends js.Object {
+  
   /**
     * A property decorator that creates a two-way binding between the property it decorates and an inner property of one of its members.
     *
@@ -15,6 +16,7 @@ trait decorators extends js.Object {
     *
     */
   def aliasOf(propertyName: String): js.Function = js.native
+  
   /**
     * This property decorator is used to define the function or class for a property.
     *
@@ -33,6 +35,7 @@ trait decorators extends js.Object {
     *
     */
   def cast(propertyName: String): js.Function = js.native
+  
   /**
     * A function that can be used as a class. It extends [expression](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-6.html#extending-expressions) and is used in conjunction with the `@subclass` decorator to create a class compatible to [dojo.declare](https://dojotoolkit.org/reference-guide/1.10/dojo/declare.html). Please refer to the `subclass` documentation for further information.
     *
@@ -43,6 +46,7 @@ trait decorators extends js.Object {
     *
     */
   def declared[T](baseClass: T, mixinClasses: js.Any*): T = js.native
+  
   /**
     * This convenience decorator is used to define an [Accessor](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Accessor.html) property. Any property defined with this decorator can now be `get` and `set`. In addition, you can [watch for any property changes](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#properties). Many times this decorator is used in conjunction with the [@renderable](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-support-widget.html#renderable) decorator.
     *
@@ -60,7 +64,7 @@ trait decorators extends js.Object {
     */
   def property(): js.Function = js.native
   def property(propertyMetadata: decoratorsPropertyPropertyMetadata): js.Function = js.native
+  
   def subclass(): js.Function = js.native
   def subclass(declaredClass: String): js.Function = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.PointCloudReturnFilterProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.PointCloudReturnFilter")
 @js.native
@@ -16,4 +16,3 @@ class PointCloudReturnFilterCls ()
   extends typingsSlinky.arcgisJsApi.esri.PointCloudReturnFilter {
   def this(properties: PointCloudReturnFilterProperties) = this()
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.xregexp.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xregexp", "addToken")
 @js.native
 object addToken extends js.Object {
+  
   //#endregion
   //#region methods
   /**
@@ -51,4 +52,3 @@ object addToken extends js.Object {
     options: TokenOptions
   ): Unit = js.native
 }
-

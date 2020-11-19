@@ -8,21 +8,24 @@ import typingsSlinky.node.streamMod.Writable
 import typingsSlinky.node.stringDecoderMod.StringDecoder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("htmlparser2/lib/WritableStream", JSImport.Namespace)
 @js.native
 object writableStreamMod extends js.Object {
+  
   @js.native
   class WritableStream protected () extends Writable {
     def this(cbs: PartialHandler) = this()
     def this(cbs: PartialHandler, options: ParserOptions) = this()
+    
     var _decoder: StringDecoder = js.native
-    var _parser: Parser = js.native
+    
     def _final(cb: js.Function0[Unit]): Unit = js.native
+    
+    var _parser: Parser = js.native
+    
     def _write(chunk: String, encoding: String, cb: js.Function0[Unit]): Unit = js.native
     def _write(chunk: Buffer, encoding: String, cb: js.Function0[Unit]): Unit = js.native
   }
-  
 }
-

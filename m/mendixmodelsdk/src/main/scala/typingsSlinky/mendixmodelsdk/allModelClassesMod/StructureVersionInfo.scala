@@ -4,7 +4,7 @@ import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.versionChecksMod.VersionInfo because Already inherited
@@ -52,4 +52,3 @@ class StructureVersionInfo protected ()
   extends typingsSlinky.mendixmodelsdk.appservicesMod.StructureVersionInfo {
   def this(info: IStructureVersionInfo, structureType: StructureType) = this()
 }
-

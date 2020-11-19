@@ -4,7 +4,7 @@ import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aframe", "THREE.Points")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 	 */
 class Points[TGeometry /* <: Geometry | BufferGeometry */, TMaterial /* <: typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material] */] ()
   extends typingsSlinky.three.mod.Points[TGeometry, TMaterial]
-

@@ -13,11 +13,21 @@ import typingsSlinky.tensorflowTfjsCore.typesMod.SaveConfig
 import typingsSlinky.tensorflowTfjsCore.typesMod.SaveResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-converter/dist/executor/graph_model", JSImport.Namespace)
 @js.native
 object graphModelMod extends js.Object {
+  
+  val DEFAULT_MODEL_NAME: /* "model.json" */ String = js.native
+  
+  val TFHUB_SEARCH_PARAM: /* "?tfjs-format=file" */ String = js.native
+  
+  def loadGraphModel(modelUrl: String): js.Promise[GraphModel] = js.native
+  def loadGraphModel(modelUrl: String, options: LoadOptions): js.Promise[GraphModel] = js.native
+  def loadGraphModel(modelUrl: IOHandler): js.Promise[GraphModel] = js.native
+  def loadGraphModel(modelUrl: IOHandler, options: LoadOptions): js.Promise[GraphModel] = js.native
+  
   @js.native
   class GraphModel protected () extends InferenceModel {
     /**
@@ -33,29 +43,17 @@ object graphModelMod extends js.Object {
     def this(modelUrl: IOHandler) = this()
     def this(modelUrl: String, loadOptions: LoadOptions) = this()
     def this(modelUrl: IOHandler, loadOptions: LoadOptions) = this()
+    
     var artifacts: js.Any = js.native
+    
     var convertTensorMapToTensorsMap: js.Any = js.native
-    var executor: js.Any = js.native
-    var findIOHandler: js.Any = js.native
-    var handler: js.Any = js.native
-    val inputNodes: js.Array[String] = js.native
-    @JSName("inputs")
-    val inputs_GraphModel: js.Array[TensorInfo] = js.native
-    var loadOptions: js.Any = js.native
-    var modelUrl: js.Any = js.native
-    val modelVersion: String = js.native
-    var normalizeInputs: js.Any = js.native
-    var normalizeOutputs: js.Any = js.native
-    val outputNodes: js.Array[String] = js.native
-    @JSName("outputs")
-    val outputs_GraphModel: js.Array[TensorInfo] = js.native
-    var version: js.Any = js.native
-    val weights: NamedTensorsMap = js.native
+    
     /**
       * Releases the memory used by the weight tensors.
       */
     /** @doc {heading: 'Models', subheading: 'Classes'} */
     def dispose(): Unit = js.native
+    
     def execute(inputs: js.Array[Tensor[Rank]]): Tensor[Rank] | js.Array[Tensor[Rank]] = js.native
     /**
       * Executes inference for the model for given input tensors.
@@ -74,6 +72,7 @@ object graphModelMod extends js.Object {
     /** @doc {heading: 'Models', subheading: 'Classes'} */
     def execute(inputs: Tensor[Rank]): Tensor[Rank] | js.Array[Tensor[Rank]] = js.native
     def execute(inputs: NamedTensorMap): Tensor[Rank] | js.Array[Tensor[Rank]] = js.native
+    
     def executeAsync(inputs: js.Array[Tensor[Rank]]): js.Promise[Tensor[Rank] | js.Array[Tensor[Rank]]] = js.native
     def executeAsync(inputs: js.Array[Tensor[Rank]], outputs: String): js.Promise[Tensor[Rank] | js.Array[Tensor[Rank]]] = js.native
     def executeAsync(inputs: js.Array[Tensor[Rank]], outputs: js.Array[String]): js.Promise[Tensor[Rank] | js.Array[Tensor[Rank]]] = js.native
@@ -98,17 +97,46 @@ object graphModelMod extends js.Object {
     def executeAsync(inputs: NamedTensorMap): js.Promise[Tensor[Rank] | js.Array[Tensor[Rank]]] = js.native
     def executeAsync(inputs: NamedTensorMap, outputs: String): js.Promise[Tensor[Rank] | js.Array[Tensor[Rank]]] = js.native
     def executeAsync(inputs: NamedTensorMap, outputs: js.Array[String]): js.Promise[Tensor[Rank] | js.Array[Tensor[Rank]]] = js.native
+    
+    var executor: js.Any = js.native
+    
+    var findIOHandler: js.Any = js.native
+    
+    var handler: js.Any = js.native
+    
+    val inputNodes: js.Array[String] = js.native
+    
+    @JSName("inputs")
+    val inputs_GraphModel: js.Array[TensorInfo] = js.native
+    
     /**
       * Loads the model and weight files, construct the in memory weight map and
       * compile the inference graph.
       */
     def load(): js.Promise[Boolean] = js.native
+    
+    var loadOptions: js.Any = js.native
+    
     /**
       * Synchronously construct the in memory weight map and
       * compile the inference graph.
       */
     /** @doc {heading: 'Models', subheading: 'Classes', ignoreCI: true} */
     def loadSync(artifacts: ModelArtifacts): Boolean = js.native
+    
+    var modelUrl: js.Any = js.native
+    
+    val modelVersion: String = js.native
+    
+    var normalizeInputs: js.Any = js.native
+    
+    var normalizeOutputs: js.Any = js.native
+    
+    val outputNodes: js.Array[String] = js.native
+    
+    @JSName("outputs")
+    val outputs_GraphModel: js.Array[TensorInfo] = js.native
+    
     def predict(inputs: js.Array[Tensor[Rank]]): Tensor[Rank] | js.Array[Tensor[Rank]] | NamedTensorMap = js.native
     /**
       * Execute the inference for the input tensors.
@@ -149,6 +177,7 @@ object graphModelMod extends js.Object {
     /** @doc {heading: 'Models', subheading: 'Classes'} */
     def predict(inputs: Tensor[Rank]): Tensor[Rank] | js.Array[Tensor[Rank]] | NamedTensorMap = js.native
     def predict(inputs: NamedTensorMap): Tensor[Rank] | js.Array[Tensor[Rank]] | NamedTensorMap = js.native
+    
     def save(handlerOrURL: String): js.Promise[SaveResult] = js.native
     def save(handlerOrURL: String, config: SaveConfig): js.Promise[SaveResult] = js.native
     /**
@@ -198,13 +227,9 @@ object graphModelMod extends js.Object {
       */
     def save(handlerOrURL: IOHandler): js.Promise[SaveResult] = js.native
     def save(handlerOrURL: IOHandler, config: SaveConfig): js.Promise[SaveResult] = js.native
+    
+    var version: js.Any = js.native
+    
+    val weights: NamedTensorsMap = js.native
   }
-  
-  val DEFAULT_MODEL_NAME: /* "model.json" */ String = js.native
-  val TFHUB_SEARCH_PARAM: /* "?tfjs-format=file" */ String = js.native
-  def loadGraphModel(modelUrl: String): js.Promise[GraphModel] = js.native
-  def loadGraphModel(modelUrl: String, options: LoadOptions): js.Promise[GraphModel] = js.native
-  def loadGraphModel(modelUrl: IOHandler): js.Promise[GraphModel] = js.native
-  def loadGraphModel(modelUrl: IOHandler, options: LoadOptions): js.Promise[GraphModel] = js.native
 }
-

@@ -2,18 +2,18 @@ package typingsSlinky.opentok.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.opentok.opentokStrings.manual
   - typingsSlinky.opentok.opentokStrings.always
 */
 trait ArchiveMode extends js.Object
-
 object ArchiveMode {
+  
   @scala.inline
   def always: typingsSlinky.opentok.opentokStrings.always = "always".asInstanceOf[typingsSlinky.opentok.opentokStrings.always]
+  
   @scala.inline
   def manual: typingsSlinky.opentok.opentokStrings.manual = "manual".asInstanceOf[typingsSlinky.opentok.opentokStrings.manual]
 }
-

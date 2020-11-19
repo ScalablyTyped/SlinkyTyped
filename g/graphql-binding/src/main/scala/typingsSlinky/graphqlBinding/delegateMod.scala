@@ -9,19 +9,18 @@ import typingsSlinky.graphqlBinding.distTypesMod.QueryOrMutation
 import typingsSlinky.std.AsyncIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-binding/dist/Delegate", JSImport.Namespace)
 @js.native
 object delegateMod extends js.Object {
+  
   @js.native
   class Delegate protected () extends js.Object {
     def this(hasSchemaFragmentReplacementsBeforeDisableCache: BindingOptions) = this()
-    var delegateToSchema: js.Any = js.native
-    var disableCache: Boolean = js.native
-    var fragmentReplacements: js.Any = js.native
-    var schema: GraphQLSchema = js.native
+    
     def before(): Unit = js.native
+    
     def delegate(operation: QueryOrMutation, fieldName: String, args: StringDictionary[js.Any]): js.Promise[_] = js.native
     def delegate(
       operation: QueryOrMutation,
@@ -51,6 +50,7 @@ object delegateMod extends js.Object {
       infoOrQuery: GraphQLResolveInfo,
       options: Options
     ): js.Promise[_] = js.native
+    
     def delegateSubscription(fieldName: String): js.Promise[AsyncIterator[_, _, js.UndefOr[scala.Nothing]]] = js.native
     def delegateSubscription(
       fieldName: String,
@@ -83,12 +83,20 @@ object delegateMod extends js.Object {
       infoOrQuery: GraphQLResolveInfo,
       options: Options
     ): js.Promise[AsyncIterator[_, _, js.UndefOr[scala.Nothing]]] = js.native
+    
+    var delegateToSchema: js.Any = js.native
+    
+    var disableCache: Boolean = js.native
+    
+    var fragmentReplacements: js.Any = js.native
+    
     def getAbstractResolvers(): js.Any = js.native
     def getAbstractResolvers(filterSchema: String): js.Any = js.native
     def getAbstractResolvers(filterSchema: GraphQLSchema): js.Any = js.native
+    
     def request[T](query: String): js.Promise[T] = js.native
     def request[T](query: String, variables: StringDictionary[js.Any]): js.Promise[T] = js.native
+    
+    var schema: GraphQLSchema = js.native
   }
-  
 }
-

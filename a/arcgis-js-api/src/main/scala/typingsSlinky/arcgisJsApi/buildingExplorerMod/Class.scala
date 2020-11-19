@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.BuildingExplorer
 import typingsSlinky.arcgisJsApi.esri.BuildingExplorerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/BuildingExplorer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends BuildingExplorer {
   def this(properties: BuildingExplorerProperties) = this()
 }
-

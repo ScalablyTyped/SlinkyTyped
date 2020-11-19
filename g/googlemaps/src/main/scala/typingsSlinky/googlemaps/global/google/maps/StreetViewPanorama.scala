@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.googlemaps.google.maps.StreetViewPanoramaOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("google.maps.StreetViewPanorama")
 @js.native
@@ -13,4 +13,3 @@ class StreetViewPanorama protected ()
   def this(container: Element) = this()
   def this(container: Element, opts: StreetViewPanoramaOptions) = this()
 }
-

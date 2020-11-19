@@ -3,10 +3,11 @@ package typingsSlinky.gapiClientPubsub.gapi.client.pubsub
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PushConfig extends js.Object {
+  
   /**
     * Endpoint configuration attributes.
     *
@@ -31,39 +32,46 @@ trait PushConfig extends js.Object {
     * &#42; `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API.
     */
   var attributes: js.UndefOr[Record[String, String]] = js.native
+  
   /**
     * A URL locating the endpoint to which messages should be pushed.
     * For example, a Webhook endpoint might use "https://example.com/push".
     */
   var pushEndpoint: js.UndefOr[String] = js.native
 }
-
 object PushConfig {
+  
   @scala.inline
   def apply(): PushConfig = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[PushConfig]
   }
+  
   @scala.inline
   implicit class PushConfigOps[Self <: PushConfig] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setAttributes(value: Record[String, String]): Self = this.set("attributes", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAttributes: Self = this.set("attributes", js.undefined)
+    
     @scala.inline
     def setPushEndpoint(value: String): Self = this.set("pushEndpoint", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deletePushEndpoint: Self = this.set("pushEndpoint", js.undefined)
   }
-  
 }
-

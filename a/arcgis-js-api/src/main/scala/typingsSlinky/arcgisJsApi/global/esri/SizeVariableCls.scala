@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.SizeVariableProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.SizeVariable")
 @js.native
@@ -16,4 +16,3 @@ class SizeVariableCls ()
   extends typingsSlinky.arcgisJsApi.esri.SizeVariable {
   def this(properties: SizeVariableProperties) = this()
 }
-

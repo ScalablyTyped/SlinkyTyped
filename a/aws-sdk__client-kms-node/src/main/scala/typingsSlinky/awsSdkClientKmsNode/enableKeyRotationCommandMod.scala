@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-node/commands/EnableKeyRotationCommand", JSImport.Namespace)
 @js.native
 object enableKeyRotationCommandMod extends js.Object {
+  
   @js.native
   class EnableKeyRotationCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object enableKeyRotationCommandMod extends js.Object {
           Readable
         ] {
     def this(input: EnableKeyRotationInput) = this()
+    
     val middlewareStack: MiddlewareStack[EnableKeyRotationInput, EnableKeyRotationOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[EnableKeyRotationInput, EnableKeyRotationOutput] = js.native
   }
-  
 }
-

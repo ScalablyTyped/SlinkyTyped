@@ -3,7 +3,7 @@ package typingsSlinky.awsSdkTypes.loggerMod
 import typingsSlinky.awsSdkTypes.awsSdkTypesStrings.error_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.awsSdkTypes.awsSdkTypesStrings.all
@@ -14,19 +14,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.awsSdkTypes.awsSdkTypesStrings.off
 */
 trait LogLevel extends js.Object
-
 object LogLevel {
+  
   @scala.inline
   def all: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.all = "all".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.all]
+  
   @scala.inline
   def error: error_ = "error".asInstanceOf[error_]
+  
   @scala.inline
   def info: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.info = "info".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.info]
+  
   @scala.inline
   def log: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.log = "log".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.log]
+  
   @scala.inline
   def off: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.off = "off".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.off]
+  
   @scala.inline
   def warn: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.warn = "warn".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.warn]
 }
-

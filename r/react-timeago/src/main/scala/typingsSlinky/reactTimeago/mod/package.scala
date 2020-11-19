@@ -2,9 +2,10 @@ package typingsSlinky.reactTimeago
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type Formatter = js.Function5[
     /* value */ scala.Double, 
     /* unit */ typingsSlinky.reactTimeago.mod.Unit, 
@@ -15,6 +16,7 @@ package object mod {
     ], 
     slinky.core.facade.ReactElement
   ]
+  
   type ReactTimeago[T /* <: slinky.core.ReactComponentClass[js.Object] */] = slinky.core.ReactComponentClass[
     typingsSlinky.reactTimeago.mod.ReactTimeagoProps[T] with typingsSlinky.react.mod.ComponentProps[T]
   ]

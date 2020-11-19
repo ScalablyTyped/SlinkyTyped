@@ -2,11 +2,12 @@ package typingsSlinky.libsodiumWrappers.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("libsodium-wrappers", "crypto_scalarmult")
 @js.native
 object cryptoScalarmult extends js.Object {
+  
   def apply(privateKey: js.typedarray.Uint8Array, publicKey: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
   def apply(
     privateKey: js.typedarray.Uint8Array,
@@ -19,4 +20,3 @@ object cryptoScalarmult extends js.Object {
     outputFormat: Uint8ArrayOutputFormat
   ): js.typedarray.Uint8Array = js.native
 }
-

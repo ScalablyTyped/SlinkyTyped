@@ -8,7 +8,7 @@ import typingsSlinky.ejWebAll.ej.RecurrenceEditor
 import typingsSlinky.ejWebAll.ej.RecurrenceEditor.Model
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofRecurrenceEditor
@@ -18,7 +18,8 @@ trait TypeofRecurrenceEditor
       /* options */ Model, 
       RecurrenceEditor
     ] {
+  
   var Locale: js.Any = js.native
+  
   var fn: RecurrenceEditor = js.native
 }
-

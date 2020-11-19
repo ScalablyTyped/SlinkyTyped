@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.legacyMod
 import typingsSlinky.babylonjs.anon.PartialIShaderMaterialOpt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "ShaderMaterial")
 @js.native
@@ -31,11 +31,11 @@ class ShaderMaterial protected ()
     options: PartialIShaderMaterialOpt
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Legacy/legacy", "ShaderMaterial")
 @js.native
 object ShaderMaterial extends js.Object {
+  
   /**
     * Creates a shader material from parsed shader material data
     * @param source defines the JSON represnetation of the material
@@ -45,4 +45,3 @@ object ShaderMaterial extends js.Object {
     */
   def Parse(source: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): typingsSlinky.babylonjs.shaderMaterialMod.ShaderMaterial = js.native
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.stellarBase.mod.AssetType.credit4
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.changeTrust
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.stellarSdk.horizonApiMod.Horizon.BaseResponse because Already inherited
@@ -17,11 +17,16 @@ trait ChangeTrustOperationRecord
       typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.changeTrust
     ]
      with OperationRecord {
+  
   var asset_code: String = js.native
+  
   var asset_issuer: String = js.native
+  
   var asset_type: credit4 | credit12 = js.native
+  
   var limit: String = js.native
+  
   var trustee: String = js.native
+  
   var trustor: String = js.native
 }
-

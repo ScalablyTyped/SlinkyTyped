@@ -7,11 +7,12 @@ import typingsSlinky.graphqlToolsUtils.anon.SkipPruning
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-tools", "rewireTypes")
 @js.native
 object rewireTypes extends js.Object {
+  
   def apply(originalTypeMap: Record[String, GraphQLNamedType | Null], directives: js.Array[GraphQLDirective]): Directives = js.native
   def apply(
     originalTypeMap: Record[String, GraphQLNamedType | Null],
@@ -19,4 +20,3 @@ object rewireTypes extends js.Object {
     options: SkipPruning
   ): Directives = js.native
 }
-

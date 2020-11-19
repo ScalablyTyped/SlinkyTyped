@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.mod
 import typingsSlinky.playcanvas.pc.ResourceHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Resource handler used for loading 2D and 3D {@link pc.Texture} resources.
@@ -20,4 +20,3 @@ class TextureHandler protected () extends ResourceHandler {
     loader: typingsSlinky.playcanvas.pc.ResourceLoader
   ) = this()
 }
-

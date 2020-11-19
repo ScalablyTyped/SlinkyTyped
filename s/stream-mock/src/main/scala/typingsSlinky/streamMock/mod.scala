@@ -6,11 +6,12 @@ import typingsSlinky.node.streamMod.WritableOptions
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stream-mock", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class BufferReadableMock protected ()
     extends typingsSlinky.streamMock.readableMod.BufferReadableMock {
@@ -65,6 +66,4 @@ object mod extends js.Object {
     extends typingsSlinky.streamMock.writableMod.WritableMock {
     def this(options: WritableOptions) = this()
   }
-  
 }
-

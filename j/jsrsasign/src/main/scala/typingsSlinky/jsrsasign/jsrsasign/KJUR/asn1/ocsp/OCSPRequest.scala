@@ -3,7 +3,7 @@ package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ocsp
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * ASN.1 OCSPRequest class for OCSP
@@ -28,8 +28,8 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait OCSPRequest extends ASN1Object
-
 object OCSPRequest {
+  
   @scala.inline
   def apply(
     getEncodedHex: () => String,
@@ -46,4 +46,3 @@ object OCSPRequest {
     __obj.asInstanceOf[OCSPRequest]
   }
 }
-

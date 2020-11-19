@@ -3,11 +3,12 @@ package typingsSlinky.nodeForge.mod
 import typingsSlinky.nodeForge.mod.md.MessageDigest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("node-forge", "pkcs5")
 @js.native
 object pkcs5 extends js.Object {
+  
   def pbkdf2(password: String, salt: String, iterations: Double, keySize: Double): String = js.native
   def pbkdf2(
     password: String,
@@ -38,4 +39,3 @@ object pkcs5 extends js.Object {
   @JSName("pbkdf2")
   def pbkdf2_Unit(password: String, salt: String, iterations: Double, keySize: Double, messageDigest: MessageDigest): Unit = js.native
 }
-

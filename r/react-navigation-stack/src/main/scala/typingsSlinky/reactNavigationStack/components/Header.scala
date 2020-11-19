@@ -16,9 +16,10 @@ import typingsSlinky.reactNavigationStack.vendorTypesMod.StackHeaderProps
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackNavigationProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Header {
+  
   @JSImport("react-navigation-stack", "Header")
   @js.native
   object component extends js.Object
@@ -27,11 +28,13 @@ object Header {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def previous(value: Scene[Route[String]]): this.type = set("previous", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: StackHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     insets: EdgeInsets,
@@ -45,4 +48,3 @@ object Header {
     new Builder(js.Array(this.component, __props.asInstanceOf[StackHeaderProps]))
   }
 }
-

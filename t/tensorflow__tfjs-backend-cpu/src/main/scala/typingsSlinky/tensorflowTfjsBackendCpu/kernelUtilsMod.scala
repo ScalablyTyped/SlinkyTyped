@@ -10,11 +10,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TypedArray
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-backend-cpu/dist/utils/kernel_utils", JSImport.Namespace)
 @js.native
 object kernelUtilsMod extends js.Object {
+  
   def createBinaryKernelConfig(
     name: String,
     op: js.Function5[
@@ -26,6 +27,7 @@ object kernelUtilsMod extends js.Object {
       js.Tuple2[TypedArray, js.Array[Double]]
     ]
   ): KernelConfig = js.native
+  
   def createBinaryKernelImpl(op: js.Function2[/* a */ Double, /* b */ Double, Double]): js.Function5[
     /* aShape */ js.Array[Double], 
     /* bShape */ js.Array[Double], 
@@ -35,4 +37,3 @@ object kernelUtilsMod extends js.Object {
     js.Tuple2[TypedArray, js.Array[Double]]
   ] = js.native
 }
-

@@ -2,10 +2,12 @@ package typingsSlinky.elementtree
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type Attributes = org.scalablytyped.runtime.StringDictionary[js.UndefOr[java.lang.String]]
+  
   type ElementTag = (js.Function1[
     js.UndefOr[typingsSlinky.elementtree.mod.ElementText], 
     typingsSlinky.elementtree.mod.Element
@@ -14,5 +16,6 @@ package object mod {
     /* text */ js.UndefOr[typingsSlinky.elementtree.mod.ElementText], 
     typingsSlinky.elementtree.mod.Element
   ]) | java.lang.String
+  
   type ElementText = typingsSlinky.elementtree.anon.ToString | java.lang.String
 }

@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.indexMod
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "PlaneRotationGizmo")
 @js.native
@@ -24,14 +24,86 @@ class PlaneRotationGizmo protected ()
   ) = this()
   def this(
     planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
     color: typingsSlinky.babylonjs.mathColorMod.Color3,
     gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    tessellation: Double
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer,
+    tessellation: Double
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    tessellation: Double
   ) = this()
   def this(
     planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
     color: typingsSlinky.babylonjs.mathColorMod.Color3,
     gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer,
     tessellation: Double
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    tessellation: js.UndefOr[scala.Nothing],
+    parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    tessellation: Double,
+    parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer,
+    tessellation: js.UndefOr[scala.Nothing],
+    parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer,
+    tessellation: Double,
+    parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    tessellation: js.UndefOr[scala.Nothing],
+    parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    tessellation: Double,
+    parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer,
+    tessellation: js.UndefOr[scala.Nothing],
+    parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]
   ) = this()
   def this(
     planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
@@ -42,11 +114,66 @@ class PlaneRotationGizmo protected ()
   ) = this()
   def this(
     planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    tessellation: js.UndefOr[scala.Nothing],
+    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+    useEulerRotation: Boolean
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    tessellation: Double,
+    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+    useEulerRotation: Boolean
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer,
+    tessellation: js.UndefOr[scala.Nothing],
+    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+    useEulerRotation: Boolean
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer,
+    tessellation: Double,
+    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+    useEulerRotation: Boolean
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    tessellation: js.UndefOr[scala.Nothing],
+    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+    useEulerRotation: Boolean
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    tessellation: Double,
+    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+    useEulerRotation: Boolean
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer,
+    tessellation: js.UndefOr[scala.Nothing],
+    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
+    useEulerRotation: Boolean
+  ) = this()
+  def this(
+    planeNormal: typingsSlinky.babylonjs.mathVectorMod.Vector3,
     color: typingsSlinky.babylonjs.mathColorMod.Color3,
     gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer,
     tessellation: Double,
-    parent: Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo],
+    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.rotationGizmoMod.RotationGizmo]],
     useEulerRotation: Boolean
   ) = this()
 }
-

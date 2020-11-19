@@ -6,12 +6,12 @@ import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cookie-session", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def apply(): RequestHandler[ParamsDictionary, _, _, Query] = js.native
   def apply(options: CookieSessionOptions): RequestHandler[ParamsDictionary, _, _, Query] = js.native
 }
-

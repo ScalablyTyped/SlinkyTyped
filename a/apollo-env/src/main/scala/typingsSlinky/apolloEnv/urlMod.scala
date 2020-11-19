@@ -6,11 +6,12 @@ import typingsSlinky.node.NodeJS.Dict
 import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-env/lib/fetch/url", JSImport.Namespace)
 @js.native
 object urlMod extends js.Object {
+  
   @js.native
   class URL protected () extends URL_ {
     def this(input: String) = this()
@@ -30,4 +31,3 @@ object urlMod extends js.Object {
   
   type URLSearchParamsInit = typingsSlinky.node.urlMod.URLSearchParams | String | (StringDictionary[js.UndefOr[js.Object | Array[js.Object]]]) | (js.Iterable[js.Tuple2[String, js.Object]]) | (Array[js.Tuple2[String, js.Object]])
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.firebase.mod
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "initializeApp")
 @js.native
 object initializeApp extends js.Object {
+  
   /**
     * Creates and initializes a Firebase {@link firebase.app.App app} instance.
     *
@@ -59,4 +60,3 @@ object initializeApp extends js.Object {
   def apply(options: js.Object): App = js.native
   def apply(options: js.Object, name: String): App = js.native
 }
-

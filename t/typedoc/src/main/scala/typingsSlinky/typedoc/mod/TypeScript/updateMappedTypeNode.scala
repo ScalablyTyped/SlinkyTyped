@@ -9,11 +9,12 @@ import typingsSlinky.typescript.mod.TypeNode
 import typingsSlinky.typescript.mod.TypeParameterDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateMappedTypeNode")
 @js.native
 object updateMappedTypeNode extends js.Object {
+  
   def apply(
     node: MappedTypeNode,
     readonlyToken: js.UndefOr[MinusToken | PlusToken | ReadonlyToken],
@@ -33,4 +34,3 @@ object updateMappedTypeNode extends js.Object {
     `type`: TypeNode
   ): MappedTypeNode = js.native
 }
-

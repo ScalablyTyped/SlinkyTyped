@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser.types
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* types types */
 /**
@@ -25,15 +25,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.incognito_session_only
 */
 trait SettingScope extends js.Object
-
 object SettingScope {
+  
   @scala.inline
   def incognito_persistent: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.incognito_persistent = "incognito_persistent".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.incognito_persistent]
+  
   @scala.inline
   def incognito_session_only: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.incognito_session_only = "incognito_session_only".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.incognito_session_only]
+  
   @scala.inline
   def regular: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.regular = "regular".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.regular]
+  
   @scala.inline
   def regular_only: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.regular_only = "regular_only".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.regular_only]
 }
-

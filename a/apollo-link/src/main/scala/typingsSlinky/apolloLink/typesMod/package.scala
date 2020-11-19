@@ -2,9 +2,10 @@ package typingsSlinky.apolloLink
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object typesMod {
+  
   type NextLink = js.Function1[
     /* operation */ typingsSlinky.apolloLink.typesMod.Operation, 
     typingsSlinky.zenObservableTs.zenObservableMod.Observable[
@@ -15,6 +16,7 @@ package object typesMod {
       ]
     ]
   ]
+  
   type RequestHandler = js.Function2[
     /* operation */ typingsSlinky.apolloLink.typesMod.Operation, 
     /* forward */ typingsSlinky.apolloLink.typesMod.NextLink, 

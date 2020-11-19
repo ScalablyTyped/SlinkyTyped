@@ -3,7 +3,7 @@ package typingsSlinky.reactDates.mod
 import typingsSlinky.react.mod.ClassicComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-dates", "DateRangePicker")
 @js.native
@@ -12,4 +12,3 @@ class DateRangePickerCls protected ()
   def this(props: DateRangePickerShape) = this()
   def this(props: DateRangePickerShape, context: js.Any) = this()
 }
-

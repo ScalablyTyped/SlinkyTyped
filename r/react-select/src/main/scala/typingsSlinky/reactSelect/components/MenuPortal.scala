@@ -13,9 +13,10 @@ import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.ValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MenuPortal {
+  
   @JSImport("react-select", "components.MenuPortal")
   @js.native
   object component extends js.Object
@@ -24,11 +25,13 @@ object MenuPortal {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: MenuPortalProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     appendTo: HTMLElement,
@@ -50,4 +53,3 @@ object MenuPortal {
     new Builder(js.Array(this.component, __props.asInstanceOf[MenuPortalProps[js.Any]]))
   }
 }
-

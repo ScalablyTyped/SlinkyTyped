@@ -2,10 +2,12 @@ package typingsSlinky.antDesignPro
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object avatarItemMod {
+  
   type AvatarItem = slinky.core.ReactComponentClass[typingsSlinky.antDesignPro.avatarItemMod.AvatarItemProps]
+  
   /* Rewritten from type alias, can be one of: 
     - scala.Double
     - typingsSlinky.antDesignPro.antDesignProStrings.small

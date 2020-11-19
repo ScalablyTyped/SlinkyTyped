@@ -3,7 +3,7 @@ package typingsSlinky.typescript.mod
 import typingsSlinky.typescript.mod.SyntaxKind.ConstructSignature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typescript.mod.TextRange because Already inherited
@@ -15,9 +15,11 @@ trait ConstructSignatureDeclaration
   extends SignatureDeclarationBase
      with SignatureDeclaration
      with _HasJSDoc {
+  
   var _typeElementBrand: js.Any = js.native
+  
   @JSName("kind")
   var kind_ConstructSignatureDeclaration: ConstructSignature = js.native
+  
   var questionToken: js.UndefOr[QuestionToken] = js.native
 }
-

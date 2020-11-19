@@ -2,11 +2,12 @@ package typingsSlinky.ramda
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ramda/src/pipeP", JSImport.Namespace)
 @js.native
 object pipePMod extends js.Object {
+  
   def default[V0, T1](fn0: js.Function1[/* x0 */ V0, js.Promise[T1]]): js.Function1[/* x0 */ V0, js.Promise[T1]] = js.native
   def default[V0, T1, T2](fn0: js.Function1[/* x0 */ V0, js.Promise[T1]], fn1: js.Function1[/* x */ T1, js.Promise[T2]]): js.Function1[/* x0 */ V0, js.Promise[T2]] = js.native
   def default[V0, T1, T2, T3](
@@ -78,4 +79,3 @@ object pipePMod extends js.Object {
     fn9: js.Function1[/* x */ T9, js.Promise[T10]]
   ): js.Function1[/* x0 */ V0, js.Promise[T10]] = js.native
 }
-

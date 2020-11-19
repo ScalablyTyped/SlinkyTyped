@@ -6,7 +6,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.meteor.anon.IdGeneration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CollectionStatic
@@ -17,4 +17,3 @@ trait CollectionStatic
       /* options */ IdGeneration, 
       Collection[js.Object]
     ]
-

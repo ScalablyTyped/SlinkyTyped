@@ -3,11 +3,12 @@ package typingsSlinky.mongoose.mod
 import typingsSlinky.mongodb.mod.SessionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mongoose", "startSession")
 @js.native
 object startSession extends js.Object {
+  
   def apply(): js.Promise[typingsSlinky.mongodb.mod.ClientSession] = js.native
   def apply(
     options: js.UndefOr[scala.Nothing],
@@ -19,4 +20,3 @@ object startSession extends js.Object {
     cb: js.Function2[/* err */ js.Any, /* session */ typingsSlinky.mongodb.mod.ClientSession, Unit]
   ): js.Promise[typingsSlinky.mongodb.mod.ClientSession] = js.native
 }
-

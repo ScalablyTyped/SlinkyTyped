@@ -9,11 +9,12 @@ import typingsSlinky.babylonjs.webXRPlaneDetectorMod.IWebXRPlaneDetectorOptions
 import typingsSlinky.babylonjs.webXRSessionManagerMod.WebXRSessionManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/XR/features/index", JSImport.Namespace)
 @js.native
 object featuresIndexMod extends js.Object {
+  
   @js.native
   class IWebXRControllerPhysicsOptions ()
     extends typingsSlinky.babylonjs.webXRControllerPhysicsMod.IWebXRControllerPhysicsOptions
@@ -28,6 +29,22 @@ object featuresIndexMod extends js.Object {
       */
     def this(_xrSessionManager: WebXRSessionManager) = this()
     def this(_xrSessionManager: WebXRSessionManager, _options: IWebXRAnchorSystemOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object WebXRAnchorSystem extends js.Object {
+    
+    /**
+      * The module's name
+      */
+    val Name: String = js.native
+    
+    /**
+      * The (Babylon) version of this module.
+      * This is an integer representing the implementation version.
+      * This number does not correspond to the WebXR specs version
+      */
+    val Version: Double = js.native
   }
   
   @js.native
@@ -47,6 +64,22 @@ object featuresIndexMod extends js.Object {
     options: IWebXRBackgroundRemoverOptions
     ) = this()
   }
+  /* static members */
+  @js.native
+  object WebXRBackgroundRemover extends js.Object {
+    
+    /**
+      * The module's name
+      */
+    val Name: String = js.native
+    
+    /**
+      * The (Babylon) version of this module.
+      * This is an integer representing the implementation version.
+      * This number does not correspond to the WebXR specs version
+      */
+    val Version: Double = js.native
+  }
   
   @js.native
   class WebXRControllerPhysics protected ()
@@ -61,6 +94,22 @@ object featuresIndexMod extends js.Object {
       _options: typingsSlinky.babylonjs.webXRControllerPhysicsMod.IWebXRControllerPhysicsOptions
     ) = this()
   }
+  /* static members */
+  @js.native
+  object WebXRControllerPhysics extends js.Object {
+    
+    /**
+      * The module's name
+      */
+    val Name: String = js.native
+    
+    /**
+      * The (Babylon) version of this module.
+      * This is an integer representing the implementation version.
+      * This number does not correspond to the webxr specs version
+      */
+    val Version: Double = js.native
+  }
   
   @js.native
   class WebXRControllerPointerSelection protected ()
@@ -71,6 +120,24 @@ object featuresIndexMod extends js.Object {
       * @param _options read-only options to be used in this module
       */
     def this(_xrSessionManager: WebXRSessionManager, _options: IWebXRControllerPointerSelectionOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object WebXRControllerPointerSelection extends js.Object {
+    
+    /**
+      * The module's name
+      */
+    val Name: String = js.native
+    
+    /**
+      * The (Babylon) version of this module.
+      * This is an integer representing the implementation version.
+      * This number does not correspond to the WebXR specs version
+      */
+    val Version: Double = js.native
+    
+    var _idCounter: js.Any = js.native
   }
   
   @js.native
@@ -90,104 +157,22 @@ object featuresIndexMod extends js.Object {
     options: IWebXRHitTestOptions
     ) = this()
   }
-  
-  @js.native
-  class WebXRMotionControllerTeleportation protected ()
-    extends typingsSlinky.babylonjs.webXRControllerTeleportationMod.WebXRMotionControllerTeleportation {
-    /**
-      * constructs a new anchor system
-      * @param _xrSessionManager an instance of WebXRSessionManager
-      * @param _options configuration object for this feature
-      */
-    def this(_xrSessionManager: WebXRSessionManager, _options: IWebXRTeleportationOptions) = this()
-  }
-  
-  @js.native
-  class WebXRPlaneDetector protected ()
-    extends typingsSlinky.babylonjs.webXRPlaneDetectorMod.WebXRPlaneDetector {
-    /**
-      * construct a new Plane Detector
-      * @param _xrSessionManager an instance of xr Session manager
-      * @param _options configuration to use when constructing this feature
-      */
-    def this(_xrSessionManager: WebXRSessionManager) = this()
-    def this(_xrSessionManager: WebXRSessionManager, _options: IWebXRPlaneDetectorOptions) = this()
-  }
-  
-  /* static members */
-  @js.native
-  object WebXRAnchorSystem extends js.Object {
-    /**
-      * The module's name
-      */
-    val Name: String = js.native
-    /**
-      * The (Babylon) version of this module.
-      * This is an integer representing the implementation version.
-      * This number does not correspond to the WebXR specs version
-      */
-    val Version: Double = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object WebXRBackgroundRemover extends js.Object {
-    /**
-      * The module's name
-      */
-    val Name: String = js.native
-    /**
-      * The (Babylon) version of this module.
-      * This is an integer representing the implementation version.
-      * This number does not correspond to the WebXR specs version
-      */
-    val Version: Double = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object WebXRControllerPhysics extends js.Object {
-    /**
-      * The module's name
-      */
-    val Name: String = js.native
-    /**
-      * The (Babylon) version of this module.
-      * This is an integer representing the implementation version.
-      * This number does not correspond to the webxr specs version
-      */
-    val Version: Double = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object WebXRControllerPointerSelection extends js.Object {
-    /**
-      * The module's name
-      */
-    val Name: String = js.native
-    /**
-      * The (Babylon) version of this module.
-      * This is an integer representing the implementation version.
-      * This number does not correspond to the WebXR specs version
-      */
-    val Version: Double = js.native
-    var _idCounter: js.Any = js.native
-  }
-  
   /* static members */
   @js.native
   object WebXRHitTestLegacy extends js.Object {
+    
     /**
       * The module's name
       */
     val Name: String = js.native
+    
     /**
       * The (Babylon) version of this module.
       * This is an integer representing the implementation version.
       * This number does not correspond to the WebXR specs version
       */
     val Version: Double = js.native
+    
     /**
       * execute a hit test with an XR Ray
       *
@@ -204,6 +189,7 @@ object featuresIndexMod extends js.Object {
       referenceSpace: XRReferenceSpace,
       filter: js.Function1[/* result */ XRHitResult, Boolean]
     ): js.Promise[js.Array[XRHitResult]] = js.native
+    
     /**
       * Execute a hit test on the current running session using a select event returned from a transient input (such as touch)
       * @param event the (select) event to use to select with
@@ -213,13 +199,25 @@ object featuresIndexMod extends js.Object {
     def XRHitTestWithSelectEvent(event: XRInputSourceEvent, referenceSpace: XRReferenceSpace): js.Promise[js.Array[XRHitResult]] = js.native
   }
   
+  @js.native
+  class WebXRMotionControllerTeleportation protected ()
+    extends typingsSlinky.babylonjs.webXRControllerTeleportationMod.WebXRMotionControllerTeleportation {
+    /**
+      * constructs a new anchor system
+      * @param _xrSessionManager an instance of WebXRSessionManager
+      * @param _options configuration object for this feature
+      */
+    def this(_xrSessionManager: WebXRSessionManager, _options: IWebXRTeleportationOptions) = this()
+  }
   /* static members */
   @js.native
   object WebXRMotionControllerTeleportation extends js.Object {
+    
     /**
       * The module's name
       */
     val Name: String = js.native
+    
     /**
       * The (Babylon) version of this module.
       * This is an integer representing the implementation version.
@@ -228,13 +226,26 @@ object featuresIndexMod extends js.Object {
     val Version: Double = js.native
   }
   
+  @js.native
+  class WebXRPlaneDetector protected ()
+    extends typingsSlinky.babylonjs.webXRPlaneDetectorMod.WebXRPlaneDetector {
+    /**
+      * construct a new Plane Detector
+      * @param _xrSessionManager an instance of xr Session manager
+      * @param _options configuration to use when constructing this feature
+      */
+    def this(_xrSessionManager: WebXRSessionManager) = this()
+    def this(_xrSessionManager: WebXRSessionManager, _options: IWebXRPlaneDetectorOptions) = this()
+  }
   /* static members */
   @js.native
   object WebXRPlaneDetector extends js.Object {
+    
     /**
       * The module's name
       */
     val Name: String = js.native
+    
     /**
       * The (Babylon) version of this module.
       * This is an integer representing the implementation version.
@@ -242,6 +253,4 @@ object featuresIndexMod extends js.Object {
       */
     val Version: Double = js.native
   }
-  
 }
-

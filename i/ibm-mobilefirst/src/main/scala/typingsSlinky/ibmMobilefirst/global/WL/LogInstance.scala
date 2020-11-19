@@ -2,7 +2,7 @@ package typingsSlinky.ibmMobilefirst.global.WL
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Class which defines instances created via:  WL.Logger.create({pkg: 'something'});
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class LogInstance ()
   extends typingsSlinky.ibmMobilefirst.WL.LogInstance
-

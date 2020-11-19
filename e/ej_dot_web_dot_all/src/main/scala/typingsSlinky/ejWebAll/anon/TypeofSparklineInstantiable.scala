@@ -8,13 +8,14 @@ import typingsSlinky.ejWebAll.ej.Sparkline.Model
 import typingsSlinky.ejWebAll.ej.datavisualization.Sparkline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofSparklineInstantiable
   extends Instantiable1[(/* element */ Element) | (/* element */ JQuery), Sparkline]
      with Instantiable2[(/* element */ Element) | (/* element */ JQuery), /* options */ Model, Sparkline] {
+  
   var Locale: js.Any = js.native
+  
   var fn: Sparkline = js.native
 }
-

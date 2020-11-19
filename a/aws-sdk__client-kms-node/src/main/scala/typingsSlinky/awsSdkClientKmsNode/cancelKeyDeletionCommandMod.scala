@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-node/commands/CancelKeyDeletionCommand", JSImport.Namespace)
 @js.native
 object cancelKeyDeletionCommandMod extends js.Object {
+  
   @js.native
   class CancelKeyDeletionCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object cancelKeyDeletionCommandMod extends js.Object {
           Readable
         ] {
     def this(input: CancelKeyDeletionInput) = this()
+    
     val middlewareStack: MiddlewareStack[CancelKeyDeletionInput, CancelKeyDeletionOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[CancelKeyDeletionInput, CancelKeyDeletionOutput] = js.native
   }
-  
 }
-

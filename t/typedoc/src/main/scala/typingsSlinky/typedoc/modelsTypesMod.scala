@@ -4,11 +4,12 @@ import typingsSlinky.typedoc.abstractMod.Reflection
 import typingsSlinky.typedoc.reflectionsDeclarationMod.DeclarationReflection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc/dist/lib/models/types", JSImport.Namespace)
 @js.native
 object modelsTypesMod extends js.Object {
+  
   @js.native
   class ArrayType protected ()
     extends typingsSlinky.typedoc.typesArrayMod.ArrayType {
@@ -69,6 +70,14 @@ object modelsTypesMod extends js.Object {
     def this(name: String, symbolFQN: String) = this()
     def this(name: String, symbolFQN: String, reflection: Reflection) = this()
   }
+  /* static members */
+  @js.native
+  object ReferenceType extends js.Object {
+    
+    var SYMBOL_FQN_RESOLVED: String = js.native
+    
+    var SYMBOL_FQN_RESOLVE_BY_NAME: String = js.native
+  }
   
   @js.native
   class ReflectionType protected ()
@@ -91,6 +100,20 @@ object modelsTypesMod extends js.Object {
   @js.native
   abstract class Type ()
     extends typingsSlinky.typedoc.typesAbstractMod.Type
+  /* static members */
+  @js.native
+  object Type extends js.Object {
+    
+    def isTypeListEqual(
+      a: js.Array[typingsSlinky.typedoc.typesAbstractMod.Type],
+      b: js.Array[typingsSlinky.typedoc.typesAbstractMod.Type]
+    ): Boolean = js.native
+    
+    def isTypeListSimilar(
+      a: js.Array[typingsSlinky.typedoc.typesAbstractMod.Type],
+      b: js.Array[typingsSlinky.typedoc.typesAbstractMod.Type]
+    ): Boolean = js.native
+  }
   
   @js.native
   class TypeOperatorType protected ()
@@ -115,26 +138,4 @@ object modelsTypesMod extends js.Object {
     extends typingsSlinky.typedoc.typesUnknownMod.UnknownType {
     def this(name: String) = this()
   }
-  
-  /* static members */
-  @js.native
-  object ReferenceType extends js.Object {
-    var SYMBOL_FQN_RESOLVED: String = js.native
-    var SYMBOL_FQN_RESOLVE_BY_NAME: String = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object Type extends js.Object {
-    def isTypeListEqual(
-      a: js.Array[typingsSlinky.typedoc.typesAbstractMod.Type],
-      b: js.Array[typingsSlinky.typedoc.typesAbstractMod.Type]
-    ): Boolean = js.native
-    def isTypeListSimilar(
-      a: js.Array[typingsSlinky.typedoc.typesAbstractMod.Type],
-      b: js.Array[typingsSlinky.typedoc.typesAbstractMod.Type]
-    ): Boolean = js.native
-  }
-  
 }
-

@@ -3,13 +3,51 @@ package typingsSlinky.zipJs
 import org.scalajs.dom.raw.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object zip extends js.Object {
+    
+    def createReader(
+      reader: typingsSlinky.zipJs.zip.Reader,
+      callback: js.Function1[/* zipReader */ typingsSlinky.zipJs.zip.ZipReader, Unit]
+    ): Unit = js.native
+    def createReader(
+      reader: typingsSlinky.zipJs.zip.Reader,
+      callback: js.Function1[/* zipReader */ typingsSlinky.zipJs.zip.ZipReader, Unit],
+      onerror: js.Function1[/* error */ js.Any, Unit]
+    ): Unit = js.native
+    
+    def createWriter(
+      writer: typingsSlinky.zipJs.zip.Writer,
+      callback: js.Function1[/* zipWriter */ typingsSlinky.zipJs.zip.ZipWriter, Unit]
+    ): Unit = js.native
+    def createWriter(
+      writer: typingsSlinky.zipJs.zip.Writer,
+      callback: js.Function1[/* zipWriter */ typingsSlinky.zipJs.zip.ZipWriter, Unit],
+      onerror: js.UndefOr[scala.Nothing],
+      dontDeflate: Boolean
+    ): Unit = js.native
+    def createWriter(
+      writer: typingsSlinky.zipJs.zip.Writer,
+      callback: js.Function1[/* zipWriter */ typingsSlinky.zipJs.zip.ZipWriter, Unit],
+      onerror: js.Function1[/* error */ js.Any, Unit]
+    ): Unit = js.native
+    def createWriter(
+      writer: typingsSlinky.zipJs.zip.Writer,
+      callback: js.Function1[/* zipWriter */ typingsSlinky.zipJs.zip.ZipWriter, Unit],
+      onerror: js.Function1[/* error */ js.Any, Unit],
+      dontDeflate: Boolean
+    ): Unit = js.native
+    
+    var useWebWorkers: Boolean = js.native
+    
+    var workerScriptsPath: String = js.native
+    
     @js.native
     class BlobReader protected ()
       extends typingsSlinky.zipJs.zip.Reader {
@@ -74,45 +112,12 @@ object global extends js.Object {
     class ZipWriter ()
       extends typingsSlinky.zipJs.zip.ZipWriter
     
-    var useWebWorkers: Boolean = js.native
-    var workerScriptsPath: String = js.native
-    def createReader(
-      reader: typingsSlinky.zipJs.zip.Reader,
-      callback: js.Function1[/* zipReader */ typingsSlinky.zipJs.zip.ZipReader, Unit]
-    ): Unit = js.native
-    def createReader(
-      reader: typingsSlinky.zipJs.zip.Reader,
-      callback: js.Function1[/* zipReader */ typingsSlinky.zipJs.zip.ZipReader, Unit],
-      onerror: js.Function1[/* error */ js.Any, Unit]
-    ): Unit = js.native
-    def createWriter(
-      writer: typingsSlinky.zipJs.zip.Writer,
-      callback: js.Function1[/* zipWriter */ typingsSlinky.zipJs.zip.ZipWriter, Unit]
-    ): Unit = js.native
-    def createWriter(
-      writer: typingsSlinky.zipJs.zip.Writer,
-      callback: js.Function1[/* zipWriter */ typingsSlinky.zipJs.zip.ZipWriter, Unit],
-      onerror: js.UndefOr[scala.Nothing],
-      dontDeflate: Boolean
-    ): Unit = js.native
-    def createWriter(
-      writer: typingsSlinky.zipJs.zip.Writer,
-      callback: js.Function1[/* zipWriter */ typingsSlinky.zipJs.zip.ZipWriter, Unit],
-      onerror: js.Function1[/* error */ js.Any, Unit]
-    ): Unit = js.native
-    def createWriter(
-      writer: typingsSlinky.zipJs.zip.Writer,
-      callback: js.Function1[/* zipWriter */ typingsSlinky.zipJs.zip.ZipWriter, Unit],
-      onerror: js.Function1[/* error */ js.Any, Unit],
-      dontDeflate: Boolean
-    ): Unit = js.native
     @js.native
     object workerScripts extends js.Object {
+      
       var deflater: js.UndefOr[js.Array[String]] = js.native
+      
       var inflater: js.UndefOr[js.Array[String]] = js.native
     }
-    
   }
-  
 }
-

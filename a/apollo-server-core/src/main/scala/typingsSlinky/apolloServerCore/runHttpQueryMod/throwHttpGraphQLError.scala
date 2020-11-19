@@ -4,11 +4,12 @@ import typingsSlinky.apolloServerCore.anon.PickdefaultRecordstringan
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server-core/dist/runHttpQuery", "throwHttpGraphQLError")
 @js.native
 object throwHttpGraphQLError extends js.Object {
+  
   def apply[E /* <: js.Error */](statusCode: Double, errors: js.Array[E]): scala.Nothing = js.native
   def apply[E /* <: js.Error */](
     statusCode: Double,
@@ -24,4 +25,3 @@ object throwHttpGraphQLError extends js.Object {
     extensions: js.UndefOr[Record[String, _]]
   ): scala.Nothing = js.native
 }
-

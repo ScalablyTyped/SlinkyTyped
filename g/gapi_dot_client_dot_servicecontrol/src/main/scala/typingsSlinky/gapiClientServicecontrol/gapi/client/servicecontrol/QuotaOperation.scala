@@ -3,10 +3,11 @@ package typingsSlinky.gapiClientServicecontrol.gapi.client.servicecontrol
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait QuotaOperation extends js.Object {
+  
   /**
     * Identity of the consumer for whom this quota operation is being performed.
     *
@@ -16,8 +17,10 @@ trait QuotaOperation extends js.Object {
     * api_key:<api_key>.
     */
   var consumerId: js.UndefOr[String] = js.native
+  
   /** Labels describing the operation. */
   var labels: js.UndefOr[Record[String, String]] = js.native
+  
   /**
     * Fully qualified name of the API method for which this quota operation is
     * requested. This name is used for matching quota rules or metric rules and
@@ -28,6 +31,7 @@ trait QuotaOperation extends js.Object {
     * google.example.library.v1.LibraryService.CreateShelf
     */
   var methodName: js.UndefOr[String] = js.native
+  
   /**
     * Identity of the operation. This is expected to be unique within the scope
     * of the service that generated the operation, and guarantees idempotency in
@@ -39,6 +43,7 @@ trait QuotaOperation extends js.Object {
     * RFC 4122 for details.
     */
   var operationId: js.UndefOr[String] = js.native
+  
   /**
     * Represents information about this operation. Each MetricValueSet
     * corresponds to a metric defined in the service configuration.
@@ -52,54 +57,70 @@ trait QuotaOperation extends js.Object {
     * an invalid argument error.
     */
   var quotaMetrics: js.UndefOr[js.Array[MetricValueSet]] = js.native
+  
   /** Quota mode for this operation. */
   var quotaMode: js.UndefOr[String] = js.native
 }
-
 object QuotaOperation {
+  
   @scala.inline
   def apply(): QuotaOperation = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[QuotaOperation]
   }
+  
   @scala.inline
   implicit class QuotaOperationOps[Self <: QuotaOperation] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setConsumerId(value: String): Self = this.set("consumerId", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteConsumerId: Self = this.set("consumerId", js.undefined)
+    
     @scala.inline
     def setLabels(value: Record[String, String]): Self = this.set("labels", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteLabels: Self = this.set("labels", js.undefined)
+    
     @scala.inline
     def setMethodName(value: String): Self = this.set("methodName", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteMethodName: Self = this.set("methodName", js.undefined)
+    
     @scala.inline
     def setOperationId(value: String): Self = this.set("operationId", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteOperationId: Self = this.set("operationId", js.undefined)
+    
     @scala.inline
     def setQuotaMetricsVarargs(value: MetricValueSet*): Self = this.set("quotaMetrics", js.Array(value :_*))
+    
     @scala.inline
     def setQuotaMetrics(value: js.Array[MetricValueSet]): Self = this.set("quotaMetrics", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteQuotaMetrics: Self = this.set("quotaMetrics", js.undefined)
+    
     @scala.inline
     def setQuotaMode(value: String): Self = this.set("quotaMode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteQuotaMode: Self = this.set("quotaMode", js.undefined)
   }
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typescript.mod.TextRange because Already inherited
@@ -16,12 +16,15 @@ trait FunctionDeclaration
      with FunctionLikeDeclaration
      with SignatureDeclaration
      with _HasJSDoc {
+  
   var _statementBrand: js.Any = js.native
+  
   @JSName("body")
   var body_FunctionDeclaration: js.UndefOr[FunctionBody] = js.native
+  
   @JSName("kind")
   var kind_FunctionDeclaration: typingsSlinky.typescript.mod.SyntaxKind.FunctionDeclaration = js.native
+  
   @JSName("name")
   var name_FunctionDeclaration: js.UndefOr[Identifier] = js.native
 }
-

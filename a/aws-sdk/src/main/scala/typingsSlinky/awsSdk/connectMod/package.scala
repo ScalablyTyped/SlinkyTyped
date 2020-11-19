@@ -2,33 +2,53 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object connectMod {
+  
   type ARN = java.lang.String
+  
   type AfterContactWorkTimeLimit = scala.Double
+  
   type AgentFirstName = java.lang.String
+  
   type AgentLastName = java.lang.String
+  
   type AgentUsername = java.lang.String
+  
   type AttributeName = java.lang.String
+  
   type AttributeValue = java.lang.String
+  
   type Attributes = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.connectMod.AttributeValue]
+  
   type AutoAccept = scala.Boolean
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.VOICE
     - typingsSlinky.awsSdk.awsSdkStrings.CHAT
     - java.lang.String
   */
   type Channel = typingsSlinky.awsSdk.connectMod._Channel | java.lang.String
+  
   type Channels = js.Array[typingsSlinky.awsSdk.connectMod.Channel]
+  
   type ChatContent = java.lang.String
+  
   type ChatContentType = java.lang.String
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.connectMod.ClientApiVersions
+  
   type ClientToken = java.lang.String
+  
   type Comparison = typingsSlinky.awsSdk.awsSdkStrings.LT | java.lang.String
+  
   type ContactFlowId = java.lang.String
+  
   type ContactFlowName = java.lang.String
+  
   type ContactFlowSummaryList = js.Array[typingsSlinky.awsSdk.connectMod.ContactFlowSummary]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CONTACT_FLOW
     - typingsSlinky.awsSdk.awsSdkStrings.CUSTOMER_QUEUE
@@ -42,9 +62,13 @@ package object connectMod {
     - java.lang.String
   */
   type ContactFlowType = typingsSlinky.awsSdk.connectMod._ContactFlowType | java.lang.String
+  
   type ContactFlowTypes = js.Array[typingsSlinky.awsSdk.connectMod.ContactFlowType]
+  
   type ContactId = java.lang.String
+  
   type CurrentMetricDataCollections = js.Array[typingsSlinky.awsSdk.connectMod.CurrentMetricData]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AGENTS_ONLINE
     - typingsSlinky.awsSdk.awsSdkStrings.AGENTS_AVAILABLE
@@ -62,24 +86,38 @@ package object connectMod {
     - java.lang.String
   */
   type CurrentMetricName = typingsSlinky.awsSdk.connectMod._CurrentMetricName | java.lang.String
+  
   type CurrentMetricResults = js.Array[typingsSlinky.awsSdk.connectMod.CurrentMetricResult]
+  
   type CurrentMetrics = js.Array[typingsSlinky.awsSdk.connectMod.CurrentMetric]
+  
   type DirectoryUserId = java.lang.String
+  
   type DisplayName = java.lang.String
+  
   type Email = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.QUEUE
     - typingsSlinky.awsSdk.awsSdkStrings.CHANNEL
     - java.lang.String
   */
   type Grouping = typingsSlinky.awsSdk.connectMod._Grouping | java.lang.String
+  
   type Groupings = js.Array[typingsSlinky.awsSdk.connectMod.Grouping]
+  
   type HierarchyGroupId = java.lang.String
+  
   type HierarchyGroupName = java.lang.String
+  
   type HierarchyGroupSummaryList = js.Array[typingsSlinky.awsSdk.connectMod.HierarchyGroupSummary]
+  
   type HierarchyLevelId = java.lang.String
+  
   type HierarchyLevelName = java.lang.String
+  
   type HistoricalMetricDataCollections = js.Array[typingsSlinky.awsSdk.connectMod.HistoricalMetricData]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CONTACTS_QUEUED
     - typingsSlinky.awsSdk.awsSdkStrings.CONTACTS_HANDLED
@@ -109,19 +147,33 @@ package object connectMod {
     - java.lang.String
   */
   type HistoricalMetricName = typingsSlinky.awsSdk.connectMod._HistoricalMetricName | java.lang.String
+  
   type HistoricalMetricResults = js.Array[typingsSlinky.awsSdk.connectMod.HistoricalMetricResult]
+  
   type HistoricalMetrics = js.Array[typingsSlinky.awsSdk.connectMod.HistoricalMetric]
+  
   type HoursOfOperationId = java.lang.String
+  
   type HoursOfOperationName = java.lang.String
+  
   type HoursOfOperationSummaryList = js.Array[typingsSlinky.awsSdk.connectMod.HoursOfOperationSummary]
+  
   type InstanceId = java.lang.String
+  
   type MaxResult100 = scala.Double
+  
   type MaxResult1000 = scala.Double
+  
   type NextToken = java.lang.String
+  
   type ParticipantId = java.lang.String
+  
   type ParticipantToken = java.lang.String
+  
   type Password = java.lang.String
+  
   type PhoneNumber = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AF
     - typingsSlinky.awsSdk.awsSdkStrings.AL
@@ -363,41 +415,62 @@ package object connectMod {
     - java.lang.String
   */
   type PhoneNumberCountryCode = typingsSlinky.awsSdk.connectMod._PhoneNumberCountryCode | java.lang.String
+  
   type PhoneNumberCountryCodes = js.Array[typingsSlinky.awsSdk.connectMod.PhoneNumberCountryCode]
+  
   type PhoneNumberId = java.lang.String
+  
   type PhoneNumberSummaryList = js.Array[typingsSlinky.awsSdk.connectMod.PhoneNumberSummary]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.TOLL_FREE
     - typingsSlinky.awsSdk.awsSdkStrings.DID
     - java.lang.String
   */
   type PhoneNumberType = typingsSlinky.awsSdk.connectMod._PhoneNumberType | java.lang.String
+  
   type PhoneNumberTypes = js.Array[typingsSlinky.awsSdk.connectMod.PhoneNumberType]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SOFT_PHONE
     - typingsSlinky.awsSdk.awsSdkStrings.DESK_PHONE
     - java.lang.String
   */
   type PhoneType = typingsSlinky.awsSdk.connectMod._PhoneType | java.lang.String
+  
   type QueueId = java.lang.String
+  
   type QueueName = java.lang.String
+  
   type QueueSummaryList = js.Array[typingsSlinky.awsSdk.connectMod.QueueSummary]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.STANDARD
     - typingsSlinky.awsSdk.awsSdkStrings.AGENT
     - java.lang.String
   */
   type QueueType = typingsSlinky.awsSdk.connectMod._QueueType | java.lang.String
+  
   type QueueTypes = js.Array[typingsSlinky.awsSdk.connectMod.QueueType]
+  
   type Queues = js.Array[typingsSlinky.awsSdk.connectMod.QueueId]
+  
   type RoutingProfileId = java.lang.String
+  
   type RoutingProfileName = java.lang.String
+  
   type RoutingProfileSummaryList = js.Array[typingsSlinky.awsSdk.connectMod.RoutingProfileSummary]
+  
   type SecurityProfileId = java.lang.String
+  
   type SecurityProfileIds = js.Array[typingsSlinky.awsSdk.connectMod.SecurityProfileId]
+  
   type SecurityProfileName = java.lang.String
+  
   type SecurityProfileSummaryList = js.Array[typingsSlinky.awsSdk.connectMod.SecurityProfileSummary]
+  
   type SecurityToken = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SUM
     - typingsSlinky.awsSdk.awsSdkStrings.MAX
@@ -405,11 +478,17 @@ package object connectMod {
     - java.lang.String
   */
   type Statistic = typingsSlinky.awsSdk.connectMod._Statistic | java.lang.String
+  
   type TagKey = java.lang.String
+  
   type TagKeyList = js.Array[typingsSlinky.awsSdk.connectMod.TagKey]
+  
   type TagMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.connectMod.TagValue]
+  
   type TagValue = java.lang.String
+  
   type ThresholdValue = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SECONDS
     - typingsSlinky.awsSdk.awsSdkStrings.COUNT
@@ -417,9 +496,13 @@ package object connectMod {
     - java.lang.String
   */
   type Unit = typingsSlinky.awsSdk.connectMod._Unit | java.lang.String
+  
   type UserId = java.lang.String
+  
   type UserSummaryList = js.Array[typingsSlinky.awsSdk.connectMod.UserSummary]
+  
   type Value = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.FROM_AGENT
     - typingsSlinky.awsSdk.awsSdkStrings.TO_AGENT
@@ -427,11 +510,13 @@ package object connectMod {
     - java.lang.String
   */
   type VoiceRecordingTrack = typingsSlinky.awsSdk.connectMod._VoiceRecordingTrack | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2017-08-08`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_
     - java.lang.String
   */
   type apiVersion = typingsSlinky.awsSdk.connectMod._apiVersion | java.lang.String
+  
   type timestamp = js.Date
 }

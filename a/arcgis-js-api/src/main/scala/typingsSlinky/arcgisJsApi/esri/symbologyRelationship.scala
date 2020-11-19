@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Object containing helper methods for getting optimal symbol schemes used to create [relationship (bivariate choropleth) visualizations](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-relationship.html). The [getSchemes()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-relationship.html#getSchemes) returns color schemes best suited to the given basemap for this visualization style.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait symbologyRelationship extends js.Object {
+  
   /**
     * Clones a relationship (bivariate color) scheme object.
     *
@@ -20,6 +21,7 @@ trait symbologyRelationship extends js.Object {
     *
     */
   def cloneScheme(scheme: RelationshipScheme): RelationshipScheme = js.native
+  
   /**
     * Returns a relationship scheme with the provided name.
     *
@@ -36,6 +38,7 @@ trait symbologyRelationship extends js.Object {
     *
     */
   def getSchemeByName(params: relationshipGetSchemeByNameParams): RelationshipScheme = js.native
+  
   /**
     * Returns a primary scheme and secondary schemes defining symbol properties for relationship-based (bivariate choropleth) data-driven visualizations in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The `basemap` parameter determines the color of the symbols used to visualize each feature. The `geometryType` determines which type of symbol to return.
     *
@@ -51,6 +54,7 @@ trait symbologyRelationship extends js.Object {
     *
     */
   def getSchemes(params: relationshipGetSchemesParams): RelationshipSchemes = js.native
+  
   /**
     * Returns an array of relationship schemes with the provided tags. These schemes define symbol properties for relationship visualizations.
     *
@@ -68,6 +72,7 @@ trait symbologyRelationship extends js.Object {
     *
     */
   def getSchemesByTag(params: relationshipGetSchemesByTagParams): js.Array[RelationshipScheme] = js.native
+  
   /**
     * Returns metadata for the available themes. If a basemap is provided, returns themes that work best with the given basemap.
     *
@@ -80,4 +85,3 @@ trait symbologyRelationship extends js.Object {
   def getThemes(basemap: String): js.Array[Theme] = js.native
   def getThemes(basemap: Basemap): js.Array[Theme] = js.native
 }
-

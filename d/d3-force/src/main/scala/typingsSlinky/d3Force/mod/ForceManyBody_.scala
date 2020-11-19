@@ -2,11 +2,12 @@ package typingsSlinky.d3Force.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ForceManyBody_[NodeDatum /* <: SimulationNodeDatum */]
   extends Force[NodeDatum, js.Any] {
+  
   /**
     * Returns the current maximum distance over which this force is considered, which defaults to infinity.
     */
@@ -21,6 +22,7 @@ trait ForceManyBody_[NodeDatum /* <: SimulationNodeDatum */]
     * @param distance The maximum distance between nodes over which this force is considered.
     */
   def distanceMax(distance: Double): this.type = js.native
+  
   /**
     * Returns the current minimum distance over which this force is considered, which defaults to 1.
     */
@@ -36,6 +38,7 @@ trait ForceManyBody_[NodeDatum /* <: SimulationNodeDatum */]
     * @param distance The minimum distance between nodes over which this force is considered.
     */
   def distanceMin(distance: Double): this.type = js.native
+  
   /**
     * Assign the array of nodes to this force. This method is called when a force is bound to a simulation via simulation.force
     * and when the simulation’s nodes change via simulation.nodes.
@@ -44,6 +47,7 @@ trait ForceManyBody_[NodeDatum /* <: SimulationNodeDatum */]
     */
   @JSName("initialize")
   def initialize_MForceManyBody_(nodes: js.Array[NodeDatum]): Unit = js.native
+  
   /**
     * Return the current strength accessor.
     *
@@ -85,6 +89,7 @@ trait ForceManyBody_[NodeDatum /* <: SimulationNodeDatum */]
     * @param strength The constant strength to be used for all nodes.
     */
   def strength(strength: Double): this.type = js.native
+  
   /**
     * Return the current value of the Barnes–Hut approximation criterion , which defaults to 0.9
     */
@@ -106,4 +111,3 @@ trait ForceManyBody_[NodeDatum /* <: SimulationNodeDatum */]
     */
   def theta(theta: Double): this.type = js.native
 }
-

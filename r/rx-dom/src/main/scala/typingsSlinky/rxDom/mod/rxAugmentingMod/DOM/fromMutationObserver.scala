@@ -6,12 +6,12 @@ import typingsSlinky.rx.Rx.Observable
 import typingsSlinky.std.MutationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rx", "DOM.fromMutationObserver")
 @js.native
 object fromMutationObserver extends js.Object {
+  
   // Mutation Observers
   def apply(target: Node, options: MutationObserverInit): Observable[MutationEvent] = js.native
 }
-

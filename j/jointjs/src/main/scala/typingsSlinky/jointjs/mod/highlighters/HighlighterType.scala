@@ -2,7 +2,7 @@ package typingsSlinky.jointjs.mod.highlighters
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.jointjs.jointjsStrings.addClass
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jointjs.jointjsStrings.stroke
 */
 trait HighlighterType extends js.Object
-

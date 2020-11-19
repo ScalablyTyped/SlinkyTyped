@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MeshConstructor
@@ -15,6 +15,7 @@ trait MeshConstructor
   */
 Instantiable0[Mesh]
      with Instantiable1[/* properties */ MeshProperties, Mesh] {
+  
   /**
     * Creates a mesh representing a box. The spatial reference of the resulting mesh is the same as the location where it is placed.  **Box UV coordinate space**  The box geometry will have UV coordinates generated according to the following scheme:  <img src="../../assets/img/apiref/geometry/mesh-box-uv.png" width="300" height="300"/>
     *
@@ -31,6 +32,7 @@ Instantiable0[Mesh]
     */
   def createBox(location: Point): Mesh = js.native
   def createBox(location: Point, params: MeshCreateBoxParams): Mesh = js.native
+  
   /**
     * Creates a mesh representing a cylinder. The spatial reference of the resulting mesh is the same as the location where it is placed.  **Cylinder UV coordinate space**  The cylinder geometry will have UV coordinates generated according to the following scheme (example is shown for 8 vertices cylinder):  <img src="../../assets/img/apiref/geometry/mesh-cylinder-uv.png" width="300" height="300"/>
     *
@@ -47,6 +49,7 @@ Instantiable0[Mesh]
     */
   def createCylinder(location: Point): Mesh = js.native
   def createCylinder(location: Point, params: MeshCreateCylinderParams): Mesh = js.native
+  
   /**
     * Creates a new mesh geometry from a glTF model referenced by the `url` parameter. The spatial reference of the resulting mesh is the same as the `location` parameter. For more information on the supported glTF features you can read the [Visualizing points with 3D symbols](https://developers.arcgis.com/javascript/latest/guide/visualizing-points-3d/index.html) guide topic. Animations are currently not supported.
     *
@@ -61,6 +64,7 @@ Instantiable0[Mesh]
     */
   def createFromGLTF(location: Point, url: String): js.Promise[Mesh] = js.native
   def createFromGLTF(location: Point, url: String, params: MeshCreateFromGLTFParams): js.Promise[Mesh] = js.native
+  
   /**
     * Creates a new mesh geometry from a polygon geometry. The resulting mesh contains only a position vertex attribute and a single component with faces. The default shading will be set to `flat`. The spatial reference of the resulting mesh is the same as the input polygon. The resulting mesh will not contain any uv nor normal vertex attributes.
     *
@@ -73,6 +77,7 @@ Instantiable0[Mesh]
     */
   def createFromPolygon(polygon: Polygon): Mesh = js.native
   def createFromPolygon(polygon: Polygon, params: MeshCreateFromPolygonParams): Mesh = js.native
+  
   /**
     * Creates a mesh representing a plane. The spatial reference of the resulting mesh is the same as the location where it is placed. A plane consists of two triangles and may be conveniently oriented at creation time.  **Plane UV coordinate space**  The plane geometry will have UV coordinates generated according to the following scheme:  <img src="../../assets/img/apiref/geometry/mesh-plane-uv.png" width="300" height="300"/>
     *
@@ -89,6 +94,7 @@ Instantiable0[Mesh]
     */
   def createPlane(location: Point): Mesh = js.native
   def createPlane(location: Point, params: MeshCreatePlaneParams): Mesh = js.native
+  
   /**
     * Creates a mesh representing a sphere. The spatial reference of the resulting mesh is the same as the location where it is placed.  **Sphere UV coordinate space**  The sphere geometry will have UV coordinates generated according to the following scheme (example is shown for 8x8 vertices sphere):  <img src="../../assets/img/apiref/geometry/mesh-sphere-uv.png" width="300" height="300"/>
     *
@@ -105,6 +111,6 @@ Instantiable0[Mesh]
     */
   def createSphere(location: Point): Mesh = js.native
   def createSphere(location: Point, params: MeshCreateSphereParams): Mesh = js.native
+  
   def fromJSON(json: js.Any): Mesh = js.native
 }
-

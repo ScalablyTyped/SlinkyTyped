@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ClosestFacilityTask extends Task {
+  
   /**
     * Solves the closest facility.
     *
@@ -18,4 +19,3 @@ trait ClosestFacilityTask extends Task {
   def solve(params: ClosestFacilityParameters): js.Promise[ClosestFacilitySolveResult] = js.native
   def solve(params: ClosestFacilityParameters, requestOptions: js.Any): js.Promise[ClosestFacilitySolveResult] = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.QueryProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Query")
 @js.native
@@ -16,4 +16,3 @@ class QueryCls ()
   extends typingsSlinky.arcgisJsApi.esri.Query {
   def this(properties: QueryProperties) = this()
 }
-

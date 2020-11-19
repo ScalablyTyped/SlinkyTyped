@@ -4,11 +4,12 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs-extra", "utimes")
 @js.native
 object utimes extends js.Object {
+  
   def apply(path: String, atime: Double, mtime: Double): js.Promise[Unit] = js.native
   def apply(path: String, atime: Double, mtime: Double, callback: js.Function1[/* err */ ErrnoException, Unit]): Unit = js.native
   def apply(path: String, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
@@ -28,4 +29,3 @@ object utimes extends js.Object {
     callback: js.Function1[/* err */ ErrnoException, Unit]
   ): Unit = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.backupMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "Backup")
 @js.native
@@ -14,4 +14,3 @@ class Backup ()
   extends typingsSlinky.awsSdk.allMod.Backup {
   def this(options: ClientConfiguration) = this()
 }
-

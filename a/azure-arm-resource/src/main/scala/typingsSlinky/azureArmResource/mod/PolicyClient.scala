@@ -5,11 +5,12 @@ import typingsSlinky.msRestAzure.mod.AzureServiceClientOptions
 import typingsSlinky.msRestAzure.mod.CloudErrorParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("azure-arm-resource", "PolicyClient")
 @js.native
 object PolicyClient extends js.Object {
+  
   @js.native
   class PolicyClient protected ()
     extends typingsSlinky.azureArmResource.policyClientMod.PolicyClient {
@@ -57,6 +58,20 @@ object PolicyClient extends js.Object {
   }
   
   @js.native
+  object PolicyModels extends js.Object {
+    
+    @js.native
+    class BaseResource ()
+      extends typingsSlinky.msRestAzure.mod.BaseResource
+    
+    @js.native
+    class CloudError protected ()
+      extends typingsSlinky.azureArmResource.policyClientMod.PolicyModels.CloudError {
+      def this(parameters: CloudErrorParameters) = this()
+    }
+  }
+  
+  @js.native
   class default protected ()
     extends typingsSlinky.azureArmResource.policyClientMod.default {
     /**
@@ -101,20 +116,4 @@ object PolicyClient extends js.Object {
       options: AzureServiceClientOptions
     ) = this()
   }
-  
-  @js.native
-  object PolicyModels extends js.Object {
-    @js.native
-    class BaseResource ()
-      extends typingsSlinky.msRestAzure.mod.BaseResource
-    
-    @js.native
-    class CloudError protected ()
-      extends typingsSlinky.azureArmResource.policyClientMod.PolicyModels.CloudError {
-      def this(parameters: CloudErrorParameters) = this()
-    }
-    
-  }
-  
 }
-

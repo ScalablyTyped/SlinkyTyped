@@ -2,7 +2,7 @@ package typingsSlinky.coinbaseCommerceNode.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Webhook class.
@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("coinbase-commerce-node", "Webhook")
 @js.native
 object Webhook extends js.Object {
+  
   /**
     * Verify a signature header.
     *
@@ -19,4 +20,3 @@ object Webhook extends js.Object {
     */
   def verifySigHeader(rawBody: String, signature: String, sharedSecret: String): Unit = js.native
 }
-

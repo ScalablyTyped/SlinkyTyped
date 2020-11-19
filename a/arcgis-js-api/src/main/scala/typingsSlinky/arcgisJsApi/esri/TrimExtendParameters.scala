@@ -8,12 +8,13 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`no-extend-at-to`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`relocate-ends`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TrimExtendParameters
   extends Accessor
      with JSONSupport {
+  
   /**
     * A flag used with the `trimExtend` operation.
     *
@@ -32,12 +33,14 @@ trait TrimExtendParameters
     * @default "default-curve-extension"
     */
   var extendHow: `default-curve-extension` | `relocate-ends` | `keep-end-attributes` | `no-end-attributes` | `no-extend-at-from` | `no-extend-at-to` = js.native
+  
   /**
     * The array of polylines to trim or extend. The structure of each geometry in the array is the same as the structure of the JSON polyline objects returned by the ArcGIS REST API.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-TrimExtendParameters.html#polylines)
     */
   var polylines: js.Array[Polyline] = js.native
+  
   /**
     * A polyline used as a guide for trimming or extending input polylines. The structure of the polyline is the same as the structure of the JSON polyline object returned by the ArcGIS REST API.
     *
@@ -45,4 +48,3 @@ trait TrimExtendParameters
     */
   var trimExtendTo: Polyline = js.native
 }
-

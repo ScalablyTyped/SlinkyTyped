@@ -2,13 +2,15 @@ package typingsSlinky.activexDao
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object DAO extends js.Object {
+    
     @js.native
     class ComplexType protected ()
       extends typingsSlinky.activexDao.DAO.ComplexType
@@ -76,8 +78,5 @@ object global extends js.Object {
     @js.native
     class Workspace protected ()
       extends typingsSlinky.activexDao.DAO.Workspace
-    
   }
-  
 }
-

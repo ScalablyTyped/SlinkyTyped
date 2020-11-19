@@ -19,65 +19,46 @@ import typingsSlinky.std.Record
 import typingsSlinky.std.RequestInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Fetcher extends CallbackifyInterface {
-  @JSName("_fetch")
-  var _fetch_Original: Fetch = js.native
-  /** Denoting this session */
-  var appNode: BlankNode = js.native
-  /** fetchCallbacks[uri].push(callback) */
-  var fetchCallbacks: FetchCallbacks = js.native
-  var fetchQueue: FetchQueue = js.native
-  var handlers: js.Array[TypeofHandler] = js.native
-  var lookedUp: BooleanMap = js.native
-  var mediatypes: MediatypesMap = js.native
-  /** Keep track of explicit 404s -> we can overwrite etc */
-  var nonexistent: BooleanMap = js.native
-  var ns: StringDictionary[js.Function1[/* ln */ String, QuadPredicate]] = js.native
-  /** Redirected from *key uri* to *value uri* */
-  var redirectedTo: Record[String, String] = js.native
-  /**
-    * this.requested[uri] states:
-    * undefined     no record of web access or records reset
-    * true          has been requested, fetch in progress
-    * 'done'        received, Ok
-    * 401           Not logged in
-    * 403           HTTP status unauthorized
-    * 404           Resource does not exist. Can be created etc.
-    * 'redirected'  In attempt to counter CORS problems retried.
-    * 'parse_error' Parse error
-    * 'unsupported_protocol'  URI is not a protocol Fetcher can deal with
-    * other strings mean various other errors.
-    */
-  var requested: RequestedMap = js.native
-  var store: typingsSlinky.rdflib.storeMod.default = js.native
-  var timeout: Double = js.native
-  /** List of timeouts associated with a requested URL */
-  var timeouts: TimeOutsMap = js.native
+  
   def _fetch(input: RequestInfo): js.Promise[ExtendedResponse] = js.native
   def _fetch(input: RequestInfo, init: RequestInit): js.Promise[ExtendedResponse] = js.native
+  @JSName("_fetch")
+  var _fetch_Original: Fetch = js.native
+  
   def acceptString(): String = js.native
+  
   def addFetchCallback(uri: String, callback: UserCallback): Unit = js.native
+  
   def addHandler(handler: TypeofHandler): Unit = js.native
+  
   /**
     * Records a status message (as a literal node) by appending it to the
     * request's metadata status collection.
     *
     */
   def addStatus(req: BlankNode, statusMessage: String): Unit = js.native
+  
   def addType(rdfType: NamedNode, req: QuadSubject, kb: typingsSlinky.rdflib.storeMod.default, locURI: String): Unit = js.native
+  
+  /** Denoting this session */
+  var appNode: BlankNode = js.native
+  
   /**
     * @param _options - DEPRECATED
     */
   def cleanupFetchRequest(originalUri: String, _options: js.Any, timeout: Double): Unit = js.native
+  
   /**
     * @param parentURI URI of parent container
     * @param folderName - Optional folder name (slug)
     * @param data - Optional folder metadata
     */
   def createContainer(parentURI: String, folderName: String, data: String): js.Promise[Response] = js.native
+  
   /** Create an empty resource if it really does not exist
     *  Be absolutely sure something does not exist before creating a new empty file
     * as otherwise existing could  be deleted.
@@ -93,10 +74,14 @@ trait Fetcher extends CallbackifyInterface {
   def createIfNotExists_textturtle(doc: typingsSlinky.rdflib.namedNodeMod.default, contentType: textSlashturtle): js.Promise[ExtendedResponse] = js.native
   @JSName("createIfNotExists")
   def createIfNotExists_textturtle(doc: typingsSlinky.rdflib.namedNodeMod.default, contentType: textSlashturtle, data: String): js.Promise[ExtendedResponse] = js.native
+  
   def defaultFetch(): js.Any = js.native
+  
   def delete(uri: String): js.Promise[ExtendedResponse] = js.native
   def delete(uri: String, options: Options): js.Promise[ExtendedResponse] = js.native
+  
   def doneFetch(options: reqQuadSubjectoriginalQua, response: ExtendedResponse): Response = js.native
+  
   /**
     * Records errors in the system on failure:
     *
@@ -112,6 +97,12 @@ trait Fetcher extends CallbackifyInterface {
     statusCode: StatusValues,
     response: ExtendedResponse
   ): js.Promise[FetchError] = js.native
+  
+  /** fetchCallbacks[uri].push(callback) */
+  var fetchCallbacks: FetchCallbacks = js.native
+  
+  var fetchQueue: FetchQueue = js.native
+  
   /**
     * (The promise chain ends in either a `failFetch()` or a `doneFetch()`)
     *
@@ -121,6 +112,7 @@ trait Fetcher extends CallbackifyInterface {
     * @returns {Promise<Object>} fetch() result or an { error, status } object
     */
   def fetchUri(docuri: String, options: AutoInitOptions): js.Promise[ExtendedResponse | FetchError] = js.native
+  
   /**
     * Looks up response header.
     *
@@ -130,30 +122,43 @@ trait Fetcher extends CallbackifyInterface {
     * Looks for { [] link:requestedURI ?uri; link:response [ httph:header-name  ?value ] }
     */
   def getHeader(doc: NamedNode, header: String): js.UndefOr[js.Array[String]] = js.native
+  
   def getState(docuri: String): js.Any = js.native
+  
   def guessContentType(uri: String): js.UndefOr[ContentType] = js.native
+  
   /**
     * Called when there's a network error in fetch(), or a response
     * with status of 0.
     */
   def handleError(response: ExtendedResponse, docuri: String, options: AutoInitOptions): js.Promise[ExtendedResponse | FetchError] = js.native
   def handleError(response: js.Error, docuri: String, options: AutoInitOptions): js.Promise[ExtendedResponse | FetchError] = js.native
+  
   /**
     * Handle fetch() response
     */
   def handleResponse(response: ExtendedResponse, docuri: String, options: AutoInitOptions): (js.Promise[FetchError | ExtendedResponse]) | ExtendedResponse = js.native
+  
   def handlerForContentType(contentType: String, response: ExtendedResponse): Handler | Null = js.native
+  
+  var handlers: js.Array[TypeofHandler] = js.native
+  
   def initFetchOptions(uri: String, options: Options): AutoInitOptions = js.native
+  
   def invalidateCache(iri: String): Unit = js.native
   def invalidateCache(iri: NamedNode): Unit = js.native
+  
   /**
     * Tests whether a request is being made to a cross-site URI (for purposes
     * of retrying with a proxy)
     */
   def isCrossSite(uri: String): Boolean = js.native
+  
   def isPending(docuri: String): Boolean = js.native
+  
   def linkData(originalUri: NamedNode, rel: String, uri: String, why: QuadGraph): Unit = js.native
   def linkData(originalUri: NamedNode, rel: String, uri: String, why: QuadGraph, reverse: Boolean): Unit = js.native
+  
   def load(uri: String): js.Promise[js.Array[Response] | Response] = js.native
   def load(uri: String, options: Options): js.Promise[js.Array[Response] | Response] = js.native
   def load(uri: js.Array[String | NamedNode]): js.Promise[js.Array[Response] | Response] = js.native
@@ -205,6 +210,7 @@ trait Fetcher extends CallbackifyInterface {
     */
   def load(uri: NamedNode): js.Promise[js.Array[Response] | Response] = js.native
   def load(uri: NamedNode, options: Options): js.Promise[js.Array[Response] | Response] = js.native
+  
   /**
     * Looks up something.
     * Looks up all the URIs a things has.
@@ -215,13 +221,23 @@ trait Fetcher extends CallbackifyInterface {
     *   (for tracking bad links)
     */
   def lookUpThing(term: QuadSubject, rterm: QuadSubject): js.Promise[Response] | js.Array[js.Promise[Response]] = js.native
+  
+  var lookedUp: BooleanMap = js.native
+  
+  var mediatypes: MediatypesMap = js.native
+  
+  /** Keep track of explicit 404s -> we can overwrite etc */
+  var nonexistent: BooleanMap = js.native
+  
   def normalizedContentType(options: AutoInitOptions, headers: Headers): ContentType | String | Null = js.native
+  
   /**
     * Note two nodes are now smushed
     * If only one was flagged as looked up, then the new node is looked up again,
     * which will make sure all the URIs are dereferenced
     */
   def nowKnownAs(was: QuadSubject, now: QuadSubject): Unit = js.native
+  
   /**
     * Asks for a doc to be loaded if necessary then calls back
     *
@@ -283,9 +299,15 @@ trait Fetcher extends CallbackifyInterface {
   def nowOrWhenFetched(uriIn: NamedNode, p2: UserCallback, userCallback: js.UndefOr[scala.Nothing], options: Options): Unit = js.native
   def nowOrWhenFetched(uriIn: NamedNode, p2: UserCallback, userCallback: UserCallback): Unit = js.native
   def nowOrWhenFetched(uriIn: NamedNode, p2: UserCallback, userCallback: UserCallback, options: Options): Unit = js.native
+  
+  var ns: StringDictionary[js.Function1[/* ln */ String, QuadPredicate]] = js.native
+  
   def objectRefresh(term: NamedNode): Unit = js.native
+  
   def parseLinkHeader(linkHeader: String, originalUri: NamedNode, reqNode: QuadGraph): Unit = js.native
+  
   def pendingFetchPromise(uri: String, originalUri: String, options: AutoInitOptions): js.Promise[Response] = js.native
+  
   def putBack(uri: String): js.Promise[Response] = js.native
   def putBack(uri: String, options: Options): js.Promise[Response] = js.native
   /**
@@ -293,21 +315,58 @@ trait Fetcher extends CallbackifyInterface {
     */
   def putBack(uri: NamedNode): js.Promise[Response] = js.native
   def putBack(uri: NamedNode, options: Options): js.Promise[Response] = js.native
+  
   /**
     * Sends a new request to the specified uri. (Extracted from `onerrorFactory()`)
     */
   def redirectToProxy(newURI: String, options: AutoInitOptions): js.Promise[ExtendedResponse | FetchError] = js.native
+  
+  /** Redirected from *key uri* to *value uri* */
+  var redirectedTo: Record[String, String] = js.native
+  
   def refresh(term: NamedNode): Unit = js.native
   def refresh(term: NamedNode, userCallback: UserCallback): Unit = js.native
+  
   def refreshIfExpired(term: NamedNode, userCallback: UserCallback): Unit = js.native
+  
+  /**
+    * this.requested[uri] states:
+    * undefined     no record of web access or records reset
+    * true          has been requested, fetch in progress
+    * 'done'        received, Ok
+    * 401           Not logged in
+    * 403           HTTP status unauthorized
+    * 404           Resource does not exist. Can be created etc.
+    * 'redirected'  In attempt to counter CORS problems retried.
+    * 'parse_error' Parse error
+    * 'unsupported_protocol'  URI is not a protocol Fetcher can deal with
+    * other strings mean various other errors.
+    */
+  var requested: RequestedMap = js.native
+  
   def retract(term: QuadGraph): Unit = js.native
+  
   def retryNoCredentials(docuri: String, options: js.Any): js.Promise[Response] = js.native
+  
   def saveErrorResponse(response: ExtendedResponse, responseNode: QuadSubject): js.Promise[Unit] = js.native
+  
   def saveRequestMetadata(docuri: String, options: AutoInitOptions): Unit = js.native
+  
   def saveResponseMetadata(response: Response, options: reqBlankNoderesourceQuadS): BlankNode = js.native
+  
   def setRequestTimeout(uri: String, options: reqQuadSubjectoriginalQua): js.Promise[Double | FetchError] = js.native
+  
+  var store: typingsSlinky.rdflib.storeMod.default = js.native
+  
+  var timeout: Double = js.native
+  
+  /** List of timeouts associated with a requested URL */
+  var timeouts: TimeOutsMap = js.native
+  
   def unload(term: NamedNode): Unit = js.native
+  
   def webCopy(here: String, there: String, contentType: js.Any): js.Promise[ExtendedResponse] = js.native
+  
   /**
     * A generic web opeation, at the fetch() level.
     * does not invole the quadstore.
@@ -320,4 +379,3 @@ trait Fetcher extends CallbackifyInterface {
   def webOperation(method: HTTPMethods, uriIn: NamedNode): js.Promise[ExtendedResponse] = js.native
   def webOperation(method: HTTPMethods, uriIn: NamedNode, options: Options): js.Promise[ExtendedResponse] = js.native
 }
-

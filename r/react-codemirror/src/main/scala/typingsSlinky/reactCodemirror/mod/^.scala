@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.reactCodemirror.ReactCodeMirror.ReactCodeMirrorProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-codemirror", JSImport.Namespace)
 @js.native
@@ -15,8 +15,6 @@ class ^ protected ()
   def this(props: ReactCodeMirrorProps) = this()
   def this(props: ReactCodeMirrorProps, context: js.Any) = this()
 }
-
 @JSImport("react-codemirror", JSImport.Namespace)
 @js.native
 object ^ extends TopLevel[ReactComponentClass[ReactCodeMirrorProps]]
-

@@ -2,10 +2,12 @@ package typingsSlinky.plist
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type PlistBuildOptions = typingsSlinky.xmlbuilder.mod.XMLToStringOptions
+  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - scala.Double

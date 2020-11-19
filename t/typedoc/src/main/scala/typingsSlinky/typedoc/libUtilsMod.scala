@@ -51,58 +51,11 @@ import typingsSlinky.typedoc.typedocStrings.tsconfig
 import typingsSlinky.typedoc.typedocStrings.version
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc/dist/lib/utils", JSImport.Namespace)
 @js.native
 object libUtilsMod extends js.Object {
-  @js.native
-  abstract class AbstractComponent[O /* <: ComponentHost */] protected ()
-    extends typingsSlinky.typedoc.componentMod.AbstractComponent[O] {
-    def this(owner: O) = this()
-    def this(owner: js.Symbol) = this()
-  }
-  
-  @js.native
-  class CallbackLogger protected ()
-    extends typingsSlinky.typedoc.loggersMod.CallbackLogger {
-    def this(callback: js.Function) = this()
-  }
-  
-  @js.native
-  abstract class ChildableComponent[O /* <: ComponentHost */, C /* <: Component */] protected ()
-    extends typingsSlinky.typedoc.componentMod.ChildableComponent[O, C] {
-    def this(owner: O) = this()
-    def this(owner: js.Symbol) = this()
-  }
-  
-  @js.native
-  class ConsoleLogger ()
-    extends typingsSlinky.typedoc.loggersMod.ConsoleLogger
-  
-  @js.native
-  class Event protected ()
-    extends typingsSlinky.typedoc.utilsEventsMod.Event {
-    def this(name: String) = this()
-  }
-  
-  @js.native
-  class EventDispatcher ()
-    extends typingsSlinky.typedoc.utilsEventsMod.EventDispatcher
-  
-  @js.native
-  class Logger ()
-    extends typingsSlinky.typedoc.loggersMod.Logger
-  
-  @js.native
-  class Options protected ()
-    extends typingsSlinky.typedoc.optionsMod.Options {
-    def this(logger: typingsSlinky.typedoc.loggersMod.Logger) = this()
-  }
-  
-  @js.native
-  class PluginHost ()
-    extends typingsSlinky.typedoc.utilsPluginsMod.PluginHost
   
   def BindOption(name: NeverIfInternal[String]): js.Function2[
     /* target */ Application | typingsSlinky.typedoc.anon.Options, 
@@ -343,14 +296,22 @@ object libUtilsMod extends js.Object {
     /* key */ PropertyKey, 
     Unit
   ] = js.native
+  
   def Component(options: ComponentOptions): ClassDecorator = js.native
+  
   def directoryExists(directoryPath: String): Boolean = js.native
+  
   def ensureDirectoriesExist(directoryPath: String): Unit = js.native
+  
   def insertPrioritySorted[T /* <: Priority */](arr: js.Array[T], item: T): js.Array[T] = js.native
+  
   def normalizePath(path: String): String = js.native
+  
   def readFile(file: String): String = js.native
+  
   def removeIfPresent[T](arr: js.UndefOr[scala.Nothing], item: T): Unit = js.native
   def removeIfPresent[T](arr: js.Array[T], item: T): Unit = js.native
+  
   def writeFile(fileName: String, data: String, writeByteOrderMark: Boolean): Unit = js.native
   def writeFile(
     fileName: String,
@@ -358,55 +319,127 @@ object libUtilsMod extends js.Object {
     writeByteOrderMark: Boolean,
     onError: js.Function1[/* message */ String, Unit]
   ): Unit = js.native
+  
+  @js.native
+  abstract class AbstractComponent[O /* <: ComponentHost */] protected ()
+    extends typingsSlinky.typedoc.componentMod.AbstractComponent[O] {
+    def this(owner: O) = this()
+    def this(owner: js.Symbol) = this()
+  }
+  
+  @js.native
+  class CallbackLogger protected ()
+    extends typingsSlinky.typedoc.loggersMod.CallbackLogger {
+    def this(callback: js.Function) = this()
+  }
+  
+  @js.native
+  abstract class ChildableComponent[O /* <: ComponentHost */, C /* <: Component */] protected ()
+    extends typingsSlinky.typedoc.componentMod.ChildableComponent[O, C] {
+    def this(owner: O) = this()
+    def this(owner: js.Symbol) = this()
+  }
+  
+  @js.native
+  class ConsoleLogger ()
+    extends typingsSlinky.typedoc.loggersMod.ConsoleLogger
+  
+  @js.native
+  class Event protected ()
+    extends typingsSlinky.typedoc.utilsEventsMod.Event {
+    def this(name: String) = this()
+  }
+  
+  @js.native
+  class EventDispatcher ()
+    extends typingsSlinky.typedoc.utilsEventsMod.EventDispatcher
+  
   @js.native
   object LogLevel extends js.Object {
-    /* 3 */ val Error: typingsSlinky.typedoc.loggersMod.LogLevel.Error with Double = js.native
-    /* 1 */ val Info: typingsSlinky.typedoc.loggersMod.LogLevel.Info with Double = js.native
-    /* 4 */ val Success: typingsSlinky.typedoc.loggersMod.LogLevel.Success with Double = js.native
-    /* 0 */ val Verbose: typingsSlinky.typedoc.loggersMod.LogLevel.Verbose with Double = js.native
-    /* 2 */ val Warn: typingsSlinky.typedoc.loggersMod.LogLevel.Warn with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.loggersMod.LogLevel with Double] = js.native
+    
+    /* 3 */ val Error: typingsSlinky.typedoc.loggersMod.LogLevel.Error with Double = js.native
+    
+    /* 1 */ val Info: typingsSlinky.typedoc.loggersMod.LogLevel.Info with Double = js.native
+    
+    /* 4 */ val Success: typingsSlinky.typedoc.loggersMod.LogLevel.Success with Double = js.native
+    
+    /* 0 */ val Verbose: typingsSlinky.typedoc.loggersMod.LogLevel.Verbose with Double = js.native
+    
+    /* 2 */ val Warn: typingsSlinky.typedoc.loggersMod.LogLevel.Warn with Double = js.native
+  }
+  
+  @js.native
+  class Logger ()
+    extends typingsSlinky.typedoc.loggersMod.Logger
+  
+  @js.native
+  class Options protected ()
+    extends typingsSlinky.typedoc.optionsMod.Options {
+    def this(logger: typingsSlinky.typedoc.loggersMod.Logger) = this()
   }
   
   @js.native
   object ParameterHint extends js.Object {
-    /* 1 */ val Directory: typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint.Directory with Double = js.native
-    /* 0 */ val File: typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint.File with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint with Double] = js.native
+    
+    /* 1 */ val Directory: typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint.Directory with Double = js.native
+    
+    /* 0 */ val File: typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint.File with Double = js.native
   }
   
   @js.native
   object ParameterScope extends js.Object {
-    /* 0 */ val TypeDoc: typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope.TypeDoc with Double = js.native
-    /* 1 */ val TypeScript: typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope.TypeScript with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope with Double] = js.native
+    
+    /* 0 */ val TypeDoc: typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope.TypeDoc with Double = js.native
+    
+    /* 1 */ val TypeScript: typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope.TypeScript with Double = js.native
   }
   
   @js.native
   object ParameterType extends js.Object {
-    /* 5 */ val Array: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Array with Double = js.native
-    /* 2 */ val Boolean: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Boolean with Double = js.native
-    /* 3 */ val Map: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Map with Double = js.native
-    /* 4 */ val Mixed: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Mixed with Double = js.native
-    /* 1 */ val Number: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Number with Double = js.native
-    /* 0 */ val String: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.String with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.ParameterType with Double] = js.native
+    
+    /* 5 */ val Array: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Array with Double = js.native
+    
+    /* 2 */ val Boolean: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Boolean with Double = js.native
+    
+    /* 3 */ val Map: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Map with Double = js.native
+    
+    /* 4 */ val Mixed: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Mixed with Double = js.native
+    
+    /* 1 */ val Number: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Number with Double = js.native
+    
+    /* 0 */ val String: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.String with Double = js.native
   }
   
   @js.native
+  class PluginHost ()
+    extends typingsSlinky.typedoc.utilsPluginsMod.PluginHost
+  
+  @js.native
   object SourceFileMode extends js.Object {
-    /* 0 */ val File: typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode.File with Double = js.native
-    /* 1 */ val Modules: typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode.Modules with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode with Double] = js.native
+    
+    /* 0 */ val File: typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode.File with Double = js.native
+    
+    /* 1 */ val Modules: typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode.Modules with Double = js.native
   }
   
   type IfInternal[T, F] = F | T
+  
   type InternalOnly = `false`
+  
   type NeverIfInternal[T] = IfInternal[scala.Nothing, T]
 }
-

@@ -3,17 +3,17 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.anon.Normal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.DecalBuilder")
 @js.native
 class DecalBuilder ()
   extends typingsSlinky.babylonjs.BABYLON.DecalBuilder
-
 /* static members */
 @JSGlobal("BABYLON.DecalBuilder")
 @js.native
 object DecalBuilder extends js.Object {
+  
   /**
     * Creates a decal mesh.
     * A decal is a mesh usually applied as a model onto the surface of another mesh. So don't forget the parameter `sourceMesh` depicting the decal
@@ -30,4 +30,3 @@ object DecalBuilder extends js.Object {
     */
   def CreateDecal(name: String, sourceMesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh, options: Normal): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
 }
-

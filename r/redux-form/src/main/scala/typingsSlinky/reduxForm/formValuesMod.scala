@@ -15,11 +15,12 @@ import typingsSlinky.reduxForm.reduxFormStrings.values
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("redux-form/lib/formValues", JSImport.Namespace)
 @js.native
 object formValuesMod extends js.Object {
+  
   def formValues[Values, P](obj: Values): js.Function1[
     /* component */ ReactComponentClass[P with typingsSlinky.reduxForm.reduxFormStrings.formValues with TopLevel[js.Any]], 
     ReactComponentClass[P with typingsSlinky.reduxForm.reduxFormStrings.formValues with TopLevel[js.Any]]
@@ -29,4 +30,3 @@ object formValuesMod extends js.Object {
     ReactComponentClass[P with (Pick[FormData, K])]
   ] = js.native
 }
-

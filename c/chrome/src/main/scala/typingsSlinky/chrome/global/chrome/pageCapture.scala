@@ -3,7 +3,7 @@ package typingsSlinky.chrome.global.chrome
 import typingsSlinky.chrome.chrome.pageCapture.SaveDetails
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 ////////////////////
 // Page Capture
@@ -16,6 +16,6 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.pageCapture")
 @js.native
 object pageCapture extends js.Object {
+  
   def saveAsMHTML(details: SaveDetails, callback: js.Function1[/* mhtmlData */ js.Any, Unit]): Unit = js.native
 }
-

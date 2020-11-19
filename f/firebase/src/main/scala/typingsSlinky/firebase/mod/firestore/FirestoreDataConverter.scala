@@ -3,10 +3,11 @@ package typingsSlinky.firebase.mod.firestore
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FirestoreDataConverter[T] extends js.Object {
+  
   /**
     * Called by the Firestore SDK to convert Firestore data into an object of
     * type T. You can access your data by calling: `snapshot.data(options)`.
@@ -15,6 +16,7 @@ trait FirestoreDataConverter[T] extends js.Object {
     * @param options The SnapshotOptions from the initial call to `data()`.
     */
   def fromFirestore(snapshot: QueryDocumentSnapshot[DocumentData], options: SnapshotOptions): T = js.native
+  
   /**
     * Called by the Firestore SDK to convert a custom model object of type T
     * into a plain Javascript object (suitable for writing directly to the
@@ -24,4 +26,3 @@ trait FirestoreDataConverter[T] extends js.Object {
   def toFirestore(modelObject: T): DocumentData = js.native
   def toFirestore(modelObject: Partial[T], options: SetOptions): DocumentData = js.native
 }
-

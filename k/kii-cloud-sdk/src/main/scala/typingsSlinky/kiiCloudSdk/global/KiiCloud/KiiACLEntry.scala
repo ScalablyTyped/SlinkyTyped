@@ -3,7 +3,7 @@ package typingsSlinky.kiiCloudSdk.global.KiiCloud
 import typingsSlinky.kiiCloudSdk.KiiCloud.KiiACLSubject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents a KiiACLEntry object
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class KiiACLEntry ()
   extends typingsSlinky.kiiCloudSdk.KiiCloud.KiiACLEntry
-
 /* static members */
 @JSGlobal("KiiCloud.KiiACLEntry")
 @js.native
 object KiiACLEntry extends js.Object {
+  
   /**
     * Create a KiiACLEntry object with a subject and action
     *
@@ -35,4 +35,3 @@ object KiiACLEntry extends js.Object {
     */
   def entryWithSubject(Subject: KiiACLSubject, action: typingsSlinky.kiiCloudSdk.KiiCloud.KiiACLAction): typingsSlinky.kiiCloudSdk.KiiCloud.KiiACLEntry = js.native
 }
-

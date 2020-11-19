@@ -43,10 +43,11 @@ import typingsSlinky.raygun4js.raygun4jsStrings.withCustomData
 import typingsSlinky.raygun4js.raygun4jsStrings.withTags
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RaygunV2 extends js.Object {
+  
   def apply(key: apiKey, value: String): Unit = js.native
   def apply(key: attach, value: Boolean): Unit = js.native
   def apply(key: detach): Unit = js.native
@@ -95,4 +96,3 @@ trait RaygunV2 extends js.Object {
   def apply(key: withCustomData, value: js.Any): Unit = js.native
   def apply(key: withTags, values: js.Array[String]): Unit = js.native
 }
-

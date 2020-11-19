@@ -11,23 +11,27 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd/lib/input/Input", JSImport.Default)
 @js.native
 class default protected () extends Input {
   def this(props: InputProps) = this()
 }
-
 /* static members */
 @JSImport("antd/lib/input/Input", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   var Group: ReactComponentClass[GroupProps] = js.native
+  
   var Password: ForwardRefExoticComponent[PasswordProps with RefAttributes[_]] = js.native
+  
   var Search: ForwardRefExoticComponent[SearchProps with RefAttributes[default]] = js.native
+  
   var TextArea: TypeofTextArea = js.native
+  
   var defaultProps: Type = js.native
+  
   def getDerivedStateFromProps(nextProps: InputProps, hasPrevValue: InputState): PartialInputState = js.native
 }
-

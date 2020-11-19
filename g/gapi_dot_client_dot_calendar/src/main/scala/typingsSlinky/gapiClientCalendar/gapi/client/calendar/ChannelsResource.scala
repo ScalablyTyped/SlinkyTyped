@@ -5,12 +5,12 @@ import typingsSlinky.gapiClientCalendar.anon.FieldsKey
 import typingsSlinky.gapiClientCalendar.anon.KeyOauthtoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ChannelsResource extends js.Object {
+  
   def stop(request: FieldsKey, body: Channel): Request[Unit] = js.native
   /** Stop watching resources through this channel */
   def stop(request: KeyOauthtoken): Request[Unit] = js.native
 }
-

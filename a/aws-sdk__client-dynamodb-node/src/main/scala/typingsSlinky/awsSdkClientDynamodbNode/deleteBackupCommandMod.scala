@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-dynamodb-node/commands/DeleteBackupCommand", JSImport.Namespace)
 @js.native
 object deleteBackupCommandMod extends js.Object {
+  
   @js.native
   class DeleteBackupCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteBackupCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteBackupInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteBackupInput, DeleteBackupOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[DeleteBackupInput, DeleteBackupOutput] = js.native
   }
-  
 }
-

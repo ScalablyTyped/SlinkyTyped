@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Email and password auth provider implementation.
@@ -13,22 +13,25 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.EmailAuthProvider")
 @js.native
 class EmailAuthProvider () extends EmailAuthProviderInstance
-
 /* static members */
 @JSImport("firebase", "auth.EmailAuthProvider")
 @js.native
 object EmailAuthProvider extends js.Object {
+  
   /**
     * This corresponds to the sign-in method identifier as returned in
     * {@link firebase.auth.Auth.fetchSignInMethodsForEmail}.
     */
   var EMAIL_LINK_SIGN_IN_METHOD: String = js.native
+  
   /**
     * This corresponds to the sign-in method identifier as returned in
     * {@link firebase.auth.Auth.fetchSignInMethodsForEmail}.
     */
   var EMAIL_PASSWORD_SIGN_IN_METHOD: String = js.native
+  
   var PROVIDER_ID: String = js.native
+  
   /**
     * @example
     * ```javascript
@@ -43,6 +46,7 @@ object EmailAuthProvider extends js.Object {
     * @return The auth provider credential.
     */
   def credential(email: String, password: String): AuthCredential = js.native
+  
   /**
     * Initialize an `EmailAuthProvider` credential using an email and an email link
     * after a sign in with email link operation.
@@ -61,4 +65,3 @@ object EmailAuthProvider extends js.Object {
     */
   def credentialWithLink(email: String, emailLink: String): AuthCredential = js.native
 }
-

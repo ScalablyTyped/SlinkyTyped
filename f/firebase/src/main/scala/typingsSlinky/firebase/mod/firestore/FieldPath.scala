@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.firestore
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "firestore.FieldPath")
 @js.native
@@ -14,6 +14,7 @@ class FieldPath protected () extends js.Object {
     * @param fieldNames A list of field names.
     */
   def this(fieldNames: String*) = this()
+  
   /**
     * Returns true if this `FieldPath` is equal to the provided one.
     *
@@ -22,15 +23,14 @@ class FieldPath protected () extends js.Object {
     */
   def isEqual(other: FieldPath): Boolean = js.native
 }
-
 /* static members */
 @JSImport("firebase", "firestore.FieldPath")
 @js.native
 object FieldPath extends js.Object {
+  
   /**
     * Returns a special sentinel `FieldPath` to refer to the ID of a document.
     * It can be used in queries to sort or filter by the document ID.
     */
   def documentId(): FieldPath = js.native
 }
-

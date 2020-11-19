@@ -3,11 +3,12 @@ package typingsSlinky.firebase.mod.analytics
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "analytics")
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Gets the {@link firebase.analytics.Analytics `Analytics`} service.
     *
@@ -28,4 +29,3 @@ object ^ extends js.Object {
   def apply(): Analytics = js.native
   def apply(app: App): Analytics = js.native
 }
-

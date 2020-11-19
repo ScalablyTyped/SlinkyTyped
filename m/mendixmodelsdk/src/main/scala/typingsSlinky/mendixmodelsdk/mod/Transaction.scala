@@ -4,7 +4,7 @@ import typingsSlinky.mendixmodelsdk.transactionManagerMod.TransactionManager
 import typingsSlinky.mendixmodelsdk.transactionManagerMod.TransactionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "Transaction")
 @js.native
@@ -12,4 +12,3 @@ class Transaction protected ()
   extends typingsSlinky.mendixmodelsdk.transactionManagerMod.Transaction {
   def this(transactionType: TransactionType, transactionManager: TransactionManager) = this()
 }
-

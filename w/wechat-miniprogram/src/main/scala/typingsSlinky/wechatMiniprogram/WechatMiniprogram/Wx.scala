@@ -5,18 +5,11 @@ import typingsSlinky.wechatMiniprogram.WxCloud
 import typingsSlinky.wechatMiniprogram.anon.USERDATAPATH
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Wx extends js.Object {
-  /**
-  小程序云开发
-  */
-  var cloud: WxCloud = js.native
-  /**
-  文件系统中的用户目录路径
-  */
-  var env: USERDATAPATH = js.native
+  
   /** [wx.addCard(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/card/wx.addCard.html)
   *
   * 批量添加卡券。只有通过 [认证](https://developers.weixin.qq.com/miniprogram/product/renzheng.html) 的小程序或文化互动类目的小游戏才能使用。更多文档请参考 [微信卡券接口文档](https://mp.weixin.qq.com/cgi-bin/announce?action=getannouncement&key=1490190158&version=1&lang=zh_CN&platform=2)。
@@ -48,12 +41,14 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def addCard[TOption /* <: AddCardOption */](option: TOption): PromisifySuccessResult[TOption, AddCardOption] = js.native
+  
   /** [wx.addPhoneContact(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/contact/wx.addPhoneContact.html)
     *
     * 添加手机通讯录联系人。用户可以选择将该表单以「新增联系人」或「添加到已有联系人」的方式，写入手机系统通讯录。
     *
     * 最低基础库： `1.2.0` */
   def addPhoneContact[TOption /* <: AddPhoneContactOption */](option: TOption): PromisifySuccessResult[TOption, AddPhoneContactOption] = js.native
+  
   /** [string wx.arrayBufferToBase64(ArrayBuffer arrayBuffer)](https://developers.weixin.qq.com/miniprogram/dev/api/base/wx.arrayBufferToBase64.html)
     *
     * 将 ArrayBuffer 对象转成 Base64 字符串
@@ -61,6 +56,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.1.0` */
   def arrayBufferToBase64(/** 要转换成 Base64 字符串的 ArrayBuffer 对象 */
   arrayBuffer: js.typedarray.ArrayBuffer): String = js.native
+  
   /** [wx.authorize(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/authorize/wx.authorize.html)
   *
   * 提前向用户发起授权请求。调用后会立刻弹窗询问用户是否同意授权小程序使用某项功能或获取用户的某些数据，但不会实际调用对应接口。如果用户之前已经同意授权，则不会出现弹窗，直接返回成功。更多用法详见 [用户授权](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html)。
@@ -87,6 +83,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.2.0` */
   def authorize[TOption /* <: AuthorizeOption */](option: TOption): PromisifySuccessResult[TOption, AuthorizeOption] = js.native
+  
   /** [ArrayBuffer wx.base64ToArrayBuffer(string base64)](https://developers.weixin.qq.com/miniprogram/dev/api/base/wx.base64ToArrayBuffer.html)
     *
     * 将 Base64 字符串转成 ArrayBuffer 对象
@@ -94,6 +91,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.1.0` */
   def base64ToArrayBuffer(/** 要转化成 ArrayBuffer 对象的 Base64 字符串 */
   base64: String): js.typedarray.ArrayBuffer = js.native
+  
   /** [boolean wx.canIUse(string schema)](https://developers.weixin.qq.com/miniprogram/dev/api/base/wx.canIUse.html)
   *
   * 判断小程序的API，回调，参数，组件等是否在当前版本可用。
@@ -136,6 +134,7 @@ trait Wx extends js.Object {
     /** 使用 `${API}.${method}.${param}.${option}` 或者 `${component}.${attribute}.${option}` 方式来调用 */
   schema: String
   ): Boolean = js.native
+  
   /** [wx.canvasGetImageData(Object object, Object this)](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/wx.canvasGetImageData.html)
   *
   * 获取 canvas 区域隐含的像素数据。
@@ -173,6 +172,7 @@ trait Wx extends js.Object {
     /** 在自定义组件下，当前组件实例的this，以操作组件内 [canvas](https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html) 组件 */
   component: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.TrivialInstance
   ): PromisifySuccessResult[TOption, CanvasGetImageDataOption] = js.native
+  
   /** [wx.canvasPutImageData(Object object, Object this)](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/wx.canvasPutImageData.html)
     *
     * 将像素数据绘制到画布。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 <canvas> 组件
@@ -189,6 +189,7 @@ trait Wx extends js.Object {
     /** 在自定义组件下，当前组件实例的this，以操作组件内 [canvas](https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html) 组件 */
   component: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.TrivialInstance
   ): PromisifySuccessResult[TOption, CanvasPutImageDataOption] = js.native
+  
   /** [wx.canvasToTempFilePath(Object object, Object this)](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/wx.canvasToTempFilePath.html)
     *
     * 把当前画布指定区域的内容导出生成指定大小的图片。在 `draw()` 回调里调用该方法才能保证图片导出成功。 */
@@ -203,6 +204,7 @@ trait Wx extends js.Object {
     /** 在自定义组件下，当前组件实例的this，以操作组件内 [canvas](https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html) 组件 */
   component: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.TrivialInstance
   ): PromisifySuccessResult[TOption, CanvasToTempFilePathOption] = js.native
+  
   /** [wx.checkIsSoterEnrolledInDevice(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/soter/wx.checkIsSoterEnrolledInDevice.html)
   *
   * 获取设备内是否录入如指纹等生物信息的接口
@@ -221,6 +223,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.6.0` */
   def checkIsSoterEnrolledInDevice[TOption /* <: CheckIsSoterEnrolledInDeviceOption */](option: TOption): PromisifySuccessResult[TOption, CheckIsSoterEnrolledInDeviceOption] = js.native
+  
   /** [wx.checkIsSupportSoterAuthentication(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/soter/wx.checkIsSupportSoterAuthentication.html)
   *
   * 获取本机支持的 SOTER 生物认证方式
@@ -241,6 +244,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.5.0` */
   def checkIsSupportSoterAuthentication[TOption /* <: CheckIsSupportSoterAuthenticationOption */](): PromisifySuccessResult[TOption, CheckIsSupportSoterAuthenticationOption] = js.native
   def checkIsSupportSoterAuthentication[TOption /* <: CheckIsSupportSoterAuthenticationOption */](option: TOption): PromisifySuccessResult[TOption, CheckIsSupportSoterAuthenticationOption] = js.native
+  
   /** [wx.checkSession(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/login/wx.checkSession.html)
   *
   * 检查登录态是否过期。
@@ -265,6 +269,7 @@ trait Wx extends js.Object {
   ``` */
   def checkSession[TOption /* <: CheckSessionOption */](): PromisifySuccessResult[TOption, CheckSessionOption] = js.native
   def checkSession[TOption /* <: CheckSessionOption */](option: TOption): PromisifySuccessResult[TOption, CheckSessionOption] = js.native
+  
   /** [wx.chooseAddress(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/address/wx.chooseAddress.html)
   *
   * 获取用户收货地址。调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址。
@@ -291,6 +296,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def chooseAddress[TOption /* <: ChooseAddressOption */](): PromisifySuccessResult[TOption, ChooseAddressOption] = js.native
   def chooseAddress[TOption /* <: ChooseAddressOption */](option: TOption): PromisifySuccessResult[TOption, ChooseAddressOption] = js.native
+  
   /** [wx.chooseImage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.chooseImage.html)
   *
   * 从本地相册选择图片或使用相机拍照。
@@ -309,6 +315,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def chooseImage[TOption /* <: ChooseImageOption */](option: TOption): PromisifySuccessResult[TOption, ChooseImageOption] = js.native
+  
   /** [wx.chooseInvoice(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/invoice/wx.chooseInvoice.html)
     *
     * 选择用户已有的发票。
@@ -322,6 +329,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.3.0` */
   def chooseInvoice[TOption /* <: ChooseInvoiceOption */](): PromisifySuccessResult[TOption, ChooseInvoiceOption] = js.native
   def chooseInvoice[TOption /* <: ChooseInvoiceOption */](option: TOption): PromisifySuccessResult[TOption, ChooseInvoiceOption] = js.native
+  
   /** [wx.chooseInvoiceTitle(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/invoice/wx.chooseInvoiceTitle.html)
   *
   * 选择用户的发票抬头。当前小程序必须关联一个公众号，且这个公众号是完成了[微信认证](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1496554031_RD4xe)的，才能调用 chooseInvoiceTitle。
@@ -340,10 +348,12 @@ trait Wx extends js.Object {
   * 最低基础库： `1.5.0` */
   def chooseInvoiceTitle[TOption /* <: ChooseInvoiceTitleOption */](): PromisifySuccessResult[TOption, ChooseInvoiceTitleOption] = js.native
   def chooseInvoiceTitle[TOption /* <: ChooseInvoiceTitleOption */](option: TOption): PromisifySuccessResult[TOption, ChooseInvoiceTitleOption] = js.native
+  
   /** [wx.chooseLocation(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.chooseLocation.html)
     *
     * 打开地图选择位置。 */
   def chooseLocation[TOption /* <: ChooseLocationOption */](option: TOption): PromisifySuccessResult[TOption, ChooseLocationOption] = js.native
+  
   /** [wx.chooseMedia(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.chooseMedia.html)
   *
   * 拍摄或从手机相册中选择图片或视频。
@@ -367,6 +377,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.10.0` */
   def chooseMedia[TOption /* <: ChooseMediaOption */](option: TOption): PromisifySuccessResult[TOption, ChooseMediaOption] = js.native
+  
   /** [wx.chooseMessageFile(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.chooseMessageFile.html)
   *
   * 从客户端会话选择文件。
@@ -386,6 +397,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.5.0` */
   def chooseMessageFile[TOption /* <: ChooseMessageFileOption */](option: TOption): PromisifySuccessResult[TOption, ChooseMessageFileOption] = js.native
+  
   /** [wx.chooseVideo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.chooseVideo.html)
   *
   * 拍摄视频或从手机相册中选视频。
@@ -404,6 +416,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def chooseVideo[TOption /* <: ChooseVideoOption */](option: TOption): PromisifySuccessResult[TOption, ChooseVideoOption] = js.native
+  
   /** [wx.clearStorage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.clearStorage.html)
   *
   * 清理本地数据缓存
@@ -424,6 +437,7 @@ trait Wx extends js.Object {
   ``` */
   def clearStorage[TOption /* <: ClearStorageOption */](): PromisifySuccessResult[TOption, ClearStorageOption] = js.native
   def clearStorage[TOption /* <: ClearStorageOption */](option: TOption): PromisifySuccessResult[TOption, ClearStorageOption] = js.native
+  
   /** [wx.clearStorageSync()](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.clearStorageSync.html)
   *
   * [wx.clearStorage](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.clearStorage.html) 的同步版本
@@ -443,6 +457,7 @@ trait Wx extends js.Object {
   }
   ``` */
   def clearStorageSync(): Unit = js.native
+  
   /** [wx.closeBLEConnection(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.closeBLEConnection.html)
   *
   * 断开与低功耗蓝牙设备的连接。
@@ -462,6 +477,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def closeBLEConnection[TOption /* <: CloseBLEConnectionOption */](option: TOption): PromisifySuccessResult[TOption, CloseBLEConnectionOption] = js.native
+  
   /** [wx.closeBluetoothAdapter(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.closeBluetoothAdapter.html)
   *
   * 关闭蓝牙模块。调用该方法将断开所有已建立的连接并释放系统资源。建议在使用蓝牙流程后，与 [wx.openBluetoothAdapter](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.openBluetoothAdapter.html) 成对调用。
@@ -481,6 +497,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def closeBluetoothAdapter[TOption /* <: CloseBluetoothAdapterOption */](): PromisifySuccessResult[TOption, CloseBluetoothAdapterOption] = js.native
   def closeBluetoothAdapter[TOption /* <: CloseBluetoothAdapterOption */](option: TOption): PromisifySuccessResult[TOption, CloseBluetoothAdapterOption] = js.native
+  
   /** [wx.closeSocket(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/network/websocket/wx.closeSocket.html)
   *
   * 关闭 WebSocket 连接
@@ -504,6 +521,12 @@ trait Wx extends js.Object {
   ``` */
   def closeSocket[TOption /* <: CloseSocketOption */](): PromisifySuccessResult[TOption, CloseSocketOption] = js.native
   def closeSocket[TOption /* <: CloseSocketOption */](option: TOption): PromisifySuccessResult[TOption, CloseSocketOption] = js.native
+  
+  /**
+  小程序云开发
+  */
+  var cloud: WxCloud = js.native
+  
   /** [wx.compressImage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.compressImage.html)
   *
   * 压缩图片接口，可选压缩质量
@@ -520,12 +543,14 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.4.0` */
   def compressImage[TOption /* <: CompressImageOption */](option: TOption): PromisifySuccessResult[TOption, CompressImageOption] = js.native
+  
   /** [wx.compressVideo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.compressVideo.html)
     *
     * 压缩视频接口。开发者可指定压缩质量 `quality` 进行压缩。当需要更精细的控制时，可指定 `bitrate`、`fps`、和 `resolution`，当 `quality` 传入时，这三个参数将被忽略。原视频的相关信息可通过 [getVideoInfo](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.getVideoInfo.html) 获取。
     *
     * 最低基础库： `2.11.0` */
   def compressVideo[TOption /* <: CompressVideoOption */](option: TOption): PromisifySuccessResult[TOption, CompressVideoOption] = js.native
+  
   /** [[SocketTask](https://developers.weixin.qq.com/miniprogram/dev/api/network/websocket/SocketTask.html) wx.connectSocket(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/network/websocket/wx.connectSocket.html)
   *
   * 创建一个 WebSocket 连接。使用前请注意阅读[相关说明](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html)。
@@ -549,6 +574,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def connectSocket(option: ConnectSocketOption): SocketTask = js.native
+  
   /** [wx.connectWifi(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/wifi/wx.connectWifi.html)
   *
   * 连接 Wi-Fi。若已知 Wi-Fi 信息，可以直接利用该接口连接。仅 Android 与 iOS 11 以上版本支持。
@@ -568,10 +594,12 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.6.0` */
   def connectWifi[TOption /* <: ConnectWifiOption */](option: TOption): PromisifySuccessResult[TOption, ConnectWifiOption] = js.native
+  
   /** [[Animation](https://developers.weixin.qq.com/miniprogram/dev/api/ui/animation/Animation.html) wx.createAnimation(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/animation/wx.createAnimation.html)
     *
     * 创建一个动画实例 [animation](https://developers.weixin.qq.com/miniprogram/dev/api/ui/animation/Animation.html)。调用实例的方法来描述动画。最后通过动画实例的 export 方法导出动画数据传递给组件的 animation 属性。 */
   def createAnimation(option: StepOption): Animation = js.native
+  
   /** [[AudioContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/AudioContext.html) wx.createAudioContext(string id, Object this)](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.createAudioContext.html)
     *
     * 创建 [audio](https://developers.weixin.qq.com/miniprogram/dev/component/audio.html) 上下文 [AudioContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/AudioContext.html) 对象。 */
@@ -591,6 +619,7 @@ trait Wx extends js.Object {
     /** 在自定义组件下，当前组件实例的this，以操作组件内 [audio](https://developers.weixin.qq.com/miniprogram/dev/component/audio.html) 组件 */
   component: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.TrivialInstance
   ): AudioContext = js.native
+  
   /** [wx.createBLEConnection(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.createBLEConnection.html)
   *
   * 连接低功耗蓝牙设备。
@@ -620,6 +649,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def createBLEConnection[TOption /* <: CreateBLEConnectionOption */](option: TOption): PromisifySuccessResult[TOption, CreateBLEConnectionOption] = js.native
+  
   /** [wx.createBLEPeripheralServer(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-peripheral/wx.createBLEPeripheralServer.html)
     *
     * 建立本地作为外围设备的服务端，可创建多个。
@@ -627,12 +657,14 @@ trait Wx extends js.Object {
     * 最低基础库： `2.10.3` */
   def createBLEPeripheralServer[TOption /* <: CreateBLEPeripheralServerOption */](): PromisifySuccessResult[TOption, CreateBLEPeripheralServerOption] = js.native
   def createBLEPeripheralServer[TOption /* <: CreateBLEPeripheralServerOption */](option: TOption): PromisifySuccessResult[TOption, CreateBLEPeripheralServerOption] = js.native
+  
   /** [[CameraContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/camera/CameraContext.html) wx.createCameraContext()](https://developers.weixin.qq.com/miniprogram/dev/api/media/camera/wx.createCameraContext.html)
     *
     * 创建 [camera](https://developers.weixin.qq.com/miniprogram/dev/component/camera.html) 上下文 [CameraContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/camera/CameraContext.html) 对象。
     *
     * 最低基础库： `1.6.0` */
   def createCameraContext(): CameraContext = js.native
+  
   /** [[CanvasContext](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) wx.createCanvasContext(string canvasId, Object this)](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/wx.createCanvasContext.html)
     *
     * 创建 canvas 的绘图上下文 [CanvasContext](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) 对象 */
@@ -652,12 +684,14 @@ trait Wx extends js.Object {
     /** 在自定义组件下，当前组件实例的this，表示在这个自定义组件下查找拥有 canvas-id 的 [canvas](https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html) ，如果省略则不在任何自定义组件内查找 */
   component: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.TrivialInstance
   ): CanvasContext = js.native
+  
   /** [[InnerAudioContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/InnerAudioContext.html) wx.createInnerAudioContext()](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.createInnerAudioContext.html)
     *
     * 创建内部 [audio](https://developers.weixin.qq.com/miniprogram/dev/component/audio.html) 上下文 [InnerAudioContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/InnerAudioContext.html) 对象。
     *
     * 最低基础库： `1.6.0` */
   def createInnerAudioContext(): InnerAudioContext = js.native
+  
   /** [[IntersectionObserver](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/IntersectionObserver.html) wx.createIntersectionObserver(Object component, Object options)](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/wx.createIntersectionObserver.html)
     *
     * 创建并返回一个 IntersectionObserver 对象实例。在自定义组件或包含自定义组件的页面中，应使用 `this.createIntersectionObserver([options])` 来代替。
@@ -673,12 +707,14 @@ trait Wx extends js.Object {
   def createIntersectionObserver(/** 自定义组件实例 */
   component: IAnyObject, /** 选项 */
   options: CreateIntersectionObserverOption): IntersectionObserver = js.native
+  
   /** [[InterstitialAd](https://developers.weixin.qq.com/miniprogram/dev/api/ad/InterstitialAd.html) wx.createInterstitialAd(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ad/wx.createInterstitialAd.html)
     *
     * 创建插屏广告组件。请通过 [wx.getSystemInfoSync()](https://developers.weixin.qq.com/miniprogram/dev/api/base/system/system-info/wx.getSystemInfoSync.html) 返回对象的 SDKVersion 判断基础库版本号后再使用该 API。每次调用该方法创建插屏广告都会返回一个全新的实例（小程序端的插屏广告实例不允许跨页面使用）。
     *
     * 最低基础库： `2.6.0` */
   def createInterstitialAd(option: CreateInterstitialAdOption): InterstitialAd = js.native
+  
   /** [[LivePlayerContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/live/LivePlayerContext.html) wx.createLivePlayerContext(string id, Object this)](https://developers.weixin.qq.com/miniprogram/dev/api/media/live/wx.createLivePlayerContext.html)
     *
     * 创建 [live-player](https://developers.weixin.qq.com/miniprogram/dev/component/live-player.html) 上下文 [LivePlayerContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/live/LivePlayerContext.html) 对象。
@@ -700,12 +736,14 @@ trait Wx extends js.Object {
     /** 在自定义组件下，当前组件实例的this，以操作组件内 [live-player](https://developers.weixin.qq.com/miniprogram/dev/component/live-player.html) 组件 */
   component: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.TrivialInstance
   ): LivePlayerContext = js.native
+  
   /** [[LivePusherContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/live/LivePusherContext.html) wx.createLivePusherContext()](https://developers.weixin.qq.com/miniprogram/dev/api/media/live/wx.createLivePusherContext.html)
     *
     * 创建 [live-pusher](https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html) 上下文 [LivePusherContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/live/LivePusherContext.html) 对象。
     *
     * 最低基础库： `1.7.0` */
   def createLivePusherContext(): LivePusherContext = js.native
+  
   /** [[MapContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/map/MapContext.html) wx.createMapContext(string mapId, Object this)](https://developers.weixin.qq.com/miniprogram/dev/api/media/map/wx.createMapContext.html)
     *
     * 创建 [map](https://developers.weixin.qq.com/miniprogram/dev/component/map.html) 上下文 [MapContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/map/MapContext.html) 对象。 */
@@ -725,12 +763,14 @@ trait Wx extends js.Object {
     /** 在自定义组件下，当前组件实例的this，以操作组件内 [map](https://developers.weixin.qq.com/miniprogram/dev/component/map.html) 组件 */
   component: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.TrivialInstance
   ): MapContext = js.native
+  
   /** [[MediaContainer](https://developers.weixin.qq.com/miniprogram/dev/api/media/video-processing/MediaContainer.html) wx.createMediaContainer()](https://developers.weixin.qq.com/miniprogram/dev/api/media/video-processing/wx.createMediaContainer.html)
     *
     * 创建音视频处理容器，最终可将容器中的轨道合成一个视频
     *
     * 最低基础库： `2.9.0` */
   def createMediaContainer(): MediaContainer = js.native
+  
   /** [[MediaRecorder](https://developers.weixin.qq.com/miniprogram/dev/api/media/media-recorder/MediaRecorder.html) wx.createMediaRecorder(Object canvas, Object options)](https://developers.weixin.qq.com/miniprogram/dev/api/media/media-recorder/wx.createMediaRecorder.html)
     *
     * 创建 WebGL 画面录制器，可逐帧录制在 WebGL 上渲染的画面并导出视频文件
@@ -741,18 +781,21 @@ trait Wx extends js.Object {
   canvas: IAnyObject,
     options: CreateMediaRecorderOption
   ): MediaRecorder = js.native
+  
   /** [[OffscreenCanvas](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/OffscreenCanvas.html) wx.createOffscreenCanvas()](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/wx.createOffscreenCanvas.html)
     *
     * 创建离屏 canvas 实例
     *
     * 最低基础库： `2.7.0` */
   def createOffscreenCanvas(): OffscreenCanvas = js.native
+  
   /** [[RewardedVideoAd](https://developers.weixin.qq.com/miniprogram/dev/api/ad/RewardedVideoAd.html) wx.createRewardedVideoAd(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ad/wx.createRewardedVideoAd.html)
     *
     * 创建激励视频广告组件。请通过 [wx.getSystemInfoSync()](https://developers.weixin.qq.com/miniprogram/dev/api/base/system/system-info/wx.getSystemInfoSync.html) 返回对象的 SDKVersion 判断基础库版本号后再使用该 API（小游戏端要求 >= 2.0.4， 小程序端要求 >= 2.6.0）。调用该方法创建的激励视频广告是一个单例（小游戏端是全局单例，小程序端是页面内单例，在小程序端的单例对象不允许跨页面使用）。
     *
     * 最低基础库： `2.0.4` */
   def createRewardedVideoAd(option: CreateRewardedVideoAdOption): RewardedVideoAd = js.native
+  
   /** [[SelectorQuery](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/SelectorQuery.html) wx.createSelectorQuery()](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/wx.createSelectorQuery.html)
   *
   * 返回一个 SelectorQuery 对象实例。在自定义组件或包含自定义组件的页面中，应使用 `this.createSelectorQuery()` 来代替。
@@ -772,12 +815,14 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.4.0` */
   def createSelectorQuery(): SelectorQuery = js.native
+  
   /** [[UDPSocket](https://developers.weixin.qq.com/miniprogram/dev/api/network/udp/UDPSocket.html) wx.createUDPSocket()](https://developers.weixin.qq.com/miniprogram/dev/api/network/udp/wx.createUDPSocket.html)
     *
     * 创建一个 UDP Socket 实例。使用前请注意阅读[相关说明](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html)。
     *
     * 最低基础库： `2.7.0` */
   def createUDPSocket(): UDPSocket = js.native
+  
   /** [[VideoContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/VideoContext.html) wx.createVideoContext(string id, Object this)](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.createVideoContext.html)
     *
     * 创建 [video](https://developers.weixin.qq.com/miniprogram/dev/component/video.html) 上下文 [VideoContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/VideoContext.html) 对象。 */
@@ -797,12 +842,14 @@ trait Wx extends js.Object {
     /** 在自定义组件下，当前组件实例的this，以操作组件内 [video](https://developers.weixin.qq.com/miniprogram/dev/component/video.html) 组件 */
   component: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.TrivialInstance
   ): VideoContext = js.native
+  
   /** [[VideoDecoder](https://developers.weixin.qq.com/miniprogram/dev/api/media/video-decoder/VideoDecoder.html) wx.createVideoDecoder()](https://developers.weixin.qq.com/miniprogram/dev/api/media/video-decoder/wx.createVideoDecoder.html)
     *
     * 创建视频解码器，可逐帧获取解码后的数据
     *
     * 最低基础库： `2.11.0` */
   def createVideoDecoder(): VideoDecoder = js.native
+  
   /** [[Worker](https://developers.weixin.qq.com/miniprogram/dev/api/worker/Worker.html) wx.createWorker(string scriptPath)](https://developers.weixin.qq.com/miniprogram/dev/api/worker/wx.createWorker.html)
     *
     * 创建一个 [Worker 线程](https://developers.weixin.qq.com/miniprogram/dev/framework/workers.html)。目前限制最多只能创建一个 Worker，创建下一个 Worker 前请先调用 [Worker.terminate](https://developers.weixin.qq.com/miniprogram/dev/api/worker/Worker.terminate.html)
@@ -810,6 +857,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.9.90` */
   def createWorker(/** worker 入口文件的**绝对路径** */
   scriptPath: String): Worker = js.native
+  
   /** [[DownloadTask](https://developers.weixin.qq.com/miniprogram/dev/api/network/download/DownloadTask.html) wx.downloadFile(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/network/download/wx.downloadFile.html)
   *
   * 下载文件资源到本地。客户端直接发起一个 HTTPS GET 请求，返回文件的本地临时路径 (本地路径)，单次下载允许的最大文件为 50MB。使用前请注意阅读[相关说明](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html)。
@@ -833,6 +881,12 @@ trait Wx extends js.Object {
   })
   ``` */
   def downloadFile(option: DownloadFileOption): DownloadTask = js.native
+  
+  /**
+  文件系统中的用户目录路径
+  */
+  var env: USERDATAPATH = js.native
+  
   /** [wx.exitVoIPChat(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/voip/wx.exitVoIPChat.html)
     *
     * 退出（销毁）实时语音通话
@@ -840,6 +894,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.7.0` */
   def exitVoIPChat[TOption /* <: ExitVoIPChatOption */](): PromisifySuccessResult[TOption, ExitVoIPChatOption] = js.native
   def exitVoIPChat[TOption /* <: ExitVoIPChatOption */](option: TOption): PromisifySuccessResult[TOption, ExitVoIPChatOption] = js.native
+  
   /** [Object wx.getAccountInfoSync()](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/account-info/wx.getAccountInfoSync.html)
   *
   * 获取当前帐号信息。线上小程序版本号仅支持在正式版小程序中获取，开发版和体验版中无法获取。
@@ -856,6 +911,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.2.2` */
   def getAccountInfoSync(): AccountInfo = js.native
+  
   /** [wx.getAvailableAudioSources(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.getAvailableAudioSources.html)
     *
     * 获取当前支持的音频输入源
@@ -863,6 +919,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.1.0` */
   def getAvailableAudioSources[TOption /* <: GetAvailableAudioSourcesOption */](): PromisifySuccessResult[TOption, GetAvailableAudioSourcesOption] = js.native
   def getAvailableAudioSources[TOption /* <: GetAvailableAudioSourcesOption */](option: TOption): PromisifySuccessResult[TOption, GetAvailableAudioSourcesOption] = js.native
+  
   /** [wx.getBLEDeviceCharacteristics(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.getBLEDeviceCharacteristics.html)
   *
   * 获取蓝牙设备某个服务中所有特征值(characteristic)。
@@ -885,12 +942,14 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def getBLEDeviceCharacteristics[TOption /* <: GetBLEDeviceCharacteristicsOption */](option: TOption): PromisifySuccessResult[TOption, GetBLEDeviceCharacteristicsOption] = js.native
+  
   /** [wx.getBLEDeviceRSSI(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.getBLEDeviceRSSI.html)
     *
     * 获取蓝牙设备的信号强度。
     *
     * 最低基础库： `2.11.0` */
   def getBLEDeviceRSSI[TOption /* <: GetBLEDeviceRSSIOption */](option: TOption): PromisifySuccessResult[TOption, GetBLEDeviceRSSIOption] = js.native
+  
   /** [wx.getBLEDeviceServices(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.getBLEDeviceServices.html)
   *
   * 获取蓝牙设备所有服务(service)。
@@ -911,6 +970,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def getBLEDeviceServices[TOption /* <: GetBLEDeviceServicesOption */](option: TOption): PromisifySuccessResult[TOption, GetBLEDeviceServicesOption] = js.native
+  
   /** [[BackgroundAudioManager](https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/BackgroundAudioManager.html) wx.getBackgroundAudioManager()](https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/wx.getBackgroundAudioManager.html)
     *
     * 获取**全局唯一**的背景音频管理器。
@@ -920,6 +980,7 @@ trait Wx extends js.Object {
     *
     * 最低基础库： `1.2.0` */
   def getBackgroundAudioManager(): BackgroundAudioManager = js.native
+  
   /** [wx.getBackgroundAudioPlayerState(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/wx.getBackgroundAudioPlayerState.html)
   *
   * 获取后台音乐播放状态。
@@ -940,12 +1001,14 @@ trait Wx extends js.Object {
   ``` */
   def getBackgroundAudioPlayerState[TOption /* <: GetBackgroundAudioPlayerStateOption */](): PromisifySuccessResult[TOption, GetBackgroundAudioPlayerStateOption] = js.native
   def getBackgroundAudioPlayerState[TOption /* <: GetBackgroundAudioPlayerStateOption */](option: TOption): PromisifySuccessResult[TOption, GetBackgroundAudioPlayerStateOption] = js.native
+  
   /** [wx.getBackgroundFetchData(object object)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/background-fetch/wx.getBackgroundFetchData.html)
     *
     * 拉取 backgroundFetch 客户端缓存数据
     *
     * 最低基础库： `2.8.0` */
   def getBackgroundFetchData[TOption /* <: GetBackgroundFetchDataOption */](option: TOption): PromisifySuccessResult[TOption, GetBackgroundFetchDataOption] = js.native
+  
   /** [wx.getBackgroundFetchToken(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/background-fetch/wx.getBackgroundFetchToken.html)
     *
     * 获取设置过的自定义登录态。若无，则返回 fail。
@@ -953,15 +1016,18 @@ trait Wx extends js.Object {
     * 最低基础库： `2.8.0` */
   def getBackgroundFetchToken[TOption /* <: GetBackgroundFetchTokenOption */](): PromisifySuccessResult[TOption, GetBackgroundFetchTokenOption] = js.native
   def getBackgroundFetchToken[TOption /* <: GetBackgroundFetchTokenOption */](option: TOption): PromisifySuccessResult[TOption, GetBackgroundFetchTokenOption] = js.native
+  
   /** [wx.getBatteryInfo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/battery/wx.getBatteryInfo.html)
     *
     * 获取设备电量。同步 API [wx.getBatteryInfoSync](https://developers.weixin.qq.com/miniprogram/dev/api/device/battery/wx.getBatteryInfoSync.html) 在 iOS 上不可用。 */
   def getBatteryInfo[TOption /* <: GetBatteryInfoOption */](): PromisifySuccessResult[TOption, GetBatteryInfoOption] = js.native
   def getBatteryInfo[TOption /* <: GetBatteryInfoOption */](option: TOption): PromisifySuccessResult[TOption, GetBatteryInfoOption] = js.native
+  
   /** [Object wx.getBatteryInfoSync()](https://developers.weixin.qq.com/miniprogram/dev/api/device/battery/wx.getBatteryInfoSync.html)
     *
     * [wx.getBatteryInfo](https://developers.weixin.qq.com/miniprogram/dev/api/device/battery/wx.getBatteryInfo.html) 的同步版本 */
   def getBatteryInfoSync(): GetBatteryInfoSyncResult = js.native
+  
   /** [wx.getBeacons(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/ibeacon/wx.getBeacons.html)
     *
     * 获取所有已搜索到的 iBeacon 设备
@@ -969,6 +1035,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.2.0` */
   def getBeacons[TOption /* <: GetBeaconsOption */](): PromisifySuccessResult[TOption, GetBeaconsOption] = js.native
   def getBeacons[TOption /* <: GetBeaconsOption */](option: TOption): PromisifySuccessResult[TOption, GetBeaconsOption] = js.native
+  
   /** [wx.getBluetoothAdapterState(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.getBluetoothAdapterState.html)
   *
   * 获取本机蓝牙适配器状态。
@@ -988,6 +1055,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def getBluetoothAdapterState[TOption /* <: GetBluetoothAdapterStateOption */](): PromisifySuccessResult[TOption, GetBluetoothAdapterStateOption] = js.native
   def getBluetoothAdapterState[TOption /* <: GetBluetoothAdapterStateOption */](option: TOption): PromisifySuccessResult[TOption, GetBluetoothAdapterStateOption] = js.native
+  
   /** [wx.getBluetoothDevices(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.getBluetoothDevices.html)
   *
   * 获取在蓝牙模块生效期间所有已发现的蓝牙设备。包括已经和本机处于连接状态的设备。
@@ -1027,6 +1095,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def getBluetoothDevices[TOption /* <: GetBluetoothDevicesOption */](): PromisifySuccessResult[TOption, GetBluetoothDevicesOption] = js.native
   def getBluetoothDevices[TOption /* <: GetBluetoothDevicesOption */](option: TOption): PromisifySuccessResult[TOption, GetBluetoothDevicesOption] = js.native
+  
   /** [wx.getClipboardData(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/clipboard/wx.getClipboardData.html)
   *
   * 获取系统剪贴板的内容
@@ -1045,6 +1114,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def getClipboardData[TOption /* <: GetClipboardDataOption */](): PromisifySuccessResult[TOption, GetClipboardDataOption] = js.native
   def getClipboardData[TOption /* <: GetClipboardDataOption */](option: TOption): PromisifySuccessResult[TOption, GetClipboardDataOption] = js.native
+  
   /** [wx.getConnectedBluetoothDevices(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.getConnectedBluetoothDevices.html)
   *
   * 根据 uuid 获取处于已连接状态的设备。
@@ -1063,6 +1133,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def getConnectedBluetoothDevices[TOption /* <: GetConnectedBluetoothDevicesOption */](option: TOption): PromisifySuccessResult[TOption, GetConnectedBluetoothDevicesOption] = js.native
+  
   /** [wx.getConnectedWifi(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/wifi/wx.getConnectedWifi.html)
     *
     * 获取已连接中的 Wi-Fi 信息。
@@ -1070,6 +1141,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.6.0` */
   def getConnectedWifi[TOption /* <: GetConnectedWifiOption */](): PromisifySuccessResult[TOption, GetConnectedWifiOption] = js.native
   def getConnectedWifi[TOption /* <: GetConnectedWifiOption */](option: TOption): PromisifySuccessResult[TOption, GetConnectedWifiOption] = js.native
+  
   /** [Object wx.getEnterOptionsSync()](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/life-cycle/wx.getEnterOptionsSync.html)
     *
     * 获取本次小程序启动时的参数。如果当前是冷启动，则返回值与 [`App.onLaunch`](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onLaunch-Object-object) 的回调参数一致；如果当前是热启动，则返回值与 [`App.onShow`](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object) 一致。
@@ -1093,6 +1165,7 @@ trait Wx extends js.Object {
     *
     * 最低基础库： `2.9.4` */
   def getEnterOptionsSync(): LaunchOptionsApp = js.native
+  
   /** [wx.getExtConfig(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ext/wx.getExtConfig.html)
   *
   * 获取[第三方平台](https://developers.weixin.qq.com/miniprogram/dev/devtools/ext.html)自定义的数据字段。
@@ -1117,6 +1190,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def getExtConfig[TOption /* <: GetExtConfigOption */](): PromisifySuccessResult[TOption, GetExtConfigOption] = js.native
   def getExtConfig[TOption /* <: GetExtConfigOption */](option: TOption): PromisifySuccessResult[TOption, GetExtConfigOption] = js.native
+  
   /** [Object wx.getExtConfigSync()](https://developers.weixin.qq.com/miniprogram/dev/api/ext/wx.getExtConfigSync.html)
   *
   * [wx.getExtConfig](https://developers.weixin.qq.com/miniprogram/dev/api/ext/wx.getExtConfig.html) 的同步版本。
@@ -1135,6 +1209,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def getExtConfigSync(): IAnyObject = js.native
+  
   /** [wx.getFileInfo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/file/wx.getFileInfo.html)
   *
   * 获取文件信息
@@ -1153,12 +1228,14 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.4.0` */
   def getFileInfo[TOption /* <: WxGetFileInfoOption */](option: TOption): PromisifySuccessResult[TOption, WxGetFileInfoOption] = js.native
+  
   /** [[FileSystemManager](https://developers.weixin.qq.com/miniprogram/dev/api/file/FileSystemManager.html) wx.getFileSystemManager()](https://developers.weixin.qq.com/miniprogram/dev/api/file/wx.getFileSystemManager.html)
     *
     * 获取全局唯一的文件管理器
     *
     * 最低基础库： `1.9.9` */
   def getFileSystemManager(): FileSystemManager = js.native
+  
   /** [wx.getHCEState(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/wx.getHCEState.html)
   *
   * 判断当前设备是否支持 HCE 能力。
@@ -1177,6 +1254,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.7.0` */
   def getHCEState[TOption /* <: GetHCEStateOption */](): PromisifySuccessResult[TOption, GetHCEStateOption] = js.native
   def getHCEState[TOption /* <: GetHCEStateOption */](option: TOption): PromisifySuccessResult[TOption, GetHCEStateOption] = js.native
+  
   /** [wx.getImageInfo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.getImageInfo.html)
   *
   * 获取图片信息。网络图片需先配置download域名才能生效。
@@ -1207,6 +1285,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def getImageInfo[TOption /* <: GetImageInfoOption */](option: TOption): PromisifySuccessResult[TOption, GetImageInfoOption] = js.native
+  
   /** [Object wx.getLaunchOptionsSync()](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/life-cycle/wx.getLaunchOptionsSync.html)
     *
     * 获取小程序启动时的参数。与 [`App.onLaunch`](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onlaunchobject-object) 的回调参数一致。
@@ -1231,6 +1310,7 @@ trait Wx extends js.Object {
     *
     * 最低基础库： `2.1.2` */
   def getLaunchOptionsSync(): LaunchOptionsApp = js.native
+  
   /** [wx.getLocation(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.getLocation.html)
   *
   * 获取当前的地理位置、速度。当用户离开小程序后，此接口无法调用。开启高精度定位，接口耗时会增加，可指定 highAccuracyExpireTime 作为超时时间。地图相关使用的坐标格式应为 gcj02。
@@ -1256,6 +1336,7 @@ trait Wx extends js.Object {
   * - 工具中定位模拟使用IP定位，可能会有一定误差。且工具目前仅支持 gcj02 坐标。
   * - 使用第三方服务进行逆地址解析时，请确认第三方服务默认的坐标系，正确进行坐标转换。 */
   def getLocation[TOption /* <: GetLocationOption */](option: TOption): PromisifySuccessResult[TOption, GetLocationOption] = js.native
+  
   /** [[LogManager](https://developers.weixin.qq.com/miniprogram/dev/api/base/debug/LogManager.html) wx.getLogManager(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/base/debug/wx.getLogManager.html)
   *
   * 获取日志管理器对象。
@@ -1273,18 +1354,21 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.1.0` */
   def getLogManager(option: GetLogManagerOption): LogManager = js.native
+  
   /** [Object wx.getMenuButtonBoundingClientRect()](https://developers.weixin.qq.com/miniprogram/dev/api/ui/menu/wx.getMenuButtonBoundingClientRect.html)
     *
     * 获取菜单按钮（右上角胶囊按钮）的布局位置信息。坐标信息以屏幕左上角为原点。
     *
     * 最低基础库： `2.1.0` */
   def getMenuButtonBoundingClientRect(): Rect = js.native
+  
   /** [[NFCAdapter](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/NFCAdapter.html) wx.getNFCAdapter()](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/wx.getNFCAdapter.html)
     *
     * 获取 NFC 实例
     *
     * 最低基础库： `2.11.2` */
   def getNFCAdapter(): NFCAdapter = js.native
+  
   /** [wx.getNetworkType(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/network/wx.getNetworkType.html)
   *
   * 获取网络类型
@@ -1301,6 +1385,7 @@ trait Wx extends js.Object {
   ``` */
   def getNetworkType[TOption /* <: GetNetworkTypeOption */](): PromisifySuccessResult[TOption, GetNetworkTypeOption] = js.native
   def getNetworkType[TOption /* <: GetNetworkTypeOption */](option: TOption): PromisifySuccessResult[TOption, GetNetworkTypeOption] = js.native
+  
   /** [wx.getPerformance()](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/performance/wx.getPerformance.html)
   *
   * 获取当前小程序性能相关的信息。
@@ -1333,6 +1418,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.11.0` */
   def getPerformance(): Unit = js.native
+  
   /** [[RealtimeLogManager](https://developers.weixin.qq.com/miniprogram/dev/api/base/debug/RealtimeLogManager.html) wx.getRealtimeLogManager()](https://developers.weixin.qq.com/miniprogram/dev/api/base/debug/wx.getRealtimeLogManager.html)
   *
   * 获取实时日志管理器对象。
@@ -1349,12 +1435,14 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.7.1` */
   def getRealtimeLogManager(): RealtimeLogManager = js.native
+  
   /** [[RecorderManager](https://developers.weixin.qq.com/miniprogram/dev/api/media/recorder/RecorderManager.html) wx.getRecorderManager()](https://developers.weixin.qq.com/miniprogram/dev/api/media/recorder/wx.getRecorderManager.html)
     *
     * 获取**全局唯一**的录音管理器 RecorderManager
     *
     * 最低基础库： `1.6.0` */
   def getRecorderManager(): RecorderManager = js.native
+  
   /** [wx.getSavedFileInfo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/file/wx.getSavedFileInfo.html)
   *
   * 获取本地文件的文件信息。此接口只能用于获取已保存到本地的文件，若需要获取临时文件信息，请使用 [wx.getFileInfo()](https://developers.weixin.qq.com/miniprogram/dev/api/file/wx.getFileInfo.html) 接口。
@@ -1370,6 +1458,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def getSavedFileInfo[TOption /* <: GetSavedFileInfoOption */](option: TOption): PromisifySuccessResult[TOption, GetSavedFileInfoOption] = js.native
+  
   /** [wx.getSavedFileList(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/file/wx.getSavedFileList.html)
   *
   * 获取该小程序下已保存的本地缓存文件列表
@@ -1386,6 +1475,7 @@ trait Wx extends js.Object {
   ``` */
   def getSavedFileList[TOption /* <: WxGetSavedFileListOption */](): PromisifySuccessResult[TOption, WxGetSavedFileListOption] = js.native
   def getSavedFileList[TOption /* <: WxGetSavedFileListOption */](option: TOption): PromisifySuccessResult[TOption, WxGetSavedFileListOption] = js.native
+  
   /** [wx.getScreenBrightness(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/screen/wx.getScreenBrightness.html)
     *
     * 获取屏幕亮度
@@ -1398,6 +1488,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.2.0` */
   def getScreenBrightness[TOption /* <: GetScreenBrightnessOption */](): PromisifySuccessResult[TOption, GetScreenBrightnessOption] = js.native
   def getScreenBrightness[TOption /* <: GetScreenBrightnessOption */](option: TOption): PromisifySuccessResult[TOption, GetScreenBrightnessOption] = js.native
+  
   /** [wx.getSelectedTextRange(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/keyboard/wx.getSelectedTextRange.html)
   *
   * 在input、textarea等focus之后，获取输入框的光标位置。注意：只有在focus的时候调用此接口才有效。
@@ -1416,6 +1507,7 @@ trait Wx extends js.Object {
   * 最低基础库： `2.7.0` */
   def getSelectedTextRange[TOption /* <: GetSelectedTextRangeOption */](): PromisifySuccessResult[TOption, GetSelectedTextRangeOption] = js.native
   def getSelectedTextRange[TOption /* <: GetSelectedTextRangeOption */](option: TOption): PromisifySuccessResult[TOption, GetSelectedTextRangeOption] = js.native
+  
   /** [wx.getSetting(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/setting/wx.getSetting.html)
   *
   * 获取用户的当前设置。**返回值中只会出现小程序已经向用户请求过的[权限](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html)**。
@@ -1461,6 +1553,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.2.0` */
   def getSetting[TOption /* <: GetSettingOption */](): PromisifySuccessResult[TOption, GetSettingOption] = js.native
   def getSetting[TOption /* <: GetSettingOption */](option: TOption): PromisifySuccessResult[TOption, GetSettingOption] = js.native
+  
   /** [wx.getShareInfo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/share/wx.getShareInfo.html)
   *
   * 获取转发详细信息
@@ -1485,6 +1578,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def getShareInfo(option: GetShareInfoOption): Unit = js.native
+  
   /** [wx.getStorage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.getStorage.html)
   *
   * 从本地缓存中异步获取指定 key 的内容
@@ -1512,6 +1606,7 @@ trait Wx extends js.Object {
   }
   ``` */
   def getStorage[TOption /* <: GetStorageOption */](option: TOption): PromisifySuccessResult[TOption, GetStorageOption] = js.native
+  
   /** [wx.getStorageInfo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.getStorageInfo.html)
   *
   * 异步获取当前storage的相关信息
@@ -1541,6 +1636,7 @@ trait Wx extends js.Object {
   ``` */
   def getStorageInfo[TOption /* <: GetStorageInfoOption */](): PromisifySuccessResult[TOption, GetStorageInfoOption] = js.native
   def getStorageInfo[TOption /* <: GetStorageInfoOption */](option: TOption): PromisifySuccessResult[TOption, GetStorageInfoOption] = js.native
+  
   /** [Object wx.getStorageInfoSync()](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.getStorageInfoSync.html)
   *
   * [wx.getStorageInfo](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.getStorageInfo.html) 的同步版本
@@ -1569,6 +1665,7 @@ trait Wx extends js.Object {
   }
   ``` */
   def getStorageInfoSync(): GetStorageInfoSyncOption = js.native
+  
   /** [any wx.getStorageSync(string key)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.getStorageSync.html)
   *
   * [wx.getStorage](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.getStorage.html) 的同步版本
@@ -1597,6 +1694,7 @@ trait Wx extends js.Object {
   ``` */
   def getStorageSync(/** 本地缓存中指定的 key */
   key: String): js.Any = js.native
+  
   /** [wx.getSystemInfo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/base/system/system-info/wx.getSystemInfo.html)
   *
   * 获取系统信息
@@ -1634,6 +1732,7 @@ trait Wx extends js.Object {
   ``` */
   def getSystemInfo[TOption /* <: GetSystemInfoOption */](): PromisifySuccessResult[TOption, GetSystemInfoOption] = js.native
   def getSystemInfo[TOption /* <: GetSystemInfoOption */](option: TOption): PromisifySuccessResult[TOption, GetSystemInfoOption] = js.native
+  
   /** [Object wx.getSystemInfoSync()](https://developers.weixin.qq.com/miniprogram/dev/api/base/system/system-info/wx.getSystemInfoSync.html)
   *
   * [wx.getSystemInfo](https://developers.weixin.qq.com/miniprogram/dev/api/base/system/system-info/wx.getSystemInfo.html) 的同步版本
@@ -1670,12 +1769,14 @@ trait Wx extends js.Object {
   }
   ``` */
   def getSystemInfoSync(): GetSystemInfoSyncResult = js.native
+  
   /** [[UpdateManager](https://developers.weixin.qq.com/miniprogram/dev/api/base/update/UpdateManager.html) wx.getUpdateManager()](https://developers.weixin.qq.com/miniprogram/dev/api/base/update/wx.getUpdateManager.html)
     *
     * 获取**全局唯一**的版本更新管理器，用于管理小程序更新。关于小程序的更新机制，可以查看[运行机制](https://developers.weixin.qq.com/miniprogram/dev/framework/runtime/operating-mechanism.html)文档。
     *
     * 最低基础库： `1.9.90` */
   def getUpdateManager(): UpdateManager = js.native
+  
   /** [wx.getUserInfo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/user-info/wx.getUserInfo.html)
   *
   * 获取用户信息。
@@ -1762,12 +1863,14 @@ trait Wx extends js.Object {
   })
   ``` */
   def getUserInfo(option: GetUserInfoOption): Unit = js.native
+  
   /** [wx.getVideoInfo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.getVideoInfo.html)
     *
     * 获取视频详细信息。
     *
     * 最低基础库： `2.11.0` */
   def getVideoInfo[TOption /* <: GetVideoInfoOption */](option: TOption): PromisifySuccessResult[TOption, GetVideoInfoOption] = js.native
+  
   /** [wx.getWeRunData(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/werun/wx.getWeRunData.html)
   *
   * 获取用户过去三十天微信运动步数。需要先调用 [wx.login](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/login/wx.login.html) 接口。步数信息会在用户主动进入小程序时更新。
@@ -1818,6 +1921,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.2.0` */
   def getWeRunData(): Unit = js.native
   def getWeRunData(option: GetWeRunDataOption): Unit = js.native
+  
   /** [wx.getWifiList(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/wifi/wx.getWifiList.html)
     *
     * 请求获取 Wi-Fi 列表。在 `onGetWifiList` 注册的回调中返回 `wifiList` 数据。 **Android 调用前需要 [用户授权](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html) scope.userLocation。**
@@ -1827,6 +1931,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.6.0` */
   def getWifiList[TOption /* <: GetWifiListOption */](): PromisifySuccessResult[TOption, GetWifiListOption] = js.native
   def getWifiList[TOption /* <: GetWifiListOption */](option: TOption): PromisifySuccessResult[TOption, GetWifiListOption] = js.native
+  
   /** [wx.hideHomeButton(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/navigation-bar/wx.hideHomeButton.html)
     *
     * 隐藏返回首页按钮。微信7.0.7版本起，当用户打开的小程序最底层页面是非首页时，默认展示“返回首页”按钮，开发者可在页面 onShow 中调用 hideHomeButton 进行隐藏。
@@ -1834,6 +1939,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.8.3` */
   def hideHomeButton[TOption /* <: HideHomeButtonOption */](): PromisifySuccessResult[TOption, HideHomeButtonOption] = js.native
   def hideHomeButton[TOption /* <: HideHomeButtonOption */](option: TOption): PromisifySuccessResult[TOption, HideHomeButtonOption] = js.native
+  
   /** [wx.hideKeyboard(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/keyboard/wx.hideKeyboard.html)
   *
   * 在input、textarea等focus拉起键盘之后，手动调用此接口收起键盘
@@ -1852,6 +1958,7 @@ trait Wx extends js.Object {
   * 最低基础库： `2.8.2` */
   def hideKeyboard[TOption /* <: HideKeyboardOption */](): PromisifySuccessResult[TOption, HideKeyboardOption] = js.native
   def hideKeyboard[TOption /* <: HideKeyboardOption */](option: TOption): PromisifySuccessResult[TOption, HideKeyboardOption] = js.native
+  
   /** [wx.hideLoading(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.hideLoading.html)
     *
     * 隐藏 loading 提示框
@@ -1859,11 +1966,13 @@ trait Wx extends js.Object {
     * 最低基础库： `1.1.0` */
   def hideLoading[TOption /* <: HideLoadingOption */](): PromisifySuccessResult[TOption, HideLoadingOption] = js.native
   def hideLoading[TOption /* <: HideLoadingOption */](option: TOption): PromisifySuccessResult[TOption, HideLoadingOption] = js.native
+  
   /** [wx.hideNavigationBarLoading(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/navigation-bar/wx.hideNavigationBarLoading.html)
     *
     * 在当前页面隐藏导航条加载动画 */
   def hideNavigationBarLoading[TOption /* <: HideNavigationBarLoadingOption */](): PromisifySuccessResult[TOption, HideNavigationBarLoadingOption] = js.native
   def hideNavigationBarLoading[TOption /* <: HideNavigationBarLoadingOption */](option: TOption): PromisifySuccessResult[TOption, HideNavigationBarLoadingOption] = js.native
+  
   /** [wx.hideShareMenu(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/share/wx.hideShareMenu.html)
   *
   * 隐藏转发按钮
@@ -1878,29 +1987,34 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def hideShareMenu[TOption /* <: HideShareMenuOption */](): PromisifySuccessResult[TOption, HideShareMenuOption] = js.native
   def hideShareMenu[TOption /* <: HideShareMenuOption */](option: TOption): PromisifySuccessResult[TOption, HideShareMenuOption] = js.native
+  
   /** [wx.hideTabBar(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/tab-bar/wx.hideTabBar.html)
     *
     * 隐藏 tabBar
     *
     * 最低基础库： `1.9.0` */
   def hideTabBar[TOption /* <: HideTabBarOption */](option: TOption): PromisifySuccessResult[TOption, HideTabBarOption] = js.native
+  
   /** [wx.hideTabBarRedDot(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/tab-bar/wx.hideTabBarRedDot.html)
     *
     * 隐藏 tabBar 某一项的右上角的红点
     *
     * 最低基础库： `1.9.0` */
   def hideTabBarRedDot[TOption /* <: HideTabBarRedDotOption */](option: TOption): PromisifySuccessResult[TOption, HideTabBarRedDotOption] = js.native
+  
   /** [wx.hideToast(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.hideToast.html)
     *
     * 隐藏消息提示框 */
   def hideToast[TOption /* <: HideToastOption */](): PromisifySuccessResult[TOption, HideToastOption] = js.native
   def hideToast[TOption /* <: HideToastOption */](option: TOption): PromisifySuccessResult[TOption, HideToastOption] = js.native
+  
   /** [wx.joinVoIPChat(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/voip/wx.joinVoIPChat.html)
     *
     * 加入 (创建) 实时语音通话，更多信息可见 [实时语音指南](#)
     *
     * 最低基础库： `2.7.0` */
   def joinVoIPChat[TOption /* <: JoinVoIPChatOption */](option: TOption): PromisifySuccessResult[TOption, JoinVoIPChatOption] = js.native
+  
   /** [wx.loadFontFace(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/font/wx.loadFontFace.html)
   *
   * 动态加载网络字体，文件地址需为下载类型。[2.10.0](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)起支持全局生效，需在 `app.js` 中调用。
@@ -1927,6 +2041,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.1.0` */
   def loadFontFace[TOption /* <: LoadFontFaceOption */](option: TOption): PromisifySuccessResult[TOption, LoadFontFaceOption] = js.native
+  
   /** [wx.login(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/login/wx.login.html)
   *
   * 调用接口获取登录凭证（code）。通过凭证进而换取用户登录态信息，包括用户的唯一标识（openid）及本次登录的会话密钥（session_key）等。用户数据的加解密通讯需要依赖会话密钥完成。更多使用方法详见 [小程序登录](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html)。
@@ -1953,6 +2068,7 @@ trait Wx extends js.Object {
   ``` */
   def login(): Unit = js.native
   def login(option: LoginOption): Unit = js.native
+  
   /** [wx.makePhoneCall(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/phone/wx.makePhoneCall.html)
   *
   * 拨打电话
@@ -1966,11 +2082,13 @@ trait Wx extends js.Object {
   })
   ``` */
   def makePhoneCall[TOption /* <: MakePhoneCallOption */](option: TOption): PromisifySuccessResult[TOption, MakePhoneCallOption] = js.native
+  
   /** [wx.navigateBack(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateBack.html)
     *
     * 关闭当前页面，返回上一页面或多级页面。可通过 [getCurrentPages](https://developers.weixin.qq.com/miniprogram/dev/reference/api/getCurrentPages.html) 获取当前的页面栈，决定需要返回几层。 */
   def navigateBack[TOption /* <: NavigateBackOption */](): PromisifySuccessResult[TOption, NavigateBackOption] = js.native
   def navigateBack[TOption /* <: NavigateBackOption */](option: TOption): PromisifySuccessResult[TOption, NavigateBackOption] = js.native
+  
   /** [wx.navigateBackMiniProgram(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/miniprogram-navigate/wx.navigateBackMiniProgram.html)
   *
   * 返回到上一个小程序。只有在当前小程序是被其他小程序打开时可以调用成功
@@ -1993,6 +2111,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.3.0` */
   def navigateBackMiniProgram[TOption /* <: NavigateBackMiniProgramOption */](option: TOption): PromisifySuccessResult[TOption, NavigateBackMiniProgramOption] = js.native
+  
   /** [wx.navigateTo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateTo.html)
   *
   * 保留当前页面，跳转到应用内的某个页面。但是不能跳到 tabbar 页面。使用 [wx.navigateBack](https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateBack.html) 可以返回到原页面。小程序中页面栈最多十层。
@@ -2037,6 +2156,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def navigateTo[TOption /* <: NavigateToOption */](option: TOption): PromisifySuccessResult[TOption, NavigateToOption] = js.native
+  
   /** [wx.navigateToMiniProgram(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/miniprogram-navigate/wx.navigateToMiniProgram.html)
   *
   * 打开另一个小程序
@@ -2082,6 +2202,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.3.0` */
   def navigateToMiniProgram[TOption /* <: NavigateToMiniProgramOption */](option: TOption): PromisifySuccessResult[TOption, NavigateToMiniProgramOption] = js.native
+  
   /** [wx.nextTick(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/custom-component/wx.nextTick.html)
   *
   * 延迟一部分操作到下一个时间片再执行。（类似于 setTimeout）
@@ -2111,6 +2232,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.2.3` */
   def nextTick(callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.notifyBLECharacteristicValueChange(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.notifyBLECharacteristicValueChange.html)
   *
   * 启用低功耗蓝牙设备特征值变化时的 notify 功能，订阅特征值。注意：必须设备的特征值支持 notify 或者 indicate 才可以成功调用。
@@ -2144,6 +2266,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def notifyBLECharacteristicValueChange[TOption /* <: NotifyBLECharacteristicValueChangeOption */](option: TOption): PromisifySuccessResult[TOption, NotifyBLECharacteristicValueChangeOption] = js.native
+  
   /** [wx.offAccelerometerChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/accelerometer/wx.offAccelerometerChange.html)
     *
     * 取消监听加速度数据事件，参数为空，则取消所有的事件监听。
@@ -2151,6 +2274,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.3` */
   def offAccelerometerChange(/** 加速度数据事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offAppHide(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.offAppHide.html)
     *
     * 取消监听小程序切后台事件
@@ -2158,6 +2282,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.1.2` */
   def offAppHide(/** 小程序切后台事件的回调函数 */
   callback: OffAppHideCallback): Unit = js.native
+  
   /** [wx.offAppShow(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.offAppShow.html)
     *
     * 取消监听小程序切前台事件
@@ -2165,6 +2290,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.1.2` */
   def offAppShow(/** 小程序切前台事件的回调函数 */
   callback: OffAppShowCallback): Unit = js.native
+  
   /** [wx.offAudioInterruptionBegin(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.offAudioInterruptionBegin.html)
     *
     * 取消监听音频因为受到系统占用而被中断开始事件
@@ -2172,6 +2298,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.6.2` */
   def offAudioInterruptionBegin(/** 音频因为受到系统占用而被中断开始事件的回调函数 */
   callback: OffAudioInterruptionBeginCallback): Unit = js.native
+  
   /** [wx.offAudioInterruptionEnd(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.offAudioInterruptionEnd.html)
     *
     * 取消监听音频中断结束事件
@@ -2179,6 +2306,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.6.2` */
   def offAudioInterruptionEnd(/** 音频中断结束事件的回调函数 */
   callback: OffAudioInterruptionEndCallback): Unit = js.native
+  
   /** [wx.offBLECharacteristicValueChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.offBLECharacteristicValueChange.html)
     *
     * 取消监听低功耗蓝牙设备的特征值变化事件。
@@ -2186,6 +2314,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.0` */
   def offBLECharacteristicValueChange(/** 低功耗蓝牙设备的特征值变化事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offBLEConnectionStateChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.offBLEConnectionStateChange.html)
     *
     * 取消监听低功耗蓝牙连接状态的改变事件
@@ -2193,6 +2322,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.0` */
   def offBLEConnectionStateChange(/** 低功耗蓝牙连接状态的改变事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offBLEPeripheralConnectionStateChanged(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-peripheral/wx.offBLEPeripheralConnectionStateChanged.html)
     *
     * 取消监听当前外围设备被连接或断开连接事件
@@ -2200,6 +2330,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.10.3` */
   def offBLEPeripheralConnectionStateChanged(/** 当前外围设备被连接或断开连接事件的回调函数 */
   callback: OffBLEPeripheralConnectionStateChangedCallback): Unit = js.native
+  
   /** [wx.offBeaconServiceChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/ibeacon/wx.offBeaconServiceChange.html)
     *
     * 取消监听 iBeacon 服务状态变化事件
@@ -2207,6 +2338,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.8.1` */
   def offBeaconServiceChange(/** iBeacon 服务状态变化事件的回调函数 */
   callback: OffBeaconServiceChangeCallback): Unit = js.native
+  
   /** [wx.offBeaconUpdate(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/ibeacon/wx.offBeaconUpdate.html)
     *
     * 取消监听 iBeacon 设备更新事件
@@ -2214,6 +2346,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.8.1` */
   def offBeaconUpdate(/** iBeacon 设备更新事件的回调函数 */
   callback: OffBeaconUpdateCallback): Unit = js.native
+  
   /** [wx.offBluetoothAdapterStateChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.offBluetoothAdapterStateChange.html)
     *
     * 取消监听蓝牙适配器状态变化事件。
@@ -2221,6 +2354,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.0` */
   def offBluetoothAdapterStateChange(/** 蓝牙适配器状态变化事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offBluetoothDeviceFound(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.offBluetoothDeviceFound.html)
     *
     * 取消监听寻找到新设备的事件。
@@ -2228,6 +2362,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.0` */
   def offBluetoothDeviceFound(/** 寻找到新设备的事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offCompassChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/compass/wx.offCompassChange.html)
     *
     * 取消监听罗盘数据变化事件，参数为空，则取消所有的事件监听。
@@ -2235,6 +2370,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.3` */
   def offCompassChange(/** 罗盘数据变化事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offDeviceMotionChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/motion/wx.offDeviceMotionChange.html)
     *
     * 取消监听设备方向变化事件，参数为空，则取消所有的事件监听。
@@ -2242,6 +2378,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.3` */
   def offDeviceMotionChange(/** 设备方向变化事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offError(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.offError.html)
     *
     * 取消监听小程序错误事件。
@@ -2249,6 +2386,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.1.2` */
   def offError(/** 小程序错误事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offGetWifiList(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/wifi/wx.offGetWifiList.html)
     *
     * 取消监听获取到 Wi-Fi 列表数据事件。
@@ -2256,6 +2394,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.0` */
   def offGetWifiList(/** 获取到 Wi-Fi 列表数据事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offGyroscopeChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/gyroscope/wx.offGyroscopeChange.html)
     *
     * 取消监听陀螺仪数据变化事件。
@@ -2263,6 +2402,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.3` */
   def offGyroscopeChange(/** 陀螺仪数据变化事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offHCEMessage(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/wx.offHCEMessage.html)
     *
     * 接收 NFC 设备消息事件，取消事件监听。
@@ -2270,6 +2410,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.8.1` */
   def offHCEMessage(/** 接收 NFC 设备消息事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offKeyboardHeightChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/keyboard/wx.offKeyboardHeightChange.html)
     *
     * 取消监听键盘高度变化事件
@@ -2277,6 +2418,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.2` */
   def offKeyboardHeightChange(/** 键盘高度变化事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offLocalServiceDiscoveryStop(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/mdns/wx.offLocalServiceDiscoveryStop.html)
     *
     * 取消监听 mDNS 服务停止搜索的事件
@@ -2284,6 +2426,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.4.0` */
   def offLocalServiceDiscoveryStop(/** mDNS 服务停止搜索的事件的回调函数 */
   callback: OffLocalServiceDiscoveryStopCallback): Unit = js.native
+  
   /** [wx.offLocalServiceFound(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/mdns/wx.offLocalServiceFound.html)
     *
     * 取消监听 mDNS 服务发现的事件
@@ -2291,6 +2434,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.4.0` */
   def offLocalServiceFound(/** mDNS 服务发现的事件的回调函数 */
   callback: OffLocalServiceFoundCallback): Unit = js.native
+  
   /** [wx.offLocalServiceLost(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/mdns/wx.offLocalServiceLost.html)
     *
     * 取消监听 mDNS 服务离开的事件
@@ -2298,6 +2442,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.4.0` */
   def offLocalServiceLost(/** mDNS 服务离开的事件的回调函数 */
   callback: OffLocalServiceLostCallback): Unit = js.native
+  
   /** [wx.offLocalServiceResolveFail(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/mdns/wx.offLocalServiceResolveFail.html)
     *
     * 取消监听 mDNS 服务解析失败的事件
@@ -2305,6 +2450,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.4.0` */
   def offLocalServiceResolveFail(/** mDNS 服务解析失败的事件的回调函数 */
   callback: OffLocalServiceResolveFailCallback): Unit = js.native
+  
   /** [wx.offLocationChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.offLocationChange.html)
     *
     * 取消监听实时地理位置变化事件
@@ -2312,6 +2458,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.8.1` */
   def offLocationChange(/** 实时地理位置变化事件的回调函数 */
   callback: OffLocationChangeCallback): Unit = js.native
+  
   /** [wx.offMemoryWarning(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/performance/wx.offMemoryWarning.html)
     *
     * 取消监听内存不足告警事件。
@@ -2319,6 +2466,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.0` */
   def offMemoryWarning(/** 内存不足告警事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offNetworkStatusChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/network/wx.offNetworkStatusChange.html)
     *
     * 取消监听网络状态变化事件，参数为空，则取消所有的事件监听。
@@ -2326,6 +2474,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.3` */
   def offNetworkStatusChange(/** 网络状态变化事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offOnVoIPVideoMembersChanged(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/media/voip/wx.offOnVoIPVideoMembersChanged.html)
     *
     * 取消监听实时语音通话成员视频状态变化事件
@@ -2333,6 +2482,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.11.0` */
   def offOnVoIPVideoMembersChanged(/** 实时语音通话成员视频状态变化事件的回调函数 */
   callback: OffOnVoIPVideoMembersChangedCallback): Unit = js.native
+  
   /** [wx.offPageNotFound(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.offPageNotFound.html)
     *
     * 取消监听小程序要打开的页面不存在事件
@@ -2340,6 +2490,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.1.2` */
   def offPageNotFound(/** 小程序要打开的页面不存在事件的回调函数 */
   callback: OffPageNotFoundCallback): Unit = js.native
+  
   /** [wx.offThemeChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.offThemeChange.html)
     *
     * 取消监听系统主题改变事件
@@ -2347,6 +2498,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.11.0` */
   def offThemeChange(/** 系统主题改变事件的回调函数 */
   callback: OffThemeChangeCallback): Unit = js.native
+  
   /** [wx.offUnhandledRejection(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.offUnhandledRejection.html)
     *
     * 取消监听未处理的 Promise 拒绝事件
@@ -2354,6 +2506,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.10.0` */
   def offUnhandledRejection(/** 未处理的 Promise 拒绝事件的回调函数 */
   callback: OffUnhandledRejectionCallback): Unit = js.native
+  
   /** [wx.offUserCaptureScreen(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/screen/wx.offUserCaptureScreen.html)
     *
     * 用户主动截屏事件。取消事件监听。
@@ -2361,6 +2514,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.3` */
   def offUserCaptureScreen(/** 用户主动截屏事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offVoIPChatInterrupted(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/media/voip/wx.offVoIPChatInterrupted.html)
     *
     * 取消监听被动断开实时语音通话事件。
@@ -2368,6 +2522,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.0` */
   def offVoIPChatInterrupted(/** 被动断开实时语音通话事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offVoIPChatMembersChanged(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/media/voip/wx.offVoIPChatMembersChanged.html)
     *
     * 取消监听实时语音通话成员在线状态变化事件。
@@ -2375,6 +2530,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.0` */
   def offVoIPChatMembersChanged(/** 实时语音通话成员在线状态变化事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offWifiConnected(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/wifi/wx.offWifiConnected.html)
     *
     * 取消监听连接上 Wi-Fi 的事件。
@@ -2382,6 +2538,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.9.0` */
   def offWifiConnected(/** 连接上 Wi-Fi 的事件的回调函数 */
   callback: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
+  
   /** [wx.offWindowResize(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/window/wx.offWindowResize.html)
     *
     * 取消监听窗口尺寸变化事件
@@ -2389,6 +2546,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.3.0` */
   def offWindowResize(/** 窗口尺寸变化事件的回调函数 */
   callback: OffWindowResizeCallback): Unit = js.native
+  
   /** [wx.onAccelerometerChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/accelerometer/wx.onAccelerometerChange.html)
   *
   * 监听加速度数据事件。频率根据 [wx.startAccelerometer()](https://developers.weixin.qq.com/miniprogram/dev/api/device/accelerometer/wx.startAccelerometer.html) 的 interval 参数, 接口调用后会自动开始监听。
@@ -2401,6 +2559,7 @@ trait Wx extends js.Object {
   ``` */
   def onAccelerometerChange(/** 加速度数据事件的回调函数 */
   callback: OnAccelerometerChangeCallback): Unit = js.native
+  
   /** [wx.onAppHide(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onAppHide.html)
     *
     * 监听小程序切后台事件。该事件与 [`App.onHide`](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onhide) 的回调时机一致。
@@ -2408,6 +2567,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.1.2` */
   def onAppHide(/** 小程序切后台事件的回调函数 */
   callback: OnAppHideCallback): Unit = js.native
+  
   /** [wx.onAppShow(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onAppShow.html)
     *
     * 监听小程序切前台事件。该事件与 [`App.onShow`](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onshowobject-object) 的回调参数一致。
@@ -2432,6 +2592,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.1.2` */
   def onAppShow(/** 小程序切前台事件的回调函数 */
   callback: OnAppShowCallback): Unit = js.native
+  
   /** [wx.onAudioInterruptionBegin(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onAudioInterruptionBegin.html)
     *
     * 监听音频因为受到系统占用而被中断开始事件。以下场景会触发此事件：闹钟、电话、FaceTime 通话、微信语音聊天、微信视频聊天。此事件触发后，小程序内所有音频会暂停。
@@ -2439,6 +2600,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.6.2` */
   def onAudioInterruptionBegin(/** 音频因为受到系统占用而被中断开始事件的回调函数 */
   callback: OnAudioInterruptionBeginCallback): Unit = js.native
+  
   /** [wx.onAudioInterruptionEnd(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onAudioInterruptionEnd.html)
     *
     * 监听音频中断结束事件。在收到 onAudioInterruptionBegin 事件之后，小程序内所有音频会暂停，收到此事件之后才可再次播放成功
@@ -2446,6 +2608,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.6.2` */
   def onAudioInterruptionEnd(/** 音频中断结束事件的回调函数 */
   callback: OnAudioInterruptionEndCallback): Unit = js.native
+  
   /** [wx.onBLECharacteristicValueChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.onBLECharacteristicValueChange.html)
   *
   * 监听低功耗蓝牙设备的特征值变化事件。必须先启用 `notifyBLECharacteristicValueChange` 接口才能接收到设备推送的 notification。
@@ -2475,6 +2638,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def onBLECharacteristicValueChange(/** 低功耗蓝牙设备的特征值变化事件的回调函数 */
   callback: OnBLECharacteristicValueChangeCallback): Unit = js.native
+  
   /** [wx.onBLEConnectionStateChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.onBLEConnectionStateChange.html)
   *
   * 监听低功耗蓝牙连接状态的改变事件。包括开发者主动连接或断开连接，设备丢失，连接异常断开等等
@@ -2493,6 +2657,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def onBLEConnectionStateChange(/** 低功耗蓝牙连接状态的改变事件的回调函数 */
   callback: OnBLEConnectionStateChangeCallback): Unit = js.native
+  
   /** [wx.onBLEPeripheralConnectionStateChanged(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-peripheral/wx.onBLEPeripheralConnectionStateChanged.html)
     *
     * 监听当前外围设备被连接或断开连接事件
@@ -2500,21 +2665,25 @@ trait Wx extends js.Object {
     * 最低基础库： `2.10.3` */
   def onBLEPeripheralConnectionStateChanged(/** 当前外围设备被连接或断开连接事件的回调函数 */
   callback: OnBLEPeripheralConnectionStateChangedCallback): Unit = js.native
+  
   /** [wx.onBackgroundAudioPause(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/wx.onBackgroundAudioPause.html)
     *
     * 监听音乐暂停事件。 */
   def onBackgroundAudioPause(/** 音乐暂停事件的回调函数 */
   callback: OnBackgroundAudioPauseCallback): Unit = js.native
+  
   /** [wx.onBackgroundAudioPlay(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/wx.onBackgroundAudioPlay.html)
     *
     * 监听音乐播放事件。 */
   def onBackgroundAudioPlay(/** 音乐播放事件的回调函数 */
   callback: OnBackgroundAudioPlayCallback): Unit = js.native
+  
   /** [wx.onBackgroundAudioStop(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/wx.onBackgroundAudioStop.html)
     *
     * 监听音乐停止事件。 */
   def onBackgroundAudioStop(/** 音乐停止事件的回调函数 */
   callback: OnBackgroundAudioStopCallback): Unit = js.native
+  
   /** [wx.onBackgroundFetchData(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/background-fetch/wx.onBackgroundFetchData.html)
     *
     * 收到 backgroundFetch 数据时的回调
@@ -2522,6 +2691,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.8.0` */
   def onBackgroundFetchData[TOption /* <: OnBackgroundFetchDataOption */](): PromisifySuccessResult[TOption, OnBackgroundFetchDataOption] = js.native
   def onBackgroundFetchData[TOption /* <: OnBackgroundFetchDataOption */](option: TOption): PromisifySuccessResult[TOption, OnBackgroundFetchDataOption] = js.native
+  
   /** [wx.onBeaconServiceChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/ibeacon/wx.onBeaconServiceChange.html)
     *
     * 监听 iBeacon 服务状态变化事件，仅能注册一个监听
@@ -2529,6 +2699,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.2.0` */
   def onBeaconServiceChange(/** iBeacon 服务状态变化事件的回调函数 */
   callback: OnBeaconServiceChangeCallback): Unit = js.native
+  
   /** [wx.onBeaconUpdate(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/ibeacon/wx.onBeaconUpdate.html)
     *
     * 监听 iBeacon 设备更新事件，仅能注册一个监听
@@ -2536,6 +2707,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.2.0` */
   def onBeaconUpdate(/** iBeacon 设备更新事件的回调函数 */
   callback: OnBeaconUpdateCallback): Unit = js.native
+  
   /** [wx.onBluetoothAdapterStateChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.onBluetoothAdapterStateChange.html)
   *
   * 监听蓝牙适配器状态变化事件
@@ -2553,6 +2725,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def onBluetoothAdapterStateChange(/** 蓝牙适配器状态变化事件的回调函数 */
   callback: OnBluetoothAdapterStateChangeCallback): Unit = js.native
+  
   /** [wx.onBluetoothDeviceFound(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.onBluetoothDeviceFound.html)
   *
   * 监听寻找到新设备的事件
@@ -2594,6 +2767,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def onBluetoothDeviceFound(/** 寻找到新设备的事件的回调函数 */
   callback: OnBluetoothDeviceFoundCallback): Unit = js.native
+  
   /** [wx.onCompassChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/compass/wx.onCompassChange.html)
     *
     * 监听罗盘数据变化事件。频率：5 次/秒，接口调用后会自动开始监听，可使用 wx.stopCompass 停止监听。
@@ -2616,6 +2790,7 @@ trait Wx extends js.Object {
     * | unknow ${value} | 未知的精度枚举值，即该 Android 系统此时返回的表示精度的 value 不是一个标准的精度枚举值 | */
   def onCompassChange(/** 罗盘数据变化事件的回调函数 */
   callback: OnCompassChangeCallback): Unit = js.native
+  
   /** [wx.onDeviceMotionChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/motion/wx.onDeviceMotionChange.html)
     *
     * 监听设备方向变化事件。频率根据 [wx.startDeviceMotionListening()](https://developers.weixin.qq.com/miniprogram/dev/api/device/motion/wx.startDeviceMotionListening.html) 的 interval 参数。可以使用 [wx.stopDeviceMotionListening()](https://developers.weixin.qq.com/miniprogram/dev/api/device/motion/wx.stopDeviceMotionListening.html) 停止监听。
@@ -2623,6 +2798,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.3.0` */
   def onDeviceMotionChange(/** 设备方向变化事件的回调函数 */
   callback: OnDeviceMotionChangeCallback): Unit = js.native
+  
   /** [wx.onError(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onError.html)
     *
     * 监听小程序错误事件。如脚本错误或 API 调用报错等。该事件与 [`App.onError`](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onerrorstring-error) 的回调时机与参数一致。
@@ -2630,6 +2806,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.1.2` */
   def onError(/** 小程序错误事件的回调函数 */
   callback: OnAppErrorCallback): Unit = js.native
+  
   /** [wx.onGetWifiList(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/wifi/wx.onGetWifiList.html)
     *
     * 监听获取到 Wi-Fi 列表数据事件
@@ -2637,6 +2814,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.6.0` */
   def onGetWifiList(/** 获取到 Wi-Fi 列表数据事件的回调函数 */
   callback: OnGetWifiListCallback): Unit = js.native
+  
   /** [wx.onGyroscopeChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/gyroscope/wx.onGyroscopeChange.html)
     *
     * 监听陀螺仪数据变化事件。频率根据 [wx.startGyroscope()](https://developers.weixin.qq.com/miniprogram/dev/api/device/gyroscope/wx.startGyroscope.html) 的 interval 参数。可以使用 [wx.stopGyroscope()](https://developers.weixin.qq.com/miniprogram/dev/api/device/gyroscope/wx.stopGyroscope.html) 停止监听。
@@ -2644,6 +2822,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.3.0` */
   def onGyroscopeChange(/** 陀螺仪数据变化事件的回调函数 */
   callback: OnGyroscopeChangeCallback): Unit = js.native
+  
   /** [wx.onHCEMessage(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/wx.onHCEMessage.html)
     *
     * 监听接收 NFC 设备消息事件，仅能注册一个监听
@@ -2651,6 +2830,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.7.0` */
   def onHCEMessage(/** 接收 NFC 设备消息事件的回调函数 */
   callback: OnHCEMessageCallback): Unit = js.native
+  
   /** [wx.onKeyboardHeightChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/keyboard/wx.onKeyboardHeightChange.html)
   *
   * 监听键盘高度变化
@@ -2666,6 +2846,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.7.0` */
   def onKeyboardHeightChange(callback: OnKeyboardHeightChangeCallback): Unit = js.native
+  
   /** [wx.onLocalServiceDiscoveryStop(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/mdns/wx.onLocalServiceDiscoveryStop.html)
     *
     * 监听 mDNS 服务停止搜索的事件
@@ -2673,6 +2854,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.4.0` */
   def onLocalServiceDiscoveryStop(/** mDNS 服务停止搜索的事件的回调函数 */
   callback: OnLocalServiceDiscoveryStopCallback): Unit = js.native
+  
   /** [wx.onLocalServiceFound(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/mdns/wx.onLocalServiceFound.html)
     *
     * 监听 mDNS 服务发现的事件
@@ -2680,6 +2862,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.4.0` */
   def onLocalServiceFound(/** mDNS 服务发现的事件的回调函数 */
   callback: OnLocalServiceFoundCallback): Unit = js.native
+  
   /** [wx.onLocalServiceLost(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/mdns/wx.onLocalServiceLost.html)
     *
     * 监听 mDNS 服务离开的事件
@@ -2687,6 +2870,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.4.0` */
   def onLocalServiceLost(/** mDNS 服务离开的事件的回调函数 */
   callback: OnLocalServiceLostCallback): Unit = js.native
+  
   /** [wx.onLocalServiceResolveFail(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/mdns/wx.onLocalServiceResolveFail.html)
     *
     * 监听 mDNS 服务解析失败的事件
@@ -2694,6 +2878,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.4.0` */
   def onLocalServiceResolveFail(/** mDNS 服务解析失败的事件的回调函数 */
   callback: OnLocalServiceResolveFailCallback): Unit = js.native
+  
   /** [wx.onLocationChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.onLocationChange.html)
   *
   * 监听实时地理位置变化事件，需结合 [wx.startLocationUpdateBackground](https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.startLocationUpdateBackground.html)、[wx.startLocationUpdate](https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.startLocationUpdate.html)使用。
@@ -2712,6 +2897,7 @@ trait Wx extends js.Object {
   * 最低基础库： `2.8.1` */
   def onLocationChange(/** 实时地理位置变化事件的回调函数 */
   callback: OnLocationChangeCallback): Unit = js.native
+  
   /** [wx.onMemoryWarning(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/performance/wx.onMemoryWarning.html)
     *
     * 监听内存不足告警事件。
@@ -2730,6 +2916,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.0.2` */
   def onMemoryWarning(/** 内存不足告警事件的回调函数 */
   callback: OnMemoryWarningCallback): Unit = js.native
+  
   /** [wx.onNetworkStatusChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/network/wx.onNetworkStatusChange.html)
   *
   * 监听网络状态变化事件
@@ -2747,6 +2934,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def onNetworkStatusChange(/** 网络状态变化事件的回调函数 */
   callback: OnNetworkStatusChangeCallback): Unit = js.native
+  
   /** [wx.onOnVoIPVideoMembersChanged(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/media/voip/wx.onOnVoIPVideoMembersChanged.html)
     *
     * 监听实时语音通话成员视频状态变化事件。
@@ -2754,6 +2942,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.11.0` */
   def onOnVoIPVideoMembersChanged(/** 实时语音通话成员视频状态变化事件的回调函数 */
   callback: OnOnVoIPVideoMembersChangedCallback): Unit = js.native
+  
   /** [wx.onPageNotFound(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onPageNotFound.html)
     *
     * 监听小程序要打开的页面不存在事件。该事件与 [`App.onPageNotFound`](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onpagenotfoundobject-object) 的回调时机一致。
@@ -2768,26 +2957,31 @@ trait Wx extends js.Object {
     * 最低基础库： `2.1.2` */
   def onPageNotFound(/** 小程序要打开的页面不存在事件的回调函数 */
   callback: OnPageNotFoundCallback): Unit = js.native
+  
   /** [wx.onSocketClose(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/websocket/wx.onSocketClose.html)
     *
     * 监听 WebSocket 连接关闭事件 */
   def onSocketClose(/** WebSocket 连接关闭事件的回调函数 */
   callback: OnSocketCloseCallback): Unit = js.native
+  
   /** [wx.onSocketError(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/websocket/wx.onSocketError.html)
     *
     * 监听 WebSocket 错误事件 */
   def onSocketError(/** WebSocket 错误事件的回调函数 */
   callback: OnSocketErrorCallback): Unit = js.native
+  
   /** [wx.onSocketMessage(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/websocket/wx.onSocketMessage.html)
     *
     * 监听 WebSocket 接受到服务器的消息事件 */
   def onSocketMessage(/** WebSocket 接受到服务器的消息事件的回调函数 */
   callback: OnSocketMessageCallback): Unit = js.native
+  
   /** [wx.onSocketOpen(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/websocket/wx.onSocketOpen.html)
     *
     * 监听 WebSocket 连接打开事件 */
   def onSocketOpen(/** WebSocket 连接打开事件的回调函数 */
   callback: OnSocketOpenCallback): Unit = js.native
+  
   /** [wx.onThemeChange(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onThemeChange.html)
     *
     * 监听系统主题改变事件。该事件与 [`App.onThemeChange`](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onThemeChange-Object-object) 的回调时机一致。
@@ -2800,6 +2994,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.11.0` */
   def onThemeChange(/** 系统主题改变事件的回调函数 */
   callback: OnThemeChangeCallback): Unit = js.native
+  
   /** [wx.onUnhandledRejection(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onUnhandledRejection.html)
     *
     * 监听未处理的 Promise 拒绝事件。该事件与 `App.onUnhandledRejection` 的回调时机与参数一致。
@@ -2813,6 +3008,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.10.0` */
   def onUnhandledRejection(/** 未处理的 Promise 拒绝事件的回调函数 */
   callback: OnUnhandledRejectionCallback): Unit = js.native
+  
   /** [wx.onUserCaptureScreen(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/screen/wx.onUserCaptureScreen.html)
   *
   * 监听用户主动截屏事件。用户使用系统截屏按键截屏时触发，只能注册一个监听
@@ -2829,6 +3025,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.4.0` */
   def onUserCaptureScreen(/** 用户主动截屏事件的回调函数 */
   callback: OnUserCaptureScreenCallback): Unit = js.native
+  
   /** [wx.onVoIPChatInterrupted(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/media/voip/wx.onVoIPChatInterrupted.html)
     *
     * 监听被动断开实时语音通话事件。包括小游戏切入后端时断开
@@ -2836,6 +3033,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.7.0` */
   def onVoIPChatInterrupted(/** 被动断开实时语音通话事件的回调函数 */
   callback: OnVoIPChatInterruptedCallback): Unit = js.native
+  
   /** [wx.onVoIPChatMembersChanged(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/media/voip/wx.onVoIPChatMembersChanged.html)
     *
     * 监听实时语音通话成员在线状态变化事件。有成员加入/退出通话时触发回调
@@ -2843,6 +3041,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.7.0` */
   def onVoIPChatMembersChanged(/** 实时语音通话成员在线状态变化事件的回调函数 */
   callback: OnVoIPChatMembersChangedCallback): Unit = js.native
+  
   /** [wx.onVoIPChatSpeakersChanged(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/media/voip/wx.onVoIPChatSpeakersChanged.html)
     *
     * 监听实时语音通话成员通话状态变化事件。有成员开始/停止说话时触发回调
@@ -2850,6 +3049,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.7.0` */
   def onVoIPChatSpeakersChanged(/** 实时语音通话成员通话状态变化事件的回调函数 */
   callback: OnVoIPChatSpeakersChangedCallback): Unit = js.native
+  
   /** [wx.onWifiConnected(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/wifi/wx.onWifiConnected.html)
     *
     * 监听连接上 Wi-Fi 的事件
@@ -2857,6 +3057,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.6.0` */
   def onWifiConnected(/** 连接上 Wi-Fi 的事件的回调函数 */
   callback: OnWifiConnectedCallback): Unit = js.native
+  
   /** [wx.onWindowResize(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/window/wx.onWindowResize.html)
     *
     * 监听窗口尺寸变化事件
@@ -2864,6 +3065,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.3.0` */
   def onWindowResize(/** 窗口尺寸变化事件的回调函数 */
   callback: OnWindowResizeCallback): Unit = js.native
+  
   /** [wx.openBluetoothAdapter(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.openBluetoothAdapter.html)
   *
   * 初始化蓝牙模块。iOS 上开启主机/从机模式时需分别调用一次，指定对应的 `mode`。
@@ -2899,6 +3101,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def openBluetoothAdapter[TOption /* <: OpenBluetoothAdapterOption */](option: TOption): PromisifySuccessResult[TOption, OpenBluetoothAdapterOption] = js.native
+  
   /** [wx.openCard(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/card/wx.openCard.html)
   *
   * 查看微信卡包中的卡券。只有通过 [认证](https://developers.weixin.qq.com/miniprogram/product/renzheng.html) 的小程序或文化互动类目的小游戏才能使用。更多文档请参考 [微信卡券接口文档](https://mp.weixin.qq.com/cgi-bin/announce?action=getannouncement&key=1490190158&version=1&lang=zh_CN&platform=2)。
@@ -2921,10 +3124,12 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def openCard[TOption /* <: OpenCardOption */](option: TOption): PromisifySuccessResult[TOption, OpenCardOption] = js.native
+  
   /** [wx.openDocument(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/file/wx.openDocument.html)
     *
     * 新开页面打开文档。微信客户端 `7.0.12` 版本前默认显示右上角菜单按钮，之后的版本默认不显示，需主动传入 `showMenu`。 */
   def openDocument[TOption /* <: OpenDocumentOption */](option: TOption): PromisifySuccessResult[TOption, OpenDocumentOption] = js.native
+  
   /** [wx.openLocation(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.openLocation.html)
   *
   * 使用微信内置地图查看位置
@@ -2947,6 +3152,7 @@ trait Wx extends js.Object {
   })
     ``` */
   def openLocation[TOption /* <: OpenLocationOption */](option: TOption): PromisifySuccessResult[TOption, OpenLocationOption] = js.native
+  
   /** [wx.openSetting(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/setting/wx.openSetting.html)
   *
   * 调起客户端小程序设置界面，返回用户设置的操作结果。**设置界面只会出现小程序已经向用户请求过的[权限](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html)**。
@@ -2968,6 +3174,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def openSetting[TOption /* <: OpenSettingOption */](option: TOption): PromisifySuccessResult[TOption, OpenSettingOption] = js.native
+  
   /** [wx.pageScrollTo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/scroll/wx.pageScrollTo.html)
   *
   * 将页面滚动到目标位置，支持选择器和滚动距离两种方式定位
@@ -2996,6 +3203,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.4.0` */
   def pageScrollTo[TOption /* <: PageScrollToOption */](option: TOption): PromisifySuccessResult[TOption, PageScrollToOption] = js.native
+  
   /** [wx.pauseBackgroundAudio(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/wx.pauseBackgroundAudio.html)
   *
   * 暂停播放音乐。
@@ -3008,6 +3216,7 @@ trait Wx extends js.Object {
   ``` */
   def pauseBackgroundAudio[TOption /* <: PauseBackgroundAudioOption */](): PromisifySuccessResult[TOption, PauseBackgroundAudioOption] = js.native
   def pauseBackgroundAudio[TOption /* <: PauseBackgroundAudioOption */](option: TOption): PromisifySuccessResult[TOption, PauseBackgroundAudioOption] = js.native
+  
   /** [wx.pauseVoice(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.pauseVoice.html)
   *
   * 暂停正在播放的语音。再次调用 [wx.playVoice](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.playVoice.html) 播放同一个文件时，会从暂停处开始播放。如果想从头开始播放，需要先调用 [wx.stopVoice](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.stopVoice.html)。
@@ -3028,6 +3237,7 @@ trait Wx extends js.Object {
   ``` */
   def pauseVoice[TOption /* <: PauseVoiceOption */](): PromisifySuccessResult[TOption, PauseVoiceOption] = js.native
   def pauseVoice[TOption /* <: PauseVoiceOption */](option: TOption): PromisifySuccessResult[TOption, PauseVoiceOption] = js.native
+  
   /** [wx.playBackgroundAudio(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/wx.playBackgroundAudio.html)
   *
   * 使用后台播放器播放音乐。对于微信客户端来说，只能同时有一个后台音乐在播放。当用户离开小程序后，音乐将暂停播放；当用户在其他小程序占用了音乐播放器，原有小程序内的音乐将停止播放。
@@ -3043,6 +3253,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def playBackgroundAudio[TOption /* <: PlayBackgroundAudioOption */](option: TOption): PromisifySuccessResult[TOption, PlayBackgroundAudioOption] = js.native
+  
   /** [wx.playVoice(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.playVoice.html)
   *
   * 开始播放语音。同时只允许一个语音文件正在播放，如果前一个语音文件还没播放完，将中断前一个语音播放。
@@ -3062,6 +3273,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def playVoice[TOption /* <: PlayVoiceOption */](option: TOption): PromisifySuccessResult[TOption, PlayVoiceOption] = js.native
+  
   /** [wx.previewImage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.previewImage.html)
   *
   * 在新页面中全屏预览图片。预览的过程中用户可以进行保存图片、发送给朋友等操作。
@@ -3076,6 +3288,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def previewImage[TOption /* <: PreviewImageOption */](option: TOption): PromisifySuccessResult[TOption, PreviewImageOption] = js.native
+  
   /** [wx.reLaunch(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.reLaunch.html)
   *
   * 关闭所有页面，打开到应用内的某个页面
@@ -3100,6 +3313,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def reLaunch[TOption /* <: ReLaunchOption */](option: TOption): PromisifySuccessResult[TOption, ReLaunchOption] = js.native
+  
   /** [wx.readBLECharacteristicValue(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.readBLECharacteristicValue.html)
   *
   * 读取低功耗蓝牙设备的特征值的二进制数据值。注意：必须设备的特征值支持 read 才可以成功调用。
@@ -3134,6 +3348,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def readBLECharacteristicValue[TOption /* <: ReadBLECharacteristicValueOption */](option: TOption): PromisifySuccessResult[TOption, ReadBLECharacteristicValueOption] = js.native
+  
   /** [wx.redirectTo(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.redirectTo.html)
   *
   * 关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面。
@@ -3147,6 +3362,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def redirectTo[TOption /* <: RedirectToOption */](option: TOption): PromisifySuccessResult[TOption, RedirectToOption] = js.native
+  
   /** [wx.removeSavedFile(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/file/wx.removeSavedFile.html)
   *
   * 删除本地缓存文件
@@ -3169,6 +3385,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def removeSavedFile[TOption /* <: WxRemoveSavedFileOption */](option: TOption): PromisifySuccessResult[TOption, WxRemoveSavedFileOption] = js.native
+  
   /** [wx.removeStorage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.removeStorage.html)
   *
   * 从本地缓存中移除指定 key
@@ -3193,6 +3410,7 @@ trait Wx extends js.Object {
   }
   ``` */
   def removeStorage[TOption /* <: RemoveStorageOption */](option: TOption): PromisifySuccessResult[TOption, RemoveStorageOption] = js.native
+  
   /** [wx.removeStorageSync(string key)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.removeStorageSync.html)
   *
   * [wx.removeStorage](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.removeStorage.html) 的同步版本
@@ -3218,12 +3436,14 @@ trait Wx extends js.Object {
   ``` */
   def removeStorageSync(/** 本地缓存中指定的 key */
   key: String): Unit = js.native
+  
   /** [wx.removeTabBarBadge(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/tab-bar/wx.removeTabBarBadge.html)
     *
     * 移除 tabBar 某一项右上角的文本
     *
     * 最低基础库： `1.9.0` */
   def removeTabBarBadge[TOption /* <: RemoveTabBarBadgeOption */](option: TOption): PromisifySuccessResult[TOption, RemoveTabBarBadgeOption] = js.native
+  
   /** [wx.reportAnalytics(string eventName, Object data)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/data-analysis/wx.reportAnalytics.html)
   *
   * 自定义分析数据上报接口。使用前，需要在小程序管理后台自定义分析中新建事件，配置好事件名与字段。
@@ -3240,6 +3460,7 @@ trait Wx extends js.Object {
   def reportAnalytics(/** 事件名 */
   eventName: String, /** 上报的自定义数据，key 为配置中的字段名，value 为上报的数据。 */
   data: IAnyObject): Unit = js.native
+  
   /** [wx.reportMonitor(string name, number value)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/report/wx.reportMonitor.html)
   *
   * 自定义业务数据监控上报接口。
@@ -3260,6 +3481,7 @@ trait Wx extends js.Object {
   def reportMonitor(/** 监控ID，在「小程序管理后台」新建数据指标后获得 */
   name: String, /** 上报数值，经处理后会在「小程序管理后台」上展示每分钟的上报总量 */
   value: Double): Unit = js.native
+  
   /** [wx.reportPerformance(Number id, Number value, String|Array dimensions)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/performance/wx.reportPerformance.html)
   *
   * 小程序测速上报。使用前，需要在小程序管理后台配置。 详情参见[小程序测速](#)指南。
@@ -3284,6 +3506,7 @@ trait Wx extends js.Object {
   id: Double, /** 需要上报的数值 */
   value: Double, /** 自定义维度 (选填) */
   dimensions: js.Array[_]): Unit = js.native
+  
   /** [[RequestTask](https://developers.weixin.qq.com/miniprogram/dev/api/network/request/RequestTask.html) wx.request(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/network/request/wx.request.html)
   *
   * 发起 HTTPS 网络请求。使用前请注意阅读[相关说明](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html)。
@@ -3315,6 +3538,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def request(option: RequestOption): RequestTask = js.native
+  
   /** [wx.requestPayment(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/payment/wx.requestPayment.html)
   *
   * 发起微信支付。了解更多信息，请查看[微信支付接口文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_3&index=1)
@@ -3334,6 +3558,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def requestPayment[TOption /* <: RequestPaymentOption */](option: TOption): PromisifySuccessResult[TOption, RequestPaymentOption] = js.native
+  
   /** [wx.requestSubscribeMessage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/subscribe-message/wx.requestSubscribeMessage.html)
   *
   * 调起客户端小程序订阅消息界面，返回用户订阅消息的操作结果。当用户勾选了订阅面板中的“总是保持以上选择，不再询问”时，模板消息会被添加到用户的小程序设置页，通过 [wx.getSetting](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/setting/wx.getSetting.html) 接口可获取用户对相关模板消息的订阅状态。
@@ -3373,6 +3598,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.4.4` */
   def requestSubscribeMessage[TOption /* <: RequestSubscribeMessageOption */](option: TOption): PromisifySuccessResult[TOption, RequestSubscribeMessageOption] = js.native
+  
   /** [wx.saveFile(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/file/wx.saveFile.html)
   *
   * 保存文件到本地。注意：**saveFile 会把临时文件移动，因此调用成功后传入的 tempFilePath 将不可用**
@@ -3399,12 +3625,14 @@ trait Wx extends js.Object {
   *
   * 本地文件存储的大小限制为 10M */
   def saveFile[TOption /* <: WxSaveFileOption */](option: TOption): PromisifySuccessResult[TOption, WxSaveFileOption] = js.native
+  
   /** [wx.saveFileToDisk(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/file/wx.saveFileToDisk.html)
     *
     * 保存文件系统的文件到用户磁盘，仅在 PC 端支持
     *
     * 最低基础库： `2.11.0` */
   def saveFileToDisk(option: SaveFileToDiskOption): Unit = js.native
+  
   /** [wx.saveImageToPhotosAlbum(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.saveImageToPhotosAlbum.html)
   *
   * 保存图片到系统相册。
@@ -3420,6 +3648,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.2.0` */
   def saveImageToPhotosAlbum[TOption /* <: SaveImageToPhotosAlbumOption */](option: TOption): PromisifySuccessResult[TOption, SaveImageToPhotosAlbumOption] = js.native
+  
   /** [wx.saveVideoToPhotosAlbum(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.saveVideoToPhotosAlbum.html)
   *
   * 保存视频到系统相册。支持mp4视频格式。
@@ -3438,6 +3667,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.2.0` */
   def saveVideoToPhotosAlbum[TOption /* <: SaveVideoToPhotosAlbumOption */](option: TOption): PromisifySuccessResult[TOption, SaveVideoToPhotosAlbumOption] = js.native
+  
   /** [wx.scanCode(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/scan/wx.scanCode.html)
   *
   * 调起客户端扫码界面进行扫码
@@ -3461,6 +3691,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def scanCode[TOption /* <: ScanCodeOption */](option: TOption): PromisifySuccessResult[TOption, ScanCodeOption] = js.native
+  
   /** [wx.seekBackgroundAudio(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/wx.seekBackgroundAudio.html)
   *
   * 控制音乐播放进度。
@@ -3474,6 +3705,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def seekBackgroundAudio[TOption /* <: SeekBackgroundAudioOption */](option: TOption): PromisifySuccessResult[TOption, SeekBackgroundAudioOption] = js.native
+  
   /** [wx.sendHCEMessage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/wx.sendHCEMessage.html)
   *
   * 发送 NFC 消息。仅在安卓系统下有效。
@@ -3498,6 +3730,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.7.0` */
   def sendHCEMessage[TOption /* <: SendHCEMessageOption */](option: TOption): PromisifySuccessResult[TOption, SendHCEMessageOption] = js.native
+  
   /** [wx.sendSocketMessage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/network/websocket/wx.sendSocketMessage.html)
   *
   * 通过 WebSocket 连接发送数据。需要先 wx.connectSocket，并在 wx.onSocketOpen 回调之后才能发送。
@@ -3529,12 +3762,14 @@ trait Wx extends js.Object {
   }
   ``` */
   def sendSocketMessage[TOption /* <: SendSocketMessageOption */](option: TOption): PromisifySuccessResult[TOption, SendSocketMessageOption] = js.native
+  
   /** [wx.setBLEMTU(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.setBLEMTU.html)
     *
     * 设置蓝牙最大传输单元。需在 wx.createBLEConnection调用成功后调用，mtu 设置范围 (22,512)。安卓5.1以上有效。
     *
     * 最低基础库： `2.11.0` */
   def setBLEMTU[TOption /* <: SetBLEMTUOption */](option: TOption): PromisifySuccessResult[TOption, SetBLEMTUOption] = js.native
+  
   /** [wx.setBackgroundColor(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/background/wx.setBackgroundColor.html)
   *
   * 动态设置窗口的背景色
@@ -3554,12 +3789,14 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.1.0` */
   def setBackgroundColor[TOption /* <: SetBackgroundColorOption */](option: TOption): PromisifySuccessResult[TOption, SetBackgroundColorOption] = js.native
+  
   /** [wx.setBackgroundFetchToken(object object)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/background-fetch/wx.setBackgroundFetchToken.html)
     *
     * 设置自定义登录态，在周期性拉取数据时带上，便于第三方服务器验证请求合法性
     *
     * 最低基础库： `2.8.0` */
   def setBackgroundFetchToken[TOption /* <: SetBackgroundFetchTokenOption */](option: TOption): PromisifySuccessResult[TOption, SetBackgroundFetchTokenOption] = js.native
+  
   /** [wx.setBackgroundTextStyle(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/background/wx.setBackgroundTextStyle.html)
   *
   * 动态设置下拉背景字体、loading 图的样式
@@ -3575,6 +3812,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `2.1.0` */
   def setBackgroundTextStyle[TOption /* <: SetBackgroundTextStyleOption */](option: TOption): PromisifySuccessResult[TOption, SetBackgroundTextStyleOption] = js.native
+  
   /** [wx.setClipboardData(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/clipboard/wx.setClipboardData.html)
   *
   * 设置系统剪贴板的内容。调用成功后，会弹出 toast 提示"内容已复制"，持续 1.5s
@@ -3597,6 +3835,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def setClipboardData[TOption /* <: SetClipboardDataOption */](option: TOption): PromisifySuccessResult[TOption, SetClipboardDataOption] = js.native
+  
   /** [wx.setEnableDebug(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/base/debug/wx.setEnableDebug.html)
   *
   * 设置是否打开调试开关。此开关对正式版也能生效。
@@ -3622,12 +3861,14 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.4.0` */
   def setEnableDebug[TOption /* <: SetEnableDebugOption */](option: TOption): PromisifySuccessResult[TOption, SetEnableDebugOption] = js.native
+  
   /** [wx.setInnerAudioOption(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.setInnerAudioOption.html)
     *
     * 设置 [InnerAudioContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/InnerAudioContext.html) 的播放选项。设置之后对当前小程序全局生效。
     *
     * 最低基础库： `2.3.0` */
   def setInnerAudioOption[TOption /* <: SetInnerAudioOption */](option: TOption): PromisifySuccessResult[TOption, SetInnerAudioOption] = js.native
+  
   /** [wx.setKeepScreenOn(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/screen/wx.setKeepScreenOn.html)
   *
   * 设置是否保持常亮状态。仅在当前小程序生效，离开小程序后设置失效。
@@ -3643,12 +3884,14 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.4.0` */
   def setKeepScreenOn[TOption /* <: SetKeepScreenOnOption */](option: TOption): PromisifySuccessResult[TOption, SetKeepScreenOnOption] = js.native
+  
   /** [wx.setNavigationBarColor(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/navigation-bar/wx.setNavigationBarColor.html)
     *
     * 设置页面导航条颜色
     *
     * 最低基础库： `1.4.0` */
   def setNavigationBarColor[TOption /* <: SetNavigationBarColorOption */](option: TOption): PromisifySuccessResult[TOption, SetNavigationBarColorOption] = js.native
+  
   /** [wx.setNavigationBarTitle(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/navigation-bar/wx.setNavigationBarTitle.html)
   *
   * 动态设置当前页面的标题
@@ -3662,12 +3905,14 @@ trait Wx extends js.Object {
   })
   ``` */
   def setNavigationBarTitle[TOption /* <: SetNavigationBarTitleOption */](option: TOption): PromisifySuccessResult[TOption, SetNavigationBarTitleOption] = js.native
+  
   /** [wx.setScreenBrightness(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/screen/wx.setScreenBrightness.html)
     *
     * 设置屏幕亮度
     *
     * 最低基础库： `1.2.0` */
   def setScreenBrightness[TOption /* <: SetScreenBrightnessOption */](option: TOption): PromisifySuccessResult[TOption, SetScreenBrightnessOption] = js.native
+  
   /** [wx.setStorage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.setStorage.html)
   *
   * 将数据存储在本地缓存中指定的 key 中。会覆盖掉原来该 key 对应的内容。除非用户主动删除或因存储空间原因被系统清理，否则数据都一直可用。单个 key 允许存储的最大数据长度为 1MB，所有数据存储上限为 10MB。
@@ -3687,6 +3932,7 @@ trait Wx extends js.Object {
   } catch (e) { }
   ``` */
   def setStorage[TOption /* <: SetStorageOption */](option: TOption): PromisifySuccessResult[TOption, SetStorageOption] = js.native
+  
   /** [wx.setStorageSync(string key, any data)](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.setStorageSync.html)
   *
   * [wx.setStorage](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.setStorage.html) 的同步版本
@@ -3711,6 +3957,7 @@ trait Wx extends js.Object {
     /** 需要存储的内容。只支持原生类型、Date、及能够通过`JSON.stringify`序列化的对象。 */
   data: js.Any
   ): Unit = js.native
+  
   /** [wx.setTabBarBadge(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/tab-bar/wx.setTabBarBadge.html)
   *
   * 为 tabBar 某一项的右上角添加文本
@@ -3727,6 +3974,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.9.0` */
   def setTabBarBadge[TOption /* <: SetTabBarBadgeOption */](option: TOption): PromisifySuccessResult[TOption, SetTabBarBadgeOption] = js.native
+  
   /** [wx.setTabBarItem(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/tab-bar/wx.setTabBarItem.html)
   *
   * 动态设置 tabBar 某一项的内容，`2.7.0` 起图片支持临时文件和网络文件。
@@ -3745,6 +3993,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.9.0` */
   def setTabBarItem[TOption /* <: SetTabBarItemOption */](option: TOption): PromisifySuccessResult[TOption, SetTabBarItemOption] = js.native
+  
   /** [wx.setTabBarStyle(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/tab-bar/wx.setTabBarStyle.html)
   *
   * 动态设置 tabBar 的整体样式
@@ -3764,6 +4013,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.9.0` */
   def setTabBarStyle[TOption /* <: SetTabBarStyleOption */](): PromisifySuccessResult[TOption, SetTabBarStyleOption] = js.native
   def setTabBarStyle[TOption /* <: SetTabBarStyleOption */](option: TOption): PromisifySuccessResult[TOption, SetTabBarStyleOption] = js.native
+  
   /** [wx.setTopBarText(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/sticky/wx.setTopBarText.html)
   *
   * 动态设置置顶栏文字内容。只有当前小程序被置顶时能生效，如果当前小程序没有被置顶，也能调用成功，但是不会立即生效，只有在用户将这个小程序置顶后才换上设置的文字内容.
@@ -3784,6 +4034,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.4.3` */
   def setTopBarText[TOption /* <: SetTopBarTextOption */](option: TOption): PromisifySuccessResult[TOption, SetTopBarTextOption] = js.native
+  
   /** [wx.setWifiList(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/wifi/wx.setWifiList.html)
   *
   * 设置 `wifiList` 中 AP 的相关信息。在 `onGetWifiList` 回调后调用，**iOS特有接口**。
@@ -3819,12 +4070,14 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.6.0` */
   def setWifiList[TOption /* <: SetWifiListOption */](option: TOption): PromisifySuccessResult[TOption, SetWifiListOption] = js.native
+  
   /** [wx.setWindowSize(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/window/wx.setWindowSize.html)
     *
     * 设置窗口大小，该接口仅适用于 PC 平台，使用细则请参见指南
     *
     * 最低基础库： `2.10.1` */
   def setWindowSize(option: SetWindowSizeOption): Unit = js.native
+  
   /** [wx.showActionSheet(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showActionSheet.html)
   *
   * 显示操作菜单
@@ -3850,6 +4103,7 @@ trait Wx extends js.Object {
   * - Android 6.7.2 以下版本，点击取消或蒙层时，回调 fail, errMsg 为 "fail cancel"；
   * - Android 6.7.2 及以上版本 和 iOS 点击蒙层不会关闭模态弹窗，所以尽量避免使用「取消」分支中实现业务逻辑 */
   def showActionSheet[TOption /* <: ShowActionSheetOption */](option: TOption): PromisifySuccessResult[TOption, ShowActionSheetOption] = js.native
+  
   /** [wx.showLoading(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showLoading.html)
   *
   * 显示 loading 提示框。需主动调用 wx.hideLoading 才能关闭提示框
@@ -3874,6 +4128,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def showLoading[TOption /* <: ShowLoadingOption */](option: TOption): PromisifySuccessResult[TOption, ShowLoadingOption] = js.native
+  
   /** [wx.showModal(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showModal.html)
   *
   * 显示模态对话框
@@ -3901,17 +4156,20 @@ trait Wx extends js.Object {
   * - Android 6.7.2 以下版本，点击取消或蒙层时，回调 fail, errMsg 为 "fail cancel"；
   * - Android 6.7.2 及以上版本 和 iOS 点击蒙层不会关闭模态弹窗，所以尽量避免使用「取消」分支中实现业务逻辑 */
   def showModal[TOption /* <: ShowModalOption */](option: TOption): PromisifySuccessResult[TOption, ShowModalOption] = js.native
+  
   /** [wx.showNavigationBarLoading(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/navigation-bar/wx.showNavigationBarLoading.html)
     *
     * 在当前页面显示导航条加载动画 */
   def showNavigationBarLoading[TOption /* <: ShowNavigationBarLoadingOption */](): PromisifySuccessResult[TOption, ShowNavigationBarLoadingOption] = js.native
   def showNavigationBarLoading[TOption /* <: ShowNavigationBarLoadingOption */](option: TOption): PromisifySuccessResult[TOption, ShowNavigationBarLoadingOption] = js.native
+  
   /** [wx.showRedPackage(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/redpackage/wx.showRedPackage.html)
     *
     * 拉取h5领取红包封面页。获取参考红包封面地址参考 [微信红包封面开发平台](https://cover.weixin.qq.com/cgi-bin/mmcover-bin/readtemplate?t=page%2Fdoc%2Fguide%2Fintroduce.html)。
     *
     * 最低基础库： `2.10.0` */
   def showRedPackage[TOption /* <: ShowRedPackageOption */](option: TOption): PromisifySuccessResult[TOption, ShowRedPackageOption] = js.native
+  
   /** [wx.showShareMenu(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/share/wx.showShareMenu.html)
   *
   * 显示当前页面的转发按钮
@@ -3927,18 +4185,21 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def showShareMenu[TOption /* <: ShowShareMenuOption */](option: TOption): PromisifySuccessResult[TOption, ShowShareMenuOption] = js.native
+  
   /** [wx.showTabBar(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/tab-bar/wx.showTabBar.html)
     *
     * 显示 tabBar
     *
     * 最低基础库： `1.9.0` */
   def showTabBar[TOption /* <: ShowTabBarOption */](option: TOption): PromisifySuccessResult[TOption, ShowTabBarOption] = js.native
+  
   /** [wx.showTabBarRedDot(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/tab-bar/wx.showTabBarRedDot.html)
     *
     * 显示 tabBar 某一项的右上角的红点
     *
     * 最低基础库： `1.9.0` */
   def showTabBarRedDot[TOption /* <: ShowTabBarRedDotOption */](option: TOption): PromisifySuccessResult[TOption, ShowTabBarRedDotOption] = js.native
+  
   /** [wx.showToast(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html)
   *
   * 显示消息提示框
@@ -3960,6 +4221,7 @@ trait Wx extends js.Object {
   * - [wx.showLoading](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showLoading.html) 和 [wx.showToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html) 同时只能显示一个
   * - [wx.showToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html) 应与 [wx.hideToast](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.hideToast.html) 配对使用 */
   def showToast[TOption /* <: ShowToastOption */](option: TOption): PromisifySuccessResult[TOption, ShowToastOption] = js.native
+  
   /** [wx.startAccelerometer(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/accelerometer/wx.startAccelerometer.html)
   *
   * 开始监听加速度数据。
@@ -3980,6 +4242,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def startAccelerometer[TOption /* <: StartAccelerometerOption */](option: TOption): PromisifySuccessResult[TOption, StartAccelerometerOption] = js.native
+  
   /** [wx.startBeaconDiscovery(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/ibeacon/wx.startBeaconDiscovery.html)
   *
   * 开始搜索附近的 iBeacon 设备
@@ -3995,6 +4258,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.2.0` */
   def startBeaconDiscovery[TOption /* <: StartBeaconDiscoveryOption */](option: TOption): PromisifySuccessResult[TOption, StartBeaconDiscoveryOption] = js.native
+  
   /** [wx.startBluetoothDevicesDiscovery(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.startBluetoothDevicesDiscovery.html)
   *
   * 开始搜寻附近的蓝牙外围设备。**此操作比较耗费系统资源，请在搜索并连接到设备后调用 [wx.stopBluetoothDevicesDiscovery](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.stopBluetoothDevicesDiscovery.html) 方法停止搜索。**
@@ -4016,6 +4280,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.1.0` */
   def startBluetoothDevicesDiscovery[TOption /* <: StartBluetoothDevicesDiscoveryOption */](option: TOption): PromisifySuccessResult[TOption, StartBluetoothDevicesDiscoveryOption] = js.native
+  
   /** [wx.startCompass(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/compass/wx.startCompass.html)
   *
   * 开始监听罗盘数据
@@ -4030,18 +4295,21 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def startCompass[TOption /* <: StartCompassOption */](): PromisifySuccessResult[TOption, StartCompassOption] = js.native
   def startCompass[TOption /* <: StartCompassOption */](option: TOption): PromisifySuccessResult[TOption, StartCompassOption] = js.native
+  
   /** [wx.startDeviceMotionListening(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/motion/wx.startDeviceMotionListening.html)
     *
     * 开始监听设备方向的变化。
     *
     * 最低基础库： `2.3.0` */
   def startDeviceMotionListening[TOption /* <: StartDeviceMotionListeningOption */](option: TOption): PromisifySuccessResult[TOption, StartDeviceMotionListeningOption] = js.native
+  
   /** [wx.startGyroscope(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/gyroscope/wx.startGyroscope.html)
     *
     * 开始监听陀螺仪数据。
     *
     * 最低基础库： `2.3.0` */
   def startGyroscope[TOption /* <: StartGyroscopeOption */](option: TOption): PromisifySuccessResult[TOption, StartGyroscopeOption] = js.native
+  
   /** [wx.startHCE(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/wx.startHCE.html)
   *
   * 初始化 NFC 模块。
@@ -4060,6 +4328,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.7.0` */
   def startHCE[TOption /* <: StartHCEOption */](option: TOption): PromisifySuccessResult[TOption, StartHCEOption] = js.native
+  
   /** [wx.startLocalServiceDiscovery(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/network/mdns/wx.startLocalServiceDiscovery.html)
     *
     * 开始搜索局域网下的 mDNS 服务。搜索的结果会通过 wx.onLocalService* 事件返回。
@@ -4072,6 +4341,7 @@ trait Wx extends js.Object {
     *
     * 最低基础库： `2.4.0` */
   def startLocalServiceDiscovery[TOption /* <: StartLocalServiceDiscoveryOption */](option: TOption): PromisifySuccessResult[TOption, StartLocalServiceDiscoveryOption] = js.native
+  
   /** [wx.startLocationUpdate(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.startLocationUpdate.html)
     *
     * 开启小程序进入前台时接收位置消息
@@ -4084,6 +4354,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.8.0` */
   def startLocationUpdate[TOption /* <: StartLocationUpdateOption */](): PromisifySuccessResult[TOption, StartLocationUpdateOption] = js.native
   def startLocationUpdate[TOption /* <: StartLocationUpdateOption */](option: TOption): PromisifySuccessResult[TOption, StartLocationUpdateOption] = js.native
+  
   /** [wx.startLocationUpdateBackground(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.startLocationUpdateBackground.html)
     *
     * 开启小程序进入前后台时均接收位置消息，需引导用户开启[授权]((open-ability/authorize#后台定位))。授权以后，小程序在运行中或进入后台均可接受位置消息变化。
@@ -4098,6 +4369,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.8.0` */
   def startLocationUpdateBackground[TOption /* <: StartLocationUpdateBackgroundOption */](): PromisifySuccessResult[TOption, StartLocationUpdateBackgroundOption] = js.native
   def startLocationUpdateBackground[TOption /* <: StartLocationUpdateBackgroundOption */](option: TOption): PromisifySuccessResult[TOption, StartLocationUpdateBackgroundOption] = js.native
+  
   /** [wx.startPullDownRefresh(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.startPullDownRefresh.html)
   *
   * 开始下拉刷新。调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。
@@ -4112,6 +4384,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.5.0` */
   def startPullDownRefresh[TOption /* <: StartPullDownRefreshOption */](): PromisifySuccessResult[TOption, StartPullDownRefreshOption] = js.native
   def startPullDownRefresh[TOption /* <: StartPullDownRefreshOption */](option: TOption): PromisifySuccessResult[TOption, StartPullDownRefreshOption] = js.native
+  
   /** [wx.startRecord(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/recorder/wx.startRecord.html)
   *
   * 开始录音。当主动调用 [wx.stopRecord](https://developers.weixin.qq.com/miniprogram/dev/api/media/recorder/wx.stopRecord.html)，或者录音超过1分钟时自动结束录音。当用户离开小程序时，此接口无法调用。
@@ -4130,6 +4403,7 @@ trait Wx extends js.Object {
   }, 10000)
   ``` */
   def startRecord[TOption /* <: WxStartRecordOption */](option: TOption): PromisifySuccessResult[TOption, WxStartRecordOption] = js.native
+  
   /** [wx.startSoterAuthentication(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/soter/wx.startSoterAuthentication.html)
   *
   * 开始 SOTER 生物认证。验证流程请参考[说明](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/bio-auth.html)。
@@ -4180,6 +4454,7 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.5.0` */
   def startSoterAuthentication[TOption /* <: StartSoterAuthenticationOption */](option: TOption): PromisifySuccessResult[TOption, StartSoterAuthenticationOption] = js.native
+  
   /** [wx.startWifi(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/wifi/wx.startWifi.html)
   *
   * 初始化 Wi-Fi 模块。
@@ -4199,6 +4474,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.6.0` */
   def startWifi[TOption /* <: StartWifiOption */](): PromisifySuccessResult[TOption, StartWifiOption] = js.native
   def startWifi[TOption /* <: StartWifiOption */](option: TOption): PromisifySuccessResult[TOption, StartWifiOption] = js.native
+  
   /** [wx.stopAccelerometer(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/accelerometer/wx.stopAccelerometer.html)
   *
   * 停止监听加速度数据。
@@ -4213,6 +4489,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def stopAccelerometer[TOption /* <: StopAccelerometerOption */](): PromisifySuccessResult[TOption, StopAccelerometerOption] = js.native
   def stopAccelerometer[TOption /* <: StopAccelerometerOption */](option: TOption): PromisifySuccessResult[TOption, StopAccelerometerOption] = js.native
+  
   /** [wx.stopBackgroundAudio(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/wx.stopBackgroundAudio.html)
   *
   * 停止播放音乐。
@@ -4225,6 +4502,7 @@ trait Wx extends js.Object {
   ``` */
   def stopBackgroundAudio[TOption /* <: StopBackgroundAudioOption */](): PromisifySuccessResult[TOption, StopBackgroundAudioOption] = js.native
   def stopBackgroundAudio[TOption /* <: StopBackgroundAudioOption */](option: TOption): PromisifySuccessResult[TOption, StopBackgroundAudioOption] = js.native
+  
   /** [wx.stopBeaconDiscovery(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/ibeacon/wx.stopBeaconDiscovery.html)
     *
     * 停止搜索附近的 iBeacon 设备
@@ -4232,6 +4510,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.2.0` */
   def stopBeaconDiscovery[TOption /* <: StopBeaconDiscoveryOption */](): PromisifySuccessResult[TOption, StopBeaconDiscoveryOption] = js.native
   def stopBeaconDiscovery[TOption /* <: StopBeaconDiscoveryOption */](option: TOption): PromisifySuccessResult[TOption, StopBeaconDiscoveryOption] = js.native
+  
   /** [wx.stopBluetoothDevicesDiscovery(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth/wx.stopBluetoothDevicesDiscovery.html)
   *
   * 停止搜寻附近的蓝牙外围设备。若已经找到需要的蓝牙设备并不需要继续搜索时，建议调用该接口停止蓝牙搜索。
@@ -4251,6 +4530,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def stopBluetoothDevicesDiscovery[TOption /* <: StopBluetoothDevicesDiscoveryOption */](): PromisifySuccessResult[TOption, StopBluetoothDevicesDiscoveryOption] = js.native
   def stopBluetoothDevicesDiscovery[TOption /* <: StopBluetoothDevicesDiscoveryOption */](option: TOption): PromisifySuccessResult[TOption, StopBluetoothDevicesDiscoveryOption] = js.native
+  
   /** [wx.stopCompass(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/compass/wx.stopCompass.html)
   *
   * 停止监听罗盘数据
@@ -4265,6 +4545,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def stopCompass[TOption /* <: StopCompassOption */](): PromisifySuccessResult[TOption, StopCompassOption] = js.native
   def stopCompass[TOption /* <: StopCompassOption */](option: TOption): PromisifySuccessResult[TOption, StopCompassOption] = js.native
+  
   /** [wx.stopDeviceMotionListening(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/motion/wx.stopDeviceMotionListening.html)
     *
     * 停止监听设备方向的变化。
@@ -4272,6 +4553,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.3.0` */
   def stopDeviceMotionListening[TOption /* <: StopDeviceMotionListeningOption */](): PromisifySuccessResult[TOption, StopDeviceMotionListeningOption] = js.native
   def stopDeviceMotionListening[TOption /* <: StopDeviceMotionListeningOption */](option: TOption): PromisifySuccessResult[TOption, StopDeviceMotionListeningOption] = js.native
+  
   /** [wx.stopGyroscope(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/gyroscope/wx.stopGyroscope.html)
     *
     * 停止监听陀螺仪数据。
@@ -4279,6 +4561,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.3.0` */
   def stopGyroscope[TOption /* <: StopGyroscopeOption */](): PromisifySuccessResult[TOption, StopGyroscopeOption] = js.native
   def stopGyroscope[TOption /* <: StopGyroscopeOption */](option: TOption): PromisifySuccessResult[TOption, StopGyroscopeOption] = js.native
+  
   /** [wx.stopHCE(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/wx.stopHCE.html)
   *
   * 关闭 NFC 模块。仅在安卓系统下有效。
@@ -4297,6 +4580,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.7.0` */
   def stopHCE[TOption /* <: StopHCEOption */](): PromisifySuccessResult[TOption, StopHCEOption] = js.native
   def stopHCE[TOption /* <: StopHCEOption */](option: TOption): PromisifySuccessResult[TOption, StopHCEOption] = js.native
+  
   /** [wx.stopLocalServiceDiscovery(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/network/mdns/wx.stopLocalServiceDiscovery.html)
     *
     * 停止搜索 mDNS 服务
@@ -4304,6 +4588,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.4.0` */
   def stopLocalServiceDiscovery[TOption /* <: StopLocalServiceDiscoveryOption */](): PromisifySuccessResult[TOption, StopLocalServiceDiscoveryOption] = js.native
   def stopLocalServiceDiscovery[TOption /* <: StopLocalServiceDiscoveryOption */](option: TOption): PromisifySuccessResult[TOption, StopLocalServiceDiscoveryOption] = js.native
+  
   /** [wx.stopLocationUpdate(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.stopLocationUpdate.html)
     *
     * 关闭监听实时位置变化，前后台都停止消息接收
@@ -4311,6 +4596,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.8.0` */
   def stopLocationUpdate[TOption /* <: StopLocationUpdateOption */](): PromisifySuccessResult[TOption, StopLocationUpdateOption] = js.native
   def stopLocationUpdate[TOption /* <: StopLocationUpdateOption */](option: TOption): PromisifySuccessResult[TOption, StopLocationUpdateOption] = js.native
+  
   /** [wx.stopPullDownRefresh(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.stopPullDownRefresh.html)
   *
   * 停止当前页面下拉刷新。
@@ -4329,6 +4615,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.5.0` */
   def stopPullDownRefresh[TOption /* <: StopPullDownRefreshOption */](): PromisifySuccessResult[TOption, StopPullDownRefreshOption] = js.native
   def stopPullDownRefresh[TOption /* <: StopPullDownRefreshOption */](option: TOption): PromisifySuccessResult[TOption, StopPullDownRefreshOption] = js.native
+  
   /** [wx.stopRecord(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/recorder/wx.stopRecord.html)
   *
   * 停止录音。
@@ -4348,6 +4635,7 @@ trait Wx extends js.Object {
   ``` */
   def stopRecord[TOption /* <: WxStopRecordOption */](): PromisifySuccessResult[TOption, WxStopRecordOption] = js.native
   def stopRecord[TOption /* <: WxStopRecordOption */](option: TOption): PromisifySuccessResult[TOption, WxStopRecordOption] = js.native
+  
   /** [wx.stopVoice(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/wx.stopVoice.html)
   *
   * 结束播放语音。
@@ -4368,6 +4656,7 @@ trait Wx extends js.Object {
   ``` */
   def stopVoice[TOption /* <: StopVoiceOption */](): PromisifySuccessResult[TOption, StopVoiceOption] = js.native
   def stopVoice[TOption /* <: StopVoiceOption */](option: TOption): PromisifySuccessResult[TOption, StopVoiceOption] = js.native
+  
   /** [wx.stopWifi(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/wifi/wx.stopWifi.html)
   *
   * 关闭 Wi-Fi 模块。
@@ -4386,6 +4675,7 @@ trait Wx extends js.Object {
   * 最低基础库： `1.6.0` */
   def stopWifi[TOption /* <: StopWifiOption */](): PromisifySuccessResult[TOption, StopWifiOption] = js.native
   def stopWifi[TOption /* <: StopWifiOption */](option: TOption): PromisifySuccessResult[TOption, StopWifiOption] = js.native
+  
   /** [wx.subscribeVoIPVideoMembers(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/voip/wx.subscribeVoIPVideoMembers.html)
     *
     * 订阅关系，调用后 `onVoIPVideoMembersChanged` 事件仅返回订阅成员的消息。
@@ -4393,6 +4683,7 @@ trait Wx extends js.Object {
     * 最低基础库： `2.11.0` */
   def subscribeVoIPVideoMembers[TOption /* <: SubscribeVoIPVideoMembersOption */](): PromisifySuccessResult[TOption, SubscribeVoIPVideoMembersOption] = js.native
   def subscribeVoIPVideoMembers[TOption /* <: SubscribeVoIPVideoMembersOption */](option: TOption): PromisifySuccessResult[TOption, SubscribeVoIPVideoMembersOption] = js.native
+  
   /** [wx.switchTab(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.switchTab.html)
   *
   * 跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面
@@ -4420,6 +4711,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def switchTab[TOption /* <: SwitchTabOption */](option: TOption): PromisifySuccessResult[TOption, SwitchTabOption] = js.native
+  
   /** [wx.updateShareMenu(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/share/wx.updateShareMenu.html)
   *
   * 更新转发属性
@@ -4436,12 +4728,14 @@ trait Wx extends js.Object {
   *
   * 最低基础库： `1.2.0` */
   def updateShareMenu[TOption /* <: UpdateShareMenuOption */](option: TOption): PromisifySuccessResult[TOption, UpdateShareMenuOption] = js.native
+  
   /** [wx.updateVoIPChatMuteConfig(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/media/voip/wx.updateVoIPChatMuteConfig.html)
     *
     * 更新实时语音静音设置
     *
     * 最低基础库： `2.7.0` */
   def updateVoIPChatMuteConfig[TOption /* <: UpdateVoIPChatMuteConfigOption */](option: TOption): PromisifySuccessResult[TOption, UpdateVoIPChatMuteConfigOption] = js.native
+  
   /** [[UploadTask](https://developers.weixin.qq.com/miniprogram/dev/api/network/upload/UploadTask.html) wx.uploadFile(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/network/upload/wx.uploadFile.html)
   *
   * 将本地资源上传到服务器。客户端发起一个 HTTPS POST 请求，其中 `content-type` 为 `multipart/form-data`。使用前请注意阅读[相关说明](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html)。
@@ -4469,6 +4763,7 @@ trait Wx extends js.Object {
   })
   ``` */
   def uploadFile(option: UploadFileOption): UploadTask = js.native
+  
   /** [wx.vibrateLong(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/vibrate/wx.vibrateLong.html)
     *
     * 使手机发生较长时间的振动（400 ms)
@@ -4476,6 +4771,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.2.0` */
   def vibrateLong[TOption /* <: VibrateLongOption */](): PromisifySuccessResult[TOption, VibrateLongOption] = js.native
   def vibrateLong[TOption /* <: VibrateLongOption */](option: TOption): PromisifySuccessResult[TOption, VibrateLongOption] = js.native
+  
   /** [wx.vibrateShort(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/vibrate/wx.vibrateShort.html)
     *
     * 使手机发生较短时间的振动（15 ms）。仅在 iPhone `7 / 7 Plus` 以上及 Android 机型生效
@@ -4483,6 +4779,7 @@ trait Wx extends js.Object {
     * 最低基础库： `1.2.0` */
   def vibrateShort[TOption /* <: VibrateShortOption */](): PromisifySuccessResult[TOption, VibrateShortOption] = js.native
   def vibrateShort[TOption /* <: VibrateShortOption */](option: TOption): PromisifySuccessResult[TOption, VibrateShortOption] = js.native
+  
   /** [wx.writeBLECharacteristicValue(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-ble/wx.writeBLECharacteristicValue.html)
   *
   * 向低功耗蓝牙设备特征值中写入二进制数据。注意：必须设备的特征值支持 write 才可以成功调用。
@@ -4522,4 +4819,3 @@ trait Wx extends js.Object {
   * 最低基础库： `1.1.0` */
   def writeBLECharacteristicValue[TOption /* <: WriteBLECharacteristicValueOption */](option: TOption): PromisifySuccessResult[TOption, WriteBLECharacteristicValueOption] = js.native
 }
-

@@ -9,11 +9,12 @@ import typingsSlinky.broFs.anon.`2`
 import typingsSlinky.filesystem.FileEntry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("bro-fs", "readFile")
 @js.native
 object readFile extends js.Object {
+  
   def apply(path: String): js.Promise[String] = js.native
   def apply(path: String, options: Type): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def apply(path: String, options: `0`): js.Promise[Blob] = js.native
@@ -25,4 +26,3 @@ object readFile extends js.Object {
   def apply(path: FileEntry, options: `1`): js.Promise[File] = js.native
   def apply(path: FileEntry, options: `2`): js.Promise[String] = js.native
 }
-

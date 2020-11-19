@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MigrationHubConfig extends Service {
+  
   @JSName("config")
   var config_MigrationHubConfig: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * This API sets up the home region for the calling account only.
     */
@@ -25,6 +27,7 @@ trait MigrationHubConfig extends Service {
     params: CreateHomeRegionControlRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateHomeRegionControlResult, Unit]
   ): Request[CreateHomeRegionControlResult, AWSError] = js.native
+  
   /**
     * This API permits filtering on the ControlId and HomeRegion fields.
     */
@@ -38,6 +41,7 @@ trait MigrationHubConfig extends Service {
     params: DescribeHomeRegionControlsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeHomeRegionControlsResult, Unit]
   ): Request[DescribeHomeRegionControlsResult, AWSError] = js.native
+  
   /**
     * Returns the calling account’s home region, if configured. This API is used by other AWS services to determine the regional endpoint for calling AWS Application Discovery Service and Migration Hub. You must call GetHomeRegion at least once before you call any other AWS Application Discovery Service and AWS Migration Hub APIs, to obtain the account's Migration Hub home region.
     */
@@ -52,4 +56,3 @@ trait MigrationHubConfig extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ GetHomeRegionResult, Unit]
   ): Request[GetHomeRegionResult, AWSError] = js.native
 }
-

@@ -7,10 +7,9 @@ import typingsSlinky.ionicCliFramework.definitionsMod.ICommand
 import typingsSlinky.ionicCliFramework.definitionsMod.INamespace
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/cli-framework", "AbstractExecutor")
 @js.native
 abstract class AbstractExecutor[C /* <: ICommand[C, N, M, I, O] */, N /* <: INamespace[C, N, M, I, O] */, M /* <: CommandMetadata[I, O] */, I /* <: CommandMetadataInput */, O /* <: CommandMetadataOption */] ()
   extends typingsSlinky.ionicCliFramework.executorMod.AbstractExecutor[C, N, M, I, O]
-

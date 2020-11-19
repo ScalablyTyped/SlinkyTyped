@@ -48,12 +48,11 @@ import typingsSlinky.semanticUiEmbed.semanticUiEmbedStrings.url
 import typingsSlinky.semanticUiEmbed.semanticUiEmbedStrings.verbose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
-  @JSName("embed")
-  var embed_Original: Embed = js.native
+  
   def embed(): JQuery = js.native
   def embed(behavior: setting, name: autoplay, value: js.UndefOr[scala.Nothing]): auto | Boolean = js.native
   def embed(behavior: setting, name: autoplay, value: Boolean): JQuery = js.native
@@ -120,6 +119,8 @@ trait JQuery extends js.Object {
   @JSName("embed")
   def embed_MetadataSettings(behavior: setting, name: metadata, value: js.UndefOr[scala.Nothing]): MetadataSettings = js.native
   @JSName("embed")
+  var embed_Original: Embed = js.native
+  @JSName("embed")
   def embed_SelectorSettings(behavior: setting, name: selector, value: js.UndefOr[scala.Nothing]): SelectorSettings = js.native
   @JSName("embed")
   def embed_TemplatesSettings(behavior: setting, name: templates, value: js.UndefOr[scala.Nothing]): TemplatesSettings = js.native
@@ -181,4 +182,3 @@ trait JQuery extends js.Object {
   @JSName("embed")
   def embed_show(behavior: show): JQuery = js.native
 }
-

@@ -1,11 +1,11 @@
 organization := "org.scalablytyped.slinky"
 name := "bases"
-version := "0.2.1-dt-20200515Z-3b4fd7"
+version := "0.2.1-dt-20200515Z-4d74d4"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5")
+  "me.shadaj" %%% "slinky-web" % "0.6.6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

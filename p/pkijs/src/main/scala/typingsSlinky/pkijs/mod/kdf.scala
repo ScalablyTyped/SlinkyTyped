@@ -2,11 +2,12 @@ package typingsSlinky.pkijs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pkijs/src/common", "kdf")
 @js.native
 object kdf extends js.Object {
+  
   /**
     * ANS X9.63 Key Derivation Function
     *
@@ -22,4 +23,3 @@ object kdf extends js.Object {
     SharedInfo: js.typedarray.ArrayBuffer
   ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
 }
-

@@ -2,10 +2,9 @@ package typingsSlinky.grammarkdown.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown", "InvalidSymbol")
 @js.native
 class InvalidSymbol ()
   extends typingsSlinky.grammarkdown.nodesMod.InvalidSymbol
-

@@ -2,7 +2,7 @@ package typingsSlinky.mockjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // Mockjs.Random
 // see https://github.com/nuysoft/Mock/wiki/Mock.Random
@@ -18,4 +18,3 @@ trait MockjsRandom
      with MockjsRandomName
      with MockjsRandomText
      with MockjsRandomWeb
-

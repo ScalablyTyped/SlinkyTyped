@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientSqsNode
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-sqs-node/types/OutputTypesUnion", JSImport.Namespace)
 @js.native
 object outputTypesUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientSqsNode.typesAddPermissionOutputMod.AddPermissionOutput
     - typingsSlinky.awsSdkClientSqsNode.typesChangeMessageVisibilityOutputMod.ChangeMessageVisibilityOutput
@@ -30,6 +31,4 @@ object outputTypesUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientSqsNode.typesUntagQueueOutputMod.UntagQueueOutput
   */
   trait OutputTypesUnion extends js.Object
-  
 }
-

@@ -7,7 +7,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.ForStatement
 import typingsSlinky.babelTypes.babelTypesStrings.WhileStatement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.DoWhileStatement_
@@ -17,8 +17,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ForOfStatement_
 */
 trait Loop extends js.Object
-
 object Loop {
+  
   @scala.inline
   def ForInStatement_(
     body: Statement,
@@ -33,6 +33,7 @@ object Loop {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Loop]
   }
+  
   @scala.inline
   def WhileStatement_(
     body: Statement,
@@ -46,6 +47,7 @@ object Loop {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Loop]
   }
+  
   @scala.inline
   def ForOfStatement_(
     body: Statement,
@@ -60,6 +62,7 @@ object Loop {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Loop]
   }
+  
   @scala.inline
   def DoWhileStatement_(
     body: Statement,
@@ -73,6 +76,7 @@ object Loop {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Loop]
   }
+  
   @scala.inline
   def ForStatement_(
     body: Statement,
@@ -89,4 +93,3 @@ object Loop {
     __obj.asInstanceOf[Loop]
   }
 }
-

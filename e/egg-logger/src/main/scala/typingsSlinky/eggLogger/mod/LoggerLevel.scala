@@ -2,7 +2,7 @@ package typingsSlinky.eggLogger.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.eggLogger.eggLoggerStrings.ALL
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.eggLogger.eggLoggerStrings.NONE
 */
 trait LoggerLevel extends js.Object
-

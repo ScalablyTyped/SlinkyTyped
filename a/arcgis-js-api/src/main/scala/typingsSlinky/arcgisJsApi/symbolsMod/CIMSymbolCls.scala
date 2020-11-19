@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.symbolsMod
 import typingsSlinky.arcgisJsApi.esri.CIMSymbolProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols", "CIMSymbol")
 @js.native
@@ -16,4 +16,3 @@ class CIMSymbolCls ()
   extends typingsSlinky.arcgisJsApi.esri.CIMSymbol {
   def this(properties: CIMSymbolProperties) = this()
 }
-

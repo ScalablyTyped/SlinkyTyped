@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.semanticUiReact.dropdownSearchInputMod.DropdownSearchInputProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semantic-ui-react", "DropdownSearchInput")
 @js.native
@@ -15,8 +15,6 @@ class DropdownSearchInput protected ()
   def this(props: DropdownSearchInputProps) = this()
   def this(props: DropdownSearchInputProps, context: js.Any) = this()
 }
-
 @JSImport("semantic-ui-react", "DropdownSearchInput")
 @js.native
 object DropdownSearchInput extends TopLevel[ReactComponentClass[DropdownSearchInputProps]]
-

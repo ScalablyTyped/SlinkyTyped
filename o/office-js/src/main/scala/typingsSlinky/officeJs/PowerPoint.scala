@@ -2,7 +2,7 @@ package typingsSlinky.officeJs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 ////////////////////////////////////////////////////////////////
 //////////////////////// End Visio APIs ////////////////////////
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 @JSGlobal("PowerPoint")
 @js.native
 object PowerPoint extends js.Object
-

@@ -348,83 +348,13 @@ import typingsSlinky.std.Iterable
 import typingsSlinky.std.SVGForeignObjectElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery_[TElement]
   extends Iterable[TElement]
      with /* n */ NumberDictionary[TElement] {
-  /**
-    * A string containing the jQuery version number.
-    * @see \`{@link https://api.jquery.com/jquery-2/#jquery1 }\`
-    * @since 1.0
-    * @example ​ ````Determine if an object is a jQuery object
-  ```javascript
-  var a = { what: "A regular JS object" },
-    b = $( "body" );
-  ​
-  if ( a.jquery ) { // Falsy, since it's undefined
-    alert( "a is a jQuery object!" );
-  }
-  ​
-  if ( b.jquery ) { // Truthy, since it's a string
-    alert( "b is a jQuery object!" );
-  }
-  ```
-    * @example ​ ````Get the current version of jQuery running on the page
-  ```javascript
-  alert( "You are running jQuery version: " + $.fn.jquery );
-  ```
-    */
-  var jquery: String = js.native
-  /**
-    * The number of elements in the jQuery object.
-    * @see \`{@link https://api.jquery.com/length/ }\`
-    * @since 1.0
-    * @example ​ ````Count the divs.  Click to add more.
-  ```html
-  <!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>length demo</title>
-    <style>
-    body {
-    cursor: pointer;
-    }
-    div {
-    width: 50px;
-    height: 30px;
-    margin: 5px;
-    float: left;
-    background: green;
-    }
-    span {
-    color: red;
-    }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  </head>
-  <body>
-  ​<span></span>
-    <div></div>​
-  <script>
-  $( document.body )
-    .click(function() {
-    $( document.body ).append( $( "<div>" ) );
-    var n = $( "div" ).length;
-    $( "span" ).text( "There are " + n + " divs." +
-    "Click to add more.");
-    })
-    // Trigger the click to start
-    .trigger( "click" );
-  </script>
-  ​
-  </body>
-  </html>
-  ```
-    */
-  var length: Double = js.native
+  
   // TODO: The return type should reflect newly selected types.
   /**
     * Create a new jQuery object with elements added to the set of matched elements.
@@ -580,6 +510,7 @@ trait JQuery_[TElement]
     * @since 1.4
     */
   def add(selector: Selector, context: Element): this.type = js.native
+  
   /**
     * Add the previous set of elements on the stack to the current set, optionally filtered by a selector.
     * @param selector A string containing a selector expression to match the current set of elements against.
@@ -646,6 +577,7 @@ trait JQuery_[TElement]
     */
   def addBack(): this.type = js.native
   def addBack(selector: Selector): this.type = js.native
+  
   def addClass(
     className_function: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* currentClassName */ String, String]
   ): this.type = js.native
@@ -775,6 +707,7 @@ trait JQuery_[TElement]
   ```
     */
   def addClass(className_function: TypeOrArray[String]): this.type = js.native
+  
   /**
     * Insert content, specified by the parameter, after each element in the set of matched elements.
     * @param contents One or more additional DOM elements, text nodes, arrays of elements and text nodes, HTML strings, or
@@ -882,6 +815,7 @@ trait JQuery_[TElement]
       htmlString | (TypeOrArray[Node | JQuery[Node]])
     ]
   ): this.type = js.native
+  
   /**
     * Register a handler to be called when Ajax requests complete. This is an AjaxEvent.
     * @param handler The function to be invoked.
@@ -904,6 +838,7 @@ trait JQuery_[TElement]
       Unit | `false`
     ]
   ): this.type = js.native
+  
   /**
     * Register a handler to be called when Ajax requests complete with an error. This is an Ajax Event.
     * @param handler The function to be invoked.
@@ -927,6 +862,7 @@ trait JQuery_[TElement]
       Unit | `false`
     ]
   ): this.type = js.native
+  
   /**
     * Attach a function to be executed before an Ajax request is sent. This is an Ajax Event.
     * @param handler The function to be invoked.
@@ -949,6 +885,7 @@ trait JQuery_[TElement]
       Unit | `false`
     ]
   ): this.type = js.native
+  
   /**
     * Register a handler to be called when the first Ajax request begins. This is an Ajax Event.
     * @param handler The function to be invoked.
@@ -963,6 +900,7 @@ trait JQuery_[TElement]
     */
   @JSName("ajaxStart")
   def ajaxStart_false(handler: js.ThisFunction0[/* this */ Document, Unit | `false`]): this.type = js.native
+  
   /**
     * Register a handler to be called when all Ajax requests have completed. This is an Ajax Event.
     * @param handler The function to be invoked.
@@ -977,6 +915,7 @@ trait JQuery_[TElement]
     */
   @JSName("ajaxStop")
   def ajaxStop_false(handler: js.ThisFunction0[/* this */ Document, Unit | `false`]): this.type = js.native
+  
   /**
     * Attach a function to be executed whenever an Ajax request completes successfully. This is an Ajax Event.
     * @param handler The function to be invoked.
@@ -1000,6 +939,7 @@ trait JQuery_[TElement]
       Unit | `false`
     ]
   ): this.type = js.native
+  
   /**
     * Perform a custom animation of a set of CSS properties.
     * @param properties An object of CSS properties and values that the animation will move toward.
@@ -1304,6 +1244,7 @@ trait JQuery_[TElement]
   ```
     */
   def animate(properties: PlainObject[_], options: EffectsOptions[TElement]): this.type = js.native
+  
   /**
     * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
     * @param contents One or more additional DOM elements, text nodes, arrays of elements and text nodes, HTML strings, or
@@ -1405,6 +1346,7 @@ trait JQuery_[TElement]
       htmlString | (TypeOrArray[Node | JQuery[Node]])
     ]
   ): this.type = js.native
+  
   /**
     * Insert every element in the set of matched elements to the end of the target.
     * @param target A selector, element, HTML string, array of elements, or jQuery object; the matched set of elements
@@ -1441,6 +1383,7 @@ trait JQuery_[TElement]
     */
   def appendTo(target: Selector | (TypeOrArray[Element | DocumentFragment]) | htmlString): this.type = js.native
   def appendTo(target: JQuery[HTMLElement]): this.type = js.native
+  
   /**
     * Set one or more attributes for the set of matched elements.
     * @param attributeName The name of the attribute to set.
@@ -1648,6 +1591,7 @@ trait JQuery_[TElement]
     */
   @JSName("attr")
   def attr_Union(attributeName: String): js.UndefOr[String] = js.native
+  
   /**
     * Insert content, specified by the parameter, before each element in the set of matched elements.
     * @param contents One or more additional DOM elements, text nodes, arrays of elements and text nodes, HTML strings, or
@@ -1754,6 +1698,7 @@ trait JQuery_[TElement]
       htmlString | (TypeOrArray[Node | JQuery[Node]])
     ]
   ): this.type = js.native
+  
   /**
     * Attach a handler to an event for the elements.
     * @param events An object containing one or more DOM event types and functions to execute for them.
@@ -1933,6 +1878,7 @@ trait JQuery_[TElement]
   ): this.type = js.native
   @JSName("bind")
   def bind_false[TType /* <: String */](eventType: TType, handler_preventBubble: `false`): this.type = js.native
+  
   /**
     * Bind an event handler to the "blur" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -1967,6 +1913,7 @@ trait JQuery_[TElement]
   def blur_blur[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, blur]): this.type = js.native
   @JSName("blur")
   def blur_false(handler: `false`): this.type = js.native
+  
   /**
     * Bind an event handler to the "change" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -2044,6 +1991,7 @@ trait JQuery_[TElement]
   def change_change[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, change]): this.type = js.native
   @JSName("change")
   def change_false(handler: `false`): this.type = js.native
+  
   /**
     * Get the children of each element in the set of matched elements, optionally filtered by a selector.
     * @param selector A string containing a selector expression to match elements against.
@@ -2212,6 +2160,7 @@ trait JQuery_[TElement]
     */
   def children(): this.type = js.native
   def children(selector: Selector): this.type = js.native
+  
   /**
     * Remove from the queue all items that have not yet been run.
     * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
@@ -2285,6 +2234,7 @@ trait JQuery_[TElement]
     */
   def clearQueue(): this.type = js.native
   def clearQueue(queueName: String): this.type = js.native
+  
   /**
     * Bind an event handler to the "click" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -2353,9 +2303,11 @@ trait JQuery_[TElement]
   def click_click[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, click]): this.type = js.native
   @JSName("click")
   def click_false(handler: `false`): this.type = js.native
+  
   def clone(withDataAndEvents: js.UndefOr[scala.Nothing], deepWithDataAndEvents: Boolean): this.type = js.native
   def clone(withDataAndEvents: Boolean): this.type = js.native
   def clone(withDataAndEvents: Boolean, deepWithDataAndEvents: Boolean): this.type = js.native
+  
   def closest(selector_selection_element: JQuery[HTMLElement]): this.type = js.native
   /**
     * For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.
@@ -2449,6 +2401,7 @@ trait JQuery_[TElement]
     * @since 1.4
     */
   def closest(selector: Selector, context: Element): this.type = js.native
+  
   /**
     * Get the children of each element in the set of matched elements, including text and comment nodes.
     * @see \`{@link https://api.jquery.com/contents/ }\`
@@ -2500,6 +2453,7 @@ trait JQuery_[TElement]
   ```
     */
   def contents(): JQuery[TElement | Text | Comment | Document] = js.native
+  
   /**
     * Bind an event handler to the "contextmenu" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -2572,6 +2526,7 @@ trait JQuery_[TElement]
   def contextmenu_contextmenu[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, contextmenu]): this.type = js.native
   @JSName("contextmenu")
   def contextmenu_false(handler: `false`): this.type = js.native
+  
   /**
     * Set one or more CSS properties for the set of matched elements.
     * @param properties An object of property-value pairs to set.
@@ -2898,6 +2853,7 @@ trait JQuery_[TElement]
   ```
     */
   def css(propertyNames: js.Array[String]): PlainObject[String] = js.native
+  
   /**
     * Return the value at the named data store for the first element in the jQuery collection, as set by data(name, value) or by an HTML5 data-* attribute.
     * @see \`{@link https://api.jquery.com/data/ }\`
@@ -3043,6 +2999,7 @@ trait JQuery_[TElement]
     */
   @JSName("data")
   def data_This(key: String): this.type = js.native
+  
   /**
     * Bind an event handler to the "dblclick" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -3115,6 +3072,7 @@ trait JQuery_[TElement]
   def dblclick_dblclick[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, dblclick]): this.type = js.native
   @JSName("dblclick")
   def dblclick_false(handler: `false`): this.type = js.native
+  
   /**
     * Set a timer to delay execution of subsequent items in the queue.
     * @param duration An integer indicating the number of milliseconds to delay execution of the next item in the queue.
@@ -3165,6 +3123,7 @@ trait JQuery_[TElement]
     */
   def delay(duration: Duration): this.type = js.native
   def delay(duration: Duration, queueName: String): this.type = js.native
+  
   /**
     * Attach a handler to one or more events for all elements that match the selector, now or in the future, based on a specific set of root elements.
     * @param selector A selector to filter the elements that trigger the event.
@@ -3317,6 +3276,7 @@ trait JQuery_[TElement]
   ): this.type = js.native
   @JSName("delegate")
   def delegate_false[TType /* <: String */](selector: Selector, eventType: TType, handler: `false`): this.type = js.native
+  
   /**
     * Execute the next function on the queue for the matched elements.
     * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
@@ -3368,6 +3328,7 @@ trait JQuery_[TElement]
     */
   def dequeue(): this.type = js.native
   def dequeue(queueName: String): this.type = js.native
+  
   /**
     * Remove the set of matched elements from the DOM.
     * @param selector A selector expression that filters the set of matched elements to be removed.
@@ -3419,6 +3380,7 @@ trait JQuery_[TElement]
     */
   def detach(): this.type = js.native
   def detach(selector: Selector): this.type = js.native
+  
   /**
     * Iterate over a jQuery object, executing a function for each matched element.
     * @param funсtion A function to execute for each matched element.
@@ -3562,6 +3524,7 @@ trait JQuery_[TElement]
   def each_false(
     funсtion: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* element */ TElement, Unit | `false`]
   ): this.type = js.native
+  
   /**
     * Remove all child nodes of the set of matched elements from the DOM.
     * @see \`{@link https://api.jquery.com/empty/ }\`
@@ -3599,6 +3562,7 @@ trait JQuery_[TElement]
   ```
     */
   def empty(): this.type = js.native
+  
   /**
     * End the most recent filtering operation in the current chain and return the set of matched elements to its previous state.
     * @see \`{@link https://api.jquery.com/end/ }\`
@@ -3705,6 +3669,7 @@ trait JQuery_[TElement]
   ```
     */
   def end(): this.type = js.native
+  
   /**
     * Reduce the set of matched elements to the one at the specified index.
     * @param index An integer indicating the 0-based position of the element.
@@ -3751,6 +3716,7 @@ trait JQuery_[TElement]
   ```
     */
   def eq(index: Double): this.type = js.native
+  
   /**
     * Reduce the set of matched elements to the even ones in the set, numbered from zero.
     * @see \`{@link https://api.jquery.com/even/ }\`
@@ -3784,6 +3750,7 @@ trait JQuery_[TElement]
   ```
     */
   def even(): this.type = js.native
+  
   /**
     * Merge the contents of an object onto the jQuery prototype to provide new jQuery instance methods.
     * @param obj An object to merge onto the jQuery prototype.
@@ -3832,6 +3799,7 @@ trait JQuery_[TElement]
   ```
     */
   def extend(obj: js.Object): this.type = js.native
+  
   /**
     * Display the matched elements by fading them to opaque.
     * @param duration_easing_complete_options _&#x40;param_ `duration_easing_complete_options`
@@ -3973,6 +3941,7 @@ trait JQuery_[TElement]
     */
   def fadeIn(duration: Duration, easing: String): this.type = js.native
   def fadeIn(duration: Duration, easing: String, complete: js.ThisFunction0[/* this */ TElement, Unit]): this.type = js.native
+  
   /**
     * Hide the matched elements by fading them to transparent.
     * @param duration_easing_complete_options _&#x40;param_ `duration_easing_complete_options`
@@ -4144,6 +4113,7 @@ trait JQuery_[TElement]
     */
   def fadeOut(duration: Duration, easing: String): this.type = js.native
   def fadeOut(duration: Duration, easing: String, complete: js.ThisFunction0[/* this */ TElement, Unit]): this.type = js.native
+  
   /**
     * Adjust the opacity of the matched elements.
     * @param duration A string or number determining how long the animation will run.
@@ -4318,6 +4288,7 @@ trait JQuery_[TElement]
     easing: String,
     complete: js.ThisFunction0[/* this */ TElement, Unit]
   ): this.type = js.native
+  
   /**
     * Display or hide the matched elements by animating their opacity.
     * @param duration_easing_complete_options _&#x40;param_ `duration_easing_complete_options`
@@ -4420,6 +4391,7 @@ trait JQuery_[TElement]
     */
   def fadeToggle(duration: Duration, easing: String): this.type = js.native
   def fadeToggle(duration: Duration, easing: String, complete: js.ThisFunction0[/* this */ TElement, Unit]): this.type = js.native
+  
   def filter(
     selector_elements_selection_function: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* element */ TElement, Boolean]
   ): this.type = js.native
@@ -4522,6 +4494,7 @@ trait JQuery_[TElement]
     */
   def filter(selector_elements_selection_function: Selector): this.type = js.native
   def filter(selector_elements_selection_function: TypeOrArray[Element]): this.type = js.native
+  
   def find[E /* <: HTMLElement */](selector_element: E): JQuery[E] = js.native
   def find[E /* <: HTMLElement */](selector_element: JQuery[E]): JQuery[E] = js.native
   def find[E /* <: HTMLElement */](selector_element: Selector): JQuery[E] = js.native
@@ -5325,6 +5298,7 @@ trait JQuery_[TElement]
   def find_wbr(selector_element: JQuery[wbr]): JQuery[HTMLElement] = js.native
   @JSName("find")
   def find_wbr(selector_element: wbr): JQuery[HTMLElement] = js.native
+  
   /**
     * Stop the currently-running animation, remove all queued animations, and complete all animations for the matched elements.
     * @param queue The name of the queue in which to stop animations.
@@ -5443,6 +5417,7 @@ trait JQuery_[TElement]
     */
   def finish(): this.type = js.native
   def finish(queue: String): this.type = js.native
+  
   /**
     * Reduce the set of matched elements to the first in the set.
     * @see \`{@link https://api.jquery.com/first/ }\`
@@ -5478,6 +5453,7 @@ trait JQuery_[TElement]
   ```
     */
   def first(): this.type = js.native
+  
   /**
     * Bind an event handler to the "focus" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -5548,6 +5524,7 @@ trait JQuery_[TElement]
     */
   @JSName("focus")
   def focus_focus[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, focus]): this.type = js.native
+  
   /**
     * Bind an event handler to the "focusin" event.
     * @param handler A function to execute each time the event is triggered.
@@ -5606,6 +5583,7 @@ trait JQuery_[TElement]
     */
   @JSName("focusin")
   def focusin_focusin[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, focusin]): this.type = js.native
+  
   /**
     * Bind an event handler to the "focusout" JavaScript event.
     * @param handler A function to execute each time the event is triggered.
@@ -5685,6 +5663,7 @@ trait JQuery_[TElement]
     */
   @JSName("focusout")
   def focusout_focusout[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, focusout]): this.type = js.native
+  
   /**
     * Retrieve the elements matched by the jQuery object.
     * @see \`{@link https://api.jquery.com/get/ }\`
@@ -5768,6 +5747,7 @@ trait JQuery_[TElement]
   ```
     */
   def get(index: Double): TElement = js.native
+  
   /**
     * Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element.
     * @param selector_contained _&#x40;param_ `selector_contained`
@@ -5807,6 +5787,7 @@ trait JQuery_[TElement]
     */
   def has(selector_contained: String): this.type = js.native
   def has(selector_contained: Element): this.type = js.native
+  
   /**
     * Determine whether any of the matched elements are assigned the given class.
     * @param className The class name to search for.
@@ -5849,6 +5830,7 @@ trait JQuery_[TElement]
   ```
     */
   def hasClass(className: String): Boolean = js.native
+  
   /**
     * Get the current computed height for the first element in the set of matched elements.
     * @see \`{@link https://api.jquery.com/height/ }\`
@@ -5966,6 +5948,7 @@ trait JQuery_[TElement]
     value_function: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* height */ Double, String | Double]
   ): this.type = js.native
   def height(value_function: Double): this.type = js.native
+  
   /**
     * Hide the matched elements.
     * @param duration_complete_options _&#x40;param_ `duration_complete_options`
@@ -6135,6 +6118,7 @@ trait JQuery_[TElement]
     * @since 1.4.3
     */
   def hide(duration: Duration, easing: String, complete: js.ThisFunction0[/* this */ TElement, Unit]): this.type = js.native
+  
   /**
     * Bind a single handler to the matched elements, to be executed when the mouse pointer enters or leaves the elements.
     * @param handlerInOut A function to execute when the mouse pointer enters or leaves the element.
@@ -6285,6 +6269,7 @@ trait JQuery_[TElement]
   def hover_false(handlerInOut: `false`): this.type = js.native
   @JSName("hover")
   def hover_false(handlerIn: `false`, handlerOut: `false`): this.type = js.native
+  
   /**
     * Get the HTML contents of the first element in the set of matched elements.
     * @see \`{@link https://api.jquery.com/html/ }\`
@@ -6413,6 +6398,7 @@ trait JQuery_[TElement]
   ```
     */
   def html(htmlString_function: htmlString): this.type = js.native
+  
   /**
     * Search for a given element from among the matched elements.
     * @param selector_element _&#x40;param_ `selector_element`
@@ -6622,6 +6608,7 @@ trait JQuery_[TElement]
   def index(selector_element: JQuery[HTMLElement]): Double = js.native
   def index(selector_element: Selector): Double = js.native
   def index(selector_element: Element): Double = js.native
+  
   /**
     * Get the current computed height for the first element in the set of matched elements, including padding but not border.
     * @see \`{@link https://api.jquery.com/innerHeight/ }\`
@@ -6717,6 +6704,7 @@ trait JQuery_[TElement]
     value_function: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* height */ Double, String | Double]
   ): this.type = js.native
   def innerHeight(value_function: Double): this.type = js.native
+  
   /**
     * Get the current computed inner width for the first element in the set of matched elements, including padding but not border.
     * @see \`{@link https://api.jquery.com/innerWidth/ }\`
@@ -6812,6 +6800,7 @@ trait JQuery_[TElement]
     value_function: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* width */ Double, String | Double]
   ): this.type = js.native
   def innerWidth(value_function: Double): this.type = js.native
+  
   /**
     * Insert every element in the set of matched elements after the target.
     * @param target A selector, element, array of elements, HTML string, or jQuery object; the matched set of elements
@@ -6847,6 +6836,7 @@ trait JQuery_[TElement]
     */
   def insertAfter(target: Selector | TypeOrArray[org.scalajs.dom.raw.Node] | htmlString): this.type = js.native
   def insertAfter(target: JQuery[org.scalajs.dom.raw.Node]): this.type = js.native
+  
   /**
     * Insert every element in the set of matched elements before the target.
     * @param target A selector, element, array of elements, HTML string, or jQuery object; the matched set of elements
@@ -6882,6 +6872,7 @@ trait JQuery_[TElement]
     */
   def insertBefore(target: Selector | TypeOrArray[org.scalajs.dom.raw.Node] | htmlString): this.type = js.native
   def insertBefore(target: JQuery[org.scalajs.dom.raw.Node]): this.type = js.native
+  
   def is(
     selector_function_selection_elements: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* element */ TElement, Boolean]
   ): Boolean = js.native
@@ -7107,6 +7098,31 @@ trait JQuery_[TElement]
     */
   def is(selector_function_selection_elements: Selector): Boolean = js.native
   def is(selector_function_selection_elements: TypeOrArray[Element]): Boolean = js.native
+  
+  /**
+    * A string containing the jQuery version number.
+    * @see \`{@link https://api.jquery.com/jquery-2/#jquery1 }\`
+    * @since 1.0
+    * @example ​ ````Determine if an object is a jQuery object
+  ```javascript
+  var a = { what: "A regular JS object" },
+    b = $( "body" );
+  ​
+  if ( a.jquery ) { // Falsy, since it's undefined
+    alert( "a is a jQuery object!" );
+  }
+  ​
+  if ( b.jquery ) { // Truthy, since it's a string
+    alert( "b is a jQuery object!" );
+  }
+  ```
+    * @example ​ ````Get the current version of jQuery running on the page
+  ```javascript
+  alert( "You are running jQuery version: " + $.fn.jquery );
+  ```
+    */
+  var jquery: String = js.native
+  
   /**
     * Bind an event handler to the "keydown" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -7197,6 +7213,7 @@ trait JQuery_[TElement]
     */
   @JSName("keydown")
   def keydown_keydown[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, keydown]): this.type = js.native
+  
   /**
     * Bind an event handler to the "keypress" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -7287,6 +7304,7 @@ trait JQuery_[TElement]
     */
   @JSName("keypress")
   def keypress_keypress[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, keypress]): this.type = js.native
+  
   /**
     * Bind an event handler to the "keyup" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -7378,6 +7396,7 @@ trait JQuery_[TElement]
     */
   @JSName("keyup")
   def keyup_keyup[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, keyup]): this.type = js.native
+  
   /**
     * Reduce the set of matched elements to the final one in the set.
     * @see \`{@link https://api.jquery.com/last/ }\`
@@ -7409,6 +7428,56 @@ trait JQuery_[TElement]
   ```
     */
   def last(): this.type = js.native
+  
+  /**
+    * The number of elements in the jQuery object.
+    * @see \`{@link https://api.jquery.com/length/ }\`
+    * @since 1.0
+    * @example ​ ````Count the divs.  Click to add more.
+  ```html
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>length demo</title>
+    <style>
+    body {
+    cursor: pointer;
+    }
+    div {
+    width: 50px;
+    height: 30px;
+    margin: 5px;
+    float: left;
+    background: green;
+    }
+    span {
+    color: red;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+  ​<span></span>
+    <div></div>​
+  <script>
+  $( document.body )
+    .click(function() {
+    $( document.body ).append( $( "<div>" ) );
+    var n = $( "div" ).length;
+    $( "span" ).text( "There are " + n + " divs." +
+    "Click to add more.");
+    })
+    // Trigger the click to start
+    .trigger( "click" );
+  </script>
+  ​
+  </body>
+  </html>
+  ```
+    */
+  var length: Double = js.native
+  
   /**
     * Load data from the server and place the returned HTML into the matched element.
     * @param url A string containing the URL to which the request is sent.
@@ -7537,6 +7606,7 @@ trait JQuery_[TElement]
       Unit
     ]
   ): this.type = js.native
+  
   /**
     * Pass each element in the current matched set through a function, producing a new jQuery object containing the return values.
     * @param callback A function object that will be invoked for each element in the current set.
@@ -7690,6 +7760,7 @@ trait JQuery_[TElement]
       js.UndefOr[TypeOrArray[TReturn] | Null]
     ]
   ): JQuery[TReturn] = js.native
+  
   /**
     * Bind an event handler to the "mousedown" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -7746,6 +7817,7 @@ trait JQuery_[TElement]
     */
   @JSName("mousedown")
   def mousedown_mousedown[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, mousedown]): this.type = js.native
+  
   /**
     * Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -7845,6 +7917,7 @@ trait JQuery_[TElement]
     */
   @JSName("mouseenter")
   def mouseenter_mouseenter[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, mouseenter]): this.type = js.native
+  
   /**
     * Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -7942,6 +8015,7 @@ trait JQuery_[TElement]
     */
   @JSName("mouseleave")
   def mouseleave_mouseleave[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, mouseleave]): this.type = js.native
+  
   /**
     * Bind an event handler to the "mousemove" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -8024,6 +8098,7 @@ trait JQuery_[TElement]
     */
   @JSName("mousemove")
   def mousemove_mousemove[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, mousemove]): this.type = js.native
+  
   /**
     * Bind an event handler to the "mouseout" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -8123,6 +8198,7 @@ trait JQuery_[TElement]
     */
   @JSName("mouseout")
   def mouseout_mouseout[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, mouseout]): this.type = js.native
+  
   /**
     * Bind an event handler to the "mouseover" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -8222,6 +8298,7 @@ trait JQuery_[TElement]
     */
   @JSName("mouseover")
   def mouseover_mouseover[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, mouseover]): this.type = js.native
+  
   /**
     * Bind an event handler to the "mouseup" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -8278,6 +8355,7 @@ trait JQuery_[TElement]
     */
   @JSName("mouseup")
   def mouseup_mouseup[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, mouseup]): this.type = js.native
+  
   /**
     * Get the immediately following sibling of each element in the set of matched elements. If a selector is provided, it retrieves the next sibling only if it matches that selector.
     * @param selector A string containing a selector expression to match elements against.
@@ -8339,6 +8417,7 @@ trait JQuery_[TElement]
     */
   def next(): this.type = js.native
   def next(selector: Selector): this.type = js.native
+  
   /**
     * Get all following siblings of each element in the set of matched elements, optionally filtered by a selector.
     * @param selector A string containing a selector expression to match elements against.
@@ -8421,6 +8500,7 @@ trait JQuery_[TElement]
     */
   def nextAll(): this.type = js.native
   def nextAll(selector: String): this.type = js.native
+  
   /**
     * Get all following siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object passed.
     * @param selector_element _&#x40;param_ `selector_element`
@@ -8479,6 +8559,7 @@ trait JQuery_[TElement]
   def nextUntil(selector_element: JQuery[HTMLElement], filter: Selector): this.type = js.native
   def nextUntil(selector_element: Element): this.type = js.native
   def nextUntil(selector_element: Element, filter: Selector): this.type = js.native
+  
   def not(
     selector_function_selection: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* element */ TElement, Boolean]
   ): this.type = js.native
@@ -8556,6 +8637,7 @@ trait JQuery_[TElement]
     */
   def not(selector_function_selection: Selector): this.type = js.native
   def not(selector_function_selection: TypeOrArray[Element]): this.type = js.native
+  
   /**
     * Reduce the set of matched elements to the odd ones in the set, numbered from zero.
     * @see \`{@link https://api.jquery.com/odd/ }\`
@@ -8589,6 +8671,7 @@ trait JQuery_[TElement]
   ```
     */
   def odd(): this.type = js.native
+  
   /**
     * Remove an event handler.
     * @param event A jQuery.Event object.
@@ -8715,6 +8798,7 @@ trait JQuery_[TElement]
   def off_false[TType /* <: String */](events: TType, selector_handler: `false`): this.type = js.native
   @JSName("off")
   def off_false[TType /* <: String */](events: TType, selector: Selector, handler: `false`): this.type = js.native
+  
   /**
     * Get the current coordinates of the first element in the set of matched elements, relative to the document.
     * @see \`{@link https://api.jquery.com/offset/ }\`
@@ -8840,6 +8924,7 @@ trait JQuery_[TElement]
   ```
     */
   def offset(coordinates_function: CoordinatesPartial): this.type = js.native
+  
   /**
     * Get the closest ancestor element that is positioned.
     * @see \`{@link https://api.jquery.com/offsetParent/ }\`
@@ -8880,6 +8965,7 @@ trait JQuery_[TElement]
   ```
     */
   def offsetParent(): this.type = js.native
+  
   /**
     * Attach an event handler function for one or more events to the selected elements.
     * @param events One or more space-separated event types and optional namespaces, such as "click" or "keydown.myPlugin".
@@ -9385,6 +9471,7 @@ trait JQuery_[TElement]
   def on_false[TType /* <: String */](events: TType, handler: `false`): this.type = js.native
   @JSName("on")
   def on_false[TType /* <: String */](events: TType, selector: Selector, handler: `false`): this.type = js.native
+  
   /**
     * Attach a handler to an event for the elements. The handler is executed at most once per element per event type.
     * @param events An object in which the string keys represent one or more space-separated event types and optional
@@ -9597,6 +9684,7 @@ trait JQuery_[TElement]
   def one_false[TType /* <: String */](events: TType, handler: `false`): this.type = js.native
   @JSName("one")
   def one_false[TType /* <: String */](events: TType, selector: Selector, handler: `false`): this.type = js.native
+  
   /**
     * Get the current computed outer height (including padding, border, and optionally margin) for the first element in the set of matched elements.
     * @param includeMargin A Boolean indicating whether to include the element's margin in the calculation.
@@ -9701,6 +9789,7 @@ trait JQuery_[TElement]
   ): this.type = js.native
   def outerHeight(value_function: Double): this.type = js.native
   def outerHeight(value_function: Double, includeMargin: Boolean): this.type = js.native
+  
   /**
     * Get the current computed outer width (including padding, border, and optionally margin) for the first element in the set of matched elements.
     * @param includeMargin A Boolean indicating whether to include the element's margin in the calculation.
@@ -9805,6 +9894,7 @@ trait JQuery_[TElement]
   ): this.type = js.native
   def outerWidth(value_function: Double): this.type = js.native
   def outerWidth(value_function: Double, includeMargin: Boolean): this.type = js.native
+  
   /**
     * Get the parent of each element in the current set of matched elements, optionally filtered by a selector.
     * @param selector A string containing a selector expression to match elements against.
@@ -9881,6 +9971,7 @@ trait JQuery_[TElement]
     */
   def parent(): this.type = js.native
   def parent(selector: Selector): this.type = js.native
+  
   /**
     * Get the ancestors of each element in the current set of matched elements, optionally filtered by a selector.
     * @param selector A string containing a selector expression to match elements against.
@@ -9994,6 +10085,7 @@ trait JQuery_[TElement]
     */
   def parents(): this.type = js.native
   def parents(selector: Selector): this.type = js.native
+  
   /**
     * Get the ancestors of each element in the current set of matched elements, up to but not including the element matched by the selector, DOM node, or jQuery object.
     * @param selector_element _&#x40;param_ `selector_element`
@@ -10055,6 +10147,7 @@ trait JQuery_[TElement]
   def parentsUntil(selector_element: JQuery[HTMLElement], filter: Selector): this.type = js.native
   def parentsUntil(selector_element: Element): this.type = js.native
   def parentsUntil(selector_element: Element, filter: Selector): this.type = js.native
+  
   /**
     * Get the current coordinates of the first element in the set of matched elements, relative to the offset parent.
     * @see \`{@link https://api.jquery.com/position/ }\`
@@ -10094,6 +10187,7 @@ trait JQuery_[TElement]
   ```
     */
   def position(): Coordinates = js.native
+  
   /**
     * Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
     * @param contents One or more additional DOM elements, text nodes, arrays of elements and text nodes, HTML strings, or
@@ -10196,6 +10290,7 @@ trait JQuery_[TElement]
       htmlString | (TypeOrArray[Node | JQuery[Node]])
     ]
   ): this.type = js.native
+  
   /**
     * Insert every element in the set of matched elements to the beginning of the target.
     * @param target A selector, element, HTML string, array of elements, or jQuery object; the matched set of elements
@@ -10231,6 +10326,7 @@ trait JQuery_[TElement]
     */
   def prependTo(target: Selector | (TypeOrArray[Element | DocumentFragment]) | htmlString): this.type = js.native
   def prependTo(target: JQuery[HTMLElement]): this.type = js.native
+  
   /**
     * Get the immediately preceding sibling of each element in the set of matched elements. If a selector is provided, it retrieves the previous sibling only if it matches that selector.
     * @param selector A string containing a selector expression to match elements against.
@@ -10312,6 +10408,7 @@ trait JQuery_[TElement]
     */
   def prev(): this.type = js.native
   def prev(selector: Selector): this.type = js.native
+  
   /**
     * Get all preceding siblings of each element in the set of matched elements, optionally filtered by a selector.
     * @param selector A string containing a selector expression to match elements against.
@@ -10356,6 +10453,7 @@ trait JQuery_[TElement]
     */
   def prevAll(): this.type = js.native
   def prevAll(selector: Selector): this.type = js.native
+  
   /**
     * Get all preceding siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object.
     * @param selector_element _&#x40;param_ `selector_element`
@@ -10415,6 +10513,7 @@ trait JQuery_[TElement]
   def prevUntil(selector_element: JQuery[HTMLElement], filter: Selector): this.type = js.native
   def prevUntil(selector_element: Element): this.type = js.native
   def prevUntil(selector_element: Element, filter: Selector): this.type = js.native
+  
   /**
     * Return a Promise object to observe when all actions of a certain type bound to the collection, queued or not, have finished.
     * @param type The type of queue that needs to be observed.
@@ -10537,6 +10636,7 @@ trait JQuery_[TElement]
     * @since 1.6
     */
   def promise[T /* <: js.Object */](`type`: String, target: T): T with (Promise[this.type, _, _]) = js.native
+  
   /**
     * Set one or more properties for the set of matched elements.
     * @param properties An object of property-value pairs to set.
@@ -10643,6 +10743,7 @@ trait JQuery_[TElement]
     */
   @JSName("prop")
   def prop_This(propertyName: String): this.type = js.native
+  
   /**
     * Add a collection of DOM elements onto the jQuery stack.
     * @param elements An array of elements to push onto the stack and make into a new jQuery object.
@@ -10666,6 +10767,7 @@ trait JQuery_[TElement]
     * @since 1.3
     */
   def pushStack(elements: ArrayLike[Element], name: String, args: js.Array[_]): this.type = js.native
+  
   /**
     * Show the queue of functions to be executed on the matched elements.
     * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
@@ -10853,6 +10955,7 @@ trait JQuery_[TElement]
   ```
     */
   def queue(queueName: String, newQueue: TypeOrArray[QueueFunction[TElement]]): this.type = js.native
+  
   /**
     * Specify a function to execute when the DOM is fully loaded.
     * @param handler A function to execute after the DOM is ready.
@@ -10889,6 +10992,7 @@ trait JQuery_[TElement]
   ```
     */
   def ready(handler: js.Function1[/* $ */ JQueryStatic, Unit]): this.type = js.native
+  
   /**
     * Remove the set of matched elements from the DOM.
     * @param selector A selector expression that filters the set of matched elements to be removed.
@@ -10959,6 +11063,7 @@ trait JQuery_[TElement]
     */
   def remove(): this.type = js.native
   def remove(selector: String): this.type = js.native
+  
   /**
     * Remove an attribute from each element in the set of matched elements.
     * @param attributeName An attribute to remove; as of version 1.7, it can be a space-separated list of attributes.
@@ -11001,6 +11106,7 @@ trait JQuery_[TElement]
   ```
     */
   def removeAttr(attributeName: String): this.type = js.native
+  
   /**
     * Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
     * @param className_function _&#x40;param_ `className_function`
@@ -11135,6 +11241,7 @@ trait JQuery_[TElement]
     className_function: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* className */ String, String]
   ): this.type = js.native
   def removeClass(className_function: TypeOrArray[String]): this.type = js.native
+  
   /**
     * Remove a previously-stored piece of data.
     * @param name A string naming the piece of data to delete.
@@ -11183,6 +11290,7 @@ trait JQuery_[TElement]
     */
   def removeData(): this.type = js.native
   def removeData(name: TypeOrArray[String]): this.type = js.native
+  
   /**
     * Remove a property for the set of matched elements.
     * @param propertyName The name of the property to remove.
@@ -11224,6 +11332,7 @@ trait JQuery_[TElement]
   ```
     */
   def removeProp(propertyName: String): this.type = js.native
+  
   def replaceAll(target: JQuery[HTMLElement]): this.type = js.native
   /**
     * Replace each target element with the set of matched elements.
@@ -11255,6 +11364,7 @@ trait JQuery_[TElement]
     */
   def replaceAll(target: Selector): this.type = js.native
   def replaceAll(target: TypeOrArray[Element]): this.type = js.native
+  
   def replaceWith(newContent_function: Node | TypeOrArray[Element]): this.type = js.native
   def replaceWith(
     newContent_function: js.ThisFunction2[
@@ -11416,6 +11526,7 @@ trait JQuery_[TElement]
   ```
     */
   def replaceWith(newContent_function: htmlString): this.type = js.native
+  
   /**
     * Bind an event handler to the "resize" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -11452,6 +11563,7 @@ trait JQuery_[TElement]
     */
   @JSName("resize")
   def resize_resize[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, resize]): this.type = js.native
+  
   /**
     * Bind an event handler to the "scroll" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -11502,6 +11614,7 @@ trait JQuery_[TElement]
   ```
     */
   def scroll(): this.type = js.native
+  
   /**
     * Get the current horizontal position of the scroll bar for the first element in the set of matched elements.
     * @see \`{@link https://api.jquery.com/scrollLeft/ }\`
@@ -11582,6 +11695,7 @@ trait JQuery_[TElement]
   ```
     */
   def scrollLeft(value: Double): this.type = js.native
+  
   /**
     * Get the current vertical position of the scroll bar for the first element in the set of matched elements or set the vertical position of the scroll bar for every matched element.
     * @see \`{@link https://api.jquery.com/scrollTop/ }\`
@@ -11662,6 +11776,7 @@ trait JQuery_[TElement]
   ```
     */
   def scrollTop(value: Double): this.type = js.native
+  
   @JSName("scroll")
   def scroll_false(handler: `false`): this.type = js.native
   @JSName("scroll")
@@ -11680,6 +11795,7 @@ trait JQuery_[TElement]
     */
   @JSName("scroll")
   def scroll_scroll[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, scroll]): this.type = js.native
+  
   /**
     * Bind an event handler to the "select" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -11747,6 +11863,7 @@ trait JQuery_[TElement]
     */
   @JSName("select")
   def select_select[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, select]): this.type = js.native
+  
   /**
     * Encode a set of form elements as a string for submission.
     * @see \`{@link https://api.jquery.com/serialize/ }\`
@@ -11821,6 +11938,7 @@ trait JQuery_[TElement]
   ```
     */
   def serialize(): String = js.native
+  
   /**
     * Encode a set of form elements as an array of names and values.
     * @see \`{@link https://api.jquery.com/serializeArray/ }\`
@@ -11892,6 +12010,7 @@ trait JQuery_[TElement]
   ```
     */
   def serializeArray(): js.Array[NameValuePair] = js.native
+  
   /**
     * Display the matched elements.
     * @param duration_complete_options _&#x40;param_ `duration_complete_options`
@@ -12054,6 +12173,7 @@ trait JQuery_[TElement]
     * @since 1.4.3
     */
   def show(duration: Duration, easing: String, complete: js.ThisFunction0[/* this */ TElement, Unit]): this.type = js.native
+  
   /**
     * Get the siblings of each element in the set of matched elements, optionally filtered by a selector.
     * @param selector A string containing a selector expression to match elements against.
@@ -12145,6 +12265,7 @@ trait JQuery_[TElement]
     */
   def siblings(): this.type = js.native
   def siblings(selector: Selector): this.type = js.native
+  
   /**
     * Reduce the set of matched elements to a subset specified by a range of indices.
     * @param start An integer indicating the 0-based position at which the elements begin to be selected. If negative,
@@ -12241,6 +12362,7 @@ trait JQuery_[TElement]
     */
   def slice(start: Double): this.type = js.native
   def slice(start: Double, end: Double): this.type = js.native
+  
   /**
     * Display the matched elements with a sliding motion.
     * @param duration_easing_complete_options _&#x40;param_ `duration_easing_complete_options`
@@ -12375,6 +12497,7 @@ trait JQuery_[TElement]
     */
   def slideDown(duration: Duration, easing: String): this.type = js.native
   def slideDown(duration: Duration, easing: String, complete: js.ThisFunction0[/* this */ TElement, Unit]): this.type = js.native
+  
   /**
     * Display or hide the matched elements with a sliding motion.
     * @param duration_easing_complete_options _&#x40;param_ `duration_easing_complete_options`
@@ -12505,6 +12628,7 @@ trait JQuery_[TElement]
     */
   def slideToggle(duration: Duration, easing: String): this.type = js.native
   def slideToggle(duration: Duration, easing: String, complete: js.ThisFunction0[/* this */ TElement, Unit]): this.type = js.native
+  
   /**
     * Hide the matched elements with a sliding motion.
     * @param duration_easing_complete_options _&#x40;param_ `duration_easing_complete_options`
@@ -12629,6 +12753,7 @@ trait JQuery_[TElement]
     */
   def slideUp(duration: Duration, easing: String): this.type = js.native
   def slideUp(duration: Duration, easing: String, complete: js.ThisFunction0[/* this */ TElement, Unit]): this.type = js.native
+  
   /**
     * Stop the currently-running animation on the matched elements.
     * @param clearQueue A Boolean indicating whether to remove queued animation as well. Defaults to false.
@@ -12734,6 +12859,7 @@ trait JQuery_[TElement]
   def stop(queue: String, clearQueue: js.UndefOr[scala.Nothing], jumpToEnd: Boolean): this.type = js.native
   def stop(queue: String, clearQueue: Boolean): this.type = js.native
   def stop(queue: String, clearQueue: Boolean, jumpToEnd: Boolean): this.type = js.native
+  
   /**
     * Bind an event handler to the "submit" JavaScript event, or trigger that event on an element.
     * @param handler A function to execute each time the event is triggered.
@@ -12821,6 +12947,7 @@ trait JQuery_[TElement]
     */
   @JSName("submit")
   def submit_submit[TData](eventData: TData, handler: TypeEventHandler[TElement, TData, TElement, TElement, submit]): this.type = js.native
+  
   /**
     * Get the combined text contents of each element in the set of matched elements, including their descendants.
     * @see \`{@link https://api.jquery.com/text/ }\`
@@ -12902,6 +13029,7 @@ trait JQuery_[TElement]
   ): this.type = js.native
   def text(text_function: Boolean): this.type = js.native
   def text(text_function: Double): this.type = js.native
+  
   /**
     * Retrieve all the elements contained in the jQuery set, as an array.
     * @see \`{@link https://api.jquery.com/toArray/ }\`
@@ -12944,6 +13072,7 @@ trait JQuery_[TElement]
   ```
     */
   def toArray(): js.Array[TElement] = js.native
+  
   /**
     * Display or hide the matched elements.
     * @param duration_complete_options_display _&#x40;param_ `duration_complete_options_display`
@@ -13059,6 +13188,7 @@ trait JQuery_[TElement]
     */
   def toggle(duration: Duration, easing: String): this.type = js.native
   def toggle(duration: Duration, easing: String, complete: js.ThisFunction0[/* this */ TElement, Unit]): this.type = js.native
+  
   /**
     * Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the state argument.
     * @param state A boolean value to determine whether the class should be added or removed.
@@ -13264,6 +13394,7 @@ trait JQuery_[TElement]
     */
   def toggleClass[TState /* <: Boolean */](className_function: TypeOrArray[String]): this.type = js.native
   def toggleClass[TState /* <: Boolean */](className_function: TypeOrArray[String], state: TState): this.type = js.native
+  
   /**
     * Execute all handlers and behaviors attached to the matched elements for the given event type.
     * @param eventType_event _&#x40;param_ `eventType_event`
@@ -13370,6 +13501,7 @@ trait JQuery_[TElement]
   def trigger(eventType_event: typingsSlinky.jquery.JQuery.Event, extraParameters: Boolean): this.type = js.native
   def trigger(eventType_event: typingsSlinky.jquery.JQuery.Event, extraParameters: Double): this.type = js.native
   def trigger(eventType_event: typingsSlinky.jquery.JQuery.Event, extraParameters: PlainObject[_]): this.type = js.native
+  
   /**
     * Execute all handlers attached to an element for an event.
     * @param eventType_event _&#x40;param_ `eventType_event`
@@ -13424,6 +13556,7 @@ trait JQuery_[TElement]
   def triggerHandler(eventType_event: typingsSlinky.jquery.JQuery.Event, extraParameters: Boolean): js.Any = js.native
   def triggerHandler(eventType_event: typingsSlinky.jquery.JQuery.Event, extraParameters: Double): js.Any = js.native
   def triggerHandler(eventType_event: typingsSlinky.jquery.JQuery.Event, extraParameters: PlainObject[_]): js.Any = js.native
+  
   /**
     * Remove a previously-attached event handler from the elements.
     * @param event A string containing one or more DOM event types, such as "click" or "submit," or custom event names.
@@ -13517,6 +13650,7 @@ trait JQuery_[TElement]
   def unbind[TType /* <: String */](event: TType, handler: TypeEventHandler[TElement, _, TElement, TElement, TType]): this.type = js.native
   @JSName("unbind")
   def unbind_false[TType /* <: String */](event: TType, handler: `false`): this.type = js.native
+  
   /**
     * Remove a handler from the event for all elements which match the current selector, based upon a specific set of root elements.
     * @param namespace A selector which will be used to filter the event results.
@@ -13643,6 +13777,7 @@ trait JQuery_[TElement]
   def undelegate[TType /* <: String */](selector: Selector, eventType: TType, handler: TypeEventHandler[TElement, _, _, _, TType]): this.type = js.native
   @JSName("undelegate")
   def undelegate_false[TType /* <: String */](selector: Selector, eventType: TType, handler: `false`): this.type = js.native
+  
   /**
     * Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place.
     * @param selector A selector to check the parent element against. If an element's parent does not match the selector,
@@ -13690,6 +13825,7 @@ trait JQuery_[TElement]
     */
   def unwrap(): this.type = js.native
   def unwrap(selector: String): this.type = js.native
+  
   /**
     * Get the current value of the first element in the set of matched elements.
     * @see \`{@link https://api.jquery.com/val/ }\`
@@ -13901,6 +14037,7 @@ trait JQuery_[TElement]
     value_function: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* value */ String, String]
   ): this.type = js.native
   def `val`(value_function: Double): this.type = js.native
+  
   /**
     * Get the current computed width for the first element in the set of matched elements.
     * @see \`{@link https://api.jquery.com/width/ }\`
@@ -14020,6 +14157,7 @@ trait JQuery_[TElement]
     value_function: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* value */ Double, String | Double]
   ): this.type = js.native
   def width(value_function: Double): this.type = js.native
+  
   /**
     * Wrap an HTML structure around each element in the set of matched elements.
     * @param wrappingElement_function _&#x40;param_ `wrappingElement_function`
@@ -14177,6 +14315,7 @@ trait JQuery_[TElement]
   ): this.type = js.native
   def wrap(wrappingElement_function: JQuery[HTMLElement]): this.type = js.native
   def wrap(wrappingElement_function: Element): this.type = js.native
+  
   /**
     * Wrap an HTML structure around all elements in the set of matched elements.
     * @param wrappingElement_function _&#x40;param_ `wrappingElement_function`
@@ -14331,6 +14470,7 @@ trait JQuery_[TElement]
   def wrapAll(wrappingElement_function: js.ThisFunction0[/* this */ TElement, String | JQuery[HTMLElement]]): this.type = js.native
   def wrapAll(wrappingElement_function: JQuery[HTMLElement]): this.type = js.native
   def wrapAll(wrappingElement_function: Element): this.type = js.native
+  
   /**
     * Wrap an HTML structure around the content of each element in the set of matched elements.
     * @param wrappingElement_function _&#x40;param_ `wrappingElement_function`
@@ -14467,4 +14607,3 @@ trait JQuery_[TElement]
   def wrapInner(wrappingElement_function: JQuery[HTMLElement]): this.type = js.native
   def wrapInner(wrappingElement_function: Element): this.type = js.native
 }
-

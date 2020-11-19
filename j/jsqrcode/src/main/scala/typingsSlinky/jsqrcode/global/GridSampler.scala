@@ -2,17 +2,20 @@ package typingsSlinky.jsqrcode.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("GridSampler")
 @js.native
 object GridSampler extends js.Object {
+  
   def checkAndNudgePoints(image: js.typedarray.Uint8Array, points: js.Array[Double]): Unit = js.native
+  
   def sampleGrid3(
     image: js.typedarray.Uint8Array,
     dimension: Double,
     transform: typingsSlinky.jsqrcode.PerspectiveTransform
   ): typingsSlinky.jsqrcode.BitMatrix = js.native
+  
   def sampleGridx(
     image: js.typedarray.Uint8Array,
     dimension: Double,
@@ -34,4 +37,3 @@ object GridSampler extends js.Object {
     p4FromY: Double
   ): typingsSlinky.jsqrcode.BitMatrix = js.native
 }
-

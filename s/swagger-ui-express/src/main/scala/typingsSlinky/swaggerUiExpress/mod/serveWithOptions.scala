@@ -6,11 +6,11 @@ import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("swagger-ui-express", "serveWithOptions")
 @js.native
 object serveWithOptions extends js.Object {
+  
   def apply(options: ServeStaticOptions): js.Array[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
 }
-

@@ -8,23 +8,27 @@ import typingsSlinky.reactNativeAppearance.appearanceTypesMod.AppearancePreferen
 import typingsSlinky.reactNativeAppearance.appearanceTypesMod.ColorSchemeName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-appearance", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  @js.native
-  class Appearance () extends js.Object
   
   def AppearanceProvider(props: Children): ReactElement = js.native
+  
   def useColorScheme(): ColorSchemeName = js.native
+  
+  @js.native
+  class Appearance () extends js.Object
   /* static members */
   @js.native
   object Appearance extends js.Object {
+    
     /**
       * Add an event handler that is fired when appearance preferences change.
       */
     def addChangeListener(listener: AppearanceListener): EventSubscription = js.native
+    
     /**
       * Note: Although appearance is available immediately, it may change (e.g
       * Dark Mode) so any rendering logic or styles that depend on this should try
@@ -38,6 +42,7 @@ object mod extends js.Object {
       * @returns {ColorSchemeName} Value for the preference.
       */
     def getColorScheme(): ColorSchemeName = js.native
+    
     /**
       * This should only be called from native code by sending the
       * appearanceChanged event.
@@ -47,6 +52,4 @@ object mod extends js.Object {
       */
     def set(preferences: AppearancePreferences): Unit = js.native
   }
-  
 }
-

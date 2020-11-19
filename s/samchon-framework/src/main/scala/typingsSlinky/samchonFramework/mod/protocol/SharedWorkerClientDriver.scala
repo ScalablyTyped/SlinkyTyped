@@ -3,7 +3,7 @@ package typingsSlinky.samchonFramework.mod.protocol
 import org.scalajs.dom.raw.MessagePort
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("samchon-framework", "protocol.SharedWorkerClientDriver")
 @js.native
@@ -14,4 +14,3 @@ class SharedWorkerClientDriver protected ()
     */
   def this(port: MessagePort) = this()
 }
-

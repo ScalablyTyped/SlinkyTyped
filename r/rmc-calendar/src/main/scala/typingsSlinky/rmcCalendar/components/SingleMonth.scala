@@ -12,9 +12,10 @@ import typingsSlinky.rmcCalendar.singleMonthMod.PropsType
 import typingsSlinky.rmcCalendar.singleMonthMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SingleMonth {
+  
   @JSImport("rmc-calendar/lib/date/SingleMonth", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -23,19 +24,22 @@ object SingleMonth {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def getDateExtra(value: /* date */ js.Date => ExtraData): this.type = set("getDateExtra", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onCellClick(value: (/* data */ CellData, /* monthData */ MonthData) => Unit): this.type = set("onCellClick", js.Any.fromFunction2(value))
+    
     @scala.inline
     def rowSize(value: normal | xl): this.type = set("rowSize", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(locale: Locale, monthData: MonthData): Builder = {
     val __props = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], monthData = monthData.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
   }
 }
-

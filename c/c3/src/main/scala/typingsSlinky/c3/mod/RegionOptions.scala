@@ -3,85 +3,107 @@ package typingsSlinky.c3.mod
 import typingsSlinky.c3.c3Strings.dashed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RegionOptions extends js.Object {
+  
   /**
     * The axis on which `start` and `end` values lie.
     */
   var axis: js.UndefOr[AxisName] = js.native
+  
   /**
     * An optional class to apply to the region, which can be used for styling
     * or targeting.
     */
   var `class`: js.UndefOr[String] = js.native
+  
   /**
     * The point on the axis at which to end the region. If not provided, will
     * use the end edge of the axis.
     */
   var end: js.UndefOr[String | Double | js.Date] = js.native
+  
   /**
     * Control the opacity of the region area.
     */
   var opacity: js.UndefOr[Double] = js.native
+  
   /**
     * The point on the axis at which to start the region. If not provided, will
     * use the start edge of the axis.
     */
   var start: js.UndefOr[String | Double | js.Date] = js.native
+  
   /**
     * If `'dashed'`, renders the line as dashed in this range instead of showing a region block.
     */
   var style: js.UndefOr[dashed] = js.native
 }
-
 object RegionOptions {
+  
   @scala.inline
   def apply(): RegionOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[RegionOptions]
   }
+  
   @scala.inline
   implicit class RegionOptionsOps[Self <: RegionOptions] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setAxis(value: AxisName): Self = this.set("axis", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAxis: Self = this.set("axis", js.undefined)
+    
     @scala.inline
     def setClass(value: String): Self = this.set("class", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteClass: Self = this.set("class", js.undefined)
+    
     @scala.inline
     def setEndDate(value: js.Date): Self = this.set("end", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setEnd(value: String | Double | js.Date): Self = this.set("end", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteEnd: Self = this.set("end", js.undefined)
+    
     @scala.inline
     def setOpacity(value: Double): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteOpacity: Self = this.set("opacity", js.undefined)
+    
     @scala.inline
     def setStartDate(value: js.Date): Self = this.set("start", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setStart(value: String | Double | js.Date): Self = this.set("start", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteStart: Self = this.set("start", js.undefined)
+    
     @scala.inline
     def setStyle(value: dashed): Self = this.set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
   }
-  
 }
-

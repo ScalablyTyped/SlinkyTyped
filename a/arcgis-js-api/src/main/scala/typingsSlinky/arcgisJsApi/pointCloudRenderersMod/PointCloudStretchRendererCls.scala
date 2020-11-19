@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.pointCloudRenderersMod
 import typingsSlinky.arcgisJsApi.esri.PointCloudStretchRendererProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/pointCloudRenderers", "PointCloudStretchRenderer")
 @js.native
@@ -16,4 +16,3 @@ class PointCloudStretchRendererCls ()
   extends typingsSlinky.arcgisJsApi.esri.PointCloudStretchRenderer {
   def this(properties: PointCloudStretchRendererProperties) = this()
 }
-

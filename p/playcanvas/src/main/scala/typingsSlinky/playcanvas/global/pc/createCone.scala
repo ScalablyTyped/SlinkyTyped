@@ -3,11 +3,12 @@ package typingsSlinky.playcanvas.global.pc
 import typingsSlinky.playcanvas.anon.BaseRadius
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("pc.createCone")
 @js.native
 object createCone extends js.Object {
+  
   /**
     * Creates a procedural cone-shaped mesh.
     *
@@ -30,4 +31,3 @@ object createCone extends js.Object {
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice): typingsSlinky.playcanvas.pc.Mesh = js.native
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, opts: BaseRadius): typingsSlinky.playcanvas.pc.Mesh = js.native
 }
-

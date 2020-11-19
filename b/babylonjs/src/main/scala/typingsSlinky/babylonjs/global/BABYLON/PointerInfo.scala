@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.PointerInfo")
 @js.native
@@ -33,20 +33,4 @@ class PointerInfo protected ()
     */
   pickInfo: Nullable[typingsSlinky.babylonjs.BABYLON.PickingInfo]
   ) = this()
-  /**
-    * Defines the related dom event
-    */
-  /* CompleteClass */
-  override var event: PointerEvent | WheelEvent = js.native
-  /**
-    * Defines the picking info associated to the info (if any)\
-    */
-  /* CompleteClass */
-  override var pickInfo: Nullable[typingsSlinky.babylonjs.BABYLON.PickingInfo] = js.native
-  /**
-    * Defines the type of event (PointerEventTypes)
-    */
-  /* CompleteClass */
-  override var `type`: Double = js.native
 }
-

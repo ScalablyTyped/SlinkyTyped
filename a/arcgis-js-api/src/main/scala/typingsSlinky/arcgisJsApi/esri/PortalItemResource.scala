@@ -9,28 +9,11 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.text
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.xml
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PortalItemResource extends Accessor {
-  /**
-    * Path of the resource relative to `{ITEM}/resources/`. Resource paths may include subfolders, but are always specified relative to the item resources endpoint.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItemResource.html#path)
-    */
-  var path: String = js.native
-  /**
-    * The [portal item](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html) that owns the resource.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItemResource.html#portalItem)
-    */
-  var portalItem: PortalItem = js.native
-  /**
-    * The absolute url to the item resource. This is computed from the [portal item](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html) and the [resource path](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItemResource.html#path).
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItemResource.html#url)
-    */
-  val url: String = js.native
+  
   /**
     * Requests the PortalItemResource data in the format specified for the `responseType`.
     *
@@ -67,6 +50,21 @@ trait PortalItemResource extends Accessor {
   def fetch_xml(responseType: xml): js.Promise[_] = js.native
   @JSName("fetch")
   def fetch_xml(responseType: xml, options: PortalItemResourceFetchOptions): js.Promise[_] = js.native
+  
+  /**
+    * Path of the resource relative to `{ITEM}/resources/`. Resource paths may include subfolders, but are always specified relative to the item resources endpoint.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItemResource.html#path)
+    */
+  var path: String = js.native
+  
+  /**
+    * The [portal item](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html) that owns the resource.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItemResource.html#portalItem)
+    */
+  var portalItem: PortalItem = js.native
+  
   /**
     * Updates an existing resource with new content.
     *
@@ -80,5 +78,11 @@ trait PortalItemResource extends Accessor {
     */
   def update(content: Blob): js.Promise[_] = js.native
   def update(content: Blob, options: PortalItemResourceUpdateOptions): js.Promise[_] = js.native
+  
+  /**
+    * The absolute url to the item resource. This is computed from the [portal item](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html) and the [resource path](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItemResource.html#path).
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItemResource.html#url)
+    */
+  val url: String = js.native
 }
-

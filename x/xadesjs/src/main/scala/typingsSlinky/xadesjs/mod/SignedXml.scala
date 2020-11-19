@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xadesjs", "SignedXml")
 @js.native
@@ -13,4 +13,3 @@ class SignedXml ()
   def this(node: Document) = this()
   def this(node: Element) = this()
 }
-

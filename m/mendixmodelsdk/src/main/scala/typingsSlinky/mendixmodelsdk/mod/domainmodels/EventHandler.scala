@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/event-handlers relevant section in reference guide}
@@ -25,24 +25,26 @@ class EventHandler protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "domainmodels.EventHandler")
 @js.native
 object EventHandler extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new EventHandler instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.EventHandler = js.native
+  
   /**
     * Creates and returns a new EventHandler instance in the SDK and on the server.
     * The new EventHandler will be automatically stored in the 'eventHandlers' property
     * of the parent Entity element passed as argument.
     */
   def createIn(container: typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.Entity): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.EventHandler = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

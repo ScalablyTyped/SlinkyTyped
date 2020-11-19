@@ -69,10 +69,11 @@ import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CloseJob extends js.Object {
+  
   def closeJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def closeJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def closeJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -84,6 +85,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def close_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def close_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def close_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -95,6 +97,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteCalendar[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteCalendar[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteCalendar[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -106,6 +109,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteCalendarEvent[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteCalendarEvent[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteCalendarEvent[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -117,6 +121,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteCalendarJob[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteCalendarJob[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteCalendarJob[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -128,6 +133,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteDataFrameAnalytics[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteDataFrameAnalytics[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteDataFrameAnalytics[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -139,6 +145,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteDatafeed[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteDatafeed[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteDatafeed[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -150,6 +157,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteExpiredData[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteExpiredData[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteExpiredData[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -161,6 +169,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteFilter[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteFilter[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteFilter[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -172,6 +181,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteForecast[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteForecast[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteForecast[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -183,6 +193,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteJob[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteJob[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteJob[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -190,6 +201,7 @@ trait CloseJob extends js.Object {
   def deleteJob[TResponse, TContext](params: MlDeleteJob, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteJob[TResponse, TContext](params: MlDeleteJob, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteJob[TResponse, TContext](params: MlDeleteJob, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def deleteModelSnapshot[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteModelSnapshot[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteModelSnapshot[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -201,6 +213,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteTrainedModel[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteTrainedModel[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteTrainedModel[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -212,6 +225,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_calendar[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_calendar[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_calendar[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -223,6 +237,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_calendar_event[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_calendar_event[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_calendar_event[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -234,6 +249,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_calendar_job[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_calendar_job[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_calendar_job[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -245,6 +261,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_data_frame_analytics[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_data_frame_analytics[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_data_frame_analytics[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -256,6 +273,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_datafeed[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_datafeed[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_datafeed[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -267,6 +285,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_expired_data[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_expired_data[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_expired_data[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -278,6 +297,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_filter[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_filter[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_filter[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -289,6 +309,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_forecast[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_forecast[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_forecast[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -300,6 +321,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_job[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_job[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_job[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -307,6 +329,7 @@ trait CloseJob extends js.Object {
   def delete_job[TResponse, TContext](params: MlDeleteJob, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_job[TResponse, TContext](params: MlDeleteJob, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_job[TResponse, TContext](params: MlDeleteJob, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def delete_model_snapshot[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_model_snapshot[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_model_snapshot[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -318,6 +341,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_trained_model[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_trained_model[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_trained_model[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -329,6 +353,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def estimateModelMemory[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def estimateModelMemory[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def estimateModelMemory[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -340,6 +365,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def estimate_model_memory[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def estimate_model_memory[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def estimate_model_memory[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -351,6 +377,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def evaluateDataFrame[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def evaluateDataFrame[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def evaluateDataFrame[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -362,6 +389,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def evaluate_data_frame[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def evaluate_data_frame[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def evaluate_data_frame[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -373,6 +401,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def explainDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def explainDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def explainDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -384,6 +413,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def explain_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def explain_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def explain_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -395,6 +425,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def findFileStructure[TResponse, TRequestBody /* <: RequestNDBody[js.Array[Record[String, _]]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def findFileStructure[TResponse, TRequestBody /* <: RequestNDBody[js.Array[Record[String, _]]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def findFileStructure[TResponse, TRequestBody /* <: RequestNDBody[js.Array[Record[String, _]]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -406,6 +437,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def find_file_structure[TResponse, TRequestBody /* <: RequestNDBody[js.Array[Record[String, _]]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def find_file_structure[TResponse, TRequestBody /* <: RequestNDBody[js.Array[Record[String, _]]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def find_file_structure[TResponse, TRequestBody /* <: RequestNDBody[js.Array[Record[String, _]]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -417,6 +449,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def flushJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def flushJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def flushJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -428,6 +461,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def flush_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def flush_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def flush_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -439,6 +473,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def forecast[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def forecast[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def forecast[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -446,6 +481,7 @@ trait CloseJob extends js.Object {
   def forecast[TResponse, TContext](params: MlForecast, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def forecast[TResponse, TContext](params: MlForecast, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def forecast[TResponse, TContext](params: MlForecast, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def getBuckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getBuckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getBuckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -457,6 +493,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getCalendarEvents[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getCalendarEvents[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getCalendarEvents[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -468,6 +505,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getCalendars[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getCalendars[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getCalendars[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -479,6 +517,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getCategories[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getCategories[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getCategories[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -490,6 +529,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getDataFrameAnalytics[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getDataFrameAnalytics[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getDataFrameAnalytics[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -501,6 +541,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getDataFrameAnalyticsStats[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getDataFrameAnalyticsStats[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getDataFrameAnalyticsStats[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -512,6 +553,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getDatafeedStats[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getDatafeedStats[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getDatafeedStats[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -523,6 +565,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getDatafeeds[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getDatafeeds[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getDatafeeds[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -534,6 +577,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getFilters[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getFilters[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getFilters[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -541,6 +585,7 @@ trait CloseJob extends js.Object {
   def getFilters[TResponse, TContext](params: MlGetFilters, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getFilters[TResponse, TContext](params: MlGetFilters, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getFilters[TResponse, TContext](params: MlGetFilters, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def getInfluencers[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getInfluencers[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getInfluencers[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -552,6 +597,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getJobStats[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getJobStats[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getJobStats[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -559,6 +605,7 @@ trait CloseJob extends js.Object {
   def getJobStats[TResponse, TContext](params: MlGetJobStats, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getJobStats[TResponse, TContext](params: MlGetJobStats, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getJobStats[TResponse, TContext](params: MlGetJobStats, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def getJobs[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getJobs[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getJobs[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -566,6 +613,7 @@ trait CloseJob extends js.Object {
   def getJobs[TResponse, TContext](params: MlGetJobs, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getJobs[TResponse, TContext](params: MlGetJobs, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getJobs[TResponse, TContext](params: MlGetJobs, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def getModelSnapshots[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getModelSnapshots[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getModelSnapshots[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -577,6 +625,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getOverallBuckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getOverallBuckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getOverallBuckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -588,6 +637,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getRecords[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getRecords[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getRecords[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -599,6 +649,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getTrainedModels[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getTrainedModels[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getTrainedModels[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -610,6 +661,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getTrainedModelsStats[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getTrainedModelsStats[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getTrainedModelsStats[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -621,6 +673,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_buckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_buckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_buckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -632,6 +685,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_calendar_events[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_calendar_events[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_calendar_events[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -643,6 +697,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_calendars[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_calendars[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_calendars[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -654,6 +709,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_categories[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_categories[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_categories[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -665,6 +721,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_data_frame_analytics[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_data_frame_analytics[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_data_frame_analytics[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -676,6 +733,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_data_frame_analytics_stats[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_data_frame_analytics_stats[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_data_frame_analytics_stats[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -687,6 +745,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_datafeed_stats[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_datafeed_stats[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_datafeed_stats[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -698,6 +757,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_datafeeds[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_datafeeds[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_datafeeds[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -709,6 +769,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_filters[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_filters[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_filters[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -716,6 +777,7 @@ trait CloseJob extends js.Object {
   def get_filters[TResponse, TContext](params: MlGetFilters, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_filters[TResponse, TContext](params: MlGetFilters, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_filters[TResponse, TContext](params: MlGetFilters, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def get_influencers[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_influencers[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_influencers[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -727,6 +789,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_job_stats[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_job_stats[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_job_stats[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -734,6 +797,7 @@ trait CloseJob extends js.Object {
   def get_job_stats[TResponse, TContext](params: MlGetJobStats, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_job_stats[TResponse, TContext](params: MlGetJobStats, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_job_stats[TResponse, TContext](params: MlGetJobStats, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def get_jobs[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_jobs[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_jobs[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -741,6 +805,7 @@ trait CloseJob extends js.Object {
   def get_jobs[TResponse, TContext](params: MlGetJobs, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_jobs[TResponse, TContext](params: MlGetJobs, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_jobs[TResponse, TContext](params: MlGetJobs, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def get_model_snapshots[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_model_snapshots[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_model_snapshots[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -752,6 +817,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_overall_buckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_overall_buckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_overall_buckets[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -763,6 +829,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_records[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_records[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_records[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -774,6 +841,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_trained_models[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_trained_models[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_trained_models[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -785,6 +853,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_trained_models_stats[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_trained_models_stats[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_trained_models_stats[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -796,6 +865,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def info[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def info[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def info[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -803,6 +873,7 @@ trait CloseJob extends js.Object {
   def info[TResponse, TContext](params: MlInfo, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def info[TResponse, TContext](params: MlInfo, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def info[TResponse, TContext](params: MlInfo, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def openJob[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def openJob[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def openJob[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -810,6 +881,7 @@ trait CloseJob extends js.Object {
   def openJob[TResponse, TContext](params: MlOpenJob, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def openJob[TResponse, TContext](params: MlOpenJob, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def openJob[TResponse, TContext](params: MlOpenJob, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def open_job[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def open_job[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def open_job[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -817,6 +889,7 @@ trait CloseJob extends js.Object {
   def open_job[TResponse, TContext](params: MlOpenJob, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def open_job[TResponse, TContext](params: MlOpenJob, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def open_job[TResponse, TContext](params: MlOpenJob, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def postCalendarEvents[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def postCalendarEvents[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def postCalendarEvents[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -828,6 +901,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def postData[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def postData[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def postData[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -839,6 +913,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def post_calendar_events[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def post_calendar_events[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def post_calendar_events[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -850,6 +925,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def post_data[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def post_data[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def post_data[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -861,6 +937,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def previewDatafeed[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def previewDatafeed[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def previewDatafeed[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -872,6 +949,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def preview_datafeed[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def preview_datafeed[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def preview_datafeed[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -883,6 +961,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def putCalendar[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def putCalendar[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def putCalendar[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -894,6 +973,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def putCalendarJob[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def putCalendarJob[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def putCalendarJob[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -905,6 +985,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def putDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def putDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def putDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -916,6 +997,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def putDatafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def putDatafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def putDatafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -927,6 +1009,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def putFilter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def putFilter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def putFilter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -938,6 +1021,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def putJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def putJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def putJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -949,6 +1033,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def putTrainedModel[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def putTrainedModel[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def putTrainedModel[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -960,6 +1045,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def put_calendar[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def put_calendar[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def put_calendar[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -971,6 +1057,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def put_calendar_job[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def put_calendar_job[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def put_calendar_job[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -982,6 +1069,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def put_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def put_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def put_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -993,6 +1081,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def put_datafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def put_datafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def put_datafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1004,6 +1093,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def put_filter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def put_filter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def put_filter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1015,6 +1105,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def put_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def put_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def put_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1026,6 +1117,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def put_trained_model[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def put_trained_model[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def put_trained_model[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1037,6 +1129,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def revertModelSnapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def revertModelSnapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def revertModelSnapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1048,6 +1141,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def revert_model_snapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def revert_model_snapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def revert_model_snapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1059,6 +1153,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def setUpgradeMode[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def setUpgradeMode[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def setUpgradeMode[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1070,6 +1165,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def set_upgrade_mode[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def set_upgrade_mode[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def set_upgrade_mode[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1081,6 +1177,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def startDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def startDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def startDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1092,6 +1189,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def startDatafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def startDatafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def startDatafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1103,6 +1201,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def start_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def start_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def start_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1114,6 +1213,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def start_datafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def start_datafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def start_datafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1125,6 +1225,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def stopDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def stopDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def stopDataFrameAnalytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1136,6 +1237,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def stopDatafeed[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def stopDatafeed[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def stopDatafeed[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1147,6 +1249,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def stop_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def stop_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def stop_data_frame_analytics[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1158,6 +1261,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def stop_datafeed[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def stop_datafeed[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def stop_datafeed[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1169,6 +1273,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def updateDatafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def updateDatafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def updateDatafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1180,6 +1285,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def updateFilter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def updateFilter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def updateFilter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1191,6 +1297,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def updateJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def updateJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def updateJob[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1202,6 +1309,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def updateModelSnapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def updateModelSnapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def updateModelSnapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1213,6 +1321,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def update_datafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def update_datafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def update_datafeed[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1224,6 +1333,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def update_filter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def update_filter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def update_filter[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1235,6 +1345,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def update_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def update_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def update_job[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1246,6 +1357,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def update_model_snapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def update_model_snapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def update_model_snapshot[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1257,6 +1369,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def validate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def validate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def validate[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1268,6 +1381,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def validateDetector[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def validateDetector[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def validateDetector[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1279,6 +1393,7 @@ trait CloseJob extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def validate_detector[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def validate_detector[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def validate_detector[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -1291,4 +1406,3 @@ trait CloseJob extends js.Object {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
 }
-

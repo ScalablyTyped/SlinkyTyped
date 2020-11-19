@@ -2,7 +2,7 @@ package typingsSlinky.plottable.componentsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("plottable/build/src/components", "XDragBoxLayer")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
   */
 class XDragBoxLayer ()
   extends typingsSlinky.plottable.xDragBoxLayerMod.XDragBoxLayer
-

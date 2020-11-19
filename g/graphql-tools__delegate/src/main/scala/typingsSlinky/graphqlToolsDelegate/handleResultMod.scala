@@ -8,11 +8,12 @@ import typingsSlinky.graphqlToolsDelegate.typesMod.SubschemaConfig
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/delegate/results/handleResult", JSImport.Namespace)
 @js.native
 object handleResultMod extends js.Object {
+  
   def handleResult(
     result: js.Any,
     errors: js.Array[GraphQLError],
@@ -62,4 +63,3 @@ object handleResultMod extends js.Object {
     returnType: GraphQLOutputType
   ): js.Any = js.native
 }
-

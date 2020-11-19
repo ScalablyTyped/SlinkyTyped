@@ -6,7 +6,7 @@ import typingsSlinky.screeps.OwnedStructureConstructor
 import typingsSlinky.screeps.StructureConstant
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("OwnedStructure")
 @js.native
@@ -14,8 +14,6 @@ class OwnedStructure protected ()
   extends typingsSlinky.screeps.OwnedStructure[StructureConstant] {
   def this(id: Id[typingsSlinky.screeps.OwnedStructure[StructureConstant]]) = this()
 }
-
 @JSGlobal("OwnedStructure")
 @js.native
 object OwnedStructure extends TopLevel[OwnedStructureConstructor]
-

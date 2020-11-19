@@ -2,13 +2,18 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object wafv2Mod {
+  
   type Action = java.lang.String
+  
   type Boolean = scala.Boolean
+  
   type CapacityUnit = scala.Double
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.wafv2Mod.ClientApiVersions
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EQ
     - typingsSlinky.awsSdk.awsSdkStrings.NE
@@ -19,8 +24,11 @@ package object wafv2Mod {
     - java.lang.String
   */
   type ComparisonOperator = typingsSlinky.awsSdk.wafv2Mod._ComparisonOperator | java.lang.String
+  
   type ConsumedCapacity = scala.Double
+  
   type Country = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AF
     - typingsSlinky.awsSdk.awsSdkStrings.AX
@@ -274,20 +282,30 @@ package object wafv2Mod {
     - java.lang.String
   */
   type CountryCode = typingsSlinky.awsSdk.wafv2Mod._CountryCode | java.lang.String
+  
   type CountryCodes = js.Array[typingsSlinky.awsSdk.wafv2Mod.CountryCode]
+  
   type EntityDescription = java.lang.String
+  
   type EntityId = java.lang.String
+  
   type EntityName = java.lang.String
+  
   type ExcludedRules = js.Array[typingsSlinky.awsSdk.wafv2Mod.ExcludedRule]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.MATCH
     - typingsSlinky.awsSdk.awsSdkStrings.NO_MATCH
     - java.lang.String
   */
   type FallbackBehavior = typingsSlinky.awsSdk.wafv2Mod._FallbackBehavior | java.lang.String
+  
   type FieldToMatchData = java.lang.String
+  
   type FirewallManagerRuleGroups = js.Array[typingsSlinky.awsSdk.wafv2Mod.FirewallManagerRuleGroup]
+  
   type ForwardedIPHeaderName = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.FIRST
     - typingsSlinky.awsSdk.awsSdkStrings.LAST
@@ -295,31 +313,52 @@ package object wafv2Mod {
     - java.lang.String
   */
   type ForwardedIPPosition = typingsSlinky.awsSdk.wafv2Mod._ForwardedIPPosition | java.lang.String
+  
   type HTTPHeaders = js.Array[typingsSlinky.awsSdk.wafv2Mod.HTTPHeader]
+  
   type HTTPMethod = java.lang.String
+  
   type HTTPVersion = java.lang.String
+  
   type HeaderName = java.lang.String
+  
   type HeaderValue = java.lang.String
+  
   type IPAddress = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.IPV4
     - typingsSlinky.awsSdk.awsSdkStrings.IPV6
     - java.lang.String
   */
   type IPAddressVersion = typingsSlinky.awsSdk.wafv2Mod._IPAddressVersion | java.lang.String
+  
   type IPAddresses = js.Array[typingsSlinky.awsSdk.wafv2Mod.IPAddress]
+  
   type IPSetSummaries = js.Array[typingsSlinky.awsSdk.wafv2Mod.IPSetSummary]
+  
   type IPString = java.lang.String
+  
   type ListMaxItems = scala.Double
+  
   type LockToken = java.lang.String
+  
   type LogDestinationConfigs = js.Array[typingsSlinky.awsSdk.wafv2Mod.ResourceArn]
+  
   type LoggingConfigurations = js.Array[typingsSlinky.awsSdk.wafv2Mod.LoggingConfiguration]
+  
   type ManagedRuleGroupSummaries = js.Array[typingsSlinky.awsSdk.wafv2Mod.ManagedRuleGroupSummary]
+  
   type MetricName = java.lang.String
+  
   type NextMarker = java.lang.String
+  
   type PaginationLimit = scala.Double
+  
   type PolicyString = java.lang.String
+  
   type PopulationSize = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EXACTLY
     - typingsSlinky.awsSdk.awsSdkStrings.STARTS_WITH
@@ -329,45 +368,70 @@ package object wafv2Mod {
     - java.lang.String
   */
   type PositionalConstraint = typingsSlinky.awsSdk.wafv2Mod._PositionalConstraint | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.IP
     - typingsSlinky.awsSdk.awsSdkStrings.FORWARDED_IP
     - java.lang.String
   */
   type RateBasedStatementAggregateKeyType = typingsSlinky.awsSdk.wafv2Mod._RateBasedStatementAggregateKeyType | java.lang.String
+  
   type RateLimit = scala.Double
+  
   type RedactedFields = js.Array[typingsSlinky.awsSdk.wafv2Mod.FieldToMatch]
+  
   type RegexPatternSetSummaries = js.Array[typingsSlinky.awsSdk.wafv2Mod.RegexPatternSetSummary]
+  
   type RegexPatternString = java.lang.String
+  
   type RegularExpressionList = js.Array[typingsSlinky.awsSdk.wafv2Mod.Regex]
+  
   type ResourceArn = java.lang.String
+  
   type ResourceArns = js.Array[typingsSlinky.awsSdk.wafv2Mod.ResourceArn]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.APPLICATION_LOAD_BALANCER
     - typingsSlinky.awsSdk.awsSdkStrings.API_GATEWAY
     - java.lang.String
   */
   type ResourceType = typingsSlinky.awsSdk.wafv2Mod._ResourceType | java.lang.String
+  
   type RuleGroupSummaries = js.Array[typingsSlinky.awsSdk.wafv2Mod.RuleGroupSummary]
+  
   type RulePriority = scala.Double
+  
   type RuleSummaries = js.Array[typingsSlinky.awsSdk.wafv2Mod.RuleSummary]
+  
   type Rules = js.Array[typingsSlinky.awsSdk.wafv2Mod.Rule]
+  
   type SampleWeight = scala.Double
+  
   type SampledHTTPRequests = js.Array[typingsSlinky.awsSdk.wafv2Mod.SampledHTTPRequest]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CLOUDFRONT
     - typingsSlinky.awsSdk.awsSdkStrings.REGIONAL
     - java.lang.String
   */
   type Scope = typingsSlinky.awsSdk.wafv2Mod._Scope | java.lang.String
+  
   type SearchString = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.wafv2Mod.Blob | java.lang.String
+  
   type Size = scala.Double
+  
   type Statements = js.Array[typingsSlinky.awsSdk.wafv2Mod.Statement]
+  
   type TagKey = java.lang.String
+  
   type TagKeyList = js.Array[typingsSlinky.awsSdk.wafv2Mod.TagKey]
+  
   type TagList = js.Array[typingsSlinky.awsSdk.wafv2Mod.Tag]
+  
   type TagValue = java.lang.String
+  
   type TextTransformationPriority = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NONE
     - typingsSlinky.awsSdk.awsSdkStrings.COMPRESS_WHITE_SPACE
@@ -378,11 +442,17 @@ package object wafv2Mod {
     - java.lang.String
   */
   type TextTransformationType = typingsSlinky.awsSdk.wafv2Mod._TextTransformationType | java.lang.String
+  
   type TextTransformations = js.Array[typingsSlinky.awsSdk.wafv2Mod.TextTransformation]
+  
   type Timestamp = js.Date
+  
   type URIString = java.lang.String
+  
   type VendorName = java.lang.String
+  
   type WebACLSummaries = js.Array[typingsSlinky.awsSdk.wafv2Mod.WebACLSummary]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2019-07-29`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

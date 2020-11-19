@@ -2,7 +2,7 @@ package typingsSlinky.openui5.global.sap.ui.test
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("sap.ui.test.Opa5")
 @js.native
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
   */
 class Opa5 ()
   extends typingsSlinky.openui5.sap.ui.test.Opa5
-

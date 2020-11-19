@@ -3,7 +3,7 @@ package typingsSlinky.grammarkdown.mod
 import typingsSlinky.grammarkdown.tokensMod.ArgumentOperatorKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown", "Argument")
 @js.native
@@ -16,4 +16,3 @@ class Argument ()
     name: typingsSlinky.grammarkdown.nodesMod.Identifier
   ) = this()
 }
-

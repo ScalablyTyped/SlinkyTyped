@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.AttachmentInfo
 import typingsSlinky.arcgisJsApi.esri.AttachmentInfoProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/layers/support/AttachmentInfo", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends AttachmentInfo {
   def this(properties: AttachmentInfoProperties) = this()
 }
-

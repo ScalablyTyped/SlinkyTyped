@@ -3,7 +3,7 @@ package typingsSlinky.tstl.mod
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "ForwardList")
 @js.native
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   * Default Constructor.
   */
 class ForwardList[T] ()
-  extends typingsSlinky.tstl.tstlMod.ForwardList[T] {
+  extends typingsSlinky.tstl.tstlModuleMod.ForwardList[T] {
   /**
     * Initializer Constructor.
     *
@@ -42,10 +42,10 @@ class ForwardList[T] ()
     */
   def this(n: Double, `val`: T) = this()
 }
-
 @JSImport("tstl", "ForwardList")
 @js.native
 object ForwardList extends js.Object {
+  
   /**
     * Iterator of {@link ForwardList}
     *
@@ -53,7 +53,5 @@ object ForwardList extends js.Object {
     */
   @js.native
   class Iterator[T] protected ()
-    extends typingsSlinky.tstl.tstlMod.ForwardList.Iterator[T]
-  
+    extends typingsSlinky.tstl.tstlModuleMod.ForwardList.Iterator[T]
 }
-

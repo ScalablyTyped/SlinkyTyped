@@ -19,11 +19,12 @@ import typingsSlinky.react.mod.SVGAttributes
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-clone-referenced-element", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   // Custom components
   def default[P](element: FunctionComponentElement[P], props: Partial[P] with Attributes, children: ReactElement*): FunctionComponentElement[P] = js.native
   def default[P](element: FunctionComponentElement[P], props: js.UndefOr[scala.Nothing], children: ReactElement*): FunctionComponentElement[P] = js.native
@@ -55,4 +56,3 @@ object mod extends js.Object {
   @JSName("default")
   def default_P_HTMLAttributesTT_HTMLElement_ReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: ReactHTMLElement[T], props: js.UndefOr[scala.Nothing], children: ReactElement*): ReactHTMLElement[T] = js.native
 }
-

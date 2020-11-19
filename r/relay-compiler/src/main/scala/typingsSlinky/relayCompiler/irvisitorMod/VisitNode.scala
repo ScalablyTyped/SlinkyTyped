@@ -22,7 +22,7 @@ import typingsSlinky.relayCompiler.schemaMod.TypeID
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.relayCompiler.iRMod.Argument
@@ -47,8 +47,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.relayCompiler.iRMod.Variable
 */
 trait VisitNode extends js.Object
-
 object VisitNode {
+  
   @scala.inline
   def Fragment(
     argumentDefinitions: js.Array[ArgumentDefinition],
@@ -63,6 +63,7 @@ object VisitNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def ScalarField(
     alias: String,
@@ -77,6 +78,7 @@ object VisitNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def InlineFragment(
     directives: js.Array[Directive],
@@ -88,6 +90,7 @@ object VisitNode {
     val __obj = js.Dynamic.literal(directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any], typeCondition = typeCondition.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def Argument(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.Argument,
@@ -98,6 +101,7 @@ object VisitNode {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def RootArgumentDefinition(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.RootArgumentDefinition,
@@ -109,6 +113,7 @@ object VisitNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def Request(
     fragment: Fragment,
@@ -120,6 +125,7 @@ object VisitNode {
     val __obj = js.Dynamic.literal(fragment = fragment.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def InlineDataFragmentSpread(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.InlineDataFragmentSpread,
@@ -130,6 +136,7 @@ object VisitNode {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def FragmentSpread(
     args: js.Array[Argument],
@@ -141,6 +148,7 @@ object VisitNode {
     val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def SplitOperation(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.SplitOperation,
@@ -154,6 +162,7 @@ object VisitNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def Directive(
     args: js.Array[Argument],
@@ -164,6 +173,7 @@ object VisitNode {
     val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def ClientExtension(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.ClientExtension,
@@ -173,6 +183,7 @@ object VisitNode {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def ModuleImport(
     documentName: String,
@@ -186,6 +197,7 @@ object VisitNode {
     val __obj = js.Dynamic.literal(documentName = documentName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], module = module.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def LocalArgumentDefinition(
     defaultValue: js.Any,
@@ -198,6 +210,7 @@ object VisitNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def Defer(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.Defer,
@@ -208,6 +221,7 @@ object VisitNode {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def Root(
     argumentDefinitions: js.Array[LocalArgumentDefinition],
@@ -223,6 +237,7 @@ object VisitNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def Stream(
     initialCount: ArgumentValue,
@@ -234,11 +249,13 @@ object VisitNode {
     val __obj = js.Dynamic.literal(initialCount = initialCount.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def Literal(kind: typingsSlinky.relayCompiler.relayCompilerStrings.Literal, loc: Location, value: js.Any): VisitNode = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def LinkedField(
     alias: String,
@@ -255,6 +272,7 @@ object VisitNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def Variable(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.Variable,
@@ -264,6 +282,7 @@ object VisitNode {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], variableName = variableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisitNode]
   }
+  
   @scala.inline
   def Condition(
     condition: Literal | Variable,
@@ -276,4 +295,3 @@ object VisitNode {
     __obj.asInstanceOf[VisitNode]
   }
 }
-

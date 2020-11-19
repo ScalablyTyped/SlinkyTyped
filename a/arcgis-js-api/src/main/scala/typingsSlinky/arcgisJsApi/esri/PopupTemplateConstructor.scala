@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PopupTemplateConstructor
@@ -15,6 +15,6 @@ trait PopupTemplateConstructor
   */
 Instantiable0[PopupTemplate]
      with Instantiable1[/* properties */ PopupTemplateProperties, PopupTemplate] {
+  
   def fromJSON(json: js.Any): PopupTemplate = js.native
 }
-

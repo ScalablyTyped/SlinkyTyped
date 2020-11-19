@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-node/commands/DeleteImportedKeyMaterialCommand", JSImport.Namespace)
 @js.native
 object deleteImportedKeyMaterialCommandMod extends js.Object {
+  
   @js.native
   class DeleteImportedKeyMaterialCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteImportedKeyMaterialCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteImportedKeyMaterialInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteImportedKeyMaterialInput, DeleteImportedKeyMaterialOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[DeleteImportedKeyMaterialInput, DeleteImportedKeyMaterialOutput] = js.native
   }
-  
 }
-

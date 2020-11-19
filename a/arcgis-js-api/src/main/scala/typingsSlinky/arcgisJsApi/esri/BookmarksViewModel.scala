@@ -4,38 +4,27 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.loading
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BookmarksViewModel
   extends Accessor
      with GoTo {
+  
   /**
     * The [Bookmark](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html) that is being navigated to.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#activeBookmark)
     */
   val activeBookmark: Bookmark = js.native
+  
   /**
     * A collection of [Bookmark](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html)s.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#bookmarks)
     */
   var bookmarks: Collection[Bookmark] = js.native
-  /**
-    * The view model's state.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#state)
-    *
-    * @default ready
-    */
-  val state: loading | ready = js.native
-  /**
-    * The view from which the widget will operate.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#view)
-    */
-  var view: MapView = js.native
+  
   /**
     * Creates a new bookmark from based on the [BookmarkCreationOptions](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#BookmarkCreationOptions).
     *
@@ -46,6 +35,7 @@ trait BookmarksViewModel
     */
   def createBookmark(): js.Promise[Bookmark] = js.native
   def createBookmark(bookmarkCreationOptions: BookmarkCreationOptions): js.Promise[Bookmark] = js.native
+  
   /**
     * Zoom to a specific bookmark.
     *
@@ -55,5 +45,20 @@ trait BookmarksViewModel
     *
     */
   def goTo(Bookmark: Bookmark): js.Promise[_] = js.native
+  
+  /**
+    * The view model's state.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#state)
+    *
+    * @default ready
+    */
+  val state: loading | ready = js.native
+  
+  /**
+    * The view from which the widget will operate.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#view)
+    */
+  var view: MapView = js.native
 }
-

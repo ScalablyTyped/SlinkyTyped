@@ -6,12 +6,13 @@ import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/layers/merge", "Merge")
 @js.native
 abstract class Merge () extends Layer {
   def this(args: LayerArgs) = this()
+  
   /**
     * Computes the shape of the result of an elementwise operation.
     *
@@ -23,11 +24,12 @@ abstract class Merge () extends Layer {
     *   element-wise operations.
     */
   var computeElementwiseOpOutputShape: js.Any = js.native
-  var reshapeRequired: Boolean = js.native
+  
   /**
     * Logic for merging multiple tensors, to be overridden by subclasses.
     * @param inputs
     */
   /* protected */ def mergeFunction(inputs: js.Array[Tensor[Rank]]): Tensor[Rank] = js.native
+  
+  var reshapeRequired: Boolean = js.native
 }
-

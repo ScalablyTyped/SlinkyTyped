@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "PBRSpecularGlossinessMaterial")
 @js.native
@@ -16,14 +16,13 @@ class PBRSpecularGlossinessMaterial protected ()
     */
   def this(name: String, scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Legacy/legacy", "PBRSpecularGlossinessMaterial")
 @js.native
 object PBRSpecularGlossinessMaterial extends js.Object {
+  
   /**
     * Parses a JSON object correponding to the serialize function.
     */
   def Parse(source: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): typingsSlinky.babylonjs.pbrSpecularGlossinessMaterialMod.PBRSpecularGlossinessMaterial = js.native
 }
-

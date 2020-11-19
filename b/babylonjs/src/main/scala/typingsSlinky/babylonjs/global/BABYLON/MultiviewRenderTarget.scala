@@ -1,11 +1,10 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
-import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.Ratio
 import typingsSlinky.babylonjs.anon.Width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.MultiviewRenderTarget")
 @js.native
@@ -20,10 +19,4 @@ class MultiviewRenderTarget protected ()
   def this(scene: typingsSlinky.babylonjs.BABYLON.Scene, size: Double) = this()
   def this(scene: typingsSlinky.babylonjs.BABYLON.Scene, size: Ratio) = this()
   def this(scene: typingsSlinky.babylonjs.BABYLON.Scene, size: Width) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-

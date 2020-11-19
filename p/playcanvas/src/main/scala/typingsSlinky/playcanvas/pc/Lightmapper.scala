@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The lightmapper is used to bake scene lights into textures.
@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Lightmapper extends js.Object {
+  
   /**
     * Generates and applies the lightmaps.
     * @param nodes - An array of entities (with model components) to render
@@ -28,4 +29,3 @@ trait Lightmapper extends js.Object {
   def bake(nodes: js.Array[Entity]): Unit = js.native
   def bake(nodes: js.Array[Entity], mode: Double): Unit = js.native
 }
-

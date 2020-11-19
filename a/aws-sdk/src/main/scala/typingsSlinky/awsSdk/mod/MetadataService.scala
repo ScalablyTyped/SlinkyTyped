@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.metadataServiceMod.MetadataServiceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "MetadataService")
 @js.native
@@ -14,14 +14,13 @@ class MetadataService ()
   extends typingsSlinky.awsSdk.coreMod.MetadataService {
   def this(options: MetadataServiceOptions) = this()
 }
-
 /* static members */
 @JSImport("aws-sdk", "MetadataService")
 @js.native
 object MetadataService extends js.Object {
+  
   /**
     * 169.254.169.254
     */
   var host: String = js.native
 }
-

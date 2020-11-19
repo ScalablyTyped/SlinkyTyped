@@ -71,29 +71,31 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx/elements/form", JSImport.Namespace)
 @js.native
 object formMod extends js.Object {
+  
   val Checkbox: ForwardRefAsExoticComponent[PreferHelpersPropsOverrid, ReactElement] = js.native
+  
   val Control: ForwardRefAsExoticComponent[ControlProps, ReactElement] = js.native
+  
   val Fieldset: ForwardRefAsExoticComponent[FieldsetProps, ReactElement] = js.native
+  
   val Help: ForwardRefAsExoticComponent[HelpProps, ReactElement] = js.native
+  
   val Input: ForwardRefAsExoticComponent[InputProps, ReactElement] = js.native
+  
   val Label: ForwardRefAsExoticComponent[LabelProps, ReactElement] = js.native
+  
   val Radio: ForwardRefAsExoticComponent[PreferHelpersPropsOverrid, ReactElement] = js.native
+  
   val Textarea: ForwardRefAsExoticComponent[TextareaProps, ReactElement] = js.native
+  
   @js.native
   object Field extends js.Object {
-    var Body: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    @JSName("$$typeof")
-    var DollarDollartypeof: js.Symbol = js.native
-    var Label: ForwardRefAsExoticComponent[FieldLabelProps, ReactElement] = js.native
-    var defaultProps: AsElementType with (Partial[
-        HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FieldModifierProps with (Pick[_, String | Double | js.Symbol])
-      ]) = js.native
-    var displayName: js.UndefOr[String] = js.native
+    
     def apply[TAsComponent /* <: ReactElement */](
       props: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FieldModifierProps with (Pick[
           ComponentProps[TAsComponent], 
@@ -103,21 +105,24 @@ object formMod extends js.Object {
           ]
         ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
     ): ReactElement | Null = js.native
+    
+    var Body: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+    
+    @JSName("$$typeof")
+    var DollarDollartypeof: js.Symbol = js.native
+    
+    var Label: ForwardRefAsExoticComponent[FieldLabelProps, ReactElement] = js.native
+    
+    var defaultProps: AsElementType with (Partial[
+        HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FieldModifierProps with (Pick[_, String | Double | js.Symbol])
+      ]) = js.native
+    
+    var displayName: js.UndefOr[String] = js.native
   }
   
   @js.native
   object File extends js.Object {
-    var CTA: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    @JSName("$$typeof")
-    var DollarDollartypeof: js.Symbol = js.native
-    var Icon: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var Input: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var Label: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var Name: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var defaultProps: AsElementType with (Partial[
-        HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FileModifierProps with (Pick[_, String | Double | js.Symbol])
-      ]) = js.native
-    var displayName: js.UndefOr[String] = js.native
+    
     def apply[TAsComponent /* <: ReactElement */](
       props: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FileModifierProps with (Pick[
           ComponentProps[TAsComponent], 
@@ -127,18 +132,30 @@ object formMod extends js.Object {
           ]
         ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
     ): ReactElement | Null = js.native
+    
+    var CTA: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+    
+    @JSName("$$typeof")
+    var DollarDollartypeof: js.Symbol = js.native
+    
+    var Icon: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+    
+    var Input: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+    
+    var Label: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+    
+    var Name: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+    
+    var defaultProps: AsElementType with (Partial[
+        HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FileModifierProps with (Pick[_, String | Double | js.Symbol])
+      ]) = js.native
+    
+    var displayName: js.UndefOr[String] = js.native
   }
   
   @js.native
   object Select extends js.Object {
-    var Container: ForwardRefAsExoticComponent[SelectContainerProps, ReactElement] = js.native
-    @JSName("$$typeof")
-    var DollarDollartypeof: js.Symbol = js.native
-    var Option: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var defaultProps: AsElementType with (Partial[
-        HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[_, String | Double | js.Symbol])
-      ]) = js.native
-    var displayName: js.UndefOr[String] = js.native
+    
     def apply[TAsComponent /* <: ReactElement */](
       props: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
           ComponentProps[TAsComponent], 
@@ -148,7 +165,18 @@ object formMod extends js.Object {
           ]
         ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
     ): ReactElement | Null = js.native
+    
+    var Container: ForwardRefAsExoticComponent[SelectContainerProps, ReactElement] = js.native
+    
+    @JSName("$$typeof")
+    var DollarDollartypeof: js.Symbol = js.native
+    
+    var Option: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+    
+    var defaultProps: AsElementType with (Partial[
+        HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[_, String | Double | js.Symbol])
+      ]) = js.native
+    
+    var displayName: js.UndefOr[String] = js.native
   }
-  
 }
-

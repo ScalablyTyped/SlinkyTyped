@@ -2,7 +2,7 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typescript.mod.TextRange because Already inherited
@@ -14,12 +14,17 @@ trait ClassExpression
   extends PrimaryExpression
      with ClassLikeDeclaration
      with JSDocContainer {
+  
   var _declarationBrand: js.Any = js.native
+  
   var heritageClauses: js.UndefOr[NodeArray[HeritageClause]] = js.native
+  
   @JSName("kind")
   var kind_ClassExpression: typingsSlinky.typescript.mod.SyntaxKind.ClassExpression = js.native
+  
   var members: NodeArray[ClassElement] = js.native
+  
   var name: js.UndefOr[Identifier] = js.native
+  
   var typeParameters: js.UndefOr[NodeArray[TypeParameterDeclaration]] = js.native
 }
-

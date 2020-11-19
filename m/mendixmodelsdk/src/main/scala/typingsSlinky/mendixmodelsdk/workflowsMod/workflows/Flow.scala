@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.workflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -26,38 +26,42 @@ class Flow protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FFlow: IModel = js.native
+  
   def containerAsWorkflow: Workflow = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
   def from: WorkflowActivity = js.native
   def from_=(newValue: WorkflowActivity): Unit = js.native
+  
+  @JSName("model")
+  var model_FFlow: IModel = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
   def to: WorkflowActivity = js.native
   def to_=(newValue: WorkflowActivity): Unit = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
   def value: FlowValue = js.native
   def value_=(newValue: FlowValue): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.Flow")
 @js.native
 object Flow extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new Flow instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): Flow = js.native
+  
   /**
     * Creates and returns a new Flow instance in the SDK and on the server.
     * The new Flow will be automatically stored in the 'flows' property
@@ -67,5 +71,8 @@ object Flow extends js.Object {
     *  8.10.0 and higher
     */
   def createIn(container: Workflow): Flow = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

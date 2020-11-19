@@ -6,7 +6,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.DraggableBaseOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.DraggableBase")
 @js.native
@@ -22,4 +22,3 @@ class DraggableBase protected () extends DOMComponent {
     options: DraggableBaseOptions[typingsSlinky.devextreme.mod.DevExpress.ui.DraggableBase]
   ) = this()
 }
-

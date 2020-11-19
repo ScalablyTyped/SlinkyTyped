@@ -5,7 +5,7 @@ import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/nanoflows relevant section in reference guide}
@@ -25,17 +25,18 @@ class Nanoflow protected ()
     container: IFolderBase
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "microflows.Nanoflow")
 @js.native
 object Nanoflow extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates a new Nanoflow unit in the SDK and on the server.
     * Expects one argument, the projects.IFolderBase in which this unit is contained.
     */
   def createIn(container: IFolderBase): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.Nanoflow = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

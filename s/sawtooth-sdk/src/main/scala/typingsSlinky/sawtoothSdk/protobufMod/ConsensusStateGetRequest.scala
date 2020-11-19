@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "ConsensusStateGetRequest")
 @js.native
@@ -16,23 +16,26 @@ import scala.scalajs.js.annotation._
   */
 class ConsensusStateGetRequest () extends IConsensusStateGetRequest {
   def this(properties: IConsensusStateGetRequest) = this()
+  
   /** ConsensusStateGetRequest addresses. */
   @JSName("addresses")
   var addresses_ConsensusStateGetRequest: js.Array[String] = js.native
+  
   /** ConsensusStateGetRequest blockId. */
   @JSName("blockId")
   var blockId_ConsensusStateGetRequest: js.typedarray.Uint8Array = js.native
+  
   /**
     * Converts this ConsensusStateGetRequest to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "ConsensusStateGetRequest")
 @js.native
 object ConsensusStateGetRequest extends js.Object {
+  
   /**
     * Creates a new ConsensusStateGetRequest instance using the specified properties.
     * @param [properties] Properties to set
@@ -40,6 +43,7 @@ object ConsensusStateGetRequest extends js.Object {
     */
   def create(): ConsensusStateGetRequest = js.native
   def create(properties: IConsensusStateGetRequest): ConsensusStateGetRequest = js.native
+  
   /**
     * Decodes a ConsensusStateGetRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -52,6 +56,7 @@ object ConsensusStateGetRequest extends js.Object {
   def decode(reader: Reader, length: Double): ConsensusStateGetRequest = js.native
   def decode(reader: js.typedarray.Uint8Array): ConsensusStateGetRequest = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusStateGetRequest = js.native
+  
   /**
     * Decodes a ConsensusStateGetRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -61,6 +66,7 @@ object ConsensusStateGetRequest extends js.Object {
     */
   def decodeDelimited(reader: Reader): ConsensusStateGetRequest = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusStateGetRequest = js.native
+  
   /**
     * Encodes the specified ConsensusStateGetRequest message. Does not implicitly {@link ConsensusStateGetRequest.verify|verify} messages.
     * @param message ConsensusStateGetRequest message or plain object to encode
@@ -69,6 +75,7 @@ object ConsensusStateGetRequest extends js.Object {
     */
   def encode(message: IConsensusStateGetRequest): Writer = js.native
   def encode(message: IConsensusStateGetRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ConsensusStateGetRequest message, length delimited. Does not implicitly {@link ConsensusStateGetRequest.verify|verify} messages.
     * @param message ConsensusStateGetRequest message or plain object to encode
@@ -77,12 +84,14 @@ object ConsensusStateGetRequest extends js.Object {
     */
   def encodeDelimited(message: IConsensusStateGetRequest): Writer = js.native
   def encodeDelimited(message: IConsensusStateGetRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ConsensusStateGetRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ConsensusStateGetRequest
     */
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusStateGetRequest = js.native
+  
   /**
     * Creates a plain object from a ConsensusStateGetRequest message. Also converts values to other types if specified.
     * @param message ConsensusStateGetRequest
@@ -91,6 +100,7 @@ object ConsensusStateGetRequest extends js.Object {
     */
   def toObject(message: ConsensusStateGetRequest): StringDictionary[js.Any] = js.native
   def toObject(message: ConsensusStateGetRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ConsensusStateGetRequest message.
     * @param message Plain object to verify
@@ -98,4 +108,3 @@ object ConsensusStateGetRequest extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

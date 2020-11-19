@@ -1,11 +1,11 @@
 organization := "org.scalablytyped.slinky"
 name := "vkbeautify"
-version := "0.99-dt-20200227Z-f1e213"
+version := "0.99-dt-20200227Z-be25da"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5")
+  "me.shadaj" %%% "slinky-web" % "0.6.6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -7,7 +7,7 @@ import typingsSlinky.appleMapkitJs.anon.Hybrid
 import typingsSlinky.appleMapkitJs.mapkit.MapConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An embeddable interactive map that you add to a webpage.
@@ -30,23 +30,24 @@ class Map protected ()
   def this(parent: String, options: MapConstructorOptions) = this()
   def this(parent: Element, options: MapConstructorOptions) = this()
 }
-
 /* static members */
 @JSGlobal("mapkit.Map")
 @js.native
 object Map extends js.Object {
+  
   // Configuring the Map's Appearance
   /**
     * Constants indicating the color scheme of the map.
     */
   val ColorSchemes: Dark = js.native
+  
   /**
     * Constants indicating the system of measurement displayed on the map.
     */
   val Distances: Adaptive = js.native
+  
   /**
     * Constants representing the type of map to display.
     */
   val MapTypes: Hybrid = js.native
 }
-

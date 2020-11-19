@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ej.Droppable")
 @js.native
@@ -15,12 +15,12 @@ class Droppable protected ()
   def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Droppable.Model) = this()
   def this(element: Element, options: typingsSlinky.ejWebAll.ej.Droppable.Model) = this()
 }
-
 /* static members */
 @JSGlobal("ej.Droppable")
 @js.native
 object Droppable extends js.Object {
+  
   var Locale: js.Any = js.native
+  
   var fn: typingsSlinky.ejWebAll.ej.Droppable = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.progressbarJs.mod
 import org.scalajs.dom.raw.SVGPathElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("progressbar.js", "Shape")
 @js.native
@@ -21,4 +21,3 @@ class Shape ()
   def this(container: Null, opts: PathDrawingOptions) = this()
   def this(container: SVGPathElement, opts: PathDrawingOptions) = this()
 }
-

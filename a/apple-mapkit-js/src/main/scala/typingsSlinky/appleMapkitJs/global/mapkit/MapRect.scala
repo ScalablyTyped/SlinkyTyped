@@ -2,7 +2,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A rectangular area on a two-dimensional map projection.
@@ -23,4 +23,3 @@ class MapRect protected ()
     */
   def this(x: Double, y: Double, width: Double, height: Double) = this()
 }
-

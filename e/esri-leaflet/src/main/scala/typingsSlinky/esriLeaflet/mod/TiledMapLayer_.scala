@@ -3,7 +3,7 @@ package typingsSlinky.esriLeaflet.mod
 import typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.TiledMapLayerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Access tiles from ArcGIS Online and ArcGIS Server to visualize and identify features. Copyright text from the
@@ -15,4 +15,3 @@ class TiledMapLayer_ protected ()
   extends typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.TiledMapLayer_ {
   def this(options: TiledMapLayerOptions) = this()
 }
-

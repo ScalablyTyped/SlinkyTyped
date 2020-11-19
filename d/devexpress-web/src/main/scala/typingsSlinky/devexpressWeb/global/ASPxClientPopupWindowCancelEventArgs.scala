@@ -2,7 +2,7 @@ package typingsSlinky.devexpressWeb.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides data for the popup control's cancellable client events, such as the ASPxClientPopupControlBase.Closing.
@@ -21,4 +21,3 @@ class ASPxClientPopupWindowCancelEventArgs protected ()
     closeReason: typingsSlinky.devexpressWeb.ASPxClientPopupControlCloseReason
   ) = this()
 }
-

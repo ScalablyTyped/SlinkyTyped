@@ -6,14 +6,16 @@ import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.std.OffscreenCanvas
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
 @JSImport("babylonjs/Engines/thinEngine", JSImport.Namespace)
 @js.native
 object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
+  
   @js.native
   trait ThinEngine extends js.Object {
+    
     /**
       * Creates a dynamic texture
       * @param width defines the width of the texture
@@ -23,6 +25,7 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       * @returns the dynamic texture inside an InternalTexture
       */
     def createDynamicTexture(width: Double, height: Double, generateMipMaps: Boolean, samplingMode: Double): InternalTexture = js.native
+    
     /**
       * Update the content of a dynamic texture
       * @param texture defines the texture to update
@@ -37,7 +40,38 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       texture: Nullable[InternalTexture],
       canvas: HTMLCanvasElement,
       invertY: Boolean,
+      premulAlpha: js.UndefOr[scala.Nothing],
+      format: js.UndefOr[scala.Nothing],
+      forceBindTexture: Boolean
+    ): Unit = js.native
+    def updateDynamicTexture(
+      texture: Nullable[InternalTexture],
+      canvas: HTMLCanvasElement,
+      invertY: Boolean,
+      premulAlpha: js.UndefOr[scala.Nothing],
+      format: Double
+    ): Unit = js.native
+    def updateDynamicTexture(
+      texture: Nullable[InternalTexture],
+      canvas: HTMLCanvasElement,
+      invertY: Boolean,
+      premulAlpha: js.UndefOr[scala.Nothing],
+      format: Double,
+      forceBindTexture: Boolean
+    ): Unit = js.native
+    def updateDynamicTexture(
+      texture: Nullable[InternalTexture],
+      canvas: HTMLCanvasElement,
+      invertY: Boolean,
       premulAlpha: Boolean
+    ): Unit = js.native
+    def updateDynamicTexture(
+      texture: Nullable[InternalTexture],
+      canvas: HTMLCanvasElement,
+      invertY: Boolean,
+      premulAlpha: Boolean,
+      format: js.UndefOr[scala.Nothing],
+      forceBindTexture: Boolean
     ): Unit = js.native
     def updateDynamicTexture(
       texture: Nullable[InternalTexture],
@@ -59,7 +93,38 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       texture: Nullable[InternalTexture],
       canvas: OffscreenCanvas,
       invertY: Boolean,
+      premulAlpha: js.UndefOr[scala.Nothing],
+      format: js.UndefOr[scala.Nothing],
+      forceBindTexture: Boolean
+    ): Unit = js.native
+    def updateDynamicTexture(
+      texture: Nullable[InternalTexture],
+      canvas: OffscreenCanvas,
+      invertY: Boolean,
+      premulAlpha: js.UndefOr[scala.Nothing],
+      format: Double
+    ): Unit = js.native
+    def updateDynamicTexture(
+      texture: Nullable[InternalTexture],
+      canvas: OffscreenCanvas,
+      invertY: Boolean,
+      premulAlpha: js.UndefOr[scala.Nothing],
+      format: Double,
+      forceBindTexture: Boolean
+    ): Unit = js.native
+    def updateDynamicTexture(
+      texture: Nullable[InternalTexture],
+      canvas: OffscreenCanvas,
+      invertY: Boolean,
       premulAlpha: Boolean
+    ): Unit = js.native
+    def updateDynamicTexture(
+      texture: Nullable[InternalTexture],
+      canvas: OffscreenCanvas,
+      invertY: Boolean,
+      premulAlpha: Boolean,
+      format: js.UndefOr[scala.Nothing],
+      forceBindTexture: Boolean
     ): Unit = js.native
     def updateDynamicTexture(
       texture: Nullable[InternalTexture],
@@ -77,6 +142,4 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       forceBindTexture: Boolean
     ): Unit = js.native
   }
-  
 }
-

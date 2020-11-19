@@ -118,123 +118,208 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.zPlussignyPlussignxPlussignname
 import typingsSlinky.plotlyJs.plotlyJsStrings.zPlussignyPlussignxPlussigntext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PlotData extends js.Object {
+  
   var autobinx: Boolean = js.native
+  
   var boxmean: Boolean | sd = js.native
+  
   var branchvalues: total | remainder = js.native
+  
   var colorscale: ColorScale = js.native
+  
   var connectgaps: Boolean = js.native
+  
   var customdata: js.Array[Datum] = js.native
+  
   var delta: PartialDelta = js.native
+  
   var direction: clockwise | counterclockwise = js.native
+  
   var domain: Partialrowsnumbercolumnsn = js.native
+  
   var error_x: ErrorBar = js.native
+  
   var error_y: ErrorBar = js.native
+  
   var fill: none | tozeroy | tozerox | tonexty | tonextx | toself | tonext = js.native
+  
   var fillcolor: String = js.native
+  
   var gauge: PartialGauge = js.native
+  
   var histfunc: count | sum | avg | min | max = js.native
+  
   var hole: Double = js.native
+  
   var hoverinfo: all | name | none | skip | text | x | xPlussigntext | xPlussignname | xPlussigny | xPlussignyPlussigntext | xPlussignyPlussignname | xPlussignyPlussignz | xPlussignyPlussignzPlussigntext | xPlussignyPlussignzPlussignname | y | yPlussignname | yPlussignx | yPlussigntext | yPlussignxPlussigntext | yPlussignxPlussignname | yPlussignz | yPlussignzPlussigntext | yPlussignzPlussignname | yPlussignxPlussignz | yPlussignxPlussignzPlussigntext | yPlussignxPlussignzPlussignname | z | zPlussignx | zPlussignxPlussigntext | zPlussignxPlussignname | zPlussignyPlussignx | zPlussignyPlussignxPlussigntext | zPlussignyPlussignxPlussignname | zPlussignxPlussigny | zPlussignxPlussignyPlussigntext | zPlussignxPlussignyPlussignname = js.native
+  
   var hoverlabel: PartialHoverLabel = js.native
+  
   var hoveron: points | fills = js.native
+  
   var hovertemplate: String | js.Array[String] = js.native
+  
   var hovertext: String | js.Array[String] = js.native
+  
   var labels: js.Array[Datum] = js.native
+  
   var lat: js.Array[Datum] = js.native
+  
   var legendgroup: String = js.native
+  
   var line: PartialScatterLine = js.native
+  
   @JSName("line.color")
   var lineDotcolor: Color = js.native
+  
   @JSName("line.dash")
   var lineDotdash: Dash = js.native
+  
   @JSName("line.shape")
   var lineDotshape: linear | spline | hv | vh | hvh | vhv = js.native
+  
   @JSName("line.simplify")
   var lineDotsimplify: Boolean = js.native
+  
   @JSName("line.smoothing")
   var lineDotsmoothing: Double = js.native
+  
   @JSName("line.width")
   var lineDotwidth: Double = js.native
+  
   var lon: js.Array[Datum] = js.native
+  
   var marker: PartialPlotMarker = js.native
+  
   @JSName("marker.color")
   var markerDotcolor: Color = js.native
+  
   @JSName("marker.colorscale")
   var markerDotcolorscale: ColorScale | js.Array[ColorScale] = js.native
+  
   @JSName("marker.line")
   var markerDotline: PartialScatterMarkerLine = js.native
+  
   @JSName("marker.line.color")
   var markerDotlineDotcolor: Color = js.native
+  
   @JSName("marker.line.colorscale")
   var markerDotlineDotcolorscale: ColorScale | js.Array[ColorScale] = js.native
+  
   @JSName("marker.maxdisplayed")
   var markerDotmaxdisplayed: Double = js.native
+  
   @JSName("marker.opacity")
   var markerDotopacity: Double | js.Array[Double] = js.native
+  
   @JSName("marker.pad.b")
   var markerDotpadDotb: Double = js.native
+  
   @JSName("marker.pad.l")
   var markerDotpadDotl: Double = js.native
+  
   @JSName("marker.pad.r")
   var markerDotpadDotr: Double = js.native
+  
    // TODO
   @JSName("marker.pad.t")
   var markerDotpadDott: Double = js.native
+  
   @JSName("marker.showscale")
   var markerDotshowscale: Boolean = js.native
+  
   @JSName("marker.size")
   var markerDotsize: Double | (js.Array[js.Array[Double] | Double]) = js.native
+  
   @JSName("marker.sizemax")
   var markerDotsizemax: Double = js.native
+  
   @JSName("marker.sizemin")
   var markerDotsizemin: Double = js.native
+  
   @JSName("marker.sizemode")
   var markerDotsizemode: diameter | area = js.native
+  
   @JSName("marker.sizeref")
   var markerDotsizeref: Double = js.native
+  
   @JSName("marker.symbol")
   var markerDotsymbol: MarkerSymbol | js.Array[MarkerSymbol] = js.native
+  
   var mode: lines | markers | text | linesPlussignmarkers | textPlussignmarkers | textPlussignlines | textPlussignlinesPlussignmarkers | none | gauge | number | delta | numberPlussigndelta | gaugePlussignnumber | gaugePlussignnumberPlussigndelta | gaugePlussigndelta = js.native
+  
   var name: String = js.native
+  
   var number: PartialPlotNumber = js.native
+  
   var opacity: Double = js.native
+  
   var orientation: v | h = js.native
+  
   var parents: js.Array[String] = js.native
+  
   var r: js.Array[Datum] = js.native
+  
   var rotation: Double = js.native
+  
   var showlegend: Boolean = js.native
+  
   var showscale: Boolean = js.native
+  
   var stackgroup: String = js.native
+  
   var text: String | js.Array[String] = js.native
+  
   var textfont: PartialFont = js.native
+  
   var textinfo: label | labelPlussigntext | labelPlussignvalue | labelPlussignpercent | labelPlussigntextPlussignvalue | labelPlussigntextPlussignpercent | labelPlussignvaluePlussignpercent | text | textPlussignvalue | textPlussignpercent | textPlussignvaluePlussignpercent | value | valuePlussignpercent | percent | none = js.native
+  
   var textposition: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside | outside = js.native
+  
   var theta: js.Array[Datum] = js.native
+  
   var title: PartialDataTitleFont = js.native
+  
   var transforms: js.Array[DataTransform] = js.native
+  
   var transpose: Boolean = js.native
+  
   var `type`: PlotType = js.native
+  
   var value: Double = js.native
+  
   var values: js.Array[Datum] = js.native
+  
   var visible: Boolean | legendonly = js.native
+  
   var width: Double | js.Array[Double] = js.native
+  
   var x: (js.Array[js.Array[Datum] | Datum]) | TypedArray = js.native
+  
   var xaxis: String = js.native
+  
   var xbins: End = js.native
+  
   var xgap: Double = js.native
+  
   var xy: js.typedarray.Float32Array = js.native
+  
   var y: (js.Array[js.Array[Datum] | Datum]) | TypedArray = js.native
+  
   var yaxis: String = js.native
+  
   var ygap: Double = js.native
+  
   var z: (js.Array[(js.Array[js.Array[Datum] | Datum]) | Datum]) | TypedArray = js.native
+  
   var zsmooth: fast | best | `false` = js.native
 }
-
 object PlotData {
+  
   @scala.inline
   def apply(
     autobinx: Boolean,
@@ -351,300 +436,439 @@ object PlotData {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotData]
   }
+  
   @scala.inline
   implicit class PlotDataOps[Self <: PlotData] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setAutobinx(value: Boolean): Self = this.set("autobinx", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setBoxmean(value: Boolean | sd): Self = this.set("boxmean", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setBranchvalues(value: total | remainder): Self = this.set("branchvalues", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setColorscaleVarargs(value: (String | (js.Tuple2[Double, String]))*): Self = this.set("colorscale", js.Array(value :_*))
+    
     @scala.inline
     def setColorscale(value: ColorScale): Self = this.set("colorscale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setConnectgaps(value: Boolean): Self = this.set("connectgaps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setCustomdataVarargs(value: Datum*): Self = this.set("customdata", js.Array(value :_*))
+    
     @scala.inline
     def setCustomdata(value: js.Array[Datum]): Self = this.set("customdata", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setDelta(value: PartialDelta): Self = this.set("delta", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setDirection(value: clockwise | counterclockwise): Self = this.set("direction", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setDomain(value: Partialrowsnumbercolumnsn): Self = this.set("domain", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setError_x(value: ErrorBar): Self = this.set("error_x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setError_y(value: ErrorBar): Self = this.set("error_y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setFill(value: none | tozeroy | tozerox | tonexty | tonextx | toself | tonext): Self = this.set("fill", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setFillcolor(value: String): Self = this.set("fillcolor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setGauge(value: PartialGauge): Self = this.set("gauge", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setHistfunc(value: count | sum | avg | min | max): Self = this.set("histfunc", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setHole(value: Double): Self = this.set("hole", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setHoverinfo(
       value: all | name | none | skip | text | typingsSlinky.plotlyJs.plotlyJsStrings.x | xPlussigntext | xPlussignname | xPlussigny | xPlussignyPlussigntext | xPlussignyPlussignname | xPlussignyPlussignz | xPlussignyPlussignzPlussigntext | xPlussignyPlussignzPlussignname | y | yPlussignname | yPlussignx | yPlussigntext | yPlussignxPlussigntext | yPlussignxPlussignname | yPlussignz | yPlussignzPlussigntext | yPlussignzPlussignname | yPlussignxPlussignz | yPlussignxPlussignzPlussigntext | yPlussignxPlussignzPlussignname | z | zPlussignx | zPlussignxPlussigntext | zPlussignxPlussignname | zPlussignyPlussignx | zPlussignyPlussignxPlussigntext | zPlussignyPlussignxPlussignname | zPlussignxPlussigny | zPlussignxPlussignyPlussigntext | zPlussignxPlussignyPlussignname
     ): Self = this.set("hoverinfo", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setHoverlabel(value: PartialHoverLabel): Self = this.set("hoverlabel", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setHoveron(value: points | fills): Self = this.set("hoveron", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setHovertemplateVarargs(value: String*): Self = this.set("hovertemplate", js.Array(value :_*))
+    
     @scala.inline
     def setHovertemplate(value: String | js.Array[String]): Self = this.set("hovertemplate", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setHovertextVarargs(value: String*): Self = this.set("hovertext", js.Array(value :_*))
+    
     @scala.inline
     def setHovertext(value: String | js.Array[String]): Self = this.set("hovertext", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLabelsVarargs(value: Datum*): Self = this.set("labels", js.Array(value :_*))
+    
     @scala.inline
     def setLabels(value: js.Array[Datum]): Self = this.set("labels", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLatVarargs(value: Datum*): Self = this.set("lat", js.Array(value :_*))
+    
     @scala.inline
     def setLat(value: js.Array[Datum]): Self = this.set("lat", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLegendgroup(value: String): Self = this.set("legendgroup", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLine(value: PartialScatterLine): Self = this.set("line", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLineDotcolorVarargs(value: (js.UndefOr[(js.Array[js.UndefOr[String | Double | Null]]) | Double | Null | String])*): Self = this.set("line.color", js.Array(value :_*))
+    
     @scala.inline
     def setLineDotcolor(value: Color): Self = this.set("line.color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLineDotdash(value: Dash): Self = this.set("line.dash", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLineDotshape(value: linear | spline | hv | vh | hvh | vhv): Self = this.set("line.shape", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLineDotsimplify(value: Boolean): Self = this.set("line.simplify", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLineDotsmoothing(value: Double): Self = this.set("line.smoothing", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLineDotwidth(value: Double): Self = this.set("line.width", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLonVarargs(value: Datum*): Self = this.set("lon", js.Array(value :_*))
+    
     @scala.inline
     def setLon(value: js.Array[Datum]): Self = this.set("lon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarker(value: PartialPlotMarker): Self = this.set("marker", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotcolorVarargs(value: (js.UndefOr[(js.Array[js.UndefOr[String | Double | Null]]) | Double | Null | String])*): Self = this.set("marker.color", js.Array(value :_*))
+    
     @scala.inline
     def setMarkerDotcolor(value: Color): Self = this.set("marker.color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotcolorscaleVarargs(value: (ColorScale | String | (js.Tuple2[Double, String]))*): Self = this.set("marker.colorscale", js.Array(value :_*))
+    
     @scala.inline
     def setMarkerDotcolorscale(value: ColorScale | js.Array[ColorScale]): Self = this.set("marker.colorscale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotline(value: PartialScatterMarkerLine): Self = this.set("marker.line", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotlineDotcolorVarargs(value: (js.UndefOr[(js.Array[js.UndefOr[String | Double | Null]]) | Double | Null | String])*): Self = this.set("marker.line.color", js.Array(value :_*))
+    
     @scala.inline
     def setMarkerDotlineDotcolor(value: Color): Self = this.set("marker.line.color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotlineDotcolorscaleVarargs(value: (ColorScale | String | (js.Tuple2[Double, String]))*): Self = this.set("marker.line.colorscale", js.Array(value :_*))
+    
     @scala.inline
     def setMarkerDotlineDotcolorscale(value: ColorScale | js.Array[ColorScale]): Self = this.set("marker.line.colorscale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotmaxdisplayed(value: Double): Self = this.set("marker.maxdisplayed", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotopacityVarargs(value: Double*): Self = this.set("marker.opacity", js.Array(value :_*))
+    
     @scala.inline
     def setMarkerDotopacity(value: Double | js.Array[Double]): Self = this.set("marker.opacity", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotpadDotb(value: Double): Self = this.set("marker.pad.b", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotpadDotl(value: Double): Self = this.set("marker.pad.l", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotpadDotr(value: Double): Self = this.set("marker.pad.r", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotpadDott(value: Double): Self = this.set("marker.pad.t", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotshowscale(value: Boolean): Self = this.set("marker.showscale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotsizeVarargs(value: (js.Array[Double] | Double)*): Self = this.set("marker.size", js.Array(value :_*))
+    
     @scala.inline
     def setMarkerDotsize(value: Double | (js.Array[js.Array[Double] | Double])): Self = this.set("marker.size", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotsizemax(value: Double): Self = this.set("marker.sizemax", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotsizemin(value: Double): Self = this.set("marker.sizemin", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotsizemode(value: diameter | area): Self = this.set("marker.sizemode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotsizeref(value: Double): Self = this.set("marker.sizeref", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMarkerDotsymbolVarargs(value: (Double | MarkerSymbol | String)*): Self = this.set("marker.symbol", js.Array(value :_*))
+    
     @scala.inline
     def setMarkerDotsymbol(value: MarkerSymbol | js.Array[MarkerSymbol]): Self = this.set("marker.symbol", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMode(
       value: lines | markers | text | linesPlussignmarkers | textPlussignmarkers | textPlussignlines | textPlussignlinesPlussignmarkers | none | gauge | number | delta | numberPlussigndelta | gaugePlussignnumber | gaugePlussignnumberPlussigndelta | gaugePlussigndelta
     ): Self = this.set("mode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setNumber(value: PartialPlotNumber): Self = this.set("number", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setOpacity(value: Double): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setOrientation(value: v | h): Self = this.set("orientation", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setParentsVarargs(value: String*): Self = this.set("parents", js.Array(value :_*))
+    
     @scala.inline
     def setParents(value: js.Array[String]): Self = this.set("parents", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setRVarargs(value: Datum*): Self = this.set("r", js.Array(value :_*))
+    
     @scala.inline
     def setR(value: js.Array[Datum]): Self = this.set("r", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setRotation(value: Double): Self = this.set("rotation", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setShowlegend(value: Boolean): Self = this.set("showlegend", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setShowscale(value: Boolean): Self = this.set("showscale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setStackgroup(value: String): Self = this.set("stackgroup", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTextVarargs(value: String*): Self = this.set("text", js.Array(value :_*))
+    
     @scala.inline
     def setText(value: String | js.Array[String]): Self = this.set("text", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTextfont(value: PartialFont): Self = this.set("textfont", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTextinfo(
       value: label | labelPlussigntext | labelPlussignvalue | labelPlussignpercent | labelPlussigntextPlussignvalue | labelPlussigntextPlussignpercent | labelPlussignvaluePlussignpercent | text | textPlussignvalue | textPlussignpercent | textPlussignvaluePlussignpercent | value | valuePlussignpercent | percent | none
     ): Self = this.set("textinfo", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTextposition(
       value: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside | outside
     ): Self = this.set("textposition", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setThetaVarargs(value: Datum*): Self = this.set("theta", js.Array(value :_*))
+    
     @scala.inline
     def setTheta(value: js.Array[Datum]): Self = this.set("theta", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTitle(value: PartialDataTitleFont): Self = this.set("title", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTransformsVarargs(value: DataTransform*): Self = this.set("transforms", js.Array(value :_*))
+    
     @scala.inline
     def setTransforms(value: js.Array[DataTransform]): Self = this.set("transforms", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTranspose(value: Boolean): Self = this.set("transpose", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setType(value: PlotType): Self = this.set("type", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setValuesVarargs(value: Datum*): Self = this.set("values", js.Array(value :_*))
+    
     @scala.inline
     def setValues(value: js.Array[Datum]): Self = this.set("values", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setVisible(value: Boolean | legendonly): Self = this.set("visible", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setWidthVarargs(value: Double*): Self = this.set("width", js.Array(value :_*))
+    
     @scala.inline
     def setWidth(value: Double | js.Array[Double]): Self = this.set("width", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXUint32Array(value: js.typedarray.Uint32Array): Self = this.set("x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXInt8Array(value: js.typedarray.Int8Array): Self = this.set("x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXVarargs(value: (js.Array[Datum] | Datum)*): Self = this.set("x", js.Array(value :_*))
+    
     @scala.inline
     def setXFloat64Array(value: js.typedarray.Float64Array): Self = this.set("x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setX(value: (js.Array[js.Array[Datum] | Datum]) | TypedArray): Self = this.set("x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = this.set("x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXUint8Array(value: js.typedarray.Uint8Array): Self = this.set("x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXInt32Array(value: js.typedarray.Int32Array): Self = this.set("x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXInt16Array(value: js.typedarray.Int16Array): Self = this.set("x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXUint16Array(value: js.typedarray.Uint16Array): Self = this.set("x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXFloat32Array(value: js.typedarray.Float32Array): Self = this.set("x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXaxis(value: String): Self = this.set("xaxis", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXbins(value: End): Self = this.set("xbins", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXgap(value: Double): Self = this.set("xgap", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setXy(value: js.typedarray.Float32Array): Self = this.set("xy", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setY(value: (js.Array[js.Array[Datum] | Datum]) | TypedArray): Self = this.set("y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYFloat32Array(value: js.typedarray.Float32Array): Self = this.set("y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = this.set("y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYFloat64Array(value: js.typedarray.Float64Array): Self = this.set("y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYUint32Array(value: js.typedarray.Uint32Array): Self = this.set("y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYInt32Array(value: js.typedarray.Int32Array): Self = this.set("y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYVarargs(value: (js.Array[Datum] | Datum)*): Self = this.set("y", js.Array(value :_*))
+    
     @scala.inline
     def setYUint16Array(value: js.typedarray.Uint16Array): Self = this.set("y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYInt8Array(value: js.typedarray.Int8Array): Self = this.set("y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYUint8Array(value: js.typedarray.Uint8Array): Self = this.set("y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYInt16Array(value: js.typedarray.Int16Array): Self = this.set("y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYaxis(value: String): Self = this.set("yaxis", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYgap(value: Double): Self = this.set("ygap", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setZFloat32Array(value: js.typedarray.Float32Array): Self = this.set("z", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setZInt8Array(value: js.typedarray.Int8Array): Self = this.set("z", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setZVarargs(value: ((js.Array[js.Array[Datum] | Datum]) | Datum)*): Self = this.set("z", js.Array(value :_*))
+    
     @scala.inline
     def setZUint16Array(value: js.typedarray.Uint16Array): Self = this.set("z", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setZUint8Array(value: js.typedarray.Uint8Array): Self = this.set("z", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setZUint32Array(value: js.typedarray.Uint32Array): Self = this.set("z", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setZ(value: (js.Array[(js.Array[js.Array[Datum] | Datum]) | Datum]) | TypedArray): Self = this.set("z", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setZInt32Array(value: js.typedarray.Int32Array): Self = this.set("z", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setZInt16Array(value: js.typedarray.Int16Array): Self = this.set("z", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setZUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = this.set("z", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setZFloat64Array(value: js.typedarray.Float64Array): Self = this.set("z", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setZsmooth(value: fast | best | `false`): Self = this.set("zsmooth", value.asInstanceOf[js.Any])
   }
-  
 }
-

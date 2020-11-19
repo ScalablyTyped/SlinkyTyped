@@ -6,11 +6,12 @@ import typingsSlinky.graphqlToolsUtils.anon.SkipPruning
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server-express", "healTypes")
 @js.native
 object healTypes extends js.Object {
+  
   def apply(originalTypeMap: Record[String, GraphQLNamedType | Null], directives: js.Array[GraphQLDirective]): Unit = js.native
   def apply(
     originalTypeMap: Record[String, GraphQLNamedType | Null],
@@ -18,4 +19,3 @@ object healTypes extends js.Object {
     config: SkipPruning
   ): Unit = js.native
 }
-

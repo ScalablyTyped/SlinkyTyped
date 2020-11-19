@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-node/commands/ScheduleKeyDeletionCommand", JSImport.Namespace)
 @js.native
 object scheduleKeyDeletionCommandMod extends js.Object {
+  
   @js.native
   class ScheduleKeyDeletionCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object scheduleKeyDeletionCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ScheduleKeyDeletionInput) = this()
+    
     val middlewareStack: MiddlewareStack[ScheduleKeyDeletionInput, ScheduleKeyDeletionOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[ScheduleKeyDeletionInput, ScheduleKeyDeletionOutput] = js.native
   }
-  
 }
-

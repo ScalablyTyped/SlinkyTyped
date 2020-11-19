@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DotDensityRendererConstructor
@@ -15,6 +15,6 @@ trait DotDensityRendererConstructor
   */
 Instantiable0[DotDensityRenderer]
      with Instantiable1[/* properties */ DotDensityRendererProperties, DotDensityRenderer] {
+  
   def fromJSON(json: js.Any): DotDensityRenderer = js.native
 }
-

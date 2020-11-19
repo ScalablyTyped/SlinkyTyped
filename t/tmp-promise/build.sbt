@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "tmp-promise"
-version := "1.1.0-af755e"
+version := "1.1.0-ab0463"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8",
-  "org.scalablytyped.slinky" %%% "tmp" % "0.2-dt-20200501Z-838067")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
+  "org.scalablytyped.slinky" %%% "tmp" % "0.2-dt-20200501Z-fb2bb7")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

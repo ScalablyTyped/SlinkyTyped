@@ -10,7 +10,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.InterfaceDeclaration
 import typingsSlinky.babelTypes.babelTypesStrings.TypeAlias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.DeclareClass_
@@ -23,8 +23,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.TypeAlias_
 */
 trait FlowDeclaration extends js.Object
-
 object FlowDeclaration {
+  
   @scala.inline
   def InterfaceDeclaration_(
     body: ObjectTypeAnnotation_,
@@ -41,6 +41,7 @@ object FlowDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowDeclaration]
   }
+  
   @scala.inline
   def DeclareModule_(
     body: BlockStatement_,
@@ -54,6 +55,7 @@ object FlowDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowDeclaration]
   }
+  
   @scala.inline
   def DeclareTypeAlias_(
     end: Double,
@@ -68,12 +70,14 @@ object FlowDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowDeclaration]
   }
+  
   @scala.inline
   def DeclareVariable_(end: Double, id: Identifier_, loc: SourceLocation, start: Double, `type`: DeclareVariable): FlowDeclaration = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowDeclaration]
   }
+  
   @scala.inline
   def DeclareInterface_(
     body: ObjectTypeAnnotation_,
@@ -90,12 +94,14 @@ object FlowDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowDeclaration]
   }
+  
   @scala.inline
   def DeclareFunction_(end: Double, id: Identifier_, loc: SourceLocation, start: Double, `type`: DeclareFunction): FlowDeclaration = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowDeclaration]
   }
+  
   @scala.inline
   def TypeAlias_(
     end: Double,
@@ -110,6 +116,7 @@ object FlowDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowDeclaration]
   }
+  
   @scala.inline
   def DeclareClass_(
     body: ObjectTypeAnnotation_,
@@ -127,4 +134,3 @@ object FlowDeclaration {
     __obj.asInstanceOf[FlowDeclaration]
   }
 }
-

@@ -4,11 +4,11 @@ import typingsSlinky.typescript.mod.Identifier
 import typingsSlinky.typescript.mod.MetaProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateMetaProperty")
 @js.native
 object updateMetaProperty extends js.Object {
+  
   def apply(node: MetaProperty, name: Identifier): MetaProperty = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.indexMod
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "NoiseProceduralTexture")
 @js.native
@@ -19,26 +19,58 @@ class NoiseProceduralTexture protected ()
     */
   def this(name: String) = this()
   def this(name: String, size: Double) = this()
+  def this(
+    name: String,
+    size: js.UndefOr[scala.Nothing],
+    scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]
+  ) = this()
   def this(name: String, size: Double, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]) = this()
   def this(
     name: String,
-    size: Double,
-    scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene],
+    size: js.UndefOr[scala.Nothing],
+    scene: js.UndefOr[Nullable[typingsSlinky.babylonjs.sceneMod.Scene]],
     fallbackTexture: typingsSlinky.babylonjs.textureMod.Texture
   ) = this()
   def this(
     name: String,
     size: Double,
-    scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene],
+    scene: js.UndefOr[Nullable[typingsSlinky.babylonjs.sceneMod.Scene]],
+    fallbackTexture: typingsSlinky.babylonjs.textureMod.Texture
+  ) = this()
+  def this(
+    name: String,
+    size: js.UndefOr[scala.Nothing],
+    scene: js.UndefOr[Nullable[typingsSlinky.babylonjs.sceneMod.Scene]],
+    fallbackTexture: js.UndefOr[scala.Nothing],
+    generateMipMaps: Boolean
+  ) = this()
+  def this(
+    name: String,
+    size: js.UndefOr[scala.Nothing],
+    scene: js.UndefOr[Nullable[typingsSlinky.babylonjs.sceneMod.Scene]],
+    fallbackTexture: typingsSlinky.babylonjs.textureMod.Texture,
+    generateMipMaps: Boolean
+  ) = this()
+  def this(
+    name: String,
+    size: Double,
+    scene: js.UndefOr[Nullable[typingsSlinky.babylonjs.sceneMod.Scene]],
+    fallbackTexture: js.UndefOr[scala.Nothing],
+    generateMipMaps: Boolean
+  ) = this()
+  def this(
+    name: String,
+    size: Double,
+    scene: js.UndefOr[Nullable[typingsSlinky.babylonjs.sceneMod.Scene]],
     fallbackTexture: typingsSlinky.babylonjs.textureMod.Texture,
     generateMipMaps: Boolean
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/index", "NoiseProceduralTexture")
 @js.native
 object NoiseProceduralTexture extends js.Object {
+  
   /**
     * Creates a NoiseProceduralTexture from parsed noise procedural texture data
     * @param parsedTexture defines parsed texture data
@@ -48,4 +80,3 @@ object NoiseProceduralTexture extends js.Object {
     */
   def Parse(parsedTexture: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene): typingsSlinky.babylonjs.noiseProceduralTextureMod.NoiseProceduralTexture = js.native
 }
-

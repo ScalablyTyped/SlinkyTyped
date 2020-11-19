@@ -22,34 +22,38 @@ import typingsSlinky.nodemailer.xoauth2Mod.Token
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Creates an object for exposing the Mail API */
 @js.native
 trait Mail extends EventEmitter {
+  
   /** Usage: typeof transporter.MailMessage */
   var MailMessage: typingsSlinky.nodemailer.mailMessageMod.^ = js.native
-  var dkim: typingsSlinky.nodemailer.dkimMod.^ = js.native
-  var logger: Logger = js.native
-  var meta: Map[String, _] = js.native
-  var options: Options = js.native
-  var transporter: Transport = js.native
+  
   @JSName("addListener")
   def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_idle(event: idle, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_token(event: token, listener: js.Function1[/* token */ Token, Unit]): this.type = js.native
+  
   /** Closes all connections in the pool. If there is a message being sent, the connection is closed later */
   def close(): Unit = js.native
+  
+  var dkim: typingsSlinky.nodemailer.dkimMod.^ = js.native
+  
   @JSName("emit")
   def emit_error(event: error, error: js.Error): Boolean = js.native
   @JSName("emit")
   def emit_idle(event: idle): Boolean = js.native
   @JSName("emit")
   def emit_token(event: token, token: Token): Boolean = js.native
+  
   def get(key: String): js.Any = js.native
+  
   def getVersionString(): String = js.native
+  
   @JSName("get")
   def get_oauth2provisioncb(key: oauth2_provision_cb): js.Function3[
     /* user */ String, 
@@ -123,44 +127,58 @@ trait Mail extends EventEmitter {
     ], 
     Unit
   ] = js.native
+  
   /** Returns true if there are free slots in the queue */
   def isIdle(): Boolean = js.native
+  
   @JSName("listeners")
   def listeners_end(event: end): js.Array[js.Function1[/* token */ Token, Unit]] = js.native
   @JSName("listeners")
   def listeners_error(event: error): js.Array[js.Function1[/* err */ js.Error, Unit]] = js.native
   @JSName("listeners")
   def listeners_idle(event: idle): js.Array[js.Function0[Unit]] = js.native
+  
+  var logger: Logger = js.native
+  
+  var meta: Map[String, _] = js.native
+  
   @JSName("on")
   def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("on")
   def on_idle(event: idle, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
   def on_token(event: token, listener: js.Function1[/* token */ Token, Unit]): this.type = js.native
+  
   @JSName("once")
   def once_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("once")
   def once_idle(event: idle, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
   def once_token(event: token, listener: js.Function1[/* token */ Token, Unit]): this.type = js.native
+  
+  var options: Options = js.native
+  
   @JSName("prependListener")
   def prependListener_end(event: end, listener: js.Function1[/* token */ Token, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_idle(event: idle, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("prependOnceListener")
   def prependOnceListener_end(event: end, listener: js.Function1[/* token */ Token, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_idle(event: idle, listener: js.Function0[Unit]): this.type = js.native
+  
   def sendMail(mailOptions: Options): js.Promise[SentMessageInfo] = js.native
   /** Sends an email using the preselected transport object */
   def sendMail(
     mailOptions: Options,
     callback: js.Function2[/* err */ js.Error | Null, /* info */ SentMessageInfo, Unit]
   ): Unit = js.native
+  
   def set(key: String, value: js.Any): Map[String, _] = js.native
   @JSName("set")
   def set_oauth2provisioncb(
@@ -261,12 +279,16 @@ trait Mail extends EventEmitter {
       Unit
     ]
   ): Map[String, _] = js.native
+  
   /** Sets up proxy handler for a Nodemailer object */
   def setupProxy(proxyUrl: String): Unit = js.native
+  
+  var transporter: Transport = js.native
+  
   def use(step: String, plugin: PluginFunction): this.type = js.native
+  
   def verify(): js.Promise[`true`] = js.native
   /** Verifies SMTP configuration */
   @JSName("verify")
   def verify_true(callback: js.Function2[/* err */ js.Error | Null, `true`, Unit]): Unit = js.native
 }
-

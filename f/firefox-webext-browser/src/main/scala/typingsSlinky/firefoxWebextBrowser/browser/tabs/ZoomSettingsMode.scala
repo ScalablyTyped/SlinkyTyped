@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser.tabs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Defines how zoom changes are handled, i.e. which entity is responsible for the actual scaling of the page;
@@ -14,13 +14,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.disabled
 */
 trait ZoomSettingsMode extends js.Object
-
 object ZoomSettingsMode {
+  
   @scala.inline
   def automatic: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.automatic = "automatic".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.automatic]
+  
   @scala.inline
   def disabled: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.disabled = "disabled".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.disabled]
+  
   @scala.inline
   def manual: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.manual = "manual".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.manual]
 }
-

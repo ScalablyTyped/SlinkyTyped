@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create a new SingleContactResult.
@@ -27,4 +27,3 @@ class SingleContactResult protected ()
     contactPoint: typingsSlinky.playcanvas.pc.ContactPoint
   ) = this()
 }
-

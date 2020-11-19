@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 8.4.0: deleted
@@ -26,39 +26,45 @@ class RetrievalSchema protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FRetrievalSchema: IModel = js.native
+  
   /**
     * In version 7.4.0: deleted
     */
   def entity: String = js.native
   def entity_=(newValue: String): Unit = js.native
+  
+  @JSName("model")
+  var model_FRetrievalSchema: IModel = js.native
+  
   /**
     * In version 7.2.0: introduced
     */
   def usedAssociations: IList[String] = js.native
+  
   /**
     * In version 7.2.0: deleted
     */
   def usedAttributes: IList[String] = js.native
+  
   /**
     * In version 7.14.0: introduced
     */
   def widgetName: String = js.native
   def widgetName_=(newValue: String): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.RetrievalSchema")
 @js.native
 object RetrievalSchema extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new RetrievalSchema instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): RetrievalSchema = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

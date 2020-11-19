@@ -2,7 +2,7 @@ package typingsSlinky.xrm.Xrm
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The {@link Entity.save Entity}'s Save Mode
@@ -15,11 +15,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.saveandnew
 */
 trait EntitySaveMode extends js.Object
-
 object EntitySaveMode {
+  
   @scala.inline
   def saveandclose: typingsSlinky.xrm.xrmStrings.saveandclose = "saveandclose".asInstanceOf[typingsSlinky.xrm.xrmStrings.saveandclose]
+  
   @scala.inline
   def saveandnew: typingsSlinky.xrm.xrmStrings.saveandnew = "saveandnew".asInstanceOf[typingsSlinky.xrm.xrmStrings.saveandnew]
 }
-

@@ -11,10 +11,11 @@ import typingsSlinky.typpy.typpyStrings.string
 import typingsSlinky.typpy.typpyStrings.undefined
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IsFn extends js.Object {
+  
   def apply(input: js.UndefOr[scala.Nothing]): undefined = js.native
   def apply(input: String): string = js.native
   def apply(input: js.Any): String = js.native
@@ -26,4 +27,3 @@ trait IsFn extends js.Object {
   def apply(input: Null): `null` = js.native
   def apply(input: js.RegExp): regexp = js.native
 }
-

@@ -15,11 +15,15 @@ import typingsSlinky.antDesignPro.waterWaveMod.IWaterWaveProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ant-design-pro/lib/Charts", JSImport.Namespace)
 @js.native
 object chartsMod extends js.Object {
+  
+  def yuan(value: String): String = js.native
+  def yuan(value: Double): String = js.native
+  
   @js.native
   class Bar ()
     extends Component[IBarProps, js.Any, js.Any]
@@ -68,25 +72,34 @@ object chartsMod extends js.Object {
   class WaterWave ()
     extends Component[IWaterWaveProps, js.Any, js.Any]
   
-  def yuan(value: String): String = js.native
-  def yuan(value: Double): String = js.native
   @js.native
   object default extends js.Object {
+    
     var Bar: typingsSlinky.antDesignPro.barMod.default = js.native
+    
     var ChartCard: typingsSlinky.antDesignPro.chartCardMod.default = js.native
+    
     var Field: typingsSlinky.antDesignPro.fieldMod.default = js.native
+    
     var Gauge: typingsSlinky.antDesignPro.gaugeMod.default = js.native
+    
     var MiniArea: typingsSlinky.antDesignPro.miniAreaMod.default = js.native
+    
     var MiniBar: typingsSlinky.antDesignPro.miniBarMod.default = js.native
+    
     var MiniProgress: typingsSlinky.antDesignPro.miniProgressMod.default = js.native
+    
     var Pie: typingsSlinky.antDesignPro.pieMod.default = js.native
+    
     var Radar: typingsSlinky.antDesignPro.radarMod.default = js.native
+    
     var TagCloud: typingsSlinky.antDesignPro.tagCloudMod.default = js.native
+    
     var TimelineChart: typingsSlinky.antDesignPro.timelineChartMod.default = js.native
+    
     var WaterWave: typingsSlinky.antDesignPro.waterWaveMod.default = js.native
+    
     def yuan(value: String): String = js.native
     def yuan(value: Double): String = js.native
   }
-  
 }
-

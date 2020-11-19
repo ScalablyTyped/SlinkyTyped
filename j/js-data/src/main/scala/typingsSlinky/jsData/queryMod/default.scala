@@ -3,18 +3,18 @@ package typingsSlinky.jsData.queryMod
 import typingsSlinky.jsData.anon._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("js-data/dist/Query", JSImport.Default)
 @js.native
 class default () extends Query {
   def this(collection: js.Any) = this()
 }
-
 /* static members */
 @JSImport("js-data/dist/Query", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   /**
     * The filtering operators supported by {@link Query#filter}, and which are
     * implemented by adapters (for the most part).
@@ -169,4 +169,3 @@ object default extends js.Object {
     */
   var ops: _empty = js.native
 }
-

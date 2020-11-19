@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri.content
 import typingsSlinky.arcgisJsApi.esri.MediaContentProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.content.MediaContent")
 @js.native
@@ -16,4 +16,3 @@ class MediaContentCls ()
   extends typingsSlinky.arcgisJsApi.esri.MediaContent {
   def this(properties: MediaContentProperties) = this()
 }
-

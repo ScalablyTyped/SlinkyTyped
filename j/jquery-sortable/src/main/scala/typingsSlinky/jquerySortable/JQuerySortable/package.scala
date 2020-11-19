@@ -2,10 +2,12 @@ package typingsSlinky.jquerySortable
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object JQuerySortable {
+  
   type Dimensions = js.Array[scala.Double]
+  
   type GenericEventHandler = js.Function4[
     /* $item */ js.UndefOr[typingsSlinky.jquerySortable.JQuery], 
     /* container */ js.UndefOr[typingsSlinky.jquerySortable.JQuerySortable.Container], 
@@ -15,6 +17,7 @@ package object JQuerySortable {
     /* event */ js.UndefOr[org.scalajs.dom.raw.Event], 
     scala.Unit
   ]
+  
   type OnCancelHandler = js.Function4[
     /* $item */ js.UndefOr[typingsSlinky.jquerySortable.JQuery], 
     /* container */ js.UndefOr[typingsSlinky.jquerySortable.JQuerySortable.Container], 
@@ -24,6 +27,7 @@ package object JQuerySortable {
     /* event */ js.UndefOr[org.scalajs.dom.raw.Event], 
     scala.Unit
   ]
+  
   type OnDragEventHandler = js.Function4[
     /* $item */ js.UndefOr[typingsSlinky.jquerySortable.JQuery], 
     /* position */ js.UndefOr[typingsSlinky.jquerySortable.JQuerySortable.Position], 
@@ -33,6 +37,7 @@ package object JQuerySortable {
     /* event */ js.UndefOr[org.scalajs.dom.raw.Event], 
     scala.Unit
   ]
+  
   type OnMousedownHandler = js.Function3[
     /* $item */ js.UndefOr[typingsSlinky.jquerySortable.JQuery], 
     /* _super */ js.UndefOr[
@@ -41,6 +46,7 @@ package object JQuerySortable {
     /* event */ js.UndefOr[org.scalajs.dom.raw.Event], 
     scala.Unit
   ]
+  
   // Deliberately typing $children as an any here as it makes it much easier to use. Actual type is JQuery | any[]
   type SerializeFunc = js.Function3[
     /* $parent */ typingsSlinky.jquerySortable.JQuery, 

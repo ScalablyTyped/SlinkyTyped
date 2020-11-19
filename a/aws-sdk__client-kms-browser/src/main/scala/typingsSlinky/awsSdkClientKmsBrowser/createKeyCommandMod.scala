@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/commands/CreateKeyCommand", JSImport.Namespace)
 @js.native
 object createKeyCommandMod extends js.Object {
+  
   @js.native
   class CreateKeyCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object createKeyCommandMod extends js.Object {
           Blob
         ] {
     def this(input: CreateKeyInput) = this()
+    
     val middlewareStack: MiddlewareStack[CreateKeyInput, CreateKeyOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[CreateKeyInput, CreateKeyOutput] = js.native
   }
-  
 }
-

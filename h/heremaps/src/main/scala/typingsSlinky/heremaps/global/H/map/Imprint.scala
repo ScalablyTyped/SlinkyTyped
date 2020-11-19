@@ -4,7 +4,7 @@ import typingsSlinky.heremaps.H.Map_
 import typingsSlinky.heremaps.H.map.Imprint.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This class encapsulates the brand, copyright and terms of use elements on the map.
@@ -21,4 +21,3 @@ class Imprint protected ()
   def this(map: Map_) = this()
   def this(map: Map_, opt_options: Options) = this()
 }
-

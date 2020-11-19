@@ -5,9 +5,8 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.reactMdTabs.anon.PickTabsListPropshiddenco
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/tabs/types/Tabs", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[PickTabsListPropshiddenco]]
-

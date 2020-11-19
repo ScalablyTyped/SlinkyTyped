@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.personalizeeventsMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "PersonalizeEvents")
 @js.native
@@ -14,4 +14,3 @@ class PersonalizeEvents ()
   extends typingsSlinky.awsSdk.allMod.PersonalizeEvents {
   def this(options: ClientConfiguration) = this()
 }
-

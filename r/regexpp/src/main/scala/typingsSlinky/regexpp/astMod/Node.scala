@@ -11,15 +11,15 @@ import typingsSlinky.regexpp.regexppStrings.start
 import typingsSlinky.regexpp.regexppStrings.word
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.regexpp.astMod.BranchNode
   - typingsSlinky.regexpp.astMod.LeafNode
 */
 trait Node extends js.Object
-
 object Node {
+  
   @scala.inline
   def Alternative(
     elements: js.Array[Element],
@@ -33,6 +33,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def EdgeAssertion(
     end: Double,
@@ -46,6 +47,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def LookaheadAssertion(
     alternatives: js.Array[Alternative],
@@ -61,6 +63,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def AnyCharacterSet(
     end: Double,
@@ -74,6 +77,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def Character(
     end: Double,
@@ -87,6 +91,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def LookbehindAssertion(
     alternatives: js.Array[Alternative],
@@ -102,6 +107,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def RegExpLiteral(
     end: Double,
@@ -116,6 +122,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def Flags(
     dotAll: Boolean,
@@ -133,6 +140,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def Group(
     alternatives: js.Array[Alternative],
@@ -146,6 +154,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def EscapeCharacterSet(
     end: Double,
@@ -160,6 +169,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def WordBoundaryAssertion(
     end: Double,
@@ -174,6 +184,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def Backreference(
     end: Double,
@@ -188,6 +199,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def CapturingGroup(
     alternatives: js.Array[Alternative],
@@ -202,6 +214,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def UnicodePropertyCharacterSet(
     end: Double,
@@ -217,6 +230,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def CharacterClassRange(
     end: Double,
@@ -231,6 +245,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def Pattern(
     alternatives: js.Array[Alternative],
@@ -243,6 +258,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def CharacterClass(
     elements: js.Array[CharacterClassElement],
@@ -257,6 +273,7 @@ object Node {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  
   @scala.inline
   def Quantifier(
     element: QuantifiableElement,
@@ -274,4 +291,3 @@ object Node {
     __obj.asInstanceOf[Node]
   }
 }
-

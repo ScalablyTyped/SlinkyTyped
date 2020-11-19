@@ -7,16 +7,18 @@ import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("authmosphere/lib/src/types/Precedence", JSImport.Namespace)
 @js.native
 object precedenceMod extends js.Object {
+  
   @js.native
   trait PrecedenceOptions extends js.Object {
+    
+    def precedenceFunction(req: Request_[ParamsDictionary, _, _, Query], res: Response_[_], next: NextFunction): js.Promise[Boolean] = js.native
     @JSName("precedenceFunction")
     var precedenceFunction_Original: PrecedenceFunction = js.native
-    def precedenceFunction(req: Request_[ParamsDictionary, _, _, Query], res: Response_[_], next: NextFunction): js.Promise[Boolean] = js.native
   }
   
   /**
@@ -29,4 +31,3 @@ object precedenceMod extends js.Object {
     js.Promise[Boolean]
   ]
 }
-

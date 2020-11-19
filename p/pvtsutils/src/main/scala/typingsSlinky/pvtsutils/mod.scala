@@ -5,37 +5,47 @@ import typingsSlinky.std.ArrayBufferLike
 import typingsSlinky.std.BufferSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pvtsutils", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  def assign(target: js.Any, sources: js.Any*): js.Any = js.native
+  
+  def combine(buf: js.typedarray.ArrayBuffer*): ArrayBufferLike = js.native
+  
+  def isEqual(bytes1: js.typedarray.ArrayBuffer, bytes2: js.typedarray.ArrayBuffer): Boolean = js.native
+  
   @js.native
   class BufferSourceConverter ()
     extends typingsSlinky.pvtsutils.bufferSourceConverterMod.BufferSourceConverter
+  /* static members */
+  @js.native
+  object BufferSourceConverter extends js.Object {
+    
+    def isBufferSource(data: js.Any): /* is std.BufferSource */ Boolean = js.native
+    
+    def toArrayBuffer(data: BufferSource): js.typedarray.ArrayBuffer = js.native
+    
+    def toUint8Array(data: BufferSource): js.typedarray.Uint8Array = js.native
+  }
   
   @js.native
   class Convert ()
     extends typingsSlinky.pvtsutils.convertMod.Convert
-  
-  def assign(target: js.Any, sources: js.Any*): js.Any = js.native
-  def combine(buf: js.typedarray.ArrayBuffer*): ArrayBufferLike = js.native
-  def isEqual(bytes1: js.typedarray.ArrayBuffer, bytes2: js.typedarray.ArrayBuffer): Boolean = js.native
-  /* static members */
-  @js.native
-  object BufferSourceConverter extends js.Object {
-    def isBufferSource(data: js.Any): /* is std.BufferSource */ Boolean = js.native
-    def toArrayBuffer(data: BufferSource): js.typedarray.ArrayBuffer = js.native
-    def toUint8Array(data: BufferSource): js.typedarray.Uint8Array = js.native
-  }
-  
   /* static members */
   @js.native
   object Convert extends js.Object {
+    
     /* protected */ def Base64Padding(base64: String): String = js.native
+    
     def FromBase64(base64Text: String): js.typedarray.ArrayBuffer = js.native
+    
     def FromBase64Url(base64url: String): js.typedarray.ArrayBuffer = js.native
+    
     def FromBinary(text: String): js.typedarray.ArrayBuffer = js.native
+    
     /**
       * Converts HEX string to buffer
       *
@@ -46,22 +56,28 @@ object mod extends js.Object {
       * @memberOf Convert
       */
     def FromHex(hexString: String): js.typedarray.ArrayBuffer = js.native
+    
     def FromString(str: String): js.typedarray.ArrayBuffer = js.native
     def FromString(str: String, enc: BufferEncoding): js.typedarray.ArrayBuffer = js.native
+    
     def FromUtf8String(text: String): js.typedarray.ArrayBuffer = js.native
+    
     def ToBase64(buffer: BufferSource): String = js.native
+    
     def ToBase64Url(data: BufferSource): String = js.native
+    
     def ToBinary(buffer: BufferSource): String = js.native
+    
     /**
       * Converts buffer to HEX string
       * @param  {BufferSource} buffer Incoming buffer
       * @returns string
       */
     def ToHex(buffer: BufferSource): String = js.native
+    
     def ToString(buffer: BufferSource): String = js.native
     def ToString(buffer: BufferSource, enc: BufferEncoding): String = js.native
+    
     def ToUtf8String(buffer: BufferSource): String = js.native
   }
-  
 }
-

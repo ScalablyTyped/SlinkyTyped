@@ -4,11 +4,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "grads")
 @js.native
 object grads extends js.Object {
+  
   /**
     * Provided `f(x1, x2,...)`, returns another function `g([x1, x2,...], dy?)`,
     * which gives an array of gradients of `f()` with respect to each input
@@ -48,4 +49,3 @@ object grads extends js.Object {
     js.Array[Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]]
   ] = js.native
 }
-

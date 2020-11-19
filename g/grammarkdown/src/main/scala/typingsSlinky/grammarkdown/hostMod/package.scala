@@ -2,21 +2,24 @@ package typingsSlinky.grammarkdown
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object hostMod {
+  
   type LegacyReadFileCallback = js.ThisFunction2[
     /* this */ scala.Nothing, 
     /* file */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.prex.mod.CancellationToken], 
     js.Thenable[java.lang.String] | java.lang.String
   ]
+  
   type LegacyReadFileSyncCallback = js.ThisFunction2[
     /* this */ scala.Nothing, 
     /* file */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.prex.mod.CancellationToken], 
     java.lang.String
   ]
+  
   type LegacyWriteFileCallback = js.ThisFunction3[
     /* this */ scala.Nothing, 
     /* file */ java.lang.String, 
@@ -24,6 +27,7 @@ package object hostMod {
     /* cancelToken */ js.UndefOr[typingsSlinky.prex.mod.CancellationToken], 
     js.Thenable[scala.Unit] | scala.Unit
   ]
+  
   type LegacyWriteFileSyncCallback = js.ThisFunction3[
     /* this */ scala.Nothing, 
     /* file */ java.lang.String, 
@@ -31,18 +35,21 @@ package object hostMod {
     /* cancelToken */ js.UndefOr[typingsSlinky.prex.mod.CancellationToken], 
     scala.Unit
   ]
+  
   type ReadFileCallback = js.ThisFunction2[
     /* this */ scala.Nothing, 
     /* file */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.esfxAsyncCanceltoken.mod.CancelToken], 
     js.Thenable[java.lang.String] | java.lang.String
   ]
+  
   type ReadFileSyncCallback = js.ThisFunction2[
     /* this */ scala.Nothing, 
     /* file */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.esfxAsyncCanceltoken.mod.CancelToken], 
     java.lang.String
   ]
+  
   type WriteFileCallback = js.ThisFunction3[
     /* this */ scala.Nothing, 
     /* file */ java.lang.String, 
@@ -50,6 +57,7 @@ package object hostMod {
     /* cancelToken */ js.UndefOr[typingsSlinky.esfxAsyncCanceltoken.mod.CancelToken], 
     js.Thenable[scala.Unit] | scala.Unit
   ]
+  
   type WriteFileSyncCallback = js.ThisFunction3[
     /* this */ scala.Nothing, 
     /* file */ java.lang.String, 

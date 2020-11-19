@@ -4,21 +4,22 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.materializeCss.anon.PartialSliderOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("M.Slider")
 @js.native
 class Slider ()
   extends typingsSlinky.materializeCss.M.Slider
-
 /* static members */
 @JSGlobal("M.Slider")
 @js.native
 object Slider extends js.Object {
+  
   /**
     * Get Instance
     */
   def getInstance(elem: Element): typingsSlinky.materializeCss.M.Slider = js.native
+  
   /**
     * Init Sliders
     */
@@ -35,4 +36,3 @@ object Slider extends js.Object {
   def init(els: Element): typingsSlinky.materializeCss.M.Slider = js.native
   def init(els: Element, options: PartialSliderOptions): typingsSlinky.materializeCss.M.Slider = js.native
 }
-

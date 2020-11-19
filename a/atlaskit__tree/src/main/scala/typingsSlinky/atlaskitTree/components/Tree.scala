@@ -13,14 +13,16 @@ import typingsSlinky.atlaskitTree.mod.TreeSourcePosition
 import typingsSlinky.atlaskitTree.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tree {
+  
   @JSImport("@atlaskit/tree", JSImport.Default)
   @js.native
   object component extends js.Object
   
   def withProps(p: TreeProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     isDragEnabled: Boolean,
@@ -37,4 +39,3 @@ object Tree {
     new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[TreeProps]))
   }
 }
-

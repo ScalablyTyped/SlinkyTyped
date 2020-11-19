@@ -2,11 +2,11 @@ package typingsSlinky.immutable.global.Immutable
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Immutable.hasIn")
 @js.native
 object hasIn extends js.Object {
+  
   def apply(collection: js.Any, keyPath: js.Iterable[_]): Boolean = js.native
 }
-

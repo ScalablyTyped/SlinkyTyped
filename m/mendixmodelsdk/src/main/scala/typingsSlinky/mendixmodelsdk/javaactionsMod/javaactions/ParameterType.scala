@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.21.0: deleted
@@ -30,18 +30,20 @@ abstract class ParameterType protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsJavaActionParameter: JavaActionParameter = js.native
   @JSName("containerAsJavaActionParameter")
   val containerAsJavaActionParameter_FParameterType: IJavaActionParameter = js.native
+  
   @JSName("model")
   var model_FParameterType: IModel = js.native
-  def containerAsJavaActionParameter: JavaActionParameter = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/javaactions", "javaactions.ParameterType")
 @js.native
 object ParameterType extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

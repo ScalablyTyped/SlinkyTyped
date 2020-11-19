@@ -4,17 +4,17 @@ import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.BackUVsCap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.TubeBuilder")
 @js.native
 class TubeBuilder ()
   extends typingsSlinky.babylonjs.BABYLON.TubeBuilder
-
 /* static members */
 @JSGlobal("BABYLON.TubeBuilder")
 @js.native
 object TubeBuilder extends js.Object {
+  
   /**
     * Creates a tube mesh.
     * The tube is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters
@@ -40,4 +40,3 @@ object TubeBuilder extends js.Object {
   def CreateTube(name: String, options: BackUVsCap): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
   def CreateTube(name: String, options: BackUVsCap, scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
 }
-

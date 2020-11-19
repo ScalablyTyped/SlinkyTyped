@@ -4,12 +4,11 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.gapiClientClassroom.anon.QuotaUserUploadType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait UserProfilesResource extends js.Object {
-  var guardianInvitations: GuardianInvitationsResource = js.native
-  var guardians: GuardiansResource = js.native
+  
   /**
     * Returns a user profile.
     *
@@ -21,5 +20,8 @@ trait UserProfilesResource extends js.Object {
     */
   def get(): Request[UserProfile] = js.native
   def get(request: QuotaUserUploadType): Request[UserProfile] = js.native
+  
+  var guardianInvitations: GuardianInvitationsResource = js.native
+  
+  var guardians: GuardiansResource = js.native
 }
-

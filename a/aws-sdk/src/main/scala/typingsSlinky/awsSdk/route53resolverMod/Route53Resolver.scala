@@ -6,12 +6,11 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Route53Resolver extends Service {
-  @JSName("config")
-  var config_Route53Resolver: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Adds IP addresses to an inbound or an outbound resolver endpoint. If you want to adding more than one IP address, submit one AssociateResolverEndpointIpAddress request for each IP address. To remove an IP address from an endpoint, see DisassociateResolverEndpointIpAddress.
     */
@@ -27,6 +26,7 @@ trait Route53Resolver extends Service {
     params: AssociateResolverEndpointIpAddressRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ AssociateResolverEndpointIpAddressResponse, Unit]
   ): Request[AssociateResolverEndpointIpAddressResponse, AWSError] = js.native
+  
   /**
     * Associates a resolver rule with a VPC. When you associate a rule with a VPC, Resolver forwards all DNS queries for the domain name that is specified in the rule and that originate in the VPC. The queries are forwarded to the IP addresses for the DNS resolvers that are specified in the rule. For more information about rules, see CreateResolverRule. 
     */
@@ -40,6 +40,10 @@ trait Route53Resolver extends Service {
     params: AssociateResolverRuleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ AssociateResolverRuleResponse, Unit]
   ): Request[AssociateResolverRuleResponse, AWSError] = js.native
+  
+  @JSName("config")
+  var config_Route53Resolver: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates a resolver endpoint. There are two types of resolver endpoints, inbound and outbound:   An inbound resolver endpoint forwards DNS queries to the DNS service for a VPC from your network or another VPC.   An outbound resolver endpoint forwards DNS queries from the DNS service for a VPC to your network or another VPC.  
     */
@@ -53,6 +57,7 @@ trait Route53Resolver extends Service {
     params: CreateResolverEndpointRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateResolverEndpointResponse, Unit]
   ): Request[CreateResolverEndpointResponse, AWSError] = js.native
+  
   /**
     * For DNS queries that originate in your VPCs, specifies which resolver endpoint the queries pass through, one domain name that you want to forward to your network, and the IP addresses of the DNS resolvers in your network.
     */
@@ -66,6 +71,7 @@ trait Route53Resolver extends Service {
     params: CreateResolverRuleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateResolverRuleResponse, Unit]
   ): Request[CreateResolverRuleResponse, AWSError] = js.native
+  
   /**
     * Deletes a resolver endpoint. The effect of deleting a resolver endpoint depends on whether it's an inbound or an outbound resolver endpoint:    Inbound: DNS queries from your network or another VPC are no longer routed to the DNS service for the specified VPC.    Outbound: DNS queries from a VPC are no longer routed to your network or to another VPC.  
     */
@@ -79,6 +85,7 @@ trait Route53Resolver extends Service {
     params: DeleteResolverEndpointRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteResolverEndpointResponse, Unit]
   ): Request[DeleteResolverEndpointResponse, AWSError] = js.native
+  
   /**
     * Deletes a resolver rule. Before you can delete a resolver rule, you must disassociate it from all the VPCs that you associated the resolver rule with. For more infomation, see DisassociateResolverRule.
     */
@@ -92,6 +99,7 @@ trait Route53Resolver extends Service {
     params: DeleteResolverRuleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteResolverRuleResponse, Unit]
   ): Request[DeleteResolverRuleResponse, AWSError] = js.native
+  
   /**
     * Removes IP addresses from an inbound or an outbound resolver endpoint. If you want to remove more than one IP address, submit one DisassociateResolverEndpointIpAddress request for each IP address. To add an IP address to an endpoint, see AssociateResolverEndpointIpAddress.
     */
@@ -107,6 +115,7 @@ trait Route53Resolver extends Service {
     params: DisassociateResolverEndpointIpAddressRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DisassociateResolverEndpointIpAddressResponse, Unit]
   ): Request[DisassociateResolverEndpointIpAddressResponse, AWSError] = js.native
+  
   /**
     * Removes the association between a specified resolver rule and a specified VPC.  If you disassociate a resolver rule from a VPC, Resolver stops forwarding DNS queries for the domain name that you specified in the resolver rule.  
     */
@@ -120,6 +129,7 @@ trait Route53Resolver extends Service {
     params: DisassociateResolverRuleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DisassociateResolverRuleResponse, Unit]
   ): Request[DisassociateResolverRuleResponse, AWSError] = js.native
+  
   /**
     * Gets information about a specified resolver endpoint, such as whether it's an inbound or an outbound resolver endpoint, and the current status of the endpoint.
     */
@@ -133,6 +143,7 @@ trait Route53Resolver extends Service {
     params: GetResolverEndpointRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetResolverEndpointResponse, Unit]
   ): Request[GetResolverEndpointResponse, AWSError] = js.native
+  
   /**
     * Gets information about a specified resolver rule, such as the domain name that the rule forwards DNS queries for and the ID of the outbound resolver endpoint that the rule is associated with.
     */
@@ -146,6 +157,7 @@ trait Route53Resolver extends Service {
     params: GetResolverRuleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetResolverRuleResponse, Unit]
   ): Request[GetResolverRuleResponse, AWSError] = js.native
+  
   /**
     * Gets information about an association between a specified resolver rule and a VPC. You associate a resolver rule and a VPC using AssociateResolverRule. 
     */
@@ -159,6 +171,7 @@ trait Route53Resolver extends Service {
     params: GetResolverRuleAssociationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetResolverRuleAssociationResponse, Unit]
   ): Request[GetResolverRuleAssociationResponse, AWSError] = js.native
+  
   /**
     * Gets information about a resolver rule policy. A resolver rule policy specifies the Resolver operations and resources that you want to allow another AWS account to be able to use. 
     */
@@ -172,6 +185,7 @@ trait Route53Resolver extends Service {
     params: GetResolverRulePolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetResolverRulePolicyResponse, Unit]
   ): Request[GetResolverRulePolicyResponse, AWSError] = js.native
+  
   /**
     * Gets the IP addresses for a specified resolver endpoint.
     */
@@ -187,6 +201,7 @@ trait Route53Resolver extends Service {
     params: ListResolverEndpointIpAddressesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListResolverEndpointIpAddressesResponse, Unit]
   ): Request[ListResolverEndpointIpAddressesResponse, AWSError] = js.native
+  
   /**
     * Lists all the resolver endpoints that were created using the current AWS account.
     */
@@ -200,6 +215,7 @@ trait Route53Resolver extends Service {
     params: ListResolverEndpointsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListResolverEndpointsResponse, Unit]
   ): Request[ListResolverEndpointsResponse, AWSError] = js.native
+  
   /**
     * Lists the associations that were created between resolver rules and VPCs using the current AWS account.
     */
@@ -213,6 +229,7 @@ trait Route53Resolver extends Service {
     params: ListResolverRuleAssociationsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListResolverRuleAssociationsResponse, Unit]
   ): Request[ListResolverRuleAssociationsResponse, AWSError] = js.native
+  
   /**
     * Lists the resolver rules that were created using the current AWS account.
     */
@@ -226,6 +243,7 @@ trait Route53Resolver extends Service {
     params: ListResolverRulesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListResolverRulesResponse, Unit]
   ): Request[ListResolverRulesResponse, AWSError] = js.native
+  
   /**
     * Lists the tags that you associated with the specified resource.
     */
@@ -239,6 +257,7 @@ trait Route53Resolver extends Service {
     params: ListTagsForResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
   ): Request[ListTagsForResourceResponse, AWSError] = js.native
+  
   /**
     * Specifies the Resolver operations and resources that you want to allow another AWS account to be able to use.
     */
@@ -252,6 +271,7 @@ trait Route53Resolver extends Service {
     params: PutResolverRulePolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutResolverRulePolicyResponse, Unit]
   ): Request[PutResolverRulePolicyResponse, AWSError] = js.native
+  
   /**
     * Adds one or more tags to a specified resource.
     */
@@ -265,6 +285,7 @@ trait Route53Resolver extends Service {
     params: TagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]
   ): Request[TagResourceResponse, AWSError] = js.native
+  
   /**
     * Removes one or more tags from a specified resource.
     */
@@ -278,6 +299,7 @@ trait Route53Resolver extends Service {
     params: UntagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceResponse, Unit]
   ): Request[UntagResourceResponse, AWSError] = js.native
+  
   /**
     * Updates the name of an inbound or an outbound resolver endpoint. 
     */
@@ -291,6 +313,7 @@ trait Route53Resolver extends Service {
     params: UpdateResolverEndpointRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateResolverEndpointResponse, Unit]
   ): Request[UpdateResolverEndpointResponse, AWSError] = js.native
+  
   /**
     * Updates settings for a specified resolver rule. ResolverRuleId is required, and all other parameters are optional. If you don't specify a parameter, it retains its current value.
     */
@@ -305,4 +328,3 @@ trait Route53Resolver extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateResolverRuleResponse, Unit]
   ): Request[UpdateResolverRuleResponse, AWSError] = js.native
 }
-

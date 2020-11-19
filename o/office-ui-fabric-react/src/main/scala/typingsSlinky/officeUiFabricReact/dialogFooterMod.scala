@@ -4,11 +4,11 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.dialogFooterTypesMod.IDialogFooterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/Dialog/DialogFooter", JSImport.Namespace)
 @js.native
 object dialogFooterMod extends js.Object {
+  
   val DialogFooter: ReactComponentClass[IDialogFooterProps] = js.native
 }
-

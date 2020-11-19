@@ -2,7 +2,7 @@ package typingsSlinky.jsts.mod.geom
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jsts", "geom.Polygon")
 @js.native
@@ -23,4 +23,3 @@ class Polygon protected ()
     factory: js.Any
   ) = this()
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.xregexp.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xregexp", "union")
 @js.native
 object union extends js.Object {
+  
   /**
     * Returns an XRegExp object that is the union of the given patterns. Patterns can be provided as
     * regex objects or strings. Metacharacters are escaped in patterns provided as strings.
@@ -32,4 +33,3 @@ object union extends js.Object {
   def apply(patterns: js.Array[Pattern], flags: String, options: UnionOptions): js.RegExp = js.native
   def apply(patterns: js.Array[Pattern], flags: Null, options: UnionOptions): js.RegExp = js.native
 }
-

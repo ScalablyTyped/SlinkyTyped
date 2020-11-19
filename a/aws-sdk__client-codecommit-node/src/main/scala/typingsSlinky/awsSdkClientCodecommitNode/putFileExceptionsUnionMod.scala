@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientCodecommitNode
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/types/PutFileExceptionsUnion", JSImport.Namespace)
 @js.native
 object putFileExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
     - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
@@ -38,6 +39,4 @@ object putFileExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientCodecommitNode.typesDirectoryNameConflictsWithFileNameExceptionMod.DirectoryNameConflictsWithFileNameException
   */
   trait PutFileExceptionsUnion extends js.Object
-  
 }
-

@@ -5,7 +5,7 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("styled-components", "ThemeProvider")
 @js.native
@@ -21,7 +21,6 @@ class ThemeProvider protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("styled-components", "ThemeProvider")
 @js.native
 object ThemeProvider extends TopLevel[
@@ -29,4 +28,3 @@ object ThemeProvider extends TopLevel[
         ThemeProviderProps[AnyIfEmpty[AnyIfEmpty[DefaultTheme]], AnyIfEmpty[AnyIfEmpty[DefaultTheme]]]
       ]
     ]
-

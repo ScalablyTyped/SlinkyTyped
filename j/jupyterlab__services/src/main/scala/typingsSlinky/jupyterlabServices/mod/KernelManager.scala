@@ -1,9 +1,9 @@
 package typingsSlinky.jupyterlabServices.mod
 
-import typingsSlinky.jupyterlabServices.managerMod.KernelManager.IOptions
+import typingsSlinky.jupyterlabServices.kernelManagerMod.KernelManager.IOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/services", "KernelManager")
 @js.native
@@ -16,4 +16,3 @@ class KernelManager ()
   extends typingsSlinky.jupyterlabServices.kernelMod.KernelManager {
   def this(options: IOptions) = this()
 }
-

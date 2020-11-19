@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.pricingMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.Pricing")
 @js.native
@@ -14,4 +14,3 @@ class Pricing ()
   extends typingsSlinky.awsSdk.mod.Pricing {
   def this(options: ClientConfiguration) = this()
 }
-

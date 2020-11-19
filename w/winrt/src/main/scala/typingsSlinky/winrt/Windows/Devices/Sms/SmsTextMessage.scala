@@ -3,12 +3,12 @@ package typingsSlinky.winrt.Windows.Devices.Sms
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SmsTextMessage extends ISmsTextMessage
-
 object SmsTextMessage {
+  
   @scala.inline
   def apply(
     body: String,
@@ -27,4 +27,3 @@ object SmsTextMessage {
     __obj.asInstanceOf[SmsTextMessage]
   }
 }
-

@@ -8,11 +8,12 @@ import typingsSlinky.webVitals.webVitalsStrings.LCP
 import typingsSlinky.webVitals.webVitalsStrings.TTFB
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("web-vitals/dist/lib/initMetric", JSImport.Namespace)
 @js.native
 object initMetricMod extends js.Object {
+  
   @JSName("initMetric")
   def initMetric_CLS(name: CLS): Metric = js.native
   @JSName("initMetric")
@@ -34,4 +35,3 @@ object initMetricMod extends js.Object {
   @JSName("initMetric")
   def initMetric_TTFB(name: TTFB, value: Double): Metric = js.native
 }
-

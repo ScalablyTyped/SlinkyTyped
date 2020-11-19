@@ -7,11 +7,12 @@ import typingsSlinky.typescript.mod.Expression
 import typingsSlinky.typescript.mod.PropertyName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateBindingElement")
 @js.native
 object updateBindingElement extends js.Object {
+  
   def apply(
     node: BindingElement,
     dotDotDotToken: js.UndefOr[scala.Nothing],
@@ -65,4 +66,3 @@ object updateBindingElement extends js.Object {
     initializer: Expression
   ): BindingElement = js.native
 }
-

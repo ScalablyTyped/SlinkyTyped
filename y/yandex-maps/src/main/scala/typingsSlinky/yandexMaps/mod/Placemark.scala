@@ -2,7 +2,7 @@ package typingsSlinky.yandexMaps.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("yandex-maps", "Placemark")
 @js.native
@@ -20,4 +20,3 @@ class Placemark protected () extends GeoObject_ {
   def this(geometry: IPointGeometry, properties: js.Object, options: IPlacemarkOptions) = this()
   def this(geometry: IPointGeometry, properties: IDataManager, options: IPlacemarkOptions) = this()
 }
-

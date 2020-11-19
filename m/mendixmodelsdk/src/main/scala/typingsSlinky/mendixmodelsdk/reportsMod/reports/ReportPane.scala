@@ -25,7 +25,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.Widget
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/report-pane relevant section in reference guide}
@@ -43,28 +43,31 @@ class ReportPane protected () extends Widget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FReportPane: IModel = js.native
+  
   def generateOnLoad: Boolean = js.native
   def generateOnLoad_=(newValue: Boolean): Unit = js.native
+  
+  @JSName("model")
+  var model_FReportPane: IModel = js.native
+  
   def parameterWidget: Widget | Null = js.native
   def parameterWidget_=(newValue: Widget | Null): Unit = js.native
+  
   def reportWidget: Widget | Null = js.native
   def reportWidget_=(newValue: Widget | Null): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/reports", "reports.ReportPane")
 @js.native
 object ReportPane extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'footerWidget' property
@@ -74,6 +77,7 @@ object ReportPane extends js.Object {
     *  6.7.0 to 6.9.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -83,6 +87,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInDataViewUnderWidget(container: DataView): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -92,6 +97,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -101,6 +107,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'leftWidget' property
@@ -110,6 +117,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInHeaderUnderLeftWidget(container: Header): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'rightWidget' property
@@ -119,6 +127,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInHeaderUnderRightWidget(container: Header): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -128,6 +137,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -137,6 +147,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -146,6 +157,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInLayoutUnderWidget(container: Layout): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -155,6 +167,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -164,6 +177,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInListViewUnderWidget(container: ListView): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -173,6 +187,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'parameterWidget' property
@@ -182,6 +197,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'reportWidget' property
@@ -191,6 +207,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -200,6 +217,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -209,6 +227,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInSnippetUnderWidget(container: Snippet): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'firstWidget' property
@@ -218,6 +237,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'secondWidget' property
@@ -227,6 +247,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -236,6 +257,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInTabPageUnderWidget(container: TabPage): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -245,6 +267,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInTableCellUnderWidget(container: TableCell): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -254,6 +277,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widgets' property
@@ -263,5 +287,8 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): ReportPane = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

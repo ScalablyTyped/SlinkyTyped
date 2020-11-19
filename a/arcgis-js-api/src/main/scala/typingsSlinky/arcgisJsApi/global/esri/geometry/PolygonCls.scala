@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri.geometry
 import typingsSlinky.arcgisJsApi.esri.PolygonProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.geometry.Polygon")
 @js.native
@@ -16,4 +16,3 @@ class PolygonCls ()
   extends typingsSlinky.arcgisJsApi.esri.Polygon {
   def this(properties: PolygonProperties) = this()
 }
-

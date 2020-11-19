@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser.runtime
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The reason that the event is being dispatched. 'app_update' is used when the restart is needed because the
@@ -16,13 +16,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.periodic
 */
 trait OnRestartRequiredReason extends js.Object
-
 object OnRestartRequiredReason {
+  
   @scala.inline
   def app_update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.app_update = "app_update".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.app_update]
+  
   @scala.inline
   def os_update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.os_update = "os_update".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.os_update]
+  
   @scala.inline
   def periodic: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.periodic = "periodic".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.periodic]
 }
-

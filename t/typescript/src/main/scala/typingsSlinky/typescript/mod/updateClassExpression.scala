@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "updateClassExpression")
 @js.native
 object updateClassExpression extends js.Object {
+  
   def apply(
     node: ClassExpression,
     modifiers: js.UndefOr[scala.Nothing],
@@ -136,4 +137,3 @@ object updateClassExpression extends js.Object {
     members: js.Array[ClassElement]
   ): ClassExpression = js.native
 }
-

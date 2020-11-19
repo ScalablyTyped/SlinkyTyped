@@ -2,35 +2,40 @@ package typingsSlinky.valerie
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
 * Valerie BindingHandlers
 */
 @js.native
 trait KnockoutBindingHandlers extends js.Object {
+  
   /**
     * Disables the element when the chosen property or model has failed or is pending validation, enabled
     * otherwise.
     * @name ko.bindingHandlers.disabledWhenNotValid
     */
   var disabledWhenNotValid: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Disables the element when the chosen property or model has been touched and has failed or is pending
     * validation, enabled otherwise.<br/>
     * @name ko.bindingHandlers.disabledWhenTouchedAndNotValid
     */
   var disabledWhenTouchedAndNotValid: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Enables the element when the chosen property or model is applicable, disabled otherwise.
     * @name ko.bindingHandlers.enabledWhenApplicable
     */
   var enabledWhenApplicable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Sets the text of the element to be a formatted representation of the specified property.
     * @name ko.bindingHandlers.formattedText
     */
   var formattedText: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Validates entries that can be checked, i.e. check boxes and radio buttons.
     * Functions in the same way as the <b>ko.bindingHandlers.checked</b> binding handler, with the following
@@ -42,6 +47,7 @@ trait KnockoutBindingHandlers extends js.Object {
     * @name ko.bindingHandlers.validatedChecked
     */
   var validatedChecked: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Validates options selected in a select list.
     * Functions in the same way as the <b>ko.bindingHandlers.selectedOptions</b> binding handler, with the
@@ -53,6 +59,7 @@ trait KnockoutBindingHandlers extends js.Object {
     * @name ko.bindingHandlers.validatedSelectedOptions
     */
   var validatedSelectedOptions: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Validates entries that can be keyed or selected.
     * Functions in the same way as the <b>ko.bindingHandlers.value</b> binding handler, with the following
@@ -75,6 +82,7 @@ trait KnockoutBindingHandlers extends js.Object {
     * @name ko.bindingHandlers.validatedValue
     */
   var validatedValue: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Sets CSS classes on the element based on the validation state of the chosen property or model.</br>
     * The names of the CSS classes used are held in the <b>ko.bindingHandlers.validationCss.classNames</b> object,
@@ -92,6 +100,7 @@ trait KnockoutBindingHandlers extends js.Object {
     * @name ko.bindingHandlers.validationCss
     */
   var validationCss: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Makes the element behave like a validation message for the chosen property or model:
     * <ul>
@@ -101,54 +110,63 @@ trait KnockoutBindingHandlers extends js.Object {
     * @name ko.bindingHandlers.validationMessage
     */
   var validationMessage: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Sets the text of the element to be the underlying validation state's message.
     * @name ko.bindingHandlers.validationMessageText
     */
   var validationMessageText: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Sets the text of the element to be the underlying validation state's name.
     * @name ko.bindingHandlers.validationName
     */
   var validationName: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Makes the element visible if the chosen property or model is applicable, invisible otherwise.
     * @name ko.bindingHandlers.visibleWhenApplicable
     */
   var visibleWhenApplicable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Makes the element visible when the entry bound to the chosen property is in focus, invisible otherwise.
     * @name ko.bindingHandlers.visibleWhenFocused
     */
   var visibleWhenFocused: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Makes the element visible when the chosen property or model has failed validation, invisible otherwise.
     * @name ko.bindingHandlers.visibleWhenInvalid
     */
   var visibleWhenInvalid: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Makes the element visible when the summary for the chosen model is not empty, invisible otherwise.
     * @name ko.bindingHandlers.visibleWhenSummaryNotEmpty
     */
   var visibleWhenSummaryNotEmpty: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Makes the element visible if the chosen property or model has been touched, invisible otherwise.
     * @name ko.bindingHandlers.visibleWhenTouched
     */
   var visibleWhenTouched: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Makes the element visible if the chosen property or model is untouched, invisible otherwise.
     * @name ko.bindingHandlers.visibleWhenUntouched
     */
   var visibleWhenUntouched: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
+  
   /**
     * Makes the element visible if the chosen property or model has passed validation.
     * @name ko.bindingHandlers.visibleWhenValid
     */
   var visibleWhenValid: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any = js.native
 }
-
 object KnockoutBindingHandlers {
+  
   @scala.inline
   def apply(
     disabledWhenNotValid: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any,
@@ -173,90 +191,110 @@ object KnockoutBindingHandlers {
     val __obj = js.Dynamic.literal(disabledWhenNotValid = disabledWhenNotValid.asInstanceOf[js.Any], disabledWhenTouchedAndNotValid = disabledWhenTouchedAndNotValid.asInstanceOf[js.Any], enabledWhenApplicable = enabledWhenApplicable.asInstanceOf[js.Any], formattedText = formattedText.asInstanceOf[js.Any], validatedChecked = validatedChecked.asInstanceOf[js.Any], validatedSelectedOptions = validatedSelectedOptions.asInstanceOf[js.Any], validatedValue = validatedValue.asInstanceOf[js.Any], validationCss = validationCss.asInstanceOf[js.Any], validationMessage = validationMessage.asInstanceOf[js.Any], validationMessageText = validationMessageText.asInstanceOf[js.Any], validationName = validationName.asInstanceOf[js.Any], visibleWhenApplicable = visibleWhenApplicable.asInstanceOf[js.Any], visibleWhenFocused = visibleWhenFocused.asInstanceOf[js.Any], visibleWhenInvalid = visibleWhenInvalid.asInstanceOf[js.Any], visibleWhenSummaryNotEmpty = visibleWhenSummaryNotEmpty.asInstanceOf[js.Any], visibleWhenTouched = visibleWhenTouched.asInstanceOf[js.Any], visibleWhenUntouched = visibleWhenUntouched.asInstanceOf[js.Any], visibleWhenValid = visibleWhenValid.asInstanceOf[js.Any])
     __obj.asInstanceOf[KnockoutBindingHandlers]
   }
+  
   @scala.inline
   implicit class KnockoutBindingHandlersOps[Self <: KnockoutBindingHandlers] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setDisabledWhenNotValid(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("disabledWhenNotValid", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setDisabledWhenTouchedAndNotValid(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("disabledWhenTouchedAndNotValid", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setEnabledWhenApplicable(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("enabledWhenApplicable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setFormattedText(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("formattedText", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setValidatedChecked(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("validatedChecked", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setValidatedSelectedOptions(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("validatedSelectedOptions", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setValidatedValue(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("validatedValue", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setValidationCss(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("validationCss", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setValidationMessage(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("validationMessage", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setValidationMessageText(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("validationMessageText", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setValidationName(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("validationName", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setVisibleWhenApplicable(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("visibleWhenApplicable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setVisibleWhenFocused(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("visibleWhenFocused", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setVisibleWhenInvalid(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("visibleWhenInvalid", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setVisibleWhenSummaryNotEmpty(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("visibleWhenSummaryNotEmpty", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setVisibleWhenTouched(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("visibleWhenTouched", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setVisibleWhenUntouched(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("visibleWhenUntouched", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setVisibleWhenValid(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutBindingHandler */ js.Any
     ): Self = this.set("visibleWhenValid", value.asInstanceOf[js.Any])
   }
-  
 }
-

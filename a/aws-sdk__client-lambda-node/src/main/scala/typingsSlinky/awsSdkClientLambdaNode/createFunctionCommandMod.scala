@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-lambda-node/commands/CreateFunctionCommand", JSImport.Namespace)
 @js.native
 object createFunctionCommandMod extends js.Object {
+  
   @js.native
   class CreateFunctionCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object createFunctionCommandMod extends js.Object {
           Readable
         ] {
     def this(input: CreateFunctionInput) = this()
+    
     val middlewareStack: MiddlewareStack[CreateFunctionInput, CreateFunctionOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[CreateFunctionInput, CreateFunctionOutput] = js.native
   }
-  
 }
-

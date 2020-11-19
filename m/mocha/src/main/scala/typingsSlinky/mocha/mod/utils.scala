@@ -2,11 +2,12 @@ package typingsSlinky.mocha.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mocha", "utils")
 @js.native
 object utils extends js.Object {
+  
   /**
     * Return a new Thing that has the keys in sorted order. Recursive.
     *
@@ -22,12 +23,14 @@ object utils extends js.Object {
     * @see https://mochajs.org/api/module-utils.html#.canonicalize
     */
   def canonicalize(value: js.Any, stack: js.Array[_], typeHint: String): js.Any = js.native
+  
   /**
     * Strip the function definition from `str`, and re-indent for pre whitespace.
     *
     * @see https://mochajs.org/api/module-utils.html#.clean
     */
   def clean(str: String): String = js.native
+  
   /**
     * Generate an undefined error if `err` is not defined.
     *
@@ -35,10 +38,12 @@ object utils extends js.Object {
     */
   def getError(): js.Error = js.native
   def getError(err: js.Error): js.Error = js.native
+  
   /**
     * Highlight the given string of `js`.
     */
   def highlight(js_ : String): String = js.native
+  
   /**
     * Lookup file names at the given `path`.
     *
@@ -48,12 +53,14 @@ object utils extends js.Object {
   def lookupFiles(filepath: String, extensions: js.UndefOr[scala.Nothing], recursive: Boolean): js.Array[String] = js.native
   def lookupFiles(filepath: String, extensions: js.Array[String]): js.Array[String] = js.native
   def lookupFiles(filepath: String, extensions: js.Array[String], recursive: Boolean): js.Array[String] = js.native
+  
   /**
     * Compute a slug from the given `str`.
     *
     * @see https://mochajs.org/api/module-utils.html#.slug
     */
   def slug(str: String): String = js.native
+  
   /**
     * When invoking this function you get a filter function that get the Error.stack as an
     * input, and return a prettify output. (i.e: strip Mocha and internal node functions from
@@ -62,6 +69,7 @@ object utils extends js.Object {
     * @see https://mochajs.org/api/module-utils.html#.stackTraceFilter
     */
   def stackTraceFilter(): js.Function1[/* stack */ String, String] = js.native
+  
   /**
     * Stringify `value`. Different behavior depending on type of value:
     *
@@ -73,10 +81,12 @@ object utils extends js.Object {
     * @see https://mochajs.org/api/module-utils.html#.stringify
     */
   def stringify(value: js.Any): String = js.native
+  
   /**
     * Takes some variable and asks `Object.prototype.toString()` what it thinks it is.
     */
   def `type`(value: js.Any): String = js.native
+  
   /**
     * Generate an undefined error with a message warning the user.
     *
@@ -84,4 +94,3 @@ object utils extends js.Object {
     */
   def undefinedError(): js.Error = js.native
 }
-

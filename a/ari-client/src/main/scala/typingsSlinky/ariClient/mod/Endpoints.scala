@@ -5,10 +5,11 @@ import typingsSlinky.ariClient.anon.From
 import typingsSlinky.ariClient.anon.Tech
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Endpoints extends js.Object {
+  
   /**
     * Details for an endpoint.
     *
@@ -31,6 +32,7 @@ trait Endpoints extends js.Object {
     params: typingsSlinky.ariClient.anon.Resource,
     callback: js.Function2[/* err */ js.Error, /* endpoint */ Endpoint, Unit]
   ): Unit = js.native
+  
   /**
     * List all endpoints.
     */
@@ -39,6 +41,7 @@ trait Endpoints extends js.Object {
     * List all endpoints.
     */
   def list(callback: js.Function2[/* err */ js.Error, /* endpoints */ js.Array[Endpoint], Unit]): Unit = js.native
+  
   /**
     * List available endoints for a given endpoint technology.
     *
@@ -56,6 +59,7 @@ trait Endpoints extends js.Object {
     * @param [params.tech] - Technology of the endpoints (sip,iax2,...).
     */
   def listByTech(params: Tech, callback: js.Function2[/* err */ js.Error, /* endpoints */ js.Array[Endpoint], Unit]): Unit = js.native
+  
   /**
     * Send a message to some technology URI or endpoint.
     *
@@ -76,6 +80,7 @@ trait Endpoints extends js.Object {
     * resource types; for example, pjsip and sip resource types will add the key/value pairs as SIP headers.
     */
   def sendMessage(params: Body, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Send a message to some endpoint in a technology.
     *
@@ -99,4 +104,3 @@ trait Endpoints extends js.Object {
     */
   def sendMessageToEndpoint(params: From, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
-

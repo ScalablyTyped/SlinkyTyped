@@ -9,11 +9,12 @@ import typingsSlinky.typescript.mod.TypeElement
 import typingsSlinky.typescript.mod.TypeParameterDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createInterfaceDeclaration")
 @js.native
 object createInterfaceDeclaration extends js.Object {
+  
   def apply(
     decorators: js.UndefOr[scala.Nothing],
     modifiers: js.UndefOr[scala.Nothing],
@@ -271,4 +272,3 @@ object createInterfaceDeclaration extends js.Object {
     members: js.Array[TypeElement]
   ): InterfaceDeclaration = js.native
 }
-

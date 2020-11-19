@@ -2,7 +2,7 @@ package typingsSlinky.cloudeventsSdk.validationErrorMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @ignore
@@ -24,4 +24,3 @@ class ^ protected () extends ValidationError {
   def this(message: String) = this()
   def this(message: String, errors: js.Array[typingsSlinky.ajv.mod.ErrorObject | String]) = this()
 }
-

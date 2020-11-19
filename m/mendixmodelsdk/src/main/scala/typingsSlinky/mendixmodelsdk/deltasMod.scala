@@ -5,11 +5,12 @@ import typingsSlinky.mendixmodelsdk.commonMod.common.IErrorCallback
 import typingsSlinky.mendixmodelsdk.commonMod.common.IVoidCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/sdk/internal/deltas", JSImport.Namespace)
 @js.native
 object deltasMod extends js.Object {
+  
   @js.native
   class DeltaManager protected ()
     extends typingsSlinky.mendixmodelsdk.deltaManagerMod.DeltaManager {
@@ -27,6 +28,4 @@ object deltasMod extends js.Object {
     extends typingsSlinky.mendixmodelsdk.deltaSenderMod.DeltaSender {
     def this(model: AbstractModel, flushCallback: IVoidCallback, errorCallback: IErrorCallback) = this()
   }
-  
 }
-

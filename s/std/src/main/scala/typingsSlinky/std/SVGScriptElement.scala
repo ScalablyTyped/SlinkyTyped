@@ -2,14 +2,14 @@ package typingsSlinky.std
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Corresponds to the SVG <script> element. */
 @js.native
 trait SVGScriptElement
   extends SVGElement
      with SVGURIReference {
-  var `type`: java.lang.String = js.native
+  
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -20,6 +20,7 @@ trait SVGScriptElement
     listener: EventListenerOrEventListenerObject,
     options: AddEventListenerOptions
   ): Unit = js.native
+  
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -30,5 +31,6 @@ trait SVGScriptElement
     callback: EventListenerOrEventListenerObject,
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  
+  var `type`: java.lang.String = js.native
 }
-

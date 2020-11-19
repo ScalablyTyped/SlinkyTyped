@@ -5,12 +5,12 @@ import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
 import typingsSlinky.popmotion.pointerTypesMod.PointerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("popmotion", "mouse")
 @js.native
 object mouse extends js.Object {
+  
   def apply(): Action[ColdSubscription] = js.native
   def apply(hasPreventDefault: PointerProps): Action[ColdSubscription] = js.native
 }
-

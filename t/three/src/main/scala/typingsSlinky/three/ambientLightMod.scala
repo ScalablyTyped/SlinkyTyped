@@ -5,11 +5,12 @@ import typingsSlinky.three.lightMod.Light
 import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/lights/AmbientLight", JSImport.Namespace)
 @js.native
 object ambientLightMod extends js.Object {
+  
   @js.native
   /**
   	 * This creates a Ambientlight with a color.
@@ -23,8 +24,7 @@ object ambientLightMod extends js.Object {
     def this(color: String, intensity: Double) = this()
     def this(color: Double, intensity: Double) = this()
     def this(color: Color, intensity: Double) = this()
+    
     val isAmbientLight: `true` = js.native
   }
-  
 }
-

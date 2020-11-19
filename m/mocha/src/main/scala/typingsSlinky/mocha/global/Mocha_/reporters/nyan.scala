@@ -5,9 +5,8 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.mocha.Mocha.reporters.Nyan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Mocha.reporters.nyan")
 @js.native
 object nyan extends TopLevel[Instantiable0[Nyan]]
-

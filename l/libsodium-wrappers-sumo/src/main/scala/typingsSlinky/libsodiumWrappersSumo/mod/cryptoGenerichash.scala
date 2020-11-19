@@ -4,11 +4,12 @@ import typingsSlinky.libsodiumWrappers.mod.StringOutputFormat
 import typingsSlinky.libsodiumWrappers.mod.Uint8ArrayOutputFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("libsodium-wrappers-sumo", "crypto_generichash")
 @js.native
 object cryptoGenerichash extends js.Object {
+  
   def apply(hash_length: Double, message: String): js.typedarray.Uint8Array = js.native
   def apply(
     hash_length: Double,
@@ -80,4 +81,3 @@ object cryptoGenerichash extends js.Object {
     outputFormat: Uint8ArrayOutputFormat
   ): js.typedarray.Uint8Array = js.native
 }
-

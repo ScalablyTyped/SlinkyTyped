@@ -9,14 +9,16 @@ import typingsSlinky.nextReactDevOverlay.nextReactDevOverlayStrings.error
 import typingsSlinky.nextReactDevOverlay.nextReactDevOverlayStrings.warning
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Dialog {
+  
   @JSImport("@next/react-dev-overlay/lib/internal/components/Dialog", "Dialog")
   @js.native
   object component extends js.Object
   
   def withProps(p: DialogProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     `aria-describedby`: String,
@@ -31,4 +33,3 @@ object Dialog {
     new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[DialogProps]))
   }
 }
-

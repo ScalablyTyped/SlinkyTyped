@@ -2,7 +2,7 @@ package typingsSlinky.devexpressWeb.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides data for a chart control's ASPxClientWebChartControl.CustomDrawCrosshair event.
@@ -27,4 +27,3 @@ class ASPxClientWebChartControlCustomDrawCrosshairEventArgs protected ()
     crosshairLegendElements: js.Array[typingsSlinky.devexpressWeb.ASPxClientCrosshairLegendElement]
   ) = this()
 }
-

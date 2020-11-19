@@ -6,7 +6,7 @@ import typingsSlinky.grommet.anon.RoutedAnchorPropsOmitAnch
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/RoutedAnchor", "RoutedAnchor")
 @js.native
@@ -15,8 +15,6 @@ class RoutedAnchor protected ()
   def this(props: RoutedAnchorPropsOmitAnch) = this()
   def this(props: RoutedAnchorPropsOmitAnch, context: js.Any) = this()
 }
-
 @JSImport("grommet/es6/components/RoutedAnchor", "RoutedAnchor")
 @js.native
 object RoutedAnchor extends TopLevel[ReactComponentClass[RoutedAnchorPropsOmitAnch]]
-

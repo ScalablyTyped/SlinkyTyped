@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.GridBaseOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.GridBase")
 @js.native
@@ -16,4 +16,3 @@ class GridBase protected ()
   def this(element: JQuery, options: GridBaseOptions[typingsSlinky.devextreme.mod.DevExpress.ui.GridBase]) = this()
   def this(element: Element, options: GridBaseOptions[typingsSlinky.devextreme.mod.DevExpress.ui.GridBase]) = this()
 }
-

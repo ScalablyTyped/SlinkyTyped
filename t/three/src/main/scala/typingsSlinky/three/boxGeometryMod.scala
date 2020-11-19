@@ -5,11 +5,12 @@ import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/BoxGeometry", JSImport.Namespace)
 @js.native
 object boxGeometryMod extends js.Object {
+  
   @js.native
   class BoxBufferGeometry protected () extends BufferGeometry {
     def this(
@@ -20,6 +21,7 @@ object boxGeometryMod extends js.Object {
       heightSegments: js.UndefOr[Double],
       depthSegments: js.UndefOr[Double]
     ) = this()
+    
     var parameters: Depth = js.native
   }
   
@@ -41,8 +43,7 @@ object boxGeometryMod extends js.Object {
       heightSegments: js.UndefOr[Double],
       depthSegments: js.UndefOr[Double]
     ) = this()
+    
     var parameters: Depth = js.native
   }
-  
 }
-

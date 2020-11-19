@@ -2,7 +2,7 @@ package typingsSlinky.googlepay.google.payments.api
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Enum string for the callback intents.
@@ -49,15 +49,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.googlepay.googlepayStrings.PAYMENT_METHOD
 */
 trait CallbackIntent extends js.Object
-
 object CallbackIntent {
+  
   @scala.inline
   def PAYMENT_AUTHORIZATION: typingsSlinky.googlepay.googlepayStrings.PAYMENT_AUTHORIZATION = "PAYMENT_AUTHORIZATION".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.PAYMENT_AUTHORIZATION]
+  
   @scala.inline
   def PAYMENT_METHOD: typingsSlinky.googlepay.googlepayStrings.PAYMENT_METHOD = "PAYMENT_METHOD".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.PAYMENT_METHOD]
+  
   @scala.inline
   def SHIPPING_ADDRESS: typingsSlinky.googlepay.googlepayStrings.SHIPPING_ADDRESS = "SHIPPING_ADDRESS".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.SHIPPING_ADDRESS]
+  
   @scala.inline
   def SHIPPING_OPTION: typingsSlinky.googlepay.googlepayStrings.SHIPPING_OPTION = "SHIPPING_OPTION".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.SHIPPING_OPTION]
 }
-

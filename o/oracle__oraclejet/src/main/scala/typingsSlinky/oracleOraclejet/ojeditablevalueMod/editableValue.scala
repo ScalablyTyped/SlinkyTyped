@@ -31,30 +31,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.value
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valueChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait editableValue[V, SP /* <: editableValueSettableProperties[V, SV, RV] */, SV, RV] extends baseComponent[SP] {
-  var describedBy: String | Null = js.native
-  var disabled: Boolean = js.native
-  var displayOptions: ConverterHint = js.native
-  var help: Instruction = js.native
-  var helpHints: Definition = js.native
-  var labelHint: String = js.native
-  var messagesCustom: js.Array[^] = js.native
-  var onDescribedByChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDisabledChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDisplayOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHelpChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHelpHintsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelHintChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onMessagesCustomChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onValidChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onValueChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  val valid: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown = js.native
-  var value: V = js.native
+  
   def addEventListener(`type`: validChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: validChanged,
@@ -141,6 +122,13 @@ trait editableValue[V, SP /* <: editableValueSettableProperties[V, SV, RV] */, S
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var describedBy: String | Null = js.native
+  
+  var disabled: Boolean = js.native
+  
+  var displayOptions: ConverterHint = js.native
+  
   @JSName("getProperty")
   def getProperty_describedBy(property: describedBy): String | Null = js.native
   @JSName("getProperty")
@@ -159,8 +147,41 @@ trait editableValue[V, SP /* <: editableValueSettableProperties[V, SV, RV] */, S
   def getProperty_valid(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid): typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown = js.native
   @JSName("getProperty")
   def getProperty_value(property: value): V = js.native
+  
+  var help: Instruction = js.native
+  
+  var helpHints: Definition = js.native
+  
+  var labelHint: String = js.native
+  
+  var messagesCustom: js.Array[^] = js.native
+  
+  var onDescribedByChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDisabledChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDisplayOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHelpChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHelpHintsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelHintChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onMessagesCustomChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onValidChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onValueChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def reset(): Unit = js.native
+  
   def setProperties(properties: editableValueSettablePropertiesLenient[V, SV, RV]): Unit = js.native
+  
   def setProperty(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid, value: invalidHidden): Unit = js.native
   def setProperty(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid, value: invalidShown): Unit = js.native
   def setProperty(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid, value: pending): Unit = js.native
@@ -187,13 +208,18 @@ trait editableValue[V, SP /* <: editableValueSettableProperties[V, SV, RV] */, S
   ): Unit = js.native
   @JSName("setProperty")
   def setProperty_value(property: value, value: SV): Unit = js.native
+  
   def showMessages(): Unit = js.native
+  
+  val valid: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown = js.native
+  
+  var value: V = js.native
 }
-
 @JSImport("@oracle/oraclejet/ojeditablevalue", "editableValue")
 @js.native
 object editableValue extends js.Object {
+  
   type ojAnimateEnd = CustomEvent
+  
   type ojAnimateStart = CustomEvent
 }
-

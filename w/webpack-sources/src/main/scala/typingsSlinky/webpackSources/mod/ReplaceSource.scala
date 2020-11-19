@@ -4,7 +4,7 @@ import typingsSlinky.sourceListMap.mod.SourceListMap
 import typingsSlinky.sourceMap.mod.RawSourceMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("webpack-sources", "ReplaceSource")
 @js.native
@@ -17,12 +17,14 @@ class ReplaceSource protected ()
     */
   def this(source: Source) = this()
   def this(source: Source, name: String) = this()
-  var replacements: js.Array[Replacement] = js.native
+  
   /**
     * Inserts the insertion before char pos (0-indexed).
     */
   def insert(pos: Double, newValue: String, name: String): Unit = js.native
+  
   def listMap(options: MapOptions): SourceListMap = js.native
+  
   /**
     * Returns the SourceMap of the represented source code as JSON.
     * May return `null` if no SourceMap is available.
@@ -31,14 +33,19 @@ class ReplaceSource protected ()
   override def map(): RawSourceMap | Null = js.native
   /* InferMemberOverrides */
   override def map(options: MapOptions): RawSourceMap | Null = js.native
+  
   /**
     * Get decorated Source.
     */
   def original(): Source = js.native
+  
   /**
     * Replaces chars from start (0-indexed, inclusive) to end (0-indexed, inclusive) with replacement.
     */
   def replace(start: Double, end: Double, newValue: String, name: String): Unit = js.native
+  
+  var replacements: js.Array[Replacement] = js.native
+  
   /**
     * Returns both, source code (like `Source.prototype.source()` and SourceMap (like `Source.prototype.map()`).
     * This method could have better performance than calling `source()` and `map()` separately.
@@ -48,4 +55,3 @@ class ReplaceSource protected ()
   /* InferMemberOverrides */
   override def sourceAndMap(options: MapOptions): SourceAndMapResult = js.native
 }
-

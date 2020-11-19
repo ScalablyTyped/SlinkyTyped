@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interface that represents the credentials returned by an auth provider.
@@ -13,11 +13,13 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.AuthCredential")
 @js.native
 abstract class AuthCredential () extends js.Object {
+  
   /**
     * The authentication provider ID for the credential.
     * For example, 'facebook.com', or 'google.com'.
     */
   var providerId: String = js.native
+  
   /**
     * The authentication sign in method for the credential.
     * For example, 'password', or 'emailLink. This corresponds to the sign-in
@@ -25,16 +27,17 @@ abstract class AuthCredential () extends js.Object {
     * {@link firebase.auth.Auth.fetchSignInMethodsForEmail}.
     */
   var signInMethod: String = js.native
+  
   /**
     * Returns a JSON-serializable representation of this object.
     */
   def toJSON(): js.Object = js.native
 }
-
 /* static members */
 @JSImport("firebase", "auth.AuthCredential")
 @js.native
 object AuthCredential extends js.Object {
+  
   def fromJSON(json: String): AuthCredential | Null = js.native
   /**
     * Static method to deserialize a JSON representation of an object into an
@@ -47,4 +50,3 @@ object AuthCredential extends js.Object {
     */
   def fromJSON(json: js.Object): AuthCredential | Null = js.native
 }
-

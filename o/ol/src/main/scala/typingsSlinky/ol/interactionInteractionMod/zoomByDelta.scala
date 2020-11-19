@@ -3,11 +3,12 @@ package typingsSlinky.ol.interactionInteractionMod
 import typingsSlinky.ol.coordinateMod.Coordinate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/interaction/Interaction", "zoomByDelta")
 @js.native
 object zoomByDelta extends js.Object {
+  
   def apply(view: typingsSlinky.ol.viewMod.default, delta: Double): Unit = js.native
   def apply(
     view: typingsSlinky.ol.viewMod.default,
@@ -23,4 +24,3 @@ object zoomByDelta extends js.Object {
     opt_duration: Double
   ): Unit = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "DepthCullingState")
 @js.native
@@ -11,4 +11,3 @@ import scala.scalajs.js.annotation._
   */
 class DepthCullingState ()
   extends typingsSlinky.babylonjs.indexMod.DepthCullingState
-

@@ -69,12 +69,11 @@ import typingsSlinky.semanticUiForm.semanticUiFormStrings.transition
 import typingsSlinky.semanticUiForm.semanticUiFormStrings.verbose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
-  @JSName("form")
-  var form_Original: Form = js.native
+  
   def form(): JQuery = js.native
   def form(behavior: setting, name: `inline`, value: js.UndefOr[scala.Nothing]): Boolean = js.native
   def form(behavior: setting, name: `inline`, value: Boolean): JQuery = js.native
@@ -153,6 +152,8 @@ trait JQuery extends js.Object {
   def form(settings: FormSettings): JQuery = js.native
   @JSName("form")
   def form_ClassNameSettings(behavior: setting, name: className, value: js.UndefOr[scala.Nothing]): ClassNameSettings = js.native
+  @JSName("form")
+  var form_Original: Form = js.native
   @JSName("form")
   def form_PromptSettings(behavior: setting, name: prompt, value: js.UndefOr[scala.Nothing]): PromptSettings = js.native
   @JSName("form")
@@ -290,4 +291,3 @@ trait JQuery extends js.Object {
   @JSName("form")
   def form_validateform(behavior: `validate form`): JQuery = js.native
 }
-

@@ -5,7 +5,7 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-fade-in", JSImport.Default)
 @js.native
@@ -14,11 +14,9 @@ class default protected ()
   def this(props: FadeInProps) = this()
   def this(props: FadeInProps, context: js.Any) = this()
 }
-
 /**
   * Visually animates content on render with FadeIn.js
   */
 @JSImport("react-fade-in", JSImport.Default)
 @js.native
 object default extends TopLevel[ReactComponentClass[FadeInProps]]
-

@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.mod
 import typingsSlinky.playcanvas.anon.DataType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Returns a new pc.VertexIteratorAccessor object.
@@ -59,4 +59,3 @@ class VertexIteratorAccessor protected ()
     vertexFormat: typingsSlinky.playcanvas.pc.VertexFormat
   ) = this()
 }
-

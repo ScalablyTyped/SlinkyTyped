@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.indexMod
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "ProceduralTexture")
 @js.native
@@ -40,7 +40,7 @@ class ProceduralTexture protected ()
     size: js.Any,
     fragment: js.Any,
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene],
-    fallbackTexture: Nullable[typingsSlinky.babylonjs.textureMod.Texture],
+    fallbackTexture: js.UndefOr[Nullable[typingsSlinky.babylonjs.textureMod.Texture]],
     generateMipMaps: Boolean
   ) = this()
   def this(
@@ -48,9 +48,17 @@ class ProceduralTexture protected ()
     size: js.Any,
     fragment: js.Any,
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene],
-    fallbackTexture: Nullable[typingsSlinky.babylonjs.textureMod.Texture],
+    fallbackTexture: js.UndefOr[Nullable[typingsSlinky.babylonjs.textureMod.Texture]],
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    isCube: Boolean
+  ) = this()
+  def this(
+    name: String,
+    size: js.Any,
+    fragment: js.Any,
+    scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene],
+    fallbackTexture: js.UndefOr[Nullable[typingsSlinky.babylonjs.textureMod.Texture]],
     generateMipMaps: Boolean,
     isCube: Boolean
   ) = this()
 }
-

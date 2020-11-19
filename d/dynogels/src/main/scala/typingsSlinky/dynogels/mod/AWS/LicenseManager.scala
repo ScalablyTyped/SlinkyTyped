@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.licensemanagerMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.LicenseManager")
 @js.native
@@ -14,4 +14,3 @@ class LicenseManager ()
   extends typingsSlinky.awsSdk.mod.LicenseManager {
   def this(options: ClientConfiguration) = this()
 }
-

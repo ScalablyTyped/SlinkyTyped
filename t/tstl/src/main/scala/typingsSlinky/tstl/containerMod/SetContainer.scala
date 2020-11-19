@@ -5,7 +5,7 @@ import typingsSlinky.tstl.setContainerMod.SetContainer.Iterator
 import typingsSlinky.tstl.setContainerMod.SetContainer.ReverseIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl/base/container", "SetContainer")
 @js.native
@@ -19,4 +19,3 @@ abstract class SetContainer[Key, Unique /* <: Boolean */, SourceT /* <: typingsS
         ILinearContainerBase[Key, SourceT, IteratorT, ReverseT, Key]
       ]) = this()
 }
-

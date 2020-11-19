@@ -2,10 +2,11 @@ package typingsSlinky.highcharts.exportDataMod.highchartsAugmentingMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Chart extends js.Object {
+  
   /**
     * Generates a data URL of CSV for local download in the browser. This
     * is the default action for a click on the 'Download CSV' button.
@@ -13,6 +14,7 @@ trait Chart extends js.Object {
     * See Highcharts.Chart#getCSV to get the CSV data itself.
     */
   def downloadCSV(): Unit = js.native
+  
   /**
     * Generates a data URL of an XLS document for local download in the
     * browser. This is the default action for a click on the 'Download XLS'
@@ -21,6 +23,7 @@ trait Chart extends js.Object {
     * See Highcharts.Chart#getTable to get the table data itself.
     */
   def downloadXLS(): Unit = js.native
+  
   /**
     * Export-data module required. Returns the current chart data as a CSV
     * string.
@@ -34,6 +37,7 @@ trait Chart extends js.Object {
     */
   def getCSV(): String = js.native
   def getCSV(useLocalDecimalPoint: Boolean): String = js.native
+  
   /**
     * Export-data module required. Returns a two-dimensional array
     * containing the current chart data.
@@ -49,6 +53,7 @@ trait Chart extends js.Object {
     */
   def getDataRows(): js.Array[js.Array[Double | String]] = js.native
   def getDataRows(multiLevelHeaders: Boolean): js.Array[js.Array[Double | String]] = js.native
+  
   /**
     * Export-data module required. Build a HTML table with the chart's
     * current data.
@@ -64,6 +69,7 @@ trait Chart extends js.Object {
     */
   def getTable(): String = js.native
   def getTable(useLocalDecimalPoint: Boolean): String = js.native
+  
   /**
     * Export-data module required. View the data in a table below the
     * chart.
@@ -72,4 +78,3 @@ trait Chart extends js.Object {
     */
   def viewData(): Unit = js.native
 }
-

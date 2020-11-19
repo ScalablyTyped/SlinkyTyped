@@ -4,11 +4,12 @@ import typingsSlinky.elasticElasticsearch.transportMod.ApiResponse
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@elastic/elasticsearch", "errors")
 @js.native
 object errors extends js.Object {
+  
   @js.native
   class ConfigurationError protected ()
     extends typingsSlinky.elasticElasticsearch.errorsMod.ConfigurationError {
@@ -60,6 +61,4 @@ object errors extends js.Object {
     extends typingsSlinky.elasticElasticsearch.errorsMod.TimeoutError[TResponse, TContext] {
     def this(message: String, meta: ApiResponse[Record[String, _], _]) = this()
   }
-  
 }
-

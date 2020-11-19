@@ -7,11 +7,12 @@ import typingsSlinky.reactMdTree.typesMod.TreeItemProps
 import typingsSlinky.reactMdTree.typesMod.TreeItemWithContentComponentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/tree/types/TreeItem", JSImport.Namespace)
 @js.native
 object treeItemMod extends js.Object {
+  
   /**
     * This component renders an item within a tree with optional child items. This
     * should almost always be used from the `itemRenderer` prop from the `Tree`
@@ -21,4 +22,3 @@ object treeItemMod extends js.Object {
     (TreeItemProps with RefAttributes[HTMLLIElement]) | (TreeItemWithContentComponentProps with RefAttributes[HTMLLIElement])
   ] = js.native
 }
-

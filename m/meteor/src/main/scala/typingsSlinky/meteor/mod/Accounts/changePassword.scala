@@ -4,11 +4,12 @@ import typingsSlinky.meteor.Meteor.Error
 import typingsSlinky.meteor.Meteor.TypedError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("meteor/accounts-base", "Accounts.changePassword")
 @js.native
 object changePassword extends js.Object {
+  
   def apply(oldPassword: String, newPassword: String): Unit = js.native
   def apply(
     oldPassword: String,
@@ -16,4 +17,3 @@ object changePassword extends js.Object {
     callback: js.Function1[/* error */ js.UndefOr[js.Error | Error | TypedError], Unit]
   ): Unit = js.native
 }
-

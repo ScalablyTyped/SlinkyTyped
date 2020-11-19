@@ -11,43 +11,47 @@ import typingsSlinky.firebaseStorage.stringMod.StringFormat
 import typingsSlinky.firebaseStorage.taskMod.UploadTask
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@firebase/storage/dist/src/reference", JSImport.Namespace)
 @js.native
 object referenceMod extends js.Object {
+  
   @js.native
   class Reference protected () extends js.Object {
     def this(service: StorageService, location: String) = this()
     def this(service: StorageService, location: Location) = this()
-    var listAllHelper: js.Any = js.native
-    var location: Location = js.native
-    var service: StorageService = js.native
-    var throwIfRoot_ : js.Any = js.native
+    
     def bucket: String = js.native
+    
     /**
       * @return A reference to the object obtained by
       *     appending childPath, removing any duplicate, beginning, or trailing
       *     slashes.
       */
     def child(childPath: String): Reference = js.native
+    
     /**
       * Deletes the object at this location.
       * @return A promise that resolves if the deletion succeeds.
       */
     def delete(): js.Promise[Unit] = js.native
+    
     def fullPath: String = js.native
+    
     /**
       * @return A promise that resolves with the download
       *     URL for this object.
       */
     def getDownloadURL(): js.Promise[String] = js.native
+    
     /**
       *     A promise that resolves with the metadata for this object. If this
       *     object doesn't exist or metadata cannot be retreived, the promise is
       *     rejected.
       */
     def getMetadata(): js.Promise[Metadata] = js.native
+    
     /**
       * List items (files) and prefixes (folders) under this storage reference.
       *
@@ -70,6 +74,7 @@ object referenceMod extends js.Object {
       */
     def list(): js.Promise[ListResult] = js.native
     def list(options: ListOptions): js.Promise[ListResult] = js.native
+    
     /**
       * List all items (files) and prefixes (folders) under this storage reference.
       *
@@ -88,14 +93,23 @@ object referenceMod extends js.Object {
       *      folder. `nextPageToken` is never returned.
       */
     def listAll(): js.Promise[ListResult] = js.native
+    
+    var listAllHelper: js.Any = js.native
+    
+    var location: Location = js.native
+    
     /* protected */ def mappings(): Mappings = js.native
+    
     def name: String = js.native
+    
     /* protected */ def newRef(service: StorageService, location: Location): Reference = js.native
+    
     /**
       * @return A reference to the parent of the
       *     current object, or null if the current object is the root.
       */
     def parent: Reference | Null = js.native
+    
     def put(data: js.typedarray.ArrayBuffer): UploadTask = js.native
     def put(data: js.typedarray.ArrayBuffer, metadata: Metadata): UploadTask = js.native
     /**
@@ -108,6 +122,7 @@ object referenceMod extends js.Object {
     def put(data: Blob, metadata: Metadata): UploadTask = js.native
     def put(data: js.typedarray.Uint8Array): UploadTask = js.native
     def put(data: js.typedarray.Uint8Array, metadata: Metadata): UploadTask = js.native
+    
     /**
       * Uploads a string to this object's location.
       * @param value The string to upload.
@@ -119,12 +134,19 @@ object referenceMod extends js.Object {
     def putString(value: String, format: js.UndefOr[scala.Nothing], metadata: Metadata): UploadTask = js.native
     def putString(value: String, format: StringFormat): UploadTask = js.native
     def putString(value: String, format: StringFormat, metadata: Metadata): UploadTask = js.native
+    
     /**
       * @return An reference to the root of this
       *     object's bucket.
       */
     def root: Reference = js.native
+    
+    var service: StorageService = js.native
+    
     def storage: StorageService = js.native
+    
+    var throwIfRoot_ : js.Any = js.native
+    
     /**
       * Updates the metadata for this object.
       * @param metadata The new metadata for the object.
@@ -136,6 +158,4 @@ object referenceMod extends js.Object {
       */
     def updateMetadata(metadata: Metadata): js.Promise[Metadata] = js.native
   }
-  
 }
-

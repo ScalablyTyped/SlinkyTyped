@@ -6,7 +6,7 @@ import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionComponent
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semantic-ui-react", "Transition")
 @js.native
@@ -15,8 +15,6 @@ class Transition protected ()
   def this(props: TransitionProps) = this()
   def this(props: TransitionProps, context: js.Any) = this()
 }
-
 @JSImport("semantic-ui-react", "Transition")
 @js.native
 object Transition extends TopLevel[TransitionComponent]
-

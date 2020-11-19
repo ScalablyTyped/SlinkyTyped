@@ -5,11 +5,11 @@ import typingsSlinky.std.HTMLTableHeaderCellElement
 import typingsSlinky.wordpressDom.wordpressDomStrings.th
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/dom", "replaceTag")
 @js.native
 object replaceTag_th extends js.Object {
+  
   def apply(node: Node, tagName: th): HTMLTableHeaderCellElement = js.native
 }
-

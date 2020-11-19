@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/PutFileCommand", JSImport.Namespace)
 @js.native
 object putFileCommandMod extends js.Object {
+  
   @js.native
   class PutFileCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object putFileCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutFileInput) = this()
+    
     val middlewareStack: MiddlewareStack[PutFileInput, PutFileOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[PutFileInput, PutFileOutput] = js.native
   }
-  
 }
-

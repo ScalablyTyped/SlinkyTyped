@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.viz.dxChartOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "viz.dxChart")
 @js.native
@@ -16,4 +16,3 @@ class dxChart protected ()
   def this(element: JQuery, options: dxChartOptions) = this()
   def this(element: Element, options: dxChartOptions) = this()
 }
-

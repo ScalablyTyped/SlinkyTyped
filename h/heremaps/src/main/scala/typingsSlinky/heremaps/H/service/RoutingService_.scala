@@ -2,7 +2,7 @@ package typingsSlinky.heremaps.H.service
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This class encapsulates the Routing REST API as a service stub. An instance of this class can be retrieved by calling the factory method on a platform instance.
@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait RoutingService_ extends AbstractRestService {
+  
   /**
     * This method sends a "calculateroute" request to Routing REST API and calls the onResult callback function once the service response was received - providing a
     * H.service.ServiceResult object - or the onError callback if a communication error occured.
@@ -23,4 +24,3 @@ trait RoutingService_ extends AbstractRestService {
     onError: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
 }
-

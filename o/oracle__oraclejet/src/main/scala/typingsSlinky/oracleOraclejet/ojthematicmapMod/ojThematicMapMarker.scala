@@ -180,62 +180,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.yChanged
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojThematicMapMarker extends JetElement[ojThematicMapMarkerSettableProperties] {
-  var borderColor: String = js.native
-  var borderStyle: solid | none = js.native
-  var borderWidth: Double = js.native
-  var categories: js.Array[String] = js.native
-  var color: String = js.native
-  var height: Double = js.native
-  var label: String = js.native
-  var labelPosition: bottom | center | top = js.native
-  var labelStyle: js.Object = js.native
-  var location: String = js.native
-  var onBorderColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onBorderStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onBorderWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHeightChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLocationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOpacityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onRotationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectableChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onShapeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSourceChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSourceHoverChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSourceHoverSelectedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSourceSelectedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onValueChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onXChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onYChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var opacity: Double = js.native
-  var rotation: Double = js.native
-  var selectable: auto | off = js.native
-  var shape: js.UndefOr[
-    circle | diamond | ellipse | human | plus | rectangle | square | star | triangleDown | triangleUp | String
-  ] = js.native
-  var shortDesc: String = js.native
-  var source: String = js.native
-  var sourceHover: String = js.native
-  var sourceHoverSelected: String = js.native
-  var sourceSelected: String = js.native
-  var svgClassName: String = js.native
-  var svgStyle: js.Object = js.native
-  var value: Double = js.native
-  var width: Double = js.native
-  var x: Double | Null = js.native
-  var y: Double | Null = js.native
+  
   def addEventListener(`type`: borderStyleChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: borderStyleChanged,
@@ -1199,6 +1148,17 @@ trait ojThematicMapMarker extends JetElement[ojThematicMapMarkerSettableProperti
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var borderColor: String = js.native
+  
+  var borderStyle: solid | none = js.native
+  
+  var borderWidth: Double = js.native
+  
+  var categories: js.Array[String] = js.native
+  
+  var color: String = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_borderColor(property: borderColor): String = js.native
@@ -1252,7 +1212,75 @@ trait ojThematicMapMarker extends JetElement[ojThematicMapMarkerSettableProperti
   def getProperty_x(property: x): Double | Null = js.native
   @JSName("getProperty")
   def getProperty_y(property: y): Double | Null = js.native
+  
+  var height: Double = js.native
+  
+  var label: String = js.native
+  
+  var labelPosition: bottom | center | top = js.native
+  
+  var labelStyle: js.Object = js.native
+  
+  var location: String = js.native
+  
+  var onBorderColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onBorderStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onBorderWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHeightChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLocationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOpacityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onRotationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectableChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onShapeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSourceChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSourceHoverChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSourceHoverSelectedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSourceSelectedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onValueChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onXChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onYChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var opacity: Double = js.native
+  
+  var rotation: Double = js.native
+  
+  var selectable: auto | off = js.native
+  
   def setProperties(properties: ojThematicMapMarkerSettablePropertiesLenient): Unit = js.native
+  
   def setProperty(property: borderStyle, value: none): Unit = js.native
   def setProperty(property: borderStyle, value: solid): Unit = js.native
   def setProperty(property: labelPosition, value: bottom): Unit = js.native
@@ -1321,5 +1349,30 @@ trait ojThematicMapMarker extends JetElement[ojThematicMapMarkerSettableProperti
   def setProperty_y(property: y): Unit = js.native
   @JSName("setProperty")
   def setProperty_y(property: y, value: Double): Unit = js.native
+  
+  var shape: js.UndefOr[
+    circle | diamond | ellipse | human | plus | rectangle | square | star | triangleDown | triangleUp | String
+  ] = js.native
+  
+  var shortDesc: String = js.native
+  
+  var source: String = js.native
+  
+  var sourceHover: String = js.native
+  
+  var sourceHoverSelected: String = js.native
+  
+  var sourceSelected: String = js.native
+  
+  var svgClassName: String = js.native
+  
+  var svgStyle: js.Object = js.native
+  
+  var value: Double = js.native
+  
+  var width: Double = js.native
+  
+  var x: Double | Null = js.native
+  
+  var y: Double | Null = js.native
 }
-

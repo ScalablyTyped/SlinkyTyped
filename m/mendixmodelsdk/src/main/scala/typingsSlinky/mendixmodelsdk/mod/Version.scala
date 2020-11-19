@@ -2,7 +2,7 @@ package typingsSlinky.mendixmodelsdk.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "Version")
 @js.native
@@ -10,12 +10,13 @@ class Version protected ()
   extends typingsSlinky.mendixmodelsdk.internalMod.Version {
   def this(major: Double, minor: Double, patch: Double) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "Version")
 @js.native
 object Version extends js.Object {
+  
   var memoisMap: js.Any = js.native
+  
   /**
     * Parses and @returns the given string as a Version object.
     *
@@ -24,4 +25,3 @@ object Version extends js.Object {
     */
   def parse(versionString: String): typingsSlinky.mendixmodelsdk.versionChecksMod.Version = js.native
 }
-

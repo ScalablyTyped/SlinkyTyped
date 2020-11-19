@@ -13,30 +13,42 @@ import typingsSlinky.officeUiFabricReact.documentCardTitleTypesMod.IDocumentCard
 import typingsSlinky.officeUiFabricReact.documentCardTypesMod.IDocumentCardProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/DocumentCard", JSImport.Namespace)
 @js.native
 object libDocumentCardMod extends js.Object {
+  
   val DocumentCard: ReactComponentClass[IDocumentCardProps] = js.native
+  
   val DocumentCardActions: ReactComponentClass[IDocumentCardActionsProps] = js.native
+  
   val DocumentCardActivity: ReactComponentClass[IDocumentCardActivityProps] = js.native
+  
   val DocumentCardDetails: ReactComponentClass[IDocumentCardDetailsProps] = js.native
+  
   val DocumentCardImage: ReactComponentClass[IDocumentCardImageProps] = js.native
+  
   val DocumentCardLocation: ReactComponentClass[IDocumentCardLocationProps] = js.native
+  
   val DocumentCardLogo: ReactComponentClass[IDocumentCardLogoProps] = js.native
+  
   val DocumentCardPreview: ReactComponentClass[IDocumentCardPreviewProps] = js.native
+  
   val DocumentCardStatus: ReactComponentClass[IDocumentCardStatusProps] = js.native
+  
   val DocumentCardTitle: ReactComponentClass[IDocumentCardTitleProps] = js.native
+  
   @js.native
   object DocumentCardType extends js.Object {
-    /* 1 */ val compact: typingsSlinky.officeUiFabricReact.documentCardTypesMod.DocumentCardType.compact with Double = js.native
-    /* 0 */ val normal: typingsSlinky.officeUiFabricReact.documentCardTypesMod.DocumentCardType.normal with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
         typingsSlinky.officeUiFabricReact.documentCardTypesMod.DocumentCardType with Double
       ] = js.native
+    
+    /* 1 */ val compact: typingsSlinky.officeUiFabricReact.documentCardTypesMod.DocumentCardType.compact with Double = js.native
+    
+    /* 0 */ val normal: typingsSlinky.officeUiFabricReact.documentCardTypesMod.DocumentCardType.normal with Double = js.native
   }
-  
 }
-

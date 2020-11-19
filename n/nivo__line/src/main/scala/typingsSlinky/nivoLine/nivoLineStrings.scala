@@ -3,9 +3,76 @@ package typingsSlinky.nivoLine
 import typingsSlinky.nivoLine.mod.LineLayerType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nivoLineStrings {
+  
+  @scala.inline
+  def areas: areas = "areas".asInstanceOf[areas]
+  
+  @scala.inline
+  def axes: axes = "axes".asInstanceOf[axes]
+  
+  @scala.inline
+  def basis: basis = "basis".asInstanceOf[basis]
+  
+  @scala.inline
+  def cardinal: cardinal = "cardinal".asInstanceOf[cardinal]
+  
+  @scala.inline
+  def catmullRom: catmullRom = "catmullRom".asInstanceOf[catmullRom]
+  
+  @scala.inline
+  def crosshair: crosshair = "crosshair".asInstanceOf[crosshair]
+  
+  @scala.inline
+  def grid: grid = "grid".asInstanceOf[grid]
+  
+  @scala.inline
+  def legends: legends = "legends".asInstanceOf[legends]
+  
+  @scala.inline
+  def linear: linear = "linear".asInstanceOf[linear]
+  
+  @scala.inline
+  def lines: lines = "lines".asInstanceOf[lines]
+  
+  @scala.inline
+  def markers: markers = "markers".asInstanceOf[markers]
+  
+  @scala.inline
+  def mesh: mesh = "mesh".asInstanceOf[mesh]
+  
+  @scala.inline
+  def monotoneX: monotoneX = "monotoneX".asInstanceOf[monotoneX]
+  
+  @scala.inline
+  def monotoneY: monotoneY = "monotoneY".asInstanceOf[monotoneY]
+  
+  @scala.inline
+  def natural: natural = "natural".asInstanceOf[natural]
+  
+  @scala.inline
+  def points: points = "points".asInstanceOf[points]
+  
+  @scala.inline
+  def slices: slices = "slices".asInstanceOf[slices]
+  
+  @scala.inline
+  def step: step = "step".asInstanceOf[step]
+  
+  @scala.inline
+  def stepAfter: stepAfter = "stepAfter".asInstanceOf[stepAfter]
+  
+  @scala.inline
+  def stepBefore: stepBefore = "stepBefore".asInstanceOf[stepBefore]
+  
+  @scala.inline
+  def x: x = "x".asInstanceOf[x]
+  
+  @scala.inline
+  def y: y = "y".asInstanceOf[y]
+  
   @js.native
   sealed trait areas extends LineLayerType
   
@@ -71,50 +138,4 @@ object nivoLineStrings {
   
   @js.native
   sealed trait y extends js.Object
-  
-  @scala.inline
-  def areas: areas = "areas".asInstanceOf[areas]
-  @scala.inline
-  def axes: axes = "axes".asInstanceOf[axes]
-  @scala.inline
-  def basis: basis = "basis".asInstanceOf[basis]
-  @scala.inline
-  def cardinal: cardinal = "cardinal".asInstanceOf[cardinal]
-  @scala.inline
-  def catmullRom: catmullRom = "catmullRom".asInstanceOf[catmullRom]
-  @scala.inline
-  def crosshair: crosshair = "crosshair".asInstanceOf[crosshair]
-  @scala.inline
-  def grid: grid = "grid".asInstanceOf[grid]
-  @scala.inline
-  def legends: legends = "legends".asInstanceOf[legends]
-  @scala.inline
-  def linear: linear = "linear".asInstanceOf[linear]
-  @scala.inline
-  def lines: lines = "lines".asInstanceOf[lines]
-  @scala.inline
-  def markers: markers = "markers".asInstanceOf[markers]
-  @scala.inline
-  def mesh: mesh = "mesh".asInstanceOf[mesh]
-  @scala.inline
-  def monotoneX: monotoneX = "monotoneX".asInstanceOf[monotoneX]
-  @scala.inline
-  def monotoneY: monotoneY = "monotoneY".asInstanceOf[monotoneY]
-  @scala.inline
-  def natural: natural = "natural".asInstanceOf[natural]
-  @scala.inline
-  def points: points = "points".asInstanceOf[points]
-  @scala.inline
-  def slices: slices = "slices".asInstanceOf[slices]
-  @scala.inline
-  def step: step = "step".asInstanceOf[step]
-  @scala.inline
-  def stepAfter: stepAfter = "stepAfter".asInstanceOf[stepAfter]
-  @scala.inline
-  def stepBefore: stepBefore = "stepBefore".asInstanceOf[stepBefore]
-  @scala.inline
-  def x: x = "x".asInstanceOf[x]
-  @scala.inline
-  def y: y = "y".asInstanceOf[y]
 }
-

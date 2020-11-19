@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create a new KeyboardEvent.
@@ -26,4 +26,3 @@ class KeyboardEvent protected ()
   extends typingsSlinky.playcanvas.pc.KeyboardEvent {
   def this(keyboard: typingsSlinky.playcanvas.pc.Keyboard, event: typingsSlinky.playcanvas.pc.KeyboardEvent) = this()
 }
-

@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "TpStateGetRequest")
 @js.native
@@ -16,23 +16,26 @@ import scala.scalajs.js.annotation._
   */
 class TpStateGetRequest () extends ITpStateGetRequest {
   def this(properties: ITpStateGetRequest) = this()
+  
   /** TpStateGetRequest addresses. */
   @JSName("addresses")
   var addresses_TpStateGetRequest: js.Array[String] = js.native
+  
   /** TpStateGetRequest contextId. */
   @JSName("contextId")
   var contextId_TpStateGetRequest: String = js.native
+  
   /**
     * Converts this TpStateGetRequest to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "TpStateGetRequest")
 @js.native
 object TpStateGetRequest extends js.Object {
+  
   /**
     * Creates a new TpStateGetRequest instance using the specified properties.
     * @param [properties] Properties to set
@@ -40,6 +43,7 @@ object TpStateGetRequest extends js.Object {
     */
   def create(): TpStateGetRequest = js.native
   def create(properties: ITpStateGetRequest): TpStateGetRequest = js.native
+  
   /**
     * Decodes a TpStateGetRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -52,6 +56,7 @@ object TpStateGetRequest extends js.Object {
   def decode(reader: Reader, length: Double): TpStateGetRequest = js.native
   def decode(reader: js.typedarray.Uint8Array): TpStateGetRequest = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): TpStateGetRequest = js.native
+  
   /**
     * Decodes a TpStateGetRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -61,6 +66,7 @@ object TpStateGetRequest extends js.Object {
     */
   def decodeDelimited(reader: Reader): TpStateGetRequest = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): TpStateGetRequest = js.native
+  
   /**
     * Encodes the specified TpStateGetRequest message. Does not implicitly {@link TpStateGetRequest.verify|verify} messages.
     * @param message TpStateGetRequest message or plain object to encode
@@ -69,6 +75,7 @@ object TpStateGetRequest extends js.Object {
     */
   def encode(message: ITpStateGetRequest): Writer = js.native
   def encode(message: ITpStateGetRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified TpStateGetRequest message, length delimited. Does not implicitly {@link TpStateGetRequest.verify|verify} messages.
     * @param message TpStateGetRequest message or plain object to encode
@@ -77,12 +84,14 @@ object TpStateGetRequest extends js.Object {
     */
   def encodeDelimited(message: ITpStateGetRequest): Writer = js.native
   def encodeDelimited(message: ITpStateGetRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a TpStateGetRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns TpStateGetRequest
     */
   def fromObject(`object`: StringDictionary[js.Any]): TpStateGetRequest = js.native
+  
   /**
     * Creates a plain object from a TpStateGetRequest message. Also converts values to other types if specified.
     * @param message TpStateGetRequest
@@ -91,6 +100,7 @@ object TpStateGetRequest extends js.Object {
     */
   def toObject(message: TpStateGetRequest): StringDictionary[js.Any] = js.native
   def toObject(message: TpStateGetRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a TpStateGetRequest message.
     * @param message Plain object to verify
@@ -98,4 +108,3 @@ object TpStateGetRequest extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

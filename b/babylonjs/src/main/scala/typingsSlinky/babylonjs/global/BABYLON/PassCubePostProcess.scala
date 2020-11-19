@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.BABYLON.PostProcessOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.PassCubePostProcess")
 @js.native
@@ -23,17 +23,7 @@ class PassCubePostProcess protected ()
     */
   def this(
     name: String,
-    options: Double,
-    camera: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.Camera]],
-    samplingMode: js.UndefOr[Double],
-    engine: js.UndefOr[typingsSlinky.babylonjs.BABYLON.Engine],
-    reusable: js.UndefOr[Boolean],
-    textureType: js.UndefOr[Double],
-    blockCompilation: js.UndefOr[Boolean]
-  ) = this()
-  def this(
-    name: String,
-    options: PostProcessOptions,
+    options: Double | PostProcessOptions,
     camera: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.Camera]],
     samplingMode: js.UndefOr[Double],
     engine: js.UndefOr[typingsSlinky.babylonjs.BABYLON.Engine],
@@ -42,4 +32,3 @@ class PassCubePostProcess protected ()
     blockCompilation: js.UndefOr[Boolean]
   ) = this()
 }
-

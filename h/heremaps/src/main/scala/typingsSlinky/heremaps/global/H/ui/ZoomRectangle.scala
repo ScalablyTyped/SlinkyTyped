@@ -3,7 +3,7 @@ package typingsSlinky.heremaps.global.H.ui
 import typingsSlinky.heremaps.H.ui.ZoomRectangle.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This class represents a zoom rectangle control element that allows zooming to the selected area on the screen.
@@ -18,4 +18,3 @@ class ZoomRectangle ()
   extends typingsSlinky.heremaps.H.ui.Control {
   def this(opt_options: Options) = this()
 }
-

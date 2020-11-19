@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SlideConstructor
@@ -15,6 +15,7 @@ trait SlideConstructor
   */
 Instantiable0[Slide]
      with Instantiable1[/* properties */ SlideProperties, Slide] {
+  
   /**
     * Creates a slide from a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html), which may be added to the [slides](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Presentation.html#slides) in the WebScene's [presentation](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebScene.html#presentation). Updating the slide is asynchronous and a snapshot of the view is only complete once the returned promise has resolved.
     *
@@ -28,4 +29,3 @@ Instantiable0[Slide]
   def createFrom(view: SceneView): js.Promise[Slide] = js.native
   def createFrom(view: SceneView, options: SlideCreateFromOptions): js.Promise[Slide] = js.native
 }
-

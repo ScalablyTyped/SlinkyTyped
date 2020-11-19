@@ -6,7 +6,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "Report")
 @js.native
@@ -16,20 +16,22 @@ import scala.scalajs.js.annotation._
   */
 class Report () extends IReport {
   def this(properties: IReport) = this()
-  /** Report tracesPerQuery. */
-  @JSName("tracesPerQuery")
-  var tracesPerQuery_Report: StringDictionary[ITracesAndStats] = js.native
+  
   /**
     * Converts this Report to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
+  
+  /** Report tracesPerQuery. */
+  @JSName("tracesPerQuery")
+  var tracesPerQuery_Report: StringDictionary[ITracesAndStats] = js.native
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "Report")
 @js.native
 object Report extends js.Object {
+  
   /**
     * Creates a new Report instance using the specified properties.
     * @param [properties] Properties to set
@@ -37,6 +39,7 @@ object Report extends js.Object {
     */
   def create(): Report = js.native
   def create(properties: IReport): Report = js.native
+  
   /**
     * Decodes a Report message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -49,6 +52,7 @@ object Report extends js.Object {
   def decode(reader: Reader, length: Double): Report = js.native
   def decode(reader: js.typedarray.Uint8Array): Report = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): Report = js.native
+  
   /**
     * Decodes a Report message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -58,6 +62,7 @@ object Report extends js.Object {
     */
   def decodeDelimited(reader: Reader): Report = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): Report = js.native
+  
   /**
     * Encodes the specified Report message. Does not implicitly {@link Report.verify|verify} messages.
     * @param message Report message or plain object to encode
@@ -66,6 +71,7 @@ object Report extends js.Object {
     */
   def encode(message: IReport): Writer = js.native
   def encode(message: IReport, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified Report message, length delimited. Does not implicitly {@link Report.verify|verify} messages.
     * @param message Report message or plain object to encode
@@ -74,12 +80,14 @@ object Report extends js.Object {
     */
   def encodeDelimited(message: IReport): Writer = js.native
   def encodeDelimited(message: IReport, writer: Writer): Writer = js.native
+  
   /**
     * Creates a Report message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns Report
     */
   def fromObject(`object`: StringDictionary[js.Any]): Report = js.native
+  
   /**
     * Creates a plain object from a Report message. Also converts values to other types if specified.
     * @param message Report
@@ -88,6 +96,7 @@ object Report extends js.Object {
     */
   def toObject(message: Report): StringDictionary[js.Any] = js.native
   def toObject(message: Report, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a Report message.
     * @param message Plain object to verify
@@ -95,4 +104,3 @@ object Report extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

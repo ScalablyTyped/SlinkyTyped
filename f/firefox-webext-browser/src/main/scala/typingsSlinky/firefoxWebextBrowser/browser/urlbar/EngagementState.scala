@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser.urlbar
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* urlbar types */
 /**
@@ -18,15 +18,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.discard
 */
 trait EngagementState extends js.Object
-
 object EngagementState {
+  
   @scala.inline
   def abandonment: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.abandonment = "abandonment".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.abandonment]
+  
   @scala.inline
   def discard: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.discard = "discard".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.discard]
+  
   @scala.inline
   def engagement: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.engagement = "engagement".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.engagement]
+  
   @scala.inline
   def start: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.start = "start".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.start]
 }
-

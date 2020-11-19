@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.MeshTexture
 import typingsSlinky.arcgisJsApi.esri.MeshTextureProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/geometry/support/MeshTexture", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends MeshTexture {
   def this(properties: MeshTextureProperties) = this()
 }
-

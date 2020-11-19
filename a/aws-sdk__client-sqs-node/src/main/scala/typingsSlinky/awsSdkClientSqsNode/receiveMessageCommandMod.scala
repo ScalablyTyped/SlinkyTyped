@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-sqs-node/commands/ReceiveMessageCommand", JSImport.Namespace)
 @js.native
 object receiveMessageCommandMod extends js.Object {
+  
   @js.native
   class ReceiveMessageCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object receiveMessageCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ReceiveMessageInput) = this()
+    
     val middlewareStack: MiddlewareStack[ReceiveMessageInput, ReceiveMessageOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: SQSResolvedConfiguration
     ): Handler[ReceiveMessageInput, ReceiveMessageOutput] = js.native
   }
-  
 }
-

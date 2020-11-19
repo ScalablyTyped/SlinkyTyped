@@ -6,11 +6,12 @@ import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs-promise", "write")
 @js.native
 object write extends js.Object {
+  
   def apply(fd: Double, buffer: Buffer): js.Promise[WriteResult] = js.native
   def apply(
     fd: Double,
@@ -5457,4 +5458,3 @@ object write extends js.Object {
   def apply[TBuffer /* <: ArrayBufferView */](fd: Double, buffer: js.UndefOr[scala.Nothing], offset: Double, length: Double): js.Promise[js.Tuple2[Double, TBuffer]] = js.native
   def apply[TBuffer /* <: ArrayBufferView */](fd: Double, buffer: js.UndefOr[scala.Nothing], offset: Double, length: Double, position: Double): js.Promise[js.Tuple2[Double, TBuffer]] = js.native
 }
-

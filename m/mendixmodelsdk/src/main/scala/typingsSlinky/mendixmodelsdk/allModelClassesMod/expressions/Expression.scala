@@ -6,7 +6,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interfaces and instance classes for types from the Mendix sub meta model `Expressions`.
@@ -31,12 +31,12 @@ abstract class Expression protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "expressions.Expression")
 @js.native
 object Expression extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayoutCallA
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/validation-message relevant section in reference guide}
@@ -28,22 +28,22 @@ class ValidationMessage protected () extends Widget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FValidationMessage: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.ValidationMessage")
 @js.native
 object ValidationMessage extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -53,6 +53,7 @@ object ValidationMessage extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: BuildingBlock): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -62,6 +63,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: BuildingBlock): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'footerWidget' property
@@ -71,6 +73,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'footerWidgets' property
@@ -80,6 +83,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: DataView): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -89,6 +93,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInDataViewUnderWidget(container: DataView): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -98,6 +103,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: DataView): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -107,6 +113,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -116,6 +123,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: DivContainer): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -125,6 +133,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -134,6 +143,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: GroupBox): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'leftWidget' property
@@ -143,6 +153,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: Header): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'leftWidgets' property
@@ -152,6 +163,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: Header): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'rightWidget' property
@@ -161,6 +173,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: Header): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'rightWidgets' property
@@ -170,6 +183,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: Header): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -179,6 +193,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -188,6 +203,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: LayoutCallArgument): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -197,6 +213,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -206,6 +223,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: LayoutGridColumn): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -215,6 +233,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInLayoutUnderWidget(container: Layout): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -224,6 +243,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: Layout): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -233,6 +253,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -242,6 +263,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: ListViewTemplate): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -251,6 +273,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInListViewUnderWidget(container: ListView): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -260,6 +283,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: ListView): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -269,6 +293,7 @@ object ValidationMessage extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: MasterDetailRegion): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -278,6 +303,7 @@ object ValidationMessage extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'sidebarWidgets' property
@@ -287,6 +313,7 @@ object ValidationMessage extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -296,6 +323,7 @@ object ValidationMessage extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: NativeLayoutContent): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'headerWidget' property
@@ -305,6 +333,7 @@ object ValidationMessage extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -314,6 +343,7 @@ object ValidationMessage extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -323,6 +353,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -332,6 +363,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: NavigationListItem): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -341,6 +373,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -350,6 +383,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: ScrollContainerRegion): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -359,6 +393,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInSnippetUnderWidget(container: Snippet): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -368,6 +403,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: Snippet): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'firstWidget' property
@@ -377,6 +413,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'firstWidgets' property
@@ -386,6 +423,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: SplitPane): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'secondWidget' property
@@ -395,6 +433,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'secondWidgets' property
@@ -404,6 +443,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: SplitPane): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -413,6 +453,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInTabPageUnderWidget(container: TabPage): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -422,6 +463,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: TabPage): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -431,6 +473,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInTableCellUnderWidget(container: TableCell): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -440,6 +483,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: TableCell): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widget' property
@@ -449,6 +493,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -458,6 +503,7 @@ object ValidationMessage extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: TemplateGridContents): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -467,6 +513,7 @@ object ValidationMessage extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -476,6 +523,7 @@ object ValidationMessage extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: WebLayoutContent): ValidationMessage = js.native
+  
   /**
     * Creates and returns a new ValidationMessage instance in the SDK and on the server.
     * The new ValidationMessage will be automatically stored in the 'widgets' property
@@ -485,5 +533,8 @@ object ValidationMessage extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): ValidationMessage = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

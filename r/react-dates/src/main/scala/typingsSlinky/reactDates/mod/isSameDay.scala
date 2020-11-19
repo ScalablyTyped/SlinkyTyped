@@ -4,11 +4,10 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.moment.mod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // utils/isSameDay.js
 @JSImport("react-dates", "isSameDay")
 @js.native
 object isSameDay
   extends TopLevel[js.Function2[/* a */ Moment, /* b */ Moment, Boolean]]
-

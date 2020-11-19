@@ -2,7 +2,7 @@ package typingsSlinky.jsrsasign.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jsrsasign", "ECPointFp")
 @js.native
@@ -20,4 +20,3 @@ class ECPointFp protected ()
     z: typingsSlinky.jsrsasign.jsrsasign.BigInteger
   ) = this()
 }
-

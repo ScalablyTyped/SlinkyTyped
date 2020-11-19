@@ -2,7 +2,7 @@ package typingsSlinky.hummusRecipe.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.hummusRecipe.hummusRecipeStrings.invisible
@@ -16,25 +16,32 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.hummusRecipe.hummusRecipeStrings.togglenoview
 */
 trait CommentOptionsFlag extends js.Object
-
 object CommentOptionsFlag {
+  
   @scala.inline
   def hidden: typingsSlinky.hummusRecipe.hummusRecipeStrings.hidden = "hidden".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.hidden]
+  
   @scala.inline
   def invisible: typingsSlinky.hummusRecipe.hummusRecipeStrings.invisible = "invisible".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.invisible]
+  
   @scala.inline
   def locked: typingsSlinky.hummusRecipe.hummusRecipeStrings.locked = "locked".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.locked]
+  
   @scala.inline
   def norotate: typingsSlinky.hummusRecipe.hummusRecipeStrings.norotate = "norotate".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.norotate]
+  
   @scala.inline
   def noview: typingsSlinky.hummusRecipe.hummusRecipeStrings.noview = "noview".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.noview]
+  
   @scala.inline
   def nozoom: typingsSlinky.hummusRecipe.hummusRecipeStrings.nozoom = "nozoom".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.nozoom]
+  
   @scala.inline
   def print: typingsSlinky.hummusRecipe.hummusRecipeStrings.print = "print".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.print]
+  
   @scala.inline
   def readonly: typingsSlinky.hummusRecipe.hummusRecipeStrings.readonly = "readonly".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.readonly]
+  
   @scala.inline
   def togglenoview: typingsSlinky.hummusRecipe.hummusRecipeStrings.togglenoview = "togglenoview".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.togglenoview]
 }
-

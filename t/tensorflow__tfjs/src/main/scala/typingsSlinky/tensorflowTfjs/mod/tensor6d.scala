@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike6D
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor6D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "tensor6d")
 @js.native
 object tensor6d extends js.Object {
+  
   /**
     * Creates rank-6 `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -41,4 +42,3 @@ object tensor6d extends js.Object {
     dtype: DataType
   ): Tensor6D = js.native
 }
-

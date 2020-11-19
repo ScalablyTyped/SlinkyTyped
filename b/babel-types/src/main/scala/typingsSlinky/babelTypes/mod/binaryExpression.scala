@@ -24,11 +24,12 @@ import typingsSlinky.babelTypes.babelTypesStrings.in
 import typingsSlinky.babelTypes.babelTypesStrings.instanceof
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babel-types", "binaryExpression")
 @js.native
 object binaryExpression extends js.Object {
+  
   def apply(
     operator: js.UndefOr[
       Plussign | `-_` | Slash | Percentsign | Asterisk | AsteriskAsterisk | Ampersand | Verticalline | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | LessthansignLessthansign | ^  | EqualssignEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | in | instanceof | Greaterthansign | Lessthansign | GreaterthansignEqualssign | LessthansignEqualssign
@@ -37,4 +38,3 @@ object binaryExpression extends js.Object {
     right: js.UndefOr[Expression]
   ): BinaryExpression_ = js.native
 }
-

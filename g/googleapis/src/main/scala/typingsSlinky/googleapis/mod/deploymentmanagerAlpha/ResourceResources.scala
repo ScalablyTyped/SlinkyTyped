@@ -3,7 +3,7 @@ package typingsSlinky.googleapis.mod.deploymentmanagerAlpha
 import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("googleapis", "deploymentmanager_alpha.Resource$Resources")
 @js.native
@@ -11,4 +11,3 @@ class ResourceResources protected ()
   extends typingsSlinky.googleapis.deploymentmanagerAlphaMod.deploymentmanagerAlpha.ResourceResources {
   def this(context: APIRequestContext) = this()
 }
-

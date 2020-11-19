@@ -3,7 +3,7 @@ package typingsSlinky.highcharts.highstockMod
 import typingsSlinky.highcharts.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts/highstock", "Pointer")
 @js.native
@@ -22,4 +22,3 @@ class Pointer protected ()
     */
   def this(chart: typingsSlinky.highcharts.mod.Chart_, options: Options) = this()
 }
-

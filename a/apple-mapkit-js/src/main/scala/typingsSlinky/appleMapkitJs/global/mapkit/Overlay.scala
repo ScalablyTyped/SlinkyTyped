@@ -2,7 +2,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An abstract base object that defines the methods and attributes for map overlays.
@@ -11,4 +11,3 @@ import scala.scalajs.js.annotation._
 @js.native
 abstract class Overlay ()
   extends typingsSlinky.appleMapkitJs.mapkit.Overlay
-

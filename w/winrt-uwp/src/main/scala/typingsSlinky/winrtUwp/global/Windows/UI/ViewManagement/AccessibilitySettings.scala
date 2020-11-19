@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.UI.ViewManagement
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides access to the high contrast accessibility settings. */
 @JSGlobal("Windows.UI.ViewManagement.AccessibilitySettings")
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
 /** Initializes a new AccessibilitySettings object. */
 class AccessibilitySettings ()
   extends typingsSlinky.winrtUwp.Windows.UI.ViewManagement.AccessibilitySettings
-

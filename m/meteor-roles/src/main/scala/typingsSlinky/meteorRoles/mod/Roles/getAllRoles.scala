@@ -3,11 +3,12 @@ package typingsSlinky.meteorRoles.mod.Roles
 import typingsSlinky.meteor.Mongo.Cursor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("meteor/alanning:roles", "Roles.getAllRoles")
 @js.native
 object getAllRoles extends js.Object {
+  
   /**
     * Retrieve set of all existing roles
     *
@@ -16,4 +17,3 @@ object getAllRoles extends js.Object {
     */
   def apply(): Cursor[Role] = js.native
 }
-

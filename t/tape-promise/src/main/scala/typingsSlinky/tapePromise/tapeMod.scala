@@ -5,7 +5,7 @@ import typingsSlinky.std.ReturnType
 import typingsSlinky.tapePromise.mod.AsyncTapeFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tape-promise/tape", JSImport.Namespace)
 @js.native
@@ -18,15 +18,18 @@ object tapeMod
         ]
       ]
     ] {
+  
   /**
     * Options for the createStream function.
     */
   type StreamOptions = typingsSlinky.tape.mod.StreamOptions
+  
   type Test = typingsSlinky.tapePromise.mod.Test
+  
   type TestCase = typingsSlinky.tapePromise.mod.TestCase
+  
   /**
     * Available opts options for the tape function.
     */
   type TestOptions = typingsSlinky.tape.mod.TestOptions
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.typescriptServices.mod
 import typingsSlinky.typescriptServices.TypeScript.ISeparatedSyntaxList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "PositionedSeparatedList")
 @js.native
@@ -15,4 +15,3 @@ class PositionedSeparatedList protected ()
     fullStart: Double
   ) = this()
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.koaRouter.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@koa/router", JSImport.Namespace)
 @js.native
@@ -12,14 +12,13 @@ import scala.scalajs.js.annotation._
 class ^[StateT, CustomT] () extends Router[StateT, CustomT] {
   def this(opt: RouterOptions) = this()
 }
-
 @JSImport("@koa/router", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Generate URL from url pattern and given `params`.
     */
   def url(path: String, params: js.Object): String = js.native
   def url(path: js.RegExp, params: js.Object): String = js.native
 }
-

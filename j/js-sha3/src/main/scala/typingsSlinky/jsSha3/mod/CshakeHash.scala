@@ -2,10 +2,11 @@ package typingsSlinky.jsSha3.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CshakeHash extends js.Object {
+  
   /**
     * Hash and return hex string.
     *
@@ -15,6 +16,7 @@ trait CshakeHash extends js.Object {
     * @param customization The customization string.
     */
   def apply(message: Message, outputBits: Double, functionName: Message, customization: Message): String = js.native
+  
   /**
     * Hash and return integer array.
     *
@@ -24,6 +26,7 @@ trait CshakeHash extends js.Object {
     * @param customization The customization string.
     */
   def array(message: Message, outputBits: Double, functionName: Message, customization: Message): js.Array[Double] = js.native
+  
   /**
     * Hash and return ArrayBuffer.
     *
@@ -33,6 +36,7 @@ trait CshakeHash extends js.Object {
     * @param customization The customization string.
     */
   def arrayBuffer(message: Message, outputBits: Double, functionName: Message, customization: Message): js.typedarray.ArrayBuffer = js.native
+  
   /**
     * Create a hash object.
     *
@@ -48,6 +52,7 @@ trait CshakeHash extends js.Object {
     * @param customization The customization string.
     */
   def create(outputBits: Double, functionName: Message, customization: Message): Hasher = js.native
+  
   /**
     * Hash and return integer array.
     *
@@ -57,6 +62,7 @@ trait CshakeHash extends js.Object {
     * @param customization The customization string.
     */
   def digest(message: Message, outputBits: Double, functionName: Message, customization: Message): js.Array[Double] = js.native
+  
   /**
     * Hash and return hex string.
     *
@@ -66,6 +72,7 @@ trait CshakeHash extends js.Object {
     * @param customization The customization string.
     */
   def hex(message: Message, outputBits: Double, functionName: Message, customization: Message): String = js.native
+  
   /**
     * Create a hash object and hash message.
     *
@@ -76,4 +83,3 @@ trait CshakeHash extends js.Object {
     */
   def update(message: Message, outputBits: Double, functionName: Message, customization: Message): Hasher = js.native
 }
-

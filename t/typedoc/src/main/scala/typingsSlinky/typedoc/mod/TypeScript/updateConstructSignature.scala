@@ -7,11 +7,12 @@ import typingsSlinky.typescript.mod.TypeNode
 import typingsSlinky.typescript.mod.TypeParameterDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateConstructSignature")
 @js.native
 object updateConstructSignature extends js.Object {
+  
   def apply(
     node: ConstructSignatureDeclaration,
     typeParameters: js.UndefOr[scala.Nothing],
@@ -35,4 +36,3 @@ object updateConstructSignature extends js.Object {
     `type`: TypeNode
   ): ConstructSignatureDeclaration = js.native
 }
-

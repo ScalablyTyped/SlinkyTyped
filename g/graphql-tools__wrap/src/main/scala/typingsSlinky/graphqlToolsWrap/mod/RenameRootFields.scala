@@ -7,7 +7,7 @@ import typingsSlinky.graphqlToolsWrap.graphqlToolsWrapStrings.Query
 import typingsSlinky.graphqlToolsWrap.graphqlToolsWrapStrings.Subscription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap", "RenameRootFields")
 @js.native
@@ -20,4 +20,3 @@ class RenameRootFields protected ()
         String
       ]) = this()
 }
-

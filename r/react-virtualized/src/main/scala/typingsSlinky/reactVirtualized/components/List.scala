@@ -19,9 +19,10 @@ import typingsSlinky.reactVirtualized.mod.Alignment
 import typingsSlinky.reactVirtualized.mod.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object List {
+  
   @JSImport("react-virtualized", "List")
   @js.native
   object component extends js.Object
@@ -30,77 +31,112 @@ object List {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.List] {
+    
     @scala.inline
     def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def autoContainerWidth(value: Boolean): this.type = set("autoContainerWidth", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def autoHeight(value: Boolean): this.type = set("autoHeight", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def autoWidth(value: Boolean): this.type = set("autoWidth", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def cellRangeRenderer(value: /* params */ GridCellRangeProps => js.Array[ReactElement]): this.type = set("cellRangeRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def containerProps(value: js.Object): this.type = set("containerProps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def containerRole(value: String): this.type = set("containerRole", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def containerStyle(value: CSSProperties): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deferredMeasurementCache(value: CellMeasurerCache): this.type = set("deferredMeasurementCache", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def estimatedColumnSize(value: Double): this.type = set("estimatedColumnSize", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def estimatedRowSize(value: Double): this.type = set("estimatedRowSize", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def getScrollbarSize(value: () => Double): this.type = set("getScrollbarSize", js.Any.fromFunction0(value))
+    
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def isScrolling(value: Boolean): this.type = set("isScrolling", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def noContentRenderer(value: () => ReactElement): this.type = set("noContentRenderer", js.Any.fromFunction0(value))
+    
     @scala.inline
     def noRowsRenderer(value: () => ReactElement): this.type = set("noRowsRenderer", js.Any.fromFunction0(value))
+    
     @scala.inline
     def onRowsRendered(value: /* info */ RenderedRows => Unit): this.type = set("onRowsRendered", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onScrollbarPresenceChange(value: /* params */ ScrollbarPresenceParams => _): this.type = set("onScrollbarPresenceChange", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onSectionRendered(value: /* params */ SectionRenderedParams => _): this.type = set("onSectionRendered", js.Any.fromFunction1(value))
+    
     @scala.inline
     def overscanColumnCount(value: Double): this.type = set("overscanColumnCount", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def overscanIndicesGetter(value: /* params */ OverscanIndicesGetterParams => OverscanIndices): this.type = set("overscanIndicesGetter", js.Any.fromFunction1(value))
+    
     @scala.inline
     def overscanRowCount(value: Double): this.type = set("overscanRowCount", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def scrollLeft(value: Double): this.type = set("scrollLeft", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def scrollToColumn(value: Double): this.type = set("scrollToColumn", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def scrollToIndex(value: Double): this.type = set("scrollToIndex", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def scrollToRow(value: Double): this.type = set("scrollToRow", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def scrollTop(value: Double): this.type = set("scrollTop", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def scrollingResetTimeInterval(value: Double): this.type = set("scrollingResetTimeInterval", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def tabIndexNull: this.type = set("tabIndex", null)
   }
   
   def withProps(p: ListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     height: Double,
@@ -115,4 +151,3 @@ object List {
     new Builder(js.Array(this.component, __props.asInstanceOf[ListProps]))
   }
 }
-

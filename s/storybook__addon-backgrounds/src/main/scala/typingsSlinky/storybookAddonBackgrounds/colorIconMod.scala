@@ -8,15 +8,15 @@ import typingsSlinky.storybookAddonBackgrounds.anon.Background
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/addon-backgrounds/dist/components/ColorIcon", JSImport.Namespace)
 @js.native
 object colorIconMod extends js.Object {
+  
   val ColorIcon: StyledComponent[
     DetailedHTMLProps[HTMLAttributes[HTMLSpanElement], HTMLSpanElement], 
     Background, 
     Theme
   ] = js.native
 }
-

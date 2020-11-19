@@ -7,7 +7,7 @@ import typingsSlinky.apolloServerExpress.apolloServerExpressStrings.Subscription
 import typingsSlinky.graphql.definitionMod.GraphQLFieldConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server-express", "RenameRootFields")
 @js.native
@@ -20,4 +20,3 @@ class RenameRootFields protected ()
         String
       ]) = this()
 }
-

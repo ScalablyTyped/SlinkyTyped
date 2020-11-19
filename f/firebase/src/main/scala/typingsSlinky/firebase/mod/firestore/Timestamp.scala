@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.firestore
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "firestore.Timestamp")
 @js.native
@@ -19,8 +19,7 @@ class Timestamp protected () extends js.Object {
     *     from 0 to 999,999,999 inclusive.
     */
   def this(seconds: Double, nanoseconds: Double) = this()
-  val nanoseconds: Double = js.native
-  val seconds: Double = js.native
+  
   /**
     * Returns true if this `Timestamp` is equal to the provided one.
     *
@@ -28,6 +27,11 @@ class Timestamp protected () extends js.Object {
     * @return true if this `Timestamp` is equal to the provided one.
     */
   def isEqual(other: Timestamp): Boolean = js.native
+  
+  val nanoseconds: Double = js.native
+  
+  val seconds: Double = js.native
+  
   /**
     * Convert a Timestamp to a JavaScript `Date` object. This conversion causes
     * a loss of precision since `Date` objects only support millisecond precision.
@@ -36,6 +40,7 @@ class Timestamp protected () extends js.Object {
     *     this `Timestamp`, with millisecond precision.
     */
   def toDate(): js.Date = js.native
+  
   /**
     * Convert a timestamp to a numeric timestamp (in milliseconds since epoch).
     * This operation causes a loss of precision.
@@ -45,11 +50,11 @@ class Timestamp protected () extends js.Object {
     */
   def toMillis(): Double = js.native
 }
-
 /* static members */
 @JSImport("firebase", "firestore.Timestamp")
 @js.native
 object Timestamp extends js.Object {
+  
   /**
     * Creates a new timestamp from the given date.
     *
@@ -58,6 +63,7 @@ object Timestamp extends js.Object {
     *     date.
     */
   def fromDate(date: js.Date): Timestamp = js.native
+  
   /**
     * Creates a new timestamp from the given number of milliseconds.
     *
@@ -67,6 +73,7 @@ object Timestamp extends js.Object {
     *     number of milliseconds.
     */
   def fromMillis(milliseconds: Double): Timestamp = js.native
+  
   /**
     * Creates a new timestamp with the current date, with millisecond precision.
     *
@@ -74,4 +81,3 @@ object Timestamp extends js.Object {
     */
   def now(): Timestamp = js.native
 }
-

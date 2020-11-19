@@ -6,16 +6,20 @@ import typingsSlinky.ol.pluggableMapMod.FrameState
 import typingsSlinky.ol.renderEventTypeMod.EventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/render/Event", JSImport.Namespace)
 @js.native
 object renderEventMod extends js.Object {
+  
   @js.native
   trait RenderEvent
     extends typingsSlinky.ol.eventMod.default {
+    
     var context: CanvasRenderingContext2D = js.native
+    
     var frameState: FrameState = js.native
+    
     var inversePixelTransform: Transform = js.native
   }
   
@@ -54,6 +58,4 @@ object renderEventMod extends js.Object {
       opt_context: CanvasRenderingContext2D
     ) = this()
   }
-  
 }
-

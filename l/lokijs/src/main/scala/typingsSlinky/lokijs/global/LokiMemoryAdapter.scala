@@ -3,7 +3,7 @@ package typingsSlinky.lokijs.global
 import typingsSlinky.lokijs.anon.AsyncResponses
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In in-memory persistence adapter for an in-memory database.
@@ -20,4 +20,3 @@ class LokiMemoryAdapter ()
   extends typingsSlinky.lokijs.LokiMemoryAdapter {
   def this(options: AsyncResponses) = this()
 }
-

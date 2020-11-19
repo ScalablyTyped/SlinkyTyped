@@ -2,11 +2,12 @@ package typingsSlinky.react.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react", "useReducer")
 @js.native
 object useReducer extends js.Object {
+  
   /**
     * An alternative to `useState`.
     *
@@ -36,4 +37,3 @@ object useReducer extends js.Object {
     initializer: js.Function1[/* arg */ I, ReducerStateWithoutAction[R]]
   ): js.Tuple2[ReducerStateWithoutAction[R], DispatchWithoutAction] = js.native
 }
-

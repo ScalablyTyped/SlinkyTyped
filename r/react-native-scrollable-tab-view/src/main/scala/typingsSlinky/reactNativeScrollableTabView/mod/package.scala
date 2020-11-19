@@ -2,9 +2,10 @@ package typingsSlinky.reactNativeScrollableTabView
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type RenderTabProperties = js.Function5[
     /* name */ java.lang.String, 
     /* pageIndex */ scala.Double, 
@@ -15,6 +16,8 @@ package object mod {
     ], 
     slinky.core.facade.ReactElement
   ]
+  
   type TabBarProps[T] = T with typingsSlinky.reactNativeScrollableTabView.anon.ActiveTab
+  
   type TabProps[T] = T with typingsSlinky.reactNativeScrollableTabView.anon.TabLabel
 }

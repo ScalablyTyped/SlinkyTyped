@@ -5,17 +5,21 @@ import typingsSlinky.jsonSchema.mod.JSONSchema6
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Form[T]
   extends Component[FormProps[T], js.Object, js.Any] {
+  
   def onBlur(id: String): Unit = js.native
   def onBlur(id: String, value: String): Unit = js.native
   def onBlur(id: String, value: Boolean): Unit = js.native
   def onBlur(id: String, value: Double): Unit = js.native
+  
   def onChange(formData: T, newErrorSchema: ErrorSchema): Unit = js.native
+  
   def submit(): Unit = js.native
+  
   def validate(formData: T): typingsSlinky.reactJsonschemaForm.anon.ErrorSchema = js.native
   def validate(
     formData: T,
@@ -41,4 +45,3 @@ trait Form[T]
     ]
   ): typingsSlinky.reactJsonschemaForm.anon.ErrorSchema = js.native
 }
-

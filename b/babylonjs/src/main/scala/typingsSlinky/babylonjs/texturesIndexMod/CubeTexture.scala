@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/Textures/index", "CubeTexture")
 @js.native
@@ -48,11 +48,11 @@ class CubeTexture protected ()
     lodOffset: js.UndefOr[Double]
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Materials/Textures/index", "CubeTexture")
 @js.native
 object CubeTexture extends js.Object {
+  
   /**
     * Creates a cube texture from an array of image urls
     * @param files defines an array of image urls
@@ -62,6 +62,7 @@ object CubeTexture extends js.Object {
     */
   def CreateFromImages(files: js.Array[String], scene: Scene): typingsSlinky.babylonjs.cubeTextureMod.CubeTexture = js.native
   def CreateFromImages(files: js.Array[String], scene: Scene, noMipmap: Boolean): typingsSlinky.babylonjs.cubeTextureMod.CubeTexture = js.native
+  
   /**
     * Creates and return a texture created from prefilterd data by tools like IBL Baker or Lys.
     * @param url defines the url of the prefiltered texture
@@ -71,8 +72,10 @@ object CubeTexture extends js.Object {
     * @return the prefiltered texture
     */
   def CreateFromPrefilteredData(url: String, scene: Scene): typingsSlinky.babylonjs.cubeTextureMod.CubeTexture = js.native
+  def CreateFromPrefilteredData(url: String, scene: Scene, forcedExtension: js.UndefOr[scala.Nothing], createPolynomials: Boolean): typingsSlinky.babylonjs.cubeTextureMod.CubeTexture = js.native
   def CreateFromPrefilteredData(url: String, scene: Scene, forcedExtension: js.Any): typingsSlinky.babylonjs.cubeTextureMod.CubeTexture = js.native
   def CreateFromPrefilteredData(url: String, scene: Scene, forcedExtension: js.Any, createPolynomials: Boolean): typingsSlinky.babylonjs.cubeTextureMod.CubeTexture = js.native
+  
   /**
     * Parses text to create a cube texture
     * @param parsedTexture define the serialized text to read from
@@ -82,4 +85,3 @@ object CubeTexture extends js.Object {
     */
   def Parse(parsedTexture: js.Any, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.cubeTextureMod.CubeTexture = js.native
 }
-

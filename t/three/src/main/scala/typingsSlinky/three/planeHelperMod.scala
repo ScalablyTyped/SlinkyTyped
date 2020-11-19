@@ -7,11 +7,12 @@ import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.planeMod.Plane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/helpers/PlaneHelper", JSImport.Namespace)
 @js.native
 object planeHelperMod extends js.Object {
+  
   @js.native
   class PlaneHelper protected ()
     extends LineSegments[Geometry | BufferGeometry, Material | js.Array[Material]] {
@@ -19,9 +20,9 @@ object planeHelperMod extends js.Object {
     def this(plane: Plane, size: Double) = this()
     def this(plane: Plane, size: js.UndefOr[scala.Nothing], hex: Double) = this()
     def this(plane: Plane, size: Double, hex: Double) = this()
+    
     var plane: Plane = js.native
+    
     var size: Double = js.native
   }
-  
 }
-

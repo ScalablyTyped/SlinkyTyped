@@ -9,11 +9,13 @@ import typingsSlinky.urqlCore.urqlCoreStrings.fetchSuccess
 import typingsSlinky.urqlCore.urqlCoreStrings.retryRetrying
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Pick<@urql/core.@urql/core/dist/types/types.ExchangeInput, 'dispatchDebug'> */
 @js.native
 trait PickExchangeInputdispatch extends js.Object {
+  
+  def dispatchDebug[T /* <: cacheHit | cacheInvalidation | fetchRequest | fetchSuccess | fetchError | retryRetrying | String */](t: DebugEventArg[T]): Unit = js.native
   @JSName("dispatchDebug")
   var dispatchDebug_Original: js.Function1[
     /* t */ DebugEventArg[
@@ -21,6 +23,4 @@ trait PickExchangeInputdispatch extends js.Object {
     ], 
     Unit
   ] = js.native
-  def dispatchDebug[T /* <: cacheHit | cacheInvalidation | fetchRequest | fetchSuccess | fetchError | retryRetrying | String */](t: DebugEventArg[T]): Unit = js.native
 }
-

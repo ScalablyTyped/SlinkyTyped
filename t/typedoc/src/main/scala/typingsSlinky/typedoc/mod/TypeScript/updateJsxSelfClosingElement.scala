@@ -6,11 +6,12 @@ import typingsSlinky.typescript.mod.JsxTagNameExpression
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateJsxSelfClosingElement")
 @js.native
 object updateJsxSelfClosingElement extends js.Object {
+  
   def apply(
     node: JsxSelfClosingElement,
     tagName: JsxTagNameExpression,
@@ -24,4 +25,3 @@ object updateJsxSelfClosingElement extends js.Object {
     attributes: JsxAttributes
   ): JsxSelfClosingElement = js.native
 }
-

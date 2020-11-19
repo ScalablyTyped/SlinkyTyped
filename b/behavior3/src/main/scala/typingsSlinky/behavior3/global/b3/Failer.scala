@@ -2,7 +2,7 @@ package typingsSlinky.behavior3.global.b3
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This action node returns `FAILURE` always.
@@ -15,4 +15,3 @@ import scala.scalajs.js.annotation._
   */
 class Failer ()
   extends typingsSlinky.behavior3.b3.Failer
-

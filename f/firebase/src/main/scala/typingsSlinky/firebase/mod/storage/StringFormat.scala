@@ -2,11 +2,12 @@ package typingsSlinky.firebase.mod.storage
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "storage.StringFormat")
 @js.native
 object StringFormat extends js.Object {
+  
   /**
     * Indicates the string should be interpreted as base64-encoded data.
     * Padding characters (trailing '='s) are optional.
@@ -14,6 +15,7 @@ object StringFormat extends js.Object {
     * ad 69 8e fb e1 3a b7 bf eb 97
     */
   var BASE64: StringFormat = js.native
+  
   /**
     * Indicates the string should be interpreted as base64url-encoded data.
     * Padding characters (trailing '='s) are optional.
@@ -21,6 +23,7 @@ object StringFormat extends js.Object {
     * ad 69 8e fb e1 3a b7 bf eb 97
     */
   var BASE64URL: StringFormat = js.native
+  
   /**
     * Indicates the string is a data URL, such as one obtained from
     * canvas.toDataURL().
@@ -31,6 +34,7 @@ object StringFormat extends js.Object {
     * be overridden in the metadata object).
     */
   var DATA_URL: StringFormat = js.native
+  
   /**
     * Indicates the string should be interpreted "raw", that is, as normal text.
     * The string will be interpreted as UTF-16, then uploaded as a UTF-8 byte
@@ -40,4 +44,3 @@ object StringFormat extends js.Object {
     */
   var RAW: StringFormat = js.native
 }
-

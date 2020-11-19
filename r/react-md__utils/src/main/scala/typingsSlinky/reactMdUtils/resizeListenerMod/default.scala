@@ -2,11 +2,12 @@ package typingsSlinky.reactMdUtils.resizeListenerMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/utils/types/sizing/ResizeListener", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   /**
     * This is a simple component that will attach a throttled resize event listener
     * when mounted, and detach when it unmounts.
@@ -16,12 +17,14 @@ object default extends js.Object {
     * instead.
     */
   def apply(hasOnResizeOptionsImmediate: ResizeListenerProps): Null = js.native
+  
   @js.native
   object propTypes extends js.Object {
+    
     var immediate: js.Any = js.native
+    
     var onResize: js.Any = js.native
+    
     var options: js.Any = js.native
   }
-  
 }
-

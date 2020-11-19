@@ -2,9 +2,10 @@ package typingsSlinky.officeUiFabricReact.components
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DetailsListCustomColumnsExample {
+  
   @JSImport("office-ui-fabric-react/lib/components/DetailsList/examples/DetailsList.CustomColumns.Example", "DetailsListCustomColumnsExample")
   @js.native
   object component extends js.Object
@@ -14,10 +15,10 @@ object DetailsListCustomColumnsExample {
   ] = new SharedBuilder_Object_159303587[
     typingsSlinky.officeUiFabricReact.detailsListCustomColumnsExampleMod.DetailsListCustomColumnsExample
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: DetailsListCustomColumnsExample.type): SharedBuilder_Object_159303587[
     typingsSlinky.officeUiFabricReact.detailsListCustomColumnsExampleMod.DetailsListCustomColumnsExample
   ] = new SharedBuilder_Object_159303587[
     typingsSlinky.officeUiFabricReact.detailsListCustomColumnsExampleMod.DetailsListCustomColumnsExample
   ](js.Array(this.component, js.Dictionary.empty))()
 }
-

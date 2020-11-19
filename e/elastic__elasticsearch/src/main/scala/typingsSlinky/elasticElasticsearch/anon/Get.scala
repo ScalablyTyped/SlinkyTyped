@@ -16,10 +16,11 @@ import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Get extends js.Object {
+  
   def delete[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -27,6 +28,7 @@ trait Get extends js.Object {
   def delete[TResponse, TContext](params: LicenseDelete, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete[TResponse, TContext](params: LicenseDelete, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete[TResponse, TContext](params: LicenseDelete, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def get[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -34,6 +36,7 @@ trait Get extends js.Object {
   def get[TResponse, TContext](params: LicenseGet, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get[TResponse, TContext](params: LicenseGet, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get[TResponse, TContext](params: LicenseGet, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def getBasicStatus[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getBasicStatus[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getBasicStatus[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -45,6 +48,7 @@ trait Get extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getTrialStatus[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getTrialStatus[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getTrialStatus[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -56,6 +60,7 @@ trait Get extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_basic_status[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_basic_status[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_basic_status[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -67,6 +72,7 @@ trait Get extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_trial_status[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_trial_status[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_trial_status[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -78,6 +84,7 @@ trait Get extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def post[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def post[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def post[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -89,6 +96,7 @@ trait Get extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def postStartBasic[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def postStartBasic[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def postStartBasic[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -100,6 +108,7 @@ trait Get extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def postStartTrial[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def postStartTrial[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def postStartTrial[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -111,6 +120,7 @@ trait Get extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def post_start_basic[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def post_start_basic[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def post_start_basic[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -122,6 +132,7 @@ trait Get extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def post_start_trial[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def post_start_trial[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def post_start_trial[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -134,4 +145,3 @@ trait Get extends js.Object {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
 }
-

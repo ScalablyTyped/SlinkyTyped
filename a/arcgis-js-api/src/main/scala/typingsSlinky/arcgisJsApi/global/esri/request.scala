@@ -5,7 +5,7 @@ import typingsSlinky.arcgisJsApi.esri.RequestOptions
 import typingsSlinky.arcgisJsApi.esri.RequestResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.request")
 @js.native
@@ -17,4 +17,3 @@ object request
         js.Promise[RequestResponse]
       ]
     ]
-

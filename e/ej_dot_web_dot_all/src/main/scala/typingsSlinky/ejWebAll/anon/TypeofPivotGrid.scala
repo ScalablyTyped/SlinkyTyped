@@ -8,13 +8,14 @@ import typingsSlinky.ejWebAll.ej.PivotGrid
 import typingsSlinky.ejWebAll.ej.PivotGrid.Model
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofPivotGrid
   extends Instantiable1[(/* element */ Element) | (/* element */ JQuery), PivotGrid]
      with Instantiable2[(/* element */ Element) | (/* element */ JQuery), /* options */ Model, PivotGrid] {
+  
   var Locale: js.Any = js.native
+  
   var fn: PivotGrid = js.native
 }
-

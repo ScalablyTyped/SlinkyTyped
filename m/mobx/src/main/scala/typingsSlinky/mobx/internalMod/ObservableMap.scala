@@ -4,7 +4,7 @@ import typingsSlinky.mobx.modifiersMod.IEnhancer
 import typingsSlinky.mobx.observablemapMod.IObservableMapInitialValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mobx/lib/internal", "ObservableMap")
 @js.native
@@ -19,4 +19,3 @@ class ObservableMap[K, V] ()
   ) = this()
   def this(initialData: js.UndefOr[IObservableMapInitialValues[K, V]], enhancer: IEnhancer[V], name: String) = this()
 }
-

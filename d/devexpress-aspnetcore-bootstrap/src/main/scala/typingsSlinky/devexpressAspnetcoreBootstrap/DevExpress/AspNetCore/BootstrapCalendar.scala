@@ -11,19 +11,29 @@ import typingsSlinky.devexpressAspnetcoreBootstrap.devexpressAspnetcoreBootstrap
 import typingsSlinky.devexpressAspnetcoreBootstrap.devexpressAspnetcoreBootstrapStrings.visibleMonthChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BootstrapCalendar extends BootstrapClientEdit {
+  
   def clearSelection(): Unit = js.native
+  
   def deselectDate(date: js.Date): Unit = js.native
+  
   def deselectRange(start: js.Date, end: js.Date): Unit = js.native
+  
   def getMaxDate(): js.Date = js.native
+  
   def getMinDate(): js.Date = js.native
+  
   def getSelectedDate(): js.Date = js.native
+  
   def getSelectedDates(): js.Array[js.Date] = js.native
+  
   def getVisibleDate(): js.Date = js.native
+  
   def isDateSelected(date: js.Date): Boolean = js.native
+  
   @JSName("off")
   def off_beginCallback(eventName: beginCallback): this.type = js.native
   @JSName("off")
@@ -91,6 +101,7 @@ trait BootstrapCalendar extends BootstrapClientEdit {
     eventName: visibleMonthChanged,
     callback: js.ThisFunction1[/* this */ this.type, /* args */ js.UndefOr[ProcessingModeEventArgs], Unit]
   ): this.type = js.native
+  
   @JSName("on")
   def on_beginCallback(
     eventName: beginCallback,
@@ -140,6 +151,7 @@ trait BootstrapCalendar extends BootstrapClientEdit {
     eventName: visibleMonthChanged,
     callback: js.ThisFunction1[/* this */ this.type, /* args */ js.UndefOr[ProcessingModeEventArgs], Unit]
   ): this.type = js.native
+  
   @JSName("once")
   def once_beginCallback(
     eventName: beginCallback,
@@ -189,11 +201,16 @@ trait BootstrapCalendar extends BootstrapClientEdit {
     eventName: visibleMonthChanged,
     callback: js.ThisFunction1[/* this */ this.type, /* args */ js.UndefOr[ProcessingModeEventArgs], Unit]
   ): this.type = js.native
+  
   def selectDate(date: js.Date): Unit = js.native
+  
   def selectRange(start: js.Date, end: js.Date): Unit = js.native
+  
   def setMaxDate(date: js.Date): Unit = js.native
+  
   def setMinDate(date: js.Date): Unit = js.native
+  
   def setSelectedDate(date: js.Date): Unit = js.native
+  
   def setVisibleDate(date: js.Date): Unit = js.native
 }
-

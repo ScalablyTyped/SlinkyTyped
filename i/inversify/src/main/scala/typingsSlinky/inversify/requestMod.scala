@@ -6,11 +6,12 @@ import typingsSlinky.inversify.interfacesMod.interfaces.ServiceIdentifier
 import typingsSlinky.inversify.interfacesMod.interfaces.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("inversify/dts/planning/request", JSImport.Namespace)
 @js.native
 object requestMod extends js.Object {
+  
   @js.native
   class Request protected ()
     extends typingsSlinky.inversify.interfacesMod.interfaces.Request {
@@ -43,6 +44,4 @@ object requestMod extends js.Object {
       target: Target
     ) = this()
   }
-  
 }
-

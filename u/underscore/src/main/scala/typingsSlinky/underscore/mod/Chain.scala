@@ -12,10 +12,30 @@ import typingsSlinky.underscore.underscoreBooleans.`true`
 import typingsSlinky.underscore.underscoreStrings._Chain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Chain[T, V] extends js.Object {
+  
+  /**
+    * Wrapped type `number`.
+    * @see _.after
+    **/
+  def after(func: js.Function): Chain[T, T] = js.native
+  
+  /**
+    * @see every
+    **/
+  def all(): ChainSingle[Boolean] = js.native
+  def all(iterator: js.UndefOr[ChainIteratee[V, Boolean, T]], context: js.Any): ChainSingle[Boolean] = js.native
+  def all(iterator: ChainIteratee[V, Boolean, T]): ChainSingle[Boolean] = js.native
+  
+  /**
+    * Wrapped type `object`.
+    * @see _.allKeys
+    **/
+  def allKeys(): Chain[String, String] = js.native
+  
   /**
     * @see every
     **/
@@ -25,6 +45,13 @@ trait Chain[T, V] extends js.Object {
     /* context */ js.UndefOr[js.Any], 
     ChainSingle[Boolean]
   ] = js.native
+  
+  /**
+    * @see some
+    **/
+  def any(): ChainSingle[Boolean] = js.native
+  def any(iterator: js.UndefOr[ChainIteratee[V, Boolean, T]], context: js.Any): ChainSingle[Boolean] = js.native
+  def any(iterator: ChainIteratee[V, Boolean, T]): ChainSingle[Boolean] = js.native
   /**
     * @see some
     **/
@@ -34,116 +61,13 @@ trait Chain[T, V] extends js.Object {
     /* context */ js.UndefOr[js.Any], 
     ChainSingle[Boolean]
   ] = js.native
-  /**
-    * @see map
-    **/
-  @JSName("collect")
-  var collect_Original: Fn0[T, V] = js.native
-  /**
-    * @see find
-    **/
-  @JSName("detect")
-  var detect_Original: js.Function2[
-    /* iteratee */ js.UndefOr[ChainIteratee[V, Boolean, T]], 
-    /* context */ js.UndefOr[js.Any], 
-    ChainSingle[js.UndefOr[T]]
-  ] = js.native
-  /**
-    * @see rest
-    **/
-  @JSName("drop")
-  var drop_Original: js.Function1[/* n */ js.UndefOr[Double], Chain[T, js.Array[T]]] = js.native
-  /**
-    * @see reduce
-    **/
-  @JSName("foldl")
-  var foldl_Original: Fn1[V] = js.native
-  /**
-    * @see reduceRight
-    **/
-  @JSName("foldr")
-  var foldr_Original: Fn1[V] = js.native
-  /**
-    * @see each
-    **/
-  @JSName("forEach")
-  var forEach_Original: js.Function2[
-    /* iteratee */ CollectionIterator[TypeOfCollection[V], Unit, V], 
-    /* context */ js.UndefOr[js.Any], 
-    Chain[T, V]
-  ] = js.native
-  /**
-    * @see first
-    **/
-  @JSName("head")
-  var head_Original: Fn2[T] = js.native
-  /**
-    * @see contains
-    **/
-  @JSName("include")
-  var include_Original: js.Function2[/* value */ js.Any, /* fromIndex */ js.UndefOr[Double], ChainSingle[Boolean]] = js.native
-  /**
-    * @see contains
-    **/
-  @JSName("includes")
-  var includes_Original: js.Function2[/* value */ js.Any, /* fromIndex */ js.UndefOr[Double], ChainSingle[Boolean]] = js.native
-  /**
-    * @see reduce
-    **/
-  @JSName("inject")
-  var inject_Original: Fn1[V] = js.native
-  /**
-    * @see filter
-    **/
-  @JSName("select")
-  var select_Original: js.Function2[
-    /* iteratee */ js.UndefOr[ChainIteratee[V, _, T]], 
-    /* context */ js.UndefOr[js.Any], 
-    Chain[T, js.Array[T]]
-  ] = js.native
-  /**
-    * @see rest
-    **/
-  @JSName("tail")
-  var tail_Original: js.Function1[/* n */ js.UndefOr[Double], Chain[T, js.Array[T]]] = js.native
-  /**
-    * @see first
-    **/
-  @JSName("take")
-  var take_Original: Fn2[T] = js.native
-  /**
-    * Wrapped type List<T>.
-    * @see uniq
-    **/
-  @JSName("unique")
-  var unique_Original: FnCallIsSortedIterateeContext[V, T] = js.native
-  /**
-    * Wrapped type `number`.
-    * @see _.after
-    **/
-  def after(func: js.Function): Chain[T, T] = js.native
-  /**
-    * @see every
-    **/
-  def all(): ChainSingle[Boolean] = js.native
-  def all(iterator: js.UndefOr[ChainIteratee[V, Boolean, T]], context: js.Any): ChainSingle[Boolean] = js.native
-  def all(iterator: ChainIteratee[V, Boolean, T]): ChainSingle[Boolean] = js.native
-  /**
-    * Wrapped type `object`.
-    * @see _.allKeys
-    **/
-  def allKeys(): Chain[String, String] = js.native
-  /**
-    * @see some
-    **/
-  def any(): ChainSingle[Boolean] = js.native
-  def any(iterator: js.UndefOr[ChainIteratee[V, Boolean, T]], context: js.Any): ChainSingle[Boolean] = js.native
-  def any(iterator: ChainIteratee[V, Boolean, T]): ChainSingle[Boolean] = js.native
+  
   /**
     * Wrapped type `number`.
     * @see _.before
     **/
   def before(fn: js.Function): Chain[T, T] = js.native
+  
   /* ***********
     * Functions *
     ************ */
@@ -152,11 +76,13 @@ trait Chain[T, V] extends js.Object {
     * @see _.bind
     **/
   def bind(`object`: js.Any, args: js.Any*): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.bindAll
     **/
   def bindAll(methodNames: String*): Chain[T, T] = js.native
+  
   /********** *
     * Chaining *
     *********** */
@@ -166,12 +92,14 @@ trait Chain[T, V] extends js.Object {
     * @returns An underscore chain wrapper around the wrapped value.
     **/
   def chain(): Chain[T, V] = js.native
+  
   /**
     * Chunks a wrapped list into multiple arrays, each containing length or fewer items.
     * @param length The maximum size of the inner arrays.
     * @returns The wrapped chunked list.
     **/
   def chunk(length: Double): Chain[js.Array[T], js.Array[js.Array[T]]] = js.native
+  
   /**
     * @see map
     **/
@@ -212,17 +140,25 @@ trait Chain[T, V] extends js.Object {
   {[ P in keyof underscore.underscore.TypeOfCollection<V extends underscore.underscore.Collection<T>? V : std.Array<T>> ]:? underscore.underscore.TypeOfCollection<V extends underscore.underscore.Collection<T>? V : std.Array<T>>[P]}
     */ _Chain with (TopLevel[TypeOfCollection[js.Array[T] | V]])) */](iteratee: I, context: js.Any): Chain[IterateeResult[I, T], js.Array[IterateeResult[I, T]]] = js.native
   /**
+    * @see map
+    **/
+  @JSName("collect")
+  var collect_Original: Fn0[T, V] = js.native
+  
+  /**
     * Returns a copy of the wrapped list with all falsy values removed. In
     * JavaScript, false, null, 0, "", undefined and NaN are all falsy.
     * @returns A chain wrapper around an array containing the elements of
     * the wrapped list without falsy values.
     **/
   def compact(): Chain[Truthy[T], js.Array[Truthy[T]]] = js.native
+  
   /**
     * Wrapped type `Function[]`.
     * @see _.compose
     **/
   def compose(functions: js.Function*): Chain[T, T] = js.native
+  
   /************* *
     * Array proxy *
     ************** */
@@ -233,11 +169,13 @@ trait Chain[T, V] extends js.Object {
     * @return A new array comprised of the array on which it is called
     **/
   def concat(arr: js.Array[T]*): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `any`.
     * @see _.constant
     **/
   def constant(): Chain[T, T] = js.native
+  
   /**
     * Returns true if the value is present in the wrapped collection. Uses
     * indexOf internally, if the wrapped collection is a List. Use
@@ -250,6 +188,7 @@ trait Chain[T, V] extends js.Object {
     **/
   def contains(value: js.Any): ChainSingle[Boolean] = js.native
   def contains(value: js.Any, fromIndex: Double): ChainSingle[Boolean] = js.native
+  
   /**
     * Wrapped type `any[]`.
     * @see _.countBy
@@ -264,28 +203,33 @@ trait Chain[T, V] extends js.Object {
   def countBy(iterator: String, context: js.Any): Chain[T, T] = js.native
   def countBy(iterator: ListIterator[T, _, List[T]]): Chain[T, T] = js.native
   def countBy(iterator: ListIterator[T, _, List[T]], context: js.Any): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `any`.
     * @see _.create
     **/
   def create(): Chain[T, T] = js.native
   def create(props: js.Object): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `Function`.
     * @see _.debounce
     **/
   def debounce(wait: Double): Chain[T, T] = js.native
   def debounce(wait: Double, immediate: Boolean): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.defaults
     **/
   def defaults(defaults: js.Any*): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `Function`.
     * @see _.defer
     **/
   def defer(args: js.Any*): Chain[T, T] = js.native
+  
   /**
     * @see _.delay
     **/
@@ -295,6 +239,7 @@ trait Chain[T, V] extends js.Object {
     * @see _.delay
     **/
   def delay(wait: Double, args: js.Any*): Chain[T, T] = js.native
+  
   /**
     * @see find
     **/
@@ -302,15 +247,32 @@ trait Chain[T, V] extends js.Object {
   def detect(iteratee: js.UndefOr[ChainIteratee[V, Boolean, T]], context: js.Any): ChainSingle[js.UndefOr[T]] = js.native
   def detect(iteratee: ChainIteratee[V, Boolean, T]): ChainSingle[js.UndefOr[T]] = js.native
   /**
+    * @see find
+    **/
+  @JSName("detect")
+  var detect_Original: js.Function2[
+    /* iteratee */ js.UndefOr[ChainIteratee[V, Boolean, T]], 
+    /* context */ js.UndefOr[js.Any], 
+    ChainSingle[js.UndefOr[T]]
+  ] = js.native
+  
+  /**
     * Wrapped type `any[]`.
     * @see _.difference
     **/
   def difference(others: List[T]*): Chain[T, T] = js.native
+  
   /**
     * @see rest
     **/
   def drop(): Chain[T, js.Array[T]] = js.native
   def drop(n: Double): Chain[T, js.Array[T]] = js.native
+  /**
+    * @see rest
+    **/
+  @JSName("drop")
+  var drop_Original: js.Function1[/* n */ js.UndefOr[Double], Chain[T, js.Array[T]]] = js.native
+  
   /* *************
     * Collections *
     ************* */
@@ -326,11 +288,13 @@ trait Chain[T, V] extends js.Object {
     **/
   def each(iteratee: CollectionIterator[TypeOfCollection[V], Unit, V]): Chain[T, V] = js.native
   def each(iteratee: CollectionIterator[TypeOfCollection[V], Unit, V], context: js.Any): Chain[T, V] = js.native
+  
   /**
     * Wrapped type `string`.
     * @see _.escape
     **/
   def escape(): Chain[T, T] = js.native
+  
   /**
     * Returns true if all of the values in the wrapped collection pass the
     * `iteratee` truth test. Short-circuits and stops traversing the
@@ -343,11 +307,13 @@ trait Chain[T, V] extends js.Object {
   def every(): ChainSingle[Boolean] = js.native
   def every(iterator: js.UndefOr[ChainIteratee[V, Boolean, T]], context: js.Any): ChainSingle[Boolean] = js.native
   def every(iterator: ChainIteratee[V, Boolean, T]): ChainSingle[Boolean] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.extend
     **/
   def extend(sources: js.Any*): Chain[T, T] = js.native
+  
   /**
     * Looks through each value in the wrapped collection, returning an array of all the values that pass a truth
     * test (iteratee).
@@ -358,6 +324,7 @@ trait Chain[T, V] extends js.Object {
   def filter(): Chain[T, js.Array[T]] = js.native
   def filter(iteratee: js.UndefOr[ChainIteratee[V, _, T]], context: js.Any): Chain[T, js.Array[T]] = js.native
   def filter(iteratee: ChainIteratee[V, _, T]): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Looks through each value in the wrapped collection, returning the first one that passes a
     * truth test (iteratee), or undefined if no value passes the test. The function
@@ -371,6 +338,7 @@ trait Chain[T, V] extends js.Object {
   def find(): ChainSingle[js.UndefOr[T]] = js.native
   def find(iteratee: js.UndefOr[ChainIteratee[V, Boolean, T]], context: js.Any): ChainSingle[js.UndefOr[T]] = js.native
   def find(iteratee: ChainIteratee[V, Boolean, T]): ChainSingle[js.UndefOr[T]] = js.native
+  
   def findIndex(predicate: js.Object): ChainSingle[Double] = js.native
   def findIndex(predicate: js.Object, context: js.Any): ChainSingle[Double] = js.native
   /**
@@ -378,12 +346,14 @@ trait Chain[T, V] extends js.Object {
     **/
   def findIndex(predicate: ListIterator[T, Boolean, List[T]]): ChainSingle[Double] = js.native
   def findIndex(predicate: ListIterator[T, Boolean, List[T]], context: js.Any): ChainSingle[Double] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.extend
     **/
   def findKey(predicate: ObjectIterator[_, Boolean, Dictionary[_]]): Chain[T, T] = js.native
   def findKey(predicate: ObjectIterator[_, Boolean, Dictionary[_]], context: js.Any): Chain[T, T] = js.native
+  
   def findLastIndex(predicate: js.Object): ChainSingle[Double] = js.native
   def findLastIndex(predicate: js.Object, context: js.Any): ChainSingle[Double] = js.native
   /**
@@ -391,6 +361,7 @@ trait Chain[T, V] extends js.Object {
     **/
   def findLastIndex(predicate: ListIterator[T, Boolean, List[T]]): ChainSingle[Double] = js.native
   def findLastIndex(predicate: ListIterator[T, Boolean, List[T]], context: js.Any): ChainSingle[Double] = js.native
+  
   /**
     * Looks through the wrapped collection and returns the first value that matches all of the key-value
     * pairs listed in `properties`.
@@ -400,6 +371,7 @@ trait Chain[T, V] extends js.Object {
     * no match is found. The result will be wrapped in a chain wrapper.
     **/
   def findWhere(properties: Partial[T]): ChainSingle[js.UndefOr[T]] = js.native
+  
   /*********
     * Arrays *
     **********/
@@ -412,6 +384,7 @@ trait Chain[T, V] extends js.Object {
     **/
   def first(): ChainSingle[js.UndefOr[T]] = js.native
   def first(n: Double): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Flattens the wrapped nested list (the nesting can be to any depth). If you pass shallow, the list will
     * only be flattened a single level.
@@ -423,6 +396,7 @@ trait Chain[T, V] extends js.Object {
   def flatten_false(shallow: `false`): Chain[DeepestListItemOrSelf[T], js.Array[DeepestListItemOrSelf[T]]] = js.native
   @JSName("flatten")
   def flatten_true(shallow: `true`): Chain[ListItemOrSelf[T], js.Array[ListItemOrSelf[T]]] = js.native
+  
   /**
     * @see reduce
     **/
@@ -433,6 +407,12 @@ trait Chain[T, V] extends js.Object {
   def foldl[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult, V], memo: TResult): ChainSingle[TResult] = js.native
   def foldl[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult, V], memo: TResult, context: js.Any): ChainSingle[TResult] = js.native
   /**
+    * @see reduce
+    **/
+  @JSName("foldl")
+  var foldl_Original: Fn1[V] = js.native
+  
+  /**
     * @see reduceRight
     **/
   def foldr[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult | TypeOfCollection[V], V]): ChainSingle[js.UndefOr[TResult | TypeOfCollection[V]]] = js.native
@@ -442,15 +422,32 @@ trait Chain[T, V] extends js.Object {
   def foldr[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult, V], memo: TResult): ChainSingle[TResult] = js.native
   def foldr[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult, V], memo: TResult, context: js.Any): ChainSingle[TResult] = js.native
   /**
+    * @see reduceRight
+    **/
+  @JSName("foldr")
+  var foldr_Original: Fn1[V] = js.native
+  
+  /**
     * @see each
     **/
   def forEach(iteratee: CollectionIterator[TypeOfCollection[V], Unit, V]): Chain[T, V] = js.native
   def forEach(iteratee: CollectionIterator[TypeOfCollection[V], Unit, V], context: js.Any): Chain[T, V] = js.native
   /**
+    * @see each
+    **/
+  @JSName("forEach")
+  var forEach_Original: js.Function2[
+    /* iteratee */ CollectionIterator[TypeOfCollection[V], Unit, V], 
+    /* context */ js.UndefOr[js.Any], 
+    Chain[T, V]
+  ] = js.native
+  
+  /**
     * Wrapped type `object`.
     * @see _.functions
     **/
   def functions(): Chain[T, T] = js.native
+  
   /**
     * Splits a collection into sets, grouped by the result of running each value through iteratee.
     * @param iteratee An iteratee that provides the value to group by for each item in the collection.
@@ -460,11 +457,13 @@ trait Chain[T, V] extends js.Object {
     **/
   def groupBy(iterator: ChainIteratee[V, _, T]): Chain[js.Array[T], Dictionary[js.Array[T]]] = js.native
   def groupBy(iterator: ChainIteratee[V, _, T], context: js.Any): Chain[js.Array[T], Dictionary[js.Array[T]]] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.has
     **/
   def has(key: String): Chain[T, T] = js.native
+  
   /**
     * @see first
     **/
@@ -473,6 +472,12 @@ trait Chain[T, V] extends js.Object {
     * @see first
     **/
   def head(n: Double): Chain[T, js.Array[T]] = js.native
+  /**
+    * @see first
+    **/
+  @JSName("head")
+  var head_Original: Fn2[T] = js.native
+  
   /********* *
     * Utility *
     ********** */
@@ -481,6 +486,7 @@ trait Chain[T, V] extends js.Object {
     * @see _.identity
     **/
   def identity(): Chain[T, T] = js.native
+  
   /**
     * @see contains
     **/
@@ -489,8 +495,20 @@ trait Chain[T, V] extends js.Object {
   /**
     * @see contains
     **/
+  @JSName("include")
+  var include_Original: js.Function2[/* value */ js.Any, /* fromIndex */ js.UndefOr[Double], ChainSingle[Boolean]] = js.native
+  
+  /**
+    * @see contains
+    **/
   def includes(value: js.Any): ChainSingle[Boolean] = js.native
   def includes(value: js.Any, fromIndex: Double): ChainSingle[Boolean] = js.native
+  /**
+    * @see contains
+    **/
+  @JSName("includes")
+  var includes_Original: js.Function2[/* value */ js.Any, /* fromIndex */ js.UndefOr[Double], ChainSingle[Boolean]] = js.native
+  
   /**
     * Wrapped type `any[]`.
     * @see _.indexBy
@@ -503,6 +521,7 @@ trait Chain[T, V] extends js.Object {
     **/
   def indexBy(iterator: ListIterator[T, _, List[T]]): Chain[T, T] = js.native
   def indexBy(iterator: ListIterator[T, _, List[T]], context: js.Any): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `any[]`.
     * @see _.indexOf
@@ -513,6 +532,7 @@ trait Chain[T, V] extends js.Object {
     * @see _.indexOf
     **/
   def indexOf(value: T, startFrom: Double): ChainSingle[Double] = js.native
+  
   /**
     * Returns everything but the last entry of the wrapped list.
     * Especially useful on the arguments object. Pass `n` to exclude the
@@ -524,6 +544,7 @@ trait Chain[T, V] extends js.Object {
     **/
   def initial(): Chain[T, js.Array[T]] = js.native
   def initial(n: Double): Chain[T, js.Array[T]] = js.native
+  
   /**
     * @see reduce
     **/
@@ -534,50 +555,64 @@ trait Chain[T, V] extends js.Object {
   def inject[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult, V], memo: TResult): ChainSingle[TResult] = js.native
   def inject[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult, V], memo: TResult, context: js.Any): ChainSingle[TResult] = js.native
   /**
+    * @see reduce
+    **/
+  @JSName("inject")
+  var inject_Original: Fn1[V] = js.native
+  
+  /**
     * Wrapped type `any[][]`.
     * @see _.intersection
     **/
   def intersection(arrays: List[T]*): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.invert
     **/
   def invert(): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `any[]`.
     * @see _.invoke
     **/
   def invoke(methodName: String, args: js.Any*): Chain[T, T] = js.native
+  
   /**
     * Returns true if the wrapped object is an Arguments object.
     * @returns True if the wrapped object is an Arguments object, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isArguments(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is an Array.
     * @returns True if the wrapped object is an Array, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isArray(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is a Boolean.
     * @returns True if the wrapped object is a Boolean, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isBoolean(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is a Date.
     * @returns True if the wrapped object is a Date, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isDate(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is a DOM element.
     * @returns True if the wrapped object is a DOM element, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isElement(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped collection contains no values.
     * For strings and array-like objects checks if the length property is 0.
@@ -585,6 +620,7 @@ trait Chain[T, V] extends js.Object {
     * The result will be wrapped in a chain wrapper.
     **/
   def isEmpty(): ChainSingle[Boolean] = js.native
+  
   /**
     * Performs an optimized deep comparison between the wrapped object
     * and `other` to determine if they should be considered equal.
@@ -593,24 +629,28 @@ trait Chain[T, V] extends js.Object {
     * The result will be wrapped in a chain wrapper.
     **/
   def isEqual(other: js.Any): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is a Error.
     * @returns True if the wrapped object is a Error, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isError(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is a finite Number.
     * @returns True if the wrapped object is a finite Number.
     * The result will be wrapped in a chain wrapper.
     **/
   def isFinite(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is a Function.
     * @returns True if the wrapped object is a Function, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isFunction(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the keys and values in `properties` are contained in the wrapped object.
     * @param properties The properties to check for in the wrapped object.
@@ -618,6 +658,7 @@ trait Chain[T, V] extends js.Object {
     * The result will be wrapped in a chain wrapper.
     **/
   def isMatch(properties: js.Any): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is NaN.
     * Note: this is not the same as the native isNaN function,
@@ -626,18 +667,21 @@ trait Chain[T, V] extends js.Object {
     * The result will be wrapped in a chain wrapper.
     **/
   def isNaN(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is null.
     * @returns True if the wrapped object is null, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isNull(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is a Number (including NaN).
     * @returns True if the wrapped object is a Number, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isNumber(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is an Object. Note that JavaScript arrays
     * and functions are objects, while (normal) strings and numbers are not.
@@ -645,36 +689,42 @@ trait Chain[T, V] extends js.Object {
     * The result will be wrapped in a chain wrapper.
     **/
   def isObject(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is a RegExp.
     * @returns True if the wrapped object is a RegExp, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isRegExp(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is a String.
     * @returns True if the wrapped object is a String, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isString(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is a Symbol.
     * @returns True if the wrapped object is a Symbol, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isSymbol(): ChainSingle[Boolean] = js.native
+  
   /**
     * Returns true if the wrapped object is undefined.
     * @returns True if the wrapped object is undefined, otherwise false.
     * The result will be wrapped in a chain wrapper.
     **/
   def isUndefined(): ChainSingle[Boolean] = js.native
+  
   /**
     * Wrapped type `string|Function|Object`.
     * @see _.iteratee
     **/
   def iteratee(): Chain[T, T] = js.native
   def iteratee(context: js.Any): Chain[T, T] = js.native
+  
   /**
     * Join all elements of an array into a string.
     * @param separator Optional. Specifies a string to separate each element of the array. The separator is converted to a string if necessary. If omitted, the array elements are separated with a comma.
@@ -682,6 +732,7 @@ trait Chain[T, V] extends js.Object {
     **/
   def join(): ChainSingle[T] = js.native
   def join(separator: js.Any): ChainSingle[T] = js.native
+  
   /********* *
     * Objects *
     ********** */
@@ -690,6 +741,7 @@ trait Chain[T, V] extends js.Object {
     * @see _.keys
     **/
   def keys(): Chain[String, String] = js.native
+  
   /**
     * Returns the last element of the wrapped list. Passing `n` will
     * return the last `n` elements of the wrapped list.
@@ -699,12 +751,14 @@ trait Chain[T, V] extends js.Object {
     **/
   def last(): ChainSingle[js.UndefOr[T]] = js.native
   def last(n: Double): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Wrapped type `any[]`.
     * @see _.lastIndexOf
     **/
   def lastIndexOf(value: T): ChainSingle[Double] = js.native
   def lastIndexOf(value: T, from: Double): ChainSingle[Double] = js.native
+  
   def map(): Chain[IterateeResult[Null, T], js.Array[IterateeResult[Null, T]]] = js.native
   def map(iteratee: js.UndefOr[scala.Nothing], context: js.Any): Chain[
     IterateeResult[js.UndefOr[scala.Nothing], T], 
@@ -737,21 +791,25 @@ trait Chain[T, V] extends js.Object {
   def map[I /* <: (CollectionIterator[TypeOfCollection[js.Array[T] | V], _, js.Array[T] | V]) | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof underscore.underscore.TypeOfCollection<V extends underscore.underscore.Collection<T>? V : std.Array<T>> ]:? underscore.underscore.TypeOfCollection<V extends underscore.underscore.Collection<T>? V : std.Array<T>>[P]}
     */ _Chain with (TopLevel[TypeOfCollection[js.Array[T] | V]])) */](iteratee: I, context: js.Any): Chain[IterateeResult[I, T], js.Array[IterateeResult[I, T]]] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.mapObject
     **/
   def mapObject(fn: ListIterator[T, _, List[T]]): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `any[]`.
     * @see _.matcher
     **/
   def matcher(): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `any[]`.
     * @see _.matches
     **/
   def matches(): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `number[]`.
     * @see _.max
@@ -764,16 +822,19 @@ trait Chain[T, V] extends js.Object {
     **/
   def max(iterator: ListIterator[T, _ | Double, List[T]]): ChainSingle[T] = js.native
   def max(iterator: ListIterator[T, _ | Double, List[T]], context: js.Any): ChainSingle[T] = js.native
+  
   /**
     * Wrapped type `Function`.
     * @see _.memoize
     **/
   def memoize(): Chain[T, T] = js.native
   def memoize(hashFn: js.Function1[/* n */ js.Any, String]): Chain[T, T] = js.native
+  
   /**
     * @see _.functions
     **/
   def methods(): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `number[]`.
     * @see _.min
@@ -786,21 +847,25 @@ trait Chain[T, V] extends js.Object {
     **/
   def min(iterator: ListIterator[T, _ | Double, List[T]]): ChainSingle[T] = js.native
   def min(iterator: ListIterator[T, _ | Double, List[T]], context: js.Any): ChainSingle[T] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.mixin
     **/
   def mixin(): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `Function`.
     * @see _.negate
     **/
   def negate(): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `any`.
     * @see _.noop
     **/
   def noop(): Chain[T, T] = js.native
+  
   /**
     * @see _.object
     **/
@@ -811,6 +876,7 @@ trait Chain[T, V] extends js.Object {
     **/
   def `object`(keyValuePairs: js.Array[_]*): Chain[T, T] = js.native
   def `object`(values: js.Any): Chain[T, T] = js.native
+  
   def omit(iteratee: js.Function): Chain[T, T] = js.native
   /**
     * Wrapped type `object`.
@@ -818,21 +884,25 @@ trait Chain[T, V] extends js.Object {
     **/
   def omit(keys: String*): Chain[T, T] = js.native
   def omit(keys: js.Array[String]): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `Function`.
     * @see _.once
     **/
   def once(): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.pairs
     **/
   def pairs(): Chain[js.Tuple2[String, _], js.Tuple2[String, _]] = js.native
+  
   /**
     * Wrapped type `Function`.
     * @see _.partial
     **/
   def partial(args: js.Any*): Chain[T, T] = js.native
+  
   /**
     * Splits the wrapped collection into two arrays: one whose elements
     * all satisfy `iteratee` and one whose elements all do not satisfy
@@ -848,6 +918,7 @@ trait Chain[T, V] extends js.Object {
   def partition(): Chain[js.Array[T], js.Tuple2[js.Array[T], js.Array[T]]] = js.native
   def partition(iteratee: js.UndefOr[ChainIteratee[V, Boolean, T]], context: js.Any): Chain[js.Array[T], js.Tuple2[js.Array[T], js.Array[T]]] = js.native
   def partition(iteratee: ChainIteratee[V, Boolean, T]): Chain[js.Array[T], js.Tuple2[js.Array[T], js.Array[T]]] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.pick
@@ -863,6 +934,7 @@ trait Chain[T, V] extends js.Object {
       ]
     ]
   ): Chain[TypeOfDictionary[Pick[V, K]], Pick[V, K]] = js.native
+  
   /**
     * A convenient version of what is perhaps the most common use-case for map: extracting a list of
     * property values.
@@ -871,27 +943,32 @@ trait Chain[T, V] extends js.Object {
     **/
   def pluck(propertyName: String): Chain[PropertyTypeOrAny[T, String], js.Array[PropertyTypeOrAny[T, String]]] = js.native
   def pluck(propertyName: Double): Chain[PropertyTypeOrAny[T, Double], js.Array[PropertyTypeOrAny[T, Double]]] = js.native
+  
   /**
     * Removes the last element from an array and returns that element.
     * @return Returns the popped element.
     **/
   def pop(): ChainSingle[T] = js.native
+  
   /**
     * Wrapped type `string`.
     * @see _.property
     **/
   def property(): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.propertyOf
     **/
   def propertyOf(): Chain[T, T] = js.native
+  
   /**
     * Adds one or more elements to the end of an array and returns the new length of the array.
     * @param item The elements to add to the end of the array.
     * @return The array with the element added to the end.
     **/
   def push(item: T*): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `number`.
     * @see _.random
@@ -902,6 +979,7 @@ trait Chain[T, V] extends js.Object {
     * @see _.random
     **/
   def random(max: Double): Chain[T, T] = js.native
+  
   /**
     * A function to create flexibly-numbered lists of integers, handy for
     * `each` and `map` loops. Returns a list of integers from
@@ -922,6 +1000,7 @@ trait Chain[T, V] extends js.Object {
   def range(stop: js.UndefOr[scala.Nothing], step: Double): Chain[Double, js.Array[Double]] = js.native
   def range(stop: Double): Chain[Double, js.Array[Double]] = js.native
   def range(stop: Double, step: Double): Chain[Double, js.Array[Double]] = js.native
+  
   def reduce[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult | TypeOfCollection[V], V]): ChainSingle[js.UndefOr[TResult | TypeOfCollection[V]]] = js.native
   /**
     * Also known as inject and foldl, reduce boils down a collection of wrapped values into a
@@ -940,6 +1019,7 @@ trait Chain[T, V] extends js.Object {
     **/
   def reduce[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult, V], memo: TResult): ChainSingle[TResult] = js.native
   def reduce[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult, V], memo: TResult, context: js.Any): ChainSingle[TResult] = js.native
+  
   def reduceRight[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult | TypeOfCollection[V], V]): ChainSingle[js.UndefOr[TResult | TypeOfCollection[V]]] = js.native
   /**
     * The right-associative version of reduce.
@@ -952,6 +1032,7 @@ trait Chain[T, V] extends js.Object {
     **/
   def reduceRight[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult, V], memo: TResult): ChainSingle[TResult] = js.native
   def reduceRight[TResult](iteratee: MemoCollectionIterator[TypeOfCollection[V], TResult, V], memo: TResult, context: js.Any): ChainSingle[TResult] = js.native
+  
   /**
     * Returns the values in the wrapped collection without the elements that pass a truth test (iteratee).
     * The opposite of filter.
@@ -962,6 +1043,7 @@ trait Chain[T, V] extends js.Object {
   def reject(): Chain[T, js.Array[T]] = js.native
   def reject(iteratee: js.UndefOr[ChainIteratee[V, Boolean, T]], context: js.Any): Chain[T, js.Array[T]] = js.native
   def reject(iteratee: ChainIteratee[V, Boolean, T]): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Returns the rest of the elements in the wrapped list. Pass an
     * `index` to return the values of the list from that index onward.
@@ -972,23 +1054,27 @@ trait Chain[T, V] extends js.Object {
     **/
   def rest(): Chain[T, js.Array[T]] = js.native
   def rest(n: Double): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Wrapped type `Function`.
     * @see _.once
     **/
   def restArgs(): Chain[T, T] = js.native
   def restArgs(startIndex: Double): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.result
     **/
   def result(property: String): Chain[T, T] = js.native
   def result(property: String, defaultValue: js.Any): Chain[T, T] = js.native
+  
   /**
     * Reverses an array in place. The first array element becomes the last and the last becomes the first.
     * @return The reversed array.
     **/
   def reverse(): Chain[T, T] = js.native
+  
   def sample(): ChainSingle[js.UndefOr[T]] = js.native
   /**
     * Produce a random sample from the wrapped collection. Pass a number to return `n` random elements from the
@@ -998,6 +1084,7 @@ trait Chain[T, V] extends js.Object {
     * The result will be wrapped in a chain wrapper.
     **/
   def sample(n: Double): Chain[T, js.Array[T]] = js.native
+  
   /**
     * @see filter
     **/
@@ -1005,20 +1092,33 @@ trait Chain[T, V] extends js.Object {
   def select(iteratee: js.UndefOr[ChainIteratee[V, _, T]], context: js.Any): Chain[T, js.Array[T]] = js.native
   def select(iteratee: ChainIteratee[V, _, T]): Chain[T, js.Array[T]] = js.native
   /**
+    * @see filter
+    **/
+  @JSName("select")
+  var select_Original: js.Function2[
+    /* iteratee */ js.UndefOr[ChainIteratee[V, _, T]], 
+    /* context */ js.UndefOr[js.Any], 
+    Chain[T, js.Array[T]]
+  ] = js.native
+  
+  /**
     * Removes the first element from an array and returns that element. This method changes the length of the array.
     * @return The shifted element.
     **/
   def shift(): ChainSingle[T] = js.native
+  
   /**
     * Returns a shuffled copy of the wrapped collection, using a version of the Fisher-Yates shuffle.
     * @return A shuffled copy of the wrapped collection in a chain wrapper.
     **/
   def shuffle(): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Wrapped type `any`.
     * @see _.size
     **/
   def size(): ChainSingle[Double] = js.native
+  
   /**
     * Returns a shallow copy of a portion of an array into a new array object.
     * @param start Zero-based index at which to begin extraction.
@@ -1027,6 +1127,7 @@ trait Chain[T, V] extends js.Object {
     **/
   def slice(start: Double): Chain[T, T] = js.native
   def slice(start: Double, end: Double): Chain[T, T] = js.native
+  
   /**
     * Returns true if any of the values in the wrapped collection pass the
     * `iteratee` truth test. Short-circuits and stops traversing the
@@ -1039,6 +1140,7 @@ trait Chain[T, V] extends js.Object {
   def some(): ChainSingle[Boolean] = js.native
   def some(iterator: js.UndefOr[ChainIteratee[V, Boolean, T]], context: js.Any): ChainSingle[Boolean] = js.native
   def some(iterator: ChainIteratee[V, Boolean, T]): ChainSingle[Boolean] = js.native
+  
   /**
     * Sorts the elements of an array in place and returns the array. The sort is not necessarily stable. The default sort order is according to string Unicode code points.
     * @param compareFn Optional. Specifies a function that defines the sort order. If omitted, the array is sorted according to each character's Unicode code point value, according to the string conversion of each element.
@@ -1046,6 +1148,7 @@ trait Chain[T, V] extends js.Object {
     **/
   def sort(): Chain[T, T] = js.native
   def sort(compareFn: js.Function2[/* a */ T, /* b */ T, Boolean]): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `any[]`.
     * @see _.sortBy
@@ -1060,6 +1163,7 @@ trait Chain[T, V] extends js.Object {
   def sortBy(iterator: String, context: js.Any): Chain[T, js.Array[T]] = js.native
   def sortBy(iterator: ListIterator[T, _, List[T]]): Chain[T, js.Array[T]] = js.native
   def sortBy(iterator: ListIterator[T, _, List[T]], context: js.Any): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Uses a binary search to determine the lowest index at which the
     * value should be inserted into the wrapped list in order to maintain
@@ -1077,6 +1181,7 @@ trait Chain[T, V] extends js.Object {
   def sortedIndex(value: T): ChainSingle[Double] = js.native
   def sortedIndex(value: T, iteratee: js.UndefOr[ChainIteratee[V, _, T]], context: js.Any): ChainSingle[Double] = js.native
   def sortedIndex(value: T, iteratee: ChainIteratee[V, _, T]): ChainSingle[Double] = js.native
+  
   /**
     * Changes the content of an array by removing existing elements and/or adding new elements.
     * @param index Index at which to start changing the array. If greater than the length of the array, actual starting index will be set to the length of the array. If negative, will begin that many elements from the end.
@@ -1085,11 +1190,18 @@ trait Chain[T, V] extends js.Object {
     * @return An array containing the deleted elements. If only one element is removed, an array of one element is returned. If no elements are removed, an empty array is returned.
     **/
   def splice(index: Double, quantity: Double, items: T*): Chain[T, T] = js.native
+  
   /**
     * @see rest
     **/
   def tail(): Chain[T, js.Array[T]] = js.native
   def tail(n: Double): Chain[T, js.Array[T]] = js.native
+  /**
+    * @see rest
+    **/
+  @JSName("tail")
+  var tail_Original: js.Function1[/* n */ js.UndefOr[Double], Chain[T, js.Array[T]]] = js.native
+  
   /**
     * @see first
     **/
@@ -1099,28 +1211,38 @@ trait Chain[T, V] extends js.Object {
     **/
   def take(n: Double): Chain[T, js.Array[T]] = js.native
   /**
+    * @see first
+    **/
+  @JSName("take")
+  var take_Original: Fn2[T] = js.native
+  
+  /**
     * Wrapped type `object`.
     * @see _.tap
     **/
   def tap(interceptor: js.Function1[/* repeated */ js.Any, _]): Chain[T, V] = js.native
+  
   /**
     * Wrapped type `string`.
     * @see _.template
     **/
   def template(): Chain[CompiledTemplate, CompiledTemplate] = js.native
   def template(settings: TemplateSettings): Chain[CompiledTemplate, CompiledTemplate] = js.native
+  
   /**
     * Wrapped type `Function`.
     * @see _.throttle
     **/
   def throttle(wait: Double): Chain[T, T] = js.native
   def throttle(wait: Double, options: ThrottleSettings): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `number`.
     * @see _.times
     **/
   def times[TResult](iterator: js.Function1[/* n */ Double, TResult]): Chain[T, T] = js.native
   def times[TResult](iterator: js.Function1[/* n */ Double, TResult], context: js.Any): Chain[T, T] = js.native
+  
   /**
     * Creates a real Array from the wrapped collection (anything that can
     * be iterated over). Useful for transmuting the arguments object.
@@ -1128,16 +1250,19 @@ trait Chain[T, V] extends js.Object {
     * of the wrapped collection.
     **/
   def toArray(): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Wrapped type `string`.
     * @see _.unescape
     **/
   def unescape(): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `any[][]`.
     * @see _.union
     **/
   def union(arrays: List[T]*): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Produces a duplicate-free version of the wrapped list, using === to
     * test object equality. If you know in advance that the wrapped list
@@ -1160,6 +1285,7 @@ trait Chain[T, V] extends js.Object {
   def uniq(isSorted: Boolean, iteratee: ChainIteratee[V, _, T]): Chain[T, js.Array[T]] = js.native
   def uniq(iteratee: js.UndefOr[ChainIteratee[V, _, T]], context: js.Any): Chain[T, js.Array[T]] = js.native
   def uniq(iteratee: ChainIteratee[V, _, T]): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Wrapped type List<T>.
     * @see uniq
@@ -1172,32 +1298,45 @@ trait Chain[T, V] extends js.Object {
   def unique(isSorted: Boolean, iteratee: ChainIteratee[V, _, T]): Chain[T, js.Array[T]] = js.native
   def unique(iteratee: js.UndefOr[ChainIteratee[V, _, T]], context: js.Any): Chain[T, js.Array[T]] = js.native
   def unique(iteratee: ChainIteratee[V, _, T]): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Wrapped type `string`.
     * @see _.uniqueId
     **/
   def uniqueId(): Chain[T, T] = js.native
+  
+  /**
+    * Wrapped type List<T>.
+    * @see uniq
+    **/
+  @JSName("unique")
+  var unique_Original: FnCallIsSortedIterateeContext[V, T] = js.native
+  
   /**
     * Adds one or more elements to the beginning of an array and returns the new length of the array.
     * @param items The elements to add to the front of the array.
     * @return The array with the element added to the beginning.
     **/
   def unshift(items: T*): Chain[T, T] = js.native
+  
   /**
     * Wrapped type `any[][]`.
     * @see _.unzip
     **/
   def unzip(arrays: js.Array[_]*): Chain[T, T] = js.native
+  
   /**
     * Extracts the value of the wrapped object.
     * @returns The value of the wrapped object.
     **/
   def value(): V = js.native
+  
   /**
     * Wrapped type `object`.
     * @see _.values
     **/
   def values(): Chain[_, _] = js.native
+  
   /**
     * Looks through each value in the wrapped collection, returning an array of all the values that matches the
     * key-value pairs listed in `properties`.
@@ -1205,6 +1344,7 @@ trait Chain[T, V] extends js.Object {
     * @return The elements in the wrapped collection that match `properties` in a chain wrapper.
     **/
   def where(properties: Partial[T]): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Returns a copy of the wrapped list with all instances of `values`
     * removed.
@@ -1213,15 +1353,16 @@ trait Chain[T, V] extends js.Object {
     * of the wrapped list except for `values`.
     **/
   def without(values: T*): Chain[T, js.Array[T]] = js.native
+  
   /**
     * Wrapped type `Function`.
     * @see _.wrap
     **/
   def wrap(wrapper: js.Function): js.Function0[Chain[T, T]] = js.native
+  
   /**
     * Wrapped type `any[][]`.
     * @see _.zip
     **/
   def zip(arrays: js.Array[_]*): Chain[T, T] = js.native
 }
-

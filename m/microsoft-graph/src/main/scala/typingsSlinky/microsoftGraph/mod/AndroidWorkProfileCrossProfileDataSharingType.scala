@@ -2,7 +2,7 @@ package typingsSlinky.microsoftGraph.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault
@@ -11,15 +11,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.noRestrictions
 */
 trait AndroidWorkProfileCrossProfileDataSharingType extends js.Object
-
 object AndroidWorkProfileCrossProfileDataSharingType {
+  
   @scala.inline
   def allowPersonalToWork: typingsSlinky.microsoftGraph.microsoftGraphStrings.allowPersonalToWork = "allowPersonalToWork".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allowPersonalToWork]
+  
   @scala.inline
   def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = "deviceDefault".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault]
+  
   @scala.inline
   def noRestrictions: typingsSlinky.microsoftGraph.microsoftGraphStrings.noRestrictions = "noRestrictions".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.noRestrictions]
+  
   @scala.inline
   def preventAny: typingsSlinky.microsoftGraph.microsoftGraphStrings.preventAny = "preventAny".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.preventAny]
 }
-

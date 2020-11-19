@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.FieldElementProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.FieldElement")
 @js.native
@@ -16,4 +16,3 @@ class FieldElementCls ()
   extends typingsSlinky.arcgisJsApi.esri.FieldElement {
   def this(properties: FieldElementProperties) = this()
 }
-

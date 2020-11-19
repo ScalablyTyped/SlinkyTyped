@@ -5,9 +5,8 @@ import typingsSlinky.ionicReact.anon.IonMenuTogglePickHTMLAttr
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/react", "IonMenuToggle")
 @js.native
 object IonMenuToggle extends TopLevel[ForwardRefExoticComponent[IonMenuTogglePickHTMLAttr]]
-

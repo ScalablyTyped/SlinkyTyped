@@ -6,7 +6,7 @@ import typingsSlinky.heredatalens.H.datalens.QueryTileProvider.Zoom
 import typingsSlinky.heremaps.H.service.IConfigurable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * HERE Maps API and Data Lens JavaScript API can be used to visualize data from different network sources.
@@ -15,6 +15,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Service_ extends IConfigurable {
+  
   /**
     * This method fetches a layer of geometries (eg buildings or administrative boundaries).
     * @param layerName - The name of the layer
@@ -55,6 +56,7 @@ trait Service_ extends IConfigurable {
     onResult: js.Function1[/* result */ js.Any, Unit],
     onError: js.Function1[/* error */ js.Any, Unit]
   ): js.Promise[_] = js.native
+  
   /**
     * This method fetches vector tile data from the layer.
     * @param x - Tile columns
@@ -119,6 +121,7 @@ trait Service_ extends IConfigurable {
     onResult: js.Function1[/* result */ js.Any, Unit],
     onError: js.Function1[/* error */ js.Any, Unit]
   ): js.Promise[js.typedarray.Uint8Array] = js.native
+  
   /**
     * This method fetches query data for a given query ID.
     * This method can be used when implementing a custom provider.
@@ -161,6 +164,7 @@ trait Service_ extends IConfigurable {
     onResult: js.Function1[/* result */ js.Any, Unit],
     onError: js.Function1[/* error */ js.Any, Unit]
   ): js.Promise[_] = js.native
+  
   /**
     * This method fetches statistical data for the Data Lens query (eg minimum and maximum values for the query metric).
     * It can be used to define visualization boundaries, scales and legends.
@@ -184,6 +188,7 @@ trait Service_ extends IConfigurable {
     onResult: js.Function1[/* result */ js.Any, Unit],
     onError: js.Function1[/* error */ js.Any, Unit]
   ): js.Promise[_] = js.native
+  
   /**
     * This method makes an HTTP request to the Data Lens REST API.
     * It makes any CRUD request (GET, PUT, POST, DELETE).
@@ -293,6 +298,7 @@ trait Service_ extends IConfigurable {
     onResult: js.Function1[/* result */ js.Any, Unit],
     onError: js.Function1[/* error */ js.Any, Unit]
   ): js.Promise[_] = js.native
+  
   /**
     * Sets the access and refresh tokens used to authenticate all requests against the Data Lens REST API.
     * Use this method to implement custom authentication to the Data Lens REST API.
@@ -302,4 +308,3 @@ trait Service_ extends IConfigurable {
     */
   def setTokens(accessToken: String, refreshToken: String): Unit = js.native
 }
-

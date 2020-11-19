@@ -8,13 +8,14 @@ import typingsSlinky.ejWebAll.ej.PivotPager
 import typingsSlinky.ejWebAll.ej.PivotPager.Model
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofPivotPager
   extends Instantiable1[(/* element */ Element) | (/* element */ JQuery), PivotPager]
      with Instantiable2[(/* element */ Element) | (/* element */ JQuery), /* options */ Model, PivotPager] {
+  
   var Locale: js.Any = js.native
+  
   var fn: PivotPager = js.native
 }
-

@@ -7,7 +7,7 @@ import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.setContainerMod.SetContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "TreeSet")
 @js.native
@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
   * @param comp A binary function predicates *x* element would be placed before *y*. When returns `true`, then *x* precedes *y*. Note that, because *equality* is predicated by `!comp(x, y) && !comp(y, x)`, the function must not cover the *equality* like `<=` or `>=`. It must exclude the *equality* like `<` or `>`. Default is {@link less}.
   */
 class TreeSet[Key] ()
-  extends typingsSlinky.tstl.tstlMod.TreeSet[Key] {
+  extends typingsSlinky.tstl.tstlModuleMod.TreeSet[Key] {
   def this(comp: Comparator[Key, Key]) = this()
   /**
     * Copy Constructor.
@@ -50,10 +50,10 @@ class TreeSet[Key] ()
     comp: Comparator[Key, Key]
   ) = this()
 }
-
 @JSImport("tstl", "TreeSet")
 @js.native
 object TreeSet extends js.Object {
+  
   val Iterator: Instantiable0[
     typingsSlinky.tstl.setElementListMod.SetElementList.Iterator[
       js.Object, 
@@ -71,6 +71,7 @@ object TreeSet extends js.Object {
       ]
     ]
   ] = js.native
+  
   val ReverseIterator: Instantiable0[
     typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
       js.Object, 
@@ -89,4 +90,3 @@ object TreeSet extends js.Object {
     ]
   ] = js.native
 }
-

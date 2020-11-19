@@ -11,7 +11,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.solid
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.vertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.arcgisJsApi.esri.Symbol2D3D because Already inherited
@@ -22,6 +22,7 @@ trait SimpleFillSymbol
      with typingsSlinky.arcgisJsApi.esri.symbols.FillSymbol
      with typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D
      with symbolsFillSymbol {
+  
   /**
     * The fill style. Possible values are listed in the table below:
     *
@@ -43,6 +44,7 @@ trait SimpleFillSymbol
     * @default solid
     */
   var style: `backward-diagonal` | cross | `diagonal-cross` | `forward-diagonal` | horizontal | none | solid | vertical = js.native
+  
   /**
     * The symbol type.
     *
@@ -51,4 +53,3 @@ trait SimpleFillSymbol
   @JSName("type")
   val type_SimpleFillSymbol: `simple-fill` = js.native
 }
-

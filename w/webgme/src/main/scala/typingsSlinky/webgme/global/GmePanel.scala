@@ -5,11 +5,12 @@ import typingsSlinky.webgme.GmePanel.Options
 import typingsSlinky.webgme.GmePanel.OptionsWithHeader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("GmePanel")
 @js.native
 object GmePanel extends js.Object {
+  
   @js.native
   class IActivePanel ()
     extends typingsSlinky.webgme.GmePanel.IActivePanel
@@ -43,6 +44,4 @@ object GmePanel extends js.Object {
     extends typingsSlinky.webgme.GmePanel.PanelManager {
     def this(client: Client) = this()
   }
-  
 }
-

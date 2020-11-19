@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.Element
 import typingsSlinky.mendixmodelsdk.messagedefinitionsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.6.0: introduced
@@ -27,19 +27,18 @@ class AttributeElement protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "messagedefinitions.AttributeElement")
 @js.native
 object AttributeElement extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new AttributeElement instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.messagedefinitionsMod.messagedefinitions.AttributeElement = js.native
+  
   /**
     * Creates and returns a new AttributeElement instance in the SDK and on the server.
     * The new AttributeElement will be automatically stored in the 'children' property
@@ -49,6 +48,7 @@ object AttributeElement extends js.Object {
     *  7.6.0 and higher
     */
   def createInElementUnderChildren(container: Element): typingsSlinky.mendixmodelsdk.messagedefinitionsMod.messagedefinitions.AttributeElement = js.native
+  
   /**
     * Creates and returns a new AttributeElement instance in the SDK and on the server.
     * The new AttributeElement will be automatically stored in the 'elements' property
@@ -58,5 +58,8 @@ object AttributeElement extends js.Object {
     *  7.6.0 and higher
     */
   def createInJsonStructureUnderElements(container: JsonStructure): typingsSlinky.mendixmodelsdk.messagedefinitionsMod.messagedefinitions.AttributeElement = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

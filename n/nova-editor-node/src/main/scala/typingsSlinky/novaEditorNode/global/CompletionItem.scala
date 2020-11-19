@@ -2,7 +2,7 @@ package typingsSlinky.novaEditorNode.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /// https://novadocs.panic.com/api-reference/completion-item/
 @JSGlobal("CompletionItem")
@@ -11,4 +11,3 @@ class CompletionItem protected ()
   extends typingsSlinky.novaEditorNode.CompletionItem {
   def this(label: String, kind: typingsSlinky.novaEditorNode.CompletionItemKind) = this()
 }
-

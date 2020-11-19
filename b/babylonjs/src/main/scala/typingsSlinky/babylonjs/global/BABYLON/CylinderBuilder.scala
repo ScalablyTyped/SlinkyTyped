@@ -3,17 +3,17 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.anon.DiameterTop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.CylinderBuilder")
 @js.native
 class CylinderBuilder ()
   extends typingsSlinky.babylonjs.BABYLON.CylinderBuilder
-
 /* static members */
 @JSGlobal("BABYLON.CylinderBuilder")
 @js.native
 object CylinderBuilder extends js.Object {
+  
   /**
     * Creates a cylinder or a cone mesh
     * * The parameter `height` sets the height size (float) of the cylinder/cone (float, default 2).
@@ -44,4 +44,3 @@ object CylinderBuilder extends js.Object {
     */
   def CreateCylinder(name: String, options: DiameterTop, scene: js.Any): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
 }
-

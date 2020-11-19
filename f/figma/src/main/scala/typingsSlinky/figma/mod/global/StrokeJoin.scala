@@ -2,7 +2,7 @@ package typingsSlinky.figma.mod.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.figma.figmaStrings.MITER
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.figma.figmaStrings.ROUND
 */
 trait StrokeJoin extends js.Object
-
 object StrokeJoin {
+  
   @scala.inline
   def BEVEL: typingsSlinky.figma.figmaStrings.BEVEL = "BEVEL".asInstanceOf[typingsSlinky.figma.figmaStrings.BEVEL]
+  
   @scala.inline
   def MITER: typingsSlinky.figma.figmaStrings.MITER = "MITER".asInstanceOf[typingsSlinky.figma.figmaStrings.MITER]
+  
   @scala.inline
   def ROUND: typingsSlinky.figma.figmaStrings.ROUND = "ROUND".asInstanceOf[typingsSlinky.figma.figmaStrings.ROUND]
 }
-

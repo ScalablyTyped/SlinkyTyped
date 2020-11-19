@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Presents a website._
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Safari")
 @js.native
 object Safari extends js.Object {
+  
   /**
     * _Presents a website._
     *
@@ -19,6 +20,7 @@ object Safari extends js.Object {
     * @see https://docs.scriptable.app/safari/#open
     */
   def open(url: String): Unit = js.native
+  
   /**
     * _Presents a website in-app._
     *
@@ -30,4 +32,3 @@ object Safari extends js.Object {
   def openInApp(url: String): js.Promise[Unit] = js.native
   def openInApp(url: String, fullscreen: Boolean): js.Promise[Unit] = js.native
 }
-

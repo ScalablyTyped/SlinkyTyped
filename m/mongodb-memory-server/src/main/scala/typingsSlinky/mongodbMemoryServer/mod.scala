@@ -9,19 +9,49 @@ import typingsSlinky.mongodbMemoryServerCore.mongoMemoryServerMod.MongoMemorySer
 import typingsSlinky.node.childProcessMod.ChildProcess
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mongodb-memory-server", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class MongoBinary ()
     extends typingsSlinky.mongodbMemoryServerCore.mod.MongoBinary
+  /* static members */
+  @js.native
+  object MongoBinary extends js.Object {
+    
+    var cache: MongoBinaryCache = js.native
+    
+    def getCachePath(version: String): js.Promise[String] = js.native
+    
+    def getDownloadPath(options: RequiredMongoBinaryOpts): js.Promise[String] = js.native
+    
+    def getPath(): js.Promise[String] = js.native
+    def getPath(opts: MongoBinaryOpts): js.Promise[String] = js.native
+    
+    def getSystemPath(systemBinary: String): js.Promise[String] = js.native
+    
+    def hasValidBinPath(files: js.Array[String]): Boolean = js.native
+  }
   
   @js.native
   class MongoInstance protected ()
     extends typingsSlinky.mongodbMemoryServerCore.mod.MongoInstance {
     def this(opts: MongodOps) = this()
+  }
+  /* static members */
+  @js.native
+  object MongoInstance extends js.Object {
+    
+    var childProcessList: js.Array[ChildProcess] = js.native
+    
+    /**
+      * Create an new instance an call method "run"
+      * @param opts Options passed to the new instance
+      */
+    def run(opts: MongodOps): js.Promise[typingsSlinky.mongodbMemoryServerCore.mongoInstanceMod.MongoInstance] = js.native
   }
   
   @js.native
@@ -41,33 +71,10 @@ object mod extends js.Object {
     extends typingsSlinky.mongodbMemoryServerCore.mod.MongoMemoryServer {
     def this(opts: MongoMemoryServerOptsT) = this()
   }
-  
-  /* static members */
-  @js.native
-  object MongoBinary extends js.Object {
-    var cache: MongoBinaryCache = js.native
-    def getCachePath(version: String): js.Promise[String] = js.native
-    def getDownloadPath(options: RequiredMongoBinaryOpts): js.Promise[String] = js.native
-    def getPath(): js.Promise[String] = js.native
-    def getPath(opts: MongoBinaryOpts): js.Promise[String] = js.native
-    def getSystemPath(systemBinary: String): js.Promise[String] = js.native
-    def hasValidBinPath(files: js.Array[String]): Boolean = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object MongoInstance extends js.Object {
-    var childProcessList: js.Array[ChildProcess] = js.native
-    /**
-      * Create an new instance an call method "run"
-      * @param opts Options passed to the new instance
-      */
-    def run(opts: MongodOps): js.Promise[typingsSlinky.mongodbMemoryServerCore.mongoInstanceMod.MongoInstance] = js.native
-  }
-  
   /* static members */
   @js.native
   object MongoMemoryServer extends js.Object {
+    
     /**
       * Create an Mongo-Memory-Sever Instance that can be awaited
       * @param opts Mongo-Memory-Sever Options
@@ -75,6 +82,4 @@ object mod extends js.Object {
     def create(): js.Promise[typingsSlinky.mongodbMemoryServerCore.mongoMemoryServerMod.MongoMemoryServer] = js.native
     def create(opts: MongoMemoryServerOptsT): js.Promise[typingsSlinky.mongodbMemoryServerCore.mongoMemoryServerMod.MongoMemoryServer] = js.native
   }
-  
 }
-

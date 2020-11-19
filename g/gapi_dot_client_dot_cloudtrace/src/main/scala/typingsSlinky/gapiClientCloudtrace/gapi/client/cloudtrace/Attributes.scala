@@ -3,10 +3,11 @@ package typingsSlinky.gapiClientCloudtrace.gapi.client.cloudtrace
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Attributes extends js.Object {
+  
   /**
     * The set of attributes. Each attribute's key can be up to 128 bytes
     * long. The value can be a string up to 256 bytes, an integer, or the
@@ -18,6 +19,7 @@ trait Attributes extends js.Object {
     * "abc.com/myattribute": true
     */
   var attributeMap: js.UndefOr[Record[String, AttributeValue]] = js.native
+  
   /**
     * The number of attributes that were discarded. Attributes can be discarded
     * because their keys are too long or because there are too many attributes.
@@ -25,33 +27,39 @@ trait Attributes extends js.Object {
     */
   var droppedAttributesCount: js.UndefOr[Double] = js.native
 }
-
 object Attributes {
+  
   @scala.inline
   def apply(): Attributes = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Attributes]
   }
+  
   @scala.inline
   implicit class AttributesOps[Self <: Attributes] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setAttributeMap(value: Record[String, AttributeValue]): Self = this.set("attributeMap", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAttributeMap: Self = this.set("attributeMap", js.undefined)
+    
     @scala.inline
     def setDroppedAttributesCount(value: Double): Self = this.set("droppedAttributesCount", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteDroppedAttributesCount: Self = this.set("droppedAttributesCount", js.undefined)
   }
-  
 }
-

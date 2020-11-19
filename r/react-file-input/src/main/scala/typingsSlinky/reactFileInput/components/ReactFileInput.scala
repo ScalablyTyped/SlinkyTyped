@@ -8,9 +8,10 @@ import typingsSlinky.reactFileInput.mod.FileInputProps
 import typingsSlinky.reactFileInput.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactFileInput {
+  
   @JSImport("react-file-input", JSImport.Namespace)
   @js.native
   object component extends js.Object
@@ -19,11 +20,13 @@ object ReactFileInput {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, ^] {
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: FileInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     accept: String,
@@ -36,4 +39,3 @@ object ReactFileInput {
     new Builder(js.Array(this.component, __props.asInstanceOf[FileInputProps]))
   }
 }
-

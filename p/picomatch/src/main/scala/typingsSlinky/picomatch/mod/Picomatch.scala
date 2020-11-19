@@ -8,11 +8,11 @@ import typingsSlinky.picomatch.parseMod.State
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Picomatch extends js.Object {
-  var constants: CHAR0 = js.native
+  
   /**
     * Creates a matcher function from one or more glob patterns. The
     * returned function takes a string to match as its first argument,
@@ -40,6 +40,7 @@ trait Picomatch extends js.Object {
   def apply(glob: js.Array[String], options: js.UndefOr[scala.Nothing], returnState: Boolean): Matcher = js.native
   def apply(glob: js.Array[String], options: PicomatchOptions): Matcher = js.native
   def apply(glob: js.Array[String], options: PicomatchOptions, returnState: Boolean): Matcher = js.native
+  
   def compileRe(state: ReturnType[js.Function2[/* input */ String, /* options */ MaxLength, State]]): js.RegExp = js.native
   def compileRe(
     state: ReturnType[js.Function2[/* input */ String, /* options */ MaxLength, State]],
@@ -79,6 +80,9 @@ trait Picomatch extends js.Object {
     returnOutput: Boolean,
     returnState: Boolean
   ): js.RegExp = js.native
+  
+  var constants: CHAR0 = js.native
+  
   def isMatch(str: String, patterns: String): Boolean = js.native
   def isMatch(str: String, patterns: String, options: js.Object): Boolean = js.native
   def isMatch(str: String, patterns: js.Array[String]): Boolean = js.native
@@ -87,6 +91,7 @@ trait Picomatch extends js.Object {
   def isMatch(str: js.Array[String], patterns: String, options: js.Object): Boolean = js.native
   def isMatch(str: js.Array[String], patterns: js.Array[String]): Boolean = js.native
   def isMatch(str: js.Array[String], patterns: js.Array[String], options: js.Object): Boolean = js.native
+  
   def makeRe(input: String): js.Function4[
     /* state */ ReturnType[js.Function2[/* input */ String, /* options */ MaxLength, State]], 
     /* options */ js.UndefOr[PicomatchOptions], 
@@ -153,19 +158,23 @@ trait Picomatch extends js.Object {
     /* returnState */ js.UndefOr[Boolean], 
     js.RegExp
   ] = js.native
+  
   def matchBase(input: String, glob: String, options: js.Object): Boolean = js.native
   def matchBase(input: String, glob: String, options: js.Object, posix: js.Any): Boolean = js.native
   def matchBase(input: String, glob: js.RegExp, options: js.Object): Boolean = js.native
   def matchBase(input: String, glob: js.RegExp, options: js.Object, posix: js.Any): Boolean = js.native
+  
   def parse(pattern: String, options: js.Object): js.Object = js.native
+  
   def scan(input: String, options: js.Object): js.Object = js.native
+  
   def test(input: String, regex: js.RegExp): IsMatch = js.native
   def test(input: String, regex: js.RegExp, options: js.UndefOr[scala.Nothing], test: js.Object): IsMatch = js.native
   def test(input: String, regex: js.RegExp, options: PicomatchOptions): IsMatch = js.native
   def test(input: String, regex: js.RegExp, options: PicomatchOptions, test: js.Object): IsMatch = js.native
+  
   def toRegex(source: String): js.RegExp = js.native
   def toRegex(source: String, options: Debug): js.RegExp = js.native
   def toRegex(source: js.RegExp): js.RegExp = js.native
   def toRegex(source: js.RegExp, options: Debug): js.RegExp = js.native
 }
-

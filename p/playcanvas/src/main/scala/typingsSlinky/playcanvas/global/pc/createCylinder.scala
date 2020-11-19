@@ -3,11 +3,12 @@ package typingsSlinky.playcanvas.global.pc
 import typingsSlinky.playcanvas.anon.CapSegments
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("pc.createCylinder")
 @js.native
 object createCylinder extends js.Object {
+  
   /**
     * Creates a procedural cylinder-shaped mesh.
     *
@@ -28,4 +29,3 @@ object createCylinder extends js.Object {
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice): typingsSlinky.playcanvas.pc.Mesh = js.native
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, opts: CapSegments): typingsSlinky.playcanvas.pc.Mesh = js.native
 }
-

@@ -6,7 +6,7 @@ import typingsSlinky.pixiJs.anon.Device
 import typingsSlinky.pixiJs.anon.Phone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Generalized convenience utilities for PIXI.
@@ -29,31 +29,6 @@ import scala.scalajs.js.annotation._
 @JSGlobal("PIXI.utils")
 @js.native
 object utils extends js.Object {
-  /**
-    * Creates a Canvas element of the given size to be used as a target for rendering to.
-    *
-    * @class
-    * @memberof PIXI.utils
-    */
-  @js.native
-  class CanvasRenderTarget protected ()
-    extends typingsSlinky.pixiJs.PIXI.utils.CanvasRenderTarget {
-    def this(width: Double, height: Double) = this()
-    def this(width: Double, height: Double, resolution: Double) = this()
-  }
-  
-  /**
-    * A high performance event emitter
-    *
-    * @see {@link https://github.com/primus/eventemitter3}
-    *
-    * @memberof PIXI.utils
-    * @class EventEmitter
-    * @type {EventEmitter}
-    */
-  @js.native
-  class EventEmitter ()
-    extends typingsSlinky.pixiJs.PIXI.utils.EventEmitter
   
   /**
     * @todo Describe property usage
@@ -64,6 +39,7 @@ object utils extends js.Object {
     * @type {Object}
     */
   var BaseTextureCache: js.Any = js.native
+  
   /**
     * @todo Describe property usage
     *
@@ -73,6 +49,7 @@ object utils extends js.Object {
     * @type {Object}
     */
   var ProgramCache: js.Any = js.native
+  
   /**
     * @todo Describe property usage
     *
@@ -82,23 +59,7 @@ object utils extends js.Object {
     * @type {Object}
     */
   var TextureCache: js.Any = js.native
-  /**
-    * maps premultiply flag and blendMode to adjusted blendMode
-    * @memberof PIXI.utils
-    * @const premultiplyBlendMode
-    * @type {Array<number[]>}
-    */
-  var premultiplyBlendMode: js.Array[js.Array[Double]] = js.native
-  /**
-    * Node.js compatible URL utilities.
-    *
-    * @see https://www.npmjs.com/package/url
-    *
-    * @memberof PIXI.utils
-    * @name url
-    * @type {object}
-    */
-  var url: js.Any = js.native
+  
   /**
     * Removes all textures from cache, but does not destroy them
     *
@@ -106,6 +67,7 @@ object utils extends js.Object {
     * @function clearTextureCache
     */
   def clearTextureCache(): Unit = js.native
+  
   /**
     * changes blendMode according to texture format
     *
@@ -116,6 +78,7 @@ object utils extends js.Object {
     * @returns {number} true blend mode for this texture
     */
   def correctBlendMode(blendMode: Double, premultiplied: Boolean): Double = js.native
+  
   /**
     * Generic Mask Stack data structure
     *
@@ -128,6 +91,7 @@ object utils extends js.Object {
   def createIndicesForQuads(size: Double): js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
   def createIndicesForQuads(size: Double, outBuffer: js.typedarray.Uint16Array): js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
   def createIndicesForQuads(size: Double, outBuffer: js.typedarray.Uint32Array): js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
+  
   /**
     * Split a data URI into components. Returns undefined if
     * parameter `dataUri` is not a valid data URI.
@@ -138,6 +102,7 @@ object utils extends js.Object {
     * @return {PIXI.utils.DecomposedDataUri|undefined} The decomposed data uri or undefined
     */
   def decomposeDataUri(dataUri: String): js.UndefOr[DecomposedDataUri] = js.native
+  
   /**
     * Helper for warning developers about deprecated features & settings.
     * A stack track for warnings is given; useful for tracking-down where
@@ -152,6 +117,7 @@ object utils extends js.Object {
     */
   def deprecation(version: String, message: String): Unit = js.native
   def deprecation(version: String, message: String, ignoreDepth: Double): Unit = js.native
+  
   /**
     * Destroys all texture in the cache
     *
@@ -159,6 +125,7 @@ object utils extends js.Object {
     * @function destroyTextureCache
     */
   def destroyTextureCache(): Unit = js.native
+  
   /**
     * A polygon triangulation library
     *
@@ -175,6 +142,7 @@ object utils extends js.Object {
   def earcut(vertices: js.Array[Double], holes: js.UndefOr[scala.Nothing], dimensions: Double): js.Array[Double] = js.native
   def earcut(vertices: js.Array[Double], holes: js.Array[Double]): js.Array[Double] = js.native
   def earcut(vertices: js.Array[Double], holes: js.Array[Double], dimensions: Double): js.Array[Double] = js.native
+  
   /**
     * get the resolution / device pixel ratio of an asset by looking for the prefix
     * used by spritesheets and image urls
@@ -187,6 +155,7 @@ object utils extends js.Object {
     */
   def getResolutionOfUrl(url: String): Double = js.native
   def getResolutionOfUrl(url: String, defaultValue: Double): Double = js.native
+  
   /**
     * Converts a hexadecimal color number to an [R, G, B] array of normalized floats (numbers from 0.0 to 1.0).
     *
@@ -200,6 +169,7 @@ object utils extends js.Object {
     */
   def hex2rgb(hex: Double): js.Array[Double] = js.native
   def hex2rgb(hex: Double, out: js.Array[Double]): js.Array[Double] = js.native
+  
   /**
     * Converts a hexadecimal color number to a string.
     *
@@ -211,6 +181,7 @@ object utils extends js.Object {
     * @return {string} The string color (e.g., `"#ffffff"`).
     */
   def hex2string(hex: Double): String = js.native
+  
   /**
     * Checks if a number is a power of two.
     *
@@ -220,6 +191,7 @@ object utils extends js.Object {
     * @return {boolean} `true` if value is power of two
     */
   def isPow2(v: Double): Boolean = js.native
+  
   /**
     * Helper for checking for WebGL support.
     *
@@ -228,6 +200,7 @@ object utils extends js.Object {
     * @return {boolean} Is WebGL supported.
     */
   def isWebGLSupported(): Boolean = js.native
+  
   /**
     * Computes ceil of log base 2
     *
@@ -237,6 +210,7 @@ object utils extends js.Object {
     * @return {number} logarithm base 2
     */
   def log2(v: Double): Double = js.native
+  
   /**
     * Rounds to next power of two.
     *
@@ -246,6 +220,15 @@ object utils extends js.Object {
     * @return {number}
     */
   def nextPow2(v: Double): Double = js.native
+  
+  /**
+    * maps premultiply flag and blendMode to adjusted blendMode
+    * @memberof PIXI.utils
+    * @const premultiplyBlendMode
+    * @type {Array<number[]>}
+    */
+  var premultiplyBlendMode: js.Array[js.Array[Double]] = js.native
+  
   def premultiplyRgba(rgb: js.Array[Double], alpha: Double): js.typedarray.Float32Array = js.native
   def premultiplyRgba(rgb: js.Array[Double], alpha: Double, out: js.UndefOr[scala.Nothing], premultiply: Boolean): js.typedarray.Float32Array = js.native
   def premultiplyRgba(rgb: js.Array[Double], alpha: Double, out: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
@@ -275,6 +258,7 @@ object utils extends js.Object {
     out: js.typedarray.Float32Array,
     premultiply: Boolean
   ): js.typedarray.Float32Array = js.native
+  
   /**
     * premultiplies tint
     *
@@ -285,6 +269,7 @@ object utils extends js.Object {
     * @returns {number} tint multiplied by alpha
     */
   def premultiplyTint(tint: Double, alpha: Double): Double = js.native
+  
   /**
     * converts integer tint and float alpha to vec4 form, premultiplies by default
     *
@@ -300,6 +285,7 @@ object utils extends js.Object {
   def premultiplyTintToRgba(tint: Double, alpha: Double, out: js.UndefOr[scala.Nothing], premultiply: Boolean): js.typedarray.Float32Array = js.native
   def premultiplyTintToRgba(tint: Double, alpha: Double, out: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
   def premultiplyTintToRgba(tint: Double, alpha: Double, out: js.typedarray.Float32Array, premultiply: Boolean): js.typedarray.Float32Array = js.native
+  
   /**
     * Remove items from a javascript array without generating garbage
     *
@@ -310,6 +296,7 @@ object utils extends js.Object {
     * @param {number} removeCount - how many to remove
     */
   def removeItems(arr: js.Array[_], startIdx: Double, removeCount: Double): Unit = js.native
+  
   /**
     * Converts a color as an [R, G, B] array of normalized floats to a hexadecimal number.
     *
@@ -321,6 +308,7 @@ object utils extends js.Object {
     * @return {number} Number in hexadecimal.
     */
   def rgb2hex(rgb: js.Array[Double]): Double = js.native
+  
   /**
     * Logs out the version and renderer information for this running instance of PIXI.
     * If you don't want to see this message you can run `PIXI.utils.skipHello()` before
@@ -332,6 +320,7 @@ object utils extends js.Object {
     * @param {string} type - The string renderer type to log.
     */
   def sayHello(`type`: String): Unit = js.native
+  
   /**
     * Returns sign of number
     *
@@ -341,6 +330,7 @@ object utils extends js.Object {
     * @returns {number} 0 if `n` is 0, -1 if `n` is negative, 1 if `n` is positive
     */
   def sign(n: Double): Double = js.native
+  
   /**
     * Skips the hello message of renderers that are created after this is run.
     *
@@ -348,6 +338,7 @@ object utils extends js.Object {
     * @memberof PIXI.utils
     */
   def skipHello(): Unit = js.native
+  
   /**
     * Converts a hexadecimal string to a hexadecimal color number.
     *
@@ -359,6 +350,7 @@ object utils extends js.Object {
     * @return {number} Number in hexadecimal.
     */
   def string2hex(string: String): Double = js.native
+  
   /**
     * Trim transparent borders from a canvas
     *
@@ -368,6 +360,7 @@ object utils extends js.Object {
     * @returns {object} Trim data
     */
   def trimCanvas(canvas: HTMLCanvasElement): js.Any = js.native
+  
   /**
     * Gets the next unique identifier
     *
@@ -376,6 +369,44 @@ object utils extends js.Object {
     * @return {number} The next unique identifier to use.
     */
   def uid(): Double = js.native
+  
+  /**
+    * Node.js compatible URL utilities.
+    *
+    * @see https://www.npmjs.com/package/url
+    *
+    * @memberof PIXI.utils
+    * @name url
+    * @type {object}
+    */
+  var url: js.Any = js.native
+  
+  /**
+    * Creates a Canvas element of the given size to be used as a target for rendering to.
+    *
+    * @class
+    * @memberof PIXI.utils
+    */
+  @js.native
+  class CanvasRenderTarget protected ()
+    extends typingsSlinky.pixiJs.PIXI.utils.CanvasRenderTarget {
+    def this(width: Double, height: Double) = this()
+    def this(width: Double, height: Double, resolution: Double) = this()
+  }
+  
+  /**
+    * A high performance event emitter
+    *
+    * @see {@link https://github.com/primus/eventemitter3}
+    *
+    * @memberof PIXI.utils
+    * @class EventEmitter
+    * @type {EventEmitter}
+    */
+  @js.native
+  class EventEmitter ()
+    extends typingsSlinky.pixiJs.PIXI.utils.EventEmitter
+  
   /**
     * A simple JS library that detects mobile devices.
     *
@@ -407,14 +438,19 @@ object utils extends js.Object {
     */
   @js.native
   object isMobile extends js.Object {
+    
     var amazon: Phone = js.native
+    
     var android: Phone = js.native
+    
     var any: Boolean = js.native
+    
     var apple: Device = js.native
+    
     var phone: Boolean = js.native
+    
     var tablet: Boolean = js.native
+    
     var windows: Phone = js.native
   }
-  
 }
-

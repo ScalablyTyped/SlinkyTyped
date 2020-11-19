@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.augmentedairuntimeMod.ClientConfiguration
 import typingsSlinky.awsSdk.augmentedairuntimeMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/clients/all", "AugmentedAIRuntime")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 class AugmentedAIRuntime () extends ^ {
   def this(options: ClientConfiguration) = this()
 }
-

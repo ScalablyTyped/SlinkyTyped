@@ -2,7 +2,7 @@ package typingsSlinky.devexpressWeb.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Contains settings related to the ASPxClientCommandConsts.INSERTAUDIO_COMMAND command parameter.
@@ -14,4 +14,3 @@ class ASPxClientHtmlEditorInsertAudioCommandArguments protected ()
   def this(htmlEditor: typingsSlinky.devexpressWeb.ASPxClientHtmlEditor) = this()
   def this(htmlEditor: typingsSlinky.devexpressWeb.ASPxClientHtmlEditor, elementToReplace: js.Any) = this()
 }
-

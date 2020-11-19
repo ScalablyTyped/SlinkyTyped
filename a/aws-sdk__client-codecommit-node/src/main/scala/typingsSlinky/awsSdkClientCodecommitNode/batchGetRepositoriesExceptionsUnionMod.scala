@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientCodecommitNode
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/types/BatchGetRepositoriesExceptionsUnion", JSImport.Namespace)
 @js.native
 object batchGetRepositoriesExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNamesRequiredExceptionMod.RepositoryNamesRequiredException
     - typingsSlinky.awsSdkClientCodecommitNode.typesMaximumRepositoryNamesExceededExceptionMod.MaximumRepositoryNamesExceededException
@@ -18,6 +19,4 @@ object batchGetRepositoriesExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
   */
   trait BatchGetRepositoriesExceptionsUnion extends js.Object
-  
 }
-

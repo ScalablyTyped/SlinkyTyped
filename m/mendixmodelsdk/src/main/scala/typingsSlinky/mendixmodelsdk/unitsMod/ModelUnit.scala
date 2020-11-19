@@ -4,7 +4,7 @@ import typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -22,23 +22,27 @@ abstract class ModelUnit protected () extends AbstractElement {
     isPartial: Boolean,
     container: IStructuralUnit
   ) = this()
+  
   @JSName("container")
   val container_FModelUnit: StructuralUnit = js.native
+  
+  def isLoadable: Boolean = js.native
   /**
     * Whether this unit and all of its children (recursively) can be loaded.
     */
   @JSName("isLoadable")
   val isLoadable_FModelUnit: Boolean = js.native
+  
+  @JSName("isLoaded")
+  def isLoaded_MModelUnit: Boolean = js.native
+  
+  def isReadOnly: Boolean = js.native
   /**
     * Whether this unit and all of its children (recursively) are editable.
     */
   @JSName("isReadOnly")
   val isReadOnly_FModelUnit: Boolean = js.native
-  def isLoadable: Boolean = js.native
-  @JSName("isLoaded")
-  def isLoaded_MModelUnit: Boolean = js.native
-  def isReadOnly: Boolean = js.native
+  
   @JSName("unit")
   def unit_MModelUnit: this.type = js.native
 }
-

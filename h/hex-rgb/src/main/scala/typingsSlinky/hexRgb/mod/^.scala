@@ -2,11 +2,12 @@ package typingsSlinky.hexRgb.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("hex-rgb", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   Convert HEX color to RGBA.
   @param hex
@@ -32,4 +33,3 @@ object ^ extends js.Object {
   def apply(hex: String): RgbaObject = js.native
   def apply(hex: String, options: Options): RgbaTuple = js.native
 }
-

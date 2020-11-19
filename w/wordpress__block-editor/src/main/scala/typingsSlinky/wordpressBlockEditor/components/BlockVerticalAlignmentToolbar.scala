@@ -6,9 +6,10 @@ import typingsSlinky.wordpressBlockEditor.blockVerticalAlignmentToolbarMod.Block
 import typingsSlinky.wordpressBlockEditor.blockVerticalAlignmentToolbarMod.BlockVerticalAlignmentToolbar.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object BlockVerticalAlignmentToolbar {
+  
   @JSImport("@wordpress/block-editor", "BlockVerticalAlignmentToolbar")
   @js.native
   object component extends js.Object
@@ -17,15 +18,16 @@ object BlockVerticalAlignmentToolbar {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def value(value: Value): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(onChange: Value => Unit): Builder = {
     val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
-

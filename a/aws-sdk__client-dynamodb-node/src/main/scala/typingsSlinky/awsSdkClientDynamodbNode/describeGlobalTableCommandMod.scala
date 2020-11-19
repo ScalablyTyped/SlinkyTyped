@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-dynamodb-node/commands/DescribeGlobalTableCommand", JSImport.Namespace)
 @js.native
 object describeGlobalTableCommandMod extends js.Object {
+  
   @js.native
   class DescribeGlobalTableCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object describeGlobalTableCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DescribeGlobalTableInput) = this()
+    
     val middlewareStack: MiddlewareStack[DescribeGlobalTableInput, DescribeGlobalTableOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[DescribeGlobalTableInput, DescribeGlobalTableOutput] = js.native
   }
-  
 }
-

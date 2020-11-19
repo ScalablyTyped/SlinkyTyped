@@ -6,11 +6,12 @@ import typingsSlinky.awsSdkTypes.utilMod.DelayDecider
 import typingsSlinky.awsSdkTypes.utilMod.RetryDecider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/retry-middleware/build/retryMiddleware", JSImport.Namespace)
 @js.native
 object retryMiddlewareMod extends js.Object {
+  
   def retryMiddleware(maxRetries: Double): js.Function1[
     /* next */ FinalizeHandler[_, MetadataBearer, _], 
     FinalizeHandler[_, MetadataBearer, _]
@@ -28,4 +29,3 @@ object retryMiddlewareMod extends js.Object {
     FinalizeHandler[_, MetadataBearer, _]
   ] = js.native
 }
-

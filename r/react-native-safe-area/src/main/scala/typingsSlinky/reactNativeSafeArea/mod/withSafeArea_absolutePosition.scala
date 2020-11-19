@@ -4,11 +4,12 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.reactNativeSafeArea.reactNativeSafeAreaStrings.absolutePosition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-safe-area", "withSafeArea")
 @js.native
 object withSafeArea_absolutePosition extends js.Object {
+  
   def apply[P](
     WrappedComponent: ReactComponentClass[P],
     /**
@@ -21,4 +22,3 @@ object withSafeArea_absolutePosition extends js.Object {
   direction: Direction
   ): ReactComponentClass[P] = js.native
 }
-

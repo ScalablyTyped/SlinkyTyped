@@ -3,7 +3,7 @@ package typingsSlinky.angularCompiler.publicApiMod
 import typingsSlinky.angularCompiler.summaryResolverMod.AotSummaryResolverHost
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/public_api", "AotSummaryResolver")
 @js.native
@@ -14,4 +14,3 @@ class AotSummaryResolver protected ()
     staticSymbolCache: typingsSlinky.angularCompiler.staticSymbolMod.StaticSymbolCache
   ) = this()
 }
-

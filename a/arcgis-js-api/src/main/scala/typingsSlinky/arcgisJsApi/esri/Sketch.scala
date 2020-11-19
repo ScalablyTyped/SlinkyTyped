@@ -23,16 +23,18 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.update
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.vertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Sketch extends Widget_ {
+  
   /**
     * When creating new graphics (for example after [create()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#create) has been called), this property reflects the create tool being used. When updating graphics (for example after [update()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#update) has been called), this property reflects the update tool being used. If no create or update operation is in progress, this is `null`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#activeTool)
     */
   val activeTool: point | polyline | polygon | circle | rectangle | move | transform | reshape = js.native
+  
   /**
     * Property controlling the visibility and order of create tool buttons.
     *
@@ -41,83 +43,7 @@ trait Sketch extends Widget_ {
     * @default ["point", "polyline", "polygon", "rectangle", "circle"]
     */
   var availableCreateTools: js.Array[String] = js.native
-  /**
-    * The graphic that is being created.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#createGraphic)
-    */
-  val createGraphic: Graphic = js.native
-  /**
-    * Defines the default behavior once the [create](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#create) operation is completed. By default, the user will be able to continuously create graphics with same geometry types.  **Possible Values**
-    *
-    * Value | Description |
-    * ----- | ----------- |
-    * continuous | This is the default. Users can continue creating graphics with same geometry types.
-    * single | User can create a single graphic with the specified geometry type. User must choose an operation once the graphic is created.
-    * update | The graphic will be selected for an [update](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#update) operation once the `create` operation is completed.
-    *
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#creationMode)
-    *
-    * @default continuous
-    */
-  var creationMode: single | continuous | update = js.native
-  /**
-    * Default create options set for the Sketch widget.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#defaultCreateOptions)
-    */
-  var defaultCreateOptions: SketchDefaultCreateOptions = js.native
-  /**
-    * Default update options set for the Sketch widget. Update options set on this property will be overwritten if the update options are changed when [update()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#update) method is called.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#defaultUpdateOptions)
-    */
-  var defaultUpdateOptions: SketchDefaultUpdateOptions = js.native
-  /**
-    * The Sketch widget's default CSS icon class.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#iconClass)
-    */
-  var iconClass: String = js.native
-  /**
-    * The [GraphicsLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GraphicsLayer.html) associated with the Sketch widget. The Sketch widget adds new [graphics](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html) to this layer or can only update graphics stored in this layer.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#layer)
-    */
-  var layer: GraphicsLayer = js.native
-  /**
-    * Determines the layout/orientation of the Sketch widget.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#layout)
-    *
-    * @default horizontal
-    */
-  var layout: vertical | horizontal = js.native
-  /**
-    * The Sketch widget's state.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#state)
-    */
-  val state: ready | disabled | active = js.native
-  /**
-    * An array of [graphics](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html) that are being updated by the Sketch widget.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#updateGraphics)
-    */
-  val updateGraphics: Collection[Graphic] = js.native
-  /**
-    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the Sketch widget to a specific view.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#view)
-    */
-  var view: MapView | SceneView = js.native
-  /**
-    * The view model for the Sketch widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [SketchViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html) class to access all properties and methods on the Sketch widget.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#viewModel)
-    */
-  var viewModel: SketchViewModel = js.native
+  
   /**
     * Cancels the active operation and fires the [create](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#event-create) or [update](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#event-update) event. If called in the middle of a create operation, `cancel()` discards the partially created graphic.
     *
@@ -126,6 +52,7 @@ trait Sketch extends Widget_ {
     *
     */
   def cancel(): Unit = js.native
+  
   /**
     * Completes the active operation and fires the [create](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#event-create) or [update](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#event-update) event and changes the event's state to `complete`. If called in the middle of a create operation, `complete()` finishes the active create operation and keeps the valid geometry.
     *
@@ -134,6 +61,14 @@ trait Sketch extends Widget_ {
     *
     */
   def complete(): Unit = js.native
+  
+  /**
+    * The graphic that is being created.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#createGraphic)
+    */
+  val createGraphic: Graphic = js.native
+  
   @JSName("create")
   def create_circle(tool: circle): Unit = js.native
   @JSName("create")
@@ -173,6 +108,37 @@ trait Sketch extends Widget_ {
   def create_rectangle(tool: rectangle): Unit = js.native
   @JSName("create")
   def create_rectangle(tool: rectangle, createOptions: SketchCreateCreateOptions): Unit = js.native
+  
+  /**
+    * Defines the default behavior once the [create](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#create) operation is completed. By default, the user will be able to continuously create graphics with same geometry types.  **Possible Values**
+    *
+    * Value | Description |
+    * ----- | ----------- |
+    * continuous | This is the default. Users can continue creating graphics with same geometry types.
+    * single | User can create a single graphic with the specified geometry type. User must choose an operation once the graphic is created.
+    * update | The graphic will be selected for an [update](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#update) operation once the `create` operation is completed.
+    *
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#creationMode)
+    *
+    * @default continuous
+    */
+  var creationMode: single | continuous | update = js.native
+  
+  /**
+    * Default create options set for the Sketch widget.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#defaultCreateOptions)
+    */
+  var defaultCreateOptions: SketchDefaultCreateOptions = js.native
+  
+  /**
+    * Default update options set for the Sketch widget. Update options set on this property will be overwritten if the update options are changed when [update()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#update) method is called.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#defaultUpdateOptions)
+    */
+  var defaultUpdateOptions: SketchDefaultUpdateOptions = js.native
+  
   /**
     * Deletes the selected graphics used in the update workflow. Calling this method will fire the [delete](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#event-delete) event.
     *
@@ -181,6 +147,30 @@ trait Sketch extends Widget_ {
     *
     */
   def delete(): Unit = js.native
+  
+  /**
+    * The Sketch widget's default CSS icon class.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#iconClass)
+    */
+  var iconClass: String = js.native
+  
+  /**
+    * The [GraphicsLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GraphicsLayer.html) associated with the Sketch widget. The Sketch widget adds new [graphics](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html) to this layer or can only update graphics stored in this layer.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#layer)
+    */
+  var layer: GraphicsLayer = js.native
+  
+  /**
+    * Determines the layout/orientation of the Sketch widget.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#layout)
+    *
+    * @default horizontal
+    */
+  var layout: vertical | horizontal = js.native
+  
   @JSName("on")
   def on_create(name: create, eventHandler: SketchCreateEventHandler): IHandle = js.native
   @JSName("on")
@@ -191,6 +181,7 @@ trait Sketch extends Widget_ {
   def on_undo(name: undo, eventHandler: SketchUndoEventHandler): IHandle = js.native
   @JSName("on")
   def on_update(name: update, eventHandler: SketchUpdateEventHandler): IHandle = js.native
+  
   /**
     * Incrementally redo actions recorded in the stack. Calling this method will fire the [redo](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#event-redo) event.
     *
@@ -199,6 +190,14 @@ trait Sketch extends Widget_ {
     *
     */
   def redo(): Unit = js.native
+  
+  /**
+    * The Sketch widget's state.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#state)
+    */
+  val state: ready | disabled | active = js.native
+  
   /**
     * Incrementally undo actions recorded in the stack. Calling this method will fire the [undo](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#event-undo) event.
     *
@@ -207,6 +206,7 @@ trait Sketch extends Widget_ {
     *
     */
   def undo(): Unit = js.native
+  
   def update(graphics: js.Array[Graphic]): js.Promise[Unit] = js.native
   def update(graphics: js.Array[Graphic], updateOptions: SketchUpdateUpdateOptions): js.Promise[Unit] = js.native
   /**
@@ -234,5 +234,25 @@ trait Sketch extends Widget_ {
     */
   def update(graphics: Graphic): js.Promise[Unit] = js.native
   def update(graphics: Graphic, updateOptions: SketchUpdateUpdateOptions): js.Promise[Unit] = js.native
+  
+  /**
+    * An array of [graphics](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html) that are being updated by the Sketch widget.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#updateGraphics)
+    */
+  val updateGraphics: Collection[Graphic] = js.native
+  
+  /**
+    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the Sketch widget to a specific view.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#view)
+    */
+  var view: MapView | SceneView = js.native
+  
+  /**
+    * The view model for the Sketch widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [SketchViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html) class to access all properties and methods on the Sketch widget.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#viewModel)
+    */
+  var viewModel: SketchViewModel = js.native
 }
-

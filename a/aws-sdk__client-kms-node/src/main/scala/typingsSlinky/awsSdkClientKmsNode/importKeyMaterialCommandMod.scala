@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-node/commands/ImportKeyMaterialCommand", JSImport.Namespace)
 @js.native
 object importKeyMaterialCommandMod extends js.Object {
+  
   @js.native
   class ImportKeyMaterialCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object importKeyMaterialCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ImportKeyMaterialInput) = this()
+    
     val middlewareStack: MiddlewareStack[ImportKeyMaterialInput, ImportKeyMaterialOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[ImportKeyMaterialInput, ImportKeyMaterialOutput] = js.native
   }
-  
 }
-

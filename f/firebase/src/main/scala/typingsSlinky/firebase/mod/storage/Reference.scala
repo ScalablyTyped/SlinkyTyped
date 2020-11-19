@@ -3,7 +3,7 @@ package typingsSlinky.firebase.mod.storage
 import org.scalajs.dom.raw.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents a reference to a Google Cloud Storage object. Developers can
@@ -11,32 +11,12 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Reference extends js.Object {
+  
   /**
     * The name of the bucket containing this reference's object.
     */
   var bucket: String = js.native
-  /**
-    * The full path of this object.
-    */
-  var fullPath: String = js.native
-  /**
-    * The short name of this object, which is the last component of the full path.
-    * For example, if fullPath is 'full/path/image.png', name is 'image.png'.
-    */
-  var name: String = js.native
-  /**
-    * A reference pointing to the parent location of this reference, or null if
-    * this reference is the root.
-    */
-  var parent: Reference | Null = js.native
-  /**
-    * A reference to the root of this reference's bucket.
-    */
-  var root: Reference = js.native
-  /**
-    * The storage service associated with this reference.
-    */
-  var storage: Storage = js.native
+  
   /**
     * Returns a reference to a relative path from this reference.
     * @param path The relative path from this reference.
@@ -44,12 +24,19 @@ trait Reference extends js.Object {
     * @return The reference to the given path.
     */
   def child(path: String): Reference = js.native
+  
   /**
     * Deletes the object at this reference's location.
     * @return A Promise that resolves if the deletion
     *     succeeded and rejects if it failed, including if the object didn't exist.
     */
   def delete(): js.Promise[_] = js.native
+  
+  /**
+    * The full path of this object.
+    */
+  var fullPath: String = js.native
+  
   /**
     * Fetches a long lived download URL for this object.
     * @return A Promise that resolves with the download
@@ -57,6 +44,7 @@ trait Reference extends js.Object {
     *     exist.
     */
   def getDownloadURL(): js.Promise[_] = js.native
+  
   /**
     * Fetches metadata for the object at this location, if one exists.
     * @return A Promise that
@@ -64,6 +52,7 @@ trait Reference extends js.Object {
     *     the object did not exist.
     */
   def getMetadata(): js.Promise[_] = js.native
+  
   /**
     * List items (files) and prefixes (folders) under this storage reference.
     *
@@ -86,6 +75,7 @@ trait Reference extends js.Object {
     */
   def list(): js.Promise[ListResult] = js.native
   def list(options: ListOptions): js.Promise[ListResult] = js.native
+  
   /**
     * List all items (files) and prefixes (folders) under this storage reference.
     *
@@ -104,6 +94,19 @@ trait Reference extends js.Object {
     *      folder. `nextPageToken` is never returned.
     */
   def listAll(): js.Promise[ListResult] = js.native
+  
+  /**
+    * The short name of this object, which is the last component of the full path.
+    * For example, if fullPath is 'full/path/image.png', name is 'image.png'.
+    */
+  var name: String = js.native
+  
+  /**
+    * A reference pointing to the parent location of this reference, or null if
+    * this reference is the root.
+    */
+  var parent: Reference | Null = js.native
+  
   def put(data: js.typedarray.ArrayBuffer): UploadTask = js.native
   def put(data: js.typedarray.ArrayBuffer, metadata: UploadMetadata): UploadTask = js.native
   /**
@@ -118,6 +121,7 @@ trait Reference extends js.Object {
   def put(data: Blob, metadata: UploadMetadata): UploadTask = js.native
   def put(data: js.typedarray.Uint8Array): UploadTask = js.native
   def put(data: js.typedarray.Uint8Array, metadata: UploadMetadata): UploadTask = js.native
+  
   /**
     * Uploads string data to this reference's location.
     * @param data The string to upload.
@@ -132,6 +136,17 @@ trait Reference extends js.Object {
   def putString(data: String, format: js.UndefOr[scala.Nothing], metadata: UploadMetadata): UploadTask = js.native
   def putString(data: String, format: StringFormat): UploadTask = js.native
   def putString(data: String, format: StringFormat, metadata: UploadMetadata): UploadTask = js.native
+  
+  /**
+    * A reference to the root of this reference's bucket.
+    */
+  var root: Reference = js.native
+  
+  /**
+    * The storage service associated with this reference.
+    */
+  var storage: Storage = js.native
+  
   /**
     * Updates the metadata for the object at this location, if one exists.
     * @param metadata The new metadata.
@@ -143,4 +158,3 @@ trait Reference extends js.Object {
     */
   def updateMetadata(metadata: SettableMetadata): js.Promise[_] = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.std
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.std.stdStrings.custom
@@ -12,17 +12,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.std.stdStrings.triangle
 */
 trait OscillatorType extends js.Object
-
 object OscillatorType {
+  
   @scala.inline
   def custom: typingsSlinky.std.stdStrings.custom = "custom".asInstanceOf[typingsSlinky.std.stdStrings.custom]
+  
   @scala.inline
   def sawtooth: typingsSlinky.std.stdStrings.sawtooth = "sawtooth".asInstanceOf[typingsSlinky.std.stdStrings.sawtooth]
+  
   @scala.inline
   def sine: typingsSlinky.std.stdStrings.sine = "sine".asInstanceOf[typingsSlinky.std.stdStrings.sine]
+  
   @scala.inline
   def square: typingsSlinky.std.stdStrings.square = "square".asInstanceOf[typingsSlinky.std.stdStrings.square]
+  
   @scala.inline
   def triangle: typingsSlinky.std.stdStrings.triangle = "triangle".asInstanceOf[typingsSlinky.std.stdStrings.triangle]
 }
-

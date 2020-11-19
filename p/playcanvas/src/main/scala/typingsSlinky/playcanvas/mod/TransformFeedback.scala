@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This object allows you to configure and use the transform feedback feature (WebGL2
@@ -81,4 +81,3 @@ class TransformFeedback protected ()
   def this(inputBuffer: typingsSlinky.playcanvas.pc.VertexBuffer) = this()
   def this(inputBuffer: typingsSlinky.playcanvas.pc.VertexBuffer, usage: Double) = this()
 }
-

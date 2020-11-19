@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create a new TouchEvent from an existing browser event.
@@ -19,4 +19,3 @@ class TouchEvent protected ()
   extends typingsSlinky.playcanvas.pc.TouchEvent {
   def this(device: typingsSlinky.playcanvas.pc.TouchDevice, event: typingsSlinky.playcanvas.pc.TouchEvent) = this()
 }
-

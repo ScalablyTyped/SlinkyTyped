@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.global.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,11 +13,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.ShapeAutoSize")
 @js.native
 object ShapeAutoSize extends js.Object {
-  /* "AutoSizeMixed" */ val autoSizeMixed: typingsSlinky.officeJsPreview.Excel.ShapeAutoSize.autoSizeMixed with String = js.native
-  /* "AutoSizeNone" */ val autoSizeNone: typingsSlinky.officeJsPreview.Excel.ShapeAutoSize.autoSizeNone with String = js.native
-  /* "AutoSizeShapeToFitText" */ val autoSizeShapeToFitText: typingsSlinky.officeJsPreview.Excel.ShapeAutoSize.autoSizeShapeToFitText with String = js.native
-  /* "AutoSizeTextToFitShape" */ val autoSizeTextToFitShape: typingsSlinky.officeJsPreview.Excel.ShapeAutoSize.autoSizeTextToFitShape with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJsPreview.Excel.ShapeAutoSize with String] = js.native
+  
+  /* "AutoSizeMixed" */ val autoSizeMixed: typingsSlinky.officeJsPreview.Excel.ShapeAutoSize.autoSizeMixed with String = js.native
+  
+  /* "AutoSizeNone" */ val autoSizeNone: typingsSlinky.officeJsPreview.Excel.ShapeAutoSize.autoSizeNone with String = js.native
+  
+  /* "AutoSizeShapeToFitText" */ val autoSizeShapeToFitText: typingsSlinky.officeJsPreview.Excel.ShapeAutoSize.autoSizeShapeToFitText with String = js.native
+  
+  /* "AutoSizeTextToFitShape" */ val autoSizeTextToFitShape: typingsSlinky.officeJsPreview.Excel.ShapeAutoSize.autoSizeTextToFitShape with String = js.native
 }
-

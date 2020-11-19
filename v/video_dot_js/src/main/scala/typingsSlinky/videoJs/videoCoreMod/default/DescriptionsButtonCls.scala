@@ -4,7 +4,7 @@ import typingsSlinky.videoJs.mod.videojs.Component.ReadyCallback
 import typingsSlinky.videoJs.mod.videojs.TrackButtonOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js/dist/alt/video.core", "DescriptionsButton")
 @js.native
@@ -35,4 +35,3 @@ class DescriptionsButtonCls protected ()
     ready: ReadyCallback
   ) = this()
 }
-

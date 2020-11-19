@@ -2,7 +2,7 @@ package typingsSlinky.exceljs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.exceljs.exceljsStrings.equal
@@ -11,15 +11,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.exceljs.exceljsStrings.between
 */
 trait CellIsOperators extends js.Object
-
 object CellIsOperators {
+  
   @scala.inline
   def between: typingsSlinky.exceljs.exceljsStrings.between = "between".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.between]
+  
   @scala.inline
   def equal: typingsSlinky.exceljs.exceljsStrings.equal = "equal".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.equal]
+  
   @scala.inline
   def greaterThan: typingsSlinky.exceljs.exceljsStrings.greaterThan = "greaterThan".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.greaterThan]
+  
   @scala.inline
   def lessThan: typingsSlinky.exceljs.exceljsStrings.lessThan = "lessThan".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.lessThan]
 }
-

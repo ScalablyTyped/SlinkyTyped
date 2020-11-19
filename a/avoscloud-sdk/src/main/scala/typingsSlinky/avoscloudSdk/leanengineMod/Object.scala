@@ -5,7 +5,7 @@ import typingsSlinky.avoscloudSdk.mod.Object.SaveAllOptions
 import typingsSlinky.avoscloudSdk.mod.SuccessFailureOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new model with defined attributes. A client id (cid) is
@@ -44,20 +44,23 @@ class Object ()
   def this(className: js.UndefOr[scala.Nothing], options: js.Any) = this()
   def this(className: String, options: js.Any) = this()
 }
-
 /* static members */
 @JSImport("leanengine", "Object")
 @js.native
 object Object extends js.Object {
+  
   def destroyAll[T](list: js.Array[typingsSlinky.avoscloudSdk.mod.Object]): typingsSlinky.avoscloudSdk.mod.Promise[T] = js.native
   def destroyAll[T](list: js.Array[typingsSlinky.avoscloudSdk.mod.Object], options: DestroyAllOptions): typingsSlinky.avoscloudSdk.mod.Promise[T] = js.native
+  
   def extend(className: String): js.Any = js.native
   def extend(className: String, protoProps: js.UndefOr[scala.Nothing], classProps: js.Any): js.Any = js.native
   def extend(className: String, protoProps: js.Any): js.Any = js.native
   def extend(className: String, protoProps: js.Any, classProps: js.Any): js.Any = js.native
+  
   def fetchAll[T](list: js.Array[typingsSlinky.avoscloudSdk.mod.Object], options: SuccessFailureOptions): typingsSlinky.avoscloudSdk.mod.Promise[T] = js.native
+  
   def fetchAllIfNeeded[T](list: js.Array[typingsSlinky.avoscloudSdk.mod.Object], options: SuccessFailureOptions): typingsSlinky.avoscloudSdk.mod.Promise[T] = js.native
+  
   def saveAll[T](list: js.Array[typingsSlinky.avoscloudSdk.mod.Object]): typingsSlinky.avoscloudSdk.mod.Promise[T] = js.native
   def saveAll[T](list: js.Array[typingsSlinky.avoscloudSdk.mod.Object], options: SaveAllOptions): typingsSlinky.avoscloudSdk.mod.Promise[T] = js.native
 }
-

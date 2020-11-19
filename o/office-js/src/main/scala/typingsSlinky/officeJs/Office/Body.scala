@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.Office
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The body object provides methods for adding and updating the content of the message or appointment. 
@@ -18,6 +18,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Body extends js.Object {
+  
   def getAsync(coercionType: String): Unit = js.native
   def getAsync(coercionType: String, callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]): Unit = js.native
   def getAsync(
@@ -67,6 +68,7 @@ trait Body extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
   ): Unit = js.native
+  
   /**
     * Gets a value that indicates whether the content is in HTML or text format.
     *
@@ -95,6 +97,7 @@ trait Body extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[CoercionType], Unit]
   ): Unit = js.native
+  
   /**
     * Adds the specified content to the beginning of the item body.
     *
@@ -136,6 +139,7 @@ trait Body extends js.Object {
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  
   /**
     * Replaces the entire body with the specified text.
     *
@@ -180,6 +184,7 @@ trait Body extends js.Object {
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  
   /**
     * Replaces the selection in the body with the specified text.
     *
@@ -225,4 +230,3 @@ trait Body extends js.Object {
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
 }
-

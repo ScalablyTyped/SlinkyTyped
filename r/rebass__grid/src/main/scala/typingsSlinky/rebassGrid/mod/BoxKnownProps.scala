@@ -15,7 +15,7 @@ import typingsSlinky.styledSystem.mod.ThemeValue
 import typingsSlinky.styledSystem.mod.WidthProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BoxKnownProps
@@ -35,12 +35,11 @@ trait BoxKnownProps
     ]
      with OrderProps[RequiredTheme]
      with AlignSelfProps[RequiredTheme]
-
 object BoxKnownProps {
+  
   @scala.inline
   def apply(): BoxKnownProps = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[BoxKnownProps]
   }
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This object contains helper methods for generating location-only visualizations (not data-driven) in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The [createRenderer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-location.html#createRenderer) method generates a [SimpleRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-SimpleRenderer.html) object that may be applied directly to the layer. This renderer contains a single symbol with a color optimally selected based on the indicated basemap.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait location extends js.Object {
+  
   /**
     * Generates a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) that may be applied directly to a supported [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The renderer contains a single symbol with a color optimally chosen based on the indicated basemap.  In most cases you will provide a `layer` and `basemap` to generate this renderer. If working in a 3D [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html), then the `view` and `symbolType` options should be used.
     *
@@ -46,27 +47,30 @@ trait location extends js.Object {
     */
   def createRenderer(params: locationCreateRendererParams): js.Promise[locationRendererResult] = js.native
 }
-
 object location {
+  
   @scala.inline
   def apply(createRenderer: locationCreateRendererParams => js.Promise[locationRendererResult]): location = {
     val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer))
     __obj.asInstanceOf[location]
   }
+  
   @scala.inline
   implicit class locationOps[Self <: location] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreateRenderer(value: locationCreateRendererParams => js.Promise[locationRendererResult]): Self = this.set("createRenderer", js.Any.fromFunction1(value))
   }
-  
 }
-

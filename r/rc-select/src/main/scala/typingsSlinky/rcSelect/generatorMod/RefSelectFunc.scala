@@ -8,13 +8,13 @@ import typingsSlinky.react.mod.PropsWithoutRef
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rc-select/lib/interface/generator", "RefSelectFunc")
 @js.native
 object RefSelectFunc extends js.Object {
+  
   def apply[OptionsType /* <: js.Array[js.Object] */, ValueType](Component: ReactComponentClass[RefSelectProps]): ForwardRefExoticComponent[
     (PropsWithoutRef[SelectProps[OptionsType, ValueType]]) with RefAttributes[RefSelectProps]
   ] = js.native
 }
-

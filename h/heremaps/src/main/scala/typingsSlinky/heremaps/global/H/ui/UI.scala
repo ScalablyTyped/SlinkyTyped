@@ -7,7 +7,7 @@ import typingsSlinky.heremaps.H.ui.UI.Options
 import typingsSlinky.heremaps.H.ui.i18n.Localization
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This class encapsulates map UI functionality.
@@ -24,11 +24,11 @@ class UI protected ()
   def this(map: Map_) = this()
   def this(map: Map_, opt_options: Options) = this()
 }
-
 /* static members */
 @JSGlobal("H.ui.UI")
 @js.native
 object UI extends js.Object {
+  
   def createDefault(map: Map_, mapTypes: DefaultLayers): typingsSlinky.heremaps.H.ui.UI = js.native
   def createDefault(map: Map_, mapTypes: DefaultLayers, opt_locale: String): typingsSlinky.heremaps.H.ui.UI = js.native
   def createDefault(map: Map_, mapTypes: DefaultLayers, opt_locale: Localization): typingsSlinky.heremaps.H.ui.UI = js.native
@@ -59,4 +59,3 @@ object UI extends js.Object {
   def createDefault(map: Map_, mapTypes: MapTypes, opt_locale: String): typingsSlinky.heremaps.H.ui.UI = js.native
   def createDefault(map: Map_, mapTypes: MapTypes, opt_locale: Localization): typingsSlinky.heremaps.H.ui.UI = js.native
 }
-

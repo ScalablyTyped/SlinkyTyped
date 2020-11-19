@@ -5,7 +5,7 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Cameras/index", "ArcFollowCamera")
 @js.native
@@ -34,4 +34,3 @@ class ArcFollowCamera protected ()
     scene: Scene
   ) = this()
 }
-

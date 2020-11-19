@@ -2,7 +2,7 @@ package typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Default
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.OneToManyRelationship
 */
 trait RelationshipType extends js.Object
-
 object RelationshipType {
+  
   @scala.inline
   def Default: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Default = "Default".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Default]
+  
   @scala.inline
   def ManyToManyRelationship: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.ManyToManyRelationship = "ManyToManyRelationship".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.ManyToManyRelationship]
+  
   @scala.inline
   def OneToManyRelationship: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.OneToManyRelationship = "OneToManyRelationship".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.OneToManyRelationship]
 }
-

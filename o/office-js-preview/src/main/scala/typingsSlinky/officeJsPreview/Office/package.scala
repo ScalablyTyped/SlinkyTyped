@@ -2,9 +2,10 @@ package typingsSlinky.officeJsPreview
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object Office {
+  
   /**
     * The subclass of {@link Office.Item | Item} dealing with appointments.
     *
@@ -19,6 +20,7 @@ package object Office {
     * - {@link Office.AppointmentRead | AppointmentRead}
     */
   type Appointment = typingsSlinky.officeJsPreview.Office.Item
+  
   /**
     * The compose mode of {@link Office.Item | Office.context.mailbox.item}.
     *
@@ -33,6 +35,7 @@ package object Office {
     * - {@link Office.MessageCompose | MessageCompose}
     */
   type ItemCompose = typingsSlinky.officeJsPreview.Office.Item
+  
   /**
     * The read mode of {@link Office.Item | Office.context.mailbox.item}.
     *
@@ -47,6 +50,7 @@ package object Office {
     * - {@link Office.MessageRead | MessageRead}
     */
   type ItemRead = typingsSlinky.officeJsPreview.Office.Item
+  
   /**
     * A subclass of {@link Office.Item | Item} for messages.
     *
@@ -61,10 +65,12 @@ package object Office {
     * - {@link Office.MessageRead | MessageRead}
     */
   type Message = typingsSlinky.officeJsPreview.Office.Item
+  
   /**
     * Function type to turn off the event.
     */
   type RemoveEventListener = js.Function0[js.Promise[scala.Unit]]
+  
   /**
     * Represents a bound text selection in the document.
     *

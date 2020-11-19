@@ -2,7 +2,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The width and height of a map region.
@@ -22,4 +22,3 @@ class CoordinateSpan protected ()
     */
   def this(latitudeDelta: Double, longitudeDelta: Double) = this()
 }
-

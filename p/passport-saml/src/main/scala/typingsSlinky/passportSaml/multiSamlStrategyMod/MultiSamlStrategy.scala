@@ -6,10 +6,11 @@ import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.passportSaml.mod.Strategy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MultiSamlStrategy extends Strategy {
+  
   def generateServiceProviderMetadata(
     req: Request_[ParamsDictionary, _, _, Query],
     decryptionCert: String,
@@ -35,4 +36,3 @@ trait MultiSamlStrategy extends Strategy {
     callback: js.Function2[/* err */ js.Error | Null, /* metadata */ js.UndefOr[String], Unit]
   ): String = js.native
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.firebase.mod.storage
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "storage")
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Gets the {@link firebase.storage.Storage `Storage`} service for the default
     * app or a given app.
@@ -38,4 +39,3 @@ object ^ extends js.Object {
   def apply(): Storage = js.native
   def apply(app: App): Storage = js.native
 }
-

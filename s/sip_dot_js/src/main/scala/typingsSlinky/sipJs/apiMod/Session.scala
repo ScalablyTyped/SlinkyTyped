@@ -3,7 +3,7 @@ package typingsSlinky.sipJs.apiMod
 import typingsSlinky.sipJs.sessionOptionsMod.SessionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js/lib/api", "Session")
 @js.native
@@ -17,4 +17,3 @@ abstract class Session protected ()
   protected def this(userAgent: typingsSlinky.sipJs.userAgentMod.UserAgent) = this()
   protected def this(userAgent: typingsSlinky.sipJs.userAgentMod.UserAgent, options: SessionOptions) = this()
 }
-

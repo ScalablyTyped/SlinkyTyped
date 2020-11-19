@@ -4,7 +4,7 @@ import typingsSlinky.pulumiPulumi.outputMod.Inputs
 import typingsSlinky.pulumiPulumi.resourceMod.ResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/pulumi", "Resource")
 @js.native
@@ -27,11 +27,10 @@ abstract class Resource protected ()
   def this(t: String, name: String, custom: Boolean, props: js.UndefOr[scala.Nothing], opts: ResourceOptions) = this()
   def this(t: String, name: String, custom: Boolean, props: Inputs, opts: ResourceOptions) = this()
 }
-
 /* static members */
 @JSImport("@pulumi/pulumi", "Resource")
 @js.native
 object Resource extends js.Object {
+  
   def isInstance(obj: js.Any): /* is @pulumi/pulumi.@pulumi/pulumi/resource.Resource */ Boolean = js.native
 }
-

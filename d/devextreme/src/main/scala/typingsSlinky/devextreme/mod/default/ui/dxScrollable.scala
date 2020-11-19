@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxScrollableOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxScrollable")
 @js.native
@@ -22,4 +22,3 @@ class dxScrollable protected ()
     options: dxScrollableOptions[typingsSlinky.devextreme.mod.DevExpress.ui.dxScrollable]
   ) = this()
 }
-

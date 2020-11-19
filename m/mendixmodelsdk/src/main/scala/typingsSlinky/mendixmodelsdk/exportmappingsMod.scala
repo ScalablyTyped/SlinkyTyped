@@ -15,11 +15,12 @@ import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/exportmappings", JSImport.Namespace)
 @js.native
 object exportmappingsMod extends js.Object {
+  
   @js.native
   class StructureVersionInfo protected ()
     extends typingsSlinky.mendixmodelsdk.internalMod.StructureVersionInfo {
@@ -28,6 +29,7 @@ object exportmappingsMod extends js.Object {
   
   @js.native
   object exportmappings extends js.Object {
+    
     /**
       * See: {@link https://docs.mendix.com/refguide7/export-mappings relevant section in reference guide}
       */
@@ -50,24 +52,44 @@ object exportmappingsMod extends js.Object {
         isPartial: Boolean,
         container: IFolderBase
       ) = this()
-      @JSName("model")
-      var model_FExportMapping: IModel = js.native
+      
       @JSName("containerAsFolderBase")
       def containerAsFolderBase_MExportMapping: FolderBase = js.native
+      
       def isHeader: Boolean = js.native
       def isHeader_=(newValue: Boolean): Unit = js.native
+      
+      @JSName("model")
+      var model_FExportMapping: IModel = js.native
+      
       /**
         * In version 6.7.0: introduced
         */
       def nullValueOption: NullValueOption = js.native
       def nullValueOption_=(newValue: NullValueOption): Unit = js.native
+      
       def parameterName: String = js.native
       def parameterName_=(newValue: String): Unit = js.native
+      
       /**
         * In version 6.1.0: deleted
         */
       def parameterTypeName: String = js.native
       def parameterTypeName_=(newValue: String): Unit = js.native
+    }
+    /* static members */
+    @js.native
+    object ExportMapping extends js.Object {
+      
+      /**
+        * Creates a new ExportMapping unit in the SDK and on the server.
+        * Expects one argument, the projects.IFolderBase in which this unit is contained.
+        */
+      def createIn(container: IFolderBase): ExportMapping = js.native
+      
+      var structureTypeName: String = js.native
+      
+      var versionInfo: StructureVersionInfo = js.native
     }
     
     /**
@@ -83,8 +105,38 @@ object exportmappingsMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
+      
       @JSName("model")
       var model_FExportObjectMappingElement: IModel = js.native
+    }
+    /* static members */
+    @js.native
+    object ExportObjectMappingElement extends js.Object {
+      
+      /**
+        * Creates and returns a new ExportObjectMappingElement instance in the SDK and on the server.
+        * Expects one argument: the IModel object the instance will "live on".
+        * After creation, assign or add this instance to a property that accepts this kind of objects.
+        */
+      def create(model: IModel): ExportObjectMappingElement = js.native
+      
+      /**
+        * Creates and returns a new ExportObjectMappingElement instance in the SDK and on the server.
+        * The new ExportObjectMappingElement will be automatically stored in the 'rootMappingElements' property
+        * of the parent mappings.MappingDocument element passed as argument.
+        */
+      def createInMappingDocumentUnderRootMappingElements(container: MappingDocument): ExportObjectMappingElement = js.native
+      
+      /**
+        * Creates and returns a new ExportObjectMappingElement instance in the SDK and on the server.
+        * The new ExportObjectMappingElement will be automatically stored in the 'children' property
+        * of the parent mappings.ObjectMappingElement element passed as argument.
+        */
+      def createInObjectMappingElementUnderChildren(container: ObjectMappingElement): ExportObjectMappingElement = js.native
+      
+      var structureTypeName: String = js.native
+      
+      var versionInfo: StructureVersionInfo = js.native
     }
     
     /**
@@ -100,8 +152,31 @@ object exportmappingsMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
+      
       @JSName("model")
       var model_FExportValueMappingElement: IModel = js.native
+    }
+    /* static members */
+    @js.native
+    object ExportValueMappingElement extends js.Object {
+      
+      /**
+        * Creates and returns a new ExportValueMappingElement instance in the SDK and on the server.
+        * Expects one argument: the IModel object the instance will "live on".
+        * After creation, assign or add this instance to a property that accepts this kind of objects.
+        */
+      def create(model: IModel): ExportValueMappingElement = js.native
+      
+      /**
+        * Creates and returns a new ExportValueMappingElement instance in the SDK and on the server.
+        * The new ExportValueMappingElement will be automatically stored in the 'children' property
+        * of the parent mappings.ObjectMappingElement element passed as argument.
+        */
+      def createIn(container: ObjectMappingElement): ExportValueMappingElement = js.native
+      
+      var structureTypeName: String = js.native
+      
+      var versionInfo: StructureVersionInfo = js.native
     }
     
     /**
@@ -112,64 +187,5 @@ object exportmappingsMod extends js.Object {
       */
     @js.native
     trait IExportMapping extends IMappingDocument
-    
-    /* static members */
-    @js.native
-    object ExportMapping extends js.Object {
-      var structureTypeName: String = js.native
-      var versionInfo: StructureVersionInfo = js.native
-      /**
-        * Creates a new ExportMapping unit in the SDK and on the server.
-        * Expects one argument, the projects.IFolderBase in which this unit is contained.
-        */
-      def createIn(container: IFolderBase): ExportMapping = js.native
-    }
-    
-    /* static members */
-    @js.native
-    object ExportObjectMappingElement extends js.Object {
-      var structureTypeName: String = js.native
-      var versionInfo: StructureVersionInfo = js.native
-      /**
-        * Creates and returns a new ExportObjectMappingElement instance in the SDK and on the server.
-        * Expects one argument: the IModel object the instance will "live on".
-        * After creation, assign or add this instance to a property that accepts this kind of objects.
-        */
-      def create(model: IModel): ExportObjectMappingElement = js.native
-      /**
-        * Creates and returns a new ExportObjectMappingElement instance in the SDK and on the server.
-        * The new ExportObjectMappingElement will be automatically stored in the 'rootMappingElements' property
-        * of the parent mappings.MappingDocument element passed as argument.
-        */
-      def createInMappingDocumentUnderRootMappingElements(container: MappingDocument): ExportObjectMappingElement = js.native
-      /**
-        * Creates and returns a new ExportObjectMappingElement instance in the SDK and on the server.
-        * The new ExportObjectMappingElement will be automatically stored in the 'children' property
-        * of the parent mappings.ObjectMappingElement element passed as argument.
-        */
-      def createInObjectMappingElementUnderChildren(container: ObjectMappingElement): ExportObjectMappingElement = js.native
-    }
-    
-    /* static members */
-    @js.native
-    object ExportValueMappingElement extends js.Object {
-      var structureTypeName: String = js.native
-      var versionInfo: StructureVersionInfo = js.native
-      /**
-        * Creates and returns a new ExportValueMappingElement instance in the SDK and on the server.
-        * Expects one argument: the IModel object the instance will "live on".
-        * After creation, assign or add this instance to a property that accepts this kind of objects.
-        */
-      def create(model: IModel): ExportValueMappingElement = js.native
-      /**
-        * Creates and returns a new ExportValueMappingElement instance in the SDK and on the server.
-        * The new ExportValueMappingElement will be automatically stored in the 'children' property
-        * of the parent mappings.ObjectMappingElement element passed as argument.
-        */
-      def createIn(container: ObjectMappingElement): ExportValueMappingElement = js.native
-    }
-    
   }
-  
 }
-

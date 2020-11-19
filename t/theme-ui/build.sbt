@@ -1,22 +1,22 @@
 organization := "org.scalablytyped.slinky"
 name := "theme-ui"
-version := "0.3-dt-20200709Z-15f70e"
+version := "0.3-dt-20200709Z-a0ea44"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-c880b4",
-  "org.scalablytyped.slinky" %%% "emotion__core" % "10.0.28-bbe99f",
-  "org.scalablytyped.slinky" %%% "emotion__serialize" % "0.11.16-d8a95b",
-  "org.scalablytyped.slinky" %%% "emotion__styled-base" % "10.0.31-059e8c",
-  "org.scalablytyped.slinky" %%% "emotion__utils" % "0.11.3-ccd446",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-9fd6d8",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-c528cd",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8",
-  "org.scalablytyped.slinky" %%% "styled-system" % "5.1-dt-20200309Z-a33f27",
-  "org.scalablytyped.slinky" %%% "styled-system__css" % "5.0-dt-20200713Z-569368",
-  "org.scalablytyped.slinky" %%% "theme-ui__components" % "0.2-dt-20200515Z-4fbb6e")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-fce754",
+  "org.scalablytyped.slinky" %%% "emotion__core" % "10.0.28-f55723",
+  "org.scalablytyped.slinky" %%% "emotion__serialize" % "0.11.16-e1b0d7",
+  "org.scalablytyped.slinky" %%% "emotion__styled-base" % "10.0.31-bdeb17",
+  "org.scalablytyped.slinky" %%% "emotion__utils" % "0.11.3-07d215",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ce652f",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a9854",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
+  "org.scalablytyped.slinky" %%% "styled-system" % "5.1-dt-20200309Z-1d8df2",
+  "org.scalablytyped.slinky" %%% "styled-system__css" % "5.0-dt-20200713Z-cbc485",
+  "org.scalablytyped.slinky" %%% "theme-ui__components" % "0.2-dt-20200515Z-c63dba")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

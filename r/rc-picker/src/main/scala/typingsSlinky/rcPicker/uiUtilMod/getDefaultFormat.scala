@@ -3,11 +3,12 @@ package typingsSlinky.rcPicker.uiUtilMod
 import typingsSlinky.rcPicker.interfaceMod.PickerMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rc-picker/es/utils/uiUtil", "getDefaultFormat")
 @js.native
 object getDefaultFormat extends js.Object {
+  
   def apply(): String | js.Array[String] = js.native
   def apply(
     format: js.UndefOr[scala.Nothing],
@@ -90,4 +91,3 @@ object getDefaultFormat extends js.Object {
   def apply(format: js.Array[String], picker: PickerMode, showTime: Boolean): String | js.Array[String] = js.native
   def apply(format: js.Array[String], picker: PickerMode, showTime: Boolean, use12Hours: Boolean): String | js.Array[String] = js.native
 }
-

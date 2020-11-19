@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.EntityWidget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 8.5.0: introduced
@@ -26,19 +26,18 @@ class CustomWidgetXPathSource protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "customwidgets.CustomWidgetXPathSource")
 @js.native
 object CustomWidgetXPathSource extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new CustomWidgetXPathSource instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.CustomWidgetXPathSource = js.native
+  
   /**
     * Creates and returns a new CustomWidgetXPathSource instance in the SDK and on the server.
     * The new CustomWidgetXPathSource will be automatically stored in the 'dataSource' property
@@ -48,6 +47,7 @@ object CustomWidgetXPathSource extends js.Object {
     *  8.5.0 and higher
     */
   def createInEntityWidgetUnderDataSource(container: EntityWidget): typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.CustomWidgetXPathSource = js.native
+  
   /**
     * Creates and returns a new CustomWidgetXPathSource instance in the SDK and on the server.
     * The new CustomWidgetXPathSource will be automatically stored in the 'dataSource' property
@@ -57,5 +57,8 @@ object CustomWidgetXPathSource extends js.Object {
     *  8.5.0 and higher
     */
   def createInWidgetValueUnderDataSource(container: typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue): typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.CustomWidgetXPathSource = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

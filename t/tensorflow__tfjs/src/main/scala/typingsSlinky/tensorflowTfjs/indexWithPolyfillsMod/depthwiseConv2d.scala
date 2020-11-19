@@ -9,11 +9,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs/dist/index_with_polyfills", "depthwiseConv2d")
 @js.native
 object depthwiseConv2d extends js.Object {
+  
   def apply[T /* <: Tensor3D | Tensor4D */](
     x: T | TensorLike,
     filter: Tensor4D | TensorLike,
@@ -26,4 +27,3 @@ object depthwiseConv2d extends js.Object {
     ]
   ): T = js.native
 }
-

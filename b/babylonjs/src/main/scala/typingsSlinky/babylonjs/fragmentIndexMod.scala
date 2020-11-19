@@ -2,11 +2,12 @@ package typingsSlinky.babylonjs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/Node/Blocks/Fragment/index", JSImport.Namespace)
 @js.native
 object fragmentIndexMod extends js.Object {
+  
   @js.native
   class DerivativeBlock protected ()
     extends typingsSlinky.babylonjs.derivativeBlockMod.DerivativeBlock {
@@ -66,6 +67,4 @@ object fragmentIndexMod extends js.Object {
       */
     def this(name: String) = this()
   }
-  
 }
-

@@ -4,8 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.Selection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantiableToString extends Instantiable0[Selection]
-

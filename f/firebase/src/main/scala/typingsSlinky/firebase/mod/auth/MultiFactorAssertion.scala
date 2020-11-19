@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The base class for asserting ownership of a second factor. This is used to
@@ -13,9 +13,9 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.MultiFactorAssertion")
 @js.native
 abstract class MultiFactorAssertion () extends js.Object {
+  
   /**
     * The identifier of the second factor.
     */
   var factorId: String = js.native
 }
-

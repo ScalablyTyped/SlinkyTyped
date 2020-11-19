@@ -5,13 +5,11 @@ import org.scalajs.dom.raw.SVGElement
 import org.scalajs.dom.raw.SVGSVGElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CustomEventOptions extends js.Object {
-  @JSName("instance")
-  var instance_Original: Instance = js.native
-  var svgElement: SVGSVGElement = js.native
+  
   /**
     * Creates a new SvgPanZoom instance with given element selector.
     *
@@ -25,5 +23,8 @@ trait CustomEventOptions extends js.Object {
   def instance(svg: HTMLElement, options: Options): Instance = js.native
   def instance(svg: SVGElement): Instance = js.native
   def instance(svg: SVGElement, options: Options): Instance = js.native
+  @JSName("instance")
+  var instance_Original: Instance = js.native
+  
+  var svgElement: SVGSVGElement = js.native
 }
-

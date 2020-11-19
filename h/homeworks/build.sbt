@@ -1,23 +1,23 @@
 organization := "org.scalablytyped.slinky"
 name := "homeworks"
-version := "1.0.50-4fe5a1"
+version := "1.0.50-7b8f61"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "angular__compiler" % "10.0.7-0af94b",
-  "org.scalablytyped.slinky" %%% "angular__core" % "10.0.7-cf8635",
-  "org.scalablytyped.slinky" %%% "angular__forms" % "10.0.7-30a353",
-  "org.scalablytyped.slinky" %%% "inquirer" % "7.3-dt-20200721Z-912e09",
-  "org.scalablytyped.slinky" %%% "jquery" % "3.5-dt-20200621Z-70c01d",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-df8c17",
-  "org.scalablytyped.slinky" %%% "rxjs" % "6.6.2-c2ee33",
-  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.6.2-f90eab",
-  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20200515Z-c1933c",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8",
-  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20200515Z-10a9ae",
-  "org.scalablytyped.slinky" %%% "typescript" % "3.9.7-155546")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "angular__compiler" % "10.0.7-17a148",
+  "org.scalablytyped.slinky" %%% "angular__core" % "10.0.7-8ec873",
+  "org.scalablytyped.slinky" %%% "angular__forms" % "10.0.7-c66e8b",
+  "org.scalablytyped.slinky" %%% "inquirer" % "7.3-dt-20200721Z-d49bc9",
+  "org.scalablytyped.slinky" %%% "jquery" % "3.5-dt-20200621Z-0ef923",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
+  "org.scalablytyped.slinky" %%% "rxjs" % "6.6.2-a28e73",
+  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.6.2-e25fd9",
+  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20200515Z-3ae803",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
+  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20200515Z-1a5702",
+  "org.scalablytyped.slinky" %%% "typescript" % "3.9.7-1dcaa8")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

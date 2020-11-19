@@ -2,7 +2,7 @@ package typingsSlinky.styleSearch.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Syntax feature options.
@@ -14,13 +14,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.styleSearch.styleSearchStrings.only
 */
 trait SyntaxFeatureOption extends js.Object
-
 object SyntaxFeatureOption {
+  
   @scala.inline
   def check: typingsSlinky.styleSearch.styleSearchStrings.check = "check".asInstanceOf[typingsSlinky.styleSearch.styleSearchStrings.check]
+  
   @scala.inline
   def only: typingsSlinky.styleSearch.styleSearchStrings.only = "only".asInstanceOf[typingsSlinky.styleSearch.styleSearchStrings.only]
+  
   @scala.inline
   def skip: typingsSlinky.styleSearch.styleSearchStrings.skip = "skip".asInstanceOf[typingsSlinky.styleSearch.styleSearchStrings.skip]
 }
-

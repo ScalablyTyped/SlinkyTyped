@@ -4,11 +4,11 @@ import typingsSlinky.std.HTMLTableDataCellElement
 import typingsSlinky.superfine.superfineStrings.td
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("superfine", "patch")
 @js.native
 object patch_td extends js.Object {
+  
   def apply(rootElement: HTMLTableDataCellElement, vNode: VNode[td]): Unit = js.native
 }
-

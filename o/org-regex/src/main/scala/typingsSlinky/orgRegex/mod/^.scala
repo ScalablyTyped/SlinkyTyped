@@ -2,11 +2,12 @@ package typingsSlinky.orgRegex.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("org-regex", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /** 
   	@example
   	```
@@ -20,4 +21,3 @@ object ^ extends js.Object {
   def apply(): js.RegExp = js.native
   def apply(options: Options): js.RegExp = js.native
 }
-

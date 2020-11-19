@@ -4,17 +4,17 @@ import typingsSlinky.babylonjs.anon.Pattern
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "TiledBoxBuilder")
 @js.native
 class TiledBoxBuilder ()
   extends typingsSlinky.babylonjs.babylonjsIndexMod.TiledBoxBuilder
-
 /* static members */
 @JSImport("babylonjs/index", "TiledBoxBuilder")
 @js.native
 object TiledBoxBuilder extends js.Object {
+  
   /**
     * Creates a box mesh
     * faceTiles sets the pattern, tile size and number of tiles for a face     * * You can set different colors and different images to each box side by using the parameters `faceColors` (an array of 6 Color3 elements) and `faceUV` (an array of 6 Vector4 elements)
@@ -30,4 +30,3 @@ object TiledBoxBuilder extends js.Object {
   def CreateTiledBox(name: String, options: Pattern): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateTiledBox(name: String, options: Pattern, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
-

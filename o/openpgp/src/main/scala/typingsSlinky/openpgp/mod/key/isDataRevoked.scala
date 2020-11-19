@@ -7,11 +7,12 @@ import typingsSlinky.openpgp.mod.packet.SecretSubkey
 import typingsSlinky.openpgp.mod.packet.Signature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "key.isDataRevoked")
 @js.native
 object isDataRevoked extends js.Object {
+  
   def apply(
     primaryKey: PublicKey,
     dataToVerify: js.Object,
@@ -87,4 +88,3 @@ object isDataRevoked extends js.Object {
     date: js.Date
   ): js.Promise[Boolean] = js.native
 }
-

@@ -2,23 +2,26 @@ package typingsSlinky.asn1js.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("asn1js", "Integer")
 @js.native
 class Integer () extends BaseBlock[LocalIntegerValueBlock] {
   def this(params: IntegerParams) = this()
+  
   /**
     * Convert current Integer value from DER to BER format
     * @returns {Integer}
     */
   def convertFromDER(): Integer = js.native
+  
   /**
     * Convert current Integer value from BER into DER format
     * 
     * @returns {Integer}
     */
   def convertToDER(): Integer = js.native
+  
   /**
     * Compare two Integer object, or Integer and ArrayBuffer objects
     * 
@@ -30,4 +33,3 @@ class Integer () extends BaseBlock[LocalIntegerValueBlock] {
   def isEqual(otherValue: Integer): scala.Boolean = js.native
   def isEqual(otherValue: js.typedarray.ArrayBuffer): scala.Boolean = js.native
 }
-

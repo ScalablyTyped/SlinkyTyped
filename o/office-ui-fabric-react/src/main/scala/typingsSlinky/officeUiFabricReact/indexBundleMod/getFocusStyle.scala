@@ -7,11 +7,12 @@ import typingsSlinky.uifabricStyling.igetfocusstylesMod.IGetFocusStylesOptions
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/index.bundle", "getFocusStyle")
 @js.native
 object getFocusStyle extends js.Object {
+  
   def apply(theme: ITheme): IRawStyle = js.native
   def apply(
     theme: ITheme,
@@ -24,4 +25,3 @@ object getFocusStyle extends js.Object {
   ): IRawStyle = js.native
   def apply(theme: ITheme, options: IGetFocusStylesOptions): IRawStyle = js.native
 }
-

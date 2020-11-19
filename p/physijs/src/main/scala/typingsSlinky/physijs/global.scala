@@ -7,13 +7,22 @@ import typingsSlinky.three.mod.Object3D
 import typingsSlinky.three.mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object Physijs extends js.Object {
+    
+    def createMaterial(material: Material): typingsSlinky.physijs.Physijs.Material = js.native
+    def createMaterial(material: Material, friction: js.UndefOr[scala.Nothing], restitution: Double): typingsSlinky.physijs.Physijs.Material = js.native
+    def createMaterial(material: Material, friction: Double): typingsSlinky.physijs.Physijs.Material = js.native
+    def createMaterial(material: Material, friction: Double, restitution: Double): typingsSlinky.physijs.Physijs.Material = js.native
+    
+    def noConflict(): js.Object = js.native
+    
     @js.native
     class BoxMesh protected ()
       extends typingsSlinky.physijs.Physijs.Mesh {
@@ -170,18 +179,12 @@ object global extends js.Object {
       ) = this()
     }
     
-    def createMaterial(material: Material): typingsSlinky.physijs.Physijs.Material = js.native
-    def createMaterial(material: Material, friction: js.UndefOr[scala.Nothing], restitution: Double): typingsSlinky.physijs.Physijs.Material = js.native
-    def createMaterial(material: Material, friction: Double): typingsSlinky.physijs.Physijs.Material = js.native
-    def createMaterial(material: Material, friction: Double, restitution: Double): typingsSlinky.physijs.Physijs.Material = js.native
-    def noConflict(): js.Object = js.native
     @js.native
     object scripts extends js.Object {
+      
       var ammo: String = js.native
+      
       var worker: String = js.native
     }
-    
   }
-  
 }
-

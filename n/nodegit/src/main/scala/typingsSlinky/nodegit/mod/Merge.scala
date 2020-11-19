@@ -3,27 +3,29 @@ package typingsSlinky.nodegit.mod
 import typingsSlinky.nodegit.mergeFileInputMod.MergeFileInput
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("nodegit", "Merge")
 @js.native
 class Merge ()
   extends typingsSlinky.nodegit.mergeMod.Merge
-
 /* static members */
 @JSImport("nodegit", "Merge")
 @js.native
 object Merge extends js.Object {
+  
   def base(
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     one: typingsSlinky.nodegit.oidMod.Oid,
     two: typingsSlinky.nodegit.oidMod.Oid
   ): js.Promise[typingsSlinky.nodegit.oidMod.Oid] = js.native
+  
   def bases(
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     one: typingsSlinky.nodegit.oidMod.Oid,
     two: typingsSlinky.nodegit.oidMod.Oid
   ): js.Promise[typingsSlinky.nodegit.oidArrayMod.Oidarray] = js.native
+  
   def commits(
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     ourCommit: typingsSlinky.nodegit.commitMod.Commit,
@@ -35,8 +37,11 @@ object Merge extends js.Object {
     theirCommit: typingsSlinky.nodegit.commitMod.Commit,
     options: typingsSlinky.nodegit.mergeOptionsMod.MergeOptions
   ): js.Any = js.native
+  
   def fileInitInput(opts: MergeFileInput, version: Double): Double = js.native
+  
   def initOptions(opts: typingsSlinky.nodegit.mergeOptionsMod.MergeOptions, version: Double): Double = js.native
+  
   def merge(
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     theirHead: typingsSlinky.nodegit.annotatedCommitMod.AnnotatedCommit
@@ -58,6 +63,7 @@ object Merge extends js.Object {
     mergeOpts: typingsSlinky.nodegit.mergeOptionsMod.MergeOptions,
     checkoutOpts: typingsSlinky.nodegit.checkoutOptionsMod.CheckoutOptions
   ): js.Any = js.native
+  
   def trees(
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     ancestorTree: typingsSlinky.nodegit.treeMod.Tree,
@@ -72,4 +78,3 @@ object Merge extends js.Object {
     opts: typingsSlinky.nodegit.mergeOptionsMod.MergeOptions
   ): js.Promise[Index] = js.native
 }
-

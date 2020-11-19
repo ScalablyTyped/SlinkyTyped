@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.Media.Audio
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a reverberation effect definition supported by the audio graph. */
 @JSGlobal("Windows.Media.Audio.ReverbEffectDefinition")
@@ -15,4 +15,3 @@ class ReverbEffectDefinition protected ()
     */
   def this(audioGraph: typingsSlinky.winrtUwp.Windows.Media.Audio.AudioGraph) = this()
 }
-

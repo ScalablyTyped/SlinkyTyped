@@ -4,11 +4,12 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.enzyme.mod.ReactWrapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("enzyme-async-helpers", "waitForState")
 @js.native
 object waitForState extends js.Object {
+  
   def apply(
     wrapper: ReactWrapper[js.Object, js.Object, ReactComponentClass[js.Object]],
     stateValidationFn: js.Function1[/* state */ js.Object, Boolean]
@@ -19,4 +20,3 @@ object waitForState extends js.Object {
     config: Config
   ): js.Promise[Unit] = js.native
 }
-

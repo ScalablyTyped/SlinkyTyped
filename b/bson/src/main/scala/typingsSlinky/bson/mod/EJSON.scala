@@ -3,17 +3,21 @@ package typingsSlinky.bson.mod
 import typingsSlinky.bson.anon.Relaxed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("bson", "EJSON")
 @js.native
 object EJSON extends js.Object {
+  
   def deserialize(ejson: js.Object): js.Object = js.native
   def deserialize(ejson: js.Object, options: Relaxed): js.Object = js.native
+  
   def parse(text: String): js.Object = js.native
   def parse(text: String, options: Relaxed): js.Object = js.native
+  
   def serialize(bson: js.Object): js.Object = js.native
   def serialize(bson: js.Object, options: Relaxed): js.Object = js.native
+  
   def stringify(value: js.Object): String = js.native
   def stringify(value: js.Object, options: Relaxed): String = js.native
   def stringify(value: js.Object, replacer: js.Array[scala.Double | String]): String = js.native
@@ -64,4 +68,3 @@ object EJSON extends js.Object {
     options: Relaxed
   ): String = js.native
 }
-

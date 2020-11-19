@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.CameraInputsManager")
 @js.native
@@ -14,4 +14,3 @@ class CameraInputsManager[TCamera /* <: typingsSlinky.babylonjs.BABYLON.Camera *
     */
   def this(camera: TCamera) = this()
 }
-

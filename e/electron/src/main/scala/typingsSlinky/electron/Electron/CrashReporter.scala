@@ -3,10 +3,11 @@ package typingsSlinky.electron.Electron
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CrashReporter extends js.Object {
+  
   // Docs: http://electronjs.org/docs/api/crash-reporter
   /**
     * Set an extra parameter to be sent with the crash report. The values specified
@@ -26,6 +27,7 @@ trait CrashReporter extends js.Object {
     * longer than the maximum length will be truncated.
     */
   def addExtraParameter(key: String, value: String): Unit = js.native
+  
   /**
     * The directory where crashes are temporarily stored before being uploaded.
     * 
@@ -34,6 +36,7 @@ trait CrashReporter extends js.Object {
     * @deprecated
     */
   def getCrashesDirectory(): String = js.native
+  
   /**
     * The date and ID of the last crash report. Only crash reports that have been
     * uploaded will be returned; even if a crash report is present on disk it will not
@@ -43,10 +46,12 @@ trait CrashReporter extends js.Object {
   **Note:** Calling this method from the renderer process is deprecated.
     */
   def getLastCrashReport(): CrashReport = js.native
+  
   /**
     * The current 'extra' parameters of the crash reporter.
     */
   def getParameters(): Record[String, String] = js.native
+  
   /**
     * Whether reports should be submitted to the server. Set through the `start`
     * method or `setUploadToServer`.
@@ -54,17 +59,20 @@ trait CrashReporter extends js.Object {
   **Note:** Calling this method from the renderer process is deprecated.
     */
   def getUploadToServer(): Boolean = js.native
+  
   /**
     * Returns all uploaded crash reports. Each report contains the date and uploaded
     * ID.
   **Note:** Calling this method from the renderer process is deprecated.
     */
   def getUploadedReports(): js.Array[CrashReport] = js.native
+  
   /**
     * Remove a extra parameter from the current set of parameters. Future crashes will
     * not include this parameter.
     */
   def removeExtraParameter(key: String): Unit = js.native
+  
   /**
     * This would normally be controlled by user preferences. This has no effect if
     * called before `start` is called.
@@ -72,6 +80,7 @@ trait CrashReporter extends js.Object {
   **Note:** Calling this method from the renderer process is deprecated.
     */
   def setUploadToServer(uploadToServer: Boolean): Unit = js.native
+  
   /**
     * This method must be called before using any other `crashReporter` APIs. Once
     * initialized this way, the crashpad handler collects crashes from all
@@ -99,8 +108,8 @@ trait CrashReporter extends js.Object {
     */
   def start(options: CrashReporterStartOptions): Unit = js.native
 }
-
 object CrashReporter {
+  
   @scala.inline
   def apply(
     addExtraParameter: (String, String) => Unit,
@@ -116,36 +125,47 @@ object CrashReporter {
     val __obj = js.Dynamic.literal(addExtraParameter = js.Any.fromFunction2(addExtraParameter), getCrashesDirectory = js.Any.fromFunction0(getCrashesDirectory), getLastCrashReport = js.Any.fromFunction0(getLastCrashReport), getParameters = js.Any.fromFunction0(getParameters), getUploadToServer = js.Any.fromFunction0(getUploadToServer), getUploadedReports = js.Any.fromFunction0(getUploadedReports), removeExtraParameter = js.Any.fromFunction1(removeExtraParameter), setUploadToServer = js.Any.fromFunction1(setUploadToServer), start = js.Any.fromFunction1(start))
     __obj.asInstanceOf[CrashReporter]
   }
+  
   @scala.inline
   implicit class CrashReporterOps[Self <: CrashReporter] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setAddExtraParameter(value: (String, String) => Unit): Self = this.set("addExtraParameter", js.Any.fromFunction2(value))
+    
     @scala.inline
     def setGetCrashesDirectory(value: () => String): Self = this.set("getCrashesDirectory", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setGetLastCrashReport(value: () => CrashReport): Self = this.set("getLastCrashReport", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setGetParameters(value: () => Record[String, String]): Self = this.set("getParameters", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setGetUploadToServer(value: () => Boolean): Self = this.set("getUploadToServer", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setGetUploadedReports(value: () => js.Array[CrashReport]): Self = this.set("getUploadedReports", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setRemoveExtraParameter(value: String => Unit): Self = this.set("removeExtraParameter", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setSetUploadToServer(value: Boolean => Unit): Self = this.set("setUploadToServer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setStart(value: CrashReporterStartOptions => Unit): Self = this.set("start", js.Any.fromFunction1(value))
   }
-  
 }
-

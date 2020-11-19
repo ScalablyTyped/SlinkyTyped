@@ -13,29 +13,36 @@ import typingsSlinky.rdflib.typesMod.PredicateType
 import typingsSlinky.rdflib.typesMod.SubjectType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rdflib/lib/statement", JSImport.Namespace)
 @js.native
 object statementMod extends js.Object {
+  
   @js.native
   trait Statement[S /* <: SubjectType */, P /* <: PredicateType */, O /* <: ObjectType */, G /* <: GraphType */] extends Quad[S, P, O, G | DefaultGraph] {
+    
     /**
       * Checks whether two statements are the same
       * @param other - The other statement
       */
     def equals(other: Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]): Boolean = js.native
+    
     /**
       * Creates a statement with the bindings substituted
       * @param bindings The bindings
       */
     def substitute(bindings: Bindings): Statement[SubjectType, PredicateType, ObjectType, GraphType] = js.native
+    
     /** Creates a canonical string representation of this statement. */
     def toCanonical(): String = js.native
+    
     /** Creates a n-quads string representation of this statement */
     def toNQ(): String = js.native
+    
     /** Creates a n-triples string representation of this statement */
     def toNT(): String = js.native
+    
     /** Alias for graph, favored by Tim */
     def why: DefaultGraph | G = js.native
     def why_=(g: DefaultGraph | G): Unit = js.native
@@ -64,6 +71,4 @@ object statementMod extends js.Object {
     def this(subject: S, predicate: P, `object`: O, graph: G) = this()
     def this(subject: S, predicate: P, `object`: O, graph: DefaultGraph) = this()
   }
-  
 }
-

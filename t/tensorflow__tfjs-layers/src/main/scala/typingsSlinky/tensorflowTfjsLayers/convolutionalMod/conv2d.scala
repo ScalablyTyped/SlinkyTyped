@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.DataFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/layers/convolutional", "conv2d")
 @js.native
 object conv2d extends js.Object {
+  
   def apply(x: Tensor[Rank], kernel: Tensor[Rank]): Tensor[Rank] = js.native
   def apply(
     x: Tensor[Rank],
@@ -107,4 +108,3 @@ object conv2d extends js.Object {
     dilationRate: js.Tuple2[Double, Double]
   ): Tensor[Rank] = js.native
 }
-

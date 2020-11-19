@@ -5,11 +5,12 @@ import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/CircleGeometry", JSImport.Namespace)
 @js.native
 object circleGeometryMod extends js.Object {
+  
   @js.native
   class CircleBufferGeometry () extends BufferGeometry {
     def this(radius: Double) = this()
@@ -47,6 +48,7 @@ object circleGeometryMod extends js.Object {
     def this(radius: Double, segments: js.UndefOr[scala.Nothing], thetaStart: Double, thetaLength: Double) = this()
     def this(radius: Double, segments: Double, thetaStart: js.UndefOr[scala.Nothing], thetaLength: Double) = this()
     def this(radius: Double, segments: Double, thetaStart: Double, thetaLength: Double) = this()
+    
     var parameters: Radius = js.native
   }
   
@@ -87,8 +89,7 @@ object circleGeometryMod extends js.Object {
     def this(radius: Double, segments: js.UndefOr[scala.Nothing], thetaStart: Double, thetaLength: Double) = this()
     def this(radius: Double, segments: Double, thetaStart: js.UndefOr[scala.Nothing], thetaLength: Double) = this()
     def this(radius: Double, segments: Double, thetaStart: Double, thetaLength: Double) = this()
+    
     var parameters: Radius = js.native
   }
-  
 }
-

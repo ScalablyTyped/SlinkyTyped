@@ -2,10 +2,11 @@ package typingsSlinky.lowdb.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LowdbFpAsync[SchemaT] extends LowdbBase[SchemaT] {
+  
   /**
     * @description Returns a function that allows you to access/modify the database at a given path.
     * @example
@@ -26,7 +27,9 @@ trait LowdbFpAsync[SchemaT] extends LowdbBase[SchemaT] {
   ] = js.native
   def apply[T](path: String): FpReturnAsync[T] = js.native
   def apply[T](path: String, defaultValue: T): FpReturnAsync[T] = js.native
-  def apply[T](path: js.Array[String]): FpReturnAsync[T] = js.native
+  def apply[TKey /* <: /* keyof SchemaT */ String */](path: js.Array[TKey]): FpReturnAsync[
+    /* import warning: importer.ImportType#apply Failed type conversion: SchemaT[TKey] */ js.Any
+  ] = js.native
   def apply[T](path: js.Array[String], defaultValue: T): FpReturnAsync[T] = js.native
   def apply[TKey /* <: /* keyof SchemaT */ String */](
     path: js.Array[TKey],
@@ -70,10 +73,10 @@ trait LowdbFpAsync[SchemaT] extends LowdbBase[SchemaT] {
   ): FpReturnAsync[
     /* import warning: importer.ImportType#apply Failed type conversion: SchemaT[TKey][TSubKey][TSubKey2][TSubKey3][TSubKey4] */ js.Any
   ] = js.native
+  
   /**
     * @description Be careful: This function overwrites the whole database.
     */
   def write[T](): js.Promise[T] = js.native
   def write[T](returnValue: T): js.Promise[T] = js.native
 }
-

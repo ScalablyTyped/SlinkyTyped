@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create an instance of a Tags.
@@ -11,10 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Tags extends EventHandler {
-  /**
-    * Number of tags in set.
-    */
-  val size: Double = js.native
+  
   /**
     * Add a tag, duplicates are ignored. Can be array or comma separated arguments for multiple tags.
     * @example
@@ -27,12 +24,14 @@ trait Tags extends EventHandler {
     * @returns True if any tag were added.
     */
   def add(name: String): Boolean = js.native
+  
   /**
     * Remove all tags.
     * @example
     * tags.clear();
     */
   def clear(): Unit = js.native
+  
   /**
     * Check if tags satisfy filters.
     * Filters can be provided by simple name of tag, as well as by array of tags.
@@ -51,11 +50,13 @@ trait Tags extends EventHandler {
     * @returns True if filters are satisfied.
     */
   def has(query: js.Any*): Boolean = js.native
+  
   /**
     * Returns immutable array of tags.
     * @returns Copy of tags array.
     */
   def list(): js.Array[String] = js.native
+  
   /**
     * Remove tag.
     * @example
@@ -68,5 +69,9 @@ trait Tags extends EventHandler {
     * @returns True if any tag were removed.
     */
   def remove(name: String): Boolean = js.native
+  
+  /**
+    * Number of tags in set.
+    */
+  val size: Double = js.native
 }
-

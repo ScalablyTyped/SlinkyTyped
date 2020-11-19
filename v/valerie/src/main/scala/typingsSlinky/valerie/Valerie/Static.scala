@@ -2,33 +2,27 @@ package typingsSlinky.valerie.Valerie
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 //
 // Static methods on valerie namespace
 //
 @js.native
 trait Static extends js.Object {
+  
   // Validation result class
   var ValidationResult: ValidationResultStatic = js.native
+  
   // additional namespaces for static methods:
   var converters: ConvertersStatic = js.native
-  /*
-    //TODO: additional namespaces/statics not yet used
-    dom: DomStatic;
-    formatting: FormattingStatic;
-    koBindingsHelper: KoBindingsHelperStatic;
-    koExtras: KoExtrasStatic;
-    rules: RulesStatic;
-    */
-  var utils: UtilsStatic = js.native
-  var validationState: ValidationState = js.native
+  
   /**
     * Maps a source model to a destination model, including only applicable properties
     * @param {Object|Array} sourceModel the source model
     * @return {*} the destination model
     */
   def mapApplicableModel(sourceModel: js.Any): js.Any = js.native
+  
   /**
     * Maps a source model to a destination model.
     * @param {Object|Array} sourceModel the source model
@@ -50,6 +44,17 @@ trait Static extends js.Object {
     includeWrappedFunction: IncludePropertyCallback,
     includeUnwrappedFunction: IncludePropertyCallback
   ): js.Any = js.native
+  
+  /*
+    //TODO: additional namespaces/statics not yet used
+    dom: DomStatic;
+    formatting: FormattingStatic;
+    koBindingsHelper: KoBindingsHelperStatic;
+    koExtras: KoExtrasStatic;
+    rules: RulesStatic;
+    */
+  var utils: UtilsStatic = js.native
+  
   /**
     * Makes the passed-in model validatable. After invocation the model will have a validation state.
     * <br/><b>fluent</b>
@@ -60,9 +65,11 @@ trait Static extends js.Object {
     */
   def validatableModel(model: js.Any): ModelValidationState = js.native
   def validatableModel(model: js.Any, options: ValidationOptions): ModelValidationState = js.native
+  
   // Makes the passed-in property validatable. After invocation the property will have a validation state.
   // (value should be observable or computed)
   def validatableProperty[T](value: T): PropertyValidationState[T] = js.native
   def validatableProperty[T](value: T, options: ValidationOptions): PropertyValidationState[T] = js.native
+  
+  var validationState: ValidationState = js.native
 }
-

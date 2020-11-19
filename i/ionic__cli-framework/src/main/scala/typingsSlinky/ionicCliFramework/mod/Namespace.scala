@@ -5,7 +5,7 @@ import typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/cli-framework", "Namespace")
 @js.native
@@ -17,4 +17,3 @@ abstract class Namespace ()
       CommandMetadataInput, 
       CommandMetadataOption
     ]
-

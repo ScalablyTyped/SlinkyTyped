@@ -2,9 +2,10 @@ package typingsSlinky.spotifyWebApiJs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object SpotifyApi {
+  
   /**
     * Add Tracks to a Playlist
     *
@@ -12,6 +13,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/add-tracks-to-playlist/
     */
   type AddTracksToPlaylistResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistSnapshotResponse
+  
   /**
     * Get an Album’s Tracks
     *
@@ -19,6 +21,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-albums-tracks/
     */
   type AlbumTracksResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PagingObject[typingsSlinky.spotifyWebApiJs.SpotifyApi.TrackObjectSimplified]
+  
   /**
     * Get an Artist’s Albums
     *
@@ -26,6 +29,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-artists-albums/
     */
   type ArtistsAlbumsResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PagingObject[typingsSlinky.spotifyWebApiJs.SpotifyApi.AlbumObjectSimplified]
+  
   /**
     * Get Audio Analysis for a Track
     *
@@ -36,6 +40,7 @@ package object SpotifyApi {
     * Object Model: https://developer.spotify.com/web-api/object-model/
     */
   type AudioAnalysisResponse = js.Object
+  
   /**
     * Get audio features for a track
     *
@@ -43,6 +48,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-audio-features/
     */
   type AudioFeaturesResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.AudioFeaturesObject
+  
   /**
     * Change a Playlist’s Details
     *
@@ -50,6 +56,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/change-playlist-details/
     */
   type ChangePlaylistDetailsResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Check user's saved albums
     *
@@ -57,6 +64,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/check-users-saved-albums/
     */
   type CheckUserSavedAlbumsResponse = js.Array[scala.Boolean]
+  
   /**
     * Check user's saved shows
     *
@@ -64,6 +72,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/documentation/web-api/reference/library/check-users-saved-shows/
     */
   type CheckUsersSavedShowsResponse = js.Array[scala.Boolean]
+  
   /**
     * Check User’s Saved Tracks
     *
@@ -71,6 +80,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/check-users-saved-tracks/
     */
   type CheckUsersSavedTracksResponse = js.Array[scala.Boolean]
+  
   /**
     * Create a Playlist
     *
@@ -78,6 +88,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/create-playlist/
     */
   type CreatePlaylistResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistObjectFull
+  
   /**
     * Get Current User’s Profile
     *
@@ -85,7 +96,9 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-current-users-profile/
     */
   type CurrentUsersProfileResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.UserObjectPrivate
+  
   type CurrentlyPlayingResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.CurrentlyPlayingObject
+  
   /**
     * Follow artists or users
     *
@@ -93,6 +106,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/follow-artists-users/
     */
   type FollowArtistsOrUsersResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Follow a Playlist
     *
@@ -100,6 +114,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/follow-playlist/
     */
   type FollowPlaylistResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Get a list of the current user's playlists
     *
@@ -107,6 +122,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-list-users-playlists/
     */
   type ListOfCurrentUsersPlaylistsResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PagingObject[typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistObjectSimplified]
+  
   /**
     * Get a list of a user's playlists
     *
@@ -114,6 +130,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-list-users-playlists/
     */
   type ListOfUsersPlaylistsResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PagingObject[typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistObjectSimplified]
+  
   /**
     * Get a list of a user's saved shows
     *
@@ -121,12 +138,14 @@ package object SpotifyApi {
     * https://developer.spotify.com/documentation/web-api/reference/library/get-users-saved-shows/
     */
   type ListOfUsersShowsResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PagingObject[typingsSlinky.spotifyWebApiJs.SpotifyApi.ShowObjectSimplified]
+  
   /**
     * Get a Playlist Cover Image
     * GET /v1/playlists/{playlist_id}/images
     * https://developer.spotify.com/documentation/web-api/reference/playlists/get-playlist-cover/
     */
   type PlaylistCoverImageResponse = js.Array[typingsSlinky.spotifyWebApiJs.SpotifyApi.ImageObject]
+  
   /**
     * Get a playlist's tracks
     *
@@ -134,6 +153,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-playlists-tracks/
     */
   type PlaylistTrackResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PagingObject[typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistTrackObject]
+  
   /**
     * Get recommendations based on seeds
     *
@@ -141,6 +161,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/get-recommendations/
     */
   type RecommendationsFromSeedsResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.RecommendationsObject
+  
   /**
     * Remove Albums for Current User
     *
@@ -148,6 +169,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/remove-albums-user/
     */
   type RemoveAlbumsForUserResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Remove Tracks from a Playlist
     *
@@ -155,6 +177,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/remove-tracks-playlist/
     */
   type RemoveTracksFromPlaylistResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistSnapshotResponse
+  
   /**
     * Remove shows for user
     *
@@ -162,6 +185,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/documentation/web-api/reference/library/remove-shows-user/
     */
   type RemoveUsersSavedShowsResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Remove User’s Saved Tracks
     *
@@ -169,6 +193,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/remove-tracks-user/
     */
   type RemoveUsersSavedTracksResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Reorder a Playlist’s Tracks
     *
@@ -176,6 +201,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/reorder-playlists-tracks/
     */
   type ReorderPlaylistTracksResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistSnapshotResponse
+  
   /**
     * Replace a Playlist’s Tracks
     *
@@ -183,6 +209,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/replace-playlists-tracks/
     */
   type ReplacePlaylistTracksResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Save albums for user
     *
@@ -190,6 +217,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/save-albums-user/
     */
   type SaveAlbumsForUserResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Save shows for user
     *
@@ -197,6 +225,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/documentation/web-api/reference/library/save-shows-user/
     */
   type SaveShowsForUserResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Save tracks for user
     *
@@ -204,6 +233,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/save-tracks-user/
     */
   type SaveTracksForUserResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Get a Show’s Episodes
     *
@@ -211,6 +241,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/documentation/web-api/reference/shows/get-shows-episodes/
     */
   type ShowEpisodesResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PagingObject[typingsSlinky.spotifyWebApiJs.SpotifyApi.EpisodeObjectSimplified]
+  
   // Spotify API Endpoints:
   /**
     * Get an Album
@@ -219,6 +250,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-album/
     */
   type SingleAlbumResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.AlbumObjectFull
+  
   /**
     * Get an Artist
     *
@@ -226,6 +258,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-artist/
     */
   type SingleArtistResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.ArtistObjectFull
+  
   /**
     * Get a category
     *
@@ -233,6 +266,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-category/
     */
   type SingleCategoryResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.CategoryObject
+  
   /**
     * Get an Episode
     *
@@ -240,6 +274,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/documentation/web-api/reference/episodes/get-an-episode/
     */
   type SingleEpisodeResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.EpisodeObjectFull
+  
   /**
     * Get a playlist
     *
@@ -247,6 +282,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-playlist/
     */
   type SinglePlaylistResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistObjectFull
+  
   /**
     * Get a Show
     *
@@ -254,6 +290,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/documentation/web-api/reference/shows/get-a-show/
     */
   type SingleShowResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.ShowObjectFull
+  
   /**
     * Get a track
     *
@@ -261,6 +298,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-track/
     */
   type SingleTrackResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.TrackObjectFull
+  
   /**
     * Unfollow artists or users
     *
@@ -268,6 +306,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/unfollow-artists-users/
     */
   type UnfollowArtistsOrUsersResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Unfollow a Playlist
     *
@@ -275,6 +314,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/unfollow-playlist/
     */
   type UnfollowPlaylistResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Upload a Custom Playlist Cover Image
     *
@@ -282,6 +322,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/upload-a-custom-playlist-cover-image/
     */
   type UploadCustomPlaylistCoverImageResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.VoidResponse
+  
   /**
     * Check if User Follows Users or Artists
     *
@@ -289,6 +330,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/check-current-user-follows/
     */
   type UserFollowsUsersOrArtistsResponse = js.Array[scala.Boolean]
+  
   /**
     * Get user profile
     *
@@ -296,6 +338,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-users-profile/
     */
   type UserProfileResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.UserObjectPublic
+  
   /**
     * Check if Users Follow a Playlist
     *
@@ -303,6 +346,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/check-user-following-playlist/
     */
   type UsersFollowPlaylistResponse = js.Array[scala.Boolean]
+  
   /**
     * Get a User’s Recently Played Tracks
     *
@@ -310,6 +354,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-users-top-artists-and-tracks/
     */
   type UsersRecentlyPlayedTracksResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.CursorBasedPagingObject[typingsSlinky.spotifyWebApiJs.SpotifyApi.PlayHistoryObject]
+  
   /**
     * Get user's saved albums
     *
@@ -317,6 +362,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-users-saved-albums/
     */
   type UsersSavedAlbumsResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PagingObject[typingsSlinky.spotifyWebApiJs.SpotifyApi.SavedAlbumObject]
+  
   /**
     * Get user's saved tracks
     *
@@ -324,6 +370,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-users-saved-tracks/
     */
   type UsersSavedTracksResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PagingObject[typingsSlinky.spotifyWebApiJs.SpotifyApi.SavedTrackObject]
+  
   /**
     * Get a User’s Top Artists and Tracks (Note: This is only Artists)
     *
@@ -331,6 +378,7 @@ package object SpotifyApi {
     * https://developer.spotify.com/web-api/get-users-top-artists-and-tracks/
     */
   type UsersTopArtistsResponse = typingsSlinky.spotifyWebApiJs.SpotifyApi.PagingObject[typingsSlinky.spotifyWebApiJs.SpotifyApi.ArtistObjectFull]
+  
   /**
     * Get a User’s Top Artists and Tracks (Note: This is only Tracks)
     *

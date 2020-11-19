@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -34,39 +34,44 @@ abstract class RemoteEntitySourceDocument protected () extends Document {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
-  /**
-    * In version 8.11.0: added public
-    * In version 8.10.0: introduced
-    */
-  @JSName("icon")
-  val icon_FRemoteEntitySourceDocument: String | Null = js.native
-  @JSName("model")
-  var model_FRemoteEntitySourceDocument: IModel = js.native
+  
   /**
     * In version 8.10.0: introduced
     */
   def catalogUrl: String = js.native
   def catalogUrl_=(newValue: String): Unit = js.native
+  
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MRemoteEntitySourceDocument: FolderBase = js.native
+  
   /**
     * In version 8.10.0: introduced
     */
   def description: String = js.native
   def description_=(newValue: String): Unit = js.native
+  
   /**
     * In version 8.11.0: added public
     * In version 8.10.0: introduced
     */
   def icon: String | Null = js.native
   def icon_=(newValue: String | Null): Unit = js.native
+  /**
+    * In version 8.11.0: added public
+    * In version 8.10.0: introduced
+    */
+  @JSName("icon")
+  val icon_FRemoteEntitySourceDocument: String | Null = js.native
+  
+  @JSName("model")
+  var model_FRemoteEntitySourceDocument: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.RemoteEntitySourceDocument")
 @js.native
 object RemoteEntitySourceDocument extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.workflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -27,19 +27,18 @@ class StartWorkflowActivity protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "workflows.StartWorkflowActivity")
 @js.native
 object StartWorkflowActivity extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new StartWorkflowActivity instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.workflowsMod.workflows.StartWorkflowActivity = js.native
+  
   /**
     * Creates and returns a new StartWorkflowActivity instance in the SDK and on the server.
     * The new StartWorkflowActivity will be automatically stored in the 'activities' property
@@ -49,5 +48,8 @@ object StartWorkflowActivity extends js.Object {
     *  8.10.0 and higher
     */
   def createIn(container: typingsSlinky.mendixmodelsdk.workflowsMod.workflows.Workflow): typingsSlinky.mendixmodelsdk.workflowsMod.workflows.StartWorkflowActivity = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

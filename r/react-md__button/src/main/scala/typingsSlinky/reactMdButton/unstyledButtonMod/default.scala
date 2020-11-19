@@ -5,7 +5,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.reactMdButton.anon.PickButtonHTMLAttributesH
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The unstyled button is a really simple button element that resets the default
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/button/types/UnstyledButton", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[PickButtonHTMLAttributesH]]
-

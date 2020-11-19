@@ -4,7 +4,7 @@ import typingsSlinky.estree.anon.Flags
 import typingsSlinky.estree.estreeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.estree.mod.ThisExpression
@@ -34,8 +34,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.estree.mod.ChainExpression
 */
 trait Expression extends Node
-
 object Expression {
+  
   @scala.inline
   def SimpleCallExpression(
     arguments: js.Array[Expression | SpreadElement],
@@ -47,6 +47,7 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def LogicalExpression(
     left: Expression,
@@ -58,12 +59,14 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def ThisExpression(`type`: typingsSlinky.estree.estreeStrings.ThisExpression): Expression = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def ObjectExpression(
     properties: js.Array[Property | SpreadElement],
@@ -73,12 +76,14 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def ClassExpression(body: ClassBody, `type`: typingsSlinky.estree.estreeStrings.ClassExpression): Expression = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def TemplateLiteral(
     expressions: js.Array[Expression],
@@ -89,6 +94,7 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def ConditionalExpression(
     alternate: Expression,
@@ -100,12 +106,14 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def YieldExpression(delegate: Boolean, `type`: typingsSlinky.estree.estreeStrings.YieldExpression): Expression = {
     val __obj = js.Dynamic.literal(delegate = delegate.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def UpdateExpression(
     argument: Expression,
@@ -117,18 +125,21 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def ImportExpression(source: Expression, `type`: typingsSlinky.estree.estreeStrings.ImportExpression): Expression = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def RegExpLiteral(regex: Flags, `type`: typingsSlinky.estree.estreeStrings.Literal): Expression = {
     val __obj = js.Dynamic.literal(regex = regex.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def AssignmentExpression(
     left: Pattern | MemberExpression,
@@ -140,12 +151,14 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def MetaProperty(meta: Identifier, property: Identifier, `type`: typingsSlinky.estree.estreeStrings.MetaProperty): Expression = {
     val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any], property = property.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def TaggedTemplateExpression(
     quasi: TemplateLiteral,
@@ -156,12 +169,14 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def SimpleLiteral(`type`: typingsSlinky.estree.estreeStrings.Literal): Expression = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def UnaryExpression(
     argument: Expression,
@@ -173,6 +188,7 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def FunctionExpression(
     body: BlockStatement,
@@ -183,30 +199,35 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def SequenceExpression(expressions: js.Array[Expression], `type`: typingsSlinky.estree.estreeStrings.SequenceExpression): Expression = {
     val __obj = js.Dynamic.literal(expressions = expressions.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def Identifier(name: String, `type`: typingsSlinky.estree.estreeStrings.Identifier): Expression = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def ChainExpression(expression: ChainElement, `type`: typingsSlinky.estree.estreeStrings.ChainExpression): Expression = {
     val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def AwaitExpression(argument: Expression, `type`: typingsSlinky.estree.estreeStrings.AwaitExpression): Expression = {
     val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def BinaryExpression(
     left: Expression,
@@ -218,6 +239,7 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def ArrayExpression(
     elements: js.Array[Expression | SpreadElement],
@@ -227,6 +249,7 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def MemberExpression(
     computed: Boolean,
@@ -240,6 +263,7 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def NewExpression(
     arguments: js.Array[Expression | SpreadElement],
@@ -250,6 +274,7 @@ object Expression {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]
   }
+  
   @scala.inline
   def ArrowFunctionExpression(
     body: BlockStatement | Expression,
@@ -262,4 +287,3 @@ object Expression {
     __obj.asInstanceOf[Expression]
   }
 }
-

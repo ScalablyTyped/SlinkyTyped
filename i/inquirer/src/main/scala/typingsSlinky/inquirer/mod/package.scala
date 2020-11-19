@@ -2,17 +2,20 @@ package typingsSlinky.inquirer
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /**
     * A set of answers.
     */
   type Answers = typingsSlinky.std.Record[java.lang.String, js.Any]
+  
   /**
     * Represents a dynamic property for a question which can be fetched asynchronously.
     */
   type AsyncDynamicQuestionProperty[T, TAnswers /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.mod.DynamicQuestionProperty[T | js.Promise[T], TAnswers]
+  
   /**
     * Provides options for a question for the `CheckboxPrompt`.
     *
@@ -20,12 +23,14 @@ package object mod {
     * The type of the answers.
     */
   type CheckboxQuestionOptions[T /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.mod.ListQuestionOptionsBase[T, typingsSlinky.inquirer.mod.CheckboxChoiceMap[T]]
+  
   /**
     * Represents a set of choices.
     */
   type ChoiceCollection[T /* <: typingsSlinky.inquirer.mod.Answers */] = js.Array[
     typingsSlinky.inquirer.mod.DistinctChoice[typingsSlinky.inquirer.mod.AllChoiceMap[typingsSlinky.inquirer.mod.Answers]]
   ]
+  
   /**
     * Provides options for a question for the `ConfirmPrompt`.
     *
@@ -33,6 +38,7 @@ package object mod {
     * The type of the answers.
     */
   type ConfirmQuestionOptions[T /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.mod.Question[T]
+  
   /**
     * Provides valid choices for the question of the `TChoiceMap`.
     *
@@ -40,6 +46,7 @@ package object mod {
     * The choice-types to provide.
     */
   type DistinctChoice[TChoiceMap] = java.lang.String | (/* import warning: importer.ImportType#apply Failed type conversion: TChoiceMap[keyof TChoiceMap] */ js.Any)
+  
   /**
     * Represents one of the available questions.
     *
@@ -48,10 +55,12 @@ package object mod {
     */
   /* Inlined inquirer.inquirer.QuestionMap<T>[keyof inquirer.inquirer.QuestionMap<T>] */
   type DistinctQuestion[T /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.inquirerStrings.`type`
+  
   /**
     * Represents a dynamic property for a question.
     */
   type DynamicQuestionProperty[T, TAnswers /* <: typingsSlinky.inquirer.mod.Answers */] = T | (js.Function1[/* answers */ TAnswers, T])
+  
   /**
     * Provides options for a question for the `EditorPrompt`.
     *
@@ -59,6 +68,7 @@ package object mod {
     * The type of the answers.
     */
   type EditorQuestionOptions[T /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.mod.Question[T]
+  
   /**
     * Provides options for a question for the `ExpandPrompt`.
     *
@@ -66,6 +76,7 @@ package object mod {
     * The type of the answers.
     */
   type ExpandQuestionOptions[T /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.mod.ListQuestionOptionsBase[T, typingsSlinky.inquirer.mod.ExpandChoiceMap[T]]
+  
   /**
     * Represents either a key of `T` or a `string`.
     *
@@ -76,6 +87,7 @@ package object mod {
     typingsSlinky.std.Extract[/* keyof T */ java.lang.String, java.lang.String], 
     java.lang.String
   ]
+  
   /**
     * Represents a union which preserves autocompletion.
     *
@@ -86,6 +98,7 @@ package object mod {
     * The fallback-type.
     */
   type LiteralUnion[T /* <: F */, F] = T | (F with js.Object)
+  
   /**
     * Provides options for a question for the `NumberPrompt`.
     *
@@ -93,6 +106,7 @@ package object mod {
     * The type of the answers.
     */
   type NumberQuestionOptions[T /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.mod.InputQuestionOptions[T]
+  
   /**
     * Represents a collection of questions.
     *
@@ -100,10 +114,12 @@ package object mod {
     * The type of the answers.
     */
   type QuestionCollection[T /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.mod.DistinctQuestion[T] | js.Array[typingsSlinky.inquirer.mod.DistinctQuestion[T]] | typingsSlinky.rxjs.mod.Observable_[typingsSlinky.inquirer.mod.DistinctQuestion[T]]
+  
   /**
     * Indicates the type of a question
     */
   type QuestionTypeName = /* import warning: importer.ImportType#apply Failed type conversion: inquirer.inquirer.DistinctQuestion<inquirer.inquirer.Answers>['type'] */ js.Any
+  
   /**
     * Provides options for a question for the `RawListPrompt`.
     *
@@ -111,6 +127,7 @@ package object mod {
     * The type of the answers.
     */
   type RawListQuestionOptions[T /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.mod.ListQuestionOptions[T]
+  
   /**
     * Provides the functionality to transform an answer.
     *
@@ -125,6 +142,7 @@ package object mod {
       java.lang.String | js.Promise[java.lang.String]
     ]
   ]
+  
   /**
     * Converts the specified union-type `U` to an intersection-type.
     *
@@ -132,6 +150,7 @@ package object mod {
     * The union to convert to an intersection.
     */
   type UnionToIntersection[U] = js.Any
+  
   /**
     * Provides the functionality to validate answers.
     *

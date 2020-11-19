@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 6.7.0: deleted
@@ -23,17 +23,19 @@ abstract class DataViewControlBarButton protected () extends ControlBarButton {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FDataViewControlBarButton: IModel = js.native
+  
   def tabIndex: Double = js.native
   def tabIndex_=(newValue: Double): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.DataViewControlBarButton")
 @js.native
 object DataViewControlBarButton extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

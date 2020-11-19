@@ -2,7 +2,7 @@ package typingsSlinky.screeps
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Conditional type for all concrete implementations of Structure.
@@ -32,4 +32,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.screeps.StructureExtension
 */
 trait ConcreteStructure[T /* <: StructureConstant */] extends js.Object
-

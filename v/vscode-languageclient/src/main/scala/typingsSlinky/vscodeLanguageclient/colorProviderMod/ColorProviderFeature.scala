@@ -7,7 +7,7 @@ import typingsSlinky.vscodeLanguageserverProtocol.protocolColorProviderMod.Docum
 import typingsSlinky.vscodeLanguageserverProtocol.protocolColorProviderMod.DocumentColorRegistrationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageclient/lib/colorProvider", "ColorProviderFeature")
 @js.native
@@ -17,8 +17,10 @@ class ColorProviderFeature protected () extends TextDocumentFeature[
       DocumentColorProvider
     ] {
   def this(client: BaseLanguageClient) = this()
+  
   var asColor: js.Any = js.native
+  
   var asColorInformations: js.Any = js.native
+  
   var asColorPresentations: js.Any = js.native
 }
-

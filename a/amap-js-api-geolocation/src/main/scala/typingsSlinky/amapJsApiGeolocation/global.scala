@@ -3,13 +3,15 @@ package typingsSlinky.amapJsApiGeolocation
 import typingsSlinky.amapJsApiGeolocation.AMap.Geolocation.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object AMap extends js.Object {
+    
     @js.native
     /**
       * 定位服务
@@ -19,8 +21,5 @@ object global extends js.Object {
       extends typingsSlinky.amapJsApiGeolocation.AMap.Geolocation {
       def this(options: Options) = this()
     }
-    
   }
-  
 }
-

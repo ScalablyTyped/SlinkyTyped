@@ -6,24 +6,25 @@ import typingsSlinky.antd.anon.FileList
 import typingsSlinky.antd.uploadInterfaceMod.UploadProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd/lib/upload", JSImport.Namespace)
 @js.native
 object uploadMod extends js.Object {
+  
   @js.native
   class default protected ()
     extends typingsSlinky.antd.uploadUploadMod.default {
     def this(props: UploadProps[_]) = this()
   }
-  
   /* static members */
   @js.native
   object default extends js.Object {
+    
     var Dragger: Instantiable0[typingsSlinky.antd.draggerMod.default] = js.native
+    
     var defaultProps: Accept = js.native
+    
     def getDerivedStateFromProps(nextProps: UploadProps[_]): FileList | Null = js.native
   }
-  
 }
-

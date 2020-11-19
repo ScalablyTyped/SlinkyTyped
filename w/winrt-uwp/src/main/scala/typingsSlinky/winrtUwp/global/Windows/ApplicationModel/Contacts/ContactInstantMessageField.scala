@@ -3,7 +3,7 @@ package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Contacts
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Defines a field that is an instant messaging (IM) address. */
 @JSGlobal("Windows.ApplicationModel.Contacts.ContactInstantMessageField")
@@ -40,4 +40,3 @@ class ContactInstantMessageField protected ()
     verb: Uri
   ) = this()
 }
-

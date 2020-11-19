@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.GraphicsLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.GraphicsLayer")
 @js.native
@@ -16,4 +16,3 @@ class GraphicsLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.GraphicsLayer {
   def this(properties: GraphicsLayerProperties) = this()
 }
-

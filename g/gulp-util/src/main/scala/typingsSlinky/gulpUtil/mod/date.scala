@@ -2,12 +2,12 @@ package typingsSlinky.gulpUtil.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gulp-util", "date")
 @js.native
 object date extends js.Object {
-  var masks: js.Any = js.native
+  
   def apply(): js.Any = js.native
   def apply(now: js.UndefOr[scala.Nothing], mask: js.UndefOr[scala.Nothing], convertLocalTimeToUTC: Boolean): js.Any = js.native
   def apply(now: js.UndefOr[scala.Nothing], mask: String): js.Any = js.native
@@ -20,5 +20,6 @@ object date extends js.Object {
   def apply(now: js.Date, mask: js.UndefOr[scala.Nothing], convertLocalTimeToUTC: Boolean): js.Any = js.native
   def apply(now: js.Date, mask: String): js.Any = js.native
   def apply(now: js.Date, mask: String, convertLocalTimeToUTC: Boolean): js.Any = js.native
+  
+  var masks: js.Any = js.native
 }
-

@@ -3,10 +3,11 @@ package typingsSlinky.newRelicBrowser.mod.NewRelic
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Browser extends js.Object {
+  
   /**
     * Reports a Browser PageAction event to Insights along with a name and attributes.
     *
@@ -16,6 +17,7 @@ trait Browser extends js.Object {
     * @see https://docs.newrelic.com/docs/browser/new-relic-browser/browser-agent-spa-api/add-page-action
     */
   def addPageAction(name: String, attributes: StringDictionary[String | Double]): Unit = js.native
+  
   /**
     * Adds a unique name and ID to identify releases with multiple JavaScript bundles on the same page.
     *
@@ -27,6 +29,7 @@ trait Browser extends js.Object {
     * @see https://docs.newrelic.com/docs/browser/new-relic-browser/browser-agent-spa-api/add-release
     */
   def addRelease(releaseName: String, releaseId: String): Unit = js.native
+  
   /**
     * Adds a JavaScript object with a custom name, start time, etc. to an in-progress session trace.
     *
@@ -36,6 +39,7 @@ trait Browser extends js.Object {
     * @see https://docs.newrelic.com/docs/browser/new-relic-browser/browser-agent-spa-api/add-to-trace
     */
   def addToTrace(eventObject: EventObject): Unit = js.native
+  
   /**
     * Records an additional time point as "finished" in a session trace, and sends the event to Insights.
     *
@@ -45,6 +49,7 @@ trait Browser extends js.Object {
     */
   def finished(): Unit = js.native
   def finished(timestamp: Double): Unit = js.native
+  
   /**
     * Returns a new API object that is bound to the current SPA interaction.
     *
@@ -54,6 +59,7 @@ trait Browser extends js.Object {
     * @see https://docs.newrelic.com/docs/browser/new-relic-browser/browser-agent-spa-api/interaction-browser-spa-api
     */
   def interaction(): BrowserInteraction = js.native
+  
   def noticeError(error: String): Unit = js.native
   def noticeError(error: String, customAttributes: StringDictionary[String | Double]): Unit = js.native
   /**
@@ -66,6 +72,7 @@ trait Browser extends js.Object {
     */
   def noticeError(error: js.Error): Unit = js.native
   def noticeError(error: js.Error, customAttributes: StringDictionary[String | Double]): Unit = js.native
+  
   /**
     * Gives SPA routes more accurate names than default names. Monitors specific routes rather than by default
     * grouping.
@@ -78,6 +85,7 @@ trait Browser extends js.Object {
     */
   def setCurrentRouteName(): Unit = js.native
   def setCurrentRouteName(name: String): Unit = js.native
+  
   /**
     * Adds a user-defined attribute name and value to subsequent events on the page.
     *
@@ -90,6 +98,7 @@ trait Browser extends js.Object {
     */
   def setCustomAttribute(name: String, value: String): Unit = js.native
   def setCustomAttribute(name: String, value: Double): Unit = js.native
+  
   /**
     * Allows selective ignoring of known errors that the Browser agent captures.
     *
@@ -98,6 +107,7 @@ trait Browser extends js.Object {
     * @see https://docs.newrelic.com/docs/browser/new-relic-browser/browser-agent-spa-api/set-error-handler
     */
   def setErrorHandler(filterCallback: js.Function1[/* err */ js.Any, Boolean]): Unit = js.native
+  
   /**
     * Groups page views to help URL structure or to capture the URL's routing information.
     *
@@ -111,4 +121,3 @@ trait Browser extends js.Object {
   def setPageViewName(name: String): Unit = js.native
   def setPageViewName(name: String, host: String): Unit = js.native
 }
-

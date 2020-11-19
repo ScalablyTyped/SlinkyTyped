@@ -12,9 +12,10 @@ import typingsSlinky.rcTable.rcTableStrings.rtl
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FixedHeader {
+  
   @JSImport("rc-table/lib/Header/FixedHeader", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -25,6 +26,7 @@ object FixedHeader {
        with StBuildingComponent[tag.type, js.Object]
   
   def withProps[RecordType](p: FixedHeaderProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[RecordType](
     colWidths: js.Array[Double],
@@ -39,4 +41,3 @@ object FixedHeader {
     new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[FixedHeaderProps[RecordType]]))
   }
 }
-

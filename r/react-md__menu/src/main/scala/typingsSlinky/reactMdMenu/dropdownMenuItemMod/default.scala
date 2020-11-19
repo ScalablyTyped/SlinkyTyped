@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `DropdownMenuItem` component is used to be able to render nested dropdown menus.
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 object default extends TopLevel[
       ForwardRefExoticComponent[DropdownMenuItemProps with RefAttributes[HTMLLIElement]]
     ]
-

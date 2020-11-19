@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.PolygonMeshBuilder")
 @js.native
@@ -29,10 +29,17 @@ class PolygonMeshBuilder protected ()
     contours: typingsSlinky.babylonjs.BABYLON.Path2,
     scene: typingsSlinky.babylonjs.BABYLON.Scene
   ) = this()
+  def this(name: String, contours: js.Any, scene: js.UndefOr[scala.Nothing], earcutInjection: js.Any) = this()
   def this(
     name: String,
     contours: js.Any,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    earcutInjection: js.Any
+  ) = this()
+  def this(
+    name: String,
+    contours: js.Array[typingsSlinky.babylonjs.BABYLON.Vector2],
+    scene: js.UndefOr[scala.Nothing],
     earcutInjection: js.Any
   ) = this()
   def this(
@@ -44,8 +51,13 @@ class PolygonMeshBuilder protected ()
   def this(
     name: String,
     contours: typingsSlinky.babylonjs.BABYLON.Path2,
+    scene: js.UndefOr[scala.Nothing],
+    earcutInjection: js.Any
+  ) = this()
+  def this(
+    name: String,
+    contours: typingsSlinky.babylonjs.BABYLON.Path2,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     earcutInjection: js.Any
   ) = this()
 }
-

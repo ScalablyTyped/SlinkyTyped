@@ -5,10 +5,11 @@ import typingsSlinky.ariClient.anon.RecordingName
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Recordings extends js.Object {
+  
   /**
     * Stop a live recording and discard it.
     *
@@ -21,6 +22,7 @@ trait Recordings extends js.Object {
     * @param params.recordingName - The name of the recording.
     */
   def cancel(params: RecordingName, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Copy a stored recording.
     *
@@ -38,6 +40,7 @@ trait Recordings extends js.Object {
     params: DestinationRecordingName,
     callback: js.Function2[/* err */ js.Error, /* storedrecording */ StoredRecording, Unit]
   ): Unit = js.native
+  
   /**
     * Delete a stored recording.
     *
@@ -50,6 +53,7 @@ trait Recordings extends js.Object {
     * @param params.recordingName - The name of the recording.
     */
   def deleteStored(params: RecordingName, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * List live recordings.
     *
@@ -65,6 +69,7 @@ trait Recordings extends js.Object {
     params: RecordingName,
     callback: js.Function2[/* err */ js.Error, /* liverecording */ LiveRecording, Unit]
   ): Unit = js.native
+  
   /**
     * Get a stored recordings details.
     *
@@ -80,6 +85,7 @@ trait Recordings extends js.Object {
     params: RecordingName,
     callback: js.Function2[/* err */ js.Error, /* storedrecording */ StoredRecording, Unit]
   ): Unit = js.native
+  
   /**
     * Get the file associated with the stored recording.
     *
@@ -92,6 +98,7 @@ trait Recordings extends js.Object {
     * @param params.recordingName - The name of the recording.
     */
   def getStoredFile(params: RecordingName, callback: js.Function2[/* err */ js.Error, /* binary */ Buffer, Unit]): Unit = js.native
+  
   /**
     * List recordings that are complete.
     */
@@ -100,6 +107,7 @@ trait Recordings extends js.Object {
     * List recordings that are complete.
     */
   def listStored(callback: js.Function2[/* err */ js.Error, /* storedrecordings */ js.Array[StoredRecording], Unit]): Unit = js.native
+  
   /**
     * Mute a live recording.
     * Muting a recording suspends silence detection, which will be restarted when the recording is unmuted.
@@ -114,6 +122,7 @@ trait Recordings extends js.Object {
     * @param params.recordingName - The name of the recording.
     */
   def mute(params: RecordingName, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Pause a live recording.
     * Pausing a recording suspends silence detection, which will be restarted when the recording is unpaused. Paused time is not included in the accounting for maxDurationSeconds.
@@ -128,6 +137,7 @@ trait Recordings extends js.Object {
     * @param params.recordingName - The name of the recording.
     */
   def pause(params: RecordingName, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Stop a live recording and store it.
     *
@@ -140,6 +150,7 @@ trait Recordings extends js.Object {
     * @param params.recordingName - The name of the recording.
     */
   def stop(params: RecordingName, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Unmute a live recording.
     *
@@ -152,6 +163,7 @@ trait Recordings extends js.Object {
     * @param params.recordingName - The name of the recording.
     */
   def unmute(params: RecordingName, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Unpause a live recording.
     *
@@ -165,4 +177,3 @@ trait Recordings extends js.Object {
     */
   def unpause(params: RecordingName, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
-

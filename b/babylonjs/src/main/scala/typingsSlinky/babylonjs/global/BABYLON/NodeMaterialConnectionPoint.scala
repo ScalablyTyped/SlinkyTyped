@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.NodeMaterialConnectionPoint")
 @js.native
@@ -20,4 +20,3 @@ class NodeMaterialConnectionPoint protected ()
     direction: typingsSlinky.babylonjs.BABYLON.NodeMaterialConnectionPointDirection
   ) = this()
 }
-

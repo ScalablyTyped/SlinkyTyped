@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.BasemapLayerList
 import typingsSlinky.arcgisJsApi.esri.BasemapLayerListProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/BasemapLayerList", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends BasemapLayerList {
   def this(properties: BasemapLayerListProperties) = this()
 }
-

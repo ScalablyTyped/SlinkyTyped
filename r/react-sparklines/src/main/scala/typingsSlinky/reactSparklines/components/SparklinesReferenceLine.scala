@@ -12,9 +12,10 @@ import typingsSlinky.reactSparklines.reactSparklinesStrings.median
 import typingsSlinky.reactSparklines.reactSparklinesStrings.min
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SparklinesReferenceLine {
+  
   @JSImport("react-sparklines", "SparklinesReferenceLine")
   @js.native
   object component extends js.Object
@@ -23,15 +24,18 @@ object SparklinesReferenceLine {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactSparklines.mod.SparklinesReferenceLine] {
+    
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def `type`(value: max | min | mean | avg | median | custom): this.type = set("type", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SparklinesReferenceLineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: SparklinesReferenceLine.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

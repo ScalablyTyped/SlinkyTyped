@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.DatabaseSourceBase")
 @js.native
@@ -21,16 +21,18 @@ abstract class DatabaseSourceBase protected () extends SortableEntityPathSource 
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def databaseConstraints: IList[DatabaseConstraint] = js.native
+  
   @JSName("model")
   var model_FDatabaseSourceBase: IModel = js.native
-  def databaseConstraints: IList[DatabaseConstraint] = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.DatabaseSourceBase")
 @js.native
 object DatabaseSourceBase extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "DoNothingAction")
 @js.native
@@ -14,6 +14,9 @@ import scala.scalajs.js.annotation._
 class DoNothingAction ()
   extends typingsSlinky.babylonjs.legacyMod.DoNothingAction {
   def this(triggerOptions: js.Any) = this()
+  def this(
+    triggerOptions: js.UndefOr[scala.Nothing],
+    condition: typingsSlinky.babylonjs.conditionMod.Condition
+  ) = this()
   def this(triggerOptions: js.Any, condition: typingsSlinky.babylonjs.conditionMod.Condition) = this()
 }
-

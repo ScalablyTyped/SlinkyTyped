@@ -18,9 +18,10 @@ import typingsSlinky.baseui.tagMod.TagOverrides
 import typingsSlinky.baseui.tagMod.TagProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tag {
+  
   @JSImport("baseui/tag", "Tag")
   @js.native
   object component extends js.Object
@@ -29,35 +30,48 @@ object Tag {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.baseui.tagMod.Tag] {
+    
     @scala.inline
     def closeable(value: Boolean): this.type = set("closeable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def isFocused(value: Boolean): this.type = set("isFocused", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def isHovered(value: Boolean): this.type = set("isHovered", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def kind(value: custom_ | accent | primary | neutral | positive | warning | negative): this.type = set("kind", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onActionClick(value: (/* e */ Event, /* children */ js.UndefOr[ReactElement]) => _): this.type = set("onActionClick", js.Any.fromFunction2(value))
+    
     @scala.inline
     def onActionKeyDown(value: (/* e */ Event, /* children */ js.UndefOr[ReactElement]) => _): this.type = set("onActionKeyDown", js.Any.fromFunction2(value))
+    
     @scala.inline
     def onClick(value: /* event */ Event => _): this.type = set("onClick", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onKeyDown(value: /* event */ Event => _): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    
     @scala.inline
     def overrides(value: TagOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def variant(value: solid | light | outlined): this.type = set("variant", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TagProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Tag.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

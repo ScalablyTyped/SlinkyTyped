@@ -3,7 +3,7 @@ package typingsSlinky.actionsOnGoogle.mod
 import typingsSlinky.actionsOnGoogle.browseMod.BrowseCarouselItemOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("actions-on-google", "BrowseCarouselItem")
 @js.native
@@ -15,4 +15,3 @@ class BrowseCarouselItem protected ()
     */
   def this(options: BrowseCarouselItemOptions) = this()
 }
-

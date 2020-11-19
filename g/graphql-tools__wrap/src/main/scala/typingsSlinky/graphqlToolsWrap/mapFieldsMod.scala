@@ -10,15 +10,16 @@ import typingsSlinky.graphqlToolsWrap.typesMod.ObjectValueTransformerMap
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/transforms/MapFields", JSImport.Namespace)
 @js.native
 object mapFieldsMod extends js.Object {
+  
   @js.native
   trait MapFields
     extends Transform[Record[String, js.Any]] {
-    val transformer: js.Any = js.native
+    
     @JSName("transformRequest")
     def transformRequest_MMapFields(originalRequest: Request): Request = js.native
     @JSName("transformRequest")
@@ -35,6 +36,7 @@ object mapFieldsMod extends js.Object {
       delegationContext: Record[String, _],
       transformationContext: Record[String, _]
     ): Request = js.native
+    
     @JSName("transformResult")
     def transformResult_MMapFields(originalResult: ExecutionResult[Record[String, _]]): ExecutionResult[Record[String, _]] = js.native
     @JSName("transformResult")
@@ -51,8 +53,11 @@ object mapFieldsMod extends js.Object {
       delegationContext: Record[String, _],
       transformationContext: Record[String, _]
     ): ExecutionResult[Record[String, _]] = js.native
+    
     @JSName("transformSchema")
     def transformSchema_MMapFields(schema: GraphQLSchema): GraphQLSchema = js.native
+    
+    val transformer: js.Any = js.native
   }
   
   @js.native
@@ -70,6 +75,4 @@ object mapFieldsMod extends js.Object {
       errorsTransformer: ErrorsTransformer
     ) = this()
   }
-  
 }
-

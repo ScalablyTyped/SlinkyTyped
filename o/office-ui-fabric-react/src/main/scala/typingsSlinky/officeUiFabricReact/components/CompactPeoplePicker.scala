@@ -25,9 +25,10 @@ import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CompactPeoplePicker {
+  
   @JSImport("office-ui-fabric-react", "CompactPeoplePicker")
   @js.native
   object component extends js.Object
@@ -36,95 +37,132 @@ object CompactPeoplePicker {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Any with js.Object] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def componentRefFunction1(value: /* ref */ IBasePicker[IPersonaProps] | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def componentRefRefObject(value: ReactRef[IBasePicker[IPersonaProps]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def componentRef(value: IRefObject[IBasePicker[IPersonaProps]]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def createGenericItem(
       value: (/* input */ String, /* ValidationState */ ValidationState) => ISuggestionModel[IPersonaProps] | IPersonaProps
     ): this.type = set("createGenericItem", js.Any.fromFunction2(value))
+    
     @scala.inline
     def defaultSelectedItemsVarargs(value: IPersonaProps*): this.type = set("defaultSelectedItems", js.Array(value :_*))
+    
     @scala.inline
     def defaultSelectedItems(value: js.Array[IPersonaProps]): this.type = set("defaultSelectedItems", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def enableSelectedSuggestionAlert(value: Boolean): this.type = set("enableSelectedSuggestionAlert", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def getTextFromItem(value: (IPersonaProps, /* currentValue */ js.UndefOr[String]) => String): this.type = set("getTextFromItem", js.Any.fromFunction2(value))
+    
     @scala.inline
     def inputProps(value: IInputProps): this.type = set("inputProps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def itemLimit(value: Double): this.type = set("itemLimit", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onBlur(
       value: SyntheticFocusEvent[HTMLInputElement | typingsSlinky.officeUiFabricReact.libAutofillMod.Autofill] => Unit
     ): this.type = set("onBlur", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onChange(value: /* items */ js.UndefOr[js.Array[IPersonaProps]] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onDismiss(value: (/* ev */ js.UndefOr[js.Any], /* selectedItem */ js.UndefOr[IPersonaProps]) => Unit): this.type = set("onDismiss", js.Any.fromFunction2(value))
+    
     @scala.inline
     def onEmptyInputFocus(
       value: /* selectedItems */ js.UndefOr[js.Array[IPersonaProps]] => js.Array[IPersonaProps] | js.Thenable[js.Array[IPersonaProps]]
     ): this.type = set("onEmptyInputFocus", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onEmptyResolveSuggestions(
       value: /* selectedItems */ js.UndefOr[js.Array[IPersonaProps]] => js.Array[IPersonaProps] | js.Thenable[js.Array[IPersonaProps]]
     ): this.type = set("onEmptyResolveSuggestions", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onFocus(
       value: SyntheticFocusEvent[HTMLInputElement | typingsSlinky.officeUiFabricReact.libAutofillMod.Autofill] => Unit
     ): this.type = set("onFocus", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onGetMoreResults(
       value: (/* filter */ String, /* selectedItems */ js.UndefOr[js.Array[IPersonaProps]]) => js.Array[IPersonaProps] | js.Thenable[js.Array[IPersonaProps]]
     ): this.type = set("onGetMoreResults", js.Any.fromFunction2(value))
+    
     @scala.inline
     def onInputChange(value: /* input */ String => String): this.type = set("onInputChange", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onItemSelected(
       value: /* selectedItem */ js.UndefOr[IPersonaProps] => IPersonaProps | js.Thenable[IPersonaProps] | Null
     ): this.type = set("onItemSelected", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onRemoveSuggestion(value: IPersonaProps => Unit): this.type = set("onRemoveSuggestion", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onRenderItem(value: /* props */ IPickerItemProps[IPersonaProps] => ReactElement): this.type = set("onRenderItem", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onRenderSuggestionsItem(value: (IPersonaProps, /* itemProps */ ISuggestionItemProps[IPersonaProps]) => ReactElement): this.type = set("onRenderSuggestionsItem", js.Any.fromFunction2(value))
+    
     @scala.inline
     def onValidateInput(value: /* input */ String => ValidationState): this.type = set("onValidateInput", js.Any.fromFunction1(value))
+    
     @scala.inline
     def pickerCalloutProps(value: ICalloutProps): this.type = set("pickerCalloutProps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def pickerSuggestionsProps(value: IBasePickerSuggestionsProps[_]): this.type = set("pickerSuggestionsProps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def removeButtonAriaLabel(value: String): this.type = set("removeButtonAriaLabel", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def resolveDelay(value: Double): this.type = set("resolveDelay", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def searchingTextFunction1(value: /* props */ Input => String): this.type = set("searchingText", js.Any.fromFunction1(value))
+    
     @scala.inline
     def searchingText(value: (js.Function1[/* props */ Input, String]) | String): this.type = set("searchingText", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def selectedItemsVarargs(value: IPersonaProps*): this.type = set("selectedItems", js.Array(value :_*))
+    
     @scala.inline
     def selectedItems(value: js.Array[IPersonaProps]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def stylesFunction1(value: IBasePickerStyleProps => DeepPartial[IBasePickerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    
     @scala.inline
     def styles(value: IStyleFunctionOrObject[IBasePickerStyleProps, IBasePickerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IBasePickerProps[IPersonaProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     onResolveSuggestions: (String, js.UndefOr[js.Array[IPersonaProps]]) => js.Array[IPersonaProps] | js.Thenable[js.Array[IPersonaProps]]
@@ -133,4 +171,3 @@ object CompactPeoplePicker {
     new Builder(js.Array(this.component, __props.asInstanceOf[IBasePickerProps[IPersonaProps]]))
   }
 }
-

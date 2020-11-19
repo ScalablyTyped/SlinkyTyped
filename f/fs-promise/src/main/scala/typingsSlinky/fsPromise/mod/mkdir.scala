@@ -7,11 +7,12 @@ import typingsSlinky.node.fsMod.NoParamCallback
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs-promise", "mkdir")
 @js.native
 object mkdir extends js.Object {
+  
   def apply(path: String): js.Promise[Unit] = js.native
   def apply(path: String, callback: js.Function1[/* err */ ErrnoException, Unit]): Unit = js.native
   def apply(path: String, mode: String, callback: js.Function1[/* err */ ErrnoException, Unit]): Unit = js.native
@@ -31,4 +32,3 @@ object mkdir extends js.Object {
   def apply(path: PathLike, options: MakeDirectoryOptions): js.Promise[Unit] = js.native
   def apply(path: PathLike, options: MakeDirectoryOptions, callback: NoParamCallback): Unit = js.native
 }
-

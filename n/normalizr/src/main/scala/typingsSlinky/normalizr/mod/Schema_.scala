@@ -2,7 +2,7 @@ package typingsSlinky.normalizr.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.normalizr.mod.schema.Entity[T]
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.normalizr.mod.SchemaArray[T]
 */
 trait Schema_[T] extends js.Object
-

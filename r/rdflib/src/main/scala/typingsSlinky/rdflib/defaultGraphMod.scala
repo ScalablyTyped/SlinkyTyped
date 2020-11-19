@@ -9,11 +9,14 @@ import typingsSlinky.rdflib.typesMod.GraphType
 import typingsSlinky.rdflib.typesMod._FromValueReturns
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rdflib/lib/default-graph", JSImport.Namespace)
 @js.native
 object defaultGraphMod extends js.Object {
+  
+  def isDefaultGraph(`object`: js.Any): /* is rdflib.rdflib/lib/default-graph.DefaultGraph */ Boolean = js.native
+  
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.rdflib.typesMod._ValueType because Already inherited
   - typingsSlinky.rdflib.tfTypesMod.Term because var conflicts: termType, value. Inlined 
@@ -25,9 +28,12 @@ object defaultGraphMod extends js.Object {
        with _Comparable
        with _FromValueReturns[js.Any]
        with _TFIDFactoryTypes {
+    
     @JSName("termType")
     var termType_DefaultGraph: typingsSlinky.rdflib.rdflibStrings.DefaultGraph = js.native
+    
     var uri: String = js.native
+    
     @JSName("value")
     var value_DefaultGraph: _empty = js.native
   }
@@ -36,7 +42,4 @@ object defaultGraphMod extends js.Object {
   class default ()
     extends DefaultGraph
        with GraphType
-  
-  def isDefaultGraph(`object`: js.Any): /* is rdflib.rdflib/lib/default-graph.DefaultGraph */ Boolean = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.UnknownLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.UnknownLayer")
 @js.native
@@ -16,4 +16,3 @@ class UnknownLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.UnknownLayer {
   def this(properties: UnknownLayerProperties) = this()
 }
-

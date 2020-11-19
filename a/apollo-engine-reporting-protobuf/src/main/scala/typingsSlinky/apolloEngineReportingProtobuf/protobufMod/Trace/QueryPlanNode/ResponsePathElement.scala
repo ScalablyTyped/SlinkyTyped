@@ -8,7 +8,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a ResponsePathElement. */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "Trace.QueryPlanNode.ResponsePathElement")
@@ -19,25 +19,29 @@ import scala.scalajs.js.annotation._
   */
 class ResponsePathElement () extends IResponsePathElement {
   def this(properties: IResponsePathElement) = this()
+  
   /** ResponsePathElement fieldName. */
   @JSName("fieldName")
   var fieldName_ResponsePathElement: String = js.native
+  
   /** ResponsePathElement id. */
   var id: js.UndefOr[fieldName | index] = js.native
+  
   /** ResponsePathElement index. */
   @JSName("index")
   var index_ResponsePathElement: Double = js.native
+  
   /**
     * Converts this ResponsePathElement to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "Trace.QueryPlanNode.ResponsePathElement")
 @js.native
 object ResponsePathElement extends js.Object {
+  
   /**
     * Creates a new ResponsePathElement instance using the specified properties.
     * @param [properties] Properties to set
@@ -45,6 +49,7 @@ object ResponsePathElement extends js.Object {
     */
   def create(): ResponsePathElement = js.native
   def create(properties: IResponsePathElement): ResponsePathElement = js.native
+  
   /**
     * Decodes a ResponsePathElement message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -57,6 +62,7 @@ object ResponsePathElement extends js.Object {
   def decode(reader: Reader, length: Double): ResponsePathElement = js.native
   def decode(reader: js.typedarray.Uint8Array): ResponsePathElement = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ResponsePathElement = js.native
+  
   /**
     * Decodes a ResponsePathElement message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -66,6 +72,7 @@ object ResponsePathElement extends js.Object {
     */
   def decodeDelimited(reader: Reader): ResponsePathElement = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ResponsePathElement = js.native
+  
   /**
     * Encodes the specified ResponsePathElement message. Does not implicitly {@link Trace.QueryPlanNode.ResponsePathElement.verify|verify} messages.
     * @param message ResponsePathElement message or plain object to encode
@@ -74,6 +81,7 @@ object ResponsePathElement extends js.Object {
     */
   def encode(message: IResponsePathElement): Writer = js.native
   def encode(message: IResponsePathElement, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ResponsePathElement message, length delimited. Does not implicitly {@link Trace.QueryPlanNode.ResponsePathElement.verify|verify} messages.
     * @param message ResponsePathElement message or plain object to encode
@@ -82,12 +90,14 @@ object ResponsePathElement extends js.Object {
     */
   def encodeDelimited(message: IResponsePathElement): Writer = js.native
   def encodeDelimited(message: IResponsePathElement, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ResponsePathElement message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ResponsePathElement
     */
   def fromObject(`object`: StringDictionary[js.Any]): ResponsePathElement = js.native
+  
   /**
     * Creates a plain object from a ResponsePathElement message. Also converts values to other types if specified.
     * @param message ResponsePathElement
@@ -96,6 +106,7 @@ object ResponsePathElement extends js.Object {
     */
   def toObject(message: ResponsePathElement): StringDictionary[js.Any] = js.native
   def toObject(message: ResponsePathElement, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ResponsePathElement message.
     * @param message Plain object to verify
@@ -103,4 +114,3 @@ object ResponsePathElement extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

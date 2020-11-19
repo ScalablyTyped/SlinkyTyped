@@ -13,11 +13,12 @@ import typingsSlinky.googleapisCommon.apiMod.GoogleConfigurable
 import typingsSlinky.googleapisCommon.mod.AuthPlus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("googleapis/build/src/apis/vision", JSImport.Namespace)
 @js.native
 object visionMod extends js.Object {
+  
   def vision(options: Options): Vision = js.native
   def vision(options: typingsSlinky.googleapis.visionV1p1beta1Mod.visionV1p1beta1.Options): typingsSlinky.googleapis.visionV1p1beta1Mod.visionV1p1beta1.Vision = js.native
   def vision(options: typingsSlinky.googleapis.visionV1p2beta1Mod.visionV1p2beta1.Options): typingsSlinky.googleapis.visionV1p2beta1Mod.visionV1p2beta1.Vision = js.native
@@ -27,13 +28,20 @@ object visionMod extends js.Object {
   def vision_v1p1beta1(version: v1p1beta1): typingsSlinky.googleapis.visionV1p1beta1Mod.visionV1p1beta1.Vision = js.native
   @JSName("vision")
   def vision_v1p2beta1(version: v1p2beta1): typingsSlinky.googleapis.visionV1p2beta1Mod.visionV1p2beta1.Vision = js.native
+  
   @js.native
   object VERSIONS extends js.Object {
+    
     @js.native
     class v1 protected () extends Vision {
       def this(options: GlobalOptions) = this()
       def this(options: GlobalOptions, google: GoogleConfigurable) = this()
     }
+    @js.native
+    object v1
+      extends TopLevel[
+              Instantiable2[/* options */ GlobalOptions, /* google */ js.UndefOr[GoogleConfigurable], Vision]
+            ]
     
     @js.native
     class v1p1beta1 protected ()
@@ -41,20 +49,6 @@ object visionMod extends js.Object {
       def this(options: GlobalOptions) = this()
       def this(options: GlobalOptions, google: GoogleConfigurable) = this()
     }
-    
-    @js.native
-    class v1p2beta1 protected ()
-      extends typingsSlinky.googleapis.visionV1p2beta1Mod.visionV1p2beta1.Vision {
-      def this(options: GlobalOptions) = this()
-      def this(options: GlobalOptions, google: GoogleConfigurable) = this()
-    }
-    
-    @js.native
-    object v1
-      extends TopLevel[
-              Instantiable2[/* options */ GlobalOptions, /* google */ js.UndefOr[GoogleConfigurable], Vision]
-            ]
-    
     @js.native
     object v1p1beta1
       extends TopLevel[
@@ -66,6 +60,12 @@ object visionMod extends js.Object {
             ]
     
     @js.native
+    class v1p2beta1 protected ()
+      extends typingsSlinky.googleapis.visionV1p2beta1Mod.visionV1p2beta1.Vision {
+      def this(options: GlobalOptions) = this()
+      def this(options: GlobalOptions, google: GoogleConfigurable) = this()
+    }
+    @js.native
     object v1p2beta1
       extends TopLevel[
               Instantiable2[
@@ -74,11 +74,11 @@ object visionMod extends js.Object {
                 typingsSlinky.googleapis.visionV1p2beta1Mod.visionV1p2beta1.Vision
               ]
             ]
-    
   }
   
   @js.native
   object auth extends TopLevel[AuthPlus] {
+    
     @js.native
     /**
       * Google Compute Engine service account credentials.
@@ -106,8 +106,5 @@ object visionMod extends js.Object {
         */
       def this(options: JWTOptions) = this()
     }
-    
   }
-  
 }
-

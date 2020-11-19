@@ -9,7 +9,7 @@ import typingsSlinky.graphqlToolsUtils.schemaDirectiveVisitorMod.SchemaDirective
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofSchemaDirectiveVisi
@@ -20,8 +20,11 @@ trait TypeofSchemaDirectiveVisi
       ], 
       SchemaDirectiveVisitor[js.Object, js.Object]
     ] {
+  
   /* protected */ def getDeclaredDirectives(schema: GraphQLSchema, directiveVisitors: Record[String, SchemaDirectiveVisitorClass]): Record[String, GraphQLDirective] = js.native
+  
   def getDirectiveDeclaration(directiveName: String, schema: GraphQLSchema): js.UndefOr[GraphQLDirective | Null] = js.native
+  
   def visitSchemaDirectives(schema: GraphQLSchema, directiveVisitors: Record[String, SchemaDirectiveVisitorClass]): Record[
     String, 
     js.Array[
@@ -39,4 +42,3 @@ trait TypeofSchemaDirectiveVisi
     ]
   ] = js.native
 }
-

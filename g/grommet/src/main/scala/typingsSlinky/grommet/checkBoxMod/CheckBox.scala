@@ -7,7 +7,7 @@ import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.InputHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/CheckBox", "CheckBox")
 @js.native
@@ -16,4 +16,3 @@ object CheckBox extends TopLevel[
         CheckBoxProps with (DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement])
       ]
     ]
-

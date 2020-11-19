@@ -195,10 +195,11 @@ import typingsSlinky.activexExcel.anon.`0`
 import typingsSlinky.std.SafeArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ActiveXObject extends js.Object {
+  
   def on(
     obj: Application,
     event: GetIDsOfNames,
@@ -1177,6 +1178,7 @@ trait ActiveXObject extends js.Object {
     event: Resize,
     handler: js.ThisFunction1[/* this */ Chart, /* parameter */ js.Object, Unit]
   ): Unit = js.native
+  
   @JSName("set")
   def set_Colors(obj: Workbook, propertyName: Colors, parameterTypes: js.Array[Double], newValue: Double): Unit = js.native
   @JSName("set")
@@ -1207,4 +1209,3 @@ trait ActiveXObject extends js.Object {
   @JSName("set")
   def set_Value(obj: Range, propertyName: Value, parameterTypes: js.Array[XlRangeValueDataType], newValue: js.Any): Unit = js.native
 }
-

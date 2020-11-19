@@ -2,13 +2,15 @@ package typingsSlinky.pEachSeries
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object anon extends js.Object {
+  
   @js.native
   trait Call extends js.Object {
+    
     /**
     	Iterate over promises serially.
     	@param input - Iterated over serially in the `iterator` function.
@@ -34,6 +36,4 @@ object anon extends js.Object {
       iterator: js.Function2[/* element */ ValueType, /* index */ Double, _]
     ): js.Promise[js.Array[ValueType]] = js.native
   }
-  
 }
-

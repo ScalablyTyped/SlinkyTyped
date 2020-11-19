@@ -18,11 +18,23 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws", "secretsmanager")
 @js.native
 object secretsmanager extends js.Object {
+  
+  def getSecret(): js.Promise[GetSecretResult] = js.native
+  def getSecret(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetSecretResult] = js.native
+  def getSecret(args: GetSecretArgs): js.Promise[GetSecretResult] = js.native
+  def getSecret(args: GetSecretArgs, opts: InvokeOptions): js.Promise[GetSecretResult] = js.native
+  
+  def getSecretRotation(args: GetSecretRotationArgs): js.Promise[GetSecretRotationResult] = js.native
+  def getSecretRotation(args: GetSecretRotationArgs, opts: InvokeOptions): js.Promise[GetSecretRotationResult] = js.native
+  
+  def getSecretVersion(args: GetSecretVersionArgs): js.Promise[GetSecretVersionResult] = js.native
+  def getSecretVersion(args: GetSecretVersionArgs, opts: InvokeOptions): js.Promise[GetSecretVersionResult] = js.native
+  
   @js.native
   class Secret protected ()
     extends typingsSlinky.pulumiAws.secretsmanagerMod.Secret {
@@ -38,6 +50,30 @@ object secretsmanager extends js.Object {
     def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
     def this(name: String, args: SecretArgs, opts: CustomResourceOptions) = this()
   }
+  /* static members */
+  @js.native
+  object Secret extends js.Object {
+    
+    /**
+      * Get an existing Secret resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.secretMod.Secret = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretMod.Secret = js.native
+    def get(name: String, id: Input[ID], state: SecretState): typingsSlinky.pulumiAws.secretMod.Secret = js.native
+    def get(name: String, id: Input[ID], state: SecretState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretMod.Secret = js.native
+    
+    /**
+      * Returns true if the given object is an instance of Secret.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/secretsmanager/secret.Secret */ Boolean = js.native
+  }
   
   @js.native
   class SecretRotation protected ()
@@ -51,6 +87,30 @@ object secretsmanager extends js.Object {
       */
     def this(name: String, args: SecretRotationArgs) = this()
     def this(name: String, args: SecretRotationArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object SecretRotation extends js.Object {
+    
+    /**
+      * Get an existing SecretRotation resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.secretRotationMod.SecretRotation = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretRotationMod.SecretRotation = js.native
+    def get(name: String, id: Input[ID], state: SecretRotationState): typingsSlinky.pulumiAws.secretRotationMod.SecretRotation = js.native
+    def get(name: String, id: Input[ID], state: SecretRotationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretRotationMod.SecretRotation = js.native
+    
+    /**
+      * Returns true if the given object is an instance of SecretRotation.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/secretsmanager/secretRotation.SecretRotation */ Boolean = js.native
   }
   
   @js.native
@@ -66,64 +126,10 @@ object secretsmanager extends js.Object {
     def this(name: String, args: SecretVersionArgs) = this()
     def this(name: String, args: SecretVersionArgs, opts: CustomResourceOptions) = this()
   }
-  
-  def getSecret(): js.Promise[GetSecretResult] = js.native
-  def getSecret(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetSecretResult] = js.native
-  def getSecret(args: GetSecretArgs): js.Promise[GetSecretResult] = js.native
-  def getSecret(args: GetSecretArgs, opts: InvokeOptions): js.Promise[GetSecretResult] = js.native
-  def getSecretRotation(args: GetSecretRotationArgs): js.Promise[GetSecretRotationResult] = js.native
-  def getSecretRotation(args: GetSecretRotationArgs, opts: InvokeOptions): js.Promise[GetSecretRotationResult] = js.native
-  def getSecretVersion(args: GetSecretVersionArgs): js.Promise[GetSecretVersionResult] = js.native
-  def getSecretVersion(args: GetSecretVersionArgs, opts: InvokeOptions): js.Promise[GetSecretVersionResult] = js.native
-  /* static members */
-  @js.native
-  object Secret extends js.Object {
-    /**
-      * Get an existing Secret resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.secretMod.Secret = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretMod.Secret = js.native
-    def get(name: String, id: Input[ID], state: SecretState): typingsSlinky.pulumiAws.secretMod.Secret = js.native
-    def get(name: String, id: Input[ID], state: SecretState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretMod.Secret = js.native
-    /**
-      * Returns true if the given object is an instance of Secret.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/secretsmanager/secret.Secret */ Boolean = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object SecretRotation extends js.Object {
-    /**
-      * Get an existing SecretRotation resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.secretRotationMod.SecretRotation = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretRotationMod.SecretRotation = js.native
-    def get(name: String, id: Input[ID], state: SecretRotationState): typingsSlinky.pulumiAws.secretRotationMod.SecretRotation = js.native
-    def get(name: String, id: Input[ID], state: SecretRotationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretRotationMod.SecretRotation = js.native
-    /**
-      * Returns true if the given object is an instance of SecretRotation.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/secretsmanager/secretRotation.SecretRotation */ Boolean = js.native
-  }
-  
   /* static members */
   @js.native
   object SecretVersion extends js.Object {
+    
     /**
       * Get an existing SecretVersion resource's state with the given name, ID, and optional extra
       * properties used to qualify the lookup.
@@ -137,12 +143,11 @@ object secretsmanager extends js.Object {
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretVersionMod.SecretVersion = js.native
     def get(name: String, id: Input[ID], state: SecretVersionState): typingsSlinky.pulumiAws.secretVersionMod.SecretVersion = js.native
     def get(name: String, id: Input[ID], state: SecretVersionState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretVersionMod.SecretVersion = js.native
+    
     /**
       * Returns true if the given object is an instance of SecretVersion.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/secretsmanager/secretVersion.SecretVersion */ Boolean = js.native
   }
-  
 }
-

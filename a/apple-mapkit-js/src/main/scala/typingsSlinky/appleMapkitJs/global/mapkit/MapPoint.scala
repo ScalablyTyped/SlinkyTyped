@@ -2,7 +2,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A location on a map when the Earth's surface is projected onto a
@@ -20,4 +20,3 @@ class MapPoint protected ()
     */
   def this(x: Double, y: Double) = this()
 }
-

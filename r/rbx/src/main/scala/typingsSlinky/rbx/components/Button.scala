@@ -1,5 +1,6 @@
 package typingsSlinky.rbx.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa
@@ -57,7 +58,7 @@ import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.rbx.anon.`6`[TAsComponent] with typingsSlinky.rbx.helpersMod.HelpersPropsOverrides with typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa with typingsSlinky.rbx.buttonButtonMod.ButtonModifierProps with (typingsSlinky.std.Pick[
 typingsSlinky.react.mod.ComponentProps[TAsComponent], 
@@ -66,16 +67,17 @@ typingsSlinky.std.Exclude[
   typingsSlinky.rbx.rbxStrings.hidden | typingsSlinky.rbx.rbxStrings.text | typingsSlinky.rbx.rbxStrings.color | typingsSlinky.rbx.rbxStrings.overlay | typingsSlinky.rbx.rbxStrings.size | typingsSlinky.rbx.rbxStrings.italic | typingsSlinky.rbx.rbxStrings.relative | typingsSlinky.rbx.rbxStrings.static | typingsSlinky.rbx.rbxStrings.tooltip | typingsSlinky.rbx.rbxStrings.as | typingsSlinky.rbx.rbxStrings.className | typingsSlinky.rbx.rbxStrings.badge | typingsSlinky.rbx.rbxStrings.badgeColor | typingsSlinky.rbx.rbxStrings.badgeOutlined | typingsSlinky.rbx.rbxStrings.badgeRounded | typingsSlinky.rbx.rbxStrings.badgeSize | typingsSlinky.rbx.rbxStrings.clearfix | typingsSlinky.rbx.rbxStrings.pull | typingsSlinky.rbx.rbxStrings.marginless | typingsSlinky.rbx.rbxStrings.paddingless | typingsSlinky.rbx.rbxStrings.radiusless | typingsSlinky.rbx.rbxStrings.shadowless | typingsSlinky.rbx.rbxStrings.unselectable | typingsSlinky.rbx.rbxStrings.clipped | typingsSlinky.rbx.rbxStrings.responsive | typingsSlinky.rbx.rbxStrings.textAlign | typingsSlinky.rbx.rbxStrings.textSize | typingsSlinky.rbx.rbxStrings.tooltipActive | typingsSlinky.rbx.rbxStrings.tooltipColor | typingsSlinky.rbx.rbxStrings.tooltipMultiline | typingsSlinky.rbx.rbxStrings.tooltipPosition | typingsSlinky.rbx.rbxStrings.tooltipResponsive | typingsSlinky.rbx.rbxStrings.backgroundColor | typingsSlinky.rbx.rbxStrings.textColor | typingsSlinky.rbx.rbxStrings.textTransform | typingsSlinky.rbx.rbxStrings.textWeight | typingsSlinky.rbx.rbxStrings.invisible | typingsSlinky.rbx.rbxStrings.srOnly | typingsSlinky.rbx.rbxStrings.fullwidth | typingsSlinky.rbx.rbxStrings.inverted | typingsSlinky.rbx.rbxStrings.outlined | typingsSlinky.rbx.rbxStrings.rounded | typingsSlinky.rbx.rbxStrings.selected | typingsSlinky.rbx.rbxStrings.state
 ]]) with (typingsSlinky.react.mod.RefAttributes[TAsComponent | typingsSlinky.rbx.exoticMod.FromReactType[TAsComponent]]) because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
 object Button {
+  
   @JSImport("rbx", "Button")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[/* <: typingsSlinky.react.mod.ElementType[js.Any] */ TAsComponent] (val args: js.Array[js.Any])
+  class Builder[TAsComponent /* <: ReactElement */] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object]
   
-  def apply[/* <: typingsSlinky.react.mod.ElementType[js.Any] */ TAsComponent](
+  def apply[TAsComponent /* <: ReactElement */](
     p: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with ButtonModifierProps with (Pick[
       ComponentProps[TAsComponent], 
       Exclude[
@@ -84,6 +86,6 @@ object Button {
       ]
     ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
   ): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[/* <: typingsSlinky.react.mod.ElementType[js.Any] */ TAsComponent](companion: Button.type): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, js.Dictionary.empty))()
+  
+  implicit def make[TAsComponent /* <: ReactElement */](companion: Button.type): Builder[TAsComponent] = new Builder[TAsComponent](js.Array(this.component, js.Dictionary.empty))()
 }
-

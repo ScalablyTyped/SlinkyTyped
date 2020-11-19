@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.IdentifyTask
 import typingsSlinky.arcgisJsApi.esri.IdentifyTaskProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/tasks/IdentifyTask", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends IdentifyTask {
   def this(properties: IdentifyTaskProperties) = this()
 }
-

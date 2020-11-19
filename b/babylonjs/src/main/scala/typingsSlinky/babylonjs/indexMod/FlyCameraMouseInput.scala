@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "FlyCameraMouseInput")
 @js.native
@@ -15,4 +15,3 @@ class FlyCameraMouseInput ()
   extends typingsSlinky.babylonjs.babylonjsMod.FlyCameraMouseInput {
   def this(touchEnabled: Boolean) = this()
 }
-

@@ -6,132 +6,16 @@ import typingsSlinky.jsData.jsDataBooleans.`false`
 import typingsSlinky.jsData.queryMod.QueryDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Mapper
   extends typingsSlinky.jsData.componentMod.default {
+  
   var _adapters: js.Any = js.native
-  var applySchema: js.Any = js.native
-  /**
-    * The {@link Container} that holds this Mapper. __Do not modify.__
-    *
-    * @name Mapper#lifecycleMethods
-    * @since 3.0.0
-    * @type {Object}
-    */
-  var datastore: js.Any = js.native
-  var defaultAdapter: js.Any = js.native
-  var idAttribute: String = js.native
-  var keepChangeHistory: js.Any = js.native
-  /**
-    * The meta information describing this Mapper's available lifecycle
-    * methods. __Do not modify.__
-    *
-    * @name Mapper#lifecycleMethods
-    * @since 3.0.0
-    * @type {Object}
-    */
-  var lifecycleMethods: Count = js.native
-  var methods: js.Any = js.native
-  var name: String = js.native
-  /**
-    * Set to `false` to force the Mapper to work with POJO objects only.
-    *
-    * @example
-    * // Use POJOs only.
-    * import { Mapper, Record } from 'js-data';
-    * const UserMapper = new Mapper({ recordClass: false });
-    * UserMapper.recordClass // false;
-    * const user = UserMapper.createRecord();
-    * user instanceof Record; // false
-    *
-    * @example
-    * // Set to a custom class to have records wrapped in your custom class.
-    * import { Mapper, Record } from 'js-data';
-    *  // Custom class
-    * class User {
-    *   constructor (props = {}) {
-    *     for (var key in props) {
-    *       if (props.hasOwnProperty(key)) {
-    *         this[key] = props[key];
-    *       }
-    *     }
-    *   }
-    * }
-    * const UserMapper = new Mapper({ recordClass: User });
-    * UserMapper.recordClass; // function User() {}
-    * const user = UserMapper.createRecord();
-    * user instanceof Record; // false
-    * user instanceof User; // true
-    *
-    *
-    * @example
-    * // Extend the {@link Record} class.
-    * import { Mapper, Record } from 'js-data';
-    *  // Custom class
-    * class User extends Record {
-    *   constructor () {
-    *     super(props);
-    *   }
-    * }
-    * const UserMapper = new Mapper({ recordClass: User });
-    * UserMapper.recordClass; // function User() {}
-    * const user = UserMapper.createRecord();
-    * user instanceof Record; // true
-    * user instanceof User; // true
-    *
-    * @name Mapper#recordClass
-    * @default {@link Record}
-    * @see Record
-    * @since 3.0.0
-    */
-  var recordClass: TypeofRecord | js.Function | `false` | js.Any = js.native
-  var relationFields: js.Any = js.native
-  var relationList: js.Any = js.native
-  var relations: js.Any = js.native
-  /**
-    * This Mapper's {@link Schema}.
-    *
-    * @example <caption>Mapper#schema</caption>
-    * const JSData = require('js-data');
-    * const { Mapper } = JSData;
-    * console.log('Using JSData v' + JSData.version.full);
-    *
-    * const UserMapper = new Mapper({
-    *   name: 'user',
-    *   schema: {
-    *     properties: {
-    *       id: { type: 'number' },
-    *       first: { type: 'string', track: true },
-    *       last: { type: 'string', track: true },
-    *       role: { type: 'string', track: true, required: true },
-    *       age: { type: 'integer', track: true },
-    *       is_active: { type: 'number' }
-    *     }
-    *   }
-    * });
-    * const user = UserMapper.createRecord({
-    *   id: 1,
-    *   name: 'John',
-    *   role: 'admin'
-    * });
-    * user.on('change', function (user, changes) {
-    *   console.log(changes);
-    * });
-    * user.on('change:role', function (user, value) {
-    *   console.log('change:role - ' + value);
-    * });
-    * user.role = 'owner';
-    *
-    * @name Mapper#schema
-    * @see Schema
-    * @since 3.0.0
-    * @type {Schema}
-    */
-  var schema: typingsSlinky.jsData.schemaMod.default = js.native
-  var validateOnSet: js.Any = js.native
+  
   def _commitChanges(recordOrRecords: js.Any, newValues: js.Any): js.Any = js.native
+  
   /**
     * Creates child record for relation types like HasOne or HasMany with foreignKey
     * in order to satisfy foreignKey dependency (so called parent records).
@@ -145,6 +29,7 @@ trait Mapper
     * @since 3.0.0
     */
   def _createOrAssignChildRecordIfRequired(props: js.Any, context: js.Any): js.Promise[_] = js.native
+  
   /**
     * Creates parent record for relation types like BelongsTo or HasMany with localKeys
     * in order to satisfy foreignKey dependency (so called child records).
@@ -155,6 +40,7 @@ trait Mapper
     * @since 3.0.0
     */
   def _createParentRecordIfRequired(props: js.Any, opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * This method is called at the end of most lifecycle methods. It does the
     * following:
@@ -170,8 +56,11 @@ trait Mapper
     */
   def _end(result: js.Any, opts: js.Any): js.Any = js.native
   def _end(result: js.Any, opts: js.Any, skip: Boolean): js.Any = js.native
+  
   def _invokeAdapterMethod(method: js.Any, propsOrRecords: js.Any, opts: js.Any): js.Any = js.native
+  
   def _runHook(hookName: js.Any, hookArgs: js.Any*): js.Promise[_] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#count}. If this method
     * returns a promise then {@link Mapper#count} will wait for the promise
@@ -184,6 +73,7 @@ trait Mapper
     * @since 3.0.0
     */
   def afterCount(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#create}. If this method
     * returns a promise then {@link Mapper#create} will wait for the promise
@@ -196,6 +86,7 @@ trait Mapper
     * @since 3.0.0
     */
   def afterCreate(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#createMany}. If this method
     * returns a promise then {@link Mapper#createMany} will wait for the promise
@@ -208,6 +99,7 @@ trait Mapper
     * @since 3.0.0
     */
   def afterCreateMany(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#destroy}. If this method
     * returns a promise then {@link Mapper#destroy} will wait for the promise
@@ -220,6 +112,7 @@ trait Mapper
     * @since 3.0.0
     */
   def afterDestroy(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#destroyAll}. If this method
     * returns a promise then {@link Mapper#destroyAll} will wait for the promise
@@ -233,6 +126,7 @@ trait Mapper
     * @since 3.0.0
     */
   def afterDestroyAll(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#find}. If this method
     * returns a promise then {@link Mapper#find} will wait for the promise
@@ -245,6 +139,7 @@ trait Mapper
     * @since 3.0.0
     */
   def afterFind(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#findAll}. If this method
     * returns a promise then {@link Mapper#findAll} will wait for the promise
@@ -257,6 +152,7 @@ trait Mapper
     * @since 3.0.0
     */
   def afterFindAll(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#sum}. If this method
     * returns a promise then {@link Mapper#sum} will wait for the promise
@@ -269,6 +165,7 @@ trait Mapper
     * @since 3.0.0
     */
   def afterSum(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#update}. If this method
     * returns a promise then {@link Mapper#update} will wait for the promise
@@ -282,6 +179,7 @@ trait Mapper
     * @since 3.0.0
     */
   def afterUpdate(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#updateAll}. If this method
     * returns a promise then {@link Mapper#updateAll} will wait for the promise
@@ -295,6 +193,7 @@ trait Mapper
     * @since 3.0.0
     */
   def afterUpdateAll(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#updateMany}. If this method
     * returns a promise then {@link Mapper#updateMany} will wait for the promise
@@ -307,6 +206,9 @@ trait Mapper
     * @since 3.0.0
     */
   def afterUpdateMany(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
+  var applySchema: js.Any = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#count}. If this method
     * returns a promise then {@link Mapper#count} will wait for the promise
@@ -318,6 +220,7 @@ trait Mapper
     * @since 3.0.0
     */
   def beforeCount(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#create}. If this method
     * returns a promise then {@link Mapper#create} will wait for the promise
@@ -329,6 +232,7 @@ trait Mapper
     * @since 3.0.0
     */
   def beforeCreate(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#createMany}. If this method
     * returns a promise then {@link Mapper#createMany} will wait for the promise
@@ -340,6 +244,7 @@ trait Mapper
     * @since 3.0.0
     */
   def beforeCreateMany(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#destroy}. If this method
     * returns a promise then {@link Mapper#destroy} will wait for the promise
@@ -351,6 +256,7 @@ trait Mapper
     * @since 3.0.0
     */
   def beforeDestroy(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#destroyAll}. If this method
     * returns a promise then {@link Mapper#destroyAll} will wait for the promise
@@ -362,6 +268,7 @@ trait Mapper
     * @since 3.0.0
     */
   def beforeDestroyAll(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mappers lifecycle hook called by {@link Mapper#find}. If this method
     * returns a promise then {@link Mapper#find} will wait for the promise
@@ -373,6 +280,7 @@ trait Mapper
     * @since 3.0.0
     */
   def beforeFind(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#findAll}. If this method
     * returns a promise then {@link Mapper#findAll} will wait for the promise
@@ -384,6 +292,7 @@ trait Mapper
     * @since 3.0.0
     */
   def beforeFindAll(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#sum}. If this method
     * returns a promise then {@link Mapper#sum} will wait for the promise
@@ -396,6 +305,7 @@ trait Mapper
     * @since 3.0.0
     */
   def beforeSum(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#update}. If this method
     * returns a promise then {@link Mapper#update} will wait for the promise
@@ -408,6 +318,7 @@ trait Mapper
     * @since 3.0.0
     */
   def beforeUpdate(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#updateAll}. If this method
     * returns a promise then {@link Mapper#updateAll} will wait for the promise
@@ -420,6 +331,7 @@ trait Mapper
     * @since 3.0.0
     */
   def beforeUpdateAll(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Mapper lifecycle hook called by {@link Mapper#updateMany}. If this method
     * returns a promise then {@link Mapper#updateMany} will wait for the promise
@@ -431,6 +343,7 @@ trait Mapper
     * @since 3.0.0
     */
   def beforeUpdateMany(args: js.Any*): js.Promise[scala.Nothing] = js.native
+  
   /**
     * Define a belongsTo relationship. Only useful if you're managing your
     * Mappers manually and not using a Container or DataStore component.
@@ -461,6 +374,7 @@ trait Mapper
     * @since 3.0.0
     */
   def belongsTo(relatedMapper: js.Any, opts: js.Any): Unit = js.native
+  
   /**
     * Select records according to the `query` argument and return the count.
     *
@@ -490,6 +404,7 @@ trait Mapper
     */
   def count(query: js.Any): js.Promise[_] = js.native
   def count(query: js.Any, opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * Fired during {@link Mapper#create}. See
     * {@link Mapper~beforeCreateListener} for how to listen for this event.
@@ -578,6 +493,7 @@ trait Mapper
   def create(props: js.UndefOr[scala.Nothing], opts: js.Any): js.Promise[_] = js.native
   def create(props: js.Any): js.Promise[_] = js.native
   def create(props: js.Any, opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * Use {@link Mapper#createRecord} instead.
     * @deprecated
@@ -590,6 +506,7 @@ trait Mapper
     */
   def createInstance(props: js.Any): js.Any = js.native
   def createInstance(props: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Fired during {@link Mapper#createMany}. See
     * {@link Mapper~beforeCreateManyListener} for how to listen for this event.
@@ -683,6 +600,7 @@ trait Mapper
   def createMany(records: js.UndefOr[scala.Nothing], opts: js.Any): js.Promise[_] = js.native
   def createMany(records: js.Array[_]): js.Promise[_] = js.native
   def createMany(records: js.Array[_], opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * Create an unsaved, uncached instance of this Mapper's
     * {@link Mapper#recordClass}.
@@ -762,6 +680,7 @@ trait Mapper
   def createRecord(props: js.UndefOr[scala.Nothing], opts: js.Any): typingsSlinky.jsData.recordMod.default | js.Array[typingsSlinky.jsData.recordMod.default] | js.Any = js.native
   def createRecord(props: js.Any): typingsSlinky.jsData.recordMod.default | js.Array[typingsSlinky.jsData.recordMod.default] | js.Any = js.native
   def createRecord(props: js.Any, opts: js.Any): typingsSlinky.jsData.recordMod.default | js.Array[typingsSlinky.jsData.recordMod.default] | js.Any = js.native
+  
   /**
     * Lifecycle invocation method. You probably won't call this method directly.
     *
@@ -772,10 +691,23 @@ trait Mapper
     * @since 3.0.0
     */
   def crud(method: js.Any, args: js.Any*): js.Promise[_] = js.native
+  
+  /**
+    * The {@link Container} that holds this Mapper. __Do not modify.__
+    *
+    * @name Mapper#lifecycleMethods
+    * @since 3.0.0
+    * @type {Object}
+    */
+  var datastore: js.Any = js.native
+  
+  var defaultAdapter: js.Any = js.native
+  
   /**
     * @ignore
     */
   def defineRelations(): Unit = js.native
+  
   /**
     * Fired during {@link Mapper#destroy}. See
     * {@link Mapper~beforeDestroyListener} for how to listen for this event.
@@ -863,6 +795,7 @@ trait Mapper
   def destroy(id: String, opts: js.Any): js.Promise[_] = js.native
   def destroy(id: Double): js.Promise[_] = js.native
   def destroy(id: Double, opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * Fired during {@link Mapper#destroyAll}. See
     * {@link Mapper~beforeDestroyAllListener} for how to listen for this event.
@@ -964,6 +897,7 @@ trait Mapper
   def destroyAll(query: js.UndefOr[scala.Nothing], opts: js.Any): js.Promise[_] = js.native
   def destroyAll(query: js.Any): js.Promise[_] = js.native
   def destroyAll(query: js.Any, opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * Fired during {@link Mapper#find}. See
     * {@link Mapper~beforeFindListener} for how to listen for this event.
@@ -1053,6 +987,7 @@ trait Mapper
   def find(id: String, opts: js.Any): js.Promise[_] = js.native
   def find(id: Double): js.Promise[_] = js.native
   def find(id: Double, opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * Fired during {@link Mapper#findAll}. See
     * {@link Mapper~beforeFindAllListener} for how to listen for this event.
@@ -1144,6 +1079,7 @@ trait Mapper
     */
   def findAll(query: js.Any): js.Promise[_] = js.native
   def findAll(query: js.Any, opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * Return the registered adapter with the given name or the default adapter if
     * no name is provided.
@@ -1156,6 +1092,7 @@ trait Mapper
     */
   def getAdapter(): js.Any = js.native
   def getAdapter(name: String): js.Any = js.native
+  
   /**
     * Return the name of a registered adapter based on the given name or options,
     * or the name of the default adapter if no name provided.
@@ -1168,6 +1105,7 @@ trait Mapper
     */
   def getAdapterName(): js.Any = js.native
   def getAdapterName(opts: js.Any): js.Any = js.native
+  
   /**
     * Get the object of registered adapters for this Mapper.
     *
@@ -1177,6 +1115,7 @@ trait Mapper
     * @tutorial ["http://www.js-data.io/v3.0/docs/connecting-to-a-data-source","Connecting to a data source"]
     */
   def getAdapters(): js.Any = js.native
+  
   /**
     * Returns this Mapper's {@link Schema}.
     *
@@ -1186,6 +1125,7 @@ trait Mapper
     * @since 3.0.0
     */
   def getSchema(): typingsSlinky.jsData.schemaMod.default = js.native
+  
   /**
     * Defines a hasMany relationship. Only useful if you're managing your
     * Mappers manually and not using a Container or DataStore component.
@@ -1203,6 +1143,7 @@ trait Mapper
     * @since 3.0.0
     */
   def hasMany(relatedMapper: js.Any, opts: js.Any): Unit = js.native
+  
   /**
     * Defines a hasOne relationship. Only useful if you're managing your Mappers
     * manually and not using a {@link Container} or {@link DataStore} component.
@@ -1220,6 +1161,9 @@ trait Mapper
     * @since 3.0.0
     */
   def hasOne(relatedMapper: js.Any, opts: js.Any): Unit = js.native
+  
+  var idAttribute: String = js.native
+  
   /**
     * Return whether `record` is an instance of this Mapper's recordClass.
     *
@@ -1237,6 +1181,76 @@ trait Mapper
     * @since 3.0.0
     */
   def is(record: js.Any): Boolean = js.native
+  
+  var keepChangeHistory: js.Any = js.native
+  
+  /**
+    * The meta information describing this Mapper's available lifecycle
+    * methods. __Do not modify.__
+    *
+    * @name Mapper#lifecycleMethods
+    * @since 3.0.0
+    * @type {Object}
+    */
+  var lifecycleMethods: Count = js.native
+  
+  var methods: js.Any = js.native
+  
+  var name: String = js.native
+  
+  /**
+    * Set to `false` to force the Mapper to work with POJO objects only.
+    *
+    * @example
+    * // Use POJOs only.
+    * import { Mapper, Record } from 'js-data';
+    * const UserMapper = new Mapper({ recordClass: false });
+    * UserMapper.recordClass // false;
+    * const user = UserMapper.createRecord();
+    * user instanceof Record; // false
+    *
+    * @example
+    * // Set to a custom class to have records wrapped in your custom class.
+    * import { Mapper, Record } from 'js-data';
+    *  // Custom class
+    * class User {
+    *   constructor (props = {}) {
+    *     for (var key in props) {
+    *       if (props.hasOwnProperty(key)) {
+    *         this[key] = props[key];
+    *       }
+    *     }
+    *   }
+    * }
+    * const UserMapper = new Mapper({ recordClass: User });
+    * UserMapper.recordClass; // function User() {}
+    * const user = UserMapper.createRecord();
+    * user instanceof Record; // false
+    * user instanceof User; // true
+    *
+    *
+    * @example
+    * // Extend the {@link Record} class.
+    * import { Mapper, Record } from 'js-data';
+    *  // Custom class
+    * class User extends Record {
+    *   constructor () {
+    *     super(props);
+    *   }
+    * }
+    * const UserMapper = new Mapper({ recordClass: User });
+    * UserMapper.recordClass; // function User() {}
+    * const user = UserMapper.createRecord();
+    * user instanceof Record; // true
+    * user instanceof User; // true
+    *
+    * @name Mapper#recordClass
+    * @default {@link Record}
+    * @see Record
+    * @since 3.0.0
+    */
+  var recordClass: TypeofRecord | js.Function | `false` | js.Any = js.native
+  
   /**
     * Register an adapter on this Mapper under the given name.
     *
@@ -1251,6 +1265,54 @@ trait Mapper
     */
   def registerAdapter(name: js.Any, adapter: js.Any): Unit = js.native
   def registerAdapter(name: js.Any, adapter: js.Any, opts: js.Any): Unit = js.native
+  
+  var relationFields: js.Any = js.native
+  
+  var relationList: js.Any = js.native
+  
+  var relations: js.Any = js.native
+  
+  /**
+    * This Mapper's {@link Schema}.
+    *
+    * @example <caption>Mapper#schema</caption>
+    * const JSData = require('js-data');
+    * const { Mapper } = JSData;
+    * console.log('Using JSData v' + JSData.version.full);
+    *
+    * const UserMapper = new Mapper({
+    *   name: 'user',
+    *   schema: {
+    *     properties: {
+    *       id: { type: 'number' },
+    *       first: { type: 'string', track: true },
+    *       last: { type: 'string', track: true },
+    *       role: { type: 'string', track: true, required: true },
+    *       age: { type: 'integer', track: true },
+    *       is_active: { type: 'number' }
+    *     }
+    *   }
+    * });
+    * const user = UserMapper.createRecord({
+    *   id: 1,
+    *   name: 'John',
+    *   role: 'admin'
+    * });
+    * user.on('change', function (user, changes) {
+    *   console.log(changes);
+    * });
+    * user.on('change:role', function (user, value) {
+    *   console.log('change:role - ' + value);
+    * });
+    * user.role = 'owner';
+    *
+    * @name Mapper#schema
+    * @see Schema
+    * @since 3.0.0
+    * @type {Schema}
+    */
+  var schema: typingsSlinky.jsData.schemaMod.default = js.native
+  
   /**
     * Select records according to the `query` argument, and aggregate the sum
     * value of the property specified by `field`.
@@ -1281,6 +1343,7 @@ trait Mapper
     */
   def sum(field: js.Any, query: QueryDefinition): js.Promise[_] = js.native
   def sum(field: js.Any, query: QueryDefinition, opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * Return a plain object representation of the given record. Relations can
     * be optionally be included. Non-schema properties can be excluded.
@@ -1327,6 +1390,7 @@ trait Mapper
     */
   def toJSON(records: js.Any): js.Any = js.native
   def toJSON(records: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Fired during {@link Mapper#update}. See
     * {@link Mapper~beforeUpdateListener} for how to listen for this event.
@@ -1414,6 +1478,7 @@ trait Mapper
     */
   def update(id: js.Any, props: js.Any): js.Promise[_] = js.native
   def update(id: js.Any, props: js.Any, opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * Fired during {@link Mapper#updateAll}. See
     * {@link Mapper~beforeUpdateAllListener} for how to listen for this event.
@@ -1505,6 +1570,7 @@ trait Mapper
   def updateAll(props: js.Any, query: js.UndefOr[scala.Nothing], opts: js.Any): js.Promise[_] = js.native
   def updateAll(props: js.Any, query: QueryDefinition): js.Promise[_] = js.native
   def updateAll(props: js.Any, query: QueryDefinition, opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * Fired during {@link Mapper#updateMany}. See
     * {@link Mapper~beforeUpdateManyListener} for how to listen for this event.
@@ -1588,6 +1654,7 @@ trait Mapper
     */
   def updateMany(records: js.Any): js.Promise[_] = js.native
   def updateMany(records: js.Any, opts: js.Any): js.Promise[_] = js.native
+  
   /**
     * Validate the given record or records according to this Mapper's
     * {@link Schema}. If there are no validation errors then the return value
@@ -1619,6 +1686,9 @@ trait Mapper
     */
   def validate(record: js.Any): js.Array[_] = js.native
   def validate(record: js.Any, opts: js.Any): js.Array[_] = js.native
+  
+  var validateOnSet: js.Any = js.native
+  
   /**
     * Method used to wrap data returned by an adapter with this Mapper's
     * {@link Mapper#recordClass}. This method is used by all of a Mapper's CRUD
@@ -1659,4 +1729,3 @@ trait Mapper
     */
   def wrap(data: js.Any, opts: js.Any): js.Any = js.native
 }
-

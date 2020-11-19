@@ -3,12 +3,12 @@ package typingsSlinky.winrt.Windows.ApplicationModel.Activation
 import typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileSavePickerUI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FileSavePickerActivatedEventArgs extends IFileSavePickerActivatedEventArgs
-
 object FileSavePickerActivatedEventArgs {
+  
   @scala.inline
   def apply(
     fileSavePickerUI: FileSavePickerUI,
@@ -20,4 +20,3 @@ object FileSavePickerActivatedEventArgs {
     __obj.asInstanceOf[FileSavePickerActivatedEventArgs]
   }
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.graphqlToolsWrap.typesMod.ErrorsTransformer
 import typingsSlinky.graphqlToolsWrap.typesMod.ObjectValueTransformerMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server", "MapFields")
 @js.native
@@ -24,4 +24,3 @@ class MapFields protected ()
     errorsTransformer: ErrorsTransformer
   ) = this()
 }
-

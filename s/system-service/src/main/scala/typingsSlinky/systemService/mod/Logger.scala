@@ -5,7 +5,7 @@ import typingsSlinky.systemLogger.mod.LoggerConfiguration
 import typingsSlinky.systemLogger.mod.SourcesConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("system-service", "Logger")
 @js.native
@@ -35,4 +35,3 @@ class Logger ()
     sourceConfig: SourcesConfiguration
   ) = this()
 }
-

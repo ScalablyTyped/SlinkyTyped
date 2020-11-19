@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AppMesh extends Service {
+  
   @JSName("config")
   var config_AppMesh: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates a gateway route.
     A gateway route is attached to a virtual gateway and routes traffic to an existing
@@ -31,6 +33,7 @@ trait AppMesh extends Service {
     params: CreateGatewayRouteInput,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateGatewayRouteOutput, Unit]
   ): Request[CreateGatewayRouteOutput, AWSError] = js.native
+  
   /**
     * Creates a service mesh.
     A service mesh is a logical boundary for network traffic between services that are
@@ -54,6 +57,7 @@ trait AppMesh extends Service {
     params: CreateMeshInput,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateMeshOutput, Unit]
   ): Request[CreateMeshOutput, AWSError] = js.native
+  
   /**
     * Creates a route that is associated with a virtual router.
     You can route several different protocols and define a retry policy for a route.
@@ -73,6 +77,7 @@ trait AppMesh extends Service {
     params: CreateRouteInput,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateRouteOutput, Unit]
   ): Request[CreateRouteOutput, AWSError] = js.native
+  
   /**
     * Creates a virtual gateway.
     A virtual gateway allows resources outside your mesh to communicate to resources that
@@ -96,6 +101,7 @@ trait AppMesh extends Service {
     params: CreateVirtualGatewayInput,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateVirtualGatewayOutput, Unit]
   ): Request[CreateVirtualGatewayOutput, AWSError] = js.native
+  
   /**
     * Creates a virtual node within a service mesh.
     A virtual node acts as a logical pointer to a particular task group, such as an Amazon ECS
@@ -149,6 +155,7 @@ trait AppMesh extends Service {
     params: CreateVirtualNodeInput,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateVirtualNodeOutput, Unit]
   ): Request[CreateVirtualNodeOutput, AWSError] = js.native
+  
   /**
     * Creates a virtual router within a service mesh.
     Specify a listener for any inbound traffic that your virtual router
@@ -174,6 +181,7 @@ trait AppMesh extends Service {
     params: CreateVirtualRouterInput,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateVirtualRouterOutput, Unit]
   ): Request[CreateVirtualRouterOutput, AWSError] = js.native
+  
   /**
     * Creates a virtual service within a service mesh.
     A virtual service is an abstraction of a real service that is provided by a virtual node
@@ -199,6 +207,7 @@ trait AppMesh extends Service {
     params: CreateVirtualServiceInput,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateVirtualServiceOutput, Unit]
   ): Request[CreateVirtualServiceOutput, AWSError] = js.native
+  
   /**
     * Deletes an existing gateway route.
     */
@@ -212,6 +221,7 @@ trait AppMesh extends Service {
     params: DeleteGatewayRouteInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteGatewayRouteOutput, Unit]
   ): Request[DeleteGatewayRouteOutput, AWSError] = js.native
+  
   /**
     * Deletes an existing service mesh.
     You must delete all resources (virtual services, routes, virtual routers, and virtual
@@ -229,6 +239,7 @@ trait AppMesh extends Service {
     params: DeleteMeshInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteMeshOutput, Unit]
   ): Request[DeleteMeshOutput, AWSError] = js.native
+  
   /**
     * Deletes an existing route.
     */
@@ -242,6 +253,7 @@ trait AppMesh extends Service {
     params: DeleteRouteInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteRouteOutput, Unit]
   ): Request[DeleteRouteOutput, AWSError] = js.native
+  
   /**
     * Deletes an existing virtual gateway. You cannot delete a virtual gateway if any gateway
     routes are associated to it.
@@ -257,6 +269,7 @@ trait AppMesh extends Service {
     params: DeleteVirtualGatewayInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteVirtualGatewayOutput, Unit]
   ): Request[DeleteVirtualGatewayOutput, AWSError] = js.native
+  
   /**
     * Deletes an existing virtual node.
     You must delete any virtual services that list a virtual node as a service provider
@@ -274,6 +287,7 @@ trait AppMesh extends Service {
     params: DeleteVirtualNodeInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteVirtualNodeOutput, Unit]
   ): Request[DeleteVirtualNodeOutput, AWSError] = js.native
+  
   /**
     * Deletes an existing virtual router.
     You must delete any routes associated with the virtual router before you can delete the
@@ -291,6 +305,7 @@ trait AppMesh extends Service {
     params: DeleteVirtualRouterInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteVirtualRouterOutput, Unit]
   ): Request[DeleteVirtualRouterOutput, AWSError] = js.native
+  
   /**
     * Deletes an existing virtual service.
     */
@@ -304,6 +319,7 @@ trait AppMesh extends Service {
     params: DeleteVirtualServiceInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteVirtualServiceOutput, Unit]
   ): Request[DeleteVirtualServiceOutput, AWSError] = js.native
+  
   /**
     * Describes an existing gateway route.
     */
@@ -317,6 +333,7 @@ trait AppMesh extends Service {
     params: DescribeGatewayRouteInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeGatewayRouteOutput, Unit]
   ): Request[DescribeGatewayRouteOutput, AWSError] = js.native
+  
   /**
     * Describes an existing service mesh.
     */
@@ -330,6 +347,7 @@ trait AppMesh extends Service {
     params: DescribeMeshInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeMeshOutput, Unit]
   ): Request[DescribeMeshOutput, AWSError] = js.native
+  
   /**
     * Describes an existing route.
     */
@@ -343,6 +361,7 @@ trait AppMesh extends Service {
     params: DescribeRouteInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeRouteOutput, Unit]
   ): Request[DescribeRouteOutput, AWSError] = js.native
+  
   /**
     * Describes an existing virtual gateway.
     */
@@ -356,6 +375,7 @@ trait AppMesh extends Service {
     params: DescribeVirtualGatewayInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeVirtualGatewayOutput, Unit]
   ): Request[DescribeVirtualGatewayOutput, AWSError] = js.native
+  
   /**
     * Describes an existing virtual node.
     */
@@ -369,6 +389,7 @@ trait AppMesh extends Service {
     params: DescribeVirtualNodeInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeVirtualNodeOutput, Unit]
   ): Request[DescribeVirtualNodeOutput, AWSError] = js.native
+  
   /**
     * Describes an existing virtual router.
     */
@@ -382,6 +403,7 @@ trait AppMesh extends Service {
     params: DescribeVirtualRouterInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeVirtualRouterOutput, Unit]
   ): Request[DescribeVirtualRouterOutput, AWSError] = js.native
+  
   /**
     * Describes an existing virtual service.
     */
@@ -395,6 +417,7 @@ trait AppMesh extends Service {
     params: DescribeVirtualServiceInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeVirtualServiceOutput, Unit]
   ): Request[DescribeVirtualServiceOutput, AWSError] = js.native
+  
   /**
     * Returns a list of existing gateway routes that are associated to a virtual
     gateway.
@@ -410,6 +433,7 @@ trait AppMesh extends Service {
     params: ListGatewayRoutesInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListGatewayRoutesOutput, Unit]
   ): Request[ListGatewayRoutesOutput, AWSError] = js.native
+  
   /**
     * Returns a list of existing service meshes.
     */
@@ -423,6 +447,7 @@ trait AppMesh extends Service {
     params: ListMeshesInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListMeshesOutput, Unit]
   ): Request[ListMeshesOutput, AWSError] = js.native
+  
   /**
     * Returns a list of existing routes in a service mesh.
     */
@@ -436,6 +461,7 @@ trait AppMesh extends Service {
     params: ListRoutesInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListRoutesOutput, Unit]
   ): Request[ListRoutesOutput, AWSError] = js.native
+  
   /**
     * List the tags for an App Mesh resource.
     */
@@ -449,6 +475,7 @@ trait AppMesh extends Service {
     params: ListTagsForResourceInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceOutput, Unit]
   ): Request[ListTagsForResourceOutput, AWSError] = js.native
+  
   /**
     * Returns a list of existing virtual gateways in a service mesh.
     */
@@ -462,6 +489,7 @@ trait AppMesh extends Service {
     params: ListVirtualGatewaysInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListVirtualGatewaysOutput, Unit]
   ): Request[ListVirtualGatewaysOutput, AWSError] = js.native
+  
   /**
     * Returns a list of existing virtual nodes.
     */
@@ -475,6 +503,7 @@ trait AppMesh extends Service {
     params: ListVirtualNodesInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListVirtualNodesOutput, Unit]
   ): Request[ListVirtualNodesOutput, AWSError] = js.native
+  
   /**
     * Returns a list of existing virtual routers in a service mesh.
     */
@@ -488,6 +517,7 @@ trait AppMesh extends Service {
     params: ListVirtualRoutersInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListVirtualRoutersOutput, Unit]
   ): Request[ListVirtualRoutersOutput, AWSError] = js.native
+  
   /**
     * Returns a list of existing virtual services in a service mesh.
     */
@@ -501,6 +531,7 @@ trait AppMesh extends Service {
     params: ListVirtualServicesInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListVirtualServicesOutput, Unit]
   ): Request[ListVirtualServicesOutput, AWSError] = js.native
+  
   /**
     * Associates the specified tags to a resource with the specified resourceArn.
     If existing tags on a resource aren't specified in the request parameters, they aren't
@@ -520,6 +551,7 @@ trait AppMesh extends Service {
     params: TagResourceInput,
     callback: js.Function2[/* err */ AWSError, /* data */ TagResourceOutput, Unit]
   ): Request[TagResourceOutput, AWSError] = js.native
+  
   /**
     * Deletes specified tags from a resource.
     */
@@ -533,6 +565,7 @@ trait AppMesh extends Service {
     params: UntagResourceInput,
     callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceOutput, Unit]
   ): Request[UntagResourceOutput, AWSError] = js.native
+  
   /**
     * Updates an existing gateway route that is associated to a specified virtual gateway in a
     service mesh.
@@ -548,6 +581,7 @@ trait AppMesh extends Service {
     params: UpdateGatewayRouteInput,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateGatewayRouteOutput, Unit]
   ): Request[UpdateGatewayRouteOutput, AWSError] = js.native
+  
   /**
     * Updates an existing service mesh.
     */
@@ -561,6 +595,7 @@ trait AppMesh extends Service {
     params: UpdateMeshInput,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateMeshOutput, Unit]
   ): Request[UpdateMeshOutput, AWSError] = js.native
+  
   /**
     * Updates an existing route for a specified service mesh and virtual router.
     */
@@ -574,6 +609,7 @@ trait AppMesh extends Service {
     params: UpdateRouteInput,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateRouteOutput, Unit]
   ): Request[UpdateRouteOutput, AWSError] = js.native
+  
   /**
     * Updates an existing virtual gateway in a specified service mesh.
     */
@@ -587,6 +623,7 @@ trait AppMesh extends Service {
     params: UpdateVirtualGatewayInput,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateVirtualGatewayOutput, Unit]
   ): Request[UpdateVirtualGatewayOutput, AWSError] = js.native
+  
   /**
     * Updates an existing virtual node in a specified service mesh.
     */
@@ -600,6 +637,7 @@ trait AppMesh extends Service {
     params: UpdateVirtualNodeInput,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateVirtualNodeOutput, Unit]
   ): Request[UpdateVirtualNodeOutput, AWSError] = js.native
+  
   /**
     * Updates an existing virtual router in a specified service mesh.
     */
@@ -613,6 +651,7 @@ trait AppMesh extends Service {
     params: UpdateVirtualRouterInput,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateVirtualRouterOutput, Unit]
   ): Request[UpdateVirtualRouterOutput, AWSError] = js.native
+  
   /**
     * Updates an existing virtual service in a specified service mesh.
     */
@@ -627,4 +666,3 @@ trait AppMesh extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateVirtualServiceOutput, Unit]
   ): Request[UpdateVirtualServiceOutput, AWSError] = js.native
 }
-

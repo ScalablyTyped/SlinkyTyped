@@ -3,7 +3,7 @@ package typingsSlinky.highcharts.highstockMod
 import typingsSlinky.highcharts.mod.LegendOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts/highstock", "Legend")
 @js.native
@@ -22,4 +22,3 @@ class Legend protected ()
     */
   def this(chart: typingsSlinky.highcharts.mod.Chart_, options: LegendOptions) = this()
 }
-

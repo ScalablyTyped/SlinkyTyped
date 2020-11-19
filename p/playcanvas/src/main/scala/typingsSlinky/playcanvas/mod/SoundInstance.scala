@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.mod
 import typingsSlinky.playcanvas.anon.Duration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A pc.SoundInstance plays a {@link pc.Sound}.
@@ -43,4 +43,3 @@ class SoundInstance protected ()
     options: Duration
   ) = this()
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.grammarkdown.tokensMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.EndOfFileToken
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.grammarkdown.tokensMod.KeywordKind
 */
 trait TokenKind extends js.Object
-

@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import org.scalajs.dom.raw.ProgressEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.SceneLoaderProgressEvent")
 @js.native
@@ -23,21 +23,12 @@ class SceneLoaderProgressEvent protected ()
     /** defines the data length to load */
   total: Double
   ) = this()
-  /** defines if data length to load can be evaluated */
-  /* CompleteClass */
-  override val lengthComputable: Boolean = js.native
-  /** defines the loaded data length */
-  /* CompleteClass */
-  override val loaded: Double = js.native
-  /** defines the data length to load */
-  /* CompleteClass */
-  override val total: Double = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.SceneLoaderProgressEvent")
 @js.native
 object SceneLoaderProgressEvent extends js.Object {
+  
   /**
     * Creates a new SceneLoaderProgressEvent from a ProgressEvent
     * @param event defines the source event
@@ -45,4 +36,3 @@ object SceneLoaderProgressEvent extends js.Object {
     */
   def FromProgressEvent(event: ProgressEvent): typingsSlinky.babylonjs.BABYLON.SceneLoaderProgressEvent = js.native
 }
-

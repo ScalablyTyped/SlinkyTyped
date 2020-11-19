@@ -4,11 +4,11 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.antdMobileRn.switchIndexNativeMod.AntmSwitchProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd-mobile-rn", "Switch")
 @js.native
 object Switch extends js.Object {
+  
   def apply(props: AntmSwitchProps): ReactElement = js.native
 }
-

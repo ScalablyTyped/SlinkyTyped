@@ -15,7 +15,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.ReferenceSetSelector
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.SelectorXPathSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.11.0: introduced
@@ -31,23 +31,24 @@ class IndirectEntityRef protected () extends EntityRef {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FIndirectEntityRef: IModel = js.native
+  
   def steps: IList[EntityRefStep] = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.IndirectEntityRef")
 @js.native
 object IndirectEntityRef extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new IndirectEntityRef instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): IndirectEntityRef = js.native
+  
   /**
     * Creates and returns a new IndirectEntityRef instance in the SDK and on the server.
     * The new IndirectEntityRef will be automatically stored in the 'entityRef' property
@@ -57,6 +58,7 @@ object IndirectEntityRef extends js.Object {
     *  7.17.0 and higher
     */
   def createInCreateObjectClientActionUnderEntityRef(container: CreateObjectClientAction): IndirectEntityRef = js.native
+  
   /**
     * Creates and returns a new IndirectEntityRef instance in the SDK and on the server.
     * The new IndirectEntityRef will be automatically stored in the 'entityRef' property
@@ -66,6 +68,7 @@ object IndirectEntityRef extends js.Object {
     *  7.11.0 and higher
     */
   def createInEntityPathSourceUnderEntityRef(container: EntityPathSource): IndirectEntityRef = js.native
+  
   /**
     * Creates and returns a new IndirectEntityRef instance in the SDK and on the server.
     * The new IndirectEntityRef will be automatically stored in the 'entityRef' property
@@ -75,6 +78,7 @@ object IndirectEntityRef extends js.Object {
     *  7.11.0 and higher
     */
   def createInEntityWidgetUnderEntityRef(container: EntityWidget): IndirectEntityRef = js.native
+  
   /**
     * Creates and returns a new IndirectEntityRef instance in the SDK and on the server.
     * The new IndirectEntityRef will be automatically stored in the 'entityRef' property
@@ -84,6 +88,7 @@ object IndirectEntityRef extends js.Object {
     *  7.11.0 and higher
     */
   def createInMemberRefUnderEntityRef(container: MemberRef): IndirectEntityRef = js.native
+  
   /**
     * Creates and returns a new IndirectEntityRef instance in the SDK and on the server.
     * The new IndirectEntityRef will be automatically stored in the 'entityRef' property
@@ -93,6 +98,7 @@ object IndirectEntityRef extends js.Object {
     *  7.11.0 to 7.16.0
     */
   def createInNewButtonUnderEntityRef(container: NewButton): IndirectEntityRef = js.native
+  
   /**
     * Creates and returns a new IndirectEntityRef instance in the SDK and on the server.
     * The new IndirectEntityRef will be automatically stored in the 'constrainedByRefs' property
@@ -102,6 +108,7 @@ object IndirectEntityRef extends js.Object {
     *  7.11.0 and higher
     */
   def createInReferenceSetSelectorUnderConstrainedByRefs(container: ReferenceSetSelector): IndirectEntityRef = js.native
+  
   /**
     * Creates and returns a new IndirectEntityRef instance in the SDK and on the server.
     * The new IndirectEntityRef will be automatically stored in the 'constrainedByRefs' property
@@ -111,6 +118,7 @@ object IndirectEntityRef extends js.Object {
     *  7.11.0 and higher
     */
   def createInSelectorXPathSourceUnderConstrainedByRefs(container: SelectorXPathSource): IndirectEntityRef = js.native
+  
   /**
     * Creates and returns a new IndirectEntityRef instance in the SDK and on the server.
     * The new IndirectEntityRef will be automatically stored in the 'entityRef' property
@@ -120,5 +128,8 @@ object IndirectEntityRef extends js.Object {
     *  7.11.0 and higher
     */
   def createInWidgetValueUnderEntityRef(container: WidgetValue): IndirectEntityRef = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

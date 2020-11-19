@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 8.0.0: introduced
@@ -25,19 +25,18 @@ class NanoflowCall protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "microflows.NanoflowCall")
 @js.native
 object NanoflowCall extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new NanoflowCall instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.NanoflowCall = js.native
+  
   /**
     * Creates and returns a new NanoflowCall instance in the SDK and on the server.
     * The new NanoflowCall will be automatically stored in the 'nanoflowCall' property
@@ -47,5 +46,8 @@ object NanoflowCall extends js.Object {
     *  8.0.0 and higher
     */
   def createIn(container: typingsSlinky.mendixmodelsdk.microflowsMod.microflows.NanoflowCallAction): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.NanoflowCall = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

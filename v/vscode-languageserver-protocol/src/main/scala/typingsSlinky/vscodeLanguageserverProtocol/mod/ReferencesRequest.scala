@@ -6,14 +6,17 @@ import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.ReferenceRegistrat
 import typingsSlinky.vscodeLanguageserverProtocol.vscodeLanguageserverProtocolStrings.textDocumentSlashreferences
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageserver-protocol", "ReferencesRequest")
 @js.native
 object ReferencesRequest extends js.Object {
+  
   val method: textDocumentSlashreferences = js.native
+  
   /** @deprecated Use ReferencesRequest.type */
   val resultType: typingsSlinky.vscodeJsonrpc.mod.ProgressType[js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.Location]] = js.native
+  
   val `type`: ProtocolRequestType[
     ReferenceParams, 
     js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.Location] | Null, 
@@ -22,4 +25,3 @@ object ReferencesRequest extends js.Object {
     ReferenceRegistrationOptions
   ] = js.native
 }
-

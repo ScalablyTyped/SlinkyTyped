@@ -2,10 +2,12 @@ package typingsSlinky.binaryParser.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object Parser {
+  
   type Data = scala.Double | java.lang.String | (js.Array[scala.Double | typingsSlinky.binaryParser.mod.Parser[js.Any]]) | typingsSlinky.binaryParser.mod.Parser[js.Any] | typingsSlinky.node.Buffer
+  
   type Next[O /* <: js.UndefOr[js.Object] */, N /* <: java.lang.String */, T /* <: js.Any */] = typingsSlinky.binaryParser.mod.Parser[
     typingsSlinky.binaryParser.mod.Parser.Valid[
       O, 
@@ -14,6 +16,8 @@ package object Parser {
     */ typingsSlinky.binaryParser.binaryParserStrings.Next with org.scalablytyped.runtime.TopLevel[js.Any]
     ]
   ]
+  
   type Parsed[O /* <: js.UndefOr[js.Object] */] = O | js.Object
+  
   type Valid[O /* <: js.UndefOr[js.Object] */, P /* <: js.Object */] = (O with P) | P
 }

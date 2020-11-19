@@ -4,7 +4,7 @@ import typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.Option
 import typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The IBM Watson&trade; Visual Recognition service uses deep learning algorithms to identify scenes, objects, and faces  in images you upload to the service. You can create and train a custom classifier to identify subjects that suit your needs.
@@ -30,61 +30,84 @@ class VisualRecognitionV3 protected () extends ^ {
     */
   def this(options: Options) = this()
 }
-
 /* static members */
 @JSImport("watson-developer-cloud/sdk", "VisualRecognitionV3")
 @js.native
 object VisualRecognitionV3 extends js.Object {
+  
   var URL: String = js.native
+  
   /** Constants for the `classify` operation. */
   @js.native
   object ClassifyConstants extends js.Object {
+    
     /** The desired language of parts of the response. See the response for details. */
     @js.native
     object AcceptLanguage extends js.Object {
-      /* "ar" */ val AR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.AR with String = js.native
-      /* "de" */ val DE: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.DE with String = js.native
-      /* "en" */ val EN: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.EN with String = js.native
-      /* "es" */ val ES: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.ES with String = js.native
-      /* "fr" */ val FR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.FR with String = js.native
-      /* "it" */ val IT: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.IT with String = js.native
-      /* "ja" */ val JA: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.JA with String = js.native
-      /* "ko" */ val KO: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.KO with String = js.native
-      /* "pt-br" */ val PT_BR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.PT_BR with String = js.native
-      /* "zh-cn" */ val ZH_CN: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.ZH_CN with String = js.native
-      /* "zh-tw" */ val ZH_TW: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.ZH_TW with String = js.native
+      
       @JSBracketAccess
       def apply(value: String): js.UndefOr[
             typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage with String
           ] = js.native
+      
+      /* "ar" */ val AR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.AR with String = js.native
+      
+      /* "de" */ val DE: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.DE with String = js.native
+      
+      /* "en" */ val EN: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.EN with String = js.native
+      
+      /* "es" */ val ES: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.ES with String = js.native
+      
+      /* "fr" */ val FR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.FR with String = js.native
+      
+      /* "it" */ val IT: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.IT with String = js.native
+      
+      /* "ja" */ val JA: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.JA with String = js.native
+      
+      /* "ko" */ val KO: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.KO with String = js.native
+      
+      /* "pt-br" */ val PT_BR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.PT_BR with String = js.native
+      
+      /* "zh-cn" */ val ZH_CN: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.ZH_CN with String = js.native
+      
+      /* "zh-tw" */ val ZH_TW: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.ClassifyConstants.AcceptLanguage.ZH_TW with String = js.native
     }
-    
   }
   
   /** Constants for the `detectFaces` operation. */
   @js.native
   object DetectFacesConstants extends js.Object {
+    
     /** The desired language of parts of the response. See the response for details. */
     @js.native
     object AcceptLanguage extends js.Object {
-      /* "ar" */ val AR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.AR with String = js.native
-      /* "de" */ val DE: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.DE with String = js.native
-      /* "en" */ val EN: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.EN with String = js.native
-      /* "es" */ val ES: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.ES with String = js.native
-      /* "fr" */ val FR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.FR with String = js.native
-      /* "it" */ val IT: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.IT with String = js.native
-      /* "ja" */ val JA: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.JA with String = js.native
-      /* "ko" */ val KO: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.KO with String = js.native
-      /* "pt-br" */ val PT_BR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.PT_BR with String = js.native
-      /* "zh-cn" */ val ZH_CN: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.ZH_CN with String = js.native
-      /* "zh-tw" */ val ZH_TW: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.ZH_TW with String = js.native
+      
       @JSBracketAccess
       def apply(value: String): js.UndefOr[
             typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage with String
           ] = js.native
+      
+      /* "ar" */ val AR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.AR with String = js.native
+      
+      /* "de" */ val DE: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.DE with String = js.native
+      
+      /* "en" */ val EN: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.EN with String = js.native
+      
+      /* "es" */ val ES: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.ES with String = js.native
+      
+      /* "fr" */ val FR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.FR with String = js.native
+      
+      /* "it" */ val IT: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.IT with String = js.native
+      
+      /* "ja" */ val JA: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.JA with String = js.native
+      
+      /* "ko" */ val KO: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.KO with String = js.native
+      
+      /* "pt-br" */ val PT_BR: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.PT_BR with String = js.native
+      
+      /* "zh-cn" */ val ZH_CN: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.ZH_CN with String = js.native
+      
+      /* "zh-tw" */ val ZH_TW: typingsSlinky.watsonDeveloperCloud.visualRecognitionV3GeneratedMod.DetectFacesConstants.AcceptLanguage.ZH_TW with String = js.native
     }
-    
   }
-  
 }
-

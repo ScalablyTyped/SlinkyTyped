@@ -8,11 +8,12 @@ import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.symlink.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs-promise", "symlink")
 @js.native
 object symlink extends js.Object {
+  
   def apply(srcpath: String, dstpath: String): js.Promise[Unit] = js.native
   def apply(srcpath: String, dstpath: String, callback: js.Function1[/* err */ ErrnoException, Unit]): Unit = js.native
   def apply(
@@ -80,4 +81,3 @@ object symlink extends js.Object {
   def apply(target: PathLike, path: PathLike, `type`: Null, callback: NoParamCallback): Unit = js.native
   def apply(target: PathLike, path: PathLike, `type`: Type, callback: NoParamCallback): Unit = js.native
 }
-

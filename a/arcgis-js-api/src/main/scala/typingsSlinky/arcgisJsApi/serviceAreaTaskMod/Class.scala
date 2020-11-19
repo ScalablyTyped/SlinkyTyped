@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.ServiceAreaTask
 import typingsSlinky.arcgisJsApi.esri.ServiceAreaTaskProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/tasks/ServiceAreaTask", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends ServiceAreaTask {
   def this(properties: ServiceAreaTaskProperties) = this()
 }
-

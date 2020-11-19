@@ -6,11 +6,12 @@ import typingsSlinky.unistBuilder.anon.Type
 import typingsSlinky.unistBuilder.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("unist-builder", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   // NOTE: the order of the unistBuilder overloads is important.
   // Looking at the generics' "extends" left to right.
   // It should go from more specific types higher in the file, to more broad types lower in the file.
@@ -51,4 +52,3 @@ object mod extends js.Object {
     */
   def apply[T /* <: String */, P /* <: js.Object */, C /* <: js.Array[Node] */](`type`: T, props: P, children: C): (Children[T, C]) with P = js.native
 }
-

@@ -43,38 +43,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.show
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojDialog_ extends baseComponent[ojDialogSettableProperties] {
-  var cancelBehavior: icon | escape | none = js.native
-  var dialogTitle: String | Null = js.native
-  var dragAffordance: `title-bar` | none = js.native
-  var initialVisibility: hide | show = js.native
-  var modality: modal | modeless = js.native
-  var onCancelBehaviorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDialogTitleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDragAffordanceChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onInitialVisibilityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onModalityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeClose: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeOpen: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjClose: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjFocus: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjOpen: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjResize: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjResizeStart: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjResizeStop: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onResizeBehaviorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onRoleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var position: Position = js.native
-  var resizeBehavior: resizable | none = js.native
-  var role: String = js.native
-  @JSName("translations")
-  var translations_ojDialog_ : LabelCloseIcon = js.native
+  
   def addEventListener(`type`: cancelBehaviorChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: cancelBehaviorChanged,
@@ -212,7 +185,15 @@ trait ojDialog_ extends baseComponent[ojDialogSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var cancelBehavior: icon | escape | none = js.native
+  
   def close(): Unit = js.native
+  
+  var dialogTitle: String | Null = js.native
+  
+  var dragAffordance: `title-bar` | none = js.native
+  
   @JSName("getProperty")
   def getProperty_cancelBehavior(property: cancelBehavior): icon | escape | none = js.native
   @JSName("getProperty")
@@ -229,9 +210,59 @@ trait ojDialog_ extends baseComponent[ojDialogSettableProperties] {
   def getProperty_resizeBehavior(property: resizeBehavior): resizable | none = js.native
   @JSName("getProperty")
   def getProperty_role(property: role): String = js.native
+  
+  var initialVisibility: hide | show = js.native
+  
   def isOpen(): Boolean = js.native
+  
+  var modality: modal | modeless = js.native
+  
+  var onCancelBehaviorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDialogTitleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDragAffordanceChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onInitialVisibilityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onModalityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeClose: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeOpen: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjClose: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjFocus: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjOpen: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjResize: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjResizeStart: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjResizeStop: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onResizeBehaviorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onRoleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def open(): Unit = js.native
+  
+  var position: Position = js.native
+  
+  var resizeBehavior: resizable | none = js.native
+  
+  var role: String = js.native
+  
   def setProperties(properties: ojDialogSettablePropertiesLenient): Unit = js.native
+  
   def setProperty(property: cancelBehavior, value: escape): Unit = js.native
   def setProperty(property: cancelBehavior, value: icon): Unit = js.native
   def setProperty(property: cancelBehavior, value: none): Unit = js.native
@@ -253,5 +284,7 @@ trait ojDialog_ extends baseComponent[ojDialogSettableProperties] {
   def setProperty_role(property: role, value: String): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: LabelCloseIcon): Unit = js.native
+  
+  @JSName("translations")
+  var translations_ojDialog_ : LabelCloseIcon = js.native
 }
-

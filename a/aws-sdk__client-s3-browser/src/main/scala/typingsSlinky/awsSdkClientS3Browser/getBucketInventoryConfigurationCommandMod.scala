@@ -12,11 +12,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-s3-browser/commands/GetBucketInventoryConfigurationCommand", JSImport.Namespace)
 @js.native
 object getBucketInventoryConfigurationCommandMod extends js.Object {
+  
   @js.native
   class GetBucketInventoryConfigurationCommand protected () extends Command[
           InputTypesUnion, 
@@ -27,13 +28,14 @@ object getBucketInventoryConfigurationCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetBucketInventoryConfigurationInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetBucketInventoryConfigurationInput, GetBucketInventoryConfigurationOutput, Blob] = js.native
+    
     val model: OperationModel = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: S3ResolvedConfiguration
     ): Handler[GetBucketInventoryConfigurationInput, GetBucketInventoryConfigurationOutput] = js.native
   }
-  
 }
-

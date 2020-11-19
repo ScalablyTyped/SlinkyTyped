@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.dataviz.ui.QRCodeOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("kendo.dataviz.ui.QRCode")
 @js.native
@@ -13,12 +13,12 @@ class QRCode protected ()
   def this(element: Element) = this()
   def this(element: Element, options: QRCodeOptions) = this()
 }
-
 /* static members */
 @JSGlobal("kendo.dataviz.ui.QRCode")
 @js.native
 object QRCode extends js.Object {
-  var fn: typingsSlinky.kendoUi.kendo.dataviz.ui.QRCode = js.native
+  
   def extend(proto: js.Object): typingsSlinky.kendoUi.kendo.dataviz.ui.QRCode = js.native
+  
+  var fn: typingsSlinky.kendoUi.kendo.dataviz.ui.QRCode = js.native
 }
-

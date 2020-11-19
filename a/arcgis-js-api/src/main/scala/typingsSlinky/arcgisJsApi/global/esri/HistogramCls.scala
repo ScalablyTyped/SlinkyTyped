@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.HistogramProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Histogram")
 @js.native
@@ -16,4 +16,3 @@ class HistogramCls ()
   extends typingsSlinky.arcgisJsApi.esri.Histogram_ {
   def this(properties: HistogramProperties) = this()
 }
-

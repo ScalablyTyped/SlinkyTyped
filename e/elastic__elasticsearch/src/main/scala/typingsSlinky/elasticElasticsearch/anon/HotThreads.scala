@@ -14,10 +14,11 @@ import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait HotThreads extends js.Object {
+  
   def hotThreads[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def hotThreads[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def hotThreads[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -29,6 +30,7 @@ trait HotThreads extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def hot_threads[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def hot_threads[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def hot_threads[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -40,6 +42,7 @@ trait HotThreads extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def info[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def info[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def info[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -47,6 +50,7 @@ trait HotThreads extends js.Object {
   def info[TResponse, TContext](params: NodesInfo, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def info[TResponse, TContext](params: NodesInfo, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def info[TResponse, TContext](params: NodesInfo, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def reloadSecureSettings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def reloadSecureSettings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def reloadSecureSettings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -58,6 +62,7 @@ trait HotThreads extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def reload_secure_settings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def reload_secure_settings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def reload_secure_settings[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -69,6 +74,7 @@ trait HotThreads extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def stats[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def stats[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def stats[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -76,6 +82,7 @@ trait HotThreads extends js.Object {
   def stats[TResponse, TContext](params: NodesStats, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def stats[TResponse, TContext](params: NodesStats, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def stats[TResponse, TContext](params: NodesStats, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  
   def usage[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def usage[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def usage[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -84,4 +91,3 @@ trait HotThreads extends js.Object {
   def usage[TResponse, TContext](params: NodesUsage, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def usage[TResponse, TContext](params: NodesUsage, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
 }
-

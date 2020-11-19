@@ -5,9 +5,109 @@ import typingsSlinky.storybookApi.shortcutsMod.Action
 import typingsSlinky.storybookApi.storiesMod._ViewMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object storybookApiStrings {
+  
+  @scala.inline
+  def Optionkey: Optionkey = "\u2325".asInstanceOf[Optionkey]
+  
+  @scala.inline
+  def Placeofinterestsign: Placeofinterestsign = "\u2318".asInstanceOf[Placeofinterestsign]
+  
+  @scala.inline
+  def aboutPage: aboutPage = "aboutPage".asInstanceOf[aboutPage]
+  
+  @scala.inline
+  def alt: alt = "alt".asInstanceOf[alt]
+  
+  @scala.inline
+  def bottom: bottom = "bottom".asInstanceOf[bottom]
+  
+  @scala.inline
+  def collapseAll: collapseAll = "collapseAll".asInstanceOf[collapseAll]
+  
+  @scala.inline
+  def control: control = "control".asInstanceOf[control]
+  
+  @scala.inline
+  def ctrl: ctrl = "ctrl".asInstanceOf[ctrl]
+  
+  @scala.inline
+  def development: development = "development".asInstanceOf[development]
+  
+  @scala.inline
+  def escape: escape = "escape".asInstanceOf[escape]
+  
+  @scala.inline
+  def expandAll: expandAll = "expandAll".asInstanceOf[expandAll]
+  
+  @scala.inline
+  def focusIframe: focusIframe = "focusIframe".asInstanceOf[focusIframe]
+  
+  @scala.inline
+  def focusNav: focusNav = "focusNav".asInstanceOf[focusNav]
+  
+  @scala.inline
+  def focusPanel: focusPanel = "focusPanel".asInstanceOf[focusPanel]
+  
+  @scala.inline
+  def fullScreen: fullScreen = "fullScreen".asInstanceOf[fullScreen]
+  
+  @scala.inline
+  def info: info = "info".asInstanceOf[info]
+  
+  @scala.inline
+  def meta: meta = "meta".asInstanceOf[meta]
+  
+  @scala.inline
+  def nextComponent: nextComponent = "nextComponent".asInstanceOf[nextComponent]
+  
+  @scala.inline
+  def nextStory: nextStory = "nextStory".asInstanceOf[nextStory]
+  
+  @scala.inline
+  def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def panelPosition: panelPosition = "panelPosition".asInstanceOf[panelPosition]
+  
+  @scala.inline
+  def prevComponent: prevComponent = "prevComponent".asInstanceOf[prevComponent]
+  
+  @scala.inline
+  def prevStory: prevStory = "prevStory".asInstanceOf[prevStory]
+  
+  @scala.inline
+  def production: production = "production".asInstanceOf[production]
+  
+  @scala.inline
+  def right: right = "right".asInstanceOf[right]
+  
+  @scala.inline
+  def search: search = "search".asInstanceOf[search]
+  
+  @scala.inline
+  def session: session = "session".asInstanceOf[session]
+  
+  @scala.inline
+  def settings: settings = "settings".asInstanceOf[settings]
+  
+  @scala.inline
+  def shortcutsPage: shortcutsPage = "shortcutsPage".asInstanceOf[shortcutsPage]
+  
+  @scala.inline
+  def story: story = "story".asInstanceOf[story]
+  
+  @scala.inline
+  def toggleNav: toggleNav = "toggleNav".asInstanceOf[toggleNav]
+  
+  @scala.inline
+  def togglePanel: togglePanel = "togglePanel".asInstanceOf[togglePanel]
+  
+  @scala.inline
+  def toolbar: toolbar = "toolbar".asInstanceOf[toolbar]
+  
   @js.native
   sealed trait Optionkey extends js.Object
   
@@ -106,72 +206,4 @@ object storybookApiStrings {
   
   @js.native
   sealed trait toolbar extends Action
-  
-  @scala.inline
-  def Optionkey: Optionkey = "\u2325".asInstanceOf[Optionkey]
-  @scala.inline
-  def Placeofinterestsign: Placeofinterestsign = "\u2318".asInstanceOf[Placeofinterestsign]
-  @scala.inline
-  def aboutPage: aboutPage = "aboutPage".asInstanceOf[aboutPage]
-  @scala.inline
-  def alt: alt = "alt".asInstanceOf[alt]
-  @scala.inline
-  def bottom: bottom = "bottom".asInstanceOf[bottom]
-  @scala.inline
-  def collapseAll: collapseAll = "collapseAll".asInstanceOf[collapseAll]
-  @scala.inline
-  def control: control = "control".asInstanceOf[control]
-  @scala.inline
-  def ctrl: ctrl = "ctrl".asInstanceOf[ctrl]
-  @scala.inline
-  def development: development = "development".asInstanceOf[development]
-  @scala.inline
-  def escape: escape = "escape".asInstanceOf[escape]
-  @scala.inline
-  def expandAll: expandAll = "expandAll".asInstanceOf[expandAll]
-  @scala.inline
-  def focusIframe: focusIframe = "focusIframe".asInstanceOf[focusIframe]
-  @scala.inline
-  def focusNav: focusNav = "focusNav".asInstanceOf[focusNav]
-  @scala.inline
-  def focusPanel: focusPanel = "focusPanel".asInstanceOf[focusPanel]
-  @scala.inline
-  def fullScreen: fullScreen = "fullScreen".asInstanceOf[fullScreen]
-  @scala.inline
-  def info: info = "info".asInstanceOf[info]
-  @scala.inline
-  def meta: meta = "meta".asInstanceOf[meta]
-  @scala.inline
-  def nextComponent: nextComponent = "nextComponent".asInstanceOf[nextComponent]
-  @scala.inline
-  def nextStory: nextStory = "nextStory".asInstanceOf[nextStory]
-  @scala.inline
-  def none: none = "none".asInstanceOf[none]
-  @scala.inline
-  def panelPosition: panelPosition = "panelPosition".asInstanceOf[panelPosition]
-  @scala.inline
-  def prevComponent: prevComponent = "prevComponent".asInstanceOf[prevComponent]
-  @scala.inline
-  def prevStory: prevStory = "prevStory".asInstanceOf[prevStory]
-  @scala.inline
-  def production: production = "production".asInstanceOf[production]
-  @scala.inline
-  def right: right = "right".asInstanceOf[right]
-  @scala.inline
-  def search: search = "search".asInstanceOf[search]
-  @scala.inline
-  def session: session = "session".asInstanceOf[session]
-  @scala.inline
-  def settings: settings = "settings".asInstanceOf[settings]
-  @scala.inline
-  def shortcutsPage: shortcutsPage = "shortcutsPage".asInstanceOf[shortcutsPage]
-  @scala.inline
-  def story: story = "story".asInstanceOf[story]
-  @scala.inline
-  def toggleNav: toggleNav = "toggleNav".asInstanceOf[toggleNav]
-  @scala.inline
-  def togglePanel: togglePanel = "togglePanel".asInstanceOf[togglePanel]
-  @scala.inline
-  def toolbar: toolbar = "toolbar".asInstanceOf[toolbar]
 }
-

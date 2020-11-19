@@ -4,11 +4,12 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.operationRetrier.anon.Initial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("operation-retrier/lib/retrier", JSImport.Namespace)
 @js.native
 object retrierMod extends js.Object {
+  
   /**
     * Provides retrier service
     */
@@ -18,32 +19,56 @@ object retrierMod extends js.Object {
       * Creates a new Retrier instance
       */
     def this(options: Initial) = this()
+    
     var attempt: js.Any = js.native
+    
     var attemptNum: js.Any = js.native
-    var cleanup: js.Any = js.native
-    var currDelay: js.Any = js.native
-    var inProgress: js.Any = js.native
-    val initialDelay: js.Any = js.native
-    val maxAttemptsCount: js.Any = js.native
-    val maxAttemptsTime: js.Any = js.native
-    var maxDelay: js.Any = js.native
-    val minDelay: js.Any = js.native
-    var nextDelay: js.Any = js.native
-    var prevDelay: js.Any = js.native
-    var randomize: js.Any = js.native
-    val randomness: js.Any = js.native
-    var reject: js.Any = js.native
-    var resolve: js.Any = js.native
-    var scheduleAttempt: js.Any = js.native
-    var startTimestamp: js.Any = js.native
-    var timeout: js.Any = js.native
+    
     def cancel(): Unit = js.native
+    
+    var cleanup: js.Any = js.native
+    
+    var currDelay: js.Any = js.native
+    
     def failed(err: js.Error): Unit = js.native
     def failed(err: js.Error, nextAttemptDelayOverride: Double): Unit = js.native
+    
+    var inProgress: js.Any = js.native
+    
+    val initialDelay: js.Any = js.native
+    
+    val maxAttemptsCount: js.Any = js.native
+    
+    val maxAttemptsTime: js.Any = js.native
+    
+    var maxDelay: js.Any = js.native
+    
+    val minDelay: js.Any = js.native
+    
+    var nextDelay: js.Any = js.native
+    
+    var prevDelay: js.Any = js.native
+    
+    var randomize: js.Any = js.native
+    
+    val randomness: js.Any = js.native
+    
+    var reject: js.Any = js.native
+    
+    var resolve: js.Any = js.native
+    
     def run[T](handler: js.Function0[js.Promise[T]]): js.Promise[T] = js.native
+    
+    var scheduleAttempt: js.Any = js.native
+    
     def start(): js.Promise[_] = js.native
+    
+    var startTimestamp: js.Any = js.native
+    
     def succeeded(): Unit = js.native
     def succeeded(arg: js.Any): Unit = js.native
+    
+    var timeout: js.Any = js.native
   }
   
   /**
@@ -56,6 +81,4 @@ object retrierMod extends js.Object {
       */
     def this(options: Initial) = this()
   }
-  
 }
-

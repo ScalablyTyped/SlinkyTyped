@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "datatables_dot_net-buttons"
-version := "1.4-dt-20200226Z-dcb821"
+version := "1.4-dt-20200226Z-c543aa"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "datatables_dot_net" % "1.10-dt-20200515Z-62e8cc",
-  "org.scalablytyped.slinky" %%% "jquery" % "3.5-dt-20200621Z-70c01d",
-  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20200515Z-c1933c",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "datatables_dot_net" % "1.10-dt-20200515Z-94078e",
+  "org.scalablytyped.slinky" %%% "jquery" % "3.5-dt-20200621Z-0ef923",
+  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20200515Z-3ae803",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

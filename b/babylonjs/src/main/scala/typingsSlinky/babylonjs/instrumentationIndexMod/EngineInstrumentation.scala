@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.instrumentationIndexMod
 import typingsSlinky.babylonjs.engineMod.Engine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Instrumentation/index", "EngineInstrumentation")
 @js.native
@@ -20,4 +20,3 @@ class EngineInstrumentation protected ()
     */
   engine: Engine) = this()
 }
-

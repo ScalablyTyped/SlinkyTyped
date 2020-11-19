@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.Widget
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interfaces and instance classes for types from the Mendix sub meta model `Reports`.
@@ -28,23 +28,28 @@ abstract class ReportWidget protected () extends Widget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FReportWidget: IModel = js.native
+  
   def dataSet: IDataSet | Null = js.native
+  
   def dataSetQualifiedName: String | Null = js.native
+  
   def dataSet_=(newValue: IDataSet | Null): Unit = js.native
+  
   /**
     * In version 6.10.0: introduced
     */
   def generateOnLoad: Boolean = js.native
   def generateOnLoad_=(newValue: Boolean): Unit = js.native
+  
+  @JSName("model")
+  var model_FReportWidget: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/reports", "reports.ReportWidget")
 @js.native
 object ReportWidget extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-dynamodb-node/commands/DescribeLimitsCommand", JSImport.Namespace)
 @js.native
 object describeLimitsCommandMod extends js.Object {
+  
   @js.native
   class DescribeLimitsCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object describeLimitsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DescribeLimitsInput) = this()
+    
     val middlewareStack: MiddlewareStack[DescribeLimitsInput, DescribeLimitsOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[DescribeLimitsInput, DescribeLimitsOutput] = js.native
   }
-  
 }
-

@@ -5,12 +5,11 @@ import typingsSlinky.steamClient.anon.Msg
 import typingsSlinky.steamClient.steamClientBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CMEventCallback extends js.Object {
-  @JSName("message")
-  var message_Original: SendMessage = js.native
+  
   /**
     * Encryption handshake complete.
     * From now on, it's your responsibility to handle disconnections and reconnect (see error).
@@ -19,6 +18,7 @@ trait CMEventCallback extends js.Object {
     * @param serverLoad The load value of the CM server you're connected to. Only available if you're connecting using UDP. It's unclear at this time what scale this value uses.
     */
   def connected(serverLoad: String): Unit = js.native
+  
   /**
     * Connection closed by the server.
     * Only emitted if the encryption handshake is complete, otherwise it will reconnect automatically (unless you disabled autoRetry).
@@ -27,18 +27,21 @@ trait CMEventCallback extends js.Object {
     * @param err An Error object. May contain an eresult property.
     */
   def error(err: js.Error): Unit = js.native
+  
   /**
     * Logon response received. If eresult is EResult.OK, loggedOn is now true.
     *
     * @param response An object with the properties in CMsgClientLogonResponse
     */
   def logOnResponse(response: CMsgClientLogonResponse): Unit = js.native
+  
   /**
     * You were logged off from Steam. loggedOn is now false.
     *
     * @param eresesult A value from EResult
     */
   def loggedOff(eresesult: EResult): Unit = js.native
+  
   def message(
     /**
     * An object containing the message header. It has the following properties:
@@ -96,6 +99,8 @@ trait CMEventCallback extends js.Object {
   callback: /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias steam-client.steam-client.SendMessage */ js.Object
   ): Unit = js.native
   @JSName("message")
+  var message_Original: SendMessage = js.native
+  @JSName("message")
   def message_false(
     /**
     * An object containing the message header. It has the following properties:
@@ -129,6 +134,7 @@ trait CMEventCallback extends js.Object {
     */
   callback: `false`
   ): Unit = js.native
+  
   /**
     * CMClient will use this new list when reconnecting, but it will be lost when your application restarts.
     * You might want to save it to a file or a database and assign it to Steam.servers before logging in next time.
@@ -140,4 +146,3 @@ trait CMEventCallback extends js.Object {
     */
   def servers(servers: js.Array[Server]): Unit = js.native
 }
-

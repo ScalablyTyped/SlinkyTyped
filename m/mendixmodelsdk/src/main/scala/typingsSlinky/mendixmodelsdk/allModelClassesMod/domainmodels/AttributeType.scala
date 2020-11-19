@@ -6,7 +6,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "domainmodels.AttributeType")
 @js.native
@@ -21,12 +21,12 @@ abstract class AttributeType protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "domainmodels.AttributeType")
 @js.native
 object AttributeType extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

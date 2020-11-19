@@ -77,10 +77,11 @@ import typingsSlinky.summernote.summernoteStrings.underline
 import typingsSlinky.summernote.summernoteStrings.undo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
+  
   def summernote(): JQuery = js.native
   def summernote(command: String): JQuery = js.native
   def summernote(command: String, markupString: String): JQuery = js.native
@@ -246,4 +247,3 @@ trait JQuery extends js.Object {
   @JSName("summernote")
   def summernote_undo(command: undo): JQuery = js.native
 }
-

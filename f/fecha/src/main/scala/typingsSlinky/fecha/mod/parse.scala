@@ -2,11 +2,12 @@ package typingsSlinky.fecha.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fecha", "parse")
 @js.native
 object parse extends js.Object {
+  
   /**
     * Parse a date string into a Javascript Date object /
     * @method parse
@@ -18,4 +19,3 @@ object parse extends js.Object {
   def apply(dateStr: String, format: String): js.Date | Null = js.native
   def apply(dateStr: String, format: String, i18n: I18nSettingsOptional): js.Date | Null = js.native
 }
-

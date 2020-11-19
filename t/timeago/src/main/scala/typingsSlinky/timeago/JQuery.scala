@@ -6,10 +6,11 @@ import typingsSlinky.timeago.timeagoStrings.update
 import typingsSlinky.timeago.timeagoStrings.updateFromDOM
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
+  
   def timeago(): this.type = js.native
   @JSName("timeago")
   def timeago_dispose(action: dispose): this.type = js.native
@@ -22,4 +23,3 @@ trait JQuery extends js.Object {
   @JSName("timeago")
   def timeago_updateFromDOM(action: updateFromDOM): this.type = js.native
 }
-

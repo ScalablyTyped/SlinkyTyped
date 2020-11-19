@@ -2,7 +2,7 @@ package typingsSlinky.awsSdk.globalMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/global", "HttpRequest")
 @js.native
@@ -13,4 +13,3 @@ class HttpRequest protected ()
     */
   def this(endpoint: typingsSlinky.awsSdk.endpointMod.Endpoint, region: String) = this()
 }
-

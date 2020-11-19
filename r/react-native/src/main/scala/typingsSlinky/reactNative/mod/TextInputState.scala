@@ -2,7 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This class is responsible for coordinating the "focused"
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait TextInputState extends js.Object {
+  
   /**
     * @deprecated Use ref.blur instead
     * @param textFieldID id of the text field to focus
@@ -19,11 +20,13 @@ trait TextInputState extends js.Object {
     */
   def blurTextInput(): Unit = js.native
   def blurTextInput(textFieldID: Double): Unit = js.native
+  
   /**
     * Returns the ID of the currently focused text field, if one exists
     * If no text field is focused it returns null
     */
   def currentlyFocusedField(): Double = js.native
+  
   /**
     * @deprecated Use ref.focus instead
     * @param TextInputID id of the text field to focus
@@ -33,4 +36,3 @@ trait TextInputState extends js.Object {
   def focusTextInput(): Unit = js.native
   def focusTextInput(textFieldID: Double): Unit = js.native
 }
-

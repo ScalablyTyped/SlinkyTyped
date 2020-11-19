@@ -2,18 +2,18 @@ package typingsSlinky.actionsOnGoogle.conversationConversationMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.typeDotgoogleapisDotcomSlashgoogleDotactionsDotv2DotPlaceValueSpecDotPlaceDialogSpec
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.typeDotgoogleapisDotcomSlashgoogleDotactionsDotv2DotLinkValueSpecDotLinkDialogSpec
 */
 trait DialogSpec extends js.Object
-
 object DialogSpec {
+  
   @scala.inline
   def typeDotgoogleapisDotcomSlashgoogleDotactionsDotv2DotLinkValueSpecDotLinkDialogSpec: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.typeDotgoogleapisDotcomSlashgoogleDotactionsDotv2DotLinkValueSpecDotLinkDialogSpec = "type.googleapis.com/google.actions.v2.LinkValueSpec.LinkDialogSpec".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.typeDotgoogleapisDotcomSlashgoogleDotactionsDotv2DotLinkValueSpecDotLinkDialogSpec]
+  
   @scala.inline
   def typeDotgoogleapisDotcomSlashgoogleDotactionsDotv2DotPlaceValueSpecDotPlaceDialogSpec: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.typeDotgoogleapisDotcomSlashgoogleDotactionsDotv2DotPlaceValueSpecDotPlaceDialogSpec = "type.googleapis.com/google.actions.v2.PlaceValueSpec.PlaceDialogSpec".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.typeDotgoogleapisDotcomSlashgoogleDotactionsDotv2DotPlaceValueSpecDotPlaceDialogSpec]
 }
-

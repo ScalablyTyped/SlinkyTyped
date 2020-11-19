@@ -2,7 +2,7 @@ package typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Details
@@ -11,15 +11,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Service
 */
 trait AssociatedMenuGroup extends js.Object
-
 object AssociatedMenuGroup {
+  
   @scala.inline
   def Details: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Details = "Details".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Details]
+  
   @scala.inline
   def Marketing: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Marketing = "Marketing".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Marketing]
+  
   @scala.inline
   def Sales: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Sales = "Sales".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Sales]
+  
   @scala.inline
   def Service: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Service = "Service".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Service]
 }
-

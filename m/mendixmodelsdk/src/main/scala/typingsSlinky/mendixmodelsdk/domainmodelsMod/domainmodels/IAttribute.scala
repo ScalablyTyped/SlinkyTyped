@@ -5,7 +5,7 @@ import typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable
 import typingsSlinky.mendixmodelsdk.elementsMod.IElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/attributes relevant section in reference guide}
@@ -14,14 +14,19 @@ import scala.scalajs.js.annotation._
 trait IAttribute
   extends IElement
      with IByNameReferrable {
+  
   val containerAsEntity: IEntity = js.native
+  
   @JSName("model")
   val model_IAttribute: IModel = js.native
+  
   val name: String = js.native
+  
   /**
     * This property is required and cannot be set to null.
     */
   val `type`: IAttributeType = js.native
+  
   /**
     * This property is required and cannot be set to null.
     *
@@ -29,4 +34,3 @@ trait IAttribute
     */
   val value: IValueType = js.native
 }
-

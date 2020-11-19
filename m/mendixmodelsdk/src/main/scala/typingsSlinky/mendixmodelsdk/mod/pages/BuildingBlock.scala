@@ -5,7 +5,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/building-block relevant section in reference guide}
@@ -24,17 +24,18 @@ class BuildingBlock protected ()
     container: IFolderBase
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "pages.BuildingBlock")
 @js.native
 object BuildingBlock extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates a new BuildingBlock unit in the SDK and on the server.
     * Expects one argument, the projects.IFolderBase in which this unit is contained.
     */
   def createIn(container: IFolderBase): typingsSlinky.mendixmodelsdk.pagesMod.pages.BuildingBlock = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

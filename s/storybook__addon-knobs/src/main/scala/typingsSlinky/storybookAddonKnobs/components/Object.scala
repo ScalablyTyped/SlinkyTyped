@@ -7,9 +7,10 @@ import typingsSlinky.storybookAddonKnobs.typesTypesMod.KnobControlConfig
 import typingsSlinky.storybookAddonKnobs.typesTypesMod.KnobControlProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Object {
+  
   @JSImport("@storybook/addon-knobs/dist/components/types/Object", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -20,10 +21,10 @@ object Object {
        with StBuildingComponent[tag.type, default[T]]
   
   def withProps[T](p: KnobControlProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[T](knob: KnobControlConfig[T], onChange: T => T): Builder[T] = {
     val __props = js.Dynamic.literal(knob = knob.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     new Builder[T](js.Array(this.component, __props.asInstanceOf[KnobControlProps[T]]))
   }
 }
-

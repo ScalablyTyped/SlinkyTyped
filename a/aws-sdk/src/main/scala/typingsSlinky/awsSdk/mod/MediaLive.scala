@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.medialiveMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "MediaLive")
 @js.native
@@ -14,4 +14,3 @@ class MediaLive ()
   extends typingsSlinky.awsSdk.allMod.MediaLive {
   def this(options: ClientConfiguration) = this()
 }
-

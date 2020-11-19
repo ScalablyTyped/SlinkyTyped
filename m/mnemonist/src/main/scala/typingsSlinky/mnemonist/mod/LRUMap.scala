@@ -5,7 +5,7 @@ import typingsSlinky.mnemonist.lruMapMod.default
 import typingsSlinky.mnemonist.typesMod.IArrayLikeConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mnemonist", "LRUMap")
 @js.native
@@ -14,11 +14,11 @@ class LRUMap[K, V] protected () extends default[K, V] {
   def this(capacity: Double) = this()
   def this(KeyArrayClass: IArrayLikeConstructor, ValueArrayClass: IArrayLikeConstructor, capacity: Double) = this()
 }
-
 /* static members */
 @JSImport("mnemonist", "LRUMap")
 @js.native
 object LRUMap extends js.Object {
+  
   def from[I, J](iterable: StringDictionary[J]): typingsSlinky.mnemonist.lruMapMod.LRUMap[I, J] = js.native
   def from[I, J](
     iterable: StringDictionary[J],
@@ -47,4 +47,3 @@ object LRUMap extends js.Object {
   ): typingsSlinky.mnemonist.lruMapMod.LRUMap[I, J] = js.native
   def from[I, J](iterable: js.Iterable[js.Tuple2[I, J]], capacity: Double): typingsSlinky.mnemonist.lruMapMod.LRUMap[I, J] = js.native
 }
-

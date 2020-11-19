@@ -2,7 +2,7 @@ package typingsSlinky.sharepoint.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("CalloutAction")
 @js.native
@@ -10,4 +10,3 @@ class CalloutAction protected ()
   extends typingsSlinky.sharepoint.CalloutAction {
   def this(options: typingsSlinky.sharepoint.CalloutActionOptions) = this()
 }
-

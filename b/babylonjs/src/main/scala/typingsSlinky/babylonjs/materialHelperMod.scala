@@ -14,39 +14,42 @@ import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.uniformBufferMod.UniformBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/materialHelper", JSImport.Namespace)
 @js.native
 object materialHelperMod extends js.Object {
+  
   @js.native
   class MaterialHelper () extends js.Object
-  
   /* static members */
   @js.native
   object MaterialHelper extends js.Object {
-    var _TmpMorphInfluencers: js.Any = js.native
-    var _tempFogColor: js.Any = js.native
+    
     /**
       * Binds the bones information from the mesh to the effect.
       * @param mesh The mesh we are binding the information to render
       * @param effect The effect we are binding the data to
       */
     def BindBonesParameters(): Unit = js.native
+    def BindBonesParameters(mesh: js.UndefOr[scala.Nothing], effect: Effect): Unit = js.native
     def BindBonesParameters(mesh: AbstractMesh): Unit = js.native
     def BindBonesParameters(mesh: AbstractMesh, effect: Effect): Unit = js.native
+    
     /**
       * Binds the clip plane information from the scene to the effect.
       * @param scene The scene the clip plane information are extracted from
       * @param effect The effect we are binding the data to
       */
     def BindClipPlane(effect: Effect, scene: Scene): Unit = js.native
+    
     /**
       * Bind the current view position to an effect.
       * @param effect The effect to be bound
       * @param scene The scene the eyes position is used from
       */
     def BindEyePosition(effect: Effect, scene: Scene): Unit = js.native
+    
     /**
       * Binds the fog information from the scene to the effect for the given mesh.
       * @param scene The scene the lights belongs to
@@ -56,6 +59,7 @@ object materialHelperMod extends js.Object {
       */
     def BindFogParameters(scene: Scene, mesh: AbstractMesh, effect: Effect): Unit = js.native
     def BindFogParameters(scene: Scene, mesh: AbstractMesh, effect: Effect, linearSpace: Boolean): Unit = js.native
+    
     /**
       * Binds the lights information from the scene to the effect for the given mesh.
       * @param light Light to bind
@@ -74,6 +78,7 @@ object materialHelperMod extends js.Object {
       useSpecular: Boolean,
       rebuildInParallel: Boolean
     ): Unit = js.native
+    
     /**
       * Binds the light information to the effect.
       * @param light The light containing the generator
@@ -81,6 +86,7 @@ object materialHelperMod extends js.Object {
       * @param lightIndex The light index in the effect used to render
       */
     def BindLightProperties(light: Light, effect: Effect, lightIndex: Double): Unit = js.native
+    
     /**
       * Binds the lights information from the scene to the effect for the given mesh.
       * @param scene The scene the lights belongs to
@@ -91,6 +97,14 @@ object materialHelperMod extends js.Object {
       * @param rebuildInParallel Specifies whether the shader is rebuilding in parallel
       */
     def BindLights(scene: Scene, mesh: AbstractMesh, effect: Effect, defines: js.Any): Unit = js.native
+    def BindLights(
+      scene: Scene,
+      mesh: AbstractMesh,
+      effect: Effect,
+      defines: js.Any,
+      maxSimultaneousLights: js.UndefOr[scala.Nothing],
+      rebuildInParallel: Boolean
+    ): Unit = js.native
     def BindLights(scene: Scene, mesh: AbstractMesh, effect: Effect, defines: js.Any, maxSimultaneousLights: Double): Unit = js.native
     def BindLights(
       scene: Scene,
@@ -100,6 +114,7 @@ object materialHelperMod extends js.Object {
       maxSimultaneousLights: Double,
       rebuildInParallel: Boolean
     ): Unit = js.native
+    
     /**
       * Binds the logarithmic depth information from the scene to the effect for the given defines.
       * @param defines The generated defines used in the effect
@@ -107,12 +122,14 @@ object materialHelperMod extends js.Object {
       * @param scene The scene we are willing to render with logarithmic scale for
       */
     def BindLogDepth(defines: js.Any, effect: Effect, scene: Scene): Unit = js.native
+    
     /**
       * Binds the morph targets information from the mesh to the effect.
       * @param abstractMesh The mesh we are binding the information to render
       * @param effect The effect we are binding the data to
       */
     def BindMorphTargetParameters(abstractMesh: AbstractMesh, effect: Effect): Unit = js.native
+    
     /**
       * Binds a texture matrix value to its corrsponding uniform
       * @param texture The texture to bind the matrix for
@@ -120,6 +137,7 @@ object materialHelperMod extends js.Object {
       * @param key The channel key "diffuse", "specular"... used in the shader
       */
     def BindTextureMatrix(texture: BaseTexture, uniformBuffer: UniformBuffer, key: String): Unit = js.native
+    
     /**
       * Gets the current status of the fog (should it be enabled?)
       * @param mesh defines the mesh to evaluate for fog support
@@ -127,6 +145,7 @@ object materialHelperMod extends js.Object {
       * @returns true if fog must be enabled
       */
     def GetFogState(mesh: AbstractMesh, scene: Scene): Boolean = js.native
+    
     /**
       * This helps decreasing rank by rank the shadow quality (0 being the highest rank and quality)
       * @param defines The defines to update while falling back
@@ -136,8 +155,15 @@ object materialHelperMod extends js.Object {
       * @returns The newly affected rank
       */
     def HandleFallbacksForShadows(defines: js.Any, fallbacks: EffectFallbacks): Double = js.native
+    def HandleFallbacksForShadows(
+      defines: js.Any,
+      fallbacks: EffectFallbacks,
+      maxSimultaneousLights: js.UndefOr[scala.Nothing],
+      rank: Double
+    ): Double = js.native
     def HandleFallbacksForShadows(defines: js.Any, fallbacks: EffectFallbacks, maxSimultaneousLights: Double): Double = js.native
     def HandleFallbacksForShadows(defines: js.Any, fallbacks: EffectFallbacks, maxSimultaneousLights: Double, rank: Double): Double = js.native
+    
     /**
       * Prepares the list of attributes required for bones according to the effect defines.
       * @param attribs The current list of supported attribs
@@ -146,12 +172,14 @@ object materialHelperMod extends js.Object {
       * @param fallbacks The current efffect fallback strategy
       */
     def PrepareAttributesForBones(attribs: js.Array[String], mesh: AbstractMesh, defines: js.Any, fallbacks: EffectFallbacks): Unit = js.native
+    
     /**
       * Check and prepare the list of attributes required for instances according to the effect defines.
       * @param attribs The current list of supported attribs
       * @param defines The current MaterialDefines of the effect
       */
     def PrepareAttributesForInstances(attribs: js.Array[String], defines: MaterialDefines): Unit = js.native
+    
     /**
       * Prepares the list of attributes required for morph targets according to the effect defines.
       * @param attribs The current list of supported attribs
@@ -159,6 +187,7 @@ object materialHelperMod extends js.Object {
       * @param defines The current Defines of the effect
       */
     def PrepareAttributesForMorphTargets(attribs: js.Array[String], mesh: AbstractMesh, defines: js.Any): Unit = js.native
+    
     /**
       * Prepares the list of attributes required for morph targets according to the effect defines.
       * @param attribs The current list of supported attribs
@@ -166,6 +195,7 @@ object materialHelperMod extends js.Object {
       * @param influencers The number of influencers
       */
     def PrepareAttributesForMorphTargetsInfluencers(attribs: js.Array[String], mesh: AbstractMesh, influencers: Double): Unit = js.native
+    
     /**
       * Prepares the defines used in the shader depending on the attributes data available in the mesh
       * @param mesh The mesh containing the geometry data we will draw
@@ -182,6 +212,14 @@ object materialHelperMod extends js.Object {
       defines: js.Any,
       useVertexColor: Boolean,
       useBones: Boolean,
+      useMorphTargets: js.UndefOr[scala.Nothing],
+      useVertexAlpha: Boolean
+    ): Boolean = js.native
+    def PrepareDefinesForAttributes(
+      mesh: AbstractMesh,
+      defines: js.Any,
+      useVertexColor: Boolean,
+      useBones: Boolean,
       useMorphTargets: Boolean
     ): Boolean = js.native
     def PrepareDefinesForAttributes(
@@ -192,12 +230,14 @@ object materialHelperMod extends js.Object {
       useMorphTargets: Boolean,
       useVertexAlpha: Boolean
     ): Boolean = js.native
+    
     /**
       * Prepares the defines for bones
       * @param mesh The mesh containing the geometry data we will draw
       * @param defines The defines to update
       */
     def PrepareDefinesForBones(mesh: AbstractMesh, defines: js.Any): Unit = js.native
+    
     /**
       * Helper used to prepare the list of defines associated with frame values for shader compilation
       * @param scene defines the current scene
@@ -214,6 +254,7 @@ object materialHelperMod extends js.Object {
       useInstances: Boolean,
       useClipPlane: Nullable[Boolean]
     ): Unit = js.native
+    
     /**
       * Prepares the defines related to the light information passed in parameter
       * @param scene The scene we are intending to draw
@@ -233,6 +274,7 @@ object materialHelperMod extends js.Object {
       specularSupported: Boolean,
       state: LightmapMode
     ): Unit = js.native
+    
     /**
       * Prepares the defines related to the light information passed in parameter
       * @param scene The scene we are intending to draw
@@ -249,6 +291,14 @@ object materialHelperMod extends js.Object {
       mesh: AbstractMesh,
       defines: js.Any,
       specularSupported: Boolean,
+      maxSimultaneousLights: js.UndefOr[scala.Nothing],
+      disableLighting: Boolean
+    ): Boolean = js.native
+    def PrepareDefinesForLights(
+      scene: Scene,
+      mesh: AbstractMesh,
+      defines: js.Any,
+      specularSupported: Boolean,
       maxSimultaneousLights: Double
     ): Boolean = js.native
     def PrepareDefinesForLights(
@@ -259,6 +309,7 @@ object materialHelperMod extends js.Object {
       maxSimultaneousLights: Double,
       disableLighting: Boolean
     ): Boolean = js.native
+    
     /**
       * Helps preparing the defines values about the UVs in used in the effect.
       * UVs are shared as much as we can accross channels in the shaders.
@@ -267,6 +318,7 @@ object materialHelperMod extends js.Object {
       * @param key The channel key "diffuse", "specular"... used in the shader
       */
     def PrepareDefinesForMergedUV(texture: BaseTexture, defines: js.Any, key: String): Unit = js.native
+    
     /**
       * Helper used to prepare the list of defines associated with misc. values for shader compilation
       * @param mesh defines the current mesh
@@ -286,18 +338,21 @@ object materialHelperMod extends js.Object {
       alphaTest: Boolean,
       defines: js.Any
     ): Unit = js.native
+    
     /**
       * Prepares the defines for morph targets
       * @param mesh The mesh containing the geometry data we will draw
       * @param defines The defines to update
       */
     def PrepareDefinesForMorphTargets(mesh: AbstractMesh, defines: js.Any): Unit = js.native
+    
     /**
       * Prepares the defines related to multiview
       * @param scene The scene we are intending to draw
       * @param defines The defines to update
       */
     def PrepareDefinesForMultiview(scene: Scene, defines: js.Any): Unit = js.native
+    
     /**
       * Prepares the uniforms and samplers list to be used in the effect (for a specific light)
       * @param lightIndex defines the light index
@@ -311,6 +366,13 @@ object materialHelperMod extends js.Object {
       lightIndex: Double,
       uniformsList: js.Array[String],
       samplersList: js.Array[String],
+      projectedLightTexture: js.UndefOr[scala.Nothing],
+      uniformBuffersList: Nullable[js.Array[String]]
+    ): Unit = js.native
+    def PrepareUniformsAndSamplersForLight(
+      lightIndex: Double,
+      uniformsList: js.Array[String],
+      samplersList: js.Array[String],
       projectedLightTexture: js.Any
     ): Unit = js.native
     def PrepareUniformsAndSamplersForLight(
@@ -320,6 +382,7 @@ object materialHelperMod extends js.Object {
       projectedLightTexture: js.Any,
       uniformBuffersList: Nullable[js.Array[String]]
     ): Unit = js.native
+    
     /**
       * Prepares the uniforms and samplers list to be used in the effect
       * @param uniformsListOrOptions The uniform names to prepare or an EffectCreationOptions containing the liist and extra information
@@ -328,7 +391,26 @@ object materialHelperMod extends js.Object {
       * @param maxSimultaneousLights The maximum number of simultanous light allowed in the effect
       */
     def PrepareUniformsAndSamplersList(uniformsListOrOptions: js.Array[String]): Unit = js.native
+    def PrepareUniformsAndSamplersList(
+      uniformsListOrOptions: js.Array[String],
+      samplersList: js.UndefOr[scala.Nothing],
+      defines: js.UndefOr[scala.Nothing],
+      maxSimultaneousLights: Double
+    ): Unit = js.native
+    def PrepareUniformsAndSamplersList(uniformsListOrOptions: js.Array[String], samplersList: js.UndefOr[scala.Nothing], defines: js.Any): Unit = js.native
+    def PrepareUniformsAndSamplersList(
+      uniformsListOrOptions: js.Array[String],
+      samplersList: js.UndefOr[scala.Nothing],
+      defines: js.Any,
+      maxSimultaneousLights: Double
+    ): Unit = js.native
     def PrepareUniformsAndSamplersList(uniformsListOrOptions: js.Array[String], samplersList: js.Array[String]): Unit = js.native
+    def PrepareUniformsAndSamplersList(
+      uniformsListOrOptions: js.Array[String],
+      samplersList: js.Array[String],
+      defines: js.UndefOr[scala.Nothing],
+      maxSimultaneousLights: Double
+    ): Unit = js.native
     def PrepareUniformsAndSamplersList(uniformsListOrOptions: js.Array[String], samplersList: js.Array[String], defines: js.Any): Unit = js.native
     def PrepareUniformsAndSamplersList(
       uniformsListOrOptions: js.Array[String],
@@ -337,7 +419,30 @@ object materialHelperMod extends js.Object {
       maxSimultaneousLights: Double
     ): Unit = js.native
     def PrepareUniformsAndSamplersList(uniformsListOrOptions: IEffectCreationOptions): Unit = js.native
+    def PrepareUniformsAndSamplersList(
+      uniformsListOrOptions: IEffectCreationOptions,
+      samplersList: js.UndefOr[scala.Nothing],
+      defines: js.UndefOr[scala.Nothing],
+      maxSimultaneousLights: Double
+    ): Unit = js.native
+    def PrepareUniformsAndSamplersList(
+      uniformsListOrOptions: IEffectCreationOptions,
+      samplersList: js.UndefOr[scala.Nothing],
+      defines: js.Any
+    ): Unit = js.native
+    def PrepareUniformsAndSamplersList(
+      uniformsListOrOptions: IEffectCreationOptions,
+      samplersList: js.UndefOr[scala.Nothing],
+      defines: js.Any,
+      maxSimultaneousLights: Double
+    ): Unit = js.native
     def PrepareUniformsAndSamplersList(uniformsListOrOptions: IEffectCreationOptions, samplersList: js.Array[String]): Unit = js.native
+    def PrepareUniformsAndSamplersList(
+      uniformsListOrOptions: IEffectCreationOptions,
+      samplersList: js.Array[String],
+      defines: js.UndefOr[scala.Nothing],
+      maxSimultaneousLights: Double
+    ): Unit = js.native
     def PrepareUniformsAndSamplersList(uniformsListOrOptions: IEffectCreationOptions, samplersList: js.Array[String], defines: js.Any): Unit = js.native
     def PrepareUniformsAndSamplersList(
       uniformsListOrOptions: IEffectCreationOptions,
@@ -345,12 +450,15 @@ object materialHelperMod extends js.Object {
       defines: js.Any,
       maxSimultaneousLights: Double
     ): Unit = js.native
+    
     /**
       * Add the list of attributes required for instances to the attribs array.
       * @param attribs The current list of supported attribs
       */
     def PushAttributesForInstances(attribs: js.Array[String]): Unit = js.native
+    
+    var _TmpMorphInfluencers: js.Any = js.native
+    
+    var _tempFogColor: js.Any = js.native
   }
-  
 }
-

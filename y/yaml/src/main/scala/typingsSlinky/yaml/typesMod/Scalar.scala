@@ -8,27 +8,31 @@ import typingsSlinky.yaml.yamlStrings.OCT
 import typingsSlinky.yaml.yamlStrings.TIME
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("yaml/types", "Scalar")
 @js.native
 class Scalar protected () extends Node {
   def this(value: js.Any) = this()
+  
   /**
     * By default (undefined), numbers use decimal notation.
     * The YAML 1.2 core schema only supports 'HEX' and 'OCT'.
     */
   var format: js.UndefOr[BIN | HEX | OCT | TIME] = js.native
-  @JSName("type")
-  var type_Scalar: js.UndefOr[Type] = js.native
-  var value: js.Any = js.native
+  
   def toJSON(arg: js.UndefOr[scala.Nothing], ctx: NodeToJsonContext): js.Any = js.native
   def toJSON(arg: js.Any, ctx: NodeToJsonContext): js.Any = js.native
+  
+  @JSName("type")
+  var type_Scalar: js.UndefOr[Type] = js.native
+  
+  var value: js.Any = js.native
 }
-
 @JSImport("yaml/types", "Scalar")
 @js.native
 object Scalar extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.yaml.utilMod.Type.BLOCK_FOLDED
     - typingsSlinky.yaml.utilMod.Type.BLOCK_LITERAL
@@ -37,6 +41,4 @@ object Scalar extends js.Object {
     - typingsSlinky.yaml.utilMod.Type.QUOTE_SINGLE
   */
   trait Type extends js.Object
-  
 }
-

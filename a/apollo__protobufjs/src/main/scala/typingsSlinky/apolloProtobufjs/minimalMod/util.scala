@@ -12,88 +12,15 @@ import typingsSlinky.apolloProtobufjs.mod.OneOfSetter
 import typingsSlinky.apolloProtobufjs.mod.PoolAllocator
 import typingsSlinky.apolloProtobufjs.mod.PoolSlicer
 import typingsSlinky.apolloProtobufjs.mod.asPromiseCallback
-import typingsSlinky.long.mod.Long
 import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@apollo/protobufjs/minimal", "util")
 @js.native
 object util extends js.Object {
-  @js.native
-  class Array protected () extends Uint8Array {
-    def this(params: js.Any*) = this()
-  }
   
-  @js.native
-  class Buffer protected () extends Uint8Array {
-    def this(params: js.Any*) = this()
-  }
-  
-  /** A minimal event emitter. */
-  @js.native
-  /** Constructs a new event emitter instance. */
-  class EventEmitter ()
-    extends typingsSlinky.apolloProtobufjs.mod.util.EventEmitter
-  
-  /** Helper class for working with the low and high bits of a 64 bit value. */
-  @js.native
-  class LongBits protected ()
-    extends typingsSlinky.apolloProtobufjs.mod.util.LongBits {
-    /**
-      * Constructs new long bits.
-      * @param lo Low 32 bits, unsigned
-      * @param hi High 32 bits, unsigned
-      */
-    def this(lo: Double, hi: Double) = this()
-  }
-  
-  /** Error subclass indicating a protocol specifc error. */
-  @js.native
-  class ProtocolError[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */] protected ()
-    extends typingsSlinky.apolloProtobufjs.mod.util.ProtocolError[T] {
-    /**
-      * Constructs a new protocol error.
-      * @param message Error message
-      * @param [properties] Additional properties
-      */
-    def this(message: String) = this()
-    def this(message: String, properties: StringDictionary[js.Any]) = this()
-  }
-  
-  /** Long.js's Long class if available. */
-  var Long: Constructor[typingsSlinky.long.mod.Long] = js.native
-  /** Decorator root (TypeScript). */
-  var decorateRoot: typingsSlinky.apolloProtobufjs.mod.Root = js.native
-  /** An immuable empty array. */
-  val emptyArray: js.Array[js.Any] = js.native
-  /** An immutable empty object. */
-  val emptyObject: js.Object = js.native
-  /** Whether running within node or not. */
-  val isNode: Boolean = js.native
-  /** Regular expression used to verify 2 bit (`bool`) map keys. */
-  val key2Re: js.RegExp = js.native
-  /** Regular expression used to verify 32 bit (`int32` etc.) map keys. */
-  val key32Re: js.RegExp = js.native
-  /** Regular expression used to verify 64 bit (`int64` etc.) map keys. */
-  val key64Re: js.RegExp = js.native
-  /**
-    * Default conversion options used for {@link Message#toJSON} implementations.
-    *
-    * These options are close to proto3's JSON mapping with the exception that internal types like Any are handled just like messages. More precisely:
-    *
-    * - Longs become strings
-    * - Enums become string keys
-    * - Bytes become base64 encoded strings
-    * - (Sub-)Messages become plain objects
-    * - Maps become plain objects with all string keys
-    * - Repeated fields become arrays
-    * - NaN and Infinity for float and double fields become strings
-    *
-    * @see https://developers.google.com/protocol-buffers/docs/proto3?hl=en#json
-    */
-  var toJSONOptions: IConversionOptions = js.native
   /**
     * Returns a promise from a node-style callback function.
     * @param fn Function to call
@@ -102,12 +29,14 @@ object util extends js.Object {
     * @returns Promisified function
     */
   def asPromise(fn: asPromiseCallback, ctx: js.Any, params: js.Any*): js.Promise[_] = js.native
+  
   /**
     * Converts a string to camel case.
     * @param str String to convert
     * @returns Converted string
     */
   def camelCase(str: String): String = js.native
+  
   /**
     * Compares reflected fields by id.
     * @param a First field
@@ -115,12 +44,17 @@ object util extends js.Object {
     * @returns Comparison value
     */
   def compareFieldsById(a: typingsSlinky.apolloProtobufjs.mod.Field, b: typingsSlinky.apolloProtobufjs.mod.Field): Double = js.native
+  
   /**
     * Decorator helper for enums (TypeScript).
     * @param object Enum object
     * @returns Reflected enum
     */
   def decorateEnum(`object`: js.Object): typingsSlinky.apolloProtobufjs.mod.Enum = js.native
+  
+  /** Decorator root (TypeScript). */
+  var decorateRoot: typingsSlinky.apolloProtobufjs.mod.Root = js.native
+  
   /**
     * Decorator helper for types (TypeScript).
     * @param ctor Constructor function
@@ -129,6 +63,13 @@ object util extends js.Object {
     */
   def decorateType[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](ctor: Constructor[T]): typingsSlinky.apolloProtobufjs.mod.Type = js.native
   def decorateType[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](ctor: Constructor[T], typeName: String): typingsSlinky.apolloProtobufjs.mod.Type = js.native
+  
+  /** An immuable empty array. */
+  val emptyArray: js.Array[js.Any] = js.native
+  
+  /** An immutable empty object. */
+  val emptyObject: js.Object = js.native
+  
   /**
     * Fetches the contents of a file.
     * @param filename File path or url
@@ -150,30 +91,38 @@ object util extends js.Object {
     */
   def fetch(path: String, callback: FetchCallback): Unit = js.native
   def fetch(path: String, options: IFetchOptions): js.Promise[String | js.typedarray.Uint8Array] = js.native
+  
   /**
     * Requires a module only if available.
     * @param moduleName Module to require
     * @returns Required module if available and not empty, otherwise `null`
     */
   def inquire(moduleName: String): js.Object = js.native
+  
   /**
     * Tests if the specified value is an integer.
     * @param value Value to test
     * @returns `true` if the value is an integer
     */
   def isInteger(value: js.Any): Boolean = js.native
+  
+  /** Whether running within node or not. */
+  val isNode: Boolean = js.native
+  
   /**
     * Tests if the specified value is a non-null object.
     * @param value Value to test
     * @returns `true` if the value is a non-null object
     */
   def isObject(value: js.Any): Boolean = js.native
+  
   /**
     * Tests whether the specified name is a reserved word in JS.
     * @param name Name to test
     * @returns `true` if reserved, otherwise `false`
     */
   def isReserved(name: String): Boolean = js.native
+  
   /**
     * Checks if a property on a message is considered to be present.
     * @param obj Plain object or message instance
@@ -182,12 +131,14 @@ object util extends js.Object {
     */
   @JSName("isSet")
   def isSet_(obj: js.Object, prop: String): Boolean = js.native
+  
   /**
     * Tests if the specified value is a string.
     * @param value Value to test
     * @returns `true` if the value is a string
     */
   def isString(value: js.Any): Boolean = js.native
+  
   /**
     * Checks if a property on a message is considered to be present.
     * This is an alias of {@link util.isSet}.
@@ -196,27 +147,40 @@ object util extends js.Object {
     * @returns `true` if considered to be present, otherwise `false`
     */
   def isset(obj: js.Object, prop: String): Boolean = js.native
+  
+  /** Regular expression used to verify 2 bit (`bool`) map keys. */
+  val key2Re: js.RegExp = js.native
+  
+  /** Regular expression used to verify 32 bit (`int32` etc.) map keys. */
+  val key32Re: js.RegExp = js.native
+  
+  /** Regular expression used to verify 64 bit (`int64` etc.) map keys. */
+  val key64Re: js.RegExp = js.native
+  
   /**
     * Converts the first character of a string to lower case.
     * @param str String to convert
     * @returns Converted string
     */
   def lcFirst(str: String): String = js.native
+  
   /**
     * Converts an 8 characters long hash string to a long or number.
     * @param hash Hash
     * @param [unsigned=false] Whether unsigned or not
     * @returns Original value
     */
-  def longFromHash(hash: String): Long | Double = js.native
-  def longFromHash(hash: String, unsigned: Boolean): Long | Double = js.native
+  def longFromHash(hash: String): typingsSlinky.long.mod.Long | Double = js.native
+  def longFromHash(hash: String, unsigned: Boolean): typingsSlinky.long.mod.Long | Double = js.native
+  
   def longToHash(value: Double): String = js.native
   /**
     * Converts a number or long to an 8 characters long hash string.
     * @param value Value to convert
     * @returns Hash
     */
-  def longToHash(value: Long): String = js.native
+  def longToHash(value: typingsSlinky.long.mod.Long): String = js.native
+  
   /**
     * Merges the properties of the source object into the destination object.
     * @param dst Destination object
@@ -226,6 +190,7 @@ object util extends js.Object {
     */
   def merge(dst: StringDictionary[js.Any], src: StringDictionary[js.Any]): StringDictionary[js.Any] = js.native
   def merge(dst: StringDictionary[js.Any], src: StringDictionary[js.Any], ifNotSet: Boolean): StringDictionary[js.Any] = js.native
+  
   /**
     * Creates a new buffer of whatever type supported by the environment.
     * @param [sizeOrArray=0] Buffer size or number array
@@ -234,24 +199,28 @@ object util extends js.Object {
   def newBuffer(): js.typedarray.Uint8Array = js.native
   def newBuffer(sizeOrArray: js.Array[Double]): js.typedarray.Uint8Array = js.native
   def newBuffer(sizeOrArray: Double): js.typedarray.Uint8Array = js.native
+  
   /**
     * Creates a custom error constructor.
     * @param name Error name
     * @returns Custom error constructor
     */
   def newError(name: String): Constructor[js.Error] = js.native
+  
   /**
     * Builds a getter for a oneof's present field name.
     * @param fieldNames Field names
     * @returns Unbound getter
     */
   def oneOfGetter(fieldNames: js.Array[String]): OneOfGetter = js.native
+  
   /**
     * Builds a setter for a oneof's present field name.
     * @param fieldNames Field names
     * @returns Unbound setter
     */
   def oneOfSetter(fieldNames: js.Array[String]): OneOfSetter = js.native
+  
   /**
     * A general purpose buffer pool.
     * @param alloc Allocator
@@ -261,47 +230,101 @@ object util extends js.Object {
     */
   def pool(alloc: PoolAllocator, slice: PoolSlicer): PoolAllocator = js.native
   def pool(alloc: PoolAllocator, slice: PoolSlicer, size: Double): PoolAllocator = js.native
+  
   /**
     * Returns a safe property accessor for the specified property name.
     * @param prop Property name
     * @returns Safe accessor
     */
   def safeProp(prop: String): String = js.native
+  
   /**
     * Converts an object's values to an array.
     * @param object Object to convert
     * @returns Converted array
     */
   def toArray(`object`: StringDictionary[js.Any]): js.Array[_] = js.native
+  
+  /**
+    * Default conversion options used for {@link Message#toJSON} implementations.
+    *
+    * These options are close to proto3's JSON mapping with the exception that internal types like Any are handled just like messages. More precisely:
+    *
+    * - Longs become strings
+    * - Enums become string keys
+    * - Bytes become base64 encoded strings
+    * - (Sub-)Messages become plain objects
+    * - Maps become plain objects with all string keys
+    * - Repeated fields become arrays
+    * - NaN and Infinity for float and double fields become strings
+    *
+    * @see https://developers.google.com/protocol-buffers/docs/proto3?hl=en#json
+    */
+  var toJSONOptions: IConversionOptions = js.native
+  
   /**
     * Converts an array of keys immediately followed by their respective value to an object, omitting undefined values.
     * @param array Array to convert
     * @returns Converted object
     */
   def toObject(array: js.Array[_]): StringDictionary[js.Any] = js.native
+  
   /**
     * Converts the first character of a string to upper case.
     * @param str String to convert
     * @returns Converted string
     */
   def ucFirst(str: String): String = js.native
+  
+  @js.native
+  class Array protected () extends Uint8Array {
+    def this(params: js.Any*) = this()
+  }
   /** Array implementation used in the browser. `Uint8Array` if supported, otherwise `Array`. */
   @js.native
   object Array
     extends TopLevel[Constructor[js.typedarray.Uint8Array]]
   
+  @js.native
+  class Buffer protected () extends Uint8Array {
+    def this(params: js.Any*) = this()
+  }
   /** Node's Buffer class if available. */
   @js.native
   object Buffer
     extends TopLevel[Constructor[js.typedarray.Uint8Array]]
   
+  /** A minimal event emitter. */
+  @js.native
+  /** Constructs a new event emitter instance. */
+  class EventEmitter ()
+    extends typingsSlinky.apolloProtobufjs.mod.util.EventEmitter
+  
+  @js.native
+  class Long protected ()
+    extends typingsSlinky.long.mod.Long {
+    def this(params: js.Any*) = this()
+  }
+  /** Long.js's Long class if available. */
+  @js.native
+  object Long
+    extends TopLevel[Constructor[typingsSlinky.long.mod.Long]]
+  
+  /** Helper class for working with the low and high bits of a 64 bit value. */
+  @js.native
+  class LongBits protected ()
+    extends typingsSlinky.apolloProtobufjs.mod.util.LongBits {
+    /**
+      * Constructs new long bits.
+      * @param lo Low 32 bits, unsigned
+      * @param hi High 32 bits, unsigned
+      */
+    def this(lo: Double, hi: Double) = this()
+  }
   /* static members */
   @js.native
   object LongBits extends js.Object {
-    /** Zero bits. */
-    var zero: typingsSlinky.apolloProtobufjs.mod.util.LongBits = js.native
-    /** Zero hash. */
-    var zeroHash: String = js.native
+    
     def from(value: String): typingsSlinky.apolloProtobufjs.mod.util.LongBits = js.native
     def from(value: Double): typingsSlinky.apolloProtobufjs.mod.util.LongBits = js.native
     /**
@@ -309,24 +332,46 @@ object util extends js.Object {
       * @param value Value
       * @returns Instance
       */
-    def from(value: Long): typingsSlinky.apolloProtobufjs.mod.util.LongBits = js.native
+    def from(value: typingsSlinky.long.mod.Long): typingsSlinky.apolloProtobufjs.mod.util.LongBits = js.native
+    
     /**
       * Constructs new long bits from the specified 8 characters long hash.
       * @param hash Hash
       * @returns Bits
       */
     def fromHash(hash: String): typingsSlinky.apolloProtobufjs.mod.util.LongBits = js.native
+    
     /**
       * Constructs new long bits from the specified number.
       * @param value Value
       * @returns Instance
       */
     def fromNumber(value: Double): typingsSlinky.apolloProtobufjs.mod.util.LongBits = js.native
+    
+    /** Zero bits. */
+    var zero: typingsSlinky.apolloProtobufjs.mod.util.LongBits = js.native
+    
+    /** Zero hash. */
+    var zeroHash: String = js.native
+  }
+  
+  /** Error subclass indicating a protocol specifc error. */
+  @js.native
+  class ProtocolError[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */] protected ()
+    extends typingsSlinky.apolloProtobufjs.mod.util.ProtocolError[T] {
+    /**
+      * Constructs a new protocol error.
+      * @param message Error message
+      * @param [properties] Additional properties
+      */
+    def this(message: String) = this()
+    def this(message: String, properties: StringDictionary[js.Any]) = this()
   }
   
   /** A minimal base64 implementation for number arrays. */
   @js.native
   object base64 extends js.Object {
+    
     /**
       * Decodes a base64 encoded string to a buffer.
       * @param string Source string
@@ -336,6 +381,7 @@ object util extends js.Object {
       * @throws {Error} If encoding is invalid
       */
     def decode(string: String, buffer: js.typedarray.Uint8Array, offset: Double): Double = js.native
+    
     /**
       * Encodes a buffer to a base64 encoded string.
       * @param buffer Source buffer
@@ -344,12 +390,14 @@ object util extends js.Object {
       * @returns Base64 encoded string
       */
     def encode(buffer: js.typedarray.Uint8Array, start: Double, end: Double): String = js.native
+    
     /**
       * Calculates the byte length of a base64 encoded string.
       * @param string Base64 encoded string
       * @returns Byte length
       */
     def length(string: String): Double = js.native
+    
     /**
       * Tests if the specified string appears to be base64 encoded.
       * @param string String to test
@@ -360,8 +408,7 @@ object util extends js.Object {
   
   @js.native
   object codegen extends js.Object {
-    /** When set to `true`, codegen will log generated code to console. Useful for debugging. */
-    var verbose: Boolean = js.native
+    
     /**
       * Begins generating a function.
       * @param [functionName] Function name if not anonymous
@@ -377,11 +424,15 @@ object util extends js.Object {
       */
     def apply(functionParams: js.Array[String]): Codegen = js.native
     def apply(functionParams: js.Array[String], functionName: String): Codegen = js.native
+    
+    /** When set to `true`, codegen will log generated code to console. Useful for debugging. */
+    var verbose: Boolean = js.native
   }
   
   /** Reads / writes floats / doubles from / to buffers. */
   @js.native
   object float extends js.Object {
+    
     /**
       * Reads a 64 bit double from a buffer using big endian byte order.
       * @param buf Source buffer
@@ -389,6 +440,7 @@ object util extends js.Object {
       * @returns Value read
       */
     def readDoubleBE(buf: js.typedarray.Uint8Array, pos: Double): Double = js.native
+    
     /**
       * Reads a 64 bit double from a buffer using little endian byte order.
       * @param buf Source buffer
@@ -396,6 +448,7 @@ object util extends js.Object {
       * @returns Value read
       */
     def readDoubleLE(buf: js.typedarray.Uint8Array, pos: Double): Double = js.native
+    
     /**
       * Reads a 32 bit float from a buffer using big endian byte order.
       * @param buf Source buffer
@@ -403,6 +456,7 @@ object util extends js.Object {
       * @returns Value read
       */
     def readFloatBE(buf: js.typedarray.Uint8Array, pos: Double): Double = js.native
+    
     /**
       * Reads a 32 bit float from a buffer using little endian byte order.
       * @param buf Source buffer
@@ -410,6 +464,7 @@ object util extends js.Object {
       * @returns Value read
       */
     def readFloatLE(buf: js.typedarray.Uint8Array, pos: Double): Double = js.native
+    
     /**
       * Writes a 64 bit double to a buffer using big endian byte order.
       * @param val Value to write
@@ -417,6 +472,7 @@ object util extends js.Object {
       * @param pos Target buffer offset
       */
     def writeDoubleBE(`val`: Double, buf: js.typedarray.Uint8Array, pos: Double): Unit = js.native
+    
     /**
       * Writes a 64 bit double to a buffer using little endian byte order.
       * @param val Value to write
@@ -424,6 +480,7 @@ object util extends js.Object {
       * @param pos Target buffer offset
       */
     def writeDoubleLE(`val`: Double, buf: js.typedarray.Uint8Array, pos: Double): Unit = js.native
+    
     /**
       * Writes a 32 bit float to a buffer using big endian byte order.
       * @param val Value to write
@@ -431,6 +488,7 @@ object util extends js.Object {
       * @param pos Target buffer offset
       */
     def writeFloatBE(`val`: Double, buf: js.typedarray.Uint8Array, pos: Double): Unit = js.native
+    
     /**
       * Writes a 32 bit float to a buffer using little endian byte order.
       * @param val Value to write
@@ -448,18 +506,21 @@ object util extends js.Object {
   /** A minimal path module to resolve Unix, Windows and URL paths alike. */
   @js.native
   object path extends js.Object {
+    
     /**
       * Tests if the specified path is absolute.
       * @param path Path to test
       * @returns `true` if path is absolute
       */
     def isAbsolute(path: String): Boolean = js.native
+    
     /**
       * Normalizes the specified path.
       * @param path Path to normalize
       * @returns Normalized path
       */
     def normalize(path: String): String = js.native
+    
     /**
       * Resolves the specified include path against the specified origin path.
       * @param originPath Path to the origin file
@@ -474,12 +535,14 @@ object util extends js.Object {
   /** A minimal UTF8 implementation for number arrays. */
   @js.native
   object utf8 extends js.Object {
+    
     /**
       * Calculates the UTF8 byte length of a string.
       * @param string String
       * @returns Byte length
       */
     def length(string: String): Double = js.native
+    
     /**
       * Reads UTF8 bytes as a string.
       * @param buffer Source buffer
@@ -488,6 +551,7 @@ object util extends js.Object {
       * @returns String read
       */
     def read(buffer: js.typedarray.Uint8Array, start: Double, end: Double): String = js.native
+    
     /**
       * Writes a string as UTF8 bytes.
       * @param string Source string
@@ -497,6 +561,4 @@ object util extends js.Object {
       */
     def write(string: String, buffer: js.typedarray.Uint8Array, offset: Double): Double = js.native
   }
-  
 }
-

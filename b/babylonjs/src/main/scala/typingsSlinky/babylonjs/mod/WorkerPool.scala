@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.mod
 import org.scalajs.dom.raw.Worker
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "WorkerPool")
 @js.native
@@ -15,4 +15,3 @@ class WorkerPool protected ()
     */
   def this(workers: js.Array[Worker]) = this()
 }
-

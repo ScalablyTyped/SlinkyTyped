@@ -5,11 +5,12 @@ import typingsSlinky.graphqlToolsUtils.interfacesMod.SchemaVisitorMap
 import typingsSlinky.graphqlToolsUtils.interfacesMod.VisitorSelector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server/dist/exports", "visitSchema")
 @js.native
 object visitSchema extends js.Object {
+  
   def apply(
     schema: GraphQLSchema,
     visitorOrVisitorSelector: js.Array[
@@ -23,4 +24,3 @@ object visitSchema extends js.Object {
     visitorOrVisitorSelector: typingsSlinky.graphqlToolsUtils.schemaVisitorMod.SchemaVisitor
   ): GraphQLSchema = js.native
 }
-

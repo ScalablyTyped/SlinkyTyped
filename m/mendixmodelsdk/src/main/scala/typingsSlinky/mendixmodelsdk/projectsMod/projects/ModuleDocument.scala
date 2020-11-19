@@ -6,7 +6,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.projectsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -31,21 +31,24 @@ abstract class ModuleDocument protected () extends ModelUnit {
     isPartial: Boolean,
     container: IModule
   ) = this()
+  
+  def containerAsFolderBase: FolderBase = js.native
   @JSName("containerAsFolderBase")
   val containerAsFolderBase_FModuleDocument: IFolderBase = js.native
+  
+  def containerAsModule: Module = js.native
   @JSName("containerAsModule")
   val containerAsModule_FModuleDocument: IModule = js.native
+  
   @JSName("model")
   var model_FModuleDocument: IModel = js.native
-  def containerAsFolderBase: FolderBase = js.native
-  def containerAsModule: Module = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/projects", "projects.ModuleDocument")
 @js.native
 object ModuleDocument extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

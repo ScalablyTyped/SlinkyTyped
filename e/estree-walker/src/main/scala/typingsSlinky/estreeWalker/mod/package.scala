@@ -2,9 +2,10 @@ package typingsSlinky.estreeWalker
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type WalkerListener = js.ThisFunction4[
     /* this */ typingsSlinky.estreeWalker.mod.WalkerContext, 
     /* node */ typingsSlinky.estreeWalker.mod.Node, 

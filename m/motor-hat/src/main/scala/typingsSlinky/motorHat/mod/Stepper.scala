@@ -8,11 +8,11 @@ import typingsSlinky.motorHat.motorHatStrings.microstep
 import typingsSlinky.motorHat.motorHatStrings.single
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Stepper extends js.Object {
-  val options: StepperOptions = js.native
+  
   /**
     * Initialize the Stepeper controller instance.
     * Synchronous overload.
@@ -27,6 +27,7 @@ trait Stepper extends js.Object {
     * @param   cb      Node style callback for asynch initialization
     */
   def init(cb: js.Function2[/* err */ Null, /* self */ this.type, Unit]): Unit = js.native
+  
   /**
     * Perform one step asynchronously.
     * Configuration as stepping style, speed, etc should have been set previously.
@@ -38,6 +39,7 @@ trait Stepper extends js.Object {
     dir: Direction,
     cb: js.Function2[/* err */ js.UndefOr[js.Error], /* result */ js.UndefOr[js.Any], Unit]
   ): Unit = js.native
+  
   /**
     * Perform one step synchronously.
     * Configuration as stepping style, speed, etc should have been set previously.
@@ -45,6 +47,9 @@ trait Stepper extends js.Object {
     * @param   dir     Direction of movement
     */
   def oneStepSync(dir: Direction): Unit = js.native
+  
+  val options: StepperOptions = js.native
+  
   /**
     * Release the stepper motor asynchronously.
     *
@@ -53,11 +58,13 @@ trait Stepper extends js.Object {
     * @param   cb      Node style callback
     */
   def release(cb: js.Function2[/* err */ js.UndefOr[js.Error], /* result */ js.UndefOr[js.Any], Unit]): Unit = js.native
+  
   /**
     * Release the stepper motor synchronously.
     * Stops applying current to the motor coils.
     */
   def releaseSync(): Unit = js.native
+  
   /**
     * Set the current rate at which to supply the steps.
     * Provide a number from 0 to 1 and the current will be reduced proportionally
@@ -65,6 +72,7 @@ trait Stepper extends js.Object {
     * @param   current Current rate, from 0 to 1.
     */
   def setCurrent(current: Double): Unit = js.native
+  
   /**
     * Set PWM Controller working frequency asynchronously.
     *
@@ -75,12 +83,14 @@ trait Stepper extends js.Object {
     freq: Double,
     cb: js.Function2[/* err */ js.UndefOr[js.Error], /* result */ js.UndefOr[js.Any], Unit]
   ): Unit = js.native
+  
   /**
     * Set PWM Controller working frequency synchronously.
     *
     * @param   freq    PWM frequency.
     */
   def setFrequencySync(freq: Double): Unit = js.native
+  
   @JSName("setMicrosteps")
   def setMicrosteps_16(ms: `16`): Unit = js.native
   /**
@@ -91,16 +101,19 @@ trait Stepper extends js.Object {
     */
   @JSName("setMicrosteps")
   def setMicrosteps_8(ms: `8`): Unit = js.native
+  
   /**
     * Set motor speed for step().
     */
   def setSpeed(speed: StepperSpeed): Unit = js.native
+  
   /**
     * Set number of steps per revolution for motor.
     *
     * @param   steps   Number of steps per revolution for stepper motor.
     */
   def setSteps(steps: Double): Unit = js.native
+  
   @JSName("setStyle")
   def setStyle_double(style: double): Unit = js.native
   @JSName("setStyle")
@@ -114,6 +127,7 @@ trait Stepper extends js.Object {
     */
   @JSName("setStyle")
   def setStyle_single(style: single): Unit = js.native
+  
   /**
     * Perform arbitrary number of steps asynchronously.
     * Configuration as stepping style, speed, etc should have been set previously.
@@ -127,6 +141,7 @@ trait Stepper extends js.Object {
     steps: Double,
     cb: js.Function2[/* err */ js.UndefOr[js.Error], /* result */ js.UndefOr[StepResult], Unit]
   ): Unit = js.native
+  
   /**
     * Perform arbitrary number of steps synchronously.
     * Configuration as stepping style, speed, etc should have been set previously.
@@ -137,4 +152,3 @@ trait Stepper extends js.Object {
     */
   def stepSync(dir: Direction, steps: Double): StepSyncResult = js.native
 }
-

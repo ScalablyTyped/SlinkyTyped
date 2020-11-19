@@ -6,11 +6,12 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdChip.chipMod.ChipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/chip", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * A chip is a simplified and condensed button component that be used to create
     * compact radio groups, checkboxes, and trigger actions. The chip only has a
@@ -20,4 +21,3 @@ object mod extends js.Object {
     */
   val Chip: ForwardRefExoticComponent[ChipProps with RefAttributes[HTMLButtonElement]] = js.native
 }
-

@@ -2,12 +2,14 @@ package typingsSlinky.minappEnv
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object Page {
+  
   type GetCurrentPages = js.Function0[
     typingsSlinky.minappEnv.Array[(typingsSlinky.minappEnv.Page.PageInstance[js.Object, js.Object]) with js.Object]
   ]
+  
   type PageConstructor = js.Function1[
     /* options */ (typingsSlinky.minappEnv.Page.PageInstance[
       typingsSlinky.minappEnv.IAnyObject, 

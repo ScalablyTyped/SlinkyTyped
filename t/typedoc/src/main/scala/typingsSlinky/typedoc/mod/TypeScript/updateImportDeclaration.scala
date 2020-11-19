@@ -7,11 +7,12 @@ import typingsSlinky.typescript.mod.ImportDeclaration
 import typingsSlinky.typescript.mod.Modifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateImportDeclaration")
 @js.native
 object updateImportDeclaration extends js.Object {
+  
   def apply(
     node: ImportDeclaration,
     decorators: js.UndefOr[scala.Nothing],
@@ -69,4 +70,3 @@ object updateImportDeclaration extends js.Object {
     moduleSpecifier: Expression
   ): ImportDeclaration = js.native
 }
-

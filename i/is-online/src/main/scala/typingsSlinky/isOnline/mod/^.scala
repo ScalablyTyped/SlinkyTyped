@@ -2,15 +2,12 @@ package typingsSlinky.isOnline.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("is-online", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  // TODO: Remove this for the next major release, refactor the whole definition to:
-  // declare function isOnline(options?: isOnline.Options): Promise<boolean>;
-  // export = isOnline;
-  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof isOnline */ js.Any = js.native
+  
   /**
   	Check if the internet connection is up.
   	The following checks are run in parallel:
@@ -29,5 +26,9 @@ object ^ extends js.Object {
   	*/
   def apply(): js.Promise[Boolean] = js.native
   def apply(options: Options): js.Promise[Boolean] = js.native
+  
+  // TODO: Remove this for the next major release, refactor the whole definition to:
+  // declare function isOnline(options?: isOnline.Options): Promise<boolean>;
+  // export = isOnline;
+  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof isOnline */ js.Any = js.native
 }
-

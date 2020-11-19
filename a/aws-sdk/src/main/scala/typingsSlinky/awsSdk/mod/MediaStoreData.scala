@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.mediastoredataMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "MediaStoreData")
 @js.native
@@ -14,4 +14,3 @@ class MediaStoreData ()
   extends typingsSlinky.awsSdk.allMod.MediaStoreData {
   def this(options: ClientConfiguration) = this()
 }
-

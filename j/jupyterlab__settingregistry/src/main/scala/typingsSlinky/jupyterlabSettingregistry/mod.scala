@@ -6,17 +6,29 @@ import typingsSlinky.jupyterlabSettingregistry.tokensMod.ISettingRegistry.IShort
 import typingsSlinky.luminoCoreutils.mod.Token
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/settingregistry", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   /**
     * Instantiate a schema validator.
     */
   class DefaultSchemaValidator ()
     extends typingsSlinky.jupyterlabSettingregistry.settingregistryMod.DefaultSchemaValidator
+  
+  @js.native
+  object ISettingRegistry
+    extends TopLevel[Token[typingsSlinky.jupyterlabSettingregistry.tokensMod.ISettingRegistry]] {
+    
+    /**
+      * A namespace for plugin functionality.
+      */
+    @js.native
+    object IPlugin extends js.Object
+  }
   
   @js.native
   class SettingRegistry protected ()
@@ -26,29 +38,9 @@ object mod extends js.Object {
       */
     def this(options: IOptions) = this()
   }
-  
-  @js.native
-  class Settings protected ()
-    extends typingsSlinky.jupyterlabSettingregistry.settingregistryMod.Settings {
-    /**
-      * Instantiate a new plugin settings manager.
-      */
-    def this(options: typingsSlinky.jupyterlabSettingregistry.settingregistryMod.Settings.IOptions) = this()
-  }
-  
-  @js.native
-  object ISettingRegistry
-    extends TopLevel[Token[typingsSlinky.jupyterlabSettingregistry.tokensMod.ISettingRegistry]] {
-    /**
-      * A namespace for plugin functionality.
-      */
-    @js.native
-    object IPlugin extends js.Object
-    
-  }
-  
   @js.native
   object SettingRegistry extends js.Object {
+    
     /**
       * Reconcile default and user shortcuts and return the composite list.
       *
@@ -61,5 +53,12 @@ object mod extends js.Object {
     def reconcileShortcuts(defaults: js.Array[IShortcut], user: js.Array[IShortcut]): js.Array[IShortcut] = js.native
   }
   
+  @js.native
+  class Settings protected ()
+    extends typingsSlinky.jupyterlabSettingregistry.settingregistryMod.Settings {
+    /**
+      * Instantiate a new plugin settings manager.
+      */
+    def this(options: typingsSlinky.jupyterlabSettingregistry.settingregistryMod.Settings.IOptions) = this()
+  }
 }
-

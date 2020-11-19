@@ -5,7 +5,7 @@ import typingsSlinky.phaser.Phaser.Textures.Texture
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A Sprite Game Object.
@@ -37,4 +37,3 @@ class Sprite protected ()
   def this(scene: Scene, x: Double, y: Double, texture: Texture, frame: String) = this()
   def this(scene: Scene, x: Double, y: Double, texture: Texture, frame: integer) = this()
 }
-

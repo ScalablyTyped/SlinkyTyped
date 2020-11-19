@@ -5,11 +5,11 @@ import typingsSlinky.graphql.definitionMod.GraphQLInputType
 import typingsSlinky.graphql.maybeMod.Maybe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/utilities/astFromValue", JSImport.Namespace)
 @js.native
 object astFromValueMod extends js.Object {
+  
   def astFromValue(value: js.Any, `type`: GraphQLInputType): Maybe[ValueNode] = js.native
 }
-

@@ -7,7 +7,7 @@ import org.scalajs.dom.experimental.webrtc.RTCIceServer
 import typingsSlinky.std.AlgorithmIdentifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("RTCPeerConnection")
 @js.native
@@ -15,7 +15,6 @@ class RTCPeerConnection ()
   extends typingsSlinky.std.RTCPeerConnection {
   def this(configuration: RTCConfiguration) = this()
 }
-
 @JSGlobal("RTCPeerConnection")
 @js.native
 object RTCPeerConnection
@@ -24,7 +23,8 @@ object RTCPeerConnection
       /* configuration */ RTCConfiguration, 
       org.scalajs.dom.experimental.webrtc.RTCPeerConnection
     ] {
+  
   def generateCertificate(keygenAlgorithm: AlgorithmIdentifier): js.Promise[typingsSlinky.std.RTCCertificate] = js.native
+  
   def getDefaultIceServers(): js.Array[RTCIceServer] = js.native
 }
-

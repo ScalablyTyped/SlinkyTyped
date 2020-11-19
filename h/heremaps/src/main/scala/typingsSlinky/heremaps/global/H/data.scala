@@ -4,12 +4,13 @@ import typingsSlinky.heremaps.H.data.AbstractReader.State
 import typingsSlinky.heremaps.H.map.Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /***** data *****/
 @JSGlobal("H.data")
 @js.native
 object data extends js.Object {
+  
   /**
     * An abstract reader class defines interface for data readers and has general functionality related to fetching data and reader events.
     */
@@ -22,9 +23,9 @@ object data extends js.Object {
     extends typingsSlinky.heremaps.H.data.AbstractReader {
     def this(opt_url: String) = this()
   }
-  
   @js.native
   object AbstractReader extends js.Object {
+    
     /**
       * The event class for state events that are dispatched by AbstractReader
       */
@@ -52,15 +53,17 @@ object data extends js.Object {
       */
     @js.native
     object State extends js.Object {
-      /* 0 */ val ERROR: typingsSlinky.heremaps.H.data.AbstractReader.State.ERROR with Double = js.native
-      /* 1 */ val LOADING: typingsSlinky.heremaps.H.data.AbstractReader.State.LOADING with Double = js.native
-      /* 3 */ val READY: typingsSlinky.heremaps.H.data.AbstractReader.State.READY with Double = js.native
-      /* 2 */ val VISIT: typingsSlinky.heremaps.H.data.AbstractReader.State.VISIT with Double = js.native
+      
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[typingsSlinky.heremaps.H.data.AbstractReader.State with Double] = js.native
+      
+      /* 0 */ val ERROR: typingsSlinky.heremaps.H.data.AbstractReader.State.ERROR with Double = js.native
+      
+      /* 1 */ val LOADING: typingsSlinky.heremaps.H.data.AbstractReader.State.LOADING with Double = js.native
+      
+      /* 3 */ val READY: typingsSlinky.heremaps.H.data.AbstractReader.State.READY with Double = js.native
+      
+      /* 2 */ val VISIT: typingsSlinky.heremaps.H.data.AbstractReader.State.VISIT with Double = js.native
     }
-    
   }
-  
 }
-

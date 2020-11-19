@@ -6,21 +6,25 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @scala.inline
 class SharedBuilder_TableFooterProps2133173170 (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, scala.Nothing] {
+  
   @scala.inline
   def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
 }
-

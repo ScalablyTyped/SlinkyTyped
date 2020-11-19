@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 8.10.0: introduced
@@ -29,17 +29,19 @@ abstract class RemoteEntitySource protected () extends EntitySource {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FRemoteEntitySource: IModel = js.native
+  
   @JSName("containerAsEntity")
   def containerAsEntity_MRemoteEntitySource: Entity = js.native
+  
+  @JSName("model")
+  var model_FRemoteEntitySource: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.RemoteEntitySource")
 @js.native
 object RemoteEntitySource extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -5,13 +5,13 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/engine/training", "isDataArray")
 @js.native
 object isDataArray extends js.Object {
+  
   def apply(x: js.Array[Tensor[Rank]]): Boolean = js.native
   def apply(x: StringDictionary[Tensor[Rank]]): Boolean = js.native
   def apply(x: Tensor[Rank]): Boolean = js.native
 }
-

@@ -2,13 +2,14 @@ package typingsSlinky.heremaps.H.service
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This class encapsulates the Geocoding REST API in a service stub with calls to its various resources implemented.
   */
 @js.native
 trait GeocodingService_ extends AbstractRestService {
+  
   /**
     * This method sends a reverse geocoding request to Geocoder REST API and calls the onResult callback function once the service response was received - providing a H.service.ServiceResult
     * object - or the onError callback if a communication error occured.
@@ -22,6 +23,7 @@ trait GeocodingService_ extends AbstractRestService {
     onResult: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): JsonpRequestHandle = js.native
+  
   /**
     * This method sends a reverse geocoding request to Geocoder REST API and calls the onResult callback function once the service response was received - providing a H.service.ServiceResult
     * object - or the onError callback if a communication error occured.
@@ -35,6 +37,7 @@ trait GeocodingService_ extends AbstractRestService {
     onResult: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): JsonpRequestHandle = js.native
+  
   /**
     * This method sends a landmark search request to Geocoder REST API and calls the onResult callback function once the service response was received - providing a H.service.ServiceResult
     * object - or the onError callback if a communication error occured.
@@ -49,4 +52,3 @@ trait GeocodingService_ extends AbstractRestService {
     onError: js.Function1[/* error */ js.Error, Unit]
   ): JsonpRequestHandle = js.native
 }
-

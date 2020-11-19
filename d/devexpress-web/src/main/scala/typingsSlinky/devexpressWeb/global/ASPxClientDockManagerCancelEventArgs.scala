@@ -2,7 +2,7 @@ package typingsSlinky.devexpressWeb.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides data for the ASPxClientDockManager.BeforeDock event.
@@ -16,4 +16,3 @@ class ASPxClientDockManagerCancelEventArgs protected ()
     */
   def this(panel: typingsSlinky.devexpressWeb.ASPxClientDockPanel) = this()
 }
-

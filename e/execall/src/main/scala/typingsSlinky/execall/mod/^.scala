@@ -2,11 +2,12 @@ package typingsSlinky.execall.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("execall", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   Find multiple RegExp matches in a string.
   @param regexp - Regular expression to match against the `string`.
@@ -31,4 +32,3 @@ object ^ extends js.Object {
   */
   def apply(regexp: js.RegExp, string: String): js.Array[Match] = js.native
 }
-

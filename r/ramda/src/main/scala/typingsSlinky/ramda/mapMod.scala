@@ -3,11 +3,12 @@ package typingsSlinky.ramda
 import typingsSlinky.ramda.toolsMod.Functor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ramda/src/map", JSImport.Namespace)
 @js.native
 object mapMod extends js.Object {
+  
   def default[T, U](
     fn: js.Function1[
       (/* import warning: importer.ImportType#apply Failed type conversion: T[keyof T & keyof U] */ /* x */ js.Any) | (/* x */ T), 
@@ -24,4 +25,3 @@ object mapMod extends js.Object {
   def default[T, U](fn: js.Function1[/* x */ T, U], list: js.Array[T]): js.Array[U] = js.native
   def default[T, U](fn: js.Function1[/* x */ T, U], obj: Functor[T]): Functor[U] = js.native
 }
-

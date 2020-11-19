@@ -5,11 +5,12 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/utils-fs", "realpath")
 @js.native
 object realpath extends js.Object {
+  
   def apply(path: String): js.Promise[String] = js.native
   def apply(path: String, cache: StringDictionary[String]): js.Promise[String] = js.native
   def apply(
@@ -27,4 +28,3 @@ object realpath extends js.Object {
   ): Unit = js.native
   def apply(path: Buffer, callback: js.Function2[/* err */ ErrnoException, /* resolvedPath */ String, _]): Unit = js.native
 }
-

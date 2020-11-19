@@ -6,15 +6,15 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.field
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.group
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.arcgisJsApi.esri.FieldElement
   - typingsSlinky.arcgisJsApi.esri.GroupElement
 */
 trait elementsElement extends js.Object
-
 object elementsElement {
+  
   @scala.inline
   def FieldElement(
     description: String,
@@ -33,6 +33,7 @@ object elementsElement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[elementsElement]
   }
+  
   @scala.inline
   def GroupElement(
     description: String,
@@ -48,4 +49,3 @@ object elementsElement {
     __obj.asInstanceOf[elementsElement]
   }
 }
-

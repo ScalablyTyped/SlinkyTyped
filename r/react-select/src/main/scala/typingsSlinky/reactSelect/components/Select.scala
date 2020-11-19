@@ -2,21 +2,24 @@ package typingsSlinky.reactSelect.components
 
 import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.selectMod.default
+import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Select {
+  
   @JSImport("react-select/src/Select", JSImport.Default)
   @js.native
   object component extends js.Object
   
-  def withProps[/* <: typingsSlinky.reactSelect.typesMod.OptionTypeBase */ OptionType](p: Props[OptionType]): SharedBuilder_Props416038889[default[OptionType], OptionType] = new SharedBuilder_Props416038889[default[OptionType], OptionType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[OptionType /* <: OptionTypeBase */](p: Props[OptionType]): SharedBuilder_Props583106040[default[OptionType], OptionType] = new SharedBuilder_Props583106040[default[OptionType], OptionType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
-  def apply[/* <: typingsSlinky.reactSelect.typesMod.OptionTypeBase */ OptionType](): SharedBuilder_Props416038889[default[OptionType], OptionType] = {
+  def apply[OptionType /* <: OptionTypeBase */](): SharedBuilder_Props583106040[default[OptionType], OptionType] = {
     val __props = js.Dynamic.literal()
-    new SharedBuilder_Props416038889[default[OptionType], OptionType](js.Array(this.component, __props.asInstanceOf[Props[OptionType]]))
+    new SharedBuilder_Props583106040[default[OptionType], OptionType](js.Array(this.component, __props.asInstanceOf[Props[OptionType]]))
   }
-  implicit def make[/* <: typingsSlinky.reactSelect.typesMod.OptionTypeBase */ OptionType](companion: Select.type): SharedBuilder_Props416038889[default[OptionType], OptionType] = new SharedBuilder_Props416038889[default[OptionType], OptionType](js.Array(this.component, js.Dictionary.empty))()
+  
+  implicit def make[OptionType /* <: OptionTypeBase */](companion: Select.type): SharedBuilder_Props583106040[default[OptionType], OptionType] = new SharedBuilder_Props583106040[default[OptionType], OptionType](js.Array(this.component, js.Dictionary.empty))()
 }
-

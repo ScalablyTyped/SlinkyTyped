@@ -3,10 +3,11 @@ package typingsSlinky.gapiClientDataflow.gapi.client.dataflow
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait WorkerMessageCode extends js.Object {
+  
   /**
     * The code is a string intended for consumption by a machine that identifies
     * the type of message being sent.
@@ -20,6 +21,7 @@ trait WorkerMessageCode extends js.Object {
     * waiting for an API change.
     */
   var code: js.UndefOr[String] = js.native
+  
   /**
     * Parameters contains specific information about the code.
     *
@@ -44,33 +46,39 @@ trait WorkerMessageCode extends js.Object {
     */
   var parameters: js.UndefOr[Record[String, _]] = js.native
 }
-
 object WorkerMessageCode {
+  
   @scala.inline
   def apply(): WorkerMessageCode = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[WorkerMessageCode]
   }
+  
   @scala.inline
   implicit class WorkerMessageCodeOps[Self <: WorkerMessageCode] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteCode: Self = this.set("code", js.undefined)
+    
     @scala.inline
     def setParameters(value: Record[String, _]): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteParameters: Self = this.set("parameters", js.undefined)
   }
-  
 }
-

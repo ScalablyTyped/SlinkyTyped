@@ -4,13 +4,15 @@ import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.classTransformer.classTransformOptionsMod.ClassTransformOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("class-transformer/ClassTransformer", JSImport.Namespace)
 @js.native
 object classTransformerMod extends js.Object {
+  
   @js.native
   class ClassTransformer () extends js.Object {
+    
     /**
       * Converts class (constructor) object to new class (constructor) object. Also works with arrays.
       */
@@ -18,6 +20,7 @@ object classTransformerMod extends js.Object {
     def classToClass[T](`object`: T, options: ClassTransformOptions): T = js.native
     def classToClass[T](`object`: js.Array[T]): js.Array[T] = js.native
     def classToClass[T](`object`: js.Array[T], options: ClassTransformOptions): js.Array[T] = js.native
+    
     /**
       * Converts class (constructor) object to plain (literal) object.
       * Uses given plain object as source object (it means fills given plain object with data from class object).
@@ -27,6 +30,7 @@ object classTransformerMod extends js.Object {
     def classToClassFromExist[T](`object`: T, fromObject: T, options: ClassTransformOptions): T = js.native
     def classToClassFromExist[T](`object`: T, fromObjects: js.Array[T]): js.Array[T] = js.native
     def classToClassFromExist[T](`object`: T, fromObjects: js.Array[T], options: ClassTransformOptions): js.Array[T] = js.native
+    
     /**
       * Converts class (constructor) object to plain (literal) object. Also works with arrays.
       */
@@ -34,6 +38,7 @@ object classTransformerMod extends js.Object {
     def classToPlain[T /* <: js.Object */](`object`: T, options: ClassTransformOptions): js.Object = js.native
     def classToPlain[T /* <: js.Object */](`object`: js.Array[T]): js.Array[js.Object] = js.native
     def classToPlain[T /* <: js.Object */](`object`: js.Array[T], options: ClassTransformOptions): js.Array[js.Object] = js.native
+    
     /**
       * Converts class (constructor) object to plain (literal) object.
       * Uses given plain object as source object (it means fills given plain object with data from class object).
@@ -43,18 +48,22 @@ object classTransformerMod extends js.Object {
     def classToPlainFromExist[T /* <: js.Object */, P](`object`: T, plainObject: P, options: ClassTransformOptions): T = js.native
     def classToPlainFromExist[T /* <: js.Object */, P](`object`: T, plainObjects: js.Array[P]): js.Array[T] = js.native
     def classToPlainFromExist[T /* <: js.Object */, P](`object`: T, plainObjects: js.Array[P], options: ClassTransformOptions): js.Array[T] = js.native
+    
     /**
       * Deserializes given JSON string to a object of the given class.
       */
     def deserialize[T](cls: ClassType[T], json: String): T = js.native
     def deserialize[T](cls: ClassType[T], json: String, options: ClassTransformOptions): T = js.native
+    
     /**
       * Deserializes given JSON string to an array of objects of the given class.
       */
     def deserializeArray[T](cls: ClassType[T], json: String): js.Array[T] = js.native
     def deserializeArray[T](cls: ClassType[T], json: String, options: ClassTransformOptions): js.Array[T] = js.native
+    
     def plainToClass[T /* <: js.Object */, V](cls: ClassType[T], plain: V): T = js.native
     def plainToClass[T /* <: js.Object */, V](cls: ClassType[T], plain: V, options: ClassTransformOptions): T = js.native
+    
     /**
       * Converts plain (literal) object to class (constructor) object.
       * Uses given object as source object (it means fills given object with data from plain object).
@@ -66,6 +75,7 @@ object classTransformerMod extends js.Object {
     def plainToClassFromExist_T_ObjectV_Array[T /* <: js.Object */, V](clsObject: T, plain: V): js.Array[T] = js.native
     @JSName("plainToClassFromExist")
     def plainToClassFromExist_T_ObjectV_Array[T /* <: js.Object */, V](clsObject: T, plain: V, options: ClassTransformOptions): js.Array[T] = js.native
+    
     /**
       * Converts plain (literal) object to class (constructor) object. Also works with arrays.
       */
@@ -73,6 +83,7 @@ object classTransformerMod extends js.Object {
     def plainToClass_T_ObjectV_ArrayWildcard_Array[T /* <: js.Object */, V /* <: js.Array[_] */](cls: ClassType[T], plain: V): js.Array[T] = js.native
     @JSName("plainToClass")
     def plainToClass_T_ObjectV_ArrayWildcard_Array[T /* <: js.Object */, V /* <: js.Array[_] */](cls: ClassType[T], plain: V, options: ClassTransformOptions): js.Array[T] = js.native
+    
     /**
       * Serializes given object to a JSON string.
       */
@@ -85,6 +96,4 @@ object classTransformerMod extends js.Object {
   @js.native
   trait ClassType[T]
     extends Instantiable1[/* args (repeated) */ js.Any, T]
-  
 }
-

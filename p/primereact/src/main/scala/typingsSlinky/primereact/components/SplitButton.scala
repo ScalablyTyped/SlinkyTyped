@@ -8,9 +8,10 @@ import typingsSlinky.primereact.splitButtonMod.SplitButtonProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SplitButton {
+  
   @JSImport("primereact/splitbutton", "SplitButton")
   @js.native
   object component extends js.Object
@@ -19,39 +20,54 @@ object SplitButton {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactSplitbuttonMod.SplitButton] {
+    
     @scala.inline
     def appendTo(value: HTMLElement): this.type = set("appendTo", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def icon(value: String): this.type = set("icon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def menuClassName(value: String): this.type = set("menuClassName", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def menuStyle(value: js.Object): this.type = set("menuStyle", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def modelVarargs(value: js.Any*): this.type = set("model", js.Array(value :_*))
+    
     @scala.inline
     def model(value: js.Array[_]): this.type = set("model", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onClick(value: /* event */ Event => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def tabIndex(value: String): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def tooltip(value: js.Any): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def tooltipOptions(value: TooltipOptions): this.type = set("tooltipOptions", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SplitButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: SplitButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

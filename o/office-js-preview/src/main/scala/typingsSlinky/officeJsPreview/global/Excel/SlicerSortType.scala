@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.global.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,10 +13,13 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.SlicerSortType")
 @js.native
 object SlicerSortType extends js.Object {
-  /* "Ascending" */ val ascending: typingsSlinky.officeJsPreview.Excel.SlicerSortType.ascending with String = js.native
-  /* "DataSourceOrder" */ val dataSourceOrder: typingsSlinky.officeJsPreview.Excel.SlicerSortType.dataSourceOrder with String = js.native
-  /* "Descending" */ val descending: typingsSlinky.officeJsPreview.Excel.SlicerSortType.descending with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJsPreview.Excel.SlicerSortType with String] = js.native
+  
+  /* "Ascending" */ val ascending: typingsSlinky.officeJsPreview.Excel.SlicerSortType.ascending with String = js.native
+  
+  /* "DataSourceOrder" */ val dataSourceOrder: typingsSlinky.officeJsPreview.Excel.SlicerSortType.dataSourceOrder with String = js.native
+  
+  /* "Descending" */ val descending: typingsSlinky.officeJsPreview.Excel.SlicerSortType.descending with String = js.native
 }
-

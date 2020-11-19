@@ -14,9 +14,10 @@ import typingsSlinky.reactPopperTooltip.typesMod.TooltipProps
 import typingsSlinky.reactPopperTooltip.typesMod.Trigger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tooltip {
+  
   @JSImport("react-popper-tooltip/dist/Tooltip", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -25,19 +26,25 @@ object Tooltip {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def innerRefFunction1(value: /* element */ HTMLElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def innerRef(value: Ref): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def innerRefNull: this.type = set("innerRef", null)
+    
     @scala.inline
     def outOfBoundaries(value: Boolean): this.type = set("outOfBoundaries", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def outOfBoundariesNull: this.type = set("outOfBoundaries", null)
   }
   
   def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     arrowProps: PopperArrowProps,
@@ -55,4 +62,3 @@ object Tooltip {
     new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
   }
 }
-

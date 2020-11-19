@@ -5,9 +5,8 @@ import typingsSlinky.graphql.definitionMod.GraphQLType
 import typingsSlinky.graphql.definitionMod._GraphQLList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql", "GraphQLList")
 @js.native
 object GraphQLList extends TopLevel[_GraphQLList[GraphQLType]]
-

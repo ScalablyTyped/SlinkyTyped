@@ -2,17 +2,14 @@ package typingsSlinky.jsData.schemaMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Schema
   extends typingsSlinky.jsData.componentMod.default {
+  
   val additionalProperties: js.Any = js.native
-  val `extends`: js.Any = js.native
-  val items: js.Any = js.native
-  var properties: js.Any = js.native
-  val track: js.Any = js.native
-  var `type`: String = js.native
+  
   /**
     * This adds ES5 getters/setters to the target based on the "properties" in
     * this Schema, which makes possible change tracking and validation on
@@ -27,6 +24,7 @@ trait Schema
   def apply(target: js.Any): Unit = js.native
   @JSName("apply")
   def apply(target: js.Any, opts: js.Any): Unit = js.native
+  
   /**
     * Apply default values to the target object for missing values.
     *
@@ -35,6 +33,11 @@ trait Schema
     * @param {object} target The target to which to apply values for missing values.
     */
   def applyDefaults(target: js.Any): Unit = js.native
+  
+  val `extends`: js.Any = js.native
+  
+  val items: js.Any = js.native
+  
   /**
     * Assemble a property descriptor for tracking and validating changes to
     * a property according to the given schema. This method is called when
@@ -51,6 +54,7 @@ trait Schema
     * @returns {object} A property descriptor for the given schema.
     */
   def makeDescriptor(prop: js.Any, schema: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Create a copy of the given value that contains only the properties defined
     * in this schema.
@@ -62,6 +66,13 @@ trait Schema
     */
   def pick(value: js.Any): js.Any = js.native
   def pick(value: js.Any, opts: js.Any): js.Any = js.native
+  
+  var properties: js.Any = js.native
+  
+  val track: js.Any = js.native
+  
+  var `type`: String = js.native
+  
   /**
     * Validate the provided value against this schema.
     *
@@ -74,4 +85,3 @@ trait Schema
   def validate(value: js.Any): js.Array[_] = js.native
   def validate(value: js.Any, opts: js.Any): js.Array[_] = js.native
 }
-

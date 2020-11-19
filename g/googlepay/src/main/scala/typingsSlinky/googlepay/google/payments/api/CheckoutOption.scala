@@ -2,7 +2,7 @@ package typingsSlinky.googlepay.google.payments.api
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The options for checkout.
@@ -29,11 +29,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.googlepay.googlepayStrings.COMPLETE_IMMEDIATE_PURCHASE
 */
 trait CheckoutOption extends js.Object
-
 object CheckoutOption {
+  
   @scala.inline
   def COMPLETE_IMMEDIATE_PURCHASE: typingsSlinky.googlepay.googlepayStrings.COMPLETE_IMMEDIATE_PURCHASE = "COMPLETE_IMMEDIATE_PURCHASE".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.COMPLETE_IMMEDIATE_PURCHASE]
+  
   @scala.inline
   def DEFAULT: typingsSlinky.googlepay.googlepayStrings.DEFAULT = "DEFAULT".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.DEFAULT]
 }
-

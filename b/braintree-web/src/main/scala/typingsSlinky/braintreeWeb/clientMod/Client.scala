@@ -5,15 +5,18 @@ import typingsSlinky.braintreeWeb.anon.Data
 import typingsSlinky.braintreeWeb.coreMod.callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Client extends js.Object {
+  
   /**
     * @description The current version of the SDK, i.e. `3.0.2`.
     */
   var VERSION: String = js.native
+  
   var authorization: String = js.native
+  
   /**
     * @description This function is the entry point for the <code>braintree.client</code> module.
     * It is used for creating {@link Client} instances that service communication to Braintree servers.
@@ -29,10 +32,12 @@ trait Client extends js.Object {
     */
   def create(options: Authorization): js.Promise[Client] = js.native
   def create(options: Authorization, callback: callback): Unit = js.native
+  
   /**
     * Returns a copy of the configuration values.
     */
   def getConfiguration(): Configuration = js.native
+  
   /**
     * Used by other modules to formulate all network requests to the Braintree gateway.
     * It is also capable of being used directly from your own form to tokenize credit card information.
@@ -77,4 +82,3 @@ trait Client extends js.Object {
     */
   def request(options: Data, callback: callback): Unit = js.native
 }
-

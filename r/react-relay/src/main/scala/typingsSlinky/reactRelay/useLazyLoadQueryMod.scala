@@ -5,11 +5,12 @@ import typingsSlinky.relayRuntime.relayModernGraphQLTagMod.GraphQLTaggedNode
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-relay/lib/relay-experimental/useLazyLoadQuery", JSImport.Namespace)
 @js.native
 object useLazyLoadQueryMod extends js.Object {
+  
   @JSName("useLazyLoadQuery")
   def useLazyLoadQuery_variables[TQuery /* <: OperationType */](
     gqlQuery: GraphQLTaggedNode,
@@ -22,4 +23,3 @@ object useLazyLoadQueryMod extends js.Object {
     options: FetchKey
   ): /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any = js.native
 }
-

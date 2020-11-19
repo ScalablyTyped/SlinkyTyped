@@ -5,7 +5,7 @@ import typingsSlinky.cordovaPluginInappbrowser.anon.Code
 import typingsSlinky.cordovaPluginInappbrowser.anon.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The object returned from a call to window.open.
@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait InAppBrowser extends Window {
+  
   /**
     * Adds a listener for an event from the InAppBrowser.
     * @param type      any custom event that might occur.
@@ -31,8 +32,10 @@ trait InAppBrowser extends Window {
     *                  passed an InAppBrowserEvent object as a parameter.
     */
   def addEventListener(`type`: channel, callback: InAppBrowserEventListenerOrEventListenerObject): Unit = js.native
+  
   /** Closes the InAppBrowser window. */
   def close(): Unit = js.native
+  
   /**
     * Injects JavaScript code into the InAppBrowser window.
     * @param script    Details of the script to run, specifying either a file or code key.
@@ -44,8 +47,10 @@ trait InAppBrowser extends Window {
     */
   def executeScript(script: Code, callback: js.Function1[/* result */ js.Any, Unit]): Unit = js.native
   def executeScript(script: File, callback: js.Function1[/* result */ js.Any, Unit]): Unit = js.native
+  
   /** Hides the InAppBrowser window. Calling this has no effect if the InAppBrowser was already hidden. */
   def hide(): Unit = js.native
+  
   /**
     * Injects CSS into the InAppBrowser window.
     * @param css       Details of the script to run, specifying either a file or code key.
@@ -53,10 +58,15 @@ trait InAppBrowser extends Window {
     */
   def insertCSS(css: Code, callback: js.Function0[Unit]): Unit = js.native
   def insertCSS(css: File, callback: js.Function0[Unit]): Unit = js.native
+  
   def onexit(`type`: InAppBrowserEvent): Unit = js.native
+  
   def onloaderror(`type`: InAppBrowserEvent): Unit = js.native
+  
   def onloadstart(`type`: Event): Unit = js.native
+  
   def onloadstop(`type`: InAppBrowserEvent): Unit = js.native
+  
   // removeEventListener overloads
   /**
     * Removes a listener for an event from the InAppBrowser.
@@ -69,10 +79,10 @@ trait InAppBrowser extends Window {
     *                  passed an InAppBrowserEvent object as a parameter.
     */
   def removeEventListener(`type`: channel, callback: InAppBrowserEventListenerOrEventListenerObject): Unit = js.native
+  
   /**
     * Displays an InAppBrowser window that was opened hidden. Calling this has no effect
     * if the InAppBrowser was already visible.
     */
   def show(): Unit = js.native
 }
-

@@ -6,12 +6,13 @@ import typingsSlinky.wordpressBlockEditor.anon.OmitPropsname
 import typingsSlinky.wordpressBlockEditor.inspectorControlsMod.InspectorControls.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/block-editor/components", "InspectorControls")
 @js.native
 object InspectorControls extends js.Object {
-  var Slot: ReactComponentClass[OmitPropsname] = js.native
+  
   def apply(props: Props): ReactElement = js.native
+  
+  var Slot: ReactComponentClass[OmitPropsname] = js.native
 }
-

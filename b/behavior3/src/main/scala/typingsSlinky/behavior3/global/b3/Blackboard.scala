@@ -2,7 +2,7 @@ package typingsSlinky.behavior3.global.b3
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Blackboard is the memory structure required by `BehaviorTree` and its
@@ -47,4 +47,3 @@ import scala.scalajs.js.annotation._
   */
 class Blackboard ()
   extends typingsSlinky.behavior3.b3.Blackboard
-

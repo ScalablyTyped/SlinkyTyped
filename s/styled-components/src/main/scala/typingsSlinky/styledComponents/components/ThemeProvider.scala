@@ -7,14 +7,16 @@ import typingsSlinky.styledComponents.styledComponentsMod.DefaultTheme
 import typingsSlinky.styledComponents.styledComponentsMod.ThemeProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ThemeProvider {
+  
   @JSImport("styled-components", "ThemeProvider")
   @js.native
   object component extends js.Object
   
   def withProps(p: ThemeProviderProps[AnyIfEmpty[AnyIfEmpty[DefaultTheme]], AnyIfEmpty[AnyIfEmpty[DefaultTheme]]]): Default[tag.type, typingsSlinky.styledComponents.styledComponentsMod.ThemeProvider] = new Default[tag.type, typingsSlinky.styledComponents.styledComponentsMod.ThemeProvider](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     theme: AnyIfEmpty[AnyIfEmpty[DefaultTheme]] | (js.Function1[AnyIfEmpty[AnyIfEmpty[DefaultTheme]], AnyIfEmpty[AnyIfEmpty[DefaultTheme]]])
@@ -23,4 +25,3 @@ object ThemeProvider {
     new Default[tag.type, typingsSlinky.styledComponents.styledComponentsMod.ThemeProvider](js.Array(this.component, __props.asInstanceOf[ThemeProviderProps[AnyIfEmpty[AnyIfEmpty[DefaultTheme]], AnyIfEmpty[AnyIfEmpty[DefaultTheme]]]]))
   }
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-xray-node/commands/PutTelemetryRecordsCommand", JSImport.Namespace)
 @js.native
 object putTelemetryRecordsCommandMod extends js.Object {
+  
   @js.native
   class PutTelemetryRecordsCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object putTelemetryRecordsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutTelemetryRecordsInput) = this()
+    
     val middlewareStack: MiddlewareStack[PutTelemetryRecordsInput, PutTelemetryRecordsOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: XRayResolvedConfiguration
     ): Handler[PutTelemetryRecordsInput, PutTelemetryRecordsOutput] = js.native
   }
-  
 }
-

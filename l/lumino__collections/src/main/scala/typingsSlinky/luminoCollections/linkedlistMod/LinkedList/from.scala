@@ -3,11 +3,12 @@ package typingsSlinky.luminoCollections.linkedlistMod.LinkedList
 import typingsSlinky.luminoAlgorithm.iterMod.IterableOrArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@lumino/collections/types/linkedlist", "LinkedList.from")
 @js.native
 object from extends js.Object {
+  
   /**
     * Create a linked list from an iterable of values.
     *
@@ -20,4 +21,3 @@ object from extends js.Object {
     */
   def apply[T](values: IterableOrArrayLike[T]): typingsSlinky.luminoCollections.linkedlistMod.LinkedList[T] = js.native
 }
-

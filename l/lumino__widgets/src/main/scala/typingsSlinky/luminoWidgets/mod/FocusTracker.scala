@@ -2,7 +2,7 @@ package typingsSlinky.luminoWidgets.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@lumino/widgets", "FocusTracker")
 @js.native
@@ -11,4 +11,3 @@ import scala.scalajs.js.annotation._
   */
 class FocusTracker[T /* <: typingsSlinky.luminoWidgets.widgetMod.Widget */] ()
   extends typingsSlinky.luminoWidgets.focustrackerMod.FocusTracker[T]
-

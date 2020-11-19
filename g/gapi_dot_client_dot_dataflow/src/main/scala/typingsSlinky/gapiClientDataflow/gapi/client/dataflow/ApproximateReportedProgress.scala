@@ -2,10 +2,11 @@ package typingsSlinky.gapiClientDataflow.gapi.client.dataflow
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ApproximateReportedProgress extends js.Object {
+  
   /**
     * Total amount of parallelism in the portion of input of this task that has
     * already been consumed and is no longer active. In the first two examples
@@ -15,13 +16,16 @@ trait ApproximateReportedProgress extends js.Object {
     * specified, must be finite.
     */
   var consumedParallelism: js.UndefOr[ReportedParallelism] = js.native
+  
   /**
     * Completion as fraction of the input consumed, from 0.0 (beginning, nothing
     * consumed), to 1.0 (end of the input, entire input consumed).
     */
   var fractionConsumed: js.UndefOr[Double] = js.native
+  
   /** A Position within the work to represent a progress. */
   var position: js.UndefOr[Position] = js.native
+  
   /**
     * Total amount of parallelism in the input of this task that remains,
     * (i.e. can be delegated to this task and any new tasks via dynamic
@@ -51,41 +55,51 @@ trait ApproximateReportedProgress extends js.Object {
     */
   var remainingParallelism: js.UndefOr[ReportedParallelism] = js.native
 }
-
 object ApproximateReportedProgress {
+  
   @scala.inline
   def apply(): ApproximateReportedProgress = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ApproximateReportedProgress]
   }
+  
   @scala.inline
   implicit class ApproximateReportedProgressOps[Self <: ApproximateReportedProgress] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setConsumedParallelism(value: ReportedParallelism): Self = this.set("consumedParallelism", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteConsumedParallelism: Self = this.set("consumedParallelism", js.undefined)
+    
     @scala.inline
     def setFractionConsumed(value: Double): Self = this.set("fractionConsumed", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteFractionConsumed: Self = this.set("fractionConsumed", js.undefined)
+    
     @scala.inline
     def setPosition(value: Position): Self = this.set("position", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deletePosition: Self = this.set("position", js.undefined)
+    
     @scala.inline
     def setRemainingParallelism(value: ReportedParallelism): Self = this.set("remainingParallelism", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteRemainingParallelism: Self = this.set("remainingParallelism", js.undefined)
   }
-  
 }
-

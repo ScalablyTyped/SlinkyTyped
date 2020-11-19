@@ -3,7 +3,7 @@ package typingsSlinky.angularCompiler.mod
 import typingsSlinky.angularCompiler.outputAstMod.LiteralMapEntry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler", "LiteralMapExpr")
 @js.native
@@ -27,4 +27,3 @@ class LiteralMapExpr protected ()
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
 }
-

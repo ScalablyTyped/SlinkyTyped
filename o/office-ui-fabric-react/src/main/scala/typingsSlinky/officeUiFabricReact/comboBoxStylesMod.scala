@@ -7,13 +7,15 @@ import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonStyles
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/ComboBox/ComboBox.styles", JSImport.Namespace)
 @js.native
 object comboBoxStylesMod extends js.Object {
+  
   def getCaretDownButtonStyles(theme: ITheme): IButtonStyles = js.native
   def getCaretDownButtonStyles(theme: ITheme, customStyles: PartialIButtonStyles): IButtonStyles = js.native
+  
   def getOptionStyles(theme: ITheme): PartialIComboBoxOptionSty = js.native
   def getOptionStyles(
     theme: ITheme,
@@ -106,9 +108,9 @@ object comboBoxStylesMod extends js.Object {
     isPending: Boolean,
     isHidden: Boolean
   ): PartialIComboBoxOptionSty = js.native
+  
   def getStyles(theme: ITheme): PartialIComboBoxStyles = js.native
   def getStyles(theme: ITheme, customStyles: js.UndefOr[scala.Nothing], comboBoxOptionWidth: String): PartialIComboBoxStyles = js.native
   def getStyles(theme: ITheme, customStyles: PartialIComboBoxStyles): PartialIComboBoxStyles = js.native
   def getStyles(theme: ITheme, customStyles: PartialIComboBoxStyles, comboBoxOptionWidth: String): PartialIComboBoxStyles = js.native
 }
-

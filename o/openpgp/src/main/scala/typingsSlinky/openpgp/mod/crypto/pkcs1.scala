@@ -3,7 +3,7 @@ package typingsSlinky.openpgp.mod.crypto
 import typingsSlinky.openpgp.mod.Integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @see module:crypto/public_key/rsa
@@ -13,14 +13,17 @@ import scala.scalajs.js.annotation._
 @JSImport("openpgp", "crypto.pkcs1")
 @js.native
 object pkcs1 extends js.Object {
+  
   /**
     * ASN1 object identifiers for hashes
     * @see
     */
   @JSName("hash_headers")
   val hashHeaders: js.Any = js.native
+  
   @js.native
   object eme extends js.Object {
+    
     /**
       * Decode a EME-PKCS1-v1_5 padded message
       * @see
@@ -28,6 +31,7 @@ object pkcs1 extends js.Object {
       * @returns message, an octet string
       */
     def decode(EM: String): String = js.native
+    
     /**
       * Create a EME-PKCS1-v1_5 padded message
       * @see
@@ -40,6 +44,7 @@ object pkcs1 extends js.Object {
   
   @js.native
   object emsa extends js.Object {
+    
     /**
       * Create a EMSA-PKCS1-v1_5 padded message
       * @see
@@ -50,6 +55,4 @@ object pkcs1 extends js.Object {
       */
     def encode(algo: Integer, hashed: js.typedarray.Uint8Array, emLen: Integer): String = js.native
   }
-  
 }
-

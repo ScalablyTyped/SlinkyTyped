@@ -3,11 +3,11 @@ package typingsSlinky.hdrHistogramJs.abstractHistogramEncodingMod
 import typingsSlinky.hdrHistogramJs.byteBufferMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("hdr-histogram-js/AbstractHistogram.encoding", "encodeIntoByteBuffer")
 @js.native
 object encodeIntoByteBuffer extends js.Object {
+  
   def apply(buffer: default): Double = js.native
 }
-

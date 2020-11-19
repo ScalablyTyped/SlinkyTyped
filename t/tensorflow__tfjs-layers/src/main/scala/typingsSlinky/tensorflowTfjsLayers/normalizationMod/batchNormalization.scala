@@ -4,11 +4,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/layers/normalization", "batchNormalization")
 @js.native
 object batchNormalization extends js.Object {
+  
   def apply(x: Tensor[Rank], mean: Tensor[Rank], variance: Tensor[Rank]): Tensor[Rank] = js.native
   def apply(
     x: Tensor[Rank],
@@ -58,4 +59,3 @@ object batchNormalization extends js.Object {
     epsilon: Double
   ): Tensor[Rank] = js.native
 }
-

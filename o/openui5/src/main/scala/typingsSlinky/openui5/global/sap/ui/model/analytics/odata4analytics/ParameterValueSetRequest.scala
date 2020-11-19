@@ -2,7 +2,7 @@ package typingsSlinky.openui5.global.sap.ui.model.analytics.odata4analytics
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("sap.ui.model.analytics.odata4analytics.ParameterValueSetRequest")
 @js.native
@@ -14,4 +14,3 @@ class ParameterValueSetRequest protected ()
     */
   def this(oParameter: typingsSlinky.openui5.sap.ui.model.analytics.odata4analytics.Parameter) = this()
 }
-

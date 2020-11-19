@@ -7,15 +7,12 @@ import typingsSlinky.lodash.mod.ValueKeyIteratee
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashOmitBy extends LodashConvertible {
-  def apply[T /* <: js.Object */](
-    predicate: ValueKeyIteratee[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
-    ]
-  ): PartialObject[T] = js.native
+  
+  def apply[T](predicate: ValueKeyIteratee[T]): NumericDictionary[T] = js.native
   def apply[T /* <: js.Object */](
     predicate: ValueKeyIteratee[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
@@ -29,4 +26,3 @@ trait LodashOmitBy extends LodashConvertible {
   def apply[T](predicate: __, `object`: Dictionary[T]): LodashOmitBy1x2[T] = js.native
   def apply[T](predicate: __, `object`: NumericDictionary[T]): LodashOmitBy2x2[T] = js.native
 }
-

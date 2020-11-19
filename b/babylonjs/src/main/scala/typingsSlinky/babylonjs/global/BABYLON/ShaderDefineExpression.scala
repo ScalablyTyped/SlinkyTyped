@@ -2,13 +2,9 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.ShaderDefineExpression")
 @js.native
 class ShaderDefineExpression ()
-  extends typingsSlinky.babylonjs.BABYLON.ShaderDefineExpression {
-  /* CompleteClass */
-  override def isTrue(preprocessors: org.scalablytyped.runtime.StringDictionary[String]): Boolean = js.native
-}
-
+  extends typingsSlinky.babylonjs.BABYLON.ShaderDefineExpression

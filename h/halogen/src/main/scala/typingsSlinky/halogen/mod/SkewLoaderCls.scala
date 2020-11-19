@@ -3,7 +3,7 @@ package typingsSlinky.halogen.mod
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("halogen", "SkewLoader")
 @js.native
@@ -12,4 +12,3 @@ class SkewLoaderCls protected ()
   def this(props: SizeLoaderProps) = this()
   def this(props: SizeLoaderProps, context: js.Any) = this()
 }
-

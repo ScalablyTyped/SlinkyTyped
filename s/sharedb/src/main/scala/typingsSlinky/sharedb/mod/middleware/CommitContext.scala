@@ -17,14 +17,14 @@ import typingsSlinky.sharedb.sharedbStrings.reply
 import typingsSlinky.sharedb.sharedbStrings.submit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CommitContext
   extends BaseContext
      with SubmitRequest
-
 object CommitContext {
+  
   @scala.inline
   def apply(
     action: afterSubmit | apply | commit | connect | doc | op | query | readSnapshots | receive | reply | submit,
@@ -43,4 +43,3 @@ object CommitContext {
     __obj.asInstanceOf[CommitContext]
   }
 }
-

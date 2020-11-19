@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-glacier-node/commands/DeleteVaultCommand", JSImport.Namespace)
 @js.native
 object deleteVaultCommandMod extends js.Object {
+  
   @js.native
   class DeleteVaultCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteVaultCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteVaultInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteVaultInput, DeleteVaultOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[DeleteVaultInput, DeleteVaultOutput] = js.native
   }
-  
 }
-

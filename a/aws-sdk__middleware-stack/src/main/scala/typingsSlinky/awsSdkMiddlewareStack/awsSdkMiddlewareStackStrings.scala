@@ -2,13 +2,12 @@ package typingsSlinky.awsSdkMiddlewareStack
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object awsSdkMiddlewareStackStrings {
-  @js.native
-  sealed trait initialize extends js.Object
   
   @scala.inline
   def initialize: initialize = "initialize".asInstanceOf[initialize]
+  @js.native
+  sealed trait initialize extends js.Object
 }
-

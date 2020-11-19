@@ -3,14 +3,16 @@ package typingsSlinky.jsData
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("js-data/dist/Settable", JSImport.Namespace)
 @js.native
 object settableMod extends js.Object {
+  
   @js.native
   trait Settable
     extends /* customAttr */ StringDictionary[js.Any] {
+    
     /**
       * Get a private property of this instance.
       *
@@ -22,6 +24,7 @@ object settableMod extends js.Object {
       * @since 3.0.0
       */
     /* protected */ def _get(key: String): js.Any = js.native
+    
     /**
       * Set a private property of this instance.
       *
@@ -35,6 +38,7 @@ object settableMod extends js.Object {
       */
     /* protected */ def _set(key: js.Any): js.Any = js.native
     /* protected */ def _set(key: js.Any, value: js.Any): js.Any = js.native
+    
     /**
       * Unset a private property of this instance.
       *
@@ -49,6 +53,4 @@ object settableMod extends js.Object {
   
   @js.native
   class default () extends Settable
-  
 }
-

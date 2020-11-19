@@ -18,17 +18,11 @@ import typingsSlinky.std.Omit
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait `280` extends js.Object {
-  @JSName("defaults")
-  var defaults_Original: js.Function1[
-    /* newDefaults */ RequestParameters, 
-    RequestInterface[js.Object with RequestParameters]
-  ] = js.native
-  @JSName("endpoint")
-  var endpoint_Original: EndpointInterface[Url] = js.native
+  
   def apply(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /orgs/:org/projects']['response'] */ js.Any
   ] = js.native
@@ -40,7 +34,14 @@ trait `280` extends js.Object {
   ): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /orgs/:org/projects']['response'] */ js.Any
   ] = js.native
+  
   def defaults[O /* <: RequestParameters */](newDefaults: O): RequestInterface[js.Object with O] = js.native
+  @JSName("defaults")
+  var defaults_Original: js.Function1[
+    /* newDefaults */ RequestParameters, 
+    RequestInterface[js.Object with RequestParameters]
+  ] = js.native
+  
   def endpoint[R /* <: Route */, P /* <: RequestParameters */](route: R): (RequestOptions | (/* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints[R]['request'] */ js.Any)) with (Pick[
     P, 
     /* keyof @octokit/types.@octokit/types/dist-types/RequestOptions.RequestOptions */ method | url | headers | body | request
@@ -66,6 +67,8 @@ trait `280` extends js.Object {
     P, 
     /* keyof @octokit/types.@octokit/types/dist-types/RequestOptions.RequestOptions */ method | url | headers | body | request
   ]) = js.native
+  @JSName("endpoint")
+  var endpoint_Original: EndpointInterface[Url] = js.native
   /**
     * Transforms a GitHub REST API endpoint into generic request options
     *
@@ -77,4 +80,3 @@ trait `280` extends js.Object {
     /* keyof @octokit/types.@octokit/types/dist-types/RequestOptions.RequestOptions */ method | url | headers | body | request
   ]) = js.native
 }
-

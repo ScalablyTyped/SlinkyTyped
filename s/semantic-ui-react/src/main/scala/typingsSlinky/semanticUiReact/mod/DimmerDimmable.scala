@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.semanticUiReact.dimmerDimmableMod.DimmerDimmableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semantic-ui-react", "DimmerDimmable")
 @js.native
@@ -15,8 +15,6 @@ class DimmerDimmable protected ()
   def this(props: DimmerDimmableProps) = this()
   def this(props: DimmerDimmableProps, context: js.Any) = this()
 }
-
 @JSImport("semantic-ui-react", "DimmerDimmable")
 @js.native
 object DimmerDimmable extends TopLevel[ReactComponentClass[DimmerDimmableProps]]
-

@@ -3,7 +3,7 @@ package typingsSlinky.esriLeaflet.mod
 import typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.FeatureLayerServiceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * `L.esri.FeatureLayerService` is an abstraction for interacting with Feature Layers running on ArcGIS Online
@@ -16,4 +16,3 @@ class FeatureLayerService_ protected ()
   extends typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.FeatureLayerService_ {
   def this(options: FeatureLayerServiceOptions) = this()
 }
-

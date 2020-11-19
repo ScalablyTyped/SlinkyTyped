@@ -7,7 +7,7 @@ import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.setContainerMod.SetContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl/container", "TreeMultiSet")
 @js.native
@@ -50,10 +50,10 @@ class TreeMultiSet[Key] ()
     comp: Comparator[Key, Key]
   ) = this()
 }
-
 @JSImport("tstl/container", "TreeMultiSet")
 @js.native
 object TreeMultiSet extends js.Object {
+  
   val Iterator: Instantiable0[
     typingsSlinky.tstl.setElementListMod.SetElementList.Iterator[
       js.Object, 
@@ -71,6 +71,7 @@ object TreeMultiSet extends js.Object {
       ]
     ]
   ] = js.native
+  
   val ReverseIterator: Instantiable0[
     typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
       js.Object, 
@@ -89,4 +90,3 @@ object TreeMultiSet extends js.Object {
     ]
   ] = js.native
 }
-

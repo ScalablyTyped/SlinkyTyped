@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.renderersMod
 import typingsSlinky.arcgisJsApi.esri.SimpleRendererProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/renderers", "SimpleRenderer")
 @js.native
@@ -16,4 +16,3 @@ class SimpleRendererCls ()
   extends typingsSlinky.arcgisJsApi.esri.SimpleRenderer {
   def this(properties: SimpleRendererProperties) = this()
 }
-

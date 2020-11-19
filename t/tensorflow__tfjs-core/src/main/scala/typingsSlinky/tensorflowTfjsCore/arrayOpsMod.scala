@@ -12,21 +12,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.int32
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/array_ops", JSImport.Namespace)
 @js.native
 object arrayOpsMod extends js.Object {
-  val setdiff1dAsync: js.Function2[
-    /* x */ Tensor[Rank] | TensorLike, 
-    /* y */ Tensor[Rank] | TensorLike, 
-    js.Promise[js.Tuple2[Tensor[Rank], Tensor[Rank]]]
-  ] = js.native
-  val unstack: js.Function2[
-    /* x */ Tensor[Rank] | TensorLike, 
-    /* axis */ js.UndefOr[Double], 
-    js.Array[Tensor[Rank]]
-  ] = js.native
+  
   def buffer[R /* <: Rank */](
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any
   ): TensorBuffer[R, float32] = js.native
@@ -105,6 +96,7 @@ object arrayOpsMod extends js.Object {
     dtype: string,
     values: js.Array[String]
   ): TensorBuffer[R, string] = js.native
+  
   /**
     * Prints information about the `tf.Tensor` including its data.
     *
@@ -119,14 +111,29 @@ object arrayOpsMod extends js.Object {
   /** @doc {heading: 'Tensors', subheading: 'Creation'} */
   def print[T /* <: Tensor[Rank] */](x: T): Unit = js.native
   def print[T /* <: Tensor[Rank] */](x: T, verbose: Boolean): Unit = js.native
+  
+  val setdiff1dAsync: js.Function2[
+    /* x */ Tensor[Rank] | TensorLike, 
+    /* y */ Tensor[Rank] | TensorLike, 
+    js.Promise[js.Tuple2[Tensor[Rank], Tensor[Rank]]]
+  ] = js.native
+  
+  val unstack: js.Function2[
+    /* x */ Tensor[Rank] | TensorLike, 
+    /* axis */ js.UndefOr[Double], 
+    js.Array[Tensor[Rank]]
+  ] = js.native
+  
   @js.native
   object cast extends js.Object {
+    
     def apply[T /* <: Tensor[Rank] */](x: T, dtype: DataType): T = js.native
     def apply[T /* <: Tensor[Rank] */](x: TensorLike, dtype: DataType): T = js.native
   }
   
   @js.native
   object expandDims extends js.Object {
+    
     def apply[R2 /* <: Rank */](x: TensorLike): Tensor[R2] = js.native
     def apply[R2 /* <: Rank */](x: TensorLike, axis: Double): Tensor[R2] = js.native
     def apply[R2 /* <: Rank */](x: Tensor[Rank]): Tensor[R2] = js.native
@@ -135,6 +142,7 @@ object arrayOpsMod extends js.Object {
   
   @js.native
   object reshape extends js.Object {
+    
     def apply[R2 /* <: Rank */](
       x: TensorLike,
       shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R2] */ js.Any
@@ -147,6 +155,7 @@ object arrayOpsMod extends js.Object {
   
   @js.native
   object squeeze extends js.Object {
+    
     def apply[T /* <: Tensor[Rank] */](x: TensorLike): T = js.native
     def apply[T /* <: Tensor[Rank] */](x: TensorLike, axis: js.Array[Double]): T = js.native
     def apply[T /* <: Tensor[Rank] */](x: Tensor[Rank]): T = js.native
@@ -155,9 +164,8 @@ object arrayOpsMod extends js.Object {
   
   @js.native
   object stack extends js.Object {
+    
     def apply[T /* <: Tensor[Rank] */](tensors: js.Array[T | TensorLike]): Tensor[Rank] = js.native
     def apply[T /* <: Tensor[Rank] */](tensors: js.Array[T | TensorLike], axis: Double): Tensor[Rank] = js.native
   }
-  
 }
-

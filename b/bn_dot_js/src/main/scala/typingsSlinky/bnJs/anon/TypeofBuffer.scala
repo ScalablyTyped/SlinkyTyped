@@ -9,14 +9,11 @@ import typingsSlinky.node.anon.ValueOf
 import typingsSlinky.node.global.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofBuffer extends Instantiable1[/* str */ String, Buffer] {
-  /**
-    * This is the number of bytes used to determine the size of pre-allocated, internal Buffer instances used for pooling. This value may be modified.
-    */
-  var poolSize: Double = js.native
+  
   /**
     * Allocates a new buffer of {size} octets.
     *
@@ -33,6 +30,7 @@ trait TypeofBuffer extends Instantiable1[/* str */ String, Buffer] {
   def alloc(size: Double, fill: Double, encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
   def alloc(size: Double, fill: typingsSlinky.node.Buffer): typingsSlinky.node.Buffer = js.native
   def alloc(size: Double, fill: typingsSlinky.node.Buffer, encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
+  
   /**
     * Allocates a new buffer of {size} octets, leaving memory not initialized, so the contents
     * of the newly created Buffer are unknown and may contain sensitive data.
@@ -40,6 +38,7 @@ trait TypeofBuffer extends Instantiable1[/* str */ String, Buffer] {
     * @param size count of octets to allocate
     */
   def allocUnsafe(size: Double): typingsSlinky.node.Buffer = js.native
+  
   /**
     * Allocates a new non-pooled buffer of {size} octets, leaving memory not initialized, so the contents
     * of the newly created Buffer are unknown and may contain sensitive data.
@@ -47,6 +46,7 @@ trait TypeofBuffer extends Instantiable1[/* str */ String, Buffer] {
     * @param size count of octets to allocate
     */
   def allocUnsafeSlow(size: Double): typingsSlinky.node.Buffer = js.native
+  
   /**
     * Gives the actual byte length of a string. encoding defaults to 'utf8'.
     * This is not the same as String.prototype.length since that returns the number of characters in a string.
@@ -62,10 +62,12 @@ trait TypeofBuffer extends Instantiable1[/* str */ String, Buffer] {
   def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
   def byteLength(string: js.typedarray.ArrayBuffer): Double = js.native
   def byteLength(string: js.typedarray.ArrayBuffer, encoding: BufferEncoding): Double = js.native
+  
   /**
     * The same as buf1.compare(buf2).
     */
   def compare(buf1: js.typedarray.Uint8Array, buf2: js.typedarray.Uint8Array): Double = js.native
+  
   /**
     * Returns a buffer which is the result of concatenating all the buffers in the list together.
     *
@@ -79,6 +81,7 @@ trait TypeofBuffer extends Instantiable1[/* str */ String, Buffer] {
     */
   def concat(list: js.Array[js.typedarray.Uint8Array]): typingsSlinky.node.Buffer = js.native
   def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): typingsSlinky.node.Buffer = js.native
+  
   def from(arrayBuffer: SharedArrayBuffer): typingsSlinky.node.Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
@@ -121,12 +124,14 @@ trait TypeofBuffer extends Instantiable1[/* str */ String, Buffer] {
     */
   def from(str: String): typingsSlinky.node.Buffer = js.native
   def from(str: String, encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
+  
   /**
     * Returns true if {obj} is a Buffer
     *
     * @param obj object to test.
     */
   def isBuffer(obj: js.Any): /* is node.Buffer */ Boolean = js.native
+  
   /**
     * Returns true if {encoding} is a valid encoding argument.
     * Valid string encodings in Node 0.12: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'
@@ -134,10 +139,15 @@ trait TypeofBuffer extends Instantiable1[/* str */ String, Buffer] {
     * @param encoding string to test.
     */
   def isEncoding(encoding: String): /* is node.BufferEncoding */ Boolean = js.native
+  
   /**
     * Creates a new Buffer using the passed {data}
     * @param values to create a new Buffer
     */
   def of(items: Double*): typingsSlinky.node.Buffer = js.native
+  
+  /**
+    * This is the number of bytes used to determine the size of pre-allocated, internal Buffer instances used for pooling. This value may be modified.
+    */
+  var poolSize: Double = js.native
 }
-

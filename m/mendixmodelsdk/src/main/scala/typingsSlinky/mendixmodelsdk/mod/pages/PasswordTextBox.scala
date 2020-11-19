@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayoutCallA
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/password-text-box relevant section in reference guide}
@@ -30,19 +30,18 @@ class PasswordTextBox protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "pages.PasswordTextBox")
 @js.native
 object PasswordTextBox extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -52,6 +51,7 @@ object PasswordTextBox extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.BuildingBlock): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -61,6 +61,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.BuildingBlock): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'footerWidget' property
@@ -70,6 +71,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'footerWidgets' property
@@ -79,6 +81,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -88,6 +91,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInDataViewUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -97,6 +101,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -106,6 +111,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DivContainer): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -115,6 +121,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DivContainer): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -124,6 +131,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.GroupBox): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -133,6 +141,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.GroupBox): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'leftWidget' property
@@ -142,6 +151,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'leftWidgets' property
@@ -151,6 +161,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'rightWidget' property
@@ -160,6 +171,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'rightWidgets' property
@@ -169,6 +181,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -178,6 +191,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutCallArgument): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -187,6 +201,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutCallArgument): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -196,6 +211,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutGridColumn): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -205,6 +221,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutGridColumn): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -214,6 +231,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInLayoutUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Layout): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -223,6 +241,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Layout): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -232,6 +251,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListViewTemplate): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -241,6 +261,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListViewTemplate): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -250,6 +271,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInListViewUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListView): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -259,6 +281,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListView): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -268,6 +291,7 @@ object PasswordTextBox extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.MasterDetailRegion): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -277,6 +301,7 @@ object PasswordTextBox extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'sidebarWidgets' property
@@ -286,6 +311,7 @@ object PasswordTextBox extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NativeLayoutContent): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -295,6 +321,7 @@ object PasswordTextBox extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NativeLayoutContent): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'headerWidget' property
@@ -304,6 +331,7 @@ object PasswordTextBox extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -313,6 +341,7 @@ object PasswordTextBox extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -322,6 +351,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationListItem): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -331,6 +361,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationListItem): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -340,6 +371,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollContainerRegion): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -349,6 +381,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollContainerRegion): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -358,6 +391,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInSnippetUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Snippet): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -367,6 +401,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Snippet): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'firstWidget' property
@@ -376,6 +411,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'firstWidgets' property
@@ -385,6 +421,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'secondWidget' property
@@ -394,6 +431,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'secondWidgets' property
@@ -403,6 +441,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -412,6 +451,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInTabPageUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TabPage): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -421,6 +461,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TabPage): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -430,6 +471,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInTableCellUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TableCell): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -439,6 +481,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TableCell): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widget' property
@@ -448,6 +491,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -457,6 +501,7 @@ object PasswordTextBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -466,6 +511,7 @@ object PasswordTextBox extends js.Object {
     *  7.0.2 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.VerticalFlow): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -475,6 +521,7 @@ object PasswordTextBox extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.WebLayoutContent): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
   /**
     * Creates and returns a new PasswordTextBox instance in the SDK and on the server.
     * The new PasswordTextBox will be automatically stored in the 'widgets' property
@@ -484,5 +531,8 @@ object PasswordTextBox extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): typingsSlinky.mendixmodelsdk.pagesMod.pages.PasswordTextBox = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -2323,10 +2323,11 @@ import typingsSlinky.igniteUi.igniteUiStrings.zoomWindowMoveDistance
 import typingsSlinky.igniteUi.igniteUiStrings.zoomable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
+  
   @JSName("data")
   def data_igBaseChart(propertyName: igBaseChart): IgBaseChartMethods = js.native
   @JSName("data")
@@ -2529,6 +2530,7 @@ trait JQuery extends js.Object {
   def data_igZoombar(propertyName: igZoombar): IgZoombarMethods = js.native
   @JSName("data")
   def data_mouseWrapper(propertyName: mouseWrapper): MouseWrapperMethods = js.native
+  
   def igBaseChart(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event which is raised before data binding.
@@ -2751,6 +2753,7 @@ trait JQuery extends js.Object {
   def igBaseChart_removeItem(methodName: removeItem, index: Double): js.Object = js.native
   @JSName("igBaseChart")
   def igBaseChart_setItem(methodName: setItem, index: Double, item: js.Object): js.Object = js.native
+  
   def igBaseEditor(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets whether the editor value can become null.
@@ -3107,6 +3110,7 @@ trait JQuery extends js.Object {
   def igBaseEditor_validator(methodName: validator): js.Object = js.native
   @JSName("igBaseEditor")
   def igBaseEditor_value(methodName: value, newValue: js.Object): Unit = js.native
+  
   def igBrowseButton(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igBrowseButton(optionLiteral: option, optionName: autoselect): Boolean = js.native
   def igBrowseButton(optionLiteral: option, optionName: autoselect, optionValue: Boolean): Unit = js.native
@@ -3135,6 +3139,7 @@ trait JQuery extends js.Object {
   def igBrowseButton_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igBrowseButton")
   def igBrowseButton_option(optionLiteral: option, options: IgBrowseButton): JQuery = js.native
+  
   def igBulletGraph(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event which is raised when a label of the bullet graph is aligned along the scale.
@@ -3902,6 +3907,7 @@ trait JQuery extends js.Object {
   def igBulletGraph_styleUpdated(methodName: styleUpdated): Unit = js.native
   @JSName("igBulletGraph")
   def igBulletGraph_updateRange(methodName: updateRange, value: js.Object): Unit = js.native
+  
   def igButton(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igButton(optionLiteral: option, optionName: centerLabel): Boolean = js.native
   def igButton(optionLiteral: option, optionName: centerLabel, optionValue: Boolean): Unit = js.native
@@ -3934,6 +3940,7 @@ trait JQuery extends js.Object {
   def igButton_setTitle(methodName: setTitle, title: js.Object): Unit = js.native
   @JSName("igButton")
   def igButton_widget(methodName: widget): Unit = js.native
+  
   def igCategoryChart(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets  a value indicating whether grid and tick lines are aligned to device pixels.
@@ -5832,6 +5839,7 @@ trait JQuery extends js.Object {
   def igCategoryChart_removeItem(methodName: removeItem, index: Double): js.Object = js.native
   @JSName("igCategoryChart")
   def igCategoryChart_setItem(methodName: setItem, index: Double, item: js.Object): js.Object = js.native
+  
   def igChartLegend(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Type of the legend.
@@ -5872,6 +5880,7 @@ trait JQuery extends js.Object {
   def igChartLegend_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igChartLegend")
   def igChartLegend_option(optionLiteral: option, options: IgChartLegend): JQuery = js.native
+  
   def igCheckboxEditor(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igCheckboxEditor(optionLiteral: option, optionName: allowNullValue): Boolean = js.native
   def igCheckboxEditor(optionLiteral: option, optionName: allowNullValue, optionValue: Boolean): Unit = js.native
@@ -6237,6 +6246,7 @@ trait JQuery extends js.Object {
   def igCheckboxEditor_validator(methodName: validator): js.Object = js.native
   @JSName("igCheckboxEditor")
   def igCheckboxEditor_value(methodName: value, newValue: js.Object): String = js.native
+  
   def igColorPicker(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * The event is fired when a color is selected.
@@ -6283,6 +6293,7 @@ trait JQuery extends js.Object {
     */
   def igColorPicker(optionLiteral: option, optionName: standardColors, optionValue: js.Array[_]): Unit = js.native
   def igColorPicker(options: IgColorPicker): JQuery = js.native
+  
   def igColorPickerSplitButton(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event fired when the button is clicked.
@@ -6445,6 +6456,7 @@ trait JQuery extends js.Object {
   def igColorPickerSplitButton_toggle(methodName: toggle, e: js.Object): js.Object = js.native
   @JSName("igColorPickerSplitButton")
   def igColorPickerSplitButton_widget(methodName: widget): Unit = js.native
+  
   @JSName("igColorPicker")
   def igColorPicker_colorFromElement(methodName: colorFromElement, $element: js.Object): String = js.native
   @JSName("igColorPicker")
@@ -6463,6 +6475,7 @@ trait JQuery extends js.Object {
   def igColorPicker_selectedColor(methodName: selectedColor): String = js.native
   @JSName("igColorPicker")
   def igColorPicker_standardColorsTable(methodName: standardColorsTable): js.Object = js.native
+  
   def igCombo(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * If set to true:
@@ -7686,6 +7699,7 @@ trait JQuery extends js.Object {
   def igCombo_value(methodName: value, value: js.Object, options: js.Object, event: js.Object): js.Object = js.native
   @JSName("igCombo")
   def igCombo_valueInput(methodName: valueInput): js.Object = js.native
+  
   def igCurrencyEditor(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets whether the editor value can become null.
@@ -8438,6 +8452,7 @@ trait JQuery extends js.Object {
   def igCurrencyEditor_value(methodName: value): Double = js.native
   @JSName("igCurrencyEditor")
   def igCurrencyEditor_value(methodName: value, newValue: Double): Double = js.native
+  
   def igDataChart(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Set to true in order to override the default behavior in which series do not animate if an axis range changes
@@ -10111,6 +10126,7 @@ trait JQuery extends js.Object {
   def igDataChart_unscaleValue(methodName: unscaleValue, targetName: String, scaledValue: Double): Double = js.native
   @JSName("igDataChart")
   def igDataChart_widget(methodName: widget): Unit = js.native
+  
   def igDateEditor(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets whether the editor value can become null.
@@ -10991,6 +11007,7 @@ trait JQuery extends js.Object {
   def igDateEditor_value(methodName: value): js.Date = js.native
   @JSName("igDateEditor")
   def igDateEditor_value(methodName: value, newValue: js.Date): js.Date = js.native
+  
   def igDatePicker(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets whether the editor value can become null.
@@ -11913,6 +11930,7 @@ trait JQuery extends js.Object {
   def igDatePicker_value(methodName: value): js.Date = js.native
   @JSName("igDatePicker")
   def igDatePicker_value(methodName: value, newValue: js.Date): js.Date = js.native
+  
   def igDialog(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event which is raised after the end of the animation when the dialog was closed or opened.
@@ -12572,6 +12590,7 @@ trait JQuery extends js.Object {
   def igDialog_state(methodName: state, state: String): String = js.native
   @JSName("igDialog")
   def igDialog_unpin(methodName: unpin): js.Object = js.native
+  
   def igDoughnutChart(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets  whether the slices can be exploded.
@@ -12820,6 +12839,7 @@ trait JQuery extends js.Object {
   def igDoughnutChart_removeSeries(methodName: removeSeries, seriesObj: js.Object): Unit = js.native
   @JSName("igDoughnutChart")
   def igDoughnutChart_updateSeries(methodName: updateSeries, value: js.Object): Unit = js.native
+  
   def igEditorFilter(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igEditorFilter(options: IgEditorFilter): JQuery = js.native
   @JSName("igEditorFilter")
@@ -12840,6 +12860,7 @@ trait JQuery extends js.Object {
   def igEditorFilter_setFocus(methodName: setFocus, delay: js.Object, toggle: js.Object): Unit = js.native
   @JSName("igEditorFilter")
   def igEditorFilter_validator(methodName: validator): Unit = js.native
+  
   def igFinancialChart(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * A FinancialChartRangeSelectorOptionCollection containing the available range selector options on the toolbar.
@@ -14984,6 +15005,7 @@ trait JQuery extends js.Object {
   def igFinancialChart_removeItem(methodName: removeItem, index: Double): js.Object = js.native
   @JSName("igFinancialChart")
   def igFinancialChart_setItem(methodName: setItem, index: Double, item: js.Object): js.Object = js.native
+  
   def igFunnelChart(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets  whether to allow slices to be selected.
@@ -15610,6 +15632,7 @@ trait JQuery extends js.Object {
   def igFunnelChart_setItem(methodName: setItem, index: Double, item: js.Object): js.Object = js.native
   @JSName("igFunnelChart")
   def igFunnelChart_toggleSelection(methodName: toggleSelection, slice: js.Object): js.Object = js.native
+  
   def igGrid(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * If this option is set to true, the height of the grid row will be calculated automatically based on the [avgRowHeight](ui.iggrid#options:avgRowHeight) and the visible virtual records. If no [avgRowHeight](ui.iggrid#options:avgRowHeight) is specified, it will be calculated automatically at runtime.
@@ -16493,6 +16516,7 @@ trait JQuery extends js.Object {
   def igGrid(optionLiteral: option, optionName: width, optionValue: String): Unit = js.native
   def igGrid(optionLiteral: option, optionName: width, optionValue: Double): Unit = js.native
   def igGrid(options: IgGrid): JQuery = js.native
+  
   def igGridAppendRowsOnDemand(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Defines local or remote type of appending rows on demand in igGrid
@@ -16637,6 +16661,7 @@ trait JQuery extends js.Object {
   def igGridAppendRowsOnDemand_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igGridAppendRowsOnDemand")
   def igGridAppendRowsOnDemand_option(optionLiteral: option, options: IgGridAppendRowsOnDemand): JQuery = js.native
+  
   def igGridCellMerging(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igGridCellMerging(optionLiteral: option, optionName: cellsMerged): CellsMergedEvent = js.native
   def igGridCellMerging(optionLiteral: option, optionName: cellsMerged, optionValue: CellsMergedEvent): Unit = js.native
@@ -16800,6 +16825,7 @@ trait JQuery extends js.Object {
   def igGridCellMerging_unmergeColumn(methodName: unmergeColumn, column: js.Object): String = js.native
   @JSName("igGridCellMerging")
   def igGridCellMerging_unmergeRow(methodName: unmergeRow, id: js.Object, index: js.Object): Unit = js.native
+  
   def igGridColumnFixing(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event which is fired when column fixing operation is finished
@@ -17139,6 +17165,7 @@ trait JQuery extends js.Object {
   def igGridColumnFixing_unfixDataSkippedColumns(methodName: unfixDataSkippedColumns): Unit = js.native
   @JSName("igGridColumnFixing")
   def igGridColumnFixing_unfixNonDataColumns(methodName: unfixNonDataColumns): Unit = js.native
+  
   def igGridColumnMoving(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets if header cells should include an additional button that opens a moving helper dropdown.
@@ -17764,6 +17791,7 @@ trait JQuery extends js.Object {
   def igGridColumnMoving_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igGridColumnMoving")
   def igGridColumnMoving_option(optionLiteral: option, options: IgGridColumnMoving): JQuery = js.native
+  
   def igGridFeatureChooser(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igGridFeatureChooser(optionLiteral: option, optionName: animationDuration): Double = js.native
   def igGridFeatureChooser(optionLiteral: option, optionName: animationDuration, optionValue: Double): Unit = js.native
@@ -17837,6 +17865,7 @@ trait JQuery extends js.Object {
   def igGridFeatureChooser(optionLiteral: option, optionName: regional, optionValue: String): Unit = js.native
   def igGridFeatureChooser(optionLiteral: option, optionName: regional, optionValue: js.Object): Unit = js.native
   def igGridFeatureChooser(options: IgGridFeatureChooser): JQuery = js.native
+  
   def igGridFeatureChooserPopover(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * The time popover fades in and out when showing/hiding
@@ -18100,6 +18129,7 @@ trait JQuery extends js.Object {
   def igGridFeatureChooserPopover_show(methodName: show, trg: Element, content: String): Unit = js.native
   @JSName("igGridFeatureChooserPopover")
   def igGridFeatureChooserPopover_target(methodName: target): js.Object = js.native
+  
   @JSName("igGridFeatureChooser")
   def igGridFeatureChooser_changeGlobalLanguage(methodName: changeGlobalLanguage): Unit = js.native
   @JSName("igGridFeatureChooser")
@@ -18124,6 +18154,7 @@ trait JQuery extends js.Object {
   def igGridFeatureChooser_showDropDown(methodName: showDropDown, columnKey: String): Unit = js.native
   @JSName("igGridFeatureChooser")
   def igGridFeatureChooser_toggleDropDown(methodName: toggleDropDown, columnKey: String): Unit = js.native
+  
   def igGridFiltering(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Type of filtering. Delegates all filtering functionality to the [$.ig.DataSource](ig.datasource).
@@ -18918,6 +18949,7 @@ trait JQuery extends js.Object {
   def igGridFiltering_requiresFilteringExpression(methodName: requiresFilteringExpression, filterCondition: String): Boolean = js.native
   @JSName("igGridFiltering")
   def igGridFiltering_toggleFilterRowByFeatureChooser(methodName: toggleFilterRowByFeatureChooser, event: String): Unit = js.native
+  
   def igGridGroupBy(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets whether the GroupBy operation takes place locally on client-side or remotely on server-side.
@@ -19754,6 +19786,7 @@ trait JQuery extends js.Object {
   def igGridGroupBy_ungroupByColumn(methodName: ungroupByColumn, key: String): Unit = js.native
   @JSName("igGridGroupBy")
   def igGridGroupBy_ungroupByColumn(methodName: ungroupByColumn, key: String, layout: String): Unit = js.native
+  
   def igGridHiding(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets time of milliseconds for animation duration to show/hide modal dialog
@@ -20237,6 +20270,7 @@ trait JQuery extends js.Object {
   def igGridHiding_showMultiColumns(methodName: showMultiColumns, columns: js.Array[_]): Unit = js.native
   @JSName("igGridHiding")
   def igGridHiding_showMultiColumns(methodName: showMultiColumns, columns: js.Array[_], callback: js.Function): Unit = js.native
+  
   def igGridModalDialog(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igGridModalDialog(optionLiteral: option, optionName: animationDuration): Double = js.native
   def igGridModalDialog(optionLiteral: option, optionName: animationDuration, optionValue: Double): Unit = js.native
@@ -20444,6 +20478,7 @@ trait JQuery extends js.Object {
   def igGridModalDialog_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igGridModalDialog")
   def igGridModalDialog_option(optionLiteral: option, options: IgGridModalDialog): JQuery = js.native
+  
   def igGridMultiColumnHeaders(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event fired after the group collapsing has been executed and results are rendered.
@@ -20520,6 +20555,7 @@ trait JQuery extends js.Object {
   def igGridMultiColumnHeaders_toggleGroup(methodName: toggleGroup, groupKey: String): Unit = js.native
   @JSName("igGridMultiColumnHeaders")
   def igGridMultiColumnHeaders_toggleGroup(methodName: toggleGroup, groupKey: String, callback: js.Function): Unit = js.native
+  
   def igGridPaging(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Type of paging. Delegates all paging functionality to the [$.ig.DataSource](ig.datasource).
@@ -21065,6 +21101,7 @@ trait JQuery extends js.Object {
   def igGridPaging_pageSize(methodName: pageSize): Double = js.native
   @JSName("igGridPaging")
   def igGridPaging_pageSize(methodName: pageSize, size: Double): Double = js.native
+  
   def igGridResizing(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Resize the column to the size of the longest currently visible cell value.
@@ -21214,6 +21251,7 @@ trait JQuery extends js.Object {
   def igGridResizing_resize(methodName: resize, column: js.Object): Unit = js.native
   @JSName("igGridResizing")
   def igGridResizing_resize(methodName: resize, column: js.Object, width: js.Object): Unit = js.native
+  
   def igGridResponsive(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * When windowWidthToRenderVertically is null, determine minimal widths columns can take before
@@ -21443,6 +21481,7 @@ trait JQuery extends js.Object {
   def igGridResponsive_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igGridResponsive")
   def igGridResponsive_option(optionLiteral: option, options: IgGridResponsive): JQuery = js.native
+  
   def igGridRowSelectors(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event fired after a row selector checkbox had changed state.
@@ -21628,6 +21667,7 @@ trait JQuery extends js.Object {
   def igGridRowSelectors_option(optionLiteral: option, options: IgGridRowSelectors): JQuery = js.native
   @JSName("igGridRowSelectors")
   def igGridRowSelectors_rsRenderColgroup(methodName: rsRenderColgroup): Unit = js.native
+  
   def igGridSelection(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Enables / disables activation of rows and cells. Activation implies ability to perform navigating through cells and rows via the keyboard, and selecting rows and cells using CTRL / SHIFT - in the way cells/rows are selected in Ms Excel
@@ -21880,6 +21920,7 @@ trait JQuery extends js.Object {
   def igGridSelection_selectedRow(methodName: selectedRow): js.Object = js.native
   @JSName("igGridSelection")
   def igGridSelection_selectedRows(methodName: selectedRows): js.Array[_] = js.native
+  
   def igGridSorting(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Defines local or remote sorting operations.
@@ -22501,6 +22542,7 @@ trait JQuery extends js.Object {
   def igGridSorting_sortMultiple(methodName: sortMultiple, exprs: js.Array[_]): Unit = js.native
   @JSName("igGridSorting")
   def igGridSorting_unsortColumn(methodName: unsortColumn, index: js.Object, header: js.Object): Unit = js.native
+  
   def igGridSummaries(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Type of summaries calculating.
@@ -22981,6 +23023,7 @@ trait JQuery extends js.Object {
   def igGridSummaries_toggleDropDown(methodName: toggleDropDown, columnKey: String, event: js.Object): Unit = js.native
   @JSName("igGridSummaries")
   def igGridSummaries_toggleSummariesRows(methodName: toggleSummariesRows, isToShow: Boolean, isInternalCall: Boolean): Unit = js.native
+  
   def igGridTooltips(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * A list of custom column settings that specify custom tooltip settings for a specific column (whether tooltips are enabled / disabled)
@@ -23143,6 +23186,7 @@ trait JQuery extends js.Object {
   def igGridTooltips_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igGridTooltips")
   def igGridTooltips_option(optionLiteral: option, options: IgGridTooltips): JQuery = js.native
+  
   def igGridUpdating(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * This option has been removed as of 2017.2 Volume release.
@@ -23751,6 +23795,7 @@ trait JQuery extends js.Object {
   def igGridUpdating_startEdit(methodName: startEdit, rowId: js.Object, column: js.Object, raiseEvents: Boolean): Boolean = js.native
   @JSName("igGridUpdating")
   def igGridUpdating_updateRow(methodName: updateRow, rowId: js.Object, values: js.Object): Unit = js.native
+  
   @JSName("igGrid")
   def igGrid_activeCell(methodName: activeCell): js.Object = js.native
   @JSName("igGrid")
@@ -23975,6 +24020,7 @@ trait JQuery extends js.Object {
   def igGrid_virtualScrollTo(methodName: virtualScrollTo, scrollerPosition: js.Object): Unit = js.native
   @JSName("igGrid")
   def igGrid_widget(methodName: widget): Unit = js.native
+  
   def igHierarchicalGrid(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * If this option is set to true, the height of the grid row will be calculated automatically based on the [avgRowHeight](ui.ighierarchicalgrid#options:avgRowHeight) and the visible virtual records. If no [avgRowHeight](ui.ighierarchicalgrid#options:avgRowHeight) is specified, it will be calculated automatically at runtime.
@@ -25168,6 +25214,7 @@ trait JQuery extends js.Object {
   def igHierarchicalGrid_toggle(methodName: toggle, element: Element): Unit = js.native
   @JSName("igHierarchicalGrid")
   def igHierarchicalGrid_toggle(methodName: toggle, element: Element, callback: js.Function): Unit = js.native
+  
   def igHtmlEditor(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event fired after a toolbar item is clicked.
@@ -25469,6 +25516,7 @@ trait JQuery extends js.Object {
     */
   def igHtmlEditor(optionLiteral: option, optionName: workspaceResized, optionValue: WorkspaceResizedEvent): Unit = js.native
   def igHtmlEditor(options: IgHtmlEditor): JQuery = js.native
+  
   def igHtmlEditorPopover(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igHtmlEditorPopover(optionLiteral: option, optionName: apply): ApplyEvent = js.native
   def igHtmlEditorPopover(optionLiteral: option, optionName: apply, optionValue: ApplyEvent): Unit = js.native
@@ -25540,6 +25588,7 @@ trait JQuery extends js.Object {
   def igHtmlEditorPopover_option(optionLiteral: option, options: IgHtmlEditorPopover): JQuery = js.native
   @JSName("igHtmlEditorPopover")
   def igHtmlEditorPopover_show(methodName: show, item: js.Object): Unit = js.native
+  
   @JSName("igHtmlEditor")
   def igHtmlEditor_changeGlobalLanguage(methodName: changeGlobalLanguage): Unit = js.native
   @JSName("igHtmlEditor")
@@ -25580,6 +25629,7 @@ trait JQuery extends js.Object {
   def igHtmlEditor_setContent(methodName: setContent, content: String, format: String): Unit = js.native
   @JSName("igHtmlEditor")
   def igHtmlEditor_widget(methodName: widget): Unit = js.native
+  
   def igImagePropertiesDialog(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igImagePropertiesDialog(optionLiteral: option, optionName: apply): ApplyEvent = js.native
   def igImagePropertiesDialog(optionLiteral: option, optionName: apply, optionValue: ApplyEvent): Unit = js.native
@@ -25643,6 +25693,7 @@ trait JQuery extends js.Object {
   def igImagePropertiesDialog_option(optionLiteral: option, options: IgImagePropertiesDialog): JQuery = js.native
   @JSName("igImagePropertiesDialog")
   def igImagePropertiesDialog_show(methodName: show, item: js.Object): Unit = js.native
+  
   def igLayoutManager(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Options specific to a border layout
@@ -25870,6 +25921,7 @@ trait JQuery extends js.Object {
   def igLayoutManager_reflow(methodName: reflow, forceReflow: Boolean, animationDuration: Double): Unit = js.native
   @JSName("igLayoutManager")
   def igLayoutManager_reflow(methodName: reflow, forceReflow: Boolean, animationDuration: Double, event: js.Object): Unit = js.native
+  
   def igLinearGauge(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event which is raised when a label of the linear gauge is aligned along the scale.
@@ -26671,6 +26723,7 @@ trait JQuery extends js.Object {
   def igLinearGauge_styleUpdated(methodName: styleUpdated): Unit = js.native
   @JSName("igLinearGauge")
   def igLinearGauge_updateRange(methodName: updateRange, value: js.Object): Unit = js.native
+  
   def igLinkPropertiesDialog(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igLinkPropertiesDialog(optionLiteral: option, optionName: apply): ApplyEvent = js.native
   def igLinkPropertiesDialog(optionLiteral: option, optionName: apply, optionValue: ApplyEvent): Unit = js.native
@@ -26734,6 +26787,7 @@ trait JQuery extends js.Object {
   def igLinkPropertiesDialog_option(optionLiteral: option, options: IgLinkPropertiesDialog): JQuery = js.native
   @JSName("igLinkPropertiesDialog")
   def igLinkPropertiesDialog_show(methodName: show, item: js.Object): Unit = js.native
+  
   def igLoading(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igLoading(optionLiteral: option, optionName: cssClass): js.Any = js.native
   def igLoading(optionLiteral: option, optionName: cssClass, optionValue: js.Any): Unit = js.native
@@ -26758,6 +26812,7 @@ trait JQuery extends js.Object {
   def igLoading_refreshPos(methodName: refreshPos): Unit = js.native
   @JSName("igLoading")
   def igLoading_show(methodName: show, refresh: js.Object): Unit = js.native
+  
   def igMap(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Sets or gets the automatic height to add when automatically adding margins to the map.
@@ -27725,6 +27780,7 @@ trait JQuery extends js.Object {
   def igMap_unscaleValue(methodName: unscaleValue, targetName: String, scaledValue: Double): Double = js.native
   @JSName("igMap")
   def igMap_zoomToGeographic(methodName: zoomToGeographic, rect: js.Object): js.Object = js.native
+  
   def igMaskEditor(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets whether the editor value can become null.
@@ -28331,6 +28387,7 @@ trait JQuery extends js.Object {
   def igMaskEditor_value(methodName: value): String = js.native
   @JSName("igMaskEditor")
   def igMaskEditor_value(methodName: value, newValue: String): String = js.native
+  
   def igNotifier(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Allows setting the respective state CSS on the target element (used to apply border color by default)
@@ -28684,6 +28741,7 @@ trait JQuery extends js.Object {
   def igNotifier_show(methodName: show, trg: Element, content: String): Unit = js.native
   @JSName("igNotifier")
   def igNotifier_target(methodName: target): js.Object = js.native
+  
   def igNumericEditor(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets whether the editor value can become null.
@@ -29506,6 +29564,7 @@ trait JQuery extends js.Object {
   def igNumericEditor_value(methodName: value): Double = js.native
   @JSName("igNumericEditor")
   def igNumericEditor_value(methodName: value, newValue: Double): Double = js.native
+  
   def igPathFinder(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igPathFinder(optionLiteral: option, optionName: items): js.Any = js.native
   def igPathFinder(optionLiteral: option, optionName: items, optionValue: js.Any): Unit = js.native
@@ -29516,6 +29575,7 @@ trait JQuery extends js.Object {
   def igPathFinder_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igPathFinder")
   def igPathFinder_option(optionLiteral: option, options: IgPathFinder): JQuery = js.native
+  
   def igPercentEditor(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets whether the editor value can become null.
@@ -30292,6 +30352,7 @@ trait JQuery extends js.Object {
   def igPercentEditor_value(methodName: value): Double = js.native
   @JSName("igPercentEditor")
   def igPercentEditor_value(methodName: value, newValue: Double): Double = js.native
+  
   def igPieChart(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets  whether the slices can be exploded.
@@ -31061,6 +31122,7 @@ trait JQuery extends js.Object {
   def igPieChart_setItem(methodName: setItem, index: Double, item: js.Object): Unit = js.native
   @JSName("igPieChart")
   def igPieChart_widget(methodName: widget): Unit = js.native
+  
   def igPivotDataSelector(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * A function that will be called to determine if an item can be moved in or dropped on an area of the data selector.
@@ -31446,6 +31508,7 @@ trait JQuery extends js.Object {
   def igPivotDataSelector_option(optionLiteral: option, options: IgPivotDataSelector): JQuery = js.native
   @JSName("igPivotDataSelector")
   def igPivotDataSelector_update(methodName: update): Unit = js.native
+  
   def igPivotGrid(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Enables sorting of the header cells in columns.
@@ -32213,6 +32276,7 @@ trait JQuery extends js.Object {
   def igPivotGrid_option(optionLiteral: option, options: IgPivotGrid): JQuery = js.native
   @JSName("igPivotGrid")
   def igPivotGrid_updateGrid(methodName: updateGrid): Unit = js.native
+  
   def igPivotView(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Configuration settings that will be assigned to the igPivotDataSelector widget.
@@ -32372,6 +32436,7 @@ trait JQuery extends js.Object {
   def igPivotView_pivotGrid(methodName: pivotGrid): js.Object = js.native
   @JSName("igPivotView")
   def igPivotView_splitter(methodName: splitter): js.Object = js.native
+  
   def igPopover(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * The time popover fades in and out when showing/hiding
@@ -32690,6 +32755,7 @@ trait JQuery extends js.Object {
   def igPopover_show(methodName: show, trg: Element, content: String): Unit = js.native
   @JSName("igPopover")
   def igPopover_target(methodName: target): js.Object = js.native
+  
   def igProgressBar(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igProgressBar(optionLiteral: option, optionName: animate): Boolean = js.native
   def igProgressBar(optionLiteral: option, optionName: animateTimeout): Double = js.native
@@ -32736,6 +32802,7 @@ trait JQuery extends js.Object {
   def igProgressBar_value(methodName: value, newValue: js.Object): Unit = js.native
   @JSName("igProgressBar")
   def igProgressBar_widget(methodName: widget): Unit = js.native
+  
   def igQRCodeBarcode(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets  the Application Indicator assigned to identify the specification concerned by AIM International.
@@ -33061,6 +33128,7 @@ trait JQuery extends js.Object {
   def igQRCodeBarcode_option(optionLiteral: option, options: IgQRCodeBarcode): JQuery = js.native
   @JSName("igQRCodeBarcode")
   def igQRCodeBarcode_styleUpdated(methodName: styleUpdated): Unit = js.native
+  
   def igRadialGauge(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event which is raised when a label of the gauge is aligned along the scale.
@@ -33920,6 +33988,7 @@ trait JQuery extends js.Object {
   def igRadialGauge_unscaleValue(methodName: unscaleValue, value: js.Object): Unit = js.native
   @JSName("igRadialGauge")
   def igRadialGauge_updateRange(methodName: updateRange, value: js.Object): Unit = js.native
+  
   def igRadialMenu(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Returns  the background of the center button of the menu when the IsOpen property is false.
@@ -34271,6 +34340,7 @@ trait JQuery extends js.Object {
   def igRadialMenu_option(optionLiteral: option, options: IgRadialMenu): JQuery = js.native
   @JSName("igRadialMenu")
   def igRadialMenu_styleUpdated(methodName: styleUpdated): Unit = js.native
+  
   def igRating(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets custom css votes.
@@ -34602,6 +34672,7 @@ trait JQuery extends js.Object {
   def igRating_valueHover(methodName: valueHover): Double | js.Object = js.native
   @JSName("igRating")
   def igRating_valueHover(methodName: valueHover, `val`: Double): Double | js.Object = js.native
+  
   def igResponsiveContainer(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * The time between two resize checks in milliseconds.
@@ -34636,6 +34707,7 @@ trait JQuery extends js.Object {
   def igResponsiveContainer_startPoller(methodName: startPoller): Unit = js.native
   @JSName("igResponsiveContainer")
   def igResponsiveContainer_stopPoller(methodName: stopPoller): Unit = js.native
+  
   def igScheduler(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Fired after agenda view range is changed when using previous and next buttons (fired only in Agenda View)
@@ -35131,6 +35203,7 @@ trait JQuery extends js.Object {
   def igScheduler_previousButton(methodName: previousButton): String = js.native
   @JSName("igScheduler")
   def igScheduler_todayButton(methodName: todayButton): String = js.native
+  
   def igScroll(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Sets or gets if the scrollbars should be always visible (on all environments). Otherwise it will be the default behavior. Note: this option is only for the custom scrollbars set through the scrollbarType option.
@@ -35607,6 +35680,7 @@ trait JQuery extends js.Object {
   def igScroll_option(optionLiteral: option, options: IgScroll): JQuery = js.native
   @JSName("igScroll")
   def igScroll_refresh(methodName: refresh): Unit = js.native
+  
   def igShapeChart(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets  a value indicating whether grid and tick lines are aligned to device pixels.
@@ -37469,6 +37543,7 @@ trait JQuery extends js.Object {
   def igShapeChart_removeItem(methodName: removeItem, index: Double): js.Object = js.native
   @JSName("igShapeChart")
   def igShapeChart_setItem(methodName: setItem, index: Double, item: js.Object): js.Object = js.native
+  
   def igSlider(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Get or set whether the slide handle will animate when it is moved.
@@ -37635,6 +37710,7 @@ trait JQuery extends js.Object {
   def igSlider_value(methodName: value, newValue: js.Object): Unit = js.native
   @JSName("igSlider")
   def igSlider_widget(methodName: widget): Unit = js.native
+  
   def igSparkline(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets  the sparkline brush.
@@ -38285,6 +38361,7 @@ trait JQuery extends js.Object {
   def igSparkline_removeItem(methodName: removeItem, index: Double): js.Object = js.native
   @JSName("igSparkline")
   def igSparkline_setItem(methodName: setItem, index: Double, item: js.Object): js.Object = js.native
+  
   def igSplitButton(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event fired when the button is clicked.
@@ -38425,6 +38502,7 @@ trait JQuery extends js.Object {
   def igSplitButton_toggle(methodName: toggle, e: js.Object): js.Object = js.native
   @JSName("igSplitButton")
   def igSplitButton_widget(methodName: widget): Unit = js.native
+  
   def igSplitter(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Fired after collapsing is performed
@@ -38684,6 +38762,7 @@ trait JQuery extends js.Object {
   def igSplitter_setSecondPanelSize(methodName: setSecondPanelSize, size: js.Object): Unit = js.native
   @JSName("igSplitter")
   def igSplitter_widget(methodName: widget): js.Object = js.native
+  
   def igSpreadsheet(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Invoked when an action is executed on the Spreadsheet.
@@ -39293,6 +39372,7 @@ trait JQuery extends js.Object {
   def igSpreadsheet_showTopOrBottomDialogForWorksheet(methodName: showTopOrBottomDialogForWorksheet, relativeColumnIndex: Double): Unit = js.native
   @JSName("igSpreadsheet")
   def igSpreadsheet_styleUpdated(methodName: styleUpdated): Unit = js.native
+  
   def igTablePropertiesDialog(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igTablePropertiesDialog(optionLiteral: option, optionName: apply): ApplyEvent = js.native
   def igTablePropertiesDialog(optionLiteral: option, optionName: apply, optionValue: ApplyEvent): Unit = js.native
@@ -39356,6 +39436,7 @@ trait JQuery extends js.Object {
   def igTablePropertiesDialog_option(optionLiteral: option, options: IgTablePropertiesDialog): JQuery = js.native
   @JSName("igTablePropertiesDialog")
   def igTablePropertiesDialog_show(methodName: show, item: js.Object): Unit = js.native
+  
   def igTextEditor(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets whether the editor value can become null.
@@ -40150,6 +40231,7 @@ trait JQuery extends js.Object {
   def igTextEditor_validator(methodName: validator): js.Object = js.native
   @JSName("igTextEditor")
   def igTextEditor_value(methodName: value, newValue: js.Object): Unit = js.native
+  
   def igTileManager(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets the duration of the animations in the tile manager.
@@ -40787,6 +40869,7 @@ trait JQuery extends js.Object {
   def igTileManager_splitter(methodName: splitter): js.Object = js.native
   @JSName("igTileManager")
   def igTileManager_widget(methodName: widget): js.Object = js.native
+  
   def igTimePicker(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets whether the editor value can become null.
@@ -41668,6 +41751,7 @@ trait JQuery extends js.Object {
   def igTimePicker_spinUpButton(methodName: spinUpButton): String = js.native
   @JSName("igTimePicker")
   def igTimePicker_value(methodName: value, newValue: js.Object): Unit = js.native
+  
   def igToolbar(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Get/Set whether the toolbar can be collapsed.
@@ -41939,6 +42023,7 @@ trait JQuery extends js.Object {
     */
   def igToolbar(optionLiteral: option, optionName: windowResized, optionValue: WindowResizedEvent): Unit = js.native
   def igToolbar(options: IgToolbar): JQuery = js.native
+  
   def igToolbarButton(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event fired after the toolbar button is activated.
@@ -42037,6 +42122,7 @@ trait JQuery extends js.Object {
   def igToolbarButton_toggle(methodName: toggle): Unit = js.native
   @JSName("igToolbarButton")
   def igToolbarButton_widget(methodName: widget): js.Object = js.native
+  
   @JSName("igToolbar")
   def igToolbar_activateItem(methodName: activateItem, index: js.Object, activated: js.Object): Unit = js.native
   @JSName("igToolbar")
@@ -42065,6 +42151,7 @@ trait JQuery extends js.Object {
   def igToolbar_removeItem(methodName: removeItem, index: js.Object): js.Object = js.native
   @JSName("igToolbar")
   def igToolbar_widget(methodName: widget): Unit = js.native
+  
   def igTooltip(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igTooltip(optionLiteral: option, optionName: arrowLocation): String = js.native
   def igTooltip(optionLiteral: option, optionName: arrowLocation, optionValue: String): Unit = js.native
@@ -42079,6 +42166,7 @@ trait JQuery extends js.Object {
   def igTooltip_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igTooltip")
   def igTooltip_option(optionLiteral: option, options: IgTooltip): JQuery = js.native
+  
   def igTree(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets the duration of each animation such as the expand/collapse.
@@ -42660,6 +42748,7 @@ trait JQuery extends js.Object {
   def igTree(optionLiteral: option, optionName: width, optionValue: String): Unit = js.native
   def igTree(optionLiteral: option, optionName: width, optionValue: Double): Unit = js.native
   def igTree(options: IgTree): JQuery = js.native
+  
   def igTreeGrid(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * If this option is set to true, the height of the grid row will be calculated automatically based on the [avgRowHeight](ui.iggrid#options:avgRowHeight) and the visible virtual records. If no [avgRowHeight](ui.iggrid#options:avgRowHeight) is specified, it will be calculated automatically at runtime.
@@ -43715,6 +43804,7 @@ trait JQuery extends js.Object {
   def igTreeGrid(optionLiteral: option, optionName: width, optionValue: String): Unit = js.native
   def igTreeGrid(optionLiteral: option, optionName: width, optionValue: Double): Unit = js.native
   def igTreeGrid(options: IgTreeGrid): JQuery = js.native
+  
   def igTreeGridColumnFixing(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event which is fired when column fixing operation is finished
@@ -44029,6 +44119,7 @@ trait JQuery extends js.Object {
   def igTreeGridColumnFixing_unfixDataSkippedColumns(methodName: unfixDataSkippedColumns): Unit = js.native
   @JSName("igTreeGridColumnFixing")
   def igTreeGridColumnFixing_unfixNonDataColumns(methodName: unfixNonDataColumns): Unit = js.native
+  
   def igTreeGridColumnMoving(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets if header cells should include an additional button that opens a moving helper dropdown.
@@ -44629,6 +44720,7 @@ trait JQuery extends js.Object {
   def igTreeGridColumnMoving_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igTreeGridColumnMoving")
   def igTreeGridColumnMoving_option(optionLiteral: option, options: IgTreeGridColumnMoving): JQuery = js.native
+  
   def igTreeGridFiltering(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Type of filtering. Delegates all filtering functionality to the [$.ig.DataSource](ig.datasource).
@@ -45486,6 +45578,7 @@ trait JQuery extends js.Object {
   def igTreeGridFiltering_requiresFilteringExpression(methodName: requiresFilteringExpression, filterCondition: String): Boolean = js.native
   @JSName("igTreeGridFiltering")
   def igTreeGridFiltering_toggleFilterRowByFeatureChooser(methodName: toggleFilterRowByFeatureChooser, event: String): Unit = js.native
+  
   def igTreeGridHiding(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets time of milliseconds for animation duration to show/hide modal dialog
@@ -45942,6 +46035,7 @@ trait JQuery extends js.Object {
   def igTreeGridHiding_showMultiColumns(methodName: showMultiColumns, columns: js.Array[_]): Unit = js.native
   @JSName("igTreeGridHiding")
   def igTreeGridHiding_showMultiColumns(methodName: showMultiColumns, columns: js.Array[_], callback: js.Function): Unit = js.native
+  
   def igTreeGridMultiColumnHeaders(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Event fired after the group collapsing has been executed and results are rendered.
@@ -46018,6 +46112,7 @@ trait JQuery extends js.Object {
   def igTreeGridMultiColumnHeaders_toggleGroup(methodName: toggleGroup, groupKey: String): Unit = js.native
   @JSName("igTreeGridMultiColumnHeaders")
   def igTreeGridMultiColumnHeaders_toggleGroup(methodName: toggleGroup, groupKey: String, callback: js.Function): Unit = js.native
+  
   def igTreeGridPaging(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Type of paging. Delegates all paging functionality to the [$.ig.DataSource](ig.datasource).
@@ -46651,6 +46746,7 @@ trait JQuery extends js.Object {
   def igTreeGridPaging_pageSize(methodName: pageSize): Double = js.native
   @JSName("igTreeGridPaging")
   def igTreeGridPaging_pageSize(methodName: pageSize, size: Double): Double = js.native
+  
   def igTreeGridResizing(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Resize the column to the size of the longest currently visible cell value.
@@ -46761,6 +46857,7 @@ trait JQuery extends js.Object {
   def igTreeGridResizing_resize(methodName: resize, column: js.Object): Unit = js.native
   @JSName("igTreeGridResizing")
   def igTreeGridResizing_resize(methodName: resize, column: js.Object, width: js.Object): Unit = js.native
+  
   def igTreeGridRowSelectors(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets the type of checkboxes rendered in the row selector. Can be set only at initialization.
@@ -46986,6 +47083,7 @@ trait JQuery extends js.Object {
   def igTreeGridRowSelectors_toggleCheckStateById(methodName: toggleCheckStateById, rowId: js.Object): Unit = js.native
   @JSName("igTreeGridRowSelectors")
   def igTreeGridRowSelectors_uncheckedRows(methodName: uncheckedRows): js.Array[_] = js.native
+  
   def igTreeGridSelection(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Enables / disables activation of rows and cells. Activation implies ability to perform navigating through cells and rows via the keyboard, and selecting rows and cells using CTRL / SHIFT - in the way cells/rows are selected in Ms Excel
@@ -47238,6 +47336,7 @@ trait JQuery extends js.Object {
   def igTreeGridSelection_selectedRow(methodName: selectedRow): js.Object = js.native
   @JSName("igTreeGridSelection")
   def igTreeGridSelection_selectedRows(methodName: selectedRows): js.Array[_] = js.native
+  
   def igTreeGridSorting(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Defines local or remote sorting operations.
@@ -47858,6 +47957,7 @@ trait JQuery extends js.Object {
   def igTreeGridSorting_sortMultiple(methodName: sortMultiple, exprs: js.Array[_]): Unit = js.native
   @JSName("igTreeGridSorting")
   def igTreeGridSorting_unsortColumn(methodName: unsortColumn, index: js.Object, header: js.Object): Unit = js.native
+  
   def igTreeGridTooltips(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * A list of custom column settings that specify custom tooltip settings for a specific column (whether tooltips are enabled / disabled)
@@ -48020,6 +48120,7 @@ trait JQuery extends js.Object {
   def igTreeGridTooltips_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igTreeGridTooltips")
   def igTreeGridTooltips_option(optionLiteral: option, options: IgTreeGridTooltips): JQuery = js.native
+  
   def igTreeGridUpdating(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * This option has been deprecated as of the 2017.2 Volume release.
@@ -48674,6 +48775,7 @@ trait JQuery extends js.Object {
   def igTreeGridUpdating_startEdit(methodName: startEdit, rowId: js.Object, column: js.Object, raiseEvents: Boolean): Boolean = js.native
   @JSName("igTreeGridUpdating")
   def igTreeGridUpdating_updateRow(methodName: updateRow, rowId: js.Object, values: js.Object): Unit = js.native
+  
   @JSName("igTreeGrid")
   def igTreeGrid_activeCell(methodName: activeCell): js.Object = js.native
   @JSName("igTreeGrid")
@@ -48908,6 +49010,7 @@ trait JQuery extends js.Object {
   def igTreeGrid_virtualScrollTo(methodName: virtualScrollTo, scrollerPosition: js.Object): Unit = js.native
   @JSName("igTreeGrid")
   def igTreeGrid_widget(methodName: widget): Unit = js.native
+  
   @JSName("igTree")
   def igTree_addNode(methodName: addNode, node: js.Object): Unit = js.native
   @JSName("igTree")
@@ -49016,6 +49119,7 @@ trait JQuery extends js.Object {
   def igTree_uncheckNode(methodName: uncheckNode, nodeObj: js.Object, cascadeDir: js.Object): Unit = js.native
   @JSName("igTree")
   def igTree_uncheckedNodes(methodName: uncheckedNodes): js.Array[_] = js.native
+  
   def igUpload(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Get or set file allowed file extensions. When this array is empty - it is not made such validation. Example ["gif", "jpg", "bmp"].
@@ -49731,6 +49835,7 @@ trait JQuery extends js.Object {
   def igUpload_startUpload(methodName: startUpload, formNumber: Double): Unit = js.native
   @JSName("igUpload")
   def igUpload_widget(methodName: widget): Unit = js.native
+  
   def igValidator(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets Credit Card number validation rule options.Note: This rule will only validate the checksum of the number using Luhn algorithm irregardless of card type.
@@ -50339,6 +50444,7 @@ trait JQuery extends js.Object {
   def igValidator_validate(methodName: validate): Boolean = js.native
   @JSName("igValidator")
   def igValidator_validate(methodName: validate, field: js.Object): Boolean = js.native
+  
   def igVideoPlayer(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets/Sets whether player controls will auto hide when video is not hovered. This is applicable only when Infragistics playback controls are used.
@@ -50882,6 +50988,7 @@ trait JQuery extends js.Object {
   def igVideoPlayer_togglePlay(methodName: togglePlay): Unit = js.native
   @JSName("igVideoPlayer")
   def igVideoPlayer_widget(methodName: widget): Unit = js.native
+  
   def igWidget(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Set/Get the locale language setting for the widget.
@@ -50935,6 +51042,7 @@ trait JQuery extends js.Object {
   def igWidget_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igWidget")
   def igWidget_option(optionLiteral: option, options: IgWidget): JQuery = js.native
+  
   def igZoomSlider(methodName: String, methodParams: js.Any*): js.Any = js.native
   def igZoomSlider(optionLiteral: option, optionName: actualPixelScalingRatio): Double = js.native
   def igZoomSlider(optionLiteral: option, optionName: actualPixelScalingRatio, optionValue: Double): Unit = js.native
@@ -51095,6 +51203,7 @@ trait JQuery extends js.Object {
   def igZoomSlider_option(optionLiteral: option, optionName: String, optionValue: js.Any): JQuery = js.native
   @JSName("igZoomSlider")
   def igZoomSlider_option(optionLiteral: option, options: IgZoomSlider): JQuery = js.native
+  
   def igZoombar(methodName: String, methodParams: js.Any*): js.Any = js.native
   /**
     * Gets how the target widget's clone is rendered inside the Zoombar.
@@ -51418,6 +51527,7 @@ trait JQuery extends js.Object {
   def igZoombar_zoom(methodName: zoom, left: Double): js.Object = js.native
   @JSName("igZoombar")
   def igZoombar_zoom(methodName: zoom, left: Double, width: Double): js.Object = js.native
+  
   def mouseWrapper(methodName: String, methodParams: js.Any*): js.Any = js.native
   def mouseWrapper(optionLiteral: option, optionName: cancel): String = js.native
   def mouseWrapper(optionLiteral: option, optionName: cancel, optionValue: String): Unit = js.native
@@ -51443,4 +51553,3 @@ trait JQuery extends js.Object {
   @JSName("mouseWrapper")
   def mouseWrapper_option(optionLiteral: option, options: MouseWrapper): JQuery = js.native
 }
-

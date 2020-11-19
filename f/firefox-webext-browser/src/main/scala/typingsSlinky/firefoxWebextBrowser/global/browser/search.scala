@@ -4,7 +4,7 @@ import typingsSlinky.firefoxWebextBrowser.anon.Engine
 import typingsSlinky.firefoxWebextBrowser.browser.search.SearchEngine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Use browser.search to interact with search engines.
@@ -16,10 +16,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("browser.search")
 @js.native
 object search extends js.Object {
+  
   /* search functions */
   /** Gets a list of search engines. */
   def get(): js.Promise[js.Array[SearchEngine]] = js.native
+  
   /** Perform a search. */
   def search(searchProperties: Engine): js.Promise[_] = js.native
 }
-

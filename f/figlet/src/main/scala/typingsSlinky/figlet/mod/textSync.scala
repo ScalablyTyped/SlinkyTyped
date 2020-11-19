@@ -2,11 +2,12 @@ package typingsSlinky.figlet.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("figlet", "textSync")
 @js.native
 object textSync extends js.Object {
+  
   def apply(txt: String): String = js.native
   def apply(txt: String, font: Fonts_): String = js.native
   /**
@@ -16,4 +17,3 @@ object textSync extends js.Object {
   // tslint:disable-next-line: unified-signatures
   def apply(txt: String, options: Options): String = js.native
 }
-

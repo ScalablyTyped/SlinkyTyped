@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "StopAnimationAction")
 @js.native
@@ -17,4 +17,3 @@ class StopAnimationAction protected ()
   def this(triggerOptions: js.Any, target: js.Any) = this()
   def this(triggerOptions: js.Any, target: js.Any, condition: typingsSlinky.babylonjs.conditionMod.Condition) = this()
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.angularEs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("angular-es", "Directive")
 @js.native
 object Directive extends js.Object {
+  
   /**
     * Register directive
     *
@@ -16,4 +17,3 @@ object Directive extends js.Object {
     */
   def apply(name: String): ngESDecorator = js.native
 }
-

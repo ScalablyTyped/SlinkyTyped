@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-cognito-identity-browser/commands/ListIdentityPoolsCommand", JSImport.Namespace)
 @js.native
 object listIdentityPoolsCommandMod extends js.Object {
+  
   @js.native
   class ListIdentityPoolsCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object listIdentityPoolsCommandMod extends js.Object {
           Blob
         ] {
     def this(input: ListIdentityPoolsInput) = this()
+    
     val middlewareStack: MiddlewareStack[ListIdentityPoolsInput, ListIdentityPoolsOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: CognitoIdentityResolvedConfiguration
     ): Handler[ListIdentityPoolsInput, ListIdentityPoolsOutput] = js.native
   }
-  
 }
-

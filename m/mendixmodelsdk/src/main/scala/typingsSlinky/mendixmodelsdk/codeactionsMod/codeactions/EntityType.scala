@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.21.0: introduced
@@ -29,21 +29,25 @@ abstract class EntityType protected () extends Type {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FEntityType: IModel = js.native
+  
   @JSName("containerAsBasicParameterType")
   def containerAsBasicParameterType_MEntityType: BasicParameterType = js.native
+  
   @JSName("containerAsCodeAction")
   def containerAsCodeAction_MEntityType: CodeAction = js.native
+  
   @JSName("containerAsListType")
   def containerAsListType_MEntityType: ListType = js.native
+  
+  @JSName("model")
+  var model_FEntityType: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/codeactions", "codeactions.EntityType")
 @js.native
 object EntityType extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

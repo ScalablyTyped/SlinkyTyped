@@ -44,11 +44,420 @@ import typingsSlinky.highcharts.mod.WrapProceedFunction
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts/modules/marker-clusters", "Highcharts")
 @js.native
 object Highcharts extends js.Object {
+  
+  var Color: TypeofColor = js.native
+  
+  def addEvent[T](el: T, `type`: String, fn: js.Function): js.Function = js.native
+  def addEvent[T](el: T, `type`: String, fn: js.Function, options: EventOptionsObject): js.Function = js.native
+  def addEvent[T](el: T, `type`: String, fn: EventCallbackFunction[T]): js.Function = js.native
+  def addEvent[T](el: T, `type`: String, fn: EventCallbackFunction[T], options: EventOptionsObject): js.Function = js.native
+  def addEvent[T](el: Class[T], `type`: String, fn: js.Function): js.Function = js.native
+  def addEvent[T](el: Class[T], `type`: String, fn: js.Function, options: EventOptionsObject): js.Function = js.native
+  def addEvent[T](el: Class[T], `type`: String, fn: EventCallbackFunction[T]): js.Function = js.native
+  def addEvent[T](el: Class[T], `type`: String, fn: EventCallbackFunction[T], options: EventOptionsObject): js.Function = js.native
+  
+  def animObject(): AnimationOptionsObject = js.native
+  def animObject(animation: Boolean): AnimationOptionsObject = js.native
+  def animObject(animation: AnimationOptionsObject): AnimationOptionsObject = js.native
+  
+  def animate(el: HTMLElement, params: CSSObject): Unit = js.native
+  def animate(el: HTMLElement, params: CSSObject, opt: AnimationOptionsObject): Unit = js.native
+  def animate(el: HTMLElement, params: SVGAttributes): Unit = js.native
+  def animate(el: HTMLElement, params: SVGAttributes, opt: AnimationOptionsObject): Unit = js.native
+  def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: CSSObject): Unit = js.native
+  def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: CSSObject, opt: AnimationOptionsObject): Unit = js.native
+  def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: SVGAttributes): Unit = js.native
+  def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: SVGAttributes, opt: AnimationOptionsObject): Unit = js.native
+  
+  def arrayMax(data: js.Array[_]): Double = js.native
+  
+  def arrayMin(data: js.Array[_]): Double = js.native
+  
+  def attr(elem: HTMLElement): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: js.UndefOr[scala.Nothing], value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: js.UndefOr[scala.Nothing], value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: HTMLAttributes): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: HTMLAttributes, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: HTMLAttributes, value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: SVGAttributes): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: SVGAttributes, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: SVGAttributes, value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: js.UndefOr[scala.Nothing], value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: js.UndefOr[scala.Nothing], value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: HTMLAttributes): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: HTMLAttributes, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: HTMLAttributes, value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: SVGAttributes): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: SVGAttributes, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: SVGAttributes, value: Double): js.UndefOr[String | Null] = js.native
+  
+  def chart(options: Options): Chart_ = js.native
+  def chart(options: Options, callback: ChartCallbackFunction): Chart_ = js.native
+  def chart(renderTo: String, options: Options): Chart_ = js.native
+  def chart(renderTo: String, options: Options, callback: ChartCallbackFunction): Chart_ = js.native
+  def chart(renderTo: HTMLElement, options: Options): Chart_ = js.native
+  def chart(renderTo: HTMLElement, options: Options, callback: ChartCallbackFunction): Chart_ = js.native
+  
+  var charts: js.Array[js.UndefOr[Chart_]] = js.native
+  
+  def clearTimeout(id: Double): Unit = js.native
+  
+  def color(input: ColorType): Color_ = js.native
+  
+  def correctFloat(num: Double): Double = js.native
+  def correctFloat(num: Double, prec: Double): Double = js.native
+  
+  def createElement(tag: String): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: js.UndefOr[scala.Nothing],
+    styles: js.UndefOr[scala.Nothing],
+    parent: js.UndefOr[scala.Nothing],
+    nopad: Boolean
+  ): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: js.UndefOr[scala.Nothing],
+    styles: js.UndefOr[scala.Nothing],
+    parent: HTMLElement
+  ): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: js.UndefOr[scala.Nothing],
+    styles: js.UndefOr[scala.Nothing],
+    parent: HTMLElement,
+    nopad: Boolean
+  ): HTMLElement = js.native
+  def createElement(tag: String, attribs: js.UndefOr[scala.Nothing], styles: CSSObject): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: js.UndefOr[scala.Nothing],
+    styles: CSSObject,
+    parent: js.UndefOr[scala.Nothing],
+    nopad: Boolean
+  ): HTMLElement = js.native
+  def createElement(tag: String, attribs: js.UndefOr[scala.Nothing], styles: CSSObject, parent: HTMLElement): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: js.UndefOr[scala.Nothing],
+    styles: CSSObject,
+    parent: HTMLElement,
+    nopad: Boolean
+  ): HTMLElement = js.native
+  def createElement(tag: String, attribs: HTMLAttributes): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: HTMLAttributes,
+    styles: js.UndefOr[scala.Nothing],
+    parent: js.UndefOr[scala.Nothing],
+    nopad: Boolean
+  ): HTMLElement = js.native
+  def createElement(tag: String, attribs: HTMLAttributes, styles: js.UndefOr[scala.Nothing], parent: HTMLElement): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: HTMLAttributes,
+    styles: js.UndefOr[scala.Nothing],
+    parent: HTMLElement,
+    nopad: Boolean
+  ): HTMLElement = js.native
+  def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject): HTMLElement = js.native
+  def createElement(
+    tag: String,
+    attribs: HTMLAttributes,
+    styles: CSSObject,
+    parent: js.UndefOr[scala.Nothing],
+    nopad: Boolean
+  ): HTMLElement = js.native
+  def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject, parent: HTMLElement): HTMLElement = js.native
+  def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject, parent: HTMLElement, nopad: Boolean): HTMLElement = js.native
+  
+  def css(el: HTMLElement, styles: CSSObject): Unit = js.native
+  def css(el: org.scalajs.dom.raw.SVGElement, styles: CSSObject): Unit = js.native
+  
+  def dateFormat(format: String, timestamp: Double): String = js.native
+  def dateFormat(format: String, timestamp: Double, capitalize: Boolean): String = js.native
+  
+  var dateFormats: Dictionary[TimeFormatCallbackFunction] = js.native
+  
+  var defaultOptions: Options = js.native
+  
+  def defined(obj: js.Any): Boolean = js.native
+  
+  def destroyObjectProperties(obj: js.Any): Unit = js.native
+  def destroyObjectProperties(obj: js.Any, except: js.Any): Unit = js.native
+  
+  def discardElement(element: HTMLElement): Unit = js.native
+  
+  def each(arr: js.Array[_], fn: js.Function): Unit = js.native
+  def each(arr: js.Array[_], fn: js.Function, ctx: js.Any): Unit = js.native
+  
+  def erase(arr: js.Array[_], item: js.Any): Unit = js.native
+  
+  def error(code: String): Unit = js.native
+  def error(
+    code: String,
+    stop: js.UndefOr[scala.Nothing],
+    chart: js.UndefOr[scala.Nothing],
+    params: Dictionary[String]
+  ): Unit = js.native
+  def error(code: String, stop: js.UndefOr[scala.Nothing], chart: Chart_): Unit = js.native
+  def error(code: String, stop: js.UndefOr[scala.Nothing], chart: Chart_, params: Dictionary[String]): Unit = js.native
+  def error(code: String, stop: Boolean): Unit = js.native
+  def error(code: String, stop: Boolean, chart: js.UndefOr[scala.Nothing], params: Dictionary[String]): Unit = js.native
+  def error(code: String, stop: Boolean, chart: Chart_): Unit = js.native
+  def error(code: String, stop: Boolean, chart: Chart_, params: Dictionary[String]): Unit = js.native
+  def error(code: Double): Unit = js.native
+  def error(
+    code: Double,
+    stop: js.UndefOr[scala.Nothing],
+    chart: js.UndefOr[scala.Nothing],
+    params: Dictionary[String]
+  ): Unit = js.native
+  def error(code: Double, stop: js.UndefOr[scala.Nothing], chart: Chart_): Unit = js.native
+  def error(code: Double, stop: js.UndefOr[scala.Nothing], chart: Chart_, params: Dictionary[String]): Unit = js.native
+  def error(code: Double, stop: Boolean): Unit = js.native
+  def error(code: Double, stop: Boolean, chart: js.UndefOr[scala.Nothing], params: Dictionary[String]): Unit = js.native
+  def error(code: Double, stop: Boolean, chart: Chart_): Unit = js.native
+  def error(code: Double, stop: Boolean, chart: Chart_, params: Dictionary[String]): Unit = js.native
+  
+  def extend[T](a: T, b: js.Object): T = js.native
+  def extend[T](a: js.UndefOr[scala.Nothing], b: js.Object): T = js.native
+  
+  def extendClass[T](parent: Class[T], members: Dictionary[_]): Class[T] = js.native
+  
+  def find[T](arr: js.Array[T], callback: js.Function): js.UndefOr[T] = js.native
+  
+  def fireEvent[T](el: T, `type`: String): Unit = js.native
+  def fireEvent[T](el: T, `type`: String, eventArguments: js.UndefOr[scala.Nothing], defaultFunction: js.Function): Unit = js.native
+  def fireEvent[T](
+    el: T,
+    `type`: String,
+    eventArguments: js.UndefOr[scala.Nothing],
+    defaultFunction: EventCallbackFunction[T]
+  ): Unit = js.native
+  def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_]): Unit = js.native
+  def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_], defaultFunction: js.Function): Unit = js.native
+  def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_], defaultFunction: EventCallbackFunction[T]): Unit = js.native
+  def fireEvent[T](el: T, `type`: String, eventArguments: Event): Unit = js.native
+  def fireEvent[T](el: T, `type`: String, eventArguments: Event, defaultFunction: js.Function): Unit = js.native
+  def fireEvent[T](el: T, `type`: String, eventArguments: Event, defaultFunction: EventCallbackFunction[T]): Unit = js.native
+  
+  def format(str: String, ctx: Record[String, _]): String = js.native
+  def format(str: String, ctx: Record[String, _], chart: Chart_): String = js.native
+  
+  def getMagnitude(num: Double): Double = js.native
+  
+  def getOptions(): Options = js.native
+  
+  def getStyle(el: HTMLElement, prop: String): Double | String = js.native
+  def getStyle(el: HTMLElement, prop: String, toInt: Boolean): Double | String = js.native
+  
+  def grep(arr: js.Array[_], callback: js.Function): js.Array[_] = js.native
+  
+  def inArray(item: js.Any, arr: js.Array[_]): Double = js.native
+  def inArray(item: js.Any, arr: js.Array[_], fromIndex: Double): Double = js.native
+  
+  def isArray(obj: js.Any): Boolean = js.native
+  
+  def isClass(): Boolean = js.native
+  def isClass(obj: js.Object): Boolean = js.native
+  
+  def isDOMElement(obj: js.Any): Boolean = js.native
+  
+  def isNumber(n: js.Any): Boolean = js.native
+  
+  def isObject(obj: js.Any): Boolean = js.native
+  def isObject(obj: js.Any, strict: Boolean): Boolean = js.native
+  
+  def isString(s: js.Any): Boolean = js.native
+  
+  def keys(obj: js.Any): js.Array[String] = js.native
+  
+  def map(arr: js.Array[_], fn: js.Function): js.Array[_] = js.native
+  
+  def merge[T](a: T, n: js.UndefOr[js.Object]*): T = js.native
+  def merge[T](a: js.UndefOr[scala.Nothing], n: js.UndefOr[js.Object]*): T = js.native
+  def merge[T](extend: Boolean, a: T, n: js.UndefOr[js.Object]*): T = js.native
+  def merge[T](extend: Boolean, a: js.UndefOr[scala.Nothing], n: js.UndefOr[js.Object]*): T = js.native
+  
+  def normalizeTickInterval(interval: Double): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.UndefOr[scala.Nothing],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: js.UndefOr[scala.Nothing],
+    hasTickAmount: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.UndefOr[scala.Nothing],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.UndefOr[scala.Nothing],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: Boolean,
+    hasTickAmount: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(interval: Double, multiples: js.UndefOr[scala.Nothing], magnitude: Double): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.UndefOr[scala.Nothing],
+    magnitude: Double,
+    allowDecimals: js.UndefOr[scala.Nothing],
+    hasTickAmount: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(interval: Double, multiples: js.UndefOr[scala.Nothing], magnitude: Double, allowDecimals: Boolean): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.UndefOr[scala.Nothing],
+    magnitude: Double,
+    allowDecimals: Boolean,
+    hasTickAmount: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(interval: Double, multiples: js.Array[_]): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.Array[_],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: js.UndefOr[scala.Nothing],
+    hasTickAmount: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.Array[_],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.Array[_],
+    magnitude: js.UndefOr[scala.Nothing],
+    allowDecimals: Boolean,
+    hasTickAmount: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(interval: Double, multiples: js.Array[_], magnitude: Double): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.Array[_],
+    magnitude: Double,
+    allowDecimals: js.UndefOr[scala.Nothing],
+    hasTickAmount: Boolean
+  ): Double = js.native
+  def normalizeTickInterval(interval: Double, multiples: js.Array[_], magnitude: Double, allowDecimals: Boolean): Double = js.native
+  def normalizeTickInterval(
+    interval: Double,
+    multiples: js.Array[_],
+    magnitude: Double,
+    allowDecimals: Boolean,
+    hasTickAmount: Boolean
+  ): Double = js.native
+  
+  def numberFormat(number: Double, decimals: Double): String = js.native
+  def numberFormat(number: Double, decimals: Double, decimalPoint: js.UndefOr[scala.Nothing], thousandsSep: String): String = js.native
+  def numberFormat(number: Double, decimals: Double, decimalPoint: String): String = js.native
+  def numberFormat(number: Double, decimals: Double, decimalPoint: String, thousandsSep: String): String = js.native
+  
+  def objectEach[T](obj: js.Any, fn: ObjectEachCallbackFunction[T]): Unit = js.native
+  def objectEach[T](obj: js.Any, fn: ObjectEachCallbackFunction[T], ctx: T): Unit = js.native
+  
+  def offset(el: Element): OffsetObject = js.native
+  
+  def pad(number: Double): String = js.native
+  def pad(number: Double, length: js.UndefOr[scala.Nothing], padder: String): String = js.native
+  def pad(number: Double, length: Double): String = js.native
+  def pad(number: Double, length: Double, padder: String): String = js.native
+  
+  def pick[T](items: (js.UndefOr[T | Null])*): T = js.native
+  
+  def reduce(arr: js.Array[_], fn: js.Function, initialValue: js.Any): js.Any = js.native
+  
+  def relativeLength(value: RelativeSize, base: Double): Double = js.native
+  def relativeLength(value: RelativeSize, base: Double, offset: Double): Double = js.native
+  
+  def removeEvent[T](el: T): Unit = js.native
+  def removeEvent[T](el: T, `type`: js.UndefOr[scala.Nothing], fn: EventCallbackFunction[T]): Unit = js.native
+  def removeEvent[T](el: T, `type`: String): Unit = js.native
+  def removeEvent[T](el: T, `type`: String, fn: EventCallbackFunction[T]): Unit = js.native
+  def removeEvent[T](el: Class[T]): Unit = js.native
+  def removeEvent[T](el: Class[T], `type`: js.UndefOr[scala.Nothing], fn: EventCallbackFunction[T]): Unit = js.native
+  def removeEvent[T](el: Class[T], `type`: String): Unit = js.native
+  def removeEvent[T](el: Class[T], `type`: String, fn: EventCallbackFunction[T]): Unit = js.native
+  
+  def seriesType(`type`: String, parent: String, options: Dictionary[_]): typingsSlinky.highcharts.mod.Series = js.native
+  def seriesType(
+    `type`: String,
+    parent: String,
+    options: Dictionary[_],
+    props: js.UndefOr[scala.Nothing],
+    pointProps: Dictionary[_]
+  ): typingsSlinky.highcharts.mod.Series = js.native
+  def seriesType(`type`: String, parent: String, options: Dictionary[_], props: Dictionary[_]): typingsSlinky.highcharts.mod.Series = js.native
+  def seriesType(
+    `type`: String,
+    parent: String,
+    options: Dictionary[_],
+    props: Dictionary[_],
+    pointProps: Dictionary[_]
+  ): typingsSlinky.highcharts.mod.Series = js.native
+  def seriesType(`type`: String, parent: String, options: SeriesOptionsType): typingsSlinky.highcharts.mod.Series = js.native
+  def seriesType(
+    `type`: String,
+    parent: String,
+    options: SeriesOptionsType,
+    props: js.UndefOr[scala.Nothing],
+    pointProps: Dictionary[_]
+  ): typingsSlinky.highcharts.mod.Series = js.native
+  def seriesType(`type`: String, parent: String, options: SeriesOptionsType, props: Dictionary[_]): typingsSlinky.highcharts.mod.Series = js.native
+  def seriesType(
+    `type`: String,
+    parent: String,
+    options: SeriesOptionsType,
+    props: Dictionary[_],
+    pointProps: Dictionary[_]
+  ): typingsSlinky.highcharts.mod.Series = js.native
+  
+  def setAnimation(animation: js.UndefOr[scala.Nothing], chart: Chart_): Unit = js.native
+  def setAnimation(animation: Boolean, chart: Chart_): Unit = js.native
+  def setAnimation(animation: AnimationOptionsObject, chart: Chart_): Unit = js.native
+  
+  def setOptions(options: Options): Options = js.native
+  
+  def some(arr: js.Array[_], fn: js.Function, ctx: js.Any): Boolean = js.native
+  
+  def splat(obj: js.Any): js.Array[_] = js.native
+  
+  def stableSort(arr: js.Array[_], sortFunction: js.Function): Unit = js.native
+  
+  def stop(el: typingsSlinky.highcharts.mod.SVGElement): Unit = js.native
+  def stop(el: typingsSlinky.highcharts.mod.SVGElement, prop: String): Unit = js.native
+  
+  def syncTimeout(fn: js.Function, delay: Double): Double = js.native
+  def syncTimeout(fn: js.Function, delay: Double, context: js.Any): Double = js.native
+  
+  var time: Time_ = js.native
+  
+  def uniqueKey(): String = js.native
+  
+  def useSerialIds(): js.UndefOr[Boolean] = js.native
+  def useSerialIds(mode: Boolean): js.UndefOr[Boolean] = js.native
+  
+  def wrap(obj: js.Any, method: String, func: WrapProceedFunction): Unit = js.native
+  
   @js.native
   class Annotation protected ()
     extends typingsSlinky.highcharts.mod.Annotation {
@@ -65,6 +474,15 @@ object Highcharts extends js.Object {
       */
     def this(chart: Chart_, userOptions: AnnotationsOptions) = this()
   }
+  @js.native
+  object Annotation
+    extends TopLevel[
+          Instantiable2[
+            /* chart */ Chart_, 
+            /* userOptions */ AnnotationsOptions, 
+            typingsSlinky.highcharts.mod.Annotation
+          ]
+        ]
   
   @js.native
   class AnnotationControlPoint protected ()
@@ -93,6 +511,17 @@ object Highcharts extends js.Object {
       index: Double
     ) = this()
   }
+  @js.native
+  object AnnotationControlPoint
+    extends TopLevel[
+          Instantiable4[
+            /* chart */ Chart_, 
+            /* target */ AnnotationControllable, 
+            /* options */ AnnotationControlPointOptionsObject, 
+            /* index */ js.UndefOr[Double], 
+            typingsSlinky.highcharts.mod.AnnotationControlPoint
+          ]
+        ]
   
   @js.native
   class Axis protected ()
@@ -128,6 +557,11 @@ object Highcharts extends js.Object {
       */
     def this(chart: Chart_, userOptions: AxisOptions) = this()
   }
+  @js.native
+  object Axis
+    extends TopLevel[
+          Instantiable2[/* chart */ Chart_, /* userOptions */ AxisOptions, typingsSlinky.highcharts.mod.Axis]
+        ]
   
   @js.native
   class Chart protected () extends Chart_ {
@@ -145,6 +579,11 @@ object Highcharts extends js.Object {
     def this(options: Options) = this()
     def this(options: Options, callback: ChartCallbackFunction) = this()
   }
+  @js.native
+  object Chart
+    extends TopLevel[
+          Instantiable2[/* options */ Options, /* callback */ js.UndefOr[ChartCallbackFunction], Chart_]
+        ]
   
   @js.native
   class ColorAxis protected ()
@@ -160,6 +599,15 @@ object Highcharts extends js.Object {
       */
     def this(chart: Chart_, userOptions: ColorAxisOptions) = this()
   }
+  @js.native
+  object ColorAxis
+    extends TopLevel[
+          Instantiable2[
+            /* chart */ Chart_, 
+            /* userOptions */ ColorAxisOptions, 
+            typingsSlinky.highcharts.mod.ColorAxis
+          ]
+        ]
   
   @js.native
   class Legend protected ()
@@ -177,6 +625,11 @@ object Highcharts extends js.Object {
       */
     def this(chart: Chart_, options: LegendOptions) = this()
   }
+  @js.native
+  object Legend
+    extends TopLevel[
+          Instantiable2[/* chart */ Chart_, /* options */ LegendOptions, typingsSlinky.highcharts.mod.Legend]
+        ]
   
   @js.native
   class PlotLineOrBand protected ()
@@ -188,10 +641,22 @@ object Highcharts extends js.Object {
     def this(axis: typingsSlinky.highcharts.mod.Axis, options: AxisPlotBandsOptions) = this()
     def this(axis: typingsSlinky.highcharts.mod.Axis, options: AxisPlotLinesOptions) = this()
   }
+  @js.native
+  object PlotLineOrBand
+    extends TopLevel[
+          Instantiable2[
+            /* axis */ typingsSlinky.highcharts.mod.Axis, 
+            /* options */ js.UndefOr[AxisPlotBandsOptions | AxisPlotLinesOptions], 
+            typingsSlinky.highcharts.mod.PlotLineOrBand
+          ]
+        ]
   
   @js.native
   class Point ()
     extends typingsSlinky.highcharts.mod.Point
+  @js.native
+  object Point
+    extends TopLevel[Instantiable0[typingsSlinky.highcharts.mod.Point]]
   
   @js.native
   class Pointer protected ()
@@ -209,10 +674,18 @@ object Highcharts extends js.Object {
       */
     def this(chart: Chart_, options: Options) = this()
   }
+  @js.native
+  object Pointer
+    extends TopLevel[
+          Instantiable2[/* chart */ Chart_, /* options */ Options, typingsSlinky.highcharts.mod.Pointer]
+        ]
   
   @js.native
   class SVGElement ()
     extends typingsSlinky.highcharts.mod.SVGElement
+  @js.native
+  object SVGElement
+    extends TopLevel[Instantiable0[typingsSlinky.highcharts.mod.SVGElement]]
   
   @js.native
   class SVGRenderer protected ()
@@ -366,6 +839,20 @@ object Highcharts extends js.Object {
       styledMode: Boolean
     ) = this()
   }
+  @js.native
+  object SVGRenderer
+    extends TopLevel[
+          Instantiable7[
+            HTMLElement, 
+            /* width */ Double, 
+            /* height */ Double, 
+            /* style */ js.UndefOr[CSSObject], 
+            /* forExport */ js.UndefOr[Boolean], 
+            /* allowHTML */ js.UndefOr[Boolean], 
+            /* styledMode */ js.UndefOr[Boolean], 
+            typingsSlinky.highcharts.mod.SVGRenderer
+          ]
+        ]
   
   @js.native
   class Series protected ()
@@ -424,6 +911,15 @@ object Highcharts extends js.Object {
     def this(chart: Chart_, options: js.Object) = this()
     def this(chart: Chart_, options: SeriesOptionsType) = this()
   }
+  @js.native
+  object Series
+    extends TopLevel[
+          Instantiable2[
+            /* chart */ Chart_, 
+            /* options */ js.Object | SeriesOptionsType, 
+            typingsSlinky.highcharts.mod.Series
+          ]
+        ]
   
   @js.native
   class Tick protected ()
@@ -484,6 +980,18 @@ object Highcharts extends js.Object {
       parameters: js.Object
     ) = this()
   }
+  @js.native
+  object Tick
+    extends TopLevel[
+          Instantiable5[
+            /* axis */ typingsSlinky.highcharts.mod.Axis, 
+            /* pos */ Double, 
+            /* type */ js.UndefOr[String], 
+            /* noLabel */ js.UndefOr[Boolean], 
+            /* parameters */ js.UndefOr[js.Object], 
+            typingsSlinky.highcharts.mod.Tick
+          ]
+        ]
   
   @js.native
   class Time protected () extends Time_ {
@@ -500,6 +1008,8 @@ object Highcharts extends js.Object {
       */
     def this(options: TimeOptions) = this()
   }
+  @js.native
+  object Time extends TopLevel[Instantiable1[/* options */ TimeOptions, Time_]]
   
   @js.native
   class Tooltip protected ()
@@ -515,467 +1025,6 @@ object Highcharts extends js.Object {
       */
     def this(chart: Chart_, options: TooltipOptions) = this()
   }
-  
-  var Color: TypeofColor = js.native
-  var charts: js.Array[js.UndefOr[Chart_]] = js.native
-  var dateFormats: Dictionary[TimeFormatCallbackFunction] = js.native
-  var defaultOptions: Options = js.native
-  var time: Time_ = js.native
-  def addEvent[T](el: T, `type`: String, fn: js.Function): js.Function = js.native
-  def addEvent[T](el: T, `type`: String, fn: js.Function, options: EventOptionsObject): js.Function = js.native
-  def addEvent[T](el: T, `type`: String, fn: EventCallbackFunction[T]): js.Function = js.native
-  def addEvent[T](el: T, `type`: String, fn: EventCallbackFunction[T], options: EventOptionsObject): js.Function = js.native
-  def addEvent[T](el: Class[T], `type`: String, fn: js.Function): js.Function = js.native
-  def addEvent[T](el: Class[T], `type`: String, fn: js.Function, options: EventOptionsObject): js.Function = js.native
-  def addEvent[T](el: Class[T], `type`: String, fn: EventCallbackFunction[T]): js.Function = js.native
-  def addEvent[T](el: Class[T], `type`: String, fn: EventCallbackFunction[T], options: EventOptionsObject): js.Function = js.native
-  def animObject(): AnimationOptionsObject = js.native
-  def animObject(animation: Boolean): AnimationOptionsObject = js.native
-  def animObject(animation: AnimationOptionsObject): AnimationOptionsObject = js.native
-  def animate(el: HTMLElement, params: CSSObject): Unit = js.native
-  def animate(el: HTMLElement, params: CSSObject, opt: AnimationOptionsObject): Unit = js.native
-  def animate(el: HTMLElement, params: SVGAttributes): Unit = js.native
-  def animate(el: HTMLElement, params: SVGAttributes, opt: AnimationOptionsObject): Unit = js.native
-  def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: CSSObject): Unit = js.native
-  def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: CSSObject, opt: AnimationOptionsObject): Unit = js.native
-  def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: SVGAttributes): Unit = js.native
-  def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: SVGAttributes, opt: AnimationOptionsObject): Unit = js.native
-  def arrayMax(data: js.Array[_]): Double = js.native
-  def arrayMin(data: js.Array[_]): Double = js.native
-  def attr(elem: HTMLElement): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLElement, prop: js.UndefOr[scala.Nothing], value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLElement, prop: js.UndefOr[scala.Nothing], value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLElement, prop: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLElement, prop: HTMLAttributes): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLElement, prop: HTMLAttributes, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLElement, prop: HTMLAttributes, value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLElement, prop: SVGAttributes): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLElement, prop: SVGAttributes, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLElement, prop: SVGAttributes, value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: js.UndefOr[scala.Nothing], value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: js.UndefOr[scala.Nothing], value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: HTMLAttributes): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: HTMLAttributes, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: HTMLAttributes, value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: SVGAttributes): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: SVGAttributes, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: SVGAttributes, value: Double): js.UndefOr[String | Null] = js.native
-  def chart(options: Options): Chart_ = js.native
-  def chart(options: Options, callback: ChartCallbackFunction): Chart_ = js.native
-  def chart(renderTo: String, options: Options): Chart_ = js.native
-  def chart(renderTo: String, options: Options, callback: ChartCallbackFunction): Chart_ = js.native
-  def chart(renderTo: HTMLElement, options: Options): Chart_ = js.native
-  def chart(renderTo: HTMLElement, options: Options, callback: ChartCallbackFunction): Chart_ = js.native
-  def clearTimeout(id: Double): Unit = js.native
-  def color(input: ColorType): Color_ = js.native
-  def correctFloat(num: Double): Double = js.native
-  def correctFloat(num: Double, prec: Double): Double = js.native
-  def createElement(tag: String): HTMLElement = js.native
-  def createElement(
-    tag: String,
-    attribs: js.UndefOr[scala.Nothing],
-    styles: js.UndefOr[scala.Nothing],
-    parent: js.UndefOr[scala.Nothing],
-    nopad: Boolean
-  ): HTMLElement = js.native
-  def createElement(
-    tag: String,
-    attribs: js.UndefOr[scala.Nothing],
-    styles: js.UndefOr[scala.Nothing],
-    parent: HTMLElement
-  ): HTMLElement = js.native
-  def createElement(
-    tag: String,
-    attribs: js.UndefOr[scala.Nothing],
-    styles: js.UndefOr[scala.Nothing],
-    parent: HTMLElement,
-    nopad: Boolean
-  ): HTMLElement = js.native
-  def createElement(tag: String, attribs: js.UndefOr[scala.Nothing], styles: CSSObject): HTMLElement = js.native
-  def createElement(
-    tag: String,
-    attribs: js.UndefOr[scala.Nothing],
-    styles: CSSObject,
-    parent: js.UndefOr[scala.Nothing],
-    nopad: Boolean
-  ): HTMLElement = js.native
-  def createElement(tag: String, attribs: js.UndefOr[scala.Nothing], styles: CSSObject, parent: HTMLElement): HTMLElement = js.native
-  def createElement(
-    tag: String,
-    attribs: js.UndefOr[scala.Nothing],
-    styles: CSSObject,
-    parent: HTMLElement,
-    nopad: Boolean
-  ): HTMLElement = js.native
-  def createElement(tag: String, attribs: HTMLAttributes): HTMLElement = js.native
-  def createElement(
-    tag: String,
-    attribs: HTMLAttributes,
-    styles: js.UndefOr[scala.Nothing],
-    parent: js.UndefOr[scala.Nothing],
-    nopad: Boolean
-  ): HTMLElement = js.native
-  def createElement(tag: String, attribs: HTMLAttributes, styles: js.UndefOr[scala.Nothing], parent: HTMLElement): HTMLElement = js.native
-  def createElement(
-    tag: String,
-    attribs: HTMLAttributes,
-    styles: js.UndefOr[scala.Nothing],
-    parent: HTMLElement,
-    nopad: Boolean
-  ): HTMLElement = js.native
-  def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject): HTMLElement = js.native
-  def createElement(
-    tag: String,
-    attribs: HTMLAttributes,
-    styles: CSSObject,
-    parent: js.UndefOr[scala.Nothing],
-    nopad: Boolean
-  ): HTMLElement = js.native
-  def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject, parent: HTMLElement): HTMLElement = js.native
-  def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject, parent: HTMLElement, nopad: Boolean): HTMLElement = js.native
-  def css(el: HTMLElement, styles: CSSObject): Unit = js.native
-  def css(el: org.scalajs.dom.raw.SVGElement, styles: CSSObject): Unit = js.native
-  def dateFormat(format: String, timestamp: Double): String = js.native
-  def dateFormat(format: String, timestamp: Double, capitalize: Boolean): String = js.native
-  def defined(obj: js.Any): Boolean = js.native
-  def destroyObjectProperties(obj: js.Any): Unit = js.native
-  def destroyObjectProperties(obj: js.Any, except: js.Any): Unit = js.native
-  def discardElement(element: HTMLElement): Unit = js.native
-  def each(arr: js.Array[_], fn: js.Function): Unit = js.native
-  def each(arr: js.Array[_], fn: js.Function, ctx: js.Any): Unit = js.native
-  def erase(arr: js.Array[_], item: js.Any): Unit = js.native
-  def error(code: String): Unit = js.native
-  def error(
-    code: String,
-    stop: js.UndefOr[scala.Nothing],
-    chart: js.UndefOr[scala.Nothing],
-    params: Dictionary[String]
-  ): Unit = js.native
-  def error(code: String, stop: js.UndefOr[scala.Nothing], chart: Chart_): Unit = js.native
-  def error(code: String, stop: js.UndefOr[scala.Nothing], chart: Chart_, params: Dictionary[String]): Unit = js.native
-  def error(code: String, stop: Boolean): Unit = js.native
-  def error(code: String, stop: Boolean, chart: js.UndefOr[scala.Nothing], params: Dictionary[String]): Unit = js.native
-  def error(code: String, stop: Boolean, chart: Chart_): Unit = js.native
-  def error(code: String, stop: Boolean, chart: Chart_, params: Dictionary[String]): Unit = js.native
-  def error(code: Double): Unit = js.native
-  def error(
-    code: Double,
-    stop: js.UndefOr[scala.Nothing],
-    chart: js.UndefOr[scala.Nothing],
-    params: Dictionary[String]
-  ): Unit = js.native
-  def error(code: Double, stop: js.UndefOr[scala.Nothing], chart: Chart_): Unit = js.native
-  def error(code: Double, stop: js.UndefOr[scala.Nothing], chart: Chart_, params: Dictionary[String]): Unit = js.native
-  def error(code: Double, stop: Boolean): Unit = js.native
-  def error(code: Double, stop: Boolean, chart: js.UndefOr[scala.Nothing], params: Dictionary[String]): Unit = js.native
-  def error(code: Double, stop: Boolean, chart: Chart_): Unit = js.native
-  def error(code: Double, stop: Boolean, chart: Chart_, params: Dictionary[String]): Unit = js.native
-  def extend[T](a: T, b: js.Object): T = js.native
-  def extend[T](a: js.UndefOr[scala.Nothing], b: js.Object): T = js.native
-  def extendClass[T](parent: Class[T], members: Dictionary[_]): Class[T] = js.native
-  def find[T](arr: js.Array[T], callback: js.Function): js.UndefOr[T] = js.native
-  def fireEvent[T](el: T, `type`: String): Unit = js.native
-  def fireEvent[T](el: T, `type`: String, eventArguments: js.UndefOr[scala.Nothing], defaultFunction: js.Function): Unit = js.native
-  def fireEvent[T](
-    el: T,
-    `type`: String,
-    eventArguments: js.UndefOr[scala.Nothing],
-    defaultFunction: EventCallbackFunction[T]
-  ): Unit = js.native
-  def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_]): Unit = js.native
-  def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_], defaultFunction: js.Function): Unit = js.native
-  def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_], defaultFunction: EventCallbackFunction[T]): Unit = js.native
-  def fireEvent[T](el: T, `type`: String, eventArguments: Event): Unit = js.native
-  def fireEvent[T](el: T, `type`: String, eventArguments: Event, defaultFunction: js.Function): Unit = js.native
-  def fireEvent[T](el: T, `type`: String, eventArguments: Event, defaultFunction: EventCallbackFunction[T]): Unit = js.native
-  def format(str: String, ctx: Record[String, _]): String = js.native
-  def format(str: String, ctx: Record[String, _], chart: Chart_): String = js.native
-  def getMagnitude(num: Double): Double = js.native
-  def getOptions(): Options = js.native
-  def getStyle(el: HTMLElement, prop: String): Double | String = js.native
-  def getStyle(el: HTMLElement, prop: String, toInt: Boolean): Double | String = js.native
-  def grep(arr: js.Array[_], callback: js.Function): js.Array[_] = js.native
-  def inArray(item: js.Any, arr: js.Array[_]): Double = js.native
-  def inArray(item: js.Any, arr: js.Array[_], fromIndex: Double): Double = js.native
-  def isArray(obj: js.Any): Boolean = js.native
-  def isClass(): Boolean = js.native
-  def isClass(obj: js.Object): Boolean = js.native
-  def isDOMElement(obj: js.Any): Boolean = js.native
-  def isNumber(n: js.Any): Boolean = js.native
-  def isObject(obj: js.Any): Boolean = js.native
-  def isObject(obj: js.Any, strict: Boolean): Boolean = js.native
-  def isString(s: js.Any): Boolean = js.native
-  def keys(obj: js.Any): js.Array[String] = js.native
-  def map(arr: js.Array[_], fn: js.Function): js.Array[_] = js.native
-  def merge[T](a: T, n: js.UndefOr[js.Object]*): T = js.native
-  def merge[T](a: js.UndefOr[scala.Nothing], n: js.UndefOr[js.Object]*): T = js.native
-  def merge[T](extend: Boolean, a: T, n: js.UndefOr[js.Object]*): T = js.native
-  def merge[T](extend: Boolean, a: js.UndefOr[scala.Nothing], n: js.UndefOr[js.Object]*): T = js.native
-  def normalizeTickInterval(interval: Double): Double = js.native
-  def normalizeTickInterval(
-    interval: Double,
-    multiples: js.UndefOr[scala.Nothing],
-    magnitude: js.UndefOr[scala.Nothing],
-    allowDecimals: js.UndefOr[scala.Nothing],
-    hasTickAmount: Boolean
-  ): Double = js.native
-  def normalizeTickInterval(
-    interval: Double,
-    multiples: js.UndefOr[scala.Nothing],
-    magnitude: js.UndefOr[scala.Nothing],
-    allowDecimals: Boolean
-  ): Double = js.native
-  def normalizeTickInterval(
-    interval: Double,
-    multiples: js.UndefOr[scala.Nothing],
-    magnitude: js.UndefOr[scala.Nothing],
-    allowDecimals: Boolean,
-    hasTickAmount: Boolean
-  ): Double = js.native
-  def normalizeTickInterval(interval: Double, multiples: js.UndefOr[scala.Nothing], magnitude: Double): Double = js.native
-  def normalizeTickInterval(
-    interval: Double,
-    multiples: js.UndefOr[scala.Nothing],
-    magnitude: Double,
-    allowDecimals: js.UndefOr[scala.Nothing],
-    hasTickAmount: Boolean
-  ): Double = js.native
-  def normalizeTickInterval(interval: Double, multiples: js.UndefOr[scala.Nothing], magnitude: Double, allowDecimals: Boolean): Double = js.native
-  def normalizeTickInterval(
-    interval: Double,
-    multiples: js.UndefOr[scala.Nothing],
-    magnitude: Double,
-    allowDecimals: Boolean,
-    hasTickAmount: Boolean
-  ): Double = js.native
-  def normalizeTickInterval(interval: Double, multiples: js.Array[_]): Double = js.native
-  def normalizeTickInterval(
-    interval: Double,
-    multiples: js.Array[_],
-    magnitude: js.UndefOr[scala.Nothing],
-    allowDecimals: js.UndefOr[scala.Nothing],
-    hasTickAmount: Boolean
-  ): Double = js.native
-  def normalizeTickInterval(
-    interval: Double,
-    multiples: js.Array[_],
-    magnitude: js.UndefOr[scala.Nothing],
-    allowDecimals: Boolean
-  ): Double = js.native
-  def normalizeTickInterval(
-    interval: Double,
-    multiples: js.Array[_],
-    magnitude: js.UndefOr[scala.Nothing],
-    allowDecimals: Boolean,
-    hasTickAmount: Boolean
-  ): Double = js.native
-  def normalizeTickInterval(interval: Double, multiples: js.Array[_], magnitude: Double): Double = js.native
-  def normalizeTickInterval(
-    interval: Double,
-    multiples: js.Array[_],
-    magnitude: Double,
-    allowDecimals: js.UndefOr[scala.Nothing],
-    hasTickAmount: Boolean
-  ): Double = js.native
-  def normalizeTickInterval(interval: Double, multiples: js.Array[_], magnitude: Double, allowDecimals: Boolean): Double = js.native
-  def normalizeTickInterval(
-    interval: Double,
-    multiples: js.Array[_],
-    magnitude: Double,
-    allowDecimals: Boolean,
-    hasTickAmount: Boolean
-  ): Double = js.native
-  def numberFormat(number: Double, decimals: Double): String = js.native
-  def numberFormat(number: Double, decimals: Double, decimalPoint: js.UndefOr[scala.Nothing], thousandsSep: String): String = js.native
-  def numberFormat(number: Double, decimals: Double, decimalPoint: String): String = js.native
-  def numberFormat(number: Double, decimals: Double, decimalPoint: String, thousandsSep: String): String = js.native
-  def objectEach[T](obj: js.Any, fn: ObjectEachCallbackFunction[T]): Unit = js.native
-  def objectEach[T](obj: js.Any, fn: ObjectEachCallbackFunction[T], ctx: T): Unit = js.native
-  def offset(el: Element): OffsetObject = js.native
-  def pad(number: Double): String = js.native
-  def pad(number: Double, length: js.UndefOr[scala.Nothing], padder: String): String = js.native
-  def pad(number: Double, length: Double): String = js.native
-  def pad(number: Double, length: Double, padder: String): String = js.native
-  def pick[T](items: (js.UndefOr[T | Null])*): T = js.native
-  def reduce(arr: js.Array[_], fn: js.Function, initialValue: js.Any): js.Any = js.native
-  def relativeLength(value: RelativeSize, base: Double): Double = js.native
-  def relativeLength(value: RelativeSize, base: Double, offset: Double): Double = js.native
-  def removeEvent[T](el: T): Unit = js.native
-  def removeEvent[T](el: T, `type`: js.UndefOr[scala.Nothing], fn: EventCallbackFunction[T]): Unit = js.native
-  def removeEvent[T](el: T, `type`: String): Unit = js.native
-  def removeEvent[T](el: T, `type`: String, fn: EventCallbackFunction[T]): Unit = js.native
-  def removeEvent[T](el: Class[T]): Unit = js.native
-  def removeEvent[T](el: Class[T], `type`: js.UndefOr[scala.Nothing], fn: EventCallbackFunction[T]): Unit = js.native
-  def removeEvent[T](el: Class[T], `type`: String): Unit = js.native
-  def removeEvent[T](el: Class[T], `type`: String, fn: EventCallbackFunction[T]): Unit = js.native
-  def seriesType(`type`: String, parent: String, options: Dictionary[_]): typingsSlinky.highcharts.mod.Series = js.native
-  def seriesType(
-    `type`: String,
-    parent: String,
-    options: Dictionary[_],
-    props: js.UndefOr[scala.Nothing],
-    pointProps: Dictionary[_]
-  ): typingsSlinky.highcharts.mod.Series = js.native
-  def seriesType(`type`: String, parent: String, options: Dictionary[_], props: Dictionary[_]): typingsSlinky.highcharts.mod.Series = js.native
-  def seriesType(
-    `type`: String,
-    parent: String,
-    options: Dictionary[_],
-    props: Dictionary[_],
-    pointProps: Dictionary[_]
-  ): typingsSlinky.highcharts.mod.Series = js.native
-  def seriesType(`type`: String, parent: String, options: SeriesOptionsType): typingsSlinky.highcharts.mod.Series = js.native
-  def seriesType(
-    `type`: String,
-    parent: String,
-    options: SeriesOptionsType,
-    props: js.UndefOr[scala.Nothing],
-    pointProps: Dictionary[_]
-  ): typingsSlinky.highcharts.mod.Series = js.native
-  def seriesType(`type`: String, parent: String, options: SeriesOptionsType, props: Dictionary[_]): typingsSlinky.highcharts.mod.Series = js.native
-  def seriesType(
-    `type`: String,
-    parent: String,
-    options: SeriesOptionsType,
-    props: Dictionary[_],
-    pointProps: Dictionary[_]
-  ): typingsSlinky.highcharts.mod.Series = js.native
-  def setAnimation(animation: js.UndefOr[scala.Nothing], chart: Chart_): Unit = js.native
-  def setAnimation(animation: Boolean, chart: Chart_): Unit = js.native
-  def setAnimation(animation: AnimationOptionsObject, chart: Chart_): Unit = js.native
-  def setOptions(options: Options): Options = js.native
-  def some(arr: js.Array[_], fn: js.Function, ctx: js.Any): Boolean = js.native
-  def splat(obj: js.Any): js.Array[_] = js.native
-  def stableSort(arr: js.Array[_], sortFunction: js.Function): Unit = js.native
-  def stop(el: typingsSlinky.highcharts.mod.SVGElement): Unit = js.native
-  def stop(el: typingsSlinky.highcharts.mod.SVGElement, prop: String): Unit = js.native
-  def syncTimeout(fn: js.Function, delay: Double): Double = js.native
-  def syncTimeout(fn: js.Function, delay: Double, context: js.Any): Double = js.native
-  def uniqueKey(): String = js.native
-  def useSerialIds(): js.UndefOr[Boolean] = js.native
-  def useSerialIds(mode: Boolean): js.UndefOr[Boolean] = js.native
-  def wrap(obj: js.Any, method: String, func: WrapProceedFunction): Unit = js.native
-  @js.native
-  object Annotation
-    extends TopLevel[
-          Instantiable2[
-            /* chart */ Chart_, 
-            /* userOptions */ AnnotationsOptions, 
-            typingsSlinky.highcharts.mod.Annotation
-          ]
-        ]
-  
-  @js.native
-  object AnnotationControlPoint
-    extends TopLevel[
-          Instantiable4[
-            /* chart */ Chart_, 
-            /* target */ AnnotationControllable, 
-            /* options */ AnnotationControlPointOptionsObject, 
-            /* index */ js.UndefOr[Double], 
-            typingsSlinky.highcharts.mod.AnnotationControlPoint
-          ]
-        ]
-  
-  @js.native
-  object Axis
-    extends TopLevel[
-          Instantiable2[/* chart */ Chart_, /* userOptions */ AxisOptions, typingsSlinky.highcharts.mod.Axis]
-        ]
-  
-  @js.native
-  object Chart
-    extends TopLevel[
-          Instantiable2[/* options */ Options, /* callback */ js.UndefOr[ChartCallbackFunction], Chart_]
-        ]
-  
-  @js.native
-  object ColorAxis
-    extends TopLevel[
-          Instantiable2[
-            /* chart */ Chart_, 
-            /* userOptions */ ColorAxisOptions, 
-            typingsSlinky.highcharts.mod.ColorAxis
-          ]
-        ]
-  
-  @js.native
-  object Legend
-    extends TopLevel[
-          Instantiable2[/* chart */ Chart_, /* options */ LegendOptions, typingsSlinky.highcharts.mod.Legend]
-        ]
-  
-  @js.native
-  object PlotLineOrBand
-    extends TopLevel[
-          Instantiable2[
-            /* axis */ typingsSlinky.highcharts.mod.Axis, 
-            /* options */ js.UndefOr[AxisPlotBandsOptions | AxisPlotLinesOptions], 
-            typingsSlinky.highcharts.mod.PlotLineOrBand
-          ]
-        ]
-  
-  @js.native
-  object Point
-    extends TopLevel[Instantiable0[typingsSlinky.highcharts.mod.Point]]
-  
-  @js.native
-  object Pointer
-    extends TopLevel[
-          Instantiable2[/* chart */ Chart_, /* options */ Options, typingsSlinky.highcharts.mod.Pointer]
-        ]
-  
-  @js.native
-  object SVGElement
-    extends TopLevel[Instantiable0[typingsSlinky.highcharts.mod.SVGElement]]
-  
-  @js.native
-  object SVGRenderer
-    extends TopLevel[
-          Instantiable7[
-            HTMLElement, 
-            /* width */ Double, 
-            /* height */ Double, 
-            /* style */ js.UndefOr[CSSObject], 
-            /* forExport */ js.UndefOr[Boolean], 
-            /* allowHTML */ js.UndefOr[Boolean], 
-            /* styledMode */ js.UndefOr[Boolean], 
-            typingsSlinky.highcharts.mod.SVGRenderer
-          ]
-        ]
-  
-  @js.native
-  object Series
-    extends TopLevel[
-          Instantiable2[
-            /* chart */ Chart_, 
-            /* options */ js.Object | SeriesOptionsType, 
-            typingsSlinky.highcharts.mod.Series
-          ]
-        ]
-  
-  @js.native
-  object Tick
-    extends TopLevel[
-          Instantiable5[
-            /* axis */ typingsSlinky.highcharts.mod.Axis, 
-            /* pos */ Double, 
-            /* type */ js.UndefOr[String], 
-            /* noLabel */ js.UndefOr[Boolean], 
-            /* parameters */ js.UndefOr[js.Object], 
-            typingsSlinky.highcharts.mod.Tick
-          ]
-        ]
-  
-  @js.native
-  object Time extends TopLevel[Instantiable1[/* options */ TimeOptions, Time_]]
-  
   @js.native
   object Tooltip
     extends TopLevel[
@@ -985,6 +1034,4 @@ object Highcharts extends js.Object {
             typingsSlinky.highcharts.mod.Tooltip
           ]
         ]
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.ansiFragments.modifierMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.ansiFragments.ansiFragmentsStrings.dim
@@ -14,21 +14,26 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.ansiFragments.ansiFragmentsStrings.none
 */
 trait AnsiModifier extends js.Object
-
 object AnsiModifier {
+  
   @scala.inline
   def bold: typingsSlinky.ansiFragments.ansiFragmentsStrings.bold = "bold".asInstanceOf[typingsSlinky.ansiFragments.ansiFragmentsStrings.bold]
+  
   @scala.inline
   def dim: typingsSlinky.ansiFragments.ansiFragmentsStrings.dim = "dim".asInstanceOf[typingsSlinky.ansiFragments.ansiFragmentsStrings.dim]
+  
   @scala.inline
   def hidden: typingsSlinky.ansiFragments.ansiFragmentsStrings.hidden = "hidden".asInstanceOf[typingsSlinky.ansiFragments.ansiFragmentsStrings.hidden]
+  
   @scala.inline
   def italic: typingsSlinky.ansiFragments.ansiFragmentsStrings.italic = "italic".asInstanceOf[typingsSlinky.ansiFragments.ansiFragmentsStrings.italic]
+  
   @scala.inline
   def none: typingsSlinky.ansiFragments.ansiFragmentsStrings.none = "none".asInstanceOf[typingsSlinky.ansiFragments.ansiFragmentsStrings.none]
+  
   @scala.inline
   def strikethrough: typingsSlinky.ansiFragments.ansiFragmentsStrings.strikethrough = "strikethrough".asInstanceOf[typingsSlinky.ansiFragments.ansiFragmentsStrings.strikethrough]
+  
   @scala.inline
   def underline: typingsSlinky.ansiFragments.ansiFragmentsStrings.underline = "underline".asInstanceOf[typingsSlinky.ansiFragments.ansiFragmentsStrings.underline]
 }
-

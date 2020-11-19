@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "ConsensusSummarizeBlockRequest")
 @js.native
@@ -16,17 +16,18 @@ import scala.scalajs.js.annotation._
   */
 class ConsensusSummarizeBlockRequest () extends IConsensusSummarizeBlockRequest {
   def this(properties: IConsensusSummarizeBlockRequest) = this()
+  
   /**
     * Converts this ConsensusSummarizeBlockRequest to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "ConsensusSummarizeBlockRequest")
 @js.native
 object ConsensusSummarizeBlockRequest extends js.Object {
+  
   /**
     * Creates a new ConsensusSummarizeBlockRequest instance using the specified properties.
     * @param [properties] Properties to set
@@ -34,6 +35,7 @@ object ConsensusSummarizeBlockRequest extends js.Object {
     */
   def create(): ConsensusSummarizeBlockRequest = js.native
   def create(properties: IConsensusSummarizeBlockRequest): ConsensusSummarizeBlockRequest = js.native
+  
   /**
     * Decodes a ConsensusSummarizeBlockRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -46,6 +48,7 @@ object ConsensusSummarizeBlockRequest extends js.Object {
   def decode(reader: Reader, length: Double): ConsensusSummarizeBlockRequest = js.native
   def decode(reader: js.typedarray.Uint8Array): ConsensusSummarizeBlockRequest = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusSummarizeBlockRequest = js.native
+  
   /**
     * Decodes a ConsensusSummarizeBlockRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -55,6 +58,7 @@ object ConsensusSummarizeBlockRequest extends js.Object {
     */
   def decodeDelimited(reader: Reader): ConsensusSummarizeBlockRequest = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusSummarizeBlockRequest = js.native
+  
   /**
     * Encodes the specified ConsensusSummarizeBlockRequest message. Does not implicitly {@link ConsensusSummarizeBlockRequest.verify|verify} messages.
     * @param message ConsensusSummarizeBlockRequest message or plain object to encode
@@ -63,6 +67,7 @@ object ConsensusSummarizeBlockRequest extends js.Object {
     */
   def encode(message: IConsensusSummarizeBlockRequest): Writer = js.native
   def encode(message: IConsensusSummarizeBlockRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ConsensusSummarizeBlockRequest message, length delimited. Does not implicitly {@link ConsensusSummarizeBlockRequest.verify|verify} messages.
     * @param message ConsensusSummarizeBlockRequest message or plain object to encode
@@ -71,12 +76,14 @@ object ConsensusSummarizeBlockRequest extends js.Object {
     */
   def encodeDelimited(message: IConsensusSummarizeBlockRequest): Writer = js.native
   def encodeDelimited(message: IConsensusSummarizeBlockRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ConsensusSummarizeBlockRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ConsensusSummarizeBlockRequest
     */
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusSummarizeBlockRequest = js.native
+  
   /**
     * Creates a plain object from a ConsensusSummarizeBlockRequest message. Also converts values to other types if specified.
     * @param message ConsensusSummarizeBlockRequest
@@ -85,6 +92,7 @@ object ConsensusSummarizeBlockRequest extends js.Object {
     */
   def toObject(message: ConsensusSummarizeBlockRequest): StringDictionary[js.Any] = js.native
   def toObject(message: ConsensusSummarizeBlockRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ConsensusSummarizeBlockRequest message.
     * @param message Plain object to verify
@@ -92,4 +100,3 @@ object ConsensusSummarizeBlockRequest extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

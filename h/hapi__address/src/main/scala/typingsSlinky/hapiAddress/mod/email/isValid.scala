@@ -2,11 +2,12 @@ package typingsSlinky.hapiAddress.mod.email
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@hapi/address", "email.isValid")
 @js.native
 object isValid extends js.Object {
+  
   /**
     * Analyzes a string to verify it is a valid email address.
     * 
@@ -18,4 +19,3 @@ object isValid extends js.Object {
   def apply(email: String): Boolean = js.native
   def apply(email: String, options: Options): Boolean = js.native
 }
-

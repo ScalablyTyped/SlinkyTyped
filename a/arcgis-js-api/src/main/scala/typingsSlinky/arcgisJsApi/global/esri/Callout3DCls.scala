@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.Callout3DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Callout3D")
 @js.native
@@ -16,4 +16,3 @@ class Callout3DCls ()
   extends typingsSlinky.arcgisJsApi.esri.Callout3D {
   def this(properties: Callout3DProperties) = this()
 }
-

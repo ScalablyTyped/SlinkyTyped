@@ -7,13 +7,15 @@ import typingsSlinky.semanticUiReact.searchResultMod.SearchResultProps
 import typingsSlinky.semanticUiReact.searchResultsMod.SearchResultsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SearchComponent
   extends ComponentClass[SearchProps, js.Object] {
+  
   var Category: ReactComponentClass[SearchCategoryProps] = js.native
+  
   var Result: ReactComponentClass[SearchResultProps] = js.native
+  
   var Results: ReactComponentClass[SearchResultsProps] = js.native
 }
-

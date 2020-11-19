@@ -3,24 +3,25 @@ package typingsSlinky.reactQuery.mod
 import typingsSlinky.reactQuery.reactQueryBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-query", "useInfiniteQuery")
 @js.native
 object useInfiniteQuery_false extends js.Object {
-  def apply[TResult, TKey /* <: AnyQueryKey */, TMoreVariable](
+  
+  def apply[TResult, TKey /* <: String */, TMoreVariable](
     queryKey: js.Function0[js.UndefOr[TKey | `false` | Null]],
-    queryFn: InfiniteQueryFunction[TResult, TKey, TMoreVariable]
+    queryFn: InfiniteQueryFunction[TResult, js.Array[TKey], TMoreVariable]
   ): InfiniteQueryResult[TResult, TMoreVariable] = js.native
-  def apply[TResult, TKey /* <: AnyQueryKey */, TMoreVariable](
+  def apply[TResult, TKey /* <: String */, TMoreVariable](
     queryKey: js.Function0[js.UndefOr[TKey | `false` | Null]],
-    queryFn: InfiniteQueryFunction[TResult, TKey, TMoreVariable],
+    queryFn: InfiniteQueryFunction[TResult, js.Array[TKey], TMoreVariable],
     config: InfiniteQueryOptions[TResult, TMoreVariable]
   ): InfiniteQueryResult[TResult, TMoreVariable] = js.native
-  def apply[TResult, TKey /* <: AnyQueryKey */, TMoreVariable](queryKey: `false`, queryFn: InfiniteQueryFunction[TResult, TKey, TMoreVariable]): InfiniteQueryResult[TResult, TMoreVariable] = js.native
-  def apply[TResult, TKey /* <: AnyQueryKey */, TMoreVariable](
+  def apply[TResult, TKey /* <: String */, TMoreVariable](queryKey: `false`, queryFn: InfiniteQueryFunction[TResult, js.Array[TKey], TMoreVariable]): InfiniteQueryResult[TResult, TMoreVariable] = js.native
+  def apply[TResult, TKey /* <: String */, TMoreVariable](
     queryKey: `false`,
-    queryFn: InfiniteQueryFunction[TResult, TKey, TMoreVariable],
+    queryFn: InfiniteQueryFunction[TResult, js.Array[TKey], TMoreVariable],
     config: InfiniteQueryOptions[TResult, TMoreVariable]
   ): InfiniteQueryResult[TResult, TMoreVariable] = js.native
   def apply[TResult, TKey /* <: String */, TVariables /* <: AnyVariables */, TMoreVariable](
@@ -46,4 +47,3 @@ object useInfiniteQuery_false extends js.Object {
     config: InfiniteQueryOptions[TResult, TMoreVariable]
   ): InfiniteQueryResult[TResult, TMoreVariable] = js.native
 }
-

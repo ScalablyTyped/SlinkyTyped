@@ -10,18 +10,25 @@ import typingsSlinky.awsSdkTypes.protocolMod.String
 import typingsSlinky.awsSdkTypes.protocolMod.Timestamp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/json-builder/build/shapes.fixtures", JSImport.Namespace)
 @js.native
 object shapesFixturesMod extends js.Object {
+  
   val blobShape: Blob = js.native
+  
   val booleanShape: Boolean = js.native
+  
   val floatShape: Float = js.native
+  
   val integerShape: Integer = js.native
+  
   val listOfStringsShape: List = js.native
+  
   val mapOfStringsToIntegersShape: Map = js.native
+  
   val stringShape: String = js.native
+  
   val timestampShape: Timestamp = js.native
 }
-

@@ -11,15 +11,15 @@ import typingsSlinky.openpgp.anon.EncryptResultmessageMessa
 import typingsSlinky.openpgp.anon.EncryptResultmessageMessaMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "encrypt")
 @js.native
 object encrypt extends js.Object {
+  
   def apply(options: EncryptOptionsarmorfalsed): js.Promise[EncryptResultmessageMessa] = js.native
   def apply(options: EncryptOptionsarmorfalsedArmor): js.Promise[EncryptResultmessageMessaMessage] = js.native
   def apply(options: EncryptOptionsarmortrueun): js.Promise[EncryptResultdatastring] = js.native
   def apply(options: EncryptOptionsarmortrueunArmor): js.Promise[EncryptResultdatastringsi] = js.native
   def apply(options: EncryptOptions): js.Promise[EncryptResultdatastringRe] = js.native
 }
-

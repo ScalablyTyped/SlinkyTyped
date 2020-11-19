@@ -2,10 +2,12 @@ package typingsSlinky.reactSelect
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object stateManagerMod {
+  
   type GetOptionType[T] = js.Any
+  
   type StateProps[T /* <: typingsSlinky.reactSelect.selectMod.Props[_] */] = typingsSlinky.std.Pick[
     T, 
     typingsSlinky.std.Exclude[

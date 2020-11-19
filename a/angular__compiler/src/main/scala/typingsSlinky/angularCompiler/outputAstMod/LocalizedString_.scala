@@ -5,7 +5,7 @@ import typingsSlinky.angularCompiler.metaMod.I18nMeta
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/output/output_ast", "LocalizedString")
 @js.native
@@ -23,10 +23,15 @@ class LocalizedString_ protected () extends Expression {
     expressions: js.Array[Expression],
     sourceSpan: ParseSourceSpan
   ) = this()
+  
   val expressions: js.Array[Expression] = js.native
+  
   val messageParts: js.Array[String] = js.native
+  
   val metaBlock: I18nMeta = js.native
+  
   val placeHolderNames: js.Array[String] = js.native
+  
   /**
     * Serialize the given `meta` and `messagePart` into "cooked" and "raw" strings that can be used
     * in a `$localize` tagged string. The format of the metadata is the same as that parsed by
@@ -36,6 +41,7 @@ class LocalizedString_ protected () extends Expression {
     * @param messagePart The first part of the tagged string
     */
   def serializeI18nHead(): Cooked = js.native
+  
   /**
     * Serialize the given `placeholderName` and `messagePart` into "cooked" and "raw" strings that
     * can be used in a `$localize` tagged string.
@@ -45,4 +51,3 @@ class LocalizedString_ protected () extends Expression {
     */
   def serializeI18nTemplatePart(partIndex: Double): Cooked = js.native
 }
-

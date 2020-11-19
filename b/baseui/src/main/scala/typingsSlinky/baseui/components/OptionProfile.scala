@@ -8,9 +8,10 @@ import typingsSlinky.baseui.anon.ListItemProfile
 import typingsSlinky.baseui.menuMod.OptionProfileProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OptionProfile {
+  
   @JSImport("baseui/menu", "OptionProfile")
   @js.native
   object component extends js.Object
@@ -19,19 +20,25 @@ object OptionProfile {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def $isHighlighted(value: Boolean): this.type = set("$isHighlighted", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def getChildMenu(value: /* item */ js.Any => ReactElement): this.type = set("getChildMenu", js.Any.fromFunction1(value))
+    
     @scala.inline
     def overrides(value: ListItemProfile): this.type = set("overrides", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def renderAll(value: Boolean): this.type = set("renderAll", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def resetMenu(value: () => Unit): this.type = set("resetMenu", js.Any.fromFunction0(value))
   }
   
   def withProps(p: OptionProfileProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     getProfileItemImg: js.Any => String | ReactComponentClass[_],
@@ -43,4 +50,3 @@ object OptionProfile {
     new Builder(js.Array(this.component, __props.asInstanceOf[OptionProfileProps]))
   }
 }
-

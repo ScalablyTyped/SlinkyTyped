@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/parameter relevant section in reference guide}
@@ -30,17 +30,19 @@ class MicroflowParameter protected () extends MicroflowParameterBase {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FMicroflowParameter: IModel = js.native
+  
   @JSName("containerAsMicroflow")
   def containerAsMicroflow_MMicroflowParameter: Microflow = js.native
+  
+  @JSName("model")
+  var model_FMicroflowParameter: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.MicroflowParameter")
 @js.native
 object MicroflowParameter extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -6,12 +6,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/regularizers", "Regularizer")
 @js.native
 abstract class Regularizer () extends Serializable {
+  
   @JSName("apply")
   def apply(x: Tensor[Rank]): Scalar = js.native
 }
-

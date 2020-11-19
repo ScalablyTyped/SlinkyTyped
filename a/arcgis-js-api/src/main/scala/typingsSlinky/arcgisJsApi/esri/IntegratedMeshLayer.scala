@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`integrated-mesh`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IntegratedMeshLayer
@@ -11,12 +11,14 @@ trait IntegratedMeshLayer
      with SceneService
      with PortalLayer
      with ScaleRangeLayer {
+  
   /**
     * Specifies how the mesh is placed on the vertical axis (z). This property only affects [IntegratedMeshLayers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-IntegratedMeshLayer.html) when using the `absolute-height` mode. Integrated mesh layers always render in front of the ground surface, so setting negative offset values will not render them below the ground.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-IntegratedMeshLayer.html#elevationInfo)
     */
   var elevationInfo: IntegratedMeshLayerElevationInfo = js.native
+  
   /**
     * A collection of [SceneModification](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-SceneModification.html) with polygons and types to apply client-side modifications.  With [WebScene.save()](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebScene.html#save) the [SceneModifications](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-SceneModifications.html) can be persisted. This allows you to share the modified integrated mesh through web scenes. The following modifications could be applied to the integrated mesh:
     *
@@ -30,7 +32,7 @@ trait IntegratedMeshLayer
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-IntegratedMeshLayer.html#modifications)
     */
   var modifications: SceneModifications = js.native
+  
   @JSName("type")
   val type_IntegratedMeshLayer: `integrated-mesh` = js.native
 }
-

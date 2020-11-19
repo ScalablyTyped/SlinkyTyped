@@ -2,7 +2,7 @@ package typingsSlinky.writableConsumableStream.consumerMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("writable-consumable-stream/consumer", JSImport.Namespace)
 @js.native
@@ -14,4 +14,3 @@ class ^[T] protected () extends Consumer[T] {
     timeout: Double
   ) = this()
 }
-

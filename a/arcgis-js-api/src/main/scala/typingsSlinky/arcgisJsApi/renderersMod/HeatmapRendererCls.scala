@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.renderersMod
 import typingsSlinky.arcgisJsApi.esri.HeatmapRendererProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/renderers", "HeatmapRenderer")
 @js.native
@@ -16,4 +16,3 @@ class HeatmapRendererCls ()
   extends typingsSlinky.arcgisJsApi.esri.HeatmapRenderer {
   def this(properties: HeatmapRendererProperties) = this()
 }
-

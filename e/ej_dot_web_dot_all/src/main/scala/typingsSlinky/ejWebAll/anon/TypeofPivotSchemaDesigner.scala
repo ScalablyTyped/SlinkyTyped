@@ -8,7 +8,7 @@ import typingsSlinky.ejWebAll.ej.PivotSchemaDesigner
 import typingsSlinky.ejWebAll.ej.PivotSchemaDesigner.Model
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofPivotSchemaDesigner
@@ -18,7 +18,8 @@ trait TypeofPivotSchemaDesigner
       /* options */ Model, 
       PivotSchemaDesigner
     ] {
+  
   var Locale: js.Any = js.native
+  
   var fn: PivotSchemaDesigner = js.native
 }
-

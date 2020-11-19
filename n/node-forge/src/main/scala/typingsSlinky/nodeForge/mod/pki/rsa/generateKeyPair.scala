@@ -2,11 +2,12 @@ package typingsSlinky.nodeForge.mod.pki.rsa
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("node-forge", "pki.rsa.generateKeyPair")
 @js.native
 object generateKeyPair extends js.Object {
+  
   def apply(): KeyPair = js.native
   def apply(
     bits: js.UndefOr[scala.Nothing],
@@ -37,4 +38,3 @@ object generateKeyPair extends js.Object {
     callback: js.Function2[/* err */ js.Error, /* keypair */ KeyPair, Unit]
   ): KeyPair = js.native
 }
-

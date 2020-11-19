@@ -7,11 +7,12 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react", "cloneElement")
 @js.native
 object cloneElement extends js.Object {
+  
   // Custom components
   def apply[P](
     element: FunctionComponentElement[P],
@@ -54,14 +55,13 @@ object cloneElement extends js.Object {
     props: js.UndefOr[scala.Nothing],
     children: slinky.core.facade.ReactElement*
   ): slinky.core.facade.ReactElement = js.native
-  // DOM Elements
-  // ReactHTMLElement
-  def apply[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: DetailedReactHTMLElement[P, T], props: P, children: slinky.core.facade.ReactElement*): DetailedReactHTMLElement[P, T] = js.native
+  // ReactHTMLElement, less specific
+  def apply[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: ReactHTMLElement[T], props: P, children: slinky.core.facade.ReactElement*): ReactHTMLElement[T] = js.native
   def apply[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](
-    element: DetailedReactHTMLElement[P, T],
+    element: ReactHTMLElement[T],
     props: js.UndefOr[scala.Nothing],
     children: slinky.core.facade.ReactElement*
-  ): DetailedReactHTMLElement[P, T] = js.native
+  ): ReactHTMLElement[T] = js.native
   // SVGElement
   def apply[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](element: ReactSVGElement, props: P, children: slinky.core.facade.ReactElement*): ReactSVGElement = js.native
   def apply[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](
@@ -70,4 +70,3 @@ object cloneElement extends js.Object {
     children: slinky.core.facade.ReactElement*
   ): ReactSVGElement = js.native
 }
-

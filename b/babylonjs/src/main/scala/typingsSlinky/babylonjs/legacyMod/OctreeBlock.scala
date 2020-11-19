@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.legacyMod
 import typingsSlinky.babylonjs.octreeBlockMod.IOctreeContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "OctreeBlock")
 @js.native
@@ -31,11 +31,11 @@ class OctreeBlock[T] protected ()
       ]
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Legacy/legacy", "OctreeBlock")
 @js.native
 object OctreeBlock extends js.Object {
+  
   /**
     * @hidden
     */
@@ -54,4 +54,3 @@ object OctreeBlock extends js.Object {
     ]
   ): Unit = js.native
 }
-

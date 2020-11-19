@@ -7,7 +7,7 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdList.listItemLinkMod.ListItemLinkWithComponentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/menu/types/MenuItemLink", JSImport.Default)
 @js.native
@@ -16,4 +16,3 @@ object default extends TopLevel[
         (MenuItemLinkProps with RefAttributes[HTMLAnchorElement]) | (MenuItemLinkProps with ListItemLinkWithComponentProps with RefAttributes[HTMLAnchorElement])
       ]
     ]
-

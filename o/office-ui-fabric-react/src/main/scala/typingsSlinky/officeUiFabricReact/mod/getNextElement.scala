@@ -3,11 +3,12 @@ package typingsSlinky.officeUiFabricReact.mod
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react", "getNextElement")
 @js.native
 object getNextElement extends js.Object {
+  
   def apply(
     rootElement: HTMLElement,
     currentElement: HTMLElement | Null,
@@ -19,4 +20,3 @@ object getNextElement extends js.Object {
     tabbable: js.UndefOr[Boolean]
   ): HTMLElement | Null = js.native
 }
-

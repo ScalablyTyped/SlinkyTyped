@@ -8,12 +8,11 @@ import typingsSlinky.lodash.mod.RightCurriedFunction5
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashCurryRightN extends LodashConvertible {
-  @JSName("placeholder")
-  var placeholder_Original: __ = js.native
+  
   def apply(arity: Double): LodashCurryRightN1x1 = js.native
   def apply(arity: Double, func: js.Function1[/* repeated */ js.Any, _]): js.Function1[/* repeated */ js.Any, _] = js.native
   def apply(arity: __, func: js.Function1[/* repeated */ js.Any, _]): LodashCurryRightN6x2 = js.native
@@ -28,6 +27,7 @@ trait LodashCurryRightN extends LodashConvertible {
     func: js.Function5[/* t1 */ T1, /* t2 */ T2, /* t3 */ T3, /* t4 */ T4, /* t5 */ T5, R]
   ): RightCurriedFunction5[T1, T2, T3, T4, T5, R] = js.native
   def apply[T1, T2, T3, T4, T5, R](arity: __, func: js.Function5[/* t1 */ T1, /* t2 */ T2, /* t3 */ T3, /* t4 */ T4, /* t5 */ T5, R]): LodashCurryRightN5x2[T1, T2, T3, T4, T5, R] = js.native
+  
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -97,5 +97,6 @@ trait LodashCurryRightN extends LodashConvertible {
     * upperFirst, value, and words.
     **/
   def placeholder[T](value: T): LoDashImplicitWrapper[T] = js.native
+  @JSName("placeholder")
+  var placeholder_Original: __ = js.native
 }
-

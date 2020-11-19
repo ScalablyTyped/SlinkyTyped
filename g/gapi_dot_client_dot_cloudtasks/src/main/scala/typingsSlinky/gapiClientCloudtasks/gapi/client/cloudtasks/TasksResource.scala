@@ -7,10 +7,11 @@ import typingsSlinky.gapiClientCloudtasks.anon.Bearertoken
 import typingsSlinky.gapiClientCloudtasks.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TasksResource extends js.Object {
+  
   /**
     * Acknowledges a pull task.
     *
@@ -26,6 +27,7 @@ trait TasksResource extends js.Object {
     * CloudTasks.GetTask, or CloudTasks.ListTasks.
     */
   def acknowledge(request: Accesstoken): Request[js.Object] = js.native
+  
   /**
     * Cancel a pull task's lease.
     *
@@ -34,6 +36,7 @@ trait TasksResource extends js.Object {
     * available to be leased to the next caller of CloudTasks.PullTasks.
     */
   def cancelLease(request: Accesstoken): Request[Task] = js.native
+  
   /**
     * Creates a task and adds it to a queue.
     *
@@ -50,6 +53,7 @@ trait TasksResource extends js.Object {
     * the maximum task size is 1MB.
     */
   def create(request: Alt): Request[Task] = js.native
+  
   /**
     * Deletes a task.
     *
@@ -58,8 +62,10 @@ trait TasksResource extends js.Object {
     * failed.
     */
   def delete(request: Accesstoken): Request[js.Object] = js.native
+  
   /** Gets a task. */
   def get(request: Bearertoken): Request[Task] = js.native
+  
   /**
     * Lists the tasks in a queue.
     *
@@ -69,6 +75,7 @@ trait TasksResource extends js.Object {
     * subset of information which is returned.
     */
   def list(request: Callback): Request[ListTasksResponse] = js.native
+  
   /**
     * Pulls tasks from a pull queue and acquires a lease on them for a
     * specified PullTasksRequest.lease_duration.
@@ -89,6 +96,7 @@ trait TasksResource extends js.Object {
     * RateLimits.max_tasks_dispatched_per_second is exceeded.
     */
   def pull(request: Accesstoken): Request[PullTasksResponse] = js.native
+  
   /**
     * Renew the current lease of a pull task.
     *
@@ -97,6 +105,7 @@ trait TasksResource extends js.Object {
     * returned in Task.schedule_time.
     */
   def renewLease(request: Accesstoken): Request[Task] = js.native
+  
   /**
     * Forces a task to run now.
     *
@@ -126,8 +135,8 @@ trait TasksResource extends js.Object {
     */
   def run(request: Accesstoken): Request[Task] = js.native
 }
-
 object TasksResource {
+  
   @scala.inline
   def apply(
     acknowledge: Accesstoken => Request[js.Object],
@@ -143,36 +152,47 @@ object TasksResource {
     val __obj = js.Dynamic.literal(acknowledge = js.Any.fromFunction1(acknowledge), cancelLease = js.Any.fromFunction1(cancelLease), create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), pull = js.Any.fromFunction1(pull), renewLease = js.Any.fromFunction1(renewLease), run = js.Any.fromFunction1(run))
     __obj.asInstanceOf[TasksResource]
   }
+  
   @scala.inline
   implicit class TasksResourceOps[Self <: TasksResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setAcknowledge(value: Accesstoken => Request[js.Object]): Self = this.set("acknowledge", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCancelLease(value: Accesstoken => Request[Task]): Self = this.set("cancelLease", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreate(value: Alt => Request[Task]): Self = this.set("create", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDelete(value: Accesstoken => Request[js.Object]): Self = this.set("delete", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGet(value: Bearertoken => Request[Task]): Self = this.set("get", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setList(value: Callback => Request[ListTasksResponse]): Self = this.set("list", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setPull(value: Accesstoken => Request[PullTasksResponse]): Self = this.set("pull", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setRenewLease(value: Accesstoken => Request[Task]): Self = this.set("renewLease", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setRun(value: Accesstoken => Request[Task]): Self = this.set("run", js.Any.fromFunction1(value))
   }
-  
 }
-

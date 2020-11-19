@@ -8,37 +8,41 @@ import typingsSlinky.urqlCore.urqlCoreStrings.fetchSuccess
 import typingsSlinky.urqlCore.urqlCoreStrings.retryRetrying
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Data[T /* <: cacheHit | cacheInvalidation | fetchRequest | fetchSuccess | fetchError | retryRetrying | String */] extends js.Object {
+  
   var data: /* import warning: importer.ImportType#apply Failed type conversion: @urql/core.@urql/core/dist/types/types.DebugEventTypes[T] */ js.Any = js.native
 }
-
 object Data {
+  
   @scala.inline
-  def apply[/* <: typingsSlinky.urqlCore.urqlCoreStrings.cacheHit | typingsSlinky.urqlCore.urqlCoreStrings.cacheInvalidation | typingsSlinky.urqlCore.urqlCoreStrings.fetchRequest | typingsSlinky.urqlCore.urqlCoreStrings.fetchSuccess | typingsSlinky.urqlCore.urqlCoreStrings.fetchError | typingsSlinky.urqlCore.urqlCoreStrings.retryRetrying | java.lang.String */ T](
+  def apply[T /* <: cacheHit | cacheInvalidation | fetchRequest | fetchSuccess | fetchError | retryRetrying | String */](
     data: /* import warning: importer.ImportType#apply Failed type conversion: @urql/core.@urql/core/dist/types/types.DebugEventTypes[T] */ js.Any
   ): Data[T] = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[Data[T]]
   }
+  
   @scala.inline
-  implicit class DataOps[Self <: Data[_], /* <: typingsSlinky.urqlCore.urqlCoreStrings.cacheHit | typingsSlinky.urqlCore.urqlCoreStrings.cacheInvalidation | typingsSlinky.urqlCore.urqlCoreStrings.fetchRequest | typingsSlinky.urqlCore.urqlCoreStrings.fetchSuccess | typingsSlinky.urqlCore.urqlCoreStrings.fetchError | typingsSlinky.urqlCore.urqlCoreStrings.retryRetrying | java.lang.String */ T] (val x: Self with Data[T]) extends AnyVal {
+  implicit class DataOps[Self <: Data[_], T /* <: cacheHit | cacheInvalidation | fetchRequest | fetchSuccess | fetchError | retryRetrying | String */] (val x: Self with Data[T]) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setData(
       value: /* import warning: importer.ImportType#apply Failed type conversion: @urql/core.@urql/core/dist/types/types.DebugEventTypes[T] */ js.Any
     ): Self = this.set("data", value.asInstanceOf[js.Any])
   }
-  
 }
-

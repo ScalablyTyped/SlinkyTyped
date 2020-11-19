@@ -2,7 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactNative.reactNativeStrings.notification
@@ -11,15 +11,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactNative.reactNativeStrings.registrationError
 */
 trait PushNotificationEventName extends js.Object
-
 object PushNotificationEventName {
+  
   @scala.inline
   def localNotification: typingsSlinky.reactNative.reactNativeStrings.localNotification = "localNotification".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.localNotification]
+  
   @scala.inline
   def notification: typingsSlinky.reactNative.reactNativeStrings.notification = "notification".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.notification]
+  
   @scala.inline
   def register: typingsSlinky.reactNative.reactNativeStrings.register = "register".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.register]
+  
   @scala.inline
   def registrationError: typingsSlinky.reactNative.reactNativeStrings.registrationError = "registrationError".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.registrationError]
 }
-

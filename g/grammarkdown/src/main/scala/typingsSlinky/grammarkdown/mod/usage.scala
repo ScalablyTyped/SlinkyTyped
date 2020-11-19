@@ -3,11 +3,12 @@ package typingsSlinky.grammarkdown.mod
 import typingsSlinky.grammarkdown.optionsMod.KnownOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown", "usage")
 @js.native
 object usage extends js.Object {
+  
   def apply(options: KnownOptions): Unit = js.native
   def apply(
     options: KnownOptions,
@@ -21,4 +22,3 @@ object usage extends js.Object {
     printHeader: js.Function1[/* writer */ typingsSlinky.grammarkdown.optionsMod.UsageWriter, Unit]
   ): Unit = js.native
 }
-

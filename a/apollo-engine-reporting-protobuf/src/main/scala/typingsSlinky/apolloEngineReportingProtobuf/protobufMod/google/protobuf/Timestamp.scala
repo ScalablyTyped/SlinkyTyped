@@ -6,7 +6,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a Timestamp. */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "google.protobuf.Timestamp")
@@ -17,23 +17,26 @@ import scala.scalajs.js.annotation._
   */
 class Timestamp () extends ITimestamp {
   def this(properties: ITimestamp) = this()
+  
   /** Timestamp nanos. */
   @JSName("nanos")
   var nanos_Timestamp: Double = js.native
+  
   /** Timestamp seconds. */
   @JSName("seconds")
   var seconds_Timestamp: Double = js.native
+  
   /**
     * Converts this Timestamp to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "google.protobuf.Timestamp")
 @js.native
 object Timestamp extends js.Object {
+  
   /**
     * Creates a new Timestamp instance using the specified properties.
     * @param [properties] Properties to set
@@ -41,6 +44,7 @@ object Timestamp extends js.Object {
     */
   def create(): Timestamp = js.native
   def create(properties: ITimestamp): Timestamp = js.native
+  
   /**
     * Decodes a Timestamp message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -53,6 +57,7 @@ object Timestamp extends js.Object {
   def decode(reader: Reader, length: Double): Timestamp = js.native
   def decode(reader: js.typedarray.Uint8Array): Timestamp = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): Timestamp = js.native
+  
   /**
     * Decodes a Timestamp message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -62,6 +67,7 @@ object Timestamp extends js.Object {
     */
   def decodeDelimited(reader: Reader): Timestamp = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): Timestamp = js.native
+  
   /**
     * Encodes the specified Timestamp message. Does not implicitly {@link google.protobuf.Timestamp.verify|verify} messages.
     * @param message Timestamp message or plain object to encode
@@ -70,6 +76,7 @@ object Timestamp extends js.Object {
     */
   def encode(message: ITimestamp): Writer = js.native
   def encode(message: ITimestamp, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified Timestamp message, length delimited. Does not implicitly {@link google.protobuf.Timestamp.verify|verify} messages.
     * @param message Timestamp message or plain object to encode
@@ -78,12 +85,14 @@ object Timestamp extends js.Object {
     */
   def encodeDelimited(message: ITimestamp): Writer = js.native
   def encodeDelimited(message: ITimestamp, writer: Writer): Writer = js.native
+  
   /**
     * Creates a Timestamp message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns Timestamp
     */
   def fromObject(`object`: StringDictionary[js.Any]): Timestamp = js.native
+  
   /**
     * Creates a plain object from a Timestamp message. Also converts values to other types if specified.
     * @param message Timestamp
@@ -92,6 +101,7 @@ object Timestamp extends js.Object {
     */
   def toObject(message: Timestamp): StringDictionary[js.Any] = js.native
   def toObject(message: Timestamp, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a Timestamp message.
     * @param message Plain object to verify
@@ -99,4 +109,3 @@ object Timestamp extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

@@ -8,11 +8,12 @@ import typingsSlinky.reactToolbox.cardTextMod.CardTextProps
 import typingsSlinky.reactToolbox.cardTitleMod.CardTitleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-toolbox/components/card", JSImport.Namespace)
 @js.native
 object cardMod extends js.Object {
+  
   @js.native
   class Card ()
     extends Component[CardProps, js.Object, js.Any]
@@ -36,6 +37,4 @@ object cardMod extends js.Object {
   @js.native
   class default ()
     extends Component[CardProps, js.Object, js.Any]
-  
 }
-

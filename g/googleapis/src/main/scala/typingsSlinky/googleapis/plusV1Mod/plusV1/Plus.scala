@@ -5,7 +5,7 @@ import typingsSlinky.googleapisCommon.apiMod.GlobalOptions
 import typingsSlinky.googleapisCommon.apiMod.GoogleConfigurable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Google+ API
@@ -27,9 +27,12 @@ import scala.scalajs.js.annotation._
 class Plus protected () extends js.Object {
   def this(options: GlobalOptions) = this()
   def this(options: GlobalOptions, google: GoogleConfigurable) = this()
+  
   var activities: ResourceActivities = js.native
+  
   var comments: ResourceComments = js.native
+  
   var context: APIRequestContext = js.native
+  
   var people: ResourcePeople = js.native
 }
-

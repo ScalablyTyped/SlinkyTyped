@@ -2,7 +2,7 @@ package typingsSlinky.luminoWidgets.layoutMod.Layout
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A type alias for the layout fit policy.
@@ -18,11 +18,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.luminoWidgets.luminoWidgetsStrings.`set-min-size`
 */
 trait FitPolicy extends js.Object
-
 object FitPolicy {
+  
   @scala.inline
   def `set-min-size`: typingsSlinky.luminoWidgets.luminoWidgetsStrings.`set-min-size` = "set-min-size".asInstanceOf[typingsSlinky.luminoWidgets.luminoWidgetsStrings.`set-min-size`]
+  
   @scala.inline
   def `set-no-constraint`: typingsSlinky.luminoWidgets.luminoWidgetsStrings.`set-no-constraint` = "set-no-constraint".asInstanceOf[typingsSlinky.luminoWidgets.luminoWidgetsStrings.`set-no-constraint`]
 }
-

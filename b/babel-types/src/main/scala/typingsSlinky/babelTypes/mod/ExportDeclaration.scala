@@ -5,7 +5,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.ExportDefaultDeclaration
 import typingsSlinky.babelTypes.babelTypesStrings.ExportNamedDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ExportAllDeclaration_
@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ExportNamedDeclaration_
 */
 trait ExportDeclaration extends js.Object
-
 object ExportDeclaration {
+  
   @scala.inline
   def ExportAllDeclaration_(
     end: Double,
@@ -27,6 +27,7 @@ object ExportDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportDeclaration]
   }
+  
   @scala.inline
   def ExportDefaultDeclaration_(
     declaration: Declaration | Expression,
@@ -39,6 +40,7 @@ object ExportDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportDeclaration]
   }
+  
   @scala.inline
   def ExportNamedDeclaration_(
     declaration: Declaration,
@@ -53,4 +55,3 @@ object ExportDeclaration {
     __obj.asInstanceOf[ExportDeclaration]
   }
 }
-

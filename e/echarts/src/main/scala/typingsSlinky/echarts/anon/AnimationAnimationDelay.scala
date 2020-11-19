@@ -2,10 +2,11 @@ package typingsSlinky.echarts.anon
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AnimationAnimationDelay extends js.Object {
+  
   /**
     * Whether to enable animation.
     *
@@ -15,6 +16,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.animation
     */
   var animation: js.UndefOr[Boolean] = js.native
+  
   /**
     * Delay before updating the first animation, which supports
     * callback function for different data to have different animation
@@ -32,6 +34,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.animationDelay
     */
   var animationDelay: js.UndefOr[js.Function | Double] = js.native
+  
   /**
     * Delay before updating animation, which supports callback
     * function for different data to have different animation effect.
@@ -50,6 +53,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.animationDelayUpdate
     */
   var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
+  
   /**
     * Duration of the first animation, which supports callback
     * function for different data to have different animation effect:
@@ -62,6 +66,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.animationDuration
     */
   var animationDuration: js.UndefOr[js.Function | Double] = js.native
+  
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
@@ -74,6 +79,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.animationDurationUpdate
     */
   var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
+  
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -86,6 +92,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.animationEasing
     */
   var animationEasing: js.UndefOr[String] = js.native
+  
   /**
     * Easing method used for animation.
     *
@@ -95,6 +102,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.animationEasingUpdate
     */
   var animationEasingUpdate: js.UndefOr[String] = js.native
+  
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger
@@ -106,6 +114,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.animationThreshold
     */
   var animationThreshold: js.UndefOr[Double] = js.native
+  
   /**
     * Data array for mark points, each of which is an object.
     * Here are some ways to assign mark point position.
@@ -132,6 +141,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.data
     */
   var data: js.UndefOr[SymbolSize] = js.native
+  
   /**
     * Mark point style.
     *
@@ -139,6 +149,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.itemStyle
     */
   var itemStyle: js.UndefOr[Emphasis] = js.native
+  
   /**
     * Label of mark point.
     *
@@ -146,6 +157,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.label
     */
   var label: js.UndefOr[BorderWidth] = js.native
+  
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to
@@ -155,6 +167,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.silent
     */
   var silent: js.UndefOr[Boolean] = js.native
+  
   /**
     * Symbol of .
     *
@@ -197,6 +210,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.symbol
     */
   var symbol: js.UndefOr[String] = js.native
+  
   /**
     * Whether to keep aspect for symbols in the form of `path://`.
     *
@@ -204,6 +218,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.symbolKeepAspect
     */
   var symbolKeepAspect: js.UndefOr[Boolean] = js.native
+  
   /**
     * Offset of symbol relative to original position.
     * By default, symbol will be put in the center position of
@@ -226,6 +241,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.symbolOffset
     */
   var symbolOffset: js.UndefOr[js.Array[_]] = js.native
+  
   /**
     * Rotate degree of symbol.
     * Note that when `symbol` is set to be `'arrow'` in `markLine`,
@@ -236,6 +252,7 @@ trait AnimationAnimationDelay extends js.Object {
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint.symbolRotate
     */
   var symbolRotate: js.UndefOr[Double] = js.native
+  
   /**
     * symbol size.
     * It can be set to single numbers like `10`, or use an array
@@ -263,97 +280,135 @@ trait AnimationAnimationDelay extends js.Object {
     */
   var symbolSize: js.UndefOr[js.Array[_] | js.Function | Double] = js.native
 }
-
 object AnimationAnimationDelay {
+  
   @scala.inline
   def apply(): AnimationAnimationDelay = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[AnimationAnimationDelay]
   }
+  
   @scala.inline
   implicit class AnimationAnimationDelayOps[Self <: AnimationAnimationDelay] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setAnimation(value: Boolean): Self = this.set("animation", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)
+    
     @scala.inline
     def setAnimationDelay(value: js.Function | Double): Self = this.set("animationDelay", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAnimationDelay: Self = this.set("animationDelay", js.undefined)
+    
     @scala.inline
     def setAnimationDelayUpdate(value: js.Function | Double): Self = this.set("animationDelayUpdate", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAnimationDelayUpdate: Self = this.set("animationDelayUpdate", js.undefined)
+    
     @scala.inline
     def setAnimationDuration(value: js.Function | Double): Self = this.set("animationDuration", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAnimationDuration: Self = this.set("animationDuration", js.undefined)
+    
     @scala.inline
     def setAnimationDurationUpdate(value: js.Function | Double): Self = this.set("animationDurationUpdate", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAnimationDurationUpdate: Self = this.set("animationDurationUpdate", js.undefined)
+    
     @scala.inline
     def setAnimationEasing(value: String): Self = this.set("animationEasing", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAnimationEasing: Self = this.set("animationEasing", js.undefined)
+    
     @scala.inline
     def setAnimationEasingUpdate(value: String): Self = this.set("animationEasingUpdate", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAnimationEasingUpdate: Self = this.set("animationEasingUpdate", js.undefined)
+    
     @scala.inline
     def setAnimationThreshold(value: Double): Self = this.set("animationThreshold", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAnimationThreshold: Self = this.set("animationThreshold", js.undefined)
+    
     @scala.inline
     def setData(value: SymbolSize): Self = this.set("data", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)
+    
     @scala.inline
     def setItemStyle(value: Emphasis): Self = this.set("itemStyle", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteItemStyle: Self = this.set("itemStyle", js.undefined)
+    
     @scala.inline
     def setLabel(value: BorderWidth): Self = this.set("label", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
+    
     @scala.inline
     def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteSilent: Self = this.set("silent", js.undefined)
+    
     @scala.inline
     def setSymbol(value: String): Self = this.set("symbol", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteSymbol: Self = this.set("symbol", js.undefined)
+    
     @scala.inline
     def setSymbolKeepAspect(value: Boolean): Self = this.set("symbolKeepAspect", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteSymbolKeepAspect: Self = this.set("symbolKeepAspect", js.undefined)
+    
     @scala.inline
     def setSymbolOffsetVarargs(value: js.Any*): Self = this.set("symbolOffset", js.Array(value :_*))
+    
     @scala.inline
     def setSymbolOffset(value: js.Array[_]): Self = this.set("symbolOffset", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteSymbolOffset: Self = this.set("symbolOffset", js.undefined)
+    
     @scala.inline
     def setSymbolRotate(value: Double): Self = this.set("symbolRotate", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteSymbolRotate: Self = this.set("symbolRotate", js.undefined)
+    
     @scala.inline
     def setSymbolSizeVarargs(value: js.Any*): Self = this.set("symbolSize", js.Array(value :_*))
+    
     @scala.inline
     def setSymbolSize(value: js.Array[_] | js.Function | Double): Self = this.set("symbolSize", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteSymbolSize: Self = this.set("symbolSize", js.undefined)
   }
-  
 }
-

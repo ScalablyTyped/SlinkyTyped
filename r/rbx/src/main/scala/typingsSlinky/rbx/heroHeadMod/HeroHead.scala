@@ -6,9 +6,8 @@ import typingsSlinky.rbx.anon.PreferHelpersPropsOverrid
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx/layout/hero/hero-head", "HeroHead")
 @js.native
 object HeroHead extends TopLevel[ForwardRefAsExoticComponent[PreferHelpersPropsOverrid, ReactElement]]
-

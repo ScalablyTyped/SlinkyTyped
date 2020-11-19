@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create a new ElementDragHelper.
@@ -16,4 +16,3 @@ class ElementDragHelper protected ()
   def this(element: typingsSlinky.playcanvas.pc.ElementComponent) = this()
   def this(element: typingsSlinky.playcanvas.pc.ElementComponent, axis: String) = this()
 }
-

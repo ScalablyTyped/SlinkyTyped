@@ -15,7 +15,7 @@ import typingsSlinky.mocha.mochaStrings.test
 import typingsSlinky.mocha.mochaStrings.waiting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // #endregion Runner "pending" event
 // #region Runner untyped events
@@ -49,33 +49,22 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Runner extends EventEmitter {
+  
   var _abort: js.Any = js.native
+  
   var _defaultGrep: js.Any = js.native
+  
   var _delay: js.Any = js.native
+  
   var _globals: js.Any = js.native
-  var allowUncaught: js.UndefOr[Boolean] = js.native
-  var asyncOnly: js.UndefOr[Boolean] = js.native
-  var currentRunnable: js.UndefOr[Runnable] = js.native
-  var failures: Double = js.native
-  var forbidOnly: js.UndefOr[Boolean] = js.native
-  var forbidPending: js.UndefOr[Boolean] = js.native
-  var fullStackTrace: js.UndefOr[Boolean] = js.native
-  var hookErr: js.Any = js.native
-  var ignoreLeaks: js.UndefOr[Boolean] = js.native
-  var next: js.Any = js.native
-  var nextSuite: js.Any = js.native
-  var prevGlobalsLength: js.Any = js.native
-  var started: Boolean = js.native
-  var stats: js.UndefOr[Stats] = js.native
-  var suite: Suite = js.native
-  var test: js.UndefOr[Test] = js.native
-  var total: Double = js.native
+  
   /**
     * Cleanly abort execution.
     *
     * @see https://mochajs.org/api/Mocha.Runner.html#.Runner#abort
     */
   def abort(): this.type = js.native
+  
   def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_end(event: end, listener: js.Function0[Unit]): this.type = js.native
@@ -101,12 +90,20 @@ trait Runner extends EventEmitter {
   def addListener_testend(event: `test end`, listener: js.Function1[/* test */ Test, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_waiting(event: waiting, listener: js.Function1[/* rootSuite */ Suite, Unit]): this.type = js.native
+  
+  var allowUncaught: js.UndefOr[Boolean] = js.native
+  
+  var asyncOnly: js.UndefOr[Boolean] = js.native
+  
   /**
     * Check for global variable leaks.
     *
     * @see https://mochajs.org/api/Mocha.Runner.html#checkGlobals
     */
   /* protected */ def checkGlobals(test: Test): Unit = js.native
+  
+  var currentRunnable: js.UndefOr[Runnable] = js.native
+  
   def emit(name: String, args: js.Any*): Boolean = js.native
   @JSName("emit")
   def emit_end(name: end): Boolean = js.native
@@ -132,12 +129,14 @@ trait Runner extends EventEmitter {
   def emit_testend(name: `test end`, test: Test): Boolean = js.native
   @JSName("emit")
   def emit_waiting(name: waiting, rootSuite: Suite): Boolean = js.native
+  
   /**
     * Fail the given `test`.
     *
     * @see https://mochajs.org/api/Mocha.Runner.html#fail
     */
   /* protected */ def fail(test: Test, err: js.Any): Unit = js.native
+  
   /**
     * Fail the given `hook` with `err`.
     *
@@ -157,12 +156,22 @@ trait Runner extends EventEmitter {
     * @see https://mochajs.org/api/Mocha.Runner.html#failHook
     */
   /* protected */ def failHook(hook: Hook, err: js.Any): Unit = js.native
+  
+  var failures: Double = js.native
+  
+  var forbidOnly: js.UndefOr[Boolean] = js.native
+  
+  var forbidPending: js.UndefOr[Boolean] = js.native
+  
+  var fullStackTrace: js.UndefOr[Boolean] = js.native
+  
   /**
     * Return a list of global properties.
     *
     * @see https://mochajs.org/api/Mocha.Runner.html#globalProps
     */
   /* protected */ def globalProps(): js.Array[String] = js.native
+  
   /**
     * Gets the allowed globals.
     *
@@ -175,6 +184,7 @@ trait Runner extends EventEmitter {
     * @see https://mochajs.org/api/Mocha.Runner.html#.Runner#globals
     */
   def globals(arr: js.Array[String]): this.type = js.native
+  
    // added by reporters
   /**
     * Run tests with full titles matching `re`. Updates runner.total
@@ -183,6 +193,7 @@ trait Runner extends EventEmitter {
     * @see https://mochajs.org/api/Mocha.Runner.html#.Runner#grep
     */
   def grep(re: js.RegExp, invert: Boolean): this.type = js.native
+  
   /**
     * Returns the number of tests matching the grep search for the
     * given suite.
@@ -190,12 +201,14 @@ trait Runner extends EventEmitter {
     * @see https://mochajs.org/api/Mocha.Runner.html#.Runner#grepTotal
     */
   def grepTotal(suite: Suite): Double = js.native
+  
   /**
     * Run hook `name` callbacks and then invoke `fn()`.
     *
     * @see https://mochajs.org/api/Mocha.Runner.html#hook
     */
   /* protected */ def hook(name: String, fn: js.Function0[Unit]): Unit = js.native
+  
   /**
     * Run hooks from the bottom up.
     *
@@ -205,6 +218,9 @@ trait Runner extends EventEmitter {
     name: String,
     fn: js.Function2[/* err */ js.UndefOr[js.Any], /* errSuite */ js.UndefOr[Suite], Unit]
   ): Unit = js.native
+  
+  var hookErr: js.Any = js.native
+  
   /**
     * Run hooks from the top level down.
     *
@@ -214,6 +230,7 @@ trait Runner extends EventEmitter {
     name: String,
     fn: js.Function2[/* err */ js.UndefOr[js.Any], /* errSuite */ js.UndefOr[Suite], Unit]
   ): Unit = js.native
+  
   /**
     * Run hook `name` for the given array of `suites`
     * in order, and callback `fn(err, errSuite)`.
@@ -225,6 +242,13 @@ trait Runner extends EventEmitter {
     suites: js.Array[Suite],
     fn: js.Function2[/* err */ js.UndefOr[js.Any], /* errSuite */ js.UndefOr[Suite], Unit]
   ): Unit = js.native
+  
+  var ignoreLeaks: js.UndefOr[Boolean] = js.native
+  
+  var next: js.Any = js.native
+  
+  var nextSuite: js.Any = js.native
+  
   def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("on")
   def on_end(event: end, listener: js.Function0[Unit]): this.type = js.native
@@ -250,6 +274,7 @@ trait Runner extends EventEmitter {
   def on_testend(event: `test end`, listener: js.Function1[/* test */ Test, Unit]): this.type = js.native
   @JSName("on")
   def on_waiting(event: waiting, listener: js.Function1[/* rootSuite */ Suite, Unit]): this.type = js.native
+  
   def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("once")
   def once_end(event: end, listener: js.Function0[Unit]): this.type = js.native
@@ -275,12 +300,14 @@ trait Runner extends EventEmitter {
   def once_testend(event: `test end`, listener: js.Function1[/* test */ Test, Unit]): this.type = js.native
   @JSName("once")
   def once_waiting(event: waiting, listener: js.Function1[/* rootSuite */ Suite, Unit]): this.type = js.native
+  
   /**
     * Return an array of parent Suites from closest to furthest.
     *
     * @see https://mochajs.org/api/Mocha.Runner.html#parents
     */
   /* protected */ def parents(): js.Array[Suite] = js.native
+  
   def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_end(event: end, listener: js.Function0[Unit]): this.type = js.native
@@ -306,6 +333,7 @@ trait Runner extends EventEmitter {
   def prependListener_testend(event: `test end`, listener: js.Function1[/* test */ Test, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_waiting(event: waiting, listener: js.Function1[/* rootSuite */ Suite, Unit]): this.type = js.native
+  
   def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_end(event: end, listener: js.Function0[Unit]): this.type = js.native
@@ -331,6 +359,9 @@ trait Runner extends EventEmitter {
   def prependOnceListener_testend(event: `test end`, listener: js.Function1[/* test */ Test, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_waiting(event: waiting, listener: js.Function1[/* rootSuite */ Suite, Unit]): this.type = js.native
+  
+  var prevGlobalsLength: js.Any = js.native
+  
   def removeListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_end(event: end, listener: js.Function0[Unit]): this.type = js.native
@@ -356,6 +387,7 @@ trait Runner extends EventEmitter {
   def removeListener_testend(event: `test end`, listener: js.Function1[/* test */ Test, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_waiting(event: waiting, listener: js.Function1[/* rootSuite */ Suite, Unit]): this.type = js.native
+  
   /**
     * Run the root suite and invoke `fn(failures)` on completion.
     *
@@ -363,24 +395,38 @@ trait Runner extends EventEmitter {
     */
   def run(): this.type = js.native
   def run(fn: js.Function1[/* failures */ Double, Unit]): this.type = js.native
+  
   /**
     * Run the given `suite` and invoke the callback `fn()` when complete.
     *
     * @see https://mochajs.org/api/Mocha.Runner.html#runSuite
     */
   /* protected */ def runSuite(suite: Suite, fn: js.Function1[/* errSuite */ js.UndefOr[Suite], Unit]): Unit = js.native
+  
   /**
     * Run the current test and callback `fn(err)`.
     *
     * @see https://mochajs.org/api/Mocha.Runner.html#runTest
     */
   /* protected */ def runTest(fn: Done): js.Any = js.native
+  
   /**
     * Run tests in the given `suite` and invoke the callback `fn()` when complete.
     *
     * @see https://mochajs.org/api/Mocha.Runner.html#runTests
     */
   /* protected */ def runTests(suite: Suite, fn: js.Function1[/* errSuite */ js.UndefOr[Suite], Unit]): Unit = js.native
+  
+  var started: Boolean = js.native
+  
+  var stats: js.UndefOr[Stats] = js.native
+  
+  var suite: Suite = js.native
+  
+  var test: js.UndefOr[Test] = js.native
+  
+  var total: Double = js.native
+  
   /**
     * Handle uncaught exceptions.
     *
@@ -388,4 +434,3 @@ trait Runner extends EventEmitter {
     */
   def uncaught(err: js.Any): Unit = js.native
 }
-

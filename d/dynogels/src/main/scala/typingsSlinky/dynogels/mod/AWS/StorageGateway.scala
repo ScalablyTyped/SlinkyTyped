@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.storagegatewayMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.StorageGateway")
 @js.native
@@ -14,4 +14,3 @@ class StorageGateway ()
   extends typingsSlinky.awsSdk.mod.StorageGateway {
   def this(options: ClientConfiguration) = this()
 }
-

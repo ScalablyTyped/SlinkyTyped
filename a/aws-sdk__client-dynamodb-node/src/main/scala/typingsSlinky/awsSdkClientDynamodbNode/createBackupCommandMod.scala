@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-dynamodb-node/commands/CreateBackupCommand", JSImport.Namespace)
 @js.native
 object createBackupCommandMod extends js.Object {
+  
   @js.native
   class CreateBackupCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object createBackupCommandMod extends js.Object {
           Readable
         ] {
     def this(input: CreateBackupInput) = this()
+    
     val middlewareStack: MiddlewareStack[CreateBackupInput, CreateBackupOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[CreateBackupInput, CreateBackupOutput] = js.native
   }
-  
 }
-

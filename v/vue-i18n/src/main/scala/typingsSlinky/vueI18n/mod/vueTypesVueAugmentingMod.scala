@@ -7,29 +7,15 @@ import typingsSlinky.vueI18n.anon.FnCallKeyChoiceLocaleValues
 import typingsSlinky.vueI18n.anon.FnCallValueKeyLocale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vue/types/vue", JSImport.Namespace)
 @js.native
 object vueTypesVueAugmentingMod extends js.Object {
+  
   @js.native
   trait Vue extends js.Object {
-    @JSName("$d")
-    var $d_Original: FnCallValueKeyLocale = js.native
-    @JSName("$i18n")
-    val $i18n: VueI18n with IVueI18n = js.native
-    @JSName("$n")
-    var $n_Original: Fn0 = js.native
-    @JSName("$t")
-    var $t_Original: FnCall = js.native
-    @JSName("$tc")
-    var $tc_Original: FnCallKeyChoiceLocaleValues = js.native
-    @JSName("$te")
-    var $te_Original: js.Function2[
-        /* key */ typingsSlinky.vueI18n.mod.VueI18n.Path, 
-        /* locale */ js.UndefOr[typingsSlinky.vueI18n.mod.VueI18n.Locale], 
-        Boolean
-      ] = js.native
+    
     @JSName("$d")
     def $d(value: Double): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
     @JSName("$d")
@@ -58,6 +44,12 @@ object vueTypesVueAugmentingMod extends js.Object {
       key: typingsSlinky.vueI18n.mod.VueI18n.Path,
       locale: typingsSlinky.vueI18n.mod.VueI18n.Locale
     ): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+    @JSName("$d")
+    var $d_Original: FnCallValueKeyLocale = js.native
+    
+    @JSName("$i18n")
+    val $i18n: VueI18n with IVueI18n = js.native
+    
     @JSName("$n")
     def $n(value: Double): typingsSlinky.vueI18n.mod.VueI18n.NumberFormatResult = js.native
     @JSName("$n")
@@ -72,6 +64,9 @@ object vueTypesVueAugmentingMod extends js.Object {
       key: typingsSlinky.vueI18n.mod.VueI18n.Path,
       locale: typingsSlinky.vueI18n.mod.VueI18n.Locale
     ): typingsSlinky.vueI18n.mod.VueI18n.NumberFormatResult = js.native
+    @JSName("$n")
+    var $n_Original: Fn0 = js.native
+    
     @JSName("$t")
     def $t(key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.TranslateResult = js.native
     @JSName("$t")
@@ -84,6 +79,9 @@ object vueTypesVueAugmentingMod extends js.Object {
     ): typingsSlinky.vueI18n.mod.VueI18n.TranslateResult = js.native
     @JSName("$t")
     def $t(key: typingsSlinky.vueI18n.mod.VueI18n.Path, values: typingsSlinky.vueI18n.mod.VueI18n.Values): typingsSlinky.vueI18n.mod.VueI18n.TranslateResult = js.native
+    @JSName("$t")
+    var $t_Original: FnCall = js.native
+    
     @JSName("$tc")
     def $tc(key: typingsSlinky.vueI18n.mod.VueI18n.Path): String = js.native
     @JSName("$tc")
@@ -113,11 +111,18 @@ object vueTypesVueAugmentingMod extends js.Object {
       choice: typingsSlinky.vueI18n.mod.VueI18n.Choice,
       values: typingsSlinky.vueI18n.mod.VueI18n.Values
     ): String = js.native
+    @JSName("$tc")
+    var $tc_Original: FnCallKeyChoiceLocaleValues = js.native
+    
     @JSName("$te")
     def $te(key: typingsSlinky.vueI18n.mod.VueI18n.Path): Boolean = js.native
     @JSName("$te")
     def $te(key: typingsSlinky.vueI18n.mod.VueI18n.Path, locale: typingsSlinky.vueI18n.mod.VueI18n.Locale): Boolean = js.native
+    @JSName("$te")
+    var $te_Original: js.Function2[
+        /* key */ typingsSlinky.vueI18n.mod.VueI18n.Path, 
+        /* locale */ js.UndefOr[typingsSlinky.vueI18n.mod.VueI18n.Locale], 
+        Boolean
+      ] = js.native
   }
-  
 }
-

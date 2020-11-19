@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/commands/CreateGrantCommand", JSImport.Namespace)
 @js.native
 object createGrantCommandMod extends js.Object {
+  
   @js.native
   class CreateGrantCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object createGrantCommandMod extends js.Object {
           Blob
         ] {
     def this(input: CreateGrantInput) = this()
+    
     val middlewareStack: MiddlewareStack[CreateGrantInput, CreateGrantOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[CreateGrantInput, CreateGrantOutput] = js.native
   }
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.lodash.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // prototype.commit
 // prototype.reverse
@@ -12,21 +12,25 @@ import scala.scalajs.js.annotation._
 // prototype.valueOf
 @js.native
 trait LoDashWrapper[TValue] extends js.Object {
+  
   /**
     * @see _.bindAll
     */
   def bindAll(methodNames: Many[String]*): this.type = js.native
+  
   /**
     * Executes the chained sequence and returns the wrapped result.
     *
     * @return Returns the new lodash wrapper instance.
     */
   def commit(): this.type = js.native
+  
   /**
     * @see _.forEach
     */
   def each(): this.type = js.native
   def each(iteratee: StringIterator[_]): this.type = js.native
+  
   /**
     * @see _.forEachRight
     */
@@ -46,6 +50,7 @@ trait LoDashWrapper[TValue] extends js.Object {
   def eachRight_T_Object[T /* <: js.Object */](): this.type = js.native
   @JSName("eachRight")
   def eachRight_T_Object[T /* <: js.Object */](iteratee: ObjectIterator[T, _]): this.type = js.native
+  
   /**
     * @see _.forEach
     */
@@ -60,15 +65,18 @@ trait LoDashWrapper[TValue] extends js.Object {
   def each_T_Object[T /* <: js.Object */](): this.type = js.native
   @JSName("each")
   def each_T_Object[T /* <: js.Object */](iteratee: ObjectIterator[T, _]): this.type = js.native
+  
   /**
     * @see _.flip
     */
   def flip(): this.type = js.native
+  
   /**
     * @see _.forEach
     */
   def forEach(): this.type = js.native
   def forEach(iteratee: StringIterator[_]): this.type = js.native
+  
   /**
     * @see _.forEachRight
     */
@@ -88,6 +96,7 @@ trait LoDashWrapper[TValue] extends js.Object {
   def forEachRight_T_Object[T /* <: js.Object */](): this.type = js.native
   @JSName("forEachRight")
   def forEachRight_T_Object[T /* <: js.Object */](iteratee: ObjectIterator[T, _]): this.type = js.native
+  
   /**
     * @see _.forEach
     */
@@ -102,30 +111,36 @@ trait LoDashWrapper[TValue] extends js.Object {
   def forEach_T_Object[T /* <: js.Object */](): this.type = js.native
   @JSName("forEach")
   def forEach_T_Object[T /* <: js.Object */](iteratee: ObjectIterator[T, _]): this.type = js.native
+  
   /**
     * @see _.forIn
     */
   def forIn[T](): this.type = js.native
   def forIn[T](iteratee: ObjectIterator[T, _]): this.type = js.native
+  
   /**
     * @see _.forInRight
     */
   def forInRight[T](): this.type = js.native
   def forInRight[T](iteratee: ObjectIterator[T, _]): this.type = js.native
+  
   /**
     * @see _.forOwn
     */
   def forOwn[T](): this.type = js.native
   def forOwn[T](iteratee: ObjectIterator[T, _]): this.type = js.native
+  
   /**
     * @see _.forOwnRight
     */
   def forOwnRight[T](): this.type = js.native
   def forOwnRight[T](iteratee: ObjectIterator[T, _]): this.type = js.native
+  
   /**
     * @see _.once
     */
   def once(): this.type = js.native
+  
   /**
     * @see _.pullAllBy
     */
@@ -138,6 +153,7 @@ trait LoDashWrapper[TValue] extends js.Object {
     */
   @JSName("pullAllBy")
   def pullAllBy_T1T2[T1, T2](values: List[T2], iteratee: ValueIteratee[T1 | T2]): this.type = js.native
+  
   /**
     * @see _.pullAllWith
     */
@@ -150,10 +166,12 @@ trait LoDashWrapper[TValue] extends js.Object {
     */
   @JSName("pullAllWith")
   def pullAllWith_T1T2[T1, T2](values: List[T2], comparator: Comparator2[T1, T2]): this.type = js.native
+  
   /**
     * @see _.pullAt
     */
   def pullAt(indexes: Many[Double]*): this.type = js.native
+  
   /**
     * Reverses the wrapped array so the first element becomes the last, the second element becomes the second to
     * last, and so on.
@@ -163,14 +181,17 @@ trait LoDashWrapper[TValue] extends js.Object {
     * @return Returns the new reversed lodash wrapper instance.
     */
   def reverse(): this.type = js.native
+  
   /**
     * @see _.tap
     */
   def tap(interceptor: js.Function1[/* value */ TValue, Unit]): this.type = js.native
+  
   /**
     * @see _.value
     */
   def toJSON(): TValue = js.native
+  
   /**
     * Executes the chained sequence to extract the unwrapped value.
     *
@@ -180,4 +201,3 @@ trait LoDashWrapper[TValue] extends js.Object {
     */
   def value(): TValue = js.native
 }
-

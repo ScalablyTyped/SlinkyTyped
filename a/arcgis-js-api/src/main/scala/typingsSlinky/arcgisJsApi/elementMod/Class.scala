@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Element
 import typingsSlinky.arcgisJsApi.esri.ElementProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/form/elements/Element", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Element {
   def this(properties: ElementProperties) = this()
 }
-

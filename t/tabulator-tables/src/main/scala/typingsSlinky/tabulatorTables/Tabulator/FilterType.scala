@@ -2,7 +2,7 @@ package typingsSlinky.tabulatorTables.Tabulator
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.tabulatorTables.tabulatorTablesStrings.Equalssign
@@ -18,29 +18,38 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.tabulatorTables.tabulatorTablesStrings.ends
 */
 trait FilterType extends js.Object
-
 object FilterType {
+  
   @scala.inline
   def Equalssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.Equalssign = "=".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.Equalssign]
+  
   @scala.inline
   def ExclamationmarkEqualssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.ExclamationmarkEqualssign = "!=".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.ExclamationmarkEqualssign]
+  
   @scala.inline
   def Greaterthansign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.Greaterthansign]
+  
   @scala.inline
   def GreaterthansignEqualssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.GreaterthansignEqualssign]
+  
   @scala.inline
   def Lessthansign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.Lessthansign]
+  
   @scala.inline
   def LessthansignEqualssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.LessthansignEqualssign]
+  
   @scala.inline
   def ends: typingsSlinky.tabulatorTables.tabulatorTablesStrings.ends = "ends".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.ends]
+  
   @scala.inline
   def in: typingsSlinky.tabulatorTables.tabulatorTablesStrings.in = "in".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.in]
+  
   @scala.inline
   def like: typingsSlinky.tabulatorTables.tabulatorTablesStrings.like = "like".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.like]
+  
   @scala.inline
   def regex: typingsSlinky.tabulatorTables.tabulatorTablesStrings.regex = "regex".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.regex]
+  
   @scala.inline
   def starts: typingsSlinky.tabulatorTables.tabulatorTablesStrings.starts = "starts".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.starts]
 }
-

@@ -2,9 +2,10 @@ package typingsSlinky.naverWhale.whale
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object bookmarks {
+  
   type BookmarkChangedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* id */ java.lang.String, 
@@ -12,6 +13,7 @@ package object bookmarks {
       scala.Unit
     ]
   ]
+  
   type BookmarkChildrenReordered = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* id */ java.lang.String, 
@@ -19,6 +21,7 @@ package object bookmarks {
       scala.Unit
     ]
   ]
+  
   type BookmarkCreatedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* id */ java.lang.String, 
@@ -26,8 +29,11 @@ package object bookmarks {
       scala.Unit
     ]
   ]
+  
   type BookmarkImportBeganEvent = typingsSlinky.chrome.chrome.events.Event[js.Function0[scala.Unit]]
+  
   type BookmarkImportEndedEvent = typingsSlinky.chrome.chrome.events.Event[js.Function0[scala.Unit]]
+  
   type BookmarkMovedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* id */ java.lang.String, 
@@ -35,6 +41,7 @@ package object bookmarks {
       scala.Unit
     ]
   ]
+  
   type BookmarkRemovedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* id */ java.lang.String, 

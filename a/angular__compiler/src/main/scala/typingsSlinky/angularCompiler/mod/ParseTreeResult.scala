@@ -3,7 +3,7 @@ package typingsSlinky.angularCompiler.mod
 import typingsSlinky.angularCompiler.mlParserAstMod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler", "ParseTreeResult")
 @js.native
@@ -14,4 +14,3 @@ class ParseTreeResult protected ()
     errors: js.Array[typingsSlinky.angularCompiler.srcParseUtilMod.ParseError]
   ) = this()
 }
-

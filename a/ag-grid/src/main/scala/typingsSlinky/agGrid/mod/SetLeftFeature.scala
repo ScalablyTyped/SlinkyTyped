@@ -5,7 +5,7 @@ import typingsSlinky.agGrid.beansMod.Beans
 import typingsSlinky.agGrid.columnGroupChildMod.ColumnGroupChild
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ag-grid", "SetLeftFeature")
 @js.native
@@ -19,4 +19,3 @@ class SetLeftFeature protected ()
     colsSpanning: js.Array[typingsSlinky.agGrid.columnMod.Column]
   ) = this()
 }
-

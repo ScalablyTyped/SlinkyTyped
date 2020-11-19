@@ -2,10 +2,12 @@ package typingsSlinky.jsonschema
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type CustomFormat = js.Function1[/* input */ js.Any, scala.Boolean]
+  
   type CustomProperty = js.Function4[
     /* instance */ js.Any, 
     /* schema */ typingsSlinky.jsonschema.mod.Schema, 
@@ -13,6 +15,7 @@ package object mod {
     /* ctx */ typingsSlinky.jsonschema.mod.SchemaContext, 
     java.lang.String | typingsSlinky.jsonschema.mod.ValidatorResult
   ]
+  
   type RewriteFunction = js.Function4[
     /* instance */ js.Any, 
     /* schema */ typingsSlinky.jsonschema.mod.Schema, 

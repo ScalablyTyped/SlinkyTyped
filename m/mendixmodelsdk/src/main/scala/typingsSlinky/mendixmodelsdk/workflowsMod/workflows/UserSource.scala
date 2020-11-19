@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.workflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -26,16 +26,18 @@ abstract class UserSource protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsUserTask: UserTask = js.native
+  
   @JSName("model")
   var model_FUserSource: IModel = js.native
-  def containerAsUserTask: UserTask = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.UserSource")
 @js.native
 object UserSource extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

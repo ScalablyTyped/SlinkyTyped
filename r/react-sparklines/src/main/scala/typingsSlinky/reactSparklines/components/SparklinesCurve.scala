@@ -6,9 +6,10 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactSparklines.mod.SparklinesCurveProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SparklinesCurve {
+  
   @JSImport("react-sparklines", "SparklinesCurve")
   @js.native
   object component extends js.Object
@@ -17,13 +18,15 @@ object SparklinesCurve {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactSparklines.mod.SparklinesCurve] {
+    
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SparklinesCurveProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: SparklinesCurve.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.alexaforbusinessMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "AlexaForBusiness")
 @js.native
@@ -14,4 +14,3 @@ class AlexaForBusiness ()
   extends typingsSlinky.awsSdk.mod.AlexaForBusiness {
   def this(options: ClientConfiguration) = this()
 }
-

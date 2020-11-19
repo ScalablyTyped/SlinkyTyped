@@ -2,11 +2,12 @@ package typingsSlinky.throat
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("throat", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * Create a throttle that only allows `size` calls in parallel.
     * Extra calls will be queued until one of the earlier calls completes.
@@ -25,4 +26,3 @@ object mod extends js.Object {
   def default[TResult, TArgs /* <: js.Array[_] */](fn: js.Function1[/* args */ TArgs, js.Promise[TResult]], size: Double): js.Function1[/* args */ TArgs, js.Promise[TResult]] = js.native
   def default[TResult, TArgs /* <: js.Array[_] */](size: Double, fn: js.Function1[/* args */ TArgs, js.Promise[TResult]]): js.Function1[/* args */ TArgs, js.Promise[TResult]] = js.native
 }
-

@@ -5,18 +5,18 @@ import typingsSlinky.tslint.ruleMod.ITypedRule
 import typingsSlinky.tslint.ruleMod.RuleFailure
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tslint/lib/language/rule/typedRule", JSImport.Namespace)
 @js.native
 object typedRuleMod extends js.Object {
+  
   @js.native
   abstract class TypedRule ()
     extends AbstractRule
        with ITypedRule {
+    
     @JSName("apply")
     def apply(): js.Array[RuleFailure] = js.native
   }
-  
 }
-

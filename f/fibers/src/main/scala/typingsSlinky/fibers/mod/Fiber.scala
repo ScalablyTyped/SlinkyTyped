@@ -2,10 +2,11 @@ package typingsSlinky.fibers.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Fiber extends js.Object {
+  
   /**
     * reset() will terminate a running Fiber and restore it to its original
     * state, as if it had returned execution.
@@ -19,6 +20,7 @@ trait Fiber extends js.Object {
     * If the fiber is not running, reset() will have no effect.
     */
   def reset[T](): T = js.native
+  
   /**
     * run() will start execution of this Fiber, or if it is currently yielding,
     * it will resume execution. If an argument is supplied, this argument will
@@ -31,6 +33,7 @@ trait Fiber extends js.Object {
     */
   def run[T, R](): R = js.native
   def run[T, R](param: T): R = js.native
+  
   /**
     * throwInto() will cause a currently yielding fiber's yield() call to
     * throw instead of return gracefully. This can be useful for notifying a
@@ -42,4 +45,3 @@ trait Fiber extends js.Object {
     */
   def throwInto(exception: js.Error): Unit = js.native
 }
-

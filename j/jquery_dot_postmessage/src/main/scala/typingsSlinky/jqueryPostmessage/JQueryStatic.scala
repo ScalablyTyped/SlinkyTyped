@@ -5,10 +5,11 @@ import org.scalajs.dom.raw.MessageEvent
 import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQueryStatic extends js.Object {
+  
   /**
     * This method will call window.postMessage if available, setting the targetOrigin parameter to the base of the targetUrl parameter for maximum security in browsers that support it. If window.postMessage is not available, the target window’s location.hash will be used to pass the message. If an object is passed as the message param, it will be serialized into a string using the jQuery.param method.
     *
@@ -27,6 +28,7 @@ trait JQueryStatic extends js.Object {
     */
   def postMessage(message: StringDictionary[js.Any], targetUrl: String): Unit = js.native
   def postMessage(message: StringDictionary[js.Any], targetUrl: String, target: Window): Unit = js.native
+  
   /**
     * Register a single callback for either a window.postMessage call, if supported, or if unsupported, for any change in the current window location.hash. If window.postMessage is supported and sourceOrigin is specified, the source window will be checked against this for maximum security. If window.postMessage is unsupported, a polling loop will be started to watch for changes to the location.hash.
     *
@@ -52,4 +54,3 @@ trait JQueryStatic extends js.Object {
     delay: Double
   ): Unit = js.native
 }
-

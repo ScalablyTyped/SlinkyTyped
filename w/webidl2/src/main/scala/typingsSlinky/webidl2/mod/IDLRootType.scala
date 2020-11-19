@@ -12,7 +12,7 @@ import typingsSlinky.webidl2.webidl2Strings.namespace
 import typingsSlinky.webidl2.webidl2Strings.typedef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.webidl2.mod.InterfaceType
@@ -25,8 +25,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.webidl2.mod.IncludesType
 */
 trait IDLRootType extends js.Object
-
 object IDLRootType {
+  
   @scala.inline
   def CallbackType(
     arguments: js.Array[Argument],
@@ -39,6 +39,7 @@ object IDLRootType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLRootType]
   }
+  
   @scala.inline
   def DictionaryType(
     extAttrs: js.Array[ExtendedAttribute],
@@ -51,6 +52,7 @@ object IDLRootType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLRootType]
   }
+  
   @scala.inline
   def NamespaceType(
     extAttrs: js.Array[ExtendedAttribute],
@@ -63,12 +65,14 @@ object IDLRootType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLRootType]
   }
+  
   @scala.inline
   def IncludesType(extAttrs: js.Array[ExtendedAttribute], includes: String, target: String, `type`: includes): IDLRootType = {
     val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], includes = includes.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLRootType]
   }
+  
   @scala.inline
   def InterfaceMixinType(
     extAttrs: js.Array[ExtendedAttribute],
@@ -81,12 +85,14 @@ object IDLRootType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLRootType]
   }
+  
   @scala.inline
   def EnumType(extAttrs: js.Array[ExtendedAttribute], name: String, `type`: enum, values: js.Array[Type]): IDLRootType = {
     val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLRootType]
   }
+  
   @scala.inline
   def InterfaceType(
     extAttrs: js.Array[ExtendedAttribute],
@@ -99,6 +105,7 @@ object IDLRootType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLRootType]
   }
+  
   @scala.inline
   def TypedefType(extAttrs: js.Array[ExtendedAttribute], idlType: IDLTypeDescription, name: String, `type`: typedef): IDLRootType = {
     val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], idlType = idlType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
@@ -106,4 +113,3 @@ object IDLRootType {
     __obj.asInstanceOf[IDLRootType]
   }
 }
-

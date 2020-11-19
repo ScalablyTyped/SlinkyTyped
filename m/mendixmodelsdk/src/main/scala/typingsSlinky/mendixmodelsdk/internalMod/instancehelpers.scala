@@ -11,11 +11,12 @@ import typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnitConstructor
 import typingsSlinky.mendixmodelsdk.unitsMod.IStructuralUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/sdk/internal", "instancehelpers")
 @js.native
 object instancehelpers extends js.Object {
+  
   /**
     * Given some a (normalized) JSON representation of a unit,
     * creates an instance of the corresponding `unit.AbstractUnit` sub class (structural/model)
@@ -27,6 +28,7 @@ object instancehelpers extends js.Object {
     json: IAbstractUnitJson,
     isPartial: Boolean
   ): typingsSlinky.mendixmodelsdk.unitsMod.AbstractUnit | Null = js.native
+  
   /**
     * Creates a new element for a SDK user.
     */
@@ -65,21 +67,26 @@ object instancehelpers extends js.Object {
     parentPropName: String,
     parentPropIsList: Boolean
   ): T = js.native
+  
   def createNewElementInstanceFromJSON(model: typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel, json: IAbstractElementJson): typingsSlinky.mendixmodelsdk.elementsMod.Element = js.native
+  
   /**
     * Creates a new unit for a SDK user.
     */
   def createUnit(container: IStructuralUnit, constructor: IAbstractUnitConstructor): js.Any = js.native
+  
   def createUnitFromJSON(model: typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel, json: IAbstractUnitJson): IAbstractUnit = js.native
   def createUnitFromJSON(
     model: typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel,
     json: IAbstractUnitJson,
     resolveByIdReferences: Boolean
   ): IAbstractUnit = js.native
+  
   /**
     * Type -> class (the constructor function, technically) lookup, e.g. "DomainModels$Entity" -> DomainModels.Entity
     */
   def lookupClass(qualifiedTypeName: String, classes: js.Any): InstanceConstructor = js.native
+  
   def modelElementJsonToInstance(
     model: typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel,
     unit: typingsSlinky.mendixmodelsdk.unitsMod.ModelUnit,
@@ -100,7 +107,8 @@ object instancehelpers extends js.Object {
     json: IAbstractElementJson,
     isPartial: Boolean
   ): typingsSlinky.mendixmodelsdk.elementsMod.Element | Null = js.native
+  
   def structureAffectsQualifiedNames(structure: IStructure): Boolean = js.native
+  
   def structureIsByNameReferrable(structure: IStructure): /* is mendixmodelsdk.mendixmodelsdk/dist/sdk/internal/elements.AbstractElement */ Boolean = js.native
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.viz.dxSankeyOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "viz.dxSankey")
 @js.native
@@ -16,4 +16,3 @@ class dxSankey protected ()
   def this(element: JQuery, options: dxSankeyOptions) = this()
   def this(element: Element, options: dxSankeyOptions) = this()
 }
-

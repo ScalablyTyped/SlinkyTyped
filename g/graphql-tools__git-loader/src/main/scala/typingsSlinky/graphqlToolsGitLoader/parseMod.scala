@@ -4,11 +4,11 @@ import typingsSlinky.graphqlToolsGitLoader.anon.Content
 import typingsSlinky.graphqlToolsUtils.loadersMod.Source
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/git-loader/parse", JSImport.Namespace)
 @js.native
 object parseMod extends js.Object {
+  
   def parse[T](hasPathPointerContentOptions: Content[T]): Source | Unit = js.native
 }
-

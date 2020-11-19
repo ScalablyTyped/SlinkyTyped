@@ -2,7 +2,7 @@ package typingsSlinky.googleapis.bigquerydatatransferV1Mod.bigquerydatatransferV
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A request to determine whether the user has valid credentials. This method
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait SchemaCheckValidCredsRequest extends js.Object
-

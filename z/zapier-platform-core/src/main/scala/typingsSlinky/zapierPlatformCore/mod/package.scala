@@ -2,10 +2,12 @@ package typingsSlinky.zapierPlatformCore
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type AppError = js.Error
+  
   type DehydrateFunc = js.Function2[
     /* func */ js.Function2[
       /* z */ typingsSlinky.zapierPlatformCore.mod.ZObject, 
@@ -15,7 +17,10 @@ package object mod {
     /* inputData */ js.Object, 
     java.lang.String
   ]
+  
   type ExpiredAuthError = js.Error
+  
   type HaltedError = js.Error
+  
   type RefreshAuthError = js.Error
 }

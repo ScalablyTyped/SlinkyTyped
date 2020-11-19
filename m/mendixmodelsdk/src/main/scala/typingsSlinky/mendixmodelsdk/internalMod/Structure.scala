@@ -3,7 +3,7 @@ package typingsSlinky.mendixmodelsdk.internalMod
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/sdk/internal", "Structure")
 @js.native
@@ -35,4 +35,3 @@ abstract class Structure protected ()
     container: IContainer
   ) = this()
 }
-

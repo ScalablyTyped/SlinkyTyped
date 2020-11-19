@@ -2,11 +2,12 @@ package typingsSlinky.cryptoRandomString.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("crypto-random-string", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   Generate a [cryptographically strong](https://en.wikipedia.org/wiki/Strong_cryptography) random string.
   @returns A randomized string.
@@ -20,4 +21,3 @@ object ^ extends js.Object {
   def apply(): String = js.native
   def apply(options: Options): String = js.native
 }
-

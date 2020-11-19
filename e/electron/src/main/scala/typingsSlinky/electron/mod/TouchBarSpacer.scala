@@ -4,7 +4,7 @@ import typingsSlinky.electron.Electron.TouchBarSpacerConstructorOptions
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("electron", "TouchBarSpacer")
 @js.native
@@ -15,4 +15,3 @@ class TouchBarSpacer protected () extends EventEmitter {
     */
   def this(options: TouchBarSpacerConstructorOptions) = this()
 }
-

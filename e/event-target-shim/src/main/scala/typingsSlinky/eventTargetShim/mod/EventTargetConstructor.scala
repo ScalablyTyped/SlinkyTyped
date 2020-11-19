@@ -5,8 +5,7 @@ import typingsSlinky.eventTargetShim.mod.EventTarget.EventDefinition
 import typingsSlinky.eventTargetShim.mod.EventTarget.Mode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait EventTargetConstructor[TEvents /* <: EventDefinition */, TEventAttributes /* <: EventDefinition */, TMode /* <: Mode */] extends Instantiable0[EventTarget[TEvents, TEventAttributes, TMode]]
-

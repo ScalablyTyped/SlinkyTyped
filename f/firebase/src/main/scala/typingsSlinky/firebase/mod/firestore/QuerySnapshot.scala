@@ -2,27 +2,12 @@ package typingsSlinky.firebase.mod.firestore
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "firestore.QuerySnapshot")
 @js.native
 class QuerySnapshot[T] protected () extends js.Object {
-  /** An array of all the documents in the `QuerySnapshot`. */
-  val docs: js.Array[QueryDocumentSnapshot[T]] = js.native
-  /** True if there are no documents in the `QuerySnapshot`. */
-  val empty: Boolean = js.native
-  /**
-    * Metadata about this snapshot, concerning its source and if it has local
-    * modifications.
-    */
-  val metadata: SnapshotMetadata = js.native
-  /**
-    * The query on which you called `get` or `onSnapshot` in order to get this
-    * `QuerySnapshot`.
-    */
-  val query: Query[T] = js.native
-  /** The number of documents in the `QuerySnapshot`. */
-  val size: Double = js.native
+  
   /**
     * Returns an array of the documents changes since the last snapshot. If this
     * is the first snapshot, all documents will be in the list as added changes.
@@ -33,6 +18,13 @@ class QuerySnapshot[T] protected () extends js.Object {
     */
   def docChanges(): js.Array[DocumentChange[T]] = js.native
   def docChanges(options: SnapshotListenOptions): js.Array[DocumentChange[T]] = js.native
+  
+  /** An array of all the documents in the `QuerySnapshot`. */
+  val docs: js.Array[QueryDocumentSnapshot[T]] = js.native
+  
+  /** True if there are no documents in the `QuerySnapshot`. */
+  val empty: Boolean = js.native
+  
   /**
     * Enumerates all of the documents in the `QuerySnapshot`.
     *
@@ -42,6 +34,7 @@ class QuerySnapshot[T] protected () extends js.Object {
     */
   def forEach(callback: js.Function1[/* result */ QueryDocumentSnapshot[T], Unit]): Unit = js.native
   def forEach(callback: js.Function1[/* result */ QueryDocumentSnapshot[T], Unit], thisArg: js.Any): Unit = js.native
+  
   /**
     * Returns true if this `QuerySnapshot` is equal to the provided one.
     *
@@ -49,5 +42,19 @@ class QuerySnapshot[T] protected () extends js.Object {
     * @return true if this `QuerySnapshot` is equal to the provided one.
     */
   def isEqual(other: QuerySnapshot[T]): Boolean = js.native
+  
+  /**
+    * Metadata about this snapshot, concerning its source and if it has local
+    * modifications.
+    */
+  val metadata: SnapshotMetadata = js.native
+  
+  /**
+    * The query on which you called `get` or `onSnapshot` in order to get this
+    * `QuerySnapshot`.
+    */
+  val query: Query[T] = js.native
+  
+  /** The number of documents in the `QuerySnapshot`. */
+  val size: Double = js.native
 }
-

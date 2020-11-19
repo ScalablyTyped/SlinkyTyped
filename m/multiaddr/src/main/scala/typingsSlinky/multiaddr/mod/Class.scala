@@ -3,7 +3,7 @@ package typingsSlinky.multiaddr.mod
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("multiaddr", JSImport.Namespace)
 @js.native
@@ -22,4 +22,3 @@ class Class () extends Multiaddr {
   def this(addr: Multiaddr) = this()
   def this(addr: Buffer) = this()
 }
-

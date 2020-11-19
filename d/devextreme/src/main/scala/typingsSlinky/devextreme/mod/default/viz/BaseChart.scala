@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.viz.BaseChartOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "viz.BaseChart")
 @js.native
@@ -16,4 +16,3 @@ class BaseChart protected ()
   def this(element: JQuery, options: BaseChartOptions[typingsSlinky.devextreme.mod.DevExpress.viz.BaseChart]) = this()
   def this(element: Element, options: BaseChartOptions[typingsSlinky.devextreme.mod.DevExpress.viz.BaseChart]) = this()
 }
-

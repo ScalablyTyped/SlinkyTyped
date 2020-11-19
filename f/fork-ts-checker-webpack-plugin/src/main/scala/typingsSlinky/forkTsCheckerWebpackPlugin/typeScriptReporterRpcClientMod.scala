@@ -4,11 +4,11 @@ import typingsSlinky.forkTsCheckerWebpackPlugin.reporterRpcClientMod.ReporterRpc
 import typingsSlinky.forkTsCheckerWebpackPlugin.typeScriptReporterConfigurationMod.TypeScriptReporterConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fork-ts-checker-webpack-plugin/lib/typescript-reporter/reporter/TypeScriptReporterRpcClient", JSImport.Namespace)
 @js.native
 object typeScriptReporterRpcClientMod extends js.Object {
+  
   def createTypeScriptReporterRpcClient(configuration: TypeScriptReporterConfiguration): ReporterRpcClient = js.native
 }
-

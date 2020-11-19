@@ -5,9 +5,8 @@ import typingsSlinky.angularCompiler.coreMod.MetadataFactory
 import typingsSlinky.angularCompiler.coreMod.Pipe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/compiler", "core.createPipe")
 @js.native
 object createPipe extends TopLevel[MetadataFactory[Pipe]]
-

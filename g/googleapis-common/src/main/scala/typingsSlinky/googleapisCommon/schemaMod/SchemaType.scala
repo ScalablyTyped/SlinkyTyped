@@ -2,7 +2,7 @@ package typingsSlinky.googleapisCommon.schemaMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.googleapisCommon.googleapisCommonStrings.`object`
@@ -12,17 +12,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.googleapisCommon.googleapisCommonStrings.boolean
 */
 trait SchemaType extends js.Object
-
 object SchemaType {
+  
   @scala.inline
   def array: typingsSlinky.googleapisCommon.googleapisCommonStrings.array = "array".asInstanceOf[typingsSlinky.googleapisCommon.googleapisCommonStrings.array]
+  
   @scala.inline
   def boolean: typingsSlinky.googleapisCommon.googleapisCommonStrings.boolean = "boolean".asInstanceOf[typingsSlinky.googleapisCommon.googleapisCommonStrings.boolean]
+  
   @scala.inline
   def integer: typingsSlinky.googleapisCommon.googleapisCommonStrings.integer = "integer".asInstanceOf[typingsSlinky.googleapisCommon.googleapisCommonStrings.integer]
+  
   @scala.inline
   def `object`: typingsSlinky.googleapisCommon.googleapisCommonStrings.`object` = "object".asInstanceOf[typingsSlinky.googleapisCommon.googleapisCommonStrings.`object`]
+  
   @scala.inline
   def string: typingsSlinky.googleapisCommon.googleapisCommonStrings.string = "string".asInstanceOf[typingsSlinky.googleapisCommon.googleapisCommonStrings.string]
 }
-

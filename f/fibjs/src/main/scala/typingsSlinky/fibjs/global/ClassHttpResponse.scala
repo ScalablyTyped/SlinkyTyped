@@ -2,7 +2,7 @@ package typingsSlinky.fibjs.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Class_HttpResponse")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
   */
 class ClassHttpResponse ()
   extends typingsSlinky.fibjs.ClassHttpResponse
-

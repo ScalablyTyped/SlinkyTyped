@@ -2,7 +2,7 @@ package typingsSlinky.behavior3.global.b3
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The BehaviorTree class, as the name implies, represents the Behavior Tree
@@ -69,4 +69,3 @@ import scala.scalajs.js.annotation._
   */
 class BehaviorTree ()
   extends typingsSlinky.behavior3.b3.BehaviorTree
-

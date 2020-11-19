@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Slide
 import typingsSlinky.arcgisJsApi.esri.SlideProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/webscene/Slide", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Slide {
   def this(properties: SlideProperties) = this()
 }
-

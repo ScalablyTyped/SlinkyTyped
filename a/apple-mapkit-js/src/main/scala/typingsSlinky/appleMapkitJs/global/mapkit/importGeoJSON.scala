@@ -5,11 +5,12 @@ import typingsSlinky.appleMapkitJs.mapkit.ImportGeoJSONCallback
 import typingsSlinky.appleMapkitJs.mapkit.ItemCollection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("mapkit.importGeoJSON")
 @js.native
 object importGeoJSON extends js.Object {
+  
   /**
     *
     * @param data The original GeoJSON data, which may be a URL to a GeoJSON file,
@@ -24,4 +25,3 @@ object importGeoJSON extends js.Object {
   def apply(data: js.Object, callback: GeoJSONDelegate): ItemCollection | js.Error = js.native
   def apply(data: js.Object, callback: ImportGeoJSONCallback): ItemCollection | js.Error = js.native
 }
-

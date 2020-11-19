@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.AreaMeasurement3D
 import typingsSlinky.arcgisJsApi.esri.AreaMeasurement3DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/AreaMeasurement3D", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends AreaMeasurement3D {
   def this(properties: AreaMeasurement3DProperties) = this()
 }
-

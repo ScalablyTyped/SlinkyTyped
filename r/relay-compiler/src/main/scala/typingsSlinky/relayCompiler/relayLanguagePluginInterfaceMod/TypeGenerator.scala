@@ -6,15 +6,11 @@ import typingsSlinky.relayCompiler.iRMod.Root
 import typingsSlinky.relayCompiler.schemaMod.Schema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeGenerator extends js.Object {
-  /**
-    * Transforms that should be applied to the intermediate representation of the
-    * GraphQL document before passing to the `generate` function.
-    */
-  var transforms: js.Array[IRTransform] = js.native
+  
   def generate(schema: Schema, node: Fragment, options: TypeGeneratorOptions): String = js.native
   /**
     * Given GraphQL document IR, this function should generate type information
@@ -22,5 +18,10 @@ trait TypeGenerator extends js.Object {
     * content such as importing other files, including other artifacts.
     */
   def generate(schema: Schema, node: Root, options: TypeGeneratorOptions): String = js.native
+  
+  /**
+    * Transforms that should be applied to the intermediate representation of the
+    * GraphQL document before passing to the `generate` function.
+    */
+  var transforms: js.Array[IRTransform] = js.native
 }
-

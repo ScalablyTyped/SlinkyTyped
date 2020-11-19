@@ -4,10 +4,9 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.reactToolbox.listItemLayoutMod.ListItemLayoutProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-toolbox/components/list/ListItem", "ListItem")
 @js.native
 class ListItem ()
   extends Component[ListItemProps with ListItemLayoutProps, js.Object, js.Any]
-

@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.std.WebAssembly.GlobalDescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("WebAssembly.Global")
 @js.native
@@ -16,4 +16,3 @@ object Global
       /* v */ js.Any, 
       typingsSlinky.std.WebAssembly.Global
     ]
-

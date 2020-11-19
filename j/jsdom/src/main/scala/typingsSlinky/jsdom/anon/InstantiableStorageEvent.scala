@@ -6,10 +6,9 @@ import org.scalajs.dom.raw.StorageEvent
 import typingsSlinky.std.StorageEventInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantiableStorageEvent
   extends Instantiable1[/* type */ String, StorageEvent]
      with Instantiable2[/* type */ String, /* eventInitDict */ StorageEventInit, StorageEvent]
-

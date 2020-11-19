@@ -35,10 +35,11 @@ import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestPromise
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Authenticate extends js.Object {
+  
   def authenticate[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def authenticate[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def authenticate[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -50,6 +51,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def changePassword[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def changePassword[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def changePassword[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -61,6 +63,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def change_password[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def change_password[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def change_password[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -72,6 +75,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def clearCachedRealms[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def clearCachedRealms[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def clearCachedRealms[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -83,6 +87,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def clearCachedRoles[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def clearCachedRoles[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def clearCachedRoles[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -94,6 +99,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def clear_cached_realms[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def clear_cached_realms[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def clear_cached_realms[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -105,6 +111,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def clear_cached_roles[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def clear_cached_roles[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def clear_cached_roles[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -116,6 +123,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def createApiKey[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def createApiKey[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def createApiKey[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -127,6 +135,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def create_api_key[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def create_api_key[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def create_api_key[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -138,6 +147,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deletePrivileges[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deletePrivileges[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deletePrivileges[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -149,6 +159,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteRole[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteRole[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteRole[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -160,6 +171,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteRoleMapping[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteRoleMapping[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteRoleMapping[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -171,6 +183,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def deleteUser[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteUser[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def deleteUser[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -182,6 +195,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_privileges[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_privileges[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_privileges[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -193,6 +207,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_role[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_role[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_role[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -204,6 +219,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_role_mapping[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_role_mapping[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_role_mapping[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -215,6 +231,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def delete_user[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_user[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete_user[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -226,6 +243,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def disableUser[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def disableUser[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def disableUser[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -237,6 +255,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def disable_user[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def disable_user[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def disable_user[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -248,6 +267,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def enableUser[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def enableUser[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def enableUser[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -259,6 +279,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def enable_user[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def enable_user[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def enable_user[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -270,6 +291,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getApiKey[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getApiKey[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getApiKey[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -281,6 +303,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getBuiltinPrivileges[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getBuiltinPrivileges[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getBuiltinPrivileges[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -292,6 +315,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getPrivileges[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getPrivileges[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getPrivileges[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -303,6 +327,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getRole[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getRole[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getRole[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -314,6 +339,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getRoleMapping[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getRoleMapping[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getRoleMapping[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -325,6 +351,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getToken[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getToken[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getToken[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -336,6 +363,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getUser[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getUser[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getUser[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -347,6 +375,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def getUserPrivileges[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def getUserPrivileges[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def getUserPrivileges[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -358,6 +387,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_api_key[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_api_key[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_api_key[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -369,6 +399,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_builtin_privileges[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_builtin_privileges[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_builtin_privileges[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -380,6 +411,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_privileges[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_privileges[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_privileges[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -391,6 +423,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_role[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_role[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_role[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -402,6 +435,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_role_mapping[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_role_mapping[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_role_mapping[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -413,6 +447,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_token[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_token[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_token[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -424,6 +459,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_user[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_user[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_user[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -435,6 +471,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def get_user_privileges[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_user_privileges[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def get_user_privileges[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -446,6 +483,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def hasPrivileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def hasPrivileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def hasPrivileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -457,6 +495,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def has_privileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def has_privileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def has_privileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -468,6 +507,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def invalidateApiKey[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def invalidateApiKey[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def invalidateApiKey[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -479,6 +519,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def invalidateToken[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def invalidateToken[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def invalidateToken[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -490,6 +531,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def invalidate_api_key[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def invalidate_api_key[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def invalidate_api_key[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -501,6 +543,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def invalidate_token[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def invalidate_token[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def invalidate_token[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -512,6 +555,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def putPrivileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def putPrivileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def putPrivileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -523,6 +567,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def putRole[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def putRole[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def putRole[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -534,6 +579,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def putRoleMapping[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def putRoleMapping[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def putRoleMapping[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -545,6 +591,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def putUser[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def putUser[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def putUser[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -556,6 +603,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def put_privileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def put_privileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def put_privileges[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -567,6 +615,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def put_role[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def put_role[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def put_role[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -578,6 +627,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def put_role_mapping[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def put_role_mapping[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def put_role_mapping[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -589,6 +639,7 @@ trait Authenticate extends js.Object {
     options: TransportRequestOptions,
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
+  
   def put_user[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def put_user[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def put_user[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
@@ -601,4 +652,3 @@ trait Authenticate extends js.Object {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
 }
-

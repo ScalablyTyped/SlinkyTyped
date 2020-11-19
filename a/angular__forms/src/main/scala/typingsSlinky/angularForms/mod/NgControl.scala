@@ -2,21 +2,12 @@ package typingsSlinky.angularForms.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/forms", "NgControl")
 @js.native
 abstract class NgControl () extends AbstractControlDirective {
-  /**
-    * @description
-    * The name for the control
-    */
-  var name: String | Double | Null = js.native
-  /**
-    * @description
-    * The value accessor for the control
-    */
-  var valueAccessor: ControlValueAccessor | Null = js.native
+  
   /**
     * @description
     * The registered async validator function for the control
@@ -24,6 +15,13 @@ abstract class NgControl () extends AbstractControlDirective {
     * @throws An exception that this method is not implemented
     */
   def asyncValidator: AsyncValidatorFn | Null = js.native
+  
+  /**
+    * @description
+    * The name for the control
+    */
+  var name: String | Double | Null = js.native
+  
   /**
     * @description
     * The registered synchronous validator function for the control
@@ -31,6 +29,13 @@ abstract class NgControl () extends AbstractControlDirective {
     * @throws An exception that this method is not implemented
     */
   def validator: ValidatorFn | Null = js.native
+  
+  /**
+    * @description
+    * The value accessor for the control
+    */
+  var valueAccessor: ControlValueAccessor | Null = js.native
+  
   /**
     * @description
     * The callback method to update the model from the view when requested
@@ -39,4 +44,3 @@ abstract class NgControl () extends AbstractControlDirective {
     */
   def viewToModelUpdate(newValue: js.Any): Unit = js.native
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/GetCommentsForComparedCommitCommand", JSImport.Namespace)
 @js.native
 object getCommentsForComparedCommitCommandMod extends js.Object {
+  
   @js.native
   class GetCommentsForComparedCommitCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getCommentsForComparedCommitCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetCommentsForComparedCommitInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetCommentsForComparedCommitInput, GetCommentsForComparedCommitOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[GetCommentsForComparedCommitInput, GetCommentsForComparedCommitOutput] = js.native
   }
-  
 }
-

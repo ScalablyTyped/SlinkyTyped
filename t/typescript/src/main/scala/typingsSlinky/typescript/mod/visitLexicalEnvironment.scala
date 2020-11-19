@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "visitLexicalEnvironment")
 @js.native
 object visitLexicalEnvironment extends js.Object {
+  
   /**
     * Starts a new lexical environment and visits a statement list, ending the lexical environment
     * and merging hoisted declarations upon completion.
@@ -28,4 +29,3 @@ object visitLexicalEnvironment extends js.Object {
     ensureUseStrict: Boolean
   ): NodeArray[Statement] = js.native
 }
-

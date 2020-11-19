@@ -7,9 +7,10 @@ import typingsSlinky.reactNativeReadMoreText.mod.ReadMoreProps
 import typingsSlinky.reactNativeReadMoreText.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeReadMoreText {
+  
   @JSImport("react-native-read-more-text", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -18,11 +19,13 @@ object ReactNativeReadMoreText {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def onReady(value: () => Unit): this.type = set("onReady", js.Any.fromFunction0(value))
   }
   
   def withProps(p: ReadMoreProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     numberOfLines: Double,
@@ -33,4 +36,3 @@ object ReactNativeReadMoreText {
     new Builder(js.Array(this.component, __props.asInstanceOf[ReadMoreProps]))
   }
 }
-

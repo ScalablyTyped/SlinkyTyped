@@ -5,7 +5,7 @@ import typingsSlinky.reduxOrm.ormMod.ORMOpts
 import typingsSlinky.std.Extract
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("redux-orm", "ORM")
 @js.native
@@ -21,4 +21,3 @@ Extract[
   extends typingsSlinky.reduxOrm.ormMod.ORM[I, ModelNames] {
   def this(opts: ORMOpts) = this()
 }
-

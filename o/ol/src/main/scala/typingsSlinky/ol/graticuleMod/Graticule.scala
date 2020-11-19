@@ -7,14 +7,18 @@ import typingsSlinky.ol.olStrings.precompose
 import typingsSlinky.ol.olStrings.rendercomplete
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Graticule
   extends typingsSlinky.ol.vectorMod.default {
+  
   def getMeridians(): js.Array[typingsSlinky.ol.lineStringMod.default] = js.native
+  
   def getParallels(): js.Array[typingsSlinky.ol.lineStringMod.default] = js.native
+  
   def loaderFunction(extent: Extent, resolution: Double, projection: typingsSlinky.ol.projectionMod.default): Unit = js.native
+  
   @JSName("on")
   def on_postcompose(
     `type`: postcompose,
@@ -30,6 +34,7 @@ trait Graticule
     `type`: rendercomplete,
     listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
   ): EventsKey = js.native
+  
   @JSName("once")
   def once_postcompose(
     `type`: postcompose,
@@ -45,7 +50,9 @@ trait Graticule
     `type`: rendercomplete,
     listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
   ): EventsKey = js.native
+  
   def strategyFunction(extent: Extent, resolution: Double): js.Array[Extent] = js.native
+  
   @JSName("un")
   def un_postcompose(
     `type`: postcompose,
@@ -62,4 +69,3 @@ trait Graticule
     listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
   ): Unit = js.native
 }
-

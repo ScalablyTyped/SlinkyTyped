@@ -2,7 +2,7 @@ package typingsSlinky.reactDevUtils.moduleScopePluginMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This Webpack plugin ensures that relative imports from app's source
@@ -17,4 +17,3 @@ class ^ protected () extends js.Object {
   def this(appSrc: String, allowedFiles: js.Array[String]) = this()
   def this(appSrc: js.Array[String], allowedFiles: js.Array[String]) = this()
 }
-

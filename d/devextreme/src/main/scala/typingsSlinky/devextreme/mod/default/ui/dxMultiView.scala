@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxMultiViewOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxMultiView")
 @js.native
@@ -22,4 +22,3 @@ class dxMultiView protected ()
     options: dxMultiViewOptions[typingsSlinky.devextreme.mod.DevExpress.ui.dxMultiView]
   ) = this()
 }
-

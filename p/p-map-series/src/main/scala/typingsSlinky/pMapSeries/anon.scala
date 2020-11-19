@@ -2,13 +2,15 @@ package typingsSlinky.pMapSeries
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object anon extends js.Object {
+  
   @js.native
   trait Call extends js.Object {
+    
     /**
     	Map over promises serially.
     	@param input - Mapped over serially in the `mapper` function.
@@ -56,6 +58,4 @@ object anon extends js.Object {
         ]
     ): js.Promise[js.Array[MappedValueType]] = js.native
   }
-  
 }
-

@@ -14,10 +14,11 @@ import typingsSlinky.yandexMetrikaTag.yandexMetrikaTagStrings.setUserID
 import typingsSlinky.yandexMetrikaTag.yandexMetrikaTagStrings.userParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Event extends js.Object {
+  
   def apply(counterId: Double, eventName: addFileExtension, extensions: String): Unit = js.native
   def apply(counterId: Double, eventName: addFileExtension, extensions: js.Array[String]): Unit = js.native
   def apply(counterId: Double, eventName: getClientID, cb: js.Function1[/* clientID */ String, Unit]): Unit = js.native
@@ -124,4 +125,3 @@ trait Event extends js.Object {
     ctx: CTX
   ): Unit = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.ssooidcMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "SSOOIDC")
 @js.native
@@ -14,4 +14,3 @@ class SSOOIDC ()
   extends typingsSlinky.awsSdk.mod.SSOOIDC {
   def this(options: ClientConfiguration) = this()
 }
-

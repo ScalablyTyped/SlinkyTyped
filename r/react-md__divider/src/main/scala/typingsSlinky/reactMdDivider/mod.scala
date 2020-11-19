@@ -8,12 +8,14 @@ import typingsSlinky.reactMdDivider.dividerMod.DividerProps
 import typingsSlinky.reactMdDivider.verticalDividerMod.VerticalDividerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/divider", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   val Divider: ForwardRefExoticComponent[DividerProps with RefAttributes[DividerElement]] = js.native
+  
   /**
     * This component is used to create a vertical divider based on a parent
     * element's height. This is really only needed when the parent element **has no
@@ -24,4 +26,3 @@ object mod extends js.Object {
     */
   val VerticalDivider: ForwardRefExoticComponent[VerticalDividerProps with RefAttributes[HTMLDivElement]] = js.native
 }
-

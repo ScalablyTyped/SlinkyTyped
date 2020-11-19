@@ -2,11 +2,12 @@ package typingsSlinky.phaser.global.Phaser.Math
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Phaser.Math.RotateVec3")
 @js.native
 object RotateVec3 extends js.Object {
+  
   /**
     * Rotates a vector in place by axis angle.
     * 
@@ -22,4 +23,3 @@ object RotateVec3 extends js.Object {
     radians: Double
   ): typingsSlinky.phaser.Phaser.Math.Vector3 = js.native
 }
-

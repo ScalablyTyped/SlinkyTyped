@@ -4,14 +4,13 @@ import typingsSlinky.primereact.autocompleteAutoCompleteMod.AutoCompleteProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("primereact/autocomplete", JSImport.Namespace)
 @js.native
 object autocompleteMod extends js.Object {
+  
   @js.native
   class AutoComplete ()
     extends Component[AutoCompleteProps, js.Any, js.Any]
-  
 }
-

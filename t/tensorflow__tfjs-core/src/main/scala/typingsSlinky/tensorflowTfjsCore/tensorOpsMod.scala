@@ -22,11 +22,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.float32
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.int32
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/tensor_ops", JSImport.Namespace)
 @js.native
 object tensorOpsMod extends js.Object {
+  
   /**
     * Return an evenly spaced sequence of numbers over the given interval.
     *
@@ -39,6 +40,7 @@ object tensorOpsMod extends js.Object {
     */
   /** @doc {heading: 'Tensors', subheading: 'Creation'} */
   def linspace(start: Double, stop: Double, num: Double): Tensor1D = js.native
+  
   /**
     * Creates a `tf.Tensor` with all elements set to 1.
     *
@@ -58,6 +60,7 @@ object tensorOpsMod extends js.Object {
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any,
     dtype: DataType
   ): Tensor[R] = js.native
+  
   /**
     * Creates a new `tf.Tensor1D` filled with the numbers in the range provided.
     *
@@ -85,6 +88,7 @@ object tensorOpsMod extends js.Object {
   def range_int32(start: Double, stop: Double, step: js.UndefOr[scala.Nothing], dtype: int32): Tensor1D = js.native
   @JSName("range")
   def range_int32(start: Double, stop: Double, step: Double, dtype: int32): Tensor1D = js.native
+  
   def scalar(value: String): Scalar = js.native
   def scalar(value: String, dtype: DataType): Scalar = js.native
   def scalar(value: Boolean): Scalar = js.native
@@ -107,6 +111,7 @@ object tensorOpsMod extends js.Object {
   def scalar(value: Double, dtype: DataType): Scalar = js.native
   def scalar(value: js.typedarray.Uint8Array): Scalar = js.native
   def scalar(value: js.typedarray.Uint8Array, dtype: DataType): Scalar = js.native
+  
   /**
     * Creates a `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -145,6 +150,7 @@ object tensorOpsMod extends js.Object {
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any,
     dtype: DataType
   ): Tensor[R] = js.native
+  
   /**
     * Creates rank-1 `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -162,6 +168,7 @@ object tensorOpsMod extends js.Object {
   /** @doc {heading: 'Tensors', subheading: 'Creation'} */
   def tensor1d(values: TensorLike1D): Tensor1D = js.native
   def tensor1d(values: TensorLike1D, dtype: DataType): Tensor1D = js.native
+  
   /**
     * Creates rank-2 `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -188,6 +195,7 @@ object tensorOpsMod extends js.Object {
   def tensor2d(values: TensorLike2D, shape: js.UndefOr[scala.Nothing], dtype: DataType): Tensor2D = js.native
   def tensor2d(values: TensorLike2D, shape: js.Tuple2[Double, Double]): Tensor2D = js.native
   def tensor2d(values: TensorLike2D, shape: js.Tuple2[Double, Double], dtype: DataType): Tensor2D = js.native
+  
   /**
     * Creates rank-3 `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -214,6 +222,7 @@ object tensorOpsMod extends js.Object {
   def tensor3d(values: TensorLike3D, shape: js.UndefOr[scala.Nothing], dtype: DataType): Tensor3D = js.native
   def tensor3d(values: TensorLike3D, shape: js.Tuple3[Double, Double, Double]): Tensor3D = js.native
   def tensor3d(values: TensorLike3D, shape: js.Tuple3[Double, Double, Double], dtype: DataType): Tensor3D = js.native
+  
   /**
     * Creates rank-4 `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -240,6 +249,7 @@ object tensorOpsMod extends js.Object {
   def tensor4d(values: TensorLike4D, shape: js.UndefOr[scala.Nothing], dtype: DataType): Tensor4D = js.native
   def tensor4d(values: TensorLike4D, shape: js.Tuple4[Double, Double, Double, Double]): Tensor4D = js.native
   def tensor4d(values: TensorLike4D, shape: js.Tuple4[Double, Double, Double, Double], dtype: DataType): Tensor4D = js.native
+  
   /**
     * Creates rank-5 `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -266,6 +276,7 @@ object tensorOpsMod extends js.Object {
   def tensor5d(values: TensorLike5D, shape: js.UndefOr[scala.Nothing], dtype: DataType): Tensor5D = js.native
   def tensor5d(values: TensorLike5D, shape: js.Tuple5[Double, Double, Double, Double, Double]): Tensor5D = js.native
   def tensor5d(values: TensorLike5D, shape: js.Tuple5[Double, Double, Double, Double, Double], dtype: DataType): Tensor5D = js.native
+  
   /**
     * Creates rank-6 `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -296,6 +307,7 @@ object tensorOpsMod extends js.Object {
     shape: js.Tuple6[Double, Double, Double, Double, Double, Double],
     dtype: DataType
   ): Tensor6D = js.native
+  
   /**
     * Creates a new variable with the provided initial value.
     * ```js
@@ -324,6 +336,7 @@ object tensorOpsMod extends js.Object {
   def variable[R /* <: Rank */](initialValue: Tensor[R], trainable: Boolean, name: js.UndefOr[scala.Nothing], dtype: DataType): Variable[R] = js.native
   def variable[R /* <: Rank */](initialValue: Tensor[R], trainable: Boolean, name: String): Variable[R] = js.native
   def variable[R /* <: Rank */](initialValue: Tensor[R], trainable: Boolean, name: String, dtype: DataType): Variable[R] = js.native
+  
   /**
     * Creates a `tf.Tensor` with all elements set to 0.
     *
@@ -343,17 +356,18 @@ object tensorOpsMod extends js.Object {
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any,
     dtype: DataType
   ): Tensor[R] = js.native
+  
   @js.native
   object onesLike extends js.Object {
+    
     def apply[T /* <: Tensor[Rank] */](x: T): T = js.native
     def apply[T /* <: Tensor[Rank] */](x: TensorLike): T = js.native
   }
   
   @js.native
   object zerosLike extends js.Object {
+    
     def apply[T /* <: Tensor[Rank] */](x: T): T = js.native
     def apply[T /* <: Tensor[Rank] */](x: TensorLike): T = js.native
   }
-  
 }
-

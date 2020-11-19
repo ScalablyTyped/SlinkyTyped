@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.accessanalyzerMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "AccessAnalyzer")
 @js.native
@@ -14,4 +14,3 @@ class AccessAnalyzer ()
   extends typingsSlinky.awsSdk.allMod.AccessAnalyzer {
   def this(options: ClientConfiguration) = this()
 }
-

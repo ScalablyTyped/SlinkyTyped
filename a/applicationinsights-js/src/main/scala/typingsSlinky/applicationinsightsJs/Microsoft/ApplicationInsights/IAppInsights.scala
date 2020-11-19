@@ -4,14 +4,11 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.applicationinsightsJs.AI.SeverityLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IAppInsights extends js.Object {
-  var config: IConfig = js.native
-  var context: ITelemetryContext = js.native
-  var downloadAndSetup: js.UndefOr[js.Function1[/* config */ IConfig, _]] = js.native
-  var queue: js.Array[js.Function0[Unit]] = js.native
+  
   /**
     * The custom error handler for Application Insights
     * @param {string} message - The error message
@@ -21,14 +18,25 @@ trait IAppInsights extends js.Object {
     * @param {Error}  error - The Error object
     */
   def _onerror(message: String, url: String, lineNumber: Double, columnNumber: Double, error: js.Error): js.Any = js.native
+  
   /**
     * Clears the authenticated user id and the account id from the user context.
     */
   def clearAuthenticatedUserContext(): js.Any = js.native
+  
+  var config: IConfig = js.native
+  
+  var context: ITelemetryContext = js.native
+  
+  var downloadAndSetup: js.UndefOr[js.Function1[/* config */ IConfig, _]] = js.native
+  
   /**
     * Immediately send all queued telemetry.
     */
   def flush(): js.Any = js.native
+  
+  var queue: js.Array[js.Function0[Unit]] = js.native
+  
   /**
     * Sets the autheticated user id and the account id in this session.
     * User auth id and account id should be of type string. They should not contain commas, semi-colons, equal signs, spaces, or vertical-bars.
@@ -40,11 +48,13 @@ trait IAppInsights extends js.Object {
   def setAuthenticatedUserContext(authenticatedUserId: String, accountId: js.UndefOr[scala.Nothing], storeInCookie: Boolean): js.Any = js.native
   def setAuthenticatedUserContext(authenticatedUserId: String, accountId: String): js.Any = js.native
   def setAuthenticatedUserContext(authenticatedUserId: String, accountId: String, storeInCookie: Boolean): js.Any = js.native
+  
   /**
     * Start timing an extended event. Call `stopTrackEvent` to log the event when it ends.
     * @param   name    A string that identifies this event uniquely within the document.
     */
   def startTrackEvent(name: String): js.Any = js.native
+  
   /**
     * Starts the timer for tracking a page load time. Use this instead of `trackPageView` if you want to control when the page view timer starts and stops,
     * but don't want to calculate the duration yourself. This method doesn't send any telemetry. Call `stopTrackPage` to log the end of the page view
@@ -53,6 +63,7 @@ trait IAppInsights extends js.Object {
     */
   def startTrackPage(): js.Any = js.native
   def startTrackPage(name: String): js.Any = js.native
+  
   /**
     * Log an extended event that you started timing with `startTrackEvent`.
     * @param   name    The string you used to identify this event in `startTrackEvent`.
@@ -63,6 +74,7 @@ trait IAppInsights extends js.Object {
   def stopTrackEvent(name: String, properties: js.UndefOr[scala.Nothing], measurements: StringDictionary[Double]): js.Any = js.native
   def stopTrackEvent(name: String, properties: StringDictionary[String]): js.Any = js.native
   def stopTrackEvent(name: String, properties: StringDictionary[String], measurements: StringDictionary[Double]): js.Any = js.native
+  
   /**
     * Stops the timer that was started by calling `startTrackPage` and sends the pageview load time telemetry with the specified properties and measurements.
     * The duration of the page view will be the time between calling `startTrackPage` and `stopTrackPage`.
@@ -131,6 +143,7 @@ trait IAppInsights extends js.Object {
     properties: StringDictionary[String],
     measurements: StringDictionary[Double]
   ): js.Any = js.native
+  
   /**
     * Log a dependency call
     * @param   id    unique id, this is used by the backend o correlate server requests. Use Util.newId() to generate a unique Id.
@@ -184,6 +197,7 @@ trait IAppInsights extends js.Object {
     properties: StringDictionary[String],
     measurements: StringDictionary[Double]
   ): js.Any = js.native
+  
   /**
     * Log a user action or other occurrence.
     * @param   name    A string to identify this event in the portal.
@@ -194,6 +208,7 @@ trait IAppInsights extends js.Object {
   def trackEvent(name: String, properties: js.UndefOr[scala.Nothing], measurements: StringDictionary[Double]): js.Any = js.native
   def trackEvent(name: String, properties: StringDictionary[String]): js.Any = js.native
   def trackEvent(name: String, properties: StringDictionary[String], measurements: StringDictionary[Double]): js.Any = js.native
+  
   /**
     * Log an exception you have caught.
     * @param   exception   An Error from a catch clause, or the string error message.
@@ -285,6 +300,7 @@ trait IAppInsights extends js.Object {
     measurements: StringDictionary[Double],
     severityLevel: SeverityLevel
   ): js.Any = js.native
+  
   /**
     * Log a numeric value that is not associated with a specific event. Typically used to send regular reports of performance indicators.
     * To send a single measurement, use just the first two parameters. If you take measurements very frequently, you can reduce the
@@ -373,6 +389,7 @@ trait IAppInsights extends js.Object {
     max: Double,
     properties: StringDictionary[String]
   ): js.Any = js.native
+  
   /**
     * Logs that a page or other item was viewed.
     * @param   name  The string you used as the name in `startTrackPage`. Defaults to the document title.
@@ -553,6 +570,7 @@ trait IAppInsights extends js.Object {
     measurements: StringDictionary[Double],
     duration: Double
   ): js.Any = js.native
+  
   /**
     * Log a diagnostic message.
     * @param    message A message string
@@ -563,4 +581,3 @@ trait IAppInsights extends js.Object {
   def trackTrace(message: String, properties: StringDictionary[String]): js.Any = js.native
   def trackTrace(message: String, properties: StringDictionary[String], severityLevel: SeverityLevel): js.Any = js.native
 }
-

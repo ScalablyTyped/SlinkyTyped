@@ -184,11 +184,12 @@ import typingsSlinky.react.mod.JSXElementConstructor
 import typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cxs/component", JSImport.Namespace)
 @js.native
 object componentMod extends js.Object {
+  
   def apply[PropsType /* <: js.Object with ApparentComponentProps[`object`] */](component: `object`): js.Function1[
     /* arg */ CSSObject | (js.Function1[/* arg */ PropsType, CSSObject]), 
     JSXElementConstructor[PropsType]
@@ -893,7 +894,7 @@ object componentMod extends js.Object {
     /* arg */ CSSObject | (js.Function1[/* arg */ PropsType, CSSObject]), 
     JSXElementConstructor[PropsType]
   ] = js.native
+  
   type ApparentComponentProps[// eslint-disable-next-line @typescript-eslint/no-explicit-any
   C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] = ComponentPropsWithRef[C] | (LibraryManagedAttributes[C, js.Any])
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.ol
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/format/filter/IsNull", JSImport.Namespace)
 @js.native
 object isNullMod extends js.Object {
+  
   @js.native
   class default protected ()
     extends typingsSlinky.ol.comparisonMod.default {
@@ -15,4 +16,3 @@ object isNullMod extends js.Object {
   
   type IsNull = typingsSlinky.ol.comparisonMod.default
 }
-

@@ -33,9 +33,10 @@ import typingsSlinky.recharts.rechartsStrings.optimizeQuality
 import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CartesianGrid {
+  
   @JSImport("recharts", "CartesianGrid")
   @js.native
   object component extends js.Object
@@ -44,189 +45,278 @@ object CartesianGrid {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.CartesianGrid] {
+    
     @scala.inline
     def alignmentBaseline(value: String): this.type = set("alignmentBaseline", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def angle(value: Double): this.type = set("angle", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def baselineShift(value: String): this.type = set("baselineShift", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def chartHeight(value: Double): this.type = set("chartHeight", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def chartWidth(value: Double): this.type = set("chartWidth", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def clip(value: String): this.type = set("clip", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def clipPath(value: String): this.type = set("clipPath", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def clipRule(value: String): this.type = set("clipRule", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def colorInterpolation(value: String): this.type = set("colorInterpolation", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def colorInterpolationFilters(value: String): this.type = set("colorInterpolationFilters", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def colorProfile(value: String): this.type = set("colorProfile", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def colorRendering(value: String): this.type = set("colorRendering", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def cursor(value: String): this.type = set("cursor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def display(value: String): this.type = set("display", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def dominantBaseline(value: String): this.type = set("dominantBaseline", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def dx(value: Double): this.type = set("dx", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def dy(value: Double): this.type = set("dy", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fill(value: String): this.type = set("fill", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fillOpacity(value: Double | String): this.type = set("fillOpacity", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fillRule(value: String): this.type = set("fillRule", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def filter(value: String): this.type = set("filter", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def floodColor(value: String): this.type = set("floodColor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def floodOpacity(value: String): this.type = set("floodOpacity", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def font(value: String): this.type = set("font", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fontSize(value: Double | String): this.type = set("fontSize", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fontSizeAdjust(value: Double | String): this.type = set("fontSizeAdjust", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fontStretch(value: String): this.type = set("fontStretch", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fontStyle(value: String): this.type = set("fontStyle", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fontVariant(value: String): this.type = set("fontVariant", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fontWeight(
       value: normal | bold | bolder | lighter | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900` | inherit
     ): this.type = set("fontWeight", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def glyphOrientationVertical(value: String): this.type = set("glyphOrientationVertical", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def horizontalReactElement(value: ReactElement): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def horizontalFunction1(value: LineProps with CartesianGridProps => ReactElement): this.type = set("horizontal", js.Any.fromFunction1(value))
+    
     @scala.inline
     def horizontal(value: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def horizontalCoordinatesGenerator(value: /* arg */ Height => js.Array[Double]): this.type = set("horizontalCoordinatesGenerator", js.Any.fromFunction1(value))
+    
     @scala.inline
     def horizontalFillVarargs(value: String*): this.type = set("horizontalFill", js.Array(value :_*))
+    
     @scala.inline
     def horizontalFill(value: js.Array[String]): this.type = set("horizontalFill", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def horizontalPointsVarargs(value: Double*): this.type = set("horizontalPoints", js.Array(value :_*))
+    
     @scala.inline
     def horizontalPoints(value: js.Array[Double]): this.type = set("horizontalPoints", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def imageRendering(value: auto | optimizeSpeed | optimizeQuality | inherit): this.type = set("imageRendering", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def kerning(value: Double | String): this.type = set("kerning", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def letterSpacing(value: String): this.type = set("letterSpacing", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def lightingColor(value: String): this.type = set("lightingColor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def markerEnd(value: String): this.type = set("markerEnd", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def markerMid(value: String): this.type = set("markerMid", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def markerStart(value: String): this.type = set("markerStart", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def mask(value: String): this.type = set("mask", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def offset(value: ChartOffset): this.type = set("offset", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def opacity(value: Double | String): this.type = set("opacity", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def overflow(value: String): this.type = set("overflow", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def pointerEvents(value: String): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def r(value: Double): this.type = set("r", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def shapeRendering(value: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def stopColor(value: String): this.type = set("stopColor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def stopOpacity(value: Double | String): this.type = set("stopOpacity", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def stroke(value: Double | String): this.type = set("stroke", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def strokeDasharray(value: String): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def strokeDashoffset(value: Double | String): this.type = set("strokeDashoffset", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def strokeLinecap(value: String): this.type = set("strokeLinecap", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def strokeLinejoin(value: String): this.type = set("strokeLinejoin", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def strokeMiterlimit(value: Double | String): this.type = set("strokeMiterlimit", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def strokeOpacity(value: Double | String): this.type = set("strokeOpacity", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def strokeWidth(value: Double | String): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def textAnchor(value: String): this.type = set("textAnchor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def textDecoration(value: String): this.type = set("textDecoration", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def textRendering(value: auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit): this.type = set("textRendering", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def unicodeBidi(value: String): this.type = set("unicodeBidi", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def verticalReactElement(value: ReactElement): this.type = set("vertical", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def verticalFunction1(value: LineProps with CartesianGridProps => ReactElement): this.type = set("vertical", js.Any.fromFunction1(value))
+    
     @scala.inline
     def vertical(value: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def verticalCoordinatesGenerator(value: /* arg */ Offset => js.Array[Double]): this.type = set("verticalCoordinatesGenerator", js.Any.fromFunction1(value))
+    
     @scala.inline
     def verticalFillVarargs(value: String*): this.type = set("verticalFill", js.Array(value :_*))
+    
     @scala.inline
     def verticalFill(value: js.Array[String]): this.type = set("verticalFill", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def verticalPointsVarargs(value: Double*): this.type = set("verticalPoints", js.Array(value :_*))
+    
     @scala.inline
     def verticalPoints(value: js.Array[Double]): this.type = set("verticalPoints", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def visibility(value: String): this.type = set("visibility", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def wordSpacing(value: Double | String): this.type = set("wordSpacing", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def writingMode(value: String): this.type = set("writingMode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def x(value: Double): this.type = set("x", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def xAxis(value: XAxisProps): this.type = set("xAxis", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def y(value: Double): this.type = set("y", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def yAxis(value: YAxisProps): this.type = set("yAxis", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: CartesianGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: CartesianGrid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.electron.global.Electron
 import typingsSlinky.electron.Electron.TouchBarScrubberConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Electron.TouchBarScrubber")
 @js.native
@@ -15,4 +15,3 @@ class TouchBarScrubber protected ()
     */
   def this(options: TouchBarScrubberConstructorOptions) = this()
 }
-

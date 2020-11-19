@@ -2,7 +2,7 @@ package typingsSlinky.behavior3.global.b3
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The MaxTime decorator limits the maximum time the node child can execute.
@@ -24,4 +24,3 @@ class MaxTime ()
   extends typingsSlinky.behavior3.b3.MaxTime {
   def this(hasMaxTimeChild: typingsSlinky.behavior3.anon.MaxTime) = this()
 }
-

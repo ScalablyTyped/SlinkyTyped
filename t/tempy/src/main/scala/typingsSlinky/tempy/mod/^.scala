@@ -5,16 +5,12 @@ import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.typeFest.basicMod.TypedArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tempy", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  /**
-  	Get the root temporary directory path.
-  	For example: `/private/var/folders/3x/jf5977fn79jbglr7rk0tq4d00000gn/T`.
-  	*/
-  val root: String = js.native
+  
   /**
   	Get a temporary directory path. The directory is created for you.
   	@example
@@ -28,6 +24,7 @@ object ^ extends js.Object {
   	*/
   def directory(): String = js.native
   def directory(options: DirectoryOptions): String = js.native
+  
   /**
   	Get a temporary file path you can write to.
   	@example
@@ -45,6 +42,13 @@ object ^ extends js.Object {
   	*/
   def file(): String = js.native
   def file(options: FileOptions): String = js.native
+  
+  /**
+  	Get the root temporary directory path.
+  	For example: `/private/var/folders/3x/jf5977fn79jbglr7rk0tq4d00000gn/T`.
+  	*/
+  val root: String = js.native
+  
   /**
   	Write data to a random temp file.
   	@example
@@ -64,6 +68,7 @@ object ^ extends js.Object {
   def write(fileContent: js.typedarray.DataView, options: FileOptions): js.Promise[String] = js.native
   def write(fileContent: TypedArray): js.Promise[String] = js.native
   def write(fileContent: TypedArray, options: FileOptions): js.Promise[String] = js.native
+  
   /**
   	Synchronously write data to a random temp file.
   	@example
@@ -82,4 +87,3 @@ object ^ extends js.Object {
   def writeSync(fileContent: TypedArray): String = js.native
   def writeSync(fileContent: TypedArray, options: FileOptions): String = js.native
 }
-

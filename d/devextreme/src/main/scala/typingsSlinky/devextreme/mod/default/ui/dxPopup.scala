@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxPopupOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxPopup")
 @js.native
@@ -16,4 +16,3 @@ class dxPopup protected ()
   def this(element: JQuery, options: dxPopupOptions[typingsSlinky.devextreme.mod.DevExpress.ui.dxPopup]) = this()
   def this(element: Element, options: dxPopupOptions[typingsSlinky.devextreme.mod.DevExpress.ui.dxPopup]) = this()
 }
-

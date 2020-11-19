@@ -2,7 +2,7 @@ package typingsSlinky.three.geometriesMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/Geometries", "CylinderBufferGeometry")
 @js.native
@@ -19,4 +19,3 @@ class CylinderBufferGeometry protected ()
     thetaLength: js.UndefOr[Double]
   ) = this()
 }
-

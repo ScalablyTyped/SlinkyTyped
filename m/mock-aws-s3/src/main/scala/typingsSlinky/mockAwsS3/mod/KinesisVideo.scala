@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.kinesisvideoMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "KinesisVideo")
 @js.native
@@ -14,4 +14,3 @@ class KinesisVideo ()
   extends typingsSlinky.awsSdk.mod.KinesisVideo {
   def this(options: ClientConfiguration) = this()
 }
-

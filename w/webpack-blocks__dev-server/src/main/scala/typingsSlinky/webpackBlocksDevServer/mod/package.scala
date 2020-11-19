@@ -2,11 +2,14 @@ package typingsSlinky.webpackBlocksDevServer
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type InjectClientFunction = js.Function1[/* compilerConfig */ js.Any, scala.Boolean]
+  
   type PathFunction = js.Function0[java.lang.String]
+  
   type ProxyFunction = js.Function3[
     /* request */ js.Any, 
     /* response */ js.Any, 
@@ -15,12 +18,17 @@ package object mod {
       scala.Null | typingsSlinky.webpackBlocksDevServer.webpackBlocksDevServerBooleans.`false` | java.lang.String
     ]
   ]
+  
   type ProxyType = js.Object | typingsSlinky.webpackBlocksDevServer.mod.ProxyFunction
+  
   type RewritesToFunction = js.Function1[
     /* context */ typingsSlinky.webpackBlocksDevServer.mod.ContextObject, 
     java.lang.String
   ]
+  
   type SetHeadersFunction = js.Function3[/* res */ js.Object, /* path */ java.lang.String, /* stat */ js.Object, scala.Unit]
+  
   type StartMiddlewareFunction = js.Function2[/* app */ js.Any, /* server */ js.Any, scala.Unit]
+  
   type WriteToDiskFunction = js.Function1[/* filePath */ java.lang.String, scala.Boolean]
 }

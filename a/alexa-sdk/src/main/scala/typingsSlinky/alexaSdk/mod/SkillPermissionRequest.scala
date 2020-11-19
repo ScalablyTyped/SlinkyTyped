@@ -22,14 +22,15 @@ import typingsSlinky.alexaSdk.alexaSdkStrings.PlaybackControllerDotPreviousComma
 import typingsSlinky.alexaSdk.alexaSdkStrings.SystemDotExceptionEncountered
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SkillPermissionRequest extends Request {
+  
   var body: SkillPermissionBody = js.native
 }
-
 object SkillPermissionRequest {
+  
   @scala.inline
   def apply(
     body: SkillPermissionBody,
@@ -41,20 +42,23 @@ object SkillPermissionRequest {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkillPermissionRequest]
   }
+  
   @scala.inline
   implicit class SkillPermissionRequestOps[Self <: SkillPermissionRequest] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setBody(value: SkillPermissionBody): Self = this.set("body", value.asInstanceOf[js.Any])
   }
-  
 }
-

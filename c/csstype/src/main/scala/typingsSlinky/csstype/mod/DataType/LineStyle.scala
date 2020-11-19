@@ -20,7 +20,7 @@ import typingsSlinky.csstype.mod.Property._WebkitBorderBefore
 import typingsSlinky.csstype.mod.Property._WebkitBorderBeforeStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.csstype.csstypeStrings.dashed
@@ -53,27 +53,35 @@ trait LineStyle
      with _OutlineStyle
      with _WebkitBorderBefore[js.Any]
      with _WebkitBorderBeforeStyle
-
 object LineStyle {
+  
   @scala.inline
   def dashed: typingsSlinky.csstype.csstypeStrings.dashed = "dashed".asInstanceOf[typingsSlinky.csstype.csstypeStrings.dashed]
+  
   @scala.inline
   def dotted: typingsSlinky.csstype.csstypeStrings.dotted = "dotted".asInstanceOf[typingsSlinky.csstype.csstypeStrings.dotted]
+  
   @scala.inline
   def double: typingsSlinky.csstype.csstypeStrings.double = "double".asInstanceOf[typingsSlinky.csstype.csstypeStrings.double]
+  
   @scala.inline
   def groove: typingsSlinky.csstype.csstypeStrings.groove = "groove".asInstanceOf[typingsSlinky.csstype.csstypeStrings.groove]
+  
   @scala.inline
   def hidden: typingsSlinky.csstype.csstypeStrings.hidden = "hidden".asInstanceOf[typingsSlinky.csstype.csstypeStrings.hidden]
+  
   @scala.inline
   def inset: typingsSlinky.csstype.csstypeStrings.inset = "inset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inset]
+  
   @scala.inline
   def none: typingsSlinky.csstype.csstypeStrings.none = "none".asInstanceOf[typingsSlinky.csstype.csstypeStrings.none]
+  
   @scala.inline
   def outset: typingsSlinky.csstype.csstypeStrings.outset = "outset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.outset]
+  
   @scala.inline
   def ridge: typingsSlinky.csstype.csstypeStrings.ridge = "ridge".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ridge]
+  
   @scala.inline
   def solid: typingsSlinky.csstype.csstypeStrings.solid = "solid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.solid]
 }
-

@@ -8,7 +8,7 @@ import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.ResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TableConstructor
@@ -35,4 +35,3 @@ Instantiable1[/* name */ String, Table]
       /* opts */ ResourceOptions, 
       Table
     ]
-

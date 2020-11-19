@@ -2,30 +2,31 @@ package typingsSlinky.rdfJs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DatasetCore[OutQuad /* <: BaseQuad */, InQuad /* <: BaseQuad */] extends js.Object {
-  @JSName(js.Symbol.iterator)
-  var iterator: js.Function0[js.Iterator[OutQuad]] = js.native
-  /**
-    * A non-negative integer that specifies the number of quads in the set.
-    */
-  val size: Double = js.native
+  
   /**
     * Adds the specified quad to the dataset.
     *
     * Existing quads, as defined in `Quad.equals`, will be ignored.
     */
   def add(quad: InQuad): this.type = js.native
+  
   /**
     * Removes the specified quad from the dataset.
     */
   def delete(quad: InQuad): this.type = js.native
+  
   /**
     * Determines whether a dataset includes a certain quad.
     */
   def has(quad: InQuad): Boolean = js.native
+  
+  @JSName(js.Symbol.iterator)
+  var iterator: js.Function0[js.Iterator[OutQuad]] = js.native
+  
   /**
     * Returns a new dataset that is comprised of all quads in the current instance matching the given arguments.
     *
@@ -47,5 +48,9 @@ trait DatasetCore[OutQuad /* <: BaseQuad */, InQuad /* <: BaseQuad */] extends j
     `object`: js.UndefOr[Term | Null],
     graph: js.UndefOr[Term | Null]
   ): DatasetCore[OutQuad, InQuad] = js.native
+  
+  /**
+    * A non-negative integer that specifies the number of quads in the set.
+    */
+  val size: Double = js.native
 }
-

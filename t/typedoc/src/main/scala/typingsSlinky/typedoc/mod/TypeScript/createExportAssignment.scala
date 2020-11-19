@@ -6,11 +6,12 @@ import typingsSlinky.typescript.mod.Expression
 import typingsSlinky.typescript.mod.Modifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createExportAssignment")
 @js.native
 object createExportAssignment extends js.Object {
+  
   def apply(
     decorators: js.UndefOr[scala.Nothing],
     modifiers: js.UndefOr[scala.Nothing],
@@ -60,4 +61,3 @@ object createExportAssignment extends js.Object {
     expression: Expression
   ): ExportAssignment = js.native
 }
-

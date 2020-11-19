@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.Office
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides methods to get and set the subject of an appointment or message in an Outlook add-in.
@@ -17,6 +17,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Subject extends js.Object {
+  
   /**
     * Gets the subject of an appointment or message.
     * 
@@ -53,6 +54,7 @@ trait Subject extends js.Object {
     *                 of type `Office.AsyncResult`. The `value` property of the result is the subject of the item.
     */
   def getAsync(options: AsyncContextOptions, callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]): Unit = js.native
+  
   def setAsync(data: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   /**
     * Sets the subject of an appointment or message.
@@ -113,4 +115,3 @@ trait Subject extends js.Object {
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
 }
-

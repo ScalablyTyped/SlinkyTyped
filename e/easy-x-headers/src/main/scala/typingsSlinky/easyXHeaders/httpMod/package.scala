@@ -2,8 +2,9 @@ package typingsSlinky.easyXHeaders
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object httpMod {
+  
   type ClientResponse = typingsSlinky.easyXHeaders.httpMod.IncomingMessage
 }

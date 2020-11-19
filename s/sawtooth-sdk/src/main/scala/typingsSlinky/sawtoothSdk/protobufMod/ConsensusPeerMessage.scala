@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "ConsensusPeerMessage")
 @js.native
@@ -16,29 +16,34 @@ import scala.scalajs.js.annotation._
   */
 class ConsensusPeerMessage () extends IConsensusPeerMessage {
   def this(properties: IConsensusPeerMessage) = this()
+  
   /** ConsensusPeerMessage content. */
   @JSName("content")
   var content_ConsensusPeerMessage: js.typedarray.Uint8Array = js.native
+  
   /** ConsensusPeerMessage messageType. */
   @JSName("messageType")
   var messageType_ConsensusPeerMessage: String = js.native
+  
   /** ConsensusPeerMessage name. */
   @JSName("name")
   var name_ConsensusPeerMessage: String = js.native
-  /** ConsensusPeerMessage version. */
-  @JSName("version")
-  var version_ConsensusPeerMessage: String = js.native
+  
   /**
     * Converts this ConsensusPeerMessage to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
+  
+  /** ConsensusPeerMessage version. */
+  @JSName("version")
+  var version_ConsensusPeerMessage: String = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "ConsensusPeerMessage")
 @js.native
 object ConsensusPeerMessage extends js.Object {
+  
   /**
     * Creates a new ConsensusPeerMessage instance using the specified properties.
     * @param [properties] Properties to set
@@ -46,6 +51,7 @@ object ConsensusPeerMessage extends js.Object {
     */
   def create(): ConsensusPeerMessage = js.native
   def create(properties: IConsensusPeerMessage): ConsensusPeerMessage = js.native
+  
   /**
     * Decodes a ConsensusPeerMessage message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -58,6 +64,7 @@ object ConsensusPeerMessage extends js.Object {
   def decode(reader: Reader, length: Double): ConsensusPeerMessage = js.native
   def decode(reader: js.typedarray.Uint8Array): ConsensusPeerMessage = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusPeerMessage = js.native
+  
   /**
     * Decodes a ConsensusPeerMessage message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -67,6 +74,7 @@ object ConsensusPeerMessage extends js.Object {
     */
   def decodeDelimited(reader: Reader): ConsensusPeerMessage = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusPeerMessage = js.native
+  
   /**
     * Encodes the specified ConsensusPeerMessage message. Does not implicitly {@link ConsensusPeerMessage.verify|verify} messages.
     * @param message ConsensusPeerMessage message or plain object to encode
@@ -75,6 +83,7 @@ object ConsensusPeerMessage extends js.Object {
     */
   def encode(message: IConsensusPeerMessage): Writer = js.native
   def encode(message: IConsensusPeerMessage, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ConsensusPeerMessage message, length delimited. Does not implicitly {@link ConsensusPeerMessage.verify|verify} messages.
     * @param message ConsensusPeerMessage message or plain object to encode
@@ -83,12 +92,14 @@ object ConsensusPeerMessage extends js.Object {
     */
   def encodeDelimited(message: IConsensusPeerMessage): Writer = js.native
   def encodeDelimited(message: IConsensusPeerMessage, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ConsensusPeerMessage message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ConsensusPeerMessage
     */
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusPeerMessage = js.native
+  
   /**
     * Creates a plain object from a ConsensusPeerMessage message. Also converts values to other types if specified.
     * @param message ConsensusPeerMessage
@@ -97,6 +108,7 @@ object ConsensusPeerMessage extends js.Object {
     */
   def toObject(message: ConsensusPeerMessage): StringDictionary[js.Any] = js.native
   def toObject(message: ConsensusPeerMessage, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ConsensusPeerMessage message.
     * @param message Plain object to verify
@@ -104,4 +116,3 @@ object ConsensusPeerMessage extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

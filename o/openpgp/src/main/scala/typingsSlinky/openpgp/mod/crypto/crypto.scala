@@ -7,11 +7,12 @@ import typingsSlinky.openpgp.mod.`type`.oid.OID
 import typingsSlinky.openpgp.mod.enums.symmetric
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "crypto.crypto")
 @js.native
 object crypto extends js.Object {
+  
   /**
     * Generate algorithm-specific key parameters
     * @param algo The public key algorithm
@@ -20,6 +21,7 @@ object crypto extends js.Object {
     * @returns The array of parameters
     */
   def generateParams(algo: String, bits: Integer, oid: OID): js.Array[_] = js.native
+  
   /**
     * Generating a session key for the specified symmetric algorithm
     * See {@link https://tools.ietf.org/html/rfc4880#section-9.2|RFC 4880 9.2} for algorithms.
@@ -27,12 +29,14 @@ object crypto extends js.Object {
     * @returns Random bytes as a string to be used as a key
     */
   def generateSessionKey(algo: symmetric): js.typedarray.Uint8Array = js.native
+  
   /**
     * Returns the types comprising the encrypted session key of an algorithm
     * @param algo The public key algorithm
     * @returns The array of types
     */
   def getEncSessionKeyParamTypes(algo: String): js.Array[_] = js.native
+  
   /**
     * Generates a random byte prefix for the specified algorithm
     * See {@link https://tools.ietf.org/html/rfc4880#section-9.2|RFC 4880 9.2} for algorithms.
@@ -40,18 +44,21 @@ object crypto extends js.Object {
     * @returns Random bytes with length equal to the block size of the cipher, plus the last two bytes repeated.
     */
   def getPrefixRandom(algo: symmetric): js.typedarray.Uint8Array = js.native
+  
   /**
     * Returns the types comprising the private key of an algorithm
     * @param algo The public key algorithm
     * @returns The array of types
     */
   def getPrivKeyParamTypes(algo: String): js.Array[_] = js.native
+  
   /**
     * Returns the types comprising the public key of an algorithm
     * @param algo The public key algorithm
     * @returns The array of types
     */
   def getPubKeyParamTypes(algo: String): js.Array[_] = js.native
+  
   /**
     * Decrypts data using specified algorithm and private key parameters.
     * See {@link https://tools.ietf.org/html/rfc4880#section-9.1|RFC 4880 9.1} for public key algorithms.
@@ -67,6 +74,7 @@ object crypto extends js.Object {
     data_params: js.Array[MPI | OID | KDFParams],
     fingerprint: String
   ): MPI = js.native
+  
   /**
     * Encrypts data using specified algorithm and public key parameters.
     * See {@link https://tools.ietf.org/html/rfc4880#section-9.1|RFC 4880 9.1} for public key algorithms.
@@ -83,4 +91,3 @@ object crypto extends js.Object {
     fingerprint: String
   ): js.Array[_] = js.native
 }
-

@@ -14,10 +14,11 @@ import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.EventTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait NajaEventTarget extends EventTarget {
+  
   @JSName("addEventListener")
   def addEventListener_abort(`type`: abort, listener: NajaEventListener[AbortEvent]): Unit = js.native
   @JSName("addEventListener")
@@ -97,6 +98,7 @@ trait NajaEventTarget extends EventTarget {
     listener: NajaEventListener[T],
     options: AddEventListenerOptions
   ): Unit = js.native
+  
   @JSName("removeEventListener")
   def removeEventListener_abort(`type`: abort, listener: NajaEventListener[AbortEvent]): Unit = js.native
   @JSName("removeEventListener")
@@ -177,4 +179,3 @@ trait NajaEventTarget extends EventTarget {
     options: AddEventListenerOptions
   ): Unit = js.native
 }
-

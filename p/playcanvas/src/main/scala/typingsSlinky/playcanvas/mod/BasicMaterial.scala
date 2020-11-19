@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A Basic material is for rendering unlit geometry, either using a constant color or a
@@ -25,4 +25,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class BasicMaterial ()
   extends typingsSlinky.playcanvas.pc.BasicMaterial
-

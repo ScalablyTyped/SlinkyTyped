@@ -6,9 +6,8 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.InputHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-form", "Text")
 @js.native
 object Text extends TopLevel[ReactComponentClass[FieldProps with InputHTMLAttributes[HTMLInputElement]]]
-

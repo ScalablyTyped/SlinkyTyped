@@ -9,14 +9,17 @@ import typingsSlinky.urqlCore.typesMod.Exchange
 import typingsSlinky.urqlCore.typesMod.OperationResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@urql/core/dist/types/exchanges/cache", JSImport.Namespace)
 @js.native
 object cacheMod extends js.Object {
-  val cacheExchange: Exchange = js.native
+  
   def afterMutation(resultCache: ResultCache, operationCache: OperationCache, client: Client, dispatchDebug: FnCallT): js.Function1[/* response */ OperationResult[_], Unit] = js.native
+  
+  val cacheExchange: Exchange = js.native
+  
   type OperationCache = StringDictionary[Set[Double]]
+  
   type ResultCache = Map[Double, OperationResult[js.Any]]
 }
-

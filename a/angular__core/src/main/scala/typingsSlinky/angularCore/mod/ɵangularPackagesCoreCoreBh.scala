@@ -2,11 +2,12 @@ package typingsSlinky.angularCore.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/core", "\u0275angular_packages_core_core_bh")
 @js.native
 object ɵangularPackagesCoreCoreBh extends js.Object {
+  
   def apply(
     lView: ɵangularPackagesCoreCoreBp,
     bindingRoot: Double,
@@ -25,4 +26,3 @@ object ɵangularPackagesCoreCoreBh extends js.Object {
     thisArg: js.Any
   ): js.Any = js.native
 }
-

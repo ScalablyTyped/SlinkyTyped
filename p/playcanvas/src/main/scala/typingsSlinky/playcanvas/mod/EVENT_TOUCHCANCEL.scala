@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.mod
 import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Name of event fired when a touch point is interrupted in some way.
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 @JSImport("playcanvas", "EVENT_TOUCHCANCEL")
 @js.native
 object EVENT_TOUCHCANCEL extends TopLevel[String]
-

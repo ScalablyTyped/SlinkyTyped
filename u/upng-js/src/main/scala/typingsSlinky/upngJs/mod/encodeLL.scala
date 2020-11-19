@@ -2,11 +2,12 @@ package typingsSlinky.upngJs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("upng-js", "encodeLL")
 @js.native
 object encodeLL extends js.Object {
+  
   def apply(
     imgs: js.Array[js.typedarray.ArrayBuffer],
     w: Double,
@@ -25,4 +26,3 @@ object encodeLL extends js.Object {
     dels: js.Array[Double]
   ): js.typedarray.ArrayBuffer = js.native
 }
-

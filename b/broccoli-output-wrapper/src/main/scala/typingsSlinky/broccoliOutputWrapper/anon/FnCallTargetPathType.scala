@@ -4,11 +4,11 @@ import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.symlink.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCallTargetPathType extends js.Object {
+  
   def apply(target: PathLike, path: PathLike): Unit = js.native
   def apply(target: PathLike, path: PathLike, `type`: Type): Unit = js.native
 }
-

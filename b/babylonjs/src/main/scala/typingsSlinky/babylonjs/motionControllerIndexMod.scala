@@ -10,11 +10,12 @@ import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionController
 import typingsSlinky.babylonjs.webXRMotionControllerManagerMod.MotionControllerConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/XR/motionController/index", JSImport.Namespace)
 @js.native
 object motionControllerIndexMod extends js.Object {
+  
   @js.native
   abstract class WebXRAbstractMotionController protected ()
     extends typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.WebXRAbstractMotionController {
@@ -95,15 +96,65 @@ object motionControllerIndexMod extends js.Object {
       * the type of the component
       */
     `type`: MotionControllerComponentType,
+      _buttonIndex: js.UndefOr[scala.Nothing],
+      _axesIndices: js.Array[Double]
+    ) = this()
+    def this(
+      /**
+      * the id of this component
+      */
+    id: String,
+      /**
+      * the type of the component
+      */
+    `type`: MotionControllerComponentType,
       _buttonIndex: Double,
       _axesIndices: js.Array[Double]
     ) = this()
+  }
+  /* static members */
+  @js.native
+  object WebXRControllerComponent extends js.Object {
+    
+    /**
+      * button component type
+      */
+    var BUTTON_TYPE: MotionControllerComponentType = js.native
+    
+    /**
+      * squeeze component type
+      */
+    var SQUEEZE_TYPE: MotionControllerComponentType = js.native
+    
+    /**
+      * Thumbstick component type
+      */
+    var THUMBSTICK_TYPE: MotionControllerComponentType = js.native
+    
+    /**
+      * Touchpad component type
+      */
+    var TOUCHPAD_TYPE: MotionControllerComponentType = js.native
+    
+    /**
+      * trigger component type
+      */
+    var TRIGGER_TYPE: MotionControllerComponentType = js.native
   }
   
   @js.native
   class WebXRGenericTriggerMotionController protected ()
     extends typingsSlinky.babylonjs.webXRGenericMotionControllerMod.WebXRGenericTriggerMotionController {
     def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
+  }
+  /* static members */
+  @js.native
+  object WebXRGenericTriggerMotionController extends js.Object {
+    
+    /**
+      * Static version of the profile id of this controller
+      */
+    var ProfileId: String = js.native
   }
   
   @js.native
@@ -117,142 +168,76 @@ object motionControllerIndexMod extends js.Object {
       */
     def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
   }
-  
-  @js.native
-  class WebXRMicrosoftMixedRealityController protected ()
-    extends typingsSlinky.babylonjs.webXRMicrosoftMixedRealityControllerMod.WebXRMicrosoftMixedRealityController {
-    def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
-  }
-  
-  @js.native
-  class WebXRMotionControllerManager ()
-    extends typingsSlinky.babylonjs.webXRMotionControllerManagerMod.WebXRMotionControllerManager
-  
-  @js.native
-  class WebXROculusTouchMotionController protected ()
-    extends typingsSlinky.babylonjs.webXROculusTouchMotionControllerMod.WebXROculusTouchMotionController {
-    def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
-    def this(
-      scene: Scene,
-      gamepadObject: IMinimalMotionControllerObject,
-      handness: MotionControllerHandness,
-      legacyMapping: Boolean
-    ) = this()
-    def this(
-      scene: Scene,
-      gamepadObject: IMinimalMotionControllerObject,
-      handness: MotionControllerHandness,
-      legacyMapping: Boolean,
-      _forceLegacyControllers: Boolean
-    ) = this()
-  }
-  
-  @js.native
-  class WebXRProfiledMotionController protected ()
-    extends typingsSlinky.babylonjs.webXRProfiledMotionControllerMod.WebXRProfiledMotionController {
-    def this(scene: Scene, xrInput: XRInputSource, _profile: IMotionControllerProfile, _repositoryUrl: String) = this()
-  }
-  
-  /* static members */
-  @js.native
-  object WebXRControllerComponent extends js.Object {
-    /**
-      * button component type
-      */
-    var BUTTON_TYPE: MotionControllerComponentType = js.native
-    /**
-      * squeeze component type
-      */
-    var SQUEEZE_TYPE: MotionControllerComponentType = js.native
-    /**
-      * Thumbstick component type
-      */
-    var THUMBSTICK_TYPE: MotionControllerComponentType = js.native
-    /**
-      * Touchpad component type
-      */
-    var TOUCHPAD_TYPE: MotionControllerComponentType = js.native
-    /**
-      * trigger component type
-      */
-    var TRIGGER_TYPE: MotionControllerComponentType = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object WebXRGenericTriggerMotionController extends js.Object {
-    /**
-      * Static version of the profile id of this controller
-      */
-    var ProfileId: String = js.native
-  }
-  
   /* static members */
   @js.native
   object WebXRHTCViveMotionController extends js.Object {
+    
     /**
       * The base url used to load the left and right controller models
       */
     var MODEL_BASE_URL: String = js.native
+    
     /**
       * File name for the controller model.
       */
     var MODEL_FILENAME: String = js.native
   }
   
+  @js.native
+  class WebXRMicrosoftMixedRealityController protected ()
+    extends typingsSlinky.babylonjs.webXRMicrosoftMixedRealityControllerMod.WebXRMicrosoftMixedRealityController {
+    def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
+  }
   /* static members */
   @js.native
   object WebXRMicrosoftMixedRealityController extends js.Object {
+    
     /**
       * The base url used to load the left and right controller models
       */
     var MODEL_BASE_URL: String = js.native
+    
     /**
       * The name of the left controller model file
       */
     var MODEL_LEFT_FILENAME: String = js.native
+    
     /**
       * The name of the right controller model file
       */
     var MODEL_RIGHT_FILENAME: String = js.native
   }
   
+  @js.native
+  class WebXRMotionControllerManager ()
+    extends typingsSlinky.babylonjs.webXRMotionControllerManagerMod.WebXRMotionControllerManager
   /* static members */
   @js.native
   object WebXRMotionControllerManager extends js.Object {
+    
     /**
       * The base URL of the online controller repository. Can be changed at any time.
       */
     var BaseRepositoryUrl: String = js.native
-    /**
-      * Which repository gets priority - local or online
-      */
-    var PrioritizeOnlineRepository: Boolean = js.native
-    /**
-      * Use the online repository, or use only locally-defined controllers
-      */
-    var UseOnlineRepository: Boolean = js.native
-    var _AvailableControllers: js.Any = js.native
-    var _Fallbacks: js.Any = js.native
-    var _LoadProfileFromRepository: js.Any = js.native
-    var _LoadProfilesFromAvailableControllers: js.Any = js.native
-    var _ProfileLoadingPromises: js.Any = js.native
-    var _ProfilesList: js.Any = js.native
+    
     /**
       * Clear the cache used for profile loading and reload when requested again
       */
     def ClearProfilesCache(): Unit = js.native
+    
     /**
       * Register the default fallbacks.
       * This function is called automatically when this file is imported.
       */
     def DefaultFallbacks(): Unit = js.native
+    
     /**
       * Find a fallback profile if the profile was not found. There are a few predefined generic profiles.
       * @param profileId the profile to which a fallback needs to be found
       * @return an array with corresponding fallback profiles
       */
     def FindFallbackWithProfileId(profileId: String): js.Array[String] = js.native
+    
     /**
       * When acquiring a new xrInput object (usually by the WebXRInput class), match it with the correct profile.
       * The order of search:
@@ -273,6 +258,12 @@ object motionControllerIndexMod extends js.Object {
     def GetMotionControllerWithXRInput(xrInput: XRInputSource, scene: Scene, forceProfile: String): js.Promise[
         typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.WebXRAbstractMotionController
       ] = js.native
+    
+    /**
+      * Which repository gets priority - local or online
+      */
+    var PrioritizeOnlineRepository: Boolean = js.native
+    
     /**
       * Register a new controller based on its profile. This function will be called by the controller classes themselves.
       *
@@ -282,39 +273,91 @@ object motionControllerIndexMod extends js.Object {
       * @param constructFunction the function to be called when loading this profile
       */
     def RegisterController(`type`: String, constructFunction: MotionControllerConstructor): Unit = js.native
+    
     /**
       * Register a fallback to a specific profile.
       * @param profileId the profileId that will receive the fallbacks
       * @param fallbacks A list of fallback profiles
       */
     def RegisterFallbacksForProfileId(profileId: String, fallbacks: js.Array[String]): Unit = js.native
+    
     /**
       * Will update the list of profiles available in the repository
       * @return a promise that resolves to a map of profiles available online
       */
     def UpdateProfilesList(): js.Promise[StringDictionary[String]] = js.native
+    
+    /**
+      * Use the online repository, or use only locally-defined controllers
+      */
+    var UseOnlineRepository: Boolean = js.native
+    
+    var _AvailableControllers: js.Any = js.native
+    
+    var _Fallbacks: js.Any = js.native
+    
+    var _LoadProfileFromRepository: js.Any = js.native
+    
+    var _LoadProfilesFromAvailableControllers: js.Any = js.native
+    
+    var _ProfileLoadingPromises: js.Any = js.native
+    
+    var _ProfilesList: js.Any = js.native
   }
   
+  @js.native
+  class WebXROculusTouchMotionController protected ()
+    extends typingsSlinky.babylonjs.webXROculusTouchMotionControllerMod.WebXROculusTouchMotionController {
+    def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
+    def this(
+      scene: Scene,
+      gamepadObject: IMinimalMotionControllerObject,
+      handness: MotionControllerHandness,
+      legacyMapping: Boolean
+    ) = this()
+    def this(
+      scene: Scene,
+      gamepadObject: IMinimalMotionControllerObject,
+      handness: MotionControllerHandness,
+      legacyMapping: js.UndefOr[scala.Nothing],
+      _forceLegacyControllers: Boolean
+    ) = this()
+    def this(
+      scene: Scene,
+      gamepadObject: IMinimalMotionControllerObject,
+      handness: MotionControllerHandness,
+      legacyMapping: Boolean,
+      _forceLegacyControllers: Boolean
+    ) = this()
+  }
   /* static members */
   @js.native
   object WebXROculusTouchMotionController extends js.Object {
+    
     /**
       * The base url used to load the left and right controller models
       */
     var MODEL_BASE_URL: String = js.native
+    
     /**
       * The name of the left controller model file
       */
     var MODEL_LEFT_FILENAME: String = js.native
+    
     /**
       * The name of the right controller model file
       */
     var MODEL_RIGHT_FILENAME: String = js.native
+    
     /**
       * Base Url for the Quest controller model.
       */
     var QUEST_MODEL_BASE_URL: String = js.native
   }
   
+  @js.native
+  class WebXRProfiledMotionController protected ()
+    extends typingsSlinky.babylonjs.webXRProfiledMotionControllerMod.WebXRProfiledMotionController {
+    def this(scene: Scene, xrInput: XRInputSource, _profile: IMotionControllerProfile, _repositoryUrl: String) = this()
+  }
 }
-

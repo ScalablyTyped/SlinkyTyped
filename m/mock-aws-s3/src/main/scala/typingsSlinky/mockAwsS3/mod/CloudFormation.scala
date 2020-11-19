@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.cloudformationMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "CloudFormation")
 @js.native
@@ -14,4 +14,3 @@ class CloudFormation ()
   extends typingsSlinky.awsSdk.mod.CloudFormation {
   def this(options: ClientConfiguration) = this()
 }
-

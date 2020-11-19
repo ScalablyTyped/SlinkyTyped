@@ -7,16 +7,20 @@ import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined react.react.FunctionComponent<fundamental-react.fundamental-react/lib/Panel/Panel.PanelBodyProps> & {  displayName :'Panel.Body'} */
 @js.native
 trait FunctionComponentPanelBod extends js.Object {
-  var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
-  var defaultProps: js.UndefOr[PartialPanelBodyProps] = js.native
-  var displayName: js.UndefOr[String] with PanelDotBody = js.native
-  var propTypes: js.UndefOr[WeakValidationMapPanelBod] = js.native
+  
   def apply(props: PropsWithChildren[PanelBodyProps]): ReactElement | Null = js.native
   def apply(props: PropsWithChildren[PanelBodyProps], context: js.Any): ReactElement | Null = js.native
+  
+  var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
+  
+  var defaultProps: js.UndefOr[PartialPanelBodyProps] = js.native
+  
+  var displayName: js.UndefOr[String] with PanelDotBody = js.native
+  
+  var propTypes: js.UndefOr[WeakValidationMapPanelBod] = js.native
 }
-

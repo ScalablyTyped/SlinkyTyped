@@ -7,10 +7,10 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TagType extends ForwardRefExoticComponent[TagProps with RefAttributes[HTMLElement]] {
+  
   var CheckableTag: ReactComponentClass[CheckableTagProps] = js.native
 }
-

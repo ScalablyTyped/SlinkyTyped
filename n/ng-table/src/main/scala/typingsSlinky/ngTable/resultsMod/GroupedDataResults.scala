@@ -6,30 +6,18 @@ import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.anon.CopyWithin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Array<ng-table.ng-table/src/core/data/results.IDataRowGroup<T>> & {  visibleColumnCount :number} */
 @js.native
 trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
-  /** Iterator */
-  @JSName(js.Symbol.iterator)
-  var iterator: js.Function0[IterableIterator[IDataRowGroup[T]]] = js.native
-  /**
-    * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
-    */
-  var length: Double = js.native
-  /**
-    * Returns an object whose properties have the value 'true'
-    * when they will be absent when used in a 'with' statement.
-    */
-  @JSName(js.Symbol.unscopables)
-  var unscopables: js.Function0[CopyWithin] = js.native
-  var visibleColumnCount: Double = js.native
+  
   /**
     * Combines two or more arrays.
     * @param items Additional items to add to the end of array1.
     */
   def concat(items: (js.Array[IDataRowGroup[T]] | IDataRowGroup[T])*): js.Array[IDataRowGroup[T]] = js.native
+  
   /**
     * Returns the this object after copying a section of the array identified by start and end
     * to the same array starting at position target
@@ -41,10 +29,12 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     */
   def copyWithin(target: Double, start: Double): this.type = js.native
   def copyWithin(target: Double, start: Double, end: Double): this.type = js.native
+  
   /**
     * Returns an iterable of key, value pairs for every entry in the array
     */
   def entries(): IterableIterator[js.Tuple2[Double, IDataRowGroup[T]]] = js.native
+  
   /**
     * Determines whether all the members of an array satisfy the specified test.
     * @param callbackfn A function that accepts up to three arguments. The every method calls
@@ -70,6 +60,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     ],
     thisArg: js.Any
   ): Boolean = js.native
+  
   /**
     * Returns the this object after filling the section identified by start and end with value
     * @param value value to fill array section with
@@ -82,6 +73,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
   def fill(value: IDataRowGroup[T], start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
   def fill(value: IDataRowGroup[T], start: Double): this.type = js.native
   def fill(value: IDataRowGroup[T], start: Double, end: Double): this.type = js.native
+  
   /**
     * Returns the elements of an array that meet the condition specified in a callback function.
     * @param callbackfn A function that accepts up to three arguments. The filter method calls the callbackfn function one time for each element in the array.
@@ -128,6 +120,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     ],
     thisArg: js.Any
   ): js.Array[S] = js.native
+  
   def find(
     predicate: js.Function3[
       /* value */ IDataRowGroup[T], 
@@ -173,6 +166,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     ],
     thisArg: js.Any
   ): js.UndefOr[S] = js.native
+  
   /**
     * Returns the index of the first element in the array where predicate is true, and -1
     * otherwise.
@@ -199,6 +193,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     ],
     thisArg: js.Any
   ): Double = js.native
+  
   /**
     * Returns a new array with all sub-array elements concatenated into it recursively up to the
     * specified depth.
@@ -207,6 +202,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     */
   def flat[A, D /* <: Double */](): js.Array[FlatArray[A, D]] = js.native
   def flat[A, D /* <: Double */](depth: D): js.Array[FlatArray[A, D]] = js.native
+  
   /**
     * Calls a defined callback function on each element of an array. Then, flattens the result into
     * a new array.
@@ -236,6 +232,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     ],
     thisArg: This
   ): js.Array[U] = js.native
+  
   /**
     * Performs the specified action for each element in an array.
     * @param callbackfn  A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
@@ -258,6 +255,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     ],
     thisArg: js.Any
   ): Unit = js.native
+  
   /**
     * Determines whether an array includes a certain element, returning true or false as appropriate.
     * @param searchElement The element to search for.
@@ -265,6 +263,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     */
   def includes(searchElement: IDataRowGroup[T]): Boolean = js.native
   def includes(searchElement: IDataRowGroup[T], fromIndex: Double): Boolean = js.native
+  
   /**
     * Returns the index of the first occurrence of a value in an array.
     * @param searchElement The value to locate in the array.
@@ -272,16 +271,23 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     */
   def indexOf(searchElement: IDataRowGroup[T]): Double = js.native
   def indexOf(searchElement: IDataRowGroup[T], fromIndex: Double): Double = js.native
+  
+  /** Iterator */
+  @JSName(js.Symbol.iterator)
+  var iterator: js.Function0[IterableIterator[IDataRowGroup[T]]] = js.native
+  
   /**
     * Adds all the elements of an array separated by the specified separator string.
     * @param separator A string used to separate one element of an array from the next in the resulting String. If omitted, the array elements are separated with a comma.
     */
   def join(): String = js.native
   def join(separator: String): String = js.native
+  
   /**
     * Returns an iterable of keys in the array
     */
   def keys(): IterableIterator[Double] = js.native
+  
   /**
     * Returns the index of the last occurrence of a specified value in an array.
     * @param searchElement The value to locate in the array.
@@ -289,6 +295,12 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     */
   def lastIndexOf(searchElement: IDataRowGroup[T]): Double = js.native
   def lastIndexOf(searchElement: IDataRowGroup[T], fromIndex: Double): Double = js.native
+  
+  /**
+    * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
+    */
+  var length: Double = js.native
+  
   /**
     * Calls a defined callback function on each element of an array, and returns an array that contains the results.
     * @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
@@ -311,15 +323,18 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     ],
     thisArg: js.Any
   ): js.Array[U] = js.native
+  
   /**
     * Removes the last element from an array and returns it.
     */
   def pop(): js.UndefOr[IDataRowGroup[T]] = js.native
+  
   /**
     * Appends new elements to an array, and returns the new length of the array.
     * @param items New elements of the Array.
     */
   def push(items: IDataRowGroup[T]*): Double = js.native
+  
   /**
     * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
@@ -359,6 +374,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     ],
     initialValue: U
   ): U = js.native
+  
   /**
     * Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
@@ -398,14 +414,17 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     ],
     initialValue: U
   ): U = js.native
+  
   /**
     * Reverses the elements in an Array.
     */
   def reverse(): js.Array[IDataRowGroup[T]] = js.native
+  
   /**
     * Removes the first element from an array and returns it.
     */
   def shift(): js.UndefOr[IDataRowGroup[T]] = js.native
+  
   /**
     * Returns a section of an array.
     * @param start The beginning of the specified portion of the array.
@@ -415,6 +434,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
   def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[IDataRowGroup[T]] = js.native
   def slice(start: Double): js.Array[IDataRowGroup[T]] = js.native
   def slice(start: Double, end: Double): js.Array[IDataRowGroup[T]] = js.native
+  
   /**
     * Determines whether the specified callback function returns true for any element of an array.
     * @param callbackfn A function that accepts up to three arguments. The some method calls
@@ -440,6 +460,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     ],
     thisArg: js.Any
   ): Boolean = js.native
+  
   /**
     * Sorts an array.
     * @param compareFn Function used to determine the order of the elements. It is expected to return
@@ -451,6 +472,7 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     */
   def sort(): this.type = js.native
   def sort(compareFn: js.Function2[/* a */ IDataRowGroup[T], /* b */ IDataRowGroup[T], Double]): this.type = js.native
+  
   /**
     * Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
     * @param start The zero-based location in the array from which to start removing elements.
@@ -465,14 +487,24 @@ trait GroupedDataResults[T] extends /* n */ NumberDictionary[IDataRowGroup[T]] {
     * @param items Elements to insert into the array in place of the deleted elements.
     */
   def splice(start: Double, deleteCount: Double, items: IDataRowGroup[T]*): js.Array[IDataRowGroup[T]] = js.native
+  
+  /**
+    * Returns an object whose properties have the value 'true'
+    * when they will be absent when used in a 'with' statement.
+    */
+  @JSName(js.Symbol.unscopables)
+  var unscopables: js.Function0[CopyWithin] = js.native
+  
   /**
     * Inserts new elements at the start of an array.
     * @param items  Elements to insert at the start of the Array.
     */
   def unshift(items: IDataRowGroup[T]*): Double = js.native
+  
   /**
     * Returns an iterable of values in the array
     */
   def values(): IterableIterator[IDataRowGroup[T]] = js.native
+  
+  var visibleColumnCount: Double = js.native
 }
-

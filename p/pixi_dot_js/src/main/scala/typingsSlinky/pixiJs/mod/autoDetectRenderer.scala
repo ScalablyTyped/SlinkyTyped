@@ -3,11 +3,12 @@ package typingsSlinky.pixiJs.mod
 import typingsSlinky.pixiJs.anon.ClearBeforeRender
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pixi.js", "autoDetectRenderer")
 @js.native
 object autoDetectRenderer extends js.Object {
+  
   /**
     * This helper function will automatically detect which renderer you should be using.
     * WebGL is the preferred renderer as it is a lot faster. If WebGL is not supported by
@@ -40,4 +41,3 @@ object autoDetectRenderer extends js.Object {
   def apply(): typingsSlinky.pixiJs.PIXI.Renderer = js.native
   def apply(options: ClearBeforeRender): typingsSlinky.pixiJs.PIXI.Renderer = js.native
 }
-

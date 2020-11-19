@@ -4,7 +4,7 @@ import typingsSlinky.graphqlToolsUtils.interfacesMod.InputFieldFilter
 import typingsSlinky.graphqlToolsWrap.typesMod.InputObjectNodeTransformer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server", "FilterInputObjectFields")
 @js.native
@@ -13,4 +13,3 @@ class FilterInputObjectFields protected ()
   def this(filter: InputFieldFilter) = this()
   def this(filter: InputFieldFilter, inputObjectNodeTransformer: InputObjectNodeTransformer) = this()
 }
-

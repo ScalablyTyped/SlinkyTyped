@@ -11,11 +11,12 @@ import typingsSlinky.tensorflowTfjsCore.convUtilMod.Conv2DInfo
 import typingsSlinky.tensorflowTfjsCore.convUtilMod.ExplicitPadding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "backend_util.computeConv2DInfo")
 @js.native
 object computeConv2DInfo extends js.Object {
+  
   def apply(
     inShape: js.Tuple4[Double, Double, Double, Double],
     filterShape: js.Tuple4[Double, Double, Double, Double],
@@ -27,4 +28,3 @@ object computeConv2DInfo extends js.Object {
     dataFormat: js.UndefOr[channelsFirst | channelsLast]
   ): Conv2DInfo = js.native
 }
-

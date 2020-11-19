@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The ScriptComponent allows you to extend the functionality of an Entity by attaching your own Script Types defined in JavaScript files
@@ -20,4 +20,3 @@ class ScriptComponent protected ()
     entity: typingsSlinky.playcanvas.pc.Entity
   ) = this()
 }
-

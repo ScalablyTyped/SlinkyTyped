@@ -5,12 +5,12 @@ import typingsSlinky.winrt.Windows.Foundation.Uri
 import typingsSlinky.winrt.Windows.Networking.Connectivity.NetworkAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait HotspotAuthenticationContext extends IHotspotAuthenticationContext
-
 object HotspotAuthenticationContext {
+  
   @scala.inline
   def apply(
     abortAuthentication: Boolean => Unit,
@@ -27,4 +27,3 @@ object HotspotAuthenticationContext {
     __obj.asInstanceOf[HotspotAuthenticationContext]
   }
 }
-

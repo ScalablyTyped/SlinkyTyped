@@ -5,7 +5,7 @@ import typingsSlinky.graphqlToolsWrap.typesMod.EnumValueTransformer
 import typingsSlinky.graphqlToolsWrap.typesMod.LeafValueTransformer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/transforms", "TransformEnumValues")
 @js.native
@@ -23,4 +23,3 @@ class TransformEnumValues protected () extends default {
     outputValueTransformer: LeafValueTransformer
   ) = this()
 }
-

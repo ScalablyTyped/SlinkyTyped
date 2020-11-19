@@ -7,11 +7,12 @@ import typingsSlinky.uirouterCore.urlInterfaceMod.UrlMatcherCompileConfig
 import typingsSlinky.uirouterCore.urlMatcherFactoryMod.ParamFactory
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@uirouter/core/lib/url/urlMatcher", JSImport.Namespace)
 @js.native
 object urlMatcherMod extends js.Object {
+  
   @js.native
   class UrlMatcher protected () extends js.Object {
     /**
@@ -27,21 +28,24 @@ object urlMatcherMod extends js.Object {
       paramFactory: ParamFactory,
       config: UrlMatcherCompileConfig
     ) = this()
+    
     /** @internal */
     var _cache: js.Any = js.native
+    
     /** @internal */
     var _children: js.Any = js.native
+    
     /** @internal */
     var _compiled: js.Any = js.native
+    
     var _getDecodedParamValue: js.Any = js.native
+    
     /** @internal */
     var _params: js.Any = js.native
+    
     /** @internal */
     var _segments: js.Any = js.native
-    /** @internal */
-    val config: js.Any = js.native
-    /** The pattern that was passed into the constructor */
-    var pattern: String = js.native
+    
     /**
       * Creates a new concatenated UrlMatcher
       *
@@ -50,6 +54,10 @@ object urlMatcherMod extends js.Object {
       * @param url A `UrlMatcher` instance to append as a child of the current `UrlMatcher`.
       */
     def append(url: UrlMatcher): UrlMatcher = js.native
+    
+    /** @internal */
+    val config: js.Any = js.native
+    
     /**
       * Tests the specified url/path against this matcher.
       *
@@ -84,6 +92,7 @@ object urlMatcherMod extends js.Object {
     def exec(path: String, search: js.Any, hash: js.UndefOr[scala.Nothing], options: js.Any): RawParams = js.native
     def exec(path: String, search: js.Any, hash: String): RawParams = js.native
     def exec(path: String, search: js.Any, hash: String, options: js.Any): RawParams = js.native
+    
     /**
       * Given a set of parameter values, creates a URL from this UrlMatcher.
       *
@@ -101,8 +110,10 @@ object urlMatcherMod extends js.Object {
       */
     def format(): String = js.native
     def format(values: RawParams): String = js.native
+    
     /** @internal */
     def isRoot(): Boolean = js.native
+    
     /**
       * @internal
       * Returns a single parameter from this UrlMatcher by id
@@ -113,6 +124,7 @@ object urlMatcherMod extends js.Object {
       */
     def parameter(id: String): Param = js.native
     def parameter(id: String, opts: js.Any): Param = js.native
+    
     /**
       * @internal
       * Returns all the [[Param]] objects of all path and search parameters of this pattern in order of appearance.
@@ -122,6 +134,10 @@ object urlMatcherMod extends js.Object {
       */
     def parameters(): js.Array[Param] = js.native
     def parameters(opts: js.Any): js.Array[Param] = js.native
+    
+    /** The pattern that was passed into the constructor */
+    var pattern: String = js.native
+    
     /**
       * Validates the input parameter values against this UrlMatcher
       *
@@ -133,12 +149,10 @@ object urlMatcherMod extends js.Object {
       */
     def validates(params: RawParams): Boolean = js.native
   }
-  
   /* static members */
   @js.native
   object UrlMatcher extends js.Object {
-    /** @internal */
-    var nameValidator: js.RegExp = js.native
+    
     /**
       * Compare two UrlMatchers
       *
@@ -149,13 +163,17 @@ object urlMatcherMod extends js.Object {
       * The comparison function sorts static segments before dynamic ones.
       */
     def compare(a: UrlMatcher, b: UrlMatcher): Double = js.native
+    
     /** @internal */
     def encodeDashes(str: String): String = js.native
+    
+    /** @internal */
+    var nameValidator: js.RegExp = js.native
+    
     /** @internal Given a matcher, return an array with the matcher's path segments and path params, in order */
     def pathSegmentsAndParams(matcher: UrlMatcher): js.Any = js.native
+    
     /** @internal Given a matcher, return an array with the matcher's query params */
     def queryParams(matcher: UrlMatcher): js.Array[Param] = js.native
   }
-  
 }
-

@@ -6,9 +6,52 @@ import typingsSlinky.reactRelay.queryResourceMod.RenderPolicy
 import typingsSlinky.reactRelay.useLoadMoreFunctionMod.Direction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object reactRelayStrings {
+  
+  @scala.inline
+  def MappedFragmentProps: MappedFragmentProps = "MappedFragmentProps".asInstanceOf[MappedFragmentProps]
+  
+  @scala.inline
+  def PreloadProps: PreloadProps = "PreloadProps".asInstanceOf[PreloadProps]
+  
+  @scala.inline
+  def backward: backward = "backward".asInstanceOf[backward]
+  
+  @scala.inline
+  def entryPoints: entryPoints = "entryPoints".asInstanceOf[entryPoints]
+  
+  @scala.inline
+  def extraProps: extraProps = "extraProps".asInstanceOf[extraProps]
+  
+  @scala.inline
+  def forward: forward = "forward".asInstanceOf[forward]
+  
+  @scala.inline
+  def full: full = "full".asInstanceOf[full]
+  
+  @scala.inline
+  def `network-only`: `network-only` = "network-only".asInstanceOf[`network-only`]
+  
+  @scala.inline
+  def partial: partial = "partial".asInstanceOf[partial]
+  
+  @scala.inline
+  def queries: queries = "queries".asInstanceOf[queries]
+  
+  @scala.inline
+  def relay: relay = "relay".asInstanceOf[relay]
+  
+  @scala.inline
+  def `store-and-network`: `store-and-network` = "store-and-network".asInstanceOf[`store-and-network`]
+  
+  @scala.inline
+  def `store-only`: `store-only` = "store-only".asInstanceOf[`store-only`]
+  
+  @scala.inline
+  def `store-or-network`: `store-or-network` = "store-or-network".asInstanceOf[`store-or-network`]
+  
   @js.native
   sealed trait MappedFragmentProps extends js.Object
   
@@ -58,34 +101,4 @@ object reactRelayStrings {
   sealed trait `store-or-network`
     extends FetchPolicy
        with PreloadFetchPolicy
-  
-  @scala.inline
-  def MappedFragmentProps: MappedFragmentProps = "MappedFragmentProps".asInstanceOf[MappedFragmentProps]
-  @scala.inline
-  def PreloadProps: PreloadProps = "PreloadProps".asInstanceOf[PreloadProps]
-  @scala.inline
-  def backward: backward = "backward".asInstanceOf[backward]
-  @scala.inline
-  def entryPoints: entryPoints = "entryPoints".asInstanceOf[entryPoints]
-  @scala.inline
-  def extraProps: extraProps = "extraProps".asInstanceOf[extraProps]
-  @scala.inline
-  def forward: forward = "forward".asInstanceOf[forward]
-  @scala.inline
-  def full: full = "full".asInstanceOf[full]
-  @scala.inline
-  def `network-only`: `network-only` = "network-only".asInstanceOf[`network-only`]
-  @scala.inline
-  def partial: partial = "partial".asInstanceOf[partial]
-  @scala.inline
-  def queries: queries = "queries".asInstanceOf[queries]
-  @scala.inline
-  def relay: relay = "relay".asInstanceOf[relay]
-  @scala.inline
-  def `store-and-network`: `store-and-network` = "store-and-network".asInstanceOf[`store-and-network`]
-  @scala.inline
-  def `store-only`: `store-only` = "store-only".asInstanceOf[`store-only`]
-  @scala.inline
-  def `store-or-network`: `store-or-network` = "store-or-network".asInstanceOf[`store-or-network`]
 }
-

@@ -21,9 +21,10 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MultipleSelector {
+  
   @JSImport("rc-select/lib/Selector/MultipleSelector", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -32,55 +33,79 @@ object MultipleSelector {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def choiceTransitionName(value: String): this.type = set("choiceTransitionName", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def inputRefRefObject(value: ReactRef[HTMLInputElement | HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def inputRefFunction1(value: /* instance */ HTMLInputElement | HTMLTextAreaElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def inputRef(value: Ref[HTMLInputElement | HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def inputRefNull: this.type = set("inputRef", null)
+    
     @scala.inline
     def maxTagCount(value: Double): this.type = set("maxTagCount", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def maxTagPlaceholderReactElement(value: ReactElement): this.type = set("maxTagPlaceholder", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def maxTagPlaceholderFunction1(value: /* omittedValues */ js.Array[LabelValueType] => ReactElement): this.type = set("maxTagPlaceholder", js.Any.fromFunction1(value))
+    
     @scala.inline
     def maxTagPlaceholder(value: ReactElement | (js.Function1[/* omittedValues */ js.Array[LabelValueType], ReactElement])): this.type = set("maxTagPlaceholder", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def maxTagTextLength(value: Double): this.type = set("maxTagTextLength", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def removeIconReactElement(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def removeIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("removeIcon", js.Any.fromFunction1(value))
+    
     @scala.inline
     def removeIcon(value: RenderNode): this.type = set("removeIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def showSearch(value: Boolean): this.type = set("showSearch", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def tagRender(value: /* props */ CustomTagProps => ReactElement): this.type = set("tagRender", js.Any.fromFunction1(value))
+    
     @scala.inline
     def tokenSeparatorsVarargs(value: String*): this.type = set("tokenSeparators", js.Array(value :_*))
+    
     @scala.inline
     def tokenSeparators(value: js.Array[String]): this.type = set("tokenSeparators", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SelectorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     accessibilityIndex: Double,
@@ -102,4 +127,3 @@ object MultipleSelector {
     new Builder(js.Array(this.component, __props.asInstanceOf[SelectorProps]))
   }
 }
-

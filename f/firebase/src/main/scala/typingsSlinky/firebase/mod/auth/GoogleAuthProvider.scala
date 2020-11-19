@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Google auth provider.
@@ -45,17 +45,19 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.GoogleAuthProvider")
 @js.native
 class GoogleAuthProvider () extends GoogleAuthProviderInstance
-
 /* static members */
 @JSImport("firebase", "auth.GoogleAuthProvider")
 @js.native
 object GoogleAuthProvider extends js.Object {
+  
   /**
     * This corresponds to the sign-in method identifier as returned in
     * {@link firebase.auth.Auth.fetchSignInMethodsForEmail}.
     */
   var GOOGLE_SIGN_IN_METHOD: String = js.native
+  
   var PROVIDER_ID: String = js.native
+  
   /**
     * Creates a credential for Google. At least one of ID token and access token
     * is required.
@@ -77,4 +79,3 @@ object GoogleAuthProvider extends js.Object {
   def credential(idToken: String, accessToken: String): OAuthCredential = js.native
   def credential(idToken: Null, accessToken: String): OAuthCredential = js.native
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.superstruct.indexCjsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("superstruct/lib/index.cjs", "struct")
 @js.native
 object struct extends js.Object {
+  
   /**
     * Define a `Struct` instance with a type and validation function.
     */
@@ -18,4 +19,3 @@ object struct extends js.Object {
     validator: js.Function2[/* value */ js.Any, /* context */ StructContext, StructResult]
   ): Struct_[T, Null] = js.native
 }
-

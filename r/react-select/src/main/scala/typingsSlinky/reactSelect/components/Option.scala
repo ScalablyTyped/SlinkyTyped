@@ -14,9 +14,10 @@ import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.ValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Option {
+  
   @JSImport("react-select", "components.Option")
   @js.native
   object component extends js.Object
@@ -25,19 +26,25 @@ object Option {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def innerRefRefObject(value: ReactRef[js.Any]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def innerRefFunction1(value: /* instance */ js.Any | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def innerRef(value: InnerRef): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def innerRefNull: this.type = set("innerRef", null)
   }
   
   def withProps(p: OptionProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     clearValue: () => Unit,
@@ -63,4 +70,3 @@ object Option {
     new Builder(js.Array(this.component, __props.asInstanceOf[OptionProps[js.Any]]))
   }
 }
-

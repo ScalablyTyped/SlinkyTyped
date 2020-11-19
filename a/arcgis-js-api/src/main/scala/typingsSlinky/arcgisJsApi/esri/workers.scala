@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This module is a utility framework that simplifies the use of [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) in the ArcGIS API for JavaScript.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait workers extends js.Object {
+  
   /**
     * Opens a connection to workers and loads a script with the workers framework.
     *
@@ -33,4 +34,3 @@ trait workers extends js.Object {
   def open(modulePath: String): js.Promise[Connection] = js.native
   def open(modulePath: String, options: workersOpenOptions): js.Promise[Connection] = js.native
 }
-

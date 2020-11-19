@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new identity Mat4 object.
@@ -10,10 +10,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Mat4 extends js.Object {
-  /**
-    * Matrix elements in the form of a flat array.
-    */
-  var data: js.typedarray.Float32Array = js.native
+  
   /**
     * Adds the specified 4x4 matrix to the current instance.
     * @example
@@ -26,6 +23,7 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def add(rhs: Mat4): Mat4 = js.native
+  
   /**
     * Adds the specified 4x4 matrices together and stores the result in
     * the current instance.
@@ -40,6 +38,7 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def add2(lhs: Mat4, rhs: Mat4): Mat4 = js.native
+  
   /**
     * Copies the contents of a source 4x4 matrix to a destination 4x4 matrix.
     * @example
@@ -51,6 +50,12 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def copy(rhs: Mat4): Mat4 = js.native
+  
+  /**
+    * Matrix elements in the form of a flat array.
+    */
+  var data: js.typedarray.Float32Array = js.native
+  
   /**
     * Reports whether two matrices are equal.
     * @example
@@ -61,6 +66,7 @@ trait Mat4 extends js.Object {
     * @returns True if the matrices are equal and false otherwise.
     */
   def equals(rhs: Mat4): Boolean = js.native
+  
   /**
     * Extracts the Euler angles equivalent to the rotational portion
     * of the specified matrix. The returned Euler angles are in XYZ order an in degrees.
@@ -74,6 +80,7 @@ trait Mat4 extends js.Object {
     */
   def getEulerAngles(): Vec3 = js.native
   def getEulerAngles(eulers: Vec3): Vec3 = js.native
+  
   /**
     * Extracts the scale component from the specified 4x4 matrix.
     * @example
@@ -87,6 +94,7 @@ trait Mat4 extends js.Object {
     */
   def getScale(): Vec3 = js.native
   def getScale(scale: Vec3): Vec3 = js.native
+  
   /**
     * Extracts the translational component from the specified 4x4 matrix.
     * @example
@@ -101,6 +109,7 @@ trait Mat4 extends js.Object {
     */
   def getTranslation(): Vec3 = js.native
   def getTranslation(t: Vec3): Vec3 = js.native
+  
   /**
     * Extracts the x-axis from the specified 4x4 matrix.
     * @example
@@ -115,6 +124,7 @@ trait Mat4 extends js.Object {
     */
   def getX(): Vec3 = js.native
   def getX(x: Vec3): Vec3 = js.native
+  
   /**
     * Extracts the y-axis from the specified 4x4 matrix.
     * @example
@@ -129,6 +139,7 @@ trait Mat4 extends js.Object {
     */
   def getY(): Vec3 = js.native
   def getY(y: Vec3): Vec3 = js.native
+  
   /**
     * Extracts the z-axis from the specified 4x4 matrix.
     * @example
@@ -143,6 +154,7 @@ trait Mat4 extends js.Object {
     */
   def getZ(): Vec3 = js.native
   def getZ(z: Vec3): Vec3 = js.native
+  
   /**
     * Sets the specified matrix to its inverse.
     * @example
@@ -154,6 +166,7 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def invert(): Mat4 = js.native
+  
   /**
     * Reports whether the specified matrix is the identity matrix.
     * @example
@@ -162,6 +175,7 @@ trait Mat4 extends js.Object {
     * @returns True if the matrix is identity and false otherwise.
     */
   def isIdentity(): Boolean = js.native
+  
   /**
     * Multiplies the current instance by the specified 4x4 matrix.
     * @example
@@ -176,6 +190,7 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def mul(rhs: Mat4): Mat4 = js.native
+  
   /**
     * Multiplies the specified 4x4 matrices together and stores the result in
     * the current instance.
@@ -193,6 +208,7 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def mul2(lhs: Mat4, rhs: Mat4): Mat4 = js.native
+  
   /**
     * Multiplies the specified 4x4 matrices together and stores the result in
     * the current instance. This function assumes the matrices are affine transformation matrices, where the upper left 3x3 elements
@@ -203,12 +219,14 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def mulAffine2(lhs: Mat4, rhs: Mat4): Mat4 = js.native
+  
   /**
     * Sets matrix data from an array.
     * @param src - Source array. Must have 16 values.
     * @returns Self for chaining.
     */
   def set(src: js.Array[Double]): Mat4 = js.native
+  
   /**
     * Sets the specified matrix to a rotation matrix equivalent to a rotation around
     * an axis. The axis must be normalized (unit length) and the angle must be specified in degrees.
@@ -220,6 +238,7 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def setFromAxisAngle(axis: Vec3, angle: Double): Mat4 = js.native
+  
   /**
     * Sets the specified matrix to a rotation matrix defined by
     * Euler angles. The Euler angles are specified in XYZ order and in degrees.
@@ -232,6 +251,7 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def setFromEulerAngles(ex: Double, ey: Double, ez: Double): Mat4 = js.native
+  
   /**
     * Sets the specified matrix to the identity matrix.
     * @example
@@ -240,6 +260,7 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def setIdentity(): Mat4 = js.native
+  
   /**
     * Sets the specified matrix to a viewing matrix derived from an eye point, a target point
     * and an up vector. The matrix maps the target point to the negative z-axis and the eye point to the
@@ -258,6 +279,7 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def setLookAt(position: Vec3, target: Vec3, up: Vec3): Mat4 = js.native
+  
   /**
     * Sets the specified matrix to an orthographic projection matrix. The function's parameters
     * define the shape of a cuboid-shaped frustum.
@@ -273,6 +295,7 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def setOrtho(left: Double, right: Double, bottom: Double, top: Double, near: Double, far: Double): Mat4 = js.native
+  
   /**
     * Sets the specified matrix to a perspective projection matrix. The function's
     * parameters define the shape of a frustum.
@@ -291,6 +314,7 @@ trait Mat4 extends js.Object {
     */
   def setPerspective(fov: Double, aspect: Double, znear: Double, zfar: Double): Mat4 = js.native
   def setPerspective(fov: Double, aspect: Double, znear: Double, zfar: Double, fovIsHorizontal: Boolean): Mat4 = js.native
+  
   /**
     * Sets the specified matrix to the concatenation of a translation, a
     * quaternion rotation and a scale.
@@ -307,6 +331,7 @@ trait Mat4 extends js.Object {
     * @returns Self for chaining.
     */
   def setTRS(t: Vec3, r: Quat, s: Vec3): Mat4 = js.native
+  
   /**
     * Transforms a 3-dimensional point by a 4x4 matrix.
     * @example
@@ -323,6 +348,7 @@ trait Mat4 extends js.Object {
     */
   def transformPoint(vec: Vec3): Vec3 = js.native
   def transformPoint(vec: Vec3, res: Vec3): Vec3 = js.native
+  
   /**
     * Transforms a 4-dimensional vector by a 4x4 matrix.
     * @example
@@ -342,6 +368,7 @@ trait Mat4 extends js.Object {
     */
   def transformVec4(vec: Vec4): Vec4 = js.native
   def transformVec4(vec: Vec4, res: Vec4): Vec4 = js.native
+  
   /**
     * Transforms a 3-dimensional vector by a 4x4 matrix.
     * @example
@@ -358,6 +385,7 @@ trait Mat4 extends js.Object {
     */
   def transformVector(vec: Vec3): Vec3 = js.native
   def transformVector(vec: Vec3, res: Vec3): Vec3 = js.native
+  
   /**
     * Sets the specified matrix to its transpose.
     * @example
@@ -369,4 +397,3 @@ trait Mat4 extends js.Object {
     */
   def transpose(): Mat4 = js.native
 }
-

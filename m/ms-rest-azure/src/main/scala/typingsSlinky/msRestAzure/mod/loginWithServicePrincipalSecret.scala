@@ -2,11 +2,12 @@ package typingsSlinky.msRestAzure.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ms-rest-azure", "loginWithServicePrincipalSecret")
 @js.native
 object loginWithServicePrincipalSecret extends js.Object {
+  
   def apply(clientId: String, secret: String, domain: String): js.Promise[ApplicationTokenCredentials] = js.native
   def apply(
     clientId: String,
@@ -33,4 +34,3 @@ object loginWithServicePrincipalSecret extends js.Object {
     ]
   ): Unit = js.native
 }
-

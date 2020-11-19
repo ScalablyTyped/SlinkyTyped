@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.ui.DrawerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("kendo.ui.Drawer")
 @js.native
@@ -13,12 +13,12 @@ class Drawer protected ()
   def this(element: Element) = this()
   def this(element: Element, options: DrawerOptions) = this()
 }
-
 /* static members */
 @JSGlobal("kendo.ui.Drawer")
 @js.native
 object Drawer extends js.Object {
-  var fn: typingsSlinky.kendoUi.kendo.ui.Drawer = js.native
+  
   def extend(proto: js.Object): typingsSlinky.kendoUi.kendo.ui.Drawer = js.native
+  
+  var fn: typingsSlinky.kendoUi.kendo.ui.Drawer = js.native
 }
-

@@ -7,11 +7,14 @@ import typingsSlinky.popmotionPose.typesMod.DomPopmotionConfig
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionPoser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("popmotion-pose/lib/dom/pose", JSImport.Namespace)
 @js.native
 object poseMod extends js.Object {
+  
+  def default(element: Element, config: DomPopmotionConfig): DomPopmotionPoser = js.native
+  
   @js.native
   class Action[Sub /* <: ColdSubscription */] ()
     extends typingsSlinky.popmotion.actionMod.Action[Sub]
@@ -21,7 +24,4 @@ object poseMod extends js.Object {
     extends typingsSlinky.popmotion.mod.ValueReaction {
     def this(props: ValueProps) = this()
   }
-  
-  def default(element: Element, config: DomPopmotionConfig): DomPopmotionPoser = js.native
 }
-

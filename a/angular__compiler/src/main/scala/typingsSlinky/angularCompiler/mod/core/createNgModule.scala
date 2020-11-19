@@ -5,9 +5,8 @@ import typingsSlinky.angularCompiler.coreMod.MetadataFactory
 import typingsSlinky.angularCompiler.coreMod.NgModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler", "core.createNgModule")
 @js.native
 object createNgModule extends TopLevel[MetadataFactory[NgModule]]
-

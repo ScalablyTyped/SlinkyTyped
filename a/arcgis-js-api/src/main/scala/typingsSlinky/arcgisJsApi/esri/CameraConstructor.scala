@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CameraConstructor
@@ -15,6 +15,6 @@ trait CameraConstructor
   */
 Instantiable0[Camera]
      with Instantiable1[/* properties */ CameraProperties, Camera] {
+  
   def fromJSON(json: js.Any): Camera = js.native
 }
-

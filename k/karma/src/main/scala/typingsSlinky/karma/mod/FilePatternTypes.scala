@@ -2,7 +2,7 @@ package typingsSlinky.karma.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.karma.karmaStrings.css
@@ -13,19 +13,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.karma.karmaStrings.dom
 */
 trait FilePatternTypes extends js.Object
-
 object FilePatternTypes {
+  
   @scala.inline
   def css: typingsSlinky.karma.karmaStrings.css = "css".asInstanceOf[typingsSlinky.karma.karmaStrings.css]
+  
   @scala.inline
   def dart: typingsSlinky.karma.karmaStrings.dart = "dart".asInstanceOf[typingsSlinky.karma.karmaStrings.dart]
+  
   @scala.inline
   def dom: typingsSlinky.karma.karmaStrings.dom = "dom".asInstanceOf[typingsSlinky.karma.karmaStrings.dom]
+  
   @scala.inline
   def html: typingsSlinky.karma.karmaStrings.html = "html".asInstanceOf[typingsSlinky.karma.karmaStrings.html]
+  
   @scala.inline
   def js_ : typingsSlinky.karma.karmaStrings.js_ = "js".asInstanceOf[typingsSlinky.karma.karmaStrings.js_]
+  
   @scala.inline
   def module: typingsSlinky.karma.karmaStrings.module = "module".asInstanceOf[typingsSlinky.karma.karmaStrings.module]
 }
-

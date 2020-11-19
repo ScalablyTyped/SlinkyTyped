@@ -14,7 +14,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.ui.XContextMenuInterceptio
 import typingsSlinky.activexLibreoffice.com_.sun.star.util.XModifyBroadcaster
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * implements a component which allows browsing the data sources registered on the system.
@@ -75,6 +75,7 @@ trait DataSourceBrowser
      with XController
      with XInitialization
      with XContextMenuInterception {
+  
   /**
     * provides access to currently attached model
     * @returns the currently attached model.
@@ -84,4 +85,3 @@ trait DataSourceBrowser
   @JSName("getModel")
   def getModel_XModel(): XModel = js.native
 }
-

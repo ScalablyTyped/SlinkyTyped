@@ -3,11 +3,12 @@ package typingsSlinky.forkTsCheckerWebpackPlugin.formatterFactoryMod
 import typingsSlinky.forkTsCheckerWebpackPlugin.formatterFormatterMod.Formatter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fork-ts-checker-webpack-plugin/lib/formatter/FormatterFactory", "createFormatter")
 @js.native
 object createFormatter extends js.Object {
+  
   def apply[T /* <: NotConfigurableFormatterType */](): Formatter = js.native
   def apply[T /* <: NotConfigurableFormatterType */](`type`: T): Formatter = js.native
   def apply[T /* <: ConfigurableFormatterType */](
@@ -16,4 +17,3 @@ object createFormatter extends js.Object {
   ): Formatter = js.native
   def apply[T /* <: FormatterType */](`type`: T, options: js.Object): Formatter = js.native
 }
-

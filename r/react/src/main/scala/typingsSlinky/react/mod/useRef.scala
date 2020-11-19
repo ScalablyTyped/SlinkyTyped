@@ -2,11 +2,12 @@ package typingsSlinky.react.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react", "useRef")
 @js.native
 object useRef extends js.Object {
+  
   // convenience overload for potentially undefined initialValue / call with 0 arguments
   // has a default to stop it from defaulting to {} instead
   /**
@@ -34,4 +35,3 @@ object useRef extends js.Object {
   // TODO (TypeScript 3.0): <T extends unknown>
   def apply[T](initialValue: T): MutableRefObject[T] = js.native
 }
-

@@ -1,43 +1,43 @@
 package typingsSlinky.materialComponentsWeb.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materialBase.foundationMod.MDCNumbers
-import typingsSlinky.materialBase.foundationMod.MDCStrings
-import typingsSlinky.materialBase.foundationMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("material-components-web", "base")
 @js.native
 object base extends js.Object {
-  @js.native
-  class MDCComponent[A, F /* <: default[A] */] protected ()
-    extends typingsSlinky.materialBase.mod.MDCComponent[A, F] {
-    def this(root: Element) = this()
-    def this(root: Element, foundation: F, args: js.Any*) = this()
-  }
   
   @js.native
-  class MDCFoundation[A] protected ()
-    extends typingsSlinky.materialBase.mod.MDCFoundation[A] {
-    def this(adapter: A) = this()
+  class MDCComponent[FoundationType /* <: typingsSlinky.materialBase.foundationMod.MDCFoundation[js.Object] */] protected ()
+    extends typingsSlinky.materialBase.mod.MDCComponent[FoundationType] {
+    def this(root: Element, foundation: FoundationType, args: js.Any*) = this()
+    def this(root: Element, foundation: js.UndefOr[scala.Nothing], args: js.Any*) = this()
   }
-  
   /* static members */
   @js.native
   object MDCComponent extends js.Object {
-    def attachTo(root: Element): typingsSlinky.materialBase.componentMod.MDCComponent[_, default[_]] = js.native
+    
+    def attachTo(root: Element): typingsSlinky.materialBase.componentMod.MDCComponent[typingsSlinky.materialBase.foundationMod.MDCFoundation[js.Object]] = js.native
   }
   
+  @js.native
+  class MDCFoundation[AdapterType /* <: js.Object */] ()
+    extends typingsSlinky.materialBase.mod.MDCFoundation[AdapterType] {
+    def this(adapter: AdapterType) = this()
+  }
   /* static members */
   @js.native
   object MDCFoundation extends js.Object {
-    val cssClasses: MDCStrings = js.native
-    val defaultAdapter: js.Any = js.native
-    val numbers: MDCNumbers = js.native
-    val strings: MDCStrings = js.native
+    
+    def cssClasses: StringDictionary[String] = js.native
+    
+    def defaultAdapter: js.Object = js.native
+    
+    def numbers: StringDictionary[Double] = js.native
+    
+    def strings: StringDictionary[String] = js.native
   }
-  
 }
-

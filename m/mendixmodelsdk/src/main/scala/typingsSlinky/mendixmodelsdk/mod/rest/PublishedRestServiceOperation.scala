@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/published-rest-operation relevant section in reference guide}
@@ -28,19 +28,18 @@ class PublishedRestServiceOperation protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "rest.PublishedRestServiceOperation")
 @js.native
 object PublishedRestServiceOperation extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new PublishedRestServiceOperation instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.restMod.rest.PublishedRestServiceOperation = js.native
+  
   /**
     * Creates and returns a new PublishedRestServiceOperation instance in the SDK and on the server.
     * The new PublishedRestServiceOperation will be automatically stored in the 'operations' property
@@ -50,5 +49,8 @@ object PublishedRestServiceOperation extends js.Object {
     *  7.7.0 and higher
     */
   def createIn(container: typingsSlinky.mendixmodelsdk.restMod.rest.PublishedRestServiceResource): typingsSlinky.mendixmodelsdk.restMod.rest.PublishedRestServiceOperation = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

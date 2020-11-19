@@ -5,11 +5,12 @@ import typingsSlinky.typescript.mod.SourceFile
 import typingsSlinky.typescript.mod.Statement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateSourceFileNode")
 @js.native
 object updateSourceFileNode extends js.Object {
+  
   def apply(node: SourceFile, statements: js.Array[Statement]): SourceFile = js.native
   def apply(
     node: SourceFile,
@@ -261,4 +262,3 @@ object updateSourceFileNode extends js.Object {
     libReferences: js.Array[FileReference]
   ): SourceFile = js.native
 }
-

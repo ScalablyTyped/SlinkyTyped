@@ -3,14 +3,16 @@ package typingsSlinky.mandrillApi
 import typingsSlinky.mandrillApi.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mandrill-api", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class Exports protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Begins an export of your activity history. The activity will be exported to a zip archive
       * containing a single file named activity.csv in the same format as you would be able to export
@@ -36,6 +38,7 @@ object mod extends js.Object {
     def activity(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def activity(params: js.Any, onsuccess: ICallback): Unit = js.native
     def activity(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Returns information about an export job. If the export job's state is 'complete',
       * the returned data will include a URL you can use to fetch the results. Every export
@@ -51,6 +54,7 @@ object mod extends js.Object {
     def info(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Returns a list of your exports.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -61,6 +65,7 @@ object mod extends js.Object {
     def list(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Begins an export of your rejection blacklist. The blacklist will be exported to a zip archive
       * containing a single file named rejects.csv that includes the following fields: email,
@@ -74,6 +79,7 @@ object mod extends js.Object {
     def rejects(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def rejects(params: js.Any, onsuccess: ICallback): Unit = js.native
     def rejects(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Begins an export of your rejection whitelist. The whitelist will be exported to a zip archive
       * containing a single file named whitelist.csv that includes the following fields:
@@ -92,6 +98,7 @@ object mod extends js.Object {
   @js.native
   class Inbound protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Add an inbound domain to your account
       * @param {Object} params the hash of the parameters to pass to the request
@@ -103,6 +110,7 @@ object mod extends js.Object {
     def addDomain(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def addDomain(params: js.Any, onsuccess: ICallback): Unit = js.native
     def addDomain(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Add a new mailbox route to an inbound domain
       * @param {Object} params the hash of the parameters to pass to the request
@@ -116,6 +124,7 @@ object mod extends js.Object {
     def addRoute(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def addRoute(params: js.Any, onsuccess: ICallback): Unit = js.native
     def addRoute(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Check the MX settings for an inbound domain. The domain must have already been added with the add-domain call
       * @param {Object} params the hash of the parameters to pass to the request
@@ -127,6 +136,7 @@ object mod extends js.Object {
     def checkDomain(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def checkDomain(params: js.Any, onsuccess: ICallback): Unit = js.native
     def checkDomain(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Delete an inbound domain from the account. All mail will stop routing for this domain immediately.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -138,6 +148,7 @@ object mod extends js.Object {
     def deleteDomain(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def deleteDomain(params: js.Any, onsuccess: ICallback): Unit = js.native
     def deleteDomain(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Delete an existing inbound mailbox route
       * @param {Object} params the hash of the parameters to pass to the request
@@ -149,6 +160,7 @@ object mod extends js.Object {
     def deleteRoute(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def deleteRoute(params: js.Any, onsuccess: ICallback): Unit = js.native
     def deleteRoute(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * List the domains that have been configured for inbound delivery
       * @param {Object} params the hash of the parameters to pass to the request
@@ -159,6 +171,7 @@ object mod extends js.Object {
     def domains(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def domains(params: js.Any, onsuccess: ICallback): Unit = js.native
     def domains(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * List the mailbox routes defined for an inbound domain
       * @param {Object} params the hash of the parameters to pass to the request
@@ -170,6 +183,7 @@ object mod extends js.Object {
     def routes(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def routes(params: js.Any, onsuccess: ICallback): Unit = js.native
     def routes(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Take a raw MIME document destined for a domain with inbound domains set up, and send it to the inbound hook exactly as if it had been sent over SMTP
       * @param {Object} params the hash of the parameters to pass to the request
@@ -186,6 +200,7 @@ object mod extends js.Object {
     def sendRaw(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def sendRaw(params: js.Any, onsuccess: ICallback): Unit = js.native
     def sendRaw(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Update the pattern or webhook of an existing inbound mailbox route. If null is provided for any fields, the values will remain unchanged.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -209,6 +224,7 @@ object mod extends js.Object {
   @js.native
   class Ips protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Cancels the warmup process for a dedicated IP.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -220,6 +236,7 @@ object mod extends js.Object {
     def cancelWarmup(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def cancelWarmup(params: js.Any, onsuccess: ICallback): Unit = js.native
     def cancelWarmup(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Tests whether a domain name is valid for use as the custom reverse
       * DNS for a dedicated IP.
@@ -233,6 +250,7 @@ object mod extends js.Object {
     def checkCustomDns(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def checkCustomDns(params: js.Any, onsuccess: ICallback): Unit = js.native
     def checkCustomDns(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Creates a pool and returns it. If a pool already exists with this
       * name, no action will be performed.
@@ -245,6 +263,7 @@ object mod extends js.Object {
     def createPool(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def createPool(params: js.Any, onsuccess: ICallback): Unit = js.native
     def createPool(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Deletes a dedicated IP. This is permanent and cannot be undone.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -256,6 +275,7 @@ object mod extends js.Object {
     def delete(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Deletes a pool. A pool must be empty before you can delete it, and you cannot delete your default pool.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -267,6 +287,7 @@ object mod extends js.Object {
     def deletePool(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def deletePool(params: js.Any, onsuccess: ICallback): Unit = js.native
     def deletePool(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Retrieves information about a single dedicated ip.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -278,6 +299,7 @@ object mod extends js.Object {
     def info(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Lists your dedicated IPs.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -288,6 +310,7 @@ object mod extends js.Object {
     def list(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Lists your dedicated IP pools.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -298,6 +321,7 @@ object mod extends js.Object {
     def listPools(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def listPools(params: js.Any, onsuccess: ICallback): Unit = js.native
     def listPools(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Describes a single dedicated IP pool.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -309,6 +333,7 @@ object mod extends js.Object {
     def poolInfo(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def poolInfo(params: js.Any, onsuccess: ICallback): Unit = js.native
     def poolInfo(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Requests an additional dedicated IP for your account. Accounts may
       * have one outstanding request at any time, and provisioning requests
@@ -323,6 +348,7 @@ object mod extends js.Object {
     def provision(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def provision(params: js.Any, onsuccess: ICallback): Unit = js.native
     def provision(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Configures the custom DNS name for a dedicated IP.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -335,6 +361,7 @@ object mod extends js.Object {
     def setCustomDns(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def setCustomDns(params: js.Any, onsuccess: ICallback): Unit = js.native
     def setCustomDns(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Moves a dedicated IP to a different pool.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -348,6 +375,7 @@ object mod extends js.Object {
     def setPool(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def setPool(params: js.Any, onsuccess: ICallback): Unit = js.native
     def setPool(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Begins the warmup process for a dedicated IP. During the warmup process,
       * Mandrill will gradually increase the percentage of your mail that is sent over
@@ -368,35 +396,55 @@ object mod extends js.Object {
   class Mandrill protected () extends js.Object {
     def this(apikey: String) = this()
     def this(apikey: String, debug: Boolean) = this()
+    
     var apikey: String = js.native
-    var debug: Boolean = js.native
-    var exports: Exports = js.native
-    var inbound: Inbound = js.native
-    var internal: Internal = js.native
-    var ips: Ips = js.native
-    var messages: Messages = js.native
-    var metadata: Metadata = js.native
-    @JSName("onerror")
-    var onerror_Original: IErrorCallback = js.native
-    var rejects: Rejects = js.native
-    var senders: Senders = js.native
-    var subaccounts: Subaccounts = js.native
-    var tags: Tags = js.native
-    var templates: Templates = js.native
-    var urls: Urls = js.native
-    var users: Users = js.native
-    var webhooks: Webhooks = js.native
-    var whitelists: Whitelists = js.native
+    
     def call(uri: String, params: js.Any): Unit = js.native
     def call(uri: String, params: js.Any, onresult: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def call(uri: String, params: js.Any, onresult: ICallback): Unit = js.native
     def call(uri: String, params: js.Any, onresult: ICallback, onerror: ICallback): Unit = js.native
+    
+    var debug: Boolean = js.native
+    
+    var exports: Exports = js.native
+    
+    var inbound: Inbound = js.native
+    
+    var internal: Internal = js.native
+    
+    var ips: Ips = js.native
+    
+    var messages: Messages = js.native
+    
+    var metadata: Metadata = js.native
+    
     def onerror(err: js.Error): Unit = js.native
+    @JSName("onerror")
+    var onerror_Original: IErrorCallback = js.native
+    
+    var rejects: Rejects = js.native
+    
+    var senders: Senders = js.native
+    
+    var subaccounts: Subaccounts = js.native
+    
+    var tags: Tags = js.native
+    
+    var templates: Templates = js.native
+    
+    var urls: Urls = js.native
+    
+    var users: Users = js.native
+    
+    var webhooks: Webhooks = js.native
+    
+    var whitelists: Whitelists = js.native
   }
   
   @js.native
   class Messages protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Cancels a scheduled email.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -408,6 +456,7 @@ object mod extends js.Object {
     def cancelScheduled(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def cancelScheduled(params: js.Any, onsuccess: ICallback): Unit = js.native
     def cancelScheduled(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Get the full content of a recently sent message
       * @param {Object} params the hash of the parameters to pass to the request
@@ -419,6 +468,7 @@ object mod extends js.Object {
     def content(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def content(params: js.Any, onsuccess: ICallback): Unit = js.native
     def content(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Get the information for a single recently sent message
       * @param {Object} params the hash of the parameters to pass to the request
@@ -430,6 +480,7 @@ object mod extends js.Object {
     def info(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Queries your scheduled emails by sender or recipient, or both.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -441,6 +492,7 @@ object mod extends js.Object {
     def listScheduled(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def listScheduled(params: js.Any, onsuccess: ICallback): Unit = js.native
     def listScheduled(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Parse the full MIME document for an email message, returning the content of the message broken into its constituent pieces
       * @param {Object} params the hash of the parameters to pass to the request
@@ -452,6 +504,7 @@ object mod extends js.Object {
     def parse(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def parse(params: js.Any, onsuccess: ICallback): Unit = js.native
     def parse(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Reschedules a scheduled email.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -464,6 +517,7 @@ object mod extends js.Object {
     def reschedule(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def reschedule(params: js.Any, onsuccess: ICallback): Unit = js.native
     def reschedule(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Search recently sent messages and optionally narrow by date range, tags, senders, and API keys. If no date range is specified, results within the last 7 days are returned. This method may be called up to 20 times per minute. If you need the data more often, you can use <a href="/api/docs/messages.html#method=info">/messages/info.json</a> to get the information for a single message, or <a href="http://help.mandrill.com/entries/21738186-Introduction-to-Webhooks">webhooks</a> to push activity to your own application for querying.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -481,6 +535,7 @@ object mod extends js.Object {
     def search(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def search(params: js.Any, onsuccess: ICallback): Unit = js.native
     def search(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Search the content of recently sent messages and return the aggregated hourly stats for matching messages
       * @param {Object} params the hash of the parameters to pass to the request
@@ -496,6 +551,7 @@ object mod extends js.Object {
     def searchTimeSeries(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def searchTimeSeries(params: js.Any, onsuccess: ICallback): Unit = js.native
     def searchTimeSeries(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Send a new transactional message through Mandrill
       * @param {Object} params the hash of the parameters to pass to the request
@@ -567,6 +623,7 @@ object mod extends js.Object {
     def send(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def send(params: js.Any, onsuccess: ICallback): Unit = js.native
     def send(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Take a raw MIME document for a message, and send it exactly as if it were sent through Mandrill's SMTP servers
       * @param {Object} params the hash of the parameters to pass to the request
@@ -586,6 +643,7 @@ object mod extends js.Object {
     def sendRaw(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def sendRaw(params: js.Any, onsuccess: ICallback): Unit = js.native
     def sendRaw(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Send a new transactional message through Mandrill using a template
       * @param {Object} params the hash of the parameters to pass to the request
@@ -667,6 +725,7 @@ object mod extends js.Object {
   @js.native
   class Metadata protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Add a new custom metadata field to be indexed for the account.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -679,6 +738,7 @@ object mod extends js.Object {
     def add(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Delete an existing custom metadata field. Deletion isn't instataneous, and /metadata/list will continue to return the field until the asynchronous deletion process is complete.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -690,6 +750,7 @@ object mod extends js.Object {
     def delete(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Get the list of custom metadata fields indexed for the account.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -700,6 +761,7 @@ object mod extends js.Object {
     def list(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Update an existing custom metadata field.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -717,6 +779,7 @@ object mod extends js.Object {
   @js.native
   class Rejects protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Adds an email to your email rejection blacklist. Addresses that you
       * add manually will never expire and there is no reputation penalty
@@ -733,6 +796,7 @@ object mod extends js.Object {
     def add(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Deletes an email rejection. There is no limit to how many rejections
       * you can remove from your blacklist, but keep in mind that each deletion
@@ -747,6 +811,7 @@ object mod extends js.Object {
     def delete(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Retrieves your email rejection blacklist. You can provide an email
       * address to limit the results. Returns up to 1000 results. By default,
@@ -768,6 +833,7 @@ object mod extends js.Object {
   @js.native
   class Senders protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Adds a sender domain to your account. Sender domains are added automatically as you
       * send, but you can use this call to add them ahead of time.
@@ -780,6 +846,7 @@ object mod extends js.Object {
     def addDomain(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def addDomain(params: js.Any, onsuccess: ICallback): Unit = js.native
     def addDomain(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Checks the SPF and DKIM settings for a domain. If you haven't already added this domain to your
       * account, it will be added automatically.
@@ -792,6 +859,7 @@ object mod extends js.Object {
     def checkDomain(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def checkDomain(params: js.Any, onsuccess: ICallback): Unit = js.native
     def checkDomain(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Returns the sender domains that have been added to this account.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -802,6 +870,7 @@ object mod extends js.Object {
     def domains(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def domains(params: js.Any, onsuccess: ICallback): Unit = js.native
     def domains(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Return more detailed information about a single sender, including aggregates of recent stats
       * @param {Object} params the hash of the parameters to pass to the request
@@ -813,6 +882,7 @@ object mod extends js.Object {
     def info(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Return the senders that have tried to use this account.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -823,6 +893,7 @@ object mod extends js.Object {
     def list(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Return the recent history (hourly stats for the last 30 days) for a sender
       * @param {Object} params the hash of the parameters to pass to the request
@@ -834,6 +905,7 @@ object mod extends js.Object {
     def timeSeries(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def timeSeries(params: js.Any, onsuccess: ICallback): Unit = js.native
     def timeSeries(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Sends a verification email in order to verify ownership of a domain.
       * Domain verification is an optional step to confirm ownership of a domain. Once a
@@ -855,6 +927,7 @@ object mod extends js.Object {
   @js.native
   class Subaccounts protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Add a new subaccount
       * @param {Object} params the hash of the parameters to pass to the request
@@ -869,6 +942,7 @@ object mod extends js.Object {
     def add(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Delete an existing subaccount. Any email related to the subaccount will be saved, but stats will be removed and any future sending calls to this subaccount will fail.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -880,6 +954,7 @@ object mod extends js.Object {
     def delete(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Given the ID of an existing subaccount, return the data about it
       * @param {Object} params the hash of the parameters to pass to the request
@@ -891,6 +966,7 @@ object mod extends js.Object {
     def info(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Get the list of subaccounts defined for the account, optionally filtered by a prefix
       * @param {Object} params the hash of the parameters to pass to the request
@@ -902,6 +978,7 @@ object mod extends js.Object {
     def list(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Pause a subaccount's sending. Any future emails delivered to this subaccount will be queued for a maximum of 3 days until the subaccount is resumed.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -913,6 +990,7 @@ object mod extends js.Object {
     def pause(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def pause(params: js.Any, onsuccess: ICallback): Unit = js.native
     def pause(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Resume a paused subaccount's sending
       * @param {Object} params the hash of the parameters to pass to the request
@@ -924,6 +1002,7 @@ object mod extends js.Object {
     def resume(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def resume(params: js.Any, onsuccess: ICallback): Unit = js.native
     def resume(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Update an existing subaccount
       * @param {Object} params the hash of the parameters to pass to the request
@@ -943,6 +1022,7 @@ object mod extends js.Object {
   @js.native
   class Tags protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Return the recent history (hourly stats for the last 30 days) for all tags
       * @param {Object} params the hash of the parameters to pass to the request
@@ -953,6 +1033,7 @@ object mod extends js.Object {
     def allTimeSeries(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def allTimeSeries(params: js.Any, onsuccess: ICallback): Unit = js.native
     def allTimeSeries(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Deletes a tag permanently. Deleting a tag removes the tag from any messages
       * that have been sent, and also deletes the tag's stats. There is no way to
@@ -966,6 +1047,7 @@ object mod extends js.Object {
     def delete(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Return more detailed information about a single tag, including aggregates of recent stats
       * @param {Object} params the hash of the parameters to pass to the request
@@ -977,6 +1059,7 @@ object mod extends js.Object {
     def info(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Return all of the user-defined tag information
       * @param {Object} params the hash of the parameters to pass to the request
@@ -987,6 +1070,7 @@ object mod extends js.Object {
     def list(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Return the recent history (hourly stats for the last 30 days) for a tag
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1003,6 +1087,7 @@ object mod extends js.Object {
   @js.native
   class Templates protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Add a new template
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1022,6 +1107,7 @@ object mod extends js.Object {
     def add(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Delete a template
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1033,6 +1119,7 @@ object mod extends js.Object {
     def delete(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Get the information for an existing template
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1044,6 +1131,7 @@ object mod extends js.Object {
     def info(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Return a list of all the templates available to this user
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1055,6 +1143,7 @@ object mod extends js.Object {
     def list(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Publish the content for the template. Any new messages sent using this template will start using the content that was previously in draft.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1066,6 +1155,7 @@ object mod extends js.Object {
     def publish(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def publish(params: js.Any, onsuccess: ICallback): Unit = js.native
     def publish(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Inject content and optionally merge fields into a template, returning the HTML that results
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1085,6 +1175,7 @@ object mod extends js.Object {
     def render(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def render(params: js.Any, onsuccess: ICallback): Unit = js.native
     def render(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Return the recent history (hourly stats for the last 30 days) for a template
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1096,6 +1187,7 @@ object mod extends js.Object {
     def timeSeries(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def timeSeries(params: js.Any, onsuccess: ICallback): Unit = js.native
     def timeSeries(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Update the code for an existing template. If null is provided for any fields, the values will remain unchanged.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1120,6 +1212,7 @@ object mod extends js.Object {
   @js.native
   class Urls protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Add a tracking domain to your account
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1131,6 +1224,7 @@ object mod extends js.Object {
     def addTrackingDomain(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def addTrackingDomain(params: js.Any, onsuccess: ICallback): Unit = js.native
     def addTrackingDomain(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Checks the CNAME settings for a tracking domain. The domain must have been added already with the add-tracking-domain call
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1142,6 +1236,7 @@ object mod extends js.Object {
     def checkTrackingDomain(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def checkTrackingDomain(params: js.Any, onsuccess: ICallback): Unit = js.native
     def checkTrackingDomain(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Get the 100 most clicked URLs
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1152,6 +1247,7 @@ object mod extends js.Object {
     def list(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Return the 100 most clicked URLs that match the search query given
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1163,6 +1259,7 @@ object mod extends js.Object {
     def search(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def search(params: js.Any, onsuccess: ICallback): Unit = js.native
     def search(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Return the recent history (hourly stats for the last 30 days) for a url
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1174,6 +1271,7 @@ object mod extends js.Object {
     def timeSeries(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def timeSeries(params: js.Any, onsuccess: ICallback): Unit = js.native
     def timeSeries(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Get the list of tracking domains set up for this account
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1189,6 +1287,7 @@ object mod extends js.Object {
   @js.native
   class Users protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Return the information about the API-connected user
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1199,6 +1298,7 @@ object mod extends js.Object {
     def info(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Validate an API key and respond to a ping
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1209,6 +1309,7 @@ object mod extends js.Object {
     def ping(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def ping(params: js.Any, onsuccess: ICallback): Unit = js.native
     def ping(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Validate an API key and respond to a ping (anal JSON parser version)
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1219,6 +1320,7 @@ object mod extends js.Object {
     def ping2(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def ping2(params: js.Any, onsuccess: ICallback): Unit = js.native
     def ping2(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Return the senders that have tried to use this account, both verified and unverified
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1234,6 +1336,7 @@ object mod extends js.Object {
   @js.native
   class Webhooks protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Add a new webhook
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1248,6 +1351,7 @@ object mod extends js.Object {
     def add(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Delete an existing webhook
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1259,6 +1363,7 @@ object mod extends js.Object {
     def delete(params: Id, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def delete(params: Id, onsuccess: ICallback): Unit = js.native
     def delete(params: Id, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Given the ID of an existing webhook, return the data about it
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1270,6 +1375,7 @@ object mod extends js.Object {
     def info(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback): Unit = js.native
     def info(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Get the list of all webhooks defined on the account
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1280,6 +1386,7 @@ object mod extends js.Object {
     def list(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback): Unit = js.native
     def list(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Update an existing webhook
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1300,6 +1407,7 @@ object mod extends js.Object {
   @js.native
   class Whitelists protected () extends js.Object {
     def this(master: Mandrill) = this()
+    
     /**
       * Adds an email to your email rejection whitelist. If the address is
       * currently on your blacklist, that blacklist entry will be removed
@@ -1314,6 +1422,7 @@ object mod extends js.Object {
     def add(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback): Unit = js.native
     def add(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Removes an email address from the whitelist.
       * @param {Object} params the hash of the parameters to pass to the request
@@ -1325,6 +1434,7 @@ object mod extends js.Object {
     def delete(params: js.Any, onsuccess: js.UndefOr[scala.Nothing], onerror: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback): Unit = js.native
     def delete(params: js.Any, onsuccess: ICallback, onerror: ICallback): Unit = js.native
+    
     /**
       * Retrieves your email rejection whitelist. You can provide an email
       * address or search prefix to limit the results. Returns up to 1000 results.
@@ -1340,6 +1450,6 @@ object mod extends js.Object {
   }
   
   type ICallback = js.Function1[/* json */ js.Object, Unit]
+  
   type IErrorCallback = js.Function1[/* err */ js.Error, Unit]
 }
-

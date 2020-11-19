@@ -10,9 +10,10 @@ import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DocsWrapper {
+  
   @JSImport("@storybook/components", "DocsWrapper")
   @js.native
   object component extends js.Object
@@ -22,6 +23,6 @@ object DocsWrapper {
       (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with (Omit[js.Object, theme]) with `0`[Theme]
     ]
   ): SharedBuilder_PropsWithChildren562192803[HTMLDivElement] = new SharedBuilder_PropsWithChildren562192803[HTMLDivElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: DocsWrapper.type): SharedBuilder_PropsWithChildren562192803[HTMLDivElement] = new SharedBuilder_PropsWithChildren562192803[HTMLDivElement](js.Array(this.component, js.Dictionary.empty))()
 }
-

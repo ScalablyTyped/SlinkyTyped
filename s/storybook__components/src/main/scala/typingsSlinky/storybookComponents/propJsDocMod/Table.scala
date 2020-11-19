@@ -9,7 +9,7 @@ import typingsSlinky.storybookComponents.anon.PickDetailedHTMLPropsTabl
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/components/dist/blocks/PropsTable/PropJsDoc", "Table")
 @js.native
@@ -20,4 +20,3 @@ object Table extends TopLevel[
         Theme
       ]
     ]
-

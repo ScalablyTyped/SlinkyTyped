@@ -4,11 +4,12 @@ import typingsSlinky.samchon.distributedSystemArrayMediatorMod.DistributedSystem
 import typingsSlinky.samchon.idistributedserverMod.IDistributedServer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("samchon/templates/distributed/derived/DistributedServerArrayMediator", JSImport.Namespace)
 @js.native
 object distributedServerArrayMediatorMod extends js.Object {
+  
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.tstl.isizeMod.ISize because Already inherited
   - typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer because Already inherited
@@ -32,6 +33,7 @@ object distributedServerArrayMediatorMod extends js.Object {
     * Default Constructor.
     */
   abstract class DistributedServerArrayMediator[System /* <: IDistributedServer */] () extends DistributedSystemArrayMediator[System] {
+    
     /**
       * @inheritdoc
       */
@@ -42,6 +44,4 @@ object distributedServerArrayMediatorMod extends js.Object {
       */
     def connect(): Unit = js.native
   }
-  
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientPinpointBrowser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/types/OutputTypesUnion", JSImport.Namespace)
 @js.native
 object outputTypesUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientPinpointBrowser.typesCreateAppOutputMod.CreateAppOutput
     - typingsSlinky.awsSdkClientPinpointBrowser.typesCreateCampaignOutputMod.CreateCampaignOutput
@@ -81,6 +82,4 @@ object outputTypesUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientPinpointBrowser.typesUpdateSmsChannelOutputMod.UpdateSmsChannelOutput
   */
   trait OutputTypesUnion extends js.Object
-  
 }
-

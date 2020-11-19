@@ -7,22 +7,29 @@ import typingsSlinky.xmlCore.mod.XmlCollection
 import typingsSlinky.xmlCore.mod.XmlObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xadesjs/build/types/xml/complete_revocation_refs", JSImport.Namespace)
 @js.native
 object completeRevocationRefsMod extends js.Object {
+  
   @js.native
   class CRLIdentifier () extends XmlObject {
+    
     var IssueTime: XadesDateTime = js.native
+    
     var Issuer: String = js.native
+    
     var Number: Double = js.native
+    
     var URI: String = js.native
   }
   
   @js.native
   class CRLRef () extends XmlObject {
+    
     var CRLIdentifier: typingsSlinky.xadesjs.completeRevocationRefsMod.CRLIdentifier = js.native
+    
     var DigestAlgAndValue: DigestAlgAndValueType = js.native
   }
   
@@ -31,22 +38,31 @@ object completeRevocationRefsMod extends js.Object {
   
   @js.native
   class CompleteRevocationRefs () extends XmlObject {
+    
     var CRLRefs: typingsSlinky.xadesjs.completeRevocationRefsMod.CRLRefs = js.native
+    
     var Id: String = js.native
+    
     var OCSPRefs: typingsSlinky.xadesjs.completeRevocationRefsMod.OCSPRefs = js.native
+    
     var OtherRefs: typingsSlinky.xadesjs.completeRevocationRefsMod.OtherRefs = js.native
   }
   
   @js.native
   class OCSPIdentifier () extends XmlObject {
+    
     var ProducedAt: XadesDateTime = js.native
+    
     var ResponderID: typingsSlinky.xadesjs.completeRevocationRefsMod.ResponderID = js.native
+    
     var URI: String = js.native
   }
   
   @js.native
   class OCSPRef () extends XmlObject {
+    
     var DigestAlgAndValue: DigestAlgAndValueType = js.native
+    
     var OCSPIdentifier: typingsSlinky.xadesjs.completeRevocationRefsMod.OCSPIdentifier = js.native
   }
   
@@ -61,9 +77,9 @@ object completeRevocationRefsMod extends js.Object {
   
   @js.native
   class ResponderID () extends XmlObject {
+    
     var ByKey: js.typedarray.Uint8Array = js.native
+    
     var ByName: String = js.native
   }
-  
 }
-

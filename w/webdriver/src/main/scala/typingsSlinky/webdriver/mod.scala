@@ -5,11 +5,12 @@ import typingsSlinky.webdriver.WebDriver.Client
 import typingsSlinky.webdriver.WebDriver.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("webdriver", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def attachToSession(options: AttachSessionOptions): js.Promise[Client] = js.native
   def attachToSession(
     options: AttachSessionOptions,
@@ -38,6 +39,7 @@ object mod extends js.Object {
     proto: js.Object,
     commandWrapper: js.Function2[/* commandName */ String, /* fn */ js.Function1[/* repeated */ js.Any, _], _]
   ): js.Promise[Client] = js.native
+  
   def newSession(): js.Promise[Client] = js.native
   def newSession(
     options: js.UndefOr[scala.Nothing],
@@ -98,6 +100,6 @@ object mod extends js.Object {
     proto: js.Object,
     commandWrapper: js.Function2[/* commandName */ String, /* fn */ js.Function1[/* repeated */ js.Any, _], _]
   ): js.Promise[Client] = js.native
+  
   def reloadSession(instance: Client): js.Promise[Client] = js.native
 }
-

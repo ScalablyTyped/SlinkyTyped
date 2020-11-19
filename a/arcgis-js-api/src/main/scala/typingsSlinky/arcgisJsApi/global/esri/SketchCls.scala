@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.SketchProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Sketch")
 @js.native
@@ -16,4 +16,3 @@ class SketchCls ()
   extends typingsSlinky.arcgisJsApi.esri.Sketch {
   def this(properties: SketchProperties) = this()
 }
-

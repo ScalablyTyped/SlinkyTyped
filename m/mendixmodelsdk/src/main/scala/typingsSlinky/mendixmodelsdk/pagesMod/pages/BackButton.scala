@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/close-page-button relevant section in reference guide}
@@ -26,22 +26,22 @@ class BackButton protected () extends Button {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FBackButton: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.BackButton")
 @js.native
 object BackButton extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'footerWidget' property
@@ -51,6 +51,7 @@ object BackButton extends js.Object {
     *  6.7.0 to 7.0.1
     */
   def createInDataViewUnderFooterWidget(container: DataView): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -60,6 +61,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInDataViewUnderWidget(container: DataView): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -69,6 +71,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInDivContainerUnderWidget(container: DivContainer): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -78,6 +81,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInGroupBoxUnderWidget(container: GroupBox): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'leftWidget' property
@@ -87,6 +91,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInHeaderUnderLeftWidget(container: Header): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'rightWidget' property
@@ -96,6 +101,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInHeaderUnderRightWidget(container: Header): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -105,6 +111,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -114,6 +121,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -123,6 +131,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInLayoutUnderWidget(container: Layout): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -132,6 +141,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -141,6 +151,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInListViewUnderWidget(container: ListView): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -150,6 +161,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'parameterWidget' property
@@ -159,6 +171,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'reportWidget' property
@@ -168,6 +181,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -177,6 +191,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -186,6 +201,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInSnippetUnderWidget(container: Snippet): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'firstWidget' property
@@ -195,6 +211,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'secondWidget' property
@@ -204,6 +221,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -213,6 +231,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInTabPageUnderWidget(container: TabPage): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -222,6 +241,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInTableCellUnderWidget(container: TableCell): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widget' property
@@ -231,6 +251,7 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): BackButton = js.native
+  
   /**
     * Creates and returns a new BackButton instance in the SDK and on the server.
     * The new BackButton will be automatically stored in the 'widgets' property
@@ -240,5 +261,8 @@ object BackButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): BackButton = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

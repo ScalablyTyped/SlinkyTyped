@@ -6,17 +6,22 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("baseui/checkbox", "Checkbox")
 @js.native
 class Checkbox ()
   extends Component[CheckboxProps, CheckboxState, js.Any] {
+  
   def onBlur(event: SyntheticFocusEvent[HTMLInputElement]): Unit = js.native
+  
   def onFocus(event: SyntheticFocusEvent[HTMLInputElement]): Unit = js.native
+  
   def onMouseDown(event: SyntheticMouseEvent[HTMLInputElement]): Unit = js.native
+  
   def onMouseEnter(event: SyntheticMouseEvent[HTMLInputElement]): Unit = js.native
+  
   def onMouseLeave(event: SyntheticMouseEvent[HTMLInputElement]): Unit = js.native
+  
   def onMouseUp(event: SyntheticMouseEvent[HTMLInputElement]): Unit = js.native
 }
-

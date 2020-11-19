@@ -6,12 +6,13 @@ import typingsSlinky.mapboxGl.mapboxGlStrings.boxzoomend
 import typingsSlinky.mapboxGl.mapboxGlStrings.boxzoomstart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MapBoxZoomEvent extends MapboxEvent[MouseEvent] {
+  
   var boxZoomBounds: LngLatBounds = js.native
+  
   @JSName("type")
   var type_MapBoxZoomEvent: boxzoomstart | boxzoomend | boxzoomcancel = js.native
 }
-

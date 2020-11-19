@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "PointLight")
 @js.native
@@ -80,4 +80,3 @@ class PointLight ()
   ) = this()
   def this(color: typingsSlinky.three.colorMod.Color, intensity: Double, distance: Double, decay: Double) = this()
 }
-

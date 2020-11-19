@@ -12,7 +12,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ddm
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.dms
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Converts between [points](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html) and formatted coordinates notation strings such as:
@@ -25,6 +25,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait coordinateFormatter extends js.Object {
+  
   /**
     * Parses coordinates in latitude/longitude notation, and returns a [Point](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html) representing that location. The coordinates may use decimal degrees, degrees and decimal minutes, or degrees, minutes, and seconds format. The spatial reference provided must have an ellipsoid and datum matching those used by the source of the latitude/longitude string. If no spatial reference is provided, it is assumed the latitude/longitude coordinates are in WGS84.  **Supported characters**
     *
@@ -52,6 +53,7 @@ trait coordinateFormatter extends js.Object {
     */
   def fromLatitudeLongitude(coordinates: String): Point = js.native
   def fromLatitudeLongitude(coordinates: String, spatialReference: SpatialReference): Point = js.native
+  
   /**
     * Parses coordinates in Military Grid Reference System (MGRS) notation, and returns a [Point](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html) representing that location. The spatial reference provided must have an ellipsoid and datum matching those used by the source of the MGRS string. If no spatial reference is provided, it is assumed the MGRS string is referenced to WGS84.  Note that the choice between zone 01 and 60 has no impact when reading from an MGRS notation string. The MGRS string can contain leading and trailing whitespace and can have whitespace between the grid zone designator, the 100km square identifier, and the numerical eastings and northings.  MGRS notation examples:
     *   * 30UVG898998
@@ -74,6 +76,7 @@ trait coordinateFormatter extends js.Object {
   def fromMgrs_old180inzone01(coordinates: String, spatialReference: SpatialReference, conversionMode: `old-180-in-zone-01`): Point = js.native
   @JSName("fromMgrs")
   def fromMgrs_old180inzone60(coordinates: String, spatialReference: SpatialReference, conversionMode: `old-180-in-zone-60`): Point = js.native
+  
   /**
     * Parses coordinates in United States National Grid (USNG) notation, and returns a [Point](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html) representing that location.  The spatial reference provided must have an ellipsoid and datum matching those used by the source of the USNG string. If no spatial reference is provided and the USNG string is suffixed with "(NAD 27)", it is assumed the USNG string is referenced to NAD 27. If no spatial reference is provided and no such suffix exists, it is assumed the USNG string is referenced to WGS84.  USNG notation examples:
     *   * 13TFJ 23 59
@@ -87,6 +90,7 @@ trait coordinateFormatter extends js.Object {
     */
   def fromUsng(coordinates: String): Point = js.native
   def fromUsng(coordinates: String, spatialReference: SpatialReference): Point = js.native
+  
   /**
     * Parses coordinates in Universal Transverse Mercator (UTM) notation, and returns a [Point](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html) representing that location. The spatial reference provided must have an ellipsoid and datum matching those used by the source of the UTM string. If no spatial reference is provided, it is assumed the UTM string is referenced to WGS84. The UTM string can contain leading and trailing whitespace and can have whitespace between the zone and latitude designator and the numerical eastings and northings.  UTM notation examples:
     *   * 30U 489885 6199877
@@ -108,6 +112,7 @@ trait coordinateFormatter extends js.Object {
   ): Point = js.native
   @JSName("fromUtm")
   def fromUtm_northsouthindicators(coordinates: String, spatialReference: SpatialReference, conversionMode: `north-south-indicators`): Point = js.native
+  
   /**
     * Indicates if all dependencies of this module have been loaded.
     *
@@ -116,6 +121,7 @@ trait coordinateFormatter extends js.Object {
     *
     */
   def isLoaded(): Boolean = js.native
+  
   /**
     * Indicates if this module is supported in the current browser. The browser must support [WebAssembly](https://caniuse.com/#feat=wasm).
     *
@@ -124,6 +130,7 @@ trait coordinateFormatter extends js.Object {
     *
     */
   def isSupported(): Boolean = js.native
+  
   /**
     * Load this module's dependencies.
     *
@@ -132,6 +139,7 @@ trait coordinateFormatter extends js.Object {
     *
     */
   def load(): js.Promise[_] = js.native
+  
   /**
     * Returns formatted coordinates in latitude/longitude notation representing the given point's location.  The latitude/longitude string will contain a space separating the latitude from the longitude value, and the characters 'N' or 'S', and 'E' and 'W', to indicate the hemisphere of each value. The string will also contain spaces separating the components (degrees, minutes, seconds) of each value. The precision of the output is controlled by both the `format` and `decimalPlaces` parameters.  For example:
     *
@@ -170,6 +178,7 @@ trait coordinateFormatter extends js.Object {
   def toLatitudeLongitude_dms(point: Point, format: dms): String = js.native
   @JSName("toLatitudeLongitude")
   def toLatitudeLongitude_dms(point: Point, format: dms, decimalPlaces: Double): String = js.native
+  
   /**
     * Returns formatted coordinates in Military Grid Reference System (MGRS) notation representing the given point's location.  Note that the choice between zone 01 and 60 has an impact only when generating the MGRS notation string for a point with longitude of exactly 180deg. The precision value controls the number of digits used to represent each numerical easting and northing value within the MGRS string.  For example:
     *
@@ -257,6 +266,7 @@ trait coordinateFormatter extends js.Object {
   def toMgrs_old180inzone60(point: Point, conversionMode: `old-180-in-zone-60`, precision: Double): String = js.native
   @JSName("toMgrs")
   def toMgrs_old180inzone60(point: Point, conversionMode: `old-180-in-zone-60`, precision: Double, addSpaces: Boolean): String = js.native
+  
   /**
     * Returns formatted coordinates in United States National Grid (USNG) notation representing the given point's location. The precision value controls the number of digits used to represent each numerical easting and northing value within the USNG string.  For example:
     *
@@ -290,6 +300,7 @@ trait coordinateFormatter extends js.Object {
   def toUsng(point: Point, precision: js.UndefOr[scala.Nothing], addSpaces: Boolean): String = js.native
   def toUsng(point: Point, precision: Double): String = js.native
   def toUsng(point: Point, precision: Double, addSpaces: Boolean): String = js.native
+  
   /**
     * Returns formatted coordinates in Universal Transverse Mercator (UTM) notation representing the given point's location.  Example output for a point in the southern hemisphere:
     *
@@ -317,4 +328,3 @@ trait coordinateFormatter extends js.Object {
   @JSName("toUtm")
   def toUtm_northsouthindicators(point: Point, conversionMode: `north-south-indicators`, addSpaces: Boolean): String = js.native
 }
-

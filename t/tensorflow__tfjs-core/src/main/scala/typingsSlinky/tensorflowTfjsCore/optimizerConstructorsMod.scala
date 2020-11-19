@@ -9,17 +9,18 @@ import typingsSlinky.tensorflowTfjsCore.rmspropOptimizerMod.RMSPropOptimizer
 import typingsSlinky.tensorflowTfjsCore.sgdOptimizerMod.SGDOptimizer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/optimizers/optimizer_constructors", JSImport.Namespace)
 @js.native
 object optimizerConstructorsMod extends js.Object {
+  
   @js.native
   class OptimizerConstructors () extends js.Object
-  
   /* static members */
   @js.native
   object OptimizerConstructors extends js.Object {
+    
     /**
       * Constructs a `tf.AdadeltaOptimizer` that uses the Adadelta algorithm.
       * See [https://arxiv.org/abs/1212.5701](https://arxiv.org/abs/1212.5701)
@@ -41,6 +42,7 @@ object optimizerConstructorsMod extends js.Object {
     def adadelta(learningRate: Double, rho: js.UndefOr[scala.Nothing], epsilon: Double): AdadeltaOptimizer = js.native
     def adadelta(learningRate: Double, rho: Double): AdadeltaOptimizer = js.native
     def adadelta(learningRate: Double, rho: Double, epsilon: Double): AdadeltaOptimizer = js.native
+    
     /**
       * Constructs a `tf.AdagradOptimizer` that uses the Adagrad algorithm.
       * See
@@ -60,6 +62,7 @@ object optimizerConstructorsMod extends js.Object {
       */
     def adagrad(learningRate: Double): AdagradOptimizer = js.native
     def adagrad(learningRate: Double, initialAccumulatorValue: Double): AdagradOptimizer = js.native
+    
     /**
       * Constructs a `tf.AdamOptimizer` that uses the Adam algorithm.
       * See [https://arxiv.org/abs/1412.6980](https://arxiv.org/abs/1412.6980)
@@ -109,6 +112,7 @@ object optimizerConstructorsMod extends js.Object {
     def adam(learningRate: Double, beta1: Double, beta2: js.UndefOr[scala.Nothing], epsilon: Double): AdamOptimizer = js.native
     def adam(learningRate: Double, beta1: Double, beta2: Double): AdamOptimizer = js.native
     def adam(learningRate: Double, beta1: Double, beta2: Double, epsilon: Double): AdamOptimizer = js.native
+    
     /**
       * Constructs a `tf.AdamaxOptimizer` that uses the Adamax algorithm.
       * See [https://arxiv.org/abs/1412.6980](https://arxiv.org/abs/1412.6980)
@@ -265,6 +269,7 @@ object optimizerConstructorsMod extends js.Object {
     ): AdamaxOptimizer = js.native
     def adamax(learningRate: Double, beta1: Double, beta2: Double, epsilon: Double): AdamaxOptimizer = js.native
     def adamax(learningRate: Double, beta1: Double, beta2: Double, epsilon: Double, decay: Double): AdamaxOptimizer = js.native
+    
     /**
       * Constructs a `tf.MomentumOptimizer` that uses momentum gradient
       * descent.
@@ -283,6 +288,7 @@ object optimizerConstructorsMod extends js.Object {
       */
     def momentum(learningRate: Double, momentum: Double): MomentumOptimizer = js.native
     def momentum(learningRate: Double, momentum: Double, useNesterov: Boolean): MomentumOptimizer = js.native
+    
     /**
       * Constructs a `tf.RMSPropOptimizer` that uses RMSProp gradient
       * descent. This implementation uses plain momentum and is not centered
@@ -367,6 +373,7 @@ object optimizerConstructorsMod extends js.Object {
     ): RMSPropOptimizer = js.native
     def rmsprop(learningRate: Double, decay: Double, momentum: Double, epsilon: Double): RMSPropOptimizer = js.native
     def rmsprop(learningRate: Double, decay: Double, momentum: Double, epsilon: Double, centered: Boolean): RMSPropOptimizer = js.native
+    
     /**
       * Constructs a `tf.SGDOptimizer` that uses stochastic gradient descent.
       *
@@ -407,6 +414,4 @@ object optimizerConstructorsMod extends js.Object {
       */
     def sgd(learningRate: Double): SGDOptimizer = js.native
   }
-  
 }
-

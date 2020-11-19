@@ -3,7 +3,7 @@ package typingsSlinky.baidumapWebSdk.global.BMap
 import typingsSlinky.baidumapWebSdk.BMap.PanoramaLabelOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BMap.PanoramaLabel")
 @js.native
@@ -12,4 +12,3 @@ class PanoramaLabel protected ()
   def this(content: String) = this()
   def this(content: String, opts: PanoramaLabelOptions) = this()
 }
-

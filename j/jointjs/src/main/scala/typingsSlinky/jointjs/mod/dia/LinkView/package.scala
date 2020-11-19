@@ -2,9 +2,10 @@ package typingsSlinky.jointjs.mod.dia
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object LinkView {
+  
   type GetConnectionPoint = js.Function5[
     /* linkView */ typingsSlinky.jointjs.mod.dia.LinkView, 
     /* view */ typingsSlinky.jointjs.mod.dia.ElementView, 
@@ -13,5 +14,6 @@ package object LinkView {
     /* end */ typingsSlinky.jointjs.mod.dia.LinkEnd, 
     typingsSlinky.jointjs.mod.dia.Point
   ]
+  
   type VertexOptions = typingsSlinky.jointjs.mod.dia.Cell.Options
 }

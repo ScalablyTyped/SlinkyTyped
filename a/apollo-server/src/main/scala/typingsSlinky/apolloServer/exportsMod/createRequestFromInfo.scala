@@ -4,11 +4,11 @@ import typingsSlinky.graphqlToolsDelegate.typesMod.ICreateRequestFromInfo
 import typingsSlinky.graphqlToolsUtils.interfacesMod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server/dist/exports", "createRequestFromInfo")
 @js.native
 object createRequestFromInfo extends js.Object {
+  
   def apply(hasInfoOperationNameOperationFieldNameSelectionSetFieldNodes: ICreateRequestFromInfo): Request = js.native
 }
-

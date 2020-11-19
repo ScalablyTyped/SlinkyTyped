@@ -4,11 +4,12 @@ import typingsSlinky.three.vector2Mod.Vector2
 import typingsSlinky.three.vector3Mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/extras/curves/Curves", JSImport.Namespace)
 @js.native
 object curvesMod extends js.Object {
+  
   @js.native
   class ArcCurve protected ()
     extends typingsSlinky.three.arcCurveMod.ArcCurve {
@@ -75,6 +76,18 @@ object curvesMod extends js.Object {
   }
   
   @js.native
+  object CurveUtils extends js.Object {
+    
+    def interpolate(p0: Double, p1: Double, p2: Double, p3: Double, t: Double): Double = js.native
+    
+    def tangentCubicBezier(t: Double, p0: Double, p1: Double, p2: Double, p3: Double): Double = js.native
+    
+    def tangentQuadraticBezier(t: Double, p0: Double, p1: Double, p2: Double): Double = js.native
+    
+    def tangentSpline(t: Double, p0: Double, p1: Double, p2: Double, p3: Double): Double = js.native
+  }
+  
+  @js.native
   class EllipseCurve protected ()
     extends typingsSlinky.three.ellipseCurveMod.EllipseCurve {
     def this(
@@ -118,14 +131,4 @@ object curvesMod extends js.Object {
     extends typingsSlinky.three.splineCurveMod.SplineCurve {
     def this(points: js.Array[Vector2]) = this()
   }
-  
-  @js.native
-  object CurveUtils extends js.Object {
-    def interpolate(p0: Double, p1: Double, p2: Double, p3: Double, t: Double): Double = js.native
-    def tangentCubicBezier(t: Double, p0: Double, p1: Double, p2: Double, p3: Double): Double = js.native
-    def tangentQuadraticBezier(t: Double, p0: Double, p1: Double, p2: Double): Double = js.native
-    def tangentSpline(t: Double, p0: Double, p1: Double, p2: Double, p3: Double): Double = js.native
-  }
-  
 }
-

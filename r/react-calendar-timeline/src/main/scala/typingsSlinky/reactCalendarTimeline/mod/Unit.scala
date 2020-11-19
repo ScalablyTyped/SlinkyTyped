@@ -2,7 +2,7 @@ package typingsSlinky.reactCalendarTimeline.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.second
@@ -14,21 +14,26 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.year
 */
 trait Unit extends js.Object
-
 object Unit {
+  
   @scala.inline
   def day: typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.day = "day".asInstanceOf[typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.day]
+  
   @scala.inline
   def hour: typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.hour = "hour".asInstanceOf[typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.hour]
+  
   @scala.inline
   def minute: typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.minute = "minute".asInstanceOf[typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.minute]
+  
   @scala.inline
   def month: typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.month = "month".asInstanceOf[typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.month]
+  
   @scala.inline
   def second: typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.second = "second".asInstanceOf[typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.second]
+  
   @scala.inline
   def week: typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.week = "week".asInstanceOf[typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.week]
+  
   @scala.inline
   def year: typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.year = "year".asInstanceOf[typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.year]
 }
-

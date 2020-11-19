@@ -5,7 +5,7 @@ import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
@@ -23,7 +23,7 @@ abstract class StructuralUnit protected ()
     _ignoredIsPartial: Boolean,
     container: IStructuralUnit
   ) = this()
+  
   @JSName("unit")
   def unit_MStructuralUnit: this.type = js.native
 }
-

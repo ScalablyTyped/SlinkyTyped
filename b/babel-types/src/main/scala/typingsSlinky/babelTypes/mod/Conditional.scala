@@ -4,15 +4,15 @@ import typingsSlinky.babelTypes.babelTypesStrings.ConditionalExpression
 import typingsSlinky.babelTypes.babelTypesStrings.IfStatement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ConditionalExpression_
   - typingsSlinky.babelTypes.mod.IfStatement_
 */
 trait Conditional extends js.Object
-
 object Conditional {
+  
   @scala.inline
   def ConditionalExpression_(
     alternate: Expression,
@@ -27,6 +27,7 @@ object Conditional {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Conditional]
   }
+  
   @scala.inline
   def IfStatement_(
     alternate: Statement,
@@ -42,4 +43,3 @@ object Conditional {
     __obj.asInstanceOf[Conditional]
   }
 }
-

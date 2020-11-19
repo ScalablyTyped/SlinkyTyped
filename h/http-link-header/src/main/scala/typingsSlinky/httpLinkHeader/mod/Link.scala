@@ -2,11 +2,11 @@ package typingsSlinky.httpLinkHeader.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Link extends js.Object {
-  var refs: js.Array[Reference] = js.native
+  
   /**
     * Get refs where the given attribute has a given value
     * @param attribute Attribute name
@@ -14,7 +14,9 @@ trait Link extends js.Object {
     * @return An array of references
     */
   def get(attribute: String, value: String): js.Array[Reference] = js.native
+  
   def has(attribute: String, value: String): Boolean = js.native
+  
   /**
     * Parse a link header beginning at the provided offset
     * @param value The header to parse
@@ -23,12 +25,15 @@ trait Link extends js.Object {
     */
   def parse(value: String): Link = js.native
   def parse(value: String, offset: Double): Link = js.native
+  
+  var refs: js.Array[Reference] = js.native
+  
   /**
     * Get refs with given relation type
     * @param value The rel value
     * @return An array of references
     */
   def rel(value: String): js.Array[Reference] = js.native
+  
   def set(ref: Reference): Link = js.native
 }
-

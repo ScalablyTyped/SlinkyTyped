@@ -2,9 +2,10 @@ package typingsSlinky.rdflib
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object updateManagerMod {
+  
   type CallBackFunction = js.Function4[
     /* uri */ java.lang.String, 
     /* ok */ scala.Boolean, 

@@ -4,11 +4,12 @@ import typingsSlinky.apolloLink.typesMod.Operation
 import typingsSlinky.apolloLink.typesMod.RequestHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-link", "split")
 @js.native
 object split extends js.Object {
+  
   def apply(test: js.Function1[/* op */ Operation, Boolean], left: typingsSlinky.apolloLink.linkMod.ApolloLink): typingsSlinky.apolloLink.linkMod.ApolloLink = js.native
   def apply(
     test: js.Function1[/* op */ Operation, Boolean],
@@ -28,4 +29,3 @@ object split extends js.Object {
   ): typingsSlinky.apolloLink.linkMod.ApolloLink = js.native
   def apply(test: js.Function1[/* op */ Operation, Boolean], left: RequestHandler, right: RequestHandler): typingsSlinky.apolloLink.linkMod.ApolloLink = js.native
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.hapiAddress.mod.ip
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@hapi/address", "ip.regex")
 @js.native
 object regex extends js.Object {
+  
   /**
     * Generates a regular expression used to validate IP addresses.
     * 
@@ -17,4 +18,3 @@ object regex extends js.Object {
   def apply(): Expression = js.native
   def apply(options: Options): Expression = js.native
 }
-

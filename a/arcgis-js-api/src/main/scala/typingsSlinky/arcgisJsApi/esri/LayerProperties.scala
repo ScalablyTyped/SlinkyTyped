@@ -35,10 +35,11 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.show
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.xor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LayerProperties extends LoadableProperties {
+  
   /**
     * Blend modes are used to blend layers together to create an interesting effect in a layer, or even to produce what seems like a new layer. Unlike the method of using [transparency](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#opacity) which can result in a washed-out top layer, blend modes can create a variety of very vibrant and intriguing results by blending a layer with the layer(s) below it.  When blending layers, a `top layer` is a layer that has a blend mode applied. All layers underneath the top layer are `background layers`. The default blending mode is `normal` where the top layer is simply displayed over the background layer. While this default behavior is perfectly acceptable, the use of blend modes on layers open up a world of endless possibilities to generate creative maps.  The layers in a [GroupLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html) are blended together in isolation from the rest of the map.  In the following screenshots, the [vintage shaded relief](https://www.arcgis.com/home/item.html?id=a8588e0401e246469260f03ee44d69f1) layer is displayed over a [firefly world imagery](http://www.arcgis.com/home/item.html?id=a66bfb7dd3b14228bf7ba42b138fe2ea) layer. The `color` blend mode is applied to the vintage shaded relief and the result looks a new layer.  <img src="../../assets/img/apiref/layers/blendMode/color-blend.png" alt="color-blend" style="width:800px;"/>
     * > **Known Limitations**
@@ -208,18 +209,21 @@ trait LayerProperties extends LoadableProperties {
   var blendMode: js.UndefOr[
     average | `color-burn` | `color-dodge` | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.color | darken | `destination-atop` | `destination-in` | `destination-out` | `destination-over` | difference | exclusion | `hard-light` | hue | invert | lighten | lighter | luminosity | minus | multiply | normal | overlay | plus | reflect | saturation | screen | `soft-light` | `source-atop` | `source-in` | `source-out` | `vivid-light` | xor
   ] = js.native
+  
   /**
     * The full extent of the layer. By default, this is worldwide. This property may be used to set the extent of the view to match a layer's extent so that its features appear to fill the view. See the sample snippet below.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#fullExtent)
     */
   var fullExtent: js.UndefOr[ExtentProperties] = js.native
+  
   /**
     * The unique ID assigned to the layer. If not set by the developer, it is automatically generated when the layer is loaded.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#id)
     */
   var id: js.UndefOr[String] = js.native
+  
   /**
     * Indicates how the layer should display in the [LayerList](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html) widget. The possible values are listed below.
     *
@@ -235,6 +239,7 @@ trait LayerProperties extends LoadableProperties {
     * @default show
     */
   var listMode: js.UndefOr[show | hide | `hide-children`] = js.native
+  
   /**
     * The opacity of the layer. This value can range between `1` and `0`, where `0` is 100 percent transparent and `1` is completely opaque.
     *
@@ -243,12 +248,14 @@ trait LayerProperties extends LoadableProperties {
     * @default 1
     */
   var opacity: js.UndefOr[Double] = js.native
+  
   /**
     * The title of the layer used to identify it in places such as the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) and [LayerList](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html) widgets.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#title)
     */
   var title: js.UndefOr[String] = js.native
+  
   /**
     * Indicates if the layer is visible in the [View](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html). When `false`, the layer may still be added to a [Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html) instance that is referenced in a view, but its features will not be visible in the view.
     *
@@ -258,55 +265,71 @@ trait LayerProperties extends LoadableProperties {
     */
   var visible: js.UndefOr[Boolean] = js.native
 }
-
 object LayerProperties {
+  
   @scala.inline
   def apply(): LayerProperties = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[LayerProperties]
   }
+  
   @scala.inline
   implicit class LayerPropertiesOps[Self <: LayerProperties] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setBlendMode(
       value: average | `color-burn` | `color-dodge` | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.color | darken | `destination-atop` | `destination-in` | `destination-out` | `destination-over` | difference | exclusion | `hard-light` | hue | invert | lighten | lighter | luminosity | minus | multiply | normal | overlay | plus | reflect | saturation | screen | `soft-light` | `source-atop` | `source-in` | `source-out` | `vivid-light` | xor
     ): Self = this.set("blendMode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteBlendMode: Self = this.set("blendMode", js.undefined)
+    
     @scala.inline
     def setFullExtent(value: ExtentProperties): Self = this.set("fullExtent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteFullExtent: Self = this.set("fullExtent", js.undefined)
+    
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
+    
     @scala.inline
     def setListMode(value: show | hide | `hide-children`): Self = this.set("listMode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteListMode: Self = this.set("listMode", js.undefined)
+    
     @scala.inline
     def setOpacity(value: Double): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteOpacity: Self = this.set("opacity", js.undefined)
+    
     @scala.inline
     def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
+    
     @scala.inline
     def setVisible(value: Boolean): Self = this.set("visible", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteVisible: Self = this.set("visible", js.undefined)
   }
-  
 }
-

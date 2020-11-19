@@ -9,10 +9,11 @@ import typingsSlinky.node.fsMod.FSWatcher
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCallFilenameOptionsListener extends js.Object {
+  
   def apply(filename: PathLike): FSWatcher = js.native
   def apply(filename: PathLike, listener: js.Function2[/* event */ String, /* filename */ String, _]): FSWatcher = js.native
   def apply(
@@ -56,4 +57,3 @@ trait FnCallFilenameOptionsListener extends js.Object {
     listener: js.Function2[/* event */ String, /* filename */ Buffer, Unit]
   ): FSWatcher = js.native
 }
-

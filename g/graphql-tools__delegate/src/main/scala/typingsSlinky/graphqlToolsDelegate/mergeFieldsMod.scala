@@ -7,11 +7,12 @@ import typingsSlinky.graphqlToolsDelegate.typesMod.SubschemaConfig
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/delegate/results/mergeFields", JSImport.Namespace)
 @js.native
 object mergeFieldsMod extends js.Object {
+  
   def mergeFields(
     mergedTypeInfo: MergedTypeInfo,
     typeName: String,
@@ -33,4 +34,3 @@ object mergeFieldsMod extends js.Object {
     info: GraphQLResolveInfo
   ): js.Any = js.native
 }
-

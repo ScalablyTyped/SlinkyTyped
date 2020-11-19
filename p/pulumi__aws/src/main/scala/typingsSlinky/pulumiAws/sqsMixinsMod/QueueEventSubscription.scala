@@ -6,7 +6,7 @@ import typingsSlinky.pulumiAws.sqsQueueMod.Queue
 import typingsSlinky.pulumiPulumi.resourceMod.ComponentResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws/sqs/sqsMixins", "QueueEventSubscription")
 @js.native
@@ -27,10 +27,11 @@ class QueueEventSubscription protected () extends EventSubscription {
     args: QueueEventSubscriptionArgs,
     opts: ComponentResourceOptions
   ) = this()
+  
   /**
     * The underlying sns object created for the subscription.
     */
   val eventSourceMapping: EventSourceMapping = js.native
+  
   val queue: Queue = js.native
 }
-

@@ -3,10 +3,11 @@ package typingsSlinky.qunit
 import typingsSlinky.qunit.anon.Actual
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Assert extends js.Object {
+  
   /**
     * Instruct QUnit to wait for an asynchronous operation.
     *
@@ -21,6 +22,7 @@ trait Assert extends js.Object {
     */
   def async(): js.Function0[Unit] = js.native
   def async(acceptCallCount: Double): js.Function0[Unit] = js.native
+  
   /**
     * A deep recursive comparison, working on primitive types, arrays, objects,
     * regular expressions, dates and functions.
@@ -38,6 +40,7 @@ trait Assert extends js.Object {
     */
   def deepEqual[T](actual: T, expected: T): Unit = js.native
   def deepEqual[T](actual: T, expected: T, message: String): Unit = js.native
+  
   /**
     * A non-strict comparison, roughly equivalent to JUnit's assertEquals.
     *
@@ -57,6 +60,7 @@ trait Assert extends js.Object {
     */
   def equal(actual: js.Any, expected: js.Any): Unit = js.native
   def equal(actual: js.Any, expected: js.Any, message: String): Unit = js.native
+  
   /**
     * Specify how many assertions are expected to run within a test.
     *
@@ -68,6 +72,7 @@ trait Assert extends js.Object {
     * @param {number} amount Number of assertions in this test.
     */
   def expect(amount: Double): Unit = js.native
+  
   /**
     * An inverted deep recursive comparison, working on primitive types,
     * arrays, objects, regular expressions, dates and functions.
@@ -78,6 +83,7 @@ trait Assert extends js.Object {
     */
   def notDeepEqual(actual: js.Any, expected: js.Any): Unit = js.native
   def notDeepEqual(actual: js.Any, expected: js.Any, message: String): Unit = js.native
+  
   /**
     * A non-strict comparison, checking for inequality.
     *
@@ -97,6 +103,7 @@ trait Assert extends js.Object {
     */
   def notEqual(actual: js.Any, expected: js.Any): Unit = js.native
   def notEqual(actual: js.Any, expected: js.Any, message: String): Unit = js.native
+  
   /**
     * A boolean check, inverse of `ok()` and CommonJS's `assert.ok()`, and
     * equivalent to JUnit's `assertFalse()`. Passes if the first argument is
@@ -111,6 +118,7 @@ trait Assert extends js.Object {
     */
   def notOk(state: js.Any): Unit = js.native
   def notOk(state: js.Any, message: String): Unit = js.native
+  
   /**
     * A strict comparison of an object's own properties, checking for inequality.
     *
@@ -132,6 +140,7 @@ trait Assert extends js.Object {
     */
   def notPropEqual(actual: js.Any, expected: js.Any): Unit = js.native
   def notPropEqual(actual: js.Any, expected: js.Any, message: String): Unit = js.native
+  
   /**
     * A strict comparison, checking for inequality.
     *
@@ -151,6 +160,7 @@ trait Assert extends js.Object {
     */
   def notStrictEqual(actual: js.Any, expected: js.Any): Unit = js.native
   def notStrictEqual(actual: js.Any, expected: js.Any, message: String): Unit = js.native
+  
   /**
     * A boolean check, equivalent to CommonJS's assert.ok() and JUnit's
     * assertTrue(). Passes if the first argument is truthy.
@@ -165,6 +175,7 @@ trait Assert extends js.Object {
     */
   def ok(state: js.Any): Unit = js.native
   def ok(state: js.Any, message: String): Unit = js.native
+  
   /**
     * A strict type and value comparison of an object's own properties.
     *
@@ -183,6 +194,7 @@ trait Assert extends js.Object {
     */
   def propEqual(actual: js.Any, expected: js.Any): Unit = js.native
   def propEqual(actual: js.Any, expected: js.Any, message: String): Unit = js.native
+  
   /**
     * Report the result of a custom assertion
     *
@@ -199,10 +211,12 @@ trait Assert extends js.Object {
     * @param assertionResult The assertion result
     */
   def pushResult(assertResult: Actual): Unit = js.native
+  
   def raises(block: js.Function0[Unit]): Unit = js.native
   def raises(block: js.Function0[Unit], expected: js.UndefOr[scala.Nothing], message: js.Any): Unit = js.native
   def raises(block: js.Function0[Unit], expected: js.Any): Unit = js.native
   def raises(block: js.Function0[Unit], expected: js.Any, message: js.Any): Unit = js.native
+  
   /**
     * Test if the provided promise rejects, and optionally compare the
     * rejection value.
@@ -229,6 +243,7 @@ trait Assert extends js.Object {
   def rejects(promise: js.Promise[_], expectedMatcher: js.Any): js.Promise[Unit] = js.native
   def rejects(promise: js.Promise[_], expectedMatcher: js.Any, message: String): js.Promise[Unit] = js.native
   def rejects(promise: js.Promise[_], message: String): js.Promise[Unit] = js.native
+  
   /**
     * A marker for progress in a given test.
     *
@@ -242,6 +257,7 @@ trait Assert extends js.Object {
     * @param message Message to display for the step
     */
   def step(message: String): Unit = js.native
+  
   /**
     * A strict type and value comparison.
     *
@@ -258,6 +274,7 @@ trait Assert extends js.Object {
     */
   def strictEqual[T](actual: T, expected: T): Unit = js.native
   def strictEqual[T](actual: T, expected: T, message: String): Unit = js.native
+  
   /**
     * Test if a callback throws an exception, and optionally compare the thrown
     * error.
@@ -275,6 +292,7 @@ trait Assert extends js.Object {
   def throws(block: js.Function0[Unit], expected: js.UndefOr[scala.Nothing], message: js.Any): Unit = js.native
   def throws(block: js.Function0[Unit], expected: js.Any): Unit = js.native
   def throws(block: js.Function0[Unit], expected: js.Any, message: js.Any): Unit = js.native
+  
   /**
     * A helper assertion to verify the order and number of steps in a test.
     *
@@ -288,4 +306,3 @@ trait Assert extends js.Object {
   def verifySteps(steps: js.Array[String]): Unit = js.native
   def verifySteps(steps: js.Array[String], message: String): Unit = js.native
 }
-

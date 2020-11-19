@@ -6,7 +6,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "TracesAndStats")
 @js.native
@@ -16,23 +16,26 @@ import scala.scalajs.js.annotation._
   */
 class TracesAndStats () extends ITracesAndStats {
   def this(properties: ITracesAndStats) = this()
+  
   /** TracesAndStats statsWithContext. */
   @JSName("statsWithContext")
   var statsWithContext_TracesAndStats: js.Array[IContextualizedStats] = js.native
-  /** TracesAndStats trace. */
-  @JSName("trace")
-  var trace_TracesAndStats: js.Array[ITrace] = js.native
+  
   /**
     * Converts this TracesAndStats to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
+  
+  /** TracesAndStats trace. */
+  @JSName("trace")
+  var trace_TracesAndStats: js.Array[ITrace] = js.native
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "TracesAndStats")
 @js.native
 object TracesAndStats extends js.Object {
+  
   /**
     * Creates a new TracesAndStats instance using the specified properties.
     * @param [properties] Properties to set
@@ -40,6 +43,7 @@ object TracesAndStats extends js.Object {
     */
   def create(): TracesAndStats = js.native
   def create(properties: ITracesAndStats): TracesAndStats = js.native
+  
   /**
     * Decodes a TracesAndStats message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -52,6 +56,7 @@ object TracesAndStats extends js.Object {
   def decode(reader: Reader, length: Double): TracesAndStats = js.native
   def decode(reader: js.typedarray.Uint8Array): TracesAndStats = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): TracesAndStats = js.native
+  
   /**
     * Decodes a TracesAndStats message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -61,6 +66,7 @@ object TracesAndStats extends js.Object {
     */
   def decodeDelimited(reader: Reader): TracesAndStats = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): TracesAndStats = js.native
+  
   /**
     * Encodes the specified TracesAndStats message. Does not implicitly {@link TracesAndStats.verify|verify} messages.
     * @param message TracesAndStats message or plain object to encode
@@ -69,6 +75,7 @@ object TracesAndStats extends js.Object {
     */
   def encode(message: ITracesAndStats): Writer = js.native
   def encode(message: ITracesAndStats, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified TracesAndStats message, length delimited. Does not implicitly {@link TracesAndStats.verify|verify} messages.
     * @param message TracesAndStats message or plain object to encode
@@ -77,12 +84,14 @@ object TracesAndStats extends js.Object {
     */
   def encodeDelimited(message: ITracesAndStats): Writer = js.native
   def encodeDelimited(message: ITracesAndStats, writer: Writer): Writer = js.native
+  
   /**
     * Creates a TracesAndStats message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns TracesAndStats
     */
   def fromObject(`object`: StringDictionary[js.Any]): TracesAndStats = js.native
+  
   /**
     * Creates a plain object from a TracesAndStats message. Also converts values to other types if specified.
     * @param message TracesAndStats
@@ -91,6 +100,7 @@ object TracesAndStats extends js.Object {
     */
   def toObject(message: TracesAndStats): StringDictionary[js.Any] = js.native
   def toObject(message: TracesAndStats, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a TracesAndStats message.
     * @param message Plain object to verify
@@ -98,4 +108,3 @@ object TracesAndStats extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

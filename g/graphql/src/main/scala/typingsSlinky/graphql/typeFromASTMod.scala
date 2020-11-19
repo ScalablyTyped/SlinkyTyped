@@ -9,13 +9,13 @@ import typingsSlinky.graphql.definitionMod.GraphQLNonNull
 import typingsSlinky.graphql.schemaMod.GraphQLSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/utilities/typeFromAST", JSImport.Namespace)
 @js.native
 object typeFromASTMod extends js.Object {
+  
   def typeFromAST(schema: GraphQLSchema, typeNode: ListTypeNode): js.UndefOr[GraphQLList[_]] = js.native
   def typeFromAST(schema: GraphQLSchema, typeNode: NamedTypeNode): js.UndefOr[GraphQLNamedType] = js.native
   def typeFromAST(schema: GraphQLSchema, typeNode: NonNullTypeNode): js.UndefOr[GraphQLNonNull[_]] = js.native
 }
-

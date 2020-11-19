@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Provides access to your photo library._
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Photos")
 @js.native
 object Photos extends js.Object {
+  
   /**
     * _Opens the camera for taking an image._
     *
@@ -18,6 +19,7 @@ object Photos extends js.Object {
     * @see https://docs.scriptable.app/photos/#fromcamera
     */
   def fromCamera(): js.Promise[typingsSlinky.scriptableIos.Image] = js.native
+  
   /**
     * _Presents the photo library for picking an image._
     *
@@ -25,6 +27,7 @@ object Photos extends js.Object {
     * @see https://docs.scriptable.app/photos/#fromlibrary
     */
   def fromLibrary(): js.Promise[typingsSlinky.scriptableIos.Image] = js.native
+  
   /**
     * _Get latest photo._
     *
@@ -32,6 +35,7 @@ object Photos extends js.Object {
     * @see https://docs.scriptable.app/photos/#latestphoto
     */
   def latestPhoto(): js.Promise[typingsSlinky.scriptableIos.Image] = js.native
+  
   /**
     * _Get latest photos._
     *
@@ -40,6 +44,7 @@ object Photos extends js.Object {
     * @see https://docs.scriptable.app/photos/#latestphotos
     */
   def latestPhotos(count: Double): js.Promise[js.Array[typingsSlinky.scriptableIos.Image]] = js.native
+  
   /**
     * _Get latest screenshot._
     *
@@ -47,6 +52,7 @@ object Photos extends js.Object {
     * @see https://docs.scriptable.app/photos/#latestscreenshot
     */
   def latestScreenshot(): js.Promise[typingsSlinky.scriptableIos.Image] = js.native
+  
   /**
     * _Get latest screenshots._
     *
@@ -55,6 +61,7 @@ object Photos extends js.Object {
     * @see https://docs.scriptable.app/photos/#latestscreenshots
     */
   def latestScreenshots(count: Double): js.Promise[js.Array[typingsSlinky.scriptableIos.Image]] = js.native
+  
   /**
     * _Removes latest photo._
     *
@@ -62,6 +69,7 @@ object Photos extends js.Object {
     * @see https://docs.scriptable.app/photos/#removelatestphoto
     */
   def removeLatestPhoto(): Unit = js.native
+  
   /**
     * _Removes latest photos._
     *
@@ -70,6 +78,7 @@ object Photos extends js.Object {
     * @see https://docs.scriptable.app/photos/#removelatestphotos
     */
   def removeLatestPhotos(count: Double): Unit = js.native
+  
   /**
     * _Removes latest screenshot._
     *
@@ -77,6 +86,7 @@ object Photos extends js.Object {
     * @see https://docs.scriptable.app/photos/#removelatestscreenshot
     */
   def removeLatestScreenshot(): Unit = js.native
+  
   /**
     * _Removes latest screenshots._
     *
@@ -85,6 +95,7 @@ object Photos extends js.Object {
     * @see https://docs.scriptable.app/photos/#removelatestscreenshots
     */
   def removeLatestScreenshots(count: Double): Unit = js.native
+  
   /**
     * _Save an image._
     *
@@ -94,4 +105,3 @@ object Photos extends js.Object {
     */
   def save(image: typingsSlinky.scriptableIos.Image): Unit = js.native
 }
-

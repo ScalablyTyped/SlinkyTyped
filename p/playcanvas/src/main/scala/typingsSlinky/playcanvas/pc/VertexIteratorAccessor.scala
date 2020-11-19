@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Returns a new pc.VertexIteratorAccessor object.
@@ -50,12 +50,14 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait VertexIteratorAccessor extends js.Object {
+  
   /**
     * Get a attribute component at the iterator's current index.
     * @param offset - The component offset. Should be either 0, 1, 2, or 3.
     * @returns The value of a attribute component.
     */
   def get(offset: Double): Double = js.native
+  
   /**
     * Read attribute components to an output array.
     * @param offset - The component offset at which to read data from the buffer. Will be used instead of the iterator's current index.
@@ -71,6 +73,7 @@ trait VertexIteratorAccessor extends js.Object {
   def getToArray(offset: Double, outputArray: js.typedarray.Uint32Array, outputIndex: Double): Unit = js.native
   def getToArray(offset: Double, outputArray: js.typedarray.Uint8Array, outputIndex: Double): Unit = js.native
   def getToArray(offset: Double, outputArray: js.typedarray.Uint8ClampedArray, outputIndex: Double): Unit = js.native
+  
   /**
     * Set all the attribute components at the iterator's current index.
     * @param a - The first component value.
@@ -86,6 +89,7 @@ trait VertexIteratorAccessor extends js.Object {
   def set(a: Double, b: Double, c: js.UndefOr[scala.Nothing], d: Double): Unit = js.native
   def set(a: Double, b: Double, c: Double): Unit = js.native
   def set(a: Double, b: Double, c: Double, d: Double): Unit = js.native
+  
   /**
     * Write attribute components from an input array.
     * @param index - The starting index at which to write data into the buffer. Will be used instead of the iterator's current index.
@@ -102,4 +106,3 @@ trait VertexIteratorAccessor extends js.Object {
   def setFromArray(index: Double, inputArray: js.typedarray.Uint8Array, inputIndex: Double): Unit = js.native
   def setFromArray(index: Double, inputArray: js.typedarray.Uint8ClampedArray, inputIndex: Double): Unit = js.native
 }
-

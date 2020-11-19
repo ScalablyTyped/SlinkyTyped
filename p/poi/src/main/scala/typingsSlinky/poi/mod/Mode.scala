@@ -2,7 +2,7 @@ package typingsSlinky.poi.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.poi.poiStrings.production
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.poi.poiStrings.test
 */
 trait Mode extends js.Object
-
 object Mode {
+  
   @scala.inline
   def development: typingsSlinky.poi.poiStrings.development = "development".asInstanceOf[typingsSlinky.poi.poiStrings.development]
+  
   @scala.inline
   def production: typingsSlinky.poi.poiStrings.production = "production".asInstanceOf[typingsSlinky.poi.poiStrings.production]
+  
   @scala.inline
   def test: typingsSlinky.poi.poiStrings.test = "test".asInstanceOf[typingsSlinky.poi.poiStrings.test]
 }
-

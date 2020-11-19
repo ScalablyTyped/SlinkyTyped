@@ -2,10 +2,11 @@ package typingsSlinky.yandexMaps.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IEventGroup extends js.Object {
+  
   def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
   def add(
     types: String,
@@ -38,6 +39,7 @@ trait IEventGroup extends js.Object {
     context: js.Object,
     priority: Double
   ): this.type = js.native
+  
   def remove(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
   def remove(
     types: String,
@@ -70,6 +72,6 @@ trait IEventGroup extends js.Object {
     context: js.Object,
     priority: Double
   ): this.type = js.native
+  
   def removeAll(): this.type = js.native
 }
-

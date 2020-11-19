@@ -12,11 +12,12 @@ import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/nanoflows", JSImport.Namespace)
 @js.native
 object nanoflowsMod extends js.Object {
+  
   @js.native
   class StructureVersionInfo protected ()
     extends typingsSlinky.mendixmodelsdk.internalMod.StructureVersionInfo {
@@ -25,6 +26,7 @@ object nanoflowsMod extends js.Object {
   
   @js.native
   object nanoflows extends js.Object {
+    
     /**
       * Interfaces and instance classes for types from the Mendix sub meta model `Nanoflows`.
       */
@@ -41,24 +43,27 @@ object nanoflowsMod extends js.Object {
         unit: ModelUnit,
         container: AbstractElement
       ) = this()
+      
       @JSName("model")
       var model_FNanoflowParameterValue: IModel = js.native
+      
       def nanoflow: INanoflow | Null = js.native
+      
       def nanoflowQualifiedName: String | Null = js.native
+      
       def nanoflow_=(newValue: INanoflow | Null): Unit = js.native
     }
-    
     /* static members */
     @js.native
     object NanoflowParameterValue extends js.Object {
-      var structureTypeName: String = js.native
-      var versionInfo: StructureVersionInfo = js.native
+      
       /**
         * Creates and returns a new NanoflowParameterValue instance in the SDK and on the server.
         * Expects one argument: the IModel object the instance will "live on".
         * After creation, assign or add this instance to a property that accepts this kind of objects.
         */
       def create(model: IModel): NanoflowParameterValue = js.native
+      
       /**
         * Creates and returns a new NanoflowParameterValue instance in the SDK and on the server.
         * The new NanoflowParameterValue will be automatically stored in the 'parameterValue' property
@@ -68,6 +73,7 @@ object nanoflowsMod extends js.Object {
         *  8.4.0 and higher
         */
       def createInJavaActionParameterMappingUnderParameterValue(container: JavaActionParameterMapping): NanoflowParameterValue = js.native
+      
       /**
         * Creates and returns a new NanoflowParameterValue instance in the SDK and on the server.
         * The new NanoflowParameterValue will be automatically stored in the 'parameterValue' property
@@ -77,9 +83,10 @@ object nanoflowsMod extends js.Object {
         *  8.4.0 and higher
         */
       def createInJavaScriptActionParameterMappingUnderParameterValue(container: JavaScriptActionParameterMapping): NanoflowParameterValue = js.native
+      
+      var structureTypeName: String = js.native
+      
+      var versionInfo: StructureVersionInfo = js.native
     }
-    
   }
-  
 }
-

@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PortalConstructor
@@ -15,6 +15,7 @@ trait PortalConstructor
   */
 Instantiable0[Portal]
      with Instantiable1[/* properties */ PortalProperties, Portal] {
+  
   /**
     * A new `Portal` instance is created the first time this method is called. The URL from [config.portalUrl](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#portalUrl) is automatically used for this instance. This instance is then cached and used for any subsequent calls to this method.
     *
@@ -24,4 +25,3 @@ Instantiable0[Portal]
     */
   def getDefault(): Portal = js.native
 }
-

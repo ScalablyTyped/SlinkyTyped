@@ -3,7 +3,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 import typingsSlinky.appleMapkitJs.mapkit.MarkerAnnotationConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a marker annotation at the coordinate location with provided options.
@@ -24,4 +24,3 @@ class MarkerAnnotation protected ()
     options: MarkerAnnotationConstructorOptions
   ) = this()
 }
-

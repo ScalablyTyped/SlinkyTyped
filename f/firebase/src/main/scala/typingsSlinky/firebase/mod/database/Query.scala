@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.database
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A `Query` sorts and filters the data at a Database location so only a subset
@@ -23,10 +23,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Query extends js.Object {
-  /**
-    * Returns a `Reference` to the `Query`'s location.
-    */
-  var ref: Reference = js.native
+  
   /**
     * Creates a `Query` with the specified ending point.
     *
@@ -69,6 +66,7 @@ trait Query extends js.Object {
   def endAt(value: Double): Query = js.native
   def endAt(value: Double, key: String): Query = js.native
   def endAt(value: Null, key: String): Query = js.native
+  
   /**
     * Creates a `Query` that includes children that match the specified value.
     *
@@ -110,6 +108,7 @@ trait Query extends js.Object {
   def equalTo(value: Double): Query = js.native
   def equalTo(value: Double, key: String): Query = js.native
   def equalTo(value: Null, key: String): Query = js.native
+  
   /**
     * Returns whether or not the current and provided queries represent the same
     * location, have the same query parameters, and are from the same instance of
@@ -151,6 +150,7 @@ trait Query extends js.Object {
     */
   def isEqual(): Boolean = js.native
   def isEqual(other: Query): Boolean = js.native
+  
   /**
     * Generates a new `Query` limited to the first specific number of children.
     *
@@ -186,6 +186,7 @@ trait Query extends js.Object {
     * @param limit The maximum number of nodes to include in this query.
     */
   def limitToFirst(limit: Double): Query = js.native
+  
   /**
     * Generates a new `Query` object limited to the last specific number of
     * children.
@@ -219,6 +220,7 @@ trait Query extends js.Object {
     * @param limit The maximum number of nodes to include in this query.
     */
   def limitToLast(limit: Double): Query = js.native
+  
   /**
     * Detaches a callback previously attached with `on()`.
     *
@@ -284,6 +286,7 @@ trait Query extends js.Object {
     callback: js.Function2[/* a */ DataSnapshot, /* b */ js.UndefOr[String | Null], _],
     context: js.Object
   ): Unit = js.native
+  
   /**
     * Listens for data changes at a particular location.
     *
@@ -423,6 +426,7 @@ trait Query extends js.Object {
     cancelCallbackOrContext: Null,
     context: js.Object
   ): js.Function2[/* a */ DataSnapshot | Null, /* b */ js.UndefOr[String | Null], _] = js.native
+  
   /**
     * Listens for exactly one event of the specified event type, and then stops
     * listening.
@@ -529,6 +533,7 @@ trait Query extends js.Object {
     failureCallbackOrContext: Null,
     context: js.Object
   ): js.Promise[DataSnapshot] = js.native
+  
   /**
     * Generates a new `Query` object ordered by the specified child key.
     *
@@ -555,6 +560,7 @@ trait Query extends js.Object {
     * ```
     */
   def orderByChild(path: String): Query = js.native
+  
   /**
     * Generates a new `Query` object ordered by key.
     *
@@ -574,6 +580,7 @@ trait Query extends js.Object {
     * ```
     */
   def orderByKey(): Query = js.native
+  
   /**
     * Generates a new `Query` object ordered by priority.
     *
@@ -584,6 +591,7 @@ trait Query extends js.Object {
     *  Sort data} for alternatives to priority.
     */
   def orderByPriority(): Query = js.native
+  
   /**
     * Generates a new `Query` object ordered by value.
     *
@@ -606,6 +614,12 @@ trait Query extends js.Object {
     * ```
     */
   def orderByValue(): Query = js.native
+  
+  /**
+    * Returns a `Reference` to the `Query`'s location.
+    */
+  var ref: Reference = js.native
+  
   /**
     * Creates a `Query` with the specified starting point.
     *
@@ -647,6 +661,7 @@ trait Query extends js.Object {
   def startAt(value: Double): Query = js.native
   def startAt(value: Double, key: String): Query = js.native
   def startAt(value: Null, key: String): Query = js.native
+  
   /**
     * Returns a JSON-serializable representation of this object.
     *
@@ -654,4 +669,3 @@ trait Query extends js.Object {
     */
   def toJSON(): js.Object = js.native
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.getFolderSize
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("get-folder-size", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def apply(folder: String, callback: js.Function2[/* err */ js.Error | Null, /* size */ Double, Unit]): Unit = js.native
   def apply(
     folder: String,
@@ -14,4 +15,3 @@ object mod extends js.Object {
     callback: js.Function2[/* err */ js.Error | Null, /* size */ Double, Unit]
   ): Unit = js.native
 }
-

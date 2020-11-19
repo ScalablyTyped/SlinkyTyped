@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Compass
 import typingsSlinky.arcgisJsApi.esri.CompassProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Compass", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Compass {
   def this(properties: CompassProperties) = this()
 }
-

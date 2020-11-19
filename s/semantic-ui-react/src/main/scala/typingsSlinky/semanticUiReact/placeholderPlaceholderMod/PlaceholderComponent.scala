@@ -8,13 +8,16 @@ import typingsSlinky.semanticUiReact.placeholderLineMod.PlaceholderLineProps
 import typingsSlinky.semanticUiReact.placeholderParagraphMod.PlaceholderParagraphProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PlaceholderComponent extends FunctionComponent[PlaceholderProps] {
+  
   var Header: ReactComponentClass[PlaceholderHeaderProps] = js.native
+  
   var Image: ReactComponentClass[PlaceholderImageProps] = js.native
+  
   var Line: ReactComponentClass[PlaceholderLineProps] = js.native
+  
   var Paragraph: ReactComponentClass[PlaceholderParagraphProps] = js.native
 }
-

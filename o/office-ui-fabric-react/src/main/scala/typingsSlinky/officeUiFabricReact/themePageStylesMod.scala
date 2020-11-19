@@ -4,11 +4,11 @@ import typingsSlinky.officeUiFabricReact.themePageTypesMod.IThemePageStyleProps
 import typingsSlinky.officeUiFabricReact.themePageTypesMod.IThemePageStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/Theme/ThemePage.styles", JSImport.Namespace)
 @js.native
 object themePageStylesMod extends js.Object {
+  
   def getStyles(props: IThemePageStyleProps): IThemePageStyles = js.native
 }
-

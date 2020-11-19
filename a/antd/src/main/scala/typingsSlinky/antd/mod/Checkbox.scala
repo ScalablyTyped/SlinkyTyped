@@ -7,19 +7,21 @@ import typingsSlinky.antd.checkboxMod.default
 import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd", "Checkbox")
 @js.native
 class Checkbox () extends default
-
 /* static members */
 @JSImport("antd", "Checkbox")
 @js.native
 object Checkbox extends js.Object {
+  
   var Group: TypeofCheckboxGroup = js.native
+  
   var __ANT_CHECKBOX: Boolean = js.native
+  
   var contextType: Context[CheckboxGroupContext | Null] = js.native
+  
   var defaultProps: Indeterminate = js.native
 }
-

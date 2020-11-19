@@ -5,12 +5,14 @@ import typingsSlinky.gapiClientToolresults.anon.Alt
 import typingsSlinky.gapiClientToolresults.anon.ExecutionId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ClustersResource extends js.Object {
+  
   /** Retrieves a single screenshot cluster by its ID */
   def get(request: Alt): Request[ScreenshotCluster] = js.native
+  
   /**
     * Lists Screenshot Clusters
     *
@@ -20,8 +22,8 @@ trait ClustersResource extends js.Object {
     */
   def list(request: ExecutionId): Request[ListScreenshotClustersResponse] = js.native
 }
-
 object ClustersResource {
+  
   @scala.inline
   def apply(
     get: Alt => Request[ScreenshotCluster],
@@ -30,22 +32,26 @@ object ClustersResource {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[ClustersResource]
   }
+  
   @scala.inline
   implicit class ClustersResourceOps[Self <: ClustersResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setGet(value: Alt => Request[ScreenshotCluster]): Self = this.set("get", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setList(value: ExecutionId => Request[ListScreenshotClustersResponse]): Self = this.set("list", js.Any.fromFunction1(value))
   }
-  
 }
-

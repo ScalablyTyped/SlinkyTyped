@@ -2,7 +2,7 @@ package typingsSlinky.std
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.std.stdStrings.accumulate
@@ -11,15 +11,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.std.stdStrings.replace
 */
 trait CompositeOperationOrAuto extends js.Object
-
 object CompositeOperationOrAuto {
+  
   @scala.inline
   def accumulate: typingsSlinky.std.stdStrings.accumulate = "accumulate".asInstanceOf[typingsSlinky.std.stdStrings.accumulate]
+  
   @scala.inline
   def add: typingsSlinky.std.stdStrings.add = "add".asInstanceOf[typingsSlinky.std.stdStrings.add]
+  
   @scala.inline
   def auto: typingsSlinky.std.stdStrings.auto = "auto".asInstanceOf[typingsSlinky.std.stdStrings.auto]
+  
   @scala.inline
   def replace: typingsSlinky.std.stdStrings.replace = "replace".asInstanceOf[typingsSlinky.std.stdStrings.replace]
 }
-

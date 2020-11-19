@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create a new instance of a Picker object.
@@ -15,18 +15,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Picker extends js.Object {
-  /**
-    * Height of the pick buffer in pixels (read-only).
-    */
-  var height: Double = js.native
-  /**
-    * The render target used by the picker internally (read-only).
-    */
-  var renderTarget: RenderTarget = js.native
-  /**
-    * Width of the pick buffer in pixels (read-only).
-    */
-  var width: Double = js.native
+  
   /**
     * Return the list of mesh instances selected by the specified rectangle in the
     previously prepared pick buffer.The rectangle using top-left coordinate system.
@@ -46,6 +35,12 @@ trait Picker extends js.Object {
   def getSelection(x: Double, y: Double, width: js.UndefOr[scala.Nothing], height: Double): js.Array[MeshInstance] = js.native
   def getSelection(x: Double, y: Double, width: Double): js.Array[MeshInstance] = js.native
   def getSelection(x: Double, y: Double, width: Double, height: Double): js.Array[MeshInstance] = js.native
+  
+  /**
+    * Height of the pick buffer in pixels (read-only).
+    */
+  var height: Double = js.native
+  
   /**
     * Primes the pick buffer with a rendering of the specified models from the point of view
     of the supplied camera. Once the pick buffer has been prepared, pc.Picker#getSelection can be
@@ -58,6 +53,12 @@ trait Picker extends js.Object {
   def prepare(camera: CameraComponent, scene: Scene): Unit = js.native
   def prepare(camera: CameraComponent, scene: Scene, arg: Layer): Unit = js.native
   def prepare(camera: CameraComponent, scene: Scene, arg: RenderTarget): Unit = js.native
+  
+  /**
+    * The render target used by the picker internally (read-only).
+    */
+  var renderTarget: RenderTarget = js.native
+  
   /**
     * Sets the resolution of the pick buffer. The pick buffer resolution does not need
     to match the resolution of the corresponding frame buffer use for general rendering of the
@@ -68,5 +69,9 @@ trait Picker extends js.Object {
     * @param height - The height of the pick buffer in pixels.
     */
   def resize(width: Double, height: Double): Unit = js.native
+  
+  /**
+    * Width of the pick buffer in pixels (read-only).
+    */
+  var width: Double = js.native
 }
-

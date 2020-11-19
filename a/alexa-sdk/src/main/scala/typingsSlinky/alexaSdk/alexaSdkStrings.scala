@@ -15,9 +15,226 @@ import typingsSlinky.alexaSdk.mod.TemplateType
 import typingsSlinky.alexaSdk.mod.TextContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object alexaSdkStrings {
+  
+  @scala.inline
+  def AlexaHouseholdListEventDotItemsCreated: AlexaHouseholdListEventDotItemsCreated = "AlexaHouseholdListEvent.ItemsCreated".asInstanceOf[AlexaHouseholdListEventDotItemsCreated]
+  
+  @scala.inline
+  def AlexaHouseholdListEventDotItemsDeleted: AlexaHouseholdListEventDotItemsDeleted = "AlexaHouseholdListEvent.ItemsDeleted".asInstanceOf[AlexaHouseholdListEventDotItemsDeleted]
+  
+  @scala.inline
+  def AlexaHouseholdListEventDotItemsUpdated: AlexaHouseholdListEventDotItemsUpdated = "AlexaHouseholdListEvent.ItemsUpdated".asInstanceOf[AlexaHouseholdListEventDotItemsUpdated]
+  
+  @scala.inline
+  def AlexaHouseholdListEventDotListCreated: AlexaHouseholdListEventDotListCreated = "AlexaHouseholdListEvent.ListCreated".asInstanceOf[AlexaHouseholdListEventDotListCreated]
+  
+  @scala.inline
+  def AlexaHouseholdListEventDotListDeleted: AlexaHouseholdListEventDotListDeleted = "AlexaHouseholdListEvent.ListDeleted".asInstanceOf[AlexaHouseholdListEventDotListDeleted]
+  
+  @scala.inline
+  def AlexaHouseholdListEventDotListUpdated: AlexaHouseholdListEventDotListUpdated = "AlexaHouseholdListEvent.ListUpdated".asInstanceOf[AlexaHouseholdListEventDotListUpdated]
+  
+  @scala.inline
+  def AlexaSkillEventDotSkillAccountLinked: AlexaSkillEventDotSkillAccountLinked = "AlexaSkillEvent.SkillAccountLinked".asInstanceOf[AlexaSkillEventDotSkillAccountLinked]
+  
+  @scala.inline
+  def AlexaSkillEventDotSkillDisabled: AlexaSkillEventDotSkillDisabled = "AlexaSkillEvent.SkillDisabled".asInstanceOf[AlexaSkillEventDotSkillDisabled]
+  
+  @scala.inline
+  def AlexaSkillEventDotSkillEnabled: AlexaSkillEventDotSkillEnabled = "AlexaSkillEvent.SkillEnabled".asInstanceOf[AlexaSkillEventDotSkillEnabled]
+  
+  @scala.inline
+  def AlexaSkillEventDotSkillPermissionAccepted: AlexaSkillEventDotSkillPermissionAccepted = "AlexaSkillEvent.SkillPermissionAccepted".asInstanceOf[AlexaSkillEventDotSkillPermissionAccepted]
+  
+  @scala.inline
+  def AlexaSkillEventDotSkillPermissionChanged: AlexaSkillEventDotSkillPermissionChanged = "AlexaSkillEvent.SkillPermissionChanged".asInstanceOf[AlexaSkillEventDotSkillPermissionChanged]
+  
+  @scala.inline
+  def AskForPermissionsConsent: AskForPermissionsConsent = "AskForPermissionsConsent".asInstanceOf[AskForPermissionsConsent]
+  
+  @scala.inline
+  def AudioPlayerDotClearQueue: AudioPlayerDotClearQueue = "AudioPlayer.ClearQueue".asInstanceOf[AudioPlayerDotClearQueue]
+  
+  @scala.inline
+  def AudioPlayerDotPlay: AudioPlayerDotPlay = "AudioPlayer.Play".asInstanceOf[AudioPlayerDotPlay]
+  
+  @scala.inline
+  def AudioPlayerDotPlaybackFinished: AudioPlayerDotPlaybackFinished = "AudioPlayer.PlaybackFinished".asInstanceOf[AudioPlayerDotPlaybackFinished]
+  
+  @scala.inline
+  def AudioPlayerDotPlaybackNearlyFinished: AudioPlayerDotPlaybackNearlyFinished = "AudioPlayer.PlaybackNearlyFinished".asInstanceOf[AudioPlayerDotPlaybackNearlyFinished]
+  
+  @scala.inline
+  def AudioPlayerDotPlaybackStarted: AudioPlayerDotPlaybackStarted = "AudioPlayer.PlaybackStarted".asInstanceOf[AudioPlayerDotPlaybackStarted]
+  
+  @scala.inline
+  def AudioPlayerDotPlaybackStopped: AudioPlayerDotPlaybackStopped = "AudioPlayer.PlaybackStopped".asInstanceOf[AudioPlayerDotPlaybackStopped]
+  
+  @scala.inline
+  def AudioPlayerDotStop: AudioPlayerDotStop = "AudioPlayer.Stop".asInstanceOf[AudioPlayerDotStop]
+  
+  @scala.inline
+  def BUFFER_UNDERRUN: BUFFER_UNDERRUN = "BUFFER_UNDERRUN".asInstanceOf[BUFFER_UNDERRUN]
+  
+  @scala.inline
+  def BodyTemplate1: BodyTemplate1 = "BodyTemplate1".asInstanceOf[BodyTemplate1]
+  
+  @scala.inline
+  def BodyTemplate2: BodyTemplate2 = "BodyTemplate2".asInstanceOf[BodyTemplate2]
+  
+  @scala.inline
+  def BodyTemplate3: BodyTemplate3 = "BodyTemplate3".asInstanceOf[BodyTemplate3]
+  
+  @scala.inline
+  def BodyTemplate6: BodyTemplate6 = "BodyTemplate6".asInstanceOf[BodyTemplate6]
+  
+  @scala.inline
+  def COMPLETED: COMPLETED = "COMPLETED".asInstanceOf[COMPLETED]
+  
+  @scala.inline
+  def CONFIRMED: CONFIRMED = "CONFIRMED".asInstanceOf[CONFIRMED]
+  
+  @scala.inline
+  def DENIED: DENIED = "DENIED".asInstanceOf[DENIED]
+  
+  @scala.inline
+  def DEVICE_COMMUNICATION_ERROR: DEVICE_COMMUNICATION_ERROR = "DEVICE_COMMUNICATION_ERROR".asInstanceOf[DEVICE_COMMUNICATION_ERROR]
+  
+  @scala.inline
+  def DisplayDotRenderTemplate: DisplayDotRenderTemplate = "Display.RenderTemplate".asInstanceOf[DisplayDotRenderTemplate]
+  
+  @scala.inline
+  def FINISHED: FINISHED = "FINISHED".asInstanceOf[FINISHED]
+  
+  @scala.inline
+  def HIDDEN: HIDDEN = "HIDDEN".asInstanceOf[HIDDEN]
+  
+  @scala.inline
+  def Hint: Hint = "Hint".asInstanceOf[Hint]
+  
+  @scala.inline
+  def IDLE: IDLE = "IDLE".asInstanceOf[IDLE]
+  
+  @scala.inline
+  def INTERNAL_ERROR: INTERNAL_ERROR = "INTERNAL_ERROR".asInstanceOf[INTERNAL_ERROR]
+  
+  @scala.inline
+  def INVALID_RESPONSE: INVALID_RESPONSE = "INVALID_RESPONSE".asInstanceOf[INVALID_RESPONSE]
+  
+  @scala.inline
+  def IN_PROGRESS: IN_PROGRESS = "IN_PROGRESS".asInstanceOf[IN_PROGRESS]
+  
+  @scala.inline
+  def IntentRequest: IntentRequest = "IntentRequest".asInstanceOf[IntentRequest]
+  
+  @scala.inline
+  def LARGE: LARGE = "LARGE".asInstanceOf[LARGE]
+  
+  @scala.inline
+  def LaunchRequest: LaunchRequest = "LaunchRequest".asInstanceOf[LaunchRequest]
+  
+  @scala.inline
+  def LinkAccount: LinkAccount = "LinkAccount".asInstanceOf[LinkAccount]
+  
+  @scala.inline
+  def ListTemplate1: ListTemplate1 = "ListTemplate1".asInstanceOf[ListTemplate1]
+  
+  @scala.inline
+  def ListTemplate2: ListTemplate2 = "ListTemplate2".asInstanceOf[ListTemplate2]
+  
+  @scala.inline
+  def MEDIA_ERROR_INTERNAL_DEVICE_ERROR: MEDIA_ERROR_INTERNAL_DEVICE_ERROR = "MEDIA_ERROR_INTERNAL_DEVICE_ERROR".asInstanceOf[MEDIA_ERROR_INTERNAL_DEVICE_ERROR]
+  
+  @scala.inline
+  def MEDIA_ERROR_INTERNAL_SERVER_ERROR: MEDIA_ERROR_INTERNAL_SERVER_ERROR = "MEDIA_ERROR_INTERNAL_SERVER_ERROR".asInstanceOf[MEDIA_ERROR_INTERNAL_SERVER_ERROR]
+  
+  @scala.inline
+  def MEDIA_ERROR_INVALID_REQUEST: MEDIA_ERROR_INVALID_REQUEST = "MEDIA_ERROR_INVALID_REQUEST".asInstanceOf[MEDIA_ERROR_INVALID_REQUEST]
+  
+  @scala.inline
+  def MEDIA_ERROR_SERVICE_UNAVAILABLE: MEDIA_ERROR_SERVICE_UNAVAILABLE = "MEDIA_ERROR_SERVICE_UNAVAILABLE".asInstanceOf[MEDIA_ERROR_SERVICE_UNAVAILABLE]
+  
+  @scala.inline
+  def MEDIA_ERROR_UNKNOWN: MEDIA_ERROR_UNKNOWN = "MEDIA_ERROR_UNKNOWN".asInstanceOf[MEDIA_ERROR_UNKNOWN]
+  
+  @scala.inline
+  def MEDIUM: MEDIUM = "MEDIUM".asInstanceOf[MEDIUM]
+  
+  @scala.inline
+  def NONE: NONE = "NONE".asInstanceOf[NONE]
+  
+  @scala.inline
+  def PAUSED: PAUSED = "PAUSED".asInstanceOf[PAUSED]
+  
+  @scala.inline
+  def PLAYING: PLAYING = "PLAYING".asInstanceOf[PLAYING]
+  
+  @scala.inline
+  def PlainText: PlainText = "PlainText".asInstanceOf[PlainText]
+  
+  @scala.inline
+  def PlaybackControllerDotNextCommandIssued: PlaybackControllerDotNextCommandIssued = "PlaybackController.NextCommandIssued".asInstanceOf[PlaybackControllerDotNextCommandIssued]
+  
+  @scala.inline
+  def PlaybackControllerDotPauseCommandIssued: PlaybackControllerDotPauseCommandIssued = "PlaybackController.PauseCommandIssued".asInstanceOf[PlaybackControllerDotPauseCommandIssued]
+  
+  @scala.inline
+  def PlaybackControllerDotPlayCommandIssued: PlaybackControllerDotPlayCommandIssued = "PlaybackController.PlayCommandIssued".asInstanceOf[PlaybackControllerDotPlayCommandIssued]
+  
+  @scala.inline
+  def PlaybackControllerDotPreviousCommandIssued: PlaybackControllerDotPreviousCommandIssued = "PlaybackController.PreviousCommandIssued".asInstanceOf[PlaybackControllerDotPreviousCommandIssued]
+  
+  @scala.inline
+  def RichText: RichText = "RichText".asInstanceOf[RichText]
+  
+  @scala.inline
+  def SMALL: SMALL = "SMALL".asInstanceOf[SMALL]
+  
+  @scala.inline
+  def SSML: SSML = "SSML".asInstanceOf[SSML]
+  
+  @scala.inline
+  def STARTED: STARTED = "STARTED".asInstanceOf[STARTED]
+  
+  @scala.inline
+  def STOPPED: STOPPED = "STOPPED".asInstanceOf[STOPPED]
+  
+  @scala.inline
+  def SessionEndedRequest: SessionEndedRequest = "SessionEndedRequest".asInstanceOf[SessionEndedRequest]
+  
+  @scala.inline
+  def Simple: Simple = "Simple".asInstanceOf[Simple]
+  
+  @scala.inline
+  def Standard: Standard = "Standard".asInstanceOf[Standard]
+  
+  @scala.inline
+  def SystemDotExceptionEncountered: SystemDotExceptionEncountered = "System.ExceptionEncountered".asInstanceOf[SystemDotExceptionEncountered]
+  
+  @scala.inline
+  def VISIBLE: VISIBLE = "VISIBLE".asInstanceOf[VISIBLE]
+  
+  @scala.inline
+  def VideoAppDotLaunch: VideoAppDotLaunch = "VideoApp.Launch".asInstanceOf[VideoAppDotLaunch]
+  
+  @scala.inline
+  def X_LARGE: X_LARGE = "X_LARGE".asInstanceOf[X_LARGE]
+  
+  @scala.inline
+  def X_SMALL: X_SMALL = "X_SMALL".asInstanceOf[X_SMALL]
+  
+  @scala.inline
+  def active: active = "active".asInstanceOf[active]
+  
+  @scala.inline
+  def archived: archived = "archived".asInstanceOf[archived]
+  
+  @scala.inline
+  def completed_ : completed_ = "completed".asInstanceOf[completed_]
+  
   @js.native
   sealed trait AlexaHouseholdListEventDotItemsCreated extends js.Object
   
@@ -235,150 +452,4 @@ object alexaSdkStrings {
   
   @js.native
   sealed trait completed_ extends ListItemObjectStatus
-  
-  @scala.inline
-  def AlexaHouseholdListEventDotItemsCreated: AlexaHouseholdListEventDotItemsCreated = "AlexaHouseholdListEvent.ItemsCreated".asInstanceOf[AlexaHouseholdListEventDotItemsCreated]
-  @scala.inline
-  def AlexaHouseholdListEventDotItemsDeleted: AlexaHouseholdListEventDotItemsDeleted = "AlexaHouseholdListEvent.ItemsDeleted".asInstanceOf[AlexaHouseholdListEventDotItemsDeleted]
-  @scala.inline
-  def AlexaHouseholdListEventDotItemsUpdated: AlexaHouseholdListEventDotItemsUpdated = "AlexaHouseholdListEvent.ItemsUpdated".asInstanceOf[AlexaHouseholdListEventDotItemsUpdated]
-  @scala.inline
-  def AlexaHouseholdListEventDotListCreated: AlexaHouseholdListEventDotListCreated = "AlexaHouseholdListEvent.ListCreated".asInstanceOf[AlexaHouseholdListEventDotListCreated]
-  @scala.inline
-  def AlexaHouseholdListEventDotListDeleted: AlexaHouseholdListEventDotListDeleted = "AlexaHouseholdListEvent.ListDeleted".asInstanceOf[AlexaHouseholdListEventDotListDeleted]
-  @scala.inline
-  def AlexaHouseholdListEventDotListUpdated: AlexaHouseholdListEventDotListUpdated = "AlexaHouseholdListEvent.ListUpdated".asInstanceOf[AlexaHouseholdListEventDotListUpdated]
-  @scala.inline
-  def AlexaSkillEventDotSkillAccountLinked: AlexaSkillEventDotSkillAccountLinked = "AlexaSkillEvent.SkillAccountLinked".asInstanceOf[AlexaSkillEventDotSkillAccountLinked]
-  @scala.inline
-  def AlexaSkillEventDotSkillDisabled: AlexaSkillEventDotSkillDisabled = "AlexaSkillEvent.SkillDisabled".asInstanceOf[AlexaSkillEventDotSkillDisabled]
-  @scala.inline
-  def AlexaSkillEventDotSkillEnabled: AlexaSkillEventDotSkillEnabled = "AlexaSkillEvent.SkillEnabled".asInstanceOf[AlexaSkillEventDotSkillEnabled]
-  @scala.inline
-  def AlexaSkillEventDotSkillPermissionAccepted: AlexaSkillEventDotSkillPermissionAccepted = "AlexaSkillEvent.SkillPermissionAccepted".asInstanceOf[AlexaSkillEventDotSkillPermissionAccepted]
-  @scala.inline
-  def AlexaSkillEventDotSkillPermissionChanged: AlexaSkillEventDotSkillPermissionChanged = "AlexaSkillEvent.SkillPermissionChanged".asInstanceOf[AlexaSkillEventDotSkillPermissionChanged]
-  @scala.inline
-  def AskForPermissionsConsent: AskForPermissionsConsent = "AskForPermissionsConsent".asInstanceOf[AskForPermissionsConsent]
-  @scala.inline
-  def AudioPlayerDotClearQueue: AudioPlayerDotClearQueue = "AudioPlayer.ClearQueue".asInstanceOf[AudioPlayerDotClearQueue]
-  @scala.inline
-  def AudioPlayerDotPlay: AudioPlayerDotPlay = "AudioPlayer.Play".asInstanceOf[AudioPlayerDotPlay]
-  @scala.inline
-  def AudioPlayerDotPlaybackFinished: AudioPlayerDotPlaybackFinished = "AudioPlayer.PlaybackFinished".asInstanceOf[AudioPlayerDotPlaybackFinished]
-  @scala.inline
-  def AudioPlayerDotPlaybackNearlyFinished: AudioPlayerDotPlaybackNearlyFinished = "AudioPlayer.PlaybackNearlyFinished".asInstanceOf[AudioPlayerDotPlaybackNearlyFinished]
-  @scala.inline
-  def AudioPlayerDotPlaybackStarted: AudioPlayerDotPlaybackStarted = "AudioPlayer.PlaybackStarted".asInstanceOf[AudioPlayerDotPlaybackStarted]
-  @scala.inline
-  def AudioPlayerDotPlaybackStopped: AudioPlayerDotPlaybackStopped = "AudioPlayer.PlaybackStopped".asInstanceOf[AudioPlayerDotPlaybackStopped]
-  @scala.inline
-  def AudioPlayerDotStop: AudioPlayerDotStop = "AudioPlayer.Stop".asInstanceOf[AudioPlayerDotStop]
-  @scala.inline
-  def BUFFER_UNDERRUN: BUFFER_UNDERRUN = "BUFFER_UNDERRUN".asInstanceOf[BUFFER_UNDERRUN]
-  @scala.inline
-  def BodyTemplate1: BodyTemplate1 = "BodyTemplate1".asInstanceOf[BodyTemplate1]
-  @scala.inline
-  def BodyTemplate2: BodyTemplate2 = "BodyTemplate2".asInstanceOf[BodyTemplate2]
-  @scala.inline
-  def BodyTemplate3: BodyTemplate3 = "BodyTemplate3".asInstanceOf[BodyTemplate3]
-  @scala.inline
-  def BodyTemplate6: BodyTemplate6 = "BodyTemplate6".asInstanceOf[BodyTemplate6]
-  @scala.inline
-  def COMPLETED: COMPLETED = "COMPLETED".asInstanceOf[COMPLETED]
-  @scala.inline
-  def CONFIRMED: CONFIRMED = "CONFIRMED".asInstanceOf[CONFIRMED]
-  @scala.inline
-  def DENIED: DENIED = "DENIED".asInstanceOf[DENIED]
-  @scala.inline
-  def DEVICE_COMMUNICATION_ERROR: DEVICE_COMMUNICATION_ERROR = "DEVICE_COMMUNICATION_ERROR".asInstanceOf[DEVICE_COMMUNICATION_ERROR]
-  @scala.inline
-  def DisplayDotRenderTemplate: DisplayDotRenderTemplate = "Display.RenderTemplate".asInstanceOf[DisplayDotRenderTemplate]
-  @scala.inline
-  def FINISHED: FINISHED = "FINISHED".asInstanceOf[FINISHED]
-  @scala.inline
-  def HIDDEN: HIDDEN = "HIDDEN".asInstanceOf[HIDDEN]
-  @scala.inline
-  def Hint: Hint = "Hint".asInstanceOf[Hint]
-  @scala.inline
-  def IDLE: IDLE = "IDLE".asInstanceOf[IDLE]
-  @scala.inline
-  def INTERNAL_ERROR: INTERNAL_ERROR = "INTERNAL_ERROR".asInstanceOf[INTERNAL_ERROR]
-  @scala.inline
-  def INVALID_RESPONSE: INVALID_RESPONSE = "INVALID_RESPONSE".asInstanceOf[INVALID_RESPONSE]
-  @scala.inline
-  def IN_PROGRESS: IN_PROGRESS = "IN_PROGRESS".asInstanceOf[IN_PROGRESS]
-  @scala.inline
-  def IntentRequest: IntentRequest = "IntentRequest".asInstanceOf[IntentRequest]
-  @scala.inline
-  def LARGE: LARGE = "LARGE".asInstanceOf[LARGE]
-  @scala.inline
-  def LaunchRequest: LaunchRequest = "LaunchRequest".asInstanceOf[LaunchRequest]
-  @scala.inline
-  def LinkAccount: LinkAccount = "LinkAccount".asInstanceOf[LinkAccount]
-  @scala.inline
-  def ListTemplate1: ListTemplate1 = "ListTemplate1".asInstanceOf[ListTemplate1]
-  @scala.inline
-  def ListTemplate2: ListTemplate2 = "ListTemplate2".asInstanceOf[ListTemplate2]
-  @scala.inline
-  def MEDIA_ERROR_INTERNAL_DEVICE_ERROR: MEDIA_ERROR_INTERNAL_DEVICE_ERROR = "MEDIA_ERROR_INTERNAL_DEVICE_ERROR".asInstanceOf[MEDIA_ERROR_INTERNAL_DEVICE_ERROR]
-  @scala.inline
-  def MEDIA_ERROR_INTERNAL_SERVER_ERROR: MEDIA_ERROR_INTERNAL_SERVER_ERROR = "MEDIA_ERROR_INTERNAL_SERVER_ERROR".asInstanceOf[MEDIA_ERROR_INTERNAL_SERVER_ERROR]
-  @scala.inline
-  def MEDIA_ERROR_INVALID_REQUEST: MEDIA_ERROR_INVALID_REQUEST = "MEDIA_ERROR_INVALID_REQUEST".asInstanceOf[MEDIA_ERROR_INVALID_REQUEST]
-  @scala.inline
-  def MEDIA_ERROR_SERVICE_UNAVAILABLE: MEDIA_ERROR_SERVICE_UNAVAILABLE = "MEDIA_ERROR_SERVICE_UNAVAILABLE".asInstanceOf[MEDIA_ERROR_SERVICE_UNAVAILABLE]
-  @scala.inline
-  def MEDIA_ERROR_UNKNOWN: MEDIA_ERROR_UNKNOWN = "MEDIA_ERROR_UNKNOWN".asInstanceOf[MEDIA_ERROR_UNKNOWN]
-  @scala.inline
-  def MEDIUM: MEDIUM = "MEDIUM".asInstanceOf[MEDIUM]
-  @scala.inline
-  def NONE: NONE = "NONE".asInstanceOf[NONE]
-  @scala.inline
-  def PAUSED: PAUSED = "PAUSED".asInstanceOf[PAUSED]
-  @scala.inline
-  def PLAYING: PLAYING = "PLAYING".asInstanceOf[PLAYING]
-  @scala.inline
-  def PlainText: PlainText = "PlainText".asInstanceOf[PlainText]
-  @scala.inline
-  def PlaybackControllerDotNextCommandIssued: PlaybackControllerDotNextCommandIssued = "PlaybackController.NextCommandIssued".asInstanceOf[PlaybackControllerDotNextCommandIssued]
-  @scala.inline
-  def PlaybackControllerDotPauseCommandIssued: PlaybackControllerDotPauseCommandIssued = "PlaybackController.PauseCommandIssued".asInstanceOf[PlaybackControllerDotPauseCommandIssued]
-  @scala.inline
-  def PlaybackControllerDotPlayCommandIssued: PlaybackControllerDotPlayCommandIssued = "PlaybackController.PlayCommandIssued".asInstanceOf[PlaybackControllerDotPlayCommandIssued]
-  @scala.inline
-  def PlaybackControllerDotPreviousCommandIssued: PlaybackControllerDotPreviousCommandIssued = "PlaybackController.PreviousCommandIssued".asInstanceOf[PlaybackControllerDotPreviousCommandIssued]
-  @scala.inline
-  def RichText: RichText = "RichText".asInstanceOf[RichText]
-  @scala.inline
-  def SMALL: SMALL = "SMALL".asInstanceOf[SMALL]
-  @scala.inline
-  def SSML: SSML = "SSML".asInstanceOf[SSML]
-  @scala.inline
-  def STARTED: STARTED = "STARTED".asInstanceOf[STARTED]
-  @scala.inline
-  def STOPPED: STOPPED = "STOPPED".asInstanceOf[STOPPED]
-  @scala.inline
-  def SessionEndedRequest: SessionEndedRequest = "SessionEndedRequest".asInstanceOf[SessionEndedRequest]
-  @scala.inline
-  def Simple: Simple = "Simple".asInstanceOf[Simple]
-  @scala.inline
-  def Standard: Standard = "Standard".asInstanceOf[Standard]
-  @scala.inline
-  def SystemDotExceptionEncountered: SystemDotExceptionEncountered = "System.ExceptionEncountered".asInstanceOf[SystemDotExceptionEncountered]
-  @scala.inline
-  def VISIBLE: VISIBLE = "VISIBLE".asInstanceOf[VISIBLE]
-  @scala.inline
-  def VideoAppDotLaunch: VideoAppDotLaunch = "VideoApp.Launch".asInstanceOf[VideoAppDotLaunch]
-  @scala.inline
-  def X_LARGE: X_LARGE = "X_LARGE".asInstanceOf[X_LARGE]
-  @scala.inline
-  def X_SMALL: X_SMALL = "X_SMALL".asInstanceOf[X_SMALL]
-  @scala.inline
-  def active: active = "active".asInstanceOf[active]
-  @scala.inline
-  def archived: archived = "archived".asInstanceOf[archived]
-  @scala.inline
-  def completed_ : completed_ = "completed".asInstanceOf[completed_]
 }
-

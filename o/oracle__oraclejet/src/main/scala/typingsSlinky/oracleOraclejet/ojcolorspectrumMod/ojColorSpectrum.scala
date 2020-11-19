@@ -11,20 +11,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.transientValueChange
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojColorSpectrum extends editableValue[^, ojColorSpectrumSettableProperties, ^, ^] {
-  var labelledBy: String | Null = js.native
-  var onLabelledByChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  @JSName("onOjAnimateEnd")
-  var onOjAnimateEnd_ojColorSpectrum: (js.Function1[CustomEvent, _]) | Null = js.native
-  @JSName("onOjAnimateStart")
-  var onOjAnimateStart_ojColorSpectrum: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onTransientValueChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  val transientValue: ^ = js.native
-  @JSName("translations")
-  var translations_ojColorSpectrum: LabelHue = js.native
+  
   @JSName("addEventListener")
   def addEventListener_labelledByChanged(`type`: labelledByChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
@@ -41,11 +32,26 @@ trait ojColorSpectrum extends editableValue[^, ojColorSpectrumSettableProperties
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
   @JSName("getProperty")
   def getProperty_labelledBy(property: labelledBy): String | Null = js.native
   @JSName("getProperty")
   def getProperty_transientValue(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.transientValue): ^ = js.native
+  
+  var labelledBy: String | Null = js.native
+  
+  var onLabelledByChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  @JSName("onOjAnimateEnd")
+  var onOjAnimateEnd_ojColorSpectrum: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  @JSName("onOjAnimateStart")
+  var onOjAnimateStart_ojColorSpectrum: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onTransientValueChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def setProperties(properties: ojColorSpectrumSettablePropertiesLenient): Unit = js.native
+  
   @JSName("setProperty")
   def setProperty_labelledBy(property: labelledBy): Unit = js.native
   @JSName("setProperty")
@@ -54,12 +60,17 @@ trait ojColorSpectrum extends editableValue[^, ojColorSpectrumSettableProperties
   def setProperty_transientValue(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.transientValue, value: ^): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: LabelHue): Unit = js.native
+  
+  val transientValue: ^ = js.native
+  
+  @JSName("translations")
+  var translations_ojColorSpectrum: LabelHue = js.native
 }
-
 @JSImport("@oracle/oraclejet/ojcolorspectrum", "ojColorSpectrum")
 @js.native
 object ojColorSpectrum extends js.Object {
+  
   type ojAnimateEnd = CustomEvent
+  
   type ojAnimateStart = CustomEvent
 }
-

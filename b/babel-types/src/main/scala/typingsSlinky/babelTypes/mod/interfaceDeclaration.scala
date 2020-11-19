@@ -2,11 +2,12 @@ package typingsSlinky.babelTypes.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babel-types", "interfaceDeclaration")
 @js.native
 object interfaceDeclaration extends js.Object {
+  
   def apply(): InterfaceDeclaration_ = js.native
   def apply(
     id: js.UndefOr[scala.Nothing],
@@ -72,4 +73,3 @@ object interfaceDeclaration extends js.Object {
     body: ObjectTypeAnnotation_
   ): InterfaceDeclaration_ = js.native
 }
-

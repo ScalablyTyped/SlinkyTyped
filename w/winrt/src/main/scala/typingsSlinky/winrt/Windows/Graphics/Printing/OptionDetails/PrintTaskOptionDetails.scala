@@ -7,15 +7,15 @@ import typingsSlinky.winrt.Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConf
 import typingsSlinky.winrt.Windows.Graphics.Printing.PrintPageDescription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PrintTaskOptionDetails
   extends IPrintTaskOptionDetails
      with IPrintTaskOptionsCore
      with IPrintTaskOptionsCoreUIConfiguration
-
 object PrintTaskOptionDetails {
+  
   @scala.inline
   def apply(
     createItemListOption: (String, String) => PrintCustomItemListOptionDetails,
@@ -30,4 +30,3 @@ object PrintTaskOptionDetails {
     __obj.asInstanceOf[PrintTaskOptionDetails]
   }
 }
-

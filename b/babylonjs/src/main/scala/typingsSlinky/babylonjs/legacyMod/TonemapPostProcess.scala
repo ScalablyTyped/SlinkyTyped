@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "TonemapPostProcess")
 @js.native
@@ -39,8 +39,47 @@ class TonemapPostProcess protected ()
     /** Defines the required exposure adjustement */
   exposureAdjustment: Double,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.engineMod.Engine
+  ) = this()
+  def this(
+    name: String,
+    _operator: typingsSlinky.babylonjs.tonemapPostProcessMod.TonemappingOperator,
+    /** Defines the required exposure adjustement */
+  exposureAdjustment: Double,
+    camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: Double,
     engine: typingsSlinky.babylonjs.engineMod.Engine
+  ) = this()
+  def this(
+    name: String,
+    _operator: typingsSlinky.babylonjs.tonemapPostProcessMod.TonemappingOperator,
+    /** Defines the required exposure adjustement */
+  exposureAdjustment: Double,
+    camera: typingsSlinky.babylonjs.cameraMod.Camera,
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    textureFormat: Double
+  ) = this()
+  def this(
+    name: String,
+    _operator: typingsSlinky.babylonjs.tonemapPostProcessMod.TonemappingOperator,
+    /** Defines the required exposure adjustement */
+  exposureAdjustment: Double,
+    camera: typingsSlinky.babylonjs.cameraMod.Camera,
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.engineMod.Engine,
+    textureFormat: Double
+  ) = this()
+  def this(
+    name: String,
+    _operator: typingsSlinky.babylonjs.tonemapPostProcessMod.TonemappingOperator,
+    /** Defines the required exposure adjustement */
+  exposureAdjustment: Double,
+    camera: typingsSlinky.babylonjs.cameraMod.Camera,
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
+    textureFormat: Double
   ) = this()
   def this(
     name: String,
@@ -53,4 +92,3 @@ class TonemapPostProcess protected ()
     textureFormat: Double
   ) = this()
 }
-

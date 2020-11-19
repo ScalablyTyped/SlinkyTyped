@@ -2,9 +2,10 @@ package typingsSlinky.tokenizr
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type Action = js.ThisFunction3[
     /* this */ typingsSlinky.tokenizr.mod.ActionContext, 
     /* ctx */ typingsSlinky.tokenizr.mod.ActionContext, 
@@ -12,7 +13,9 @@ package object mod {
     /* rule */ typingsSlinky.tokenizr.anon.Action, 
     scala.Unit
   ]
+  
   type IToken[T] = typingsSlinky.tokenizr.mod.Token[T]
+  
   type RuleAction = js.ThisFunction2[
     /* this */ typingsSlinky.tokenizr.mod.ActionContext, 
     /* ctx */ typingsSlinky.tokenizr.mod.ActionContext, 

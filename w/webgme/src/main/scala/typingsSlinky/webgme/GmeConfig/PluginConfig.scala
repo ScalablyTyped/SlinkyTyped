@@ -18,14 +18,14 @@ import typingsSlinky.webgme.anon.Manager
 import typingsSlinky.webgme.anon.Uri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PluginConfig
   extends typingsSlinky.webgme.GmeConfig.GmeConfig
      with /* propName */ StringDictionary[js.Any]
-
 object PluginConfig {
+  
   @scala.inline
   def apply(
     addOns: BasePaths,
@@ -52,4 +52,3 @@ object PluginConfig {
     __obj.asInstanceOf[PluginConfig]
   }
 }
-

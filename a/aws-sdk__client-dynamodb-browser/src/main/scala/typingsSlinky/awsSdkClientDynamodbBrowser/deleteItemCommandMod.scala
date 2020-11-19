@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-dynamodb-browser/commands/DeleteItemCommand", JSImport.Namespace)
 @js.native
 object deleteItemCommandMod extends js.Object {
+  
   @js.native
   class DeleteItemCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteItemCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteItemInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteItemInput, DeleteItemOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[DeleteItemInput, DeleteItemOutput] = js.native
   }
-  
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.RotationVariable
 import typingsSlinky.arcgisJsApi.esri.RotationVariableProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/renderers/visualVariables/RotationVariable", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends RotationVariable {
   def this(properties: RotationVariableProperties) = this()
 }
-

@@ -2,16 +2,20 @@ package typingsSlinky.angularCompiler.mod.core
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler", "core.ViewEncapsulation")
 @js.native
 object ViewEncapsulation extends js.Object {
-  /* 0 */ val Emulated: typingsSlinky.angularCompiler.coreMod.ViewEncapsulation.Emulated with Double = js.native
-  /* 1 */ val Native: typingsSlinky.angularCompiler.coreMod.ViewEncapsulation.Native with Double = js.native
-  /* 2 */ val None: typingsSlinky.angularCompiler.coreMod.ViewEncapsulation.None with Double = js.native
-  /* 3 */ val ShadowDom: typingsSlinky.angularCompiler.coreMod.ViewEncapsulation.ShadowDom with Double = js.native
+  
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.angularCompiler.coreMod.ViewEncapsulation with Double] = js.native
+  
+  /* 0 */ val Emulated: typingsSlinky.angularCompiler.coreMod.ViewEncapsulation.Emulated with Double = js.native
+  
+  /* 1 */ val Native: typingsSlinky.angularCompiler.coreMod.ViewEncapsulation.Native with Double = js.native
+  
+  /* 2 */ val None: typingsSlinky.angularCompiler.coreMod.ViewEncapsulation.None with Double = js.native
+  
+  /* 3 */ val ShadowDom: typingsSlinky.angularCompiler.coreMod.ViewEncapsulation.ShadowDom with Double = js.native
 }
-

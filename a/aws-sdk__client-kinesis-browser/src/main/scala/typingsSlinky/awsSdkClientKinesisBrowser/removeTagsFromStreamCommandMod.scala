@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kinesis-browser/commands/RemoveTagsFromStreamCommand", JSImport.Namespace)
 @js.native
 object removeTagsFromStreamCommandMod extends js.Object {
+  
   @js.native
   class RemoveTagsFromStreamCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object removeTagsFromStreamCommandMod extends js.Object {
           Blob
         ] {
     def this(input: RemoveTagsFromStreamInput) = this()
+    
     val middlewareStack: MiddlewareStack[RemoveTagsFromStreamInput, RemoveTagsFromStreamOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KinesisResolvedConfiguration
     ): Handler[RemoveTagsFromStreamInput, RemoveTagsFromStreamOutput] = js.native
   }
-  
 }
-

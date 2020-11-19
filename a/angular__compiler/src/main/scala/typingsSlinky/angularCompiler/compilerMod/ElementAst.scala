@@ -4,7 +4,7 @@ import typingsSlinky.angularCompiler.templateAstMod.QueryMatch
 import typingsSlinky.angularCompiler.templateAstMod.TemplateAst
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/compiler", "ElementAst")
 @js.native
@@ -69,4 +69,3 @@ class ElementAst protected ()
     endSourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
 }
-

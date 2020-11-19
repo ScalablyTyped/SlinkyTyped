@@ -352,18 +352,25 @@ import typingsSlinky.storybookComponents.storybookComponentsStrings.webview
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/components/dist/form/input/input", "Select")
 @js.native
 object Select extends js.Object {
-  var __emotion_styles: js.Any = js.native
-  var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
-  var defaultProps: js.UndefOr[PartialPickSelectHTMLAttr] = js.native
-  var displayName: js.UndefOr[String] = js.native
-  var propTypes: js.UndefOr[WeakValidationMapPickSele] = js.native
+  
   def apply(props: PropsWithChildrenPickSeleAbout): ReactElement | Null = js.native
   def apply(props: PropsWithChildrenPickSeleAbout, context: js.Any): ReactElement | Null = js.native
+  
+  var __emotion_styles: js.Any = js.native
+  
+  var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
+  
+  var defaultProps: js.UndefOr[PartialPickSelectHTMLAttr] = js.native
+  
+  var displayName: js.UndefOr[String] = js.native
+  
+  var propTypes: js.UndefOr[WeakValidationMapPickSele] = js.native
+  
   def withComponent[Tag /* <: ReactComponentClass[_] */](tag: Tag): StyledComponent[PropsOf[Tag], SelectProps, Theme] = js.native
   /**
     * @desc this method is type-unsafe
@@ -991,4 +998,3 @@ object Select extends js.Object {
     Theme
   ] = js.native
 }
-

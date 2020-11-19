@@ -18,26 +18,11 @@ import typingsSlinky.std.stdStrings.unhandledrejection
 import typingsSlinky.std.stdStrings.unload
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait WindowEventHandlers extends js.Object {
-  var onafterprint: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onbeforeprint: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onbeforeunload: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, _]) | Null = js.native
-  var onhashchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.HashChangeEvent, _]) | Null = js.native
-  var onlanguagechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onmessage: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
-  var onmessageerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
-  var onoffline: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var ononline: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onpagehide: (js.ThisFunction1[/* this */ this.type, /* ev */ PageTransitionEvent, _]) | Null = js.native
-  var onpageshow: (js.ThisFunction1[/* this */ this.type, /* ev */ PageTransitionEvent, _]) | Null = js.native
-  var onpopstate: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.PopStateEvent, _]) | Null = js.native
-  var onrejectionhandled: (js.ThisFunction1[/* this */ this.type, /* ev */ PromiseRejectionEvent, _]) | Null = js.native
-  var onstorage: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.StorageEvent, _]) | Null = js.native
-  var onunhandledrejection: (js.ThisFunction1[/* this */ this.type, /* ev */ PromiseRejectionEvent, _]) | Null = js.native
-  var onunload: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   def addEventListener(
@@ -317,6 +302,39 @@ trait WindowEventHandlers extends js.Object {
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
+  
+  var onafterprint: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  var onbeforeprint: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  var onbeforeunload: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, _]) | Null = js.native
+  
+  var onhashchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.HashChangeEvent, _]) | Null = js.native
+  
+  var onlanguagechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  var onmessage: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
+  
+  var onmessageerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
+  
+  var onoffline: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  var ononline: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  var onpagehide: (js.ThisFunction1[/* this */ this.type, /* ev */ PageTransitionEvent, _]) | Null = js.native
+  
+  var onpageshow: (js.ThisFunction1[/* this */ this.type, /* ev */ PageTransitionEvent, _]) | Null = js.native
+  
+  var onpopstate: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.PopStateEvent, _]) | Null = js.native
+  
+  var onrejectionhandled: (js.ThisFunction1[/* this */ this.type, /* ev */ PromiseRejectionEvent, _]) | Null = js.native
+  
+  var onstorage: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.StorageEvent, _]) | Null = js.native
+  
+  var onunhandledrejection: (js.ThisFunction1[/* this */ this.type, /* ev */ PromiseRejectionEvent, _]) | Null = js.native
+  
+  var onunload: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
   def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   def removeEventListener(
@@ -597,4 +615,3 @@ trait WindowEventHandlers extends js.Object {
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-

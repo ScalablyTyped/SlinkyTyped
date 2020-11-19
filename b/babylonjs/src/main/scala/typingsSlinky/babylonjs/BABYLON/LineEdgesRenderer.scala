@@ -2,11 +2,12 @@ package typingsSlinky.babylonjs.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+@js.native
 trait LineEdgesRenderer extends EdgesRenderer
-
 object LineEdgesRenderer {
+  
   @scala.inline
   def apply(
     _buffers: org.scalablytyped.runtime.StringDictionary[Nullable[VertexBuffer]],
@@ -39,4 +40,3 @@ object LineEdgesRenderer {
     __obj.asInstanceOf[LineEdgesRenderer]
   }
 }
-

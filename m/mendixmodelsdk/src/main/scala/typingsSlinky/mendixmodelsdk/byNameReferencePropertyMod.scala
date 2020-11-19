@@ -8,11 +8,12 @@ import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
 import typingsSlinky.mobx.observablevalueMod.IObservableValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/sdk/internal/properties/ByNameReferenceProperty", JSImport.Namespace)
 @js.native
 object byNameReferencePropertyMod extends js.Object {
+  
   @js.native
   class ByNameReferenceListProperty[T /* <: IAbstractElement */] protected ()
     extends AbstractProperty[js.Array[T], IList[String]] {
@@ -23,10 +24,14 @@ object byNameReferencePropertyMod extends js.Object {
       value: js.Array[T],
       _targetType: String
     ) = this()
+    
     @JSName("parent")
     var parent_ByNameReferenceListProperty: AbstractElement = js.native
+    
     def qualifiedNames(): js.Array[String] = js.native
+    
     def targetType: String = js.native
+    
     def updateWithRawValue(value: js.Array[String]): Unit = js.native
   }
   
@@ -46,14 +51,17 @@ object byNameReferencePropertyMod extends js.Object {
       initialValue: Null,
       _targetType: String
     ) = this()
+    
     @JSName("parent")
     var parent_ByNameReferenceProperty: AbstractElement = js.native
+    
     def qualifiedName(): String | Null = js.native
+    
     def set(): Unit = js.native
     def set(newValue: T): Unit = js.native
+    
     def targetType: String = js.native
+    
     def updateWithRawValue(value: String): Unit = js.native
   }
-  
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.playerframework.global.PlayerFramework
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("PlayerFramework.UI")
 @js.native
 object UI extends js.Object {
+  
   @js.native
   class Button ()
     extends typingsSlinky.playerframework.PlayerFramework.UI.Button
@@ -26,6 +27,4 @@ object UI extends js.Object {
   @js.native
   class Slider ()
     extends typingsSlinky.playerframework.PlayerFramework.UI.Slider
-  
 }
-

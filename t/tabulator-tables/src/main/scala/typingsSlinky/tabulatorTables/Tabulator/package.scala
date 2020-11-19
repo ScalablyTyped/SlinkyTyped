@@ -2,16 +2,20 @@ package typingsSlinky.tabulatorTables
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object Tabulator {
+  
   type CellEditEventCallback = js.Function1[/* cell */ typingsSlinky.tabulatorTables.Tabulator.CellComponent, scala.Unit]
+  
   type CellEventCallback = js.Function2[
     /* e */ org.scalajs.dom.raw.UIEvent, 
     /* cell */ typingsSlinky.tabulatorTables.Tabulator.CellComponent, 
     scala.Unit
   ]
+  
   type Color = java.lang.String | js.Array[js.Any] | typingsSlinky.tabulatorTables.Tabulator.ValueStringCallback
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.tabulatorTables.tabulatorTablesStrings.avg
     - typingsSlinky.tabulatorTables.tabulatorTablesStrings.max
@@ -31,12 +35,15 @@ package object Tabulator {
     /* calcParams */ js.Object, 
     js.Any
   ])
+  
   type ColumnCalcParams = js.Function2[/* values */ js.Any, /* data */ js.Any, js.Any]
+  
   type ColumnEventCallback = js.Function2[
     /* e */ org.scalajs.dom.raw.UIEvent, 
     /* column */ typingsSlinky.tabulatorTables.Tabulator.ColumnComponent, 
     scala.Unit
   ]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.tabulatorTables.Tabulator.ColumnComponent
     - typingsSlinky.tabulatorTables.Tabulator.ColumnDefinition
@@ -44,11 +51,13 @@ package object Tabulator {
     - java.lang.String
   */
   type ColumnLookup = typingsSlinky.tabulatorTables.Tabulator._ColumnLookup | org.scalajs.dom.raw.HTMLElement | java.lang.String
+  
   type ColumnSorterParamLookupFunction = js.Function2[
     /* column */ typingsSlinky.tabulatorTables.Tabulator.ColumnComponent, 
     /* dir */ typingsSlinky.tabulatorTables.Tabulator.SortDirection, 
     js.Object
   ]
+  
   type CustomAccessor = js.Function5[
     /* value */ js.Any, 
     /* data */ js.Any, 
@@ -57,6 +66,7 @@ package object Tabulator {
     /* column */ js.UndefOr[typingsSlinky.tabulatorTables.Tabulator.ColumnComponent], 
     js.Any
   ]
+  
   type CustomAccessorParams = js.Object | (js.Function4[
     /* value */ js.Any, 
     /* data */ js.Any, 
@@ -64,6 +74,7 @@ package object Tabulator {
     /* column */ js.UndefOr[typingsSlinky.tabulatorTables.Tabulator.ColumnComponent], 
     js.Any
   ])
+  
   type CustomMutator = js.Function5[
     /* value */ js.Any, 
     /* data */ js.Any, 
@@ -72,6 +83,7 @@ package object Tabulator {
     /* cell */ js.UndefOr[typingsSlinky.tabulatorTables.Tabulator.CellComponent], 
     js.Any
   ]
+  
   type CustomMutatorParams = js.Object | (js.Function4[
     /* value */ js.Any, 
     /* data */ js.Any, 
@@ -79,6 +91,7 @@ package object Tabulator {
     /* cell */ js.UndefOr[typingsSlinky.tabulatorTables.Tabulator.CellComponent], 
     js.Any
   ])
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`true`
     - typingsSlinky.tabulatorTables.tabulatorTablesStrings.input
@@ -105,6 +118,7 @@ package object Tabulator {
     /* editorParams */ js.Object, 
     org.scalajs.dom.raw.HTMLElement | typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`false`
   ])
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.tabulatorTables.Tabulator.NumberParams
     - typingsSlinky.tabulatorTables.Tabulator.CheckboxParams
@@ -115,7 +129,9 @@ package object Tabulator {
     - js.Function1[/ * cell * / typingsSlinky.tabulatorTables.Tabulator.CellComponent, js.Object]
   */
   type EditorParams = typingsSlinky.tabulatorTables.Tabulator._EditorParams | (js.Function1[/* cell */ typingsSlinky.tabulatorTables.Tabulator.CellComponent, js.Object])
+  
   type EmptyCallback = js.Function1[/* callback */ js.Function0[scala.Unit], scala.Unit]
+  
   type FilterFunction = js.Function4[
     /* field */ java.lang.String, 
     /* type */ typingsSlinky.tabulatorTables.Tabulator.FilterType, 
@@ -123,6 +139,7 @@ package object Tabulator {
     /* filterParams */ js.UndefOr[typingsSlinky.tabulatorTables.Tabulator.FilterParams], 
     scala.Unit
   ]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.tabulatorTables.tabulatorTablesStrings.plaintext
     - typingsSlinky.tabulatorTables.tabulatorTablesStrings.textarea
@@ -156,6 +173,7 @@ package object Tabulator {
     /* onRendered */ typingsSlinky.tabulatorTables.Tabulator.EmptyCallback, 
     java.lang.String | org.scalajs.dom.raw.HTMLElement
   ])
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.tabulatorTables.Tabulator.MoneyParams
     - typingsSlinky.tabulatorTables.Tabulator.ImageParams
@@ -169,22 +187,32 @@ package object Tabulator {
     - js.Function1[/ * cell * / typingsSlinky.tabulatorTables.Tabulator.CellComponent, js.Object]
   */
   type FormatterParams = typingsSlinky.tabulatorTables.Tabulator._FormatterParams | (js.Function1[/* cell */ typingsSlinky.tabulatorTables.Tabulator.CellComponent, js.Object]) | typingsSlinky.tabulatorTables.Tabulator.JSONRecord
+  
   type GlobalTooltipOption = scala.Boolean | (js.Function1[/* cell */ typingsSlinky.tabulatorTables.Tabulator.CellComponent, java.lang.String])
+  
   type GroupEventCallback = js.Function2[
     /* e */ org.scalajs.dom.raw.UIEvent, 
     /* group */ typingsSlinky.tabulatorTables.Tabulator.GroupComponent, 
     scala.Unit
   ]
+  
   type JSONRecord = typingsSlinky.std.Record[java.lang.String, java.lang.String | scala.Double | scala.Boolean]
+  
   type RowChangedCallback = js.Function1[/* row */ typingsSlinky.tabulatorTables.Tabulator.RowComponent, scala.Unit]
+  
   type RowEventCallback = js.Function2[
     /* e */ org.scalajs.dom.raw.UIEvent, 
     /* row */ typingsSlinky.tabulatorTables.Tabulator.RowComponent, 
     scala.Unit
   ]
+  
   type RowLookup = typingsSlinky.tabulatorTables.Tabulator.RowComponent | org.scalajs.dom.raw.HTMLElement | java.lang.String | scala.Double | (js.Array[scala.Double | java.lang.String])
+  
   type StandardStringParam = java.lang.String | org.scalajs.dom.raw.HTMLElement | (js.Function0[java.lang.String | org.scalajs.dom.raw.HTMLElement])
+  
   type ValueBooleanCallback = js.Function1[/* value */ js.Any, scala.Boolean]
+  
   type ValueStringCallback = js.Function1[/* value */ js.Any, java.lang.String]
+  
   type ValueVoidCallback = js.Function1[/* value */ js.Any, scala.Unit]
 }

@@ -2,7 +2,7 @@ package typingsSlinky.activexExcel.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.activexExcel.Excel.XlLineStyle
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.activexExcel.activexExcelNumbers.`-4105`
 */
 trait LineStyle extends js.Object
-

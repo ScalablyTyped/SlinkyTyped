@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/UpdateEndpointsBatchCommand", JSImport.Namespace)
 @js.native
 object updateEndpointsBatchCommandMod extends js.Object {
+  
   @js.native
   class UpdateEndpointsBatchCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object updateEndpointsBatchCommandMod extends js.Object {
           Blob
         ] {
     def this(input: UpdateEndpointsBatchInput) = this()
+    
     val middlewareStack: MiddlewareStack[UpdateEndpointsBatchInput, UpdateEndpointsBatchOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[UpdateEndpointsBatchInput, UpdateEndpointsBatchOutput] = js.native
   }
-  
 }
-

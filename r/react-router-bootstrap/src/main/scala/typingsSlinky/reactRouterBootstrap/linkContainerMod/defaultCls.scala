@@ -5,7 +5,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.reactRouterDom.mod.NavLinkProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-router-bootstrap/lib/LinkContainer", JSImport.Default)
 @js.native
@@ -14,4 +14,3 @@ class defaultCls protected ()
   def this(props: NavLinkProps[LocationState]) = this()
   def this(props: NavLinkProps[LocationState], context: js.Any) = this()
 }
-

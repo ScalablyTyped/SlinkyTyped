@@ -2,11 +2,12 @@ package typingsSlinky.domHelpers
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dom-helpers/cjs/types", JSImport.Namespace)
 @js.native
 object typesMod extends js.Object {
+  
   /* keyof csstype.csstype.Properties<string & {} | 0, string & {}> */ /* Rewritten from type alias, can be one of: 
     - typingsSlinky.domHelpers.domHelpersStrings.alignContent
     - typingsSlinky.domHelpers.domHelpersStrings.alignItems
@@ -1937,6 +1938,4 @@ object typesMod extends js.Object {
     - typingsSlinky.domHelpers.domHelpersStrings.zoom
   */
   trait Styles extends js.Object
-  
 }
-

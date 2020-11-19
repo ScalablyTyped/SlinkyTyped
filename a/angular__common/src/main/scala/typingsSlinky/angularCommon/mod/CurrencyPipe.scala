@@ -6,15 +6,18 @@ import typingsSlinky.angularCommon.angularCommonStrings.symbol
 import typingsSlinky.angularCore.mod.PipeTransform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/common", "CurrencyPipe")
 @js.native
 class CurrencyPipe protected () extends PipeTransform {
   def this(_locale: String) = this()
   def this(_locale: String, _defaultCurrencyCode: String) = this()
+  
   var _defaultCurrencyCode: js.Any = js.native
+  
   var _locale: js.Any = js.native
+  
   /**
     *
     * @param value The number to be formatted as currency.
@@ -245,4 +248,3 @@ class CurrencyPipe protected () extends PipeTransform {
   @JSName("transform")
   def transform_symbolnarrow(value: js.Any, currencyCode: String, display: `symbol-narrow`, digitsInfo: String, locale: String): String | Null = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.winrtUwp.global.Windows.Web.Http
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents an HTTP request message including headers. */
 @JSGlobal("Windows.Web.Http.HttpRequestMessage")
@@ -18,4 +18,3 @@ class HttpRequestMessage ()
     */
   def this(method: typingsSlinky.winrtUwp.Windows.Web.Http.HttpMethod, uri: Uri) = this()
 }
-

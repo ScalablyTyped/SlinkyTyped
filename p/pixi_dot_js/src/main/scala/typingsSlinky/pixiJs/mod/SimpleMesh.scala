@@ -2,7 +2,7 @@ package typingsSlinky.pixiJs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Simple Mesh class mimics Mesh in PixiJS v4, providing easy-to-use constructor arguments.
@@ -200,4 +200,3 @@ class SimpleMesh ()
     drawMode: Double
   ) = this()
 }
-

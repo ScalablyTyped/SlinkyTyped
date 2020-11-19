@@ -3,12 +3,13 @@ package typingsSlinky.rdfJs.mod
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Store[Q /* <: BaseQuad */]
   extends Source[Q]
      with Sink[Stream[Q], EventEmitter] {
+  
   def deleteGraph(graph: String): EventEmitter = js.native
   /**
     * Deletes the given named graph.
@@ -21,6 +22,7 @@ trait Store[Q /* <: BaseQuad */]
     */
   @JSName("deleteGraph")
   def deleteGraph_graph(graph: /* import warning: importer.ImportType#apply Failed type conversion: Q['graph'] */ js.Any): EventEmitter = js.native
+  
   /**
     * Removes all streamed quads.
     *
@@ -31,6 +33,7 @@ trait Store[Q /* <: BaseQuad */]
     * @return The resulting event emitter.
     */
   def remove(stream: Stream[Q]): EventEmitter = js.native
+  
   /**
     * All quads matching the pattern will be removed.
     *
@@ -50,4 +53,3 @@ trait Store[Q /* <: BaseQuad */]
     graph: js.UndefOr[Term | js.RegExp]
   ): EventEmitter = js.native
 }
-

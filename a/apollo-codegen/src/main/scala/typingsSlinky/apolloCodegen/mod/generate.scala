@@ -3,11 +3,12 @@ package typingsSlinky.apolloCodegen.mod
 import typingsSlinky.apolloCodegen.anon.AddTypename
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-codegen", "generate")
 @js.native
 object generate extends js.Object {
+  
   def apply(
     inputPaths: js.Array[String],
     schemaPath: String,
@@ -19,4 +20,3 @@ object generate extends js.Object {
     options: AddTypename
   ): Unit = js.native
 }
-

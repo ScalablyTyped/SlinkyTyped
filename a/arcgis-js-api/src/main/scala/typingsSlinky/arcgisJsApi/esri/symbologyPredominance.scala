@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Object containing helper methods for getting optimal symbol schemes used to create [predominance visualizations](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-predominance.html). The [getSchemes()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-predominance.html#getSchemes) returns color schemes best suited to the given basemap for this visualization style.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait symbologyPredominance extends js.Object {
+  
   /**
     * Clones a predominance scheme object.
     *
@@ -20,6 +21,7 @@ trait symbologyPredominance extends js.Object {
     *
     */
   def cloneScheme(scheme: PredominanceScheme): PredominanceScheme = js.native
+  
   /**
     * Returns a predominance scheme with the provided name.
     *
@@ -37,6 +39,7 @@ trait symbologyPredominance extends js.Object {
     *
     */
   def getSchemeByName(params: predominanceGetSchemeByNameParams): PredominanceScheme = js.native
+  
   /**
     * Returns a primary scheme and secondary schemes defining symbol properties for predominance-based data-driven visualizations in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The `basemap` parameter determines the color of the symbols used to visualize each feature. The `geometryType` determines which type of symbol to return.
     *
@@ -53,6 +56,7 @@ trait symbologyPredominance extends js.Object {
     *
     */
   def getSchemes(params: predominanceGetSchemesParams): PredominanceSchemes = js.native
+  
   /**
     * Returns an array of predominance schemes with the provided tags. These schemes define symbol properties for predominance visualizations in any layer that can be rendered with a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html).
     *
@@ -71,6 +75,7 @@ trait symbologyPredominance extends js.Object {
     *
     */
   def getSchemesByTag(params: predominanceGetSchemesByTagParams): js.Array[PredominanceScheme] = js.native
+  
   /**
     * Returns metadata for the available themes. If a basemap is provided, returns themes that work best with the given basemap.
     *
@@ -83,4 +88,3 @@ trait symbologyPredominance extends js.Object {
   def getThemes(basemap: String): js.Array[Theme] = js.native
   def getThemes(basemap: Basemap): js.Array[Theme] = js.native
 }
-

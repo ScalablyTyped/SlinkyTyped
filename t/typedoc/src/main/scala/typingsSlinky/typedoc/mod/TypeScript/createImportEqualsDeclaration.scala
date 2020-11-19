@@ -7,11 +7,12 @@ import typingsSlinky.typescript.mod.Modifier
 import typingsSlinky.typescript.mod.ModuleReference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createImportEqualsDeclaration")
 @js.native
 object createImportEqualsDeclaration extends js.Object {
+  
   def apply(
     decorators: js.UndefOr[scala.Nothing],
     modifiers: js.UndefOr[scala.Nothing],
@@ -61,4 +62,3 @@ object createImportEqualsDeclaration extends js.Object {
     moduleReference: ModuleReference
   ): ImportEqualsDeclaration = js.native
 }
-

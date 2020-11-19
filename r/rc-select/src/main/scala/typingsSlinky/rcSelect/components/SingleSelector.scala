@@ -17,9 +17,10 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SingleSelector {
+  
   @JSImport("rc-select/lib/Selector/SingleSelector", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -28,33 +29,46 @@ object SingleSelector {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def backfill(value: Boolean): this.type = set("backfill", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def inputRefRefObject(value: ReactRef[HTMLInputElement | HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def inputRefFunction1(value: /* instance */ HTMLInputElement | HTMLTextAreaElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def inputRef(value: Ref[HTMLInputElement | HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def inputRefNull: this.type = set("inputRef", null)
+    
     @scala.inline
     def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def placeholder(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def showSearch(value: Boolean): this.type = set("showSearch", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SelectorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     accessibilityIndex: Double,
@@ -77,4 +91,3 @@ object SingleSelector {
     new Builder(js.Array(this.component, __props.asInstanceOf[SelectorProps]))
   }
 }
-

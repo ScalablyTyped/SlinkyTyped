@@ -4,11 +4,12 @@ import typingsSlinky.rdflib.formulaMod.default
 import typingsSlinky.rdflib.typesMod.ContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rdflib/lib/parse", JSImport.Namespace)
 @js.native
 object parseMod extends js.Object {
+  
   def default(str: String, kb: typingsSlinky.rdflib.formulaMod.default, base: String): Unit = js.native
   def default(
     str: String,
@@ -33,6 +34,6 @@ object parseMod extends js.Object {
     contentType: ContentType,
     callback: CallbackFunc
   ): Unit = js.native
+  
   type CallbackFunc = js.Function2[/* error */ js.Any, /* kb */ default | Null, Unit]
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.activexAccess.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AccWizObjects")
 @js.native
 object AccWizObjects extends js.Object {
+  
   /** Field List Control */
   @js.native
   class FieldList protected ()
@@ -21,6 +22,4 @@ object AccWizObjects extends js.Object {
   @js.native
   class WizShellLinkA protected ()
     extends typingsSlinky.activexAccess.AccWizObjects.WizShellLinkA
-  
 }
-

@@ -507,12 +507,11 @@ import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.octokitTypes.routeMod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Paginate extends js.Object {
-  @JSName("paginate")
-  var paginate_Original: PaginateInterface = js.native
+  
   /**
     * Paginate a request using endpoint options
     *
@@ -4887,6 +4886,8 @@ trait Paginate extends js.Object {
       MR
     ]
   ): js.Promise[MR] = js.native
+  @JSName("paginate")
+  var paginate_Original: PaginateInterface = js.native
   /**
     * Paginate a request using an unknown endpoint route string
     *
@@ -4896,4 +4897,3 @@ trait Paginate extends js.Object {
   @JSName("paginate")
   def paginate_TR_Route[T, R /* <: Route */](route: R): js.Promise[js.Array[T]] = js.native
 }
-

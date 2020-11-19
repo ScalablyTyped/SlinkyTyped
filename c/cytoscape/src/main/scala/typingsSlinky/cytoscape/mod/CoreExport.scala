@@ -3,10 +3,11 @@ package typingsSlinky.cytoscape.mod
 import org.scalajs.dom.raw.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CoreExport extends js.Object {
+  
   /**
     * Export the current graph view as a JPG image in Base64 representation.
     */
@@ -15,6 +16,7 @@ trait CoreExport extends js.Object {
   def jpeg(options: ExportJpgStringOptions): String = js.native
   @JSName("jpeg")
   def jpeg_Blob(): Blob = js.native
+  
   /**
     * Export the current graph view as a JPG image in Base64 representation.
     */
@@ -23,11 +25,13 @@ trait CoreExport extends js.Object {
   def jpg(options: ExportJpgStringOptions): String = js.native
   @JSName("jpg")
   def jpg_Blob(): Blob = js.native
+  
   /**
     * Export the graph as JSON, the same format used at initialisation.
     */
   def json(): js.Object = js.native
   def json(json: js.Object): this.type = js.native
+  
   /**
     * Export the current graph view as a PNG image in Base64 representation.
     */
@@ -37,4 +41,3 @@ trait CoreExport extends js.Object {
   @JSName("png")
   def png_Blob(): Blob = js.native
 }
-

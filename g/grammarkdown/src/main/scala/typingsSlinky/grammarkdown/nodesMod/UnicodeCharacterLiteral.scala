@@ -3,7 +3,7 @@ package typingsSlinky.grammarkdown.nodesMod
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.QuestionToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown/dist/nodes", "UnicodeCharacterLiteral")
 @js.native
@@ -14,4 +14,3 @@ class UnicodeCharacterLiteral ()
   def this(text: js.UndefOr[scala.Nothing], questionToken: Token[QuestionToken]) = this()
   def this(text: String, questionToken: Token[QuestionToken]) = this()
 }
-

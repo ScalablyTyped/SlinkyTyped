@@ -6,7 +6,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "TypeStat")
 @js.native
@@ -16,20 +16,22 @@ import scala.scalajs.js.annotation._
   */
 class TypeStat () extends ITypeStat {
   def this(properties: ITypeStat) = this()
+  
   /** TypeStat perFieldStat. */
   @JSName("perFieldStat")
   var perFieldStat_TypeStat: StringDictionary[IFieldStat] = js.native
+  
   /**
     * Converts this TypeStat to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "TypeStat")
 @js.native
 object TypeStat extends js.Object {
+  
   /**
     * Creates a new TypeStat instance using the specified properties.
     * @param [properties] Properties to set
@@ -37,6 +39,7 @@ object TypeStat extends js.Object {
     */
   def create(): TypeStat = js.native
   def create(properties: ITypeStat): TypeStat = js.native
+  
   /**
     * Decodes a TypeStat message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -49,6 +52,7 @@ object TypeStat extends js.Object {
   def decode(reader: Reader, length: Double): TypeStat = js.native
   def decode(reader: js.typedarray.Uint8Array): TypeStat = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): TypeStat = js.native
+  
   /**
     * Decodes a TypeStat message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -58,6 +62,7 @@ object TypeStat extends js.Object {
     */
   def decodeDelimited(reader: Reader): TypeStat = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): TypeStat = js.native
+  
   /**
     * Encodes the specified TypeStat message. Does not implicitly {@link TypeStat.verify|verify} messages.
     * @param message TypeStat message or plain object to encode
@@ -66,6 +71,7 @@ object TypeStat extends js.Object {
     */
   def encode(message: ITypeStat): Writer = js.native
   def encode(message: ITypeStat, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified TypeStat message, length delimited. Does not implicitly {@link TypeStat.verify|verify} messages.
     * @param message TypeStat message or plain object to encode
@@ -74,12 +80,14 @@ object TypeStat extends js.Object {
     */
   def encodeDelimited(message: ITypeStat): Writer = js.native
   def encodeDelimited(message: ITypeStat, writer: Writer): Writer = js.native
+  
   /**
     * Creates a TypeStat message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns TypeStat
     */
   def fromObject(`object`: StringDictionary[js.Any]): TypeStat = js.native
+  
   /**
     * Creates a plain object from a TypeStat message. Also converts values to other types if specified.
     * @param message TypeStat
@@ -88,6 +96,7 @@ object TypeStat extends js.Object {
     */
   def toObject(message: TypeStat): StringDictionary[js.Any] = js.native
   def toObject(message: TypeStat, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a TypeStat message.
     * @param message Plain object to verify
@@ -95,4 +104,3 @@ object TypeStat extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.securityMod.security.IModuleRole
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/nanoflows relevant section in reference guide}
@@ -14,10 +14,11 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait INanoflow extends IMicroflowBase {
+  
   /**
     * In version 7.23.0: added public
     */
   val allowedModuleRoles: IList[IModuleRole] = js.native
+  
   val allowedModuleRolesQualifiedNames: js.Array[String] = js.native
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.ansiRegex.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ansi-regex", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   Regular expression for matching ANSI escape codes.
   @example
@@ -27,4 +28,3 @@ object ^ extends js.Object {
   def apply(): js.RegExp = js.native
   def apply(options: Options): js.RegExp = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.esriLeaflet.mod
 import typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.QueryOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * `L.esri.Query` is an abstraction for the query API included in Feature Layers and Image Services. It provides
@@ -18,4 +18,3 @@ class Query_ protected ()
   extends typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.Query_ {
   def this(options: QueryOptions) = this()
 }
-

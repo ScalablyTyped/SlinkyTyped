@@ -4,7 +4,7 @@ import typingsSlinky.googleapisCommon.apiMod.GlobalOptions
 import typingsSlinky.googleapisCommon.apiMod.GoogleConfigurable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Android Device Provisioning Partner API
@@ -29,4 +29,3 @@ class Androiddeviceprovisioning protected ()
   def this(options: GlobalOptions) = this()
   def this(options: GlobalOptions, google: GoogleConfigurable) = this()
 }
-

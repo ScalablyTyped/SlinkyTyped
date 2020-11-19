@@ -6,11 +6,12 @@ import typingsSlinky.std.Omit
 import typingsSlinky.wordpressCompose.wordpressComposeStrings.setState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/compose/higher-order/with-state", JSImport.Namespace)
 @js.native
 object withStateMod extends js.Object {
+  
   // prettier-ignore
   def default[SP /* <: js.Object */](
     initialState: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
@@ -21,4 +22,3 @@ object withStateMod extends js.Object {
     ReactComponentClass[Omit[_, (/* keyof SP */ String) | setState]]
   ] = js.native
 }
-

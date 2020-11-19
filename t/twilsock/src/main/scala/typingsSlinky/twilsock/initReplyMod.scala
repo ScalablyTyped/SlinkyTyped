@@ -3,15 +3,19 @@ package typingsSlinky.twilsock
 import typingsSlinky.twilsock.abstractmessageMod.AbstractMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("twilsock/lib/protocol/messages/initReply", JSImport.Namespace)
 @js.native
 object initReplyMod extends js.Object {
+  
   @js.native
   class ContinuationTokenStatus () extends js.Object {
+    
     val reissue_message: String = js.native
+    
     val reissue_reason: String = js.native
+    
     val reissued: Boolean = js.native
   }
   
@@ -25,12 +29,15 @@ object initReplyMod extends js.Object {
       initRegistrations: js.Any,
       debugInfo: js.Any
     ) = this()
+    
     val continuationToken: String = js.native
+    
     val continuationTokenStatus: ContinuationTokenStatus = js.native
+    
     val debugInfo: js.Any = js.native
+    
     val initRegistrations: js.Any = js.native
+    
     val offlineStorage: js.Any = js.native
   }
-  
 }
-

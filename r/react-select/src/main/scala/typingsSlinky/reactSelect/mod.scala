@@ -28,55 +28,81 @@ import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import typingsSlinky.std.NonNullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-select", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  def createFilter(): js.Function2[/* option */ Option, /* rawInput */ String, Boolean] = js.native
+  def createFilter(config: Config): js.Function2[/* option */ Option, /* rawInput */ String, Boolean] = js.native
+  
+  def mergeStyles(source: StylesConfig, target: StylesConfig): StylesConfig = js.native
+  
   @js.native
   class NonceProvider ()
     extends Component[NonceProviderProps, js.Object, js.Any]
   
   @js.native
-  class default[OptionType /* <: OptionTypeBase */, T /* <: typingsSlinky.reactSelect.selectMod.default[OptionType] */] () extends StateManager[OptionType, T]
-  
-  def createFilter(): js.Function2[/* option */ Option, /* rawInput */ String, Boolean] = js.native
-  def createFilter(config: Config): js.Function2[/* option */ Option, /* rawInput */ String, Boolean] = js.native
-  def mergeStyles(source: StylesConfig, target: StylesConfig): StylesConfig = js.native
-  @js.native
   object components extends js.Object {
+    
     var ClearIndicator: NonNullable[IndicatorComponentType[_] | Null] = js.native
+    
     var Control: NonNullable[ReactComponentClass[ControlProps[_]]] = js.native
+    
     var CrossIcon: NonNullable[ReactComponentClass[_]] = js.native
+    
     var DownChevron: NonNullable[ReactComponentClass[_]] = js.native
+    
     var DropdownIndicator: NonNullable[IndicatorComponentType[_] | Null] = js.native
+    
     var Group: NonNullable[ReactComponentClass[GroupProps[_]]] = js.native
+    
     var GroupHeading: NonNullable[ReactComponentClass[_]] = js.native
+    
     var IndicatorSeparator: NonNullable[IndicatorComponentType[_] | Null] = js.native
+    
     var IndicatorsContainer: NonNullable[ReactComponentClass[IndicatorContainerProps[_]]] = js.native
+    
     var Input: NonNullable[ReactComponentClass[InputProps]] = js.native
+    
     var LoadingIndicator: NonNullable[ReactComponentClass[LoadingIconProps[_]] | Null] = js.native
+    
     var LoadingMessage: NonNullable[ReactComponentClass[NoticeProps[_]]] = js.native
+    
     var Menu: NonNullable[ReactComponentClass[MenuProps[_]]] = js.native
+    
     var MenuList: NonNullable[ReactComponentClass[MenuListComponentProps[_]]] = js.native
+    
     var MenuPortal: NonNullable[ReactComponentClass[MenuPortalProps[_]]] = js.native
+    
     var MultiValue: NonNullable[ReactComponentClass[MultiValueProps[_]]] = js.native
+    
     var MultiValueContainer: NonNullable[ReactComponentClass[_]] = js.native
+    
     var MultiValueLabel: NonNullable[ReactComponentClass[_]] = js.native
+    
     var MultiValueRemove: NonNullable[ReactComponentClass[_]] = js.native
+    
     var NoOptionsMessage: NonNullable[ReactComponentClass[NoticeProps[_]]] = js.native
+    
     var Option: NonNullable[ReactComponentClass[OptionProps[_]]] = js.native
+    
     var Placeholder: NonNullable[ReactComponentClass[PlaceholderProps[_]]] = js.native
+    
     var SelectContainer: NonNullable[ReactComponentClass[ContainerProps[_]]] = js.native
+    
     var SingleValue: NonNullable[ReactComponentClass[SingleValueProps[_]]] = js.native
+    
     var ValueContainer: NonNullable[ReactComponentClass[ValueContainerProps[_]]] = js.native
   }
   
+  @js.native
+  class default[OptionType /* <: OptionTypeBase */, T /* <: typingsSlinky.reactSelect.selectMod.default[OptionType] */] () extends StateManager[OptionType, T]
   /* static members */
   @js.native
   object default extends js.Object {
+    
     var defaultProps: DefaultProps[_] = js.native
   }
-  
 }
-

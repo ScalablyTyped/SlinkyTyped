@@ -10,11 +10,13 @@ import typingsSlinky.nodeZookeeperClient.nodeZookeeperClientStrings.expired
 import typingsSlinky.nodeZookeeperClient.nodeZookeeperClientStrings.state
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Client extends EventEmitter {
+  
   def addAuthInfo(scheme: String, auth: Buffer): Unit = js.native
+  
   def addListener(event: String, cb: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_authenticationFailed(event: authenticationFailed, cb: js.Function0[Unit]): this.type = js.native
@@ -28,8 +30,11 @@ trait Client extends EventEmitter {
   def addListener_expired(event: expired, cb: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_state(event: state, cb: js.Function1[/* state */ State, Unit]): this.type = js.native
+  
   def close(): Unit = js.native
+  
   def connect(): Unit = js.native
+  
   def create(path: String, callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]): Unit = js.native
   def create(
     path: String,
@@ -289,16 +294,19 @@ trait Client extends EventEmitter {
     dataOrAclsOrmode3: Buffer,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
+  
   def exists(path: String, callback: js.Function2[/* error */ js.Error | Exception, /* stat */ Stat, Unit]): Unit = js.native
   def exists(
     path: String,
     watcher: js.Function1[/* event */ Event, Unit],
     callback: js.Function2[/* error */ js.Error | Exception, /* stat */ Stat, Unit]
   ): Unit = js.native
+  
   def getACL(
     path: String,
     callback: js.Function3[/* error */ js.Error | Exception, /* acls */ js.Array[ACL], /* stat */ Stat, Unit]
   ): Unit = js.native
+  
   def getChildren(
     path: String,
     callback: js.Function3[
@@ -318,6 +326,7 @@ trait Client extends EventEmitter {
       Unit
     ]
   ): Unit = js.native
+  
   def getData(
     path: String,
     callback: js.Function3[/* error */ js.Error | Exception, /* data */ Buffer, /* stat */ Stat, Unit]
@@ -327,10 +336,15 @@ trait Client extends EventEmitter {
     watcher: js.Function1[/* event */ Event, Unit],
     callback: js.Function3[/* error */ js.Error | Exception, /* data */ Buffer, /* stat */ Stat, Unit]
   ): Unit = js.native
+  
   def getSessionId(): Buffer = js.native
+  
   def getSessionPassword(): Buffer = js.native
+  
   def getSessionTimeout(): Double = js.native
+  
   def getState(): State = js.native
+  
   def mkdirp(path: String, callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]): Unit = js.native
   def mkdirp(
     path: String,
@@ -590,6 +604,7 @@ trait Client extends EventEmitter {
     dataOrAclsOrmode3: Buffer,
     callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
+  
   def on(event: String, cb: js.Function0[Unit]): this.type = js.native
   @JSName("on")
   def on_authenticationFailed(event: authenticationFailed, cb: js.Function0[Unit]): this.type = js.native
@@ -603,6 +618,7 @@ trait Client extends EventEmitter {
   def on_expired(event: expired, cb: js.Function0[Unit]): this.type = js.native
   @JSName("on")
   def on_state(event: state, cb: js.Function1[/* state */ State, Unit]): this.type = js.native
+  
   def once(event: String, cb: js.Function0[Unit]): this.type = js.native
   @JSName("once")
   def once_authenticationFailed(event: authenticationFailed, cb: js.Function0[Unit]): this.type = js.native
@@ -616,8 +632,10 @@ trait Client extends EventEmitter {
   def once_expired(event: expired, cb: js.Function0[Unit]): this.type = js.native
   @JSName("once")
   def once_state(event: state, cb: js.Function1[/* state */ State, Unit]): this.type = js.native
+  
   def remove(path: String, callback: js.Function1[/* error */ js.Error | Exception, Unit]): Unit = js.native
   def remove(path: String, version: Double, callback: js.Function1[/* error */ js.Error | Exception, Unit]): Unit = js.native
+  
   def setACL(
     path: String,
     acls: js.Array[ACL],
@@ -629,6 +647,7 @@ trait Client extends EventEmitter {
     version: Double,
     callback: js.Function2[/* error */ js.Error | Exception, /* stat */ Stat, Unit]
   ): Unit = js.native
+  
   def setData(
     path: String,
     data: Null,
@@ -651,6 +670,6 @@ trait Client extends EventEmitter {
     version: Double,
     callback: js.Function2[/* error */ js.Error | Exception, /* stat */ Stat, Unit]
   ): Unit = js.native
+  
   def transaction(): Transaction = js.native
 }
-

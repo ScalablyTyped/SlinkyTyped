@@ -4,7 +4,7 @@ import typingsSlinky.navermaps.naver.maps.Coord
 import typingsSlinky.navermaps.naver.maps.PointLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("naver.maps.PointBounds")
 @js.native
@@ -15,14 +15,13 @@ class PointBounds protected ()
     maxPoint: typingsSlinky.navermaps.naver.maps.Point
   ) = this()
 }
-
 /* static members */
 @JSGlobal("naver.maps.PointBounds")
 @js.native
 object PointBounds extends js.Object {
+  
   def bounds(point: Coord, pointN: Coord): typingsSlinky.navermaps.naver.maps.PointBounds = js.native
   def bounds(point: Coord, pointN: PointLiteral): typingsSlinky.navermaps.naver.maps.PointBounds = js.native
   def bounds(point: PointLiteral, pointN: Coord): typingsSlinky.navermaps.naver.maps.PointBounds = js.native
   def bounds(point: PointLiteral, pointN: PointLiteral): typingsSlinky.navermaps.naver.maps.PointBounds = js.native
 }
-

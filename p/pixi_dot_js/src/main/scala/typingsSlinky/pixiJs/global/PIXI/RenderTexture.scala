@@ -3,7 +3,7 @@ package typingsSlinky.pixiJs.global.PIXI
 import typingsSlinky.pixiJs.anon.Resolution
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A RenderTexture is a special texture that allows any PixiJS display object to be rendered to it.
@@ -55,11 +55,11 @@ class RenderTexture protected ()
     frame: typingsSlinky.pixiJs.PIXI.Rectangle
   ) = this()
 }
-
 /* static members */
 @JSGlobal("PIXI.RenderTexture")
 @js.native
 object RenderTexture extends js.Object {
+  
   /**
     * A short hand way of creating a render texture.
     *
@@ -73,4 +73,3 @@ object RenderTexture extends js.Object {
   def create(): typingsSlinky.pixiJs.PIXI.RenderTexture = js.native
   def create(options: Resolution): typingsSlinky.pixiJs.PIXI.RenderTexture = js.native
 }
-

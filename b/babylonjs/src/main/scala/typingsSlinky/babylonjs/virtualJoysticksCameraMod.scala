@@ -5,11 +5,12 @@ import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Cameras/virtualJoysticksCamera", JSImport.Namespace)
 @js.native
 object virtualJoysticksCameraMod extends js.Object {
+  
   @js.native
   class VirtualJoysticksCamera protected () extends FreeCamera {
     /**
@@ -23,6 +24,4 @@ object virtualJoysticksCameraMod extends js.Object {
       */
     def this(name: String, position: Vector3, scene: Scene) = this()
   }
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An animation is a sequence of keyframe arrays which map to the nodes of a skeletal hierarchy.
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class Animation ()
   extends typingsSlinky.playcanvas.pc.Animation
-

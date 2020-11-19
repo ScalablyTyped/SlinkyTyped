@@ -2,11 +2,12 @@ package typingsSlinky.multimatch.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("multimatch", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   Extends [`minimatch.match()`](https://github.com/isaacs/minimatch#minimatchmatchlist-pattern-options) with support for multiple patterns.
   @param paths - Paths to match against.
@@ -28,4 +29,3 @@ object ^ extends js.Object {
   def apply(paths: js.Array[String], patterns: js.Array[String]): js.Array[String] = js.native
   def apply(paths: js.Array[String], patterns: js.Array[String], options: Options): js.Array[String] = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.jose.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.jose.joseStrings.RSA
@@ -11,15 +11,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jose.joseStrings.oct
 */
 trait keyType extends js.Object
-
 object keyType {
+  
   @scala.inline
   def EC: typingsSlinky.jose.joseStrings.EC = "EC".asInstanceOf[typingsSlinky.jose.joseStrings.EC]
+  
   @scala.inline
   def OKP: typingsSlinky.jose.joseStrings.OKP = "OKP".asInstanceOf[typingsSlinky.jose.joseStrings.OKP]
+  
   @scala.inline
   def RSA: typingsSlinky.jose.joseStrings.RSA = "RSA".asInstanceOf[typingsSlinky.jose.joseStrings.RSA]
+  
   @scala.inline
   def oct: typingsSlinky.jose.joseStrings.oct = "oct".asInstanceOf[typingsSlinky.jose.joseStrings.oct]
 }
-

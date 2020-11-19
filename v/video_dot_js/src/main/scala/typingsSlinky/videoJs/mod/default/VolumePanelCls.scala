@@ -2,7 +2,7 @@ package typingsSlinky.videoJs.mod.default
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js", "VolumePanel")
 @js.native
@@ -23,4 +23,3 @@ class VolumePanelCls protected ()
     options: typingsSlinky.videoJs.mod.videojs.VolumePanel
   ) = this()
 }
-

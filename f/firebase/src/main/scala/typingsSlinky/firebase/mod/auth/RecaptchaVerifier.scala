@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An {@link https://www.google.com/recaptcha/ reCAPTCHA}-based application
@@ -28,4 +28,3 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.RecaptchaVerifier")
 @js.native
 class RecaptchaVerifier () extends RecaptchaVerifierInstance
-

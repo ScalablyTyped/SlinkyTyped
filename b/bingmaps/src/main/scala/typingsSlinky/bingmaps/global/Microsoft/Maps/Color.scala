@@ -2,7 +2,7 @@ package typingsSlinky.bingmaps.global.Microsoft.Maps
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Microsoft.Maps.Color")
 @js.native
@@ -17,17 +17,18 @@ class Color protected ()
     */
   def this(a: Double, r: Double, g: Double, b: Double) = this()
 }
-
 /* static members */
 @JSGlobal("Microsoft.Maps.Color")
 @js.native
 object Color extends js.Object {
+  
   /**
     * Clones the color.
     * @param color The color class that needs to be clones.
     * @returns The colne of the color.
     */
   def clone(color: typingsSlinky.bingmaps.Microsoft.Maps.Color): typingsSlinky.bingmaps.Microsoft.Maps.Color = js.native
+  
   /**
     * Creates the color from a hex string.
     * @param hex The color represented as '#rrggbb' format.
@@ -35,4 +36,3 @@ object Color extends js.Object {
     */
   def fromHex(hex: String): typingsSlinky.bingmaps.Microsoft.Maps.Color = js.native
 }
-

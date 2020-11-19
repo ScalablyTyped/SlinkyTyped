@@ -2,7 +2,7 @@ package typingsSlinky.openlayers.mod.geom
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The geometry type. One of `'Point'`, `'LineString'`, `'LinearRing'`,
@@ -21,25 +21,32 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.openlayers.openlayersStrings.Circle
 */
 trait GeometryType extends js.Object
-
 object GeometryType {
+  
   @scala.inline
   def Circle: typingsSlinky.openlayers.openlayersStrings.Circle = "Circle".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.Circle]
+  
   @scala.inline
   def GeometryCollection: typingsSlinky.openlayers.openlayersStrings.GeometryCollection = "GeometryCollection".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.GeometryCollection]
+  
   @scala.inline
   def LineString: typingsSlinky.openlayers.openlayersStrings.LineString = "LineString".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.LineString]
+  
   @scala.inline
   def LinearRing: typingsSlinky.openlayers.openlayersStrings.LinearRing = "LinearRing".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.LinearRing]
+  
   @scala.inline
   def MultiLineString: typingsSlinky.openlayers.openlayersStrings.MultiLineString = "MultiLineString".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.MultiLineString]
+  
   @scala.inline
   def MultiPoint: typingsSlinky.openlayers.openlayersStrings.MultiPoint = "MultiPoint".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.MultiPoint]
+  
   @scala.inline
   def MultiPolygon: typingsSlinky.openlayers.openlayersStrings.MultiPolygon = "MultiPolygon".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.MultiPolygon]
+  
   @scala.inline
   def Point: typingsSlinky.openlayers.openlayersStrings.Point = "Point".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.Point]
+  
   @scala.inline
   def Polygon: typingsSlinky.openlayers.openlayersStrings.Polygon = "Polygon".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.Polygon]
 }
-

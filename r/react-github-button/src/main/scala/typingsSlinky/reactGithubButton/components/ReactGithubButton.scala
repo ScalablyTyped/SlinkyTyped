@@ -10,9 +10,10 @@ import typingsSlinky.reactGithubButton.reactGithubButtonStrings.stargazers
 import typingsSlinky.reactGithubButton.reactGithubButtonStrings.watchers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactGithubButton {
+  
   @JSImport("react-github-button", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -21,11 +22,13 @@ object ReactGithubButton {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def size(value: large): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ReactGitHubButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(namespace: String, repo: String, `type`: stargazers | watchers | forks): Builder = {
     val __props = js.Dynamic.literal(namespace = namespace.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
@@ -33,4 +36,3 @@ object ReactGithubButton {
     new Builder(js.Array(this.component, __props.asInstanceOf[ReactGitHubButtonProps]))
   }
 }
-

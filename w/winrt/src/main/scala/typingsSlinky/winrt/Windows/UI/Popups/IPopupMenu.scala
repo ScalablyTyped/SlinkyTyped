@@ -6,13 +6,15 @@ import typingsSlinky.winrt.Windows.Foundation.Point
 import typingsSlinky.winrt.Windows.Foundation.Rect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IPopupMenu extends js.Object {
+  
   var commands: IVector[IUICommand] = js.native
+  
   def showAsync(invocationPoint: Point): IAsyncOperation[IUICommand] = js.native
+  
   def showForSelectionAsync(selection: Rect): IAsyncOperation[IUICommand] = js.native
   def showForSelectionAsync(selection: Rect, preferredPlacement: Placement): IAsyncOperation[IUICommand] = js.native
 }
-

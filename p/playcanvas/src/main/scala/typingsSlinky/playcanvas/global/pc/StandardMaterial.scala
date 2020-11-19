@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A Standard material is the main, general purpose material that is most often used for rendering.
@@ -246,4 +246,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class StandardMaterial ()
   extends typingsSlinky.playcanvas.pc.StandardMaterial
-

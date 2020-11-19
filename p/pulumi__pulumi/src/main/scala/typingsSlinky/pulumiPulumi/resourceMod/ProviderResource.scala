@@ -3,7 +3,7 @@ package typingsSlinky.pulumiPulumi.resourceMod
 import typingsSlinky.pulumiPulumi.outputMod.Inputs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/pulumi/resource", "ProviderResource")
 @js.native
@@ -21,12 +21,11 @@ abstract class ProviderResource protected () extends CustomResource {
   def this(pkg: String, name: String, props: js.UndefOr[scala.Nothing], opts: ResourceOptions) = this()
   def this(pkg: String, name: String, props: Inputs, opts: ResourceOptions) = this()
 }
-
 /* static members */
 @JSImport("@pulumi/pulumi/resource", "ProviderResource")
 @js.native
 object ProviderResource extends js.Object {
+  
   def register(): js.Promise[js.UndefOr[String]] = js.native
   def register(provider: ProviderResource): js.Promise[js.UndefOr[String]] = js.native
 }
-

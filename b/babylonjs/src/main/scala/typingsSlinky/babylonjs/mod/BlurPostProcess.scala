@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "BlurPostProcess")
 @js.native
@@ -28,21 +28,7 @@ class BlurPostProcess protected ()
     /** The direction in which to blur the image. */
   direction: typingsSlinky.babylonjs.mathVectorMod.Vector2,
     kernel: Double,
-    options: Double,
-    camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
-    samplingMode: js.UndefOr[Double],
-    engine: js.UndefOr[typingsSlinky.babylonjs.engineMod.Engine],
-    reusable: js.UndefOr[Boolean],
-    textureType: js.UndefOr[Double],
-    defines: js.UndefOr[String],
-    blockCompilation: js.UndefOr[Boolean]
-  ) = this()
-  def this(
-    name: String,
-    /** The direction in which to blur the image. */
-  direction: typingsSlinky.babylonjs.mathVectorMod.Vector2,
-    kernel: Double,
-    options: PostProcessOptions,
+    options: Double | PostProcessOptions,
     camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
     samplingMode: js.UndefOr[Double],
     engine: js.UndefOr[typingsSlinky.babylonjs.engineMod.Engine],
@@ -52,4 +38,3 @@ class BlurPostProcess protected ()
     blockCompilation: js.UndefOr[Boolean]
   ) = this()
 }
-

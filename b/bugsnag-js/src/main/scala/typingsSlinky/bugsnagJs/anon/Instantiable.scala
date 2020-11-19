@@ -9,7 +9,7 @@ import typingsSlinky.bugsnagJs.reportMod.Report
 import typingsSlinky.bugsnagJs.reportMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Instantiable
@@ -27,13 +27,14 @@ trait Instantiable
       /* handledState */ IHandledState, 
       default
     ] {
+  
   def ensureReport(reportOrError: js.Any): Report = js.native
   def ensureReport(reportOrError: js.Any, errorFramesToSkip: js.UndefOr[scala.Nothing], generatedFramesToSkip: Double): Report = js.native
   def ensureReport(reportOrError: js.Any, errorFramesToSkip: Double): Report = js.native
   def ensureReport(reportOrError: js.Any, errorFramesToSkip: Double, generatedFramesToSkip: Double): Report = js.native
+  
   def getStacktrace(error: js.Any): js.Array[IStackframe] = js.native
   def getStacktrace(error: js.Any, errorFramesToSkip: js.UndefOr[scala.Nothing], generatedFramesToSkip: Double): js.Array[IStackframe] = js.native
   def getStacktrace(error: js.Any, errorFramesToSkip: Double): js.Array[IStackframe] = js.native
   def getStacktrace(error: js.Any, errorFramesToSkip: Double, generatedFramesToSkip: Double): js.Array[IStackframe] = js.native
 }
-

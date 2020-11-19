@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.rest.ODataKeyPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -27,28 +27,31 @@ class BinaryAttributeType protected () extends AttributeType {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FBinaryAttributeType: IModel = js.native
+  
   @JSName("containerAsAttribute")
   def containerAsAttribute_MBinaryAttributeType: Attribute = js.native
+  
   @JSName("containerAsEntityKeyPart")
   def containerAsEntityKeyPart_MBinaryAttributeType: EntityKeyPart = js.native
+  
   @JSName("containerAsODataKeyPart")
   def containerAsODataKeyPart_MBinaryAttributeType: ODataKeyPart = js.native
+  
+  @JSName("model")
+  var model_FBinaryAttributeType: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.BinaryAttributeType")
 @js.native
 object BinaryAttributeType extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new BinaryAttributeType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): BinaryAttributeType = js.native
+  
   /**
     * Creates and returns a new BinaryAttributeType instance in the SDK and on the server.
     * The new BinaryAttributeType will be automatically stored in the 'type' property
@@ -58,12 +61,14 @@ object BinaryAttributeType extends js.Object {
     *  6.0.0 to 8.8.0
     */
   def createIn(container: Attribute): BinaryAttributeType = js.native
+  
   /**
     * Creates and returns a new BinaryAttributeType instance in the SDK and on the server.
     * The new BinaryAttributeType will be automatically stored in the 'type' property
     * of the parent Attribute element passed as argument.
     */
   def createInAttributeUnderType(container: Attribute): BinaryAttributeType = js.native
+  
   /**
     * Creates and returns a new BinaryAttributeType instance in the SDK and on the server.
     * The new BinaryAttributeType will be automatically stored in the 'type' property
@@ -73,6 +78,7 @@ object BinaryAttributeType extends js.Object {
     *  8.9.0 and higher
     */
   def createInEntityKeyPartUnderType(container: EntityKeyPart): BinaryAttributeType = js.native
+  
   /**
     * Creates and returns a new BinaryAttributeType instance in the SDK and on the server.
     * The new BinaryAttributeType will be automatically stored in the 'type' property
@@ -82,5 +88,8 @@ object BinaryAttributeType extends js.Object {
     *  8.9.0 and higher
     */
   def createInODataKeyPartUnderType(container: ODataKeyPart): BinaryAttributeType = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

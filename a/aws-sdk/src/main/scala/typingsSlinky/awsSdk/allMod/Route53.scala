@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.route53Mod.ClientConfiguration
 import typingsSlinky.awsSdk.route53Mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/clients/all", "Route53")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 class Route53 () extends ^ {
   def this(options: ClientConfiguration) = this()
 }
-

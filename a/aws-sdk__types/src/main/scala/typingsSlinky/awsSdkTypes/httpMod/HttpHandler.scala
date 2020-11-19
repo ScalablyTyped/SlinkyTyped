@@ -2,10 +2,11 @@ package typingsSlinky.awsSdkTypes.httpMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait HttpHandler[StreamType, HttpOptionsType] extends js.Object {
+  
   /**
     * Perform any necessary cleanup actions, such as closing any open
     * connections. Calling `destroy` should allow the host application to
@@ -15,6 +16,7 @@ trait HttpHandler[StreamType, HttpOptionsType] extends js.Object {
     * called.
     */
   def destroy(): Unit = js.native
+  
   /**
     * A function that takes an HTTP request and returns a promise for an HTTP
     * response.
@@ -26,8 +28,8 @@ trait HttpHandler[StreamType, HttpOptionsType] extends js.Object {
     */
   def handle(request: HttpRequest[StreamType], options: HttpHandlerOptions): js.Promise[HttpResponse[StreamType]] = js.native
 }
-
 object HttpHandler {
+  
   @scala.inline
   def apply[StreamType, HttpOptionsType](
     destroy: () => Unit,
@@ -36,22 +38,26 @@ object HttpHandler {
     val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), handle = js.Any.fromFunction2(handle))
     __obj.asInstanceOf[HttpHandler[StreamType, HttpOptionsType]]
   }
+  
   @scala.inline
   implicit class HttpHandlerOps[Self <: HttpHandler[_, _], StreamType, HttpOptionsType] (val x: Self with (HttpHandler[StreamType, HttpOptionsType])) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setDestroy(value: () => Unit): Self = this.set("destroy", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setHandle(value: (HttpRequest[StreamType], HttpHandlerOptions) => js.Promise[HttpResponse[StreamType]]): Self = this.set("handle", js.Any.fromFunction2(value))
   }
-  
 }
-

@@ -4,10 +4,11 @@ import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GeoprocessorWaitForJobCompletionOptions extends Object {
+  
   /**
     * The time in millisecond between remote job status requests.
     *
@@ -16,12 +17,14 @@ trait GeoprocessorWaitForJobCompletionOptions extends Object {
     * @default 1000
     */
   var interval: js.UndefOr[js.Any] = js.native
+  
   /**
     * [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) allows for cancelable asynchronous job. If canceled, the promise will be rejected with an error named `AbortError`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#waitForJobCompletion)
     */
   var signal: js.UndefOr[js.Any] = js.native
+  
   /**
     * Callback function that is called at the specified interval. Use this method to monitor job status and messages.
     *
@@ -29,8 +32,8 @@ trait GeoprocessorWaitForJobCompletionOptions extends Object {
     */
   var statusCallback: js.UndefOr[js.Any] = js.native
 }
-
 object GeoprocessorWaitForJobCompletionOptions {
+  
   @scala.inline
   def apply(
     constructor: js.Function,
@@ -40,30 +43,38 @@ object GeoprocessorWaitForJobCompletionOptions {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     __obj.asInstanceOf[GeoprocessorWaitForJobCompletionOptions]
   }
+  
   @scala.inline
   implicit class GeoprocessorWaitForJobCompletionOptionsOps[Self <: GeoprocessorWaitForJobCompletionOptions] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setInterval(value: js.Any): Self = this.set("interval", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteInterval: Self = this.set("interval", js.undefined)
+    
     @scala.inline
     def setSignal(value: js.Any): Self = this.set("signal", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteSignal: Self = this.set("signal", js.undefined)
+    
     @scala.inline
     def setStatusCallback(value: js.Any): Self = this.set("statusCallback", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteStatusCallback: Self = this.set("statusCallback", js.undefined)
   }
-  
 }
-

@@ -6,11 +6,12 @@ import typingsSlinky.reduxOrm.reduxMod.defaultUpdater
 import typingsSlinky.std.Extract
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("redux-orm", "createReducer")
 @js.native
 object createReducer extends js.Object {
+  
   def apply[I /* <: IndexedModelClasses[
     js.Object, 
     Extract[
@@ -29,4 +30,3 @@ object createReducer extends js.Object {
     updater: defaultUpdater[I, TAction]
   ): ORMReducer[I, TAction] = js.native
 }
-

@@ -83,20 +83,11 @@ import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait WebContents_ extends EventEmitter {
-  var audioMuted: Boolean = js.native
-  val debugger: Debugger = js.native
-  val devToolsWebContents: WebContents_ | Null = js.native
-  var frameRate: Double = js.native
-  val hostWebContents: WebContents_ = js.native
-  val id: Double = js.native
-  val session: Session_ = js.native
-  var userAgent: String = js.native
-  var zoomFactor: Double = js.native
-  var zoomLevel: Double = js.native
+  
   def addListener(
     event: `new-window`,
     listener: js.Function7[
@@ -426,11 +417,15 @@ trait WebContents_ extends EventEmitter {
       Unit
     ]
   ): this.type = js.native
+  
   /**
     * Adds the specified path to DevTools workspace. Must be used after DevTools
     * creation:
     */
   def addWorkSpace(path: String): Unit = js.native
+  
+  var audioMuted: Boolean = js.native
+  
   /**
     * Begin subscribing for presentation events and captured frames, the `callback`
     * will be called with `callback(image, dirtyRect)` when there is a presentation
@@ -458,18 +453,22 @@ trait WebContents_ extends EventEmitter {
     onlyDirty: Boolean,
     callback: js.Function2[/* image */ NativeImage_, /* dirtyRect */ Rectangle, Unit]
   ): Unit = js.native
+  
   /**
     * Whether the browser can go back to previous web page.
     */
   def canGoBack(): Boolean = js.native
+  
   /**
     * Whether the browser can go forward to next web page.
     */
   def canGoForward(): Boolean = js.native
+  
   /**
     * Whether the web page can go to `offset`.
     */
   def canGoToOffset(offset: Double): Boolean = js.native
+  
   /**
     * Resolves with a NativeImage
     *
@@ -478,26 +477,34 @@ trait WebContents_ extends EventEmitter {
     */
   def capturePage(): js.Promise[NativeImage_] = js.native
   def capturePage(rect: Rectangle): js.Promise[NativeImage_] = js.native
+  
   /**
     * Clears the navigation history.
     */
   def clearHistory(): Unit = js.native
+  
   /**
     * Closes the devtools.
     */
   def closeDevTools(): Unit = js.native
+  
   /**
     * Executes the editing command `copy` in web page.
     */
   def copy(): Unit = js.native
+  
   /**
     * Copy the image at the given position to the clipboard.
     */
   def copyImageAt(x: Double, y: Double): Unit = js.native
+  
   /**
     * Executes the editing command `cut` in web page.
     */
   def cut(): Unit = js.native
+  
+  val debugger: Debugger = js.native
+  
   /**
     * Decrease the capturer count by one. The page will be set to hidden or occluded
     * state when its browser window is hidden or occluded and the capturer count
@@ -506,27 +513,35 @@ trait WebContents_ extends EventEmitter {
     */
   def decrementCapturerCount(): Unit = js.native
   def decrementCapturerCount(stayHidden: Boolean): Unit = js.native
+  
   /**
     * Executes the editing command `delete` in web page.
     */
   def delete(): Unit = js.native
+  
+  val devToolsWebContents: WebContents_ | Null = js.native
+  
   /**
     * Disable device emulation enabled by `webContents.enableDeviceEmulation`.
     */
   def disableDeviceEmulation(): Unit = js.native
+  
   /**
     * Initiates a download of the resource at `url` without navigating. The
     * `will-download` event of `session` will be triggered.
     */
   def downloadURL(url: String): Unit = js.native
+  
   /**
     * Enable device emulation with the given parameters.
     */
   def enableDeviceEmulation(parameters: Parameters): Unit = js.native
+  
   /**
     * End subscribing for frame presentation events.
     */
   def endFrameSubscription(): Unit = js.native
+  
   /**
     * A promise that resolves with the result of the executed code or is rejected if
     * the result of the code is a rejected promise.
@@ -540,6 +555,7 @@ trait WebContents_ extends EventEmitter {
     */
   def executeJavaScript(code: String): js.Promise[_] = js.native
   def executeJavaScript(code: String, userGesture: Boolean): js.Promise[_] = js.native
+  
   /**
     * A promise that resolves with the result of the executed code or is rejected if
     * the result of the code is a rejected promise.
@@ -548,6 +564,7 @@ trait WebContents_ extends EventEmitter {
     */
   def executeJavaScriptInIsolatedWorld(worldId: Double, scripts: js.Array[WebSource]): js.Promise[_] = js.native
   def executeJavaScriptInIsolatedWorld(worldId: Double, scripts: js.Array[WebSource], userGesture: Boolean): js.Promise[_] = js.native
+  
   /**
     * The request id used for the request.
     *
@@ -556,77 +573,101 @@ trait WebContents_ extends EventEmitter {
     */
   def findInPage(text: String): Double = js.native
   def findInPage(text: String, options: FindInPageOptions): Double = js.native
+  
   /**
     * Focuses the web page.
     */
   def focus(): Unit = js.native
+  
+  var frameRate: Double = js.native
+  
   /**
     * Information about all Shared Workers.
     */
   def getAllSharedWorkers(): js.Array[SharedWorkerInfo] = js.native
+  
   /**
     * If *offscreen rendering* is enabled returns the current frame rate.
     */
   def getFrameRate(): Double = js.native
+  
   /**
     * The operating system `pid` of the associated renderer process.
     */
   def getOSProcessId(): Double = js.native
+  
   /**
     * Get the system printer list.
     */
   def getPrinters(): js.Array[PrinterInfo] = js.native
+  
   /**
     * The Chromium internal `pid` of the associated renderer. Can be compared to the
     * `frameProcessId` passed by frame specific navigation events (e.g.
     * `did-frame-navigate`)
     */
   def getProcessId(): Double = js.native
+  
   /**
     * The title of the current web page.
     */
   def getTitle(): String = js.native
+  
   /**
     * the type of the webContent. Can be `backgroundPage`, `window`, `browserView`,
     * `remote`, `webview` or `offscreen`.
     */
   def getType(): backgroundPage | window | browserView | remote | webview | offscreen = js.native
+  
   /**
     * The URL of the current web page.
     */
   def getURL(): String = js.native
+  
   /**
     * The user agent for this web page.
     */
   def getUserAgent(): String = js.native
+  
   /**
     * Returns the WebRTC IP Handling Policy.
     */
   def getWebRTCIPHandlingPolicy(): String = js.native
+  
   /**
     * the current zoom factor.
     */
   def getZoomFactor(): Double = js.native
+  
   /**
     * the current zoom level.
     */
   def getZoomLevel(): Double = js.native
+  
   /**
     * Makes the browser go back a web page.
     */
   def goBack(): Unit = js.native
+  
   /**
     * Makes the browser go forward a web page.
     */
   def goForward(): Unit = js.native
+  
   /**
     * Navigates browser to the specified absolute web page index.
     */
   def goToIndex(index: Double): Unit = js.native
+  
   /**
     * Navigates to the specified offset from the "current entry".
     */
   def goToOffset(offset: Double): Unit = js.native
+  
+  val hostWebContents: WebContents_ = js.native
+  
+  val id: Double = js.native
+  
   /**
     * Increase the capturer count by one. The page is considered visible when its
     * browser window is hidden and the capturer count is non-zero. If you would like
@@ -638,6 +679,7 @@ trait WebContents_ extends EventEmitter {
   def incrementCapturerCount(size: js.UndefOr[scala.Nothing], stayHidden: Boolean): Unit = js.native
   def incrementCapturerCount(size: Size): Unit = js.native
   def incrementCapturerCount(size: Size, stayHidden: Boolean): Unit = js.native
+  
   /**
     * A promise that resolves with a key for the inserted CSS that can later be used
     * to remove the CSS via `contents.removeInsertedCSS(key)`.
@@ -647,26 +689,32 @@ trait WebContents_ extends EventEmitter {
     */
   def insertCSS(css: String): js.Promise[String] = js.native
   def insertCSS(css: String, options: InsertCSSOptions): js.Promise[String] = js.native
+  
   /**
     * Inserts `text` to the focused element.
     */
   def insertText(text: String): js.Promise[Unit] = js.native
+  
   /**
     * Starts inspecting element at position (`x`, `y`).
     */
   def inspectElement(x: Double, y: Double): Unit = js.native
+  
   /**
     * Opens the developer tools for the service worker context.
     */
   def inspectServiceWorker(): Unit = js.native
+  
   /**
     * Opens the developer tools for the shared worker context.
     */
   def inspectSharedWorker(): Unit = js.native
+  
   /**
     * Inspects the shared worker based on its ID.
     */
   def inspectSharedWorkerById(workerId: String): Unit = js.native
+  
   /**
     * Schedules a full repaint of the window this web contents is in.
     *
@@ -674,61 +722,75 @@ trait WebContents_ extends EventEmitter {
     * one through the `'paint'` event.
     */
   def invalidate(): Unit = js.native
+  
   /**
     * Whether this page has been muted.
     */
   def isAudioMuted(): Boolean = js.native
+  
   /**
     * Whether this page is being captured. It returns true when the capturer count is
     * large then 0.
     */
   def isBeingCaptured(): Boolean = js.native
+  
   /**
     * Whether the renderer process has crashed.
     */
   def isCrashed(): Boolean = js.native
+  
   /**
     * Whether audio is currently playing.
     */
   def isCurrentlyAudible(): Boolean = js.native
+  
   /**
     * Whether the web page is destroyed.
     */
   def isDestroyed(): Boolean = js.native
+  
   /**
     * Whether the devtools view is focused .
     */
   def isDevToolsFocused(): Boolean = js.native
+  
   /**
     * Whether the devtools is opened.
     */
   def isDevToolsOpened(): Boolean = js.native
+  
   /**
     * Whether the web page is focused.
     */
   def isFocused(): Boolean = js.native
+  
   /**
     * Whether web page is still loading resources.
     */
   def isLoading(): Boolean = js.native
+  
   /**
     * Whether the main frame (and not just iframes or frames within it) is still
     * loading.
     */
   def isLoadingMainFrame(): Boolean = js.native
+  
   /**
     * Indicates whether *offscreen rendering* is enabled.
     */
   def isOffscreen(): Boolean = js.native
+  
   /**
     * If *offscreen rendering* is enabled returns whether it is currently painting.
     */
   def isPainting(): Boolean = js.native
+  
   /**
     * Whether the web page is waiting for a first-response from the main resource of
     * the page.
     */
   def isWaitingForResponse(): Boolean = js.native
+  
   /**
     * the promise will resolve when the page has finished loading (see
     * `did-finish-load`), and rejects if the page fails to load (see `did-fail-load`).
@@ -740,6 +802,7 @@ trait WebContents_ extends EventEmitter {
     */
   def loadFile(filePath: String): js.Promise[Unit] = js.native
   def loadFile(filePath: String, options: LoadFileOptions): js.Promise[Unit] = js.native
+  
   /**
     * the promise will resolve when the page has finished loading (see
     * `did-finish-load`), and rejects if the page fails to load (see `did-fail-load`).
@@ -752,6 +815,7 @@ trait WebContents_ extends EventEmitter {
     */
   def loadURL(url: String): js.Promise[Unit] = js.native
   def loadURL(url: String, options: LoadURLOptions): js.Promise[Unit] = js.native
+  
   /**
     * Emitted when the page requests to open a new window for a `url`. It could be
     * requested by `window.open` or an external link like `<a target='_blank'>`.
@@ -1357,6 +1421,7 @@ trait WebContents_ extends EventEmitter {
       Unit
     ]
   ): this.type = js.native
+  
   def once(
     event: `new-window`,
     listener: js.Function7[
@@ -1686,6 +1751,7 @@ trait WebContents_ extends EventEmitter {
       Unit
     ]
   ): this.type = js.native
+  
   /**
     * Opens the devtools.
     *
@@ -1694,14 +1760,17 @@ trait WebContents_ extends EventEmitter {
     */
   def openDevTools(): Unit = js.native
   def openDevTools(options: OpenDevToolsOptions): Unit = js.native
+  
   /**
     * Executes the editing command `paste` in web page.
     */
   def paste(): Unit = js.native
+  
   /**
     * Executes the editing command `pasteAndMatchStyle` in web page.
     */
   def pasteAndMatchStyle(): Unit = js.native
+  
   /**
     * Send a message to the renderer process, optionally transferring ownership of
     * zero or more [`MessagePortMain`][] objects.
@@ -1713,6 +1782,7 @@ trait WebContents_ extends EventEmitter {
     */
   def postMessage(channel: String, message: js.Any): Unit = js.native
   def postMessage(channel: String, message: js.Any, transfer: js.Array[MessagePortMain]): Unit = js.native
+  
   /**
     * When a custom `pageSize` is passed, Chromium attempts to validate platform
     * specific minumum values for `width_microns` and `height_microns`. Width and
@@ -1737,6 +1807,7 @@ trait WebContents_ extends EventEmitter {
     options: WebContentsPrintOptions,
     callback: js.Function2[/* success */ Boolean, /* failureReason */ String, Unit]
   ): Unit = js.native
+  
   /**
     * Resolves with the generated PDF data.
     *
@@ -1752,18 +1823,22 @@ trait WebContents_ extends EventEmitter {
   An example of `webContents.printToPDF`:
     */
   def printToPDF(options: PrintToPDFOptions): js.Promise[Buffer] = js.native
+  
   /**
     * Executes the editing command `redo` in web page.
     */
   def redo(): Unit = js.native
+  
   /**
     * Reloads the current web page.
     */
   def reload(): Unit = js.native
+  
   /**
     * Reloads current page and ignores cache.
     */
   def reloadIgnoringCache(): Unit = js.native
+  
   /**
     * Resolves if the removal was successful.
     *
@@ -1771,6 +1846,7 @@ trait WebContents_ extends EventEmitter {
     * by its key, which is returned from `contents.insertCSS(css)`.
     */
   def removeInsertedCSS(key: String): js.Promise[Unit] = js.native
+  
   def removeListener(
     event: `new-window`,
     listener: js.Function7[
@@ -2100,18 +2176,22 @@ trait WebContents_ extends EventEmitter {
       Unit
     ]
   ): this.type = js.native
+  
   /**
     * Removes the specified path from DevTools workspace.
     */
   def removeWorkSpace(path: String): Unit = js.native
+  
   /**
     * Executes the editing command `replace` in web page.
     */
   def replace(text: String): Unit = js.native
+  
   /**
     * Executes the editing command `replaceMisspelling` in web page.
     */
   def replaceMisspelling(text: String): Unit = js.native
+  
   @JSName("savePage")
   def savePage_HTMLComplete(fullPath: String, saveType: HTMLComplete): js.Promise[Unit] = js.native
   /**
@@ -2121,10 +2201,12 @@ trait WebContents_ extends EventEmitter {
   def savePage_HTMLOnly(fullPath: String, saveType: HTMLOnly): js.Promise[Unit] = js.native
   @JSName("savePage")
   def savePage_MHTML(fullPath: String, saveType: MHTML): js.Promise[Unit] = js.native
+  
   /**
     * Executes the editing command `selectAll` in web page.
     */
   def selectAll(): Unit = js.native
+  
   /**
     * Send an asynchronous message to the renderer process via `channel`, along with
     * arguments. Arguments will be serialized with the Structured Clone Algorithm,
@@ -2141,6 +2223,7 @@ trait WebContents_ extends EventEmitter {
   An example of sending messages from the main process to the renderer process:
     */
   def send(channel: String, args: js.Any*): Unit = js.native
+  
   def sendInputEvent(inputEvent: KeyboardInputEvent): Unit = js.native
   /**
     * Sends an input `event` to the page. **Note:** The `BrowserWindow` containing the
@@ -2148,6 +2231,7 @@ trait WebContents_ extends EventEmitter {
     */
   def sendInputEvent(inputEvent: MouseInputEvent): Unit = js.native
   def sendInputEvent(inputEvent: MouseWheelInputEvent): Unit = js.native
+  
   /**
     * Send an asynchronous message to a specific frame in a renderer process via
     * `channel`, along with arguments. Arguments will be serialized with the
@@ -2168,15 +2252,20 @@ trait WebContents_ extends EventEmitter {
   You can also read `frameId` from all incoming IPC messages in the main process.
     */
   def sendToFrame(frameId: Double, channel: String, args: js.Any*): Unit = js.native
+  
+  val session: Session_ = js.native
+  
   /**
     * Mute the audio on the current web page.
     */
   def setAudioMuted(muted: Boolean): Unit = js.native
+  
   /**
     * Controls whether or not this WebContents will throttle animations and timers
     * when the page becomes backgrounded. This also affects the Page Visibility API.
     */
   def setBackgroundThrottling(allowed: Boolean): Unit = js.native
+  
   /**
     * Uses the `devToolsWebContents` as the target `WebContents` to show devtools.
     *
@@ -2197,21 +2286,25 @@ trait WebContents_ extends EventEmitter {
   An example of showing devtools in a `BrowserWindow`:
     */
   def setDevToolsWebContents(devToolsWebContents: WebContents_): Unit = js.native
+  
   /**
     * If *offscreen rendering* is enabled sets the frame rate to the specified number.
     * Only values between 1 and 60 are accepted.
     */
   def setFrameRate(fps: Double): Unit = js.native
+  
   /**
     * Ignore application menu shortcuts while this web contents is focused.
     *
     * @experimental
     */
   def setIgnoreMenuShortcuts(ignore: Boolean): Unit = js.native
+  
   /**
     * Overrides the user agent for this web page.
     */
   def setUserAgent(userAgent: String): Unit = js.native
+  
   /**
     * Sets the maximum and minimum pinch-to-zoom level.
     *
@@ -2219,6 +2312,7 @@ trait WebContents_ extends EventEmitter {
     * call:
     */
   def setVisualZoomLevelLimits(minimumLevel: Double, maximumLevel: Double): js.Promise[Unit] = js.native
+  
   /**
     * Setting the WebRTC IP handling policy allows you to control which IPs are
     * exposed via WebRTC. See BrowserLeaks for more details.
@@ -2231,12 +2325,14 @@ trait WebContents_ extends EventEmitter {
   def setWebRTCIPHandlingPolicy_defaultpublicinterfaceonly(policy: default_public_interface_only): Unit = js.native
   @JSName("setWebRTCIPHandlingPolicy")
   def setWebRTCIPHandlingPolicy_disablenonproxiedudp(policy: disable_non_proxied_udp): Unit = js.native
+  
   /**
     * Changes the zoom factor to the specified factor. Zoom factor is zoom percent
     * divided by 100, so 300% = 3.0.
   The factor must be greater than 0.0.
     */
   def setZoomFactor(factor: Double): Unit = js.native
+  
   /**
     * Changes the zoom level to the specified level. The original size is 0 and each
     * increment above or below represents zooming 20% larger or smaller to default
@@ -2244,26 +2340,31 @@ trait WebContents_ extends EventEmitter {
     * `scale := 1.2 ^ level`.
     */
   def setZoomLevel(level: Double): Unit = js.native
+  
   /**
     * Shows pop-up dictionary that searches the selected word on the page.
     *
     * @platform darwin
     */
   def showDefinitionForSelection(): Unit = js.native
+  
   /**
     * Sets the `item` as dragging item for current drag-drop operation, `file` is the
     * absolute path of the file to be dragged, and `icon` is the image showing under
     * the cursor when dragging.
     */
   def startDrag(item: Item): Unit = js.native
+  
   /**
     * If *offscreen rendering* is enabled and not painting, start painting.
     */
   def startPainting(): Unit = js.native
+  
   /**
     * Stops any pending navigation.
     */
   def stop(): Unit = js.native
+  
   @JSName("stopFindInPage")
   def stopFindInPage_activateSelection(action: activateSelection): Unit = js.native
   /**
@@ -2273,27 +2374,37 @@ trait WebContents_ extends EventEmitter {
   def stopFindInPage_clearSelection(action: clearSelection): Unit = js.native
   @JSName("stopFindInPage")
   def stopFindInPage_keepSelection(action: keepSelection): Unit = js.native
+  
   /**
     * If *offscreen rendering* is enabled and painting, stop painting.
     */
   def stopPainting(): Unit = js.native
+  
   /**
     * Indicates whether the snapshot has been created successfully.
     * 
   Takes a V8 heap snapshot and saves it to `filePath`.
     */
   def takeHeapSnapshot(filePath: String): js.Promise[Unit] = js.native
+  
   /**
     * Toggles the developer tools.
     */
   def toggleDevTools(): Unit = js.native
+  
   /**
     * Executes the editing command `undo` in web page.
     */
   def undo(): Unit = js.native
+  
   /**
     * Executes the editing command `unselect` in web page.
     */
   def unselect(): Unit = js.native
+  
+  var userAgent: String = js.native
+  
+  var zoomFactor: Double = js.native
+  
+  var zoomLevel: Double = js.native
 }
-

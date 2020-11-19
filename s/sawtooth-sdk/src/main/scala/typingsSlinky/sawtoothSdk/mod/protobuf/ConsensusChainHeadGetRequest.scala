@@ -7,7 +7,7 @@ import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.IConsensusChainHeadGetRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk", "protobuf.ConsensusChainHeadGetRequest")
 @js.native
@@ -19,11 +19,11 @@ class ConsensusChainHeadGetRequest ()
   extends typingsSlinky.sawtoothSdk.protobufMod.ConsensusChainHeadGetRequest {
   def this(properties: IConsensusChainHeadGetRequest) = this()
 }
-
 /* static members */
 @JSImport("sawtooth-sdk", "protobuf.ConsensusChainHeadGetRequest")
 @js.native
 object ConsensusChainHeadGetRequest extends js.Object {
+  
   /**
     * Creates a new ConsensusChainHeadGetRequest instance using the specified properties.
     * @param [properties] Properties to set
@@ -31,6 +31,7 @@ object ConsensusChainHeadGetRequest extends js.Object {
     */
   def create(): typingsSlinky.sawtoothSdk.protobufMod.ConsensusChainHeadGetRequest = js.native
   def create(properties: IConsensusChainHeadGetRequest): typingsSlinky.sawtoothSdk.protobufMod.ConsensusChainHeadGetRequest = js.native
+  
   /**
     * Decodes a ConsensusChainHeadGetRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -43,6 +44,7 @@ object ConsensusChainHeadGetRequest extends js.Object {
   def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusChainHeadGetRequest = js.native
   def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusChainHeadGetRequest = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusChainHeadGetRequest = js.native
+  
   /**
     * Decodes a ConsensusChainHeadGetRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,6 +54,7 @@ object ConsensusChainHeadGetRequest extends js.Object {
     */
   def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ConsensusChainHeadGetRequest = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusChainHeadGetRequest = js.native
+  
   /**
     * Encodes the specified ConsensusChainHeadGetRequest message. Does not implicitly {@link ConsensusChainHeadGetRequest.verify|verify} messages.
     * @param message ConsensusChainHeadGetRequest message or plain object to encode
@@ -60,6 +63,7 @@ object ConsensusChainHeadGetRequest extends js.Object {
     */
   def encode(message: IConsensusChainHeadGetRequest): Writer = js.native
   def encode(message: IConsensusChainHeadGetRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ConsensusChainHeadGetRequest message, length delimited. Does not implicitly {@link ConsensusChainHeadGetRequest.verify|verify} messages.
     * @param message ConsensusChainHeadGetRequest message or plain object to encode
@@ -68,12 +72,14 @@ object ConsensusChainHeadGetRequest extends js.Object {
     */
   def encodeDelimited(message: IConsensusChainHeadGetRequest): Writer = js.native
   def encodeDelimited(message: IConsensusChainHeadGetRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ConsensusChainHeadGetRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ConsensusChainHeadGetRequest
     */
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.ConsensusChainHeadGetRequest = js.native
+  
   /**
     * Creates a plain object from a ConsensusChainHeadGetRequest message. Also converts values to other types if specified.
     * @param message ConsensusChainHeadGetRequest
@@ -85,6 +91,7 @@ object ConsensusChainHeadGetRequest extends js.Object {
     message: typingsSlinky.sawtoothSdk.protobufMod.ConsensusChainHeadGetRequest,
     options: IConversionOptions
   ): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ConsensusChainHeadGetRequest message.
     * @param message Plain object to verify
@@ -92,4 +99,3 @@ object ConsensusChainHeadGetRequest extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

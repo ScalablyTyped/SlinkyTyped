@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.ssmMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.SSM")
 @js.native
@@ -14,4 +14,3 @@ class SSM ()
   extends typingsSlinky.awsSdk.mod.SSM {
   def this(options: ClientConfiguration) = this()
 }
-

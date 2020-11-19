@@ -2,7 +2,7 @@ package typingsSlinky.node7z.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // node-7z uses `when` promises which have a progress method, however they are deprecated
 // internally node-7z uses the progress events to emit files that are extracted,
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PromiseWithProgress[T]
   extends js.Promise[T] {
+  
   def progress(progress: js.Function1[/* files */ js.Array[String], Unit]): this.type = js.native
 }
-

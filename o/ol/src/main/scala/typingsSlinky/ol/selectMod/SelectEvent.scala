@@ -2,7 +2,7 @@ package typingsSlinky.ol.selectMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/interaction/Select", "SelectEvent")
 @js.native
@@ -14,8 +14,10 @@ class SelectEvent protected ()
     deselected: js.Array[typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]],
     mapBrowserEvent: typingsSlinky.ol.mapBrowserEventMod.default
   ) = this()
+  
   var deselected: js.Array[typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]] = js.native
+  
   var mapBrowserEvent: typingsSlinky.ol.mapBrowserEventMod.default = js.native
+  
   var selected: js.Array[typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]] = js.native
 }
-

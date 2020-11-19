@@ -3,11 +3,12 @@ package typingsSlinky.utility.mod
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("utility", "hash")
 @js.native
 object hash_md5 extends js.Object {
+  
   /**
     * --------------------0_0----------------
     * @description Defines For Crypto
@@ -26,4 +27,3 @@ object hash_md5 extends js.Object {
   def apply(method: typingsSlinky.utility.utilityStrings.md5, s: String): String = js.native
   def apply(method: typingsSlinky.utility.utilityStrings.md5, s: Buffer): String = js.native
 }
-

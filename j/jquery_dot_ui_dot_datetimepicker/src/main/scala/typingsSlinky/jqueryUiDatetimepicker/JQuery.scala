@@ -5,10 +5,11 @@ import typingsSlinky.jqueryUiDatetimepicker.jqueryUiDatetimepickerStrings.parseD
 import typingsSlinky.jqueryUiDatetimepicker.jqueryUiDatetimepickerStrings.parseTime
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
+  
   def datetimepicker(): JQuery = js.native
   def datetimepicker(method: String, methodParameter: js.Any): js.Any = js.native
   def datetimepicker(options: DateTimePickerOptions): JQuery = js.native
@@ -19,4 +20,3 @@ trait JQuery extends js.Object {
   @JSName("datetimepicker")
   def datetimepicker_parseTime(method: parseTime, methodParameter: parseTimeOptions): Time = js.native
 }
-

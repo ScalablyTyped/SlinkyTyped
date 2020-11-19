@@ -7,11 +7,12 @@ import typingsSlinky.d3Selection.mod.TransitionLike
 import typingsSlinky.d3Selection.mod.ValueFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
   extends js.Function {
+  
   /**
     * Applies this zoom behavior to the specified selection, binding the necessary event listeners to
     * allow panning and zooming, and initializing the zoom transform on each selected element to the identity transform if not already defined. This function is typically not invoked directly,
@@ -23,6 +24,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * @param args Optional arguments to be passed in.
     */
   def apply(selection: Selection_[ZoomRefElement, Datum, _, _], args: js.Any*): Unit = js.native
+  
   /**
     * Return the current click distance threshold, which defaults to zero.
     */
@@ -36,6 +38,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * The default is zero.
     */
   def clickDistance(distance: Double): this.type = js.native
+  
   /**
     * Returns the current constraint function.
     * The default implementation attempts to ensure that the viewport extent does not go outside the translate extent.
@@ -60,6 +63,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
       ZoomTransform_
     ]
   ): this.type = js.native
+  
   /**
     * Get the duration for zoom transitions on double-click and double-tap in milliseconds.
     */
@@ -72,6 +76,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * @param Duration in milliseconds.
     */
   def duration(duration: Double): this.type = js.native
+  
   /**
     * Return the current extent accessor, which defaults to [[0, 0], [width, height]] where width is the client width of the element and height is its client height;
     * for SVG elements, the nearest ancestor SVG element’s width and height is used. In this case,
@@ -122,6 +127,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
       js.Tuple2[js.Tuple2[Double, Double], js.Tuple2[Double, Double]]
     ]
   ): this.type = js.native
+  
   /**
     * Returns the current filter function.
     */
@@ -139,6 +145,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * with this as the current DOM element. The function returns a boolean value.
     */
   def filter(filterFn: ValueFn[ZoomRefElement, Datum, Boolean]): this.type = js.native
+  
   /**
     * Sets the interpolation factory for zoom transitions to the specified function.
     * Use the default d3.interpolateZoom to implement smooth zooming.
@@ -156,6 +163,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * Returns the current interpolation factory, which defaults to d3.interpolateZoom to implement smooth zooming.
     */
   def interpolate[InterpolationFactory /* <: js.Function2[/* a */ ZoomView, /* b */ ZoomView, js.Function1[/* t */ Double, ZoomView]] */](): InterpolationFactory = js.native
+  
   /**
     * Return the first currently-assigned listener matching the specified typenames, if any.
     *
@@ -194,6 +202,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * with this as the current DOM element.
     */
   def on(typenames: String, listener: ValueFn[ZoomRefElement, Datum, Unit]): this.type = js.native
+  
   /**
     * Scales the current zoom transform of the selected elements by k, such that the new k(1) = k(0)k.
     *
@@ -246,6 +255,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * with this as the current DOM element.The function returns the scale factor.
     */
   def scaleBy(transition: TransitionLike[ZoomRefElement, Datum], k: ValueFn[ZoomRefElement, Datum, Double]): Unit = js.native
+  
   /**
     * Return the current scale extent.
     */
@@ -266,6 +276,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * @param extent A scale extent array of two numbers representing the scale boundaries.
     */
   def scaleExtent(extent: js.Tuple2[Double, Double]): this.type = js.native
+  
   /**
     * Scales the current zoom transform of the selected elements to k, such that the new k(1) = k.
     *
@@ -318,6 +329,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * with this as the current DOM element.The function returns the new scale.
     */
   def scaleTo(transition: TransitionLike[ZoomRefElement, Datum], k: ValueFn[ZoomRefElement, Datum, Double]): Unit = js.native
+  
   /**
     * Returns the current touch support detector, which defaults to a function returning true,
     * if the "ontouchstart" event is supported on the current element.
@@ -345,6 +357,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * the current index (i), and the current group (nodes), with this as the current DOM element. The function returns a boolean value.
     */
   def touchable(touchable: ValueFn[ZoomRefElement, Datum, Boolean]): this.type = js.native
+  
   /**
     * Sets the current zoom transform of the selected elements to the transform returned by the specified
     * zoom transform factory function evaluated for each element, instantaneously emitting start, zoom and end events.
@@ -420,6 +433,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * @param transform A zoom transform object.
     */
   def transform(transition: TransitionLike[ZoomRefElement, Datum], transform: ZoomTransform_): Unit = js.native
+  
   /**
     * Translates the current zoom transform of the selected elements by x and y,
     * such that the new t(x1) = t(x0) + kx and t(y1) = t(y0) + ky.
@@ -577,6 +591,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     x: ValueFn[ZoomRefElement, Datum, Double],
     y: ValueFn[ZoomRefElement, Datum, Double]
   ): Unit = js.native
+  
   /**
     * Return the current translate extent.
     */
@@ -593,6 +608,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     * @param extent A translate extent array, i.e. an array of two arrays, each representing a point.
     */
   def translateExtent(extent: js.Tuple2[js.Tuple2[Double, Double], js.Tuple2[Double, Double]]): this.type = js.native
+  
   /**
     * Translates the current zoom transform of the selected elements such that the specified position ⟨x,y⟩ appears at the center of the viewport extent.
     * The new tx = cx - kx and ty = cy - ky, where ⟨cx,cy⟩ is the center.
@@ -750,6 +766,7 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     x: ValueFn[ZoomRefElement, Datum, Double],
     y: ValueFn[ZoomRefElement, Datum, Double]
   ): Unit = js.native
+  
   /**
     * Returns the current wheelDelta function.
     */
@@ -766,4 +783,3 @@ trait ZoomBehavior[ZoomRefElement /* <: Element */, Datum]
     */
   def wheelDelta(delta: ValueFn[ZoomRefElement, Datum, Double]): this.type = js.native
 }
-

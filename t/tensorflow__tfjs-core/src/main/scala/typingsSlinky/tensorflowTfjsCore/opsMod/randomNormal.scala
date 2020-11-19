@@ -6,11 +6,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.float32
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.int32
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/ops", "randomNormal")
 @js.native
 object randomNormal extends js.Object {
+  
   def apply[R /* <: Rank */](
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any
   ): Tensor[R] = js.native
@@ -161,4 +162,3 @@ object randomNormal extends js.Object {
     seed: Double
   ): Tensor[R] = js.native
 }
-

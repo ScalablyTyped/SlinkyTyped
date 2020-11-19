@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "mongration"
-version := "1.0-dt-20200515Z-d5af40"
+version := "1.0-dt-20200515Z-90ac67"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "bson" % "4.0-dt-20200515Z-f9be85",
-  "org.scalablytyped.slinky" %%% "mongodb" % "3.5-dt-20200624Z-f0ff63",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-df8c17",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "bson" % "4.0-dt-20200515Z-62bbfd",
+  "org.scalablytyped.slinky" %%% "mongodb" % "3.5-dt-20200624Z-897802",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

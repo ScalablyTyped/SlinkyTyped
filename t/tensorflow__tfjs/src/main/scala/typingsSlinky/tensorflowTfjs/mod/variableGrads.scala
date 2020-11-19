@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Variable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "variableGrads")
 @js.native
 object variableGrads extends js.Object {
+  
   /**
     * Computes and returns the gradient of f(x) with respect to the list of
     * trainable variables provided by `varList`. If no list is provided, it
@@ -45,4 +46,3 @@ object variableGrads extends js.Object {
     varList: js.Array[Variable[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]]
   ): Value = js.native
 }
-

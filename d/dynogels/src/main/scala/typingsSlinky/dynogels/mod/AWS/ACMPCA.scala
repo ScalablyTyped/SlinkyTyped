@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.acmpcaMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.ACMPCA")
 @js.native
@@ -14,4 +14,3 @@ class ACMPCA ()
   extends typingsSlinky.awsSdk.mod.ACMPCA {
   def this(options: ClientConfiguration) = this()
 }
-

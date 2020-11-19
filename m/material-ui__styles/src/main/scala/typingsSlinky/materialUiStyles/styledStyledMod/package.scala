@@ -2,9 +2,10 @@ package typingsSlinky.materialUiStyles
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object styledStyledMod {
+  
   type ComponentCreator[Component /* <: slinky.core.facade.ReactElement */] = js.Function2[
     /* styles */ typingsSlinky.materialUiStyles.withStylesWithStylesMod.CreateCSSProperties[typingsSlinky.react.mod.ComponentPropsWithoutRef[Component]] | (js.Function1[
       /* props */ typingsSlinky.materialUiStyles.anon.ThemeTheme[typingsSlinky.materialUiStyles.defaultThemeMod.DefaultTheme] with typingsSlinky.react.mod.ComponentPropsWithoutRef[Component], 
@@ -23,5 +24,6 @@ package object styledStyledMod {
       ])
     ]
   ]
+  
   type StyledComponent[P /* <: js.Object */] = js.Function1[/* props */ P, slinky.core.facade.ReactElement | scala.Null]
 }

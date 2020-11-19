@@ -2,16 +2,20 @@ package typingsSlinky.chrome.global.chrome.cast
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("chrome.cast.AutoJoinPolicy")
 @js.native
 object AutoJoinPolicy extends js.Object {
-  /* "custom_controller_scoped" */ val CUSTOM_CONTROLLER_SCOPED: typingsSlinky.chrome.chrome.cast.AutoJoinPolicy.CUSTOM_CONTROLLER_SCOPED with String = js.native
-  /* "origin_scoped" */ val ORIGIN_SCOPED: typingsSlinky.chrome.chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED with String = js.native
-  /* "page_scoped" */ val PAGE_SCOPED: typingsSlinky.chrome.chrome.cast.AutoJoinPolicy.PAGE_SCOPED with String = js.native
-  /* "tab_and_origin_scoped" */ val TAB_AND_ORIGIN_SCOPED: typingsSlinky.chrome.chrome.cast.AutoJoinPolicy.TAB_AND_ORIGIN_SCOPED with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.chrome.chrome.cast.AutoJoinPolicy with String] = js.native
+  
+  /* "custom_controller_scoped" */ val CUSTOM_CONTROLLER_SCOPED: typingsSlinky.chrome.chrome.cast.AutoJoinPolicy.CUSTOM_CONTROLLER_SCOPED with String = js.native
+  
+  /* "origin_scoped" */ val ORIGIN_SCOPED: typingsSlinky.chrome.chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED with String = js.native
+  
+  /* "page_scoped" */ val PAGE_SCOPED: typingsSlinky.chrome.chrome.cast.AutoJoinPolicy.PAGE_SCOPED with String = js.native
+  
+  /* "tab_and_origin_scoped" */ val TAB_AND_ORIGIN_SCOPED: typingsSlinky.chrome.chrome.cast.AutoJoinPolicy.TAB_AND_ORIGIN_SCOPED with String = js.native
 }
-

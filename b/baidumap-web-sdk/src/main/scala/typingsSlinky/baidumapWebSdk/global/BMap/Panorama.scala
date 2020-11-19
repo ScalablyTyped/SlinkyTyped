@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.baidumapWebSdk.BMap.PanoramaOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BMap.Panorama")
 @js.native
@@ -15,4 +15,3 @@ class Panorama protected ()
   def this(container: String, opts: PanoramaOptions) = this()
   def this(container: HTMLElement, opts: PanoramaOptions) = this()
 }
-

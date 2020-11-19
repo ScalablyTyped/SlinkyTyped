@@ -6,15 +6,15 @@ import typingsSlinky.sharepoint.sharepointStrings.fullscreenchange
 import typingsSlinky.std.GlobalEventHandlers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AttachEvent")
 @js.native
 object AttachEvent_fullscreenchange extends js.Object {
+  
   def apply(
     `type`: fullscreenchange,
     eventFunc: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     el: GlobalEventHandlers
   ): js.Any = js.native
 }
-

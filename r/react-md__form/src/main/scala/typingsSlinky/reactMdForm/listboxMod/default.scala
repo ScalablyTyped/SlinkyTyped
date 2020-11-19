@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdList.listMod.ListElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This component is used to render the list part of a `<select>` element with
@@ -18,4 +18,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/form/types/select/Listbox", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[ListboxProps with RefAttributes[ListElement]]]
-

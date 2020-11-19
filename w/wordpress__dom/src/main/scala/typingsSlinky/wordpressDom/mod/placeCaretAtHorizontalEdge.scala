@@ -3,12 +3,12 @@ package typingsSlinky.wordpressDom.mod
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/dom", "placeCaretAtHorizontalEdge")
 @js.native
 object placeCaretAtHorizontalEdge extends js.Object {
+  
   def apply(container: js.UndefOr[scala.Nothing], isReverse: Boolean): Unit = js.native
   def apply(container: HTMLElement, isReverse: Boolean): Unit = js.native
 }
-

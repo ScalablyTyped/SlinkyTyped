@@ -4,7 +4,7 @@ import typingsSlinky.sipJs.outgoingRequestMod.OutgoingRequestDelegate
 import typingsSlinky.sipJs.outgoingRequestMod.RequestOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js", "Core.ByeUserAgentClient")
 @js.native
@@ -23,4 +23,3 @@ class ByeUserAgentClient protected ()
     options: RequestOptions
   ) = this()
 }
-

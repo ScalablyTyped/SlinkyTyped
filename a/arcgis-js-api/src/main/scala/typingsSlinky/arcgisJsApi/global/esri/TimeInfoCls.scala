@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.TimeInfoProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.TimeInfo")
 @js.native
@@ -16,4 +16,3 @@ class TimeInfoCls ()
   extends typingsSlinky.arcgisJsApi.esri.TimeInfo {
   def this(properties: TimeInfoProperties) = this()
 }
-

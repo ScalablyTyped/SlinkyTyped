@@ -4,11 +4,11 @@ import typingsSlinky.prosemirrorModel.mod.Schema
 import typingsSlinky.prosemirrorTables.anon.RecordTableRolesNodeTypea
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("prosemirror-tables", "tableNodeTypes")
 @js.native
 object tableNodeTypes extends js.Object {
+  
   def apply(schema: Schema[_, _]): RecordTableRolesNodeTypea = js.native
 }
-

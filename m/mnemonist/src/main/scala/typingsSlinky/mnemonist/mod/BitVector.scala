@@ -4,7 +4,7 @@ import typingsSlinky.mnemonist.bitVectorMod.BitVectorOptions
 import typingsSlinky.mnemonist.bitVectorMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mnemonist", "BitVector")
 @js.native
@@ -13,4 +13,3 @@ class BitVector protected () extends default {
   def this(length: Double) = this()
   def this(options: BitVectorOptions) = this()
 }
-

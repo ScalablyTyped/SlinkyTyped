@@ -8,11 +8,12 @@ import typingsSlinky.reactRelay.entryPointTypesMod.IEnvironmentProvider
 import typingsSlinky.reactRelay.entryPointTypesMod.PreloadedEntryPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-relay/lib/relay-experimental/prepareEntryPoint", JSImport.Namespace)
 @js.native
 object prepareEntryPointMod extends js.Object {
+  
   def prepareEntryPoint[TEntryPointParams /* <: js.Object */, TPreloadedQueries /* <: js.Object */, TPreloadedEntryPoints /* <: js.Object */, TRuntimeProps /* <: js.Object */, TExtraProps, TEntryPointComponent /* <: ReactComponentClass[
     EntryPointProps[
       // tslint:disable-next-line no-unnecessary-generics
@@ -32,4 +33,3 @@ object prepareEntryPointMod extends js.Object {
     entryPointParams: TEntryPointParams
   ): PreloadedEntryPoint[TEntryPointComponent] = js.native
 }
-

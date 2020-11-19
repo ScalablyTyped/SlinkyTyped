@@ -2,15 +2,18 @@ package typingsSlinky.cytoscape
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /**
     * http://js.cytoscape.org/#collection/style
     */
   type ClassName = java.lang.String
+  
   /** A space-separated list of class names or an array */
   type ClassNames = java.lang.String | js.Array[typingsSlinky.cytoscape.mod.ClassName]
+  
   /**
     * The output is a collection of node and edge elements OR single element.
     */
@@ -26,6 +29,7 @@ package object mod {
     typingsSlinky.cytoscape.mod.SingularElementReturnValue, 
     typingsSlinky.cytoscape.mod.SingularElementArgument
   ])
+  
   /**
     * Get a new collection, resulting from the collection without some specified elements.
     * http://js.cytoscape.org/#eles.difference
@@ -36,6 +40,7 @@ package object mod {
     /* eles */ typingsSlinky.cytoscape.mod.CollectionArgument | typingsSlinky.cytoscape.mod.Selector, 
     typingsSlinky.cytoscape.mod.CollectionReturnValue
   ]
+  
   /**
     * Get the elements in both this collection and another specified collection.
     * http://js.cytoscape.org/#eles.intersection
@@ -47,6 +52,7 @@ package object mod {
     /* eles */ typingsSlinky.cytoscape.mod.CollectionArgument | typingsSlinky.cytoscape.mod.Selector, 
     typingsSlinky.cytoscape.mod.CollectionReturnValue
   ]
+  
   /**
     * http://js.cytoscape.org/#collection/building--filtering
     */
@@ -60,10 +66,12 @@ package object mod {
     /* eles */ typingsSlinky.cytoscape.mod.CollectionArgument | js.Array[typingsSlinky.cytoscape.mod.CollectionArgument] | typingsSlinky.cytoscape.mod.Selector, 
     typingsSlinky.cytoscape.mod.CollectionReturnValue
   ]
+  
   type CollectionReturnValue = (typingsSlinky.cytoscape.mod.Collection[
     typingsSlinky.cytoscape.mod.SingularElementReturnValue, 
     typingsSlinky.cytoscape.mod.SingularElementArgument
   ]) with typingsSlinky.cytoscape.mod.EdgeCollection with typingsSlinky.cytoscape.mod.NodeCollection with typingsSlinky.cytoscape.mod.SingularElementReturnValue
+  
   /**
     * Get the elements that are in the calling collection or the passed collection but not in both.
     * http://js.cytoscape.org/#eles.symmetricDifference
@@ -75,13 +83,16 @@ package object mod {
     /* eles */ typingsSlinky.cytoscape.mod.CollectionArgument | typingsSlinky.cytoscape.mod.Selector, 
     typingsSlinky.cytoscape.mod.CollectionReturnValue
   ]
+  
   type CssStyleDeclaration = js.Any
+  
   type ElementCollectionFunction = js.Function3[
     /* ele */ typingsSlinky.cytoscape.mod.NodeSingular, 
     /* ix */ scala.Double, 
     /* eles */ typingsSlinky.cytoscape.mod.CollectionArgument, 
     typingsSlinky.cytoscape.mod.Position
   ]
+  
   /**
     * @param ele The element being iterated over for which the function should return a position to set.
     * @param ix The index of the element when iterating over the elements in the collection.
@@ -91,16 +102,19 @@ package object mod {
     /* ix */ scala.Double, 
     typingsSlinky.cytoscape.mod.Position
   ]
+  
   type EventHandler = js.Function2[
     /* event */ typingsSlinky.cytoscape.mod.EventObject, 
     /* extraParams */ js.UndefOr[js.Any], 
     scala.Unit
   ]
+  
   /**
     * A space separated list of event names.
     * http://js.cytoscape.org/#cy.promiseOn
     */
   type EventNames = java.lang.String
+  
   /**
     * Cytoscape extension type
     * Definition of an extension would be in following form:
@@ -117,16 +131,21 @@ package object mod {
     ], 
     scala.Unit
   ]
+  
   type LayoutHandler = js.Function1[/* e */ typingsSlinky.cytoscape.mod.LayoutEventObject, scala.Unit]
+  
   /**
     * http://js.cytoscape.org/#collection/traversing
     */
   type MinumumSpanningTree = js.Any
+  
   type NodePositionFunction = js.Function1[/* nodeid */ java.lang.String, typingsSlinky.cytoscape.mod.Position]
+  
   /**
     * http://js.cytoscape.org/#layouts/preset
     */
   type NodePositionMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.cytoscape.mod.Position]
+  
   /**
     * Usually temp or nonserialisable data can be stored.
     * http://js.cytoscape.org/#notation/elements-json
@@ -134,6 +153,7 @@ package object mod {
     * http://js.cytoscape.org/#ele.scratch
     */
   type Scratchpad = js.Any
+  
   /**
     * The handler returns true when it finds the desired node, and it returns false to cancel the search.
     * v - The current node.
@@ -150,6 +170,7 @@ package object mod {
     /* depth */ scala.Double, 
     scala.Boolean | scala.Unit
   ]
+  
   /**
     * A selector functions similar to a CSS selector on DOM elements,
     * but selectors in Cytoscape.js instead work on
@@ -164,17 +185,21 @@ package object mod {
     * Selectors are an island grammar.
     */
   type Selector = java.lang.String
+  
   type SingularElementReturnValue = typingsSlinky.cytoscape.mod.EdgeSingular with typingsSlinky.cytoscape.mod.NodeSingular
+  
   // function(a, b){ return a.data('weight') - b.data('weight') }
   type SortingFunction = js.Function2[
     /* a */ typingsSlinky.cytoscape.mod.SortableNode, 
     /* b */ typingsSlinky.cytoscape.mod.SortableNode, 
     scala.Double
   ]
+  
   /**
     *
     * http://js.cytoscape.org/#collection/algorithms
     */
   type WeightFn = js.Function1[/* edge */ typingsSlinky.cytoscape.mod.EdgeCollection, scala.Double]
+  
   type ZoomOptions = typingsSlinky.cytoscape.mod.ZoomOptionsLevel with (typingsSlinky.cytoscape.mod.ZoomOptionsModel | typingsSlinky.cytoscape.mod.ZoomOptionsRendered)
 }

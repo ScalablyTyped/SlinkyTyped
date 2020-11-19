@@ -2,7 +2,7 @@ package typingsSlinky.cassanknex.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.cassanknex.cassanknexStrings.Equalssign
@@ -12,17 +12,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.cassanknex.cassanknexStrings.GreaterthansignEqualssign
 */
 trait ComparisonRestriction extends js.Object
-
 object ComparisonRestriction {
+  
   @scala.inline
   def Equalssign: typingsSlinky.cassanknex.cassanknexStrings.Equalssign = "=".asInstanceOf[typingsSlinky.cassanknex.cassanknexStrings.Equalssign]
+  
   @scala.inline
   def Greaterthansign: typingsSlinky.cassanknex.cassanknexStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.cassanknex.cassanknexStrings.Greaterthansign]
+  
   @scala.inline
   def GreaterthansignEqualssign: typingsSlinky.cassanknex.cassanknexStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.cassanknex.cassanknexStrings.GreaterthansignEqualssign]
+  
   @scala.inline
   def Lessthansign: typingsSlinky.cassanknex.cassanknexStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.cassanknex.cassanknexStrings.Lessthansign]
+  
   @scala.inline
   def LessthansignEqualssign: typingsSlinky.cassanknex.cassanknexStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.cassanknex.cassanknexStrings.LessthansignEqualssign]
 }
-

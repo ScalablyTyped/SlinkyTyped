@@ -4,13 +4,27 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.fsMod.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("metalsmith", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  /**
+    * Initialize a new `Metalsmith` builder with a working `directory`.
+    * @param directory  - The working directory.
+    * @example
+    * initialize Metalsmith with the node.js working directory
+    * Metalsmith(__dirname);
+    * @link [Metalsmith] http://www.metalsmith.io/
+    * @link [API] https://github.com/segmentio/metalsmith#new-metalsmithdir
+    * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L30
+    */
+  def apply(directory: String): Metalsmith = js.native
+  
   @js.native
   trait Metalsmith extends js.Object {
+    
     /**
       * Perform the `build` with the current settings outputting to the destination directory.
       * @param fn - Optional Callback function.
@@ -25,6 +39,7 @@ object mod extends js.Object {
       */
     def build(): js.Object = js.native
     def build(fn: Callback): js.Object = js.native
+    
     /**
       * Get the flag on whether the destination directory will be `cleaned` before writing.
       * @example
@@ -44,6 +59,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L132
       */
     def clean(clean: Boolean): Metalsmith = js.native
+    
     /**
       * Get the `maximum` number of files to open at once.
       * @example
@@ -63,6 +79,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L118
       */
     def concurrency(max: Double): Metalsmith = js.native
+    
     /**
       * Get the absolute path of the `destination` directory.
       * @example
@@ -85,6 +102,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L104
       */
     def destination(path: String): Metalsmith = js.native
+    
     /**
       * Get the absolute path of the `working` directory
       * @example
@@ -107,6 +125,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L62
       */
     def directory(directory: String): Metalsmith = js.native
+    
     /**
       * Get the flag on whether to parse YAML `frontmatter`
       * @example
@@ -126,6 +145,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L145
       */
     def frontmatter(frontmatter: Boolean): Metalsmith = js.native
+    
     /**
       * Get the array of `Ignored` files/paths.
       * @example
@@ -152,6 +172,7 @@ object mod extends js.Object {
     def ignore(files: String): Metalsmith = js.native
     def ignore(files: js.Array[Ignore | String]): Metalsmith = js.native
     def ignore(files: Ignore): Metalsmith = js.native
+    
     /**
       * Get the global `metadata` object passed to templates.
       * @example
@@ -171,6 +192,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L76
       */
     def metadata(metadata: js.Object): Metalsmith = js.native
+    
     /**
       * Resolve `paths` relative to the root directory.
       * @param paths - The `paths` to resolve.
@@ -181,6 +203,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L171
       */
     def path(paths: String*): String = js.native
+    
     /**
       * `Process` files through plugins without writing out files.
       * @param fn - Optional Callback function.
@@ -195,6 +218,7 @@ object mod extends js.Object {
       */
     def process(): js.Object = js.native
     def process(fn: Callback): js.Object = js.native
+    
     /**
       * Read a dictionary of files from a `dir`, parsing frontmatter. If no directory
       * is provided, it will default to the source directory.
@@ -216,6 +240,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L227
       */
     def read(fn: Callback): js.Object = js.native
+    
     /**
       * Read a `file` by path. If the path is not absolute, it will be resolved
       * relative to the source directory.
@@ -226,6 +251,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L261
       */
     def readFile(file: String): js.Object = js.native
+    
     /**
       * `Run` a set of files through the plugins stack.
       * @param files - The dictionary of files.
@@ -252,6 +278,7 @@ object mod extends js.Object {
       */
     def run(files: js.Object, plugins: js.Array[Plugin]): js.Object = js.native
     def run(files: js.Object, plugins: js.Array[Plugin], fn: Callback): js.Object = js.native
+    
     /**
       * Get the absolute path of the `source` directory.
       * @example
@@ -274,6 +301,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L90
       */
     def source(path: String): Metalsmith = js.native
+    
     def use(plugin: js.Array[Plugin]): Metalsmith = js.native
     /**
       * Add a `plugin` function to the stack.
@@ -285,6 +313,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L50
       */
     def use(plugin: Plugin): Metalsmith = js.native
+    
     /**
       * Write a dictionary of `files` to a destination `dir`. If no directory is
       * provided, it will default to the destination directory.
@@ -311,6 +340,7 @@ object mod extends js.Object {
       * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L308
       */
     def write(files: js.Object, fn: Callback): Unit = js.native
+    
     /**
       * Write a `file` by path with `data`. If the path is not absolute, it will be
       * resolved relative to the destination directory.
@@ -324,20 +354,11 @@ object mod extends js.Object {
     def writeFile(file: String, data: js.Object): Unit = js.native
   }
   
-  /**
-    * Initialize a new `Metalsmith` builder with a working `directory`.
-    * @param directory  - The working directory.
-    * @example
-    * initialize Metalsmith with the node.js working directory
-    * Metalsmith(__dirname);
-    * @link [Metalsmith] http://www.metalsmith.io/
-    * @link [API] https://github.com/segmentio/metalsmith#new-metalsmithdir
-    * @link [Source] https://github.com/segmentio/metalsmith/blob/00b2c7aaee13fbe0f7fb3be332929a303b2df51d/lib/index.js#L30
-    */
-  def apply(directory: String): Metalsmith = js.native
   type Callback = js.Function3[/* err */ js.Error | Null, /* files */ Files, /* metalsmith */ Metalsmith, Unit]
+  
   type Files = StringDictionary[js.Any]
+  
   type Ignore = js.Function2[/* path */ String, /* stat */ Stats, Unit]
+  
   type Plugin = js.Function3[/* files */ Files, /* metalsmith */ Metalsmith, /* callback */ Callback, Unit]
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.typescriptServices.global.TypeScript
 import typingsSlinky.typescriptServices.TypeScript.IScriptSnapshot
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.Document")
 @js.native
@@ -22,11 +22,11 @@ class Document protected ()
     _topLevelDecl: typingsSlinky.typescriptServices.TypeScript.PullDecl
   ) = this()
 }
-
 /* static members */
 @JSGlobal("TypeScript.Document")
 @js.native
 object Document extends js.Object {
+  
   def create(
     compiler: typingsSlinky.typescriptServices.TypeScript.TypeScriptCompiler,
     semanticInfoChain: typingsSlinky.typescriptServices.TypeScript.SemanticInfoChain,
@@ -38,4 +38,3 @@ object Document extends js.Object {
     referencedFiles: js.Array[String]
   ): typingsSlinky.typescriptServices.TypeScript.Document = js.native
 }
-

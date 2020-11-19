@@ -2,7 +2,7 @@ package typingsSlinky.cytoscape.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A string indicating the selection behaviour from user input.
@@ -17,11 +17,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.cytoscape.cytoscapeStrings.single
 */
 trait SelectionType extends js.Object
-
 object SelectionType {
+  
   @scala.inline
   def additive: typingsSlinky.cytoscape.cytoscapeStrings.additive = "additive".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.additive]
+  
   @scala.inline
   def single: typingsSlinky.cytoscape.cytoscapeStrings.single = "single".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.single]
 }
-

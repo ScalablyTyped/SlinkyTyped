@@ -5,7 +5,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/domain-model relevant section in reference guide}
@@ -22,17 +22,18 @@ class DomainModel protected ()
     container: IModule
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "domainmodels.DomainModel")
 @js.native
 object DomainModel extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates a new DomainModel unit in the SDK and on the server.
     * Expects one argument, the projects.IModule in which this unit is contained.
     */
   def createIn(container: IModule): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.DomainModel = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.lensFlaresIndexMod
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/LensFlares/index", "LensFlareSystem")
 @js.native
@@ -23,11 +23,11 @@ class LensFlareSystem protected ()
     */
   name: String, emitter: js.Any, scene: Scene) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/LensFlares/index", "LensFlareSystem")
 @js.native
 object LensFlareSystem extends js.Object {
+  
   /**
     * Parse a lens flare system from a JSON repressentation
     * @param parsedLensFlareSystem Define the JSON to parse
@@ -36,7 +36,7 @@ object LensFlareSystem extends js.Object {
     * @returns the parsed system
     */
   def Parse(parsedLensFlareSystem: js.Any, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.lensFlareSystemMod.LensFlareSystem = js.native
+  
   /** @hidden */
   def _SceneComponentInitialization(scene: Scene): Unit = js.native
 }
-

@@ -2,47 +2,98 @@ package typingsSlinky.babylonjs.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+@js.native
 trait DevicePose extends js.Object {
+  
   /**
     * The angularAcceleration of the device, values in array are [x,y,z].
     */
-  val angularAcceleration: Nullable[js.typedarray.Float32Array]
+  val angularAcceleration: Nullable[js.typedarray.Float32Array] = js.native
+  
   /**
     * The angularVelocity of the device, values in array are [x,y,z].
     */
-  val angularVelocity: Nullable[js.typedarray.Float32Array]
+  val angularVelocity: Nullable[js.typedarray.Float32Array] = js.native
+  
   /**
     * The linearAcceleration of the device, values in array are [x,y,z].
     */
-  val linearAcceleration: Nullable[js.typedarray.Float32Array]
+  val linearAcceleration: Nullable[js.typedarray.Float32Array] = js.native
+  
   /**
     * The linearVelocity of the device, values in array are [x,y,z].
     */
-  val linearVelocity: Nullable[js.typedarray.Float32Array]
+  val linearVelocity: Nullable[js.typedarray.Float32Array] = js.native
+  
   /**
     * The orientation of the device in a quaternion array, values in array are [x,y,z,w].
     */
-  val orientation: Nullable[js.typedarray.Float32Array]
+  val orientation: Nullable[js.typedarray.Float32Array] = js.native
+  
   /**
     * The position of the device, values in array are [x,y,z].
     */
-  val position: Nullable[js.typedarray.Float32Array]
+  val position: Nullable[js.typedarray.Float32Array] = js.native
 }
-
 object DevicePose {
+  
   @scala.inline
-  def apply(
-    angularAcceleration: Nullable[js.typedarray.Float32Array] = null,
-    angularVelocity: Nullable[js.typedarray.Float32Array] = null,
-    linearAcceleration: Nullable[js.typedarray.Float32Array] = null,
-    linearVelocity: Nullable[js.typedarray.Float32Array] = null,
-    orientation: Nullable[js.typedarray.Float32Array] = null,
-    position: Nullable[js.typedarray.Float32Array] = null
-  ): DevicePose = {
-    val __obj = js.Dynamic.literal(angularAcceleration = angularAcceleration.asInstanceOf[js.Any], angularVelocity = angularVelocity.asInstanceOf[js.Any], linearAcceleration = linearAcceleration.asInstanceOf[js.Any], linearVelocity = linearVelocity.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any])
+  def apply(): DevicePose = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[DevicePose]
   }
+  
+  @scala.inline
+  implicit class DevicePoseOps[Self <: DevicePose] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
+    }
+    
+    @scala.inline
+    def setAngularAcceleration(value: Nullable[js.typedarray.Float32Array]): Self = this.set("angularAcceleration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAngularAccelerationNull: Self = this.set("angularAcceleration", null)
+    
+    @scala.inline
+    def setAngularVelocity(value: Nullable[js.typedarray.Float32Array]): Self = this.set("angularVelocity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAngularVelocityNull: Self = this.set("angularVelocity", null)
+    
+    @scala.inline
+    def setLinearAcceleration(value: Nullable[js.typedarray.Float32Array]): Self = this.set("linearAcceleration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLinearAccelerationNull: Self = this.set("linearAcceleration", null)
+    
+    @scala.inline
+    def setLinearVelocity(value: Nullable[js.typedarray.Float32Array]): Self = this.set("linearVelocity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLinearVelocityNull: Self = this.set("linearVelocity", null)
+    
+    @scala.inline
+    def setOrientation(value: Nullable[js.typedarray.Float32Array]): Self = this.set("orientation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOrientationNull: Self = this.set("orientation", null)
+    
+    @scala.inline
+    def setPosition(value: Nullable[js.typedarray.Float32Array]): Self = this.set("position", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPositionNull: Self = this.set("position", null)
+  }
 }
-

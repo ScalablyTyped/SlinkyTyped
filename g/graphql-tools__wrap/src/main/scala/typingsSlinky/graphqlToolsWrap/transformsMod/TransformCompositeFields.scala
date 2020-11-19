@@ -7,7 +7,7 @@ import typingsSlinky.graphqlToolsWrap.typesMod.FieldNodeTransformer
 import typingsSlinky.graphqlToolsWrap.typesMod.FieldTransformer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/transforms", "TransformCompositeFields")
 @js.native
@@ -49,4 +49,3 @@ class TransformCompositeFields protected () extends default {
     errorsTransformer: ErrorsTransformer
   ) = this()
 }
-

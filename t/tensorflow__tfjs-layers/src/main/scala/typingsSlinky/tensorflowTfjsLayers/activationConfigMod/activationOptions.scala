@@ -14,7 +14,7 @@ import typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.softsign
 import typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.tanh
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/keras_format/activation_config", "activationOptions")
 @js.native
@@ -24,4 +24,3 @@ object activationOptions
         linear | relu_ | elu_ | relu6 | sigmoid | softplus | tanh | softmax_ | selu | hard_sigmoid | softsign
       ]
     ]
-

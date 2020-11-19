@@ -2,7 +2,7 @@ package typingsSlinky.mocha.Mocha
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.mocha.mochaStrings.Base
@@ -35,4 +35,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.mocha.mochaStrings.`json-stream`
 */
 trait Reporter extends js.Object
-

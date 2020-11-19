@@ -2,13 +2,14 @@ package typingsSlinky.appleMapkitJs.mapkit
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An object that retrieves map-based search results for a user-entered query.
   */
 @js.native
 trait Search extends js.Object {
+  
   def autocomplete(query: String, callback: AutocompleteSearchCallback): Unit = js.native
   def autocomplete(query: String, callback: AutocompleteSearchCallback, options: SearchOptions): Unit = js.native
   /**
@@ -20,6 +21,7 @@ trait Search extends js.Object {
     */
   def autocomplete(query: String, callback: SearchDelegate): Unit = js.native
   def autocomplete(query: String, callback: SearchDelegate, options: SearchOptions): Unit = js.native
+  
   /**
     * Cancels a search request using its request ID.
     *
@@ -27,6 +29,7 @@ trait Search extends js.Object {
     * @return true if the server canceled the pending search request.
     */
   def cancel(id: Double): Boolean = js.native
+  
   def search(query: String, callback: SearchCallback[String]): Double = js.native
   def search(query: String, callback: SearchCallback[String], options: SearchOptions): Double = js.native
   /**
@@ -51,4 +54,3 @@ trait Search extends js.Object {
   def search(query: SearchAutocompleteResult, callback: SearchDelegate): Double = js.native
   def search(query: SearchAutocompleteResult, callback: SearchDelegate, options: SearchOptions): Double = js.native
 }
-

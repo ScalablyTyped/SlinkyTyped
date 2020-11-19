@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.BottomBarItem
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "pages.NoClientAction")
 @js.native
@@ -25,31 +25,32 @@ class NoClientAction protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "pages.NoClientAction")
 @js.native
 object NoClientAction extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'action' property
     * of the parent ActionButton element passed as argument.
     */
   def createInActionButtonUnderAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ActionButton): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'action' property
     * of the parent ActionItem element passed as argument.
     */
   def createInActionItemUnderAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ActionItem): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'onChangeAction' property
@@ -59,6 +60,7 @@ object NoClientAction extends js.Object {
     *  7.13.0 and higher
     */
   def createInAssociationWidgetUnderOnChangeAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.AssociationWidget): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'onChangeAction' property
@@ -68,6 +70,7 @@ object NoClientAction extends js.Object {
     *  7.13.0 and higher
     */
   def createInAttributeWidgetUnderOnChangeAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.AttributeWidget): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'onEnterAction' property
@@ -77,6 +80,7 @@ object NoClientAction extends js.Object {
     *  7.13.0 and higher
     */
   def createInAttributeWidgetUnderOnEnterAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.AttributeWidget): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'onLeaveAction' property
@@ -86,6 +90,7 @@ object NoClientAction extends js.Object {
     *  7.13.0 and higher
     */
   def createInAttributeWidgetUnderOnLeaveAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.AttributeWidget): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'action' property
@@ -95,6 +100,7 @@ object NoClientAction extends js.Object {
     *  8.0.0 and higher
     */
   def createInBottomBarItemUnderAction(container: BottomBarItem): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'action' property
@@ -104,6 +110,7 @@ object NoClientAction extends js.Object {
     *  6.0.0 to 6.6.0
     */
   def createInDataViewActionButtonUnderAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataViewActionButton): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'onClickAction' property
@@ -113,6 +120,7 @@ object NoClientAction extends js.Object {
     *  8.3.0 and higher
     */
   def createInDivContainerUnderOnClickAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DivContainer): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'clickAction' property
@@ -122,18 +130,21 @@ object NoClientAction extends js.Object {
     *  7.18.0 and higher
     */
   def createInDynamicImageViewerUnderClickAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DynamicImageViewer): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'action' property
     * of the parent GridActionButton element passed as argument.
     */
   def createInGridActionButtonUnderAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.GridActionButton): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'clickAction' property
     * of the parent ListView element passed as argument.
     */
   def createInListViewUnderClickAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListView): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'pullDownAction' property
@@ -143,12 +154,14 @@ object NoClientAction extends js.Object {
     *  8.0.0 and higher
     */
   def createInListViewUnderPullDownAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListView): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'action' property
     * of the parent menus.MenuItem element passed as argument.
     */
   def createInMenuItemUnderAction(container: MenuItem): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'onChangeAction' property
@@ -158,12 +171,14 @@ object NoClientAction extends js.Object {
     *  7.13.0 and higher
     */
   def createInReferenceSetSelectorUnderOnChangeAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ReferenceSetSelector): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'clickAction' property
     * of the parent StaticImageViewer element passed as argument.
     */
   def createInStaticImageViewerUnderClickAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.StaticImageViewer): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'onEnterKeyPressAction' property
@@ -173,6 +188,7 @@ object NoClientAction extends js.Object {
     *  8.7.0 and higher
     */
   def createInTextBoxUnderOnEnterKeyPressAction(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TextBox): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
   /**
     * Creates and returns a new NoClientAction instance in the SDK and on the server.
     * The new NoClientAction will be automatically stored in the 'action' property
@@ -182,5 +198,8 @@ object NoClientAction extends js.Object {
     *  7.19.0 and higher
     */
   def createInWidgetValueUnderAction(container: WidgetValue): typingsSlinky.mendixmodelsdk.pagesMod.pages.NoClientAction = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -6,7 +6,7 @@ import typingsSlinky.std.Record
 import typingsSlinky.std.URLSearchParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ToString
@@ -15,4 +15,3 @@ trait ToString
       (/* init */ js.Array[js.Array[String]]) | (/* init */ Record[String, String]) | (/* init */ String) | (/* init */ URLSearchParams), 
       URLSearchParams
     ]
-

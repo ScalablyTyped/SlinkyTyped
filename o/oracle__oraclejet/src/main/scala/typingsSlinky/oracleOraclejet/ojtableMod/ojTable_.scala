@@ -76,58 +76,13 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.verticalGridVisible
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.verticalGridVisibleChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
+  
   var accessibility: RowHeader = js.native
-  var as: String = js.native
-  var columns: (js.Array[Field[K, D]]) | Null = js.native
-  var columnsDefault: FooterClassName[K, D] = js.native
-  var currentRow: CurrentRow[K] | Null = js.native
-  var data: (DataProvider[K, D]) | Null = js.native
-  var display: list | grid = js.native
-  var dnd: DropReorder[K, D] = js.native
-  var editMode: none | rowEdit = js.native
-  val firstSelectedRow: js.Object = js.native
-  var horizontalGridVisible: auto | enabled | disabled = js.native
-  var onAccessibilityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onColumnsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onColumnsDefaultChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onCurrentRowChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDndChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onEditModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onFirstSelectedRowChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHorizontalGridVisibleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeCurrentRow: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeRowEdit: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeRowEditEnd: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjSort: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onRowRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onScrollPolicyChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onScrollPolicyOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onScrollPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionRequiredChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onVerticalGridVisibleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var rowRenderer: (js.Function1[/* context */ RowRendererContext[K, D], String | HTMLElement | Unit]) | Null = js.native
-  var scrollPolicy: auto | loadMoreOnScroll = js.native
-  var scrollPolicyOptions: MaxCount = js.native
-  var scrollPosition: ColumnKey = js.native
-  var selection: js.Array[
-    (RowSelectionStart[K] with RowSelectionEnd[K]) | (ColumnSelectionStart[K] with ColumnSelectionEnd[K])
-  ] = js.native
-  var selectionMode: `21` = js.native
-  var selectionRequired: Boolean = js.native
-  @JSName("translations")
-  var translations_ojTable_ : LabelAccSelectionAffordanceBottom = js.native
-  var verticalGridVisible: auto | enabled | disabled = js.native
+  
   def addEventListener(`type`: displayChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: displayChanged,
@@ -331,8 +286,29 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var as: String = js.native
+  
+  var columns: (js.Array[Field[K, D]]) | Null = js.native
+  
+  var columnsDefault: FooterClassName[K, D] = js.native
+  
+  var currentRow: CurrentRow[K] | Null = js.native
+  
+  var data: (DataProvider[K, D]) | Null = js.native
+  
+  var display: list | grid = js.native
+  
+  var dnd: DropReorder[K, D] = js.native
+  
+  var editMode: none | rowEdit = js.native
+  
+  val firstSelectedRow: js.Object = js.native
+  
   def getContextByNode(node: Element): ColumnIndexKey | IndexSubId = js.native
+  
   def getDataForVisibleRow(rowIndex: Double): (DataIndex[D, K]) | Null = js.native
+  
   @JSName("getProperty")
   def getProperty_accessibility(property: accessibility): RowHeader = js.native
   @JSName("getProperty")
@@ -373,8 +349,79 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
   def getProperty_selectionRequired(property: selectionRequired): Boolean = js.native
   @JSName("getProperty")
   def getProperty_verticalGridVisible(property: verticalGridVisible): auto | enabled | disabled = js.native
+  
+  var horizontalGridVisible: auto | enabled | disabled = js.native
+  
+  var onAccessibilityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onColumnsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onColumnsDefaultChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onCurrentRowChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDndChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onEditModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onFirstSelectedRowChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHorizontalGridVisibleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeCurrentRow: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeRowEdit: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeRowEditEnd: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjSort: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onRowRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onScrollPolicyChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onScrollPolicyOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onScrollPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionRequiredChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onVerticalGridVisibleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def refreshRow(rowIdx: Double): js.Promise[Boolean] = js.native
+  
+  var rowRenderer: (js.Function1[/* context */ RowRendererContext[K, D], String | HTMLElement | Unit]) | Null = js.native
+  
+  var scrollPolicy: auto | loadMoreOnScroll = js.native
+  
+  var scrollPolicyOptions: MaxCount = js.native
+  
+  var scrollPosition: ColumnKey = js.native
+  
+  var selection: js.Array[
+    (RowSelectionStart[K] with RowSelectionEnd[K]) | (ColumnSelectionStart[K] with ColumnSelectionEnd[K])
+  ] = js.native
+  
+  var selectionMode: `21` = js.native
+  
+  var selectionRequired: Boolean = js.native
+  
   def setProperties(properties: ojTableSettablePropertiesLenient[K, D]): Unit = js.native
+  
   def setProperty(property: display, value: grid): Unit = js.native
   def setProperty(property: display, value: list): Unit = js.native
   def setProperty(property: editMode, value: none): Unit = js.native
@@ -433,5 +480,9 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
   def setProperty_selectionRequired(property: selectionRequired, value: Boolean): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: LabelAccSelectionAffordanceBottom): Unit = js.native
+  
+  @JSName("translations")
+  var translations_ojTable_ : LabelAccSelectionAffordanceBottom = js.native
+  
+  var verticalGridVisible: auto | enabled | disabled = js.native
 }
-

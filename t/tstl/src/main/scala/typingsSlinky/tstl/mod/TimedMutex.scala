@@ -2,7 +2,7 @@ package typingsSlinky.tstl.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "TimedMutex")
 @js.native
@@ -10,5 +10,4 @@ import scala.scalajs.js.annotation._
   * Default Constructor.
   */
 class TimedMutex ()
-  extends typingsSlinky.tstl.threadMod.TimedMutex
-
+  extends typingsSlinky.tstl.tstlModuleMod.TimedMutex

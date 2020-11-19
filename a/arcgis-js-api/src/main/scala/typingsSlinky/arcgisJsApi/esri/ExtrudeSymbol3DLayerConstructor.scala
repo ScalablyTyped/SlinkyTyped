@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ExtrudeSymbol3DLayerConstructor
@@ -15,6 +15,6 @@ trait ExtrudeSymbol3DLayerConstructor
   */
 Instantiable0[ExtrudeSymbol3DLayer]
      with Instantiable1[/* properties */ ExtrudeSymbol3DLayerProperties, ExtrudeSymbol3DLayer] {
+  
   def fromJSON(json: js.Any): ExtrudeSymbol3DLayer = js.native
 }
-

@@ -7,13 +7,14 @@ import typingsSlinky.kendoUi.kendo.ui.DatePicker
 import typingsSlinky.kendoUi.kendo.ui.DatePickerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofDatePicker
   extends Instantiable1[/* element */ Element, DatePicker]
      with Instantiable2[/* element */ Element, /* options */ DatePickerOptions, DatePicker] {
-  var fn: DatePicker = js.native
+  
   def extend(proto: js.Object): DatePicker = js.native
+  
+  var fn: DatePicker = js.native
 }
-

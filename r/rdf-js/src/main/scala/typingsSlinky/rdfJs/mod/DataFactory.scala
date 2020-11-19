@@ -2,17 +2,11 @@ package typingsSlinky.rdfJs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DataFactory[OutQuad /* <: BaseQuad */, InQuad /* <: BaseQuad */] extends js.Object {
-  /**
-    * This method is optional.
-    * @param value The variable name
-    * @return A new instance of Variable.
-    * @see Variable
-    */
-  var variable: js.UndefOr[js.Function1[/* value */ String, Variable]] = js.native
+  
   /**
     * @param value The optional blank node identifier.
     * @return A new instance of BlankNode.
@@ -22,10 +16,12 @@ trait DataFactory[OutQuad /* <: BaseQuad */, InQuad /* <: BaseQuad */] extends j
     */
   def blankNode(): BlankNode = js.native
   def blankNode(value: String): BlankNode = js.native
+  
   /**
     * @return An instance of DefaultGraph.
     */
   def defaultGraph(): DefaultGraph = js.native
+  
   /**
     * @param                 value              The literal value.
     * @param languageOrDatatype The optional language or datatype.
@@ -39,6 +35,7 @@ trait DataFactory[OutQuad /* <: BaseQuad */, InQuad /* <: BaseQuad */] extends j
   def literal(value: String): Literal = js.native
   def literal(value: String, languageOrDatatype: String): Literal = js.native
   def literal(value: String, languageOrDatatype: NamedNode[String]): Literal = js.native
+  
   /**
     * @param value The IRI for the named node.
     * @return A new instance of NamedNode.
@@ -48,6 +45,7 @@ trait DataFactory[OutQuad /* <: BaseQuad */, InQuad /* <: BaseQuad */] extends j
   //       given `value` - but note that that would be a breaking change. See commit
   //       16d29e86cd6fe34e6ac6f53bba6ba1a1988d7401.
   def namedNode(value: String): NamedNode[String] = js.native
+  
   /**
     * @param subject   The quad subject term.
     * @param predicate The quad predicate term.
@@ -67,5 +65,12 @@ trait DataFactory[OutQuad /* <: BaseQuad */, InQuad /* <: BaseQuad */] extends j
     `object`: /* import warning: importer.ImportType#apply Failed type conversion: InQuad['object'] */ js.Any,
     graph: /* import warning: importer.ImportType#apply Failed type conversion: InQuad['graph'] */ js.Any
   ): OutQuad = js.native
+  
+  /**
+    * This method is optional.
+    * @param value The variable name
+    * @return A new instance of Variable.
+    * @see Variable
+    */
+  var variable: js.UndefOr[js.Function1[/* value */ String, Variable]] = js.native
 }
-

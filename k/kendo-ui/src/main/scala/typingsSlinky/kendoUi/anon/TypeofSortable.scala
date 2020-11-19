@@ -7,13 +7,14 @@ import typingsSlinky.kendoUi.kendo.ui.Sortable
 import typingsSlinky.kendoUi.kendo.ui.SortableOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofSortable
   extends Instantiable1[/* element */ Element, Sortable]
      with Instantiable2[/* element */ Element, /* options */ SortableOptions, Sortable] {
-  var fn: Sortable = js.native
+  
   def extend(proto: js.Object): Sortable = js.native
+  
+  var fn: Sortable = js.native
 }
-

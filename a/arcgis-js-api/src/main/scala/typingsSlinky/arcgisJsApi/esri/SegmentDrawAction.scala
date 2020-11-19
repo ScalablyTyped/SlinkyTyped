@@ -8,10 +8,29 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.click
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.freehand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SegmentDrawAction extends DrawAction {
+  
+  /**
+    * Completes drawing the polygon geometry and fires the [draw-complete](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#event-draw-complete) event.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#complete)
+    *
+    *
+    */
+  def complete(): Unit = js.native
+  
+  /**
+    * Returns the actual z value to be used when drawing geometry. NB: this.defaultZ is the value which was passed to the constructor of the DrawAction the actual defaultZ value may differ, depending on derived draw action implementation.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#getGeometryZValue)
+    *
+    *
+    */
+  def getGeometryZValue(): Unit = js.native
+  
   /**
     * The drawing mode. It is only relevant when the action is first created. Its value cannot be changed during the action lifecycle.  **Possible Values**
     *
@@ -26,33 +45,18 @@ trait SegmentDrawAction extends DrawAction {
     * @default freehand
     */
   var mode: freehand | click = js.native
-  /**
-    * Two-dimensional array of numbers representing the coordinates of each vertex comprising the geometry being drawn.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#vertices)
-    */
-  val vertices: js.Array[js.Array[Double]] = js.native
-  /**
-    * Completes drawing the polygon geometry and fires the [draw-complete](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#event-draw-complete) event.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#complete)
-    *
-    *
-    */
-  def complete(): Unit = js.native
-  /**
-    * Returns the actual z value to be used when drawing geometry. NB: this.defaultZ is the value which was passed to the constructor of the DrawAction the actual defaultZ value may differ, depending on derived draw action implementation.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#getGeometryZValue)
-    *
-    *
-    */
-  def getGeometryZValue(): Unit = js.native
+  
   @JSName("on")
   def on_cursorupdate(name: `cursor-update`, eventHandler: SegmentDrawActionCursorUpdateEventHandler): IHandle = js.native
   @JSName("on")
   def on_drawcomplete(name: `draw-complete`, eventHandler: SegmentDrawActionDrawCompleteEventHandler): IHandle = js.native
   @JSName("on")
   def on_vertexadd(name: `vertex-add`, eventHandler: SegmentDrawActionVertexAddEventHandler): IHandle = js.native
+  
+  /**
+    * Two-dimensional array of numbers representing the coordinates of each vertex comprising the geometry being drawn.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#vertices)
+    */
+  val vertices: js.Array[js.Array[Double]] = js.native
 }
-

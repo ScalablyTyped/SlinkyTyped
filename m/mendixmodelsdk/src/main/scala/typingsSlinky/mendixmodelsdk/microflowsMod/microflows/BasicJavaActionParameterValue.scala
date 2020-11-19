@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.21.0: deleted
@@ -25,12 +25,12 @@ class BasicJavaActionParameterValue protected () extends JavaActionParameterValu
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FBasicJavaActionParameterValue: IModel = js.native
+  
   /**
     * The value of this property is conceptually of type microflowExpressions.MicroflowExpression.
     */
   def argument: String = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
@@ -38,21 +38,24 @@ class BasicJavaActionParameterValue protected () extends JavaActionParameterValu
     */
   def argumentModel: Expression = js.native
   def argumentModel_=(newValue: Expression): Unit = js.native
+  
   def argument_=(newValue: String): Unit = js.native
+  
+  @JSName("model")
+  var model_FBasicJavaActionParameterValue: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.BasicJavaActionParameterValue")
 @js.native
 object BasicJavaActionParameterValue extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new BasicJavaActionParameterValue instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): BasicJavaActionParameterValue = js.native
+  
   /**
     * Creates and returns a new BasicJavaActionParameterValue instance in the SDK and on the server.
     * The new BasicJavaActionParameterValue will be automatically stored in the 'value' property
@@ -62,5 +65,8 @@ object BasicJavaActionParameterValue extends js.Object {
     *  6.7.0 to 7.20.0
     */
   def createIn(container: JavaActionParameterMapping): BasicJavaActionParameterValue = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

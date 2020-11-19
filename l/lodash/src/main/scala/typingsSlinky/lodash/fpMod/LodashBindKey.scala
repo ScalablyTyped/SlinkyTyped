@@ -4,15 +4,15 @@ import typingsSlinky.lodash.mod.LoDashImplicitWrapper
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashBindKey extends LodashConvertible {
-  @JSName("placeholder")
-  var placeholder_Original: __ = js.native
+  
   def apply(`object`: js.Object): LodashBindKey1x1 = js.native
   def apply(`object`: js.Object, key: String): js.Function1[/* repeated */ js.Any, _] = js.native
   def apply(`object`: __, key: String): LodashBindKey1x2 = js.native
+  
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -82,5 +82,6 @@ trait LodashBindKey extends LodashConvertible {
     * upperFirst, value, and words.
     **/
   def placeholder[T](value: T): LoDashImplicitWrapper[T] = js.native
+  @JSName("placeholder")
+  var placeholder_Original: __ = js.native
 }
-

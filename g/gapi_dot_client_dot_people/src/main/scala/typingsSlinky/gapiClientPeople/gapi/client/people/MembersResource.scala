@@ -5,10 +5,11 @@ import typingsSlinky.gapiClientPeople.anon.Accesstoken
 import typingsSlinky.gapiClientPeople.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MembersResource extends js.Object {
+  
   /**
     * Modify the members of a contact group owned by the authenticated user.
     *
@@ -19,4 +20,3 @@ trait MembersResource extends js.Object {
   def modify(request: Accesstoken): Request[ModifyContactGroupMembersResponse] = js.native
   def modify(request: Alt, body: ModifyContactGroupMembersRequest): Request[ModifyContactGroupMembersResponse] = js.native
 }
-

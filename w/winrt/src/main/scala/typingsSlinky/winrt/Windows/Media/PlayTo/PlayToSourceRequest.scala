@@ -2,12 +2,12 @@ package typingsSlinky.winrt.Windows.Media.PlayTo
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PlayToSourceRequest extends IPlayToSourceRequest
-
 object PlayToSourceRequest {
+  
   @scala.inline
   def apply(
     deadline: js.Date,
@@ -19,4 +19,3 @@ object PlayToSourceRequest {
     __obj.asInstanceOf[PlayToSourceRequest]
   }
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.WebXRExperienceHelper")
 @js.native
@@ -11,18 +11,12 @@ import scala.scalajs.js.annotation._
   * @param scene The scene the helper should be created in
   */
 class WebXRExperienceHelper protected ()
-  extends typingsSlinky.babylonjs.BABYLON.WebXRExperienceHelper {
-  /**
-    * Releases all held resources
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
-}
-
+  extends typingsSlinky.babylonjs.BABYLON.WebXRExperienceHelper
 /* static members */
 @JSGlobal("BABYLON.WebXRExperienceHelper")
 @js.native
 object WebXRExperienceHelper extends js.Object {
+  
   /**
     * Creates the experience helper
     * @param scene the scene to attach the experience helper to
@@ -30,4 +24,3 @@ object WebXRExperienceHelper extends js.Object {
     */
   def CreateAsync(scene: typingsSlinky.babylonjs.BABYLON.Scene): js.Promise[typingsSlinky.babylonjs.BABYLON.WebXRExperienceHelper] = js.native
 }
-

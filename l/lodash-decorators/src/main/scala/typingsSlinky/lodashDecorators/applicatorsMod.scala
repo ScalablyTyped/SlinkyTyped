@@ -3,11 +3,12 @@ package typingsSlinky.lodashDecorators
 import typingsSlinky.lodashDecorators.anon.Post
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("lodash-decorators/applicators", JSImport.Namespace)
 @js.native
 object applicatorsMod extends js.Object {
+  
   @js.native
   abstract class Applicator ()
     extends typingsSlinky.lodashDecorators.applicatorMod.Applicator
@@ -53,6 +54,4 @@ object applicatorsMod extends js.Object {
   @js.native
   class WrapApplicator ()
     extends typingsSlinky.lodashDecorators.wrapApplicatorMod.WrapApplicator
-  
 }
-

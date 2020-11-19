@@ -6,9 +6,8 @@ import typingsSlinky.rbx.containerContainerMod.ContainerProps
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx", "Container")
 @js.native
 object Container extends TopLevel[ForwardRefAsExoticComponent[ContainerProps, ReactElement]]
-

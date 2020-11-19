@@ -3,10 +3,11 @@ package typingsSlinky.awsSdkTypes.middlewareMod
 import typingsSlinky.awsSdkTypes.anon.HandlerOptionsstepinitial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MiddlewareStack[Input /* <: js.Object */, Output /* <: js.Object */, Stream] extends js.Object {
+  
   /**
     * Add middleware to the list to be executed during the "build" phase,
     * optionally specifying a priority and tags.
@@ -27,12 +28,14 @@ trait MiddlewareStack[Input /* <: js.Object */, Output /* <: js.Object */, Strea
     * optionally specifying a priority and tags.
     */
   def add(middleware: Middleware[Input, Output], options: SerializeHandlerOptions): Unit = js.native
+  
   /**
     * Create a list containing the middlewares in this list as well as the
     * middlewares in the `from` list. Neither source is modified, and step
     * bindings and handler priorities and tags are preserved in the copy.
     */
   def concat[InputType /* <: Input */, OutputType /* <: Output */](from: MiddlewareStack[InputType, OutputType, Stream]): MiddlewareStack[InputType, OutputType, Stream] = js.native
+  
   def remove(toRemove: String): Boolean = js.native
   /**
     * Removes middleware from the stack.
@@ -43,6 +46,7 @@ trait MiddlewareStack[Input /* <: js.Object */, Output /* <: js.Object */, Strea
     * If a middleware class is provided, all usages thereof will be removed.
     */
   def remove(toRemove: Middleware[Input, Output]): Boolean = js.native
+  
   /**
     * Builds a single handler function from zero or more middleware classes and
     * a core handler. The core handler is meant to send command objects to AWS
@@ -55,4 +59,3 @@ trait MiddlewareStack[Input /* <: js.Object */, Output /* <: js.Object */, Strea
     */
   def resolve[InputType /* <: Input */, OutputType /* <: Output */](handler: FinalizeHandler[InputType, OutputType, Stream], context: HandlerExecutionContext): Handler[InputType, OutputType] = js.native
 }
-

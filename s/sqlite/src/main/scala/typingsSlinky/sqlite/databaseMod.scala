@@ -8,16 +8,16 @@ import typingsSlinky.sqlite.interfacesMod.ISqlite.SqlType
 import typingsSlinky.sqlite.sqlite3Mod.Statement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sqlite/build/Database", JSImport.Namespace)
 @js.native
 object databaseMod extends js.Object {
+  
   @js.native
   class Database[Driver /* <: typingsSlinky.sqlite.sqlite3Mod.Database */, Stmt /* <: Statement */] protected () extends js.Object {
     def this(config: Config) = this()
-    var config: Config = js.native
-    var db: Driver = js.native
+    
     /**
       * Runs the SQL query with the specified parameters. The parameters are the same as the
       * Database#run function, with the following differences:
@@ -42,14 +42,21 @@ object databaseMod extends js.Object {
       * @see https://github.com/mapbox/node-sqlite3/wiki/API#databaseallsql-param--callback
       */
     def all[T](sql: SqlType, params: js.Any*): js.Promise[T] = js.native
+    
     /**
       * Closes the database.
       */
     def close(): js.Promise[Unit] = js.native
+    
+    var config: Config = js.native
+    
     /**
       * @see https://github.com/mapbox/node-sqlite3/wiki/API#databaseconfigureoption-value
       */
     def configure(option: ConfigureOption, value: js.Any): js.Any = js.native
+    
+    var db: Driver = js.native
+    
     /**
       * Runs the SQL query with the specified parameters and calls the callback once for each result
       * row. The parameters are the same as the Database#run function, with the following differences:
@@ -71,6 +78,7 @@ object databaseMod extends js.Object {
       * @returns Promise<number> Number of rows returned
       */
     def each[T](sql: SqlType, params: js.Any*): js.Promise[Double] = js.native
+    
     /**
       * Runs all SQL queries in the supplied string. No result rows are retrieved. If a query fails,
       * no subsequent statements will be executed (wrap it in a transaction if you want all
@@ -83,6 +91,7 @@ object databaseMod extends js.Object {
       * @see https://github.com/mapbox/node-sqlite3/wiki/API#databaseexecsql-callback
       */
     def exec(sql: SqlType): js.Promise[Unit] = js.native
+    
     /**
       * Runs the SQL query with the specified parameters and resolves with
       * with the first result row afterwards. If the result set is empty, returns undefined.
@@ -101,31 +110,38 @@ object databaseMod extends js.Object {
       * @see https://github.com/mapbox/node-sqlite3/wiki/API#databasegetsql-param--callback
       */
     def get[T](sql: SqlType, params: js.Any*): js.Promise[js.UndefOr[T]] = js.native
+    
     /**
       * Returns the underlying sqlite3 Database instance
       */
     def getDatabaseInstance(): Driver = js.native
+    
     /**
       * Loads a compiled SQLite extension into the database connection object.
       *
       * @param {string} path Filename of the extension to load
       */
     def loadExtension(path: String): js.Promise[_] = js.native
+    
     /**
       * Performs a database migration.
       */
     def migrate(): js.Promise[Unit] = js.native
     def migrate(config: MigrationParams): js.Promise[Unit] = js.native
+    
     /**
       * Event handler when verbose mode is enabled.
       * @see https://github.com/mapbox/node-sqlite3/wiki/Debugging
       */
     def on(event: String, listener: js.Any): Unit = js.native
+    
     /**
       * Opens the database
       */
     def open(): js.Promise[Unit] = js.native
+    
     def parallelize(): Unit = js.native
+    
     /**
       * Prepares the SQL statement and optionally binds the specified parameters.
       * When bind parameters are supplied, they are bound to the prepared statement.
@@ -139,6 +155,7 @@ object databaseMod extends js.Object {
       * @returns Promise<Statement> Statement object
       */
     def prepare(sql: SqlType, params: js.Any*): js.Promise[typingsSlinky.sqlite.statementMod.Statement[Stmt]] = js.native
+    
     /**
       * Runs the SQL query with the specified parameters. It does not retrieve any result data.
       * The function returns the Database object for which it was called to allow for function chaining.
@@ -154,11 +171,10 @@ object databaseMod extends js.Object {
       * @see https://github.com/mapbox/node-sqlite3/wiki/API#databaserunsql-param--callback
       */
     def run(sql: SqlType, params: js.Any*): js.Promise[RunResult[Stmt]] = js.native
+    
     /**
       * The methods underneath requires creative work to implement. PRs / proposals accepted!
       */
     def serialize(): Unit = js.native
   }
-  
 }
-

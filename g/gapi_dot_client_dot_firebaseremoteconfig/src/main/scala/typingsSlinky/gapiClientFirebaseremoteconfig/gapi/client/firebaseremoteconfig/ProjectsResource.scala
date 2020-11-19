@@ -5,16 +5,18 @@ import typingsSlinky.gapiClientFirebaseremoteconfig.anon.Accesstoken
 import typingsSlinky.gapiClientFirebaseremoteconfig.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ProjectsResource extends js.Object {
+  
   /**
     * Get the latest version Remote Configuration for a project.
     * Returns the RemoteConfig as the payload, and also the eTag as a
     * response header.
     */
   def getRemoteConfig(request: Accesstoken): Request[RemoteConfig] = js.native
+  
   /**
     * Update a RemoteConfig. We treat this as an always-existing
     * resource (when it is not found in our data store, we treat it as version
@@ -37,8 +39,8 @@ trait ProjectsResource extends js.Object {
     */
   def updateRemoteConfig(request: Alt): Request[RemoteConfig] = js.native
 }
-
 object ProjectsResource {
+  
   @scala.inline
   def apply(
     getRemoteConfig: Accesstoken => Request[RemoteConfig],
@@ -47,22 +49,26 @@ object ProjectsResource {
     val __obj = js.Dynamic.literal(getRemoteConfig = js.Any.fromFunction1(getRemoteConfig), updateRemoteConfig = js.Any.fromFunction1(updateRemoteConfig))
     __obj.asInstanceOf[ProjectsResource]
   }
+  
   @scala.inline
   implicit class ProjectsResourceOps[Self <: ProjectsResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setGetRemoteConfig(value: Accesstoken => Request[RemoteConfig]): Self = this.set("getRemoteConfig", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setUpdateRemoteConfig(value: Alt => Request[RemoteConfig]): Self = this.set("updateRemoteConfig", js.Any.fromFunction1(value))
   }
-  
 }
-

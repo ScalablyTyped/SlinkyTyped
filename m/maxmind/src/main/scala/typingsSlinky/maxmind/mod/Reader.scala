@@ -4,7 +4,7 @@ import typingsSlinky.maxmind.responseMod.Response
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("maxmind", "Reader")
 @js.native
@@ -13,4 +13,3 @@ class Reader[T /* <: Response */] protected ()
   def this(db: Buffer) = this()
   def this(db: Buffer, opts: OpenOpts) = this()
 }
-

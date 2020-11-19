@@ -4,9 +4,8 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.rdflib.rdflibStrings.`applicationSlashx-turtle`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rdflib/lib/types", "TurtleLegacyContentType")
 @js.native
 object TurtleLegacyContentType extends TopLevel[`applicationSlashx-turtle`]
-

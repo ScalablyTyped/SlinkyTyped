@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "createParameter")
 @js.native
 object createParameter extends js.Object {
+  
   def apply(
     decorators: js.UndefOr[js.Array[Decorator]],
     modifiers: js.UndefOr[js.Array[Modifier]],
@@ -17,4 +18,3 @@ object createParameter extends js.Object {
     initializer: js.UndefOr[Expression]
   ): ParameterDeclaration = js.native
 }
-

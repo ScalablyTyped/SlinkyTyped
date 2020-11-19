@@ -4,7 +4,7 @@ import typingsSlinky.openpgp.mod.Integer
 import typingsSlinky.openpgp.mod.ReadableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "packet.List")
 @js.native
@@ -14,40 +14,48 @@ import scala.scalajs.js.annotation._
   * are stored as numerical indices.
   */
 class List () extends js.Object {
-  /**
-    * The number of packets contained within the list.
-    */
-  val length: Integer = js.native
+  
   /**
     * Concatenates packetlist or array of packets
     */
   def concat(): Unit = js.native
+  
   /**
     * Creates a new PacketList with all packets from the given types
     */
   def filterByTag(): Unit = js.native
+  
   /**
     * Traverses packet tree and returns first matching packet
     * @param type The packet type
     * @returns
     */
   def findPacket(`type`: typingsSlinky.openpgp.mod.enums.packet): js.UndefOr[List] = js.native
+  
   /**
     * Returns array of found indices by tag
     */
   def indexOfTag(): Unit = js.native
+  
+  /**
+    * The number of packets contained within the list.
+    */
+  val length: Integer = js.native
+  
   /**
     * Adds a packet to the list. This is the only supported method of doing so;
     * writing to packetlist[i] directly will result in an error.
     * @param packet Packet to push
     */
   def push(packet: js.Object): Unit = js.native
+  
   def read(A: ReadableStream[js.typedarray.Uint8Array]): Unit = js.native
   /**
     * Reads a stream of binary data and interprents it as a list of packets.
     * @param A Uint8Array of bytes.
     */
   def read(A: js.typedarray.Uint8Array): Unit = js.native
+  
   /**
     * Creates a binary representation of openpgp objects contained within the
     * class instance.
@@ -55,11 +63,11 @@ class List () extends js.Object {
     */
   def write(): js.typedarray.Uint8Array | ReadableStream[js.typedarray.Uint8Array] = js.native
 }
-
 /* static members */
 @JSImport("openpgp", "packet.List")
 @js.native
 object List extends js.Object {
+  
   /**
     * Allocate a new packetlist from structured packetlist clone
     * See {@link https://w3c.github.io/html/infrastructure.html#safe-passing-of-structured-data}
@@ -68,4 +76,3 @@ object List extends js.Object {
     */
   def fromStructuredClone(packetClone: js.Object): js.Object = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.cloudwatcheventsMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "CloudWatchEvents")
 @js.native
@@ -14,4 +14,3 @@ class CloudWatchEvents ()
   extends typingsSlinky.awsSdk.allMod.CloudWatchEvents {
   def this(options: ClientConfiguration) = this()
 }
-

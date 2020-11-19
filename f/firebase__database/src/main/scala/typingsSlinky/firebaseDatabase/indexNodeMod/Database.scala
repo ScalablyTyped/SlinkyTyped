@@ -4,7 +4,7 @@ import typingsSlinky.firebaseDatabase.anon.TIMESTAMP
 import typingsSlinky.firebaseDatabase.repoMod.Repo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@firebase/database/dist/index.node", "Database")
 @js.native
@@ -16,11 +16,10 @@ class Database protected ()
     */
   def this(repo_ : Repo) = this()
 }
-
 /* static members */
 @JSImport("@firebase/database/dist/index.node", "Database")
 @js.native
 object Database extends js.Object {
+  
   val ServerValue: TIMESTAMP = js.native
 }
-

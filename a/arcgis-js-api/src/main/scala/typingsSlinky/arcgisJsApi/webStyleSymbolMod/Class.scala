@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.WebStyleSymbol
 import typingsSlinky.arcgisJsApi.esri.WebStyleSymbolProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols/WebStyleSymbol", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends WebStyleSymbol {
   def this(properties: WebStyleSymbolProperties) = this()
 }
-

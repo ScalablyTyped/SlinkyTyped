@@ -3,22 +3,20 @@ package typingsSlinky.reactQuery.mod
 import typingsSlinky.reactQuery.reactQueryBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-query", "usePaginatedQuery")
 @js.native
 object usePaginatedQuery_false extends js.Object {
-  def apply[TResult, TKey /* <: String */](
+  
+  def apply[TResult, TKey /* <: AnyQueryKey */](queryKey: js.Function0[js.UndefOr[TKey | `false` | Null]], queryFn: QueryFunction[TResult, TKey]): PaginatedQueryResult[TResult] = js.native
+  def apply[TResult, TKey /* <: AnyQueryKey */](
     queryKey: js.Function0[js.UndefOr[TKey | `false` | Null]],
-    queryFn: QueryFunction[TResult, js.Array[TKey]]
-  ): PaginatedQueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */](
-    queryKey: js.Function0[js.UndefOr[TKey | `false` | Null]],
-    queryFn: QueryFunction[TResult, js.Array[TKey]],
+    queryFn: QueryFunction[TResult, TKey],
     config: QueryOptions[TResult]
   ): PaginatedQueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */](queryKey: `false`, queryFn: QueryFunction[TResult, js.Array[TKey]]): PaginatedQueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */](queryKey: `false`, queryFn: QueryFunction[TResult, js.Array[TKey]], config: QueryOptions[TResult]): PaginatedQueryResult[TResult] = js.native
+  def apply[TResult, TKey /* <: AnyQueryKey */](queryKey: `false`, queryFn: QueryFunction[TResult, TKey]): PaginatedQueryResult[TResult] = js.native
+  def apply[TResult, TKey /* <: AnyQueryKey */](queryKey: `false`, queryFn: QueryFunction[TResult, TKey], config: QueryOptions[TResult]): PaginatedQueryResult[TResult] = js.native
   def apply[TResult, TKey /* <: String */, TVariables /* <: AnyVariables */](
     queryKey: js.Function0[js.UndefOr[TKey | `false` | Null]],
     variables: TVariables,
@@ -42,4 +40,3 @@ object usePaginatedQuery_false extends js.Object {
     config: QueryOptions[TResult]
   ): PaginatedQueryResult[TResult] = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.draftJs.mod.Draft.Model.Constants
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Default entity types.
@@ -14,15 +14,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.draftJs.draftJsStrings.IMAGE
 */
 trait ComposedEntityType extends js.Object
-
 object ComposedEntityType {
+  
   @scala.inline
   def IMAGE: typingsSlinky.draftJs.draftJsStrings.IMAGE = "IMAGE".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.IMAGE]
+  
   @scala.inline
   def LINK: typingsSlinky.draftJs.draftJsStrings.LINK = "LINK".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.LINK]
+  
   @scala.inline
   def PHOTO: typingsSlinky.draftJs.draftJsStrings.PHOTO = "PHOTO".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.PHOTO]
+  
   @scala.inline
   def TOKEN: typingsSlinky.draftJs.draftJsStrings.TOKEN = "TOKEN".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.TOKEN]
 }
-

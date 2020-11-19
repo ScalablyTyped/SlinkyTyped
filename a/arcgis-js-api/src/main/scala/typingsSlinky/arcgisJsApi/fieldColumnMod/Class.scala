@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.fieldColumnMod
 import typingsSlinky.arcgisJsApi.esri.FieldColumn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/FeatureTable/FieldColumn", JSImport.Namespace)
 @js.native
@@ -15,4 +15,3 @@ import scala.scalajs.js.annotation._
 class Class () extends FieldColumn {
   def this(properties: js.Any) = this()
 }
-

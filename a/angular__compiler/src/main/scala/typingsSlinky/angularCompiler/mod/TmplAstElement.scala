@@ -8,7 +8,7 @@ import typingsSlinky.angularCompiler.r3AstMod.Reference
 import typingsSlinky.angularCompiler.r3AstMod.TextAttribute
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler", "TmplAstElement")
 @js.native
@@ -152,4 +152,3 @@ class TmplAstElement protected ()
     i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
   ) = this()
 }
-

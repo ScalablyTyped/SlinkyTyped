@@ -4,21 +4,22 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.materializeCss.anon.PartialTapTargetOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("M.TapTarget")
 @js.native
 class TapTarget ()
   extends typingsSlinky.materializeCss.M.TapTarget
-
 /* static members */
 @JSGlobal("M.TapTarget")
 @js.native
 object TapTarget extends js.Object {
+  
   /**
     * Get Instance
     */
   def getInstance(elem: Element): typingsSlinky.materializeCss.M.TapTarget = js.native
+  
   /**
     * Init TapTargets
     */
@@ -35,4 +36,3 @@ object TapTarget extends js.Object {
   def init(els: Element): typingsSlinky.materializeCss.M.TapTarget = js.native
   def init(els: Element, options: PartialTapTargetOptions): typingsSlinky.materializeCss.M.TapTarget = js.native
 }
-

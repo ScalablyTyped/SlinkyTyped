@@ -3,11 +3,11 @@ package typingsSlinky.apolloServer.mod
 import typingsSlinky.graphql.astMod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server", "isListTypeNode")
 @js.native
 object isListTypeNode extends js.Object {
+  
   def apply(`type`: TypeNode): /* is graphql.graphql/language/ast.ListTypeNode */ Boolean = js.native
 }
-

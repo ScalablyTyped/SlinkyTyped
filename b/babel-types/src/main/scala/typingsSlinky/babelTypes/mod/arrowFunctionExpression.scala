@@ -2,11 +2,12 @@ package typingsSlinky.babelTypes.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babel-types", "arrowFunctionExpression")
 @js.native
 object arrowFunctionExpression extends js.Object {
+  
   def apply(): ArrowFunctionExpression_ = js.native
   def apply(params: js.UndefOr[scala.Nothing], body: js.UndefOr[scala.Nothing], async: Boolean): ArrowFunctionExpression_ = js.native
   def apply(params: js.UndefOr[scala.Nothing], body: BlockStatement_): ArrowFunctionExpression_ = js.native
@@ -20,4 +21,3 @@ object arrowFunctionExpression extends js.Object {
   def apply(params: js.Array[LVal], body: Expression): ArrowFunctionExpression_ = js.native
   def apply(params: js.Array[LVal], body: Expression, async: Boolean): ArrowFunctionExpression_ = js.native
 }
-

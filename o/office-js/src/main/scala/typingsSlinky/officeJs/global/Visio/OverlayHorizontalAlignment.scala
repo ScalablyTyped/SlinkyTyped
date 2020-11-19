@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.global.Visio
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,10 +13,13 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Visio.OverlayHorizontalAlignment")
 @js.native
 object OverlayHorizontalAlignment extends js.Object {
-  /* "Center" */ val center: typingsSlinky.officeJs.Visio.OverlayHorizontalAlignment.center with String = js.native
-  /* "Left" */ val left: typingsSlinky.officeJs.Visio.OverlayHorizontalAlignment.left with String = js.native
-  /* "Right" */ val right: typingsSlinky.officeJs.Visio.OverlayHorizontalAlignment.right with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Visio.OverlayHorizontalAlignment with String] = js.native
+  
+  /* "Center" */ val center: typingsSlinky.officeJs.Visio.OverlayHorizontalAlignment.center with String = js.native
+  
+  /* "Left" */ val left: typingsSlinky.officeJs.Visio.OverlayHorizontalAlignment.left with String = js.native
+  
+  /* "Right" */ val right: typingsSlinky.officeJs.Visio.OverlayHorizontalAlignment.right with String = js.native
 }
-

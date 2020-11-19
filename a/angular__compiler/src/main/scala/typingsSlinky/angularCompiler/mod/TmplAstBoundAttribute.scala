@@ -8,7 +8,7 @@ import typingsSlinky.angularCompiler.i18nAstMod.Node
 import typingsSlinky.angularCompiler.r3AstMod.BoundAttribute
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler", "TmplAstBoundAttribute")
 @js.native
@@ -129,12 +129,11 @@ class TmplAstBoundAttribute protected ()
     i18n: Node
   ) = this()
 }
-
 /* static members */
 @JSImport("@angular/compiler", "TmplAstBoundAttribute")
 @js.native
 object TmplAstBoundAttribute extends js.Object {
+  
   def fromBoundElementProperty(prop: typingsSlinky.angularCompiler.astMod.BoundElementProperty): BoundAttribute = js.native
   def fromBoundElementProperty(prop: typingsSlinky.angularCompiler.astMod.BoundElementProperty, i18n: I18nMeta): BoundAttribute = js.native
 }
-

@@ -6,11 +6,12 @@ import typingsSlinky.ws.mod.Server
 import typingsSlinky.ws.mod.ServerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rsocket-websocket-server/RSocketWebSocketServer", JSImport.Namespace)
 @js.native
 object rsocketwebsocketserverMod extends js.Object {
+  
   @js.native
   class RSocketWebSocketServer protected () extends TransportServer {
     def this(options: ServerOptions) = this()
@@ -26,6 +27,4 @@ object rsocketwebsocketserverMod extends js.Object {
       factory: js.Function1[/* options */ ServerOptions, Server]
     ) = this()
   }
-  
 }
-

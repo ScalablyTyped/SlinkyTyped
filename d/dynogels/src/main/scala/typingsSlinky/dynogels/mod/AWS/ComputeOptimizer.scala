@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.computeoptimizerMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.ComputeOptimizer")
 @js.native
@@ -14,4 +14,3 @@ class ComputeOptimizer ()
   extends typingsSlinky.awsSdk.mod.ComputeOptimizer {
   def this(options: ClientConfiguration) = this()
 }
-

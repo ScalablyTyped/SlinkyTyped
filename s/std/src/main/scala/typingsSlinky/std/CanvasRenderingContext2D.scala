@@ -2,7 +2,7 @@ package typingsSlinky.std
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** The CanvasRenderingContext2D interface, part of the Canvas API, provides the 2D rendering context for the drawing surface of a <canvas> element. It is used for drawing shapes, text, images, and other objects. */
 @js.native
@@ -23,6 +23,6 @@ trait CanvasRenderingContext2D
      with CanvasTextDrawingStyles
      with CanvasTransform
      with CanvasUserInterface {
+  
   val canvas: org.scalajs.dom.raw.HTMLCanvasElement = js.native
 }
-

@@ -2,13 +2,15 @@ package typingsSlinky.pinkyswear
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("PinkySwear")
 @js.native
 object PinkySwear extends js.Object {
+  
   @js.native
   trait GenericPromise[T] extends Promise {
+    
     /**
       * Fulfill or reject the promise.
       *
@@ -16,6 +18,7 @@ object PinkySwear extends js.Object {
       * @param value Value with which to fulfill or reject the promise
       */
     def apply(fulfilled: Boolean, value: T): Boolean = js.native
+    
     /**
       * onFulfilled is called when or if the promise is resolved.
       * onRejected is called when or if the promise is rejected.
@@ -42,6 +45,7 @@ object PinkySwear extends js.Object {
   
   @js.native
   trait Promise extends js.Object {
+    
     /**
       * Get the promise's current state; true if fulfilled, false if rejected, and undefined, otherwise.
       */
@@ -54,6 +58,7 @@ object PinkySwear extends js.Object {
       * @returns PinkySwear.Promise
       */
     def apply(fulfilled: Boolean, values: js.Any*): Promise = js.native
+    
     /**
       * onFulfilled is called when or if the promise is resolved.
       * onRejected is called when or if the promise is rejected.
@@ -70,6 +75,4 @@ object PinkySwear extends js.Object {
       onRejected: js.Function1[/* repeated */ js.Any, Unit]
     ): Promise = js.native
   }
-  
 }
-

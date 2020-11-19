@@ -7,7 +7,7 @@ import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CacheableRequest
@@ -30,7 +30,8 @@ trait CacheableRequest
         Emitter
       ]
     ] {
+  
   var CacheError: Instantiable1[/* error */ js.Error, CacheErrorCls] = js.native
+  
   var RequestError: Instantiable1[/* error */ js.Error, RequestErrorCls] = js.native
 }
-

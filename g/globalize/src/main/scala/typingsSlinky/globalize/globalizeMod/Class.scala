@@ -3,7 +3,7 @@ package typingsSlinky.globalize.globalizeMod
 import typingsSlinky.cldrjs.mod.CldrStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("globalize/dist/globalize", JSImport.Namespace)
 @js.native
@@ -21,4 +21,3 @@ class Class protected () extends Shared {
     */
   def this(locale: String) = this()
 }
-

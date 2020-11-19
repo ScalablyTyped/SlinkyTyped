@@ -3,11 +3,12 @@ package typingsSlinky.fastGlob.mod
 import typingsSlinky.node.NodeJS.ReadableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fast-glob", "stream")
 @js.native
 object stream extends js.Object {
+  
   def apply(source: js.Array[typingsSlinky.fastGlob.typesMod.Pattern]): ReadableStream = js.native
   def apply(
     source: js.Array[typingsSlinky.fastGlob.typesMod.Pattern],
@@ -19,4 +20,3 @@ object stream extends js.Object {
     options: typingsSlinky.fastGlob.settingsMod.Options
   ): ReadableStream = js.native
 }
-

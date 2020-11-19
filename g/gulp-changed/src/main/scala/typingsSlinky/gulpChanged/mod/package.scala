@@ -2,9 +2,10 @@ package typingsSlinky.gulpChanged
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type IComparator = js.Function4[
     /* stream */ typingsSlinky.node.streamMod.Transform, 
     /* callback */ js.Function, 
@@ -12,5 +13,6 @@ package object mod {
     /* destPath */ java.lang.String, 
     scala.Unit
   ]
+  
   type IDestination = js.Function1[/* file */ java.lang.String | typingsSlinky.node.Buffer, java.lang.String]
 }

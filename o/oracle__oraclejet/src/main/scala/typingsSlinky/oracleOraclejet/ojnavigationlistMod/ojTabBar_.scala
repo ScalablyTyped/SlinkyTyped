@@ -52,41 +52,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.truncation
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.truncationChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojTabBar_[K, D] extends baseComponent[ojTabBarSettableProperties[K, D]] {
-  var as: String = js.native
-  var currentItem: js.Any = js.native
-  var data: (DataProvider[K, D]) | Null = js.native
-  var display: all | icons = js.native
-  var edge: top | bottom | start | end = js.native
-  var item: RendererSelectable[K, D] = js.native
-  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onCurrentItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onEdgeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeCurrentItem: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeDeselect: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeRemove: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeSelect: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjDeselect: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjRemove: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjReorder: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOverflowChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onReorderableChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onTruncationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var overflow: popup | hidden = js.native
-  var reorderable: enabled | disabled = js.native
-  var selection: js.Any = js.native
-  @JSName("translations")
-  var translations_ojTabBar_ : AccessibleReorderAfterItem = js.native
-  var truncation: none | progressive = js.native
+  
   def addEventListener(`type`: currentItemChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: currentItemChanged,
@@ -225,7 +195,19 @@ trait ojTabBar_[K, D] extends baseComponent[ojTabBarSettableProperties[K, D]] {
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var as: String = js.native
+  
+  var currentItem: js.Any = js.native
+  
+  var data: (DataProvider[K, D]) | Null = js.native
+  
+  var display: all | icons = js.native
+  
+  var edge: top | bottom | start | end = js.native
+  
   def getContextByNode(node: Element): NodeContext[K] | Null = js.native
+  
   @JSName("getProperty")
   def getProperty_as(property: as): String = js.native
   @JSName("getProperty")
@@ -246,7 +228,55 @@ trait ojTabBar_[K, D] extends baseComponent[ojTabBarSettableProperties[K, D]] {
   def getProperty_selection(property: selection): /* import warning: importer.ImportType#apply Failed type conversion: @oracle/oraclejet.@oracle/oraclejet/ojnavigationlist.ojTabBar<K, D>['selection'] */ js.Any = js.native
   @JSName("getProperty")
   def getProperty_truncation(property: truncation): none | progressive = js.native
+  
+  var item: RendererSelectable[K, D] = js.native
+  
+  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onCurrentItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onEdgeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeCurrentItem: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeDeselect: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeRemove: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeSelect: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjDeselect: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjRemove: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjReorder: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOverflowChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onReorderableChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onTruncationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var overflow: popup | hidden = js.native
+  
+  var reorderable: enabled | disabled = js.native
+  
+  var selection: js.Any = js.native
+  
   def setProperties(properties: ojTabBarSettablePropertiesLenient[K, D]): Unit = js.native
+  
   def setProperty(property: display, value: all): Unit = js.native
   def setProperty(property: display, value: icons): Unit = js.native
   def setProperty(property: edge, value: bottom): Unit = js.native
@@ -273,5 +303,9 @@ trait ojTabBar_[K, D] extends baseComponent[ojTabBarSettableProperties[K, D]] {
   def setProperty_selection(property: selection, value: js.Any): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: AccessibleReorderAfterItem): Unit = js.native
+  
+  @JSName("translations")
+  var translations_ojTabBar_ : AccessibleReorderAfterItem = js.native
+  
+  var truncation: none | progressive = js.native
 }
-

@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DictionaryRendererConstructor
@@ -15,6 +15,6 @@ trait DictionaryRendererConstructor
   */
 Instantiable0[DictionaryRenderer]
      with Instantiable1[/* properties */ DictionaryRendererProperties, DictionaryRenderer] {
+  
   def fromJSON(json: js.Any): DictionaryRenderer = js.native
 }
-

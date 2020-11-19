@@ -6,10 +6,11 @@ import typingsSlinky.gapiClientGenomics.anon.Alt
 import typingsSlinky.gapiClientGenomics.anon.AnnotationId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AnnotationsResource extends js.Object {
+  
   /**
     * Creates one or more new annotations atomically. All annotations must
     * belong to the same annotation set. Caller must have WRITE
@@ -27,6 +28,7 @@ trait AnnotationsResource extends js.Object {
     * CreateAnnotation.
     */
   def batchCreate(request: Accesstoken): Request[BatchCreateAnnotationsResponse] = js.native
+  
   /**
     * Creates a new annotation. Caller must have WRITE permission
     * for the associated annotation set.
@@ -52,16 +54,19 @@ trait AnnotationsResource extends js.Object {
     * for additional restrictions on each field.
     */
   def create(request: Accesstoken): Request[Annotation] = js.native
+  
   /**
     * Deletes an annotation. Caller must have WRITE permission for
     * the associated annotation set.
     */
   def delete(request: Alt): Request[js.Object] = js.native
+  
   /**
     * Gets an annotation. Caller must have READ permission
     * for the associated annotation set.
     */
   def get(request: Alt): Request[Annotation] = js.native
+  
   /**
     * Searches for annotations that match the given criteria. Results are
     * ordered by genomic coordinate (by reference sequence, then position).
@@ -72,14 +77,15 @@ trait AnnotationsResource extends js.Object {
     * READ permission for the queried annotation sets.
     */
   def search(request: Accesstoken): Request[SearchAnnotationsResponse] = js.native
+  
   /**
     * Updates an annotation. Caller must have
     * WRITE permission for the associated dataset.
     */
   def update(request: AnnotationId): Request[Annotation] = js.native
 }
-
 object AnnotationsResource {
+  
   @scala.inline
   def apply(
     batchCreate: Accesstoken => Request[BatchCreateAnnotationsResponse],
@@ -92,30 +98,38 @@ object AnnotationsResource {
     val __obj = js.Dynamic.literal(batchCreate = js.Any.fromFunction1(batchCreate), create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), search = js.Any.fromFunction1(search), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[AnnotationsResource]
   }
+  
   @scala.inline
   implicit class AnnotationsResourceOps[Self <: AnnotationsResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setBatchCreate(value: Accesstoken => Request[BatchCreateAnnotationsResponse]): Self = this.set("batchCreate", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreate(value: Accesstoken => Request[Annotation]): Self = this.set("create", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDelete(value: Alt => Request[js.Object]): Self = this.set("delete", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGet(value: Alt => Request[Annotation]): Self = this.set("get", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setSearch(value: Accesstoken => Request[SearchAnnotationsResponse]): Self = this.set("search", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setUpdate(value: AnnotationId => Request[Annotation]): Self = this.set("update", js.Any.fromFunction1(value))
   }
-  
 }
-

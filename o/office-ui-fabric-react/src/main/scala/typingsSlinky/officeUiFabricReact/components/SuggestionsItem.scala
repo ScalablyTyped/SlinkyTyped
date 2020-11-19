@@ -17,9 +17,10 @@ import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SuggestionsItem {
+  
   @JSImport("office-ui-fabric-react", "SuggestionsItem")
   @js.native
   object component extends js.Object
@@ -28,31 +29,43 @@ object SuggestionsItem {
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.SuggestionsItem[T]] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def componentRefFunction1(value: /* ref */ ISuggestionsItem | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def componentRefRefObject(value: ReactRef[ISuggestionsItem]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def componentRef(value: IRefObject[ISuggestionsItem]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def isSelectedOverride(value: Boolean): this.type = set("isSelectedOverride", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def removeButtonAriaLabel(value: String): this.type = set("removeButtonAriaLabel", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def showRemoveButton(value: Boolean): this.type = set("showRemoveButton", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def stylesFunction1(value: ISuggestionsItemStyleProps => DeepPartial[ISuggestionsItemStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    
     @scala.inline
     def styles(value: IStyleFunctionOrObject[ISuggestionsItemStyleProps, ISuggestionsItemStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps[T](p: ISuggestionItemProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[T](
     RenderSuggestion: (T, ISuggestionItemProps[T]) => ReactElement,
@@ -64,4 +77,3 @@ object SuggestionsItem {
     new Builder[T](js.Array(this.component, __props.asInstanceOf[ISuggestionItemProps[T]]))
   }
 }
-

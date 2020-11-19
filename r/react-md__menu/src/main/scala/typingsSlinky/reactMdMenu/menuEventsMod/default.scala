@@ -2,11 +2,11 @@ package typingsSlinky.reactMdMenu.menuEventsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/menu/types/MenuEvents", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   def apply(hasMenuRefCancelledDefaultFocus: MenuEventsProps): Null = js.native
 }
-

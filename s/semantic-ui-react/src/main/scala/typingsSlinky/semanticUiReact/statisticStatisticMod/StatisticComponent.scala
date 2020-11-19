@@ -7,12 +7,14 @@ import typingsSlinky.semanticUiReact.statisticLabelMod.StatisticLabelProps
 import typingsSlinky.semanticUiReact.statisticValueMod.StatisticValueProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait StatisticComponent extends FunctionComponent[StatisticProps] {
+  
   var Group: ReactComponentClass[StatisticGroupProps] = js.native
+  
   var Label: ReactComponentClass[StatisticLabelProps] = js.native
+  
   var Value: ReactComponentClass[StatisticValueProps] = js.native
 }
-

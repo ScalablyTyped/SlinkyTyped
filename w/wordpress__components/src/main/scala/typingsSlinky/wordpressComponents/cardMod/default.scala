@@ -179,11 +179,12 @@ import typingsSlinky.wordpressComponents.wordpressComponentsStrings.wbr
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.webview
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/components/card", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   // tslint:disable-next-line no-unnecessary-generics
   def apply(
     props: Props[
@@ -191,4 +192,3 @@ object default extends js.Object {
     ]
   ): ReactElement = js.native
 }
-

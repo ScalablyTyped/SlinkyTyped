@@ -61,14 +61,16 @@ import typingsSlinky.postmark.webhookMod.Webhook
 import typingsSlinky.postmark.webhooksMod.Webhooks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("postmark/dist/client/ServerClient", JSImport.Namespace)
 @js.native
 object serverClientMod extends js.Object {
+  
   @js.native
   trait ServerClient
     extends typingsSlinky.postmark.baseClientMod.default {
+    
     /**
       * Activate email address that was deactivated due to a Bounce.
       *
@@ -78,6 +80,7 @@ object serverClientMod extends js.Object {
       */
     def activateBounce(id: Double): js.Promise[BounceActivationResponse] = js.native
     def activateBounce(id: Double, callback: Callback[BounceActivationResponse]): js.Promise[BounceActivationResponse] = js.native
+    
     /**
       * Cause an Inbound Message to bypass filtering rules defined on this Client's associated Server.
       *
@@ -87,6 +90,7 @@ object serverClientMod extends js.Object {
       */
     def bypassBlockedInboundMessage(messageId: String): js.Promise[DefaultResponse] = js.native
     def bypassBlockedInboundMessage(messageId: String, callback: Callback[DefaultResponse]): js.Promise[DefaultResponse] = js.native
+    
     /**
       * Create an Inbound Rule Trigger.
       *
@@ -96,6 +100,7 @@ object serverClientMod extends js.Object {
       */
     def createInboundRuleTrigger(options: CreateInboundRuleRequest): js.Promise[InboundRule] = js.native
     def createInboundRuleTrigger(options: CreateInboundRuleRequest, callback: Callback[InboundRule]): js.Promise[InboundRule] = js.native
+    
     /**
       * Add email addresses to a suppressions list on a message stream on a server.
       *
@@ -106,6 +111,7 @@ object serverClientMod extends js.Object {
       */
     def createSuppressions(messageStream: String, options: CreateSuppressionsRequest): js.Promise[SuppressionStatuses] = js.native
     def createSuppressions(messageStream: String, options: CreateSuppressionsRequest, callback: Callback[SuppressionStatuses]): js.Promise[SuppressionStatuses] = js.native
+    
     /**
       * Create a new template on the associated server.
       *
@@ -115,6 +121,7 @@ object serverClientMod extends js.Object {
       */
     def createTemplate(options: CreateTemplateRequest): js.Promise[Template] = js.native
     def createTemplate(options: CreateTemplateRequest, callback: Callback[Template]): js.Promise[Template] = js.native
+    
     /**
       * Create a Webhook on the associated server.
       *
@@ -124,6 +131,7 @@ object serverClientMod extends js.Object {
       */
     def createWebhook(options: CreateWebhookRequest): js.Promise[Webhook] = js.native
     def createWebhook(options: CreateWebhookRequest, callback: Callback[Webhook]): js.Promise[Webhook] = js.native
+    
     /**
       * Delete an Inbound Rule Trigger.
       *
@@ -133,6 +141,7 @@ object serverClientMod extends js.Object {
       */
     def deleteInboundRuleTrigger(id: Double): js.Promise[DefaultResponse] = js.native
     def deleteInboundRuleTrigger(id: Double, callback: Callback[DefaultResponse]): js.Promise[DefaultResponse] = js.native
+    
     /**
       * Delete email addresses from a suppressions list on a message stream on a server.
       *
@@ -143,6 +152,7 @@ object serverClientMod extends js.Object {
       */
     def deleteSuppressions(messageStream: String, options: DeleteSuppressionsRequest): js.Promise[SuppressionStatuses] = js.native
     def deleteSuppressions(messageStream: String, options: DeleteSuppressionsRequest, callback: Callback[SuppressionStatuses]): js.Promise[SuppressionStatuses] = js.native
+    
     def deleteTemplate(idOrAlias: String): js.Promise[DefaultResponse] = js.native
     def deleteTemplate(idOrAlias: String, callback: Callback[DefaultResponse]): js.Promise[DefaultResponse] = js.native
     /**
@@ -154,6 +164,7 @@ object serverClientMod extends js.Object {
       */
     def deleteTemplate(idOrAlias: Double): js.Promise[DefaultResponse] = js.native
     def deleteTemplate(idOrAlias: Double, callback: Callback[DefaultResponse]): js.Promise[DefaultResponse] = js.native
+    
     /**
       * Delete an existing Webhook.
       *
@@ -163,6 +174,7 @@ object serverClientMod extends js.Object {
       */
     def deleteWebhook(id: Double): js.Promise[DefaultResponse] = js.native
     def deleteWebhook(id: Double, callback: Callback[DefaultResponse]): js.Promise[DefaultResponse] = js.native
+    
     /**
       * Modify the Server associated with this Client.
       *
@@ -172,6 +184,7 @@ object serverClientMod extends js.Object {
       */
     def editServer(options: UpdateServerRequest): js.Promise[Server] = js.native
     def editServer(options: UpdateServerRequest, callback: Callback[Server]): js.Promise[Server] = js.native
+    
     def editTemplate(idOrAlias: String, options: UpdateTemplateRequest): js.Promise[Template] = js.native
     def editTemplate(idOrAlias: String, options: UpdateTemplateRequest, callback: Callback[Template]): js.Promise[Template] = js.native
     /**
@@ -184,6 +197,7 @@ object serverClientMod extends js.Object {
       */
     def editTemplate(idOrAlias: Double, options: UpdateTemplateRequest): js.Promise[Template] = js.native
     def editTemplate(idOrAlias: Double, options: UpdateTemplateRequest, callback: Callback[Template]): js.Promise[Template] = js.native
+    
     /**
       * Update Webhook on the associated server.
       *
@@ -194,6 +208,7 @@ object serverClientMod extends js.Object {
       */
     def editWebhook(id: Double, options: UpdateWebhookRequest): js.Promise[Webhook] = js.native
     def editWebhook(id: Double, options: UpdateWebhookRequest, callback: Callback[Webhook]): js.Promise[Webhook] = js.native
+    
     /**
       * Get details for a specific Bounce.
       *
@@ -203,6 +218,7 @@ object serverClientMod extends js.Object {
       */
     def getBounce(id: Double): js.Promise[Bounce] = js.native
     def getBounce(id: Double, callback: Callback[Bounce]): js.Promise[Bounce] = js.native
+    
     /**
       * Get statistiscs on emails that bounced after being sent from the Server associated with this Client.
       *
@@ -214,6 +230,7 @@ object serverClientMod extends js.Object {
     def getBounceCounts(filter: js.UndefOr[scala.Nothing], callback: Callback[BounceCounts]): js.Promise[BounceCounts] = js.native
     def getBounceCounts(filter: StatisticsFilteringParameters): js.Promise[BounceCounts] = js.native
     def getBounceCounts(filter: StatisticsFilteringParameters, callback: Callback[BounceCounts]): js.Promise[BounceCounts] = js.native
+    
     /**
       * Get a Bounce Dump for a specific Bounce.
       *
@@ -223,6 +240,7 @@ object serverClientMod extends js.Object {
       */
     def getBounceDump(id: Double): js.Promise[BounceDump] = js.native
     def getBounceDump(id: Double, callback: Callback[BounceDump]): js.Promise[BounceDump] = js.native
+    
     /**
       * Get a batch of bounces.
       *
@@ -234,6 +252,7 @@ object serverClientMod extends js.Object {
     def getBounces(filter: js.UndefOr[scala.Nothing], callback: Callback[Bounces]): js.Promise[Bounces] = js.native
     def getBounces(filter: BounceFilteringParameters): js.Promise[Bounces] = js.native
     def getBounces(filter: BounceFilteringParameters, callback: Callback[Bounces]): js.Promise[Bounces] = js.native
+    
     /**
       * Get browser family statistics for tracked links for messages sent from the Server associated with this Client.
       * @param filter Optional filtering parameters.
@@ -244,6 +263,7 @@ object serverClientMod extends js.Object {
     def getClickBrowserUsage(filter: js.UndefOr[scala.Nothing], callback: Callback[BrowserUsageCounts]): js.Promise[BrowserUsageCounts] = js.native
     def getClickBrowserUsage(filter: StatisticsFilteringParameters): js.Promise[BrowserUsageCounts] = js.native
     def getClickBrowserUsage(filter: StatisticsFilteringParameters, callback: Callback[BrowserUsageCounts]): js.Promise[BrowserUsageCounts] = js.native
+    
     /**
       * Get total clicks statistics for tracked links for messages sent from the Server associated with this Client.
       *
@@ -255,6 +275,7 @@ object serverClientMod extends js.Object {
     def getClickCounts(filter: js.UndefOr[scala.Nothing], callback: Callback[ClickCounts]): js.Promise[ClickCounts] = js.native
     def getClickCounts(filter: StatisticsFilteringParameters): js.Promise[ClickCounts] = js.native
     def getClickCounts(filter: StatisticsFilteringParameters, callback: Callback[ClickCounts]): js.Promise[ClickCounts] = js.native
+    
     /**
       * Get click location (in HTML or Text body of the email) statistics for tracked links for messages sent
       * from the Server associated with this Client.
@@ -267,6 +288,7 @@ object serverClientMod extends js.Object {
     def getClickLocation(filter: js.UndefOr[scala.Nothing], callback: Callback[ClickLocationCounts]): js.Promise[ClickLocationCounts] = js.native
     def getClickLocation(filter: StatisticsFilteringParameters): js.Promise[ClickLocationCounts] = js.native
     def getClickLocation(filter: StatisticsFilteringParameters, callback: Callback[ClickLocationCounts]): js.Promise[ClickLocationCounts] = js.native
+    
     /**
       * Get browser platform statistics for tracked links for messages sent from the Server associated with this Client.
       *
@@ -278,6 +300,7 @@ object serverClientMod extends js.Object {
     def getClickPlatformUsage(filter: js.UndefOr[scala.Nothing], callback: Callback[ClickPlaformUsageCounts]): js.Promise[ClickPlaformUsageCounts] = js.native
     def getClickPlatformUsage(filter: StatisticsFilteringParameters): js.Promise[ClickPlaformUsageCounts] = js.native
     def getClickPlatformUsage(filter: StatisticsFilteringParameters, callback: Callback[ClickPlaformUsageCounts]): js.Promise[ClickPlaformUsageCounts] = js.native
+    
     /**
       * Get bounce statistic information for the associated Server.
       *
@@ -286,6 +309,7 @@ object serverClientMod extends js.Object {
       */
     def getDeliveryStatistics(): js.Promise[DeliveryStatistics] = js.native
     def getDeliveryStatistics(callback: Callback[DeliveryStatistics]): js.Promise[DeliveryStatistics] = js.native
+    
     /**
       * Get statistics on which Email Clients were used to open messages sent from the Server associated with this Client.
       *
@@ -297,6 +321,7 @@ object serverClientMod extends js.Object {
     def getEmailOpenClientUsage(filter: js.UndefOr[scala.Nothing], callback: Callback[EmailClientUsageCounts]): js.Promise[EmailClientUsageCounts] = js.native
     def getEmailOpenClientUsage(filter: StatisticsFilteringParameters): js.Promise[EmailClientUsageCounts] = js.native
     def getEmailOpenClientUsage(filter: StatisticsFilteringParameters, callback: Callback[EmailClientUsageCounts]): js.Promise[EmailClientUsageCounts] = js.native
+    
     /**
       * Get Open statistics for messages sent from the Server associated with this Client.
       *
@@ -308,6 +333,7 @@ object serverClientMod extends js.Object {
     def getEmailOpenCounts(filter: js.UndefOr[scala.Nothing], callback: Callback[OpenCounts]): js.Promise[OpenCounts] = js.native
     def getEmailOpenCounts(filter: StatisticsFilteringParameters): js.Promise[OpenCounts] = js.native
     def getEmailOpenCounts(filter: StatisticsFilteringParameters, callback: Callback[OpenCounts]): js.Promise[OpenCounts] = js.native
+    
     /**
       * Get Email Client Platform statistics for messages sent from the Server associated with this Client.
       *
@@ -319,6 +345,7 @@ object serverClientMod extends js.Object {
     def getEmailOpenPlatformUsage(filter: js.UndefOr[scala.Nothing], callback: Callback[EmailPlaformUsageCounts]): js.Promise[EmailPlaformUsageCounts] = js.native
     def getEmailOpenPlatformUsage(filter: StatisticsFilteringParameters): js.Promise[EmailPlaformUsageCounts] = js.native
     def getEmailOpenPlatformUsage(filter: StatisticsFilteringParameters, callback: Callback[EmailPlaformUsageCounts]): js.Promise[EmailPlaformUsageCounts] = js.native
+    
     /**
       * Get Read Time statistics for messages sent from the Server associated with this Client.
       * @param filter Optional filtering parameters.
@@ -329,6 +356,7 @@ object serverClientMod extends js.Object {
     def getEmailOpenReadTimes(filter: js.UndefOr[scala.Nothing], callback: Callback[EmailReadTimesCounts]): js.Promise[EmailReadTimesCounts] = js.native
     def getEmailOpenReadTimes(filter: StatisticsFilteringParameters): js.Promise[EmailReadTimesCounts] = js.native
     def getEmailOpenReadTimes(filter: StatisticsFilteringParameters, callback: Callback[EmailReadTimesCounts]): js.Promise[EmailReadTimesCounts] = js.native
+    
     /**
       * Get details for a specific Inbound Message.
       *
@@ -338,6 +366,7 @@ object serverClientMod extends js.Object {
       */
     def getInboundMessageDetails(messageId: String): js.Promise[InboundMessageDetails] = js.native
     def getInboundMessageDetails(messageId: String, callback: Callback[InboundMessageDetails]): js.Promise[InboundMessageDetails] = js.native
+    
     /**
       * Get a batch of Inbound Messages.
       *
@@ -349,6 +378,7 @@ object serverClientMod extends js.Object {
     def getInboundMessages(filter: js.UndefOr[scala.Nothing], callback: Callback[InboundMessages]): js.Promise[InboundMessages] = js.native
     def getInboundMessages(filter: InboundMessagesFilteringParameters): js.Promise[InboundMessages] = js.native
     def getInboundMessages(filter: InboundMessagesFilteringParameters, callback: Callback[InboundMessages]): js.Promise[InboundMessages] = js.native
+    
     /**
       * Get a list of Inbound Rule Triggers.
       *
@@ -360,6 +390,7 @@ object serverClientMod extends js.Object {
     def getInboundRuleTriggers(filter: js.UndefOr[scala.Nothing], callback: Callback[InboundRules]): js.Promise[InboundRules] = js.native
     def getInboundRuleTriggers(filter: FilteringParameters): js.Promise[InboundRules] = js.native
     def getInboundRuleTriggers(filter: FilteringParameters, callback: Callback[InboundRules]): js.Promise[InboundRules] = js.native
+    
     /**
       * Get the Clicks for Outbound Messages.
       *
@@ -371,6 +402,7 @@ object serverClientMod extends js.Object {
     def getMessageClicks(filter: js.UndefOr[scala.Nothing], callback: Callback[OutboundMessageClicks]): js.Promise[OutboundMessageClicks] = js.native
     def getMessageClicks(filter: OutboundMessageClicksFilteringParameters): js.Promise[OutboundMessageClicks] = js.native
     def getMessageClicks(filter: OutboundMessageClicksFilteringParameters, callback: Callback[OutboundMessageClicks]): js.Promise[OutboundMessageClicks] = js.native
+    
     /**
       * Get Click information for a single Outbound Message.
       *
@@ -387,6 +419,7 @@ object serverClientMod extends js.Object {
       filter: OutboundMessageClicksFilteringParameters,
       callback: Callback[OutboundMessageClicks]
     ): js.Promise[OutboundMessageClicks] = js.native
+    
     /**
       * Get the Opens for Outbound Messages.
       *
@@ -398,6 +431,7 @@ object serverClientMod extends js.Object {
     def getMessageOpens(filter: js.UndefOr[scala.Nothing], callback: Callback[OutboundMessageOpens]): js.Promise[OutboundMessageOpens] = js.native
     def getMessageOpens(filter: OutboundMessageOpensFilteringParameters): js.Promise[OutboundMessageOpens] = js.native
     def getMessageOpens(filter: OutboundMessageOpensFilteringParameters, callback: Callback[OutboundMessageOpens]): js.Promise[OutboundMessageOpens] = js.native
+    
     /**
       * Get details of Opens for specific Outbound Message.
       *
@@ -413,6 +447,7 @@ object serverClientMod extends js.Object {
       filter: OutboundMessageOpensFilteringParameters,
       callback: Callback[OutboundMessageOpens]
     ): js.Promise[OutboundMessageOpens] = js.native
+    
     /**
       * Get details for a specific Outbound Message.
       *
@@ -422,6 +457,7 @@ object serverClientMod extends js.Object {
       */
     def getOutboundMessageDetails(messageId: String): js.Promise[OutboundMessageDetails] = js.native
     def getOutboundMessageDetails(messageId: String, callback: Callback[OutboundMessageDetails]): js.Promise[OutboundMessageDetails] = js.native
+    
     /**
       * Get details for a specific Outbound Message.
       *
@@ -431,6 +467,7 @@ object serverClientMod extends js.Object {
       */
     def getOutboundMessageDump(messageId: String): js.Promise[OutboundMessageDump] = js.native
     def getOutboundMessageDump(messageId: String, callback: Callback[OutboundMessageDump]): js.Promise[OutboundMessageDump] = js.native
+    
     /**
       * Get a batch of Outbound Messages.
       *
@@ -442,6 +479,7 @@ object serverClientMod extends js.Object {
     def getOutboundMessages(filter: js.UndefOr[scala.Nothing], callback: Callback[OutboundMessages]): js.Promise[OutboundMessages] = js.native
     def getOutboundMessages(filter: OutboundMessagesFilteringParameters): js.Promise[OutboundMessages] = js.native
     def getOutboundMessages(filter: OutboundMessagesFilteringParameters, callback: Callback[OutboundMessages]): js.Promise[OutboundMessages] = js.native
+    
     /**
       * Get overview statistics on Outbound Messages sent from the Server associated with this Client.
       *
@@ -453,6 +491,7 @@ object serverClientMod extends js.Object {
     def getOutboundOverview(filter: js.UndefOr[scala.Nothing], callback: Callback[OutboundStatistics]): js.Promise[OutboundStatistics] = js.native
     def getOutboundOverview(filter: StatisticsFilteringParameters): js.Promise[OutboundStatistics] = js.native
     def getOutboundOverview(filter: StatisticsFilteringParameters, callback: Callback[OutboundStatistics]): js.Promise[OutboundStatistics] = js.native
+    
     /**
       * Get statistics on email sent from the Server associated with this Client.
       *
@@ -464,6 +503,7 @@ object serverClientMod extends js.Object {
     def getSentCounts(filter: js.UndefOr[scala.Nothing], callback: Callback[SentCounts]): js.Promise[SentCounts] = js.native
     def getSentCounts(filter: StatisticsFilteringParameters): js.Promise[SentCounts] = js.native
     def getSentCounts(filter: StatisticsFilteringParameters, callback: Callback[SentCounts]): js.Promise[SentCounts] = js.native
+    
     /**
       * Get the information for the Server associated with this Client.
       *
@@ -472,6 +512,7 @@ object serverClientMod extends js.Object {
       */
     def getServer(): js.Promise[Server] = js.native
     def getServer(callback: Callback[Server]): js.Promise[Server] = js.native
+    
     /**
       * Get SPAM complaint statistics for email sent from the Server associated with this Client.
       *
@@ -483,6 +524,7 @@ object serverClientMod extends js.Object {
     def getSpamComplaintsCounts(filter: js.UndefOr[scala.Nothing], callback: Callback[SpamCounts]): js.Promise[SpamCounts] = js.native
     def getSpamComplaintsCounts(filter: StatisticsFilteringParameters): js.Promise[SpamCounts] = js.native
     def getSpamComplaintsCounts(filter: StatisticsFilteringParameters, callback: Callback[SpamCounts]): js.Promise[SpamCounts] = js.native
+    
     /**
       * Get the list of suppressions for a message stream on a server.
       *
@@ -492,6 +534,7 @@ object serverClientMod extends js.Object {
       */
     def getSuppressions(messageStream: String): js.Promise[Suppressions] = js.native
     def getSuppressions(messageStream: String, callback: Callback[Suppressions]): js.Promise[Suppressions] = js.native
+    
     def getTemplate(idOrAlias: String): js.Promise[Template] = js.native
     def getTemplate(idOrAlias: String, callback: Callback[Template]): js.Promise[Template] = js.native
     /**
@@ -503,6 +546,7 @@ object serverClientMod extends js.Object {
       */
     def getTemplate(idOrAlias: Double): js.Promise[Template] = js.native
     def getTemplate(idOrAlias: Double, callback: Callback[Template]): js.Promise[Template] = js.native
+    
     /**
       * Get the list of templates associated with this server.
       *
@@ -514,6 +558,7 @@ object serverClientMod extends js.Object {
     def getTemplates(filter: js.UndefOr[scala.Nothing], callback: Callback[Templates]): js.Promise[Templates] = js.native
     def getTemplates(filter: TemplateFilteringParameters): js.Promise[Templates] = js.native
     def getTemplates(filter: TemplateFilteringParameters, callback: Callback[Templates]): js.Promise[Templates] = js.native
+    
     /**
       * Get email tracking statistics for messages sent from the Server associated with this Client.
       *
@@ -525,6 +570,7 @@ object serverClientMod extends js.Object {
     def getTrackedEmailCounts(filter: js.UndefOr[scala.Nothing], callback: Callback[TrackedEmailCounts]): js.Promise[TrackedEmailCounts] = js.native
     def getTrackedEmailCounts(filter: StatisticsFilteringParameters): js.Promise[TrackedEmailCounts] = js.native
     def getTrackedEmailCounts(filter: StatisticsFilteringParameters, callback: Callback[TrackedEmailCounts]): js.Promise[TrackedEmailCounts] = js.native
+    
     /**
       * Get details for a specific Webhook.
       *
@@ -534,6 +580,7 @@ object serverClientMod extends js.Object {
       */
     def getWebhook(id: Double): js.Promise[Webhook] = js.native
     def getWebhook(id: Double, callback: Callback[Webhook]): js.Promise[Webhook] = js.native
+    
     /**
       * Get the list of Webhooks for specific server.
       *
@@ -545,6 +592,7 @@ object serverClientMod extends js.Object {
     def getWebhooks(filter: js.UndefOr[scala.Nothing], callback: Callback[Webhooks]): js.Promise[Webhooks] = js.native
     def getWebhooks(filter: WebhookFilteringParameters): js.Promise[Webhooks] = js.native
     def getWebhooks(filter: WebhookFilteringParameters, callback: Callback[Webhooks]): js.Promise[Webhooks] = js.native
+    
     /**
       * Request that Postmark retry POSTing to the Inbound Hook for the specified message.
       *
@@ -554,6 +602,7 @@ object serverClientMod extends js.Object {
       */
     def retryInboundHookForMessage(messageId: String): js.Promise[DefaultResponse] = js.native
     def retryInboundHookForMessage(messageId: String, callback: Callback[DefaultResponse]): js.Promise[DefaultResponse] = js.native
+    
     /** Send a single email message.
       *
       * @param email - Email message to send.
@@ -562,6 +611,7 @@ object serverClientMod extends js.Object {
       */
     def sendEmail(email: Message): js.Promise[MessageSendingResponse] = js.native
     def sendEmail(email: Message, callback: Callback[MessageSendingResponse]): js.Promise[MessageSendingResponse] = js.native
+    
     /**
       * Send a batch of email messages.
       *
@@ -571,6 +621,7 @@ object serverClientMod extends js.Object {
       */
     def sendEmailBatch(emails: js.Array[Message]): js.Promise[js.Array[MessageSendingResponse]] = js.native
     def sendEmailBatch(emails: js.Array[Message], callback: Callback[js.Array[MessageSendingResponse]]): js.Promise[js.Array[MessageSendingResponse]] = js.native
+    
     /**
       * Send a batch of template email messages.
       *
@@ -580,6 +631,7 @@ object serverClientMod extends js.Object {
       */
     def sendEmailBatchWithTemplates(templates: js.Array[TemplatedMessage]): js.Promise[js.Array[MessageSendingResponse]] = js.native
     def sendEmailBatchWithTemplates(templates: js.Array[TemplatedMessage], callback: Callback[js.Array[MessageSendingResponse]]): js.Promise[js.Array[MessageSendingResponse]] = js.native
+    
     /**
       * Send a message using a template.
       *
@@ -589,6 +641,7 @@ object serverClientMod extends js.Object {
       */
     def sendEmailWithTemplate(template: TemplatedMessage): js.Promise[MessageSendingResponse] = js.native
     def sendEmailWithTemplate(template: TemplatedMessage, callback: Callback[MessageSendingResponse]): js.Promise[MessageSendingResponse] = js.native
+    
     /**
       * Validate template markup to verify that it will be parsed. Also provides a recommended template
       * model to be used when sending using the specified template content.
@@ -612,6 +665,4 @@ object serverClientMod extends js.Object {
     def this(serverToken: String) = this()
     def this(serverToken: String, configOptions: Configuration) = this()
   }
-  
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Attribution
 import typingsSlinky.arcgisJsApi.esri.AttributionProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Attribution", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Attribution {
   def this(properties: AttributionProperties) = this()
 }
-

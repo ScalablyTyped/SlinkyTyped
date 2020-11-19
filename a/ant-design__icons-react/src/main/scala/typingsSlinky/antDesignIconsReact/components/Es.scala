@@ -4,14 +4,16 @@ import typingsSlinky.antDesignIconsReact.iconMod.IconProps
 import typingsSlinky.antDesignIconsReact.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Es {
+  
   @JSImport("@ant-design/icons-react/es", JSImport.Default)
   @js.native
   object component extends js.Object
   
   def withProps(p: IconProps): SharedBuilder_IconProps_1416468498[default] = new SharedBuilder_IconProps_1416468498[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     `type`: String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconDefinition */ js.Any)
@@ -21,4 +23,3 @@ object Es {
     new SharedBuilder_IconProps_1416468498[default](js.Array(this.component, __props.asInstanceOf[IconProps]))
   }
 }
-

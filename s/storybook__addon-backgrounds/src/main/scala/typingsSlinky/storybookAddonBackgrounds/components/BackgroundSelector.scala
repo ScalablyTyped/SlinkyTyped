@@ -6,9 +6,10 @@ import typingsSlinky.storybookAddonBackgrounds.backgroundSelectorMod.Props
 import typingsSlinky.storybookApi.mod.API
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object BackgroundSelector {
+  
   @JSImport("@storybook/addon-backgrounds/dist/containers/BackgroundSelector", "BackgroundSelector")
   @js.native
   object component extends js.Object
@@ -20,6 +21,7 @@ object BackgroundSelector {
     tag.type, 
     typingsSlinky.storybookAddonBackgrounds.backgroundSelectorMod.BackgroundSelector
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(api: API): Default[
     tag.type, 
@@ -27,9 +29,8 @@ object BackgroundSelector {
   ] = {
     val __props = js.Dynamic.literal(api = api.asInstanceOf[js.Any])
     new Default[
-      tag.type, 
-      typingsSlinky.storybookAddonBackgrounds.backgroundSelectorMod.BackgroundSelector
-    ](js.Array(this.component, __props.asInstanceOf[Props]))
+    tag.type, 
+    typingsSlinky.storybookAddonBackgrounds.backgroundSelectorMod.BackgroundSelector
+  ](js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.azureArmResource.mod
 import typingsSlinky.msRestAzure.mod.CloudErrorParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("azure-arm-resource", "SubscriptionModels")
 @js.native
 object SubscriptionModels extends js.Object {
+  
   @js.native
   class BaseResource ()
     extends typingsSlinky.msRestAzure.mod.BaseResource
@@ -17,6 +18,4 @@ object SubscriptionModels extends js.Object {
     extends typingsSlinky.azureArmResource.subscriptionModelsMod.CloudError {
     def this(parameters: CloudErrorParameters) = this()
   }
-  
 }
-

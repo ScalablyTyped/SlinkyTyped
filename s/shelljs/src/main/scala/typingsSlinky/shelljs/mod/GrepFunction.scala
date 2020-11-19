@@ -2,10 +2,11 @@ package typingsSlinky.shelljs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GrepFunction extends js.Object {
+  
   def apply(options: String, regex_filter: String, files: String*): ShellString = js.native
   /**
     * Reads input string from given files and returns a string containing all lines
@@ -35,4 +36,3 @@ trait GrepFunction extends js.Object {
   def apply(regex_filter: js.RegExp, files: String*): ShellString = js.native
   def apply(regex_filter: js.RegExp, files: js.Array[String]): ShellString = js.native
 }
-

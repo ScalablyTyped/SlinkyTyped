@@ -15,9 +15,10 @@ import typingsSlinky.rcPicker.timePanelMod.TimePanelProps
 import typingsSlinky.react.mod.MutableRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TimePanel {
+  
   @JSImport("rc-picker/es/panels/TimePanel", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -26,63 +27,91 @@ object TimePanel {
   class Builder[DateType] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def defaultPickerValue(value: DateType): this.type = set("defaultPickerValue", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def defaultValue(value: DateType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabledDate(value: DateType => Boolean): this.type = set("disabledDate", js.Any.fromFunction1(value))
+    
     @scala.inline
     def disabledHours(value: () => js.Array[Double]): this.type = set("disabledHours", js.Any.fromFunction0(value))
+    
     @scala.inline
     def disabledMinutes(value: /* hour */ Double => js.Array[Double]): this.type = set("disabledMinutes", js.Any.fromFunction1(value))
+    
     @scala.inline
     def disabledSeconds(value: (/* hour */ Double, /* minute */ Double) => js.Array[Double]): this.type = set("disabledSeconds", js.Any.fromFunction2(value))
+    
     @scala.inline
     def format(value: String): this.type = set("format", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def hideDisabledOptions(value: Boolean): this.type = set("hideDisabledOptions", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def hourStep(value: Double): this.type = set("hourStep", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def minuteStep(value: Double): this.type = set("minuteStep", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def nextIconReactElement(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def nextIcon(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def prevIconReactElement(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def prevIcon(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def secondStep(value: Double): this.type = set("secondStep", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def showHour(value: Boolean): this.type = set("showHour", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def showMinute(value: Boolean): this.type = set("showMinute", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def showSecond(value: Boolean): this.type = set("showSecond", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def superNextIconReactElement(value: ReactElement): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def superNextIcon(value: ReactElement): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def superPrevIconReactElement(value: ReactElement): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def superPrevIcon(value: ReactElement): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def use12Hours(value: Boolean): this.type = set("use12Hours", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def value(value: NullableDateType[DateType]): this.type = set("value", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def valueNull: this.type = set("value", null)
   }
   
   def withProps[DateType](p: TimePanelProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[DateType](
     generateConfig: GenerateConfig[DateType],
@@ -98,4 +127,3 @@ object TimePanel {
     new Builder[DateType](js.Array(this.component, __props.asInstanceOf[TimePanelProps[DateType]]))
   }
 }
-

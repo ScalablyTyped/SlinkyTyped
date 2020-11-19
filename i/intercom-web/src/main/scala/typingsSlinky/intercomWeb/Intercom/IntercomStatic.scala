@@ -15,11 +15,11 @@ import typingsSlinky.intercomWeb.intercomWebStrings.trackEvent
 import typingsSlinky.intercomWeb.intercomWebStrings.update
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IntercomStatic extends js.Object {
-  var booted: Boolean = js.native
+  
   def apply(command: IntercomCommand): Unit = js.native
   def apply(command: IntercomCommand, param1: js.UndefOr[scala.Nothing], param2: js.Any): Unit = js.native
   def apply(command: IntercomCommand, param1: js.Any): Unit = js.native
@@ -45,5 +45,6 @@ trait IntercomStatic extends js.Object {
   def apply(command: trackEvent, tag: String, metadata: js.Any): Unit = js.native
   def apply(command: update): Unit = js.native
   def apply(command: update, param: IntercomSettings): Unit = js.native
+  
+  var booted: Boolean = js.native
 }
-

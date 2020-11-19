@@ -2,7 +2,7 @@ package typingsSlinky.stripe.mod.issuing.cardholders
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.stripe.stripeStrings.active
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.stripe.stripeStrings.blocked
 */
 trait CardholderStatus extends js.Object
-
 object CardholderStatus {
+  
   @scala.inline
   def active: typingsSlinky.stripe.stripeStrings.active = "active".asInstanceOf[typingsSlinky.stripe.stripeStrings.active]
+  
   @scala.inline
   def blocked: typingsSlinky.stripe.stripeStrings.blocked = "blocked".asInstanceOf[typingsSlinky.stripe.stripeStrings.blocked]
+  
   @scala.inline
   def inactive: typingsSlinky.stripe.stripeStrings.inactive = "inactive".asInstanceOf[typingsSlinky.stripe.stripeStrings.inactive]
 }
-

@@ -7,11 +7,12 @@ import typingsSlinky.three.lineSegmentsMod.LineSegments
 import typingsSlinky.three.materialMod.Material
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/helpers/GridHelper", JSImport.Namespace)
 @js.native
 object gridHelperMod extends js.Object {
+  
   @js.native
   class GridHelper protected ()
     extends LineSegments[Geometry | BufferGeometry, Material | js.Array[Material]] {
@@ -31,6 +32,7 @@ object gridHelperMod extends js.Object {
     def this(size: Double, divisions: Double, color1: Color, color2: String) = this()
     def this(size: Double, divisions: Double, color1: Color, color2: Double) = this()
     def this(size: Double, divisions: Double, color1: Color, color2: Color) = this()
+    
     /**
     	 * @deprecated Colors should be specified in the constructor.
     	 */
@@ -51,6 +53,4 @@ object gridHelperMod extends js.Object {
     def setColors(color1: Color, color2: Double): Unit = js.native
     def setColors(color1: Color, color2: Color): Unit = js.native
   }
-  
 }
-

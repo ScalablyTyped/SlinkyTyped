@@ -2,9 +2,31 @@ package typingsSlinky.wicgNativeFileSystem
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object wicgNativeFileSystemStrings {
+  
+  @scala.inline
+  def `open-directory`: `open-directory` = "open-directory".asInstanceOf[`open-directory`]
+  
+  @scala.inline
+  def `open-file`: `open-file` = "open-file".asInstanceOf[`open-file`]
+  
+  @scala.inline
+  def sandbox: sandbox = "sandbox".asInstanceOf[sandbox]
+  
+  @scala.inline
+  def `save-file`: `save-file` = "save-file".asInstanceOf[`save-file`]
+  
+  @scala.inline
+  def seek: seek = "seek".asInstanceOf[seek]
+  
+  @scala.inline
+  def truncate: truncate = "truncate".asInstanceOf[truncate]
+  
+  @scala.inline
+  def write: write = "write".asInstanceOf[write]
+  
   @js.native
   sealed trait `open-directory` extends js.Object
   
@@ -25,20 +47,4 @@ object wicgNativeFileSystemStrings {
   
   @js.native
   sealed trait write extends js.Object
-  
-  @scala.inline
-  def `open-directory`: `open-directory` = "open-directory".asInstanceOf[`open-directory`]
-  @scala.inline
-  def `open-file`: `open-file` = "open-file".asInstanceOf[`open-file`]
-  @scala.inline
-  def sandbox: sandbox = "sandbox".asInstanceOf[sandbox]
-  @scala.inline
-  def `save-file`: `save-file` = "save-file".asInstanceOf[`save-file`]
-  @scala.inline
-  def seek: seek = "seek".asInstanceOf[seek]
-  @scala.inline
-  def truncate: truncate = "truncate".asInstanceOf[truncate]
-  @scala.inline
-  def write: write = "write".asInstanceOf[write]
 }
-

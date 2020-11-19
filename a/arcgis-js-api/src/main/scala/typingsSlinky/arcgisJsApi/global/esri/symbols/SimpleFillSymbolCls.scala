@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri.symbols
 import typingsSlinky.arcgisJsApi.esri.SimpleFillSymbolProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.symbols.SimpleFillSymbol")
 @js.native
@@ -16,4 +16,3 @@ class SimpleFillSymbolCls ()
   extends typingsSlinky.arcgisJsApi.esri.SimpleFillSymbol {
   def this(properties: SimpleFillSymbolProperties) = this()
 }
-

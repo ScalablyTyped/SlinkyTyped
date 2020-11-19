@@ -5,7 +5,7 @@ import typingsSlinky.std.EnumeratorConstructor
 import typingsSlinky.std.anon.Item
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Enumerator")
 @js.native
@@ -15,8 +15,6 @@ class Enumerator[T] protected ()
   def this(collection: Item[T]) = this()
   def this(safearray: typingsSlinky.std.SafeArray[T]) = this()
 }
-
 @JSGlobal("Enumerator")
 @js.native
 object Enumerator extends TopLevel[EnumeratorConstructor]
-

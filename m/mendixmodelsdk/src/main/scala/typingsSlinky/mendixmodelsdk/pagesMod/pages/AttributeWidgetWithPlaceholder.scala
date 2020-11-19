@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.AttributeWidgetWithPlaceholder")
 @js.native
@@ -21,17 +21,19 @@ abstract class AttributeWidgetWithPlaceholder protected () extends AttributeWidg
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FAttributeWidgetWithPlaceholder: IModel = js.native
+  
   def placeholder: Text = js.native
   def placeholder_=(newValue: Text): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.AttributeWidgetWithPlaceholder")
 @js.native
 object AttributeWidgetWithPlaceholder extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

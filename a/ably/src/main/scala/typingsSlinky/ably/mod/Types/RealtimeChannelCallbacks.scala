@@ -2,29 +2,36 @@ package typingsSlinky.ably.mod.Types
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RealtimeChannelCallbacks extends RealtimeChannelBase {
-  var presence: RealtimePresenceCallbacks = js.native
+  
   def attach(): Unit = js.native
   def attach(callback: standardCallback): Unit = js.native
+  
   def detach(): Unit = js.native
   def detach(callback: standardCallback): Unit = js.native
+  
   def history(): Unit = js.native
   def history(paramsOrCallback: js.UndefOr[scala.Nothing], callback: paginatedResultCallback[Message]): Unit = js.native
   def history(paramsOrCallback: RealtimeHistoryParams): Unit = js.native
   def history(paramsOrCallback: RealtimeHistoryParams, callback: paginatedResultCallback[Message]): Unit = js.native
   def history(paramsOrCallback: paginatedResultCallback[Message]): Unit = js.native
   def history(paramsOrCallback: paginatedResultCallback[Message], callback: paginatedResultCallback[Message]): Unit = js.native
+  
+  var presence: RealtimePresenceCallbacks = js.native
+  
   def publish(messagesOrName: js.Any): Unit = js.native
   def publish(messagesOrName: js.Any, messageDataOrCallback: js.UndefOr[scala.Nothing], callback: errorCallback): Unit = js.native
   def publish(messagesOrName: js.Any, messageDataOrCallback: js.Any): Unit = js.native
   def publish(messagesOrName: js.Any, messageDataOrCallback: js.Any, callback: errorCallback): Unit = js.native
   def publish(messagesOrName: js.Any, messageDataOrCallback: errorCallback): Unit = js.native
   def publish(messagesOrName: js.Any, messageDataOrCallback: errorCallback, callback: errorCallback): Unit = js.native
+  
   def setOptions(options: ChannelOptions): Unit = js.native
   def setOptions(options: ChannelOptions, callback: errorCallback): Unit = js.native
+  
   def subscribe(eventOrCallback: String): Unit = js.native
   def subscribe(
     eventOrCallback: String,
@@ -61,6 +68,6 @@ trait RealtimeChannelCallbacks extends RealtimeChannelBase {
     listener: messageCallback[Message],
     callbackWhenAttached: standardCallback
   ): Unit = js.native
+  
   def whenState(targetState: ChannelState, callback: channelEventCallback): Unit = js.native
 }
-

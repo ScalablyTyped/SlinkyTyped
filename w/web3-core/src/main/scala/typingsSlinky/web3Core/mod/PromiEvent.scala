@@ -8,11 +8,12 @@ import typingsSlinky.web3Core.web3CoreStrings.sent
 import typingsSlinky.web3Core.web3CoreStrings.transactionHash
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PromiEvent[T]
   extends js.Promise[T] {
+  
   @JSName("on")
   def on_confirmation(
     `type`: confirmation,
@@ -40,6 +41,7 @@ trait PromiEvent[T]
     `type`: transactionHash,
     handler: js.Function1[js.Error | (/* receipt */ String) | TransactionReceipt, Unit]
   ): PromiEvent[T] = js.native
+  
   @JSName("once")
   def once_confirmation(
     `type`: confirmation,
@@ -72,4 +74,3 @@ trait PromiEvent[T]
     handler: js.Function1[js.Error | (/* transactionHash */ String) | TransactionReceipt, Unit]
   ): PromiEvent[T] = js.native
 }
-

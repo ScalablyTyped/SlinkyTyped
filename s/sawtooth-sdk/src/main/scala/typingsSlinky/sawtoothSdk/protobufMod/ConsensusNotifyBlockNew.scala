@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockNew")
 @js.native
@@ -16,17 +16,18 @@ import scala.scalajs.js.annotation._
   */
 class ConsensusNotifyBlockNew () extends IConsensusNotifyBlockNew {
   def this(properties: IConsensusNotifyBlockNew) = this()
+  
   /**
     * Converts this ConsensusNotifyBlockNew to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "ConsensusNotifyBlockNew")
 @js.native
 object ConsensusNotifyBlockNew extends js.Object {
+  
   /**
     * Creates a new ConsensusNotifyBlockNew instance using the specified properties.
     * @param [properties] Properties to set
@@ -34,6 +35,7 @@ object ConsensusNotifyBlockNew extends js.Object {
     */
   def create(): ConsensusNotifyBlockNew = js.native
   def create(properties: IConsensusNotifyBlockNew): ConsensusNotifyBlockNew = js.native
+  
   /**
     * Decodes a ConsensusNotifyBlockNew message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -46,6 +48,7 @@ object ConsensusNotifyBlockNew extends js.Object {
   def decode(reader: Reader, length: Double): ConsensusNotifyBlockNew = js.native
   def decode(reader: js.typedarray.Uint8Array): ConsensusNotifyBlockNew = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusNotifyBlockNew = js.native
+  
   /**
     * Decodes a ConsensusNotifyBlockNew message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -55,6 +58,7 @@ object ConsensusNotifyBlockNew extends js.Object {
     */
   def decodeDelimited(reader: Reader): ConsensusNotifyBlockNew = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusNotifyBlockNew = js.native
+  
   /**
     * Encodes the specified ConsensusNotifyBlockNew message. Does not implicitly {@link ConsensusNotifyBlockNew.verify|verify} messages.
     * @param message ConsensusNotifyBlockNew message or plain object to encode
@@ -63,6 +67,7 @@ object ConsensusNotifyBlockNew extends js.Object {
     */
   def encode(message: IConsensusNotifyBlockNew): Writer = js.native
   def encode(message: IConsensusNotifyBlockNew, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ConsensusNotifyBlockNew message, length delimited. Does not implicitly {@link ConsensusNotifyBlockNew.verify|verify} messages.
     * @param message ConsensusNotifyBlockNew message or plain object to encode
@@ -71,12 +76,14 @@ object ConsensusNotifyBlockNew extends js.Object {
     */
   def encodeDelimited(message: IConsensusNotifyBlockNew): Writer = js.native
   def encodeDelimited(message: IConsensusNotifyBlockNew, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ConsensusNotifyBlockNew message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ConsensusNotifyBlockNew
     */
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusNotifyBlockNew = js.native
+  
   /**
     * Creates a plain object from a ConsensusNotifyBlockNew message. Also converts values to other types if specified.
     * @param message ConsensusNotifyBlockNew
@@ -85,6 +92,7 @@ object ConsensusNotifyBlockNew extends js.Object {
     */
   def toObject(message: ConsensusNotifyBlockNew): StringDictionary[js.Any] = js.native
   def toObject(message: ConsensusNotifyBlockNew, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ConsensusNotifyBlockNew message.
     * @param message Plain object to verify
@@ -92,4 +100,3 @@ object ConsensusNotifyBlockNew extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

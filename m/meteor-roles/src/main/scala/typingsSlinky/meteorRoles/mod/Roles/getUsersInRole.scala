@@ -5,11 +5,12 @@ import typingsSlinky.meteor.Mongo.Cursor
 import typingsSlinky.meteorRoles.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("meteor/alanning:roles", "Roles.getUsersInRole")
 @js.native
 object getUsersInRole extends js.Object {
+  
   /**
     * Retrieve all users who are in target role.
     *
@@ -37,4 +38,3 @@ object getUsersInRole extends js.Object {
   def apply(role: js.Array[String], group: String): Cursor[User] = js.native
   def apply(role: js.Array[String], group: String, options: Fields): Cursor[User] = js.native
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-dynamodb-browser/commands/UpdateContinuousBackupsCommand", JSImport.Namespace)
 @js.native
 object updateContinuousBackupsCommandMod extends js.Object {
+  
   @js.native
   class UpdateContinuousBackupsCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object updateContinuousBackupsCommandMod extends js.Object {
           Blob
         ] {
     def this(input: UpdateContinuousBackupsInput) = this()
+    
     val middlewareStack: MiddlewareStack[UpdateContinuousBackupsInput, UpdateContinuousBackupsOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[UpdateContinuousBackupsInput, UpdateContinuousBackupsOutput] = js.native
   }
-  
 }
-

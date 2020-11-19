@@ -3,12 +3,14 @@ package typingsSlinky.angularCommon.mod
 import typingsSlinky.angularCore.mod.PipeTransform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/common", "SlicePipe")
 @js.native
 class SlicePipe () extends PipeTransform {
+  
   var supports: js.Any = js.native
+  
   def transform(value: js.UndefOr[scala.Nothing], start: Double): js.UndefOr[scala.Nothing] = js.native
   def transform(value: js.UndefOr[scala.Nothing], start: Double, end: Double): js.UndefOr[scala.Nothing] = js.native
   def transform(value: String, start: Double): String = js.native
@@ -33,4 +35,3 @@ class SlicePipe () extends PipeTransform {
   def transform[T](value: js.Array[T], start: Double): js.Array[T] = js.native
   def transform[T](value: js.Array[T], start: Double, end: Double): js.Array[T] = js.native
 }
-

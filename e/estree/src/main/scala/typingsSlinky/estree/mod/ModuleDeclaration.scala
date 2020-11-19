@@ -2,7 +2,7 @@ package typingsSlinky.estree.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.estree.mod.ImportDeclaration
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.estree.mod.ExportAllDeclaration
 */
 trait ModuleDeclaration extends Node
-
 object ModuleDeclaration {
+  
   @scala.inline
   def ImportDeclaration(
     source: Literal,
@@ -23,6 +23,7 @@ object ModuleDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleDeclaration]
   }
+  
   @scala.inline
   def ExportNamedDeclaration(
     specifiers: js.Array[ExportSpecifier],
@@ -32,6 +33,7 @@ object ModuleDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleDeclaration]
   }
+  
   @scala.inline
   def ExportDefaultDeclaration(
     declaration: Declaration | Expression,
@@ -41,6 +43,7 @@ object ModuleDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleDeclaration]
   }
+  
   @scala.inline
   def ExportAllDeclaration(source: Literal, `type`: typingsSlinky.estree.estreeStrings.ExportAllDeclaration): ModuleDeclaration = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
@@ -48,4 +51,3 @@ object ModuleDeclaration {
     __obj.asInstanceOf[ModuleDeclaration]
   }
 }
-

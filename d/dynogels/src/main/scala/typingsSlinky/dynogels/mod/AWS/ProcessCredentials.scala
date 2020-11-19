@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.processCredentialsMod.ProcessCredentialsOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.ProcessCredentials")
 @js.native
@@ -14,4 +14,3 @@ class ProcessCredentials ()
   extends typingsSlinky.awsSdk.mod.ProcessCredentials {
   def this(options: ProcessCredentialsOptions) = this()
 }
-

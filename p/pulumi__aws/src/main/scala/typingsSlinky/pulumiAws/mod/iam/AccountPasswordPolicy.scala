@@ -7,7 +7,7 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws", "iam.AccountPasswordPolicy")
 @js.native
@@ -25,11 +25,11 @@ class AccountPasswordPolicy protected ()
   def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
   def this(name: String, args: AccountPasswordPolicyArgs, opts: CustomResourceOptions) = this()
 }
-
 /* static members */
 @JSImport("@pulumi/aws", "iam.AccountPasswordPolicy")
 @js.native
 object AccountPasswordPolicy extends js.Object {
+  
   /**
     * Get an existing AccountPasswordPolicy resource's state with the given name, ID, and optional extra
     * properties used to qualify the lookup.
@@ -43,10 +43,10 @@ object AccountPasswordPolicy extends js.Object {
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.accountPasswordPolicyMod.AccountPasswordPolicy = js.native
   def get(name: String, id: Input[ID], state: AccountPasswordPolicyState): typingsSlinky.pulumiAws.accountPasswordPolicyMod.AccountPasswordPolicy = js.native
   def get(name: String, id: Input[ID], state: AccountPasswordPolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.accountPasswordPolicyMod.AccountPasswordPolicy = js.native
+  
   /**
     * Returns true if the given object is an instance of AccountPasswordPolicy.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/iam/accountPasswordPolicy.AccountPasswordPolicy */ Boolean = js.native
 }
-

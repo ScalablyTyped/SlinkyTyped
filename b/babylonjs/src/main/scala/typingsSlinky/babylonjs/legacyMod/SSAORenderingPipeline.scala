@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "SSAORenderingPipeline")
 @js.native
@@ -23,4 +23,3 @@ class SSAORenderingPipeline protected ()
     cameras: js.Array[typingsSlinky.babylonjs.cameraMod.Camera]
   ) = this()
 }
-

@@ -26,11 +26,12 @@ import typingsSlinky.reactMdIcon.svgiconMod.SVGIconProps
 import typingsSlinky.reactMdIcon.textIconSpacingMod.TextIconSpacingProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/icon", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * The `FontIcon` component is used for rendering a font-icon library's icon.
     * The default is to use the `material-icons` library, but others can be used as
@@ -41,6 +42,7 @@ object mod extends js.Object {
     * `forceSize` and `forceFontSize` props to fix the sizing issues.
     */
   val FontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
+  
   /**
     * The `IconProvider` component is used to override all the default icons within
     * `react-md` with a newly defined set of icons. This is super nice since you
@@ -49,17 +51,21 @@ object mod extends js.Object {
     * icons.
     */
   val IconProvider: ReactComponentClass[IconProviderProps] = js.native
+  
   /**
     * The `IconRotator` is a simple component that is used to rotate an icon from a
     * one degrees to another.
     */
   val IconRotator: ForwardRefExoticComponent[IconRotatorProps with RefAttributes[HTMLSpanElement]] = js.native
+  
   /**
     * The `SVGIcon` component is used to render inline SVG icons or SVG icons in a
     * sprite map as an icon.
     */
   val SVGIcon: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
+  
   val TextIconSpacing: ReactComponentClass[TextIconSpacingProps] = js.native
+  
   @JSName("useIcon")
   def useIcon_back(name: back): ReactElement = js.native
   @JSName("useIcon")
@@ -109,4 +115,3 @@ object mod extends js.Object {
   @JSName("useIcon")
   def useIcon_sort(name: sort, `override`: ReactElement): ReactElement = js.native
 }
-

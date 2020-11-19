@@ -7,11 +7,12 @@ import typingsSlinky.std.ArrayLike
 import typingsSlinky.std.Int32ArrayConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("random-js/dist/utils/Int32Array", JSImport.Namespace)
 @js.native
 object int32ArrayMod extends js.Object {
+  
   @js.native
   class Int32Array ()
     extends typingsSlinky.std.Int32Array {
@@ -22,12 +23,9 @@ object int32ArrayMod extends js.Object {
     def this(buffer: ArrayBufferLike, byteOffset: Double) = this()
     def this(buffer: ArrayBufferLike, byteOffset: Double, length: Double) = this()
   }
-  
   @js.native
   object Int32Array
     extends TopLevel[
           Int32ArrayConstructor with (Instantiable1[/* elements */ js.Iterable[Double], js.typedarray.Int32Array])
         ]
-  
 }
-

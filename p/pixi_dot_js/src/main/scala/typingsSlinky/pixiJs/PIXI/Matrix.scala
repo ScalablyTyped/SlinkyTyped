@@ -2,7 +2,7 @@ package typingsSlinky.pixiJs.PIXI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The PixiJS Matrix as a class makes it a lot faster.
@@ -18,36 +18,13 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Matrix extends js.Object {
+  
   /**
     * @member {number} PIXI.Matrix#a
     * @default 1
     */
   var a: Double = js.native
-  /**
-    * @member {number} PIXI.Matrix#b
-    * @default 0
-    */
-  var b: Double = js.native
-  /**
-    * @member {number} PIXI.Matrix#c
-    * @default 0
-    */
-  var c: Double = js.native
-  /**
-    * @member {number} PIXI.Matrix#d
-    * @default 1
-    */
-  var d: Double = js.native
-  /**
-    * @member {number} PIXI.Matrix#tx
-    * @default 0
-    */
-  var tx: Double = js.native
-  /**
-    * @member {number} PIXI.Matrix#ty
-    * @default 0
-    */
-  var ty: Double = js.native
+  
   /**
     * Appends the given Matrix to this Matrix.
     *
@@ -55,6 +32,7 @@ trait Matrix extends js.Object {
     * @return {PIXI.Matrix} This matrix. Good for chaining method calls.
     */
   def append(matrix: Matrix): Matrix = js.native
+  
   /**
     * Get a new position with the current transformation applied.
     * Can be used to go from a child's coordinate space to the world coordinate space. (e.g. rendering)
@@ -67,6 +45,7 @@ trait Matrix extends js.Object {
   def apply(pos: IPointData): Point = js.native
   @JSName("apply")
   def apply(pos: IPointData, newPos: Point): Point = js.native
+  
   /**
     * Get a new position with the inverse of the current transformation applied.
     * Can be used to go from the world coordinate space to a child's coordinate space. (e.g. input)
@@ -77,6 +56,19 @@ trait Matrix extends js.Object {
     */
   def applyInverse(pos: IPointData): Point = js.native
   def applyInverse(pos: IPointData, newPos: Point): Point = js.native
+  
+  /**
+    * @member {number} PIXI.Matrix#b
+    * @default 0
+    */
+  var b: Double = js.native
+  
+  /**
+    * @member {number} PIXI.Matrix#c
+    * @default 0
+    */
+  var c: Double = js.native
+  
   /**
     * Changes the values of the matrix to be the same as the ones in given matrix
     *
@@ -84,6 +76,7 @@ trait Matrix extends js.Object {
     * @return {PIXI.Matrix} this
     */
   def copyFrom(matrix: Matrix): Matrix = js.native
+  
   /**
     * Changes the values of the given matrix to be the same as the ones in this matrix
     *
@@ -91,6 +84,13 @@ trait Matrix extends js.Object {
     * @return {PIXI.Matrix} The matrix given in parameter with its values updated.
     */
   def copyTo(matrix: Matrix): Matrix = js.native
+  
+  /**
+    * @member {number} PIXI.Matrix#d
+    * @default 1
+    */
+  var d: Double = js.native
+  
   /**
     * Decomposes the matrix (x, y, scaleX, scaleY, and rotation) and sets the properties on to a transform.
     *
@@ -98,6 +98,7 @@ trait Matrix extends js.Object {
     * @return {PIXI.Transform} The transform with the newly applied properties
     */
   def decompose(transform: Transform): Transform = js.native
+  
   /**
     * Creates a Matrix object based on the given array. The Element to Matrix mapping order is as follows:
     *
@@ -111,18 +112,21 @@ trait Matrix extends js.Object {
     * @param {number[]} array - The array that the matrix will be populated from.
     */
   def fromArray(array: js.Array[Double]): Unit = js.native
+  
   /**
     * Resets this Matrix to an identity (default) matrix.
     *
     * @return {PIXI.Matrix} This matrix. Good for chaining method calls.
     */
   def identity(): Matrix = js.native
+  
   /**
     * Inverts this matrix
     *
     * @return {PIXI.Matrix} This matrix. Good for chaining method calls.
     */
   def invert(): Matrix = js.native
+  
   /**
     * Prepends the given Matrix to this Matrix.
     *
@@ -130,6 +134,7 @@ trait Matrix extends js.Object {
     * @return {PIXI.Matrix} This matrix. Good for chaining method calls.
     */
   def prepend(matrix: Matrix): Matrix = js.native
+  
   /**
     * Applies a rotation transformation to the matrix.
     *
@@ -137,6 +142,7 @@ trait Matrix extends js.Object {
     * @return {PIXI.Matrix} This matrix. Good for chaining method calls.
     */
   def rotate(angle: Double): Matrix = js.native
+  
   /**
     * Applies a scale transformation to the matrix.
     *
@@ -145,6 +151,7 @@ trait Matrix extends js.Object {
     * @return {PIXI.Matrix} This matrix. Good for chaining method calls.
     */
   def scale(x: Double, y: Double): Matrix = js.native
+  
   /**
     * sets the matrix properties
     *
@@ -158,6 +165,7 @@ trait Matrix extends js.Object {
     * @return {PIXI.Matrix} This matrix. Good for chaining method calls.
     */
   def set(a: Double, b: Double, c: Double, d: Double, tx: Double, ty: Double): Matrix = js.native
+  
   /**
     * Sets the matrix based on all the available properties
     *
@@ -183,6 +191,7 @@ trait Matrix extends js.Object {
     skewX: Double,
     skewY: Double
   ): Matrix = js.native
+  
   /**
     * Creates an array from the current Matrix object.
     *
@@ -192,6 +201,7 @@ trait Matrix extends js.Object {
     */
   def toArray(transpose: Boolean): js.Array[Double] = js.native
   def toArray(transpose: Boolean, out: js.typedarray.Float32Array): js.Array[Double] = js.native
+  
   /**
     * Translates the matrix on the x and y.
     *
@@ -200,5 +210,16 @@ trait Matrix extends js.Object {
     * @return {PIXI.Matrix} This matrix. Good for chaining method calls.
     */
   def translate(x: Double, y: Double): Matrix = js.native
+  
+  /**
+    * @member {number} PIXI.Matrix#tx
+    * @default 0
+    */
+  var tx: Double = js.native
+  
+  /**
+    * @member {number} PIXI.Matrix#ty
+    * @default 0
+    */
+  var ty: Double = js.native
 }
-

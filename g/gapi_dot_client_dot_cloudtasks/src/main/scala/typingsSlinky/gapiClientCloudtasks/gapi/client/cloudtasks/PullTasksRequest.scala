@@ -2,10 +2,11 @@ package typingsSlinky.gapiClientCloudtasks.gapi.client.cloudtasks
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PullTasksRequest extends js.Object {
+  
   /**
     * `filter` can be used to specify a subset of tasks to lease.
     *
@@ -29,6 +30,7 @@ trait PullTasksRequest extends js.Object {
     * oldest task (ordered by schedule time).
     */
   var filter: js.UndefOr[String] = js.native
+  
   /**
     * The duration of the lease.
     *
@@ -51,11 +53,13 @@ trait PullTasksRequest extends js.Object {
     * `lease_duration` will be truncated to the nearest second.
     */
   var leaseDuration: js.UndefOr[String] = js.native
+  
   /**
     * The maximum number of tasks to lease. The maximum that can be
     * requested is 1000.
     */
   var maxTasks: js.UndefOr[Double] = js.native
+  
   /**
     * The response_view specifies which subset of the Task will be
     * returned.
@@ -72,41 +76,51 @@ trait PullTasksRequest extends js.Object {
     */
   var responseView: js.UndefOr[String] = js.native
 }
-
 object PullTasksRequest {
+  
   @scala.inline
   def apply(): PullTasksRequest = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[PullTasksRequest]
   }
+  
   @scala.inline
   implicit class PullTasksRequestOps[Self <: PullTasksRequest] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setFilter(value: String): Self = this.set("filter", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteFilter: Self = this.set("filter", js.undefined)
+    
     @scala.inline
     def setLeaseDuration(value: String): Self = this.set("leaseDuration", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteLeaseDuration: Self = this.set("leaseDuration", js.undefined)
+    
     @scala.inline
     def setMaxTasks(value: Double): Self = this.set("maxTasks", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteMaxTasks: Self = this.set("maxTasks", js.undefined)
+    
     @scala.inline
     def setResponseView(value: String): Self = this.set("responseView", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteResponseView: Self = this.set("responseView", js.undefined)
   }
-  
 }
-

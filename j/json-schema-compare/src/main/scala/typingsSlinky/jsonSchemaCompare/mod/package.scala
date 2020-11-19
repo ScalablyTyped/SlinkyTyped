@@ -2,12 +2,14 @@ package typingsSlinky.jsonSchemaCompare
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type JSONSchemaComparee = js.UndefOr[
     typingsSlinky.jsonSchema.mod.JSONSchema4 | typingsSlinky.jsonSchema.mod.JSONSchema6Definition | typingsSlinky.jsonSchema.mod.JSONSchema7Definition
   ]
+  
   /**
     * The `string & {''?: never}` is a workaround for
     * [Microsoft/TypeScript#29729](https://github.com/Microsoft/TypeScript/issues/29729).
@@ -64,5 +66,6 @@ package object mod {
     - java.lang.String with typingsSlinky.jsonSchemaCompare.anon._empty
   */
   type JSONSchemaKeys = typingsSlinky.jsonSchemaCompare.mod._JSONSchemaKeys | typingsSlinky.jsonSchemaCompare.mod.KnownKeys[typingsSlinky.jsonSchema.mod.JSONSchema4] | (java.lang.String with typingsSlinky.jsonSchemaCompare.anon._empty)
+  
   type KnownKeys[T] = js.Any
 }

@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Connect extends Service {
+  
   @JSName("config")
   var config_Connect: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates a user account for the specified Amazon Connect instance.
     */
@@ -25,6 +27,7 @@ trait Connect extends Service {
     params: CreateUserRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateUserResponse, scala.Unit]
   ): Request[CreateUserResponse, AWSError] = js.native
+  
   /**
     * Deletes a user account from the specified Amazon Connect instance.
     */
@@ -38,6 +41,7 @@ trait Connect extends Service {
     params: DeleteUserRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, scala.Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Describes the specified user account. You can find the instance ID in the console (it’s the final part of the ARN). The console does not display the user IDs. Instead, list the users and note the IDs provided in the output.
     */
@@ -51,6 +55,7 @@ trait Connect extends Service {
     params: DescribeUserRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeUserResponse, scala.Unit]
   ): Request[DescribeUserResponse, AWSError] = js.native
+  
   /**
     * Describes the specified hierarchy group.
     */
@@ -66,6 +71,7 @@ trait Connect extends Service {
     params: DescribeUserHierarchyGroupRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeUserHierarchyGroupResponse, scala.Unit]
   ): Request[DescribeUserHierarchyGroupResponse, AWSError] = js.native
+  
   /**
     * Describes the hierarchy structure of the specified Amazon Connect instance.
     */
@@ -81,6 +87,7 @@ trait Connect extends Service {
     params: DescribeUserHierarchyStructureRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeUserHierarchyStructureResponse, scala.Unit]
   ): Request[DescribeUserHierarchyStructureResponse, AWSError] = js.native
+  
   /**
     * Retrieves the contact attributes for the specified contact.
     */
@@ -94,6 +101,7 @@ trait Connect extends Service {
     params: GetContactAttributesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetContactAttributesResponse, scala.Unit]
   ): Request[GetContactAttributesResponse, AWSError] = js.native
+  
   /**
     * Gets the real-time metric data from the specified Amazon Connect instance. For more information, see Real-time Metrics Reports in the Amazon Connect Administrator Guide.
     */
@@ -107,6 +115,7 @@ trait Connect extends Service {
     params: GetCurrentMetricDataRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetCurrentMetricDataResponse, scala.Unit]
   ): Request[GetCurrentMetricDataResponse, AWSError] = js.native
+  
   /**
     * Retrieves a token for federation.
     */
@@ -120,6 +129,7 @@ trait Connect extends Service {
     params: GetFederationTokenRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetFederationTokenResponse, scala.Unit]
   ): Request[GetFederationTokenResponse, AWSError] = js.native
+  
   /**
     * Gets historical metric data from the specified Amazon Connect instance. For more information, see Historical Metrics Reports in the Amazon Connect Administrator Guide.
     */
@@ -133,6 +143,7 @@ trait Connect extends Service {
     params: GetMetricDataRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetMetricDataResponse, scala.Unit]
   ): Request[GetMetricDataResponse, AWSError] = js.native
+  
   /**
     * Provides information about the contact flows for the specified Amazon Connect instance.
     */
@@ -146,6 +157,7 @@ trait Connect extends Service {
     params: ListContactFlowsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListContactFlowsResponse, scala.Unit]
   ): Request[ListContactFlowsResponse, AWSError] = js.native
+  
   /**
     * Provides information about the hours of operation for the specified Amazon Connect instance.
     */
@@ -159,6 +171,7 @@ trait Connect extends Service {
     params: ListHoursOfOperationsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListHoursOfOperationsResponse, scala.Unit]
   ): Request[ListHoursOfOperationsResponse, AWSError] = js.native
+  
   /**
     * Provides information about the phone numbers for the specified Amazon Connect instance.
     */
@@ -172,6 +185,7 @@ trait Connect extends Service {
     params: ListPhoneNumbersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListPhoneNumbersResponse, scala.Unit]
   ): Request[ListPhoneNumbersResponse, AWSError] = js.native
+  
   /**
     * Provides information about the queues for the specified Amazon Connect instance.
     */
@@ -185,6 +199,7 @@ trait Connect extends Service {
     params: ListQueuesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListQueuesResponse, scala.Unit]
   ): Request[ListQueuesResponse, AWSError] = js.native
+  
   /**
     * Provides summary information about the routing profiles for the specified Amazon Connect instance.
     */
@@ -198,6 +213,7 @@ trait Connect extends Service {
     params: ListRoutingProfilesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListRoutingProfilesResponse, scala.Unit]
   ): Request[ListRoutingProfilesResponse, AWSError] = js.native
+  
   /**
     * Provides summary information about the security profiles for the specified Amazon Connect instance.
     */
@@ -211,6 +227,7 @@ trait Connect extends Service {
     params: ListSecurityProfilesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListSecurityProfilesResponse, scala.Unit]
   ): Request[ListSecurityProfilesResponse, AWSError] = js.native
+  
   /**
     * Lists the tags for the specified resource.
     */
@@ -224,6 +241,7 @@ trait Connect extends Service {
     params: ListTagsForResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, scala.Unit]
   ): Request[ListTagsForResourceResponse, AWSError] = js.native
+  
   /**
     * Provides summary information about the hierarchy groups for the specified Amazon Connect instance.
     */
@@ -237,6 +255,7 @@ trait Connect extends Service {
     params: ListUserHierarchyGroupsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListUserHierarchyGroupsResponse, scala.Unit]
   ): Request[ListUserHierarchyGroupsResponse, AWSError] = js.native
+  
   /**
     * Provides summary information about the users for the specified Amazon Connect instance.
     */
@@ -250,6 +269,7 @@ trait Connect extends Service {
     params: ListUsersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListUsersResponse, scala.Unit]
   ): Request[ListUsersResponse, AWSError] = js.native
+  
   /**
     * When a contact is being recorded, and the recording has been suspended using SuspendContactRecording, this API resumes recording the call. Only voice recordings are supported at this time.
     */
@@ -263,6 +283,7 @@ trait Connect extends Service {
     params: ResumeContactRecordingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ResumeContactRecordingResponse, scala.Unit]
   ): Request[ResumeContactRecordingResponse, AWSError] = js.native
+  
   /**
     * Initiates a contact flow to start a new chat for the customer. Response of this API provides a token required to obtain credentials from the CreateParticipantConnection API in the Amazon Connect Participant Service. When a new chat contact is successfully created, clients need to subscribe to the participant’s connection for the created chat within 5 minutes. This is achieved by invoking CreateParticipantConnection with WEBSOCKET and CONNECTION_CREDENTIALS. 
     */
@@ -276,6 +297,7 @@ trait Connect extends Service {
     params: StartChatContactRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartChatContactResponse, scala.Unit]
   ): Request[StartChatContactResponse, AWSError] = js.native
+  
   /**
     * This API starts recording the contact when the agent joins the call. StartContactRecording is a one-time action. For example, if you use StopContactRecording to stop recording an ongoing call, you can't use StartContactRecording to restart it. For scenarios where the recording has started and you want to suspend and resume it, such as when collecting sensitive information (for example, a credit card number), use SuspendContactRecording and ResumeContactRecording. You can use this API to override the recording behavior configured in the Set recording behavior block. Only voice recordings are supported at this time.
     */
@@ -289,6 +311,7 @@ trait Connect extends Service {
     params: StartContactRecordingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartContactRecordingResponse, scala.Unit]
   ): Request[StartContactRecordingResponse, AWSError] = js.native
+  
   /**
     * This API places an outbound call to a contact, and then initiates the contact flow. It performs the actions in the contact flow that's specified (in ContactFlowId). Agents are not involved in initiating the outbound API (that is, dialing the contact). If the contact flow places an outbound call to a contact, and then puts the contact in queue, that's when the call is routed to the agent, like any other inbound case. There is a 60 second dialing timeout for this operation. If the call is not connected after 60 seconds, it fails.
     */
@@ -304,6 +327,7 @@ trait Connect extends Service {
     params: StartOutboundVoiceContactRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartOutboundVoiceContactResponse, scala.Unit]
   ): Request[StartOutboundVoiceContactResponse, AWSError] = js.native
+  
   /**
     * Ends the specified contact.
     */
@@ -317,6 +341,7 @@ trait Connect extends Service {
     params: StopContactRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopContactResponse, scala.Unit]
   ): Request[StopContactResponse, AWSError] = js.native
+  
   /**
     * When a contact is being recorded, this API stops recording the call. StopContactRecording is a one-time action. If you use StopContactRecording to stop recording an ongoing call, you can't use StartContactRecording to restart it. For scenarios where the recording has started and you want to suspend it for sensitive information (for example, to collect a credit card number), and then restart it, use SuspendContactRecording and ResumeContactRecording. Only voice recordings are supported at this time.
     */
@@ -330,6 +355,7 @@ trait Connect extends Service {
     params: StopContactRecordingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopContactRecordingResponse, scala.Unit]
   ): Request[StopContactRecordingResponse, AWSError] = js.native
+  
   /**
     * When a contact is being recorded, this API suspends recording the call. For example, you might suspend the call recording while collecting sensitive information, such as a credit card number. Then use ResumeContactRecording to restart recording.  The period of time that the recording is suspended is filled with silence in the final recording.  Only voice recordings are supported at this time.
     */
@@ -343,6 +369,7 @@ trait Connect extends Service {
     params: SuspendContactRecordingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ SuspendContactRecordingResponse, scala.Unit]
   ): Request[SuspendContactRecordingResponse, AWSError] = js.native
+  
   /**
     * Adds the specified tags to the specified resource. The supported resource type is users.
     */
@@ -356,6 +383,7 @@ trait Connect extends Service {
     params: TagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, scala.Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Removes the specified tags from the specified resource.
     */
@@ -369,6 +397,7 @@ trait Connect extends Service {
     params: UntagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, scala.Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Creates or updates the contact attributes associated with the specified contact. You can add or update attributes for both ongoing and completed contacts. For example, you can update the customer's name or the reason the customer called while the call is active, or add notes about steps that the agent took during the call that are displayed to the next agent that takes the call. You can also update attributes for a contact using data from your CRM application and save the data with the contact in Amazon Connect. You could also flag calls for additional analysis, such as legal review or identifying abusive callers. Contact attributes are available in Amazon Connect for 24 months, and are then deleted.  Important: You cannot use the operation to update attributes for contacts that occurred prior to the release of the API, September 12, 2018. You can update attributes only for contacts that started after the release of the API. If you attempt to update attributes for a contact that occurred prior to the release of the API, a 400 error is returned. This applies also to queued callbacks that were initiated prior to the release of the API but are still active in your instance.
     */
@@ -382,6 +411,7 @@ trait Connect extends Service {
     params: UpdateContactAttributesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateContactAttributesResponse, scala.Unit]
   ): Request[UpdateContactAttributesResponse, AWSError] = js.native
+  
   /**
     * Assigns the specified hierarchy group to the specified user.
     */
@@ -395,6 +425,7 @@ trait Connect extends Service {
     params: UpdateUserHierarchyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, scala.Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Updates the identity information for the specified user.
     */
@@ -408,6 +439,7 @@ trait Connect extends Service {
     params: UpdateUserIdentityInfoRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, scala.Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Updates the phone configuration settings for the specified user.
     */
@@ -421,6 +453,7 @@ trait Connect extends Service {
     params: UpdateUserPhoneConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, scala.Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Assigns the specified routing profile to the specified user.
     */
@@ -434,6 +467,7 @@ trait Connect extends Service {
     params: UpdateUserRoutingProfileRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, scala.Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Assigns the specified security profiles to the specified user.
     */
@@ -448,4 +482,3 @@ trait Connect extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, scala.Unit]
   ): Request[js.Object, AWSError] = js.native
 }
-

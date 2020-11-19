@@ -7,10 +7,11 @@ import typingsSlinky.gapiClientClassroom.anon.EnrollmentCode
 import typingsSlinky.gapiClientClassroom.anon.UserId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait StudentsResource extends js.Object {
+  
   def create(request: CallbackCourseId, body: Student): Request[Student] = js.native
   /**
     * Adds a user as a student of a course.
@@ -29,6 +30,7 @@ trait StudentsResource extends js.Object {
     * course.
     */
   def create(request: EnrollmentCode): Request[Student] = js.native
+  
   /**
     * Deletes a student of a course.
     *
@@ -41,6 +43,7 @@ trait StudentsResource extends js.Object {
     */
   def delete(): Request[js.Object] = js.native
   def delete(request: UserId): Request[js.Object] = js.native
+  
   /**
     * Returns a student of a course.
     *
@@ -53,6 +56,7 @@ trait StudentsResource extends js.Object {
     */
   def get(): Request[Student] = js.native
   def get(request: UserId): Request[Student] = js.native
+  
   /**
     * Returns a list of students of this course that the requester
     * is permitted to view.
@@ -65,4 +69,3 @@ trait StudentsResource extends js.Object {
   def list(): Request[ListStudentsResponse] = js.native
   def list(request: Callback): Request[ListStudentsResponse] = js.native
 }
-

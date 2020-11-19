@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.lambdaMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "Lambda")
 @js.native
@@ -14,4 +14,3 @@ class Lambda ()
   extends typingsSlinky.awsSdk.allMod.Lambda {
   def this(options: ClientConfiguration) = this()
 }
-

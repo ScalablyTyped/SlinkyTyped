@@ -7,13 +7,13 @@ import typingsSlinky.node.cryptoMod.RsaPrivateKey
 import typingsSlinky.node.cryptoMod.RsaPublicKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mz/crypto", "publicDecrypt")
 @js.native
 object publicDecrypt extends js.Object {
+  
   def apply(key: KeyLike, buffer: ArrayBufferView): Buffer = js.native
   def apply(key: RsaPrivateKey, buffer: ArrayBufferView): Buffer = js.native
   def apply(key: RsaPublicKey, buffer: ArrayBufferView): Buffer = js.native
 }
-

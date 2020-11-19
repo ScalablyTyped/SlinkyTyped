@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.ScaleBar
 import typingsSlinky.arcgisJsApi.esri.ScaleBarProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/ScaleBar", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends ScaleBar {
   def this(properties: ScaleBarProperties) = this()
 }
-

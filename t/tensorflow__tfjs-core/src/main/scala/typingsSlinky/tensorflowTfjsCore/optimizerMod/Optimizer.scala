@@ -9,16 +9,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensor
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/optimizers/optimizer", "Optimizer")
 @js.native
 abstract class Optimizer () extends Serializable {
-  /**
-    * The number of iterations that this optimizer instance has been invoked for.
-    */
-  val iterations: Double = js.native
-  var iterations_ : Double = js.native
+  
   def applyGradients(variableGradients: js.Array[NamedTensor]): Unit = js.native
   /**
     * Updates variables by using the computed gradients.
@@ -26,6 +22,7 @@ abstract class Optimizer () extends Serializable {
     * @param variableGradients A mapping of variable name to its gradient value.
     */
   def applyGradients(variableGradients: NamedTensorMap): Unit = js.native
+  
   /**
     * Executes f() and computes the gradient of the scalar output of f() with
     * respect to the list of trainable variables provided by `varList`. If no
@@ -39,10 +36,12 @@ abstract class Optimizer () extends Serializable {
     */
   def computeGradients(f: js.Function0[Scalar]): Value = js.native
   def computeGradients(f: js.Function0[Scalar], varList: js.Array[Variable[Rank]]): Value = js.native
+  
   /**
     * Dispose the variables (if any) owned by this optimizer instance.
     */
   def dispose(): Unit = js.native
+  
   /**
     * Extract the first element of the weight values and set it
     * as the iterations counter variable of this instance of optimizer.
@@ -51,8 +50,18 @@ abstract class Optimizer () extends Serializable {
     * @returns Weight values with the first element consumed and excluded.
     */
   /* protected */ def extractIterations(weightValues: js.Array[NamedTensor]): js.Promise[js.Array[NamedTensor]] = js.native
+  
   def getWeights(): js.Promise[js.Array[NamedTensor]] = js.native
+  
   /* protected */ def incrementIterations(): Unit = js.native
+  
+  /**
+    * The number of iterations that this optimizer instance has been invoked for.
+    */
+  val iterations: Double = js.native
+  
+  var iterations_ : Double = js.native
+  
   /**
     * Executes `f()` and minimizes the scalar output of `f()` by computing
     * gradients of y with respect to the list of trainable variables provided by
@@ -70,7 +79,8 @@ abstract class Optimizer () extends Serializable {
   def minimize(f: js.Function0[Scalar], returnCost: js.UndefOr[scala.Nothing], varList: js.Array[Variable[Rank]]): Scalar | Null = js.native
   def minimize(f: js.Function0[Scalar], returnCost: Boolean): Scalar | Null = js.native
   def minimize(f: js.Function0[Scalar], returnCost: Boolean, varList: js.Array[Variable[Rank]]): Scalar | Null = js.native
+  
   def saveIterations(): js.Promise[NamedTensor] = js.native
+  
   def setWeights(weightValues: js.Array[NamedTensor]): js.Promise[Unit] = js.native
 }
-

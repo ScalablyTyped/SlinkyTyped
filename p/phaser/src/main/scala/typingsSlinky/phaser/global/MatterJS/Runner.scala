@@ -3,7 +3,7 @@ package typingsSlinky.phaser.global.MatterJS
 import typingsSlinky.phaser.MatterJS.IRunnerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `Matter.Runner` module is an optional utility which provides a game loop,
@@ -21,17 +21,18 @@ import scala.scalajs.js.annotation._
 @js.native
 class Runner ()
   extends typingsSlinky.phaser.MatterJS.Runner
-
 /* static members */
 @JSGlobal("MatterJS.Runner")
 @js.native
 object Runner extends js.Object {
+  
   /**
     * Creates a new Runner. The options parameter is an object that specifies any properties you wish to override the defaults.
     * @method create
     * @param {} options
     */
   def create(options: IRunnerOptions): typingsSlinky.phaser.MatterJS.Runner = js.native
+  
   /**
     * Continuously ticks a `Matter.Engine` by calling `Runner.tick` on the `requestAnimationFrame` event.
     * @method run
@@ -44,6 +45,7 @@ object Runner extends js.Object {
     * @param {engine} engine
     */
   def run(runner: typingsSlinky.phaser.MatterJS.Runner, engine: typingsSlinky.phaser.MatterJS.Engine): typingsSlinky.phaser.MatterJS.Runner = js.native
+  
   /**
     * Alias for `Runner.run`.
     * @method start
@@ -51,6 +53,7 @@ object Runner extends js.Object {
     * @param {engine} engine
     */
   def start(runner: typingsSlinky.phaser.MatterJS.Runner, engine: typingsSlinky.phaser.MatterJS.Engine): Unit = js.native
+  
   /**
     * Ends execution of `Runner.run` on the given `runner`, by canceling the animation frame request event loop.
     * If you wish to only temporarily pause the engine, see `engine.enabled` instead.
@@ -58,6 +61,7 @@ object Runner extends js.Object {
     * @param {runner} runner
     */
   def stop(runner: typingsSlinky.phaser.MatterJS.Runner): Unit = js.native
+  
   /**
     * A game loop utility that updates the engine and renderer by one step (a 'tick').
     * Features delta smoothing, time correction and fixed or dynamic timing.
@@ -74,4 +78,3 @@ object Runner extends js.Object {
     time: Double
   ): Unit = js.native
 }
-

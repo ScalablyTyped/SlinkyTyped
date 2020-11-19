@@ -4,11 +4,12 @@ import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("morgan", "format")
 @js.native
 object format extends js.Object {
+  
   /**
     * Define a named custom format by specifying a format string in token
     * notation.
@@ -20,4 +21,3 @@ object format extends js.Object {
     */
   def apply[Request /* <: IncomingMessage */, Response /* <: ServerResponse */](name: String, fmt: FormatFn[Request, Response]): Morgan[Request, Response] = js.native
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.webservicesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/published-app-services relevant section in reference guide}
@@ -22,17 +22,18 @@ class PublishedAppService protected ()
     container: IFolderBase
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "webservices.PublishedAppService")
 @js.native
 object PublishedAppService extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates a new PublishedAppService unit in the SDK and on the server.
     * Expects one argument, the projects.IFolderBase in which this unit is contained.
     */
   def createIn(container: IFolderBase): typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedAppService = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

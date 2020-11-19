@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.WebScene
 import typingsSlinky.arcgisJsApi.esri.WebSceneProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/WebScene", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends WebScene {
   def this(properties: WebSceneProperties) = this()
 }
-

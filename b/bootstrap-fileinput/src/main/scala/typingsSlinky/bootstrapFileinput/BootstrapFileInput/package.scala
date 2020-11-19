@@ -2,10 +2,13 @@ package typingsSlinky.bootstrapFileinput
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object BootstrapFileInput {
+  
   type FileStack = org.scalablytyped.runtime.StringDictionary[org.scalajs.dom.raw.File]
+  
   type PreviewFileExtSettings = org.scalablytyped.runtime.StringDictionary[js.Function1[/* ext */ java.lang.String, scala.Boolean]]
+  
   type PreviewFileIconSettings = org.scalablytyped.runtime.StringDictionary[java.lang.String]
 }

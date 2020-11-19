@@ -3,7 +3,7 @@ package typingsSlinky.typescriptServices.mod
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "ConstructSignatureSyntax")
 @js.native
@@ -15,11 +15,10 @@ class ConstructSignatureSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSImport("typescript-services", "ConstructSignatureSyntax")
 @js.native
 object ConstructSignatureSyntax extends js.Object {
+  
   def create1(): typingsSlinky.typescriptServices.TypeScript.ConstructSignatureSyntax = js.native
 }
-

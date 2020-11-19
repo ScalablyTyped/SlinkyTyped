@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CUR extends Service {
+  
   @JSName("config")
   var config_CUR: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Deletes the specified report.
     */
@@ -25,6 +27,7 @@ trait CUR extends Service {
     params: DeleteReportDefinitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteReportDefinitionResponse, Unit]
   ): Request[DeleteReportDefinitionResponse, AWSError] = js.native
+  
   /**
     * Lists the AWS Cost and Usage reports available to this account.
     */
@@ -38,6 +41,7 @@ trait CUR extends Service {
     params: DescribeReportDefinitionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeReportDefinitionsResponse, Unit]
   ): Request[DescribeReportDefinitionsResponse, AWSError] = js.native
+  
   /**
     * Allows you to programatically update your report preferences.
     */
@@ -51,6 +55,7 @@ trait CUR extends Service {
     params: ModifyReportDefinitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ModifyReportDefinitionResponse, Unit]
   ): Request[ModifyReportDefinitionResponse, AWSError] = js.native
+  
   /**
     * Creates a new report using the description that you provide.
     */
@@ -65,4 +70,3 @@ trait CUR extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ PutReportDefinitionResponse, Unit]
   ): Request[PutReportDefinitionResponse, AWSError] = js.native
 }
-

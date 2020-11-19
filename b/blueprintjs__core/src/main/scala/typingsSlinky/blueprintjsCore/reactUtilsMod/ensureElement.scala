@@ -3,11 +3,12 @@ package typingsSlinky.blueprintjsCore.reactUtilsMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@blueprintjs/core/lib/esm/common/utils/reactUtils", "ensureElement")
 @js.native
 object ensureElement extends js.Object {
+  
   def apply(): ReactElement = js.native
   def apply(
     child: js.UndefOr[ReactElement],
@@ -15,4 +16,3 @@ object ensureElement extends js.Object {
   ): ReactElement = js.native
   def apply(child: ReactElement): ReactElement = js.native
 }
-

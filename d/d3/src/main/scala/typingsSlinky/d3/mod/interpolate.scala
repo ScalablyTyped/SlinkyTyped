@@ -5,11 +5,12 @@ import typingsSlinky.d3Interpolate.anon.ToString
 import typingsSlinky.d3Interpolate.anon.ValueOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("d3", "interpolate")
 @js.native
 object interpolate extends js.Object {
+  
   def apply(a: String, b: String): js.Function1[/* t */ Double, String] = js.native
   def apply(a: String, b: ColorCommonInstance): js.Function1[/* t */ Double, String] = js.native
   def apply(a: js.Any, b: Boolean): js.Function1[/* t */ Double, Boolean] = js.native
@@ -24,4 +25,3 @@ object interpolate extends js.Object {
   def apply[U /* <: js.Object */](a: js.Any, b: U): js.Function1[/* t */ Double, U] = js.native
   def apply[U /* <: js.Array[_] */](a: js.Array[_], b: U): js.Function1[/* t */ Double, U] = js.native
 }
-

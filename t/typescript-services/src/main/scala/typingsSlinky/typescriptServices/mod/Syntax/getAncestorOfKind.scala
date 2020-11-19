@@ -4,11 +4,11 @@ import typingsSlinky.typescriptServices.TypeScript.PositionedElement
 import typingsSlinky.typescriptServices.TypeScript.SyntaxKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "Syntax.getAncestorOfKind")
 @js.native
 object getAncestorOfKind extends js.Object {
+  
   def apply(positionedToken: PositionedElement, kind: SyntaxKind): PositionedElement = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.directconnectMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "DirectConnect")
 @js.native
@@ -14,4 +14,3 @@ class DirectConnect ()
   extends typingsSlinky.awsSdk.mod.DirectConnect {
   def this(options: ClientConfiguration) = this()
 }
-

@@ -2,13 +2,15 @@ package typingsSlinky.activexAdox
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object ADOX extends js.Object {
+    
     @js.native
     class Catalog protected ()
       extends typingsSlinky.activexAdox.ADOX.Catalog
@@ -44,8 +46,5 @@ object global extends js.Object {
     @js.native
     class View protected ()
       extends typingsSlinky.activexAdox.ADOX.View
-    
   }
-  
 }
-

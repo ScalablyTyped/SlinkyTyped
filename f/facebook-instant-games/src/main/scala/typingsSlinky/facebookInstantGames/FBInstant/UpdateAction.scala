@@ -2,7 +2,7 @@ package typingsSlinky.facebookInstantGames.FBInstant
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents the type of the update action to perform.
@@ -15,11 +15,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.LEADERBOARD
 */
 trait UpdateAction extends js.Object
-
 object UpdateAction {
+  
   @scala.inline
   def CUSTOM: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.CUSTOM = "CUSTOM".asInstanceOf[typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.CUSTOM]
+  
   @scala.inline
   def LEADERBOARD: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.LEADERBOARD = "LEADERBOARD".asInstanceOf[typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.LEADERBOARD]
 }
-

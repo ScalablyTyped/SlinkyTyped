@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "getParseTreeNode")
 @js.native
 object getParseTreeNode extends js.Object {
+  
   /**
     * Gets the original parse tree node for a node.
     *
@@ -25,4 +26,3 @@ object getParseTreeNode extends js.Object {
   def apply[T /* <: Node */](node: js.UndefOr[scala.Nothing], nodeTest: js.Function1[/* node */ Node, /* is T */ Boolean]): js.UndefOr[T] = js.native
   def apply[T /* <: Node */](node: Node, nodeTest: js.Function1[/* node */ Node, /* is T */ Boolean]): js.UndefOr[T] = js.native
 }
-

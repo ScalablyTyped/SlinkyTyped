@@ -2,7 +2,7 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typescript.mod.TextRange because Already inherited
@@ -15,9 +15,11 @@ trait NoSubstitutionTemplateLiteral
      with StringLiteralLike
      with TemplateLiteral
      with TemplateLiteralToken {
+  
   var _declarationBrand: js.Any = js.native
+  
   @JSName("kind")
   var kind_NoSubstitutionTemplateLiteral: typingsSlinky.typescript.mod.SyntaxKind.NoSubstitutionTemplateLiteral = js.native
+  
   var rawText: js.UndefOr[java.lang.String] = js.native
 }
-

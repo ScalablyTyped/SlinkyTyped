@@ -4,10 +4,11 @@ import typingsSlinky.node.NodeJS.ReadWriteStream
 import typingsSlinky.vinyl.mod.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GulpIf extends js.Object {
+  
   /** 
     * gulp-if will pipe data to stream whenever condition is truthy.
     * If condition is falsey and elseStream is passed, data will pipe to elseStream
@@ -57,4 +58,3 @@ trait GulpIf extends js.Object {
   def apply(condition: js.RegExp, stream: ReadWriteStream): ReadWriteStream = js.native
   def apply(condition: js.RegExp, stream: ReadWriteStream, elseStream: ReadWriteStream): ReadWriteStream = js.native
 }
-

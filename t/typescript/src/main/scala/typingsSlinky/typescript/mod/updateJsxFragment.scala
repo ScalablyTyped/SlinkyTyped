@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "updateJsxFragment")
 @js.native
 object updateJsxFragment extends js.Object {
+  
   def apply(
     node: JsxFragment,
     openingFragment: JsxOpeningFragment,
@@ -14,4 +15,3 @@ object updateJsxFragment extends js.Object {
     closingFragment: JsxClosingFragment
   ): JsxFragment = js.native
 }
-

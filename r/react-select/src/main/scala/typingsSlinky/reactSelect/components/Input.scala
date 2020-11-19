@@ -7,9 +7,10 @@ import typingsSlinky.reactSelect.componentsInputMod.InputProps
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Input {
+  
   @JSImport("react-select", "components.Input")
   @js.native
   object component extends js.Object
@@ -18,13 +19,16 @@ object Input {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def isDisabled(value: Boolean): this.type = set("isDisabled", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: InputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     cx: (Null | String, ClassNamesState, String) => String | Unit,
@@ -36,4 +40,3 @@ object Input {
     new Builder(js.Array(this.component, __props.asInstanceOf[InputProps]))
   }
 }
-

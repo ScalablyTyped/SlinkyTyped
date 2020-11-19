@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "RequestFileError")
 @js.native
@@ -15,4 +15,3 @@ class RequestFileError protected ()
     */
   def this(message: String, request: typingsSlinky.babylonjs.webRequestMod.WebRequest) = this()
 }
-

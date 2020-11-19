@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/CreateBranchCommand", JSImport.Namespace)
 @js.native
 object createBranchCommandMod extends js.Object {
+  
   @js.native
   class CreateBranchCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object createBranchCommandMod extends js.Object {
           Readable
         ] {
     def this(input: CreateBranchInput) = this()
+    
     val middlewareStack: MiddlewareStack[CreateBranchInput, CreateBranchOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[CreateBranchInput, CreateBranchOutput] = js.native
   }
-  
 }
-

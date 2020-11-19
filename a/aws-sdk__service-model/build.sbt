@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "aws-sdk__service-model"
-version := "0.1.0-preview.2-ab60eb"
+version := "0.1.0-preview.2-f87161"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "aws-sdk__build-types" % "0.1.0-preview.1-478f63",
-  "org.scalablytyped.slinky" %%% "aws-sdk__types" % "0.1.0-preview.1-3a791d",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "aws-sdk__build-types" % "0.1.0-preview.1-97bc09",
+  "org.scalablytyped.slinky" %%% "aws-sdk__types" % "0.1.0-preview.1-9499ed",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.WorkflowProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Workflow")
 @js.native
@@ -16,4 +16,3 @@ class WorkflowCls ()
   extends typingsSlinky.arcgisJsApi.esri.Workflow {
   def this(properties: WorkflowProperties) = this()
 }
-

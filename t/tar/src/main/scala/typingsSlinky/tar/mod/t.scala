@@ -4,11 +4,12 @@ import typingsSlinky.node.streamMod.Writable
 import typingsSlinky.tar.anon.ListOptionsFileOptionssyn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tar", "t")
 @js.native
 object t extends js.Object {
+  
   def apply(): Writable = js.native
   def apply(
     options: js.UndefOr[scala.Nothing],
@@ -36,4 +37,3 @@ object t extends js.Object {
     callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
   ): Writable = js.native
 }
-

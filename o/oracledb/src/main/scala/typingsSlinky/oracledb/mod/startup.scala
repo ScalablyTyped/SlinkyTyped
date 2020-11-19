@@ -2,11 +2,12 @@ package typingsSlinky.oracledb.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("oracledb", "startup")
 @js.native
 object startup extends js.Object {
+  
   /**
     * This is the simplified form of connection.startup() used for starting a database instance up.
     * It accepts connection credentials and starts the database instance completely.
@@ -21,4 +22,3 @@ object startup extends js.Object {
   def apply(creds: DBCredentials, opts: StartupOptions): js.Promise[Unit] = js.native
   def apply(creds: DBCredentials, opts: StartupOptions, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "Triangle")
 @js.native
@@ -32,17 +32,18 @@ class Triangle ()
     c: typingsSlinky.three.vector3Mod.Vector3
   ) = this()
 }
-
 /* static members */
 @JSImport("three", "Triangle")
 @js.native
 object Triangle extends js.Object {
+  
   def containsPoint(
     point: typingsSlinky.three.vector3Mod.Vector3,
     a: typingsSlinky.three.vector3Mod.Vector3,
     b: typingsSlinky.three.vector3Mod.Vector3,
     c: typingsSlinky.three.vector3Mod.Vector3
   ): Boolean = js.native
+  
   def getBarycoord(
     point: typingsSlinky.three.vector3Mod.Vector3,
     a: typingsSlinky.three.vector3Mod.Vector3,
@@ -50,12 +51,14 @@ object Triangle extends js.Object {
     c: typingsSlinky.three.vector3Mod.Vector3,
     target: typingsSlinky.three.vector3Mod.Vector3
   ): typingsSlinky.three.vector3Mod.Vector3 = js.native
+  
   def getNormal(
     a: typingsSlinky.three.vector3Mod.Vector3,
     b: typingsSlinky.three.vector3Mod.Vector3,
     c: typingsSlinky.three.vector3Mod.Vector3,
     target: typingsSlinky.three.vector3Mod.Vector3
   ): typingsSlinky.three.vector3Mod.Vector3 = js.native
+  
   def getUV(
     point: typingsSlinky.three.vector3Mod.Vector3,
     p1: typingsSlinky.three.vector3Mod.Vector3,
@@ -66,6 +69,7 @@ object Triangle extends js.Object {
     uv3: typingsSlinky.three.vector2Mod.Vector2,
     target: typingsSlinky.three.vector2Mod.Vector2
   ): typingsSlinky.three.vector2Mod.Vector2 = js.native
+  
   def isFrontFacing(
     a: typingsSlinky.three.vector3Mod.Vector3,
     b: typingsSlinky.three.vector3Mod.Vector3,
@@ -73,4 +77,3 @@ object Triangle extends js.Object {
     direction: typingsSlinky.three.vector3Mod.Vector3
   ): Boolean = js.native
 }
-

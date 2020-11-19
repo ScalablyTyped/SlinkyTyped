@@ -24,25 +24,31 @@ import typingsSlinky.reactNavigation.mod.NavigationSetParamsAction
 import typingsSlinky.reactNavigation.mod.NavigationToggleDrawerAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GetActionCreators extends js.Object {
-  var getScreenOptions: NavigationScreenOptionsGetter[_] = js.native
+  
   def getActionCreators(route: NavigationRoute[NavigationParams], navStateKey: String): CloseDrawer = js.native
+  
   def getActionForPathAndParams(path: String): NavigationInitAction | NavigationNavigateAction | NavigationBackAction | NavigationSetParamsAction | NavigationResetAction | NavigationReplaceAction | NavigationPopAction | NavigationPushAction | NavigationPopToTopAction | NavigationCompleteTransitionAction | NavigationDrawerOpenedAction | NavigationDrawerClosedAction | NavigationOpenDrawerAction | NavigationCloseDrawerAction | NavigationToggleDrawerAction | NavigationJumpToAction | Key | Null = js.native
   def getActionForPathAndParams(path: String, params: NavigationParams): NavigationInitAction | NavigationNavigateAction | NavigationBackAction | NavigationSetParamsAction | NavigationResetAction | NavigationReplaceAction | NavigationPopAction | NavigationPushAction | NavigationPopToTopAction | NavigationCompleteTransitionAction | NavigationDrawerOpenedAction | NavigationDrawerClosedAction | NavigationOpenDrawerAction | NavigationCloseDrawerAction | NavigationToggleDrawerAction | NavigationJumpToAction | Key | Null = js.native
+  
   def getComponentForRouteName(routeName: String): NavigationComponent[
     js.Object, 
     NavigationScreenProp[NavigationRoute[NavigationParams], NavigationParams]
   ] = js.native
+  
   def getComponentForState(state: js.Any): NavigationComponent[
     js.Object, 
     NavigationScreenProp[NavigationRoute[NavigationParams], NavigationParams]
   ] = js.native
+  
   def getPathAndParamsForState(state: js.Any): Params = js.native
+  
+  var getScreenOptions: NavigationScreenOptionsGetter[_] = js.native
+  
   def getStateForAction(action: NavigationAction): js.Any = js.native
   def getStateForAction(action: NavigationAction, state: NavigationLeafRouteNaviga): js.Any = js.native
   def getStateForAction(action: NavigationAction, state: NavigationLeafRouteNavigaIndex): js.Any = js.native
 }
-

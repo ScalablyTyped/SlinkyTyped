@@ -2,17 +2,17 @@ package typingsSlinky.nodegit.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("nodegit", "Checkout")
 @js.native
 class Checkout ()
   extends typingsSlinky.nodegit.checkoutMod.Checkout
-
 /* static members */
 @JSImport("nodegit", "Checkout")
 @js.native
 object Checkout extends js.Object {
+  
   /**
     * Patch head checkout to automatically coerce objects.
     */
@@ -21,6 +21,7 @@ object Checkout extends js.Object {
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     options: typingsSlinky.nodegit.checkoutOptionsMod.CheckoutOptions
   ): js.Promise[Unit] = js.native
+  
   /**
     * Patch index checkout to automatically coerce objects.
     */
@@ -30,7 +31,9 @@ object Checkout extends js.Object {
     The: Index,
     options: typingsSlinky.nodegit.checkoutOptionsMod.CheckoutOptions
   ): js.Promise[Unit] = js.native
+  
   def initOptions(opts: typingsSlinky.nodegit.checkoutOptionsMod.CheckoutOptions, version: Double): Double = js.native
+  
   def tree(
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     treeish: typingsSlinky.nodegit.commitMod.Commit
@@ -65,4 +68,3 @@ object Checkout extends js.Object {
     options: typingsSlinky.nodegit.checkoutOptionsMod.CheckoutOptions
   ): js.Promise[Unit] = js.native
 }
-

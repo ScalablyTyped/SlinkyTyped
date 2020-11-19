@@ -2,11 +2,12 @@ package typingsSlinky.babelTypes.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babel-types", "jSXAttribute")
 @js.native
 object jSXAttribute extends js.Object {
+  
   def apply(): JSXAttribute_ = js.native
   def apply(name: js.UndefOr[scala.Nothing], value: JSXElement_): JSXAttribute_ = js.native
   def apply(name: js.UndefOr[scala.Nothing], value: JSXExpressionContainer_): JSXAttribute_ = js.native
@@ -20,4 +21,3 @@ object jSXAttribute extends js.Object {
   def apply(name: JSXNamespacedName_, value: JSXExpressionContainer_): JSXAttribute_ = js.native
   def apply(name: JSXNamespacedName_, value: StringLiteral_): JSXAttribute_ = js.native
 }
-

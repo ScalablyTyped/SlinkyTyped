@@ -5,11 +5,11 @@ import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
 import typingsSlinky.popmotion.keyframesTypesMod.KeyframesProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("popmotion", "keyframes")
 @js.native
 object keyframes extends js.Object {
+  
   def apply(hasEasingsEaseTimesValuesTweenProps: KeyframesProps): Action[ColdSubscription] = js.native
 }
-

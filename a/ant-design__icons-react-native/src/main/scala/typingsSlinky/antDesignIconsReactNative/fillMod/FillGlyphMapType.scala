@@ -2,7 +2,7 @@ package typingsSlinky.antDesignIconsReactNative.fillMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* keyof @ant-design/icons-react-native.anon.Accountbook */ /* Rewritten from type alias, can be one of: 
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`account-book`
@@ -225,4 +225,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antDesignIconsReactNative.antDesignIconsReactNativeStrings.`zhihu-square`
 */
 trait FillGlyphMapType extends js.Object
-

@@ -6,11 +6,12 @@ import typingsSlinky.sipJs.serverTransactionMod.ServerTransaction
 import typingsSlinky.sipJs.transactionUserMod.ServerTransactionUser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js/lib/core/transactions/non-invite-server-transaction", JSImport.Namespace)
 @js.native
 object nonInviteServerTransactionMod extends js.Object {
+  
   @js.native
   class NonInviteServerTransaction protected () extends ServerTransaction {
     /**
@@ -23,15 +24,11 @@ object nonInviteServerTransactionMod extends js.Object {
       * @param user - The transaction user.
       */
     def this(request: IncomingRequestMessage, transport: Transport, user: ServerTransactionUser) = this()
+    
     var J: js.Any = js.native
+    
     var lastResponse: js.Any = js.native
-    var stateTransition: js.Any = js.native
-    /**
-      * The server transaction remains in this state until Timer J fires,
-      * at which point it MUST transition to the "Terminated" state.
-      * https://tools.ietf.org/html/rfc3261#section-17.2.2
-      */
-    var timerJ: js.Any = js.native
+    
     /**
       * First, the procedures in [4] are followed, which attempt to deliver the response to a backup.
       * If those should all fail, based on the definition of failure in [4], the server transaction SHOULD
@@ -39,7 +36,14 @@ object nonInviteServerTransactionMod extends js.Object {
       * https://tools.ietf.org/html/rfc3261#section-17.2.4
       */
     /* protected */ def onTransportError(error: js.Error): Unit = js.native
+    
+    var stateTransition: js.Any = js.native
+    
+    /**
+      * The server transaction remains in this state until Timer J fires,
+      * at which point it MUST transition to the "Terminated" state.
+      * https://tools.ietf.org/html/rfc3261#section-17.2.2
+      */
+    var timerJ: js.Any = js.native
   }
-  
 }
-

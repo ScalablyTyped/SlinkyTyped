@@ -2,11 +2,12 @@ package typingsSlinky.googleAppsScript.global.GoogleAppsScript
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("GoogleAppsScript.Forms")
 @js.native
 object Forms extends js.Object {
+  
   /**
     * An enum representing the supported types of image alignment. Alignment types can be accessed from
     * FormApp.Alignment.
@@ -20,11 +21,15 @@ object Forms extends js.Object {
     */
   @js.native
   object Alignment extends js.Object {
-    /* 1 */ val CENTER: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.Alignment.CENTER with Double = js.native
-    /* 0 */ val LEFT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.Alignment.LEFT with Double = js.native
-    /* 2 */ val RIGHT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.Alignment.RIGHT with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.Alignment with Double] = js.native
+    
+    /* 1 */ val CENTER: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.Alignment.CENTER with Double = js.native
+    
+    /* 0 */ val LEFT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.Alignment.LEFT with Double = js.native
+    
+    /* 2 */ val RIGHT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.Alignment.RIGHT with Double = js.native
   }
   
   /**
@@ -41,11 +46,13 @@ object Forms extends js.Object {
     */
   @js.native
   object DestinationType extends js.Object {
-    /* 0 */ val SPREADSHEET: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.DestinationType.SPREADSHEET with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
         typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.DestinationType with Double
       ] = js.native
+    
+    /* 0 */ val SPREADSHEET: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.DestinationType.SPREADSHEET with Double = js.native
   }
   
   /**
@@ -65,11 +72,15 @@ object Forms extends js.Object {
     */
   @js.native
   object FeedbackType extends js.Object {
-    /* 0 */ val CORRECT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.FeedbackType.CORRECT with Double = js.native
-    /* 2 */ val GENERAL: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.FeedbackType.GENERAL with Double = js.native
-    /* 1 */ val INCORRECT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.FeedbackType.INCORRECT with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.FeedbackType with Double] = js.native
+    
+    /* 0 */ val CORRECT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.FeedbackType.CORRECT with Double = js.native
+    
+    /* 2 */ val GENERAL: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.FeedbackType.GENERAL with Double = js.native
+    
+    /* 1 */ val INCORRECT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.FeedbackType.INCORRECT with Double = js.native
   }
   
   /**
@@ -87,24 +98,41 @@ object Forms extends js.Object {
     */
   @js.native
   object ItemType extends js.Object {
-    /* 0 */ val CHECKBOX: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.CHECKBOX with Double = js.native
-    /* 1 */ val CHECKBOX_GRID: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.CHECKBOX_GRID with Double = js.native
-    /* 2 */ val DATE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.DATE with Double = js.native
-    /* 3 */ val DATETIME: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.DATETIME with Double = js.native
-    /* 4 */ val DURATION: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.DURATION with Double = js.native
-    /* 5 */ val GRID: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.GRID with Double = js.native
-    /* 6 */ val IMAGE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.IMAGE with Double = js.native
-    /* 7 */ val LIST: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.LIST with Double = js.native
-    /* 8 */ val MULTIPLE_CHOICE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.MULTIPLE_CHOICE with Double = js.native
-    /* 9 */ val PAGE_BREAK: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.PAGE_BREAK with Double = js.native
-    /* 10 */ val PARAGRAPH_TEXT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.PARAGRAPH_TEXT with Double = js.native
-    /* 11 */ val SCALE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.SCALE with Double = js.native
-    /* 12 */ val SECTION_HEADER: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.SECTION_HEADER with Double = js.native
-    /* 13 */ val TEXT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.TEXT with Double = js.native
-    /* 14 */ val TIME: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.TIME with Double = js.native
-    /* 15 */ val VIDEO: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.VIDEO with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType with Double] = js.native
+    
+    /* 0 */ val CHECKBOX: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.CHECKBOX with Double = js.native
+    
+    /* 1 */ val CHECKBOX_GRID: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.CHECKBOX_GRID with Double = js.native
+    
+    /* 2 */ val DATE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.DATE with Double = js.native
+    
+    /* 3 */ val DATETIME: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.DATETIME with Double = js.native
+    
+    /* 4 */ val DURATION: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.DURATION with Double = js.native
+    
+    /* 5 */ val GRID: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.GRID with Double = js.native
+    
+    /* 6 */ val IMAGE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.IMAGE with Double = js.native
+    
+    /* 7 */ val LIST: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.LIST with Double = js.native
+    
+    /* 8 */ val MULTIPLE_CHOICE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.MULTIPLE_CHOICE with Double = js.native
+    
+    /* 9 */ val PAGE_BREAK: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.PAGE_BREAK with Double = js.native
+    
+    /* 10 */ val PARAGRAPH_TEXT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.PARAGRAPH_TEXT with Double = js.native
+    
+    /* 11 */ val SCALE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.SCALE with Double = js.native
+    
+    /* 12 */ val SECTION_HEADER: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.SECTION_HEADER with Double = js.native
+    
+    /* 13 */ val TEXT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.TEXT with Double = js.native
+    
+    /* 14 */ val TIME: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.TIME with Double = js.native
+    
+    /* 15 */ val VIDEO: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.ItemType.VIDEO with Double = js.native
   }
   
   /**
@@ -136,15 +164,18 @@ object Forms extends js.Object {
     */
   @js.native
   object PageNavigationType extends js.Object {
-    /* 0 */ val CONTINUE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.PageNavigationType.CONTINUE with Double = js.native
-    /* 1 */ val GO_TO_PAGE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.PageNavigationType.GO_TO_PAGE with Double = js.native
-    /* 2 */ val RESTART: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.PageNavigationType.RESTART with Double = js.native
-    /* 3 */ val SUBMIT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.PageNavigationType.SUBMIT with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
         typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.PageNavigationType with Double
       ] = js.native
+    
+    /* 0 */ val CONTINUE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.PageNavigationType.CONTINUE with Double = js.native
+    
+    /* 1 */ val GO_TO_PAGE: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.PageNavigationType.GO_TO_PAGE with Double = js.native
+    
+    /* 2 */ val RESTART: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.PageNavigationType.RESTART with Double = js.native
+    
+    /* 3 */ val SUBMIT: typingsSlinky.googleAppsScript.GoogleAppsScript.Forms.PageNavigationType.SUBMIT with Double = js.native
   }
-  
 }
-

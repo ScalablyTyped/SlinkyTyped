@@ -2,11 +2,12 @@ package typingsSlinky.materialSlider
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@material/slider/constants", JSImport.Namespace)
 @js.native
 object constantsMod extends js.Object {
+  
   /**
     * @license
     * Copyright 2017 Google Inc.
@@ -31,35 +32,53 @@ object constantsMod extends js.Object {
     */
   @js.native
   object cssClasses extends js.Object {
+    
     var ACTIVE: String = js.native
+    
     var DISABLED: String = js.native
+    
     var DISABLE_TOUCH_ACTION: String = js.native
+    
     var DISCRETE: String = js.native
+    
     var FOCUS: String = js.native
+    
     var HAS_TRACK_MARKER: String = js.native
+    
     var IN_TRANSIT: String = js.native
+    
     var IS_DISCRETE: String = js.native
   }
   
   @js.native
   object numbers extends js.Object {
+    
     var PAGE_FACTOR: Double = js.native
   }
   
   @js.native
   object strings extends js.Object {
+    
     var ARIA_DISABLED: String = js.native
+    
     var ARIA_VALUEMAX: String = js.native
+    
     var ARIA_VALUEMIN: String = js.native
+    
     var ARIA_VALUENOW: String = js.native
+    
     var CHANGE_EVENT: String = js.native
+    
     var INPUT_EVENT: String = js.native
+    
     var PIN_VALUE_MARKER_SELECTOR: String = js.native
+    
     var STEP_DATA_ATTR: String = js.native
+    
     var THUMB_CONTAINER_SELECTOR: String = js.native
+    
     var TRACK_MARKER_CONTAINER_SELECTOR: String = js.native
+    
     var TRACK_SELECTOR: String = js.native
   }
-  
 }
-

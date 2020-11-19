@@ -7,23 +7,17 @@ import typingsSlinky.rotJs.astarMod.default
 import typingsSlinky.rotJs.pathPathMod.PassableCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rot-js", "Path")
 @js.native
 object Path extends js.Object {
+  
   @js.native
   class AStar protected () extends default {
     def this(toX: Double, toY: Double, passableCallback: PassableCallback) = this()
     def this(toX: Double, toY: Double, passableCallback: PassableCallback, options: PartialOptions) = this()
   }
-  
-  @js.native
-  class Dijkstra protected ()
-    extends typingsSlinky.rotJs.dijkstraMod.default {
-    def this(toX: Double, toY: Double, passableCallback: PassableCallback, options: PartialOptions) = this()
-  }
-  
   @js.native
   object AStar
     extends TopLevel[
@@ -37,6 +31,11 @@ object Path extends js.Object {
         ]
   
   @js.native
+  class Dijkstra protected ()
+    extends typingsSlinky.rotJs.dijkstraMod.default {
+    def this(toX: Double, toY: Double, passableCallback: PassableCallback, options: PartialOptions) = this()
+  }
+  @js.native
   object Dijkstra
     extends TopLevel[
           Instantiable4[
@@ -47,6 +46,4 @@ object Path extends js.Object {
             typingsSlinky.rotJs.dijkstraMod.default
           ]
         ]
-  
 }
-

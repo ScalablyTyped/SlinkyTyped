@@ -14,7 +14,7 @@ import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // tslint:disable:unified-signatures
 /**
@@ -29,6 +29,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Dicer extends Writable {
+  
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
@@ -47,6 +48,7 @@ trait Dicer extends Writable {
   def addListener_trailer(event: trailer, listener: js.Function1[/* data */ Buffer, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+  
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -65,6 +67,7 @@ trait Dicer extends Writable {
   def on_trailer(event: trailer, listener: js.Function1[/* data */ Buffer, Unit]): this.type = js.native
   @JSName("on")
   def on_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+  
   @JSName("once")
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -83,6 +86,7 @@ trait Dicer extends Writable {
   def once_trailer(event: trailer, listener: js.Function1[/* data */ Buffer, Unit]): this.type = js.native
   @JSName("once")
   def once_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+  
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -101,6 +105,7 @@ trait Dicer extends Writable {
   def prependListener_trailer(event: trailer, listener: js.Function1[/* data */ Buffer, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+  
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -119,6 +124,7 @@ trait Dicer extends Writable {
   def prependOnceListener_trailer(event: trailer, listener: js.Function1[/* data */ Buffer, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+  
   @JSName("removeListener")
   def removeListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("removeListener")
@@ -137,6 +143,7 @@ trait Dicer extends Writable {
   def removeListener_trailer(event: trailer, listener: js.Function1[/* data */ Buffer, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+  
   /**
     * Sets the boundary to use for parsing and performs some initialization needed for parsing.
     * You should only need to use this if you set headerFirst to true in the constructor and are parsing the boundary from the preamble header.
@@ -145,4 +152,3 @@ trait Dicer extends Writable {
     */
   def setBoundary(boundary: String): Unit = js.native
 }
-

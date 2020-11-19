@@ -2,7 +2,7 @@ package typingsSlinky.googlepay.google.payments.api
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Supported methods for presenting the Google Pay button.
@@ -23,11 +23,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.googlepay.googlepayStrings.short
 */
 trait ButtonType extends js.Object
-
 object ButtonType {
+  
   @scala.inline
   def long: typingsSlinky.googlepay.googlepayStrings.long = "long".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.long]
+  
   @scala.inline
   def short: typingsSlinky.googlepay.googlepayStrings.short = "short".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.short]
 }
-

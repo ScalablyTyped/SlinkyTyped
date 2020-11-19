@@ -8,11 +8,14 @@ import typingsSlinky.graphql.sourceMod.Source
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/error/GraphQLError", JSImport.Namespace)
 @js.native
 object graphQLErrorMod extends js.Object {
+  
+  def printError(error: GraphQLError): String = js.native
+  
   @js.native
   class GraphQLError protected () extends Error {
     def this(
@@ -24,10 +27,12 @@ object graphQLErrorMod extends js.Object {
       originalError: js.UndefOr[Maybe[js.Error]],
       extensions: js.UndefOr[Maybe[StringDictionary[_]]]
     ) = this()
+    
     /**
       * Extension fields to add to the formatted error.
       */
     val extensions: js.UndefOr[StringDictionary[js.Any]] = js.native
+    
     /**
       * An array of { line, column } locations within the source GraphQL document
       * which correspond to this error.
@@ -39,14 +44,17 @@ object graphQLErrorMod extends js.Object {
       * Enumerable, and appears in the result of JSON.stringify().
       */
     val locations: js.UndefOr[js.Array[SourceLocation]] = js.native
+    
     /**
       * An array of GraphQL AST Nodes corresponding to this error.
       */
     val nodes: js.UndefOr[js.Array[ASTNode]] = js.native
+    
     /**
       * The original error thrown from a field resolver during execution.
       */
     val originalError: Maybe[js.Error] = js.native
+    
     /**
       * An array describing the JSON-path into the execution response which
       * corresponds to this error. Only included for errors during execution.
@@ -54,11 +62,13 @@ object graphQLErrorMod extends js.Object {
       * Enumerable, and appears in the result of JSON.stringify().
       */
     val path: js.UndefOr[js.Array[String | Double]] = js.native
+    
     /**
       * An array of character offsets within the source GraphQL document
       * which correspond to this error.
       */
     val positions: js.UndefOr[js.Array[Double]] = js.native
+    
     /**
       * The source GraphQL document corresponding to this error.
       *
@@ -67,7 +77,4 @@ object graphQLErrorMod extends js.Object {
       */
     val source: js.UndefOr[Source] = js.native
   }
-  
-  def printError(error: GraphQLError): String = js.native
 }
-

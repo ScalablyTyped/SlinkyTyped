@@ -4,7 +4,7 @@ import typingsSlinky.typescriptServices.TypeScript.ISyntaxList
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.IndexMemberDeclarationSyntax")
 @js.native
@@ -17,15 +17,15 @@ class IndexMemberDeclarationSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSGlobal("TypeScript.IndexMemberDeclarationSyntax")
 @js.native
 object IndexMemberDeclarationSyntax extends js.Object {
+  
   def create(
     indexSignature: typingsSlinky.typescriptServices.TypeScript.IndexSignatureSyntax,
     semicolonToken: ISyntaxToken
   ): typingsSlinky.typescriptServices.TypeScript.IndexMemberDeclarationSyntax = js.native
+  
   def create1(indexSignature: typingsSlinky.typescriptServices.TypeScript.IndexSignatureSyntax): typingsSlinky.typescriptServices.TypeScript.IndexMemberDeclarationSyntax = js.native
 }
-

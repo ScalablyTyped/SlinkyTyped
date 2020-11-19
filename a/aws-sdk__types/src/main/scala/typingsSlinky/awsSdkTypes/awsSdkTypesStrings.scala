@@ -8,9 +8,124 @@ import typingsSlinky.awsSdkTypes.protocolMod.SupportedProtocol
 import typingsSlinky.awsSdkTypes.protocolMod.SupportedSignatureVersion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object awsSdkTypesStrings {
+  
+  @scala.inline
+  def ConfigurationDefinition: ConfigurationDefinition = "ConfigurationDefinition".asInstanceOf[ConfigurationDefinition]
+  
+  @scala.inline
+  def Error: Error = "Error".asInstanceOf[Error]
+  
+  @scala.inline
+  def all: all = "all".asInstanceOf[all]
+  
+  @scala.inline
+  def ascii: ascii = "ascii".asInstanceOf[ascii]
+  
+  @scala.inline
+  def blob: blob = "blob".asInstanceOf[blob]
+  
+  @scala.inline
+  def boolean: boolean = "boolean".asInstanceOf[boolean]
+  
+  @scala.inline
+  def build: build = "build".asInstanceOf[build]
+  
+  @scala.inline
+  def ec2: ec2 = "ec2".asInstanceOf[ec2]
+  
+  @scala.inline
+  def error_ : error_ = "error".asInstanceOf[error_]
+  
+  @scala.inline
+  def float: float = "float".asInstanceOf[float]
+  
+  @scala.inline
+  def header: header = "header".asInstanceOf[header]
+  
+  @scala.inline
+  def headers: headers = "headers".asInstanceOf[headers]
+  
+  @scala.inline
+  def info: info = "info".asInstanceOf[info]
+  
+  @scala.inline
+  def initialize: initialize = "initialize".asInstanceOf[initialize]
+  
+  @scala.inline
+  def integer: integer = "integer".asInstanceOf[integer]
+  
+  @scala.inline
+  def json: json = "json".asInstanceOf[json]
+  
+  @scala.inline
+  def latin1: latin1 = "latin1".asInstanceOf[latin1]
+  
+  @scala.inline
+  def list: list = "list".asInstanceOf[list]
+  
+  @scala.inline
+  def log: log = "log".asInstanceOf[log]
+  
+  @scala.inline
+  def map: map = "map".asInstanceOf[map]
+  
+  @scala.inline
+  def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def off: off = "off".asInstanceOf[off]
+  
+  @scala.inline
+  def query: query = "query".asInstanceOf[query]
+  
+  @scala.inline
+  def querystring: querystring = "querystring".asInstanceOf[querystring]
+  
+  @scala.inline
+  def `rest-json`: `rest-json` = "rest-json".asInstanceOf[`rest-json`]
+  
+  @scala.inline
+  def `rest-xml`: `rest-xml` = "rest-xml".asInstanceOf[`rest-xml`]
+  
+  @scala.inline
+  def s3: s3 = "s3".asInstanceOf[s3]
+  
+  @scala.inline
+  def s3v4: s3v4 = "s3v4".asInstanceOf[s3v4]
+  
+  @scala.inline
+  def serialize: serialize = "serialize".asInstanceOf[serialize]
+  
+  @scala.inline
+  def statusCode: statusCode = "statusCode".asInstanceOf[statusCode]
+  
+  @scala.inline
+  def string: string = "string".asInstanceOf[string]
+  
+  @scala.inline
+  def structure: structure = "structure".asInstanceOf[structure]
+  
+  @scala.inline
+  def timestamp: timestamp = "timestamp".asInstanceOf[timestamp]
+  
+  @scala.inline
+  def uri: uri = "uri".asInstanceOf[uri]
+  
+  @scala.inline
+  def utf8: utf8 = "utf8".asInstanceOf[utf8]
+  
+  @scala.inline
+  def v4: v4 = "v4".asInstanceOf[v4]
+  
+  @scala.inline
+  def `v4-unsigned-body`: `v4-unsigned-body` = "v4-unsigned-body".asInstanceOf[`v4-unsigned-body`]
+  
+  @scala.inline
+  def warn: warn = "warn".asInstanceOf[warn]
+  
   @js.native
   sealed trait ConfigurationDefinition extends js.Object
   
@@ -127,82 +242,4 @@ object awsSdkTypesStrings {
   
   @js.native
   sealed trait warn extends LogLevel
-  
-  @scala.inline
-  def ConfigurationDefinition: ConfigurationDefinition = "ConfigurationDefinition".asInstanceOf[ConfigurationDefinition]
-  @scala.inline
-  def Error: Error = "Error".asInstanceOf[Error]
-  @scala.inline
-  def all: all = "all".asInstanceOf[all]
-  @scala.inline
-  def ascii: ascii = "ascii".asInstanceOf[ascii]
-  @scala.inline
-  def blob: blob = "blob".asInstanceOf[blob]
-  @scala.inline
-  def boolean: boolean = "boolean".asInstanceOf[boolean]
-  @scala.inline
-  def build: build = "build".asInstanceOf[build]
-  @scala.inline
-  def ec2: ec2 = "ec2".asInstanceOf[ec2]
-  @scala.inline
-  def error_ : error_ = "error".asInstanceOf[error_]
-  @scala.inline
-  def float: float = "float".asInstanceOf[float]
-  @scala.inline
-  def header: header = "header".asInstanceOf[header]
-  @scala.inline
-  def headers: headers = "headers".asInstanceOf[headers]
-  @scala.inline
-  def info: info = "info".asInstanceOf[info]
-  @scala.inline
-  def initialize: initialize = "initialize".asInstanceOf[initialize]
-  @scala.inline
-  def integer: integer = "integer".asInstanceOf[integer]
-  @scala.inline
-  def json: json = "json".asInstanceOf[json]
-  @scala.inline
-  def latin1: latin1 = "latin1".asInstanceOf[latin1]
-  @scala.inline
-  def list: list = "list".asInstanceOf[list]
-  @scala.inline
-  def log: log = "log".asInstanceOf[log]
-  @scala.inline
-  def map: map = "map".asInstanceOf[map]
-  @scala.inline
-  def none: none = "none".asInstanceOf[none]
-  @scala.inline
-  def off: off = "off".asInstanceOf[off]
-  @scala.inline
-  def query: query = "query".asInstanceOf[query]
-  @scala.inline
-  def querystring: querystring = "querystring".asInstanceOf[querystring]
-  @scala.inline
-  def `rest-json`: `rest-json` = "rest-json".asInstanceOf[`rest-json`]
-  @scala.inline
-  def `rest-xml`: `rest-xml` = "rest-xml".asInstanceOf[`rest-xml`]
-  @scala.inline
-  def s3: s3 = "s3".asInstanceOf[s3]
-  @scala.inline
-  def s3v4: s3v4 = "s3v4".asInstanceOf[s3v4]
-  @scala.inline
-  def serialize: serialize = "serialize".asInstanceOf[serialize]
-  @scala.inline
-  def statusCode: statusCode = "statusCode".asInstanceOf[statusCode]
-  @scala.inline
-  def string: string = "string".asInstanceOf[string]
-  @scala.inline
-  def structure: structure = "structure".asInstanceOf[structure]
-  @scala.inline
-  def timestamp: timestamp = "timestamp".asInstanceOf[timestamp]
-  @scala.inline
-  def uri: uri = "uri".asInstanceOf[uri]
-  @scala.inline
-  def utf8: utf8 = "utf8".asInstanceOf[utf8]
-  @scala.inline
-  def v4: v4 = "v4".asInstanceOf[v4]
-  @scala.inline
-  def `v4-unsigned-body`: `v4-unsigned-body` = "v4-unsigned-body".asInstanceOf[`v4-unsigned-body`]
-  @scala.inline
-  def warn: warn = "warn".asInstanceOf[warn]
 }
-

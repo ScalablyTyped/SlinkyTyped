@@ -4,7 +4,7 @@ import typingsSlinky.graphqlToolsWrap.typesMod.FieldNodeTransformer
 import typingsSlinky.graphqlToolsWrap.typesMod.RootFieldTransformer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-tools", "TransformRootFields")
 @js.native
@@ -13,4 +13,3 @@ class TransformRootFields protected ()
   def this(rootFieldTransformer: RootFieldTransformer) = this()
   def this(rootFieldTransformer: RootFieldTransformer, fieldNodeTransformer: FieldNodeTransformer) = this()
 }
-

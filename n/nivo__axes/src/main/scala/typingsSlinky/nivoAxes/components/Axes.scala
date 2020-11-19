@@ -7,9 +7,10 @@ import typingsSlinky.nivoAxes.mod.AxisProps
 import typingsSlinky.nivoScales.mod.Scale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Axes {
+  
   @JSImport("@nivo/axes", "Axes")
   @js.native
   object component extends js.Object
@@ -18,13 +19,16 @@ object Axes {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def xScale(value: Scale): this.type = set("xScale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def yScale(value: Scale): this.type = set("yScale", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: AxesProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     bottom: AxisProps,
@@ -38,4 +42,3 @@ object Axes {
     new Builder(js.Array(this.component, __props.asInstanceOf[AxesProps]))
   }
 }
-

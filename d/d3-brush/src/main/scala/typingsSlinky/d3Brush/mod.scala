@@ -9,13 +9,23 @@ import typingsSlinky.d3Selection.mod.TransitionLike
 import typingsSlinky.d3Selection.mod.ValueFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("d3-brush", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  def brush[Datum](): BrushBehavior[Datum] = js.native
+  
+  def brushSelection(node: SVGGElement): BrushSelection_ | Null = js.native
+  
+  def brushX[Datum](): BrushBehavior[Datum] = js.native
+  
+  def brushY[Datum](): BrushBehavior[Datum] = js.native
+  
   @js.native
   trait BrushBehavior[Datum] extends js.Object {
+    
     /**
       * Applies the brush to the specified group, which must be a selection of SVG G elements.
       * This function is typically not invoked directly, and is instead invoked via selection.call.
@@ -26,6 +36,7 @@ object mod extends js.Object {
       * @param args Optional arguments to be passed in.
       */
     def apply(group: Selection_[SVGGElement, Datum, _, _], args: js.Any*): Unit = js.native
+    
     /**
       * Returns the current extent accessor.
       */
@@ -55,6 +66,7 @@ object mod extends js.Object {
     def extent(
       extent: ValueFn[SVGGElement, Datum, js.Tuple2[js.Tuple2[Double, Double], js.Tuple2[Double, Double]]]
     ): this.type = js.native
+    
     /**
       * Returns the current filter function.
       */
@@ -71,6 +83,7 @@ object mod extends js.Object {
       * with this as the current DOM element. The function returns a boolean value.
       */
     def filter(filterFn: ValueFn[SVGGElement, Datum, Boolean]): this.type = js.native
+    
     /**
       * Returns the current handle size, which defaults to six.
       */
@@ -85,6 +98,7 @@ object mod extends js.Object {
       * @param size Size of the handle.
       */
     def handleSize(size: Double): this.type = js.native
+    
     /**
       * Returns the current key modifiers flag.
       */
@@ -98,6 +112,7 @@ object mod extends js.Object {
       * @param keyModifiers New value for key modifiers flag.
       */
     def keyModifiers(modifiers: Boolean): this.type = js.native
+    
     /**
       * Clear the active selection of the brush on the specified SVG G element(s) selection.
       *
@@ -156,6 +171,7 @@ object mod extends js.Object {
       * for a y-brush, it must be defined as [y0, y1].
       */
     def move(group: TransitionLike[SVGGElement, Datum], selection: ValueFn[SVGGElement, Datum, BrushSelection_]): Unit = js.native
+    
     /**
       * Returns the first currently-assigned listener matching the specified typenames, if any.
       *
@@ -197,25 +213,19 @@ object mod extends js.Object {
   
   @js.native
   trait D3BrushEvent[Datum] extends js.Object {
+    
      // Leave failsafe string type for cases like 'brush.foo'
     /**
       * The current brush selection associated with the event.
       * This is null when the selection is empty.
       */
     var selection: BrushSelection_ | Null = js.native
+    
     /**
       * The underlying input event, such as mousemove or touchmove.
       */
     var sourceEvent: js.Any = js.native
-    /**
-      * The BrushBehavior associated with the event
-      */
-    @JSName("target")
-    var target_Original: BrushBehavior[Datum] = js.native
-    /**
-      * The event type for the BrushEvent
-      */
-    var `type`: start | brush | end | String = js.native
+    
     /**
       * Applies the brush to the specified group, which must be a selection of SVG G elements.
       * This function is typically not invoked directly, and is instead invoked via selection.call.
@@ -229,12 +239,17 @@ object mod extends js.Object {
       * The BrushBehavior associated with the event
       */
     def target(group: Selection_[SVGGElement, Datum, _, _], args: js.Any*): Unit = js.native
+    /**
+      * The BrushBehavior associated with the event
+      */
+    @JSName("target")
+    var target_Original: BrushBehavior[Datum] = js.native
+    
+    /**
+      * The event type for the BrushEvent
+      */
+    var `type`: start | brush | end | String = js.native
   }
   
-  def brush[Datum](): BrushBehavior[Datum] = js.native
-  def brushSelection(node: SVGGElement): BrushSelection_ | Null = js.native
-  def brushX[Datum](): BrushBehavior[Datum] = js.native
-  def brushY[Datum](): BrushBehavior[Datum] = js.native
   type BrushSelection_ = js.Tuple2[Double | (js.Tuple2[Double, Double]), Double | (js.Tuple2[Double, Double])]
 }
-

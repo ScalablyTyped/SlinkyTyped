@@ -6,12 +6,13 @@ import typingsSlinky.semanticUiReact.sidebarPushableMod.SidebarPushableProps
 import typingsSlinky.semanticUiReact.sidebarPusherMod.SidebarPusherProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SidebarComponent
   extends ComponentClass[SidebarProps, js.Object] {
+  
   var Pushable: ReactComponentClass[SidebarPushableProps] = js.native
+  
   var Pusher: ReactComponentClass[SidebarPusherProps] = js.native
 }
-

@@ -8,11 +8,12 @@ import typingsSlinky.babelTypes.babelTypesStrings.`--`
 import typingsSlinky.babelTypes.babelTypesStrings.`-_`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babel-types", "unaryExpression")
 @js.native
 object unaryExpression extends js.Object {
+  
   def apply(): UnaryExpression_ = js.native
   def apply(operator: js.UndefOr[scala.Nothing], argument: js.UndefOr[scala.Nothing], prefix: Boolean): UnaryExpression_ = js.native
   def apply(operator: js.UndefOr[scala.Nothing], argument: Expression): UnaryExpression_ = js.native
@@ -42,4 +43,3 @@ object unaryExpression extends js.Object {
   def apply(operator: `-_`, argument: Expression): UnaryExpression_ = js.native
   def apply(operator: `-_`, argument: Expression, prefix: Boolean): UnaryExpression_ = js.native
 }
-

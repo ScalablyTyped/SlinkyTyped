@@ -3,11 +3,12 @@ package typingsSlinky.nanoidDictionary
 import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("nanoid-dictionary", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   object lowercase extends TopLevel[String]
   
@@ -19,6 +20,4 @@ object mod extends js.Object {
   
   @js.native
   object uppercase extends TopLevel[String]
-  
 }
-

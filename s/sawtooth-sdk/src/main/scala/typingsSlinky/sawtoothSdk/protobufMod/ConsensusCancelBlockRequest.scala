@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "ConsensusCancelBlockRequest")
 @js.native
@@ -16,17 +16,18 @@ import scala.scalajs.js.annotation._
   */
 class ConsensusCancelBlockRequest () extends IConsensusCancelBlockRequest {
   def this(properties: IConsensusCancelBlockRequest) = this()
+  
   /**
     * Converts this ConsensusCancelBlockRequest to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "ConsensusCancelBlockRequest")
 @js.native
 object ConsensusCancelBlockRequest extends js.Object {
+  
   /**
     * Creates a new ConsensusCancelBlockRequest instance using the specified properties.
     * @param [properties] Properties to set
@@ -34,6 +35,7 @@ object ConsensusCancelBlockRequest extends js.Object {
     */
   def create(): ConsensusCancelBlockRequest = js.native
   def create(properties: IConsensusCancelBlockRequest): ConsensusCancelBlockRequest = js.native
+  
   /**
     * Decodes a ConsensusCancelBlockRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -46,6 +48,7 @@ object ConsensusCancelBlockRequest extends js.Object {
   def decode(reader: Reader, length: Double): ConsensusCancelBlockRequest = js.native
   def decode(reader: js.typedarray.Uint8Array): ConsensusCancelBlockRequest = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusCancelBlockRequest = js.native
+  
   /**
     * Decodes a ConsensusCancelBlockRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -55,6 +58,7 @@ object ConsensusCancelBlockRequest extends js.Object {
     */
   def decodeDelimited(reader: Reader): ConsensusCancelBlockRequest = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusCancelBlockRequest = js.native
+  
   /**
     * Encodes the specified ConsensusCancelBlockRequest message. Does not implicitly {@link ConsensusCancelBlockRequest.verify|verify} messages.
     * @param message ConsensusCancelBlockRequest message or plain object to encode
@@ -63,6 +67,7 @@ object ConsensusCancelBlockRequest extends js.Object {
     */
   def encode(message: IConsensusCancelBlockRequest): Writer = js.native
   def encode(message: IConsensusCancelBlockRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ConsensusCancelBlockRequest message, length delimited. Does not implicitly {@link ConsensusCancelBlockRequest.verify|verify} messages.
     * @param message ConsensusCancelBlockRequest message or plain object to encode
@@ -71,12 +76,14 @@ object ConsensusCancelBlockRequest extends js.Object {
     */
   def encodeDelimited(message: IConsensusCancelBlockRequest): Writer = js.native
   def encodeDelimited(message: IConsensusCancelBlockRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ConsensusCancelBlockRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ConsensusCancelBlockRequest
     */
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusCancelBlockRequest = js.native
+  
   /**
     * Creates a plain object from a ConsensusCancelBlockRequest message. Also converts values to other types if specified.
     * @param message ConsensusCancelBlockRequest
@@ -85,6 +92,7 @@ object ConsensusCancelBlockRequest extends js.Object {
     */
   def toObject(message: ConsensusCancelBlockRequest): StringDictionary[js.Any] = js.native
   def toObject(message: ConsensusCancelBlockRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ConsensusCancelBlockRequest message.
     * @param message Plain object to verify
@@ -92,4 +100,3 @@ object ConsensusCancelBlockRequest extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

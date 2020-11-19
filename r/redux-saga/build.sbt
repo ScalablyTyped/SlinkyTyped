@@ -1,11 +1,11 @@
 organization := "org.scalablytyped.slinky"
 name := "redux-saga"
-version := "1.1.3-bc60a8"
+version := "1.1.3-874715"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5")
+  "me.shadaj" %%% "slinky-web" % "0.6.6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

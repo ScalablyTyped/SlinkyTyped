@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Daylight
 import typingsSlinky.arcgisJsApi.esri.DaylightProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Daylight", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Daylight {
   def this(properties: DaylightProperties) = this()
 }
-

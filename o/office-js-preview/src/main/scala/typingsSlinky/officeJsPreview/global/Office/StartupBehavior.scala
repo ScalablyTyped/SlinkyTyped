@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.global.Office
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // Enumerations
 /**
@@ -11,9 +11,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Office.StartupBehavior")
 @js.native
 object StartupBehavior extends js.Object {
-  /* "Load" */ val load: typingsSlinky.officeJsPreview.Office.StartupBehavior.load with String = js.native
-  /* "None" */ val none: typingsSlinky.officeJsPreview.Office.StartupBehavior.none with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJsPreview.Office.StartupBehavior with String] = js.native
+  
+  /* "Load" */ val load: typingsSlinky.officeJsPreview.Office.StartupBehavior.load with String = js.native
+  
+  /* "None" */ val none: typingsSlinky.officeJsPreview.Office.StartupBehavior.none with String = js.native
 }
-

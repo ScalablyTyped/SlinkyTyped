@@ -3,14 +3,16 @@ package typingsSlinky.nuclearJs.mod.Immutable
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("nuclear-js", "Immutable.Map")
 @js.native
 object Map extends js.Object {
+  
   def apply(): typingsSlinky.immutable.Immutable.Map[_, _] = js.native
   def apply[V](obj: StringDictionary[V]): typingsSlinky.immutable.Immutable.Map[String, V] = js.native
   def apply[K, V](collection: js.Iterable[js.Tuple2[K, V]]): typingsSlinky.immutable.Immutable.Map[K, V] = js.native
+  
   /**
     * True if the provided value is a Map
     *
@@ -22,6 +24,7 @@ object Map extends js.Object {
     * ```
     */
   def isMap(maybeMap: js.Any): /* is immutable.Immutable.Map<any, any> */ Boolean = js.native
+  
   /**
     * Creates a new Map from alternating keys and values
     *
@@ -40,4 +43,3 @@ object Map extends js.Object {
     */
   def of(keyValues: js.Any*): typingsSlinky.immutable.Immutable.Map[_, _] = js.native
 }
-

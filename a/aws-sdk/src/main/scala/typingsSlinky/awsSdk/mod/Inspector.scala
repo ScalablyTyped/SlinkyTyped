@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.inspectorMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "Inspector")
 @js.native
@@ -14,4 +14,3 @@ class Inspector ()
   extends typingsSlinky.awsSdk.allMod.Inspector {
   def this(options: ClientConfiguration) = this()
 }
-

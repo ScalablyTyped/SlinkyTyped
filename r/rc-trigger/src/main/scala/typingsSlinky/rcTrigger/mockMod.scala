@@ -6,20 +6,18 @@ import typingsSlinky.rcTrigger.mod.TriggerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rc-trigger/es/mock", JSImport.Namespace)
 @js.native
 object mockMod extends js.Object {
+  
   @js.native
   class default protected ()
     extends Component[TriggerProps, js.Any, js.Any] {
     def this(props: TriggerProps) = this()
     def this(props: TriggerProps, context: js.Any) = this()
   }
-  
   @js.native
   object default extends TopLevel[ReactComponentClass[TriggerProps]]
-  
 }
-

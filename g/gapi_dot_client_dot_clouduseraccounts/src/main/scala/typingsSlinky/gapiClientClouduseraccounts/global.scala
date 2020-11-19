@@ -8,25 +8,29 @@ import typingsSlinky.gapiClientClouduseraccounts.gapiClientClouduseraccountsStri
 import typingsSlinky.gapiClientClouduseraccounts.gapiClientClouduseraccountsStrings.vm_alpha
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object gapi extends js.Object {
+    
     @js.native
     object client extends js.Object {
+      
       val globalAccountsOperations: GlobalAccountsOperationsResource = js.native
+      
       val groups: GroupsResource = js.native
+      
       val linux: LinuxResource = js.native
-      val users: UsersResource = js.native
+      
       /** Load Cloud User Accounts API vm_alpha */
       def load(name: clouduseraccounts, version: vm_alpha): js.Thenable[Unit] = js.native
       def load(name: clouduseraccounts, version: vm_alpha, callback: js.Function0[_]): Unit = js.native
+      
+      val users: UsersResource = js.native
     }
-    
   }
-  
 }
-

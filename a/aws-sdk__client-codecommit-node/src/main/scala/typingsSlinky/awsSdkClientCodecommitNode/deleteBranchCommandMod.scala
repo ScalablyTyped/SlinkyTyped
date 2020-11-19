@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/DeleteBranchCommand", JSImport.Namespace)
 @js.native
 object deleteBranchCommandMod extends js.Object {
+  
   @js.native
   class DeleteBranchCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteBranchCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteBranchInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteBranchInput, DeleteBranchOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[DeleteBranchInput, DeleteBranchOutput] = js.native
   }
-  
 }
-

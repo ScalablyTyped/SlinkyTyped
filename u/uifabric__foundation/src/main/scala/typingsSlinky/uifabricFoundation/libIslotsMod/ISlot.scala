@@ -5,12 +5,13 @@ import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ISlot[TProps] extends js.Object {
-  var isSlot: js.UndefOr[Boolean] = js.native
+  
   def apply(): ReturnType[ReactComponentClass[js.Object]] = js.native
   def apply(componentProps: PropsWithChildren[TProps]): ReturnType[ReactComponentClass[js.Object]] = js.native
+  
+  var isSlot: js.UndefOr[Boolean] = js.native
 }
-

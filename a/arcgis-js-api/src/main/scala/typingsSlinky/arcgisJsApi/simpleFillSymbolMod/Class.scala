@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.SimpleFillSymbol
 import typingsSlinky.arcgisJsApi.esri.SimpleFillSymbolProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols/SimpleFillSymbol", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends SimpleFillSymbol {
   def this(properties: SimpleFillSymbolProperties) = this()
 }
-

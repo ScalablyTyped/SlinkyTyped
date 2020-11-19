@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.mediatailorMod.ClientConfiguration
 import typingsSlinky.awsSdk.mediatailorMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/clients/all", "MediaTailor")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 class MediaTailor () extends ^ {
   def this(options: ClientConfiguration) = this()
 }
-

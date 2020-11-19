@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.EntityWidget")
 @js.native
@@ -20,17 +20,19 @@ abstract class EntityWidget protected () extends ConditionallyVisibleWidget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FEntityWidget: IModel = js.native
+  
   def dataSource: DataSource = js.native
   def dataSource_=(newValue: DataSource): Unit = js.native
+  
+  @JSName("model")
+  var model_FEntityWidget: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.EntityWidget")
 @js.native
 object EntityWidget extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

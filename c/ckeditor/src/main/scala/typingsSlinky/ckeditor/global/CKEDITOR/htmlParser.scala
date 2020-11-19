@@ -4,11 +4,12 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ckeditor.CKEDITOR.htmlParser.filterRulesDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("CKEDITOR.htmlParser")
 @js.native
 object htmlParser extends js.Object {
+  
   @js.native
   class basicWriter ()
     extends typingsSlinky.ckeditor.CKEDITOR.htmlParser.basicWriter
@@ -51,21 +52,12 @@ object htmlParser extends js.Object {
   @js.native
   class fragment ()
     extends typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment
-  
-  @js.native
-  class node ()
-    extends typingsSlinky.ckeditor.CKEDITOR.htmlParser.node
-  
-  @js.native
-  class text protected ()
-    extends typingsSlinky.ckeditor.CKEDITOR.htmlParser.text {
-    def this(value: String) = this()
-  }
-  
   /* static members */
   @js.native
   object fragment extends js.Object {
+    
     def fromBBCode(source: String): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment = js.native
+    
     def fromHtml(fragmentHtml: String): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment | typingsSlinky.ckeditor.CKEDITOR.htmlParser.element = js.native
     def fromHtml(fragmentHtml: String, parent: js.UndefOr[scala.Nothing], fixingBlock: String): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment | typingsSlinky.ckeditor.CKEDITOR.htmlParser.element = js.native
     def fromHtml(fragmentHtml: String, parent: js.UndefOr[scala.Nothing], fixingBlock: Boolean): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment | typingsSlinky.ckeditor.CKEDITOR.htmlParser.element = js.native
@@ -85,5 +77,13 @@ object htmlParser extends js.Object {
     ): typingsSlinky.ckeditor.CKEDITOR.htmlParser.fragment | typingsSlinky.ckeditor.CKEDITOR.htmlParser.element = js.native
   }
   
+  @js.native
+  class node ()
+    extends typingsSlinky.ckeditor.CKEDITOR.htmlParser.node
+  
+  @js.native
+  class text protected ()
+    extends typingsSlinky.ckeditor.CKEDITOR.htmlParser.text {
+    def this(value: String) = this()
+  }
 }
-

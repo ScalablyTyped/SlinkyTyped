@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This object contains helper methods for generating data-driven univariate visualizations using both continuous color and continuous size based on a field value or expression from features in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The [createContinuousRenderer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-univariateColorSize.html#createContinuousRenderer) method generates a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) object that may be applied directly to a supported layer. This renderer contains a continuous color and size ramp with optimal colors based on the indicated basemap and mapped to specific break values based on the statistics of the indicated field or expression.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait univariateColorSize extends js.Object {
+  
   /**
     * Generates a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) that may be applied directly to a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The renderer contains continuous color and size visual variables that map symbols with optimal colors and sizes based on the indicated basemap to specific stop values based on queried statistics from the indicated field or expression.  In most cases you will provide a `layer`, `basemap`, `field`, and `theme` to generate this renderer. This is a scenario in which the statistics of the data aren't well known and the user doesn't know what colors and sizes to use in the visualization. You can also use a `valueExpression` instead of a `field` to visualize features based on a value returned from a script executed at runtime.  The other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the statistics object to the `statistics` parameter to avoid making an extra call to the server.
     *
@@ -46,6 +47,7 @@ trait univariateColorSize extends js.Object {
     *
     */
   def createContinuousRenderer(params: univariateColorSizeCreateContinuousRendererParams): js.Promise[univariateColorSizeContinuousRendererResult] = js.native
+  
   /**
     * This method generates color and size visual variables, both based on the same given field or expression. These visual variables are generated with default stops that are optimally chosen based on the statistics queried for the indicated field or expression and colors based on the input basemap.  There are two different ways this method may be called. The most common case is by providing a `layer`, `basemap`, and `field`. This is the scenario where the statistics of the data aren't well known and the user doesn't know what colors to use. You can optionally use a `valueExpression` instead of a field to visualize features based on a numeric value returned from a script executed at runtime.  The other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the object in the `statistics` parameter to avoid making an extra call to the server. You can also provide a `colorScheme` and/or a `sizeScheme` if you don't want one picked for you. In this case the `basemap` and `theme` options would be ignored.  The resulting array of visual variables will contain one color visual variable, and one or two size visual variables depending on the value of the `sizeOptions.axis` parameter.
     *
@@ -72,8 +74,8 @@ trait univariateColorSize extends js.Object {
     */
   def createVisualVariables(params: univariateColorSizeCreateVisualVariablesParams): js.Promise[VisualVariablesResult] = js.native
 }
-
 object univariateColorSize {
+  
   @scala.inline
   def apply(
     createContinuousRenderer: univariateColorSizeCreateContinuousRendererParams => js.Promise[univariateColorSizeContinuousRendererResult],
@@ -82,24 +84,28 @@ object univariateColorSize {
     val __obj = js.Dynamic.literal(createContinuousRenderer = js.Any.fromFunction1(createContinuousRenderer), createVisualVariables = js.Any.fromFunction1(createVisualVariables))
     __obj.asInstanceOf[univariateColorSize]
   }
+  
   @scala.inline
   implicit class univariateColorSizeOps[Self <: univariateColorSize] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreateContinuousRenderer(
       value: univariateColorSizeCreateContinuousRendererParams => js.Promise[univariateColorSizeContinuousRendererResult]
     ): Self = this.set("createContinuousRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreateVisualVariables(value: univariateColorSizeCreateVisualVariablesParams => js.Promise[VisualVariablesResult]): Self = this.set("createVisualVariables", js.Any.fromFunction1(value))
   }
-  
 }
-

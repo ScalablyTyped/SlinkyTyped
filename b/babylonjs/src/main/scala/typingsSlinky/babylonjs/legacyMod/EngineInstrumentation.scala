@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "EngineInstrumentation")
 @js.native
@@ -19,4 +19,3 @@ class EngineInstrumentation protected ()
     */
   engine: typingsSlinky.babylonjs.engineMod.Engine) = this()
 }
-

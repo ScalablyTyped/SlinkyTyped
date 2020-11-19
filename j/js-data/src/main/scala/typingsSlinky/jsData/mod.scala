@@ -14,11 +14,26 @@ import typingsSlinky.jsData.schemaMod.SchemaDefinition
 import typingsSlinky.jsData.simpleStoreMod.SimpleStoreOpts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("js-data", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  def belongsTo(related: js.Any, opts: js.Any): js.Function1[/* mapper */ js.Any, Unit] = js.native
+  
+  val belongsToType: /* "belongsTo" */ String = js.native
+  
+  def hasMany(related: js.Any, opts: js.Any): js.Function1[/* mapper */ js.Any, Unit] = js.native
+  
+  val hasManyType: /* "hasMany" */ String = js.native
+  
+  def hasOne(related: js.Any, opts: js.Any): js.Function1[/* mapper */ js.Any, Unit] = js.native
+  
+  val hasOneType: /* "hasOne" */ String = js.native
+  
+  val version: /* "<%= version %>" */ String = js.native
+  
   @js.native
   class Collection () extends default {
     def this(records: js.Any) = this()
@@ -74,41 +89,10 @@ object mod extends js.Object {
     extends typingsSlinky.jsData.queryMod.default {
     def this(collection: js.Any) = this()
   }
-  
-  @js.native
-  class Record ()
-    extends typingsSlinky.jsData.recordMod.default {
-    def this(props: js.Any) = this()
-    def this(props: js.UndefOr[scala.Nothing], opts: js.Any) = this()
-    def this(props: js.Any, opts: js.Any) = this()
-  }
-  
-  @js.native
-  class Schema ()
-    extends typingsSlinky.jsData.schemaMod.default {
-    def this(definition: SchemaDefinition) = this()
-  }
-  
-  @js.native
-  class Settable ()
-    extends typingsSlinky.jsData.settableMod.default
-  
-  @js.native
-  class SimpleStore ()
-    extends typingsSlinky.jsData.simpleStoreMod.default {
-    def this(opts: SimpleStoreOpts) = this()
-  }
-  
-  val belongsToType: /* "belongsTo" */ String = js.native
-  val hasManyType: /* "hasMany" */ String = js.native
-  val hasOneType: /* "hasOne" */ String = js.native
-  val version: /* "<%= version %>" */ String = js.native
-  def belongsTo(related: js.Any, opts: js.Any): js.Function1[/* mapper */ js.Any, Unit] = js.native
-  def hasMany(related: js.Any, opts: js.Any): js.Function1[/* mapper */ js.Any, Unit] = js.native
-  def hasOne(related: js.Any, opts: js.Any): js.Function1[/* mapper */ js.Any, Unit] = js.native
   /* static members */
   @js.native
   object Query extends js.Object {
+    
     /**
       * The filtering operators supported by {@link Query#filter}, and which are
       * implemented by adapters (for the most part).
@@ -264,33 +248,70 @@ object mod extends js.Object {
     var ops: _empty = js.native
   }
   
+  @js.native
+  class Record ()
+    extends typingsSlinky.jsData.recordMod.default {
+    def this(props: js.Any) = this()
+    def this(props: js.UndefOr[scala.Nothing], opts: js.Any) = this()
+    def this(props: js.Any, opts: js.Any) = this()
+  }
   /* static members */
   @js.native
   object Record extends js.Object {
+    
     var creatingPath: String = js.native
+    
     var keepChangeHistoryPath: String = js.native
+    
     var mapper: typingsSlinky.jsData.mapperMod.default = js.native
+    
     var noValidatePath: String = js.native
+    
     var previousPath: String = js.native
   }
   
+  @js.native
+  class Schema ()
+    extends typingsSlinky.jsData.schemaMod.default {
+    def this(definition: SchemaDefinition) = this()
+  }
   /* static members */
   @js.native
   object Schema extends js.Object {
+    
     var ANY_OPS: js.Array[String] = js.native
+    
     var ARRAY_OPS: js.Array[String] = js.native
+    
     var NUMERIC_OPS: js.Array[String] = js.native
+    
     var OBJECT_OPS: js.Array[String] = js.native
+    
     var STRING_OPS: js.Array[String] = js.native
+    
     var typeGroupValidators: Array = js.native
+    
     var types: Boolean = js.native
-    var validationKeywords: js.Any = js.native
+    
     def validate(value: js.Any, schema: js.Any): js.Array[_] = js.native
     def validate(value: js.Any, schema: js.Any, opts: js.Any): js.Array[_] = js.native
+    
+    var validationKeywords: js.Any = js.native
+  }
+  
+  @js.native
+  class Settable ()
+    extends typingsSlinky.jsData.settableMod.default
+  
+  @js.native
+  class SimpleStore ()
+    extends typingsSlinky.jsData.simpleStoreMod.default {
+    def this(opts: SimpleStoreOpts) = this()
   }
   
   @js.native
   object utils extends js.Object {
+    
     /**
       * Recursively iterates over relations found in `opts.with`.
       *
@@ -303,6 +324,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def _forRelation(opts: js.Any, `def`: js.Any, fn: js.Any, thisArg: js.Any): Unit = js.native
+    
     /**
       * Find the index of a relation in the given list
       *
@@ -313,6 +335,7 @@ object mod extends js.Object {
       * @returns {number}
       */
     def _getIndex(list: js.Any, relation: js.Any): Double = js.native
+    
     /**
       * Shallow copy properties that meet the following criteria from `src` to
       * `dest`:
@@ -329,6 +352,7 @@ object mod extends js.Object {
       */
     @JSName("_")
     def _underscore(dest: js.Any, src: js.Any): Unit = js.native
+    
     /**
       * Define hidden (non-enumerable), writable properties on `target` from the
       * provided `props`.
@@ -350,6 +374,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def addHiddenPropsToTarget(target: js.Any, props: js.Any): Unit = js.native
+    
     /**
       * Return whether the two objects are deeply different.
       *
@@ -371,6 +396,7 @@ object mod extends js.Object {
       */
     def areDifferent(newObject: js.Any, oldObject: js.Any): scala.Boolean = js.native
     def areDifferent(newObject: js.Any, oldObject: js.Any, opts: js.Any): scala.Boolean = js.native
+    
     /**
       * Deep copy a value.
       *
@@ -553,6 +579,7 @@ object mod extends js.Object {
     ): js.Any = js.native
     def copy(from: js.Any, to: js.Any, stackFrom: js.Any, stackTo: js.Any, blacklist: js.Any): js.Any = js.native
     def copy(from: js.Any, to: js.Any, stackFrom: js.Any, stackTo: js.Any, blacklist: js.Any, plain: js.Any): js.Any = js.native
+    
     /**
       * Check whether the two provided objects are deeply equal.
       *
@@ -589,6 +616,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def deepEqual(a: js.Any, b: js.Any): scala.Boolean = js.native
+    
     /**
       * Recursively shallow fill in own enumerable properties from `source` to
       * `dest`.
@@ -609,6 +637,7 @@ object mod extends js.Object {
       */
     def deepFillIn(dest: js.Any): js.Any = js.native
     def deepFillIn(dest: js.Any, source: js.Any): js.Any = js.native
+    
     /**
       * Recursively shallow copy enumerable properties from `source` to `dest`.
       *
@@ -628,6 +657,7 @@ object mod extends js.Object {
       */
     def deepMixIn(dest: js.Any): js.Any = js.native
     def deepMixIn(dest: js.Any, source: js.Any): js.Any = js.native
+    
     /**
       * Return a diff of the base object to the comparison object.
       *
@@ -652,6 +682,7 @@ object mod extends js.Object {
       */
     def diffObjects(newObject: js.Any, oldObject: js.Any): Added = js.native
     def diffObjects(newObject: js.Any, oldObject: js.Any, opts: js.Any): Added = js.native
+    
     /**
       * Return whether the two values are equal according to the `==` operator.
       *
@@ -668,6 +699,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def equal(a: js.Any, b: js.Any): scala.Boolean = js.native
+    
     /**
       * Produce a factory function for making Error objects with the provided
       * metadata. Used throughout the various js-data components.
@@ -686,6 +718,7 @@ object mod extends js.Object {
       */
     def err(domain: js.Any): js.Function2[/* code */ js.Any, /* repeated */ js.Any, js.Error] = js.native
     def err(domain: js.Any, target: js.Any): js.Function2[/* code */ js.Any, /* repeated */ js.Any, js.Error] = js.native
+    
     /**
       * Add eventing capabilities into the target object.
       *
@@ -708,6 +741,7 @@ object mod extends js.Object {
     def eventify(target: js.Any, getter: js.UndefOr[scala.Nothing], setter: js.Any): Unit = js.native
     def eventify(target: js.Any, getter: js.Any): Unit = js.native
     def eventify(target: js.Any, getter: js.Any, setter: js.Any): Unit = js.native
+    
     /**
       * Shallow copy own enumerable properties from `src` to `dest` that are on
       * `src` but are missing from `dest.
@@ -727,6 +761,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def fillIn(dest: js.Any, src: js.Any): Unit = js.native
+    
     /**
       * Find the last index of an item in an array according to the given checker function.
       *
@@ -750,6 +785,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def findIndex(array: js.Any, fn: js.Any): Double = js.native
+    
     /**
       * Recursively iterate over a {@link Mapper}'s relations according to
       * `opts.with`.
@@ -763,6 +799,7 @@ object mod extends js.Object {
       */
     def forEachRelation(mapper: js.Any, opts: js.Any, fn: js.Any): Unit = js.native
     def forEachRelation(mapper: js.Any, opts: js.Any, fn: js.Any, thisArg: js.Any): Unit = js.native
+    
     /**
       * Iterate over an object's own enumerable properties.
       *
@@ -783,6 +820,7 @@ object mod extends js.Object {
       */
     def forOwn(obj: js.Any, fn: js.Any): Unit = js.native
     def forOwn(obj: js.Any, fn: js.Any, thisArg: js.Any): Unit = js.native
+    
     /**
       * Proxy for `JSON.parse`.
       *
@@ -799,6 +837,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def fromJson(json: js.Any): js.Any = js.native
+    
     /**
       * Retrieve the specified property from the given object. Supports retrieving
       * nested properties.
@@ -817,6 +856,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def get(`object`: js.Any, prop: js.Any): js.Any = js.native
+    
     /**
       * Gets default locale for the js-data context.
       *
@@ -830,6 +870,7 @@ object mod extends js.Object {
       * @since 4.0.0
       */
     def getDefaultLocale(): String = js.native
+    
     /**
       * Return the superclass for the given instance or subclass. If an instance is
       * provided, then finds the parent class of the instance's constructor.
@@ -859,6 +900,7 @@ object mod extends js.Object {
       */
     def getSuper(instance: js.Any): js.Any = js.native
     def getSuper(instance: js.Any, isCtor: js.Any): js.Any = js.native
+    
     /**
       * Return the intersection of two arrays.
       *
@@ -877,6 +919,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def intersection(array1: js.Any, array2: js.Any): js.Array[_] = js.native
+    
     /**
       * Proxy for `Array.isArray`.
       *
@@ -893,6 +936,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isArray(arg: js.Any): /* is std.Array<any> */ scala.Boolean = js.native
+    
     /**
       * Return whether `prop` is matched by any string or regular expression in
       * `blacklist`.
@@ -912,6 +956,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isBlacklisted(prop: js.Any, blacklist: js.Any): scala.Boolean = js.native
+    
     /**
       * Return whether the provided value is a boolean.
       *
@@ -928,6 +973,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isBoolean(value: js.Any): scala.Boolean = js.native
+    
     /**
       * Return whether the provided value is a date.
       *
@@ -944,6 +990,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isDate(value: js.Any): scala.Boolean = js.native
+    
     /**
       * Return whether the provided value is a function.
       *
@@ -960,6 +1007,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isFunction(value: js.Any): scala.Boolean = js.native
+    
     /**
       * Return whether the provided value is an integer.
       *
@@ -978,6 +1026,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isInteger(value: js.Any): scala.Boolean = js.native
+    
     /**
       * Return whether the provided value is `null`.
       *
@@ -994,6 +1043,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isNull(value: js.Any): scala.Boolean = js.native
+    
     /**
       * Return whether the provided value is a number.
       *
@@ -1012,6 +1062,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isNumber(value: js.Any): scala.Boolean = js.native
+    
     /**
       * Return whether the provided value is an object.
       *
@@ -1028,6 +1079,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isObject(value: js.Any): scala.Boolean = js.native
+    
     /**
       * Return whether the provided value is a regular expression.
       *
@@ -1046,6 +1098,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isRegExp(value: js.Any): scala.Boolean = js.native
+    
     /**
       * Return whether the provided value is a string or a number.
       *
@@ -1063,6 +1116,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isSorN(value: js.Any): scala.Boolean = js.native
+    
     /**
       * Return whether the provided value is a string.
       *
@@ -1079,6 +1133,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isString(value: js.Any): scala.Boolean = js.native
+    
     /**
       * Return whether the provided value is a `undefined`.
       *
@@ -1097,6 +1152,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def isUndefined(value: js.Any): scala.Boolean = js.native
+    
     /**
       * Mix in logging capabilities to the target.
       *
@@ -1118,6 +1174,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def logify(target: js.Any): Unit = js.native
+    
     /**
       * Adds the given record to the provided array only if it's not already in the
       * array.
@@ -1143,6 +1200,7 @@ object mod extends js.Object {
     def noDupeAdd(array: js.Any, record: js.UndefOr[scala.Nothing], fn: js.Any): Unit = js.native
     def noDupeAdd(array: js.Any, record: js.Any): Unit = js.native
     def noDupeAdd(array: js.Any, record: js.Any, fn: js.Any): Unit = js.native
+    
     /**
       * Return a shallow copy of the provided object, minus the properties
       * specified in `keys`.
@@ -1161,6 +1219,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def omit(props: js.Any, keys: js.Any): js.Object = js.native
+    
     /**
       * Return a shallow copy of the provided object, but only include the
       * properties specified in `keys`.
@@ -1179,6 +1238,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def pick(props: js.Any, keys: js.Any): js.Any = js.native
+    
     /**
       * Return a plain copy of the given value.
       *
@@ -1195,6 +1255,7 @@ object mod extends js.Object {
       * @since 3.0.0
       */
     def plainCopy(value: js.Any): js.Any = js.native
+    
     /**
       * Shortcut for `utils.Promise.reject(value)`.
       *
@@ -1212,6 +1273,7 @@ object mod extends js.Object {
       * @returns {Promise} Promise reject with `value`.
       */
     def reject(value: js.Any): js.Promise[scala.Nothing] = js.native
+    
     /**
       * Remove the last item found in array according to the given checker function.
       *
@@ -1228,6 +1290,7 @@ object mod extends js.Object {
       */
     def remove(array: js.Any): Unit = js.native
     def remove(array: js.Any, fn: js.Any): Unit = js.native
+    
     /**
       * Shortcut for `utils.Promise.resolve(value)`.
       *
@@ -1245,6 +1308,7 @@ object mod extends js.Object {
       */
     def resolve(): js.Promise[_] = js.native
     def resolve(value: js.Any): js.Promise[_] = js.native
+    
     /**
       * Set the value at the provided key or path.
       *
@@ -1288,6 +1352,7 @@ object mod extends js.Object {
     def set(`object`: js.Any, path: js.Any, value: js.UndefOr[scala.Nothing], opts: js.Any): Unit = js.native
     def set(`object`: js.Any, path: js.Any, value: js.Any): Unit = js.native
     def set(`object`: js.Any, path: js.Any, value: js.Any, opts: js.Any): Unit = js.native
+    
     /**
       * Proxy for `JSON.stringify`.
       *
@@ -1324,6 +1389,7 @@ object mod extends js.Object {
       replacer: js.ThisFunction2[/* this */ js.Any, /* key */ String, /* value */ js.Any, _],
       space: Double
     ): String = js.native
+    
     /**
       * Unset the value at the provided key or path.
       *
@@ -1353,6 +1419,4 @@ object mod extends js.Object {
       */
     def unset(`object`: js.Any, path: String): Unit = js.native
   }
-  
 }
-

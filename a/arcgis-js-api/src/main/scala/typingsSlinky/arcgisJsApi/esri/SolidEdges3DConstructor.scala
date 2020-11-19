@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SolidEdges3DConstructor
@@ -15,6 +15,6 @@ trait SolidEdges3DConstructor
   */
 Instantiable0[SolidEdges3D]
      with Instantiable1[/* properties */ SolidEdges3DProperties, SolidEdges3D] {
+  
   def fromJSON(json: js.Any): SolidEdges3D = js.native
 }
-

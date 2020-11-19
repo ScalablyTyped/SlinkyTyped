@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "SkinnedMesh")
 @js.native
@@ -20,4 +20,3 @@ class SkinnedMesh[TGeometry /* <: typingsSlinky.three.geometryMod.Geometry | typ
     useVertexTexture: Boolean
   ) = this()
 }
-

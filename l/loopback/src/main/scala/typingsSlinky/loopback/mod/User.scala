@@ -4,7 +4,7 @@ import typingsSlinky.loopback.anon.CaseSensitiveEmail
 import typingsSlinky.loopback.anon.GenerateVerificationToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Built-in User model.
@@ -46,40 +46,7 @@ import scala.scalajs.js.annotation._
 @JSImport("loopback", "User")
 @js.native
 class User () extends PersistedModel {
-  /** The property is not used by LoopBack, you are free to use it for your own purposes. */
-  var created: js.Date = js.native
-  /** Must be valid email. */
-  var email: String = js.native
-  /** Set when a user's email has been verified via `confirm()`. */
-  var emailVerified: Boolean = js.native
-  /** The property is not used by LoopBack, you are free to use it for your own purposes. */
-  var lastUpdate: js.Date = js.native
-  /** Hidden from remote clients. */
-  var password: String = js.native
-  /** The namespace the user belongs to. See [Partitioning users with realms](docs.strongloop.com/display/public/LB/Partitioning+users+with+realms) for details. */
-  var realm: String = js.native
-  /**
-    * ettings Extends the `Model.settings` object.
-    * settings.emailVerificationRequired Require the email verification
-    * process before allowing a login.
-    * settings.ttl Default time to live (in seconds) for the `AccessToken` created by `User.login() / user.createAccessToken()`.
-    * Default is `1209600` (2 weeks)
-    * settings.maxTTL The max value a user can request a token to be alive / valid for.
-    * Default is `31556926` (1 year)
-    * settings.realmRequired Require a realm when logging in a user.
-    * settings.realmDelimiter When set a realm is required.
-    * settings.resetPasswordTokenTTL Time to live for password reset `AccessToken`. Default is `900` (15 minutes).
-    * settings.saltWorkFactor The `bcrypt` salt work factor. Default is `10`.
-    * settings.caseSensitiveEmail Enable case sensitive email.
-    */
-  @JSName("settings")
-  var settings_User: CaseSensitiveEmail = js.native
-  /** The property is not used by LoopBack, you are free to use it for your own purposes. */
-  var status: String = js.native
-  /** Must be unique. */
-  var username: String = js.native
-  /** Set when `verify()` is called. */
-  var verificationToken: String = js.native
+  
   /**
     * Create access token for the logged in user. This method can be overridden to
     * customize how access tokens are generate
@@ -101,6 +68,16 @@ class User () extends PersistedModel {
     options: js.Any,
     callback: js.Function2[/* err */ String | js.Error, /* token */ AccessToken, Unit]
   ): js.Promise[AccessToken] | Unit = js.native
+  
+  /** The property is not used by LoopBack, you are free to use it for your own purposes. */
+  var created: js.Date = js.native
+  
+  /** Must be valid email. */
+  var email: String = js.native
+  
+  /** Set when a user's email has been verified via `confirm()`. */
+  var emailVerified: Boolean = js.native
+  
   /**
     * Compare the given `password` with the users hashed password
     * @param {string} password The plain text password
@@ -110,6 +87,42 @@ class User () extends PersistedModel {
     */
   def hasPassword(password: String): js.Promise[Boolean] | Unit = js.native
   def hasPassword(password: String, callback: js.Function2[/* err */ js.Error, /* isMatch */ Boolean, Unit]): js.Promise[Boolean] | Unit = js.native
+  
+  /** The property is not used by LoopBack, you are free to use it for your own purposes. */
+  var lastUpdate: js.Date = js.native
+  
+  /** Hidden from remote clients. */
+  var password: String = js.native
+  
+  /** The namespace the user belongs to. See [Partitioning users with realms](docs.strongloop.com/display/public/LB/Partitioning+users+with+realms) for details. */
+  var realm: String = js.native
+  
+  /**
+    * ettings Extends the `Model.settings` object.
+    * settings.emailVerificationRequired Require the email verification
+    * process before allowing a login.
+    * settings.ttl Default time to live (in seconds) for the `AccessToken` created by `User.login() / user.createAccessToken()`.
+    * Default is `1209600` (2 weeks)
+    * settings.maxTTL The max value a user can request a token to be alive / valid for.
+    * Default is `31556926` (1 year)
+    * settings.realmRequired Require a realm when logging in a user.
+    * settings.realmDelimiter When set a realm is required.
+    * settings.resetPasswordTokenTTL Time to live for password reset `AccessToken`. Default is `900` (15 minutes).
+    * settings.saltWorkFactor The `bcrypt` salt work factor. Default is `10`.
+    * settings.caseSensitiveEmail Enable case sensitive email.
+    */
+  @JSName("settings")
+  var settings_User: CaseSensitiveEmail = js.native
+  
+  /** The property is not used by LoopBack, you are free to use it for your own purposes. */
+  var status: String = js.native
+  
+  /** Must be unique. */
+  var username: String = js.native
+  
+  /** Set when `verify()` is called. */
+  var verificationToken: String = js.native
+  
   /**
     * Verify a user's identity by sending them a confirmation email
     *  ```js
@@ -143,11 +156,11 @@ class User () extends PersistedModel {
     */
   def verify(options: GenerateVerificationToken): Unit = js.native
 }
-
 /* static members */
 @JSImport("loopback", "User")
 @js.native
 object User extends js.Object {
+  
   /**
     * Confirm the user's identity
     * @param {Any} userId
@@ -158,6 +171,7 @@ object User extends js.Object {
     */
   def confirm(userId: js.Any, token: String, redirect: String): js.Promise[Unit] | Unit = js.native
   def confirm(userId: js.Any, token: String, redirect: String, callback: js.Function1[/* err */ js.Error, Unit]): js.Promise[Unit] | Unit = js.native
+  
   /**
     * A default verification token generator which accepts the user the token is
     * being generated for and a callback function to indicate completion.
@@ -169,6 +183,7 @@ object User extends js.Object {
     */
   def generateVerificationToken(user: js.Any): js.Promise[Unit] | Unit = js.native
   def generateVerificationToken(user: js.Any, callback: js.Function0[Unit]): js.Promise[Unit] | Unit = js.native
+  
   /**
     * Login a user by with the given `credentials`
     *
@@ -203,6 +218,7 @@ object User extends js.Object {
     include: js.Array[String],
     callback: js.Function2[/* err */ js.Error, /* token */ AccessToken, Unit]
   ): js.Promise[AccessToken] | Unit = js.native
+  
   /**
     * Logout a user with the given accessToken id
     *
@@ -218,6 +234,7 @@ object User extends js.Object {
     */
   def logout(accessTokenID: String): js.Promise[Unit] | Unit = js.native
   def logout(accessTokenID: String, callback: js.Function1[/* err */ js.Error, Unit]): js.Promise[Unit] | Unit = js.native
+  
   /**
     * Normalize the credentials
     * @param {any} credentials The credential object
@@ -226,6 +243,7 @@ object User extends js.Object {
     * @returns {any} The normalized credential objec
     */
   def normalizeCredentials(credentials: js.Any, realmRequired: Boolean, realmDelimiter: String): js.Any = js.native
+  
   /**
     * Create a short lived acess token for temporary login. Allows users
     * to change passwords if forgotten
@@ -237,4 +255,3 @@ object User extends js.Object {
   def resetPassword(options: js.Object): js.Promise[Unit] | Unit = js.native
   def resetPassword(options: js.Object, callback: js.Function1[/* err */ js.Error, Unit]): js.Promise[Unit] | Unit = js.native
 }
-

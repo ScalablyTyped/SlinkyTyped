@@ -6,7 +6,7 @@ import typingsSlinky.kiiCloudSdk.anon.`37`
 import typingsSlinky.kiiCloudSdk.anon.`38`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents a KiiUser object
@@ -15,11 +15,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class KiiUser ()
   extends typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser
-
 /* static members */
 @JSGlobal("KiiCloud.KiiUser")
 @js.native
 object KiiUser extends js.Object {
+  
   /**
     * Authenticates a user with the server.
     * If authentication successful, the user is cached inside SDK as current user,and accessible via
@@ -67,6 +67,7 @@ object KiiUser extends js.Object {
     */
   def authenticate(userIdentifier: String, password: String): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def authenticate(userIdentifier: String, password: String, callbacks: `32`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
+  
   /**
     * Asynchronously authenticates a user with the server using specified access token.
     * This method is non-blocking.<br><br>
@@ -135,6 +136,7 @@ object KiiUser extends js.Object {
   def authenticateWithToken(accessToken: String, callbacks: js.UndefOr[scala.Nothing], expiresAt: js.Date): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def authenticateWithToken(accessToken: String, callbacks: `32`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def authenticateWithToken(accessToken: String, callbacks: `32`, expiresAt: js.Date): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
+  
   /**
     * Reset password with the PIN code in receipt SMS
     * After {@link KiiUser.resetPasswordWithNotificationMethod} is called with
@@ -186,6 +188,7 @@ object KiiUser extends js.Object {
   def completeResetPassword(userIdentifier: String, pinCode: String, newPassword: js.UndefOr[scala.Nothing], callbacks: `19`): js.Promise[Unit] = js.native
   def completeResetPassword(userIdentifier: String, pinCode: String, newPassword: String): js.Promise[Unit] = js.native
   def completeResetPassword(userIdentifier: String, pinCode: String, newPassword: String, callbacks: `19`): js.Promise[Unit] = js.native
+  
   /**
     * Find registered KiiUser with the email.<br>
     * If there are no user registers with the specified email or if there are but not verified email yet,
@@ -235,6 +238,7 @@ object KiiUser extends js.Object {
     */
   def findUserByEmail(email: String): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def findUserByEmail(email: String, callbacks: `38`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
+  
   /**
     * Find registered KiiUser with the phone.<br>
     * If there are no user registers with the specified phone or if there are but not verified phone yet,
@@ -284,6 +288,7 @@ object KiiUser extends js.Object {
     */
   def findUserByPhone(phone: String): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def findUserByPhone(phone: String, callbacks: `38`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
+  
   /**
     * Find registered KiiUser with the user name.<br>
     * If there are no user registers with the specified user name, callbacks.failure or reject callback of promise will be called.
@@ -332,6 +337,7 @@ object KiiUser extends js.Object {
     */
   def findUserByUsername(username: String): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def findUserByUsername(username: String, callbacks: `38`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
+  
   /**
     * The currently authenticated user
     *
@@ -339,6 +345,7 @@ object KiiUser extends js.Object {
     *         var user = KiiUser.getCurrentUser();
     */
   def getCurrentUser(): typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser = js.native
+  
   /**
     * Logs the currently logged-in user out of the KiiSDK
     *
@@ -346,6 +353,7 @@ object KiiUser extends js.Object {
     *         KiiUser.logOut();
     */
   def logOut(): Unit = js.native
+  
   /**
     * Checks to see if there is a user authenticated with the SDK
     *
@@ -355,6 +363,7 @@ object KiiUser extends js.Object {
     *         }
     */
   def loggedIn(): Boolean = js.native
+  
   /**
     * Registers a user as pseudo user with the server
     *
@@ -400,6 +409,7 @@ object KiiUser extends js.Object {
   def registerAsPseudoUser(callbacks: js.UndefOr[scala.Nothing], userFields: js.Any): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def registerAsPseudoUser(callbacks: `32`): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
   def registerAsPseudoUser(callbacks: `32`, userFields: js.Any): js.Promise[typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser] = js.native
+  
   /**
     * Reset a user's password on the server
     *
@@ -444,6 +454,7 @@ object KiiUser extends js.Object {
     */
   def resetPassword(userIdentifier: String): js.Promise[Unit] = js.native
   def resetPassword(userIdentifier: String, callbacks: `37`): js.Promise[Unit] = js.native
+  
   /**
     * Reset the password of user <br>
     * Reset the password of user specified by given identifier. <br>
@@ -497,6 +508,7 @@ object KiiUser extends js.Object {
     */
   def resetPasswordWithNotificationMethod(userIdentifier: String, notificationMethod: String): js.Promise[Unit] = js.native
   def resetPasswordWithNotificationMethod(userIdentifier: String, notificationMethod: String, callbacks: `37`): js.Promise[Unit] = js.native
+  
   /**
     * Create a user object to prepare for registration with credentials pre-filled
     *
@@ -519,6 +531,7 @@ object KiiUser extends js.Object {
     *     var user = KiiUser.userWithCredentials("johndoe@example.com", "+874012345678", "johndoe", "mypassword");
     */
   def userWithCredentials(emailAddress: String, phoneNumber: String, username: String, password: String): typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser = js.native
+  
   /**
     * Create a user object to prepare for registration with credentials pre-filled
     *
@@ -537,6 +550,7 @@ object KiiUser extends js.Object {
     *     var user = KiiUser.userWithEmailAddress("johndoe@example.com", "mypassword");
     */
   def userWithEmailAddress(emailAddress: String, password: String): typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser = js.native
+  
   /**
     * Create a user object to prepare for registration with credentials pre-filled
     *
@@ -557,6 +571,7 @@ object KiiUser extends js.Object {
     *     var user = KiiUser.userWithEmailAddressAndPhoneNumber("johndoe@example.com", "+874012345678", "mypassword");
     */
   def userWithEmailAddressAndPhoneNumber(emailAddress: String, phoneNumber: String, password: String): typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser = js.native
+  
   /**
     * Create a user object to prepare for registration with credentials pre-filled
     *
@@ -577,6 +592,7 @@ object KiiUser extends js.Object {
     *     var user = KiiUser.userWithEmailAddressAndUsername("johndoe@example.com", "johndoe", "mypassword");
     */
   def userWithEmailAddressAndUsername(emailAddress: String, username: String, password: String): typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser = js.native
+  
   /**
     * Instantiate KiiUser that refers to existing user which has specified ID.
     * You have to specify the ID of existing KiiUser. Unlike KiiObject,
@@ -594,6 +610,7 @@ object KiiUser extends js.Object {
     *     var user = new KiiUser.userWithID("__USER_ID__");
     */
   def userWithID(userID: String): typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser = js.native
+  
   /**
     * Create a user object to prepare for registration with credentials pre-filled
     *
@@ -612,6 +629,7 @@ object KiiUser extends js.Object {
     *     var user = KiiUser.userWithPhoneNumber("+874012345678", "mypassword");
     */
   def userWithPhoneNumber(phoneNumber: String, password: String): typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser = js.native
+  
   /**
     * Create a user object to prepare for registration with credentials pre-filled
     *
@@ -632,6 +650,7 @@ object KiiUser extends js.Object {
     *     var user = KiiUser.userWithPhoneNumberAndUsername("+874012345678", "johndoe", "mypassword");
     */
   def userWithPhoneNumberAndUsername(phoneNumber: String, username: String, password: String): typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser = js.native
+  
   /**
     * Generate a new KiiUser based on a given URI
     *
@@ -645,6 +664,7 @@ object KiiUser extends js.Object {
     *     var user = new KiiUser.userWithURI("kiicloud://myuri");
     */
   def userWithURI(uri: String): typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser = js.native
+  
   /**
     * Create a user object to prepare for registration with credentials pre-filled
     *
@@ -664,4 +684,3 @@ object KiiUser extends js.Object {
     */
   def userWithUsername(username: String, password: String): typingsSlinky.kiiCloudSdk.KiiCloud.KiiUser = js.native
 }
-

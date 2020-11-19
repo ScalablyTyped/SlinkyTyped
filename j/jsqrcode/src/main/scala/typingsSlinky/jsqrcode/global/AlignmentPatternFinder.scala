@@ -3,7 +3,7 @@ package typingsSlinky.jsqrcode.global
 import typingsSlinky.jsqrcode.ResultPointCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AlignmentPatternFinder")
 @js.native
@@ -19,4 +19,3 @@ class AlignmentPatternFinder protected ()
     resultPointCallback: ResultPointCallback
   ) = this()
 }
-

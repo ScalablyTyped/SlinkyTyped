@@ -2,15 +2,18 @@ package typingsSlinky.lunr
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type ConfigFunction = js.ThisFunction1[
     /* this */ typingsSlinky.lunr.mod.Builder, 
     /* builder */ typingsSlinky.lunr.mod.Builder, 
     scala.Unit
   ]
+  
   type Index = typingsSlinky.lunr.mod.Index_
+  
   /**
     * A pipeline function maps lunr.Token to lunr.Token. A lunr.Token contains the token
     * string as well as all known metadata. A pipeline function can mutate the token string
@@ -35,5 +38,6 @@ package object mod {
     /* tokens */ js.Array[typingsSlinky.lunr.mod.Token], 
     scala.Null | typingsSlinky.lunr.mod.Token | js.Array[typingsSlinky.lunr.mod.Token]
   ]
+  
   type Query = typingsSlinky.lunr.mod.Query_
 }

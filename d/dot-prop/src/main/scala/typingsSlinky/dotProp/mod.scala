@@ -3,11 +3,12 @@ package typingsSlinky.dotProp
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dot-prop", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
   	@param object - Object to delete the `path` value.
   	@param path - Path of the property in the object, using `.` to separate each nested key. Use `\\.` if you have a `.` in the key.
@@ -25,6 +26,7 @@ object mod extends js.Object {
   	```
   	*/
   def delete(`object`: StringDictionary[js.Any], path: String): Unit = js.native
+  
   def get[T](`object`: js.UndefOr[scala.Nothing], path: String): js.UndefOr[T] = js.native
   def get[T](`object`: js.UndefOr[scala.Nothing], path: String, defaultValue: T): T = js.native
   /**
@@ -46,6 +48,7 @@ object mod extends js.Object {
   	*/
   def get[T](`object`: StringDictionary[js.Any], path: String): js.UndefOr[T] = js.native
   def get[T](`object`: StringDictionary[js.Any], path: String, defaultValue: T): T = js.native
+  
   def has(`object`: js.UndefOr[scala.Nothing], path: String): Boolean = js.native
   /**
   	@param object - Object to test the `path` value.
@@ -58,6 +61,7 @@ object mod extends js.Object {
   	```
   	*/
   def has(`object`: StringDictionary[js.Any], path: String): Boolean = js.native
+  
   /**
   	@param object - Object to set the `path` value.
   	@param path - Path of the property in the object, using `.` to separate each nested key. Use `\\.` if you have a `.` in the key.
@@ -79,4 +83,3 @@ object mod extends js.Object {
   	*/
   def set[T /* <: StringDictionary[js.Any] */](`object`: T, path: String, value: js.Any): T = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/page-templates relevant section in reference guide}
@@ -11,15 +11,16 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IPageTemplate extends ITemplateFormBase {
+  
   /**
     * This property is required and cannot be set to null.
     *
     * In version 7.17.0: added public
     */
   val layoutCall: ILayoutCall = js.native
+  
   /**
     * In version 7.17.0: added public
     */
   val `type`: PageTemplateType = js.native
 }
-

@@ -10,7 +10,7 @@ import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.CELLULAR
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.WIFI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DownloadRequestConstructor
@@ -54,4 +54,3 @@ Instantiable1[/* url */ String, DownloadRequest]
       /* httpHeader */ DownloadHTTPHeaderFields, 
       DownloadRequest
     ]
-

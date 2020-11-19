@@ -3,7 +3,7 @@ package typingsSlinky.typescript.mod
 import typingsSlinky.typescript.mod.SyntaxKind.GetAccessor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typescript.mod.TextRange because Already inherited
@@ -16,15 +16,20 @@ trait GetAccessorDeclaration
   extends FunctionLikeDeclarationBase
      with AccessorDeclaration
      with FunctionLikeDeclaration {
+  
   var _classElementBrand: js.Any = js.native
+  
   var _objectLiteralBrand: js.Any = js.native
+  
   @JSName("body")
   var body_GetAccessorDeclaration: js.UndefOr[FunctionBody] = js.native
+  
   @JSName("kind")
   var kind_GetAccessorDeclaration: GetAccessor = js.native
+  
   @JSName("name")
   var name_GetAccessorDeclaration: PropertyName = js.native
+  
   @JSName("parent")
   var parent_GetAccessorDeclaration: ClassLikeDeclaration | ObjectLiteralExpression = js.native
 }
-

@@ -15,7 +15,7 @@ import typingsSlinky.graphql.schemaMod.GraphQLSchema
 import typingsSlinky.graphql.typeInfoMod.TypeInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/validation/ValidationContext", "ValidationContext")
 @js.native
@@ -26,15 +26,24 @@ class ValidationContext protected () extends ASTValidationContext {
     typeInfo: TypeInfo,
     onError: js.Function1[/* err */ GraphQLError, Unit]
   ) = this()
+  
   def getArgument(): Maybe[GraphQLArgument] = js.native
+  
   def getDirective(): Maybe[GraphQLDirective] = js.native
+  
   def getEnumValue(): Maybe[GraphQLEnumValue] = js.native
+  
   def getFieldDef(): Maybe[GraphQLField[_, _, StringDictionary[_]]] = js.native
+  
   def getInputType(): Maybe[GraphQLInputType] = js.native
+  
   def getParentInputType(): Maybe[GraphQLInputType] = js.native
+  
   def getParentType(): Maybe[GraphQLCompositeType] = js.native
+  
   def getSchema(): GraphQLSchema = js.native
+  
   def getType(): Maybe[GraphQLOutputType] = js.native
+  
   def getVariableUsages(node: NodeWithSelectionSet): js.Array[VariableUsage] = js.native
 }
-

@@ -4,11 +4,64 @@ import org.scalajs.dom.raw.PerformanceTiming
 import typingsSlinky.applicationinsightsJs.AI.SeverityLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Microsoft.ApplicationInsights.Telemetry")
 @js.native
 object Telemetry extends js.Object {
+  
+  @js.native
+  object Common extends js.Object {
+    
+    @js.native
+    class Base ()
+      extends typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Common.Base
+    
+    @js.native
+    class Data[TDomain] protected ()
+      extends typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Common.Data[TDomain] {
+      /**
+        * Constructs a new instance of telemetry data.
+        */
+      def this(`type`: String, data: TDomain) = this()
+    }
+    
+    @js.native
+    class DataSanitizer ()
+      extends typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Common.DataSanitizer
+    /* static members */
+    @js.native
+    object DataSanitizer extends js.Object {
+      
+      def padNumber(num: js.Any): String = js.native
+      
+      def sanitizeException(exception: js.Any): js.Any = js.native
+      
+      def sanitizeKey(name: js.Any): js.Any = js.native
+      
+      def sanitizeKeyAndAddUniqueness(key: js.Any, map: js.Any): js.Any = js.native
+      
+      def sanitizeMeasurements(measurements: js.Any): js.Any = js.native
+      
+      def sanitizeMessage(message: js.Any): js.Any = js.native
+      
+      def sanitizeProperties(properties: js.Any): js.Any = js.native
+      
+      def sanitizeString(value: js.Any): js.Any = js.native
+      
+      def sanitizeUrl(url: js.Any): js.Any = js.native
+    }
+    
+    @js.native
+    class Envelope protected ()
+      extends typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Common.Envelope {
+      /**
+        * Constructs a new instance of telemetry data.
+        */
+      def this(data: typingsSlinky.applicationinsightsJs.Microsoft.Telemetry.Base, name: String) = this()
+    }
+  }
+  
   @js.native
   class Event protected ()
     extends typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Event {
@@ -19,6 +72,14 @@ object Telemetry extends js.Object {
     def this(name: String, properties: js.Any) = this()
     def this(name: String, properties: js.UndefOr[scala.Nothing], measurements: js.Any) = this()
     def this(name: String, properties: js.Any, measurements: js.Any) = this()
+  }
+  /* static members */
+  @js.native
+  object Event extends js.Object {
+    
+    var dataType: String = js.native
+    
+    var envelopeType: String = js.native
   }
   
   @js.native
@@ -107,6 +168,35 @@ object Telemetry extends js.Object {
       severityLevel: SeverityLevel
     ) = this()
   }
+  /* static members */
+  @js.native
+  object Exception extends js.Object {
+    
+    /**
+      * Creates a simple exception with 1 stack frame. Useful for manual constracting of exception.
+      */
+    def CreateSimpleException(
+      message: String,
+      typeName: String,
+      assembly: String,
+      fileName: String,
+      details: String,
+      line: Double
+    ): typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Exception = js.native
+    def CreateSimpleException(
+      message: String,
+      typeName: String,
+      assembly: String,
+      fileName: String,
+      details: String,
+      line: Double,
+      handledAt: String
+    ): typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Exception = js.native
+    
+    var dataType: String = js.native
+    
+    var envelopeType: String = js.native
+  }
   
   @js.native
   class Metric protected ()
@@ -185,6 +275,14 @@ object Telemetry extends js.Object {
       properties: js.Any
     ) = this()
     def this(name: String, value: Double, count: Double, min: Double, max: Double, properties: js.Any) = this()
+  }
+  /* static members */
+  @js.native
+  object Metric extends js.Object {
+    
+    var dataType: String = js.native
+    
+    var envelopeType: String = js.native
   }
   
   @js.native
@@ -335,6 +433,14 @@ object Telemetry extends js.Object {
     ) = this()
     def this(name: String, url: String, durationMs: Double, properties: js.Any, measurements: js.Any) = this()
   }
+  /* static members */
+  @js.native
+  object PageView extends js.Object {
+    
+    var dataType: String = js.native
+    
+    var envelopeType: String = js.native
+  }
   
   @js.native
   class PageViewPerformance protected ()
@@ -352,6 +458,29 @@ object Telemetry extends js.Object {
       measurements: js.Any
     ) = this()
     def this(name: String, url: String, unused: Double, properties: js.Any, measurements: js.Any) = this()
+  }
+  /* static members */
+  @js.native
+  object PageViewPerformance extends js.Object {
+    
+    var dataType: String = js.native
+    
+    var envelopeType: String = js.native
+    
+    def getDuration(start: js.Any, end: js.Any): Double = js.native
+    
+    def getPerformanceTiming(): PerformanceTiming = js.native
+    
+    /**
+      * As page loads different parts of performance timing numbers get set. When all of them are set we can report it.
+      * Returns true if ready, false otherwise.
+      */
+    def isPerformanceTimingDataReady(): Boolean = js.native
+    
+    /**
+      * Returns true is window performance timing API is supported, false otherwise.
+      */
+    def isPerformanceTimingSupported(): PerformanceTiming = js.native
   }
   
   @js.native
@@ -378,6 +507,14 @@ object Telemetry extends js.Object {
       method: String
     ) = this()
   }
+  /* static members */
+  @js.native
+  object RemoteDependencyData extends js.Object {
+    
+    var dataType: String = js.native
+    
+    var envelopeType: String = js.native
+  }
   
   @js.native
   class Trace protected ()
@@ -388,130 +525,12 @@ object Telemetry extends js.Object {
     def this(message: String) = this()
     def this(message: String, properties: js.Any) = this()
   }
-  
-  @js.native
-  object Common extends js.Object {
-    @js.native
-    class Base ()
-      extends typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Common.Base
-    
-    @js.native
-    class Data[TDomain] protected ()
-      extends typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Common.Data[TDomain] {
-      /**
-        * Constructs a new instance of telemetry data.
-        */
-      def this(`type`: String, data: TDomain) = this()
-    }
-    
-    @js.native
-    class DataSanitizer ()
-      extends typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Common.DataSanitizer
-    
-    @js.native
-    class Envelope protected ()
-      extends typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Common.Envelope {
-      /**
-        * Constructs a new instance of telemetry data.
-        */
-      def this(data: typingsSlinky.applicationinsightsJs.Microsoft.Telemetry.Base, name: String) = this()
-    }
-    
-    /* static members */
-    @js.native
-    object DataSanitizer extends js.Object {
-      def padNumber(num: js.Any): String = js.native
-      def sanitizeException(exception: js.Any): js.Any = js.native
-      def sanitizeKey(name: js.Any): js.Any = js.native
-      def sanitizeKeyAndAddUniqueness(key: js.Any, map: js.Any): js.Any = js.native
-      def sanitizeMeasurements(measurements: js.Any): js.Any = js.native
-      def sanitizeMessage(message: js.Any): js.Any = js.native
-      def sanitizeProperties(properties: js.Any): js.Any = js.native
-      def sanitizeString(value: js.Any): js.Any = js.native
-      def sanitizeUrl(url: js.Any): js.Any = js.native
-    }
-    
-  }
-  
-  /* static members */
-  @js.native
-  object Event extends js.Object {
-    var dataType: String = js.native
-    var envelopeType: String = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object Exception extends js.Object {
-    var dataType: String = js.native
-    var envelopeType: String = js.native
-    /**
-      * Creates a simple exception with 1 stack frame. Useful for manual constracting of exception.
-      */
-    def CreateSimpleException(
-      message: String,
-      typeName: String,
-      assembly: String,
-      fileName: String,
-      details: String,
-      line: Double
-    ): typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Exception = js.native
-    def CreateSimpleException(
-      message: String,
-      typeName: String,
-      assembly: String,
-      fileName: String,
-      details: String,
-      line: Double,
-      handledAt: String
-    ): typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.Telemetry.Exception = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object Metric extends js.Object {
-    var dataType: String = js.native
-    var envelopeType: String = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object PageView extends js.Object {
-    var dataType: String = js.native
-    var envelopeType: String = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object PageViewPerformance extends js.Object {
-    var dataType: String = js.native
-    var envelopeType: String = js.native
-    def getDuration(start: js.Any, end: js.Any): Double = js.native
-    def getPerformanceTiming(): PerformanceTiming = js.native
-    /**
-      * As page loads different parts of performance timing numbers get set. When all of them are set we can report it.
-      * Returns true if ready, false otherwise.
-      */
-    def isPerformanceTimingDataReady(): Boolean = js.native
-    /**
-      * Returns true is window performance timing API is supported, false otherwise.
-      */
-    def isPerformanceTimingSupported(): PerformanceTiming = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object RemoteDependencyData extends js.Object {
-    var dataType: String = js.native
-    var envelopeType: String = js.native
-  }
-  
   /* static members */
   @js.native
   object Trace extends js.Object {
+    
     var dataType: String = js.native
+    
     var envelopeType: String = js.native
   }
-  
 }
-

@@ -3,18 +3,21 @@ package typingsSlinky.gapiClientFirestore.gapi.client.firestore
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait WriteRequest extends js.Object {
+  
   /** Labels associated with this write request. */
   var labels: js.UndefOr[Record[String, String]] = js.native
+  
   /**
     * The ID of the write stream to resume.
     * This may only be set in the first message. When left empty, a new write
     * stream will be created.
     */
   var streamId: js.UndefOr[String] = js.native
+  
   /**
     * A stream token that was previously sent by the server.
     *
@@ -32,6 +35,7 @@ trait WriteRequest extends js.Object {
     * Leave this field unset when creating a new stream.
     */
   var streamToken: js.UndefOr[String] = js.native
+  
   /**
     * The writes to apply.
     *
@@ -42,43 +46,54 @@ trait WriteRequest extends js.Object {
     */
   var writes: js.UndefOr[js.Array[Write]] = js.native
 }
-
 object WriteRequest {
+  
   @scala.inline
   def apply(): WriteRequest = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[WriteRequest]
   }
+  
   @scala.inline
   implicit class WriteRequestOps[Self <: WriteRequest] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setLabels(value: Record[String, String]): Self = this.set("labels", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteLabels: Self = this.set("labels", js.undefined)
+    
     @scala.inline
     def setStreamId(value: String): Self = this.set("streamId", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteStreamId: Self = this.set("streamId", js.undefined)
+    
     @scala.inline
     def setStreamToken(value: String): Self = this.set("streamToken", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteStreamToken: Self = this.set("streamToken", js.undefined)
+    
     @scala.inline
     def setWritesVarargs(value: Write*): Self = this.set("writes", js.Array(value :_*))
+    
     @scala.inline
     def setWrites(value: js.Array[Write]): Self = this.set("writes", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteWrites: Self = this.set("writes", js.undefined)
   }
-  
 }
-

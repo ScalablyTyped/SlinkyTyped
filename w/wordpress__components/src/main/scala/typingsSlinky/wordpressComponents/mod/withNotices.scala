@@ -7,12 +7,12 @@ import typingsSlinky.wordpressComponents.wordpressComponentsStrings.noticeOperat
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.noticeUI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/components", "withNotices")
 @js.native
 object withNotices extends js.Object {
+  
   // prettier-ignore
   def apply[T /* <: ReactComponentClass[_] */](wrapped: T): ReactComponentClass[Omit[_, noticeList | noticeOperations | noticeUI]] = js.native
 }
-

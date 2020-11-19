@@ -8,11 +8,12 @@ import typingsSlinky.tensorflowTfjsBackendCpu.tensorflowTfjsBackendCpuStrings.st
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TypedArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-backend-cpu/dist/kernels/Div_impl", JSImport.Namespace)
 @js.native
 object divImplMod extends js.Object {
+  
   @JSName("divImpl")
   def divImpl_bool(
     aShape: js.Array[Double],
@@ -54,4 +55,3 @@ object divImplMod extends js.Object {
     dtype: string
   ): js.Tuple2[TypedArray, js.Array[Double]] = js.native
 }
-

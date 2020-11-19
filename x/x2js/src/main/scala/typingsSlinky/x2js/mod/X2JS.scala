@@ -3,10 +3,11 @@ package typingsSlinky.x2js.mod
 import org.scalajs.dom.raw.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait X2JS extends js.Object {
+  
   /**
     * Converts the provided property into an array. If the property is already an Array then it will return unchanged.
     * 
@@ -18,6 +19,7 @@ trait X2JS extends js.Object {
     */
   def asArray[T](prop: T): js.Array[T] = js.native
   def asArray[T](prop: js.Array[T]): js.Array[T] = js.native
+  
   /**
     * Converts the provided date string into a javascript Date instance.
     * 
@@ -27,6 +29,7 @@ trait X2JS extends js.Object {
     * @memberOf X2JS
     */
   def asDateTime(prop: String): js.Date = js.native
+  
   /**
     * Transforms a DOM tree to JavaScript objects.
     * 
@@ -37,6 +40,7 @@ trait X2JS extends js.Object {
     * @memberOf X2JS
     */
   def dom2js[T](domNode: Document): T = js.native
+  
   /**
     * Gets the current version of x2js. 
     * 
@@ -45,6 +49,7 @@ trait X2JS extends js.Object {
     * @memberOf X2JS
     */
   def getVersion(): String = js.native
+  
   /**
     * 
     * 
@@ -55,6 +60,7 @@ trait X2JS extends js.Object {
     * @memberOf X2JS
     */
   def js2dom[T](jsObject: T): Document = js.native
+  
   /**
     * Transforms JavaScript objects into an XML string.
     * 
@@ -65,6 +71,7 @@ trait X2JS extends js.Object {
     * @memberOf X2JS
     */
   def js2xml[T](json: T): String = js.native
+  
   def toXmlDateTime(dt: Double): String = js.native
   /**
     * Converts the provided date value to a valid XML string.
@@ -75,6 +82,7 @@ trait X2JS extends js.Object {
     * @memberOf X2JS
     */
   def toXmlDateTime(dt: js.Date): String = js.native
+  
   /**
     * Transformns an XML string into DOM-tree
     * 
@@ -84,6 +92,7 @@ trait X2JS extends js.Object {
     * @memberOf X2JS
     */
   def xml2dom(xml: String): Document = js.native
+  
   /**
     * Transformns an XML string into JavaScript objects.
     * 
@@ -95,4 +104,3 @@ trait X2JS extends js.Object {
     */
   def xml2js[T](xml: String): T = js.native
 }
-

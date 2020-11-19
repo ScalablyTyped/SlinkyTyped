@@ -8,7 +8,7 @@ import org.scalablytyped.runtime.Instantiable4
 import typingsSlinky.std.DOMRectInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("SVGRect")
 @js.native
@@ -35,7 +35,6 @@ class SVGRect ()
   def this(x: Double, y: Double, width: js.UndefOr[scala.Nothing], height: Double) = this()
   def this(x: Double, y: Double, width: Double, height: Double) = this()
 }
-
 @JSGlobal("SVGRect")
 @js.native
 object SVGRect
@@ -55,7 +54,7 @@ object SVGRect
       /* height */ Double, 
       typingsSlinky.std.DOMRect
     ] {
+  
   def fromRect(): typingsSlinky.std.DOMRect = js.native
   def fromRect(other: DOMRectInit): typingsSlinky.std.DOMRect = js.native
 }
-

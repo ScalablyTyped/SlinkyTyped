@@ -2,7 +2,7 @@ package typingsSlinky.xrm.Xrm
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Display States for setDisplayState() on {@link Controls.ProcessControl.setDisplayState Processes} and {@link Controls.Tab.setDisplayState Tabs}.
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.expanded
 */
 trait DisplayState extends js.Object
-
 object DisplayState {
+  
   @scala.inline
   def collapsed: typingsSlinky.xrm.xrmStrings.collapsed = "collapsed".asInstanceOf[typingsSlinky.xrm.xrmStrings.collapsed]
+  
   @scala.inline
   def expanded: typingsSlinky.xrm.xrmStrings.expanded = "expanded".asInstanceOf[typingsSlinky.xrm.xrmStrings.expanded]
 }
-

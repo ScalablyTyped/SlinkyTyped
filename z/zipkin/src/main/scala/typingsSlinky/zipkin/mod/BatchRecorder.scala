@@ -2,7 +2,7 @@ package typingsSlinky.zipkin.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("zipkin", "BatchRecorder")
 @js.native
@@ -17,6 +17,6 @@ class BatchRecorder protected () extends Recorder {
     * to pass a value for it unless there is a good reason for.
     */
   def this(args: typingsSlinky.zipkin.anon.Logger) = this()
+  
   def flush(): Unit = js.native
 }
-

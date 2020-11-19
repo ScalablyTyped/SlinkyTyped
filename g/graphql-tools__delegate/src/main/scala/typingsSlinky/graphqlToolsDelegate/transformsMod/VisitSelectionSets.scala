@@ -7,7 +7,7 @@ import typingsSlinky.graphql.mod.TypeInfo
 import typingsSlinky.graphqlToolsDelegate.visitSelectionSetsMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/delegate/transforms", "VisitSelectionSets")
 @js.native
@@ -18,4 +18,3 @@ class VisitSelectionSets protected () extends default {
     visitor: js.Function2[/* node */ SelectionSetNode, /* typeInfo */ TypeInfo, SelectionSetNode]
   ) = this()
 }
-

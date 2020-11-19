@@ -8,18 +8,23 @@ import typingsSlinky.angularCore.mod.EventEmitter
 import typingsSlinky.angularCore.mod.NgZone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/angular/directives/proxies", "IonInput")
 @js.native
 class IonInput protected ()
   extends typingsSlinky.ionicCore.componentsMod.Components.IonInput {
   def this(c: ChangeDetectorRef, r: ElementRef[_], z: NgZone) = this()
+  
   var el: HTMLElement = js.native
+  
   var ionBlur: EventEmitter[CustomEvent] = js.native
+  
   var ionChange: EventEmitter[CustomEvent] = js.native
+  
   var ionFocus: EventEmitter[CustomEvent] = js.native
+  
   var ionInput: EventEmitter[CustomEvent] = js.native
+  
   var z: NgZone = js.native
 }
-

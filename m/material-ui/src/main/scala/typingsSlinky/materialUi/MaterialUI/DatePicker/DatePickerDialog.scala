@@ -3,12 +3,13 @@ package typingsSlinky.materialUi.MaterialUI.DatePicker
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DatePickerDialog
   extends Component[DatePickerDialogProps, js.Object, js.Any] {
+  
   def dismiss(): Unit = js.native
+  
   def show(): Unit = js.native
 }
-

@@ -5,11 +5,12 @@ import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("swagger-ui-express", "setup")
 @js.native
 object setup extends js.Object {
+  
   def apply(): RequestHandler[ParamsDictionary, _, _, Query] = js.native
   def apply(swaggerDoc: js.UndefOr[scala.Nothing], isExplorer: Boolean): RequestHandler[ParamsDictionary, _, _, Query] = js.native
   def apply(
@@ -24,4 +25,3 @@ object setup extends js.Object {
   def apply(swaggerDoc: JsonObject): RequestHandler[ParamsDictionary, _, _, Query] = js.native
   def apply(swaggerDoc: JsonObject, isExplorer: Boolean): RequestHandler[ParamsDictionary, _, _, Query] = js.native
 }
-

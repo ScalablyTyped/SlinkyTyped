@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "ScaleGizmo")
 @js.native
@@ -14,4 +14,3 @@ class ScaleGizmo ()
   extends typingsSlinky.babylonjs.legacyMod.ScaleGizmo {
   def this(gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer) = this()
 }
-

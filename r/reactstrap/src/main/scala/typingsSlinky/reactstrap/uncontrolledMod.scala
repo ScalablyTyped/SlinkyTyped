@@ -9,11 +9,12 @@ import typingsSlinky.reactstrap.popoverMod.UncontrolledPopoverProps
 import typingsSlinky.reactstrap.tooltipMod.UncontrolledTooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("reactstrap/lib/Uncontrolled", JSImport.Namespace)
 @js.native
 object uncontrolledMod extends js.Object {
+  
   @js.native
   class UncontrolledAlert[T] ()
     extends Component[UncontrolledAlertProps, js.Object, js.Any]
@@ -41,6 +42,4 @@ object uncontrolledMod extends js.Object {
   @js.native
   class UncontrolledTooltip[T] ()
     extends Component[UncontrolledTooltipProps, js.Object, js.Any]
-  
 }
-

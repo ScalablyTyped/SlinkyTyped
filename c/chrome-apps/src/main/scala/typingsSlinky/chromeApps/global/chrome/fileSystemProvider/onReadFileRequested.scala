@@ -24,7 +24,7 @@ import typingsSlinky.chromeApps.chromeAppsStrings.TOO_MANY_OPENED
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Raised when reading contents of a file opened previously with openRequestId is requested.
@@ -55,4 +55,3 @@ object onReadFileRequested
         ]
       ]
     ]
-

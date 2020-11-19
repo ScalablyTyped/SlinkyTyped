@@ -4,17 +4,17 @@ import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.FrontUVsRadius
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.DiscBuilder")
 @js.native
 class DiscBuilder ()
   extends typingsSlinky.babylonjs.BABYLON.DiscBuilder
-
 /* static members */
 @JSGlobal("BABYLON.DiscBuilder")
 @js.native
 object DiscBuilder extends js.Object {
+  
   /**
     * Creates a plane polygonal mesh.  By default, this is a disc
     * * The parameter `radius` sets the radius size (float) of the polygon (default 0.5)
@@ -32,4 +32,3 @@ object DiscBuilder extends js.Object {
   def CreateDisc(name: String, options: FrontUVsRadius): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
   def CreateDisc(name: String, options: FrontUVsRadius, scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
 }
-

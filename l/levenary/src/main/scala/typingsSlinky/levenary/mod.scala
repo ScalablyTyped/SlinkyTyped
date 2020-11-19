@@ -2,11 +2,12 @@ package typingsSlinky.levenary
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("levenary", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     Return the string within `array`, whose Levenshtein distance from `str` is minimal.
   	@example
@@ -18,4 +19,3 @@ object mod extends js.Object {
   	*/
   def default(str: String, array: js.Array[String]): String = js.native
 }
-

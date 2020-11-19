@@ -4,11 +4,12 @@ import typingsSlinky.samchon.iclientdriverMod.IClientDriver
 import typingsSlinky.samchon.iexternalserverMod.IExternalServer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("samchon/templates", "external")
 @js.native
 object external extends js.Object {
+  
   @js.native
   /**
     * Default Constructor.
@@ -79,6 +80,4 @@ object external extends js.Object {
       */
     def this(system: typingsSlinky.samchon.externalSystemMod.ExternalSystem) = this()
   }
-  
 }
-

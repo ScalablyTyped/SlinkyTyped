@@ -8,22 +8,29 @@ import typingsSlinky.ol.tileStateMod.TileState
 import typingsSlinky.ol.tilecoordMod.TileCoord
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/VectorTile", JSImport.Namespace)
 @js.native
 object olVectorTileMod extends js.Object {
+  
   @js.native
   trait VectorTile
     extends typingsSlinky.ol.olTileMod.default {
+    
     def getFeatures(): js.Array[FeatureLike] = js.native
+    
     def getFormat(): typingsSlinky.ol.featureMod.default = js.native
+    
     def onError(): Unit = js.native
+    
     def onLoad(
       features: js.Array[typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]],
       dataProjection: typingsSlinky.ol.projectionMod.default
     ): Unit = js.native
+    
     def setFeatures(features: js.Array[typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]]): Unit = js.native
+    
     def setLoader(loader: FeatureLoader): Unit = js.native
   }
   
@@ -45,6 +52,4 @@ object olVectorTileMod extends js.Object {
       opt_options: Options
     ) = this()
   }
-  
 }
-

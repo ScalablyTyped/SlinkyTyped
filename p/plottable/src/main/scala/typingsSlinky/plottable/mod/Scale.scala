@@ -2,7 +2,7 @@ package typingsSlinky.plottable.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("plottable", "Scale")
 @js.native
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
   */
 class Scale[D, R] ()
   extends typingsSlinky.plottable.scaleMod.Scale[D, R]
-

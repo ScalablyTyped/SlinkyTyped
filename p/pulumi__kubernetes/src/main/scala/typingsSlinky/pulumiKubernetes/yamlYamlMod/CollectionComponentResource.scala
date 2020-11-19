@@ -498,7 +498,7 @@ import typingsSlinky.pulumiPulumi.outputMod.Output_
 import typingsSlinky.pulumiPulumi.resourceMod.ComponentResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/kubernetes/yaml/yaml", "CollectionComponentResource")
 @js.native
@@ -506,8 +506,7 @@ abstract class CollectionComponentResource protected ()
   extends ComponentResource[js.Any] {
   protected def this(resourceType: String, name: String, config: js.Any) = this()
   protected def this(resourceType: String, name: String, config: js.Any, opts: ComponentResourceOptions) = this()
-  var getResourceImpl: js.Any = js.native
-  var resources: Output_[StringDictionary[CustomResource]] = js.native
+  
   /**
     * getCustomResource returns a resource defined by a CRD with the given group/version/kind and name.
     *
@@ -516,6 +515,9 @@ abstract class CollectionComponentResource protected ()
     */
   def getCustomResource[T /* <: CustomResource */](groupVersionKind: String, namespace: String): Output_[T] = js.native
   def getCustomResource[T /* <: CustomResource */](groupVersionKind: String, namespace: String, name: String): Output_[T] = js.native
+  
+  var getResourceImpl: js.Any = js.native
+  
   def getResourceProperty(
     groupVersionKind: admissionregistrationDotk8sDotioSlashv1SlashMutatingWebhookConfigurationList,
     name: String,
@@ -7504,6 +7506,7 @@ abstract class CollectionComponentResource protected ()
   def getResourceProperty(groupVersionKind: v1SlashService, namespace: String, name: String, property: metadata): Output_[ObjectMeta] = js.native
   def getResourceProperty(groupVersionKind: v1SlashService, namespace: String, name: String, property: spec): Output_[ServiceSpec] = js.native
   def getResourceProperty(groupVersionKind: v1SlashService, namespace: String, name: String, property: status_): Output_[ServiceStatus] = js.native
+  
   /**
     * getResource returns a resource defined by a built-in Kubernetes group/version/kind and name.
     *
@@ -8731,5 +8734,6 @@ abstract class CollectionComponentResource protected ()
   def getResource_v1ServiceList(groupVersionKind: v1SlashServiceList, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.core.v1.ServiceList] = js.native
   @JSName("getResource")
   def getResource_v1ServiceList(groupVersionKind: v1SlashServiceList, namespace: String, name: String): Output_[typingsSlinky.pulumiKubernetes.mod.core.v1.ServiceList] = js.native
+  
+  var resources: Output_[StringDictionary[CustomResource]] = js.native
 }
-

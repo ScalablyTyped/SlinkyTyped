@@ -11,7 +11,7 @@ import typingsSlinky.rdflib.tfTypesMod.QuadPredicate
 import typingsSlinky.rdflib.tfTypesMod.QuadSubject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IRDFlibDataFactory
@@ -21,16 +21,19 @@ trait IRDFlibDataFactory
       ]) | (typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]), 
       Indexable
     ] {
+  
   def fetcher(store: typingsSlinky.rdflib.storeMod.default, options: js.Any): typingsSlinky.rdflib.fetcherMod.default = js.native
+  
   def graph(): typingsSlinky.rdflib.storeMod.default = js.native
   def graph(features: js.UndefOr[scala.Nothing], opts: js.Any): typingsSlinky.rdflib.storeMod.default = js.native
   def graph(features: js.Any): typingsSlinky.rdflib.storeMod.default = js.native
   def graph(features: js.Any, opts: js.Any): typingsSlinky.rdflib.storeMod.default = js.native
+  
   def lit(`val`: String): typingsSlinky.rdflib.literalMod.default = js.native
   def lit(`val`: String, lang: js.UndefOr[scala.Nothing], dt: NamedNode): typingsSlinky.rdflib.literalMod.default = js.native
   def lit(`val`: String, lang: String): typingsSlinky.rdflib.literalMod.default = js.native
   def lit(`val`: String, lang: String, dt: NamedNode): typingsSlinky.rdflib.literalMod.default = js.native
+  
   def st(subject: QuadSubject, predicate: QuadPredicate, `object`: QuadObject): typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType] = js.native
   def st(subject: QuadSubject, predicate: QuadPredicate, `object`: QuadObject, graph: QuadGraph): typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType] = js.native
 }
-

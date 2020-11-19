@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a Label. */
 @JSImport("dd-trace/protobuf/profile", "perftools.profiles.Label")
@@ -17,29 +17,34 @@ import scala.scalajs.js.annotation._
   */
 class Label () extends ILabel {
   def this(properties: ILabel) = this()
+  
   /** Label key. */
   @JSName("key")
   var key_Label: Double | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Long */ js.Any) = js.native
+  
   /** Label numUnit. */
   @JSName("numUnit")
   var numUnit_Label: Double | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Long */ js.Any) = js.native
+  
   /** Label num. */
   @JSName("num")
   var num_Label: Double | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Long */ js.Any) = js.native
+  
   /** Label str. */
   @JSName("str")
   var str_Label: Double | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Long */ js.Any) = js.native
+  
   /**
     * Converts this Label to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("dd-trace/protobuf/profile", "perftools.profiles.Label")
 @js.native
 object Label extends js.Object {
+  
   /**
     * Creates a new Label instance using the specified properties.
     * @param [properties] Properties to set
@@ -47,6 +52,7 @@ object Label extends js.Object {
     */
   def create(): Label = js.native
   def create(properties: ILabel): Label = js.native
+  
   /**
     * Decodes a Label message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -59,6 +65,7 @@ object Label extends js.Object {
   def decode(reader: Reader, length: Double): Label = js.native
   def decode(reader: js.typedarray.Uint8Array): Label = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): Label = js.native
+  
   /**
     * Decodes a Label message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -68,6 +75,7 @@ object Label extends js.Object {
     */
   def decodeDelimited(reader: Reader): Label = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): Label = js.native
+  
   /**
     * Encodes the specified Label message. Does not implicitly {@link perftools.profiles.Label.verify|verify} messages.
     * @param message Label message or plain object to encode
@@ -76,6 +84,7 @@ object Label extends js.Object {
     */
   def encode(message: ILabel): Writer = js.native
   def encode(message: ILabel, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified Label message, length delimited. Does not implicitly {@link perftools.profiles.Label.verify|verify} messages.
     * @param message Label message or plain object to encode
@@ -84,12 +93,14 @@ object Label extends js.Object {
     */
   def encodeDelimited(message: ILabel): Writer = js.native
   def encodeDelimited(message: ILabel, writer: Writer): Writer = js.native
+  
   /**
     * Creates a Label message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns Label
     */
   def fromObject(`object`: StringDictionary[js.Any]): Label = js.native
+  
   /**
     * Creates a plain object from a Label message. Also converts values to other types if specified.
     * @param message Label
@@ -98,6 +109,7 @@ object Label extends js.Object {
     */
   def toObject(message: Label): StringDictionary[js.Any] = js.native
   def toObject(message: Label, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a Label message.
     * @param message Plain object to verify
@@ -105,4 +117,3 @@ object Label extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

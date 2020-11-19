@@ -2,7 +2,7 @@ package typingsSlinky.asmcryptoJs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("asmcrypto.js", "HmacSha256")
 @js.native
@@ -11,4 +11,3 @@ class HmacSha256 protected ()
   def this(password: js.typedarray.Uint8Array) = this()
   def this(password: js.typedarray.Uint8Array, verify: js.typedarray.Uint8Array) = this()
 }
-

@@ -7,67 +7,88 @@ import typingsSlinky.browserfs.nodeFsStatsMod.default
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("browserfs/dist/node/core/file", JSImport.Namespace)
 @js.native
 object fileMod extends js.Object {
+  
   @js.native
   class BaseFile () extends js.Object {
+    
     def chmod(mode: Double, cb: BFSOneArgCallback): Unit = js.native
+    
     def chmodSync(mode: Double): Unit = js.native
+    
     def chown(uid: Double, gid: Double, cb: BFSOneArgCallback): Unit = js.native
+    
     def chownSync(uid: Double, gid: Double): Unit = js.native
+    
     def datasync(cb: BFSOneArgCallback): Unit = js.native
+    
     def datasyncSync(): Unit = js.native
+    
     def sync(cb: BFSOneArgCallback): Unit = js.native
+    
     def syncSync(): Unit = js.native
+    
     def utimes(atime: js.Date, mtime: js.Date, cb: BFSOneArgCallback): Unit = js.native
+    
     def utimesSync(atime: js.Date, mtime: js.Date): Unit = js.native
   }
   
   @js.native
   trait File extends js.Object {
+    
     /**
       * **Optional**: Asynchronous `fchmod`.
       */
     def chmod(mode: Double, cb: BFSOneArgCallback): Unit = js.native
+    
     /**
       * **Optional**: Synchronous `fchmod`.
       */
     def chmodSync(mode: Double): Unit = js.native
+    
     /**
       * **Optional**: Asynchronous `chown`.
       */
     def chown(uid: Double, gid: Double, cb: BFSOneArgCallback): Unit = js.native
+    
     /**
       * **Optional**: Synchronous `chown`.
       */
     def chownSync(uid: Double, gid: Double): Unit = js.native
+    
     /**
       * **Core**: Asynchronous close.
       */
     def close(cb: BFSOneArgCallback): Unit = js.native
+    
     /**
       * **Core**: Synchronous close.
       */
     def closeSync(): Unit = js.native
+    
     /**
       * **Supplementary**: Asynchronous `datasync`.
       *
       * Default implementation maps to `sync`.
       */
     def datasync(cb: BFSOneArgCallback): Unit = js.native
+    
     /**
       * **Supplementary**: Synchronous `datasync`.
       *
       * Default implementation maps to `syncSync`.
       */
     def datasyncSync(): Unit = js.native
+    
     /**
       * **Core**: Get the current file position.
       */
     def getPos(): js.UndefOr[Double] = js.native
+    
     /**
       * **Core**: Read data from the file.
       * @param buffer The buffer that the data will be
@@ -94,6 +115,7 @@ object fileMod extends js.Object {
       position: Null,
       cb: BFSThreeArgCallback[Double, Buffer]
     ): Unit = js.native
+    
     /**
       * **Core**: Read data from the file.
       * @param buffer The buffer that the data will be written to.
@@ -104,38 +126,47 @@ object fileMod extends js.Object {
       *   position.
       */
     def readSync(buffer: Buffer, offset: Double, length: Double, position: Double): Double = js.native
+    
     /**
       * **Core**: Asynchronous `stat`.
       */
     def stat(cb: BFSCallback[default]): Unit = js.native
+    
     /**
       * **Core**: Synchronous `stat`.
       */
     def statSync(): default = js.native
+    
     /**
       * **Core**: Asynchronous sync.
       */
     def sync(cb: BFSOneArgCallback): Unit = js.native
+    
     /**
       * **Core**: Synchronous sync.
       */
     def syncSync(): Unit = js.native
+    
     /**
       * **Core**: Asynchronous truncate.
       */
     def truncate(len: Double, cb: BFSOneArgCallback): Unit = js.native
+    
     /**
       * **Core**: Synchronous truncate.
       */
     def truncateSync(len: Double): Unit = js.native
+    
     /**
       * **Optional**: Change the file timestamps of the file.
       */
     def utimes(atime: js.Date, mtime: js.Date, cb: BFSOneArgCallback): Unit = js.native
+    
     /**
       * **Optional**: Change the file timestamps of the file.
       */
     def utimesSync(atime: js.Date, mtime: js.Date): Unit = js.native
+    
     /**
       * **Core**: Write buffer to the file.
       * Note that it is unsafe to use fs.write multiple times on the same file
@@ -163,6 +194,7 @@ object fileMod extends js.Object {
       position: Null,
       cb: BFSThreeArgCallback[Double, Buffer]
     ): Unit = js.native
+    
     /**
       * **Core**: Write buffer to the file.
       * Note that it is unsafe to use fs.writeSync multiple times on the same file
@@ -178,6 +210,4 @@ object fileMod extends js.Object {
     def writeSync(buffer: Buffer, offset: Double, length: Double): Double = js.native
     def writeSync(buffer: Buffer, offset: Double, length: Double, position: Double): Double = js.native
   }
-  
 }
-

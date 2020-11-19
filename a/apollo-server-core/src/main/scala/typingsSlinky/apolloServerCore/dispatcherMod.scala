@@ -4,16 +4,18 @@ import typingsSlinky.apolloServerTypes.mod.AnyFunctionMap
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server-core/dist/utils/dispatcher", JSImport.Namespace)
 @js.native
 object dispatcherMod extends js.Object {
+  
   @js.native
   class Dispatcher[T /* <: AnyFunctionMap */] protected () extends js.Object {
     def this(targets: js.Array[T]) = this()
+    
     var callTargets: js.Any = js.native
-    var targets: js.Array[T] = js.native
+    
     def invokeDidStartHook[TMethodName /* <: /* keyof T */ String */, TEndHookArgs /* <: Args[
         ReturnType[
           AsFunction[
@@ -26,6 +28,7 @@ object dispatcherMod extends js.Object {
           /* import warning: importer.ImportType#apply Failed type conversion: T[TMethodName] */ js.Any
         ]
     ): DidEndHook[TEndHookArgs] = js.native
+    
     def invokeHookAsync[TMethodName /* <: /* keyof T */ String */](
       methodName: TMethodName,
       /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Args<T[TMethodName]> is not an array type */ args: Args[
@@ -40,6 +43,7 @@ object dispatcherMod extends js.Object {
           ]
         ]
       ] = js.native
+    
     def invokeHookSync[TMethodName /* <: /* keyof T */ String */](
       methodName: TMethodName,
       /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Args<T[TMethodName]> is not an array type */ args: Args[
@@ -52,6 +56,7 @@ object dispatcherMod extends js.Object {
           ]
         ]
       ] = js.native
+    
     def invokeHooksUntilNonNull[TMethodName /* <: /* keyof T */ String */](
       methodName: TMethodName,
       /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Args<T[TMethodName]> is not an array type */ args: Args[
@@ -66,6 +71,7 @@ object dispatcherMod extends js.Object {
           ]
         ]) | Null
       ] = js.native
+    
     def reverseInvokeHookSync[TMethodName /* <: /* keyof T */ String */](
       methodName: TMethodName,
       /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Args<T[TMethodName]> is not an array type */ args: Args[
@@ -78,11 +84,15 @@ object dispatcherMod extends js.Object {
           ]
         ]
       ] = js.native
+    
+    var targets: js.Array[T] = js.native
   }
   
   type Args[F] = js.Any
+  
   type AsFunction[F] = F
+  
   type DidEndHook[TArgs /* <: js.Array[_] */] = js.Function1[/* args */ TArgs, Unit]
+  
   type UnwrapPromise[T] = T
 }
-

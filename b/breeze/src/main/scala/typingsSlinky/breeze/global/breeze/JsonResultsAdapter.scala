@@ -3,7 +3,7 @@ package typingsSlinky.breeze.global.breeze
 import typingsSlinky.breeze.anon.ExtractKeyMappings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("breeze.JsonResultsAdapter")
 @js.native
@@ -11,4 +11,3 @@ class JsonResultsAdapter protected ()
   extends typingsSlinky.breeze.breeze.JsonResultsAdapter {
   def this(config: ExtractKeyMappings) = this()
 }
-

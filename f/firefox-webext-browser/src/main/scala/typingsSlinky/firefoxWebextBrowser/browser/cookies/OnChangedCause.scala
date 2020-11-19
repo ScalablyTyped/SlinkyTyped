@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser.cookies
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The underlying reason behind the cookie's change. If a cookie was inserted, or removed via an explicit call to
@@ -20,17 +20,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.overwrite
 */
 trait OnChangedCause extends js.Object
-
 object OnChangedCause {
+  
   @scala.inline
   def evicted: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.evicted = "evicted".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.evicted]
+  
   @scala.inline
   def expired: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.expired = "expired".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.expired]
+  
   @scala.inline
   def expired_overwrite: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.expired_overwrite = "expired_overwrite".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.expired_overwrite]
+  
   @scala.inline
   def explicit: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.explicit = "explicit".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.explicit]
+  
   @scala.inline
   def overwrite: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.overwrite = "overwrite".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.overwrite]
 }
-

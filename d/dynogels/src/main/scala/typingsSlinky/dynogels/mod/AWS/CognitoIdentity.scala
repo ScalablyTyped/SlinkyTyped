@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.cognitoidentityMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.CognitoIdentity")
 @js.native
@@ -14,4 +14,3 @@ class CognitoIdentity ()
   extends typingsSlinky.awsSdk.mod.CognitoIdentity {
   def this(options: ClientConfiguration) = this()
 }
-

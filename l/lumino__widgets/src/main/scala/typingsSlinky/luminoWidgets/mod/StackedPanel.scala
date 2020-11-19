@@ -3,7 +3,7 @@ package typingsSlinky.luminoWidgets.mod
 import typingsSlinky.luminoWidgets.stackedpanelMod.StackedPanel.IOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@lumino/widgets", "StackedPanel")
 @js.native
@@ -16,4 +16,3 @@ class StackedPanel ()
   extends typingsSlinky.luminoWidgets.stackedpanelMod.StackedPanel {
   def this(options: IOptions) = this()
 }
-

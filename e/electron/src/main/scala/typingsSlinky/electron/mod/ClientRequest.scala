@@ -3,7 +3,7 @@ package typingsSlinky.electron.mod
 import typingsSlinky.electron.Electron.ClientRequestConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("electron", "ClientRequest")
 @js.native
@@ -15,4 +15,3 @@ class ClientRequest protected ()
     */
   def this(options: ClientRequestConstructorOptions) = this()
 }
-

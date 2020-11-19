@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.ClassBreaksRenderer
 import typingsSlinky.arcgisJsApi.esri.ClassBreaksRendererProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/renderers/ClassBreaksRenderer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends ClassBreaksRenderer {
   def this(properties: ClassBreaksRendererProperties) = this()
 }
-

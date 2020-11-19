@@ -8,11 +8,12 @@ import typingsSlinky.death.deathStrings.SIGTERM
 import typingsSlinky.death.deathStrings.uncaughtException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("death", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def apply(callback: js.Function1[/* signal */ SIGINT | SIGTERM | SIGQUIT, Unit]): js.Function0[Unit] = js.native
   /**
     * Invokes a callback when a SIGINT, SIGTERM, or SIGQUIT is detected
@@ -42,4 +43,3 @@ object mod extends js.Object {
     js.Function0[Unit]
   ] = js.native
 }
-

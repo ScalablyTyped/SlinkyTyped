@@ -3,7 +3,7 @@ package typingsSlinky.chromeApps.WebView
 import typingsSlinky.chromeApps.chromeAppsStrings.disabled__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Defines the how zooming is handled in the webview.
@@ -33,13 +33,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.chromeApps.chromeAppsStrings.disabled__
 */
 trait ZoomMode extends js.Object
-
 object ZoomMode {
+  
   @scala.inline
   def disabled: disabled__ = "disabled".asInstanceOf[disabled__]
+  
   @scala.inline
   def `per-origin`: typingsSlinky.chromeApps.chromeAppsStrings.`per-origin` = "per-origin".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.`per-origin`]
+  
   @scala.inline
   def `per-view`: typingsSlinky.chromeApps.chromeAppsStrings.`per-view` = "per-view".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.`per-view`]
 }
-

@@ -20,10 +20,11 @@ import typingsSlinky.react.mod.SVGAttributes
 import typingsSlinky.rehypeReact.rehypeReactStrings.input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCall extends js.Object {
+  
   def apply(
     `type`: input,
     props: InputHTMLAttributes[HTMLInputElement] with ClassAttributes[HTMLInputElement],
@@ -75,4 +76,3 @@ trait FnCall extends js.Object {
   def apply[P /* <: js.Object */, T /* <: ReactComponentClass[P] */, C /* <: ReactComponentClass[P] */](`type`: ClassType[P, T, C], props: js.UndefOr[scala.Nothing], children: ReactElement*): CElement[P, T] = js.native
   def apply[P /* <: js.Object */, T /* <: ReactComponentClass[P] */, C /* <: ReactComponentClass[P] */](`type`: ClassType[P, T, C], props: Null, children: ReactElement*): CElement[P, T] = js.native
 }
-

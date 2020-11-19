@@ -16,9 +16,10 @@ import typingsSlinky.blueprintjsTable.locatorMod.ILocator
 import typingsSlinky.blueprintjsTable.resizeHandleMod.Orientation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Header {
+  
   @JSImport("@blueprintjs/table/lib/esm/headers/header", "Header")
   @js.native
   object component extends js.Object
@@ -27,20 +28,28 @@ object Header {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.headerMod.Header] {
+    
     @scala.inline
     def convertPointToIndex(value: (/* clientXOrY */ Double, /* useMidpoint */ js.UndefOr[Boolean]) => Double): this.type = set("convertPointToIndex", js.Any.fromFunction2(value))
+    
     @scala.inline
     def enableMultipleSelection(value: Boolean): this.type = set("enableMultipleSelection", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def focusedCell(value: IFocusedCellCoordinates): this.type = set("focusedCell", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def handleResizeDoubleClick(value: /* index */ Double => Unit): this.type = set("handleResizeDoubleClick", js.Any.fromFunction1(value))
+    
     @scala.inline
     def isResizable(value: Boolean): this.type = set("isResizable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onSelectionEnd(value: /* regions */ js.Array[IRegion] => Unit): this.type = set("onSelectionEnd", js.Any.fromFunction1(value))
+    
     @scala.inline
     def selectedRegionTransform(
       value: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion
@@ -48,6 +57,7 @@ object Header {
   }
   
   def withProps(p: IInternalHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     fullRegionCardinality: RegionCardinality,
@@ -86,4 +96,3 @@ object Header {
     new Builder(js.Array(this.component, __props.asInstanceOf[IInternalHeaderProps]))
   }
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Object containing helper methods for getting optimal symbol schemes used to create [dot density visualizations](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html). The [getSchemes()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-dotDensity.html#getSchemes) returns color schemes best suited to the given basemap for this visualization style.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait symbologyDotDensity extends js.Object {
+  
   /**
     * Clones a dot density scheme object.
     *
@@ -20,6 +21,7 @@ trait symbologyDotDensity extends js.Object {
     *
     */
   def cloneScheme(scheme: DotDensityScheme): DotDensityScheme = js.native
+  
   /**
     * Returns a dot density scheme with the provided name.
     *
@@ -33,6 +35,7 @@ trait symbologyDotDensity extends js.Object {
     *
     */
   def getSchemeByName(params: dotDensityGetSchemeByNameParams): DotDensityScheme = js.native
+  
   /**
     * Returns a primary scheme and secondary schemes defining symbol properties for dot density-based data-driven visualizations in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The `basemap` parameter determines the color of the dots used to visualize each attribute. The `geometryType` determines which type of symbol to return.
     *
@@ -45,6 +48,7 @@ trait symbologyDotDensity extends js.Object {
     *
     */
   def getSchemes(params: dotDensityGetSchemesParams): DotDensitySchemes = js.native
+  
   /**
     * Returns an array of dot density schemes with the provided tags. These schemes define symbol properties for dot density visualizations in any layer that can be rendered with a [DotDensityRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html).
     *
@@ -60,8 +64,8 @@ trait symbologyDotDensity extends js.Object {
     */
   def getSchemesByTag(params: dotDensityGetSchemesByTagParams): js.Array[DotDensityScheme] = js.native
 }
-
 object symbologyDotDensity {
+  
   @scala.inline
   def apply(
     cloneScheme: DotDensityScheme => DotDensityScheme,
@@ -72,26 +76,32 @@ object symbologyDotDensity {
     val __obj = js.Dynamic.literal(cloneScheme = js.Any.fromFunction1(cloneScheme), getSchemeByName = js.Any.fromFunction1(getSchemeByName), getSchemes = js.Any.fromFunction1(getSchemes), getSchemesByTag = js.Any.fromFunction1(getSchemesByTag))
     __obj.asInstanceOf[symbologyDotDensity]
   }
+  
   @scala.inline
   implicit class symbologyDotDensityOps[Self <: symbologyDotDensity] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCloneScheme(value: DotDensityScheme => DotDensityScheme): Self = this.set("cloneScheme", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGetSchemeByName(value: dotDensityGetSchemeByNameParams => DotDensityScheme): Self = this.set("getSchemeByName", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGetSchemes(value: dotDensityGetSchemesParams => DotDensitySchemes): Self = this.set("getSchemes", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGetSchemesByTag(value: dotDensityGetSchemesByTagParams => js.Array[DotDensityScheme]): Self = this.set("getSchemesByTag", js.Any.fromFunction1(value))
   }
-  
 }
-

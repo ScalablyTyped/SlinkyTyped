@@ -4,11 +4,12 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("crypto", "sign")
 @js.native
 object sign extends js.Object {
+  
   def apply(algorithm: js.UndefOr[scala.Nothing], data: ArrayBufferView, key: KeyLike): Buffer = js.native
   def apply(algorithm: js.UndefOr[scala.Nothing], data: ArrayBufferView, key: SignPrivateKeyInput): Buffer = js.native
   /**
@@ -24,4 +25,3 @@ object sign extends js.Object {
   def apply(algorithm: Null, data: ArrayBufferView, key: KeyLike): Buffer = js.native
   def apply(algorithm: Null, data: ArrayBufferView, key: SignPrivateKeyInput): Buffer = js.native
 }
-

@@ -4,15 +4,15 @@ import typingsSlinky.babelTypes.babelTypesStrings.DoWhileStatement
 import typingsSlinky.babelTypes.babelTypesStrings.WhileStatement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.DoWhileStatement_
   - typingsSlinky.babelTypes.mod.WhileStatement_
 */
 trait While extends js.Object
-
 object While {
+  
   @scala.inline
   def DoWhileStatement_(
     body: Statement,
@@ -26,6 +26,7 @@ object While {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[While]
   }
+  
   @scala.inline
   def WhileStatement_(
     body: Statement,
@@ -40,4 +41,3 @@ object While {
     __obj.asInstanceOf[While]
   }
 }
-

@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/java-actions relevant section in reference guide}
@@ -34,6 +34,16 @@ class JavaAction protected () extends CodeAction {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
+  
+  @JSName("containerAsFolderBase")
+  def containerAsFolderBase_MJavaAction: FolderBase = js.native
+  
+  /**
+    * In version 7.21.0: deleted
+    * In version 6.6.0: introduced
+    */
+  def javaReturnType: Type = js.native
+  def javaReturnType_=(newValue: Type): Unit = js.native
   /**
     * This property is required and cannot be set to null.
     *
@@ -42,45 +52,7 @@ class JavaAction protected () extends CodeAction {
     */
   @JSName("javaReturnType")
   val javaReturnType_FJavaAction: IType = js.native
-  /**
-    * In version 7.21.0: deleted
-    * In version 6.6.0: introduced
-    */
-  @JSName("microflowActionInfo")
-  val microflowActionInfo_FJavaAction: IMicroflowActionInfo | Null = js.native
-  @JSName("model")
-  var model_FJavaAction: IModel = js.native
-  /**
-    * In version 7.21.0: deleted
-    */
-  @JSName("parameters")
-  val parameters_FJavaAction: IList[IJavaActionParameter] = js.native
-  /**
-    * The value of this property is conceptually of type dataTypes.LegacyDataType.
-    *
-    * In version 6.6.0: deleted
-    */
-  @JSName("returnType")
-  val returnType_FJavaAction: String | Null = js.native
-  /**
-    * In version 7.21.0: deleted
-    * In version 6.6.0: introduced
-    */
-  @JSName("typeParameters")
-  val typeParameters_FJavaAction: IList[ITypeParameter] = js.native
-  /**
-    * In version 8.0.0: introduced
-    */
-  @JSName("useLegacyCodeGeneration")
-  val useLegacyCodeGeneration_FJavaAction: Boolean = js.native
-  @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MJavaAction: FolderBase = js.native
-  /**
-    * In version 7.21.0: deleted
-    * In version 6.6.0: introduced
-    */
-  def javaReturnType: Type = js.native
-  def javaReturnType_=(newValue: Type): Unit = js.native
+  
   /**
     * In version 7.21.0: deleted
     * In version 6.6.0: introduced
@@ -89,8 +61,24 @@ class JavaAction protected () extends CodeAction {
   def microflowActionInfo_=(newValue: MicroflowActionInfo | Null): Unit = js.native
   /**
     * In version 7.21.0: deleted
+    * In version 6.6.0: introduced
+    */
+  @JSName("microflowActionInfo")
+  val microflowActionInfo_FJavaAction: IMicroflowActionInfo | Null = js.native
+  
+  @JSName("model")
+  var model_FJavaAction: IModel = js.native
+  
+  /**
+    * In version 7.21.0: deleted
     */
   def parameters: IList[JavaActionParameter] = js.native
+  /**
+    * In version 7.21.0: deleted
+    */
+  @JSName("parameters")
+  val parameters_FJavaAction: IList[IJavaActionParameter] = js.native
+  
   /**
     * The value of this property is conceptually of type dataTypes.LegacyDataType.
     *
@@ -99,27 +87,48 @@ class JavaAction protected () extends CodeAction {
   def returnType: String = js.native
   def returnType_=(newValue: String): Unit = js.native
   /**
+    * The value of this property is conceptually of type dataTypes.LegacyDataType.
+    *
+    * In version 6.6.0: deleted
+    */
+  @JSName("returnType")
+  val returnType_FJavaAction: String | Null = js.native
+  
+  /**
     * In version 7.21.0: deleted
     * In version 6.6.0: introduced
     */
   def typeParameters: IList[TypeParameter] = js.native
   /**
+    * In version 7.21.0: deleted
+    * In version 6.6.0: introduced
+    */
+  @JSName("typeParameters")
+  val typeParameters_FJavaAction: IList[ITypeParameter] = js.native
+  
+  /**
     * In version 8.0.0: introduced
     */
   def useLegacyCodeGeneration: Boolean = js.native
   def useLegacyCodeGeneration_=(newValue: Boolean): Unit = js.native
+  /**
+    * In version 8.0.0: introduced
+    */
+  @JSName("useLegacyCodeGeneration")
+  val useLegacyCodeGeneration_FJavaAction: Boolean = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/javaactions", "javaactions.JavaAction")
 @js.native
 object JavaAction extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates a new JavaAction unit in the SDK and on the server.
     * Expects one argument, the projects.IFolderBase in which this unit is contained.
     */
   def createIn(container: IFolderBase): JavaAction = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

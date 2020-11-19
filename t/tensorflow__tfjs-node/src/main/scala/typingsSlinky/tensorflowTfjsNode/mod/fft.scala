@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-node", "fft")
 @js.native
@@ -15,4 +15,3 @@ object fft
         Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
       ]
     ]
-

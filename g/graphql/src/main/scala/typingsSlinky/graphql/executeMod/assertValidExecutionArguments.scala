@@ -6,11 +6,11 @@ import typingsSlinky.graphql.maybeMod.Maybe
 import typingsSlinky.graphql.schemaMod.GraphQLSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/execution/execute", "assertValidExecutionArguments")
 @js.native
 object assertValidExecutionArguments extends js.Object {
+  
   def apply(schema: GraphQLSchema, document: DocumentNode, rawVariableValues: Maybe[StringDictionary[_]]): Unit = js.native
 }
-

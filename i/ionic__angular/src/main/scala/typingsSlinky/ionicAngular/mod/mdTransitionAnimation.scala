@@ -5,11 +5,11 @@ import typingsSlinky.ionicCore.animationInterfaceMod.Animation
 import typingsSlinky.ionicCore.transitionMod.TransitionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/angular", "mdTransitionAnimation")
 @js.native
 object mdTransitionAnimation extends js.Object {
+  
   def apply(_underscore: HTMLElement, opts: TransitionOptions): Animation = js.native
 }
-

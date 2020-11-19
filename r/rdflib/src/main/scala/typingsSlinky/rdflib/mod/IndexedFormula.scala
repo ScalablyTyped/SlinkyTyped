@@ -5,7 +5,7 @@ import typingsSlinky.rdflib.storeMod.FeaturesType
 import typingsSlinky.rdflib.storeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rdflib", "IndexedFormula")
 @js.native
@@ -22,15 +22,15 @@ class IndexedFormula () extends default {
   def this(features: FeaturesType) = this()
   def this(features: js.UndefOr[FeaturesType], opts: FormulaOpts) = this()
 }
-
 /* static members */
 @JSImport("rdflib", "IndexedFormula")
 @js.native
 object IndexedFormula extends js.Object {
-  var handleRDFType: js.Function = js.native
+  
   /**
     * Gets the URI of the default graph
     */
   def defaultGraphURI: String = js.native
+  
+  var handleRDFType: js.Function = js.native
 }
-

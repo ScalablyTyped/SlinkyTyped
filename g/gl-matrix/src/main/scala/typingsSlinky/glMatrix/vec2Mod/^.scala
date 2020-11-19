@@ -8,15 +8,15 @@ import typingsSlinky.glMatrix.mod.vec2
 import typingsSlinky.glMatrix.mod.vec3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gl-matrix/src/gl-matrix/vec2", JSImport.Namespace)
 @js.native
 class ^ () extends vec2
-
 @JSImport("gl-matrix/src/gl-matrix/vec2", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   def add(out: vec2, a: js.Array[Double], b: js.Array[Double]): vec2 = js.native
   def add(out: vec2, a: js.Array[Double], b: vec2): vec2 = js.native
   def add(out: vec2, a: vec2, b: js.Array[Double]): vec2 = js.native
@@ -29,6 +29,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def add(out: vec2, a: vec2, b: vec2): vec2 = js.native
+  
   def angle(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def angle(a: js.Array[Double], b: vec2): Double = js.native
   def angle(a: vec2, b: js.Array[Double]): Double = js.native
@@ -39,6 +40,7 @@ object ^ extends js.Object {
     * @returns The angle in radians
     */
   def angle(a: vec2, b: vec2): Double = js.native
+  
   def ceil(out: vec2, a: js.Array[Double]): vec2 = js.native
   /**
     * Math.ceil the components of a vec2
@@ -48,6 +50,7 @@ object ^ extends js.Object {
     * @returns {vec2} out
     */
   def ceil(out: vec2, a: vec2): vec2 = js.native
+  
   def clone(a: js.Array[Double]): vec2 = js.native
   /**
     * Creates a new vec2 initialized with values from an existing vector
@@ -56,6 +59,7 @@ object ^ extends js.Object {
     * @returns a new 2D vector
     */
   def clone(a: vec2): vec2 = js.native
+  
   def copy(out: vec2, a: js.Array[Double]): vec2 = js.native
   /**
     * Copy the values from one vec2 to another
@@ -65,12 +69,14 @@ object ^ extends js.Object {
     * @returns out
     */
   def copy(out: vec2, a: vec2): vec2 = js.native
+  
   /**
     * Creates a new, empty vec2
     *
     * @returns a new 2D vector
     */
   def create(): vec2 = js.native
+  
   def cross(out: vec3, a: js.Array[Double], b: js.Array[Double]): vec3 = js.native
   def cross(out: vec3, a: js.Array[Double], b: vec2): vec3 = js.native
   def cross(out: vec3, a: vec2, b: js.Array[Double]): vec3 = js.native
@@ -84,6 +90,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def cross(out: vec3, a: vec2, b: vec2): vec3 = js.native
+  
   def dist(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def dist(a: js.Array[Double], b: vec2): Double = js.native
   def dist(a: vec2, b: js.Array[Double]): Double = js.native
@@ -95,6 +102,7 @@ object ^ extends js.Object {
     * @returns distance between a and b
     */
   def dist(a: vec2, b: vec2): Double = js.native
+  
   def distance(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def distance(a: js.Array[Double], b: vec2): Double = js.native
   def distance(a: vec2, b: js.Array[Double]): Double = js.native
@@ -106,6 +114,7 @@ object ^ extends js.Object {
     * @returns distance between a and b
     */
   def distance(a: vec2, b: vec2): Double = js.native
+  
   def div(out: vec2, a: js.Array[Double], b: js.Array[Double]): vec2 = js.native
   def div(out: vec2, a: js.Array[Double], b: vec2): vec2 = js.native
   def div(out: vec2, a: vec2, b: js.Array[Double]): vec2 = js.native
@@ -118,6 +127,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def div(out: vec2, a: vec2, b: vec2): vec2 = js.native
+  
   def divide(out: vec2, a: js.Array[Double], b: js.Array[Double]): vec2 = js.native
   def divide(out: vec2, a: js.Array[Double], b: vec2): vec2 = js.native
   def divide(out: vec2, a: vec2, b: js.Array[Double]): vec2 = js.native
@@ -130,6 +140,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def divide(out: vec2, a: vec2, b: vec2): vec2 = js.native
+  
   def dot(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def dot(a: js.Array[Double], b: vec2): Double = js.native
   def dot(a: vec2, b: js.Array[Double]): Double = js.native
@@ -141,6 +152,7 @@ object ^ extends js.Object {
     * @returns dot product of a and b
     */
   def dot(a: vec2, b: vec2): Double = js.native
+  
   def equals(a: js.Array[Double], b: js.Array[Double]): Boolean = js.native
   def equals(a: js.Array[Double], b: vec2): Boolean = js.native
   def equals(a: vec2, b: js.Array[Double]): Boolean = js.native
@@ -152,6 +164,7 @@ object ^ extends js.Object {
     * @returns {boolean} True if the vectors are equal, false otherwise.
     */
   def equals(a: vec2, b: vec2): Boolean = js.native
+  
   def exactEquals(a: js.Array[Double], b: js.Array[Double]): Boolean = js.native
   def exactEquals(a: js.Array[Double], b: vec2): Boolean = js.native
   def exactEquals(a: vec2, b: js.Array[Double]): Boolean = js.native
@@ -163,6 +176,7 @@ object ^ extends js.Object {
     * @returns {boolean} True if the vectors are equal, false otherwise.
     */
   def exactEquals(a: vec2, b: vec2): Boolean = js.native
+  
   def floor(out: vec2, a: js.Array[Double]): vec2 = js.native
   /**
     * Math.floor the components of a vec2
@@ -172,6 +186,7 @@ object ^ extends js.Object {
     * @returns {vec2} out
     */
   def floor(out: vec2, a: vec2): vec2 = js.native
+  
   /**
     * Perform some operation over an array of vec2s.
     *
@@ -213,6 +228,7 @@ object ^ extends js.Object {
     ],
     arg: js.Any
   ): js.typedarray.Float32Array = js.native
+  
   /**
     * Creates a new vec2 initialized with the given values
     *
@@ -221,6 +237,7 @@ object ^ extends js.Object {
     * @returns a new 2D vector
     */
   def fromValues(x: Double, y: Double): vec2 = js.native
+  
   def inverse(out: vec2, a: js.Array[Double]): vec2 = js.native
   /**
     * Returns the inverse of the components of a vec2
@@ -230,6 +247,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def inverse(out: vec2, a: vec2): vec2 = js.native
+  
   def len(a: js.Array[Double]): Double = js.native
   /**
     * Calculates the length of a vec2
@@ -238,6 +256,7 @@ object ^ extends js.Object {
     * @returns length of a
     */
   def len(a: vec2): Double = js.native
+  
   def length(a: js.Array[Double]): Double = js.native
   /**
     * Calculates the length of a vec2
@@ -246,6 +265,7 @@ object ^ extends js.Object {
     * @returns length of a
     */
   def length(a: vec2): Double = js.native
+  
   def lerp(out: vec2, a: js.Array[Double], b: js.Array[Double], t: Double): vec2 = js.native
   def lerp(out: vec2, a: js.Array[Double], b: vec2, t: Double): vec2 = js.native
   def lerp(out: vec2, a: vec2, b: js.Array[Double], t: Double): vec2 = js.native
@@ -259,6 +279,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def lerp(out: vec2, a: vec2, b: vec2, t: Double): vec2 = js.native
+  
   def max(out: vec2, a: js.Array[Double], b: js.Array[Double]): vec2 = js.native
   def max(out: vec2, a: js.Array[Double], b: vec2): vec2 = js.native
   def max(out: vec2, a: vec2, b: js.Array[Double]): vec2 = js.native
@@ -271,6 +292,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def max(out: vec2, a: vec2, b: vec2): vec2 = js.native
+  
   def min(out: vec2, a: js.Array[Double], b: js.Array[Double]): vec2 = js.native
   def min(out: vec2, a: js.Array[Double], b: vec2): vec2 = js.native
   def min(out: vec2, a: vec2, b: js.Array[Double]): vec2 = js.native
@@ -283,6 +305,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def min(out: vec2, a: vec2, b: vec2): vec2 = js.native
+  
   def mul(out: vec2, a: js.Array[Double], b: js.Array[Double]): vec2 = js.native
   def mul(out: vec2, a: js.Array[Double], b: vec2): vec2 = js.native
   def mul(out: vec2, a: vec2, b: js.Array[Double]): vec2 = js.native
@@ -295,6 +318,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def mul(out: vec2, a: vec2, b: vec2): vec2 = js.native
+  
   def multiply(out: vec2, a: js.Array[Double], b: js.Array[Double]): vec2 = js.native
   def multiply(out: vec2, a: js.Array[Double], b: vec2): vec2 = js.native
   def multiply(out: vec2, a: vec2, b: js.Array[Double]): vec2 = js.native
@@ -307,6 +331,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def multiply(out: vec2, a: vec2, b: vec2): vec2 = js.native
+  
   def negate(out: vec2, a: js.Array[Double]): vec2 = js.native
   /**
     * Negates the components of a vec2
@@ -316,6 +341,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def negate(out: vec2, a: vec2): vec2 = js.native
+  
   def normalize(out: vec2, a: js.Array[Double]): vec2 = js.native
   /**
     * Normalize a vec2
@@ -325,6 +351,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def normalize(out: vec2, a: vec2): vec2 = js.native
+  
   /**
     * Generates a random unit vector
     *
@@ -340,6 +367,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def random(out: vec2, scale: Double): vec2 = js.native
+  
   /**
     * Rotate a 2D vector
     *
@@ -350,6 +378,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def rotate(out: vec2, a: vec2, b: vec2, c: Double): vec2 = js.native
+  
   def round(out: vec2, a: js.Array[Double]): vec2 = js.native
   /**
     * Math.round the components of a vec2
@@ -359,6 +388,7 @@ object ^ extends js.Object {
     * @returns {vec2} out
     */
   def round(out: vec2, a: vec2): vec2 = js.native
+  
   def scale(out: vec2, a: js.Array[Double], b: Double): vec2 = js.native
   /**
     * Scales a vec2 by a scalar number
@@ -369,6 +399,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def scale(out: vec2, a: vec2, b: Double): vec2 = js.native
+  
   def scaleAndAdd(out: vec2, a: js.Array[Double], b: js.Array[Double], scale: Double): vec2 = js.native
   def scaleAndAdd(out: vec2, a: js.Array[Double], b: vec2, scale: Double): vec2 = js.native
   def scaleAndAdd(out: vec2, a: vec2, b: js.Array[Double], scale: Double): vec2 = js.native
@@ -382,6 +413,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def scaleAndAdd(out: vec2, a: vec2, b: vec2, scale: Double): vec2 = js.native
+  
   /**
     * Set the components of a vec2 to the given values
     *
@@ -391,6 +423,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def set(out: vec2, x: Double, y: Double): vec2 = js.native
+  
   def sqrDist(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def sqrDist(a: js.Array[Double], b: vec2): Double = js.native
   def sqrDist(a: vec2, b: js.Array[Double]): Double = js.native
@@ -402,6 +435,7 @@ object ^ extends js.Object {
     * @returns squared distance between a and b
     */
   def sqrDist(a: vec2, b: vec2): Double = js.native
+  
   def sqrLen(a: js.Array[Double]): Double = js.native
   /**
     * Calculates the squared length of a vec2
@@ -410,6 +444,7 @@ object ^ extends js.Object {
     * @returns squared length of a
     */
   def sqrLen(a: vec2): Double = js.native
+  
   def squaredDistance(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def squaredDistance(a: js.Array[Double], b: vec2): Double = js.native
   def squaredDistance(a: vec2, b: js.Array[Double]): Double = js.native
@@ -421,6 +456,7 @@ object ^ extends js.Object {
     * @returns squared distance between a and b
     */
   def squaredDistance(a: vec2, b: vec2): Double = js.native
+  
   def squaredLength(a: js.Array[Double]): Double = js.native
   /**
     * Calculates the squared length of a vec2
@@ -429,6 +465,7 @@ object ^ extends js.Object {
     * @returns squared length of a
     */
   def squaredLength(a: vec2): Double = js.native
+  
   def str(a: js.Array[Double]): String = js.native
   /**
     * Returns a string representation of a vector
@@ -437,6 +474,7 @@ object ^ extends js.Object {
     * @returns string representation of the vector
     */
   def str(a: vec2): String = js.native
+  
   def sub(out: vec2, a: js.Array[Double], b: js.Array[Double]): vec2 = js.native
   def sub(out: vec2, a: js.Array[Double], b: vec2): vec2 = js.native
   def sub(out: vec2, a: vec2, b: js.Array[Double]): vec2 = js.native
@@ -449,6 +487,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def sub(out: vec2, a: vec2, b: vec2): vec2 = js.native
+  
   def subtract(out: vec2, a: js.Array[Double], b: js.Array[Double]): vec2 = js.native
   def subtract(out: vec2, a: js.Array[Double], b: vec2): vec2 = js.native
   def subtract(out: vec2, a: vec2, b: js.Array[Double]): vec2 = js.native
@@ -461,6 +500,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def subtract(out: vec2, a: vec2, b: vec2): vec2 = js.native
+  
   def transformMat2(out: vec2, a: js.Array[Double], m: mat2): vec2 = js.native
   /**
     * Transforms the vec2 with a mat2
@@ -471,6 +511,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def transformMat2(out: vec2, a: vec2, m: mat2): vec2 = js.native
+  
   def transformMat2d(out: vec2, a: js.Array[Double], m: mat2d): vec2 = js.native
   /**
     * Transforms the vec2 with a mat2d
@@ -481,6 +522,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def transformMat2d(out: vec2, a: vec2, m: mat2d): vec2 = js.native
+  
   def transformMat3(out: vec2, a: js.Array[Double], m: mat3): vec2 = js.native
   /**
     * Transforms the vec2 with a mat3
@@ -492,6 +534,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def transformMat3(out: vec2, a: vec2, m: mat3): vec2 = js.native
+  
   def transformMat4(out: vec2, a: js.Array[Double], m: mat4): vec2 = js.native
   /**
     * Transforms the vec2 with a mat4
@@ -505,4 +548,3 @@ object ^ extends js.Object {
     */
   def transformMat4(out: vec2, a: vec2, m: mat4): vec2 = js.native
 }
-

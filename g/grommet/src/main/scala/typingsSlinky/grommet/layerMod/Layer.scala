@@ -8,7 +8,7 @@ import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/Layer", "Layer")
 @js.native
@@ -24,7 +24,6 @@ class Layer protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("grommet/es6/components/Layer", "Layer")
 @js.native
 object Layer extends TopLevel[
@@ -32,4 +31,3 @@ object Layer extends TopLevel[
         LayerProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])
       ]
     ]
-

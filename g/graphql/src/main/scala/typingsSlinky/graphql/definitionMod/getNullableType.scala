@@ -2,11 +2,12 @@ package typingsSlinky.graphql.definitionMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/type/definition", "getNullableType")
 @js.native
 object getNullableType extends js.Object {
+  
   def apply(`type`: js.UndefOr[scala.Nothing]): js.UndefOr[scala.Nothing] = js.native
   def apply(`type`: GraphQLEnumType): GraphQLEnumType = js.native
   def apply(`type`: GraphQLInputObjectType): GraphQLInputObjectType = js.native
@@ -20,4 +21,3 @@ object getNullableType extends js.Object {
   `type`: GraphQLNonNull[T]
   ): T = js.native
 }
-

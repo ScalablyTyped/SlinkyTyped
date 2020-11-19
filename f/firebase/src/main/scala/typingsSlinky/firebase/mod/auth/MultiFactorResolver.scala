@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The class used to facilitate recovery from
@@ -58,20 +58,18 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.MultiFactorResolver")
 @js.native
 class MultiFactorResolver protected () extends js.Object {
+  
   /**
     * The Auth instance used to sign in with the first factor.
     */
   var auth: Auth = js.native
+  
   /**
     * The list of hints for the second factors needed to complete the sign-in
     * for the current session.
     */
   var hints: js.Array[MultiFactorInfo] = js.native
-  /**
-    * The session identifier for the current sign-in flow, which can be used
-    * to complete the second factor sign-in.
-    */
-  var session: MultiFactorSession = js.native
+  
   /**
     * A helper function to help users complete sign in with a second factor
     * using an {@link firebase.auth.MultiFactorAssertion} confirming the user
@@ -103,5 +101,10 @@ class MultiFactorResolver protected () extends js.Object {
     * @return The promise that resolves with the user credential object.
     */
   def resolveSignIn(assertion: MultiFactorAssertion): js.Promise[UserCredential] = js.native
+  
+  /**
+    * The session identifier for the current sign-in flow, which can be used
+    * to complete the second factor sign-in.
+    */
+  var session: MultiFactorSession = js.native
 }
-

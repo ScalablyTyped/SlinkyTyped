@@ -7,14 +7,16 @@ import typingsSlinky.storybookAddonA11y.a11YPanelMod.RuleType
 import typingsSlinky.storybookAddonA11y.reportMod.ReportProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Report {
+  
   @JSImport("@storybook/addon-a11y/dist/components/Report", "Report")
   @js.native
   object component extends js.Object
   
   def withProps(p: ReportProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(empty: String, items: js.Array[Result], `type`: RuleType): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(empty = empty.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
@@ -22,4 +24,3 @@ object Report {
     new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ReportProps]))
   }
 }
-

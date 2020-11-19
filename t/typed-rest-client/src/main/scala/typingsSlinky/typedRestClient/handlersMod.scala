@@ -2,11 +2,12 @@ package typingsSlinky.typedRestClient
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typed-rest-client/Handlers", JSImport.Namespace)
 @js.native
 object handlersMod extends js.Object {
+  
   @js.native
   class BasicCredentialHandler protected ()
     extends typingsSlinky.typedRestClient.mod.BasicCredentialHandler {
@@ -33,6 +34,4 @@ object handlersMod extends js.Object {
     extends typingsSlinky.typedRestClient.personalaccesstokenMod.PersonalAccessTokenCredentialHandler {
     def this(token: String) = this()
   }
-  
 }
-

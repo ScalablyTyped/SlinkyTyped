@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `FocusContainer` is a wrapper for a few of the accessibility hooks to
@@ -17,4 +17,3 @@ import scala.scalajs.js.annotation._
 object default extends TopLevel[
       ForwardRefExoticComponent[FocusContainerProps with RefAttributes[HTMLDivElement]]
     ]
-

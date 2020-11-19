@@ -2,18 +2,20 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Map
   extends Accessor
      with LayersMixin {
+  
   /**
     * A flat collection of all the [layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html) in the map. This collection contains [basemap layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap), [operational layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#layers) and [ground layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#ground). [Group Layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html) and their [children layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html#layers) are also part of this collection. Reference layers in the basemap will always be included at the end of the collection.  Layers should not be added directly to this collection. They must only be added via the [layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#layers), [basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap) or [ground](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#ground) properties.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#allLayers)
     */
   val allLayers: Collection[Layer] = js.native
+  
   /**
     * Specifies a basemap for the map. The basemap is a set of tile layers that give geographic context to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) and the other [operational layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#layers) in the map.  This value can be an instance of [Basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html) or one of the strings listed in the table below.
     *
@@ -41,6 +43,7 @@ trait Map
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap)
     */
   var basemap: Basemap = js.native
+  
   /**
     * Specifies the surface properties for the map. This property is only relevant when adding the map to a 3D [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). It renders the terrain or topographical variations in the real world on the map's surface with a collection of [ElevationLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html).  This value can be an instance of [Ground](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html), or one of the following strings:
     *   * `world-elevation` for a default instance of ground using the [Terrain3D Service](https://www.arcgis.com/home/item.html?id=7029fb60158543ad845c7e1527af11e4).
@@ -53,4 +56,3 @@ trait Map
     */
   var ground: Ground = js.native
 }
-

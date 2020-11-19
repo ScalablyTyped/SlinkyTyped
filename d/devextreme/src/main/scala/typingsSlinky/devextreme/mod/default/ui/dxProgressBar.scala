@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxProgressBarOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxProgressBar")
 @js.native
@@ -16,4 +16,3 @@ class dxProgressBar protected ()
   def this(element: JQuery, options: dxProgressBarOptions) = this()
   def this(element: Element, options: dxProgressBarOptions) = this()
 }
-

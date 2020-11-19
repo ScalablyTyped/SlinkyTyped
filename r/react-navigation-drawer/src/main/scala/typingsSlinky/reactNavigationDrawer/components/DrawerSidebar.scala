@@ -14,9 +14,10 @@ import typingsSlinky.reactNavigationDrawer.typesMod.NavigationDrawerState
 import typingsSlinky.reactNavigationDrawer.typesMod.SceneDescriptorMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DrawerSidebar {
+  
   @JSImport("react-navigation-drawer", "DrawerSidebar")
   @js.native
   object component extends js.Object
@@ -25,21 +26,28 @@ object DrawerSidebar {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNavigationDrawer.mod.DrawerSidebar] {
+    
     @scala.inline
     def contentComponentFunctionComponent(value: ReactComponentClass[DrawerContentComponentProps]): this.type = set("contentComponent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def contentComponentComponentClass(value: ReactComponentClass[DrawerContentComponentProps]): this.type = set("contentComponent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def contentComponent(value: ReactComponentClass[DrawerContentComponentProps]): this.type = set("contentComponent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def contentOptions(value: js.Object): this.type = set("contentOptions", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def screenProps(value: js.Any): this.type = set("screenProps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: ViewStyle): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     descriptors: SceneDescriptorMap,
@@ -51,4 +59,3 @@ object DrawerSidebar {
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
-

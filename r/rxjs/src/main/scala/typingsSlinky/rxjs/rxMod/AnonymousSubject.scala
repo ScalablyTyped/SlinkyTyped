@@ -3,7 +3,7 @@ package typingsSlinky.rxjs.rxMod
 import typingsSlinky.rxjs.typesMod.Observer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rxjs/internal/Rx", "AnonymousSubject")
 @js.native
@@ -16,4 +16,3 @@ class AnonymousSubject[T] ()
   ) = this()
   def this(destination: Observer[T], source: typingsSlinky.rxjs.internalObservableMod.Observable[T]) = this()
 }
-

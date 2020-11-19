@@ -2,13 +2,47 @@ package typingsSlinky.sat
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object SAT extends js.Object {
+    
+    def pointInCircle(p: typingsSlinky.sat.SAT.Vector, c: typingsSlinky.sat.SAT.Circle): Boolean = js.native
+    
+    def pointInPolygon(p: typingsSlinky.sat.SAT.Vector, poly: typingsSlinky.sat.SAT.Polygon): Boolean = js.native
+    
+    def testCircleCircle(a: typingsSlinky.sat.SAT.Circle, b: typingsSlinky.sat.SAT.Circle): Boolean = js.native
+    def testCircleCircle(
+      a: typingsSlinky.sat.SAT.Circle,
+      b: typingsSlinky.sat.SAT.Circle,
+      response: typingsSlinky.sat.SAT.Response
+    ): Boolean = js.native
+    
+    def testCirclePolygon(circle: typingsSlinky.sat.SAT.Circle, polygon: typingsSlinky.sat.SAT.Polygon): Boolean = js.native
+    def testCirclePolygon(
+      circle: typingsSlinky.sat.SAT.Circle,
+      polygon: typingsSlinky.sat.SAT.Polygon,
+      response: typingsSlinky.sat.SAT.Response
+    ): Boolean = js.native
+    
+    def testPolygonCircle(polygon: typingsSlinky.sat.SAT.Polygon, circle: typingsSlinky.sat.SAT.Circle): Boolean = js.native
+    def testPolygonCircle(
+      polygon: typingsSlinky.sat.SAT.Polygon,
+      circle: typingsSlinky.sat.SAT.Circle,
+      response: typingsSlinky.sat.SAT.Response
+    ): Boolean = js.native
+    
+    def testPolygonPolygon(a: typingsSlinky.sat.SAT.Polygon, b: typingsSlinky.sat.SAT.Polygon): Boolean = js.native
+    def testPolygonPolygon(
+      a: typingsSlinky.sat.SAT.Polygon,
+      b: typingsSlinky.sat.SAT.Polygon,
+      response: typingsSlinky.sat.SAT.Response
+    ): Boolean = js.native
+    
     @js.native
     class Box ()
       extends typingsSlinky.sat.SAT.Box {
@@ -53,34 +87,5 @@ object global extends js.Object {
       def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
       def this(x: Double, y: Double) = this()
     }
-    
-    def pointInCircle(p: typingsSlinky.sat.SAT.Vector, c: typingsSlinky.sat.SAT.Circle): Boolean = js.native
-    def pointInPolygon(p: typingsSlinky.sat.SAT.Vector, poly: typingsSlinky.sat.SAT.Polygon): Boolean = js.native
-    def testCircleCircle(a: typingsSlinky.sat.SAT.Circle, b: typingsSlinky.sat.SAT.Circle): Boolean = js.native
-    def testCircleCircle(
-      a: typingsSlinky.sat.SAT.Circle,
-      b: typingsSlinky.sat.SAT.Circle,
-      response: typingsSlinky.sat.SAT.Response
-    ): Boolean = js.native
-    def testCirclePolygon(circle: typingsSlinky.sat.SAT.Circle, polygon: typingsSlinky.sat.SAT.Polygon): Boolean = js.native
-    def testCirclePolygon(
-      circle: typingsSlinky.sat.SAT.Circle,
-      polygon: typingsSlinky.sat.SAT.Polygon,
-      response: typingsSlinky.sat.SAT.Response
-    ): Boolean = js.native
-    def testPolygonCircle(polygon: typingsSlinky.sat.SAT.Polygon, circle: typingsSlinky.sat.SAT.Circle): Boolean = js.native
-    def testPolygonCircle(
-      polygon: typingsSlinky.sat.SAT.Polygon,
-      circle: typingsSlinky.sat.SAT.Circle,
-      response: typingsSlinky.sat.SAT.Response
-    ): Boolean = js.native
-    def testPolygonPolygon(a: typingsSlinky.sat.SAT.Polygon, b: typingsSlinky.sat.SAT.Polygon): Boolean = js.native
-    def testPolygonPolygon(
-      a: typingsSlinky.sat.SAT.Polygon,
-      b: typingsSlinky.sat.SAT.Polygon,
-      response: typingsSlinky.sat.SAT.Response
-    ): Boolean = js.native
   }
-  
 }
-

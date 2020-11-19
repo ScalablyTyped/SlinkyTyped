@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "Skeleton")
 @js.native
@@ -22,11 +22,11 @@ class Skeleton protected ()
     scene: typingsSlinky.babylonjs.sceneMod.Scene
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/index", "Skeleton")
 @js.native
 object Skeleton extends js.Object {
+  
   /**
     * Creates a new skeleton from serialized data
     * @param parsedSkeleton defines the serialized data
@@ -35,4 +35,3 @@ object Skeleton extends js.Object {
     */
   def Parse(parsedSkeleton: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene): typingsSlinky.babylonjs.skeletonMod.Skeleton = js.native
 }
-

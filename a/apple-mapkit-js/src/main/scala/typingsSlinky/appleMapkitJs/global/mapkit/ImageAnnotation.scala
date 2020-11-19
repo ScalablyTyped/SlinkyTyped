@@ -3,7 +3,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 import typingsSlinky.appleMapkitJs.mapkit.ImageAnnotationConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A customized annotation with image resources that you provide.
@@ -20,4 +20,3 @@ class ImageAnnotation protected ()
     options: ImageAnnotationConstructorOptions
   ) = this()
 }
-

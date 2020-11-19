@@ -2,7 +2,7 @@ package typingsSlinky.styledSystem.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LayoutProps[ThemeType /* <: Theme[TLengthStyledSystem] */]
@@ -40,12 +40,11 @@ trait LayoutProps[ThemeType /* <: Theme[TLengthStyledSystem] */]
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any
     ]
      with OverflowProps[ThemeType]
-
 object LayoutProps {
+  
   @scala.inline
-  def apply[/* <: typingsSlinky.styledSystem.mod.Theme[typingsSlinky.styledSystem.mod.TLengthStyledSystem] */ ThemeType](): LayoutProps[ThemeType] = {
+  def apply[ThemeType /* <: Theme[TLengthStyledSystem] */](): LayoutProps[ThemeType] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[LayoutProps[ThemeType]]
   }
 }
-

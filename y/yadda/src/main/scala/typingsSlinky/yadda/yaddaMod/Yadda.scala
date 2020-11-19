@@ -5,11 +5,13 @@ import typingsSlinky.yadda.libMod.Scenario
 import typingsSlinky.yadda.libMod.Step
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Yadda extends js.Object {
+  
   var interpreter: typingsSlinky.yadda.interpreterMod.^ = js.native
+  
   def run(scenario: js.Array[Scenario | Step]): Unit = js.native
   def run(scenario: js.Array[Scenario | Step], next: js.Function1[js.Error | Null, Unit]): Unit = js.native
   def run(scenario: js.Array[Scenario | Step], scenario_context: Properties): Unit = js.native
@@ -48,6 +50,7 @@ trait Yadda extends js.Object {
     scenario_context: typingsSlinky.yadda.contextMod.^,
     next: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
+  
   def yadda(scenario: js.Array[Scenario | Step]): Unit = js.native
   def yadda(scenario: js.Array[Scenario | Step], next: js.Function1[js.Error | Null, Unit]): Unit = js.native
   def yadda(scenario: js.Array[Scenario | Step], scenario_context: Properties): Unit = js.native
@@ -87,4 +90,3 @@ trait Yadda extends js.Object {
     next: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
 }
-

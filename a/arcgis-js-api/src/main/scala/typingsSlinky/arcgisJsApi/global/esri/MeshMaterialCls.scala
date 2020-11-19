@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.MeshMaterialProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.MeshMaterial")
 @js.native
@@ -16,4 +16,3 @@ class MeshMaterialCls ()
   extends typingsSlinky.arcgisJsApi.esri.MeshMaterial {
   def this(properties: MeshMaterialProperties) = this()
 }
-

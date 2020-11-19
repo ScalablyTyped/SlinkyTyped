@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This component is a simple wrapper of the `TextField` that can only be
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/form/types/text-field/Password", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[PasswordProps with RefAttributes[HTMLInputElement]]]
-

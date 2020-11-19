@@ -2,17 +2,17 @@ package typingsSlinky.babylonjs.indexMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "TextureTools")
 @js.native
 class TextureTools ()
   extends typingsSlinky.babylonjs.miscIndexMod.TextureTools
-
 /* static members */
 @JSImport("babylonjs/index", "TextureTools")
 @js.native
 object TextureTools extends js.Object {
+  
   /**
     * Uses the GPU to create a copy texture rescaled at a given size
     * @param texture Texture to copy from
@@ -29,4 +29,3 @@ object TextureTools extends js.Object {
     useBilinearMode: Boolean
   ): typingsSlinky.babylonjs.textureMod.Texture = js.native
 }
-

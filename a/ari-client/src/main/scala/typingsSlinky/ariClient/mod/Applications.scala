@@ -5,10 +5,11 @@ import typingsSlinky.ariClient.anon.EventSource
 import typingsSlinky.ariClient.anon.Filter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Applications extends js.Object {
+  
   /**
     * Filter application events types.
     * Allowed and/or disallowed event type filtering can be done. The body (parameter) should specify a JSON key/value object that describes the type of event filtering needed. One, or
@@ -41,6 +42,7 @@ trait Applications extends js.Object {
     * @param [params.filter] - Specify which event types to allow/disallow.
     */
   def filter(params: Filter, callback: js.Function2[/* err */ js.Error, /* application */ Application, Unit]): Unit = js.native
+  
   /**
     * Get details of an application.
     *
@@ -56,6 +58,7 @@ trait Applications extends js.Object {
     params: ApplicationName,
     callback: js.Function2[/* err */ js.Error, /* application */ Application, Unit]
   ): Unit = js.native
+  
   /**
     * List all applications.
     */
@@ -64,6 +67,7 @@ trait Applications extends js.Object {
     * List all applications.
     */
   def list(callback: js.Function2[/* err */ js.Error, /* applications */ js.Array[Application], Unit]): Unit = js.native
+  
   /**
     * Subscribe an application to a event source.
     * Returns the state of the application after the subscriptions have changed.
@@ -83,6 +87,7 @@ trait Applications extends js.Object {
     params: EventSource,
     callback: js.Function2[/* err */ js.Error, /* application */ Application, Unit]
   ): Unit = js.native
+  
   /**
     * Unsubscribe an application from an event source.
     * Returns the state of the application after the subscriptions have changed.
@@ -103,4 +108,3 @@ trait Applications extends js.Object {
     callback: js.Function2[/* err */ js.Error, /* application */ Application, Unit]
   ): Unit = js.native
 }
-

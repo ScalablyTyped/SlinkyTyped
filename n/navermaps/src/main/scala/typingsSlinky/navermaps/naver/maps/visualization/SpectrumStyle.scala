@@ -2,14 +2,14 @@ package typingsSlinky.navermaps.naver.maps.visualization
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait SpectrumStyle extends js.Object
-
 @JSGlobal("naver.maps.visualization.SpectrumStyle")
 @js.native
 object SpectrumStyle extends js.Object {
+  
   @js.native
   sealed trait COOL extends SpectrumStyle
   
@@ -42,6 +42,4 @@ object SpectrumStyle extends js.Object {
   
   @js.native
   sealed trait YIOrRd extends SpectrumStyle
-  
 }
-

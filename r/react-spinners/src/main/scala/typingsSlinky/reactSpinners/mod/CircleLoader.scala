@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.reactSpinners.interfacesMod.LoaderSizeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-spinners", "CircleLoader")
 @js.native
@@ -15,8 +15,6 @@ class CircleLoader protected ()
   def this(props: LoaderSizeProps) = this()
   def this(props: LoaderSizeProps, context: js.Any) = this()
 }
-
 @JSImport("react-spinners", "CircleLoader")
 @js.native
 object CircleLoader extends TopLevel[ReactComponentClass[LoaderSizeProps]]
-

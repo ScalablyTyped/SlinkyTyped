@@ -3,13 +3,15 @@ package typingsSlinky.amapJsApiDistrictSearch
 import typingsSlinky.amapJsApiDistrictSearch.AMap.DistrictSearch.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object AMap extends js.Object {
+    
     @js.native
     /**
       * 行政区查询
@@ -19,8 +21,5 @@ object global extends js.Object {
       extends typingsSlinky.amapJsApiDistrictSearch.AMap.DistrictSearch {
       def this(options: Options) = this()
     }
-    
   }
-  
 }
-

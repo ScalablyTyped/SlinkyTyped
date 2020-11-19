@@ -3,7 +3,7 @@ package typingsSlinky.googlemaps.google.maps
 import typingsSlinky.googlemaps.google.maps.places._LocationBias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A LatLng is a point in geographical coordinates: latitude and longitude.
@@ -26,17 +26,22 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait LatLng extends _LocationBias {
+  
   /** Comparison function. */
   def equals(other: LatLng): Boolean = js.native
+  
   /** Returns the latitude in degrees. */
   def lat(): Double = js.native
+  
   /** Returns the longitude in degrees. */
   def lng(): Double = js.native
+  
   /**
     * Converts to JSON representation. This function is intended to be used
     * via JSON.stringify.
     */
   def toJSON(): LatLngLiteral = js.native
+  
   /**
     * Returns a string of the form "lat,lng". We round the lat/lng values to 6
     * decimal places by default.
@@ -44,4 +49,3 @@ trait LatLng extends _LocationBias {
   def toUrlValue(): String = js.native
   def toUrlValue(precision: Double): String = js.native
 }
-

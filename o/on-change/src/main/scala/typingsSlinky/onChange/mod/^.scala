@@ -3,11 +3,12 @@ package typingsSlinky.onChange.mod
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("on-change", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   	Watch an object or array for changes. It works recursively, so it will even detect if you modify a deep property like `obj.a.b[0].c = true`.
   	@param object - Object to watch for changes.
@@ -94,11 +95,13 @@ object ^ extends js.Object {
     ],
     options: Options
   ): ObjectType = js.native
+  
   /**
   	@param object - Object that is already being watched for changes.
   	@returns The original unwatched object.
   	*/
   def target[ObjectType /* <: StringDictionary[js.Any] */](`object`: ObjectType): ObjectType = js.native
+  
   /**
   	Cancels all future callbacks on a watched object.
   	@param object - Object that is already being watched for changes.
@@ -106,4 +109,3 @@ object ^ extends js.Object {
   	*/
   def unsubscribe[ObjectType /* <: StringDictionary[js.Any] */](`object`: ObjectType): ObjectType = js.native
 }
-

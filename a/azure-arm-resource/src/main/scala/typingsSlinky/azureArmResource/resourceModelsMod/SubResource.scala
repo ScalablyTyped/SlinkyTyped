@@ -2,14 +2,14 @@ package typingsSlinky.azureArmResource.resourceModelsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SubResource
   extends typingsSlinky.msRestAzure.mod.BaseResource {
+  
   /**
     * Resource ID
     */
   var id: js.UndefOr[String] = js.native
 }
-

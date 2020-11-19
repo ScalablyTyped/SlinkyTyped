@@ -9,19 +9,18 @@ import typingsSlinky.winrtUwp.Windows.Storage.IStorageItem
 import typingsSlinky.winrtUwp.Windows.Storage.NameCollisionOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides access to operations that manage files that are protected to an enterprise identity. */
 @JSGlobal("Windows.Security.EnterpriseData.FileProtectionManager")
 @js.native
 abstract class FileProtectionManager ()
   extends typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.FileProtectionManager
-
 /* static members */
 @JSGlobal("Windows.Security.EnterpriseData.FileProtectionManager")
 @js.native
 object FileProtectionManager extends js.Object {
-  var isContainerAsync: js.Any = js.native
+  
   /**
     * Replicate the file protection of one file onto another file.
     * @param source The source file, from which file protection is being copied.
@@ -29,6 +28,7 @@ object FileProtectionManager extends js.Object {
     * @return When the call to this method completes successfully, it returns true if the file protection was copied, or false if there was an error.
     */
   def copyProtectionAsync(source: IStorageItem, target: IStorageItem): IPromiseWithIAsyncOperation[Boolean] = js.native
+  
   /**
     * Create an enterprise-protected file.
     * @param parentFolder The folder into which to create the enterprise protected file.
@@ -43,12 +43,16 @@ object FileProtectionManager extends js.Object {
     identity: String,
     collisionOption: CreationCollisionOption
   ): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.ProtectedFileCreateResult] = js.native
+  
   /**
     * Get the status of an enterprise-protected file.
     * @param source The file or folder for which protection status is being queried.
     * @return When the call to this method completes successfully, it returns a FileProtectionInfo object that contains the status of the file.
     */
   def getProtectionInfoAsync(source: IStorageItem): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.FileProtectionInfo] = js.native
+  
+  var isContainerAsync: js.Any = js.native
+  
    /* unmapped type */ /**
     * Create an enterprise-protected file, and load it from a container file.
     * @param containerFile The enterprise protected file to be created and loaded.
@@ -76,6 +80,7 @@ object FileProtectionManager extends js.Object {
   def loadFileFromContainerAsync(containerFile: IStorageFile, target: IStorageItem, collisionOption: NameCollisionOption): IPromiseWithIAsyncOperation[
     typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.ProtectedContainerImportResult
   ] = js.native
+  
   /**
     * Protect the data in a file to an enterprise identity. The app can then use standard APIs to read or write from the file.
     * @param target The file to be protected.
@@ -83,6 +88,7 @@ object FileProtectionManager extends js.Object {
     * @return When the call to this method completes successfully, it returns a FileProtectionInfo object that contains the status of the newly protected file.
     */
   def protectAsync(target: IStorageItem, identity: String): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.FileProtectionInfo] = js.native
+  
   /**
     * Save an enterprise-protected file as a containerized version.
     * @param protectedFile The protected source file being copied.
@@ -101,4 +107,3 @@ object FileProtectionManager extends js.Object {
     typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.ProtectedContainerExportResult
   ] = js.native
 }
-

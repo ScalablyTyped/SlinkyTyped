@@ -19,9 +19,10 @@ import typingsSlinky.gestalt.gestaltStrings.xs
 import typingsSlinky.gestalt.mod.FlyoutProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Flyout {
+  
   @JSImport("gestalt", "Flyout")
   @js.native
   object component extends js.Object
@@ -30,25 +31,31 @@ object Flyout {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Flyout] {
+    
     @scala.inline
     def color(value: blue | orange | red | white | darkGray): this.type = set("color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def idealDirection(value: up | right | down | left): this.type = set("idealDirection", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def positionRelativeToAnchor(value: Boolean): this.type = set("positionRelativeToAnchor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def shouldFocus(value: Boolean): this.type = set("shouldFocus", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def showCaret(value: Boolean): this.type = set("showCaret", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def size(value: xs | sm | md | lg | xl | Double): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: FlyoutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(anchor: js.Any, onDismiss: () => Unit): Builder = {
     val __props = js.Dynamic.literal(anchor = anchor.asInstanceOf[js.Any], onDismiss = js.Any.fromFunction0(onDismiss))
     new Builder(js.Array(this.component, __props.asInstanceOf[FlyoutProps]))
   }
 }
-

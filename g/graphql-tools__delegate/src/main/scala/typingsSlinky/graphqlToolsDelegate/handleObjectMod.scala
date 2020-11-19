@@ -8,11 +8,12 @@ import typingsSlinky.graphqlToolsDelegate.typesMod.SubschemaConfig
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/delegate/results/handleObject", JSImport.Namespace)
 @js.native
 object handleObjectMod extends js.Object {
+  
   def handleObject(
     `type`: GraphQLCompositeType,
     `object`: js.Any,
@@ -48,4 +49,3 @@ object handleObjectMod extends js.Object {
     skipTypeMerging: Boolean
   ): js.Any = js.native
 }
-

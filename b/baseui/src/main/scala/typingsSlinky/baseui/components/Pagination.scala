@@ -13,9 +13,10 @@ import typingsSlinky.baseui.paginationMod.PaginationOverrides
 import typingsSlinky.baseui.paginationMod.PaginationProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Pagination {
+  
   @JSImport("baseui/pagination", "Pagination")
   @js.native
   object component extends js.Object
@@ -24,25 +25,31 @@ object Pagination {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.baseui.paginationMod.Pagination] {
+    
     @scala.inline
     def labels(value: Labels): this.type = set("labels", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onNextClick(value: /* args */ EventAny => _): this.type = set("onNextClick", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onPageChange(value: /* args */ NextPage => _): this.type = set("onPageChange", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onPrevClick(value: /* args */ EventAny => _): this.type = set("onPrevClick", js.Any.fromFunction1(value))
+    
     @scala.inline
     def overrides(value: PaginationOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def size(value: mini | default_ | compact | large_): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(currentPage: Double, numPages: Double): Builder = {
     val __props = js.Dynamic.literal(currentPage = currentPage.asInstanceOf[js.Any], numPages = numPages.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[PaginationProps]))
   }
 }
-

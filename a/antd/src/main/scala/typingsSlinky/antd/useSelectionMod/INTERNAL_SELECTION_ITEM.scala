@@ -2,7 +2,7 @@ package typingsSlinky.antd.useSelectionMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.antd.tableInterfaceMod.SelectionItem
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antd.antdStrings.SELECT_INVERT
 */
 trait INTERNAL_SELECTION_ITEM extends js.Object
-

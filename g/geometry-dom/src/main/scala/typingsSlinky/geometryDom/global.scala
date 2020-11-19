@@ -8,11 +8,12 @@ import org.scalablytyped.runtime.Instantiable4
 import org.scalablytyped.runtime.Instantiable6
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   class DOMMatrix ()
     extends typingsSlinky.geometryDom.GeometryDom.DOMMatrix {
@@ -21,12 +22,34 @@ object global extends js.Object {
     def this(transformList: String) = this()
     def this(a: Double, b: Double, c: Double, d: Double, e: Double, f: Double) = this()
   }
+  @js.native
+  object DOMMatrix
+    extends Instantiable0[typingsSlinky.geometryDom.GeometryDom.DOMMatrix]
+       with Instantiable1[
+          (/* array */ js.Array[Double]) | (/* other */ typingsSlinky.geometryDom.GeometryDom.DOMMatrixReadOnly) | (/* transformList */ String), 
+          typingsSlinky.geometryDom.GeometryDom.DOMMatrix
+        ]
+       with Instantiable6[
+          /* a */ Double, 
+          /* b */ Double, 
+          /* c */ Double, 
+          /* d */ Double, 
+          /* e */ Double, 
+          /* f */ Double, 
+          typingsSlinky.geometryDom.GeometryDom.DOMMatrix
+        ]
   
   @js.native
   class DOMMatrixReadOnly protected ()
     extends typingsSlinky.geometryDom.GeometryDom.DOMMatrixReadOnly {
     def this(numberSequence: js.Array[Double]) = this()
   }
+  @js.native
+  object DOMMatrixReadOnly
+    extends Instantiable1[
+          /* numberSequence */ js.Array[Double], 
+          typingsSlinky.geometryDom.GeometryDom.DOMMatrixReadOnly
+        ]
   
   @js.native
   class DOMPoint ()
@@ -52,12 +75,43 @@ object global extends js.Object {
     def this(x: Double, y: Double, z: js.UndefOr[scala.Nothing], w: Double) = this()
     def this(x: Double, y: Double, z: Double, w: Double) = this()
   }
+  @js.native
+  object DOMPoint
+    extends Instantiable0[typingsSlinky.geometryDom.GeometryDom.DOMPoint]
+       with Instantiable1[/* x */ Double, typingsSlinky.geometryDom.GeometryDom.DOMPoint]
+       with Instantiable2[
+          js.UndefOr[/* x */ Double], 
+          /* y */ Double, 
+          typingsSlinky.geometryDom.GeometryDom.DOMPoint
+        ]
+       with Instantiable3[
+          js.UndefOr[/* x */ Double], 
+          js.UndefOr[/* y */ Double], 
+          /* z */ Double, 
+          typingsSlinky.geometryDom.GeometryDom.DOMPoint
+        ]
+       with Instantiable4[
+          js.UndefOr[/* x */ Double], 
+          js.UndefOr[/* y */ Double], 
+          js.UndefOr[/* z */ Double], 
+          /* w */ Double, 
+          typingsSlinky.geometryDom.GeometryDom.DOMPoint
+        ]
   
   @js.native
   class DOMPointReadOnly protected ()
     extends typingsSlinky.geometryDom.GeometryDom.DOMPointReadOnly {
     def this(x: Double, y: Double, z: Double, w: Double) = this()
   }
+  @js.native
+  object DOMPointReadOnly
+    extends Instantiable4[
+          /* x */ Double, 
+          /* y */ Double, 
+          /* z */ Double, 
+          /* w */ Double, 
+          typingsSlinky.geometryDom.GeometryDom.DOMPointReadOnly
+        ]
   
   @js.native
   class DOMQuad ()
@@ -84,76 +138,6 @@ object global extends js.Object {
     def this(p1: DOMPointInit, p2: DOMPointInit, p3: js.UndefOr[scala.Nothing], p4: DOMPointInit) = this()
     def this(p1: DOMPointInit, p2: DOMPointInit, p3: DOMPointInit, p4: DOMPointInit) = this()
   }
-  
-  @js.native
-  class DOMRect protected ()
-    extends typingsSlinky.geometryDom.GeometryDom.DOMRect {
-    def this(x: Double, y: Double, width: Double, height: Double) = this()
-  }
-  
-  @js.native
-  class DOMRectReadOnly protected ()
-    extends typingsSlinky.geometryDom.GeometryDom.DOMRectReadOnly {
-    def this(x: Double, y: Double, width: Double, height: Double) = this()
-  }
-  
-  @js.native
-  object DOMMatrix
-    extends Instantiable0[typingsSlinky.geometryDom.GeometryDom.DOMMatrix]
-       with Instantiable1[
-          (/* array */ js.Array[Double]) | (/* other */ typingsSlinky.geometryDom.GeometryDom.DOMMatrixReadOnly) | (/* transformList */ String), 
-          typingsSlinky.geometryDom.GeometryDom.DOMMatrix
-        ]
-       with Instantiable6[
-          /* a */ Double, 
-          /* b */ Double, 
-          /* c */ Double, 
-          /* d */ Double, 
-          /* e */ Double, 
-          /* f */ Double, 
-          typingsSlinky.geometryDom.GeometryDom.DOMMatrix
-        ]
-  
-  @js.native
-  object DOMMatrixReadOnly
-    extends Instantiable1[
-          /* numberSequence */ js.Array[Double], 
-          typingsSlinky.geometryDom.GeometryDom.DOMMatrixReadOnly
-        ]
-  
-  @js.native
-  object DOMPoint
-    extends Instantiable0[typingsSlinky.geometryDom.GeometryDom.DOMPoint]
-       with Instantiable1[/* x */ Double, typingsSlinky.geometryDom.GeometryDom.DOMPoint]
-       with Instantiable2[
-          js.UndefOr[/* x */ Double], 
-          /* y */ Double, 
-          typingsSlinky.geometryDom.GeometryDom.DOMPoint
-        ]
-       with Instantiable3[
-          js.UndefOr[/* x */ Double], 
-          js.UndefOr[/* y */ Double], 
-          /* z */ Double, 
-          typingsSlinky.geometryDom.GeometryDom.DOMPoint
-        ]
-       with Instantiable4[
-          js.UndefOr[/* x */ Double], 
-          js.UndefOr[/* y */ Double], 
-          js.UndefOr[/* z */ Double], 
-          /* w */ Double, 
-          typingsSlinky.geometryDom.GeometryDom.DOMPoint
-        ]
-  
-  @js.native
-  object DOMPointReadOnly
-    extends Instantiable4[
-          /* x */ Double, 
-          /* y */ Double, 
-          /* z */ Double, 
-          /* w */ Double, 
-          typingsSlinky.geometryDom.GeometryDom.DOMPointReadOnly
-        ]
-  
   @js.native
   object DOMQuad
     extends Instantiable0[typingsSlinky.geometryDom.GeometryDom.DOMQuad]
@@ -181,6 +165,11 @@ object global extends js.Object {
         ]
   
   @js.native
+  class DOMRect protected ()
+    extends typingsSlinky.geometryDom.GeometryDom.DOMRect {
+    def this(x: Double, y: Double, width: Double, height: Double) = this()
+  }
+  @js.native
   object DOMRect
     extends Instantiable4[
           /* x */ Double, 
@@ -191,6 +180,11 @@ object global extends js.Object {
         ]
   
   @js.native
+  class DOMRectReadOnly protected ()
+    extends typingsSlinky.geometryDom.GeometryDom.DOMRectReadOnly {
+    def this(x: Double, y: Double, width: Double, height: Double) = this()
+  }
+  @js.native
   object DOMRectReadOnly
     extends Instantiable4[
           /* x */ Double, 
@@ -199,6 +193,4 @@ object global extends js.Object {
           /* height */ Double, 
           typingsSlinky.geometryDom.GeometryDom.DOMRectReadOnly
         ]
-  
 }
-

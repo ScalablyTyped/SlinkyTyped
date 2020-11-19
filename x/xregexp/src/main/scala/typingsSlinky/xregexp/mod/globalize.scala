@@ -2,11 +2,12 @@ package typingsSlinky.xregexp.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xregexp", "globalize")
 @js.native
 object globalize extends js.Object {
+  
   /**
     * Copies a regex object and adds flag `g`. The copy maintains extended data, is augmented with
     * `XRegExp.prototype` properties, and has a fresh `lastIndex` property (set to zero). Native
@@ -21,4 +22,3 @@ object globalize extends js.Object {
     */
   def apply(regex: js.RegExp): js.RegExp = js.native
 }
-

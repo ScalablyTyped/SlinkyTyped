@@ -9,11 +9,12 @@ import typingsSlinky.typescript.mod.PropertyName
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createGetAccessor")
 @js.native
 object createGetAccessor extends js.Object {
+  
   def apply(
     decorators: js.UndefOr[scala.Nothing],
     modifiers: js.UndefOr[scala.Nothing],
@@ -247,4 +248,3 @@ object createGetAccessor extends js.Object {
     body: Block
   ): GetAccessorDeclaration = js.native
 }
-

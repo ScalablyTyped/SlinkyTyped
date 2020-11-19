@@ -2,7 +2,7 @@ package typingsSlinky.microsoftGraph.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.mail
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.file
 */
 trait ThreatAssessmentContentType extends js.Object
-
 object ThreatAssessmentContentType {
+  
   @scala.inline
   def file: typingsSlinky.microsoftGraph.microsoftGraphStrings.file = "file".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.file]
+  
   @scala.inline
   def mail: typingsSlinky.microsoftGraph.microsoftGraphStrings.mail = "mail".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.mail]
+  
   @scala.inline
   def url: typingsSlinky.microsoftGraph.microsoftGraphStrings.url = "url".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.url]
 }
-

@@ -5,9 +5,8 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.mocha.Mocha.reporters.Dot
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mocha", "reporters.dot")
 @js.native
 object dot extends TopLevel[Instantiable0[Dot]]
-

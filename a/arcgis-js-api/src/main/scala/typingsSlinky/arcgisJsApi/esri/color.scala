@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This object contains helper methods for generating data-driven visualizations with continuous color or class breaks based on a field value or expression from features in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The methods in this module generate renderer or visual variable objects that may be applied directly to a supported layer. The renderers specify how features should be visualized based on data values and colors optimized based on the indicated basemap.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait color extends js.Object {
+  
   /**
     * Generates a continuous color [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) representing the age of features based on one or more fields. The age of a feature is calculated based on a given `startTime` and `endTime`, one of which must be a date field in the input `layer`. This method generates an Arcade expression and calculates statistics on the output of the expression to accomplish this. The resulting renderer contains a continuous color visual variable that maps optimal colors based on the indicated basemap to data values based on the resulting statistics of the expression.  You are required to provide a `layer`, `view`, `startTime`, and `endTime` to generate this renderer. Optionally, you can set a `unit` and a `theme` for the visualization. Other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the statistics object to the `statistics` parameter to avoid making an extra call to the server.
     *
@@ -62,6 +63,7 @@ trait color extends js.Object {
     *
     */
   def createAgeRenderer(params: colorCreateAgeRendererParams): js.Promise[AgeRendererResult] = js.native
+  
   /**
     * Generates a [ClassBreaksRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html) that may be applied directly to the layer used to call this method. The resulting renderer defines the symbol color of each feature based on the value of the given `field` value. A default color scheme is determined based on the given `basemap`. Depending on the `classificationMethod`, class breaks (or data ranges) are generated based on the statistics of the data. Each feature is assigned a color based on the class break in which the value of the `field` falls.  In most cases you will provide a `layer`, `basemap`, `field`, and `classificationMethod` to generate this renderer. This is a scenario in which the statistics of the data aren't well known and the user doesn't know what colors to use in the visualization. You can also use a `valueExpression` instead of a `field` to visualize features based on a value returned from a script executed at runtime.  The other options are provided for convenience for more involved custom visualization authoring applications.
     *
@@ -126,6 +128,7 @@ trait color extends js.Object {
     *
     */
   def createClassBreaksRenderer(params: colorCreateClassBreaksRendererParams): js.Promise[ClassBreaksRendererResult] = js.native
+  
   /**
     * Generates a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) that may be applied directly to the layer used to call this method. The renderer contains a continuous color visual variable that maps optimal colors based on the indicated basemap to specific stop values based on queried statistics from the indicated field or expression.  In most cases you will provide a `layer`, `basemap`, `field`, and `theme` to generate this renderer. This is a scenario in which the statistics of the data aren't well known and the user doesn't know what colors to use in the visualization. You can also use a `valueExpression` instead of a `field` to visualize features based on a value returned from a script executed at runtime.  The other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the statistics object to the `statistics` parameter to avoid making an extra call to the server.
     *
@@ -180,6 +183,7 @@ trait color extends js.Object {
     *
     */
   def createContinuousRenderer(params: colorCreateContinuousRendererParams): js.Promise[ContinuousRendererResult] = js.native
+  
   /**
     * Generates a [PointCloudStretchRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudStretchRenderer.html) with a color scheme best-suited for the given basemap based on statistics returned from a given field of a [PointCloudLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-PointCloudLayer.html). All that's required is a layer instance, field name, and basemap ID. You can optionally set the size and density of the points to suit the needs of the desired visualization.
     *
@@ -197,6 +201,7 @@ trait color extends js.Object {
     *
     */
   def createPCContinuousRenderer(params: colorCreatePCContinuousRendererParams): js.Promise[PCContinuousRendererResult] = js.native
+  
   /**
     * Generates a [PointCloudRGBRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudRGBRenderer.html) based on the `RGB` field of a given [PointCloudLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-PointCloudLayer.html). This method simplifies the experience of creating a [PointCloudRGBRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudRGBRenderer.html) manually. All that's required is a layer instance. You can optionally set the size and density of the points to suit the needs of the desired visualization.
     *
@@ -210,6 +215,7 @@ trait color extends js.Object {
     *
     */
   def createPCTrueColorRenderer(params: colorCreatePCTrueColorRendererParams): js.Promise[PCTrueColorRendererResult] = js.native
+  
   /**
     * This method generates a color visual variable with default stops that are optimally chosen based on the statistics queried for the indicated field or expression and colors based on the input basemap.  There are two different ways this method may be called. The most common case is by providing a `layer`, `basemap`, `field`, and `theme`. This is the scenario where the statistics of the data aren't well known and the user doesn't know what colors to use. You can optionally use a `valueExpression` instead of a field to visualize features based on a numeric value returned from a script executed at runtime.  The other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the object in the `statistics` parameter to avoid making an extra call to the server. You can also provide a `colorScheme` if you don't want one picked for you. In this case the `basemap` and `theme` options would be ignored.
     *
@@ -245,8 +251,8 @@ trait color extends js.Object {
     */
   def createVisualVariable(params: colorCreateVisualVariableParams): js.Promise[VisualVariableResult] = js.native
 }
-
 object color {
+  
   @scala.inline
   def apply(
     createAgeRenderer: colorCreateAgeRendererParams => js.Promise[AgeRendererResult],
@@ -259,30 +265,38 @@ object color {
     val __obj = js.Dynamic.literal(createAgeRenderer = js.Any.fromFunction1(createAgeRenderer), createClassBreaksRenderer = js.Any.fromFunction1(createClassBreaksRenderer), createContinuousRenderer = js.Any.fromFunction1(createContinuousRenderer), createPCContinuousRenderer = js.Any.fromFunction1(createPCContinuousRenderer), createPCTrueColorRenderer = js.Any.fromFunction1(createPCTrueColorRenderer), createVisualVariable = js.Any.fromFunction1(createVisualVariable))
     __obj.asInstanceOf[color]
   }
+  
   @scala.inline
   implicit class colorOps[Self <: color] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreateAgeRenderer(value: colorCreateAgeRendererParams => js.Promise[AgeRendererResult]): Self = this.set("createAgeRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreateClassBreaksRenderer(value: colorCreateClassBreaksRendererParams => js.Promise[ClassBreaksRendererResult]): Self = this.set("createClassBreaksRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreateContinuousRenderer(value: colorCreateContinuousRendererParams => js.Promise[ContinuousRendererResult]): Self = this.set("createContinuousRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreatePCContinuousRenderer(value: colorCreatePCContinuousRendererParams => js.Promise[PCContinuousRendererResult]): Self = this.set("createPCContinuousRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreatePCTrueColorRenderer(value: colorCreatePCTrueColorRendererParams => js.Promise[PCTrueColorRendererResult]): Self = this.set("createPCTrueColorRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreateVisualVariable(value: colorCreateVisualVariableParams => js.Promise[VisualVariableResult]): Self = this.set("createVisualVariable", js.Any.fromFunction1(value))
   }
-  
 }
-

@@ -24,7 +24,7 @@ import typingsSlinky.screeps.screepsStrings.terrain
 import typingsSlinky.screeps.screepsStrings.tombstone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An object representing the specified position in the room.
@@ -35,18 +35,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait RoomPosition extends js.Object {
-  /**
-    * The name of the room.
-    */
-  var roomName: String = js.native
-  /**
-    * X position in the room.
-    */
-  var x: Double = js.native
-  /**
-    * Y position in the room.
-    */
-  var y: Double = js.native
+  
   /**
     * Create new ConstructionSite at the specified location.
     * @param structureType One of the following constants:
@@ -71,6 +60,7 @@ trait RoomPosition extends js.Object {
     */
   def createConstructionSite(structureType: STRUCTURE_SPAWN): ScreepsReturnCode = js.native
   def createConstructionSite(structureType: STRUCTURE_SPAWN, name: String): ScreepsReturnCode = js.native
+  
   /**
     * Create new Flag at the specified location.
     * @param name The name of a new flag.
@@ -86,6 +76,7 @@ trait RoomPosition extends js.Object {
   def createFlag(name: String): ERR_NAME_EXISTS | ERR_INVALID_ARGS | String = js.native
   def createFlag(name: String, color: js.UndefOr[ColorConstant], secondaryColor: ColorConstant): ERR_NAME_EXISTS | ERR_INVALID_ARGS | String = js.native
   def createFlag(name: String, color: ColorConstant): ERR_NAME_EXISTS | ERR_INVALID_ARGS | String = js.native
+  
   /**
     * Find the object with the shortest path from the given position. Uses A* search algorithm and Dijkstra's algorithm.
     * @param objects An array of RoomPositions or objects with a RoomPosition
@@ -108,6 +99,7 @@ trait RoomPosition extends js.Object {
   def findClosestByPath[T /* <: Structure[StructureConstant] */](`type`: FIND_MY_STRUCTURES, opts: FindPathOptsFilterOptions): T | Null = js.native
   def findClosestByPath[T /* <: Structure[StructureConstant] */](`type`: FIND_STRUCTURES): T | Null = js.native
   def findClosestByPath[T /* <: Structure[StructureConstant] */](`type`: FIND_STRUCTURES, opts: FindPathOptsFilterOptions): T | Null = js.native
+  
   /**
     * Find the object with the shortest linear distance from the given position.
     * @param objects An array of RoomPositions or objects with a RoomPosition.
@@ -128,6 +120,7 @@ trait RoomPosition extends js.Object {
   def findClosestByRange[T /* <: Structure[StructureConstant] */](`type`: FIND_MY_STRUCTURES, opts: FilterOptions[FIND_STRUCTURES]): T | Null = js.native
   def findClosestByRange[T /* <: Structure[StructureConstant] */](`type`: FIND_STRUCTURES): T | Null = js.native
   def findClosestByRange[T /* <: Structure[StructureConstant] */](`type`: FIND_STRUCTURES, opts: FilterOptions[FIND_STRUCTURES]): T | Null = js.native
+  
   /**
     * Find all objects in the specified linear range.
     * @param objects An array of room's objects or RoomPosition objects that the search should be executed against.
@@ -154,6 +147,7 @@ trait RoomPosition extends js.Object {
   def findInRange[T /* <: Structure[StructureConstant] */](`type`: FIND_MY_STRUCTURES, range: Double, opts: FilterOptions[FIND_STRUCTURES]): js.Array[T] = js.native
   def findInRange[T /* <: Structure[StructureConstant] */](`type`: FIND_STRUCTURES, range: Double): js.Array[T] = js.native
   def findInRange[T /* <: Structure[StructureConstant] */](`type`: FIND_STRUCTURES, range: Double, opts: FilterOptions[FIND_STRUCTURES]): js.Array[T] = js.native
+  
   def findPathTo(target: HasRoomPosition): js.Array[PathStep] = js.native
   def findPathTo(target: HasRoomPosition, opts: FindPathOpts): js.Array[PathStep] = js.native
   /**
@@ -175,6 +169,7 @@ trait RoomPosition extends js.Object {
     */
   def findPathTo(x: Double, y: Double): js.Array[PathStep] = js.native
   def findPathTo(x: Double, y: Double, opts: FindPathOpts): js.Array[PathStep] = js.native
+  
   def getDirectionTo(target: HasRoomPosition): DirectionConstant = js.native
   /**
     * Get linear direction to the specified position.
@@ -187,6 +182,7 @@ trait RoomPosition extends js.Object {
     * @param y Y position in the room.
     */
   def getDirectionTo(x: Double, y: Double): DirectionConstant = js.native
+  
   /**
     * Get linear range to the specified position.
     * @param target Can be a RoomPosition object or any object containing RoomPosition.
@@ -199,6 +195,7 @@ trait RoomPosition extends js.Object {
     * @param y Y position in the room.
     */
   def getRangeTo(x: Double, y: Double): Double = js.native
+  
   /**
     * Check whether this position is in the given range of another position.
     * @param toPos The target position.
@@ -213,6 +210,7 @@ trait RoomPosition extends js.Object {
     * @param range The range distance.
     */
   def inRangeTo(x: Double, y: Double, range: Double): Boolean = js.native
+  
   /**
     * Check whether this position is the same as the specified position.
     * @param target Can be a RoomPosition object or any object containing RoomPosition.
@@ -225,6 +223,7 @@ trait RoomPosition extends js.Object {
     * @param y Y position in the room.
     */
   def isEqualTo(x: Double, y: Double): Boolean = js.native
+  
   /**
     * Check whether this position is on the adjacent square to the specified position. The same as inRangeTo(target, 1).
     * @param target Can be a RoomPosition object or any object containing RoomPosition.
@@ -237,10 +236,12 @@ trait RoomPosition extends js.Object {
     * @param y Y position in the room.
     */
   def isNearTo(x: Double, y: Double): Boolean = js.native
+  
   /**
     * Get the list of objects at the specified room position.
     */
   def look(): js.Array[LookAtResultLookConstant] = js.native
+  
   /**
     * Get an object with the given type at the specified room position.
     * @param type One of the following string constants: constructionSite, creep, exit, flag, resource, source, structure, terrain
@@ -275,5 +276,19 @@ trait RoomPosition extends js.Object {
   def lookFor_terrain(`type`: terrain): js.Array[Terrain] = js.native
   @JSName("lookFor")
   def lookFor_tombstone(`type`: tombstone): js.Array[Tombstone] = js.native
+  
+  /**
+    * The name of the room.
+    */
+  var roomName: String = js.native
+  
+  /**
+    * X position in the room.
+    */
+  var x: Double = js.native
+  
+  /**
+    * Y position in the room.
+    */
+  var y: Double = js.native
 }
-

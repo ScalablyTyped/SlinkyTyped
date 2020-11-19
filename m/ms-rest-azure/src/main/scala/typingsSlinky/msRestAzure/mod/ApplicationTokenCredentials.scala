@@ -3,13 +3,14 @@ package typingsSlinky.msRestAzure.mod
 import typingsSlinky.msRest.mod.ServiceClientCredentials
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ms-rest-azure", "ApplicationTokenCredentials")
 @js.native
 class ApplicationTokenCredentials protected () extends ServiceClientCredentials {
   def this(clientId: String, domain: String, secret: String) = this()
   def this(clientId: String, domain: String, secret: String, options: AzureTokenCredentialsOptions) = this()
+  
   /**
     * Gets the token.
     * @param  {function} callback  The callback in the form (err, result)
@@ -19,4 +20,3 @@ class ApplicationTokenCredentials protected () extends ServiceClientCredentials 
     */
   def getToken(callback: js.Function2[/* err */ js.Error, /* result */ TokenResponse, Unit]): Unit = js.native
 }
-

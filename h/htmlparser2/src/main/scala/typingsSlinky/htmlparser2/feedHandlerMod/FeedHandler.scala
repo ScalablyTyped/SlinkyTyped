@@ -2,7 +2,7 @@ package typingsSlinky.htmlparser2.feedHandlerMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
 - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DomHandler * / any */ @JSImport("htmlparser2/lib/FeedHandler", "FeedHandler")
@@ -27,7 +27,8 @@ class FeedHandler () extends js.Object {
     callback: js.Function1[/* error */ js.Error | Null, Unit],
     options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DomHandlerOptions */ js.Any
   ) = this()
+  
   var feed: js.UndefOr[Feed] = js.native
+  
   def onend(): Unit = js.native
 }
-

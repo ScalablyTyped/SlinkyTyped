@@ -4,7 +4,7 @@ import typingsSlinky.bitcoreLib.mod.Networks.Network
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("bitcore-lib", "Address")
 @js.native
@@ -25,8 +25,10 @@ class Address protected () extends js.Object {
   def this(data: Buffer, network: Network, `type`: String) = this()
   def this(data: js.typedarray.Uint8Array, network: js.UndefOr[scala.Nothing], `type`: String) = this()
   def this(data: js.typedarray.Uint8Array, network: Network, `type`: String) = this()
+  
   val hashBuffer: Buffer = js.native
+  
   val network: Network = js.native
+  
   val `type`: String = js.native
 }
-

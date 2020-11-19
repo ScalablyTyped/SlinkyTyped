@@ -5,10 +5,11 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMdl.mod._MDLComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from P because couldn't resolve ClassTree. */
 object MDLComponent {
+  
   @JSImport("react-mdl", "__MDLComponent")
   @js.native
   object component extends js.Object
@@ -19,6 +20,6 @@ object MDLComponent {
        with StBuildingComponent[tag.type, _MDLComponent[P]]
   
   def apply[P](p: P): Builder[P] = new Builder[P](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make[P](companion: MDLComponent.type): Builder[P] = new Builder[P](js.Array(this.component, js.Dictionary.empty))()
 }
-

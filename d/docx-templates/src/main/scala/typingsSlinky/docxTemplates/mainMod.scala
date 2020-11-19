@@ -10,11 +10,12 @@ import typingsSlinky.jszip.mod.JSZip
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("docx-templates/lib/main", JSImport.Namespace)
 @js.native
 object mainMod extends js.Object {
+  
   /**
     * Create Report from docx template
     *
@@ -50,10 +51,12 @@ object mainMod extends js.Object {
     */
   @JSName("default")
   def default_XML(options: UserOptions, _probe: XML): js.Promise[String] = js.native
+  
   def getMainDoc(contentTypes: NonTextNode): String = js.native
+  
   def listCommands(template: Buffer): js.Promise[js.Array[CommandSummary]] = js.native
   def listCommands(template: Buffer, delimiter: String): js.Promise[js.Array[CommandSummary]] = js.native
   def listCommands(template: Buffer, delimiter: js.Tuple2[String, String]): js.Promise[js.Array[CommandSummary]] = js.native
+  
   def readContentTypes(zip: JSZip): js.Promise[NonTextNode] = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.baidumapWebSdk.global.BMap
 import typingsSlinky.baidumapWebSdk.BMap.MarkerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BMap.Marker")
 @js.native
@@ -12,4 +12,3 @@ class Marker protected ()
   def this(point: typingsSlinky.baidumapWebSdk.BMap.Point) = this()
   def this(point: typingsSlinky.baidumapWebSdk.BMap.Point, opts: MarkerOptions) = this()
 }
-

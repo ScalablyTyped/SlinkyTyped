@@ -5,11 +5,12 @@ import typingsSlinky.antd.anon.ShowLeafIcon
 import typingsSlinky.antd.treeTreeMod.AntTreeNodeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd/lib/tree/utils/iconUtil", JSImport.Namespace)
 @js.native
 object utilsIconUtilMod extends js.Object {
+  
   def default(
     prefixCls: String,
     switcherIcon: js.UndefOr[ReactElement],
@@ -47,4 +48,3 @@ object utilsIconUtilMod extends js.Object {
     hasIsLeafExpandedLoading: AntTreeNodeProps
   ): js.Object | Null = js.native
 }
-

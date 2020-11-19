@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.indexMod
 import org.scalajs.dom.raw.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "ReadFileError")
 @js.native
@@ -16,4 +16,3 @@ class ReadFileError protected ()
     */
   def this(message: String, file: File) = this()
 }
-

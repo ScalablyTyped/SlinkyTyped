@@ -3,7 +3,7 @@ package typingsSlinky.useragent.mod
 import typingsSlinky.useragent.anon.Family
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("useragent", "Device")
 @js.native
@@ -35,17 +35,22 @@ class Device () extends js.Object {
   def this(family: String, major: js.UndefOr[scala.Nothing], minor: String, patch: String) = this()
   def this(family: String, major: String, minor: js.UndefOr[scala.Nothing], patch: String) = this()
   def this(family: String, major: String, minor: String, patch: String) = this()
+  
   var family: String = js.native
+  
   var major: String = js.native
+  
   var minor: String = js.native
+  
   var patch: String = js.native
+  
   /**
     * Outputs a JSON string of the Device, values are defaulted to undefined so they are not outputed in the stringify.
     */
   def toJSON(): Family = js.native
+  
   /**
     * Generates the version of the Device.
     */
   def toVersion(): String = js.native
 }
-

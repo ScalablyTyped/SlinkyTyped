@@ -3,7 +3,7 @@ package typingsSlinky.awsSdkClientS3Node.mod
 import typingsSlinky.awsSdkClientS3Node.typesGetObjectAclInputMod.GetObjectAclInput
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-s3-node", "GetObjectAclCommand")
 @js.native
@@ -11,4 +11,3 @@ class GetObjectAclCommand protected ()
   extends typingsSlinky.awsSdkClientS3Node.getObjectAclCommandMod.GetObjectAclCommand {
   def this(input: GetObjectAclInput) = this()
 }
-

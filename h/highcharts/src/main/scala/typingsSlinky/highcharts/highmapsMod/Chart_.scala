@@ -5,7 +5,7 @@ import typingsSlinky.highcharts.mod.ChartCallbackFunction
 import typingsSlinky.highcharts.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts/highmaps", "Chart")
 @js.native
@@ -43,4 +43,3 @@ class Chart_ protected ()
   def this(renderTo: String, options: Options, callback: ChartCallbackFunction) = this()
   def this(renderTo: HTMLElement, options: Options, callback: ChartCallbackFunction) = this()
 }
-

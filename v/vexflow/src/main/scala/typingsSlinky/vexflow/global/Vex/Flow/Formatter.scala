@@ -5,7 +5,7 @@ import typingsSlinky.vexflow.anon.Alignrests
 import typingsSlinky.vexflow.anon.MaxIterations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Vex.Flow.Formatter")
 @js.native
@@ -13,12 +13,11 @@ class Formatter ()
   extends typingsSlinky.vexflow.Vex.Flow.Formatter {
   def this(options: MaxIterations) = this()
 }
-
 /* static members */
 @JSGlobal("Vex.Flow.Formatter")
 @js.native
 object Formatter extends js.Object {
-  var DEBUG: Boolean = js.native
+  
   def AlignRestsToNotes(notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note]): typingsSlinky.vexflow.Vex.Flow.Formatter = js.native
   def AlignRestsToNotes(
     notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note],
@@ -31,6 +30,9 @@ object Formatter extends js.Object {
     align_all_notes: Boolean,
     align_tuplets: Boolean
   ): typingsSlinky.vexflow.Vex.Flow.Formatter = js.native
+  
+  var DEBUG: Boolean = js.native
+  
   def FormatAndDraw(
     ctx: IRenderContext,
     stave: typingsSlinky.vexflow.Vex.Flow.Stave,
@@ -48,6 +50,7 @@ object Formatter extends js.Object {
     notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note],
     params: Alignrests
   ): typingsSlinky.vexflow.Vex.Flow.BoundingBox = js.native
+  
   def FormatAndDrawTab(
     ctx: IRenderContext,
     tabstave: typingsSlinky.vexflow.Vex.Flow.TabStave,
@@ -100,4 +103,3 @@ object Formatter extends js.Object {
     params: Alignrests
   ): Unit = js.native
 }
-

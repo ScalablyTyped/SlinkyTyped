@@ -3,7 +3,7 @@ package typingsSlinky.highcharts.highchartsGanttMod
 import typingsSlinky.highcharts.mod.AxisOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts/highcharts-gantt", "Axis")
 @js.native
@@ -40,4 +40,3 @@ class Axis protected ()
     */
   def this(chart: typingsSlinky.highcharts.mod.Chart_, userOptions: AxisOptions) = this()
 }
-

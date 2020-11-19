@@ -17,9 +17,10 @@ import typingsSlinky.reactEasyCrop.typesMod.Point
 import typingsSlinky.reactEasyCrop.typesMod.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactEasyCrop {
+  
   @JSImport("react-easy-crop", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -28,37 +29,52 @@ object ReactEasyCrop {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def cropSize(value: Size): this.type = set("cropSize", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disableAutomaticStylesInjection(value: Boolean): this.type = set("disableAutomaticStylesInjection", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def image(value: String): this.type = set("image", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def initialCroppedAreaPixels(value: Area): this.type = set("initialCroppedAreaPixels", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onCropComplete(value: (/* croppedArea */ Area, /* croppedAreaPixels */ Area) => Unit): this.type = set("onCropComplete", js.Any.fromFunction2(value))
+    
     @scala.inline
     def onInteractionEnd(value: () => Unit): this.type = set("onInteractionEnd", js.Any.fromFunction0(value))
+    
     @scala.inline
     def onInteractionStart(value: () => Unit): this.type = set("onInteractionStart", js.Any.fromFunction0(value))
+    
     @scala.inline
     def onMediaLoaded(value: /* mediaSize */ MediaSize => Unit): this.type = set("onMediaLoaded", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onRotationChange(value: /* rotation */ Double => Unit): this.type = set("onRotationChange", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onZoomChange(value: /* zoom */ Double => Unit): this.type = set("onZoomChange", js.Any.fromFunction1(value))
+    
     @scala.inline
     def showGrid(value: Boolean): this.type = set("showGrid", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def video(value: String): this.type = set("video", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def zoomWithScroll(value: Boolean): this.type = set("zoomWithScroll", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     aspect: Double,
@@ -79,4 +95,3 @@ object ReactEasyCrop {
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
-

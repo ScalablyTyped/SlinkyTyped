@@ -6,7 +6,7 @@ import typingsSlinky.awsSdk.configServicePlaceholdersMod.ConfigurationServicePla
 import typingsSlinky.awsSdk.coreMod.Config
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "Config")
 @js.native
@@ -17,4 +17,3 @@ import scala.scalajs.js.annotation._
 class Config_ () extends Config {
   def this(options: ConfigurationOptions with ConfigurationServicePlaceholders with APIVersions) = this()
 }
-

@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.std.HTMLTableDataCellElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This is a simple wrapper for the `Checkbox` component that allows you to
@@ -20,4 +20,3 @@ import scala.scalajs.js.annotation._
 object default extends TopLevel[
       ForwardRefExoticComponent[TableCheckboxProps with RefAttributes[HTMLTableDataCellElement]]
     ]
-

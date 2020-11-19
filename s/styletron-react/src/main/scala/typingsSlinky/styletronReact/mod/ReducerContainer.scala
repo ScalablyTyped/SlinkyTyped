@@ -5,15 +5,15 @@ import typingsSlinky.styletronReact.styletronReactBooleans.`true`
 import typingsSlinky.styletronStandard.mod.StyleObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.styletronReact.mod.AssignmentCommutativeReducerContainer
   - typingsSlinky.styletronReact.mod.NonAssignmentCommutativeReducerContainer
 */
 trait ReducerContainer extends js.Object
-
 object ReducerContainer {
+  
   @scala.inline
   def AssignmentCommutativeReducerContainer(
     assignmentCommutative: `true`,
@@ -24,6 +24,7 @@ object ReducerContainer {
     val __obj = js.Dynamic.literal(assignmentCommutative = assignmentCommutative.asInstanceOf[js.Any], factory = js.Any.fromFunction1(factory), reducer = js.Any.fromFunction2(reducer), style = style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReducerContainer]
   }
+  
   @scala.inline
   def NonAssignmentCommutativeReducerContainer(
     assignmentCommutative: `false`,
@@ -33,4 +34,3 @@ object ReducerContainer {
     __obj.asInstanceOf[ReducerContainer]
   }
 }
-

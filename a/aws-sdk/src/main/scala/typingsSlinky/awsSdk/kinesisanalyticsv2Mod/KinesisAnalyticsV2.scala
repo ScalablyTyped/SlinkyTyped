@@ -6,12 +6,11 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait KinesisAnalyticsV2 extends Service {
-  @JSName("config")
-  var config_KinesisAnalyticsV2: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Adds an Amazon CloudWatch log stream to monitor application configuration errors.
     */
@@ -27,6 +26,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: AddApplicationCloudWatchLoggingOptionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ AddApplicationCloudWatchLoggingOptionResponse, Unit]
   ): Request[AddApplicationCloudWatchLoggingOptionResponse, AWSError] = js.native
+  
   /**
     *  Adds a streaming source to your SQL-based Amazon Kinesis Data Analytics application.  You can add a streaming source when you create an application, or you can use this operation to add a streaming source after you create an application. For more information, see CreateApplication. Any configuration update, including adding a streaming source using this operation, results in a new version of the application. You can use the DescribeApplication operation to find the current application version. 
     */
@@ -40,6 +40,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: AddApplicationInputRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ AddApplicationInputResponse, Unit]
   ): Request[AddApplicationInputResponse, AWSError] = js.native
+  
   /**
     * Adds an InputProcessingConfiguration to an SQL-based Kinesis Data Analytics application. An input processor pre-processes records on the input stream before the application's SQL code executes. Currently, the only input processor available is AWS Lambda.
     */
@@ -63,6 +64,7 @@ trait KinesisAnalyticsV2 extends Service {
       Unit
     ]
   ): Request[AddApplicationInputProcessingConfigurationResponse, AWSError] = js.native
+  
   /**
     * Adds an external destination to your SQL-based Amazon Kinesis Data Analytics application. If you want Kinesis Data Analytics to deliver data from an in-application stream within your application to an external destination (such as an Kinesis data stream, a Kinesis Data Firehose delivery stream, or an AWS Lambda function), you add the relevant configuration to your application using this operation. You can configure one or more outputs for your application. Each output configuration maps an in-application stream and an external destination.  You can use one of the output configurations to deliver data from your in-application error stream to an external destination so that you can analyze the errors.   Any configuration update, including adding a streaming source using this operation, results in a new version of the application. You can use the DescribeApplication operation to find the current application version.
     */
@@ -76,6 +78,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: AddApplicationOutputRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ AddApplicationOutputResponse, Unit]
   ): Request[AddApplicationOutputResponse, AWSError] = js.native
+  
   /**
     * Adds a reference data source to an existing SQL-based Amazon Kinesis Data Analytics application. Kinesis Data Analytics reads reference data (that is, an Amazon S3 object) and creates an in-application table within your application. In the request, you provide the source (S3 bucket name and object key name), name of the in-application table to create, and the necessary mapping information that describes how data in an Amazon S3 object maps to columns in the resulting in-application table.
     */
@@ -91,6 +94,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: AddApplicationReferenceDataSourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ AddApplicationReferenceDataSourceResponse, Unit]
   ): Request[AddApplicationReferenceDataSourceResponse, AWSError] = js.native
+  
   /**
     * Adds a Virtual Private Cloud (VPC) configuration to the application. Applications can use VPCs to store and access resources securely. Note the following about VPC configurations for Kinesis Data Analytics applications:   VPC configurations are not supported for SQL applications.   When a VPC is added to a Kinesis Data Analytics application, the application can no longer be accessed from the Internet directly. To enable Internet access to the application, add an Internet gateway to your VPC.  
     */
@@ -106,6 +110,10 @@ trait KinesisAnalyticsV2 extends Service {
     params: AddApplicationVpcConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ AddApplicationVpcConfigurationResponse, Unit]
   ): Request[AddApplicationVpcConfigurationResponse, AWSError] = js.native
+  
+  @JSName("config")
+  var config_KinesisAnalyticsV2: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates an Amazon Kinesis Data Analytics application. For information about creating a Kinesis Data Analytics application, see Creating an Application. 
     */
@@ -119,6 +127,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: CreateApplicationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateApplicationResponse, Unit]
   ): Request[CreateApplicationResponse, AWSError] = js.native
+  
   /**
     * Creates a snapshot of the application's state data.
     */
@@ -132,6 +141,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: CreateApplicationSnapshotRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateApplicationSnapshotResponse, Unit]
   ): Request[CreateApplicationSnapshotResponse, AWSError] = js.native
+  
   /**
     * Deletes the specified application. Kinesis Data Analytics halts application execution and deletes the application.
     */
@@ -145,6 +155,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: DeleteApplicationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteApplicationResponse, Unit]
   ): Request[DeleteApplicationResponse, AWSError] = js.native
+  
   /**
     * Deletes an Amazon CloudWatch log stream from an Amazon Kinesis Data Analytics application. 
     */
@@ -168,6 +179,7 @@ trait KinesisAnalyticsV2 extends Service {
       Unit
     ]
   ): Request[DeleteApplicationCloudWatchLoggingOptionResponse, AWSError] = js.native
+  
   /**
     * Deletes an InputProcessingConfiguration from an input.
     */
@@ -191,6 +203,7 @@ trait KinesisAnalyticsV2 extends Service {
       Unit
     ]
   ): Request[DeleteApplicationInputProcessingConfigurationResponse, AWSError] = js.native
+  
   /**
     * Deletes the output destination configuration from your SQL-based Amazon Kinesis Data Analytics application's configuration. Kinesis Data Analytics will no longer write data from the corresponding in-application stream to the external output destination.
     */
@@ -204,6 +217,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: DeleteApplicationOutputRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteApplicationOutputResponse, Unit]
   ): Request[DeleteApplicationOutputResponse, AWSError] = js.native
+  
   /**
     * Deletes a reference data source configuration from the specified SQL-based Amazon Kinesis Data Analytics application's configuration. If the application is running, Kinesis Data Analytics immediately removes the in-application table that you created using the AddApplicationReferenceDataSource operation. 
     */
@@ -219,6 +233,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: DeleteApplicationReferenceDataSourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteApplicationReferenceDataSourceResponse, Unit]
   ): Request[DeleteApplicationReferenceDataSourceResponse, AWSError] = js.native
+  
   /**
     * Deletes a snapshot of application state.
     */
@@ -232,6 +247,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: DeleteApplicationSnapshotRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteApplicationSnapshotResponse, Unit]
   ): Request[DeleteApplicationSnapshotResponse, AWSError] = js.native
+  
   /**
     * Removes a VPC configuration from a Kinesis Data Analytics application.
     */
@@ -247,6 +263,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: DeleteApplicationVpcConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteApplicationVpcConfigurationResponse, Unit]
   ): Request[DeleteApplicationVpcConfigurationResponse, AWSError] = js.native
+  
   /**
     * Returns information about a specific Amazon Kinesis Data Analytics application. If you want to retrieve a list of all applications in your account, use the ListApplications operation.
     */
@@ -260,6 +277,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: DescribeApplicationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeApplicationResponse, Unit]
   ): Request[DescribeApplicationResponse, AWSError] = js.native
+  
   /**
     * Returns information about a snapshot of application state data.
     */
@@ -273,6 +291,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: DescribeApplicationSnapshotRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeApplicationSnapshotResponse, Unit]
   ): Request[DescribeApplicationSnapshotResponse, AWSError] = js.native
+  
   /**
     * Infers a schema for an SQL-based Amazon Kinesis Data Analytics application by evaluating sample records on the specified streaming source (Kinesis data stream or Kinesis Data Firehose delivery stream) or Amazon S3 object. In the response, the operation returns the inferred schema and also the sample records that the operation used to infer the schema.  You can use the inferred schema when configuring a streaming source for your application. When you create an application using the Kinesis Data Analytics console, the console uses this operation to infer a schema and show it in the console user interface. 
     */
@@ -286,6 +305,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: DiscoverInputSchemaRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DiscoverInputSchemaResponse, Unit]
   ): Request[DiscoverInputSchemaResponse, AWSError] = js.native
+  
   /**
     * Lists information about the current application snapshots.
     */
@@ -299,6 +319,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: ListApplicationSnapshotsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListApplicationSnapshotsResponse, Unit]
   ): Request[ListApplicationSnapshotsResponse, AWSError] = js.native
+  
   /**
     * Returns a list of Amazon Kinesis Data Analytics applications in your account. For each application, the response includes the application name, Amazon Resource Name (ARN), and status.  If you want detailed information about a specific application, use DescribeApplication.
     */
@@ -312,6 +333,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: ListApplicationsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListApplicationsResponse, Unit]
   ): Request[ListApplicationsResponse, AWSError] = js.native
+  
   /**
     * Retrieves the list of key-value tags assigned to the application. For more information, see Using Tagging.
     */
@@ -325,6 +347,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: ListTagsForResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
   ): Request[ListTagsForResourceResponse, AWSError] = js.native
+  
   /**
     * Starts the specified Amazon Kinesis Data Analytics application. After creating an application, you must exclusively call this operation to start your application.
     */
@@ -338,6 +361,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: StartApplicationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartApplicationResponse, Unit]
   ): Request[StartApplicationResponse, AWSError] = js.native
+  
   /**
     * Stops the application from processing data. You can stop an application only if it is in the running state. You can use the DescribeApplication operation to find the application state. 
     */
@@ -351,6 +375,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: StopApplicationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopApplicationResponse, Unit]
   ): Request[StopApplicationResponse, AWSError] = js.native
+  
   /**
     * Adds one or more key-value tags to a Kinesis Analytics application. Note that the maximum number of application tags includes system tags. The maximum number of user-defined application tags is 50. For more information, see Using Tagging.
     */
@@ -364,6 +389,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: TagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]
   ): Request[TagResourceResponse, AWSError] = js.native
+  
   /**
     * Removes one or more tags from a Kinesis Analytics application. For more information, see Using Tagging.
     */
@@ -377,6 +403,7 @@ trait KinesisAnalyticsV2 extends Service {
     params: UntagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceResponse, Unit]
   ): Request[UntagResourceResponse, AWSError] = js.native
+  
   /**
     * Updates an existing Amazon Kinesis Data Analytics application. Using this operation, you can update application code, input configuration, and output configuration.  Kinesis Data Analytics updates the ApplicationVersionId each time you update your application. 
     */
@@ -391,4 +418,3 @@ trait KinesisAnalyticsV2 extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateApplicationResponse, Unit]
   ): Request[UpdateApplicationResponse, AWSError] = js.native
 }
-

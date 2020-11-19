@@ -2,7 +2,7 @@ package typingsSlinky.coinbaseCommerceNode.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Pricing type.
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.fixed_price
 */
 trait PricingType extends js.Object
-
 object PricingType {
+  
   @scala.inline
   def fixed_price: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.fixed_price = "fixed_price".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.fixed_price]
+  
   @scala.inline
   def no_price: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.no_price = "no_price".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.no_price]
 }
-

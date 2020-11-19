@@ -4,15 +4,15 @@ import typingsSlinky.babelTypes.babelTypesStrings.ClassDeclaration
 import typingsSlinky.babelTypes.babelTypesStrings.ClassExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ClassDeclaration_
   - typingsSlinky.babelTypes.mod.ClassExpression_
 */
 trait Class extends js.Object
-
 object Class {
+  
   @scala.inline
   def ClassDeclaration_(
     body: ClassBody_,
@@ -27,6 +27,7 @@ object Class {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Class]
   }
+  
   @scala.inline
   def ClassExpression_(
     body: ClassBody_,
@@ -42,4 +43,3 @@ object Class {
     __obj.asInstanceOf[Class]
   }
 }
-

@@ -9,12 +9,11 @@ import typingsSlinky.lodash.mod.LoDashImplicitWrapper
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashPartial extends LodashConvertible {
-  @JSName("placeholder")
-  var placeholder_Original: __ = js.native
+  
   def apply(func: js.Function1[/* repeated */ js.Any, _]): LodashPartial27x1 = js.native
   def apply(func: js.Function1[/* repeated */ js.Any, _], args: js.Array[_]): js.Function1[/* repeated */ js.Any, _] = js.native
   def apply(func: __, args: js.Array[_]): LodashPartial27x2 = js.native
@@ -26,13 +25,14 @@ trait LodashPartial extends LodashConvertible {
   def apply[T1, T2, R](func: Function2[T1, T2, R], arg1: js.Tuple2[T1, T2]): Function0[R] = js.native
   def apply[T1, T2, T3, R](func: Function3[T1, T2, T3, R]): LodashPartial5x1[T1, T2, T3, R] = js.native
   def apply[T1, T2, T3, R](func: Function3[T1, T2, T3, R], arg1: js.Array[T1]): Function2[T2, T3, R] = js.native
-  def apply[T1, T2, T3, R](func: Function3[T1, T2, T3, R], plc1: js.Tuple2[__, T2]): Function2[T1, T3, R] = js.native
-  def apply[T1, T2, T3, R](func: Function3[T1, T2, T3, R], plc1: js.Tuple3[__, __, T3]): Function2[T1, T2, R] = js.native
+  def apply[T1, T2, T3, R](func: Function3[T1, T2, T3, R], arg1: js.Tuple2[T1, T2]): Function1[T3, R] = js.native
+  def apply[T1, T2, T3, R](func: Function3[T1, T2, T3, R], arg1: js.Tuple3[T1 | __, T2 | __, T3]): Function1[T2, R] = js.native
   def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R]): LodashPartial12x1[T1, T2, T3, T4, R] = js.native
   def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R], arg1: js.Array[T1]): Function3[T2, T3, T4, R] = js.native
   def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R], arg1: js.Tuple2[T1, T2]): Function2[T3, T4, R] = js.native
-  def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R], arg1: js.Tuple3[T1 | __, T2 | __, T3]): Function2[T2, T4, R] = js.native
-  def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R], arg1: js.Tuple4[T1 | __, T2 | __, T3 | __, T4]): Function2[T2, T3, R] = js.native
+  def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R], arg1: js.Tuple3[T1, T2, T3]): Function1[T4, R] = js.native
+  def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R], arg1: js.Tuple4[T1, T2, T3, T4]): Function0[R] = js.native
+  
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -102,5 +102,6 @@ trait LodashPartial extends LodashConvertible {
     * upperFirst, value, and words.
     **/
   def placeholder[T](value: T): LoDashImplicitWrapper[T] = js.native
+  @JSName("placeholder")
+  var placeholder_Original: __ = js.native
 }
-

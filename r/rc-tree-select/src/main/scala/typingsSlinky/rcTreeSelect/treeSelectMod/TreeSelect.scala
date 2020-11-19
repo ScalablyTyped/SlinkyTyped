@@ -5,13 +5,15 @@ import typingsSlinky.rcSelect.generateMod.RefSelectProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TreeSelect[ValueType]
   extends Component[TreeSelectProps[ValueType], js.Object, js.Any] {
-  var selectRef: ReactRef[RefSelectProps] = js.native
+  
   def blur(): Unit = js.native
+  
   def focus(): Unit = js.native
+  
+  var selectRef: ReactRef[RefSelectProps] = js.native
 }
-

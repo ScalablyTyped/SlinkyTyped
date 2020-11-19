@@ -2,11 +2,12 @@ package typingsSlinky.xregexp.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xregexp", "forEach")
 @js.native
 object forEach extends js.Object {
+  
   /**
     * Executes a provided function once per regex match. Searches always start at the beginning of the
     * string and continue until the end, regardless of the state of the regex's `global` property and
@@ -40,4 +41,3 @@ object forEach extends js.Object {
     ]
   ): Unit = js.native
 }
-

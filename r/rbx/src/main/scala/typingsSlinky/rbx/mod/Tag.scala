@@ -54,18 +54,12 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx", "Tag")
 @js.native
 object Tag extends js.Object {
-  @JSName("$$typeof")
-  var DollarDollartypeof: js.Symbol = js.native
-  var Group: ForwardRefAsExoticComponent[TagGroupProps, ReactElement] = js.native
-  var defaultProps: AsElementType with (Partial[
-    HelpersPropsOverrides with PickBadgeHelpersPropsFloa with TagModifierProps with (Pick[_, String | Double | js.Symbol])
-  ]) = js.native
-  var displayName: js.UndefOr[String] = js.native
+  
   def apply[TAsComponent /* <: ReactElement */](
     props: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with TagModifierProps with (Pick[
       ComponentProps[TAsComponent], 
@@ -75,5 +69,15 @@ object Tag extends js.Object {
       ]
     ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
   ): ReactElement | Null = js.native
+  
+  @JSName("$$typeof")
+  var DollarDollartypeof: js.Symbol = js.native
+  
+  var Group: ForwardRefAsExoticComponent[TagGroupProps, ReactElement] = js.native
+  
+  var defaultProps: AsElementType with (Partial[
+    HelpersPropsOverrides with PickBadgeHelpersPropsFloa with TagModifierProps with (Pick[_, String | Double | js.Symbol])
+  ]) = js.native
+  
+  var displayName: js.UndefOr[String] = js.native
 }
-

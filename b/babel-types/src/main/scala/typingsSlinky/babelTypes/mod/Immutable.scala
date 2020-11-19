@@ -11,7 +11,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.NumericLiteral
 import typingsSlinky.babelTypes.babelTypesStrings.StringLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.StringLiteral_
@@ -25,26 +25,29 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.JSXOpeningElement_
 */
 trait Immutable extends js.Object
-
 object Immutable {
+  
   @scala.inline
   def NullLiteral_(end: Double, loc: SourceLocation, start: Double, `type`: NullLiteral): Immutable = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Immutable]
   }
+  
   @scala.inline
   def StringLiteral_(end: Double, loc: SourceLocation, start: Double, `type`: StringLiteral, value: String): Immutable = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Immutable]
   }
+  
   @scala.inline
   def BooleanLiteral_(end: Double, loc: SourceLocation, start: Double, `type`: BooleanLiteral, value: Boolean): Immutable = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Immutable]
   }
+  
   @scala.inline
   def JSXClosingElement_(
     end: Double,
@@ -57,6 +60,7 @@ object Immutable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Immutable]
   }
+  
   @scala.inline
   def JSXAttribute_(
     end: Double,
@@ -69,12 +73,14 @@ object Immutable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Immutable]
   }
+  
   @scala.inline
   def NumericLiteral_(end: Double, loc: SourceLocation, start: Double, `type`: NumericLiteral, value: Double): Immutable = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Immutable]
   }
+  
   @scala.inline
   def JSXExpressionContainer_(
     end: Double,
@@ -87,6 +93,7 @@ object Immutable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Immutable]
   }
+  
   @scala.inline
   def JSXOpeningElement_(
     attributes: js.Array[JSXAttribute_],
@@ -101,6 +108,7 @@ object Immutable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Immutable]
   }
+  
   @scala.inline
   def JSXElement_(
     children: js.Array[typingsSlinky.babelTypes.mod.JSXElement_ | JSXExpressionContainer_ | JSXText_],
@@ -116,4 +124,3 @@ object Immutable {
     __obj.asInstanceOf[Immutable]
   }
 }
-

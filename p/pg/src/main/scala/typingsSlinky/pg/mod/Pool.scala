@@ -7,7 +7,7 @@ import typingsSlinky.pg.pgStrings.error
 import typingsSlinky.pg.pgStrings.remove
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pg", "Pool")
 @js.native
@@ -18,9 +18,7 @@ import scala.scalajs.js.annotation._
   */
 class Pool () extends EventEmitter {
   def this(config: PoolConfig) = this()
-  val idleCount: Double = js.native
-  val totalCount: Double = js.native
-  val waitingCount: Double = js.native
+  
   def connect(): js.Promise[PoolClient] = js.native
   def connect(
     callback: js.Function3[
@@ -30,8 +28,12 @@ class Pool () extends EventEmitter {
       Unit
     ]
   ): Unit = js.native
+  
   def end(): js.Promise[Unit] = js.native
   def end(callback: js.Function0[Unit]): Unit = js.native
+  
+  val idleCount: Double = js.native
+  
   @JSName("on")
   def on_acquire(event: acquire, listener: js.Function1[/* client */ PoolClient, Unit]): this.type = js.native
   @JSName("on")
@@ -41,6 +43,7 @@ class Pool () extends EventEmitter {
   def on_error(event: error, listener: js.Function2[/* err */ js.Error, /* client */ PoolClient, Unit]): this.type = js.native
   @JSName("on")
   def on_remove(event: remove, listener: js.Function1[/* client */ PoolClient, Unit]): this.type = js.native
+  
   def query[T /* <: Submittable */](queryStream: T): T = js.native
   // tslint:disable:no-unnecessary-generics
   def query[R /* <: js.Array[_] */, I /* <: js.Array[_] */](queryConfig: QueryArrayConfig[I]): js.Promise[QueryArrayResult[R]] = js.native
@@ -66,5 +69,8 @@ class Pool () extends EventEmitter {
     values: I,
     callback: js.Function2[/* err */ js.Error, /* result */ QueryResult[R], Unit]
   ): Unit = js.native
+  
+  val totalCount: Double = js.native
+  
+  val waitingCount: Double = js.native
 }
-

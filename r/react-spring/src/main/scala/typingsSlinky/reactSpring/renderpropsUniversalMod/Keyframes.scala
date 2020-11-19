@@ -29,17 +29,17 @@ import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-spring/renderprops-universal", "Keyframes")
 @js.native
 class Keyframes[S /* <: js.Object */, DS /* <: js.Object */] ()
   extends Component[KeyframesProps[DS] with S, js.Object, js.Any]
-
 /* static members */
 @JSImport("react-spring/renderprops-universal", "Keyframes")
 @js.native
 object Keyframes extends js.Object {
+  
   def Spring[S /* <: js.Object */, DS /* <: js.Object */](states: js.Object): js.Function1[
     /* props */ js.Object, 
     Keyframes[
@@ -53,6 +53,7 @@ object Keyframes extends js.Object {
       DS
     ]
   ] = js.native
+  
   def Trail[S /* <: js.Object */, DS /* <: js.Object */](states: js.Object): js.Function1[
     /* props */ js.Object, 
     Keyframes[
@@ -66,6 +67,7 @@ object Keyframes extends js.Object {
       DS
     ]
   ] = js.native
+  
   def Transition[S /* <: js.Object */, DS /* <: js.Object */](states: js.Object): js.Function1[
     /* props */ js.Object, 
     Keyframes[
@@ -79,6 +81,6 @@ object Keyframes extends js.Object {
       DS
     ]
   ] = js.native
+  
   def create[S /* <: js.Object */, DS /* <: js.Object */](primitive: ReactComponentClass[js.Object]): js.Function1[/* states */ js.Object, js.Function1[/* props */ js.Object, Keyframes[S, DS]]] = js.native
 }
-

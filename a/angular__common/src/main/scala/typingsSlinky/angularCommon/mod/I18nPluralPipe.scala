@@ -4,13 +4,15 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.angularCore.mod.PipeTransform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/common", "I18nPluralPipe")
 @js.native
 class I18nPluralPipe protected () extends PipeTransform {
   def this(_localization: NgLocalization) = this()
+  
   var _localization: js.Any = js.native
+  
   /**
     * @param value the number to be formatted
     * @param pluralMap an object that mimics the ICU format, see
@@ -21,4 +23,3 @@ class I18nPluralPipe protected () extends PipeTransform {
   def transform(value: Double, pluralMap: StringDictionary[String]): String = js.native
   def transform(value: Double, pluralMap: StringDictionary[String], locale: String): String = js.native
 }
-

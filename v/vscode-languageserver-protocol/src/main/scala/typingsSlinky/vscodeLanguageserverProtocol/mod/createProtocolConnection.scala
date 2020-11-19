@@ -3,11 +3,12 @@ package typingsSlinky.vscodeLanguageserverProtocol.mod
 import typingsSlinky.vscodeJsonrpc.mod.Logger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageserver-protocol", "createProtocolConnection")
 @js.native
 object createProtocolConnection extends js.Object {
+  
   def apply(
     reader: typingsSlinky.vscodeJsonrpc.messageReaderMod.MessageReader,
     writer: typingsSlinky.vscodeJsonrpc.messageWriterMod.MessageWriter,
@@ -20,4 +21,3 @@ object createProtocolConnection extends js.Object {
     strategy: typingsSlinky.vscodeJsonrpc.mod.ConnectionStrategy
   ): ProtocolConnection = js.native
 }
-

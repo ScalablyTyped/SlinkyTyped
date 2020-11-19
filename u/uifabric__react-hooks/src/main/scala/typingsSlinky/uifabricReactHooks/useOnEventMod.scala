@@ -6,11 +6,12 @@ import org.scalajs.dom.raw.Window
 import slinky.core.facade.ReactRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@uifabric/react-hooks/lib/useOnEvent", JSImport.Namespace)
 @js.native
 object useOnEventMod extends js.Object {
+  
   def useOnEvent[TElement /* <: Element */, TEvent /* <: Event */](element: TElement, eventName: String, callback: js.Function1[/* ev */ TEvent, Unit]): Unit = js.native
   def useOnEvent[TElement /* <: Element */, TEvent /* <: Event */](
     element: TElement,
@@ -55,4 +56,3 @@ object useOnEventMod extends js.Object {
     useCapture: Boolean
   ): Unit = js.native
 }
-

@@ -8,10 +8,11 @@ import typingsSlinky.dagre.mod.graphlib.Graph
 import typingsSlinky.dagreD3.anon.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Render_ extends js.Object {
+  
   def apply(
     selection: Selection_[
       _, 
@@ -21,6 +22,7 @@ trait Render_ extends js.Object {
     ],
     g: Graph[js.Object]
   ): Unit = js.native
+  
   // see http://cpettitt.github.io/project/dagre-d3/latest/demo/user-defined.html for example usage
   def arrows(): StringDictionary[
     js.Function4[
@@ -36,6 +38,7 @@ trait Render_ extends js.Object {
       Unit
     ]
   ] = js.native
+  
   def shapes(): StringDictionary[
     js.Function3[
       /* parent */ Selection_[
@@ -50,4 +53,3 @@ trait Render_ extends js.Object {
     ]
   ] = js.native
 }
-

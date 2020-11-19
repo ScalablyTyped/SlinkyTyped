@@ -5,11 +5,12 @@ import org.scalajs.dom.raw.Window
 import typingsSlinky.std.stdStrings.deviceorientationabsolute
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("removeEventListener")
 @js.native
 object removeEventListener_deviceorientationabsolute extends js.Object {
+  
   def apply(
     `type`: deviceorientationabsolute,
     listener: js.ThisFunction1[
@@ -37,4 +38,3 @@ object removeEventListener_deviceorientationabsolute extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
 }
-

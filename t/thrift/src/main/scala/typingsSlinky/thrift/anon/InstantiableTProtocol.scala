@@ -5,8 +5,7 @@ import typingsSlinky.thrift.mod.TProtocol
 import typingsSlinky.thrift.mod.TTransport
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantiableTProtocol extends Instantiable1[/* trans */ TTransport, TProtocol]
-

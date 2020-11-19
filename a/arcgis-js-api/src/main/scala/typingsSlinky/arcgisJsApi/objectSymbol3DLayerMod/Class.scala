@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.ObjectSymbol3DLayer
 import typingsSlinky.arcgisJsApi.esri.ObjectSymbol3DLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols/ObjectSymbol3DLayer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends ObjectSymbol3DLayer {
   def this(properties: ObjectSymbol3DLayerProperties) = this()
 }
-

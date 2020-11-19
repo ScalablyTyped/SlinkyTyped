@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.WebGLRenderingContext
 import typingsSlinky.three.webGLAttributesMod.WebGLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aframe", "THREE.WebGLGeometries")
 @js.native
@@ -16,4 +16,3 @@ class WebGLGeometries protected ()
     info: typingsSlinky.three.webGLInfoMod.WebGLInfo
   ) = this()
 }
-

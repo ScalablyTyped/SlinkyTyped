@@ -7,13 +7,13 @@ import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.SymbolicTensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/layers/merge", "multiply")
 @js.native
 object multiply extends js.Object {
+  
   def apply(): Layer | SymbolicTensor | Tensor[Rank] = js.native
   def apply(config: js.Array[SymbolicTensor | Tensor[Rank]]): Layer | SymbolicTensor | Tensor[Rank] = js.native
   def apply(config: LayerArgs): Layer | SymbolicTensor | Tensor[Rank] = js.native
 }
-

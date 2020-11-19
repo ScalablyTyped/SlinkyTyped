@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxTabsOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxTabs")
 @js.native
@@ -16,4 +16,3 @@ class dxTabs protected ()
   def this(element: JQuery, options: dxTabsOptions[typingsSlinky.devextreme.mod.DevExpress.ui.dxTabs]) = this()
   def this(element: Element, options: dxTabsOptions[typingsSlinky.devextreme.mod.DevExpress.ui.dxTabs]) = this()
 }
-

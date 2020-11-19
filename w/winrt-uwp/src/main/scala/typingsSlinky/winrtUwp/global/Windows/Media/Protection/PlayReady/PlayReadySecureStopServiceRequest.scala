@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.Media.Protection.PlayReady
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Manages secure stop messages. */
 @JSGlobal("Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest")
@@ -21,4 +21,3 @@ class PlayReadySecureStopServiceRequest protected ()
     */
   def this(sessionID: String, publisherCertBytes: js.Array[Double]) = this()
 }
-

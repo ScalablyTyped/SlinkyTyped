@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.indexMod
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "PostProcessRenderEffect")
 @js.native
@@ -37,4 +37,3 @@ class PostProcessRenderEffect protected ()
     singleInstance: Boolean
   ) = this()
 }
-

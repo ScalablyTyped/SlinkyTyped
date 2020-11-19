@@ -2,9 +2,10 @@ package typingsSlinky.qlikEngineapi
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object EngineAPI {
+  
   /**
     * BookmarkListObject width extend GenericObject
     */
@@ -12,10 +13,12 @@ package object EngineAPI {
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericBookmarkListProperties, 
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericBookmarkListLayout
   ]
+  
   type IDimensionListObject = typingsSlinky.qlikEngineapi.EngineAPI.IGenericObjectPrototype[
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericDimensionsListProperties, 
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericDimensionListLayout
   ]
+  
   /**
     * FieldListObject width extend GenericObject
     */
@@ -23,11 +26,14 @@ package object EngineAPI {
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericFieldListProperties, 
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericFieldLayout
   ]
+  
   /**
     * GenericBookmarkProperties width extend GenericProperties
     */
   type IGenericBookmarkProperties = typingsSlinky.qlikEngineapi.EngineAPI.IGenericProperties
+  
   type IGenericDerivedFieldProperties = typingsSlinky.qlikEngineapi.EngineAPI.IGenericProperties
+  
   /**
     * GenericList...
     */
@@ -35,6 +41,7 @@ package object EngineAPI {
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericListProperties, 
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericListLayout
   ]
+  
   /**
     * HyperCubeObject width extend GenericObjectPrototype<GenericHyperCubeProperties, GenericHyperCubeLayout>
     */
@@ -42,6 +49,7 @@ package object EngineAPI {
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericHyperCubeProperties, 
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericHyperCubeLayout
   ]
+  
   /**
     * IMeassureListObject
     */
@@ -49,10 +57,12 @@ package object EngineAPI {
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericMeasureListProperties, 
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericMeasureListLayout
   ]
+  
   /**
     * NxCellRows...
     */
   type INxCellRows = js.Array[typingsSlinky.qlikEngineapi.EngineAPI.INxCell]
+  
   /**
     * VariableListObject width extend GenericObject
     */
@@ -60,6 +70,7 @@ package object EngineAPI {
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericVariableListProperties, 
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericVariableListLayout
   ]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.N
     - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.H

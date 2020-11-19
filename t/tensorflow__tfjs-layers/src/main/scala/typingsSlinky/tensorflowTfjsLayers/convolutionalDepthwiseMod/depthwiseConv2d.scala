@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.DataFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/layers/convolutional_depthwise", "depthwiseConv2d")
 @js.native
 object depthwiseConv2d extends js.Object {
+  
   def apply(x: Tensor[Rank], depthwiseKernel: Tensor[Rank]): Tensor[Rank] = js.native
   def apply(
     x: Tensor[Rank],
@@ -117,4 +118,3 @@ object depthwiseConv2d extends js.Object {
     dilationRate: js.Tuple2[Double, Double]
   ): Tensor[Rank] = js.native
 }
-

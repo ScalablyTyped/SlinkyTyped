@@ -10,11 +10,12 @@ import typingsSlinky.jose.mod.JWK.Key
 import typingsSlinky.jose.mod.NoneKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jose", "JWT.AccessToken")
 @js.native
 object AccessToken extends js.Object {
+  
   def verify(
     jwt: String,
     key: ConsumeKeyInputWithNone | EmbeddedVerifyKeys,
@@ -28,4 +29,3 @@ object AccessToken extends js.Object {
     options: VerifyOptions[`true`] with VerifyProfileOptions[atPlussignJWT]
   ): completeResult[Key] = js.native
 }
-

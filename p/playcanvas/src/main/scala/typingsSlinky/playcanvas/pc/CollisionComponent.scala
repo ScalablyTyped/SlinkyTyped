@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create a new CollisionComponent.
@@ -36,36 +36,43 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait CollisionComponent extends Component {
+  
   /**
     * The asset for the model of the mesh collision volume - can also be
     an asset id. Defaults to null.
     */
   var asset: Asset = js.native
+  
   /**
     * The local space axis with which the capsule, cylinder or cone-shaped
     collision volume's length is aligned. 0 for X, 1 for Y and 2 for Z. Defaults to 1 (Y-axis).
     */
   var axis: Double = js.native
+  
   /**
     * The half-extents of the box-shaped collision volume in the
     x, y and z axes. Defaults to [0.5, 0.5, 0.5].
     */
   var halfExtents: Vec3 = js.native
+  
   /**
     * The total height of the capsule, cylinder or cone-shaped collision
     volume from tip to tip. Defaults to 2.
     */
   var height: Double = js.native
+  
   /**
     * The model that is added to the scene graph for the mesh collision
     volume.
     */
   var model: Model = js.native
+  
   /**
     * The radius of the sphere, capsule, cylinder or cone-shaped collision
     volumes. Defaults to 0.5.
     */
   var radius: Double = js.native
+  
   /**
     * The type of the collision volume. Can be:
     
@@ -83,4 +90,3 @@ trait CollisionComponent extends Component {
     */
   var `type`: String = js.native
 }
-

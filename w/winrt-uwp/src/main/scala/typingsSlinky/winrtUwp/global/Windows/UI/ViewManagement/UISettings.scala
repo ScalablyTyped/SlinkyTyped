@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.UI.ViewManagement
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Contains a set of common app user interface settings and operations. */
 @JSGlobal("Windows.UI.ViewManagement.UISettings")
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
 /** Creates a new default instance of the UISettings class. */
 class UISettings ()
   extends typingsSlinky.winrtUwp.Windows.UI.ViewManagement.UISettings
-

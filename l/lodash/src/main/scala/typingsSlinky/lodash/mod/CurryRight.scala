@@ -2,13 +2,12 @@ package typingsSlinky.lodash.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // curryRight
 @js.native
 trait CurryRight extends js.Object {
-  @JSName("placeholder")
-  var placeholder_Original: __ = js.native
+  
   /**
     * This method is like _.curry except that arguments are applied to func in the manner of _.partialRight
     * instead of _.partial.
@@ -57,6 +56,7 @@ trait CurryRight extends js.Object {
     func: js.Function5[/* t1 */ T1, /* t2 */ T2, /* t3 */ T3, /* t4 */ T4, /* t5 */ T5, R],
     arity: Double
   ): RightCurriedFunction5[T1, T2, T3, T4, T5, R] = js.native
+  
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -126,5 +126,6 @@ trait CurryRight extends js.Object {
     * upperFirst, value, and words.
     **/
   def placeholder[T](value: T): LoDashImplicitWrapper[T] = js.native
+  @JSName("placeholder")
+  var placeholder_Original: __ = js.native
 }
-

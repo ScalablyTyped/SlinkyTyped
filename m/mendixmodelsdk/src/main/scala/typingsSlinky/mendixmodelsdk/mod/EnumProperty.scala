@@ -5,7 +5,7 @@ import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
 import typingsSlinky.mendixmodelsdk.versionChecksMod.ILifeCycle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "EnumProperty")
 @js.native
@@ -23,4 +23,3 @@ class EnumProperty[T /* <: typingsSlinky.mendixmodelsdk.instancesMod.AbstractEnu
       ]
   ) = this()
 }
-

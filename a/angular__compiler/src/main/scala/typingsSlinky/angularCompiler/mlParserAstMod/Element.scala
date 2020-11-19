@@ -4,7 +4,7 @@ import typingsSlinky.angularCompiler.i18nAstMod.I18nMeta
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/ml_parser/ast", "Element")
 @js.native
@@ -122,10 +122,14 @@ class Element protected () extends NodeWithI18n {
     endSourceSpan: ParseSourceSpan,
     i18n: I18nMeta
   ) = this()
+  
   var attrs: js.Array[Attribute] = js.native
+  
   var children: js.Array[Node] = js.native
+  
   var endSourceSpan: ParseSourceSpan | Null = js.native
+  
   var name: String = js.native
+  
   var startSourceSpan: ParseSourceSpan | Null = js.native
 }
-

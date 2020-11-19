@@ -8,11 +8,12 @@ import typingsSlinky.graphqlToolsUtils.visitResultMod.ResultVisitorMap
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server/dist/exports", "visitResult")
 @js.native
 object visitResult extends js.Object {
+  
   def apply(result: ExecutionResult[Record[String, _]], request: Request, schema: GraphQLSchema): js.Any = js.native
   def apply(
     result: ExecutionResult[Record[String, _]],
@@ -35,4 +36,3 @@ object visitResult extends js.Object {
     errorVisitorMap: ErrorVisitorMap
   ): js.Any = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create a new ParticleSystemComponent.
@@ -99,4 +99,3 @@ class ParticleSystemComponent protected ()
     entity: typingsSlinky.playcanvas.pc.Entity
   ) = this()
 }
-

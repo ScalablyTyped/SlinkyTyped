@@ -9,7 +9,7 @@ import typingsSlinky.uirouterCore.urlMatcherFactoryMod.ParamFactory
 import typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofUrlMatcher
@@ -26,8 +26,7 @@ trait TypeofUrlMatcher
       /* config */ UrlMatcherCompileConfig, 
       UrlMatcher
     ] {
-  /** @internal */
-  var nameValidator: js.RegExp = js.native
+  
   /**
     * Compare two UrlMatchers
     *
@@ -38,11 +37,16 @@ trait TypeofUrlMatcher
     * The comparison function sorts static segments before dynamic ones.
     */
   def compare(a: UrlMatcher, b: UrlMatcher): Double = js.native
+  
   /** @internal */
   def encodeDashes(str: String): String = js.native
+  
+  /** @internal */
+  var nameValidator: js.RegExp = js.native
+  
   /** @internal Given a matcher, return an array with the matcher's path segments and path params, in order */
   def pathSegmentsAndParams(matcher: UrlMatcher): js.Any = js.native
+  
   /** @internal Given a matcher, return an array with the matcher's query params */
   def queryParams(matcher: UrlMatcher): js.Array[Param] = js.native
 }
-

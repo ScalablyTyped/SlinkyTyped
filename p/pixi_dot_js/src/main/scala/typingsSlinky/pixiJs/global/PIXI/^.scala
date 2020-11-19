@@ -2,11 +2,12 @@ package typingsSlinky.pixiJs.global.PIXI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("PIXI")
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Regexp for data URI.
     * Based on: {@link https://github.com/ragingwind/data-uri-regex}
@@ -17,6 +18,7 @@ object ^ extends js.Object {
     * @example data:image/png;base64
     */
   var DATA_URI: js.RegExp | String = js.native
+  
   /**
     * Conversion factor for converting degrees to radians.
     *
@@ -25,6 +27,7 @@ object ^ extends js.Object {
     * @memberof PIXI
     */
   var DEG_TO_RAD: Double = js.native
+  
   /**
     * Two Pi.
     *
@@ -33,6 +36,7 @@ object ^ extends js.Object {
     * @memberof PIXI
     */
   var PI_2: Double = js.native
+  
   /**
     * Conversion factor for converting radians to degrees.
     *
@@ -41,6 +45,7 @@ object ^ extends js.Object {
     * @memberof PIXI
     */
   var RAD_TO_DEG: Double = js.native
+  
   /**
     * String of the current PIXI version.
     *
@@ -51,12 +56,14 @@ object ^ extends js.Object {
     * @type {string}
     */
   var VERSION: String = js.native
+  
   /**
     * Default filter vertex shader
     * @memberof PIXI
     * @member {string} defaultFilterVertex
     */
   var defaultFilterVertex: String = js.native
+  
   /**
     * Default vertex shader
     * @memberof PIXI
@@ -64,4 +71,3 @@ object ^ extends js.Object {
     */
   var defaultVertex: String = js.native
 }
-

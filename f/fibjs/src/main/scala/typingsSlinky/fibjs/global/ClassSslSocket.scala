@@ -2,7 +2,7 @@ package typingsSlinky.fibjs.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Class_SslSocket")
 @js.native
@@ -42,4 +42,3 @@ class ClassSslSocket ()
     */
   def this(crt: typingsSlinky.fibjs.ClassX509Cert, key: typingsSlinky.fibjs.ClassPKey) = this()
 }
-

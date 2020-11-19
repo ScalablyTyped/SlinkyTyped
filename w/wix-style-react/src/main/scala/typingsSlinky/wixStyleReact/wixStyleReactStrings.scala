@@ -11,9 +11,79 @@ import typingsSlinky.wixStyleReact.textMod.TextSkin
 import typingsSlinky.wixStyleReact.textMod.TextWeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object wixStyleReactStrings {
+  
+  @scala.inline
+  def blue: blue = "blue".asInstanceOf[blue]
+  
+  @scala.inline
+  def bold: bold = "bold".asInstanceOf[bold]
+  
+  @scala.inline
+  def dark: dark = "dark".asInstanceOf[dark]
+  
+  @scala.inline
+  def destructive: destructive = "destructive".asInstanceOf[destructive]
+  
+  @scala.inline
+  def disabled: disabled = "disabled".asInstanceOf[disabled]
+  
+  @scala.inline
+  def error: error = "error".asInstanceOf[error]
+  
+  @scala.inline
+  def inverted: inverted = "inverted".asInstanceOf[inverted]
+  
+  @scala.inline
+  def large: large = "large".asInstanceOf[large]
+  
+  @scala.inline
+  def light: light = "light".asInstanceOf[light]
+  
+  @scala.inline
+  def loading: loading = "loading".asInstanceOf[loading]
+  
+  @scala.inline
+  def medium: medium = "medium".asInstanceOf[medium]
+  
+  @scala.inline
+  def normal: normal = "normal".asInstanceOf[normal]
+  
+  @scala.inline
+  def premium: premium = "premium".asInstanceOf[premium]
+  
+  @scala.inline
+  def `premium-light`: `premium-light` = "premium-light".asInstanceOf[`premium-light`]
+  
+  @scala.inline
+  def primary: primary = "primary".asInstanceOf[primary]
+  
+  @scala.inline
+  def secondary: secondary = "secondary".asInstanceOf[secondary]
+  
+  @scala.inline
+  def small: small = "small".asInstanceOf[small]
+  
+  @scala.inline
+  def standard: standard = "standard".asInstanceOf[standard]
+  
+  @scala.inline
+  def success: success = "success".asInstanceOf[success]
+  
+  @scala.inline
+  def thin: thin = "thin".asInstanceOf[thin]
+  
+  @scala.inline
+  def tiny: tiny = "tiny".asInstanceOf[tiny]
+  
+  @scala.inline
+  def transparent: transparent = "transparent".asInstanceOf[transparent]
+  
+  @scala.inline
+  def white: white = "white".asInstanceOf[white]
+  
   @js.native
   sealed trait blue extends LoaderColor
   
@@ -101,52 +171,4 @@ object wixStyleReactStrings {
   
   @js.native
   sealed trait white extends LoaderColor
-  
-  @scala.inline
-  def blue: blue = "blue".asInstanceOf[blue]
-  @scala.inline
-  def bold: bold = "bold".asInstanceOf[bold]
-  @scala.inline
-  def dark: dark = "dark".asInstanceOf[dark]
-  @scala.inline
-  def destructive: destructive = "destructive".asInstanceOf[destructive]
-  @scala.inline
-  def disabled: disabled = "disabled".asInstanceOf[disabled]
-  @scala.inline
-  def error: error = "error".asInstanceOf[error]
-  @scala.inline
-  def inverted: inverted = "inverted".asInstanceOf[inverted]
-  @scala.inline
-  def large: large = "large".asInstanceOf[large]
-  @scala.inline
-  def light: light = "light".asInstanceOf[light]
-  @scala.inline
-  def loading: loading = "loading".asInstanceOf[loading]
-  @scala.inline
-  def medium: medium = "medium".asInstanceOf[medium]
-  @scala.inline
-  def normal: normal = "normal".asInstanceOf[normal]
-  @scala.inline
-  def premium: premium = "premium".asInstanceOf[premium]
-  @scala.inline
-  def `premium-light`: `premium-light` = "premium-light".asInstanceOf[`premium-light`]
-  @scala.inline
-  def primary: primary = "primary".asInstanceOf[primary]
-  @scala.inline
-  def secondary: secondary = "secondary".asInstanceOf[secondary]
-  @scala.inline
-  def small: small = "small".asInstanceOf[small]
-  @scala.inline
-  def standard: standard = "standard".asInstanceOf[standard]
-  @scala.inline
-  def success: success = "success".asInstanceOf[success]
-  @scala.inline
-  def thin: thin = "thin".asInstanceOf[thin]
-  @scala.inline
-  def tiny: tiny = "tiny".asInstanceOf[tiny]
-  @scala.inline
-  def transparent: transparent = "transparent".asInstanceOf[transparent]
-  @scala.inline
-  def white: white = "white".asInstanceOf[white]
 }
-

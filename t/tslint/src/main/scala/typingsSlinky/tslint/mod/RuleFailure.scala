@@ -3,7 +3,7 @@ package typingsSlinky.tslint.mod
 import typingsSlinky.typescript.mod.SourceFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tslint", "RuleFailure")
 @js.native
@@ -27,11 +27,10 @@ class RuleFailure protected ()
     fix: typingsSlinky.tslint.ruleMod.Replacement
   ) = this()
 }
-
 /* static members */
 @JSImport("tslint", "RuleFailure")
 @js.native
 object RuleFailure extends js.Object {
+  
   def compare(a: typingsSlinky.tslint.ruleMod.RuleFailure, b: typingsSlinky.tslint.ruleMod.RuleFailure): Double = js.native
 }
-

@@ -4,13 +4,15 @@ import typingsSlinky.alexaSdk.anon.HeightPixels
 import typingsSlinky.alexaSdk.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("alexa-sdk", "utils")
 @js.native
 object utils extends js.Object {
+  
   @js.native
   object ImageUtils extends js.Object {
+    
     /**
       * Creates an image object with a single source
       * These images may be in either JPEG or PNG formats, with the appropriate file extensions.
@@ -91,6 +93,7 @@ object utils extends js.Object {
     ): Image = js.native
     def makeImage(url: String, widthPixels: Double, heightPixels: Double, size: ImageSourceSize): Image = js.native
     def makeImage(url: String, widthPixels: Double, heightPixels: Double, size: ImageSourceSize, description: String): Image = js.native
+    
     /**
       * Creates an image object with a multiple sources, source images are provided as an array of image objects
       * These images may be in either JPEG or PNG formats, with the appropriate file extensions.
@@ -119,18 +122,21 @@ object utils extends js.Object {
     */
   @js.native
   object TextUtils extends js.Object {
+    
     /**
       * Creates a plain TextField object with contents : text
       * @param text contents of plain text object
       * @returns TextField
       */
     def makePlainText(text: String): TextField = js.native
+    
     /**
       * Creates a rich TextField object with contents : text
       * @param text text
       * @returns TextField
       */
     def makeRichText(text: String): TextField = js.native
+    
     /**
       * Creates a textContent
       * @param primaryText primary Text
@@ -140,6 +146,4 @@ object utils extends js.Object {
       */
     def makeTextContent(primaryText: Text, secondaryText: Text, tertiaryText: Text): TextContent = js.native
   }
-  
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxResponsiveBoxOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxResponsiveBox")
 @js.native
@@ -16,4 +16,3 @@ class dxResponsiveBox protected ()
   def this(element: JQuery, options: dxResponsiveBoxOptions) = this()
   def this(element: Element, options: dxResponsiveBoxOptions) = this()
 }
-

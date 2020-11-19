@@ -12,9 +12,10 @@ import typingsSlinky.reactResizable.mod.ResizeCallbackData
 import typingsSlinky.reactResizable.mod.ResizeHandle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Resizable {
+  
   @JSImport("react-resizable", "Resizable")
   @js.native
   object component extends js.Object
@@ -23,43 +24,58 @@ object Resizable {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactResizable.mod.Resizable] {
+    
     @scala.inline
     def axis(value: Axis): this.type = set("axis", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def draggableOpts(value: js.Any): this.type = set("draggableOpts", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def handleReactElement(value: ReactElement): this.type = set("handle", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def handleFunction1(value: /* resizeHandle */ ResizeHandle => ReactElement): this.type = set("handle", js.Any.fromFunction1(value))
+    
     @scala.inline
     def handle(value: ReactElement | (js.Function1[/* resizeHandle */ ResizeHandle, ReactElement])): this.type = set("handle", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def handleSize(value: js.Tuple2[Double, Double]): this.type = set("handleSize", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def lockAspectRatio(value: Boolean): this.type = set("lockAspectRatio", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def maxConstraints(value: js.Tuple2[Double, Double]): this.type = set("maxConstraints", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def minConstraints(value: js.Tuple2[Double, Double]): this.type = set("minConstraints", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onResize(value: (/* e */ SyntheticEvent[Event, Element], /* data */ ResizeCallbackData) => _): this.type = set("onResize", js.Any.fromFunction2(value))
+    
     @scala.inline
     def onResizeStart(value: (/* e */ SyntheticEvent[Event, Element], /* data */ ResizeCallbackData) => _): this.type = set("onResizeStart", js.Any.fromFunction2(value))
+    
     @scala.inline
     def onResizeStop(value: (/* e */ SyntheticEvent[Event, Element], /* data */ ResizeCallbackData) => _): this.type = set("onResizeStop", js.Any.fromFunction2(value))
+    
     @scala.inline
     def resizeHandlesVarargs(value: ResizeHandle*): this.type = set("resizeHandles", js.Array(value :_*))
+    
     @scala.inline
     def resizeHandles(value: js.Array[ResizeHandle]): this.type = set("resizeHandles", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ResizableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(height: Double, width: Double): Builder = {
     val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ResizableProps]))
   }
 }
-

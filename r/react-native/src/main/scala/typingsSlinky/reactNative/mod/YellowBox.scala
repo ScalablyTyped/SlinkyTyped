@@ -12,7 +12,7 @@ import typingsSlinky.react.mod.WeakValidationMap
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native", "YellowBox")
 @js.native
@@ -21,20 +21,27 @@ class YellowBox protected ()
   def this(props: js.Any) = this()
   def this(props: js.Any, context: js.Any) = this()
 }
-
 @JSImport("react-native", "YellowBox")
 @js.native
 object YellowBox
   extends Instantiable1[/* props */ js.Any, ReactComponentClass[js.Any]]
      with Instantiable2[/* props */ js.Any, /* context */ js.Any, ReactComponentClass[js.Any]] {
+  
   var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native
+  
   var contextType: js.UndefOr[Context[_]] = js.native
+  
   var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
+  
   var defaultProps: js.UndefOr[Partial[_]] = js.native
+  
   var displayName: js.UndefOr[String] = js.native
+  
   var getDerivedStateFromError: js.UndefOr[GetDerivedStateFromError[_, _]] = js.native
+  
   var getDerivedStateFromProps: js.UndefOr[GetDerivedStateFromProps[_, _]] = js.native
-  var propTypes: js.UndefOr[WeakValidationMap[_]] = js.native
+  
   def ignoreWarnings(warnings: js.Array[String]): Unit = js.native
+  
+  var propTypes: js.UndefOr[WeakValidationMap[_]] = js.native
 }
-

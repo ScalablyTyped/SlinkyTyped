@@ -6,21 +6,22 @@ import typingsSlinky.chartjsPluginAnnotation.chartjsPluginAnnotationStrings.line
 import typingsSlinky.chartjsPluginAnnotation.chartjsPluginAnnotationStrings.vertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.chartjsPluginAnnotation.mod.LineAnnotationOptions
   - typingsSlinky.chartjsPluginAnnotation.mod.BoxAnnotationOptions
 */
 trait AnnotationOptions extends js.Object
-
 object AnnotationOptions {
+  
   @scala.inline
   def LineAnnotationOptions(mode: horizontal | vertical, scaleID: String, `type`: line, value: Double | String): AnnotationOptions = {
     val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any], scaleID = scaleID.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotationOptions]
   }
+  
   @scala.inline
   def BoxAnnotationOptions(
     `type`: box,
@@ -34,4 +35,3 @@ object AnnotationOptions {
     __obj.asInstanceOf[AnnotationOptions]
   }
 }
-

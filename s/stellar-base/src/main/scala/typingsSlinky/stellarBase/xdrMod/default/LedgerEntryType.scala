@@ -2,20 +2,22 @@ package typingsSlinky.stellarBase.xdrMod.default
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stellar-base/types/xdr", "LedgerEntryType")
 @js.native
 class LedgerEntryType ()
   extends typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryType
-
 /* static members */
 @JSImport("stellar-base/types/xdr", "LedgerEntryType")
 @js.native
 object LedgerEntryType extends js.Object {
+  
   def account(): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryType = js.native
+  
   def datum(): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryType = js.native
+  
   def offer(): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryType = js.native
+  
   def trustline(): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryType = js.native
 }
-

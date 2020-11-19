@@ -4,7 +4,7 @@ import typingsSlinky.stormReactDiagrams.baseEntityMod.BaseListener
 import typingsSlinky.stormReactDiagrams.baseModelMod.BaseModelListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("storm-react-diagrams", "AbstractFactory")
 @js.native
@@ -14,4 +14,3 @@ BaseModelListener] */] protected ()
   extends typingsSlinky.stormReactDiagrams.abstractFactoryMod.AbstractFactory[T] {
   def this(name: String) = this()
 }
-

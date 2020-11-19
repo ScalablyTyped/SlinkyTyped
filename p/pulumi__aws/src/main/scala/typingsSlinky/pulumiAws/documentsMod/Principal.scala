@@ -2,7 +2,7 @@ package typingsSlinky.pulumiAws.documentsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.pulumiAws.pulumiAwsStrings.Asterisk
@@ -11,4 +11,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.pulumiAws.documentsMod.FederatedPrincipal
 */
 trait Principal extends js.Object
-

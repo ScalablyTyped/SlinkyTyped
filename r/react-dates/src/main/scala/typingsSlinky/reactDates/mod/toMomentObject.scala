@@ -6,7 +6,7 @@ import typingsSlinky.moment.mod.MomentFormatSpecification
 import typingsSlinky.moment.mod.MomentInput
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // utils/toMomentObject.js
 @JSImport("react-dates", "toMomentObject")
@@ -19,4 +19,3 @@ object toMomentObject
         Moment | Null
       ]
     ]
-

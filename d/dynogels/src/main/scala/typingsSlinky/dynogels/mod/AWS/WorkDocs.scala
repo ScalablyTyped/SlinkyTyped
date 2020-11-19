@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.workdocsMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.WorkDocs")
 @js.native
@@ -14,4 +14,3 @@ class WorkDocs ()
   extends typingsSlinky.awsSdk.mod.WorkDocs {
   def this(options: ClientConfiguration) = this()
 }
-

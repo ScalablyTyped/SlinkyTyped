@@ -6,15 +6,16 @@ import typingsSlinky.lodash.mod.NumericDictionary
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashMapValues extends LodashConvertible {
+  
   def apply(iteratee: String): LodashMapValues6x1 = js.native
   def apply(iteratee: js.Object): LodashMapValues3x1 = js.native
+  def apply[T](callbackOrIterateeOrIterateeOrIteratee: __): LodashMapValues1x2[T] = js.native
   def apply[T](callbackOrIterateeOrIterateeOrIteratee: __, obj: Dictionary[T]): LodashMapValues1x2[T] = js.native
   def apply[T](callbackOrIterateeOrIterateeOrIteratee: __, obj: NumericDictionary[T]): LodashMapValues1x2[T] = js.native
-  def apply[T /* <: js.Object */](callbackOrIterateeOrIteratee: __): LodashMapValues2x2[T] = js.native
   def apply[T /* <: js.Object */](callbackOrIterateeOrIteratee: __, obj: T): LodashMapValues2x2[T] = js.native
   def apply[T /* <: js.Object */](iteratee: String, obj: T): /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: any}
@@ -26,7 +27,14 @@ trait LodashMapValues extends LodashConvertible {
     */ typingsSlinky.lodash.lodashStrings.LodashMapValues with TopLevel[js.Any] = js.native
   def apply[T](iteratee: js.Object, obj: Dictionary[T]): Dictionary[Boolean] = js.native
   def apply[T](iteratee: js.Object, obj: NumericDictionary[T]): Dictionary[Boolean] = js.native
-  def apply[T, TResult](callback: js.Function1[/* value */ T, TResult]): Dictionary[TResult] = js.native
+  def apply[T /* <: js.Object */, TResult](
+    callback: js.Function1[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
+      TResult
+    ]
+  ): /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof T ]: TResult}
+    */ typingsSlinky.lodash.lodashStrings.LodashMapValues with TopLevel[js.Any] = js.native
   def apply[T /* <: js.Object */, TResult](
     callback: js.Function1[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
@@ -48,4 +56,3 @@ trait LodashMapValues extends LodashConvertible {
     /* import warning: importer.ImportType#apply Failed type conversion: T[TKey] */ js.Any
   ] = js.native
 }
-

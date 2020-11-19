@@ -15,10 +15,11 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.long
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ParameterValueProperties extends js.Object {
+  
   /**
     * Specifies the parameter's data type.
     *
@@ -27,6 +28,7 @@ trait ParameterValueProperties extends js.Object {
   var dataType: js.UndefOr[
     boolean | `data-file` | date | double | `feature-record-set-layer` | field | `linear-unit` | long | `raster-data` | `raster-data-layer` | `record-set` | string | `multi-value`
   ] = js.native
+  
   /**
     * The value of the parameter. The data structure of this value depends on the `dataType`.
     *
@@ -52,35 +54,41 @@ trait ParameterValueProperties extends js.Object {
     */
   var value: js.UndefOr[js.Any] = js.native
 }
-
 object ParameterValueProperties {
+  
   @scala.inline
   def apply(): ParameterValueProperties = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ParameterValueProperties]
   }
+  
   @scala.inline
   implicit class ParameterValuePropertiesOps[Self <: ParameterValueProperties] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setDataType(
       value: boolean | `data-file` | date | double | `feature-record-set-layer` | field | `linear-unit` | long | `raster-data` | `raster-data-layer` | `record-set` | string | `multi-value`
     ): Self = this.set("dataType", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteDataType: Self = this.set("dataType", js.undefined)
+    
     @scala.inline
     def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
   }
-  
 }
-

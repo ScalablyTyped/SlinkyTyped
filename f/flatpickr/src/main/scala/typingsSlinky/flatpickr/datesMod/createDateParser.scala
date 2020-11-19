@@ -5,11 +5,12 @@ import typingsSlinky.flatpickr.globalsMod.global.Date
 import typingsSlinky.flatpickr.localeMod.Locale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("flatpickr/dist/utils/dates", "createDateParser")
 @js.native
 object createDateParser extends js.Object {
+  
   def apply(hasConfigL10n: Config): js.Function4[
     /* date */ String | Double | Date, 
     /* givenFormat */ js.UndefOr[String], 
@@ -18,4 +19,3 @@ object createDateParser extends js.Object {
     js.UndefOr[Date]
   ] = js.native
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-glacier-node/commands/GetDataRetrievalPolicyCommand", JSImport.Namespace)
 @js.native
 object getDataRetrievalPolicyCommandMod extends js.Object {
+  
   @js.native
   class GetDataRetrievalPolicyCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getDataRetrievalPolicyCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetDataRetrievalPolicyInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetDataRetrievalPolicyInput, GetDataRetrievalPolicyOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[GetDataRetrievalPolicyInput, GetDataRetrievalPolicyOutput] = js.native
   }
-  
 }
-

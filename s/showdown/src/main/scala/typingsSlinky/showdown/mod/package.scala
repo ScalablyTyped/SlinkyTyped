@@ -2,9 +2,10 @@ package typingsSlinky.showdown
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /**
     * Showdown event listener.
     */
@@ -16,15 +17,19 @@ package object mod {
     /* globals */ typingsSlinky.showdown.mod.ConverterGlobals, 
     scala.Unit | java.lang.String
   ]
+  
   type Metadata = org.scalablytyped.runtime.StringDictionary[java.lang.String]
+  
   /**
     * Showdown extensions store object.
     */
   type ShowdownExtensions = org.scalablytyped.runtime.StringDictionary[js.Array[typingsSlinky.showdown.mod.ShowdownExtension]]
+  
   /**
     * Showdown options schema.
     */
   type ShowdownOptionsSchema = org.scalablytyped.runtime.StringDictionary[typingsSlinky.showdown.mod.ShowdownOptionDescription]
+  
   /**
     * Showdown subParser.
     */

@@ -2,7 +2,7 @@ package typingsSlinky.std
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.std.stdStrings.answer
@@ -11,15 +11,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.std.stdStrings.rollback
 */
 trait RTCSdpType extends js.Object
-
 object RTCSdpType {
+  
   @scala.inline
   def answer: typingsSlinky.std.stdStrings.answer = "answer".asInstanceOf[typingsSlinky.std.stdStrings.answer]
+  
   @scala.inline
   def offer: typingsSlinky.std.stdStrings.offer = "offer".asInstanceOf[typingsSlinky.std.stdStrings.offer]
+  
   @scala.inline
   def pranswer: typingsSlinky.std.stdStrings.pranswer = "pranswer".asInstanceOf[typingsSlinky.std.stdStrings.pranswer]
+  
   @scala.inline
   def rollback: typingsSlinky.std.stdStrings.rollback = "rollback".asInstanceOf[typingsSlinky.std.stdStrings.rollback]
 }
-

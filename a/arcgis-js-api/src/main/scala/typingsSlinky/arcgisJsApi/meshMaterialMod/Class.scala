@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.MeshMaterial
 import typingsSlinky.arcgisJsApi.esri.MeshMaterialProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/geometry/support/MeshMaterial", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends MeshMaterial {
   def this(properties: MeshMaterialProperties) = this()
 }
-

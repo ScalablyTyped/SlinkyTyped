@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.TextWidget")
 @js.native
@@ -20,17 +20,19 @@ abstract class TextWidget protected () extends AttributeWidgetWithPlaceholder {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FTextWidget: IModel = js.native
+  
   def maxLengthCode: Double = js.native
   def maxLengthCode_=(newValue: Double): Unit = js.native
+  
+  @JSName("model")
+  var model_FTextWidget: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.TextWidget")
 @js.native
 object TextWidget extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

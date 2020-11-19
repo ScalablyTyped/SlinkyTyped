@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "createFor")
 @js.native
 object createFor extends js.Object {
+  
   def apply(
     initializer: js.UndefOr[scala.Nothing],
     condition: js.UndefOr[scala.Nothing],
@@ -51,4 +52,3 @@ object createFor extends js.Object {
   ): ForStatement = js.native
   def apply(initializer: ForInitializer, condition: Expression, incrementor: Expression, statement: Statement): ForStatement = js.native
 }
-

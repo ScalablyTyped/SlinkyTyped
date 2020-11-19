@@ -4,14 +4,14 @@ import typingsSlinky.slickgrid.Slick.SlickData
 import typingsSlinky.slickgrid.Slick.ValidateResults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Checkbox[T /* <: SlickData */] extends Editor[T]
-
 object Checkbox {
+  
   @scala.inline
-  def apply[/* <: typingsSlinky.slickgrid.Slick.SlickData */ T](
+  def apply[T /* <: SlickData */](
     applyValue: (T, String) => Unit,
     destroy: () => Unit,
     focus: () => Unit,
@@ -25,4 +25,3 @@ object Checkbox {
     __obj.asInstanceOf[Checkbox[T]]
   }
 }
-

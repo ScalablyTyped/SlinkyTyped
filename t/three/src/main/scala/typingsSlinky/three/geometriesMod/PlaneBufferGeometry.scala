@@ -2,7 +2,7 @@ package typingsSlinky.three.geometriesMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/Geometries", "PlaneBufferGeometry")
 @js.native
@@ -44,4 +44,3 @@ class PlaneBufferGeometry ()
   def this(width: Double, height: Double, widthSegments: js.UndefOr[scala.Nothing], heightSegments: Double) = this()
   def this(width: Double, height: Double, widthSegments: Double, heightSegments: Double) = this()
 }
-

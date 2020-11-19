@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "lumino__disposable"
-version := "1.4.3-c70cce"
+version := "1.4.3-d5389d"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "lumino__algorithm" % "1.3.3-3abbc1",
-  "org.scalablytyped.slinky" %%% "lumino__signaling" % "1.4.3-4b1aac",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "lumino__algorithm" % "1.3.3-5cf99d",
+  "org.scalablytyped.slinky" %%% "lumino__signaling" % "1.4.3-f9af4e",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

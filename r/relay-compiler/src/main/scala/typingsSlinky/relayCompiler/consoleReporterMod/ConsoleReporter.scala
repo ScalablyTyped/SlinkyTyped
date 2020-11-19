@@ -3,12 +3,12 @@ package typingsSlinky.relayCompiler.consoleReporterMod
 import typingsSlinky.relayCompiler.reporterMod.Reporter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ConsoleReporter extends Reporter
-
 object ConsoleReporter {
+  
   @scala.inline
   def apply(
     reportError: (String, js.Error) => Unit,
@@ -19,4 +19,3 @@ object ConsoleReporter {
     __obj.asInstanceOf[ConsoleReporter]
   }
 }
-

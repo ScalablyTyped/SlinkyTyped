@@ -2,7 +2,7 @@ package typingsSlinky.qlikEngineapi.EngineAPI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * One of:
@@ -18,15 +18,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IT_END
 */
 trait InteractionType extends js.Object
-
 object InteractionType {
+  
   @scala.inline
   def IT_BREAK: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IT_BREAK = "IT_BREAK".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IT_BREAK]
+  
   @scala.inline
   def IT_END: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IT_END = "IT_END".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IT_END]
+  
   @scala.inline
   def IT_MSGBOX: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IT_MSGBOX = "IT_MSGBOX".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IT_MSGBOX]
+  
   @scala.inline
   def IT_SCRIPTLINE: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IT_SCRIPTLINE = "IT_SCRIPTLINE".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.IT_SCRIPTLINE]
 }
-

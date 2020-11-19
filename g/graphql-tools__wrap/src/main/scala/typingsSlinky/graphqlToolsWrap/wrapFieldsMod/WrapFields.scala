@@ -7,17 +7,17 @@ import typingsSlinky.graphqlToolsUtils.interfacesMod.Transform
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait WrapFields extends Transform[WrapFieldsTransformationContext] {
+  
   val fieldNames: js.Any = js.native
+  
   val numWraps: js.Any = js.native
+  
   val outerTypeName: js.Any = js.native
-  val transformer: js.Any = js.native
-  val wrappingFieldNames: js.Any = js.native
-  val wrappingResolver: js.Any = js.native
-  val wrappingTypeNames: js.Any = js.native
+  
   @JSName("transformRequest")
   def transformRequest_MWrapFields(originalRequest: Request): Request = js.native
   @JSName("transformRequest")
@@ -34,6 +34,7 @@ trait WrapFields extends Transform[WrapFieldsTransformationContext] {
     delegationContext: Record[String, _],
     transformationContext: WrapFieldsTransformationContext
   ): Request = js.native
+  
   @JSName("transformResult")
   def transformResult_MWrapFields(originalResult: ExecutionResult[Record[String, _]]): ExecutionResult[Record[String, _]] = js.native
   @JSName("transformResult")
@@ -50,7 +51,15 @@ trait WrapFields extends Transform[WrapFieldsTransformationContext] {
     delegationContext: Record[String, _],
     transformationContext: WrapFieldsTransformationContext
   ): ExecutionResult[Record[String, _]] = js.native
+  
   @JSName("transformSchema")
   def transformSchema_MWrapFields(schema: GraphQLSchema): GraphQLSchema = js.native
+  
+  val transformer: js.Any = js.native
+  
+  val wrappingFieldNames: js.Any = js.native
+  
+  val wrappingResolver: js.Any = js.native
+  
+  val wrappingTypeNames: js.Any = js.native
 }
-

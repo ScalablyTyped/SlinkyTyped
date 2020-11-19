@@ -1,9 +1,8 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
-import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.RefractionTexture")
 @js.native
@@ -20,10 +19,4 @@ class RefractionTexture protected ()
     */
   def this(name: String, size: Double, scene: typingsSlinky.babylonjs.BABYLON.Scene) = this()
   def this(name: String, size: Double, scene: typingsSlinky.babylonjs.BABYLON.Scene, generateMipMaps: Boolean) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-

@@ -7,7 +7,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-engine-reporting-protobuf", "ContextualizedTypeStats")
 @js.native
@@ -19,11 +19,11 @@ class ContextualizedTypeStats ()
   extends typingsSlinky.apolloEngineReportingProtobuf.protobufMod.ContextualizedTypeStats {
   def this(properties: IContextualizedTypeStats) = this()
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf", "ContextualizedTypeStats")
 @js.native
 object ContextualizedTypeStats extends js.Object {
+  
   /**
     * Creates a new ContextualizedTypeStats instance using the specified properties.
     * @param [properties] Properties to set
@@ -31,6 +31,7 @@ object ContextualizedTypeStats extends js.Object {
     */
   def create(): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
   def create(properties: IContextualizedTypeStats): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
+  
   /**
     * Decodes a ContextualizedTypeStats message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -43,6 +44,7 @@ object ContextualizedTypeStats extends js.Object {
   def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
   def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
+  
   /**
     * Decodes a ContextualizedTypeStats message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,6 +54,7 @@ object ContextualizedTypeStats extends js.Object {
     */
   def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
+  
   /**
     * Encodes the specified ContextualizedTypeStats message. Does not implicitly {@link ContextualizedTypeStats.verify|verify} messages.
     * @param message ContextualizedTypeStats message or plain object to encode
@@ -60,6 +63,7 @@ object ContextualizedTypeStats extends js.Object {
     */
   def encode(message: IContextualizedTypeStats): Writer = js.native
   def encode(message: IContextualizedTypeStats, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ContextualizedTypeStats message, length delimited. Does not implicitly {@link ContextualizedTypeStats.verify|verify} messages.
     * @param message ContextualizedTypeStats message or plain object to encode
@@ -68,12 +72,14 @@ object ContextualizedTypeStats extends js.Object {
     */
   def encodeDelimited(message: IContextualizedTypeStats): Writer = js.native
   def encodeDelimited(message: IContextualizedTypeStats, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ContextualizedTypeStats message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ContextualizedTypeStats
     */
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.ContextualizedTypeStats = js.native
+  
   /**
     * Creates a plain object from a ContextualizedTypeStats message. Also converts values to other types if specified.
     * @param message ContextualizedTypeStats
@@ -85,6 +91,7 @@ object ContextualizedTypeStats extends js.Object {
     message: typingsSlinky.apolloEngineReportingProtobuf.protobufMod.ContextualizedTypeStats,
     options: IConversionOptions
   ): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ContextualizedTypeStats message.
     * @param message Plain object to verify
@@ -92,4 +99,3 @@ object ContextualizedTypeStats extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

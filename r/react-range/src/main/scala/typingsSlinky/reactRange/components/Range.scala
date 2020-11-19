@@ -9,9 +9,10 @@ import typingsSlinky.reactRange.typesMod.Direction
 import typingsSlinky.reactRange.typesMod.IProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Range {
+  
   @JSImport("react-range", "Range")
   @js.native
   object component extends js.Object
@@ -20,11 +21,13 @@ object Range {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactRange.mod.Range] {
+    
     @scala.inline
     def onFinalChange(value: /* values */ js.Array[Double] => Unit): this.type = set("onFinalChange", js.Any.fromFunction1(value))
   }
   
   def withProps(p: IProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     allowOverlap: Boolean,
@@ -43,4 +46,3 @@ object Range {
     new Builder(js.Array(this.component, __props.asInstanceOf[IProps]))
   }
 }
-

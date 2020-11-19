@@ -4,16 +4,18 @@ import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.electron.Electron.FromPartitionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Electron.session")
 @js.native
 object session
   extends Instantiable0[typingsSlinky.electron.Electron.Session_] {
+  
   /**
     * A `Session` object, the default session object of the app.
     */
   var defaultSession: typingsSlinky.electron.Electron.Session_ = js.native
+  
   // Docs: http://electronjs.org/docs/api/session
   /**
     * A session instance from `partition` string. When there is an existing `Session`
@@ -32,4 +34,3 @@ object session
   def fromPartition(partition: String): typingsSlinky.electron.Electron.Session_ = js.native
   def fromPartition(partition: String, options: FromPartitionOptions): typingsSlinky.electron.Electron.Session_ = js.native
 }
-

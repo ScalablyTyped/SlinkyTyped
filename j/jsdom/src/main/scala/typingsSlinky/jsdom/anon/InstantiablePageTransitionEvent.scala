@@ -6,10 +6,9 @@ import typingsSlinky.std.PageTransitionEvent
 import typingsSlinky.std.PageTransitionEventInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantiablePageTransitionEvent
   extends Instantiable1[/* type */ String, PageTransitionEvent]
      with Instantiable2[/* type */ String, /* eventInitDict */ PageTransitionEventInit, PageTransitionEvent]
-

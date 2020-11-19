@@ -4,7 +4,7 @@ import typingsSlinky.mendixmodelsdk.localByNameReferencePropertyMod.INamedElemen
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "LocalByNameReferenceProperty")
 @js.native
@@ -25,4 +25,3 @@ class LocalByNameReferenceProperty[T /* <: INamedElement */] protected ()
     _targetType: String
   ) = this()
 }
-

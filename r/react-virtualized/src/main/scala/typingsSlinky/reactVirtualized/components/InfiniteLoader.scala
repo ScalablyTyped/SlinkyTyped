@@ -9,9 +9,10 @@ import typingsSlinky.reactVirtualized.mod.Index
 import typingsSlinky.reactVirtualized.mod.IndexRange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object InfiniteLoader {
+  
   @JSImport("react-virtualized", "InfiniteLoader")
   @js.native
   object component extends js.Object
@@ -20,15 +21,19 @@ object InfiniteLoader {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.InfiniteLoader] {
+    
     @scala.inline
     def minimumBatchSize(value: Double): this.type = set("minimumBatchSize", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def rowCount(value: Double): this.type = set("rowCount", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def threshold(value: Double): this.type = set("threshold", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: InfiniteLoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     children: InfiniteLoaderChildProps => ReactElement,
@@ -39,4 +44,3 @@ object InfiniteLoader {
     new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteLoaderProps]))
   }
 }
-

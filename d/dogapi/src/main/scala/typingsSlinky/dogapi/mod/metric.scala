@@ -5,10 +5,11 @@ import typingsSlinky.dogapi.anon.Host
 import typingsSlinky.dogapi.dogapiStrings.ok
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait metric extends js.Object {
+  
   @JSName("send")
   def send_ok(
     metric: String,
@@ -32,8 +33,6 @@ trait metric extends js.Object {
     callback: js.Function2[/* err */ js.Error | Null, ok, Unit]
   ): Unit = js.native
 }
-
 @JSImport("dogapi", "metric")
 @js.native
 object metric extends TopLevel[metric]
-

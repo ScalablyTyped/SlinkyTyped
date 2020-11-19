@@ -6,7 +6,7 @@ import typingsSlinky.observeJs.mod.observejs.ObserverTransformInstance
 import typingsSlinky.observeJs.mod.observejs.ObserverTransformStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("observe-js", "ObserverTransform")
 @js.native
@@ -29,8 +29,6 @@ class ObserverTransform protected () extends ObserverTransformInstance {
     setValue: js.Function1[/* value */ js.Any, _]
   ) = this()
 }
-
 @JSImport("observe-js", "ObserverTransform")
 @js.native
 object ObserverTransform extends TopLevel[ObserverTransformStatic]
-

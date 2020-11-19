@@ -3,7 +3,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 import typingsSlinky.appleMapkitJs.mapkit.SearchConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An object that retrieves map-based search results for a user-entered query.
@@ -19,4 +19,3 @@ class Search ()
   extends typingsSlinky.appleMapkitJs.mapkit.Search {
   def this(options: SearchConstructorOptions) = this()
 }
-

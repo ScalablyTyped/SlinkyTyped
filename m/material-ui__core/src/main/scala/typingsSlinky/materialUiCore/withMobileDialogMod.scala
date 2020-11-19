@@ -6,11 +6,12 @@ import typingsSlinky.materialUiCore.withMobileDialogWithMobileDialogMod.Injected
 import typingsSlinky.materialUiCore.withMobileDialogWithMobileDialogMod.WithMobileDialogOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@material-ui/core/withMobileDialog", JSImport.Namespace)
 @js.native
 object withMobileDialogMod extends js.Object {
+  
   def default[P](): js.Function1[
     /* component */ ReactComponentClass[P with InjectedProps with PartialWithWidth], 
     ReactComponentClass[P with PartialWithWidth]
@@ -20,4 +21,3 @@ object withMobileDialogMod extends js.Object {
     ReactComponentClass[P with PartialWithWidth]
   ] = js.native
 }
-

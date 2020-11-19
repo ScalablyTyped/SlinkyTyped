@@ -7,7 +7,7 @@ import typingsSlinky.graphql.astMod.InputObjectTypeExtensionNode
 import typingsSlinky.graphql.maybeMod.Maybe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/type/definition", "GraphQLInputObjectType")
 @js.native
@@ -17,14 +17,22 @@ class GraphQLInputObjectType protected ()
      with _GraphQLNullableType
      with _GraphQLType {
   def this(config: ReadonlyGraphQLInputObjec) = this()
+  
   var astNode: Maybe[InputObjectTypeDefinitionNode] = js.native
+  
   var description: Maybe[String] = js.native
+  
   var extensionASTNodes: Maybe[js.Array[InputObjectTypeExtensionNode]] = js.native
+  
   var extensions: Maybe[js.Object] = js.native
-  var name: String = js.native
+  
   def getFields(): GraphQLInputFieldMap = js.native
+  
   def inspect(): String = js.native
+  
+  var name: String = js.native
+  
   def toConfig(): GraphQLInputObjectTypeCon = js.native
+  
   def toJSON(): String = js.native
 }
-

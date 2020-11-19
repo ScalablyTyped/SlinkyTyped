@@ -12,11 +12,12 @@ import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-s3-node/commands/DeleteBucketReplicationCommand", JSImport.Namespace)
 @js.native
 object deleteBucketReplicationCommandMod extends js.Object {
+  
   @js.native
   class DeleteBucketReplicationCommand protected () extends Command[
           InputTypesUnion, 
@@ -27,13 +28,14 @@ object deleteBucketReplicationCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteBucketReplicationInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteBucketReplicationInput, DeleteBucketReplicationOutput, Readable] = js.native
+    
     val model: OperationModel = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[DeleteBucketReplicationInput, DeleteBucketReplicationOutput] = js.native
   }
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This object contains helper methods for generating data-driven visualizations with unique types (or categories) based on a field value from features in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The [createRenderer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-type.html#createRenderer) method generates a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) object that may be applied directly to the layer used to generate it. This renderer contains unique values with colors best suited to the given basemap.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait `type` extends js.Object {
+  
   /**
     * Generates a [PointCloudUniqueValueRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudUniqueValueRenderer.html) based on a given field of a [PointCloudLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-PointCloudLayer.html). This renderer visualizes points of the same type, usually from the `CLASS_CODE` field or an equivalent field that stores information related to the classification of the data (e.g. low vegetation, high vegetation, ground, etc.). The generated renderer visualizes each point with a standard predefined color matching the class code of the point.  All that's required is a layer instance and field name. You can optionally set the size and density of the points to suit the needs of the desired visualization.
     *
@@ -27,6 +28,7 @@ trait `type` extends js.Object {
     *
     */
   def createPCClassRenderer(params: typeCreatePCClassRendererParams): js.Promise[PCClassRendererResult] = js.native
+  
   /**
     * Generates a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) that may be applied directly to a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html) that supports renderers. The renderer contains unique symbols representing a string or a numeric value returned from the indicated field.  In most cases you will provide a `layer`, `basemap`, and `field` to generate this renderer. This is a scenario in which the values of the field aren't well known and the user doesn't know which colors to use in the visualization. You can also use a `valueExpression` instead of a `field` to visualize features based on a value returned from a script executed at runtime.
     *
@@ -77,8 +79,8 @@ trait `type` extends js.Object {
     */
   def createRenderer(params: typeCreateRendererParams): js.Promise[typeRendererResult] = js.native
 }
-
 object `type` {
+  
   @scala.inline
   def apply(
     createPCClassRenderer: typeCreatePCClassRendererParams => js.Promise[PCClassRendererResult],
@@ -87,22 +89,26 @@ object `type` {
     val __obj = js.Dynamic.literal(createPCClassRenderer = js.Any.fromFunction1(createPCClassRenderer), createRenderer = js.Any.fromFunction1(createRenderer))
     __obj.asInstanceOf[`type`]
   }
+  
   @scala.inline
   implicit class typeOps[Self <: `type`] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreatePCClassRenderer(value: typeCreatePCClassRendererParams => js.Promise[PCClassRendererResult]): Self = this.set("createPCClassRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreateRenderer(value: typeCreateRendererParams => js.Promise[typeRendererResult]): Self = this.set("createRenderer", js.Any.fromFunction1(value))
   }
-  
 }
-

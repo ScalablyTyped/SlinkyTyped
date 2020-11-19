@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.PointCloudUniqueValueRenderer
 import typingsSlinky.arcgisJsApi.esri.PointCloudUniqueValueRendererProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/renderers/PointCloudUniqueValueRenderer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends PointCloudUniqueValueRenderer {
   def this(properties: PointCloudUniqueValueRendererProperties) = this()
 }
-

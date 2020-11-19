@@ -14,11 +14,12 @@ import typingsSlinky.rdflib.typesMod._FromValueReturns
 import typingsSlinky.rdflib.typesMod._ObjectType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rdflib/lib/variable", JSImport.Namespace)
 @js.native
 object variableMod extends js.Object {
+  
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.rdflib.typesMod._ValueType because Already inherited
   - typingsSlinky.rdflib.tfTypesMod.Term because var conflicts: termType, value. Inlined 
@@ -32,15 +33,21 @@ object variableMod extends js.Object {
        with _TFIDFactoryTypes
        with _Comparable
        with _FromValueReturns[js.Any] {
+    
     /** The base string for a variable's name */
     var base: String = js.native
+    
+    def equals(other: js.Any): Boolean = js.native
+    
     var isVar: Double = js.native
+    
+    def substitute(bindings: js.Any): js.Any = js.native
+    
     @JSName("termType")
     var termType_Variable: typingsSlinky.rdflib.rdflibStrings.Variable = js.native
+    
     /** The unique identifier of this variable */
     var uri: String = js.native
-    def equals(other: js.Any): Boolean = js.native
-    def substitute(bindings: js.Any): js.Any = js.native
   }
   
   @js.native
@@ -57,12 +64,10 @@ object variableMod extends js.Object {
        with _ObjectType {
     def this(name: String) = this()
   }
-  
   /* static members */
   @js.native
   object default extends js.Object {
+    
     def toString(variable: js.Any): String = js.native
   }
-  
 }
-

@@ -4,10 +4,11 @@ import typingsSlinky.lodash.mod.ReplaceFunction
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashReplace extends LodashConvertible {
+  
   def apply(pattern: String): LodashReplace1x1 = js.native
   def apply(pattern: String, replacement: String): LodashReplace1x3 = js.native
   def apply(pattern: String, replacement: String, string: String): String = js.native
@@ -26,4 +27,3 @@ trait LodashReplace extends LodashConvertible {
   def apply(pattern: js.RegExp, replacement: ReplaceFunction, string: String): String = js.native
   def apply(pattern: js.RegExp, replacement: __, string: String): LodashReplace1x5 = js.native
 }
-

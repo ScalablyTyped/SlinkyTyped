@@ -4,11 +4,12 @@ import typingsSlinky.samchon.dedicatedWorkerCommunicatorMod.DedicatedWorkerCommu
 import typingsSlinky.samchon.iprotocolMod.IProtocol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("samchon/protocol/communicator/client_driver/DedicatedWorkerClientDriver", JSImport.Namespace)
 @js.native
 object dedicatedWorkerClientDriverMod extends js.Object {
+  
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.samchon.iprotocolMod.IProtocol because Already inherited
   - typingsSlinky.samchon.icommunicatorMod.ICommunicator because Already inherited
@@ -17,6 +18,7 @@ object dedicatedWorkerClientDriverMod extends js.Object {
     * Default Constructor.
     */
   class DedicatedWorkerClientDriver () extends DedicatedWorkerCommunicator {
+    
     /**
       * @inheritdoc
       */
@@ -32,6 +34,4 @@ object dedicatedWorkerClientDriverMod extends js.Object {
       */
     def listen(listener: IProtocol): Unit = js.native
   }
-  
 }
-

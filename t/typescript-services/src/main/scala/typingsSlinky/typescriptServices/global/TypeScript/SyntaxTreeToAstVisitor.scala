@@ -2,7 +2,7 @@ package typingsSlinky.typescriptServices.global.TypeScript
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.SyntaxTreeToAstVisitor")
 @js.native
@@ -14,11 +14,11 @@ class SyntaxTreeToAstVisitor protected ()
     compilationSettings: typingsSlinky.typescriptServices.TypeScript.ImmutableCompilationSettings
   ) = this()
 }
-
 /* static members */
 @JSGlobal("TypeScript.SyntaxTreeToAstVisitor")
 @js.native
 object SyntaxTreeToAstVisitor extends js.Object {
+  
   def visit(
     syntaxTree: typingsSlinky.typescriptServices.TypeScript.SyntaxTree,
     fileName: String,
@@ -26,4 +26,3 @@ object SyntaxTreeToAstVisitor extends js.Object {
     incrementalAST: Boolean
   ): typingsSlinky.typescriptServices.TypeScript.SourceUnit = js.native
 }
-

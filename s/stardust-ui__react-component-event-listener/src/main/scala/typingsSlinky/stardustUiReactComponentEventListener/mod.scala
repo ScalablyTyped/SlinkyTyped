@@ -104,29 +104,35 @@ import typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactCompon
 import typingsSlinky.stardustUiReactComponentEventListener.typesMod.EventListenerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@stardust-ui/react-component-event-listener", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   val documentRef: ReactRef[Node | Window] = js.native
-  val windowRef: ReactRef[Node | Window] = js.native
+  
   def useEventListener[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 91 */ js.Any */](options: EventListenerOptions[T]): Unit = js.native
+  
+  val windowRef: ReactRef[Node | Window] = js.native
+  
   @js.native
   object EventListener extends js.Object {
-    var displayName: String = js.native
-    var propTypes: Capture | Listener = js.native
+    
     def apply(
       props: EventListenerOptions[
           abort | animationcancel | animationend | animationiteration | animationstart | auxclick | blur | cancel | canplay | canplaythrough | change | click | close | contextmenu | copy | cuechange | cut | dblclick | drag | dragend | dragenter | dragexit | dragleave | dragover | dragstart | drop | durationchange | emptied | ended | error | focus | focusin | focusout | fullscreenchange | fullscreenerror | gotpointercapture | input | invalid | keydown | keypress | keyup | load | loadeddata | loadedmetadata | loadstart | lostpointercapture | mousedown | mouseenter | mouseleave | mousemove | mouseout | mouseover | mouseup | paste | pause | play | playing | pointercancel | pointerdown | pointerenter | pointerleave | pointerlockchange | pointerlockerror | pointermove | pointerout | pointerover | pointerup | progress | ratechange | readystatechange | reset | resize | scroll | securitypolicyviolation | seeked | seeking | select | selectionchange | selectstart | stalled | submit | suspend | timeupdate | toggle | touchcancel | touchend | touchmove | touchstart | transitioncancel | transitionend | transitionrun | transitionstart | visibilitychange | volumechange | waiting | wheel
         ]
     ): js.Any = js.native
+    
+    var displayName: String = js.native
+    
+    var propTypes: Capture | Listener = js.native
+    
     @js.native
     object defaultProps extends js.Object {
+      
       var capture: Boolean = js.native
     }
-    
   }
-  
 }
-

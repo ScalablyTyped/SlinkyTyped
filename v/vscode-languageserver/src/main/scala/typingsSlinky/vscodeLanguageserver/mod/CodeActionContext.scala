@@ -2,11 +2,12 @@ package typingsSlinky.vscodeLanguageserver.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageserver", "CodeActionContext")
 @js.native
 object CodeActionContext extends js.Object {
+  
   /**
     * Creates a new CodeActionContext literal.
     */
@@ -15,9 +16,9 @@ object CodeActionContext extends js.Object {
     diagnostics: js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.Diagnostic],
     only: js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind]
   ): typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionContext = js.native
+  
   /**
     * Checks whether the given literal conforms to the [CodeActionContext](#CodeActionContext) interface.
     */
   def is(value: js.Any): /* is vscode-languageserver-types.vscode-languageserver-types.CodeActionContext */ Boolean = js.native
 }
-

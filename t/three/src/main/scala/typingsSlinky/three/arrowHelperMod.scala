@@ -10,11 +10,12 @@ import typingsSlinky.three.object3DMod.Object3D
 import typingsSlinky.three.vector3Mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/helpers/ArrowHelper", JSImport.Namespace)
 @js.native
 object arrowHelperMod extends js.Object {
+  
   @js.native
   class ArrowHelper protected () extends Object3D {
     def this(dir: Vector3) = this()
@@ -197,17 +198,20 @@ object arrowHelperMod extends js.Object {
       headLength: Double,
       headWidth: Double
     ) = this()
+    
     var cone: Mesh[Geometry | BufferGeometry, Material | js.Array[Material]] = js.native
+    
     var line: Line[Geometry | BufferGeometry, Material | js.Array[Material]] = js.native
+    
     def setColor(color: String): Unit = js.native
     def setColor(color: Double): Unit = js.native
     def setColor(color: Color): Unit = js.native
+    
     def setDirection(dir: Vector3): Unit = js.native
+    
     def setLength(length: Double): Unit = js.native
     def setLength(length: Double, headLength: js.UndefOr[scala.Nothing], headWidth: Double): Unit = js.native
     def setLength(length: Double, headLength: Double): Unit = js.native
     def setLength(length: Double, headLength: Double, headWidth: Double): Unit = js.native
   }
-  
 }
-

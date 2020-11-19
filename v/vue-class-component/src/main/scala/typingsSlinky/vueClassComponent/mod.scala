@@ -13,11 +13,12 @@ import typingsSlinky.vueClassComponent.utilMod.MixedVueClass
 import typingsSlinky.vueClassComponent.utilMod.VueDecorator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vue-class-component", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def createDecorator(
     factory: js.Function3[
       /* options */ ComponentOptions[
@@ -33,6 +34,7 @@ object mod extends js.Object {
       Unit
     ]
   ): VueDecorator = js.native
+  
   def mixins[A](CtorA: VueClass[A]): VueClass[A] = js.native
   def mixins[T /* <: js.Array[VueClass[Vue]] */](
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param Ctors because its type T is not an array type */ Ctors: T
@@ -41,9 +43,10 @@ object mod extends js.Object {
   def mixins[A, B, C](CtorA: VueClass[A], CtorB: VueClass[B], CtorC: VueClass[C]): VueClass[A with B with C] = js.native
   def mixins[A, B, C, D](CtorA: VueClass[A], CtorB: VueClass[B], CtorC: VueClass[C], CtorD: VueClass[D]): VueClass[A with B with C with D] = js.native
   def mixins[A, B, C, D, E](CtorA: VueClass[A], CtorB: VueClass[B], CtorC: VueClass[C], CtorD: VueClass[D], CtorE: VueClass[E]): VueClass[A with B with C with D with E] = js.native
+  
   @js.native
   object default extends js.Object {
-    var registerHooks: js.Function1[/* keys */ js.Array[String], Unit] = js.native
+    
     def apply[V /* <: Vue */](
       options: (ComponentOptions[
           V, 
@@ -55,7 +58,7 @@ object mod extends js.Object {
         ]) with ThisType[V]
     ): js.Function1[/* target */ VueClass[V], VueClass[V]] = js.native
     def apply[VC /* <: VueClass[Vue] */](target: VC): VC = js.native
+    
+    var registerHooks: js.Function1[/* keys */ js.Array[String], Unit] = js.native
   }
-  
 }
-

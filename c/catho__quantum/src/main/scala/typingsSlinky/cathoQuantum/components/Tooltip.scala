@@ -12,9 +12,10 @@ import typingsSlinky.cathoQuantum.tooltipMod.TooltipProps
 import typingsSlinky.cathoQuantum.tooltipMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tooltip {
+  
   @JSImport("@catho/quantum/Tooltip", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -23,27 +24,34 @@ object Tooltip {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    
     @scala.inline
     def children(value: js.Array[ReactElement] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def multiline(value: Boolean): this.type = set("multiline", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def placement(value: top | right | bottom | left): this.type = set("placement", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def theme(value: BaseFontSizeColors): this.type = set("theme", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(text: String): Builder = {
     val __props = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
   }
 }
-

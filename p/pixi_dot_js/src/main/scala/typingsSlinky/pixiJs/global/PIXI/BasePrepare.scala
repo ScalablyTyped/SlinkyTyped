@@ -2,7 +2,7 @@ package typingsSlinky.pixiJs.global.PIXI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The prepare manager provides functionality to upload content to the GPU.
@@ -33,4 +33,3 @@ class BasePrepare protected ()
   extends typingsSlinky.pixiJs.PIXI.BasePrepare {
   def this(renderer: typingsSlinky.pixiJs.PIXI.AbstractRenderer) = this()
 }
-

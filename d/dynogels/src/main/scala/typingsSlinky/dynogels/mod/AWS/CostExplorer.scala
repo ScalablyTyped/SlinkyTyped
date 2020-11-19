@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.costexplorerMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.CostExplorer")
 @js.native
@@ -14,4 +14,3 @@ class CostExplorer ()
   extends typingsSlinky.awsSdk.mod.CostExplorer {
   def this(options: ClientConfiguration) = this()
 }
-

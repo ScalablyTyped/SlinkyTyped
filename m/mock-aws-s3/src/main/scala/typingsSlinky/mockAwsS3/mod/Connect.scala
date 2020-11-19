@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.connectMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "Connect")
 @js.native
@@ -14,4 +14,3 @@ class Connect ()
   extends typingsSlinky.awsSdk.mod.Connect {
   def this(options: ClientConfiguration) = this()
 }
-

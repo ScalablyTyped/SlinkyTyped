@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.smsMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "SMS")
 @js.native
@@ -14,4 +14,3 @@ class SMS ()
   extends typingsSlinky.awsSdk.allMod.SMS {
   def this(options: ClientConfiguration) = this()
 }
-

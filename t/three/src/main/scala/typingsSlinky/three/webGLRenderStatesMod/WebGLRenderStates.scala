@@ -4,12 +4,13 @@ import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/renderers/webgl/WebGLRenderStates", "WebGLRenderStates")
 @js.native
 class WebGLRenderStates () extends js.Object {
+  
   def dispose(): Unit = js.native
+  
   def get(scene: Scene, camera: Camera): WebGLRenderState = js.native
 }
-

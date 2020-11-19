@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.SolidEdges3D
 import typingsSlinky.arcgisJsApi.esri.SolidEdges3DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols/edges/SolidEdges3D", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends SolidEdges3D {
   def this(properties: SolidEdges3DProperties) = this()
 }
-

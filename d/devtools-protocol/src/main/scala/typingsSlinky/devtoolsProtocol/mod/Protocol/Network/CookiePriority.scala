@@ -2,7 +2,7 @@ package typingsSlinky.devtoolsProtocol.mod.Protocol.Network
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.Low
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.High
 */
 trait CookiePriority extends js.Object
-
 object CookiePriority {
+  
   @scala.inline
   def High: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.High = "High".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.High]
+  
   @scala.inline
   def Low: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.Low = "Low".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.Low]
+  
   @scala.inline
   def Medium: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.Medium = "Medium".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.Medium]
 }
-

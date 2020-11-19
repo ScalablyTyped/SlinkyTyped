@@ -5,7 +5,7 @@ import typingsSlinky.graphql.astMod.ASTNode
 import typingsSlinky.graphql.maybeMod.Maybe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-compose", "graphql.GraphQLError")
 @js.native
@@ -21,4 +21,3 @@ class GraphQLError protected ()
     extensions: js.UndefOr[Maybe[StringDictionary[_]]]
   ) = this()
 }
-

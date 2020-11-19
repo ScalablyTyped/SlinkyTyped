@@ -2,7 +2,7 @@ package typingsSlinky.alexaSdk.mod.templateBuilders
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Used to create ListTemplate2 objects
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
 class ListTemplate2Builder ()
   extends TemplateBuilder[ListTemplate2Builder]
      with SetListItems[ListTemplate2Builder]
-

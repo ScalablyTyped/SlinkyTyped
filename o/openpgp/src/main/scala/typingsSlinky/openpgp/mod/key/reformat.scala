@@ -2,11 +2,12 @@ package typingsSlinky.openpgp.mod.key
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "key.reformat")
 @js.native
 object reformat extends js.Object {
+  
   /**
     * Reformats and signs an OpenPGP key with a given User ID. Currently only supports RSA keys.
     * @param options.privateKey The private key to reformat
@@ -21,4 +22,3 @@ object reformat extends js.Object {
     */
   def apply(date: js.Date, subkeys: js.Array[_]): js.Promise[Key] = js.native
 }
-

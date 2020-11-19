@@ -4,9 +4,37 @@ import typingsSlinky.reactOverlays.dropdownMod.Directions
 import typingsSlinky.reactOverlays.overlayMod.Placements
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object reactOverlaysStrings {
+  
+  @scala.inline
+  def bottom: bottom = "bottom".asInstanceOf[bottom]
+  
+  @scala.inline
+  def click: click = "click".asInstanceOf[click]
+  
+  @scala.inline
+  def down: down = "down".asInstanceOf[down]
+  
+  @scala.inline
+  def left: left = "left".asInstanceOf[left]
+  
+  @scala.inline
+  def mousedown: mousedown = "mousedown".asInstanceOf[mousedown]
+  
+  @scala.inline
+  def right: right = "right".asInstanceOf[right]
+  
+  @scala.inline
+  def static: static = "static".asInstanceOf[static]
+  
+  @scala.inline
+  def top: top = "top".asInstanceOf[top]
+  
+  @scala.inline
+  def up: up = "up".asInstanceOf[up]
+  
   @js.native
   sealed trait bottom extends Placements
   
@@ -37,24 +65,4 @@ object reactOverlaysStrings {
   
   @js.native
   sealed trait up extends Directions
-  
-  @scala.inline
-  def bottom: bottom = "bottom".asInstanceOf[bottom]
-  @scala.inline
-  def click: click = "click".asInstanceOf[click]
-  @scala.inline
-  def down: down = "down".asInstanceOf[down]
-  @scala.inline
-  def left: left = "left".asInstanceOf[left]
-  @scala.inline
-  def mousedown: mousedown = "mousedown".asInstanceOf[mousedown]
-  @scala.inline
-  def right: right = "right".asInstanceOf[right]
-  @scala.inline
-  def static: static = "static".asInstanceOf[static]
-  @scala.inline
-  def top: top = "top".asInstanceOf[top]
-  @scala.inline
-  def up: up = "up".asInstanceOf[up]
 }
-

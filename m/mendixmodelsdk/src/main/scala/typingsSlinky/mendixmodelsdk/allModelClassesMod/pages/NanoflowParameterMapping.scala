@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.19.0: introduced
@@ -25,19 +25,18 @@ class NanoflowParameterMapping protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.NanoflowParameterMapping")
 @js.native
 object NanoflowParameterMapping extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new NanoflowParameterMapping instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.pagesMod.pages.NanoflowParameterMapping = js.native
+  
   /**
     * Creates and returns a new NanoflowParameterMapping instance in the SDK and on the server.
     * The new NanoflowParameterMapping will be automatically stored in the 'parameterMappings' property
@@ -47,6 +46,7 @@ object NanoflowParameterMapping extends js.Object {
     *  7.19.0 and higher
     */
   def createInCallNanoflowClientActionUnderParameterMappings(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.CallNanoflowClientAction): typingsSlinky.mendixmodelsdk.pagesMod.pages.NanoflowParameterMapping = js.native
+  
   /**
     * Creates and returns a new NanoflowParameterMapping instance in the SDK and on the server.
     * The new NanoflowParameterMapping will be automatically stored in the 'parameterMappings' property
@@ -56,5 +56,8 @@ object NanoflowParameterMapping extends js.Object {
     *  7.19.0 and higher
     */
   def createInNanoflowSourceUnderParameterMappings(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NanoflowSource): typingsSlinky.mendixmodelsdk.pagesMod.pages.NanoflowParameterMapping = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

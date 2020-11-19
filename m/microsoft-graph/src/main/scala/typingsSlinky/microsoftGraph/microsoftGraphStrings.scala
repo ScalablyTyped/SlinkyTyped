@@ -221,9 +221,2524 @@ import typingsSlinky.microsoftGraph.mod.WorkforceIntegrationEncryptionProtocol
 import typingsSlinky.microsoftGraph.mod.WorkforceIntegrationSupportedEntities
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object microsoftGraphStrings {
+  
+  @scala.inline
+  def After: After = "After".asInstanceOf[After]
+  
+  @scala.inline
+  def Append: Append = "Append".asInstanceOf[Append]
+  
+  @scala.inline
+  def Before: Before = "Before".asInstanceOf[Before]
+  
+  @scala.inline
+  def Completed: Completed = "Completed".asInstanceOf[Completed]
+  
+  @scala.inline
+  def Contributor: Contributor = "Contributor".asInstanceOf[Contributor]
+  
+  @scala.inline
+  def Delete: Delete = "Delete".asInstanceOf[Delete]
+  
+  @scala.inline
+  def Failed: Failed = "Failed".asInstanceOf[Failed]
+  
+  @scala.inline
+  def Insert: Insert = "Insert".asInstanceOf[Insert]
+  
+  @scala.inline
+  def None: None = "None".asInstanceOf[None]
+  
+  @scala.inline
+  def NotStarted: NotStarted = "NotStarted".asInstanceOf[NotStarted]
+  
+  @scala.inline
+  def OnPremOneDriveForBusiness: OnPremOneDriveForBusiness = "OnPremOneDriveForBusiness".asInstanceOf[OnPremOneDriveForBusiness]
+  
+  @scala.inline
+  def OneDrive: OneDrive = "OneDrive".asInstanceOf[OneDrive]
+  
+  @scala.inline
+  def OneDriveForBusiness: OneDriveForBusiness = "OneDriveForBusiness".asInstanceOf[OneDriveForBusiness]
+  
+  @scala.inline
+  def Owner: Owner = "Owner".asInstanceOf[Owner]
+  
+  @scala.inline
+  def Prepend: Prepend = "Prepend".asInstanceOf[Prepend]
+  
+  @scala.inline
+  def Reader: Reader = "Reader".asInstanceOf[Reader]
+  
+  @scala.inline
+  def Replace: Replace = "Replace".asInstanceOf[Replace]
+  
+  @scala.inline
+  def Running: Running = "Running".asInstanceOf[Running]
+  
+  @scala.inline
+  def Unknown: Unknown = "Unknown".asInstanceOf[Unknown]
+  
+  @scala.inline
+  def a: a = "a".asInstanceOf[a]
+  
+  @scala.inline
+  def absoluteMonthly: absoluteMonthly = "absoluteMonthly".asInstanceOf[absoluteMonthly]
+  
+  @scala.inline
+  def absoluteYearly: absoluteYearly = "absoluteYearly".asInstanceOf[absoluteYearly]
+  
+  @scala.inline
+  def accept: accept = "accept".asInstanceOf[accept]
+  
+  @scala.inline
+  def acceptAndViewCalendar: acceptAndViewCalendar = "acceptAndViewCalendar".asInstanceOf[acceptAndViewCalendar]
+  
+  @scala.inline
+  def accepted: accepted = "accepted".asInstanceOf[accepted]
+  
+  @scala.inline
+  def accountValidation: accountValidation = "accountValidation".asInstanceOf[accountValidation]
+  
+  @scala.inline
+  def activated: activated = "activated".asInstanceOf[activated]
+  
+  @scala.inline
+  def active: active = "active".asInstanceOf[active]
+  
+  @scala.inline
+  def addThisCalendar: addThisCalendar = "addThisCalendar".asInstanceOf[addThisCalendar]
+  
+  @scala.inline
+  def adminConfirmedSigninCompromised: adminConfirmedSigninCompromised = "adminConfirmedSigninCompromised".asInstanceOf[adminConfirmedSigninCompromised]
+  
+  @scala.inline
+  def adminConfirmedSigninSafe: adminConfirmedSigninSafe = "adminConfirmedSigninSafe".asInstanceOf[adminConfirmedSigninSafe]
+  
+  @scala.inline
+  def adminConfirmedUserCompromised: adminConfirmedUserCompromised = "adminConfirmedUserCompromised".asInstanceOf[adminConfirmedUserCompromised]
+  
+  @scala.inline
+  def adminDismissedAllRiskForUser: adminDismissedAllRiskForUser = "adminDismissedAllRiskForUser".asInstanceOf[adminDismissedAllRiskForUser]
+  
+  @scala.inline
+  def adminGeneratedTemporaryPassword: adminGeneratedTemporaryPassword = "adminGeneratedTemporaryPassword".asInstanceOf[adminGeneratedTemporaryPassword]
+  
+  @scala.inline
+  def administrator: administrator = "administrator".asInstanceOf[administrator]
+  
+  @scala.inline
+  def adults: adults = "adults".asInstanceOf[adults]
+  
+  @scala.inline
+  def advancedSpamFiltering: advancedSpamFiltering = "advancedSpamFiltering".asInstanceOf[advancedSpamFiltering]
+  
+  @scala.inline
+  def aesCbc128: aesCbc128 = "aesCbc128".asInstanceOf[aesCbc128]
+  
+  @scala.inline
+  def aesCbc256: aesCbc256 = "aesCbc256".asInstanceOf[aesCbc256]
+  
+  @scala.inline
+  def afterDeviceRestart: afterDeviceRestart = "afterDeviceRestart".asInstanceOf[afterDeviceRestart]
+  
+  @scala.inline
+  def agesAbove10: agesAbove10 = "agesAbove10".asInstanceOf[agesAbove10]
+  
+  @scala.inline
+  def agesAbove12: agesAbove12 = "agesAbove12".asInstanceOf[agesAbove12]
+  
+  @scala.inline
+  def agesAbove12Cinema: agesAbove12Cinema = "agesAbove12Cinema".asInstanceOf[agesAbove12Cinema]
+  
+  @scala.inline
+  def agesAbove12Video: agesAbove12Video = "agesAbove12Video".asInstanceOf[agesAbove12Video]
+  
+  @scala.inline
+  def agesAbove13: agesAbove13 = "agesAbove13".asInstanceOf[agesAbove13]
+  
+  @scala.inline
+  def agesAbove14: agesAbove14 = "agesAbove14".asInstanceOf[agesAbove14]
+  
+  @scala.inline
+  def agesAbove15: agesAbove15 = "agesAbove15".asInstanceOf[agesAbove15]
+  
+  @scala.inline
+  def agesAbove15AdultViolence: agesAbove15AdultViolence = "agesAbove15AdultViolence".asInstanceOf[agesAbove15AdultViolence]
+  
+  @scala.inline
+  def agesAbove16: agesAbove16 = "agesAbove16".asInstanceOf[agesAbove16]
+  
+  @scala.inline
+  def agesAbove16Restricted: agesAbove16Restricted = "agesAbove16Restricted".asInstanceOf[agesAbove16Restricted]
+  
+  @scala.inline
+  def agesAbove17: agesAbove17 = "agesAbove17".asInstanceOf[agesAbove17]
+  
+  @scala.inline
+  def agesAbove18: agesAbove18 = "agesAbove18".asInstanceOf[agesAbove18]
+  
+  @scala.inline
+  def agesAbove4: agesAbove4 = "agesAbove4".asInstanceOf[agesAbove4]
+  
+  @scala.inline
+  def agesAbove6: agesAbove6 = "agesAbove6".asInstanceOf[agesAbove6]
+  
+  @scala.inline
+  def agesAbove9: agesAbove9 = "agesAbove9".asInstanceOf[agesAbove9]
+  
+  @scala.inline
+  def aiConfirmedSigninSafe: aiConfirmedSigninSafe = "aiConfirmedSigninSafe".asInstanceOf[aiConfirmedSigninSafe]
+  
+  @scala.inline
+  def all: all = "all".asInstanceOf[all]
+  
+  @scala.inline
+  def allAllowed: allAllowed = "allAllowed".asInstanceOf[allAllowed]
+  
+  @scala.inline
+  def allApps: allApps = "allApps".asInstanceOf[allApps]
+  
+  @scala.inline
+  def allBlocked: allBlocked = "allBlocked".asInstanceOf[allBlocked]
+  
+  @scala.inline
+  def allow: allow = "allow".asInstanceOf[allow]
+  
+  @scala.inline
+  def allowAlways: allowAlways = "allowAlways".asInstanceOf[allowAlways]
+  
+  @scala.inline
+  def allowCurrentWebSite: allowCurrentWebSite = "allowCurrentWebSite".asInstanceOf[allowCurrentWebSite]
+  
+  @scala.inline
+  def allowFalsePositiveOverride: allowFalsePositiveOverride = "allowFalsePositiveOverride".asInstanceOf[allowFalsePositiveOverride]
+  
+  @scala.inline
+  def allowFromWebsitesVisited: allowFromWebsitesVisited = "allowFromWebsitesVisited".asInstanceOf[allowFromWebsitesVisited]
+  
+  @scala.inline
+  def allowOverrideWithJustification: allowOverrideWithJustification = "allowOverrideWithJustification".asInstanceOf[allowOverrideWithJustification]
+  
+  @scala.inline
+  def allowOverrideWithoutJustification: allowOverrideWithoutJustification = "allowOverrideWithoutJustification".asInstanceOf[allowOverrideWithoutJustification]
+  
+  @scala.inline
+  def allowPersonalToWork: allowPersonalToWork = "allowPersonalToWork".asInstanceOf[allowPersonalToWork]
+  
+  @scala.inline
+  def allowed: allowed = "allowed".asInstanceOf[allowed]
+  
+  @scala.inline
+  def alphabetic: alphabetic = "alphabetic".asInstanceOf[alphabetic]
+  
+  @scala.inline
+  def alphanumeric: alphanumeric = "alphanumeric".asInstanceOf[alphanumeric]
+  
+  @scala.inline
+  def alphanumericAndSymbol: alphanumericAndSymbol = "alphanumericAndSymbol".asInstanceOf[alphanumericAndSymbol]
+  
+  @scala.inline
+  def alphanumericWithSymbols: alphanumericWithSymbols = "alphanumericWithSymbols".asInstanceOf[alphanumericWithSymbols]
+  
+  @scala.inline
+  def alwaysEnabled: alwaysEnabled = "alwaysEnabled".asInstanceOf[alwaysEnabled]
+  
+  @scala.inline
+  def alwaysNotify: alwaysNotify = "alwaysNotify".asInstanceOf[alwaysNotify]
+  
+  @scala.inline
+  def alwaysPrompt: alwaysPrompt = "alwaysPrompt".asInstanceOf[alwaysPrompt]
+  
+  @scala.inline
+  def android: android = "android".asInstanceOf[android]
+  
+  @scala.inline
+  def androidWorkProfile: androidWorkProfile = "androidWorkProfile".asInstanceOf[androidWorkProfile]
+  
+  @scala.inline
+  def anonymizedIPAddress: anonymizedIPAddress = "anonymizedIPAddress".asInstanceOf[anonymizedIPAddress]
+  
+  @scala.inline
+  def any: any = "any".asInstanceOf[any]
+  
+  @scala.inline
+  def appleBulkWithUser: appleBulkWithUser = "appleBulkWithUser".asInstanceOf[appleBulkWithUser]
+  
+  @scala.inline
+  def appleBulkWithoutUser: appleBulkWithoutUser = "appleBulkWithoutUser".asInstanceOf[appleBulkWithoutUser]
+  
+  @scala.inline
+  def approvalPending: approvalPending = "approvalPending".asInstanceOf[approvalPending]
+  
+  @scala.inline
+  def approved: approved = "approved".asInstanceOf[approved]
+  
+  @scala.inline
+  def apps: apps = "apps".asInstanceOf[apps]
+  
+  @scala.inline
+  def appsInListCompliant: appsInListCompliant = "appsInListCompliant".asInstanceOf[appsInListCompliant]
+  
+  @scala.inline
+  def appsNotInListCompliant: appsNotInListCompliant = "appsNotInListCompliant".asInstanceOf[appsNotInListCompliant]
+  
+  @scala.inline
+  def archiveTeam: archiveTeam = "archiveTeam".asInstanceOf[archiveTeam]
+  
+  @scala.inline
+  def arm: arm = "arm".asInstanceOf[arm]
+  
+  @scala.inline
+  def assignedToExternalMDM: assignedToExternalMDM = "assignedToExternalMDM".asInstanceOf[assignedToExternalMDM]
+  
+  @scala.inline
+  def assistant: assistant = "assistant".asInstanceOf[assistant]
+  
+  @scala.inline
+  def atLeastAlphabetic: atLeastAlphabetic = "atLeastAlphabetic".asInstanceOf[atLeastAlphabetic]
+  
+  @scala.inline
+  def atLeastAlphanumeric: atLeastAlphanumeric = "atLeastAlphanumeric".asInstanceOf[atLeastAlphanumeric]
+  
+  @scala.inline
+  def atLeastNumeric: atLeastNumeric = "atLeastNumeric".asInstanceOf[atLeastNumeric]
+  
+  @scala.inline
+  def atRisk: atRisk = "atRisk".asInstanceOf[atRisk]
+  
+  @scala.inline
+  def attacked: attacked = "attacked".asInstanceOf[attacked]
+  
+  @scala.inline
+  def attempt: attempt = "attempt".asInstanceOf[attempt]
+  
+  @scala.inline
+  def attempted: attempted = "attempted".asInstanceOf[attempted]
+  
+  @scala.inline
+  def audio: audio = "audio".asInstanceOf[audio]
+  
+  @scala.inline
+  def auditComponentsAndStoreApps: auditComponentsAndStoreApps = "auditComponentsAndStoreApps".asInstanceOf[auditComponentsAndStoreApps]
+  
+  @scala.inline
+  def auditComponentsStoreAppsAndSmartlocker: auditComponentsStoreAppsAndSmartlocker = "auditComponentsStoreAppsAndSmartlocker".asInstanceOf[auditComponentsStoreAppsAndSmartlocker]
+  
+  @scala.inline
+  def authentication: authentication = "authentication".asInstanceOf[authentication]
+  
+  @scala.inline
+  def authenticodeHash256: authenticodeHash256 = "authenticodeHash256".asInstanceOf[authenticodeHash256]
+  
+  @scala.inline
+  def authorization: authorization = "authorization".asInstanceOf[authorization]
+  
+  @scala.inline
+  def auto: auto = "auto".asInstanceOf[auto]
+  
+  @scala.inline
+  def autoDeny: autoDeny = "autoDeny".asInstanceOf[autoDeny]
+  
+  @scala.inline
+  def autoGrant: autoGrant = "autoGrant".asInstanceOf[autoGrant]
+  
+  @scala.inline
+  def autoInstallAndRebootAtMaintenanceTime: autoInstallAndRebootAtMaintenanceTime = "autoInstallAndRebootAtMaintenanceTime".asInstanceOf[autoInstallAndRebootAtMaintenanceTime]
+  
+  @scala.inline
+  def autoInstallAndRebootAtScheduledTime: autoInstallAndRebootAtScheduledTime = "autoInstallAndRebootAtScheduledTime".asInstanceOf[autoInstallAndRebootAtScheduledTime]
+  
+  @scala.inline
+  def autoInstallAndRebootWithoutEndUserControl: autoInstallAndRebootWithoutEndUserControl = "autoInstallAndRebootWithoutEndUserControl".asInstanceOf[autoInstallAndRebootWithoutEndUserControl]
+  
+  @scala.inline
+  def autoInstallAtMaintenanceTime: autoInstallAtMaintenanceTime = "autoInstallAtMaintenanceTime".asInstanceOf[autoInstallAtMaintenanceTime]
+  
+  @scala.inline
+  def autoPurgeToDeleted: autoPurgeToDeleted = "autoPurgeToDeleted".asInstanceOf[autoPurgeToDeleted]
+  
+  @scala.inline
+  def autoPurgeToInbox: autoPurgeToInbox = "autoPurgeToInbox".asInstanceOf[autoPurgeToInbox]
+  
+  @scala.inline
+  def autoPurgeToJunk: autoPurgeToJunk = "autoPurgeToJunk".asInstanceOf[autoPurgeToJunk]
+  
+  @scala.inline
+  def automatic: automatic = "automatic".asInstanceOf[automatic]
+  
+  @scala.inline
+  def automaticReplies: automaticReplies = "automaticReplies".asInstanceOf[automaticReplies]
+  
+  @scala.inline
+  def available: available = "available".asInstanceOf[available]
+  
+  @scala.inline
+  def availableWithoutEnrollment: availableWithoutEnrollment = "availableWithoutEnrollment".asInstanceOf[availableWithoutEnrollment]
+  
+  @scala.inline
+  def azureAD: azureAD = "azureAD".asInstanceOf[azureAD]
+  
+  @scala.inline
+  def azureADBlockDueToAccessPolicy: azureADBlockDueToAccessPolicy = "azureADBlockDueToAccessPolicy".asInstanceOf[azureADBlockDueToAccessPolicy]
+  
+  @scala.inline
+  def azureStorageUriRenewalFailed: azureStorageUriRenewalFailed = "azureStorageUriRenewalFailed".asInstanceOf[azureStorageUriRenewalFailed]
+  
+  @scala.inline
+  def azureStorageUriRenewalPending: azureStorageUriRenewalPending = "azureStorageUriRenewalPending".asInstanceOf[azureStorageUriRenewalPending]
+  
+  @scala.inline
+  def azureStorageUriRenewalSuccess: azureStorageUriRenewalSuccess = "azureStorageUriRenewalSuccess".asInstanceOf[azureStorageUriRenewalSuccess]
+  
+  @scala.inline
+  def azureStorageUriRenewalTimedOut: azureStorageUriRenewalTimedOut = "azureStorageUriRenewalTimedOut".asInstanceOf[azureStorageUriRenewalTimedOut]
+  
+  @scala.inline
+  def azureStorageUriRequestFailed: azureStorageUriRequestFailed = "azureStorageUriRequestFailed".asInstanceOf[azureStorageUriRequestFailed]
+  
+  @scala.inline
+  def azureStorageUriRequestPending: azureStorageUriRequestPending = "azureStorageUriRequestPending".asInstanceOf[azureStorageUriRequestPending]
+  
+  @scala.inline
+  def azureStorageUriRequestSuccess: azureStorageUriRequestSuccess = "azureStorageUriRequestSuccess".asInstanceOf[azureStorageUriRequestSuccess]
+  
+  @scala.inline
+  def azureStorageUriRequestTimedOut: azureStorageUriRequestTimedOut = "azureStorageUriRequestTimedOut".asInstanceOf[azureStorageUriRequestTimedOut]
+  
+  @scala.inline
+  def b: b = "b".asInstanceOf[b]
+  
+  @scala.inline
+  def badRequest: badRequest = "badRequest".asInstanceOf[badRequest]
+  
+  @scala.inline
+  def banner: banner = "banner".asInstanceOf[banner]
+  
+  @scala.inline
+  def basic: basic = "basic".asInstanceOf[basic]
+  
+  @scala.inline
+  def batch: batch = "batch".asInstanceOf[batch]
+  
+  @scala.inline
+  def benignPositive: benignPositive = "benignPositive".asInstanceOf[benignPositive]
+  
+  @scala.inline
+  def binary: binary = "binary".asInstanceOf[binary]
+  
+  @scala.inline
+  def bing: bing = "bing".asInstanceOf[bing]
+  
+  @scala.inline
+  def block: block = "block".asInstanceOf[block]
+  
+  @scala.inline
+  def blockAccess: blockAccess = "blockAccess".asInstanceOf[blockAccess]
+  
+  @scala.inline
+  def blockAccessExternal: blockAccessExternal = "blockAccessExternal".asInstanceOf[blockAccessExternal]
+  
+  @scala.inline
+  def blockAll: blockAll = "blockAll".asInstanceOf[blockAll]
+  
+  @scala.inline
+  def blockAlways: blockAlways = "blockAlways".asInstanceOf[blockAlways]
+  
+  @scala.inline
+  def blockBoth: blockBoth = "blockBoth".asInstanceOf[blockBoth]
+  
+  @scala.inline
+  def blockContainerToHost: blockContainerToHost = "blockContainerToHost".asInstanceOf[blockContainerToHost]
+  
+  @scala.inline
+  def blockHostToContainer: blockHostToContainer = "blockHostToContainer".asInstanceOf[blockHostToContainer]
+  
+  @scala.inline
+  def blockImageAndTextFile: blockImageAndTextFile = "blockImageAndTextFile".asInstanceOf[blockImageAndTextFile]
+  
+  @scala.inline
+  def blockImageFile: blockImageFile = "blockImageFile".asInstanceOf[blockImageFile]
+  
+  @scala.inline
+  def blockNone: blockNone = "blockNone".asInstanceOf[blockNone]
+  
+  @scala.inline
+  def blockTextFile: blockTextFile = "blockTextFile".asInstanceOf[blockTextFile]
+  
+  @scala.inline
+  def blockThirdParty: blockThirdParty = "blockThirdParty".asInstanceOf[blockThirdParty]
+  
+  @scala.inline
+  def blocked: blocked = "blocked".asInstanceOf[blocked]
+  
+  @scala.inline
+  def blockedSender: blockedSender = "blockedSender".asInstanceOf[blockedSender]
+  
+  @scala.inline
+  def blog: blog = "blog".asInstanceOf[blog]
+  
+  @scala.inline
+  def blue: blue = "blue".asInstanceOf[blue]
+  
+  @scala.inline
+  def booleanType: booleanType = "booleanType".asInstanceOf[booleanType]
+  
+  @scala.inline
+  def browserDefault: browserDefault = "browserDefault".asInstanceOf[browserDefault]
+  
+  @scala.inline
+  def business: business = "business".asInstanceOf[business]
+  
+  @scala.inline
+  def businessAddress: businessAddress = "businessAddress".asInstanceOf[businessAddress]
+  
+  @scala.inline
+  def businessFax: businessFax = "businessFax".asInstanceOf[businessFax]
+  
+  @scala.inline
+  def businessReadyOnly: businessReadyOnly = "businessReadyOnly".asInstanceOf[businessReadyOnly]
+  
+  @scala.inline
+  def busy: busy = "busy".asInstanceOf[busy]
+  
+  @scala.inline
+  def bypassMode: bypassMode = "bypassMode".asInstanceOf[bypassMode]
+  
+  @scala.inline
+  def c: c = "c".asInstanceOf[c]
+  
+  @scala.inline
+  def cake: cake = "cake".asInstanceOf[cake]
+  
+  @scala.inline
+  def calendar: calendar = "calendar".asInstanceOf[calendar]
+  
+  @scala.inline
+  def call: call = "call".asInstanceOf[call]
+  
+  @scala.inline
+  def canceled: canceled = "canceled".asInstanceOf[canceled]
+  
+  @scala.inline
+  def car: car = "car".asInstanceOf[car]
+  
+  @scala.inline
+  def caution: caution = "caution".asInstanceOf[caution]
+  
+  @scala.inline
+  def certificateReset: certificateReset = "certificateReset".asInstanceOf[certificateReset]
+  
+  @scala.inline
+  def channels: channels = "channels".asInstanceOf[channels]
+  
+  @scala.inline
+  def chatEvent: chatEvent = "chatEvent".asInstanceOf[chatEvent]
+  
+  @scala.inline
+  def checkPolicy: checkPolicy = "checkPolicy".asInstanceOf[checkPolicy]
+  
+  @scala.inline
+  def checklist: checklist = "checklist".asInstanceOf[checklist]
+  
+  @scala.inline
+  def children: children = "children".asInstanceOf[children]
+  
+  @scala.inline
+  def childrenAbove14: childrenAbove14 = "childrenAbove14".asInstanceOf[childrenAbove14]
+  
+  @scala.inline
+  def childrenAbove7: childrenAbove7 = "childrenAbove7".asInstanceOf[childrenAbove7]
+  
+  @scala.inline
+  def childrenAbove8: childrenAbove8 = "childrenAbove8".asInstanceOf[childrenAbove8]
+  
+  @scala.inline
+  def childrenAll: childrenAll = "childrenAll".asInstanceOf[childrenAll]
+  
+  @scala.inline
+  def clean: clean = "clean".asInstanceOf[clean]
+  
+  @scala.inline
+  def clientDisconnected: clientDisconnected = "clientDisconnected".asInstanceOf[clientDisconnected]
+  
+  @scala.inline
+  def clock: clock = "clock".asInstanceOf[clock]
+  
+  @scala.inline
+  def cloneTeam: cloneTeam = "cloneTeam".asInstanceOf[cloneTeam]
+  
+  @scala.inline
+  def collapse: collapse = "collapse".asInstanceOf[collapse]
+  
+  @scala.inline
+  def commitFileFailed: commitFileFailed = "commitFileFailed".asInstanceOf[commitFileFailed]
+  
+  @scala.inline
+  def commitFilePending: commitFilePending = "commitFilePending".asInstanceOf[commitFilePending]
+  
+  @scala.inline
+  def commitFileSuccess: commitFileSuccess = "commitFileSuccess".asInstanceOf[commitFileSuccess]
+  
+  @scala.inline
+  def commitFileTimedOut: commitFileTimedOut = "commitFileTimedOut".asInstanceOf[commitFileTimedOut]
+  
+  @scala.inline
+  def company: company = "company".asInstanceOf[company]
+  
+  @scala.inline
+  def complete: complete = "complete".asInstanceOf[complete]
+  
+  @scala.inline
+  def completed_ : completed_ = "completed".asInstanceOf[completed_]
+  
+  @scala.inline
+  def compliant: compliant = "compliant".asInstanceOf[compliant]
+  
+  @scala.inline
+  def compromised: compromised = "compromised".asInstanceOf[compromised]
+  
+  @scala.inline
+  def compromisedPassword: compromisedPassword = "compromisedPassword".asInstanceOf[compromisedPassword]
+  
+  @scala.inline
+  def conferenceRoom: conferenceRoom = "conferenceRoom".asInstanceOf[conferenceRoom]
+  
+  @scala.inline
+  def confidential: confidential = "confidential".asInstanceOf[confidential]
+  
+  @scala.inline
+  def configManager: configManager = "configManager".asInstanceOf[configManager]
+  
+  @scala.inline
+  def configurationManagerClient: configurationManagerClient = "configurationManagerClient".asInstanceOf[configurationManagerClient]
+  
+  @scala.inline
+  def configurationManagerClientMdm: configurationManagerClientMdm = "configurationManagerClientMdm".asInstanceOf[configurationManagerClientMdm]
+  
+  @scala.inline
+  def configurationManagerClientMdmEas: configurationManagerClientMdmEas = "configurationManagerClientMdmEas".asInstanceOf[configurationManagerClientMdmEas]
+  
+  @scala.inline
+  def confirmedCompromised: confirmedCompromised = "confirmedCompromised".asInstanceOf[confirmedCompromised]
+  
+  @scala.inline
+  def confirmedSafe: confirmedSafe = "confirmedSafe".asInstanceOf[confirmedSafe]
+  
+  @scala.inline
+  def conflict: conflict = "conflict".asInstanceOf[conflict]
+  
+  @scala.inline
+  def connected: connected = "connected".asInstanceOf[connected]
+  
+  @scala.inline
+  def connectionPending: connectionPending = "connectionPending".asInstanceOf[connectionPending]
+  
+  @scala.inline
+  def contactsOnly: contactsOnly = "contactsOnly".asInstanceOf[contactsOnly]
+  
+  @scala.inline
+  def create: create = "create".asInstanceOf[create]
+  
+  @scala.inline
+  def createTeam: createTeam = "createTeam".asInstanceOf[createTeam]
+  
+  @scala.inline
+  def created: created = "created".asInstanceOf[created]
+  
+  @scala.inline
+  def ctph: ctph = "ctph".asInstanceOf[ctph]
+  
+  @scala.inline
+  def cup: cup = "cup".asInstanceOf[cup]
+  
+  @scala.inline
+  def currentConfig: currentConfig = "currentConfig".asInstanceOf[currentConfig]
+  
+  @scala.inline
+  def currentUser: currentUser = "currentUser".asInstanceOf[currentUser]
+  
+  @scala.inline
+  def custom: custom = "custom".asInstanceOf[custom]
+  
+  @scala.inline
+  def customMailTip: customMailTip = "customMailTip".asInstanceOf[customMailTip]
+  
+  @scala.inline
+  def d: d = "d".asInstanceOf[d]
+  
+  @scala.inline
+  def daily: daily = "daily".asInstanceOf[daily]
+  
+  @scala.inline
+  def darkBlue: darkBlue = "darkBlue".asInstanceOf[darkBlue]
+  
+  @scala.inline
+  def darkGreen: darkGreen = "darkGreen".asInstanceOf[darkGreen]
+  
+  @scala.inline
+  def darkPink: darkPink = "darkPink".asInstanceOf[darkPink]
+  
+  @scala.inline
+  def darkPurple: darkPurple = "darkPurple".asInstanceOf[darkPurple]
+  
+  @scala.inline
+  def darkYellow: darkYellow = "darkYellow".asInstanceOf[darkYellow]
+  
+  @scala.inline
+  def data: data = "data".asInstanceOf[data]
+  
+  @scala.inline
+  def deactivated: deactivated = "deactivated".asInstanceOf[deactivated]
+  
+  @scala.inline
+  def declined: declined = "declined".asInstanceOf[declined]
+  
+  @scala.inline
+  def dedicated: dedicated = "dedicated".asInstanceOf[dedicated]
+  
+  @scala.inline
+  def default: default = "default".asInstanceOf[default]
+  
+  @scala.inline
+  def delegateWithPrivateEventAccess: delegateWithPrivateEventAccess = "delegateWithPrivateEventAccess".asInstanceOf[delegateWithPrivateEventAccess]
+  
+  @scala.inline
+  def delegateWithoutPrivateEventAccess: delegateWithoutPrivateEventAccess = "delegateWithoutPrivateEventAccess".asInstanceOf[delegateWithoutPrivateEventAccess]
+  
+  @scala.inline
+  def delete_ : delete_ = "delete".asInstanceOf[delete_]
+  
+  @scala.inline
+  def deleted: deleted = "deleted".asInstanceOf[deleted]
+  
+  @scala.inline
+  def deliveryRestriction: deliveryRestriction = "deliveryRestriction".asInstanceOf[deliveryRestriction]
+  
+  @scala.inline
+  def deltaSync: deltaSync = "deltaSync".asInstanceOf[deltaSync]
+  
+  @scala.inline
+  def description: description = "description".asInstanceOf[description]
+  
+  @scala.inline
+  def desktop: desktop = "desktop".asInstanceOf[desktop]
+  
+  @scala.inline
+  def deviceDefault: deviceDefault = "deviceDefault".asInstanceOf[deviceDefault]
+  
+  @scala.inline
+  def deviceEnrollmentManager: deviceEnrollmentManager = "deviceEnrollmentManager".asInstanceOf[deviceEnrollmentManager]
+  
+  @scala.inline
+  def deviceNotKnownWithManagedApp: deviceNotKnownWithManagedApp = "deviceNotKnownWithManagedApp".asInstanceOf[deviceNotKnownWithManagedApp]
+  
+  @scala.inline
+  def deviceNotSupported: deviceNotSupported = "deviceNotSupported".asInstanceOf[deviceNotSupported]
+  
+  @scala.inline
+  def deviceOsHigherThanDesiredOsVersion: deviceOsHigherThanDesiredOsVersion = "deviceOsHigherThanDesiredOsVersion".asInstanceOf[deviceOsHigherThanDesiredOsVersion]
+  
+  @scala.inline
+  def directory: directory = "directory".asInstanceOf[directory]
+  
+  @scala.inline
+  def disable: disable = "disable".asInstanceOf[disable]
+  
+  @scala.inline
+  def disableSettingsApp: disableSettingsApp = "disableSettingsApp".asInstanceOf[disableSettingsApp]
+  
+  @scala.inline
+  def disabled: disabled = "disabled".asInstanceOf[disabled]
+  
+  @scala.inline
+  def disallowed: disallowed = "disallowed".asInstanceOf[disallowed]
+  
+  @scala.inline
+  def disconnected: disconnected = "disconnected".asInstanceOf[disconnected]
+  
+  @scala.inline
+  def diskSpaceThreshold: diskSpaceThreshold = "diskSpaceThreshold".asInstanceOf[diskSpaceThreshold]
+  
+  @scala.inline
+  def diskSpaceThresholdOrInactiveThreshold: diskSpaceThresholdOrInactiveThreshold = "diskSpaceThresholdOrInactiveThreshold".asInstanceOf[diskSpaceThresholdOrInactiveThreshold]
+  
+  @scala.inline
+  def dismissed: dismissed = "dismissed".asInstanceOf[dismissed]
+  
+  @scala.inline
+  def doNotForward: doNotForward = "doNotForward".asInstanceOf[doNotForward]
+  
+  @scala.inline
+  def doctor: doctor = "doctor".asInstanceOf[doctor]
+  
+  @scala.inline
+  def dog: dog = "dog".asInstanceOf[dog]
+  
+  @scala.inline
+  def domain: domain = "domain".asInstanceOf[domain]
+  
+  @scala.inline
+  def domainAllowList: domainAllowList = "domainAllowList".asInstanceOf[domainAllowList]
+  
+  @scala.inline
+  def domainBlockList: domainBlockList = "domainBlockList".asInstanceOf[domainBlockList]
+  
+  @scala.inline
+  def done: done = "done".asInstanceOf[done]
+  
+  @scala.inline
+  def downloadFailed: downloadFailed = "downloadFailed".asInstanceOf[downloadFailed]
+  
+  @scala.inline
+  def downloadInsufficientNetwork: downloadInsufficientNetwork = "downloadInsufficientNetwork".asInstanceOf[downloadInsufficientNetwork]
+  
+  @scala.inline
+  def downloadInsufficientPower: downloadInsufficientPower = "downloadInsufficientPower".asInstanceOf[downloadInsufficientPower]
+  
+  @scala.inline
+  def downloadInsufficientSpace: downloadInsufficientSpace = "downloadInsufficientSpace".asInstanceOf[downloadInsufficientSpace]
+  
+  @scala.inline
+  def downloadRequiresComputer: downloadRequiresComputer = "downloadRequiresComputer".asInstanceOf[downloadRequiresComputer]
+  
+  @scala.inline
+  def downloading: downloading = "downloading".asInstanceOf[downloading]
+  
+  @scala.inline
+  def dword: dword = "dword".asInstanceOf[dword]
+  
+  @scala.inline
+  def dwordBigEndian: dwordBigEndian = "dwordBigEndian".asInstanceOf[dwordBigEndian]
+  
+  @scala.inline
+  def dwordLittleEndian: dwordLittleEndian = "dwordLittleEndian".asInstanceOf[dwordLittleEndian]
+  
+  @scala.inline
+  def eas: eas = "eas".asInstanceOf[eas]
+  
+  @scala.inline
+  def easIntuneClient: easIntuneClient = "easIntuneClient".asInstanceOf[easIntuneClient]
+  
+  @scala.inline
+  def easMdm: easMdm = "easMdm".asInstanceOf[easMdm]
+  
+  @scala.inline
+  def education: education = "education".asInstanceOf[education]
+  
+  @scala.inline
+  def eight: eight = "eight".asInstanceOf[eight]
+  
+  @scala.inline
+  def eleven: eleven = "eleven".asInstanceOf[eleven]
+  
+  @scala.inline
+  def enabled: enabled = "enabled".asInstanceOf[enabled]
+  
+  @scala.inline
+  def encryptAndAuditOnly: encryptAndAuditOnly = "encryptAndAuditOnly".asInstanceOf[encryptAndAuditOnly]
+  
+  @scala.inline
+  def encryptAuditAndBlock: encryptAuditAndBlock = "encryptAuditAndBlock".asInstanceOf[encryptAuditAndBlock]
+  
+  @scala.inline
+  def encryptAuditAndPrompt: encryptAuditAndPrompt = "encryptAuditAndPrompt".asInstanceOf[encryptAuditAndPrompt]
+  
+  @scala.inline
+  def endDate: endDate = "endDate".asInstanceOf[endDate]
+  
+  @scala.inline
+  def enforceComponentsAndStoreApps: enforceComponentsAndStoreApps = "enforceComponentsAndStoreApps".asInstanceOf[enforceComponentsAndStoreApps]
+  
+  @scala.inline
+  def enforceComponentsStoreAppsAndSmartlocker: enforceComponentsStoreAppsAndSmartlocker = "enforceComponentsStoreAppsAndSmartlocker".asInstanceOf[enforceComponentsStoreAppsAndSmartlocker]
+  
+  @scala.inline
+  def enhanced: enhanced = "enhanced".asInstanceOf[enhanced]
+  
+  @scala.inline
+  def enrollmentRestrictionsEnforced: enrollmentRestrictionsEnforced = "enrollmentRestrictionsEnforced".asInstanceOf[enrollmentRestrictionsEnforced]
+  
+  @scala.inline
+  def entryId: entryId = "entryId".asInstanceOf[entryId]
+  
+  @scala.inline
+  def error: error = "error".asInstanceOf[error]
+  
+  @scala.inline
+  def established: established = "established".asInstanceOf[established]
+  
+  @scala.inline
+  def establishing: establishing = "establishing".asInstanceOf[establishing]
+  
+  @scala.inline
+  def everyday: everyday = "everyday".asInstanceOf[everyday]
+  
+  @scala.inline
+  def ewsId: ewsId = "ewsId".asInstanceOf[ewsId]
+  
+  @scala.inline
+  def exception: exception = "exception".asInstanceOf[exception]
+  
+  @scala.inline
+  def exchangeDeviceRule: exchangeDeviceRule = "exchangeDeviceRule".asInstanceOf[exchangeDeviceRule]
+  
+  @scala.inline
+  def exchangeGlobalRule: exchangeGlobalRule = "exchangeGlobalRule".asInstanceOf[exchangeGlobalRule]
+  
+  @scala.inline
+  def exchangeIndividualRule: exchangeIndividualRule = "exchangeIndividualRule".asInstanceOf[exchangeIndividualRule]
+  
+  @scala.inline
+  def exchangeMailboxPolicy: exchangeMailboxPolicy = "exchangeMailboxPolicy".asInstanceOf[exchangeMailboxPolicy]
+  
+  @scala.inline
+  def exchangeUpgrade: exchangeUpgrade = "exchangeUpgrade".asInstanceOf[exchangeUpgrade]
+  
+  @scala.inline
+  def expandSz: expandSz = "expandSz".asInstanceOf[expandSz]
+  
+  @scala.inline
+  def expired: expired = "expired".asInstanceOf[expired]
+  
+  @scala.inline
+  def explicitAllowed: explicitAllowed = "explicitAllowed".asInstanceOf[explicitAllowed]
+  
+  @scala.inline
+  def external: external = "external".asInstanceOf[external]
+  
+  @scala.inline
+  def externalMemberCount: externalMemberCount = "externalMemberCount".asInstanceOf[externalMemberCount]
+  
+  @scala.inline
+  def externalNonPartner: externalNonPartner = "externalNonPartner".asInstanceOf[externalNonPartner]
+  
+  @scala.inline
+  def externalPartner: externalPartner = "externalPartner".asInstanceOf[externalPartner]
+  
+  @scala.inline
+  def failed_ : failed_ = "failed".asInstanceOf[failed_]
+  
+  @scala.inline
+  def failure: failure = "failure".asInstanceOf[failure]
+  
+  @scala.inline
+  def falsePositive: falsePositive = "falsePositive".asInstanceOf[falsePositive]
+  
+  @scala.inline
+  def featureNotSupported: featureNotSupported = "featureNotSupported".asInstanceOf[featureNotSupported]
+  
+  @scala.inline
+  def female: female = "female".asInstanceOf[female]
+  
+  @scala.inline
+  def file: file = "file".asInstanceOf[file]
+  
+  @scala.inline
+  def first: first = "first".asInstanceOf[first]
+  
+  @scala.inline
+  def firstAid: firstAid = "firstAid".asInstanceOf[firstAid]
+  
+  @scala.inline
+  def firstTimeSender: firstTimeSender = "firstTimeSender".asInstanceOf[firstTimeSender]
+  
+  @scala.inline
+  def five: five = "five".asInstanceOf[five]
+  
+  @scala.inline
+  def flagged: flagged = "flagged".asInstanceOf[flagged]
+  
+  @scala.inline
+  def flash: flash = "flash".asInstanceOf[flash]
+  
+  @scala.inline
+  def focused: focused = "focused".asInstanceOf[focused]
+  
+  @scala.inline
+  def followUp: followUp = "followUp".asInstanceOf[followUp]
+  
+  @scala.inline
+  def forbidden: forbidden = "forbidden".asInstanceOf[forbidden]
+  
+  @scala.inline
+  def forty: forty = "forty".asInstanceOf[forty]
+  
+  @scala.inline
+  def fortyEight: fortyEight = "fortyEight".asInstanceOf[fortyEight]
+  
+  @scala.inline
+  def fortyFour: fortyFour = "fortyFour".asInstanceOf[fortyFour]
+  
+  @scala.inline
+  def forward: forward = "forward".asInstanceOf[forward]
+  
+  @scala.inline
+  def forwarded: forwarded = "forwarded".asInstanceOf[forwarded]
+  
+  @scala.inline
+  def four: four = "four".asInstanceOf[four]
+  
+  @scala.inline
+  def fourth: fourth = "fourth".asInstanceOf[fourth]
+  
+  @scala.inline
+  def free: free = "free".asInstanceOf[free]
+  
+  @scala.inline
+  def freeBusyRead: freeBusyRead = "freeBusyRead".asInstanceOf[freeBusyRead]
+  
+  @scala.inline
+  def friday: friday = "friday".asInstanceOf[friday]
+  
+  @scala.inline
+  def full: full = "full".asInstanceOf[full]
+  
+  @scala.inline
+  def fullScreen: fullScreen = "fullScreen".asInstanceOf[fullScreen]
+  
+  @scala.inline
+  def fullSync: fullSync = "fullSync".asInstanceOf[fullSync]
+  
+  @scala.inline
+  def fullUpdate: fullUpdate = "fullUpdate".asInstanceOf[fullUpdate]
+  
+  @scala.inline
+  def fyi: fyi = "fyi".asInstanceOf[fyi]
+  
+  @scala.inline
+  def general: general = "general".asInstanceOf[general]
+  
+  @scala.inline
+  def generic: generic = "generic".asInstanceOf[generic]
+  
+  @scala.inline
+  def geoCoordinates: geoCoordinates = "geoCoordinates".asInstanceOf[geoCoordinates]
+  
+  @scala.inline
+  def ggp: ggp = "ggp".asInstanceOf[ggp]
+  
+  @scala.inline
+  def global: global = "global".asInstanceOf[global]
+  
+  @scala.inline
+  def globe: globe = "globe".asInstanceOf[globe]
+  
+  @scala.inline
+  def googleCloudDevicePolicyController: googleCloudDevicePolicyController = "googleCloudDevicePolicyController".asInstanceOf[googleCloudDevicePolicyController]
+  
+  @scala.inline
+  def gray: gray = "gray".asInstanceOf[gray]
+  
+  @scala.inline
+  def green: green = "green".asInstanceOf[green]
+  
+  @scala.inline
+  def guest: guest = "guest".asInstanceOf[guest]
+  
+  @scala.inline
+  def hidden: hidden = "hidden".asInstanceOf[hidden]
+  
+  @scala.inline
+  def hiddenMembership: hiddenMembership = "hiddenMembership".asInstanceOf[hiddenMembership]
+  
+  @scala.inline
+  def hide: hide = "hide".asInstanceOf[hide]
+  
+  @scala.inline
+  def high: high = "high".asInstanceOf[high]
+  
+  @scala.inline
+  def highPlus: highPlus = "highPlus".asInstanceOf[highPlus]
+  
+  @scala.inline
+  def highSeverity: highSeverity = "highSeverity".asInstanceOf[highSeverity]
+  
+  @scala.inline
+  def hold: hold = "hold".asInstanceOf[hold]
+  
+  @scala.inline
+  def holographic: holographic = "holographic".asInstanceOf[holographic]
+  
+  @scala.inline
+  def home: home = "home".asInstanceOf[home]
+  
+  @scala.inline
+  def homeAddress: homeAddress = "homeAddress".asInstanceOf[homeAddress]
+  
+  @scala.inline
+  def homeFax: homeFax = "homeFax".asInstanceOf[homeFax]
+  
+  @scala.inline
+  def hosted: hosted = "hosted".asInstanceOf[hosted]
+  
+  @scala.inline
+  def hotel: hotel = "hotel".asInstanceOf[hotel]
+  
+  @scala.inline
+  def html: html = "html".asInstanceOf[html]
+  
+  @scala.inline
+  def httpOnly: httpOnly = "httpOnly".asInstanceOf[httpOnly]
+  
+  @scala.inline
+  def httpWithInternetPeering: httpWithInternetPeering = "httpWithInternetPeering".asInstanceOf[httpWithInternetPeering]
+  
+  @scala.inline
+  def httpWithPeeringNat: httpWithPeeringNat = "httpWithPeeringNat".asInstanceOf[httpWithPeeringNat]
+  
+  @scala.inline
+  def httpWithPeeringPrivateGroup: httpWithPeeringPrivateGroup = "httpWithPeeringPrivateGroup".asInstanceOf[httpWithPeeringPrivateGroup]
+  
+  @scala.inline
+  def iOS: iOS = "iOS".asInstanceOf[iOS]
+  
+  @scala.inline
+  def iana: iana = "iana".asInstanceOf[iana]
+  
+  @scala.inline
+  def icmp: icmp = "icmp".asInstanceOf[icmp]
+  
+  @scala.inline
+  def icmpV6: icmpV6 = "icmpV6".asInstanceOf[icmpV6]
+  
+  @scala.inline
+  def idle: idle = "idle".asInstanceOf[idle]
+  
+  @scala.inline
+  def idp: idp = "idp".asInstanceOf[idp]
+  
+  @scala.inline
+  def igmp: igmp = "igmp".asInstanceOf[igmp]
+  
+  @scala.inline
+  def ignored: ignored = "ignored".asInstanceOf[ignored]
+  
+  @scala.inline
+  def immediate: immediate = "immediate".asInstanceOf[immediate]
+  
+  @scala.inline
+  def immutableEntryId: immutableEntryId = "immutableEntryId".asInstanceOf[immutableEntryId]
+  
+  @scala.inline
+  def inGracePeriod: inGracePeriod = "inGracePeriod".asInstanceOf[inGracePeriod]
+  
+  @scala.inline
+  def inMaintenance: inMaintenance = "inMaintenance".asInstanceOf[inMaintenance]
+  
+  @scala.inline
+  def inProgress: inProgress = "inProgress".asInstanceOf[inProgress]
+  
+  @scala.inline
+  def inactive: inactive = "inactive".asInstanceOf[inactive]
+  
+  @scala.inline
+  def inbound: inbound = "inbound".asInstanceOf[inbound]
+  
+  @scala.inline
+  def includeCompanyLogo: includeCompanyLogo = "includeCompanyLogo".asInstanceOf[includeCompanyLogo]
+  
+  @scala.inline
+  def includeCompanyName: includeCompanyName = "includeCompanyName".asInstanceOf[includeCompanyName]
+  
+  @scala.inline
+  def includeContactInformation: includeContactInformation = "includeContactInformation".asInstanceOf[includeContactInformation]
+  
+  @scala.inline
+  def incoming: incoming = "incoming".asInstanceOf[incoming]
+  
+  @scala.inline
+  def informational: informational = "informational".asInstanceOf[informational]
+  
+  @scala.inline
+  def informationalUpdate: informationalUpdate = "informationalUpdate".asInstanceOf[informationalUpdate]
+  
+  @scala.inline
+  def installFailed: installFailed = "installFailed".asInstanceOf[installFailed]
+  
+  @scala.inline
+  def installInsufficientPower: installInsufficientPower = "installInsufficientPower".asInstanceOf[installInsufficientPower]
+  
+  @scala.inline
+  def installInsufficientSpace: installInsufficientSpace = "installInsufficientSpace".asInstanceOf[installInsufficientSpace]
+  
+  @scala.inline
+  def installPhoneCallInProgress: installPhoneCallInProgress = "installPhoneCallInProgress".asInstanceOf[installPhoneCallInProgress]
+  
+  @scala.inline
+  def installed: installed = "installed".asInstanceOf[installed]
+  
+  @scala.inline
+  def installing: installing = "installing".asInstanceOf[installing]
+  
+  @scala.inline
+  def integerType: integerType = "integerType".asInstanceOf[integerType]
+  
+  @scala.inline
+  def interactive: interactive = "interactive".asInstanceOf[interactive]
+  
+  @scala.inline
+  def internal: internal = "internal".asInstanceOf[internal]
+  
+  @scala.inline
+  def intune: intune = "intune".asInstanceOf[intune]
+  
+  @scala.inline
+  def intuneClient: intuneClient = "intuneClient".asInstanceOf[intuneClient]
+  
+  @scala.inline
+  def invalid: invalid = "invalid".asInstanceOf[invalid]
+  
+  @scala.inline
+  def investigationsThreatIntelligence: investigationsThreatIntelligence = "investigationsThreatIntelligence".asInstanceOf[investigationsThreatIntelligence]
+  
+  @scala.inline
+  def investigationsThreatIntelligenceSigninLinked: investigationsThreatIntelligenceSigninLinked = "investigationsThreatIntelligenceSigninLinked".asInstanceOf[investigationsThreatIntelligenceSigninLinked]
+  
+  @scala.inline
+  def ip: ip = "ip".asInstanceOf[ip]
+  
+  @scala.inline
+  def ipSecAuthenticationHeader: ipSecAuthenticationHeader = "ipSecAuthenticationHeader".asInstanceOf[ipSecAuthenticationHeader]
+  
+  @scala.inline
+  def ipSecEncapsulatingSecurityPayload: ipSecEncapsulatingSecurityPayload = "ipSecEncapsulatingSecurityPayload".asInstanceOf[ipSecEncapsulatingSecurityPayload]
+  
+  @scala.inline
+  def ipv4: ipv4 = "ipv4".asInstanceOf[ipv4]
+  
+  @scala.inline
+  def ipv6: ipv6 = "ipv6".asInstanceOf[ipv6]
+  
+  @scala.inline
+  def ipv6DestinationOptions: ipv6DestinationOptions = "ipv6DestinationOptions".asInstanceOf[ipv6DestinationOptions]
+  
+  @scala.inline
+  def ipv6FragmentHeader: ipv6FragmentHeader = "ipv6FragmentHeader".asInstanceOf[ipv6FragmentHeader]
+  
+  @scala.inline
+  def ipv6NoNextHeader: ipv6NoNextHeader = "ipv6NoNextHeader".asInstanceOf[ipv6NoNextHeader]
+  
+  @scala.inline
+  def ipv6RoutingHeader: ipv6RoutingHeader = "ipv6RoutingHeader".asInstanceOf[ipv6RoutingHeader]
+  
+  @scala.inline
+  def ipx: ipx = "ipx".asInstanceOf[ipx]
+  
+  @scala.inline
+  def item: item = "item".asInstanceOf[item]
+  
+  @scala.inline
+  def jamf: jamf = "jamf".asInstanceOf[jamf]
+  
+  @scala.inline
+  def junk: junk = "junk".asInstanceOf[junk]
+  
+  @scala.inline
+  def juryDuty: juryDuty = "juryDuty".asInstanceOf[juryDuty]
+  
+  @scala.inline
+  def keyConflict: keyConflict = "keyConflict".asInstanceOf[keyConflict]
+  
+  @scala.inline
+  def last: last = "last".asInstanceOf[last]
+  
+  @scala.inline
+  def leakedCredentials: leakedCredentials = "leakedCredentials".asInstanceOf[leakedCredentials]
+  
+  @scala.inline
+  def licenseFile: licenseFile = "licenseFile".asInstanceOf[licenseFile]
+  
+  @scala.inline
+  def lightBlue: lightBlue = "lightBlue".asInstanceOf[lightBlue]
+  
+  @scala.inline
+  def lightBrown: lightBrown = "lightBrown".asInstanceOf[lightBrown]
+  
+  @scala.inline
+  def lightGray: lightGray = "lightGray".asInstanceOf[lightGray]
+  
+  @scala.inline
+  def lightGreen: lightGreen = "lightGreen".asInstanceOf[lightGreen]
+  
+  @scala.inline
+  def lightOrange: lightOrange = "lightOrange".asInstanceOf[lightOrange]
+  
+  @scala.inline
+  def lightPink: lightPink = "lightPink".asInstanceOf[lightPink]
+  
+  @scala.inline
+  def lightRed: lightRed = "lightRed".asInstanceOf[lightRed]
+  
+  @scala.inline
+  def lightTeal: lightTeal = "lightTeal".asInstanceOf[lightTeal]
+  
+  @scala.inline
+  def lightYellow: lightYellow = "lightYellow".asInstanceOf[lightYellow]
+  
+  @scala.inline
+  def limitedRead: limitedRead = "limitedRead".asInstanceOf[limitedRead]
+  
+  @scala.inline
+  def lineOfBusiness: lineOfBusiness = "lineOfBusiness".asInstanceOf[lineOfBusiness]
+  
+  @scala.inline
+  def link: link = "link".asInstanceOf[link]
+  
+  @scala.inline
+  def localBusiness: localBusiness = "localBusiness".asInstanceOf[localBusiness]
+  
+  @scala.inline
+  def localMachineSam: localMachineSam = "localMachineSam".asInstanceOf[localMachineSam]
+  
+  @scala.inline
+  def localMachineSecurity: localMachineSecurity = "localMachineSecurity".asInstanceOf[localMachineSecurity]
+  
+  @scala.inline
+  def localMachineSoftware: localMachineSoftware = "localMachineSoftware".asInstanceOf[localMachineSoftware]
+  
+  @scala.inline
+  def localMachineSystem: localMachineSystem = "localMachineSystem".asInstanceOf[localMachineSystem]
+  
+  @scala.inline
+  def localStorage: localStorage = "localStorage".asInstanceOf[localStorage]
+  
+  @scala.inline
+  def locationStore: locationStore = "locationStore".asInstanceOf[locationStore]
+  
+  @scala.inline
+  def lockedOut: lockedOut = "lockedOut".asInstanceOf[lockedOut]
+  
+  @scala.inline
+  def lookup: lookup = "lookup".asInstanceOf[lookup]
+  
+  @scala.inline
+  def low: low = "low".asInstanceOf[low]
+  
+  @scala.inline
+  def lowSecurityBiometric: lowSecurityBiometric = "lowSecurityBiometric".asInstanceOf[lowSecurityBiometric]
+  
+  @scala.inline
+  def lowSeverity: lowSeverity = "lowSeverity".asInstanceOf[lowSeverity]
+  
+  @scala.inline
+  def lsHash: lsHash = "lsHash".asInstanceOf[lsHash]
+  
+  @scala.inline
+  def macOS: macOS = "macOS".asInstanceOf[macOS]
+  
+  @scala.inline
+  def mail: mail = "mail".asInstanceOf[mail]
+  
+  @scala.inline
+  def mailFlowRule: mailFlowRule = "mailFlowRule".asInstanceOf[mailFlowRule]
+  
+  @scala.inline
+  def mailboxFullStatus: mailboxFullStatus = "mailboxFullStatus".asInstanceOf[mailboxFullStatus]
+  
+  @scala.inline
+  def male: male = "male".asInstanceOf[male]
+  
+  @scala.inline
+  def maliciousIPAddress: maliciousIPAddress = "maliciousIPAddress".asInstanceOf[maliciousIPAddress]
+  
+  @scala.inline
+  def maliciousIPAddressValidCredentialsBlockedIP: maliciousIPAddressValidCredentialsBlockedIP = "maliciousIPAddressValidCredentialsBlockedIP".asInstanceOf[maliciousIPAddressValidCredentialsBlockedIP]
+  
+  @scala.inline
+  def malware: malware = "malware".asInstanceOf[malware]
+  
+  @scala.inline
+  def malwareInfectedIPAddress: malwareInfectedIPAddress = "malwareInfectedIPAddress".asInstanceOf[malwareInfectedIPAddress]
+  
+  @scala.inline
+  def managedApps: managedApps = "managedApps".asInstanceOf[managedApps]
+  
+  @scala.inline
+  def managedAppsWithPasteIn: managedAppsWithPasteIn = "managedAppsWithPasteIn".asInstanceOf[managedAppsWithPasteIn]
+  
+  @scala.inline
+  def manager: manager = "manager".asInstanceOf[manager]
+  
+  @scala.inline
+  def manual: manual = "manual".asInstanceOf[manual]
+  
+  @scala.inline
+  def mature: mature = "mature".asInstanceOf[mature]
+  
+  @scala.inline
+  def maxColor: maxColor = "maxColor".asInstanceOf[maxColor]
+  
+  @scala.inline
+  def maxMessageSize: maxMessageSize = "maxMessageSize".asInstanceOf[maxMessageSize]
+  
+  @scala.inline
+  def mcasImpossibleTravel: mcasImpossibleTravel = "mcasImpossibleTravel".asInstanceOf[mcasImpossibleTravel]
+  
+  @scala.inline
+  def mcasSuspiciousInboxManipulationRules: mcasSuspiciousInboxManipulationRules = "mcasSuspiciousInboxManipulationRules".asInstanceOf[mcasSuspiciousInboxManipulationRules]
+  
+  @scala.inline
+  def md5: md5 = "md5".asInstanceOf[md5]
+  
+  @scala.inline
+  def mdm: mdm = "mdm".asInstanceOf[mdm]
+  
+  @scala.inline
+  def medium: medium = "medium".asInstanceOf[medium]
+  
+  @scala.inline
+  def mediumHigh: mediumHigh = "mediumHigh".asInstanceOf[mediumHigh]
+  
+  @scala.inline
+  def mediumLow: mediumLow = "mediumLow".asInstanceOf[mediumLow]
+  
+  @scala.inline
+  def mediumSeverity: mediumSeverity = "mediumSeverity".asInstanceOf[mediumSeverity]
+  
+  @scala.inline
+  def meetingAccepted: meetingAccepted = "meetingAccepted".asInstanceOf[meetingAccepted]
+  
+  @scala.inline
+  def meetingCancelled: meetingCancelled = "meetingCancelled".asInstanceOf[meetingCancelled]
+  
+  @scala.inline
+  def meetingDeclined: meetingDeclined = "meetingDeclined".asInstanceOf[meetingDeclined]
+  
+  @scala.inline
+  def meetingRequest: meetingRequest = "meetingRequest".asInstanceOf[meetingRequest]
+  
+  @scala.inline
+  def meetingTenativelyAccepted: meetingTenativelyAccepted = "meetingTenativelyAccepted".asInstanceOf[meetingTenativelyAccepted]
+  
+  @scala.inline
+  def members: members = "members".asInstanceOf[members]
+  
+  @scala.inline
+  def message: message = "message".asInstanceOf[message]
+  
+  @scala.inline
+  def mfaRequired: mfaRequired = "mfaRequired".asInstanceOf[mfaRequired]
+  
+  @scala.inline
+  def microsoftEdge: microsoftEdge = "microsoftEdge".asInstanceOf[microsoftEdge]
+  
+  @scala.inline
+  def misconfigured: misconfigured = "misconfigured".asInstanceOf[misconfigured]
+  
+  @scala.inline
+  def mobile: mobile = "mobile".asInstanceOf[mobile]
+  
+  @scala.inline
+  def modal: modal = "modal".asInstanceOf[modal]
+  
+  @scala.inline
+  def moderate: moderate = "moderate".asInstanceOf[moderate]
+  
+  @scala.inline
+  def moderationStatus: moderationStatus = "moderationStatus".asInstanceOf[moderationStatus]
+  
+  @scala.inline
+  def modify: modify = "modify".asInstanceOf[modify]
+  
+  @scala.inline
+  def monday: monday = "monday".asInstanceOf[monday]
+  
+  @scala.inline
+  def monitorAllFiles: monitorAllFiles = "monitorAllFiles".asInstanceOf[monitorAllFiles]
+  
+  @scala.inline
+  def monitorIncomingFilesOnly: monitorIncomingFilesOnly = "monitorIncomingFilesOnly".asInstanceOf[monitorIncomingFilesOnly]
+  
+  @scala.inline
+  def monitorOutgoingFilesOnly: monitorOutgoingFilesOnly = "monitorOutgoingFilesOnly".asInstanceOf[monitorOutgoingFilesOnly]
+  
+  @scala.inline
+  def multiSz: multiSz = "multiSz".asInstanceOf[multiSz]
+  
+  @scala.inline
+  def multiTenantApp: multiTenantApp = "multiTenantApp".asInstanceOf[multiTenantApp]
+  
+  @scala.inline
+  def nd: nd = "nd".asInstanceOf[nd]
+  
+  @scala.inline
+  def network: network = "network".asInstanceOf[network]
+  
+  @scala.inline
+  def neutral: neutral = "neutral".asInstanceOf[neutral]
+  
+  @scala.inline
+  def neverNotify: neverNotify = "neverNotify".asInstanceOf[neverNotify]
+  
+  @scala.inline
+  def neverSendData: neverSendData = "neverSendData".asInstanceOf[neverSendData]
+  
+  @scala.inline
+  def newAlert: newAlert = "newAlert".asInstanceOf[newAlert]
+  
+  @scala.inline
+  def newMeetingRequest: newMeetingRequest = "newMeetingRequest".asInstanceOf[newMeetingRequest]
+  
+  @scala.inline
+  def nine: nine = "nine".asInstanceOf[nine]
+  
+  @scala.inline
+  def noAction: noAction = "noAction".asInstanceOf[noAction]
+  
+  @scala.inline
+  def noEnd: noEnd = "noEnd".asInstanceOf[noEnd]
+  
+  @scala.inline
+  def noPreview: noPreview = "noPreview".asInstanceOf[noPreview]
+  
+  @scala.inline
+  def noProtection: noProtection = "noProtection".asInstanceOf[noProtection]
+  
+  @scala.inline
+  def noResponseNecessary: noResponseNecessary = "noResponseNecessary".asInstanceOf[noResponseNecessary]
+  
+  @scala.inline
+  def noRestrictions: noRestrictions = "noRestrictions".asInstanceOf[noRestrictions]
+  
+  @scala.inline
+  def nonCompliant: nonCompliant = "nonCompliant".asInstanceOf[nonCompliant]
+  
+  @scala.inline
+  def nonFullScreen: nonFullScreen = "nonFullScreen".asInstanceOf[nonFullScreen]
+  
+  @scala.inline
+  def noncompliant_ : noncompliant_ = "noncompliant".asInstanceOf[noncompliant_]
+  
+  @scala.inline
+  def none_ : none_ = "none".asInstanceOf[none_]
+  
+  @scala.inline
+  def normal: normal = "normal".asInstanceOf[normal]
+  
+  @scala.inline
+  def notAllow: notAllow = "notAllow".asInstanceOf[notAllow]
+  
+  @scala.inline
+  def notAllowed: notAllowed = "notAllowed".asInstanceOf[notAllowed]
+  
+  @scala.inline
+  def notApplicable: notApplicable = "notApplicable".asInstanceOf[notApplicable]
+  
+  @scala.inline
+  def notApplied: notApplied = "notApplied".asInstanceOf[notApplied]
+  
+  @scala.inline
+  def notAssigned: notAssigned = "notAssigned".asInstanceOf[notAssigned]
+  
+  @scala.inline
+  def notCompliant: notCompliant = "notCompliant".asInstanceOf[notCompliant]
+  
+  @scala.inline
+  def notConfigured: notConfigured = "notConfigured".asInstanceOf[notConfigured]
+  
+  @scala.inline
+  def notEnabled: notEnabled = "notEnabled".asInstanceOf[notEnabled]
+  
+  @scala.inline
+  def notEnrolled: notEnrolled = "notEnrolled".asInstanceOf[notEnrolled]
+  
+  @scala.inline
+  def notFlagged: notFlagged = "notFlagged".asInstanceOf[notFlagged]
+  
+  @scala.inline
+  def notInAddressBook: notInAddressBook = "notInAddressBook".asInstanceOf[notInAddressBook]
+  
+  @scala.inline
+  def notInstalled: notInstalled = "notInstalled".asInstanceOf[notInstalled]
+  
+  @scala.inline
+  def notJunk: notJunk = "notJunk".asInstanceOf[notJunk]
+  
+  @scala.inline
+  def notOnboarded: notOnboarded = "notOnboarded".asInstanceOf[notOnboarded]
+  
+  @scala.inline
+  def notPublished: notPublished = "notPublished".asInstanceOf[notPublished]
+  
+  @scala.inline
+  def notRecording: notRecording = "notRecording".asInstanceOf[notRecording]
+  
+  @scala.inline
+  def notRegistered: notRegistered = "notRegistered".asInstanceOf[notRegistered]
+  
+  @scala.inline
+  def notRegisteredPendingEnrollment: notRegisteredPendingEnrollment = "notRegisteredPendingEnrollment".asInstanceOf[notRegisteredPendingEnrollment]
+  
+  @scala.inline
+  def notResponded: notResponded = "notResponded".asInstanceOf[notResponded]
+  
+  @scala.inline
+  def notSet: notSet = "notSet".asInstanceOf[notSet]
+  
+  @scala.inline
+  def notSpecified: notSpecified = "notSpecified".asInstanceOf[notSpecified]
+  
+  @scala.inline
+  def notStarted_ : notStarted_ = "notStarted".asInstanceOf[notStarted_]
+  
+  @scala.inline
+  def notSupported: notSupported = "notSupported".asInstanceOf[notSupported]
+  
+  @scala.inline
+  def notSupportedOperation: notSupportedOperation = "notSupportedOperation".asInstanceOf[notSupportedOperation]
+  
+  @scala.inline
+  def notWorking: notWorking = "notWorking".asInstanceOf[notWorking]
+  
+  @scala.inline
+  def notification: notification = "notification".asInstanceOf[notification]
+  
+  @scala.inline
+  def notifyDownload: notifyDownload = "notifyDownload".asInstanceOf[notifyDownload]
+  
+  @scala.inline
+  def notifyOnAppChanges: notifyOnAppChanges = "notifyOnAppChanges".asInstanceOf[notifyOnAppChanges]
+  
+  @scala.inline
+  def notifyOnAppChangesWithoutDimming: notifyOnAppChangesWithoutDimming = "notifyOnAppChangesWithoutDimming".asInstanceOf[notifyOnAppChangesWithoutDimming]
+  
+  @scala.inline
+  def notifySender: notifySender = "notifySender".asInstanceOf[notifySender]
+  
+  @scala.inline
+  def numbered: numbered = "numbered".asInstanceOf[numbered]
+  
+  @scala.inline
+  def numeric: numeric = "numeric".asInstanceOf[numeric]
+  
+  @scala.inline
+  def numericComplex: numericComplex = "numericComplex".asInstanceOf[numericComplex]
+  
+  @scala.inline
+  def occurrence: occurrence = "occurrence".asInstanceOf[occurrence]
+  
+  @scala.inline
+  def offerShiftRequest: offerShiftRequest = "offerShiftRequest".asInstanceOf[offerShiftRequest]
+  
+  @scala.inline
+  def office365: office365 = "office365".asInstanceOf[office365]
+  
+  @scala.inline
+  def offline: offline = "offline".asInstanceOf[offline]
+  
+  @scala.inline
+  def onPremises: onPremises = "onPremises".asInstanceOf[onPremises]
+  
+  @scala.inline
+  def onboarded: onboarded = "onboarded".asInstanceOf[onboarded]
+  
+  @scala.inline
+  def onboarding: onboarding = "onboarding".asInstanceOf[onboarding]
+  
+  @scala.inline
+  def one: one = "one".asInstanceOf[one]
+  
+  @scala.inline
+  def oneDriveForBusiness_ : oneDriveForBusiness_ = "oneDriveForBusiness".asInstanceOf[oneDriveForBusiness_]
+  
+  @scala.inline
+  def oneHundredFiftySeven: oneHundredFiftySeven = "oneHundredFiftySeven".asInstanceOf[oneHundredFiftySeven]
+  
+  @scala.inline
+  def oneHundredFiftyThree: oneHundredFiftyThree = "oneHundredFiftyThree".asInstanceOf[oneHundredFiftyThree]
+  
+  @scala.inline
+  def oneHundredFortyNine: oneHundredFortyNine = "oneHundredFortyNine".asInstanceOf[oneHundredFortyNine]
+  
+  @scala.inline
+  def oneHundredSixtyFive: oneHundredSixtyFive = "oneHundredSixtyFive".asInstanceOf[oneHundredSixtyFive]
+  
+  @scala.inline
+  def oneHundredSixtyOne: oneHundredSixtyOne = "oneHundredSixtyOne".asInstanceOf[oneHundredSixtyOne]
+  
+  @scala.inline
+  def online: online = "online".asInstanceOf[online]
+  
+  @scala.inline
+  def oof: oof = "oof".asInstanceOf[oof]
+  
+  @scala.inline
+  def openShift: openShift = "openShift".asInstanceOf[openShift]
+  
+  @scala.inline
+  def openShiftRequest: openShiftRequest = "openShiftRequest".asInstanceOf[openShiftRequest]
+  
+  @scala.inline
+  def optional: optional = "optional".asInstanceOf[optional]
+  
+  @scala.inline
+  def organization: organization = "organization".asInstanceOf[organization]
+  
+  @scala.inline
+  def organizer: organizer = "organizer".asInstanceOf[organizer]
+  
+  @scala.inline
+  def other: other = "other".asInstanceOf[other]
+  
+  @scala.inline
+  def otherFax: otherFax = "otherFax".asInstanceOf[otherFax]
+  
+  @scala.inline
+  def outbound: outbound = "outbound".asInstanceOf[outbound]
+  
+  @scala.inline
+  def outdated: outdated = "outdated".asInstanceOf[outdated]
+  
+  @scala.inline
+  def outgoing: outgoing = "outgoing".asInstanceOf[outgoing]
+  
+  @scala.inline
+  def `override`: `override` = "override".asInstanceOf[`override`]
+  
+  @scala.inline
+  def pager: pager = "pager".asInstanceOf[pager]
+  
+  @scala.inline
+  def parentalGuidance: parentalGuidance = "parentalGuidance".asInstanceOf[parentalGuidance]
+  
+  @scala.inline
+  def parentalGuidance13: parentalGuidance13 = "parentalGuidance13".asInstanceOf[parentalGuidance13]
+  
+  @scala.inline
+  def parentalSupervision: parentalSupervision = "parentalSupervision".asInstanceOf[parentalSupervision]
+  
+  @scala.inline
+  def pending: pending = "pending".asInstanceOf[pending]
+  
+  @scala.inline
+  def personal: personal = "personal".asInstanceOf[personal]
+  
+  @scala.inline
+  def phishing: phishing = "phishing".asInstanceOf[phishing]
+  
+  @scala.inline
+  def phone: phone = "phone".asInstanceOf[phone]
+  
+  @scala.inline
+  def piggyBank: piggyBank = "piggyBank".asInstanceOf[piggyBank]
+  
+  @scala.inline
+  def pin: pin = "pin".asInstanceOf[pin]
+  
+  @scala.inline
+  def pink: pink = "pink".asInstanceOf[pink]
+  
+  @scala.inline
+  def plane: plane = "plane".asInstanceOf[plane]
+  
+  @scala.inline
+  def postalAddress: postalAddress = "postalAddress".asInstanceOf[postalAddress]
+  
+  @scala.inline
+  def pound: pound = "pound".asInstanceOf[pound]
+  
+  @scala.inline
+  def power: power = "power".asInstanceOf[power]
+  
+  @scala.inline
+  def preschoolers: preschoolers = "preschoolers".asInstanceOf[preschoolers]
+  
+  @scala.inline
+  def preset0: preset0 = "preset0".asInstanceOf[preset0]
+  
+  @scala.inline
+  def preset1: preset1 = "preset1".asInstanceOf[preset1]
+  
+  @scala.inline
+  def preset10: preset10 = "preset10".asInstanceOf[preset10]
+  
+  @scala.inline
+  def preset11: preset11 = "preset11".asInstanceOf[preset11]
+  
+  @scala.inline
+  def preset12: preset12 = "preset12".asInstanceOf[preset12]
+  
+  @scala.inline
+  def preset13: preset13 = "preset13".asInstanceOf[preset13]
+  
+  @scala.inline
+  def preset14: preset14 = "preset14".asInstanceOf[preset14]
+  
+  @scala.inline
+  def preset15: preset15 = "preset15".asInstanceOf[preset15]
+  
+  @scala.inline
+  def preset16: preset16 = "preset16".asInstanceOf[preset16]
+  
+  @scala.inline
+  def preset17: preset17 = "preset17".asInstanceOf[preset17]
+  
+  @scala.inline
+  def preset18: preset18 = "preset18".asInstanceOf[preset18]
+  
+  @scala.inline
+  def preset19: preset19 = "preset19".asInstanceOf[preset19]
+  
+  @scala.inline
+  def preset2: preset2 = "preset2".asInstanceOf[preset2]
+  
+  @scala.inline
+  def preset20: preset20 = "preset20".asInstanceOf[preset20]
+  
+  @scala.inline
+  def preset21: preset21 = "preset21".asInstanceOf[preset21]
+  
+  @scala.inline
+  def preset22: preset22 = "preset22".asInstanceOf[preset22]
+  
+  @scala.inline
+  def preset23: preset23 = "preset23".asInstanceOf[preset23]
+  
+  @scala.inline
+  def preset24: preset24 = "preset24".asInstanceOf[preset24]
+  
+  @scala.inline
+  def preset3: preset3 = "preset3".asInstanceOf[preset3]
+  
+  @scala.inline
+  def preset4: preset4 = "preset4".asInstanceOf[preset4]
+  
+  @scala.inline
+  def preset5: preset5 = "preset5".asInstanceOf[preset5]
+  
+  @scala.inline
+  def preset6: preset6 = "preset6".asInstanceOf[preset6]
+  
+  @scala.inline
+  def preset7: preset7 = "preset7".asInstanceOf[preset7]
+  
+  @scala.inline
+  def preset8: preset8 = "preset8".asInstanceOf[preset8]
+  
+  @scala.inline
+  def preset9: preset9 = "preset9".asInstanceOf[preset9]
+  
+  @scala.inline
+  def preventAny: preventAny = "preventAny".asInstanceOf[preventAny]
+  
+  @scala.inline
+  def primary: primary = "primary".asInstanceOf[primary]
+  
+  @scala.inline
+  def principalWantsCopy: principalWantsCopy = "principalWantsCopy".asInstanceOf[principalWantsCopy]
+  
+  @scala.inline
+  def `private`: `private` = "private".asInstanceOf[`private`]
+  
+  @scala.inline
+  def processing: processing = "processing".asInstanceOf[processing]
+  
+  @scala.inline
+  def productKey: productKey = "productKey".asInstanceOf[productKey]
+  
+  @scala.inline
+  def profile: profile = "profile".asInstanceOf[profile]
+  
+  @scala.inline
+  def prompt: prompt = "prompt".asInstanceOf[prompt]
+  
+  @scala.inline
+  def promptBeforeSendingPersonalData: promptBeforeSendingPersonalData = "promptBeforeSendingPersonalData".asInstanceOf[promptBeforeSendingPersonalData]
+  
+  @scala.inline
+  def public: public = "public".asInstanceOf[public]
+  
+  @scala.inline
+  def published: published = "published".asInstanceOf[published]
+  
+  @scala.inline
+  def pup: pup = "pup".asInstanceOf[pup]
+  
+  @scala.inline
+  def purple: purple = "purple".asInstanceOf[purple]
+  
+  @scala.inline
+  def pushNotification: pushNotification = "pushNotification".asInstanceOf[pushNotification]
+  
+  @scala.inline
+  def quarantine: quarantine = "quarantine".asInstanceOf[quarantine]
+  
+  @scala.inline
+  def quarantined: quarantined = "quarantined".asInstanceOf[quarantined]
+  
+  @scala.inline
+  def queueBoth: queueBoth = "queueBoth".asInstanceOf[queueBoth]
+  
+  @scala.inline
+  def queueInbound: queueInbound = "queueInbound".asInstanceOf[queueInbound]
+  
+  @scala.inline
+  def queueOutbound: queueOutbound = "queueOutbound".asInstanceOf[queueOutbound]
+  
+  @scala.inline
+  def quick: quick = "quick".asInstanceOf[quick]
+  
+  @scala.inline
+  def qword: qword = "qword".asInstanceOf[qword]
+  
+  @scala.inline
+  def qwordlittleEndian: qwordlittleEndian = "qwordlittleEndian".asInstanceOf[qwordlittleEndian]
+  
+  @scala.inline
+  def radio: radio = "radio".asInstanceOf[radio]
+  
+  @scala.inline
+  def raw: raw = "raw".asInstanceOf[raw]
+  
+  @scala.inline
+  def read: read = "read".asInstanceOf[read]
+  
+  @scala.inline
+  def realType: realType = "realType".asInstanceOf[realType]
+  
+  @scala.inline
+  def receiveOnly: receiveOnly = "receiveOnly".asInstanceOf[receiveOnly]
+  
+  @scala.inline
+  def recipient: recipient = "recipient".asInstanceOf[recipient]
+  
+  @scala.inline
+  def recipientScope: recipientScope = "recipientScope".asInstanceOf[recipientScope]
+  
+  @scala.inline
+  def recipientSuggestions: recipientSuggestions = "recipientSuggestions".asInstanceOf[recipientSuggestions]
+  
+  @scala.inline
+  def recording: recording = "recording".asInstanceOf[recording]
+  
+  @scala.inline
+  def redirecting: redirecting = "redirecting".asInstanceOf[redirecting]
+  
+  @scala.inline
+  def reference: reference = "reference".asInstanceOf[reference]
+  
+  @scala.inline
+  def registered: registered = "registered".asInstanceOf[registered]
+  
+  @scala.inline
+  def rejected: rejected = "rejected".asInstanceOf[rejected]
+  
+  @scala.inline
+  def related: related = "related".asInstanceOf[related]
+  
+  @scala.inline
+  def relativeMonthly: relativeMonthly = "relativeMonthly".asInstanceOf[relativeMonthly]
+  
+  @scala.inline
+  def relativeYearly: relativeYearly = "relativeYearly".asInstanceOf[relativeYearly]
+  
+  @scala.inline
+  def remediated: remediated = "remediated".asInstanceOf[remediated]
+  
+  @scala.inline
+  def remoteInteractive: remoteInteractive = "remoteInteractive".asInstanceOf[remoteInteractive]
+  
+  @scala.inline
+  def remove: remove = "remove".asInstanceOf[remove]
+  
+  @scala.inline
+  def removeResourceAccessProfiles: removeResourceAccessProfiles = "removeResourceAccessProfiles".asInstanceOf[removeResourceAccessProfiles]
+  
+  @scala.inline
+  def reply: reply = "reply".asInstanceOf[reply]
+  
+  @scala.inline
+  def replyToAll: replyToAll = "replyToAll".asInstanceOf[replyToAll]
+  
+  @scala.inline
+  def reportFalsePositive: reportFalsePositive = "reportFalsePositive".asInstanceOf[reportFalsePositive]
+  
+  @scala.inline
+  def require: require = "require".asInstanceOf[require]
+  
+  @scala.inline
+  def requireAtLeastOne: requireAtLeastOne = "requireAtLeastOne".asInstanceOf[requireAtLeastOne]
+  
+  @scala.inline
+  def required: required = "required".asInstanceOf[required]
+  
+  @scala.inline
+  def rescan: rescan = "rescan".asInstanceOf[rescan]
+  
+  @scala.inline
+  def reserved: reserved = "reserved".asInstanceOf[reserved]
+  
+  @scala.inline
+  def resolved: resolved = "resolved".asInstanceOf[resolved]
+  
+  @scala.inline
+  def resource: resource = "resource".asInstanceOf[resource]
+  
+  @scala.inline
+  def restId: restId = "restId".asInstanceOf[restId]
+  
+  @scala.inline
+  def restImmutableEntryId: restImmutableEntryId = "restImmutableEntryId".asInstanceOf[restImmutableEntryId]
+  
+  @scala.inline
+  def restaurant: restaurant = "restaurant".asInstanceOf[restaurant]
+  
+  @scala.inline
+  def restricted: restricted = "restricted".asInstanceOf[restricted]
+  
+  @scala.inline
+  def retire: retire = "retire".asInstanceOf[retire]
+  
+  @scala.inline
+  def review: review = "review".asInstanceOf[review]
+  
+  @scala.inline
+  def revoked: revoked = "revoked".asInstanceOf[revoked]
+  
+  @scala.inline
+  def rootedDevice: rootedDevice = "rootedDevice".asInstanceOf[rootedDevice]
+  
+  @scala.inline
+  def running_ : running_ = "running".asInstanceOf[running_]
+  
+  @scala.inline
+  def safeSender: safeSender = "safeSender".asInstanceOf[safeSender]
+  
+  @scala.inline
+  def saturday: saturday = "saturday".asInstanceOf[saturday]
+  
+  @scala.inline
+  def sccm: sccm = "sccm".asInstanceOf[sccm]
+  
+  @scala.inline
+  def scheduled: scheduled = "scheduled".asInstanceOf[scheduled]
+  
+  @scala.inline
+  def second: second = "second".asInstanceOf[second]
+  
+  @scala.inline
+  def secondary: secondary = "secondary".asInstanceOf[secondary]
+  
+  @scala.inline
+  def secured: secured = "secured".asInstanceOf[secured]
+  
+  @scala.inline
+  def selfFork: selfFork = "selfFork".asInstanceOf[selfFork]
+  
+  @scala.inline
+  def sendAllDataWithoutPrompting: sendAllDataWithoutPrompting = "sendAllDataWithoutPrompting".asInstanceOf[sendAllDataWithoutPrompting]
+  
+  @scala.inline
+  def sendOnly: sendOnly = "sendOnly".asInstanceOf[sendOnly]
+  
+  @scala.inline
+  def sendReceive: sendReceive = "sendReceive".asInstanceOf[sendReceive]
+  
+  @scala.inline
+  def sendToDelegateAndInformationToPrincipal: sendToDelegateAndInformationToPrincipal = "sendToDelegateAndInformationToPrincipal".asInstanceOf[sendToDelegateAndInformationToPrincipal]
+  
+  @scala.inline
+  def sendToDelegateAndPrincipal: sendToDelegateAndPrincipal = "sendToDelegateAndPrincipal".asInstanceOf[sendToDelegateAndPrincipal]
+  
+  @scala.inline
+  def sendToDelegateOnly: sendToDelegateOnly = "sendToDelegateOnly".asInstanceOf[sendToDelegateOnly]
+  
+  @scala.inline
+  def sender: sender = "sender".asInstanceOf[sender]
+  
+  @scala.inline
+  def seriesMaster: seriesMaster = "seriesMaster".asInstanceOf[seriesMaster]
+  
+  @scala.inline
+  def service: service = "service".asInstanceOf[service]
+  
+  @scala.inline
+  def serviceToService: serviceToService = "serviceToService".asInstanceOf[serviceToService]
+  
+  @scala.inline
+  def settings: settings = "settings".asInstanceOf[settings]
+  
+  @scala.inline
+  def settingsAndExperimentations: settingsAndExperimentations = "settingsAndExperimentations".asInstanceOf[settingsAndExperimentations]
+  
+  @scala.inline
+  def settingsOnly: settingsOnly = "settingsOnly".asInstanceOf[settingsOnly]
+  
+  @scala.inline
+  def seven: seven = "seven".asInstanceOf[seven]
+  
+  @scala.inline
+  def sha1: sha1 = "sha1".asInstanceOf[sha1]
+  
+  @scala.inline
+  def sha256: sha256 = "sha256".asInstanceOf[sha256]
+  
+  @scala.inline
+  def sharePoint: sharePoint = "sharePoint".asInstanceOf[sharePoint]
+  
+  @scala.inline
+  def sharedDeviceUserLoggedInError: sharedDeviceUserLoggedInError = "sharedDeviceUserLoggedInError".asInstanceOf[sharedDeviceUserLoggedInError]
+  
+  @scala.inline
+  def sharedSecret: sharedSecret = "sharedSecret".asInstanceOf[sharedSecret]
+  
+  @scala.inline
+  def sharer: sharer = "sharer".asInstanceOf[sharer]
+  
+  @scala.inline
+  def shift: shift = "shift".asInstanceOf[shift]
+  
+  @scala.inline
+  def show: show = "show".asInstanceOf[show]
+  
+  @scala.inline
+  def showOrganizerAndTimeAndSubject: showOrganizerAndTimeAndSubject = "showOrganizerAndTimeAndSubject".asInstanceOf[showOrganizerAndTimeAndSubject]
+  
+  @scala.inline
+  def showOrganizerAndTimeOnly: showOrganizerAndTimeOnly = "showOrganizerAndTimeOnly".asInstanceOf[showOrganizerAndTimeOnly]
+  
+  @scala.inline
+  def sideloaded: sideloaded = "sideloaded".asInstanceOf[sideloaded]
+  
+  @scala.inline
+  def silentUpdate: silentUpdate = "silentUpdate".asInstanceOf[silentUpdate]
+  
+  @scala.inline
+  def simpleDownload: simpleDownload = "simpleDownload".asInstanceOf[simpleDownload]
+  
+  @scala.inline
+  def singleInstance: singleInstance = "singleInstance".asInstanceOf[singleInstance]
+  
+  @scala.inline
+  def singleTenantApp: singleTenantApp = "singleTenantApp".asInstanceOf[singleTenantApp]
+  
+  @scala.inline
+  def sis: sis = "sis".asInstanceOf[sis]
+  
+  @scala.inline
+  def six: six = "six".asInstanceOf[six]
+  
+  @scala.inline
+  def skypeForBusiness: skypeForBusiness = "skypeForBusiness".asInstanceOf[skypeForBusiness]
+  
+  @scala.inline
+  def skypeForBusinessVoipPhone: skypeForBusinessVoipPhone = "skypeForBusinessVoipPhone".asInstanceOf[skypeForBusinessVoipPhone]
+  
+  @scala.inline
+  def skypeForConsumer: skypeForConsumer = "skypeForConsumer".asInstanceOf[skypeForConsumer]
+  
+  @scala.inline
+  def spam: spam = "spam".asInstanceOf[spam]
+  
+  @scala.inline
+  def spx: spx = "spx".asInstanceOf[spx]
+  
+  @scala.inline
+  def spxII: spxII = "spxII".asInstanceOf[spxII]
+  
+  @scala.inline
+  def standard: standard = "standard".asInstanceOf[standard]
+  
+  @scala.inline
+  def star: star = "star".asInstanceOf[star]
+  
+  @scala.inline
+  def store: store = "store".asInstanceOf[store]
+  
+  @scala.inline
+  def streetAddress: streetAddress = "streetAddress".asInstanceOf[streetAddress]
+  
+  @scala.inline
+  def strict: strict = "strict".asInstanceOf[strict]
+  
+  @scala.inline
+  def stringType: stringType = "stringType".asInstanceOf[stringType]
+  
+  @scala.inline
+  def student: student = "student".asInstanceOf[student]
+  
+  @scala.inline
+  def succeeded: succeeded = "succeeded".asInstanceOf[succeeded]
+  
+  @scala.inline
+  def success: success = "success".asInstanceOf[success]
+  
+  @scala.inline
+  def sunday: sunday = "sunday".asInstanceOf[sunday]
+  
+  @scala.inline
+  def sunny: sunny = "sunny".asInstanceOf[sunny]
+  
+  @scala.inline
+  def suspiciousIPAddress: suspiciousIPAddress = "suspiciousIPAddress".asInstanceOf[suspiciousIPAddress]
+  
+  @scala.inline
+  def swapRequest: swapRequest = "swapRequest".asInstanceOf[swapRequest]
+  
+  @scala.inline
+  def system: system = "system".asInstanceOf[system]
+  
+  @scala.inline
+  def sz: sz = "sz".asInstanceOf[sz]
+  
+  @scala.inline
+  def tabs: tabs = "tabs".asInstanceOf[tabs]
+  
+  @scala.inline
+  def tcp: tcp = "tcp".asInstanceOf[tcp]
+  
+  @scala.inline
+  def teacher: teacher = "teacher".asInstanceOf[teacher]
+  
+  @scala.inline
+  def team: team = "team".asInstanceOf[team]
+  
+  @scala.inline
+  def teamsForBusiness: teamsForBusiness = "teamsForBusiness".asInstanceOf[teamsForBusiness]
+  
+  @scala.inline
+  def ten: ten = "ten".asInstanceOf[ten]
+  
+  @scala.inline
+  def tentative: tentative = "tentative".asInstanceOf[tentative]
+  
+  @scala.inline
+  def tentativelyAccepted: tentativelyAccepted = "tentativelyAccepted".asInstanceOf[tentativelyAccepted]
+  
+  @scala.inline
+  def terminated: terminated = "terminated".asInstanceOf[terminated]
+  
+  @scala.inline
+  def terminating: terminating = "terminating".asInstanceOf[terminating]
+  
+  @scala.inline
+  def text: text = "text".asInstanceOf[text]
+  
+  @scala.inline
+  def third: third = "third".asInstanceOf[third]
+  
+  @scala.inline
+  def thirtySix: thirtySix = "thirtySix".asInstanceOf[thirtySix]
+  
+  @scala.inline
+  def three: three = "three".asInstanceOf[three]
+  
+  @scala.inline
+  def thursday: thursday = "thursday".asInstanceOf[thursday]
+  
+  @scala.inline
+  def timeout: timeout = "timeout".asInstanceOf[timeout]
+  
+  @scala.inline
+  def tokenType: tokenType = "tokenType".asInstanceOf[tokenType]
+  
+  @scala.inline
+  def tone0: tone0 = "tone0".asInstanceOf[tone0]
+  
+  @scala.inline
+  def tone1: tone1 = "tone1".asInstanceOf[tone1]
+  
+  @scala.inline
+  def tone2: tone2 = "tone2".asInstanceOf[tone2]
+  
+  @scala.inline
+  def tone3: tone3 = "tone3".asInstanceOf[tone3]
+  
+  @scala.inline
+  def tone4: tone4 = "tone4".asInstanceOf[tone4]
+  
+  @scala.inline
+  def tone5: tone5 = "tone5".asInstanceOf[tone5]
+  
+  @scala.inline
+  def tone6: tone6 = "tone6".asInstanceOf[tone6]
+  
+  @scala.inline
+  def tone7: tone7 = "tone7".asInstanceOf[tone7]
+  
+  @scala.inline
+  def tone8: tone8 = "tone8".asInstanceOf[tone8]
+  
+  @scala.inline
+  def tone9: tone9 = "tone9".asInstanceOf[tone9]
+  
+  @scala.inline
+  def totalMemberCount: totalMemberCount = "totalMemberCount".asInstanceOf[totalMemberCount]
+  
+  @scala.inline
+  def trafficCone: trafficCone = "trafficCone".asInstanceOf[trafficCone]
+  
+  @scala.inline
+  def transferAccepted: transferAccepted = "transferAccepted".asInstanceOf[transferAccepted]
+  
+  @scala.inline
+  def transferring: transferring = "transferring".asInstanceOf[transferring]
+  
+  @scala.inline
+  def transientError: transientError = "transientError".asInstanceOf[transientError]
+  
+  @scala.inline
+  def truePositive: truePositive = "truePositive".asInstanceOf[truePositive]
+  
+  @scala.inline
+  def tuesday: tuesday = "tuesday".asInstanceOf[tuesday]
+  
+  @scala.inline
+  def two: two = "two".asInstanceOf[two]
+  
+  @scala.inline
+  def typing: typing = "typing".asInstanceOf[typing]
+  
+  @scala.inline
+  def udp: udp = "udp".asInstanceOf[udp]
+  
+  @scala.inline
+  def umbrella: umbrella = "umbrella".asInstanceOf[umbrella]
+  
+  @scala.inline
+  def unarchiveTeam: unarchiveTeam = "unarchiveTeam".asInstanceOf[unarchiveTeam]
+  
+  @scala.inline
+  def unavailable: unavailable = "unavailable".asInstanceOf[unavailable]
+  
+  @scala.inline
+  def unblock: unblock = "unblock".asInstanceOf[unblock]
+  
+  @scala.inline
+  def undefined: undefined = "undefined".asInstanceOf[undefined]
+  
+  @scala.inline
+  def unfamiliarFeatures: unfamiliarFeatures = "unfamiliarFeatures".asInstanceOf[unfamiliarFeatures]
+  
+  @scala.inline
+  def unifiedGroups: unifiedGroups = "unifiedGroups".asInstanceOf[unifiedGroups]
+  
+  @scala.inline
+  def uninstall: uninstall = "uninstall".asInstanceOf[uninstall]
+  
+  @scala.inline
+  def uninstallFailed: uninstallFailed = "uninstallFailed".asInstanceOf[uninstallFailed]
+  
+  @scala.inline
+  def universal: universal = "universal".asInstanceOf[universal]
+  
+  @scala.inline
+  def universalChildren: universalChildren = "universalChildren".asInstanceOf[universalChildren]
+  
+  @scala.inline
+  def unknownFutureValue: unknownFutureValue = "unknownFutureValue".asInstanceOf[unknownFutureValue]
+  
+  @scala.inline
+  def unknownLocation: unknownLocation = "unknownLocation".asInstanceOf[unknownLocation]
+  
+  @scala.inline
+  def unknown_ : unknown_ = "unknown".asInstanceOf[unknown_]
+  
+  @scala.inline
+  def unlikelyTravel: unlikelyTravel = "unlikelyTravel".asInstanceOf[unlikelyTravel]
+  
+  @scala.inline
+  def unresponsive: unresponsive = "unresponsive".asInstanceOf[unresponsive]
+  
+  @scala.inline
+  def unrestricted: unrestricted = "unrestricted".asInstanceOf[unrestricted]
+  
+  @scala.inline
+  def untrusted: untrusted = "untrusted".asInstanceOf[untrusted]
+  
+  @scala.inline
+  def updated: updated = "updated".asInstanceOf[updated]
+  
+  @scala.inline
+  def urgent: urgent = "urgent".asInstanceOf[urgent]
+  
+  @scala.inline
+  def url: url = "url".asInstanceOf[url]
+  
+  @scala.inline
+  def useDeviceSettings: useDeviceSettings = "useDeviceSettings".asInstanceOf[useDeviceSettings]
+  
+  @scala.inline
+  def user: user = "user".asInstanceOf[user]
+  
+  @scala.inline
+  def userAbandonment: userAbandonment = "userAbandonment".asInstanceOf[userAbandonment]
+  
+  @scala.inline
+  def userDefined: userDefined = "userDefined".asInstanceOf[userDefined]
+  
+  @scala.inline
+  def userEnrollment: userEnrollment = "userEnrollment".asInstanceOf[userEnrollment]
+  
+  @scala.inline
+  def userPassedMFADrivenByRiskBasedPolicy: userPassedMFADrivenByRiskBasedPolicy = "userPassedMFADrivenByRiskBasedPolicy".asInstanceOf[userPassedMFADrivenByRiskBasedPolicy]
+  
+  @scala.inline
+  def userPerformedSecuredPasswordChange: userPerformedSecuredPasswordChange = "userPerformedSecuredPasswordChange".asInstanceOf[userPerformedSecuredPasswordChange]
+  
+  @scala.inline
+  def userPerformedSecuredPasswordReset: userPerformedSecuredPasswordReset = "userPerformedSecuredPasswordReset".asInstanceOf[userPerformedSecuredPasswordReset]
+  
+  @scala.inline
+  def userShiftPreferences: userShiftPreferences = "userShiftPreferences".asInstanceOf[userShiftPreferences]
+  
+  @scala.inline
+  def userValidation: userValidation = "userValidation".asInstanceOf[userValidation]
+  
+  @scala.inline
+  def usersDefault: usersDefault = "usersDefault".asInstanceOf[usersDefault]
+  
+  @scala.inline
+  def utF8: utF8 = "utF8".asInstanceOf[utF8]
+  
+  @scala.inline
+  def valid: valid = "valid".asInstanceOf[valid]
+  
+  @scala.inline
+  def video: video = "video".asInstanceOf[video]
+  
+  @scala.inline
+  def videoBasedScreenSharing: videoBasedScreenSharing = "videoBasedScreenSharing".asInstanceOf[videoBasedScreenSharing]
+  
+  @scala.inline
+  def viewCalendar: viewCalendar = "viewCalendar".asInstanceOf[viewCalendar]
+  
+  @scala.inline
+  def viewer: viewer = "viewer".asInstanceOf[viewer]
+  
+  @scala.inline
+  def voicemail: voicemail = "voicemail".asInstanceOf[voicemail]
+  
+  @scala.inline
+  def warning: warning = "warning".asInstanceOf[warning]
+  
+  @scala.inline
+  def weather: weather = "weather".asInstanceOf[weather]
+  
+  @scala.inline
+  def wednesday: wednesday = "wednesday".asInstanceOf[wednesday]
+  
+  @scala.inline
+  def weekly: weekly = "weekly".asInstanceOf[weekly]
+  
+  @scala.inline
+  def whenDeviceLocked: whenDeviceLocked = "whenDeviceLocked".asInstanceOf[whenDeviceLocked]
+  
+  @scala.inline
+  def whenDeviceLockedExceptOpenFiles: whenDeviceLockedExceptOpenFiles = "whenDeviceLockedExceptOpenFiles".asInstanceOf[whenDeviceLockedExceptOpenFiles]
+  
+  @scala.inline
+  def white: white = "white".asInstanceOf[white]
+  
+  @scala.inline
+  def windows: windows = "windows".asInstanceOf[windows]
+  
+  @scala.inline
+  def windows10AndLater: windows10AndLater = "windows10AndLater".asInstanceOf[windows10AndLater]
+  
+  @scala.inline
+  def windows10Education: windows10Education = "windows10Education".asInstanceOf[windows10Education]
+  
+  @scala.inline
+  def windows10EducationN: windows10EducationN = "windows10EducationN".asInstanceOf[windows10EducationN]
+  
+  @scala.inline
+  def windows10Enterprise: windows10Enterprise = "windows10Enterprise".asInstanceOf[windows10Enterprise]
+  
+  @scala.inline
+  def windows10EnterpriseN: windows10EnterpriseN = "windows10EnterpriseN".asInstanceOf[windows10EnterpriseN]
+  
+  @scala.inline
+  def windows10HolographicEnterprise: windows10HolographicEnterprise = "windows10HolographicEnterprise".asInstanceOf[windows10HolographicEnterprise]
+  
+  @scala.inline
+  def windows10MobileEnterprise: windows10MobileEnterprise = "windows10MobileEnterprise".asInstanceOf[windows10MobileEnterprise]
+  
+  @scala.inline
+  def windows10Professional: windows10Professional = "windows10Professional".asInstanceOf[windows10Professional]
+  
+  @scala.inline
+  def windows10ProfessionalEducation: windows10ProfessionalEducation = "windows10ProfessionalEducation".asInstanceOf[windows10ProfessionalEducation]
+  
+  @scala.inline
+  def windows10ProfessionalEducationN: windows10ProfessionalEducationN = "windows10ProfessionalEducationN".asInstanceOf[windows10ProfessionalEducationN]
+  
+  @scala.inline
+  def windows10ProfessionalN: windows10ProfessionalN = "windows10ProfessionalN".asInstanceOf[windows10ProfessionalN]
+  
+  @scala.inline
+  def windows10ProfessionalWorkstation: windows10ProfessionalWorkstation = "windows10ProfessionalWorkstation".asInstanceOf[windows10ProfessionalWorkstation]
+  
+  @scala.inline
+  def windows10ProfessionalWorkstationN: windows10ProfessionalWorkstationN = "windows10ProfessionalWorkstationN".asInstanceOf[windows10ProfessionalWorkstationN]
+  
+  @scala.inline
+  def windows81AndLater: windows81AndLater = "windows81AndLater".asInstanceOf[windows81AndLater]
+  
+  @scala.inline
+  def windowsAutoEnrollment: windowsAutoEnrollment = "windowsAutoEnrollment".asInstanceOf[windowsAutoEnrollment]
+  
+  @scala.inline
+  def windowsAzureADJoin: windowsAzureADJoin = "windowsAzureADJoin".asInstanceOf[windowsAzureADJoin]
+  
+  @scala.inline
+  def windowsBulkAzureDomainJoin: windowsBulkAzureDomainJoin = "windowsBulkAzureDomainJoin".asInstanceOf[windowsBulkAzureDomainJoin]
+  
+  @scala.inline
+  def windowsBulkUserless: windowsBulkUserless = "windowsBulkUserless".asInstanceOf[windowsBulkUserless]
+  
+  @scala.inline
+  def windowsCoManagement: windowsCoManagement = "windowsCoManagement".asInstanceOf[windowsCoManagement]
+  
+  @scala.inline
+  def windowsInsiderBuildFast: windowsInsiderBuildFast = "windowsInsiderBuildFast".asInstanceOf[windowsInsiderBuildFast]
+  
+  @scala.inline
+  def windowsInsiderBuildRelease: windowsInsiderBuildRelease = "windowsInsiderBuildRelease".asInstanceOf[windowsInsiderBuildRelease]
+  
+  @scala.inline
+  def windowsInsiderBuildSlow: windowsInsiderBuildSlow = "windowsInsiderBuildSlow".asInstanceOf[windowsInsiderBuildSlow]
+  
+  @scala.inline
+  def windowsPhone81: windowsPhone81 = "windowsPhone81".asInstanceOf[windowsPhone81]
+  
+  @scala.inline
+  def wipe: wipe = "wipe".asInstanceOf[wipe]
+  
+  @scala.inline
+  def work: work = "work".asInstanceOf[work]
+  
+  @scala.inline
+  def workingElsewhere: workingElsewhere = "workingElsewhere".asInstanceOf[workingElsewhere]
+  
+  @scala.inline
+  def write: write = "write".asInstanceOf[write]
+  
+  @scala.inline
+  def x64: x64 = "x64".asInstanceOf[x64]
+  
+  @scala.inline
+  def x86: x86 = "x86".asInstanceOf[x86]
+  
+  @scala.inline
+  def xtsAes128: xtsAes128 = "xtsAes128".asInstanceOf[xtsAes128]
+  
+  @scala.inline
+  def xtsAes256: xtsAes256 = "xtsAes256".asInstanceOf[xtsAes256]
+  
+  @scala.inline
+  def yellow: yellow = "yellow".asInstanceOf[yellow]
+  
+  @scala.inline
+  def youngAdults: youngAdults = "youngAdults".asInstanceOf[youngAdults]
+  
+  @scala.inline
+  def zeroTolerance: zeroTolerance = "zeroTolerance".asInstanceOf[zeroTolerance]
+  
   @js.native
   sealed trait After extends OnenotePatchInsertPosition
   
@@ -3246,1682 +5761,4 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait zeroTolerance extends DefenderCloudBlockLevelType
-  
-  @scala.inline
-  def After: After = "After".asInstanceOf[After]
-  @scala.inline
-  def Append: Append = "Append".asInstanceOf[Append]
-  @scala.inline
-  def Before: Before = "Before".asInstanceOf[Before]
-  @scala.inline
-  def Completed: Completed = "Completed".asInstanceOf[Completed]
-  @scala.inline
-  def Contributor: Contributor = "Contributor".asInstanceOf[Contributor]
-  @scala.inline
-  def Delete: Delete = "Delete".asInstanceOf[Delete]
-  @scala.inline
-  def Failed: Failed = "Failed".asInstanceOf[Failed]
-  @scala.inline
-  def Insert: Insert = "Insert".asInstanceOf[Insert]
-  @scala.inline
-  def None: None = "None".asInstanceOf[None]
-  @scala.inline
-  def NotStarted: NotStarted = "NotStarted".asInstanceOf[NotStarted]
-  @scala.inline
-  def OnPremOneDriveForBusiness: OnPremOneDriveForBusiness = "OnPremOneDriveForBusiness".asInstanceOf[OnPremOneDriveForBusiness]
-  @scala.inline
-  def OneDrive: OneDrive = "OneDrive".asInstanceOf[OneDrive]
-  @scala.inline
-  def OneDriveForBusiness: OneDriveForBusiness = "OneDriveForBusiness".asInstanceOf[OneDriveForBusiness]
-  @scala.inline
-  def Owner: Owner = "Owner".asInstanceOf[Owner]
-  @scala.inline
-  def Prepend: Prepend = "Prepend".asInstanceOf[Prepend]
-  @scala.inline
-  def Reader: Reader = "Reader".asInstanceOf[Reader]
-  @scala.inline
-  def Replace: Replace = "Replace".asInstanceOf[Replace]
-  @scala.inline
-  def Running: Running = "Running".asInstanceOf[Running]
-  @scala.inline
-  def Unknown: Unknown = "Unknown".asInstanceOf[Unknown]
-  @scala.inline
-  def a: a = "a".asInstanceOf[a]
-  @scala.inline
-  def absoluteMonthly: absoluteMonthly = "absoluteMonthly".asInstanceOf[absoluteMonthly]
-  @scala.inline
-  def absoluteYearly: absoluteYearly = "absoluteYearly".asInstanceOf[absoluteYearly]
-  @scala.inline
-  def accept: accept = "accept".asInstanceOf[accept]
-  @scala.inline
-  def acceptAndViewCalendar: acceptAndViewCalendar = "acceptAndViewCalendar".asInstanceOf[acceptAndViewCalendar]
-  @scala.inline
-  def accepted: accepted = "accepted".asInstanceOf[accepted]
-  @scala.inline
-  def accountValidation: accountValidation = "accountValidation".asInstanceOf[accountValidation]
-  @scala.inline
-  def activated: activated = "activated".asInstanceOf[activated]
-  @scala.inline
-  def active: active = "active".asInstanceOf[active]
-  @scala.inline
-  def addThisCalendar: addThisCalendar = "addThisCalendar".asInstanceOf[addThisCalendar]
-  @scala.inline
-  def adminConfirmedSigninCompromised: adminConfirmedSigninCompromised = "adminConfirmedSigninCompromised".asInstanceOf[adminConfirmedSigninCompromised]
-  @scala.inline
-  def adminConfirmedSigninSafe: adminConfirmedSigninSafe = "adminConfirmedSigninSafe".asInstanceOf[adminConfirmedSigninSafe]
-  @scala.inline
-  def adminConfirmedUserCompromised: adminConfirmedUserCompromised = "adminConfirmedUserCompromised".asInstanceOf[adminConfirmedUserCompromised]
-  @scala.inline
-  def adminDismissedAllRiskForUser: adminDismissedAllRiskForUser = "adminDismissedAllRiskForUser".asInstanceOf[adminDismissedAllRiskForUser]
-  @scala.inline
-  def adminGeneratedTemporaryPassword: adminGeneratedTemporaryPassword = "adminGeneratedTemporaryPassword".asInstanceOf[adminGeneratedTemporaryPassword]
-  @scala.inline
-  def administrator: administrator = "administrator".asInstanceOf[administrator]
-  @scala.inline
-  def adults: adults = "adults".asInstanceOf[adults]
-  @scala.inline
-  def advancedSpamFiltering: advancedSpamFiltering = "advancedSpamFiltering".asInstanceOf[advancedSpamFiltering]
-  @scala.inline
-  def aesCbc128: aesCbc128 = "aesCbc128".asInstanceOf[aesCbc128]
-  @scala.inline
-  def aesCbc256: aesCbc256 = "aesCbc256".asInstanceOf[aesCbc256]
-  @scala.inline
-  def afterDeviceRestart: afterDeviceRestart = "afterDeviceRestart".asInstanceOf[afterDeviceRestart]
-  @scala.inline
-  def agesAbove10: agesAbove10 = "agesAbove10".asInstanceOf[agesAbove10]
-  @scala.inline
-  def agesAbove12: agesAbove12 = "agesAbove12".asInstanceOf[agesAbove12]
-  @scala.inline
-  def agesAbove12Cinema: agesAbove12Cinema = "agesAbove12Cinema".asInstanceOf[agesAbove12Cinema]
-  @scala.inline
-  def agesAbove12Video: agesAbove12Video = "agesAbove12Video".asInstanceOf[agesAbove12Video]
-  @scala.inline
-  def agesAbove13: agesAbove13 = "agesAbove13".asInstanceOf[agesAbove13]
-  @scala.inline
-  def agesAbove14: agesAbove14 = "agesAbove14".asInstanceOf[agesAbove14]
-  @scala.inline
-  def agesAbove15: agesAbove15 = "agesAbove15".asInstanceOf[agesAbove15]
-  @scala.inline
-  def agesAbove15AdultViolence: agesAbove15AdultViolence = "agesAbove15AdultViolence".asInstanceOf[agesAbove15AdultViolence]
-  @scala.inline
-  def agesAbove16: agesAbove16 = "agesAbove16".asInstanceOf[agesAbove16]
-  @scala.inline
-  def agesAbove16Restricted: agesAbove16Restricted = "agesAbove16Restricted".asInstanceOf[agesAbove16Restricted]
-  @scala.inline
-  def agesAbove17: agesAbove17 = "agesAbove17".asInstanceOf[agesAbove17]
-  @scala.inline
-  def agesAbove18: agesAbove18 = "agesAbove18".asInstanceOf[agesAbove18]
-  @scala.inline
-  def agesAbove4: agesAbove4 = "agesAbove4".asInstanceOf[agesAbove4]
-  @scala.inline
-  def agesAbove6: agesAbove6 = "agesAbove6".asInstanceOf[agesAbove6]
-  @scala.inline
-  def agesAbove9: agesAbove9 = "agesAbove9".asInstanceOf[agesAbove9]
-  @scala.inline
-  def aiConfirmedSigninSafe: aiConfirmedSigninSafe = "aiConfirmedSigninSafe".asInstanceOf[aiConfirmedSigninSafe]
-  @scala.inline
-  def all: all = "all".asInstanceOf[all]
-  @scala.inline
-  def allAllowed: allAllowed = "allAllowed".asInstanceOf[allAllowed]
-  @scala.inline
-  def allApps: allApps = "allApps".asInstanceOf[allApps]
-  @scala.inline
-  def allBlocked: allBlocked = "allBlocked".asInstanceOf[allBlocked]
-  @scala.inline
-  def allow: allow = "allow".asInstanceOf[allow]
-  @scala.inline
-  def allowAlways: allowAlways = "allowAlways".asInstanceOf[allowAlways]
-  @scala.inline
-  def allowCurrentWebSite: allowCurrentWebSite = "allowCurrentWebSite".asInstanceOf[allowCurrentWebSite]
-  @scala.inline
-  def allowFalsePositiveOverride: allowFalsePositiveOverride = "allowFalsePositiveOverride".asInstanceOf[allowFalsePositiveOverride]
-  @scala.inline
-  def allowFromWebsitesVisited: allowFromWebsitesVisited = "allowFromWebsitesVisited".asInstanceOf[allowFromWebsitesVisited]
-  @scala.inline
-  def allowOverrideWithJustification: allowOverrideWithJustification = "allowOverrideWithJustification".asInstanceOf[allowOverrideWithJustification]
-  @scala.inline
-  def allowOverrideWithoutJustification: allowOverrideWithoutJustification = "allowOverrideWithoutJustification".asInstanceOf[allowOverrideWithoutJustification]
-  @scala.inline
-  def allowPersonalToWork: allowPersonalToWork = "allowPersonalToWork".asInstanceOf[allowPersonalToWork]
-  @scala.inline
-  def allowed: allowed = "allowed".asInstanceOf[allowed]
-  @scala.inline
-  def alphabetic: alphabetic = "alphabetic".asInstanceOf[alphabetic]
-  @scala.inline
-  def alphanumeric: alphanumeric = "alphanumeric".asInstanceOf[alphanumeric]
-  @scala.inline
-  def alphanumericAndSymbol: alphanumericAndSymbol = "alphanumericAndSymbol".asInstanceOf[alphanumericAndSymbol]
-  @scala.inline
-  def alphanumericWithSymbols: alphanumericWithSymbols = "alphanumericWithSymbols".asInstanceOf[alphanumericWithSymbols]
-  @scala.inline
-  def alwaysEnabled: alwaysEnabled = "alwaysEnabled".asInstanceOf[alwaysEnabled]
-  @scala.inline
-  def alwaysNotify: alwaysNotify = "alwaysNotify".asInstanceOf[alwaysNotify]
-  @scala.inline
-  def alwaysPrompt: alwaysPrompt = "alwaysPrompt".asInstanceOf[alwaysPrompt]
-  @scala.inline
-  def android: android = "android".asInstanceOf[android]
-  @scala.inline
-  def androidWorkProfile: androidWorkProfile = "androidWorkProfile".asInstanceOf[androidWorkProfile]
-  @scala.inline
-  def anonymizedIPAddress: anonymizedIPAddress = "anonymizedIPAddress".asInstanceOf[anonymizedIPAddress]
-  @scala.inline
-  def any: any = "any".asInstanceOf[any]
-  @scala.inline
-  def appleBulkWithUser: appleBulkWithUser = "appleBulkWithUser".asInstanceOf[appleBulkWithUser]
-  @scala.inline
-  def appleBulkWithoutUser: appleBulkWithoutUser = "appleBulkWithoutUser".asInstanceOf[appleBulkWithoutUser]
-  @scala.inline
-  def approvalPending: approvalPending = "approvalPending".asInstanceOf[approvalPending]
-  @scala.inline
-  def approved: approved = "approved".asInstanceOf[approved]
-  @scala.inline
-  def apps: apps = "apps".asInstanceOf[apps]
-  @scala.inline
-  def appsInListCompliant: appsInListCompliant = "appsInListCompliant".asInstanceOf[appsInListCompliant]
-  @scala.inline
-  def appsNotInListCompliant: appsNotInListCompliant = "appsNotInListCompliant".asInstanceOf[appsNotInListCompliant]
-  @scala.inline
-  def archiveTeam: archiveTeam = "archiveTeam".asInstanceOf[archiveTeam]
-  @scala.inline
-  def arm: arm = "arm".asInstanceOf[arm]
-  @scala.inline
-  def assignedToExternalMDM: assignedToExternalMDM = "assignedToExternalMDM".asInstanceOf[assignedToExternalMDM]
-  @scala.inline
-  def assistant: assistant = "assistant".asInstanceOf[assistant]
-  @scala.inline
-  def atLeastAlphabetic: atLeastAlphabetic = "atLeastAlphabetic".asInstanceOf[atLeastAlphabetic]
-  @scala.inline
-  def atLeastAlphanumeric: atLeastAlphanumeric = "atLeastAlphanumeric".asInstanceOf[atLeastAlphanumeric]
-  @scala.inline
-  def atLeastNumeric: atLeastNumeric = "atLeastNumeric".asInstanceOf[atLeastNumeric]
-  @scala.inline
-  def atRisk: atRisk = "atRisk".asInstanceOf[atRisk]
-  @scala.inline
-  def attacked: attacked = "attacked".asInstanceOf[attacked]
-  @scala.inline
-  def attempt: attempt = "attempt".asInstanceOf[attempt]
-  @scala.inline
-  def attempted: attempted = "attempted".asInstanceOf[attempted]
-  @scala.inline
-  def audio: audio = "audio".asInstanceOf[audio]
-  @scala.inline
-  def auditComponentsAndStoreApps: auditComponentsAndStoreApps = "auditComponentsAndStoreApps".asInstanceOf[auditComponentsAndStoreApps]
-  @scala.inline
-  def auditComponentsStoreAppsAndSmartlocker: auditComponentsStoreAppsAndSmartlocker = "auditComponentsStoreAppsAndSmartlocker".asInstanceOf[auditComponentsStoreAppsAndSmartlocker]
-  @scala.inline
-  def authentication: authentication = "authentication".asInstanceOf[authentication]
-  @scala.inline
-  def authenticodeHash256: authenticodeHash256 = "authenticodeHash256".asInstanceOf[authenticodeHash256]
-  @scala.inline
-  def authorization: authorization = "authorization".asInstanceOf[authorization]
-  @scala.inline
-  def auto: auto = "auto".asInstanceOf[auto]
-  @scala.inline
-  def autoDeny: autoDeny = "autoDeny".asInstanceOf[autoDeny]
-  @scala.inline
-  def autoGrant: autoGrant = "autoGrant".asInstanceOf[autoGrant]
-  @scala.inline
-  def autoInstallAndRebootAtMaintenanceTime: autoInstallAndRebootAtMaintenanceTime = "autoInstallAndRebootAtMaintenanceTime".asInstanceOf[autoInstallAndRebootAtMaintenanceTime]
-  @scala.inline
-  def autoInstallAndRebootAtScheduledTime: autoInstallAndRebootAtScheduledTime = "autoInstallAndRebootAtScheduledTime".asInstanceOf[autoInstallAndRebootAtScheduledTime]
-  @scala.inline
-  def autoInstallAndRebootWithoutEndUserControl: autoInstallAndRebootWithoutEndUserControl = "autoInstallAndRebootWithoutEndUserControl".asInstanceOf[autoInstallAndRebootWithoutEndUserControl]
-  @scala.inline
-  def autoInstallAtMaintenanceTime: autoInstallAtMaintenanceTime = "autoInstallAtMaintenanceTime".asInstanceOf[autoInstallAtMaintenanceTime]
-  @scala.inline
-  def autoPurgeToDeleted: autoPurgeToDeleted = "autoPurgeToDeleted".asInstanceOf[autoPurgeToDeleted]
-  @scala.inline
-  def autoPurgeToInbox: autoPurgeToInbox = "autoPurgeToInbox".asInstanceOf[autoPurgeToInbox]
-  @scala.inline
-  def autoPurgeToJunk: autoPurgeToJunk = "autoPurgeToJunk".asInstanceOf[autoPurgeToJunk]
-  @scala.inline
-  def automatic: automatic = "automatic".asInstanceOf[automatic]
-  @scala.inline
-  def automaticReplies: automaticReplies = "automaticReplies".asInstanceOf[automaticReplies]
-  @scala.inline
-  def available: available = "available".asInstanceOf[available]
-  @scala.inline
-  def availableWithoutEnrollment: availableWithoutEnrollment = "availableWithoutEnrollment".asInstanceOf[availableWithoutEnrollment]
-  @scala.inline
-  def azureAD: azureAD = "azureAD".asInstanceOf[azureAD]
-  @scala.inline
-  def azureADBlockDueToAccessPolicy: azureADBlockDueToAccessPolicy = "azureADBlockDueToAccessPolicy".asInstanceOf[azureADBlockDueToAccessPolicy]
-  @scala.inline
-  def azureStorageUriRenewalFailed: azureStorageUriRenewalFailed = "azureStorageUriRenewalFailed".asInstanceOf[azureStorageUriRenewalFailed]
-  @scala.inline
-  def azureStorageUriRenewalPending: azureStorageUriRenewalPending = "azureStorageUriRenewalPending".asInstanceOf[azureStorageUriRenewalPending]
-  @scala.inline
-  def azureStorageUriRenewalSuccess: azureStorageUriRenewalSuccess = "azureStorageUriRenewalSuccess".asInstanceOf[azureStorageUriRenewalSuccess]
-  @scala.inline
-  def azureStorageUriRenewalTimedOut: azureStorageUriRenewalTimedOut = "azureStorageUriRenewalTimedOut".asInstanceOf[azureStorageUriRenewalTimedOut]
-  @scala.inline
-  def azureStorageUriRequestFailed: azureStorageUriRequestFailed = "azureStorageUriRequestFailed".asInstanceOf[azureStorageUriRequestFailed]
-  @scala.inline
-  def azureStorageUriRequestPending: azureStorageUriRequestPending = "azureStorageUriRequestPending".asInstanceOf[azureStorageUriRequestPending]
-  @scala.inline
-  def azureStorageUriRequestSuccess: azureStorageUriRequestSuccess = "azureStorageUriRequestSuccess".asInstanceOf[azureStorageUriRequestSuccess]
-  @scala.inline
-  def azureStorageUriRequestTimedOut: azureStorageUriRequestTimedOut = "azureStorageUriRequestTimedOut".asInstanceOf[azureStorageUriRequestTimedOut]
-  @scala.inline
-  def b: b = "b".asInstanceOf[b]
-  @scala.inline
-  def badRequest: badRequest = "badRequest".asInstanceOf[badRequest]
-  @scala.inline
-  def banner: banner = "banner".asInstanceOf[banner]
-  @scala.inline
-  def basic: basic = "basic".asInstanceOf[basic]
-  @scala.inline
-  def batch: batch = "batch".asInstanceOf[batch]
-  @scala.inline
-  def benignPositive: benignPositive = "benignPositive".asInstanceOf[benignPositive]
-  @scala.inline
-  def binary: binary = "binary".asInstanceOf[binary]
-  @scala.inline
-  def bing: bing = "bing".asInstanceOf[bing]
-  @scala.inline
-  def block: block = "block".asInstanceOf[block]
-  @scala.inline
-  def blockAccess: blockAccess = "blockAccess".asInstanceOf[blockAccess]
-  @scala.inline
-  def blockAccessExternal: blockAccessExternal = "blockAccessExternal".asInstanceOf[blockAccessExternal]
-  @scala.inline
-  def blockAll: blockAll = "blockAll".asInstanceOf[blockAll]
-  @scala.inline
-  def blockAlways: blockAlways = "blockAlways".asInstanceOf[blockAlways]
-  @scala.inline
-  def blockBoth: blockBoth = "blockBoth".asInstanceOf[blockBoth]
-  @scala.inline
-  def blockContainerToHost: blockContainerToHost = "blockContainerToHost".asInstanceOf[blockContainerToHost]
-  @scala.inline
-  def blockHostToContainer: blockHostToContainer = "blockHostToContainer".asInstanceOf[blockHostToContainer]
-  @scala.inline
-  def blockImageAndTextFile: blockImageAndTextFile = "blockImageAndTextFile".asInstanceOf[blockImageAndTextFile]
-  @scala.inline
-  def blockImageFile: blockImageFile = "blockImageFile".asInstanceOf[blockImageFile]
-  @scala.inline
-  def blockNone: blockNone = "blockNone".asInstanceOf[blockNone]
-  @scala.inline
-  def blockTextFile: blockTextFile = "blockTextFile".asInstanceOf[blockTextFile]
-  @scala.inline
-  def blockThirdParty: blockThirdParty = "blockThirdParty".asInstanceOf[blockThirdParty]
-  @scala.inline
-  def blocked: blocked = "blocked".asInstanceOf[blocked]
-  @scala.inline
-  def blockedSender: blockedSender = "blockedSender".asInstanceOf[blockedSender]
-  @scala.inline
-  def blog: blog = "blog".asInstanceOf[blog]
-  @scala.inline
-  def blue: blue = "blue".asInstanceOf[blue]
-  @scala.inline
-  def booleanType: booleanType = "booleanType".asInstanceOf[booleanType]
-  @scala.inline
-  def browserDefault: browserDefault = "browserDefault".asInstanceOf[browserDefault]
-  @scala.inline
-  def business: business = "business".asInstanceOf[business]
-  @scala.inline
-  def businessAddress: businessAddress = "businessAddress".asInstanceOf[businessAddress]
-  @scala.inline
-  def businessFax: businessFax = "businessFax".asInstanceOf[businessFax]
-  @scala.inline
-  def businessReadyOnly: businessReadyOnly = "businessReadyOnly".asInstanceOf[businessReadyOnly]
-  @scala.inline
-  def busy: busy = "busy".asInstanceOf[busy]
-  @scala.inline
-  def bypassMode: bypassMode = "bypassMode".asInstanceOf[bypassMode]
-  @scala.inline
-  def c: c = "c".asInstanceOf[c]
-  @scala.inline
-  def cake: cake = "cake".asInstanceOf[cake]
-  @scala.inline
-  def calendar: calendar = "calendar".asInstanceOf[calendar]
-  @scala.inline
-  def call: call = "call".asInstanceOf[call]
-  @scala.inline
-  def canceled: canceled = "canceled".asInstanceOf[canceled]
-  @scala.inline
-  def car: car = "car".asInstanceOf[car]
-  @scala.inline
-  def caution: caution = "caution".asInstanceOf[caution]
-  @scala.inline
-  def certificateReset: certificateReset = "certificateReset".asInstanceOf[certificateReset]
-  @scala.inline
-  def channels: channels = "channels".asInstanceOf[channels]
-  @scala.inline
-  def chatEvent: chatEvent = "chatEvent".asInstanceOf[chatEvent]
-  @scala.inline
-  def checkPolicy: checkPolicy = "checkPolicy".asInstanceOf[checkPolicy]
-  @scala.inline
-  def checklist: checklist = "checklist".asInstanceOf[checklist]
-  @scala.inline
-  def children: children = "children".asInstanceOf[children]
-  @scala.inline
-  def childrenAbove14: childrenAbove14 = "childrenAbove14".asInstanceOf[childrenAbove14]
-  @scala.inline
-  def childrenAbove7: childrenAbove7 = "childrenAbove7".asInstanceOf[childrenAbove7]
-  @scala.inline
-  def childrenAbove8: childrenAbove8 = "childrenAbove8".asInstanceOf[childrenAbove8]
-  @scala.inline
-  def childrenAll: childrenAll = "childrenAll".asInstanceOf[childrenAll]
-  @scala.inline
-  def clean: clean = "clean".asInstanceOf[clean]
-  @scala.inline
-  def clientDisconnected: clientDisconnected = "clientDisconnected".asInstanceOf[clientDisconnected]
-  @scala.inline
-  def clock: clock = "clock".asInstanceOf[clock]
-  @scala.inline
-  def cloneTeam: cloneTeam = "cloneTeam".asInstanceOf[cloneTeam]
-  @scala.inline
-  def collapse: collapse = "collapse".asInstanceOf[collapse]
-  @scala.inline
-  def commitFileFailed: commitFileFailed = "commitFileFailed".asInstanceOf[commitFileFailed]
-  @scala.inline
-  def commitFilePending: commitFilePending = "commitFilePending".asInstanceOf[commitFilePending]
-  @scala.inline
-  def commitFileSuccess: commitFileSuccess = "commitFileSuccess".asInstanceOf[commitFileSuccess]
-  @scala.inline
-  def commitFileTimedOut: commitFileTimedOut = "commitFileTimedOut".asInstanceOf[commitFileTimedOut]
-  @scala.inline
-  def company: company = "company".asInstanceOf[company]
-  @scala.inline
-  def complete: complete = "complete".asInstanceOf[complete]
-  @scala.inline
-  def completed_ : completed_ = "completed".asInstanceOf[completed_]
-  @scala.inline
-  def compliant: compliant = "compliant".asInstanceOf[compliant]
-  @scala.inline
-  def compromised: compromised = "compromised".asInstanceOf[compromised]
-  @scala.inline
-  def compromisedPassword: compromisedPassword = "compromisedPassword".asInstanceOf[compromisedPassword]
-  @scala.inline
-  def conferenceRoom: conferenceRoom = "conferenceRoom".asInstanceOf[conferenceRoom]
-  @scala.inline
-  def confidential: confidential = "confidential".asInstanceOf[confidential]
-  @scala.inline
-  def configManager: configManager = "configManager".asInstanceOf[configManager]
-  @scala.inline
-  def configurationManagerClient: configurationManagerClient = "configurationManagerClient".asInstanceOf[configurationManagerClient]
-  @scala.inline
-  def configurationManagerClientMdm: configurationManagerClientMdm = "configurationManagerClientMdm".asInstanceOf[configurationManagerClientMdm]
-  @scala.inline
-  def configurationManagerClientMdmEas: configurationManagerClientMdmEas = "configurationManagerClientMdmEas".asInstanceOf[configurationManagerClientMdmEas]
-  @scala.inline
-  def confirmedCompromised: confirmedCompromised = "confirmedCompromised".asInstanceOf[confirmedCompromised]
-  @scala.inline
-  def confirmedSafe: confirmedSafe = "confirmedSafe".asInstanceOf[confirmedSafe]
-  @scala.inline
-  def conflict: conflict = "conflict".asInstanceOf[conflict]
-  @scala.inline
-  def connected: connected = "connected".asInstanceOf[connected]
-  @scala.inline
-  def connectionPending: connectionPending = "connectionPending".asInstanceOf[connectionPending]
-  @scala.inline
-  def contactsOnly: contactsOnly = "contactsOnly".asInstanceOf[contactsOnly]
-  @scala.inline
-  def create: create = "create".asInstanceOf[create]
-  @scala.inline
-  def createTeam: createTeam = "createTeam".asInstanceOf[createTeam]
-  @scala.inline
-  def created: created = "created".asInstanceOf[created]
-  @scala.inline
-  def ctph: ctph = "ctph".asInstanceOf[ctph]
-  @scala.inline
-  def cup: cup = "cup".asInstanceOf[cup]
-  @scala.inline
-  def currentConfig: currentConfig = "currentConfig".asInstanceOf[currentConfig]
-  @scala.inline
-  def currentUser: currentUser = "currentUser".asInstanceOf[currentUser]
-  @scala.inline
-  def custom: custom = "custom".asInstanceOf[custom]
-  @scala.inline
-  def customMailTip: customMailTip = "customMailTip".asInstanceOf[customMailTip]
-  @scala.inline
-  def d: d = "d".asInstanceOf[d]
-  @scala.inline
-  def daily: daily = "daily".asInstanceOf[daily]
-  @scala.inline
-  def darkBlue: darkBlue = "darkBlue".asInstanceOf[darkBlue]
-  @scala.inline
-  def darkGreen: darkGreen = "darkGreen".asInstanceOf[darkGreen]
-  @scala.inline
-  def darkPink: darkPink = "darkPink".asInstanceOf[darkPink]
-  @scala.inline
-  def darkPurple: darkPurple = "darkPurple".asInstanceOf[darkPurple]
-  @scala.inline
-  def darkYellow: darkYellow = "darkYellow".asInstanceOf[darkYellow]
-  @scala.inline
-  def data: data = "data".asInstanceOf[data]
-  @scala.inline
-  def deactivated: deactivated = "deactivated".asInstanceOf[deactivated]
-  @scala.inline
-  def declined: declined = "declined".asInstanceOf[declined]
-  @scala.inline
-  def dedicated: dedicated = "dedicated".asInstanceOf[dedicated]
-  @scala.inline
-  def default: default = "default".asInstanceOf[default]
-  @scala.inline
-  def delegateWithPrivateEventAccess: delegateWithPrivateEventAccess = "delegateWithPrivateEventAccess".asInstanceOf[delegateWithPrivateEventAccess]
-  @scala.inline
-  def delegateWithoutPrivateEventAccess: delegateWithoutPrivateEventAccess = "delegateWithoutPrivateEventAccess".asInstanceOf[delegateWithoutPrivateEventAccess]
-  @scala.inline
-  def delete_ : delete_ = "delete".asInstanceOf[delete_]
-  @scala.inline
-  def deleted: deleted = "deleted".asInstanceOf[deleted]
-  @scala.inline
-  def deliveryRestriction: deliveryRestriction = "deliveryRestriction".asInstanceOf[deliveryRestriction]
-  @scala.inline
-  def deltaSync: deltaSync = "deltaSync".asInstanceOf[deltaSync]
-  @scala.inline
-  def description: description = "description".asInstanceOf[description]
-  @scala.inline
-  def desktop: desktop = "desktop".asInstanceOf[desktop]
-  @scala.inline
-  def deviceDefault: deviceDefault = "deviceDefault".asInstanceOf[deviceDefault]
-  @scala.inline
-  def deviceEnrollmentManager: deviceEnrollmentManager = "deviceEnrollmentManager".asInstanceOf[deviceEnrollmentManager]
-  @scala.inline
-  def deviceNotKnownWithManagedApp: deviceNotKnownWithManagedApp = "deviceNotKnownWithManagedApp".asInstanceOf[deviceNotKnownWithManagedApp]
-  @scala.inline
-  def deviceNotSupported: deviceNotSupported = "deviceNotSupported".asInstanceOf[deviceNotSupported]
-  @scala.inline
-  def deviceOsHigherThanDesiredOsVersion: deviceOsHigherThanDesiredOsVersion = "deviceOsHigherThanDesiredOsVersion".asInstanceOf[deviceOsHigherThanDesiredOsVersion]
-  @scala.inline
-  def directory: directory = "directory".asInstanceOf[directory]
-  @scala.inline
-  def disable: disable = "disable".asInstanceOf[disable]
-  @scala.inline
-  def disableSettingsApp: disableSettingsApp = "disableSettingsApp".asInstanceOf[disableSettingsApp]
-  @scala.inline
-  def disabled: disabled = "disabled".asInstanceOf[disabled]
-  @scala.inline
-  def disallowed: disallowed = "disallowed".asInstanceOf[disallowed]
-  @scala.inline
-  def disconnected: disconnected = "disconnected".asInstanceOf[disconnected]
-  @scala.inline
-  def diskSpaceThreshold: diskSpaceThreshold = "diskSpaceThreshold".asInstanceOf[diskSpaceThreshold]
-  @scala.inline
-  def diskSpaceThresholdOrInactiveThreshold: diskSpaceThresholdOrInactiveThreshold = "diskSpaceThresholdOrInactiveThreshold".asInstanceOf[diskSpaceThresholdOrInactiveThreshold]
-  @scala.inline
-  def dismissed: dismissed = "dismissed".asInstanceOf[dismissed]
-  @scala.inline
-  def doNotForward: doNotForward = "doNotForward".asInstanceOf[doNotForward]
-  @scala.inline
-  def doctor: doctor = "doctor".asInstanceOf[doctor]
-  @scala.inline
-  def dog: dog = "dog".asInstanceOf[dog]
-  @scala.inline
-  def domain: domain = "domain".asInstanceOf[domain]
-  @scala.inline
-  def domainAllowList: domainAllowList = "domainAllowList".asInstanceOf[domainAllowList]
-  @scala.inline
-  def domainBlockList: domainBlockList = "domainBlockList".asInstanceOf[domainBlockList]
-  @scala.inline
-  def done: done = "done".asInstanceOf[done]
-  @scala.inline
-  def downloadFailed: downloadFailed = "downloadFailed".asInstanceOf[downloadFailed]
-  @scala.inline
-  def downloadInsufficientNetwork: downloadInsufficientNetwork = "downloadInsufficientNetwork".asInstanceOf[downloadInsufficientNetwork]
-  @scala.inline
-  def downloadInsufficientPower: downloadInsufficientPower = "downloadInsufficientPower".asInstanceOf[downloadInsufficientPower]
-  @scala.inline
-  def downloadInsufficientSpace: downloadInsufficientSpace = "downloadInsufficientSpace".asInstanceOf[downloadInsufficientSpace]
-  @scala.inline
-  def downloadRequiresComputer: downloadRequiresComputer = "downloadRequiresComputer".asInstanceOf[downloadRequiresComputer]
-  @scala.inline
-  def downloading: downloading = "downloading".asInstanceOf[downloading]
-  @scala.inline
-  def dword: dword = "dword".asInstanceOf[dword]
-  @scala.inline
-  def dwordBigEndian: dwordBigEndian = "dwordBigEndian".asInstanceOf[dwordBigEndian]
-  @scala.inline
-  def dwordLittleEndian: dwordLittleEndian = "dwordLittleEndian".asInstanceOf[dwordLittleEndian]
-  @scala.inline
-  def eas: eas = "eas".asInstanceOf[eas]
-  @scala.inline
-  def easIntuneClient: easIntuneClient = "easIntuneClient".asInstanceOf[easIntuneClient]
-  @scala.inline
-  def easMdm: easMdm = "easMdm".asInstanceOf[easMdm]
-  @scala.inline
-  def education: education = "education".asInstanceOf[education]
-  @scala.inline
-  def eight: eight = "eight".asInstanceOf[eight]
-  @scala.inline
-  def eleven: eleven = "eleven".asInstanceOf[eleven]
-  @scala.inline
-  def enabled: enabled = "enabled".asInstanceOf[enabled]
-  @scala.inline
-  def encryptAndAuditOnly: encryptAndAuditOnly = "encryptAndAuditOnly".asInstanceOf[encryptAndAuditOnly]
-  @scala.inline
-  def encryptAuditAndBlock: encryptAuditAndBlock = "encryptAuditAndBlock".asInstanceOf[encryptAuditAndBlock]
-  @scala.inline
-  def encryptAuditAndPrompt: encryptAuditAndPrompt = "encryptAuditAndPrompt".asInstanceOf[encryptAuditAndPrompt]
-  @scala.inline
-  def endDate: endDate = "endDate".asInstanceOf[endDate]
-  @scala.inline
-  def enforceComponentsAndStoreApps: enforceComponentsAndStoreApps = "enforceComponentsAndStoreApps".asInstanceOf[enforceComponentsAndStoreApps]
-  @scala.inline
-  def enforceComponentsStoreAppsAndSmartlocker: enforceComponentsStoreAppsAndSmartlocker = "enforceComponentsStoreAppsAndSmartlocker".asInstanceOf[enforceComponentsStoreAppsAndSmartlocker]
-  @scala.inline
-  def enhanced: enhanced = "enhanced".asInstanceOf[enhanced]
-  @scala.inline
-  def enrollmentRestrictionsEnforced: enrollmentRestrictionsEnforced = "enrollmentRestrictionsEnforced".asInstanceOf[enrollmentRestrictionsEnforced]
-  @scala.inline
-  def entryId: entryId = "entryId".asInstanceOf[entryId]
-  @scala.inline
-  def error: error = "error".asInstanceOf[error]
-  @scala.inline
-  def established: established = "established".asInstanceOf[established]
-  @scala.inline
-  def establishing: establishing = "establishing".asInstanceOf[establishing]
-  @scala.inline
-  def everyday: everyday = "everyday".asInstanceOf[everyday]
-  @scala.inline
-  def ewsId: ewsId = "ewsId".asInstanceOf[ewsId]
-  @scala.inline
-  def exception: exception = "exception".asInstanceOf[exception]
-  @scala.inline
-  def exchangeDeviceRule: exchangeDeviceRule = "exchangeDeviceRule".asInstanceOf[exchangeDeviceRule]
-  @scala.inline
-  def exchangeGlobalRule: exchangeGlobalRule = "exchangeGlobalRule".asInstanceOf[exchangeGlobalRule]
-  @scala.inline
-  def exchangeIndividualRule: exchangeIndividualRule = "exchangeIndividualRule".asInstanceOf[exchangeIndividualRule]
-  @scala.inline
-  def exchangeMailboxPolicy: exchangeMailboxPolicy = "exchangeMailboxPolicy".asInstanceOf[exchangeMailboxPolicy]
-  @scala.inline
-  def exchangeUpgrade: exchangeUpgrade = "exchangeUpgrade".asInstanceOf[exchangeUpgrade]
-  @scala.inline
-  def expandSz: expandSz = "expandSz".asInstanceOf[expandSz]
-  @scala.inline
-  def expired: expired = "expired".asInstanceOf[expired]
-  @scala.inline
-  def explicitAllowed: explicitAllowed = "explicitAllowed".asInstanceOf[explicitAllowed]
-  @scala.inline
-  def external: external = "external".asInstanceOf[external]
-  @scala.inline
-  def externalMemberCount: externalMemberCount = "externalMemberCount".asInstanceOf[externalMemberCount]
-  @scala.inline
-  def externalNonPartner: externalNonPartner = "externalNonPartner".asInstanceOf[externalNonPartner]
-  @scala.inline
-  def externalPartner: externalPartner = "externalPartner".asInstanceOf[externalPartner]
-  @scala.inline
-  def failed_ : failed_ = "failed".asInstanceOf[failed_]
-  @scala.inline
-  def failure: failure = "failure".asInstanceOf[failure]
-  @scala.inline
-  def falsePositive: falsePositive = "falsePositive".asInstanceOf[falsePositive]
-  @scala.inline
-  def featureNotSupported: featureNotSupported = "featureNotSupported".asInstanceOf[featureNotSupported]
-  @scala.inline
-  def female: female = "female".asInstanceOf[female]
-  @scala.inline
-  def file: file = "file".asInstanceOf[file]
-  @scala.inline
-  def first: first = "first".asInstanceOf[first]
-  @scala.inline
-  def firstAid: firstAid = "firstAid".asInstanceOf[firstAid]
-  @scala.inline
-  def firstTimeSender: firstTimeSender = "firstTimeSender".asInstanceOf[firstTimeSender]
-  @scala.inline
-  def five: five = "five".asInstanceOf[five]
-  @scala.inline
-  def flagged: flagged = "flagged".asInstanceOf[flagged]
-  @scala.inline
-  def flash: flash = "flash".asInstanceOf[flash]
-  @scala.inline
-  def focused: focused = "focused".asInstanceOf[focused]
-  @scala.inline
-  def followUp: followUp = "followUp".asInstanceOf[followUp]
-  @scala.inline
-  def forbidden: forbidden = "forbidden".asInstanceOf[forbidden]
-  @scala.inline
-  def forty: forty = "forty".asInstanceOf[forty]
-  @scala.inline
-  def fortyEight: fortyEight = "fortyEight".asInstanceOf[fortyEight]
-  @scala.inline
-  def fortyFour: fortyFour = "fortyFour".asInstanceOf[fortyFour]
-  @scala.inline
-  def forward: forward = "forward".asInstanceOf[forward]
-  @scala.inline
-  def forwarded: forwarded = "forwarded".asInstanceOf[forwarded]
-  @scala.inline
-  def four: four = "four".asInstanceOf[four]
-  @scala.inline
-  def fourth: fourth = "fourth".asInstanceOf[fourth]
-  @scala.inline
-  def free: free = "free".asInstanceOf[free]
-  @scala.inline
-  def freeBusyRead: freeBusyRead = "freeBusyRead".asInstanceOf[freeBusyRead]
-  @scala.inline
-  def friday: friday = "friday".asInstanceOf[friday]
-  @scala.inline
-  def full: full = "full".asInstanceOf[full]
-  @scala.inline
-  def fullScreen: fullScreen = "fullScreen".asInstanceOf[fullScreen]
-  @scala.inline
-  def fullSync: fullSync = "fullSync".asInstanceOf[fullSync]
-  @scala.inline
-  def fullUpdate: fullUpdate = "fullUpdate".asInstanceOf[fullUpdate]
-  @scala.inline
-  def fyi: fyi = "fyi".asInstanceOf[fyi]
-  @scala.inline
-  def general: general = "general".asInstanceOf[general]
-  @scala.inline
-  def generic: generic = "generic".asInstanceOf[generic]
-  @scala.inline
-  def geoCoordinates: geoCoordinates = "geoCoordinates".asInstanceOf[geoCoordinates]
-  @scala.inline
-  def ggp: ggp = "ggp".asInstanceOf[ggp]
-  @scala.inline
-  def global: global = "global".asInstanceOf[global]
-  @scala.inline
-  def globe: globe = "globe".asInstanceOf[globe]
-  @scala.inline
-  def googleCloudDevicePolicyController: googleCloudDevicePolicyController = "googleCloudDevicePolicyController".asInstanceOf[googleCloudDevicePolicyController]
-  @scala.inline
-  def gray: gray = "gray".asInstanceOf[gray]
-  @scala.inline
-  def green: green = "green".asInstanceOf[green]
-  @scala.inline
-  def guest: guest = "guest".asInstanceOf[guest]
-  @scala.inline
-  def hidden: hidden = "hidden".asInstanceOf[hidden]
-  @scala.inline
-  def hiddenMembership: hiddenMembership = "hiddenMembership".asInstanceOf[hiddenMembership]
-  @scala.inline
-  def hide: hide = "hide".asInstanceOf[hide]
-  @scala.inline
-  def high: high = "high".asInstanceOf[high]
-  @scala.inline
-  def highPlus: highPlus = "highPlus".asInstanceOf[highPlus]
-  @scala.inline
-  def highSeverity: highSeverity = "highSeverity".asInstanceOf[highSeverity]
-  @scala.inline
-  def hold: hold = "hold".asInstanceOf[hold]
-  @scala.inline
-  def holographic: holographic = "holographic".asInstanceOf[holographic]
-  @scala.inline
-  def home: home = "home".asInstanceOf[home]
-  @scala.inline
-  def homeAddress: homeAddress = "homeAddress".asInstanceOf[homeAddress]
-  @scala.inline
-  def homeFax: homeFax = "homeFax".asInstanceOf[homeFax]
-  @scala.inline
-  def hosted: hosted = "hosted".asInstanceOf[hosted]
-  @scala.inline
-  def hotel: hotel = "hotel".asInstanceOf[hotel]
-  @scala.inline
-  def html: html = "html".asInstanceOf[html]
-  @scala.inline
-  def httpOnly: httpOnly = "httpOnly".asInstanceOf[httpOnly]
-  @scala.inline
-  def httpWithInternetPeering: httpWithInternetPeering = "httpWithInternetPeering".asInstanceOf[httpWithInternetPeering]
-  @scala.inline
-  def httpWithPeeringNat: httpWithPeeringNat = "httpWithPeeringNat".asInstanceOf[httpWithPeeringNat]
-  @scala.inline
-  def httpWithPeeringPrivateGroup: httpWithPeeringPrivateGroup = "httpWithPeeringPrivateGroup".asInstanceOf[httpWithPeeringPrivateGroup]
-  @scala.inline
-  def iOS: iOS = "iOS".asInstanceOf[iOS]
-  @scala.inline
-  def iana: iana = "iana".asInstanceOf[iana]
-  @scala.inline
-  def icmp: icmp = "icmp".asInstanceOf[icmp]
-  @scala.inline
-  def icmpV6: icmpV6 = "icmpV6".asInstanceOf[icmpV6]
-  @scala.inline
-  def idle: idle = "idle".asInstanceOf[idle]
-  @scala.inline
-  def idp: idp = "idp".asInstanceOf[idp]
-  @scala.inline
-  def igmp: igmp = "igmp".asInstanceOf[igmp]
-  @scala.inline
-  def ignored: ignored = "ignored".asInstanceOf[ignored]
-  @scala.inline
-  def immediate: immediate = "immediate".asInstanceOf[immediate]
-  @scala.inline
-  def immutableEntryId: immutableEntryId = "immutableEntryId".asInstanceOf[immutableEntryId]
-  @scala.inline
-  def inGracePeriod: inGracePeriod = "inGracePeriod".asInstanceOf[inGracePeriod]
-  @scala.inline
-  def inMaintenance: inMaintenance = "inMaintenance".asInstanceOf[inMaintenance]
-  @scala.inline
-  def inProgress: inProgress = "inProgress".asInstanceOf[inProgress]
-  @scala.inline
-  def inactive: inactive = "inactive".asInstanceOf[inactive]
-  @scala.inline
-  def inbound: inbound = "inbound".asInstanceOf[inbound]
-  @scala.inline
-  def includeCompanyLogo: includeCompanyLogo = "includeCompanyLogo".asInstanceOf[includeCompanyLogo]
-  @scala.inline
-  def includeCompanyName: includeCompanyName = "includeCompanyName".asInstanceOf[includeCompanyName]
-  @scala.inline
-  def includeContactInformation: includeContactInformation = "includeContactInformation".asInstanceOf[includeContactInformation]
-  @scala.inline
-  def incoming: incoming = "incoming".asInstanceOf[incoming]
-  @scala.inline
-  def informational: informational = "informational".asInstanceOf[informational]
-  @scala.inline
-  def informationalUpdate: informationalUpdate = "informationalUpdate".asInstanceOf[informationalUpdate]
-  @scala.inline
-  def installFailed: installFailed = "installFailed".asInstanceOf[installFailed]
-  @scala.inline
-  def installInsufficientPower: installInsufficientPower = "installInsufficientPower".asInstanceOf[installInsufficientPower]
-  @scala.inline
-  def installInsufficientSpace: installInsufficientSpace = "installInsufficientSpace".asInstanceOf[installInsufficientSpace]
-  @scala.inline
-  def installPhoneCallInProgress: installPhoneCallInProgress = "installPhoneCallInProgress".asInstanceOf[installPhoneCallInProgress]
-  @scala.inline
-  def installed: installed = "installed".asInstanceOf[installed]
-  @scala.inline
-  def installing: installing = "installing".asInstanceOf[installing]
-  @scala.inline
-  def integerType: integerType = "integerType".asInstanceOf[integerType]
-  @scala.inline
-  def interactive: interactive = "interactive".asInstanceOf[interactive]
-  @scala.inline
-  def internal: internal = "internal".asInstanceOf[internal]
-  @scala.inline
-  def intune: intune = "intune".asInstanceOf[intune]
-  @scala.inline
-  def intuneClient: intuneClient = "intuneClient".asInstanceOf[intuneClient]
-  @scala.inline
-  def invalid: invalid = "invalid".asInstanceOf[invalid]
-  @scala.inline
-  def investigationsThreatIntelligence: investigationsThreatIntelligence = "investigationsThreatIntelligence".asInstanceOf[investigationsThreatIntelligence]
-  @scala.inline
-  def investigationsThreatIntelligenceSigninLinked: investigationsThreatIntelligenceSigninLinked = "investigationsThreatIntelligenceSigninLinked".asInstanceOf[investigationsThreatIntelligenceSigninLinked]
-  @scala.inline
-  def ip: ip = "ip".asInstanceOf[ip]
-  @scala.inline
-  def ipSecAuthenticationHeader: ipSecAuthenticationHeader = "ipSecAuthenticationHeader".asInstanceOf[ipSecAuthenticationHeader]
-  @scala.inline
-  def ipSecEncapsulatingSecurityPayload: ipSecEncapsulatingSecurityPayload = "ipSecEncapsulatingSecurityPayload".asInstanceOf[ipSecEncapsulatingSecurityPayload]
-  @scala.inline
-  def ipv4: ipv4 = "ipv4".asInstanceOf[ipv4]
-  @scala.inline
-  def ipv6: ipv6 = "ipv6".asInstanceOf[ipv6]
-  @scala.inline
-  def ipv6DestinationOptions: ipv6DestinationOptions = "ipv6DestinationOptions".asInstanceOf[ipv6DestinationOptions]
-  @scala.inline
-  def ipv6FragmentHeader: ipv6FragmentHeader = "ipv6FragmentHeader".asInstanceOf[ipv6FragmentHeader]
-  @scala.inline
-  def ipv6NoNextHeader: ipv6NoNextHeader = "ipv6NoNextHeader".asInstanceOf[ipv6NoNextHeader]
-  @scala.inline
-  def ipv6RoutingHeader: ipv6RoutingHeader = "ipv6RoutingHeader".asInstanceOf[ipv6RoutingHeader]
-  @scala.inline
-  def ipx: ipx = "ipx".asInstanceOf[ipx]
-  @scala.inline
-  def item: item = "item".asInstanceOf[item]
-  @scala.inline
-  def jamf: jamf = "jamf".asInstanceOf[jamf]
-  @scala.inline
-  def junk: junk = "junk".asInstanceOf[junk]
-  @scala.inline
-  def juryDuty: juryDuty = "juryDuty".asInstanceOf[juryDuty]
-  @scala.inline
-  def keyConflict: keyConflict = "keyConflict".asInstanceOf[keyConflict]
-  @scala.inline
-  def last: last = "last".asInstanceOf[last]
-  @scala.inline
-  def leakedCredentials: leakedCredentials = "leakedCredentials".asInstanceOf[leakedCredentials]
-  @scala.inline
-  def licenseFile: licenseFile = "licenseFile".asInstanceOf[licenseFile]
-  @scala.inline
-  def lightBlue: lightBlue = "lightBlue".asInstanceOf[lightBlue]
-  @scala.inline
-  def lightBrown: lightBrown = "lightBrown".asInstanceOf[lightBrown]
-  @scala.inline
-  def lightGray: lightGray = "lightGray".asInstanceOf[lightGray]
-  @scala.inline
-  def lightGreen: lightGreen = "lightGreen".asInstanceOf[lightGreen]
-  @scala.inline
-  def lightOrange: lightOrange = "lightOrange".asInstanceOf[lightOrange]
-  @scala.inline
-  def lightPink: lightPink = "lightPink".asInstanceOf[lightPink]
-  @scala.inline
-  def lightRed: lightRed = "lightRed".asInstanceOf[lightRed]
-  @scala.inline
-  def lightTeal: lightTeal = "lightTeal".asInstanceOf[lightTeal]
-  @scala.inline
-  def lightYellow: lightYellow = "lightYellow".asInstanceOf[lightYellow]
-  @scala.inline
-  def limitedRead: limitedRead = "limitedRead".asInstanceOf[limitedRead]
-  @scala.inline
-  def lineOfBusiness: lineOfBusiness = "lineOfBusiness".asInstanceOf[lineOfBusiness]
-  @scala.inline
-  def link: link = "link".asInstanceOf[link]
-  @scala.inline
-  def localBusiness: localBusiness = "localBusiness".asInstanceOf[localBusiness]
-  @scala.inline
-  def localMachineSam: localMachineSam = "localMachineSam".asInstanceOf[localMachineSam]
-  @scala.inline
-  def localMachineSecurity: localMachineSecurity = "localMachineSecurity".asInstanceOf[localMachineSecurity]
-  @scala.inline
-  def localMachineSoftware: localMachineSoftware = "localMachineSoftware".asInstanceOf[localMachineSoftware]
-  @scala.inline
-  def localMachineSystem: localMachineSystem = "localMachineSystem".asInstanceOf[localMachineSystem]
-  @scala.inline
-  def localStorage: localStorage = "localStorage".asInstanceOf[localStorage]
-  @scala.inline
-  def locationStore: locationStore = "locationStore".asInstanceOf[locationStore]
-  @scala.inline
-  def lockedOut: lockedOut = "lockedOut".asInstanceOf[lockedOut]
-  @scala.inline
-  def lookup: lookup = "lookup".asInstanceOf[lookup]
-  @scala.inline
-  def low: low = "low".asInstanceOf[low]
-  @scala.inline
-  def lowSecurityBiometric: lowSecurityBiometric = "lowSecurityBiometric".asInstanceOf[lowSecurityBiometric]
-  @scala.inline
-  def lowSeverity: lowSeverity = "lowSeverity".asInstanceOf[lowSeverity]
-  @scala.inline
-  def lsHash: lsHash = "lsHash".asInstanceOf[lsHash]
-  @scala.inline
-  def macOS: macOS = "macOS".asInstanceOf[macOS]
-  @scala.inline
-  def mail: mail = "mail".asInstanceOf[mail]
-  @scala.inline
-  def mailFlowRule: mailFlowRule = "mailFlowRule".asInstanceOf[mailFlowRule]
-  @scala.inline
-  def mailboxFullStatus: mailboxFullStatus = "mailboxFullStatus".asInstanceOf[mailboxFullStatus]
-  @scala.inline
-  def male: male = "male".asInstanceOf[male]
-  @scala.inline
-  def maliciousIPAddress: maliciousIPAddress = "maliciousIPAddress".asInstanceOf[maliciousIPAddress]
-  @scala.inline
-  def maliciousIPAddressValidCredentialsBlockedIP: maliciousIPAddressValidCredentialsBlockedIP = "maliciousIPAddressValidCredentialsBlockedIP".asInstanceOf[maliciousIPAddressValidCredentialsBlockedIP]
-  @scala.inline
-  def malware: malware = "malware".asInstanceOf[malware]
-  @scala.inline
-  def malwareInfectedIPAddress: malwareInfectedIPAddress = "malwareInfectedIPAddress".asInstanceOf[malwareInfectedIPAddress]
-  @scala.inline
-  def managedApps: managedApps = "managedApps".asInstanceOf[managedApps]
-  @scala.inline
-  def managedAppsWithPasteIn: managedAppsWithPasteIn = "managedAppsWithPasteIn".asInstanceOf[managedAppsWithPasteIn]
-  @scala.inline
-  def manager: manager = "manager".asInstanceOf[manager]
-  @scala.inline
-  def manual: manual = "manual".asInstanceOf[manual]
-  @scala.inline
-  def mature: mature = "mature".asInstanceOf[mature]
-  @scala.inline
-  def maxColor: maxColor = "maxColor".asInstanceOf[maxColor]
-  @scala.inline
-  def maxMessageSize: maxMessageSize = "maxMessageSize".asInstanceOf[maxMessageSize]
-  @scala.inline
-  def mcasImpossibleTravel: mcasImpossibleTravel = "mcasImpossibleTravel".asInstanceOf[mcasImpossibleTravel]
-  @scala.inline
-  def mcasSuspiciousInboxManipulationRules: mcasSuspiciousInboxManipulationRules = "mcasSuspiciousInboxManipulationRules".asInstanceOf[mcasSuspiciousInboxManipulationRules]
-  @scala.inline
-  def md5: md5 = "md5".asInstanceOf[md5]
-  @scala.inline
-  def mdm: mdm = "mdm".asInstanceOf[mdm]
-  @scala.inline
-  def medium: medium = "medium".asInstanceOf[medium]
-  @scala.inline
-  def mediumHigh: mediumHigh = "mediumHigh".asInstanceOf[mediumHigh]
-  @scala.inline
-  def mediumLow: mediumLow = "mediumLow".asInstanceOf[mediumLow]
-  @scala.inline
-  def mediumSeverity: mediumSeverity = "mediumSeverity".asInstanceOf[mediumSeverity]
-  @scala.inline
-  def meetingAccepted: meetingAccepted = "meetingAccepted".asInstanceOf[meetingAccepted]
-  @scala.inline
-  def meetingCancelled: meetingCancelled = "meetingCancelled".asInstanceOf[meetingCancelled]
-  @scala.inline
-  def meetingDeclined: meetingDeclined = "meetingDeclined".asInstanceOf[meetingDeclined]
-  @scala.inline
-  def meetingRequest: meetingRequest = "meetingRequest".asInstanceOf[meetingRequest]
-  @scala.inline
-  def meetingTenativelyAccepted: meetingTenativelyAccepted = "meetingTenativelyAccepted".asInstanceOf[meetingTenativelyAccepted]
-  @scala.inline
-  def members: members = "members".asInstanceOf[members]
-  @scala.inline
-  def message: message = "message".asInstanceOf[message]
-  @scala.inline
-  def mfaRequired: mfaRequired = "mfaRequired".asInstanceOf[mfaRequired]
-  @scala.inline
-  def microsoftEdge: microsoftEdge = "microsoftEdge".asInstanceOf[microsoftEdge]
-  @scala.inline
-  def misconfigured: misconfigured = "misconfigured".asInstanceOf[misconfigured]
-  @scala.inline
-  def mobile: mobile = "mobile".asInstanceOf[mobile]
-  @scala.inline
-  def modal: modal = "modal".asInstanceOf[modal]
-  @scala.inline
-  def moderate: moderate = "moderate".asInstanceOf[moderate]
-  @scala.inline
-  def moderationStatus: moderationStatus = "moderationStatus".asInstanceOf[moderationStatus]
-  @scala.inline
-  def modify: modify = "modify".asInstanceOf[modify]
-  @scala.inline
-  def monday: monday = "monday".asInstanceOf[monday]
-  @scala.inline
-  def monitorAllFiles: monitorAllFiles = "monitorAllFiles".asInstanceOf[monitorAllFiles]
-  @scala.inline
-  def monitorIncomingFilesOnly: monitorIncomingFilesOnly = "monitorIncomingFilesOnly".asInstanceOf[monitorIncomingFilesOnly]
-  @scala.inline
-  def monitorOutgoingFilesOnly: monitorOutgoingFilesOnly = "monitorOutgoingFilesOnly".asInstanceOf[monitorOutgoingFilesOnly]
-  @scala.inline
-  def multiSz: multiSz = "multiSz".asInstanceOf[multiSz]
-  @scala.inline
-  def multiTenantApp: multiTenantApp = "multiTenantApp".asInstanceOf[multiTenantApp]
-  @scala.inline
-  def nd: nd = "nd".asInstanceOf[nd]
-  @scala.inline
-  def network: network = "network".asInstanceOf[network]
-  @scala.inline
-  def neutral: neutral = "neutral".asInstanceOf[neutral]
-  @scala.inline
-  def neverNotify: neverNotify = "neverNotify".asInstanceOf[neverNotify]
-  @scala.inline
-  def neverSendData: neverSendData = "neverSendData".asInstanceOf[neverSendData]
-  @scala.inline
-  def newAlert: newAlert = "newAlert".asInstanceOf[newAlert]
-  @scala.inline
-  def newMeetingRequest: newMeetingRequest = "newMeetingRequest".asInstanceOf[newMeetingRequest]
-  @scala.inline
-  def nine: nine = "nine".asInstanceOf[nine]
-  @scala.inline
-  def noAction: noAction = "noAction".asInstanceOf[noAction]
-  @scala.inline
-  def noEnd: noEnd = "noEnd".asInstanceOf[noEnd]
-  @scala.inline
-  def noPreview: noPreview = "noPreview".asInstanceOf[noPreview]
-  @scala.inline
-  def noProtection: noProtection = "noProtection".asInstanceOf[noProtection]
-  @scala.inline
-  def noResponseNecessary: noResponseNecessary = "noResponseNecessary".asInstanceOf[noResponseNecessary]
-  @scala.inline
-  def noRestrictions: noRestrictions = "noRestrictions".asInstanceOf[noRestrictions]
-  @scala.inline
-  def nonCompliant: nonCompliant = "nonCompliant".asInstanceOf[nonCompliant]
-  @scala.inline
-  def nonFullScreen: nonFullScreen = "nonFullScreen".asInstanceOf[nonFullScreen]
-  @scala.inline
-  def noncompliant_ : noncompliant_ = "noncompliant".asInstanceOf[noncompliant_]
-  @scala.inline
-  def none_ : none_ = "none".asInstanceOf[none_]
-  @scala.inline
-  def normal: normal = "normal".asInstanceOf[normal]
-  @scala.inline
-  def notAllow: notAllow = "notAllow".asInstanceOf[notAllow]
-  @scala.inline
-  def notAllowed: notAllowed = "notAllowed".asInstanceOf[notAllowed]
-  @scala.inline
-  def notApplicable: notApplicable = "notApplicable".asInstanceOf[notApplicable]
-  @scala.inline
-  def notApplied: notApplied = "notApplied".asInstanceOf[notApplied]
-  @scala.inline
-  def notAssigned: notAssigned = "notAssigned".asInstanceOf[notAssigned]
-  @scala.inline
-  def notCompliant: notCompliant = "notCompliant".asInstanceOf[notCompliant]
-  @scala.inline
-  def notConfigured: notConfigured = "notConfigured".asInstanceOf[notConfigured]
-  @scala.inline
-  def notEnabled: notEnabled = "notEnabled".asInstanceOf[notEnabled]
-  @scala.inline
-  def notEnrolled: notEnrolled = "notEnrolled".asInstanceOf[notEnrolled]
-  @scala.inline
-  def notFlagged: notFlagged = "notFlagged".asInstanceOf[notFlagged]
-  @scala.inline
-  def notInAddressBook: notInAddressBook = "notInAddressBook".asInstanceOf[notInAddressBook]
-  @scala.inline
-  def notInstalled: notInstalled = "notInstalled".asInstanceOf[notInstalled]
-  @scala.inline
-  def notJunk: notJunk = "notJunk".asInstanceOf[notJunk]
-  @scala.inline
-  def notOnboarded: notOnboarded = "notOnboarded".asInstanceOf[notOnboarded]
-  @scala.inline
-  def notPublished: notPublished = "notPublished".asInstanceOf[notPublished]
-  @scala.inline
-  def notRecording: notRecording = "notRecording".asInstanceOf[notRecording]
-  @scala.inline
-  def notRegistered: notRegistered = "notRegistered".asInstanceOf[notRegistered]
-  @scala.inline
-  def notRegisteredPendingEnrollment: notRegisteredPendingEnrollment = "notRegisteredPendingEnrollment".asInstanceOf[notRegisteredPendingEnrollment]
-  @scala.inline
-  def notResponded: notResponded = "notResponded".asInstanceOf[notResponded]
-  @scala.inline
-  def notSet: notSet = "notSet".asInstanceOf[notSet]
-  @scala.inline
-  def notSpecified: notSpecified = "notSpecified".asInstanceOf[notSpecified]
-  @scala.inline
-  def notStarted_ : notStarted_ = "notStarted".asInstanceOf[notStarted_]
-  @scala.inline
-  def notSupported: notSupported = "notSupported".asInstanceOf[notSupported]
-  @scala.inline
-  def notSupportedOperation: notSupportedOperation = "notSupportedOperation".asInstanceOf[notSupportedOperation]
-  @scala.inline
-  def notWorking: notWorking = "notWorking".asInstanceOf[notWorking]
-  @scala.inline
-  def notification: notification = "notification".asInstanceOf[notification]
-  @scala.inline
-  def notifyDownload: notifyDownload = "notifyDownload".asInstanceOf[notifyDownload]
-  @scala.inline
-  def notifyOnAppChanges: notifyOnAppChanges = "notifyOnAppChanges".asInstanceOf[notifyOnAppChanges]
-  @scala.inline
-  def notifyOnAppChangesWithoutDimming: notifyOnAppChangesWithoutDimming = "notifyOnAppChangesWithoutDimming".asInstanceOf[notifyOnAppChangesWithoutDimming]
-  @scala.inline
-  def notifySender: notifySender = "notifySender".asInstanceOf[notifySender]
-  @scala.inline
-  def numbered: numbered = "numbered".asInstanceOf[numbered]
-  @scala.inline
-  def numeric: numeric = "numeric".asInstanceOf[numeric]
-  @scala.inline
-  def numericComplex: numericComplex = "numericComplex".asInstanceOf[numericComplex]
-  @scala.inline
-  def occurrence: occurrence = "occurrence".asInstanceOf[occurrence]
-  @scala.inline
-  def offerShiftRequest: offerShiftRequest = "offerShiftRequest".asInstanceOf[offerShiftRequest]
-  @scala.inline
-  def office365: office365 = "office365".asInstanceOf[office365]
-  @scala.inline
-  def offline: offline = "offline".asInstanceOf[offline]
-  @scala.inline
-  def onPremises: onPremises = "onPremises".asInstanceOf[onPremises]
-  @scala.inline
-  def onboarded: onboarded = "onboarded".asInstanceOf[onboarded]
-  @scala.inline
-  def onboarding: onboarding = "onboarding".asInstanceOf[onboarding]
-  @scala.inline
-  def one: one = "one".asInstanceOf[one]
-  @scala.inline
-  def oneDriveForBusiness_ : oneDriveForBusiness_ = "oneDriveForBusiness".asInstanceOf[oneDriveForBusiness_]
-  @scala.inline
-  def oneHundredFiftySeven: oneHundredFiftySeven = "oneHundredFiftySeven".asInstanceOf[oneHundredFiftySeven]
-  @scala.inline
-  def oneHundredFiftyThree: oneHundredFiftyThree = "oneHundredFiftyThree".asInstanceOf[oneHundredFiftyThree]
-  @scala.inline
-  def oneHundredFortyNine: oneHundredFortyNine = "oneHundredFortyNine".asInstanceOf[oneHundredFortyNine]
-  @scala.inline
-  def oneHundredSixtyFive: oneHundredSixtyFive = "oneHundredSixtyFive".asInstanceOf[oneHundredSixtyFive]
-  @scala.inline
-  def oneHundredSixtyOne: oneHundredSixtyOne = "oneHundredSixtyOne".asInstanceOf[oneHundredSixtyOne]
-  @scala.inline
-  def online: online = "online".asInstanceOf[online]
-  @scala.inline
-  def oof: oof = "oof".asInstanceOf[oof]
-  @scala.inline
-  def openShift: openShift = "openShift".asInstanceOf[openShift]
-  @scala.inline
-  def openShiftRequest: openShiftRequest = "openShiftRequest".asInstanceOf[openShiftRequest]
-  @scala.inline
-  def optional: optional = "optional".asInstanceOf[optional]
-  @scala.inline
-  def organization: organization = "organization".asInstanceOf[organization]
-  @scala.inline
-  def organizer: organizer = "organizer".asInstanceOf[organizer]
-  @scala.inline
-  def other: other = "other".asInstanceOf[other]
-  @scala.inline
-  def otherFax: otherFax = "otherFax".asInstanceOf[otherFax]
-  @scala.inline
-  def outbound: outbound = "outbound".asInstanceOf[outbound]
-  @scala.inline
-  def outdated: outdated = "outdated".asInstanceOf[outdated]
-  @scala.inline
-  def outgoing: outgoing = "outgoing".asInstanceOf[outgoing]
-  @scala.inline
-  def `override`: `override` = "override".asInstanceOf[`override`]
-  @scala.inline
-  def pager: pager = "pager".asInstanceOf[pager]
-  @scala.inline
-  def parentalGuidance: parentalGuidance = "parentalGuidance".asInstanceOf[parentalGuidance]
-  @scala.inline
-  def parentalGuidance13: parentalGuidance13 = "parentalGuidance13".asInstanceOf[parentalGuidance13]
-  @scala.inline
-  def parentalSupervision: parentalSupervision = "parentalSupervision".asInstanceOf[parentalSupervision]
-  @scala.inline
-  def pending: pending = "pending".asInstanceOf[pending]
-  @scala.inline
-  def personal: personal = "personal".asInstanceOf[personal]
-  @scala.inline
-  def phishing: phishing = "phishing".asInstanceOf[phishing]
-  @scala.inline
-  def phone: phone = "phone".asInstanceOf[phone]
-  @scala.inline
-  def piggyBank: piggyBank = "piggyBank".asInstanceOf[piggyBank]
-  @scala.inline
-  def pin: pin = "pin".asInstanceOf[pin]
-  @scala.inline
-  def pink: pink = "pink".asInstanceOf[pink]
-  @scala.inline
-  def plane: plane = "plane".asInstanceOf[plane]
-  @scala.inline
-  def postalAddress: postalAddress = "postalAddress".asInstanceOf[postalAddress]
-  @scala.inline
-  def pound: pound = "pound".asInstanceOf[pound]
-  @scala.inline
-  def power: power = "power".asInstanceOf[power]
-  @scala.inline
-  def preschoolers: preschoolers = "preschoolers".asInstanceOf[preschoolers]
-  @scala.inline
-  def preset0: preset0 = "preset0".asInstanceOf[preset0]
-  @scala.inline
-  def preset1: preset1 = "preset1".asInstanceOf[preset1]
-  @scala.inline
-  def preset10: preset10 = "preset10".asInstanceOf[preset10]
-  @scala.inline
-  def preset11: preset11 = "preset11".asInstanceOf[preset11]
-  @scala.inline
-  def preset12: preset12 = "preset12".asInstanceOf[preset12]
-  @scala.inline
-  def preset13: preset13 = "preset13".asInstanceOf[preset13]
-  @scala.inline
-  def preset14: preset14 = "preset14".asInstanceOf[preset14]
-  @scala.inline
-  def preset15: preset15 = "preset15".asInstanceOf[preset15]
-  @scala.inline
-  def preset16: preset16 = "preset16".asInstanceOf[preset16]
-  @scala.inline
-  def preset17: preset17 = "preset17".asInstanceOf[preset17]
-  @scala.inline
-  def preset18: preset18 = "preset18".asInstanceOf[preset18]
-  @scala.inline
-  def preset19: preset19 = "preset19".asInstanceOf[preset19]
-  @scala.inline
-  def preset2: preset2 = "preset2".asInstanceOf[preset2]
-  @scala.inline
-  def preset20: preset20 = "preset20".asInstanceOf[preset20]
-  @scala.inline
-  def preset21: preset21 = "preset21".asInstanceOf[preset21]
-  @scala.inline
-  def preset22: preset22 = "preset22".asInstanceOf[preset22]
-  @scala.inline
-  def preset23: preset23 = "preset23".asInstanceOf[preset23]
-  @scala.inline
-  def preset24: preset24 = "preset24".asInstanceOf[preset24]
-  @scala.inline
-  def preset3: preset3 = "preset3".asInstanceOf[preset3]
-  @scala.inline
-  def preset4: preset4 = "preset4".asInstanceOf[preset4]
-  @scala.inline
-  def preset5: preset5 = "preset5".asInstanceOf[preset5]
-  @scala.inline
-  def preset6: preset6 = "preset6".asInstanceOf[preset6]
-  @scala.inline
-  def preset7: preset7 = "preset7".asInstanceOf[preset7]
-  @scala.inline
-  def preset8: preset8 = "preset8".asInstanceOf[preset8]
-  @scala.inline
-  def preset9: preset9 = "preset9".asInstanceOf[preset9]
-  @scala.inline
-  def preventAny: preventAny = "preventAny".asInstanceOf[preventAny]
-  @scala.inline
-  def primary: primary = "primary".asInstanceOf[primary]
-  @scala.inline
-  def principalWantsCopy: principalWantsCopy = "principalWantsCopy".asInstanceOf[principalWantsCopy]
-  @scala.inline
-  def `private`: `private` = "private".asInstanceOf[`private`]
-  @scala.inline
-  def processing: processing = "processing".asInstanceOf[processing]
-  @scala.inline
-  def productKey: productKey = "productKey".asInstanceOf[productKey]
-  @scala.inline
-  def profile: profile = "profile".asInstanceOf[profile]
-  @scala.inline
-  def prompt: prompt = "prompt".asInstanceOf[prompt]
-  @scala.inline
-  def promptBeforeSendingPersonalData: promptBeforeSendingPersonalData = "promptBeforeSendingPersonalData".asInstanceOf[promptBeforeSendingPersonalData]
-  @scala.inline
-  def public: public = "public".asInstanceOf[public]
-  @scala.inline
-  def published: published = "published".asInstanceOf[published]
-  @scala.inline
-  def pup: pup = "pup".asInstanceOf[pup]
-  @scala.inline
-  def purple: purple = "purple".asInstanceOf[purple]
-  @scala.inline
-  def pushNotification: pushNotification = "pushNotification".asInstanceOf[pushNotification]
-  @scala.inline
-  def quarantine: quarantine = "quarantine".asInstanceOf[quarantine]
-  @scala.inline
-  def quarantined: quarantined = "quarantined".asInstanceOf[quarantined]
-  @scala.inline
-  def queueBoth: queueBoth = "queueBoth".asInstanceOf[queueBoth]
-  @scala.inline
-  def queueInbound: queueInbound = "queueInbound".asInstanceOf[queueInbound]
-  @scala.inline
-  def queueOutbound: queueOutbound = "queueOutbound".asInstanceOf[queueOutbound]
-  @scala.inline
-  def quick: quick = "quick".asInstanceOf[quick]
-  @scala.inline
-  def qword: qword = "qword".asInstanceOf[qword]
-  @scala.inline
-  def qwordlittleEndian: qwordlittleEndian = "qwordlittleEndian".asInstanceOf[qwordlittleEndian]
-  @scala.inline
-  def radio: radio = "radio".asInstanceOf[radio]
-  @scala.inline
-  def raw: raw = "raw".asInstanceOf[raw]
-  @scala.inline
-  def read: read = "read".asInstanceOf[read]
-  @scala.inline
-  def realType: realType = "realType".asInstanceOf[realType]
-  @scala.inline
-  def receiveOnly: receiveOnly = "receiveOnly".asInstanceOf[receiveOnly]
-  @scala.inline
-  def recipient: recipient = "recipient".asInstanceOf[recipient]
-  @scala.inline
-  def recipientScope: recipientScope = "recipientScope".asInstanceOf[recipientScope]
-  @scala.inline
-  def recipientSuggestions: recipientSuggestions = "recipientSuggestions".asInstanceOf[recipientSuggestions]
-  @scala.inline
-  def recording: recording = "recording".asInstanceOf[recording]
-  @scala.inline
-  def redirecting: redirecting = "redirecting".asInstanceOf[redirecting]
-  @scala.inline
-  def reference: reference = "reference".asInstanceOf[reference]
-  @scala.inline
-  def registered: registered = "registered".asInstanceOf[registered]
-  @scala.inline
-  def rejected: rejected = "rejected".asInstanceOf[rejected]
-  @scala.inline
-  def related: related = "related".asInstanceOf[related]
-  @scala.inline
-  def relativeMonthly: relativeMonthly = "relativeMonthly".asInstanceOf[relativeMonthly]
-  @scala.inline
-  def relativeYearly: relativeYearly = "relativeYearly".asInstanceOf[relativeYearly]
-  @scala.inline
-  def remediated: remediated = "remediated".asInstanceOf[remediated]
-  @scala.inline
-  def remoteInteractive: remoteInteractive = "remoteInteractive".asInstanceOf[remoteInteractive]
-  @scala.inline
-  def remove: remove = "remove".asInstanceOf[remove]
-  @scala.inline
-  def removeResourceAccessProfiles: removeResourceAccessProfiles = "removeResourceAccessProfiles".asInstanceOf[removeResourceAccessProfiles]
-  @scala.inline
-  def reply: reply = "reply".asInstanceOf[reply]
-  @scala.inline
-  def replyToAll: replyToAll = "replyToAll".asInstanceOf[replyToAll]
-  @scala.inline
-  def reportFalsePositive: reportFalsePositive = "reportFalsePositive".asInstanceOf[reportFalsePositive]
-  @scala.inline
-  def require: require = "require".asInstanceOf[require]
-  @scala.inline
-  def requireAtLeastOne: requireAtLeastOne = "requireAtLeastOne".asInstanceOf[requireAtLeastOne]
-  @scala.inline
-  def required: required = "required".asInstanceOf[required]
-  @scala.inline
-  def rescan: rescan = "rescan".asInstanceOf[rescan]
-  @scala.inline
-  def reserved: reserved = "reserved".asInstanceOf[reserved]
-  @scala.inline
-  def resolved: resolved = "resolved".asInstanceOf[resolved]
-  @scala.inline
-  def resource: resource = "resource".asInstanceOf[resource]
-  @scala.inline
-  def restId: restId = "restId".asInstanceOf[restId]
-  @scala.inline
-  def restImmutableEntryId: restImmutableEntryId = "restImmutableEntryId".asInstanceOf[restImmutableEntryId]
-  @scala.inline
-  def restaurant: restaurant = "restaurant".asInstanceOf[restaurant]
-  @scala.inline
-  def restricted: restricted = "restricted".asInstanceOf[restricted]
-  @scala.inline
-  def retire: retire = "retire".asInstanceOf[retire]
-  @scala.inline
-  def review: review = "review".asInstanceOf[review]
-  @scala.inline
-  def revoked: revoked = "revoked".asInstanceOf[revoked]
-  @scala.inline
-  def rootedDevice: rootedDevice = "rootedDevice".asInstanceOf[rootedDevice]
-  @scala.inline
-  def running_ : running_ = "running".asInstanceOf[running_]
-  @scala.inline
-  def safeSender: safeSender = "safeSender".asInstanceOf[safeSender]
-  @scala.inline
-  def saturday: saturday = "saturday".asInstanceOf[saturday]
-  @scala.inline
-  def sccm: sccm = "sccm".asInstanceOf[sccm]
-  @scala.inline
-  def scheduled: scheduled = "scheduled".asInstanceOf[scheduled]
-  @scala.inline
-  def second: second = "second".asInstanceOf[second]
-  @scala.inline
-  def secondary: secondary = "secondary".asInstanceOf[secondary]
-  @scala.inline
-  def secured: secured = "secured".asInstanceOf[secured]
-  @scala.inline
-  def selfFork: selfFork = "selfFork".asInstanceOf[selfFork]
-  @scala.inline
-  def sendAllDataWithoutPrompting: sendAllDataWithoutPrompting = "sendAllDataWithoutPrompting".asInstanceOf[sendAllDataWithoutPrompting]
-  @scala.inline
-  def sendOnly: sendOnly = "sendOnly".asInstanceOf[sendOnly]
-  @scala.inline
-  def sendReceive: sendReceive = "sendReceive".asInstanceOf[sendReceive]
-  @scala.inline
-  def sendToDelegateAndInformationToPrincipal: sendToDelegateAndInformationToPrincipal = "sendToDelegateAndInformationToPrincipal".asInstanceOf[sendToDelegateAndInformationToPrincipal]
-  @scala.inline
-  def sendToDelegateAndPrincipal: sendToDelegateAndPrincipal = "sendToDelegateAndPrincipal".asInstanceOf[sendToDelegateAndPrincipal]
-  @scala.inline
-  def sendToDelegateOnly: sendToDelegateOnly = "sendToDelegateOnly".asInstanceOf[sendToDelegateOnly]
-  @scala.inline
-  def sender: sender = "sender".asInstanceOf[sender]
-  @scala.inline
-  def seriesMaster: seriesMaster = "seriesMaster".asInstanceOf[seriesMaster]
-  @scala.inline
-  def service: service = "service".asInstanceOf[service]
-  @scala.inline
-  def serviceToService: serviceToService = "serviceToService".asInstanceOf[serviceToService]
-  @scala.inline
-  def settings: settings = "settings".asInstanceOf[settings]
-  @scala.inline
-  def settingsAndExperimentations: settingsAndExperimentations = "settingsAndExperimentations".asInstanceOf[settingsAndExperimentations]
-  @scala.inline
-  def settingsOnly: settingsOnly = "settingsOnly".asInstanceOf[settingsOnly]
-  @scala.inline
-  def seven: seven = "seven".asInstanceOf[seven]
-  @scala.inline
-  def sha1: sha1 = "sha1".asInstanceOf[sha1]
-  @scala.inline
-  def sha256: sha256 = "sha256".asInstanceOf[sha256]
-  @scala.inline
-  def sharePoint: sharePoint = "sharePoint".asInstanceOf[sharePoint]
-  @scala.inline
-  def sharedDeviceUserLoggedInError: sharedDeviceUserLoggedInError = "sharedDeviceUserLoggedInError".asInstanceOf[sharedDeviceUserLoggedInError]
-  @scala.inline
-  def sharedSecret: sharedSecret = "sharedSecret".asInstanceOf[sharedSecret]
-  @scala.inline
-  def sharer: sharer = "sharer".asInstanceOf[sharer]
-  @scala.inline
-  def shift: shift = "shift".asInstanceOf[shift]
-  @scala.inline
-  def show: show = "show".asInstanceOf[show]
-  @scala.inline
-  def showOrganizerAndTimeAndSubject: showOrganizerAndTimeAndSubject = "showOrganizerAndTimeAndSubject".asInstanceOf[showOrganizerAndTimeAndSubject]
-  @scala.inline
-  def showOrganizerAndTimeOnly: showOrganizerAndTimeOnly = "showOrganizerAndTimeOnly".asInstanceOf[showOrganizerAndTimeOnly]
-  @scala.inline
-  def sideloaded: sideloaded = "sideloaded".asInstanceOf[sideloaded]
-  @scala.inline
-  def silentUpdate: silentUpdate = "silentUpdate".asInstanceOf[silentUpdate]
-  @scala.inline
-  def simpleDownload: simpleDownload = "simpleDownload".asInstanceOf[simpleDownload]
-  @scala.inline
-  def singleInstance: singleInstance = "singleInstance".asInstanceOf[singleInstance]
-  @scala.inline
-  def singleTenantApp: singleTenantApp = "singleTenantApp".asInstanceOf[singleTenantApp]
-  @scala.inline
-  def sis: sis = "sis".asInstanceOf[sis]
-  @scala.inline
-  def six: six = "six".asInstanceOf[six]
-  @scala.inline
-  def skypeForBusiness: skypeForBusiness = "skypeForBusiness".asInstanceOf[skypeForBusiness]
-  @scala.inline
-  def skypeForBusinessVoipPhone: skypeForBusinessVoipPhone = "skypeForBusinessVoipPhone".asInstanceOf[skypeForBusinessVoipPhone]
-  @scala.inline
-  def skypeForConsumer: skypeForConsumer = "skypeForConsumer".asInstanceOf[skypeForConsumer]
-  @scala.inline
-  def spam: spam = "spam".asInstanceOf[spam]
-  @scala.inline
-  def spx: spx = "spx".asInstanceOf[spx]
-  @scala.inline
-  def spxII: spxII = "spxII".asInstanceOf[spxII]
-  @scala.inline
-  def standard: standard = "standard".asInstanceOf[standard]
-  @scala.inline
-  def star: star = "star".asInstanceOf[star]
-  @scala.inline
-  def store: store = "store".asInstanceOf[store]
-  @scala.inline
-  def streetAddress: streetAddress = "streetAddress".asInstanceOf[streetAddress]
-  @scala.inline
-  def strict: strict = "strict".asInstanceOf[strict]
-  @scala.inline
-  def stringType: stringType = "stringType".asInstanceOf[stringType]
-  @scala.inline
-  def student: student = "student".asInstanceOf[student]
-  @scala.inline
-  def succeeded: succeeded = "succeeded".asInstanceOf[succeeded]
-  @scala.inline
-  def success: success = "success".asInstanceOf[success]
-  @scala.inline
-  def sunday: sunday = "sunday".asInstanceOf[sunday]
-  @scala.inline
-  def sunny: sunny = "sunny".asInstanceOf[sunny]
-  @scala.inline
-  def suspiciousIPAddress: suspiciousIPAddress = "suspiciousIPAddress".asInstanceOf[suspiciousIPAddress]
-  @scala.inline
-  def swapRequest: swapRequest = "swapRequest".asInstanceOf[swapRequest]
-  @scala.inline
-  def system: system = "system".asInstanceOf[system]
-  @scala.inline
-  def sz: sz = "sz".asInstanceOf[sz]
-  @scala.inline
-  def tabs: tabs = "tabs".asInstanceOf[tabs]
-  @scala.inline
-  def tcp: tcp = "tcp".asInstanceOf[tcp]
-  @scala.inline
-  def teacher: teacher = "teacher".asInstanceOf[teacher]
-  @scala.inline
-  def team: team = "team".asInstanceOf[team]
-  @scala.inline
-  def teamsForBusiness: teamsForBusiness = "teamsForBusiness".asInstanceOf[teamsForBusiness]
-  @scala.inline
-  def ten: ten = "ten".asInstanceOf[ten]
-  @scala.inline
-  def tentative: tentative = "tentative".asInstanceOf[tentative]
-  @scala.inline
-  def tentativelyAccepted: tentativelyAccepted = "tentativelyAccepted".asInstanceOf[tentativelyAccepted]
-  @scala.inline
-  def terminated: terminated = "terminated".asInstanceOf[terminated]
-  @scala.inline
-  def terminating: terminating = "terminating".asInstanceOf[terminating]
-  @scala.inline
-  def text: text = "text".asInstanceOf[text]
-  @scala.inline
-  def third: third = "third".asInstanceOf[third]
-  @scala.inline
-  def thirtySix: thirtySix = "thirtySix".asInstanceOf[thirtySix]
-  @scala.inline
-  def three: three = "three".asInstanceOf[three]
-  @scala.inline
-  def thursday: thursday = "thursday".asInstanceOf[thursday]
-  @scala.inline
-  def timeout: timeout = "timeout".asInstanceOf[timeout]
-  @scala.inline
-  def tokenType: tokenType = "tokenType".asInstanceOf[tokenType]
-  @scala.inline
-  def tone0: tone0 = "tone0".asInstanceOf[tone0]
-  @scala.inline
-  def tone1: tone1 = "tone1".asInstanceOf[tone1]
-  @scala.inline
-  def tone2: tone2 = "tone2".asInstanceOf[tone2]
-  @scala.inline
-  def tone3: tone3 = "tone3".asInstanceOf[tone3]
-  @scala.inline
-  def tone4: tone4 = "tone4".asInstanceOf[tone4]
-  @scala.inline
-  def tone5: tone5 = "tone5".asInstanceOf[tone5]
-  @scala.inline
-  def tone6: tone6 = "tone6".asInstanceOf[tone6]
-  @scala.inline
-  def tone7: tone7 = "tone7".asInstanceOf[tone7]
-  @scala.inline
-  def tone8: tone8 = "tone8".asInstanceOf[tone8]
-  @scala.inline
-  def tone9: tone9 = "tone9".asInstanceOf[tone9]
-  @scala.inline
-  def totalMemberCount: totalMemberCount = "totalMemberCount".asInstanceOf[totalMemberCount]
-  @scala.inline
-  def trafficCone: trafficCone = "trafficCone".asInstanceOf[trafficCone]
-  @scala.inline
-  def transferAccepted: transferAccepted = "transferAccepted".asInstanceOf[transferAccepted]
-  @scala.inline
-  def transferring: transferring = "transferring".asInstanceOf[transferring]
-  @scala.inline
-  def transientError: transientError = "transientError".asInstanceOf[transientError]
-  @scala.inline
-  def truePositive: truePositive = "truePositive".asInstanceOf[truePositive]
-  @scala.inline
-  def tuesday: tuesday = "tuesday".asInstanceOf[tuesday]
-  @scala.inline
-  def two: two = "two".asInstanceOf[two]
-  @scala.inline
-  def typing: typing = "typing".asInstanceOf[typing]
-  @scala.inline
-  def udp: udp = "udp".asInstanceOf[udp]
-  @scala.inline
-  def umbrella: umbrella = "umbrella".asInstanceOf[umbrella]
-  @scala.inline
-  def unarchiveTeam: unarchiveTeam = "unarchiveTeam".asInstanceOf[unarchiveTeam]
-  @scala.inline
-  def unavailable: unavailable = "unavailable".asInstanceOf[unavailable]
-  @scala.inline
-  def unblock: unblock = "unblock".asInstanceOf[unblock]
-  @scala.inline
-  def undefined: undefined = "undefined".asInstanceOf[undefined]
-  @scala.inline
-  def unfamiliarFeatures: unfamiliarFeatures = "unfamiliarFeatures".asInstanceOf[unfamiliarFeatures]
-  @scala.inline
-  def unifiedGroups: unifiedGroups = "unifiedGroups".asInstanceOf[unifiedGroups]
-  @scala.inline
-  def uninstall: uninstall = "uninstall".asInstanceOf[uninstall]
-  @scala.inline
-  def uninstallFailed: uninstallFailed = "uninstallFailed".asInstanceOf[uninstallFailed]
-  @scala.inline
-  def universal: universal = "universal".asInstanceOf[universal]
-  @scala.inline
-  def universalChildren: universalChildren = "universalChildren".asInstanceOf[universalChildren]
-  @scala.inline
-  def unknownFutureValue: unknownFutureValue = "unknownFutureValue".asInstanceOf[unknownFutureValue]
-  @scala.inline
-  def unknownLocation: unknownLocation = "unknownLocation".asInstanceOf[unknownLocation]
-  @scala.inline
-  def unknown_ : unknown_ = "unknown".asInstanceOf[unknown_]
-  @scala.inline
-  def unlikelyTravel: unlikelyTravel = "unlikelyTravel".asInstanceOf[unlikelyTravel]
-  @scala.inline
-  def unresponsive: unresponsive = "unresponsive".asInstanceOf[unresponsive]
-  @scala.inline
-  def unrestricted: unrestricted = "unrestricted".asInstanceOf[unrestricted]
-  @scala.inline
-  def untrusted: untrusted = "untrusted".asInstanceOf[untrusted]
-  @scala.inline
-  def updated: updated = "updated".asInstanceOf[updated]
-  @scala.inline
-  def urgent: urgent = "urgent".asInstanceOf[urgent]
-  @scala.inline
-  def url: url = "url".asInstanceOf[url]
-  @scala.inline
-  def useDeviceSettings: useDeviceSettings = "useDeviceSettings".asInstanceOf[useDeviceSettings]
-  @scala.inline
-  def user: user = "user".asInstanceOf[user]
-  @scala.inline
-  def userAbandonment: userAbandonment = "userAbandonment".asInstanceOf[userAbandonment]
-  @scala.inline
-  def userDefined: userDefined = "userDefined".asInstanceOf[userDefined]
-  @scala.inline
-  def userEnrollment: userEnrollment = "userEnrollment".asInstanceOf[userEnrollment]
-  @scala.inline
-  def userPassedMFADrivenByRiskBasedPolicy: userPassedMFADrivenByRiskBasedPolicy = "userPassedMFADrivenByRiskBasedPolicy".asInstanceOf[userPassedMFADrivenByRiskBasedPolicy]
-  @scala.inline
-  def userPerformedSecuredPasswordChange: userPerformedSecuredPasswordChange = "userPerformedSecuredPasswordChange".asInstanceOf[userPerformedSecuredPasswordChange]
-  @scala.inline
-  def userPerformedSecuredPasswordReset: userPerformedSecuredPasswordReset = "userPerformedSecuredPasswordReset".asInstanceOf[userPerformedSecuredPasswordReset]
-  @scala.inline
-  def userShiftPreferences: userShiftPreferences = "userShiftPreferences".asInstanceOf[userShiftPreferences]
-  @scala.inline
-  def userValidation: userValidation = "userValidation".asInstanceOf[userValidation]
-  @scala.inline
-  def usersDefault: usersDefault = "usersDefault".asInstanceOf[usersDefault]
-  @scala.inline
-  def utF8: utF8 = "utF8".asInstanceOf[utF8]
-  @scala.inline
-  def valid: valid = "valid".asInstanceOf[valid]
-  @scala.inline
-  def video: video = "video".asInstanceOf[video]
-  @scala.inline
-  def videoBasedScreenSharing: videoBasedScreenSharing = "videoBasedScreenSharing".asInstanceOf[videoBasedScreenSharing]
-  @scala.inline
-  def viewCalendar: viewCalendar = "viewCalendar".asInstanceOf[viewCalendar]
-  @scala.inline
-  def viewer: viewer = "viewer".asInstanceOf[viewer]
-  @scala.inline
-  def voicemail: voicemail = "voicemail".asInstanceOf[voicemail]
-  @scala.inline
-  def warning: warning = "warning".asInstanceOf[warning]
-  @scala.inline
-  def weather: weather = "weather".asInstanceOf[weather]
-  @scala.inline
-  def wednesday: wednesday = "wednesday".asInstanceOf[wednesday]
-  @scala.inline
-  def weekly: weekly = "weekly".asInstanceOf[weekly]
-  @scala.inline
-  def whenDeviceLocked: whenDeviceLocked = "whenDeviceLocked".asInstanceOf[whenDeviceLocked]
-  @scala.inline
-  def whenDeviceLockedExceptOpenFiles: whenDeviceLockedExceptOpenFiles = "whenDeviceLockedExceptOpenFiles".asInstanceOf[whenDeviceLockedExceptOpenFiles]
-  @scala.inline
-  def white: white = "white".asInstanceOf[white]
-  @scala.inline
-  def windows: windows = "windows".asInstanceOf[windows]
-  @scala.inline
-  def windows10AndLater: windows10AndLater = "windows10AndLater".asInstanceOf[windows10AndLater]
-  @scala.inline
-  def windows10Education: windows10Education = "windows10Education".asInstanceOf[windows10Education]
-  @scala.inline
-  def windows10EducationN: windows10EducationN = "windows10EducationN".asInstanceOf[windows10EducationN]
-  @scala.inline
-  def windows10Enterprise: windows10Enterprise = "windows10Enterprise".asInstanceOf[windows10Enterprise]
-  @scala.inline
-  def windows10EnterpriseN: windows10EnterpriseN = "windows10EnterpriseN".asInstanceOf[windows10EnterpriseN]
-  @scala.inline
-  def windows10HolographicEnterprise: windows10HolographicEnterprise = "windows10HolographicEnterprise".asInstanceOf[windows10HolographicEnterprise]
-  @scala.inline
-  def windows10MobileEnterprise: windows10MobileEnterprise = "windows10MobileEnterprise".asInstanceOf[windows10MobileEnterprise]
-  @scala.inline
-  def windows10Professional: windows10Professional = "windows10Professional".asInstanceOf[windows10Professional]
-  @scala.inline
-  def windows10ProfessionalEducation: windows10ProfessionalEducation = "windows10ProfessionalEducation".asInstanceOf[windows10ProfessionalEducation]
-  @scala.inline
-  def windows10ProfessionalEducationN: windows10ProfessionalEducationN = "windows10ProfessionalEducationN".asInstanceOf[windows10ProfessionalEducationN]
-  @scala.inline
-  def windows10ProfessionalN: windows10ProfessionalN = "windows10ProfessionalN".asInstanceOf[windows10ProfessionalN]
-  @scala.inline
-  def windows10ProfessionalWorkstation: windows10ProfessionalWorkstation = "windows10ProfessionalWorkstation".asInstanceOf[windows10ProfessionalWorkstation]
-  @scala.inline
-  def windows10ProfessionalWorkstationN: windows10ProfessionalWorkstationN = "windows10ProfessionalWorkstationN".asInstanceOf[windows10ProfessionalWorkstationN]
-  @scala.inline
-  def windows81AndLater: windows81AndLater = "windows81AndLater".asInstanceOf[windows81AndLater]
-  @scala.inline
-  def windowsAutoEnrollment: windowsAutoEnrollment = "windowsAutoEnrollment".asInstanceOf[windowsAutoEnrollment]
-  @scala.inline
-  def windowsAzureADJoin: windowsAzureADJoin = "windowsAzureADJoin".asInstanceOf[windowsAzureADJoin]
-  @scala.inline
-  def windowsBulkAzureDomainJoin: windowsBulkAzureDomainJoin = "windowsBulkAzureDomainJoin".asInstanceOf[windowsBulkAzureDomainJoin]
-  @scala.inline
-  def windowsBulkUserless: windowsBulkUserless = "windowsBulkUserless".asInstanceOf[windowsBulkUserless]
-  @scala.inline
-  def windowsCoManagement: windowsCoManagement = "windowsCoManagement".asInstanceOf[windowsCoManagement]
-  @scala.inline
-  def windowsInsiderBuildFast: windowsInsiderBuildFast = "windowsInsiderBuildFast".asInstanceOf[windowsInsiderBuildFast]
-  @scala.inline
-  def windowsInsiderBuildRelease: windowsInsiderBuildRelease = "windowsInsiderBuildRelease".asInstanceOf[windowsInsiderBuildRelease]
-  @scala.inline
-  def windowsInsiderBuildSlow: windowsInsiderBuildSlow = "windowsInsiderBuildSlow".asInstanceOf[windowsInsiderBuildSlow]
-  @scala.inline
-  def windowsPhone81: windowsPhone81 = "windowsPhone81".asInstanceOf[windowsPhone81]
-  @scala.inline
-  def wipe: wipe = "wipe".asInstanceOf[wipe]
-  @scala.inline
-  def work: work = "work".asInstanceOf[work]
-  @scala.inline
-  def workingElsewhere: workingElsewhere = "workingElsewhere".asInstanceOf[workingElsewhere]
-  @scala.inline
-  def write: write = "write".asInstanceOf[write]
-  @scala.inline
-  def x64: x64 = "x64".asInstanceOf[x64]
-  @scala.inline
-  def x86: x86 = "x86".asInstanceOf[x86]
-  @scala.inline
-  def xtsAes128: xtsAes128 = "xtsAes128".asInstanceOf[xtsAes128]
-  @scala.inline
-  def xtsAes256: xtsAes256 = "xtsAes256".asInstanceOf[xtsAes256]
-  @scala.inline
-  def yellow: yellow = "yellow".asInstanceOf[yellow]
-  @scala.inline
-  def youngAdults: youngAdults = "youngAdults".asInstanceOf[youngAdults]
-  @scala.inline
-  def zeroTolerance: zeroTolerance = "zeroTolerance".asInstanceOf[zeroTolerance]
 }
-

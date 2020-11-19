@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "createCallSignature")
 @js.native
 object createCallSignature extends js.Object {
+  
   def apply(typeParameters: js.UndefOr[scala.Nothing], parameters: js.Array[ParameterDeclaration]): CallSignatureDeclaration = js.native
   def apply(
     typeParameters: js.UndefOr[scala.Nothing],
@@ -20,4 +21,3 @@ object createCallSignature extends js.Object {
     `type`: TypeNode
   ): CallSignatureDeclaration = js.native
 }
-

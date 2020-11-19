@@ -3,9 +3,46 @@ package typingsSlinky.tensorflowTfjsBackendWebgl
 import typingsSlinky.tensorflowTfjsBackendWebgl.reduceMod.ReduceTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object tensorflowTfjsBackendWebglStrings {
+  
+  @scala.inline
+  def NCHW: NCHW = "NCHW".asInstanceOf[NCHW]
+  
+  @scala.inline
+  def NHWC: NHWC = "NHWC".asInstanceOf[NHWC]
+  
+  @scala.inline
+  def all: all = "all".asInstanceOf[all]
+  
+  @scala.inline
+  def any: any = "any".asInstanceOf[any]
+  
+  @scala.inline
+  def avg: avg = "avg".asInstanceOf[avg]
+  
+  @scala.inline
+  def bilinear: bilinear = "bilinear".asInstanceOf[bilinear]
+  
+  @scala.inline
+  def max: max = "max".asInstanceOf[max]
+  
+  @scala.inline
+  def min: min = "min".asInstanceOf[min]
+  
+  @scala.inline
+  def nearest: nearest = "nearest".asInstanceOf[nearest]
+  
+  @scala.inline
+  def prod: prod = "prod".asInstanceOf[prod]
+  
+  @scala.inline
+  def sum: sum = "sum".asInstanceOf[sum]
+  
+  @scala.inline
+  def unsortedSegmentSum: unsortedSegmentSum = "unsortedSegmentSum".asInstanceOf[unsortedSegmentSum]
+  
   @js.native
   sealed trait NCHW extends js.Object
   
@@ -41,30 +78,4 @@ object tensorflowTfjsBackendWebglStrings {
   
   @js.native
   sealed trait unsortedSegmentSum extends js.Object
-  
-  @scala.inline
-  def NCHW: NCHW = "NCHW".asInstanceOf[NCHW]
-  @scala.inline
-  def NHWC: NHWC = "NHWC".asInstanceOf[NHWC]
-  @scala.inline
-  def all: all = "all".asInstanceOf[all]
-  @scala.inline
-  def any: any = "any".asInstanceOf[any]
-  @scala.inline
-  def avg: avg = "avg".asInstanceOf[avg]
-  @scala.inline
-  def bilinear: bilinear = "bilinear".asInstanceOf[bilinear]
-  @scala.inline
-  def max: max = "max".asInstanceOf[max]
-  @scala.inline
-  def min: min = "min".asInstanceOf[min]
-  @scala.inline
-  def nearest: nearest = "nearest".asInstanceOf[nearest]
-  @scala.inline
-  def prod: prod = "prod".asInstanceOf[prod]
-  @scala.inline
-  def sum: sum = "sum".asInstanceOf[sum]
-  @scala.inline
-  def unsortedSegmentSum: unsortedSegmentSum = "unsortedSegmentSum".asInstanceOf[unsortedSegmentSum]
 }
-

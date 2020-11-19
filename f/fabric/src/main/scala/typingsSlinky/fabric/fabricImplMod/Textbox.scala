@@ -3,7 +3,7 @@ package typingsSlinky.fabric.fabricImplMod
 import org.scalablytyped.runtime.NumberDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.fabric.fabricImplMod.IObjectOptions because Already inherited
@@ -19,46 +19,7 @@ class Textbox protected () extends IText {
     */
   def this(text: String) = this()
   def this(text: String, options: ITextboxOptions) = this()
-  /**
-    * Style objects for each line
-    * Generate an object that translates the style object so that it is
-    * broken up by visual lines (new lines and automatic wrapping).
-    * The original text styles object is broken up by actual lines (new lines only),
-    * which is only sufficient for Text / IText
-    * @private
-    * @type {Array} Line style { line: number, offset: number }
-    */
-  var _styleMap: js.UndefOr[NumberDictionary[typingsSlinky.fabric.anon.Line]] = js.native
-  /**
-    * Use this regular expression to split strings in breakable lines
-    * @private
-    * @type RegExp
-    */
-  var _wordJoiners: js.RegExp = js.native
-  /**
-    * Minimum calculated width of a textbox, in pixels.
-    * fixed to 2 so that an empty textbox cannot go to 0
-    * and is still selectable without text.
-    * @type Number
-    */
-  var dynamicMinWidth: js.UndefOr[Double] = js.native
-  /**
-    * Is the text wrapping
-    * @type Boolean
-    */
-  var isWrapping: js.UndefOr[Boolean] = js.native
-  /**
-    * Minimum width of textbox, in pixels.
-    * @type Number
-    */
-  var minWidth: js.UndefOr[Double] = js.native
-  /**
-    * Use this boolean property in order to split strings that have no white space concept.
-    * this is a cheap way to help with chinese/japaense
-    * @type Boolean
-    * @since 2.6.0
-    */
-  var splitByGrapheme: js.UndefOr[Boolean] = js.native
+  
   /**
     * Helper function to measure a string of text, given its lineIndex and charIndex offset
     * it gets called when charBounds are not available yet.
@@ -69,6 +30,25 @@ class Textbox protected () extends IText {
     * @returns {number}
     */
   def _measureWord(word: js.Array[String], lineIndex: Double, charOffset: Double): Double = js.native
+  
+  /**
+    * Style objects for each line
+    * Generate an object that translates the style object so that it is
+    * broken up by visual lines (new lines and automatic wrapping).
+    * The original text styles object is broken up by actual lines (new lines only),
+    * which is only sufficient for Text / IText
+    * @private
+    * @type {Array} Line style { line: number, offset: number }
+    */
+  var _styleMap: js.UndefOr[NumberDictionary[typingsSlinky.fabric.anon.Line]] = js.native
+  
+  /**
+    * Use this regular expression to split strings in breakable lines
+    * @private
+    * @type RegExp
+    */
+  var _wordJoiners: js.RegExp = js.native
+  
   /**
     * Wraps text using the 'width' property of Textbox. First this function
     * splits text on newlines, so we preserve newlines entered by the user.
@@ -79,17 +59,46 @@ class Textbox protected () extends IText {
     * @returns {Array} Array of grapheme lines
     */
   def _wrapText(lines: js.Array[String], desiredWidth: Double): js.Array[js.Array[String]] = js.native
+  
+  /**
+    * Minimum calculated width of a textbox, in pixels.
+    * fixed to 2 so that an empty textbox cannot go to 0
+    * and is still selectable without text.
+    * @type Number
+    */
+  var dynamicMinWidth: js.UndefOr[Double] = js.native
+  
   /**
     * Returns larger of min width and dynamic min width
     * @return {Number}
     */
   def getMinWidth(): Double = js.native
+  
+  /**
+    * Is the text wrapping
+    * @type Boolean
+    */
+  var isWrapping: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Minimum width of textbox, in pixels.
+    * @type Number
+    */
+  var minWidth: js.UndefOr[Double] = js.native
+  
+  /**
+    * Use this boolean property in order to split strings that have no white space concept.
+    * this is a cheap way to help with chinese/japaense
+    * @type Boolean
+    * @since 2.6.0
+    */
+  var splitByGrapheme: js.UndefOr[Boolean] = js.native
 }
-
 /* static members */
 @JSImport("fabric/fabric-impl", "Textbox")
 @js.native
 object Textbox extends js.Object {
+  
   /**
     * Returns fabric.Textbox instance from an object representation
     * @static
@@ -100,4 +109,3 @@ object Textbox extends js.Object {
   def fromObject(`object`: js.Any): Textbox = js.native
   def fromObject(`object`: js.Any, callback: js.Function): Textbox = js.native
 }
-

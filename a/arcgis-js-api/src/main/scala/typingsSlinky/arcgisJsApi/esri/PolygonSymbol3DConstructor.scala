@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PolygonSymbol3DConstructor
@@ -15,6 +15,6 @@ trait PolygonSymbol3DConstructor
   */
 Instantiable0[PolygonSymbol3D]
      with Instantiable1[/* properties */ PolygonSymbol3DProperties, PolygonSymbol3D] {
+  
   def fromJSON(json: js.Any): PolygonSymbol3D = js.native
 }
-

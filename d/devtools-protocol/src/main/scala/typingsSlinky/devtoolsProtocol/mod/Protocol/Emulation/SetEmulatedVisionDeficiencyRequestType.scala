@@ -8,7 +8,7 @@ import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.protanopia
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.tritanopia
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.none_
@@ -19,19 +19,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.tritanopia
 */
 trait SetEmulatedVisionDeficiencyRequestType extends js.Object
-
 object SetEmulatedVisionDeficiencyRequestType {
+  
   @scala.inline
   def Achromatopsia: achromatopsia = "achromatopsia".asInstanceOf[achromatopsia]
+  
   @scala.inline
   def BlurredVision: blurredVision = "blurredVision".asInstanceOf[blurredVision]
+  
   @scala.inline
   def Deuteranopia: deuteranopia = "deuteranopia".asInstanceOf[deuteranopia]
+  
   @scala.inline
   def None: none_ = "none".asInstanceOf[none_]
+  
   @scala.inline
   def Protanopia: protanopia = "protanopia".asInstanceOf[protanopia]
+  
   @scala.inline
   def Tritanopia: tritanopia = "tritanopia".asInstanceOf[tritanopia]
 }
-

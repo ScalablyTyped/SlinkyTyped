@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/sort-bar relevant section in reference guide}
@@ -25,29 +25,34 @@ class GridSortBar protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsGrid: Grid = js.native
+  
   @JSName("model")
   var model_FGridSortBar: IModel = js.native
-  def containerAsGrid: Grid = js.native
+  
   def sortItems: IList[GridSortItem] = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.GridSortBar")
 @js.native
 object GridSortBar extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new GridSortBar instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): GridSortBar = js.native
+  
   /**
     * Creates and returns a new GridSortBar instance in the SDK and on the server.
     * The new GridSortBar will be automatically stored in the 'sortBar' property
     * of the parent Grid element passed as argument.
     */
   def createIn(container: Grid): GridSortBar = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

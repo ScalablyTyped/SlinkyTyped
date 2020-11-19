@@ -3,10 +3,11 @@ package typingsSlinky.lodash.fpMod
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashClamp extends LodashConvertible {
+  
   def apply(lower: Double): LodashClamp1x1 = js.native
   def apply(lower: Double, upper: Double): LodashClamp1x3 = js.native
   def apply(lower: Double, upper: Double, number: Double): Double = js.native
@@ -15,4 +16,3 @@ trait LodashClamp extends LodashConvertible {
   def apply(lower: __, upper: Double, number: Double): LodashClamp1x6 = js.native
   def apply(lower: __, upper: __, number: Double): LodashClamp1x4 = js.native
 }
-

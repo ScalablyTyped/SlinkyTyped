@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Group of contacts._
@@ -22,11 +22,11 @@ import scala.scalajs.js.annotation._
   */
 class ContactsGroup ()
   extends typingsSlinky.scriptableIos.ContactsGroup
-
 /* static members */
 @JSGlobal("ContactsGroup")
 @js.native
 object ContactsGroup extends js.Object {
+  
   /**
     * _Queues a contacts group to be added._
     *
@@ -40,6 +40,7 @@ object ContactsGroup extends js.Object {
     */
   def add(group: typingsSlinky.scriptableIos.ContactsGroup): Unit = js.native
   def add(group: typingsSlinky.scriptableIos.ContactsGroup, containerIdentifier: String): Unit = js.native
+  
   /**
     * _Fetches contacts groups._
     *
@@ -48,6 +49,7 @@ object ContactsGroup extends js.Object {
     * @see https://docs.scriptable.app/contactsgroup/#all
     */
   def all(containers: js.Array[typingsSlinky.scriptableIos.ContactsContainer]): js.Promise[js.Array[typingsSlinky.scriptableIos.ContactsGroup]] = js.native
+  
   /**
     * _Queues a contacts group to be deleted._
     *
@@ -59,6 +61,7 @@ object ContactsGroup extends js.Object {
     * @see https://docs.scriptable.app/contactsgroup/#delete
     */
   def delete(group: typingsSlinky.scriptableIos.ContactsGroup): Unit = js.native
+  
   /**
     * _Queues an update to a contacts group._
     *
@@ -72,4 +75,3 @@ object ContactsGroup extends js.Object {
     */
   def update(group: typingsSlinky.scriptableIos.ContactsGroup): Unit = js.native
 }
-

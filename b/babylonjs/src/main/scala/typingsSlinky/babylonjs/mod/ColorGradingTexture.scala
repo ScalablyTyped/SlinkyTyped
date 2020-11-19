@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.mod
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "ColorGradingTexture")
 @js.native
@@ -17,15 +17,11 @@ class ColorGradingTexture protected ()
     */
   def this(url: String, scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
 }
-
 /* static members */
 @JSImport("babylonjs", "ColorGradingTexture")
 @js.native
 object ColorGradingTexture extends js.Object {
-  /**
-    * Empty line regex stored for GC.
-    */
-  var _noneEmptyLineRegex: js.Any = js.native
+  
   /**
     * Parses a color grading texture serialized by Babylon.
     * @param parsedTexture The texture information being parsedTexture
@@ -34,5 +30,9 @@ object ColorGradingTexture extends js.Object {
     * @return A color gradind texture
     */
   def Parse(parsedTexture: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene): Nullable[typingsSlinky.babylonjs.colorGradingTextureMod.ColorGradingTexture] = js.native
+  
+  /**
+    * Empty line regex stored for GC.
+    */
+  var _noneEmptyLineRegex: js.Any = js.native
 }
-

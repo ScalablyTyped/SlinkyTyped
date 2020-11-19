@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMauron85BackgroundGeolocation.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.IN_VEHICLE
@@ -15,23 +15,29 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.WALKING
 */
 trait ActivityType extends js.Object
-
 object ActivityType {
+  
   @scala.inline
   def IN_VEHICLE: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.IN_VEHICLE = "IN_VEHICLE".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.IN_VEHICLE]
+  
   @scala.inline
   def ON_BICYCLE: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.ON_BICYCLE = "ON_BICYCLE".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.ON_BICYCLE]
+  
   @scala.inline
   def ON_FOOT: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.ON_FOOT = "ON_FOOT".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.ON_FOOT]
+  
   @scala.inline
   def RUNNING: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.RUNNING = "RUNNING".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.RUNNING]
+  
   @scala.inline
   def STILL: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.STILL = "STILL".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.STILL]
+  
   @scala.inline
   def TILTING: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.TILTING = "TILTING".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.TILTING]
+  
   @scala.inline
   def UNKNOWN: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.UNKNOWN = "UNKNOWN".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.UNKNOWN]
+  
   @scala.inline
   def WALKING: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.WALKING = "WALKING".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.WALKING]
 }
-

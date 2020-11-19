@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-sqs-node/commands/ListQueueTagsCommand", JSImport.Namespace)
 @js.native
 object listQueueTagsCommandMod extends js.Object {
+  
   @js.native
   class ListQueueTagsCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object listQueueTagsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ListQueueTagsInput) = this()
+    
     val middlewareStack: MiddlewareStack[ListQueueTagsInput, ListQueueTagsOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: SQSResolvedConfiguration
     ): Handler[ListQueueTagsInput, ListQueueTagsOutput] = js.native
   }
-  
 }
-

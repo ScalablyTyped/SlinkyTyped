@@ -2,9 +2,10 @@ package typingsSlinky.babelTypes
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.babelTypes.mod.AnyTypeAnnotation_
     - typingsSlinky.babelTypes.mod.ArgumentPlaceholder_
@@ -297,11 +298,17 @@ package object mod {
     - typingsSlinky.babelTypes.mod.YieldExpression_
   */
   type Node = typingsSlinky.babelTypes.mod._Node | typingsSlinky.babelTypes.mod.NumberLiteral | typingsSlinky.babelTypes.mod.RegexLiteral | typingsSlinky.babelTypes.mod.RestProperty | typingsSlinky.babelTypes.mod.SpreadProperty
+  
   type NumberLiteral = typingsSlinky.babelTypes.mod.NumericLiteral_
+  
   type RegexLiteral = typingsSlinky.babelTypes.mod.RegExpLiteral_
+  
   type RestProperty = typingsSlinky.babelTypes.mod.RestElement_
+  
   type SpreadProperty = typingsSlinky.babelTypes.mod.SpreadElement_
+  
   type TraversalAncestors = js.Array[typingsSlinky.babelTypes.anon.Index]
+  
   type TraversalHandler[T] = js.ThisFunction3[
     /* this */ js.UndefOr[scala.Nothing], 
     /* node */ typingsSlinky.babelTypes.mod.Node, 

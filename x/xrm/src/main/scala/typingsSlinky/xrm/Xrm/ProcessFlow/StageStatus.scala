@@ -2,7 +2,7 @@ package typingsSlinky.xrm.Xrm.ProcessFlow
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Status for {@link ProcessFlow.Stage.getStatus Stage.getStatus()}.
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.inactive
 */
 trait StageStatus extends js.Object
-
 object StageStatus {
+  
   @scala.inline
   def active: typingsSlinky.xrm.xrmStrings.active = "active".asInstanceOf[typingsSlinky.xrm.xrmStrings.active]
+  
   @scala.inline
   def inactive: typingsSlinky.xrm.xrmStrings.inactive = "inactive".asInstanceOf[typingsSlinky.xrm.xrmStrings.inactive]
 }
-

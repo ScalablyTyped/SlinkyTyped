@@ -2,7 +2,7 @@ package typingsSlinky.sharepoint.global.CUI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("CUI.Component")
 @js.native
@@ -11,4 +11,3 @@ class Component protected ()
   /* tslint:enable:variable-name */
   def this(root: typingsSlinky.sharepoint.CUI.Component, id: String, title: String, description: String) = this()
 }
-

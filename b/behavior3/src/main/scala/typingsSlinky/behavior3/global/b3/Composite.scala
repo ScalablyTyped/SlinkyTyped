@@ -3,7 +3,7 @@ package typingsSlinky.behavior3.global.b3
 import typingsSlinky.behavior3.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Composite is the base class for all composite nodes. Thus, if you want to
@@ -50,4 +50,3 @@ class Composite ()
   extends typingsSlinky.behavior3.b3.BaseNode {
   def this(hasChildrenNameTitleProperties: Children) = this()
 }
-

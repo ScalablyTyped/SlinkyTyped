@@ -3,7 +3,7 @@ package typingsSlinky.aframe.mod.global.AFRAME.THREE
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AFRAME.THREE.InstancedMesh")
 @js.native
@@ -15,4 +15,3 @@ class InstancedMesh[TGeometry /* <: typingsSlinky.three.geometryMod.Geometry | B
     count: Double
   ) = this()
 }
-

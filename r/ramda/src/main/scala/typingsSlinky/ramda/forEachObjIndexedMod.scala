@@ -2,11 +2,12 @@ package typingsSlinky.ramda
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ramda/src/forEachObjIndexed", JSImport.Namespace)
 @js.native
 object forEachObjIndexedMod extends js.Object {
+  
   def default[T](
     fn: js.Function3[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
@@ -25,4 +26,3 @@ object forEachObjIndexedMod extends js.Object {
     obj: T
   ): T = js.native
 }
-

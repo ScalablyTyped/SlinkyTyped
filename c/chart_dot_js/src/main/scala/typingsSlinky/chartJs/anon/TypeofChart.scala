@@ -10,7 +10,7 @@ import typingsSlinky.chartJs.mod.PluginServiceStatic
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofChart
@@ -19,15 +19,23 @@ trait TypeofChart
       /* options */ ChartConfiguration, 
       typingsSlinky.chartJs.mod.Chart
     ] {
+  
   // Tooltip Static Options
   var Tooltip: ChartTooltipsStaticConfiguration = js.native
+  
   var controllers: StringDictionary[js.Any] = js.native
+  
   var defaults: Dictkey = js.native
+  
   var helpers: StringDictionary[js.Any] = js.native
+  
   val instances: StringDictionary[typingsSlinky.chartJs.mod.Chart] = js.native
+  
   var platform: DisableCSSInjection = js.native
+  
   var pluginService: PluginServiceStatic = js.native
+  
   var plugins: PluginServiceStatic = js.native
+  
   var scaleService: UpdateScaleDefaults = js.native
 }
-

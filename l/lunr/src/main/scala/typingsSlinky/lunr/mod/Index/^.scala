@@ -2,11 +2,12 @@ package typingsSlinky.lunr.mod.Index
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("lunr", "Index")
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Loads a previously serialized lunr.Index
     *
@@ -14,4 +15,3 @@ object ^ extends js.Object {
     */
   def load(serializedIndex: js.Object): typingsSlinky.lunr.mod.Index = js.native
 }
-

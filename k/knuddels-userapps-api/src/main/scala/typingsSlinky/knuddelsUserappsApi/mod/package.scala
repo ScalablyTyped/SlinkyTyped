@@ -2,9 +2,10 @@ package typingsSlinky.knuddelsUserappsApi
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - scala.Double
@@ -17,12 +18,14 @@ package object mod {
   type JsonData = js.UndefOr[
     typingsSlinky.knuddelsUserappsApi.mod._JsonData | java.lang.String | scala.Double | scala.Boolean | js.Date
   ]
+  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - typingsSlinky.knuddelsUserappsApi.mod.global.Json
     - typingsSlinky.knuddelsUserappsApi.mod.global.KnuddelsEventArray
   */
   type KnuddelsEvent = typingsSlinky.knuddelsUserappsApi.mod._KnuddelsEvent | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - scala.Double
@@ -36,6 +39,7 @@ package object mod {
   type KnuddelsJsonData = js.UndefOr[
     typingsSlinky.knuddelsUserappsApi.mod._KnuddelsJsonData | java.lang.String | scala.Double | scala.Boolean | js.Date
   ]
+  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - scala.Double

@@ -2,11 +2,12 @@ package typingsSlinky.firebase.mod.database
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "database.enableLogging")
 @js.native
 object enableLogging extends js.Object {
+  
   /**
     * Logs debugging information to the console.
     *
@@ -49,4 +50,3 @@ object enableLogging extends js.Object {
   def apply(logger: Boolean): js.Any = js.native
   def apply(logger: Boolean, persistent: Boolean): js.Any = js.native
 }
-

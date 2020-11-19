@@ -2,9 +2,10 @@ package typingsSlinky.momentMini
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.momentMini.momentMiniStrings.sameDay
     - typingsSlinky.momentMini.momentMiniStrings.nextDay
@@ -15,11 +16,13 @@ package object mod {
     - java.lang.String
   */
   type CalendarKey = typingsSlinky.momentMini.mod._CalendarKey | java.lang.String
+  
   type CalendarSpecVal = java.lang.String | (js.Function2[
     /* m */ js.UndefOr[typingsSlinky.momentMini.mod.MomentInput], 
     /* now */ js.UndefOr[typingsSlinky.momentMini.mod.Moment], 
     java.lang.String
   ])
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.momentMini.mod.Duration_
     - scala.Double
@@ -29,7 +32,9 @@ package object mod {
     - scala.Unit
   */
   type DurationInputArg1 = typingsSlinky.momentMini.mod._DurationInputArg1 | scala.Double | java.lang.String | scala.Unit
+  
   type DurationInputArg2 = typingsSlinky.momentMini.mod.unitOfTime.DurationConstructor
+  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - typingsSlinky.momentMini.mod.Moment
@@ -38,7 +43,9 @@ package object mod {
     - scala.Boolean
   */
   type LocaleSpecifier = typingsSlinky.momentMini.mod._LocaleSpecifier | js.Array[java.lang.String] | java.lang.String | scala.Boolean
+  
   type MomentFormatSpecification = java.lang.String | typingsSlinky.momentMini.mod.MomentBuiltinFormat | (js.Array[java.lang.String | typingsSlinky.momentMini.mod.MomentBuiltinFormat])
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.momentMini.mod.Moment
     - typingsSlinky.std.Date
@@ -49,12 +56,15 @@ package object mod {
     - scala.Unit
   */
   type MomentInput = typingsSlinky.momentMini.mod._MomentInput | (js.Array[scala.Double | java.lang.String]) | js.Date | java.lang.String | scala.Double | scala.Unit
+  
   type MonthWeekdayFn = js.Function2[
     /* momentToFormat */ typingsSlinky.momentMini.mod.Moment, 
     /* format */ js.UndefOr[java.lang.String], 
     java.lang.String
   ]
+  
   type RelativeTimeFuturePastVal = java.lang.String | (js.Function1[/* relTime */ java.lang.String, java.lang.String])
+  
   type RelativeTimeSpecVal = java.lang.String | (js.Function4[
     /* n */ scala.Double, 
     /* withoutSuffix */ scala.Boolean, 
@@ -62,5 +72,6 @@ package object mod {
     /* isFuture */ scala.Boolean, 
     java.lang.String
   ])
+  
   type WeekdaySimpleFn = js.Function1[/* momentToFormat */ typingsSlinky.momentMini.mod.Moment, java.lang.String]
 }

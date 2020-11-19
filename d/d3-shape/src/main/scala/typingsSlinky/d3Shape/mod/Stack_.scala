@@ -2,10 +2,11 @@ package typingsSlinky.d3Shape.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Stack_[This, Datum, Key] extends js.Object {
+  
   /**
     * Generates a stack for the given array of data, returning an array representing each series.
     * The resulting array has one element per series. Each series in then typically passed to an area generator to render an area chart,
@@ -16,6 +17,7 @@ trait Stack_[This, Datum, Key] extends js.Object {
     * @param data Array of data elements.
     */
   def apply(data: js.Array[Datum], args: js.Any*): js.Array[Series[Datum, Key]] = js.native
+  
   /**
     * Returns the current keys accessor, which defaults to the empty array.
     */
@@ -41,6 +43,7 @@ trait Stack_[This, Datum, Key] extends js.Object {
   def keys(
     keys: js.ThisFunction2[/* this */ This, /* data */ js.Array[Datum], /* repeated */ js.Any, js.Array[Key]]
   ): this.type = js.native
+  
   /**
     * Returns the current offset accessor, which defaults to stackOffsetNone; this uses a zero baseline.
     */
@@ -58,6 +61,7 @@ trait Stack_[This, Datum, Key] extends js.Object {
     * @param offset null to set to the default stackOffsetNone.
     */
   def offset(offset: Null): this.type = js.native
+  
   /**
     * Returns the current order accessor, which defaults to stackOrderNone; this uses the order given by the key accessor.
     */
@@ -88,6 +92,7 @@ trait Stack_[This, Datum, Key] extends js.Object {
     * @param order null to set to the default stackOrderNone.
     */
   def order(order: Null): this.type = js.native
+  
   /**
     * Returns the current value accessor, which defaults to a function return the property corresponding to the relevant key from the data element.
     *
@@ -110,4 +115,3 @@ trait Stack_[This, Datum, Key] extends js.Object {
     */
   def value(value: Double): this.type = js.native
 }
-

@@ -9,15 +9,15 @@ import typingsSlinky.webidl2.webidl2Strings.static
 import typingsSlinky.webidl2.webidl2Strings.stringifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.webidl2.mod.OperationMemberType
   - typingsSlinky.webidl2.mod.AttributeMemberType
 */
 trait IDLNamespaceMemberType extends js.Object
-
 object IDLNamespaceMemberType {
+  
   @scala.inline
   def OperationMemberType(
     arguments: js.Array[Argument],
@@ -30,6 +30,7 @@ object IDLNamespaceMemberType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLNamespaceMemberType]
   }
+  
   @scala.inline
   def AttributeMemberType(
     extAttrs: js.Array[ExtendedAttribute],
@@ -46,4 +47,3 @@ object IDLNamespaceMemberType {
     __obj.asInstanceOf[IDLNamespaceMemberType]
   }
 }
-

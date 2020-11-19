@@ -8,50 +8,43 @@ import typingsSlinky.babylonjs.spriteManagerMod.ISpriteManager
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
 @JSImport("babylonjs/Sprites/index", "babylonjs/scene")
 @js.native
 object babylonjsSceneAugmentingMod extends js.Object {
+  
   @js.native
   trait Scene extends js.Object {
-    /** @hidden */
-    var _pickedDownSprite: Nullable[typingsSlinky.babylonjs.spriteMod.Sprite] = js.native
-    /** @hidden */
-    var _pointerOverSprite: Nullable[typingsSlinky.babylonjs.spriteMod.Sprite] = js.native
-    /** @hidden */
-    var _tempSpritePickingRay: Nullable[Ray] = js.native
-    /**
-      * An event triggered when sprites rendering is done
-      * Note: This event can be trigger more than once per frame (because sprites can be rendered by render target textures as well)
-      */
-    var onAfterSpritesRenderingObservable: Observable[
-        typingsSlinky.babylonjs.spriteSceneComponentMod.babylonjsSceneAugmentingMod.Scene
-      ] = js.native
-    /**
-      * An event triggered when sprites rendering is about to start
-      * Note: This event can be trigger more than once per frame (because sprites can be rendered by render target textures as well)
-      */
-    var onBeforeSpritesRenderingObservable: Observable[
-        typingsSlinky.babylonjs.spriteSceneComponentMod.babylonjsSceneAugmentingMod.Scene
-      ] = js.native
-    /**
-      * All of the sprite managers added to this scene
-      * @see http://doc.babylonjs.com/babylon101/sprites
-      */
-    var spriteManagers: js.Array[ISpriteManager] = js.native
+    
     /** @hidden */
     def _internalMultiPickSprites(ray: Ray): Nullable[js.Array[PickingInfo]] = js.native
+    def _internalMultiPickSprites(ray: Ray, predicate: js.UndefOr[scala.Nothing], camera: Camera): Nullable[js.Array[PickingInfo]] = js.native
     def _internalMultiPickSprites(ray: Ray, predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean]): Nullable[js.Array[PickingInfo]] = js.native
     def _internalMultiPickSprites(
       ray: Ray,
       predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean],
       camera: Camera
     ): Nullable[js.Array[PickingInfo]] = js.native
+    
     /** @hidden */
     def _internalPickSprites(ray: Ray): Nullable[PickingInfo] = js.native
+    def _internalPickSprites(
+      ray: Ray,
+      predicate: js.UndefOr[scala.Nothing],
+      fastCheck: js.UndefOr[scala.Nothing],
+      camera: Camera
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickSprites(ray: Ray, predicate: js.UndefOr[scala.Nothing], fastCheck: Boolean): Nullable[PickingInfo] = js.native
+    def _internalPickSprites(ray: Ray, predicate: js.UndefOr[scala.Nothing], fastCheck: Boolean, camera: Camera): Nullable[PickingInfo] = js.native
     def _internalPickSprites(ray: Ray, predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean]): Nullable[PickingInfo] = js.native
+    def _internalPickSprites(
+      ray: Ray,
+      predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean],
+      fastCheck: js.UndefOr[scala.Nothing],
+      camera: Camera
+    ): Nullable[PickingInfo] = js.native
     def _internalPickSprites(
       ray: Ray,
       predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean],
@@ -63,11 +56,22 @@ object babylonjsSceneAugmentingMod extends js.Object {
       fastCheck: Boolean,
       camera: Camera
     ): Nullable[PickingInfo] = js.native
+    
+    /** @hidden */
+    var _pickedDownSprite: Nullable[typingsSlinky.babylonjs.spriteMod.Sprite] = js.native
+    
+    /** @hidden */
+    var _pointerOverSprite: Nullable[typingsSlinky.babylonjs.spriteMod.Sprite] = js.native
+    
+    /** @hidden */
+    var _tempSpritePickingRay: Nullable[Ray] = js.native
+    
     /**
       * Gets the sprite under the pointer
       * @returns a Sprite or null if no sprite is under the pointer
       */
     def getPointerOverSprite(): Nullable[typingsSlinky.babylonjs.spriteMod.Sprite] = js.native
+    
     /** Launch a ray to try to pick sprites in the scene
       * @param x position on screen
       * @param y position on screen
@@ -76,6 +80,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * @returns a PickingInfo array
       */
     def multiPickSprite(x: Double, y: Double): Nullable[js.Array[PickingInfo]] = js.native
+    def multiPickSprite(x: Double, y: Double, predicate: js.UndefOr[scala.Nothing], camera: Camera): Nullable[js.Array[PickingInfo]] = js.native
     def multiPickSprite(
       x: Double,
       y: Double,
@@ -87,6 +92,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean],
       camera: Camera
     ): Nullable[js.Array[PickingInfo]] = js.native
+    
     /** Use the given ray to pick sprites in the scene
       * @param ray The ray (in world space) to use to pick meshes
       * @param predicate Predicate function used to determine eligible sprites. Can be set to null. In this case, a sprite must have isPickable set to true
@@ -94,12 +100,30 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * @returns a PickingInfo array
       */
     def multiPickSpriteWithRay(ray: Ray): Nullable[js.Array[PickingInfo]] = js.native
+    def multiPickSpriteWithRay(ray: Ray, predicate: js.UndefOr[scala.Nothing], camera: Camera): Nullable[js.Array[PickingInfo]] = js.native
     def multiPickSpriteWithRay(ray: Ray, predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean]): Nullable[js.Array[PickingInfo]] = js.native
     def multiPickSpriteWithRay(
       ray: Ray,
       predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean],
       camera: Camera
     ): Nullable[js.Array[PickingInfo]] = js.native
+    
+    /**
+      * An event triggered when sprites rendering is done
+      * Note: This event can be trigger more than once per frame (because sprites can be rendered by render target textures as well)
+      */
+    var onAfterSpritesRenderingObservable: Observable[
+        typingsSlinky.babylonjs.spriteSceneComponentMod.babylonjsSceneAugmentingMod.Scene
+      ] = js.native
+    
+    /**
+      * An event triggered when sprites rendering is about to start
+      * Note: This event can be trigger more than once per frame (because sprites can be rendered by render target textures as well)
+      */
+    var onBeforeSpritesRenderingObservable: Observable[
+        typingsSlinky.babylonjs.spriteSceneComponentMod.babylonjsSceneAugmentingMod.Scene
+      ] = js.native
+    
     /** Launch a ray to try to pick a sprite in the scene
       * @param x position on screen
       * @param y position on screen
@@ -112,7 +136,23 @@ object babylonjsSceneAugmentingMod extends js.Object {
     def pickSprite(
       x: Double,
       y: Double,
+      predicate: js.UndefOr[scala.Nothing],
+      fastCheck: js.UndefOr[scala.Nothing],
+      camera: Camera
+    ): Nullable[PickingInfo] = js.native
+    def pickSprite(x: Double, y: Double, predicate: js.UndefOr[scala.Nothing], fastCheck: Boolean): Nullable[PickingInfo] = js.native
+    def pickSprite(x: Double, y: Double, predicate: js.UndefOr[scala.Nothing], fastCheck: Boolean, camera: Camera): Nullable[PickingInfo] = js.native
+    def pickSprite(
+      x: Double,
+      y: Double,
       predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean]
+    ): Nullable[PickingInfo] = js.native
+    def pickSprite(
+      x: Double,
+      y: Double,
+      predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean],
+      fastCheck: js.UndefOr[scala.Nothing],
+      camera: Camera
     ): Nullable[PickingInfo] = js.native
     def pickSprite(
       x: Double,
@@ -127,6 +167,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       fastCheck: Boolean,
       camera: Camera
     ): Nullable[PickingInfo] = js.native
+    
     /** Use the given ray to pick a sprite in the scene
       * @param ray The ray (in world space) to use to pick meshes
       * @param predicate Predicate function used to determine eligible sprites. Can be set to null. In this case, a sprite must have isPickable set to true
@@ -135,7 +176,21 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * @returns a PickingInfo
       */
     def pickSpriteWithRay(ray: Ray): Nullable[PickingInfo] = js.native
+    def pickSpriteWithRay(
+      ray: Ray,
+      predicate: js.UndefOr[scala.Nothing],
+      fastCheck: js.UndefOr[scala.Nothing],
+      camera: Camera
+    ): Nullable[PickingInfo] = js.native
+    def pickSpriteWithRay(ray: Ray, predicate: js.UndefOr[scala.Nothing], fastCheck: Boolean): Nullable[PickingInfo] = js.native
+    def pickSpriteWithRay(ray: Ray, predicate: js.UndefOr[scala.Nothing], fastCheck: Boolean, camera: Camera): Nullable[PickingInfo] = js.native
     def pickSpriteWithRay(ray: Ray, predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean]): Nullable[PickingInfo] = js.native
+    def pickSpriteWithRay(
+      ray: Ray,
+      predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean],
+      fastCheck: js.UndefOr[scala.Nothing],
+      camera: Camera
+    ): Nullable[PickingInfo] = js.native
     def pickSpriteWithRay(
       ray: Ray,
       predicate: js.Function1[/* sprite */ typingsSlinky.babylonjs.spriteMod.Sprite, Boolean],
@@ -147,12 +202,17 @@ object babylonjsSceneAugmentingMod extends js.Object {
       fastCheck: Boolean,
       camera: Camera
     ): Nullable[PickingInfo] = js.native
+    
     /**
       * Force the sprite under the pointer
       * @param sprite defines the sprite to use
       */
     def setPointerOverSprite(sprite: Nullable[typingsSlinky.babylonjs.spriteMod.Sprite]): Unit = js.native
+    
+    /**
+      * All of the sprite managers added to this scene
+      * @see http://doc.babylonjs.com/babylon101/sprites
+      */
+    var spriteManagers: js.Array[ISpriteManager] = js.native
   }
-  
 }
-

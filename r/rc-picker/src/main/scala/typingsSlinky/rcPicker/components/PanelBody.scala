@@ -7,9 +7,10 @@ import typingsSlinky.rcPicker.panelBodyMod.PanelBodyProps
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PanelBody {
+  
   @JSImport("rc-picker/es/panels/PanelBody", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -18,23 +19,31 @@ object PanelBody {
   class Builder[DateType] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def disabledDate(value: DateType => Boolean): this.type = set("disabledDate", js.Any.fromFunction1(value))
+    
     @scala.inline
     def getCellNode(value: DateType => ReactElement): this.type = set("getCellNode", js.Any.fromFunction1(value))
+    
     @scala.inline
     def headerCellsReactElement(value: ReactElement): this.type = set("headerCells", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def headerCells(value: ReactElement): this.type = set("headerCells", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def prefixColumn(value: DateType => ReactElement): this.type = set("prefixColumn", js.Any.fromFunction1(value))
+    
     @scala.inline
     def rowClassName(value: DateType => String): this.type = set("rowClassName", js.Any.fromFunction1(value))
+    
     @scala.inline
     def titleCell(value: DateType => String): this.type = set("titleCell", js.Any.fromFunction1(value))
   }
   
   def withProps[DateType](p: PanelBodyProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[DateType](
     baseDate: DateType,
@@ -50,4 +59,3 @@ object PanelBody {
     new Builder[DateType](js.Array(this.component, __props.asInstanceOf[PanelBodyProps[DateType]]))
   }
 }
-

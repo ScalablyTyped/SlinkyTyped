@@ -20,12 +20,13 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.feet_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.meters_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait HeightModelInfo
   extends Accessor
      with JSONSupport {
+  
   /**
     * The surface type or height model of the vertical coordinate system (VCS). A [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) will only render layers containing data that is compatible with the HeightModelInfo of the scene.
     *
@@ -40,6 +41,7 @@ trait HeightModelInfo
     * @default "gravity-related-height"
     */
   val heightModel: `gravity-related-height` | ellipsoidal = js.native
+  
   /**
     * The unit of the vertical coordinate system. A [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) will use this property to check that the vertical data of layers that define a HeightModelInfo is compatible with the view.
     *
@@ -48,6 +50,7 @@ trait HeightModelInfo
     * @default "meters"
     */
   val heightUnit: meters_ | feet_ | `us-feet` | `clarke-feet` | `clarke-yards` | `clarke-links` | `sears-yards` | `sears-feet` | `sears-chains` | `benoit-1895-b-chains` | `indian-yards` | `indian-1937-yards` | `gold-coast-feet` | `sears-1922-truncated-chains` | `50-kilometers` | `150-kilometers` = js.native
+  
   /**
     * The datum realization of the vertical coordinate system. A [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) will only render layers that define a HeightModelInfo with an identical `vertCRS` to that of the scene, when using an `ellipsoidal` height model.
     *
@@ -55,4 +58,3 @@ trait HeightModelInfo
     */
   val vertCRS: String = js.native
 }
-

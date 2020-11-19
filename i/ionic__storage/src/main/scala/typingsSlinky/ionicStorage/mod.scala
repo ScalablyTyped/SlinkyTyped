@@ -5,13 +5,25 @@ import typingsSlinky.angularCore.mod.ModuleWithProviders
 import typingsSlinky.ionicStorage.storageMod.StorageConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/storage", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  val StorageConfigToken: InjectionToken[js.Any] = js.native
+  
+  def ɵa(storageConfig: StorageConfig): typingsSlinky.ionicStorage.storageMod.Storage = js.native
+  
   @js.native
   class IonicStorageModule () extends js.Object
+  /* static members */
+  @js.native
+  object IonicStorageModule extends js.Object {
+    
+    def forRoot(): ModuleWithProviders[IonicStorageModule] = js.native
+    def forRoot(storageConfig: StorageConfig): ModuleWithProviders[IonicStorageModule] = js.native
+  }
   
   @js.native
   class Storage protected ()
@@ -25,15 +37,4 @@ object mod extends js.Object {
       */
     def this(config: StorageConfig) = this()
   }
-  
-  val StorageConfigToken: InjectionToken[js.Any] = js.native
-  def ɵa(storageConfig: StorageConfig): typingsSlinky.ionicStorage.storageMod.Storage = js.native
-  /* static members */
-  @js.native
-  object IonicStorageModule extends js.Object {
-    def forRoot(): ModuleWithProviders[IonicStorageModule] = js.native
-    def forRoot(storageConfig: StorageConfig): ModuleWithProviders[IonicStorageModule] = js.native
-  }
-  
 }
-

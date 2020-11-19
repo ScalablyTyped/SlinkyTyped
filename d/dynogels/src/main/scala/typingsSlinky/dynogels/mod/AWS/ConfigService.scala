@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.configserviceMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.ConfigService")
 @js.native
@@ -14,4 +14,3 @@ class ConfigService ()
   extends typingsSlinky.awsSdk.mod.ConfigService {
   def this(options: ClientConfiguration) = this()
 }
-

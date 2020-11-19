@@ -3,11 +3,12 @@ package typingsSlinky.firebase.mod.firestore
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "firestore.Transaction")
 @js.native
 class Transaction protected () extends js.Object {
+  
   /**
     * Deletes the document referred to by the provided `DocumentReference`.
     *
@@ -15,6 +16,7 @@ class Transaction protected () extends js.Object {
     * @return This `Transaction` instance. Used for chaining method calls.
     */
   def delete(documentRef: DocumentReference[_]): Transaction = js.native
+  
   /**
     * Reads the document referenced by the provided `DocumentReference.`
     *
@@ -22,6 +24,7 @@ class Transaction protected () extends js.Object {
     * @return A DocumentSnapshot for the read data.
     */
   def get[T](documentRef: DocumentReference[T]): js.Promise[DocumentSnapshot[T]] = js.native
+  
   /**
     * Writes to the document referred to by the provided `DocumentReference`.
     * If the document does not exist yet, it will be created. If you pass
@@ -43,6 +46,7 @@ class Transaction protected () extends js.Object {
     * @return This `Transaction` instance. Used for chaining method calls.
     */
   def set[T](documentRef: DocumentReference[T], data: Partial[T], options: SetOptions): Transaction = js.native
+  
   /**
     * Updates fields in the document referred to by the provided
     * `DocumentReference`. The update will fail if applied to a document that
@@ -73,4 +77,3 @@ class Transaction protected () extends js.Object {
   def update(documentRef: DocumentReference[_], field: String, value: js.Any, moreFieldsAndValues: js.Any*): Transaction = js.native
   def update(documentRef: DocumentReference[_], field: FieldPath, value: js.Any, moreFieldsAndValues: js.Any*): Transaction = js.native
 }
-

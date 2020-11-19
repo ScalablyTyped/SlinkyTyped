@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MapProperties extends LayersMixinProperties {
+  
   /**
     * Specifies a basemap for the map. The basemap is a set of tile layers that give geographic context to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) and the other [operational layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#layers) in the map.  This value can be an instance of [Basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html) or one of the strings listed in the table below.
     *
@@ -33,6 +34,7 @@ trait MapProperties extends LayersMixinProperties {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap)
     */
   var basemap: js.UndefOr[BasemapProperties | String] = js.native
+  
   /**
     * Specifies the surface properties for the map. This property is only relevant when adding the map to a 3D [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). It renders the terrain or topographical variations in the real world on the map's surface with a collection of [ElevationLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html).  This value can be an instance of [Ground](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html), or one of the following strings:
     *   * `world-elevation` for a default instance of ground using the [Terrain3D Service](https://www.arcgis.com/home/item.html?id=7029fb60158543ad845c7e1527af11e4).
@@ -45,33 +47,39 @@ trait MapProperties extends LayersMixinProperties {
     */
   var ground: js.UndefOr[GroundProperties | String] = js.native
 }
-
 object MapProperties {
+  
   @scala.inline
   def apply(): MapProperties = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[MapProperties]
   }
+  
   @scala.inline
   implicit class MapPropertiesOps[Self <: MapProperties] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setBasemap(value: BasemapProperties | String): Self = this.set("basemap", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteBasemap: Self = this.set("basemap", js.undefined)
+    
     @scala.inline
     def setGround(value: GroundProperties | String): Self = this.set("ground", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteGround: Self = this.set("ground", js.undefined)
   }
-  
 }
-

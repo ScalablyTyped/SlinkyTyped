@@ -1,13 +1,13 @@
 package typingsSlinky.pinkyswear
 
-import typingsSlinky.pinkyswear.PinkySwear.GenericPromise
 import typingsSlinky.pinkyswear.PinkySwear.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PinkySwearStatic extends js.Object {
+  
   /**
     * Create a new promise in pending state that promises a value or set of values.
     *
@@ -16,12 +16,11 @@ trait PinkySwearStatic extends js.Object {
     */
   def apply(): Promise = js.native
   /**
-    * Create a new generic promise in pending state that promises a value of a specific type and that also extends
-    * the returned generic promise object as specified in an extend function.
+    * Create a new promise in pending state that promises a value of a specific type and that also extends the
+    * returned promise object as specified in an extend function.
     *
     * @param extend Called when the promise is created and is ready to be extended.
-    * @returns PinkySwear.GenericPromise
+    * @returns PinkySwear.Promise
     */
-  def apply[T](extend: js.Function1[/* promise */ GenericPromise[T], GenericPromise[T]]): GenericPromise[T] = js.native
+  def apply[T](extend: js.Function1[/* promise */ Promise, Promise]): Promise = js.native
 }
-

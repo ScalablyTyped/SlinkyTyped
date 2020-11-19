@@ -3,11 +3,12 @@ package typingsSlinky.firebase.mod.auth
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "auth")
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Gets the {@link firebase.auth.Auth `Auth`} service for the default app or a
     * given app.
@@ -34,4 +35,3 @@ object ^ extends js.Object {
   def apply(): Auth = js.native
   def apply(app: App): Auth = js.native
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.angularCompiler.i18nAstMod.Message
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/render3/r3_ast", "Element")
 @js.native
@@ -146,14 +146,22 @@ class Element protected () extends Node {
     endSourceSpan: ParseSourceSpan,
     i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
   ) = this()
+  
   var attributes: js.Array[TextAttribute] = js.native
+  
   var children: js.Array[Node] = js.native
+  
   var endSourceSpan: ParseSourceSpan | Null = js.native
+  
   var i18n: js.UndefOr[Message | typingsSlinky.angularCompiler.i18nAstMod.Node] = js.native
+  
   var inputs: js.Array[BoundAttribute] = js.native
+  
   var name: String = js.native
+  
   var outputs: js.Array[BoundEvent] = js.native
+  
   var references: js.Array[Reference] = js.native
+  
   var startSourceSpan: ParseSourceSpan | Null = js.native
 }
-

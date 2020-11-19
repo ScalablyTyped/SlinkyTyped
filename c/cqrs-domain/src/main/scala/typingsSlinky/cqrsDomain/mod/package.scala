@@ -2,9 +2,10 @@ package typingsSlinky.cqrsDomain
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /**
     * @param changed is the new aggregate object
     * @param previous is the old aggregate object
@@ -19,11 +20,13 @@ package object mod {
     /* callback */ js.UndefOr[js.Function1[/* err */ java.lang.String | js.Error, java.lang.String | js.Error]], 
     scala.Unit | java.lang.String | js.Error
   ]
+  
   type commandHandler = js.Function2[
     /* data */ js.Any, 
     /* aggregate */ typingsSlinky.cqrsDomain.mod.AggregateModel, 
     scala.Unit
   ]
+  
   /**
     * @param aggId is the aggregate id
     * @param cmd is the command data
@@ -36,7 +39,9 @@ package object mod {
     /* callback */ js.UndefOr[js.Function1[/* err */ java.lang.String | js.Error, java.lang.String | js.Error]], 
     scala.Unit | java.lang.String | js.Error
   ]
+  
   type defineEventStreamsToLoadHandler = js.Function1[/* cmd */ js.Any, js.Array[typingsSlinky.cqrsDomain.anon.Aggregate]]
+  
   /**
     * @param loadingTime is the loading time in ms of the eventstore data
     * @param events are all loaded events in an array
@@ -48,12 +53,15 @@ package object mod {
     /* aggregateData */ js.Any, 
     scala.Boolean
   ]
+  
   type eventHandler = js.Function2[
     /* data */ js.Any, 
     /* aggregate */ typingsSlinky.cqrsDomain.mod.AggregateModel, 
     scala.Unit
   ]
+  
   type generateIdCallback = js.Function2[/* err */ js.Any, /* id */ java.lang.String, scala.Unit]
+  
   /**
     * @param data is the command data
     * @param aggregate is the aggregate object
@@ -65,6 +73,7 @@ package object mod {
     /* callback */ js.UndefOr[js.Function1[/* err */ java.lang.String | js.Error, java.lang.String | js.Error]], 
     scala.Unit | java.lang.String | js.Error
   ]
+  
   /**
     * @param data is the command data
     * @param callback is optional, if not defined as function argument you can throw errors or return errors here (sync way)

@@ -2,7 +2,7 @@ package typingsSlinky.googlemaps.global.google.maps
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This class extends MVCObject. */
 @JSGlobal("google.maps.MVCArray")
@@ -12,4 +12,3 @@ class MVCArray[T] ()
   extends typingsSlinky.googlemaps.google.maps.MVCArray[T] {
   def this(array: js.Array[T]) = this()
 }
-

@@ -3,16 +3,18 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.cim
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CIMSymbol extends Symbol {
+  
   /**
     * The JSON payload of the [CIMSymbolReference](https://github.com/Esri/cim-spec/blob/master/docs/v2/CIMRenderers.md#CIMSymbolReference).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-CIMSymbol.html#data)
     */
   var data: js.Any = js.native
+  
   /**
     * The symbol type.
     *
@@ -21,4 +23,3 @@ trait CIMSymbol extends Symbol {
   @JSName("type")
   val type_CIMSymbol: cim = js.native
 }
-

@@ -13,34 +13,19 @@ import typingsSlinky.feathersjsFeathers.mod.Application
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Typeofself extends js.Object {
-  /**
-    * This is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser.
-    * @since 4.16.0
-    */
-  @JSName("json")
-  var json_Original: FnCall = js.native
-  @JSName("rest")
-  val rest_Original: Call = js.native
-  /**
-    * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
-    */
-  @JSName("static")
-  var static_Original: Mime = js.native
-  /**
-    * This is a built-in middleware function in Express. It parses incoming requests with urlencoded payloads and is based on body-parser.
-    * @since 4.16.0
-    */
-  @JSName("urlencoded")
-  var urlencoded_Original: FnCallOptions = js.native
+  
   def Router(): typingsSlinky.expressServeStaticCore.mod.Router = js.native
   def Router(options: RouterOptions): typingsSlinky.expressServeStaticCore.mod.Router = js.native
+  
   def default[T](app: Application[T]): typingsSlinky.feathersjsExpress.mod.Application[T] = js.native
+  
   def errorHandler(): ErrorRequestHandler[ParamsDictionary, _, _, Query] = js.native
   def errorHandler(options: Html): ErrorRequestHandler[ParamsDictionary, _, _, Query] = js.native
+  
   /**
     * This is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser.
     * @since 4.16.0
@@ -51,9 +36,20 @@ trait Typeofself extends js.Object {
     * @since 4.16.0
     */
   def json(options: OptionsJson): NextHandleFunction = js.native
+  /**
+    * This is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser.
+    * @since 4.16.0
+    */
+  @JSName("json")
+  var json_Original: FnCall = js.native
+  
   def notFound(): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  
   def rest(): js.Function0[Unit] = js.native
   def rest(handler: RequestHandler[ParamsDictionary, _, _, Query]): js.Function0[Unit] = js.native
+  @JSName("rest")
+  val rest_Original: Call = js.native
+  
   /**
     * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
     */
@@ -62,6 +58,12 @@ trait Typeofself extends js.Object {
     * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
     */
   def static(root: String, options: ServeStaticOptions): Handler = js.native
+  /**
+    * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
+    */
+  @JSName("static")
+  var static_Original: Mime = js.native
+  
   /**
     * This is a built-in middleware function in Express. It parses incoming requests with urlencoded payloads and is based on body-parser.
     * @since 4.16.0
@@ -72,5 +74,10 @@ trait Typeofself extends js.Object {
     * @since 4.16.0
     */
   def urlencoded(options: OptionsUrlencoded): NextHandleFunction = js.native
+  /**
+    * This is a built-in middleware function in Express. It parses incoming requests with urlencoded payloads and is based on body-parser.
+    * @since 4.16.0
+    */
+  @JSName("urlencoded")
+  var urlencoded_Original: FnCallOptions = js.native
 }
-

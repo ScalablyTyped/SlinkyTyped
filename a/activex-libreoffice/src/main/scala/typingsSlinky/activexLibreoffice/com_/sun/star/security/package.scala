@@ -2,9 +2,10 @@ package typingsSlinky.activexLibreoffice.com_.sun.star
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object security {
+  
   /**
     * This meta service supports the {@link XAccessController} interface for checking security permissions.
     *
@@ -13,22 +14,31 @@ package object security {
     * @since OOo 1.1.2
     */
   type AccessController = typingsSlinky.activexLibreoffice.com_.sun.star.security.XAccessController
+  
   /**
     * the service to be used for {@link XCertificateContainer} .
     * @since OOo 2.3.1
     */
   type CertificateContainer = typingsSlinky.activexLibreoffice.com_.sun.star.security.XCertificateContainer
+  
   type CertificateException = typingsSlinky.activexLibreoffice.com_.sun.star.uno.SecurityException
+  
   type CryptographyException = typingsSlinky.activexLibreoffice.com_.sun.star.uno.SecurityException
+  
   type EncryptionException = typingsSlinky.activexLibreoffice.com_.sun.star.security.CryptographyException
+  
   type KeyException = typingsSlinky.activexLibreoffice.com_.sun.star.uno.SecurityException
+  
   type NoPasswordException = typingsSlinky.activexLibreoffice.com_.sun.star.uno.SecurityException
+  
   /**
     * Service for getting sets of permissions reading from some persistent storage.
     * @since OOo 1.1.2
     */
   type Policy = typingsSlinky.activexLibreoffice.com_.sun.star.security.XPolicy
+  
   type SecurityInfrastructureException = typingsSlinky.activexLibreoffice.com_.sun.star.uno.SecurityException
+  
   /**
     * provides conversion services for Serial Numbers.
     *
@@ -36,5 +46,6 @@ package object security {
     * @since OOo 3.1
     */
   type SerialNumberAdapter = typingsSlinky.activexLibreoffice.com_.sun.star.security.XSerialNumberAdapter
+  
   type SignatureException = typingsSlinky.activexLibreoffice.com_.sun.star.security.CryptographyException
 }

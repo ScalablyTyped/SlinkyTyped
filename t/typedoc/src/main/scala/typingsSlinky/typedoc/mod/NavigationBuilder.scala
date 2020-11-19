@@ -2,7 +2,7 @@ package typingsSlinky.typedoc.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "NavigationBuilder")
 @js.native
@@ -13,4 +13,3 @@ class NavigationBuilder protected ()
     entryPoint: typingsSlinky.typedoc.reflectionsMod.ContainerReflection
   ) = this()
 }
-

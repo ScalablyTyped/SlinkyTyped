@@ -7,10 +7,11 @@ import typingsSlinky.gapiClientClassroom.anon.CourseIdFields
 import typingsSlinky.gapiClientClassroom.anon.UserId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TeachersResource extends js.Object {
+  
   def create(request: Alt, body: Teacher): Request[Teacher] = js.native
   /**
     * Creates a teacher of a course.
@@ -30,6 +31,7 @@ trait TeachersResource extends js.Object {
     * course.
     */
   def create(request: CourseIdFields): Request[Teacher] = js.native
+  
   /**
     * Deletes a teacher of a course.
     *
@@ -44,6 +46,7 @@ trait TeachersResource extends js.Object {
     */
   def delete(): Request[js.Object] = js.native
   def delete(request: UserId): Request[js.Object] = js.native
+  
   /**
     * Returns a teacher of a course.
     *
@@ -56,6 +59,7 @@ trait TeachersResource extends js.Object {
     */
   def get(): Request[Teacher] = js.native
   def get(request: UserId): Request[Teacher] = js.native
+  
   /**
     * Returns a list of teachers of this course that the requester
     * is permitted to view.
@@ -68,4 +72,3 @@ trait TeachersResource extends js.Object {
   def list(): Request[ListTeachersResponse] = js.native
   def list(request: Callback): Request[ListTeachersResponse] = js.native
 }
-

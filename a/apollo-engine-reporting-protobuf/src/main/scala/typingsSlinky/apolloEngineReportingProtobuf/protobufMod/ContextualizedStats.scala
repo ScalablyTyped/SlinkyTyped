@@ -6,7 +6,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "ContextualizedStats")
 @js.native
@@ -16,20 +16,22 @@ import scala.scalajs.js.annotation._
   */
 class ContextualizedStats () extends IContextualizedStats {
   def this(properties: IContextualizedStats) = this()
+  
   /** ContextualizedStats perTypeStat. */
   @JSName("perTypeStat")
   var perTypeStat_ContextualizedStats: StringDictionary[ITypeStat] = js.native
+  
   /**
     * Converts this ContextualizedStats to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "ContextualizedStats")
 @js.native
 object ContextualizedStats extends js.Object {
+  
   /**
     * Creates a new ContextualizedStats instance using the specified properties.
     * @param [properties] Properties to set
@@ -37,6 +39,7 @@ object ContextualizedStats extends js.Object {
     */
   def create(): ContextualizedStats = js.native
   def create(properties: IContextualizedStats): ContextualizedStats = js.native
+  
   /**
     * Decodes a ContextualizedStats message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -49,6 +52,7 @@ object ContextualizedStats extends js.Object {
   def decode(reader: Reader, length: Double): ContextualizedStats = js.native
   def decode(reader: js.typedarray.Uint8Array): ContextualizedStats = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ContextualizedStats = js.native
+  
   /**
     * Decodes a ContextualizedStats message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -58,6 +62,7 @@ object ContextualizedStats extends js.Object {
     */
   def decodeDelimited(reader: Reader): ContextualizedStats = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ContextualizedStats = js.native
+  
   /**
     * Encodes the specified ContextualizedStats message. Does not implicitly {@link ContextualizedStats.verify|verify} messages.
     * @param message ContextualizedStats message or plain object to encode
@@ -66,6 +71,7 @@ object ContextualizedStats extends js.Object {
     */
   def encode(message: IContextualizedStats): Writer = js.native
   def encode(message: IContextualizedStats, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ContextualizedStats message, length delimited. Does not implicitly {@link ContextualizedStats.verify|verify} messages.
     * @param message ContextualizedStats message or plain object to encode
@@ -74,12 +80,14 @@ object ContextualizedStats extends js.Object {
     */
   def encodeDelimited(message: IContextualizedStats): Writer = js.native
   def encodeDelimited(message: IContextualizedStats, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ContextualizedStats message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ContextualizedStats
     */
   def fromObject(`object`: StringDictionary[js.Any]): ContextualizedStats = js.native
+  
   /**
     * Creates a plain object from a ContextualizedStats message. Also converts values to other types if specified.
     * @param message ContextualizedStats
@@ -88,6 +96,7 @@ object ContextualizedStats extends js.Object {
     */
   def toObject(message: ContextualizedStats): StringDictionary[js.Any] = js.native
   def toObject(message: ContextualizedStats, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ContextualizedStats message.
     * @param message Plain object to verify
@@ -95,4 +104,3 @@ object ContextualizedStats extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

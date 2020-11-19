@@ -2,11 +2,14 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object chimeMod {
+  
   type AccountList = js.Array[typingsSlinky.awsSdk.chimeMod.Account]
+  
   type AccountName = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Team
     - typingsSlinky.awsSdk.awsSdkStrings.EnterpriseDirectory
@@ -15,17 +18,29 @@ package object chimeMod {
     - java.lang.String
   */
   type AccountType = typingsSlinky.awsSdk.chimeMod._AccountType | java.lang.String
+  
   type Alpha2CountryCode = java.lang.String
+  
   type AreaCode = java.lang.String
+  
   type Arn = java.lang.String
+  
   type AttendeeList = js.Array[typingsSlinky.awsSdk.chimeMod.Attendee]
+  
   type AttendeeTagKeyList = js.Array[typingsSlinky.awsSdk.chimeMod.TagKey]
+  
   type AttendeeTagList = js.Array[typingsSlinky.awsSdk.chimeMod.Tag]
+  
   type BatchCreateAttendeeErrorList = js.Array[typingsSlinky.awsSdk.chimeMod.CreateAttendeeError]
+  
   type Boolean = scala.Boolean
+  
   type BotList = js.Array[typingsSlinky.awsSdk.chimeMod.Bot]
+  
   type BotType = typingsSlinky.awsSdk.awsSdkStrings.ChatBot | java.lang.String
+  
   type CallingName = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Unassigned
     - typingsSlinky.awsSdk.awsSdkStrings.UpdateInProgress
@@ -34,28 +49,46 @@ package object chimeMod {
     - java.lang.String
   */
   type CallingNameStatus = typingsSlinky.awsSdk.chimeMod._CallingNameStatus | java.lang.String
+  
   type CallingRegion = java.lang.String
+  
   type CallingRegionList = js.Array[typingsSlinky.awsSdk.chimeMod.CallingRegion]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Voice_
     - typingsSlinky.awsSdk.awsSdkStrings.SMS
     - java.lang.String
   */
   type Capability = typingsSlinky.awsSdk.chimeMod._Capability | java.lang.String
+  
   type CapabilityList = js.Array[typingsSlinky.awsSdk.chimeMod.Capability]
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.chimeMod.ClientApiVersions
+  
   type ClientRequestToken = java.lang.String
+  
   type Country = java.lang.String
+  
   type CountryList = js.Array[typingsSlinky.awsSdk.chimeMod.Country]
+  
   type CpsLimit = scala.Double
+  
   type CreateAttendeeRequestItemList = js.Array[typingsSlinky.awsSdk.chimeMod.CreateAttendeeRequestItem]
+  
   type CreateMeetingWithAttendeesRequestItemList = js.Array[typingsSlinky.awsSdk.chimeMod.CreateAttendeeRequestItem]
+  
   type CredentialList = js.Array[typingsSlinky.awsSdk.chimeMod.Credential]
+  
   type DNISEmergencyCallingConfigurationList = js.Array[typingsSlinky.awsSdk.chimeMod.DNISEmergencyCallingConfiguration]
+  
   type DataRetentionInHours = scala.Double
+  
   type E164PhoneNumber = java.lang.String
+  
   type E164PhoneNumberList = js.Array[typingsSlinky.awsSdk.chimeMod.E164PhoneNumber]
+  
   type EmailAddress = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NotSent
     - typingsSlinky.awsSdk.awsSdkStrings.Sent
@@ -63,6 +96,7 @@ package object chimeMod {
     - java.lang.String
   */
   type EmailStatus = typingsSlinky.awsSdk.chimeMod._EmailStatus | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.BadRequest
     - typingsSlinky.awsSdk.awsSdkStrings.Conflict_
@@ -82,17 +116,24 @@ package object chimeMod {
     - java.lang.String
   */
   type ErrorCode = typingsSlinky.awsSdk.chimeMod._ErrorCode | java.lang.String
+  
   type ExternalMeetingIdType = java.lang.String
+  
   type ExternalUserIdType = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Country_
     - typingsSlinky.awsSdk.awsSdkStrings.AreaCode
     - java.lang.String
   */
   type GeoMatchLevel = typingsSlinky.awsSdk.chimeMod._GeoMatchLevel | java.lang.String
+  
   type GuidString = java.lang.String
+  
   type Integer = scala.Double
+  
   type InviteList = js.Array[typingsSlinky.awsSdk.chimeMod.Invite]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Pending_
     - typingsSlinky.awsSdk.awsSdkStrings.Accepted_
@@ -100,8 +141,11 @@ package object chimeMod {
     - java.lang.String
   */
   type InviteStatus = typingsSlinky.awsSdk.chimeMod._InviteStatus | java.lang.String
+  
   type Iso8601Timestamp = js.Date
+  
   type JoinTokenString = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Basic_
     - typingsSlinky.awsSdk.awsSdkStrings.Plus
@@ -110,11 +154,17 @@ package object chimeMod {
     - java.lang.String
   */
   type License = typingsSlinky.awsSdk.chimeMod._License | java.lang.String
+  
   type LicenseList = js.Array[typingsSlinky.awsSdk.chimeMod.License]
+  
   type MeetingList = js.Array[typingsSlinky.awsSdk.chimeMod.Meeting]
+  
   type MeetingTagKeyList = js.Array[typingsSlinky.awsSdk.chimeMod.TagKey]
+  
   type MeetingTagList = js.Array[typingsSlinky.awsSdk.chimeMod.Tag]
+  
   type MemberErrorList = js.Array[typingsSlinky.awsSdk.chimeMod.MemberError]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.User_
     - typingsSlinky.awsSdk.awsSdkStrings.Bot_
@@ -122,11 +172,17 @@ package object chimeMod {
     - java.lang.String
   */
   type MemberType = typingsSlinky.awsSdk.chimeMod._MemberType | java.lang.String
+  
   type MembershipItemList = js.Array[typingsSlinky.awsSdk.chimeMod.MembershipItem]
+  
   type NextTokenString = java.lang.String
+  
   type NonEmptyString = java.lang.String
+  
   type NonEmptyString128 = java.lang.String
+  
   type NonEmptyStringList = js.Array[typingsSlinky.awsSdk.chimeMod.String]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EventBridge
     - typingsSlinky.awsSdk.awsSdkStrings.SNS
@@ -134,14 +190,18 @@ package object chimeMod {
     - java.lang.String
   */
   type NotificationTarget = typingsSlinky.awsSdk.chimeMod._NotificationTarget | java.lang.String
+  
   type NullableBoolean = scala.Boolean
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PreferSticky
     - typingsSlinky.awsSdk.awsSdkStrings.AvoidSticky
     - java.lang.String
   */
   type NumberSelectionBehavior = typingsSlinky.awsSdk.chimeMod._NumberSelectionBehavior | java.lang.String
+  
   type OrderedPhoneNumberList = js.Array[typingsSlinky.awsSdk.chimeMod.OrderedPhoneNumber]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Processing_
     - typingsSlinky.awsSdk.awsSdkStrings.Acquired
@@ -149,18 +209,26 @@ package object chimeMod {
     - java.lang.String
   */
   type OrderedPhoneNumberStatus = typingsSlinky.awsSdk.chimeMod._OrderedPhoneNumberStatus | java.lang.String
+  
   type OriginationRouteList = js.Array[typingsSlinky.awsSdk.chimeMod.OriginationRoute]
+  
   type OriginationRoutePriority = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.TCP
     - typingsSlinky.awsSdk.awsSdkStrings.UDP
     - java.lang.String
   */
   type OriginationRouteProtocol = typingsSlinky.awsSdk.chimeMod._OriginationRouteProtocol | java.lang.String
+  
   type OriginationRouteWeight = scala.Double
+  
   type ParticipantPhoneNumberList = js.Array[typingsSlinky.awsSdk.chimeMod.E164PhoneNumber]
+  
   type Participants = js.Array[typingsSlinky.awsSdk.chimeMod.Participant]
+  
   type PhoneNumberAssociationList = js.Array[typingsSlinky.awsSdk.chimeMod.PhoneNumberAssociation]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AccountId
     - typingsSlinky.awsSdk.awsSdkStrings.UserId
@@ -169,10 +237,15 @@ package object chimeMod {
     - java.lang.String
   */
   type PhoneNumberAssociationName = typingsSlinky.awsSdk.chimeMod._PhoneNumberAssociationName | java.lang.String
+  
   type PhoneNumberErrorList = js.Array[typingsSlinky.awsSdk.chimeMod.PhoneNumberError]
+  
   type PhoneNumberList = js.Array[typingsSlinky.awsSdk.chimeMod.PhoneNumber]
+  
   type PhoneNumberMaxResults = scala.Double
+  
   type PhoneNumberOrderList = js.Array[typingsSlinky.awsSdk.chimeMod.PhoneNumberOrder]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Processing_
     - typingsSlinky.awsSdk.awsSdkStrings.Successful_
@@ -181,12 +254,14 @@ package object chimeMod {
     - java.lang.String
   */
   type PhoneNumberOrderStatus = typingsSlinky.awsSdk.chimeMod._PhoneNumberOrderStatus | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.BusinessCalling
     - typingsSlinky.awsSdk.awsSdkStrings.VoiceConnector
     - java.lang.String
   */
   type PhoneNumberProductType = typingsSlinky.awsSdk.chimeMod._PhoneNumberProductType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AcquireInProgress
     - typingsSlinky.awsSdk.awsSdkStrings.AcquireFailed
@@ -199,16 +274,22 @@ package object chimeMod {
     - java.lang.String
   */
   type PhoneNumberStatus = typingsSlinky.awsSdk.chimeMod._PhoneNumberStatus | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Local_
     - typingsSlinky.awsSdk.awsSdkStrings.TollFree
     - java.lang.String
   */
   type PhoneNumberType = typingsSlinky.awsSdk.chimeMod._PhoneNumberType | java.lang.String
+  
   type Port = scala.Double
+  
   type PositiveInteger = scala.Double
+  
   type ProfileServiceMaxResults = scala.Double
+  
   type ProxySessionNameString = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Open_
     - typingsSlinky.awsSdk.awsSdkStrings.InProgress_
@@ -216,7 +297,9 @@ package object chimeMod {
     - java.lang.String
   */
   type ProxySessionStatus = typingsSlinky.awsSdk.chimeMod._ProxySessionStatus | java.lang.String
+  
   type ProxySessions = js.Array[typingsSlinky.awsSdk.chimeMod.ProxySession]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Unregistered
     - typingsSlinky.awsSdk.awsSdkStrings.Registered_
@@ -224,53 +307,86 @@ package object chimeMod {
     - java.lang.String
   */
   type RegistrationStatus = typingsSlinky.awsSdk.chimeMod._RegistrationStatus | java.lang.String
+  
   type ResultMax = scala.Double
+  
   type RetentionDays = scala.Double
+  
   type RoomList = js.Array[typingsSlinky.awsSdk.chimeMod.Room]
+  
   type RoomMembershipList = js.Array[typingsSlinky.awsSdk.chimeMod.RoomMembership]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Administrator_
     - typingsSlinky.awsSdk.awsSdkStrings.Member
     - java.lang.String
   */
   type RoomMembershipRole = typingsSlinky.awsSdk.chimeMod._RoomMembershipRole | java.lang.String
+  
   type SensitiveString = java.lang.String
+  
   type SensitiveStringList = js.Array[typingsSlinky.awsSdk.chimeMod.SensitiveString]
+  
   type SigninDelegateGroupList = js.Array[typingsSlinky.awsSdk.chimeMod.SigninDelegateGroup]
+  
   type StreamingNotificationTargetList = js.Array[typingsSlinky.awsSdk.chimeMod.StreamingNotificationTarget]
+  
   type String = java.lang.String
+  
   type String128 = java.lang.String
+  
   type StringList = js.Array[typingsSlinky.awsSdk.chimeMod.String]
+  
   type TagKey = java.lang.String
+  
   type TagKeyList = js.Array[typingsSlinky.awsSdk.chimeMod.TagKey]
+  
   type TagList = js.Array[typingsSlinky.awsSdk.chimeMod.Tag]
+  
   type TagValue = java.lang.String
+  
   type TollFreePrefix = java.lang.String
+  
   type UpdatePhoneNumberRequestItemList = js.Array[typingsSlinky.awsSdk.chimeMod.UpdatePhoneNumberRequestItem]
+  
   type UpdateUserRequestItemList = js.Array[typingsSlinky.awsSdk.chimeMod.UpdateUserRequestItem]
+  
   type UriType = java.lang.String
+  
   type UserEmailList = js.Array[typingsSlinky.awsSdk.chimeMod.EmailAddress]
+  
   type UserErrorList = js.Array[typingsSlinky.awsSdk.chimeMod.UserError]
+  
   type UserIdList = js.Array[typingsSlinky.awsSdk.chimeMod.NonEmptyString]
+  
   type UserList = js.Array[typingsSlinky.awsSdk.chimeMod.User]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PrivateUser
     - typingsSlinky.awsSdk.awsSdkStrings.SharedDevice
     - java.lang.String
   */
   type UserType = typingsSlinky.awsSdk.chimeMod._UserType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`us-east-1`
     - typingsSlinky.awsSdk.awsSdkStrings.`us-west-2`
     - java.lang.String
   */
   type VoiceConnectorAwsRegion = typingsSlinky.awsSdk.chimeMod._VoiceConnectorAwsRegion | java.lang.String
+  
   type VoiceConnectorGroupList = js.Array[typingsSlinky.awsSdk.chimeMod.VoiceConnectorGroup]
+  
   type VoiceConnectorGroupName = java.lang.String
+  
   type VoiceConnectorItemList = js.Array[typingsSlinky.awsSdk.chimeMod.VoiceConnectorItem]
+  
   type VoiceConnectorItemPriority = scala.Double
+  
   type VoiceConnectorList = js.Array[typingsSlinky.awsSdk.chimeMod.VoiceConnector]
+  
   type VoiceConnectorName = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2018-05-01`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

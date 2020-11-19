@@ -4,21 +4,22 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.materializeCss.anon.PartialModalOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("M.Modal")
 @js.native
 class Modal ()
   extends typingsSlinky.materializeCss.M.Modal
-
 /* static members */
 @JSGlobal("M.Modal")
 @js.native
 object Modal extends js.Object {
+  
   /**
     * Get Instance
     */
   def getInstance(elem: Element): typingsSlinky.materializeCss.M.Modal = js.native
+  
   /**
     * Init Modals
     */
@@ -35,4 +36,3 @@ object Modal extends js.Object {
   def init(els: Element): typingsSlinky.materializeCss.M.Modal = js.native
   def init(els: Element, options: PartialModalOptions): typingsSlinky.materializeCss.M.Modal = js.native
 }
-

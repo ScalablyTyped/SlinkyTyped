@@ -4,11 +4,12 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/xml", "pushSerializeAndPop")
 @js.native
 object pushSerializeAndPop extends js.Object {
+  
   def apply[O, T](
     `object`: O,
     serializersNS: StringDictionary[StringDictionary[Serializer]],
@@ -43,4 +44,3 @@ object pushSerializeAndPop extends js.Object {
     opt_this: T
   ): O = js.native
 }
-

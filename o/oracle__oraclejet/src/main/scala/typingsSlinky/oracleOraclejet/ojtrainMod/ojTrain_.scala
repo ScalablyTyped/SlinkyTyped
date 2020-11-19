@@ -15,18 +15,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.steps
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.stepsChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojTrain_ extends baseComponent[ojTrainSettableProperties] {
-  var onOjBeforeDeselect: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeSelect: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjDeselect: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjSelect: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectedStepChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onStepsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var selectedStep: String = js.native
-  var steps: js.Array[Step] = js.native
+  
   @JSName("addEventListener")
   def addEventListener_ojBeforeDeselect(`type`: ojBeforeDeselect, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
@@ -75,18 +68,40 @@ trait ojTrain_ extends baseComponent[ojTrainSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
   def getNextSelectableStep(): String | Null = js.native
+  
   def getPreviousSelectableStep(): String | Null = js.native
+  
   @JSName("getProperty")
   def getProperty_selectedStep(property: selectedStep): String = js.native
   @JSName("getProperty")
   def getProperty_steps(property: steps): js.Array[Step] = js.native
+  
   def getStep(id: String): Step | Null = js.native
+  
+  var onOjBeforeDeselect: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeSelect: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjDeselect: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjSelect: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectedStepChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onStepsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var selectedStep: String = js.native
+  
   def setProperties(properties: ojTrainSettablePropertiesLenient): Unit = js.native
+  
   @JSName("setProperty")
   def setProperty_selectedStep(property: selectedStep, value: String): Unit = js.native
   @JSName("setProperty")
   def setProperty_steps(property: steps, value: js.Array[Step]): Unit = js.native
+  
+  var steps: js.Array[Step] = js.native
+  
   def updateStep(id: String, stepProperties: MessageType): Unit = js.native
 }
-

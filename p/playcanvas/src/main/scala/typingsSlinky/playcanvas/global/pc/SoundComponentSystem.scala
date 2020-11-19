@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create a SoundComponentSystem.
@@ -19,4 +19,3 @@ class SoundComponentSystem protected ()
   extends typingsSlinky.playcanvas.pc.SoundComponentSystem {
   def this(app: typingsSlinky.playcanvas.pc.Application, manager: typingsSlinky.playcanvas.pc.SoundManager) = this()
 }
-

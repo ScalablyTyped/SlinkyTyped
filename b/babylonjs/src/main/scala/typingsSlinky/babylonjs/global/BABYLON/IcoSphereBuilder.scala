@@ -4,17 +4,17 @@ import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.RadiusZ
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.IcoSphereBuilder")
 @js.native
 class IcoSphereBuilder ()
   extends typingsSlinky.babylonjs.BABYLON.IcoSphereBuilder
-
 /* static members */
 @JSGlobal("BABYLON.IcoSphereBuilder")
 @js.native
 object IcoSphereBuilder extends js.Object {
+  
   /**
     * Creates a sphere based upon an icosahedron with 20 triangular faces which can be subdivided
     * * The parameter `radius` sets the radius size (float) of the icosphere (default 1)
@@ -33,4 +33,3 @@ object IcoSphereBuilder extends js.Object {
   def CreateIcoSphere(name: String, options: RadiusZ): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
   def CreateIcoSphere(name: String, options: RadiusZ, scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
 }
-

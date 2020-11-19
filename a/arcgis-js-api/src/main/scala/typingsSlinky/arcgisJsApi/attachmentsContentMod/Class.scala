@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.AttachmentsContent
 import typingsSlinky.arcgisJsApi.esri.AttachmentsContentProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/popup/content/AttachmentsContent", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends AttachmentsContent {
   def this(properties: AttachmentsContentProperties) = this()
 }
-

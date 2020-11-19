@@ -37,7 +37,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.WidgetValidation
 import typingsSlinky.mendixmodelsdk.restMod.rest.ConsumedODataService
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -55,25 +55,28 @@ class ConstantRefExpression protected () extends Expression {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def constant: IConstant = js.native
+  
+  def constantQualifiedName: String = js.native
+  
+  def constant_=(newValue: IConstant): Unit = js.native
+  
   @JSName("model")
   var model_FConstantRefExpression: IModel = js.native
-  def constant: IConstant = js.native
-  def constantQualifiedName: String = js.native
-  def constant_=(newValue: IConstant): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/expressions", "expressions.ConstantRefExpression")
 @js.native
 object ConstantRefExpression extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'argumentModel' property
@@ -83,6 +86,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInAppServiceCallParameterMappingUnderArgumentModel(container: AppServiceCallParameterMapping): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'argumentModel' property
@@ -92,6 +96,7 @@ object ConstantRefExpression extends js.Object {
     *  7.21.0 and higher
     */
   def createInBasicCodeActionParameterValueUnderArgumentModel(container: BasicCodeActionParameterValue): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'argumentModel' property
@@ -101,6 +106,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 to 7.20.0
     */
   def createInBasicJavaActionParameterValueUnderArgumentModel(container: BasicJavaActionParameterValue): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'left' property
@@ -110,6 +116,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryExpressionUnderLeft(container: BinaryExpression): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'right' property
@@ -119,6 +126,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryExpressionUnderRight(container: BinaryExpression): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'expressionModel' property
@@ -128,6 +136,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryRequestHandlingUnderExpressionModel(container: BinaryRequestHandling): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'valueModel' property
@@ -137,6 +146,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInChangeListActionUnderValueModel(container: ChangeListAction): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'valueModel' property
@@ -146,6 +156,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInChangeVariableActionUnderValueModel(container: ChangeVariableAction): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'expressionModel' property
@@ -155,6 +166,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInConditionalSettingsUnderExpressionModel(container: ConditionalSettings): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'timeoutModel' property
@@ -164,6 +176,7 @@ object ConstantRefExpression extends js.Object {
     *  8.5.0 and higher
     */
   def createInConsumedODataServiceUnderTimeoutModel(container: ConsumedODataService): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'initialValueModel' property
@@ -173,6 +186,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInCreateVariableActionUnderInitialValueModel(container: CreateVariableAction): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'limitExpressionModel' property
@@ -182,6 +196,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInCustomRangeUnderLimitExpressionModel(container: CustomRange): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'offsetExpressionModel' property
@@ -191,6 +206,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInCustomRangeUnderOffsetExpressionModel(container: CustomRange): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'argumentModel' property
@@ -200,6 +216,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInDocumentTemplateParameterMappingUnderArgumentModel(container: DocumentTemplateParameterMapping): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'returnValueModel' property
@@ -209,6 +226,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInEndEventUnderReturnValueModel(container: EndEvent): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'expressionModel' property
@@ -218,6 +236,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInExpressionSplitConditionUnderExpressionModel(container: ExpressionSplitCondition): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'valueModel' property
@@ -227,6 +246,7 @@ object ConstantRefExpression extends js.Object {
     *  8.0.0 and higher
     */
   def createInFormDataPartUnderValueModel(container: FormDataPart): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'arguments' property
@@ -236,6 +256,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInFunctionCallExpressionUnderArguments(container: FunctionCallExpression): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'marginBottomInInchModel' property
@@ -245,6 +266,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginBottomInInchModel(container: GenerateDocumentAction): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'marginLeftInInchModel' property
@@ -254,6 +276,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginLeftInInchModel(container: GenerateDocumentAction): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'marginRightInInchModel' property
@@ -263,6 +286,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginRightInInchModel(container: GenerateDocumentAction): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'marginTopInInchModel' property
@@ -272,6 +296,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginTopInInchModel(container: GenerateDocumentAction): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'customLocationModel' property
@@ -281,6 +306,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderCustomLocationModel(container: HttpConfiguration): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'password' property
@@ -290,6 +316,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderPassword(container: HttpConfiguration): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'username' property
@@ -299,6 +326,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderUsername(container: HttpConfiguration): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'valueModel' property
@@ -308,6 +336,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpHeaderEntryUnderValueModel(container: HttpHeaderEntry): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'condition' property
@@ -317,6 +346,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderCondition(container: IfExpression): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'ifFalse' property
@@ -326,6 +356,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderIfFalse(container: IfExpression): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'ifTrue' property
@@ -335,6 +366,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderIfTrue(container: IfExpression): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'expressionModel' property
@@ -344,6 +376,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInInspectAttributeUnderExpressionModel(container: InspectAttribute): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'nodeModel' property
@@ -353,6 +386,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInLogMessageActionUnderNodeModel(container: LogMessageAction): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'valueModel' property
@@ -362,6 +396,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInMemberChangeUnderValueModel(container: MemberChange): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'argumentModel' property
@@ -371,6 +406,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInMicroflowCallParameterMappingUnderArgumentModel(container: MicroflowCallParameterMapping): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'argumentModel' property
@@ -380,6 +416,7 @@ object ConstantRefExpression extends js.Object {
     *  8.0.0 and higher
     */
   def createInNanoflowCallParameterMappingUnderArgumentModel(container: NanoflowCallParameterMapping): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'expression' property
@@ -389,6 +426,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInParenthesisExpressionUnderExpression(container: ParenthesisExpression): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'hostExpressionModel' property
@@ -398,6 +436,7 @@ object ConstantRefExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderHostExpressionModel(container: ProxyConfiguration): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'passwordExpressionModel' property
@@ -407,6 +446,7 @@ object ConstantRefExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderPasswordExpressionModel(container: ProxyConfiguration): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'portExpressionModel' property
@@ -416,6 +456,7 @@ object ConstantRefExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderPortExpressionModel(container: ProxyConfiguration): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'useConfigurationExpressionModel' property
@@ -425,6 +466,7 @@ object ConstantRefExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderUseConfigurationExpressionModel(container: ProxyConfiguration): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'usernameExpressionModel' property
@@ -434,6 +476,7 @@ object ConstantRefExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderUsernameExpressionModel(container: ProxyConfiguration): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'timeOutModel' property
@@ -443,6 +486,7 @@ object ConstantRefExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInRestCallActionUnderTimeOutModel(container: RestCallAction): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'argumentModel' property
@@ -452,6 +496,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInRuleCallParameterMappingUnderArgumentModel(container: RuleCallParameterMapping): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'expressionModel' property
@@ -461,6 +506,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInTemplateArgumentUnderExpressionModel(container: TemplateArgument): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'expression' property
@@ -470,6 +516,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInUnaryExpressionUnderExpression(container: UnaryExpression): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'timeOutModel' property
@@ -479,6 +526,7 @@ object ConstantRefExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInWebServiceCallActionUnderTimeOutModel(container: WebServiceCallAction): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'argumentModel' property
@@ -488,6 +536,7 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInWebServiceOperationParameterMappingUnderArgumentModel(container: WebServiceOperationParameterMapping): ConstantRefExpression = js.native
+  
   /**
     * Creates and returns a new ConstantRefExpression instance in the SDK and on the server.
     * The new ConstantRefExpression will be automatically stored in the 'expressionModel' property
@@ -497,5 +546,8 @@ object ConstantRefExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInWidgetValidationUnderExpressionModel(container: WidgetValidation): ConstantRefExpression = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -11,13 +11,14 @@ import typingsSlinky.nodemailer.nodemailerStrings.hash
 import typingsSlinky.nodemailer.nodemailerStrings.readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Streams through a message body and calculates relaxed body hash
   */
 @js.native
 trait RelaxedBody extends Transform {
+  
   def addListener(event: hash, listener: js.Function2[/* digest */ Buffer, /* debugBody */ Buffer | `false`, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
@@ -29,6 +30,7 @@ trait RelaxedBody extends Transform {
   def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  
   def emit(event: hash, digest: Buffer, debugBody: `false`): Boolean = js.native
   @JSName("emit")
   def emit_close(event: close): Boolean = js.native
@@ -42,6 +44,7 @@ trait RelaxedBody extends Transform {
   def emit_hash(event: hash, digest: Buffer, debugBody: Buffer): Boolean = js.native
   @JSName("emit")
   def emit_readable(event: readable): Boolean = js.native
+  
   def on(event: hash, listener: js.Function2[/* digest */ Buffer, /* debugBody */ Buffer | `false`, Unit]): this.type = js.native
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
@@ -53,6 +56,7 @@ trait RelaxedBody extends Transform {
   def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("on")
   def on_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  
   def once(event: hash, listener: js.Function2[/* digest */ Buffer, /* debugBody */ Buffer | `false`, Unit]): this.type = js.native
   @JSName("once")
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
@@ -64,6 +68,7 @@ trait RelaxedBody extends Transform {
   def once_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("once")
   def once_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  
   def prependListener(event: hash, listener: js.Function2[/* digest */ Buffer, /* debugBody */ Buffer | `false`, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
@@ -75,6 +80,7 @@ trait RelaxedBody extends Transform {
   def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  
   def prependOnceListener(event: hash, listener: js.Function2[/* digest */ Buffer, /* debugBody */ Buffer | `false`, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
@@ -86,6 +92,7 @@ trait RelaxedBody extends Transform {
   def prependOnceListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  
   def removeListener(event: hash, listener: js.Function2[/* digest */ Buffer, /* debugBody */ Buffer | `false`, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
@@ -98,4 +105,3 @@ trait RelaxedBody extends Transform {
   @JSName("removeListener")
   def removeListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
 }
-

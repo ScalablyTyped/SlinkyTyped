@@ -4,14 +4,14 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.estree.mod.BaseNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ASTNode
   extends BaseNode
      with /* _ */ StringDictionary[js.Any]
-
 object ASTNode {
+  
   @scala.inline
   def apply(`type`: String): ASTNode = {
     val __obj = js.Dynamic.literal()
@@ -19,4 +19,3 @@ object ASTNode {
     __obj.asInstanceOf[ASTNode]
   }
 }
-

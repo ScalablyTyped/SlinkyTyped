@@ -9,11 +9,12 @@ import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/PostProcesses/depthOfFieldMergePostProcess", JSImport.Namespace)
 @js.native
 object depthOfFieldMergePostProcessMod extends js.Object {
+  
   @js.native
   class DepthOfFieldMergePostProcess protected () extends PostProcess {
     /**
@@ -35,145 +36,34 @@ object depthOfFieldMergePostProcessMod extends js.Object {
       originalFromInput: PostProcess,
       circleOfConfusion: PostProcess,
       blurSteps: js.Array[PostProcess],
-      options: Double,
-      camera: Nullable[Camera]
-    ) = this()
-    def this(
-      name: String,
-      originalFromInput: PostProcess,
-      circleOfConfusion: PostProcess,
-      blurSteps: js.Array[PostProcess],
-      options: PostProcessOptions,
-      camera: Nullable[Camera]
-    ) = this()
-    def this(
-      name: String,
-      originalFromInput: PostProcess,
-      circleOfConfusion: PostProcess,
-      blurSteps: js.Array[PostProcess],
-      options: Double,
+      options: Double | PostProcessOptions,
       camera: Nullable[Camera],
-      samplingMode: Double
+      samplingMode: js.UndefOr[Double],
+      engine: js.UndefOr[Engine],
+      reusable: js.UndefOr[Boolean],
+      textureType: js.UndefOr[Double],
+      blockCompilation: js.UndefOr[Boolean]
     ) = this()
-    def this(
-      name: String,
-      originalFromInput: PostProcess,
-      circleOfConfusion: PostProcess,
-      blurSteps: js.Array[PostProcess],
-      options: PostProcessOptions,
-      camera: Nullable[Camera],
-      samplingMode: Double
-    ) = this()
-    def this(
-      name: String,
-      originalFromInput: PostProcess,
-      circleOfConfusion: PostProcess,
-      blurSteps: js.Array[PostProcess],
-      options: Double,
-      camera: Nullable[Camera],
-      samplingMode: Double,
-      engine: Engine
-    ) = this()
-    def this(
-      name: String,
-      originalFromInput: PostProcess,
-      circleOfConfusion: PostProcess,
-      blurSteps: js.Array[PostProcess],
-      options: PostProcessOptions,
-      camera: Nullable[Camera],
-      samplingMode: Double,
-      engine: Engine
-    ) = this()
-    def this(
-      name: String,
-      originalFromInput: PostProcess,
-      circleOfConfusion: PostProcess,
-      blurSteps: js.Array[PostProcess],
-      options: Double,
-      camera: Nullable[Camera],
-      samplingMode: Double,
-      engine: Engine,
-      reusable: Boolean
-    ) = this()
-    def this(
-      name: String,
-      originalFromInput: PostProcess,
-      circleOfConfusion: PostProcess,
-      blurSteps: js.Array[PostProcess],
-      options: PostProcessOptions,
-      camera: Nullable[Camera],
-      samplingMode: Double,
-      engine: Engine,
-      reusable: Boolean
-    ) = this()
-    def this(
-      name: String,
-      originalFromInput: PostProcess,
-      circleOfConfusion: PostProcess,
-      blurSteps: js.Array[PostProcess],
-      options: Double,
-      camera: Nullable[Camera],
-      samplingMode: Double,
-      engine: Engine,
-      reusable: Boolean,
-      textureType: Double
-    ) = this()
-    def this(
-      name: String,
-      originalFromInput: PostProcess,
-      circleOfConfusion: PostProcess,
-      blurSteps: js.Array[PostProcess],
-      options: PostProcessOptions,
-      camera: Nullable[Camera],
-      samplingMode: Double,
-      engine: Engine,
-      reusable: Boolean,
-      textureType: Double
-    ) = this()
-    def this(
-      name: String,
-      originalFromInput: PostProcess,
-      circleOfConfusion: PostProcess,
-      blurSteps: js.Array[PostProcess],
-      options: Double,
-      camera: Nullable[Camera],
-      samplingMode: Double,
-      engine: Engine,
-      reusable: Boolean,
-      textureType: Double,
-      blockCompilation: Boolean
-    ) = this()
-    def this(
-      name: String,
-      originalFromInput: PostProcess,
-      circleOfConfusion: PostProcess,
-      blurSteps: js.Array[PostProcess],
-      options: PostProcessOptions,
-      camera: Nullable[Camera],
-      samplingMode: Double,
-      engine: Engine,
-      reusable: Boolean,
-      textureType: Double,
-      blockCompilation: Boolean
-    ) = this()
+    
     var blurSteps: js.Any = js.native
   }
   
   @js.native
   class DepthOfFieldMergePostProcessOptions () extends js.Object {
+    
     /**
       * Parameters to perform the merge of bloom effect
       */
     var bloom: js.UndefOr[Blurred] = js.native
+    
     /**
       * Parameters to perform the merge of the depth of field effect
       */
     var depthOfField: js.UndefOr[BlurSteps] = js.native
+    
     /**
       * The original image to merge on top of
       */
     var originalFromInput: PostProcess = js.native
   }
-  
 }
-

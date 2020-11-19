@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.servicecatalogMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "ServiceCatalog")
 @js.native
@@ -14,4 +14,3 @@ class ServiceCatalog ()
   extends typingsSlinky.awsSdk.allMod.ServiceCatalog {
   def this(options: ClientConfiguration) = this()
 }
-

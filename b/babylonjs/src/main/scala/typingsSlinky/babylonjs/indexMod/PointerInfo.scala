@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "PointerInfo")
 @js.native
@@ -34,4 +34,3 @@ class PointerInfo protected ()
   pickInfo: Nullable[typingsSlinky.babylonjs.pickingInfoMod.PickingInfo]
   ) = this()
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.workspacesMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "WorkSpaces")
 @js.native
@@ -14,4 +14,3 @@ class WorkSpaces ()
   extends typingsSlinky.awsSdk.allMod.WorkSpaces {
   def this(options: ClientConfiguration) = this()
 }
-

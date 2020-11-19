@@ -12,7 +12,7 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Meshes/index", "Mesh")
 @js.native
@@ -31,114 +31,72 @@ class Mesh protected ()
     */
   def this(name: String) = this()
   def this(name: String, scene: Nullable[Scene]) = this()
-  def this(name: String, scene: Nullable[Scene], parent: Nullable[Node]) = this()
+  def this(name: String, scene: js.UndefOr[Nullable[Scene]], parent: Nullable[Node]) = this()
   def this(
     name: String,
-    scene: Nullable[Scene],
-    parent: Nullable[Node],
+    scene: js.UndefOr[Nullable[Scene]],
+    parent: js.UndefOr[Nullable[Node]],
     source: Nullable[typingsSlinky.babylonjs.meshMod.Mesh]
   ) = this()
   def this(
     name: String,
-    scene: Nullable[Scene],
-    parent: Nullable[Node],
-    source: Nullable[typingsSlinky.babylonjs.meshMod.Mesh],
+    scene: js.UndefOr[Nullable[Scene]],
+    parent: js.UndefOr[Nullable[Node]],
+    source: js.UndefOr[Nullable[typingsSlinky.babylonjs.meshMod.Mesh]],
     doNotCloneChildren: Boolean
   ) = this()
   def this(
     name: String,
-    scene: Nullable[Scene],
-    parent: Nullable[Node],
-    source: Nullable[typingsSlinky.babylonjs.meshMod.Mesh],
+    scene: js.UndefOr[Nullable[Scene]],
+    parent: js.UndefOr[Nullable[Node]],
+    source: js.UndefOr[Nullable[typingsSlinky.babylonjs.meshMod.Mesh]],
+    doNotCloneChildren: js.UndefOr[scala.Nothing],
+    clonePhysicsImpostor: Boolean
+  ) = this()
+  def this(
+    name: String,
+    scene: js.UndefOr[Nullable[Scene]],
+    parent: js.UndefOr[Nullable[Node]],
+    source: js.UndefOr[Nullable[typingsSlinky.babylonjs.meshMod.Mesh]],
     doNotCloneChildren: Boolean,
     clonePhysicsImpostor: Boolean
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Meshes/index", "Mesh")
 @js.native
 object Mesh extends js.Object {
+  
   /**
     * Mesh side orientation : usually the internal or back surface
     */
   val BACKSIDE: Double = js.native
+  
   /**
     * Mesh tile positioning : part tiles on bottom
     */
   val BOTTOM: Double = js.native
+  
   /**
     * Mesh cap setting : two caps, one at the beginning  and one at the end of the mesh
     */
   val CAP_ALL: Double = js.native
+  
   /**
     * Mesh cap setting : one cap at the end of the mesh
     */
   val CAP_END: Double = js.native
+  
   /**
     * Mesh cap setting : one cap at the beginning of the mesh
     */
   val CAP_START: Double = js.native
+  
   /**
     * Mesh tile positioning : part tiles same on left/right or top/bottom
     */
   val CENTER: Double = js.native
-  /**
-    * Mesh side orientation : by default, `FRONTSIDE`
-    */
-  val DEFAULTSIDE: Double = js.native
-  /**
-    * Mesh side orientation : both internal and external or front and back surfaces
-    */
-  val DOUBLESIDE: Double = js.native
-  /**
-    * Mesh pattern setting : rotate pattern and rotate
-    */
-  val FLIP_N_ROTATE_ROW: Double = js.native
-  /**
-    * Mesh pattern setting : flip and rotate alternate tiles on each row or column
-    */
-  val FLIP_N_ROTATE_TILE: Double = js.native
-  /**
-    * Mesh pattern setting : flip (reflect in y axis) all tiles on alternate rows
-    */
-  val FLIP_ROW: Double = js.native
-  /**
-    * Mesh pattern setting : flip (reflect in y axis) alternate tiles on each row or column
-    */
-  val FLIP_TILE: Double = js.native
-  /**
-    * Mesh side orientation : usually the external or front surface
-    */
-  val FRONTSIDE: Double = js.native
-  /**
-    * Mesh tile positioning : part tiles on left
-    */
-  val LEFT: Double = js.native
-  /**
-    * Mesh cap setting : no cap
-    */
-  val NO_CAP: Double = js.native
-  /**
-    * Mesh pattern setting : no flip or rotate
-    */
-  val NO_FLIP: Double = js.native
-  /**
-    * Mesh tile positioning : part tiles on right
-    */
-  val RIGHT: Double = js.native
-  /**
-    * Mesh pattern setting : rotate (180degs) all tiles on alternate rows
-    */
-  val ROTATE_ROW: Double = js.native
-  /**
-    * Mesh pattern setting : rotate (180degs) alternate tiles on each row or column
-    */
-  val ROTATE_TILE: Double = js.native
-  /**
-    * Mesh tile positioning : part tiles on top
-    */
-  val TOP: Double = js.native
+  
   def Center(meshesOrMinMaxVector: js.Array[typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh]): Vector3 = js.native
   /**
     * Returns the center of the `{min:` Vector3`, max:` Vector3`}` or the center of MinMax vector3 computed from a mesh array
@@ -146,6 +104,7 @@ object Mesh extends js.Object {
     * @returns a vector3
     */
   def Center(meshesOrMinMaxVector: Max): Vector3 = js.native
+  
   /**
     * Creates a box mesh. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -156,9 +115,23 @@ object Mesh extends js.Object {
     * @returns a new Mesh
     */
   def CreateBox(name: String, size: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateBox(
+    name: String,
+    size: Double,
+    scene: js.UndefOr[Nullable[Scene]],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateBox(name: String, size: Double, scene: js.UndefOr[Nullable[Scene]], updatable: Boolean): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateBox(
+    name: String,
+    size: Double,
+    scene: js.UndefOr[Nullable[Scene]],
+    updatable: Boolean,
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateBox(name: String, size: Double, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateBox(name: String, size: Double, scene: Nullable[Scene], updatable: Boolean): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateBox(name: String, size: Double, scene: Nullable[Scene], updatable: Boolean, sideOrientation: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a cylinder or a cone mesh. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -187,7 +160,50 @@ object Mesh extends js.Object {
     diameterBottom: Double,
     tessellation: Double,
     subdivisions: js.Any,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateCylinder(
+    name: String,
+    height: Double,
+    diameterTop: Double,
+    diameterBottom: Double,
+    tessellation: Double,
+    subdivisions: js.Any,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateCylinder(
+    name: String,
+    height: Double,
+    diameterTop: Double,
+    diameterBottom: Double,
+    tessellation: Double,
+    subdivisions: js.Any,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: js.Any,
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateCylinder(
+    name: String,
+    height: Double,
+    diameterTop: Double,
+    diameterBottom: Double,
+    tessellation: Double,
+    subdivisions: js.Any,
     scene: Scene
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateCylinder(
+    name: String,
+    height: Double,
+    diameterTop: Double,
+    diameterBottom: Double,
+    tessellation: Double,
+    subdivisions: js.Any,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateCylinder(
     name: String,
@@ -210,6 +226,7 @@ object Mesh extends js.Object {
     updatable: js.Any,
     sideOrientation: Double
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a dashed line mesh. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -229,7 +246,9 @@ object Mesh extends js.Object {
     dashSize: Double,
     gapSize: Double,
     dashNb: Double,
-    scene: Nullable[Scene]
+    scene: js.UndefOr[Nullable[Scene]],
+    updatable: js.UndefOr[scala.Nothing],
+    instance: typingsSlinky.babylonjs.linesMeshMod.LinesMesh
   ): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
   def CreateDashedLines(
     name: String,
@@ -237,7 +256,7 @@ object Mesh extends js.Object {
     dashSize: Double,
     gapSize: Double,
     dashNb: Double,
-    scene: Nullable[Scene],
+    scene: js.UndefOr[Nullable[Scene]],
     updatable: Boolean
   ): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
   def CreateDashedLines(
@@ -246,10 +265,19 @@ object Mesh extends js.Object {
     dashSize: Double,
     gapSize: Double,
     dashNb: Double,
-    scene: Nullable[Scene],
+    scene: js.UndefOr[Nullable[Scene]],
     updatable: Boolean,
     instance: typingsSlinky.babylonjs.linesMeshMod.LinesMesh
   ): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  def CreateDashedLines(
+    name: String,
+    points: js.Array[Vector3],
+    dashSize: Double,
+    gapSize: Double,
+    dashNb: Double,
+    scene: Nullable[Scene]
+  ): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  
   /**
     * Creates a decal mesh.
     * Please consider using the same method from the MeshBuilder class instead.
@@ -270,6 +298,7 @@ object Mesh extends js.Object {
     size: Vector3,
     angle: Double
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a plane polygonal mesh.  By default, this is a disc. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -281,16 +310,31 @@ object Mesh extends js.Object {
     * @returns a new Mesh
     */
   def CreateDisc(name: String, radius: Double, tessellation: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateDisc(name: String, radius: Double, tessellation: Double, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateDisc(name: String, radius: Double, tessellation: Double, scene: Nullable[Scene], updatable: Boolean): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateDisc(
     name: String,
     radius: Double,
     tessellation: Double,
-    scene: Nullable[Scene],
+    scene: js.UndefOr[Nullable[Scene]],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateDisc(
+    name: String,
+    radius: Double,
+    tessellation: Double,
+    scene: js.UndefOr[Nullable[Scene]],
+    updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateDisc(
+    name: String,
+    radius: Double,
+    tessellation: Double,
+    scene: js.UndefOr[Nullable[Scene]],
     updatable: Boolean,
     sideOrientation: Double
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateDisc(name: String, radius: Double, tessellation: Double, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a ground mesh.
     * Please consider using the same method from the MeshBuilder class instead
@@ -303,6 +347,14 @@ object Mesh extends js.Object {
     * @returns a new Mesh
     */
   def CreateGround(name: String, width: Double, height: Double, subdivisions: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateGround(
+    name: String,
+    width: Double,
+    height: Double,
+    subdivisions: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateGround(name: String, width: Double, height: Double, subdivisions: Double, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateGround(
     name: String,
@@ -312,6 +364,7 @@ object Mesh extends js.Object {
     scene: Scene,
     updatable: Boolean
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a ground mesh from a height map.
     * Please consider using the same method from the MeshBuilder class instead
@@ -348,7 +401,58 @@ object Mesh extends js.Object {
     minHeight: Double,
     maxHeight: Double,
     scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    onReady: js.UndefOr[scala.Nothing],
+    alphaFilter: Double
+  ): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
+  def CreateGroundFromHeightMap(
+    name: String,
+    url: String,
+    width: Double,
+    height: Double,
+    subdivisions: Double,
+    minHeight: Double,
+    maxHeight: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    onReady: js.Function1[/* mesh */ typingsSlinky.babylonjs.groundMeshMod.GroundMesh, Unit]
+  ): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
+  def CreateGroundFromHeightMap(
+    name: String,
+    url: String,
+    width: Double,
+    height: Double,
+    subdivisions: Double,
+    minHeight: Double,
+    maxHeight: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    onReady: js.Function1[/* mesh */ typingsSlinky.babylonjs.groundMeshMod.GroundMesh, Unit],
+    alphaFilter: Double
+  ): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
+  def CreateGroundFromHeightMap(
+    name: String,
+    url: String,
+    width: Double,
+    height: Double,
+    subdivisions: Double,
+    minHeight: Double,
+    maxHeight: Double,
+    scene: Scene,
     updatable: Boolean
+  ): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
+  def CreateGroundFromHeightMap(
+    name: String,
+    url: String,
+    width: Double,
+    height: Double,
+    subdivisions: Double,
+    minHeight: Double,
+    maxHeight: Double,
+    scene: Scene,
+    updatable: Boolean,
+    onReady: js.UndefOr[scala.Nothing],
+    alphaFilter: Double
   ): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
   def CreateGroundFromHeightMap(
     name: String,
@@ -375,6 +479,7 @@ object Mesh extends js.Object {
     onReady: js.Function1[/* mesh */ typingsSlinky.babylonjs.groundMeshMod.GroundMesh, Unit],
     alphaFilter: Double
   ): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
+  
   /**
     * Creates a hemisphere mesh. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -385,6 +490,7 @@ object Mesh extends js.Object {
     */
   def CreateHemisphere(name: String, segments: Double, diameter: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateHemisphere(name: String, segments: Double, diameter: Double, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a sphere based upon an icosahedron with 20 triangular faces which can be subdivided
     * * The parameter `radius` sets the radius size (float) of the icosphere (default 1)
@@ -401,6 +507,7 @@ object Mesh extends js.Object {
     * @see http://doc.babylonjs.com/how_to/polyhedra_shapes#icosphere
     */
   def CreateIcoSphere(name: String, options: Updatable, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates lathe mesh.
     * The lathe is a shape with a symetry axis : a 2D model shape is rotated around this axis to design the lathe.
@@ -421,6 +528,15 @@ object Mesh extends js.Object {
     radius: Double,
     tessellation: Double,
     scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateLathe(
+    name: String,
+    shape: js.Array[Vector3],
+    radius: Double,
+    tessellation: Double,
+    scene: Scene,
     updatable: Boolean
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateLathe(
@@ -432,6 +548,7 @@ object Mesh extends js.Object {
     updatable: Boolean,
     sideOrientation: Double
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a line mesh. Please consider using the same method from the MeshBuilder class instead.
     * @param name defines the name of the mesh to create
@@ -442,15 +559,23 @@ object Mesh extends js.Object {
     * @returns a new Mesh
     */
   def CreateLines(name: String, points: js.Array[Vector3]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
-  def CreateLines(name: String, points: js.Array[Vector3], scene: Nullable[Scene]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
-  def CreateLines(name: String, points: js.Array[Vector3], scene: Nullable[Scene], updatable: Boolean): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
   def CreateLines(
     name: String,
     points: js.Array[Vector3],
-    scene: Nullable[Scene],
+    scene: js.UndefOr[Nullable[Scene]],
+    updatable: js.UndefOr[scala.Nothing],
+    instance: Nullable[typingsSlinky.babylonjs.linesMeshMod.LinesMesh]
+  ): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  def CreateLines(name: String, points: js.Array[Vector3], scene: js.UndefOr[Nullable[Scene]], updatable: Boolean): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  def CreateLines(
+    name: String,
+    points: js.Array[Vector3],
+    scene: js.UndefOr[Nullable[Scene]],
     updatable: Boolean,
     instance: Nullable[typingsSlinky.babylonjs.linesMeshMod.LinesMesh]
   ): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  def CreateLines(name: String, points: js.Array[Vector3], scene: Nullable[Scene]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  
   /**
     * Creates a plane mesh. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -461,8 +586,16 @@ object Mesh extends js.Object {
     * @returns a new Mesh
     */
   def CreatePlane(name: String, size: Double, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePlane(
+    name: String,
+    size: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreatePlane(name: String, size: Double, scene: Scene, updatable: Boolean): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreatePlane(name: String, size: Double, scene: Scene, updatable: Boolean, sideOrientation: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a polygon mesh.Please consider using the same method from the MeshBuilder class instead
     * The polygon's shape will depend on the input parameters and is constructed parallel to a ground mesh.
@@ -481,13 +614,107 @@ object Mesh extends js.Object {
     * @returns a new Mesh
     */
   def CreatePolygon(name: String, shape: js.Array[Vector3], scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: js.UndefOr[scala.Nothing],
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double,
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: js.UndefOr[scala.Nothing],
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: Double,
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreatePolygon(name: String, shape: js.Array[Vector3], scene: Scene, holes: js.Array[js.Array[Vector3]]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreatePolygon(
     name: String,
     shape: js.Array[Vector3],
     scene: Scene,
     holes: js.Array[js.Array[Vector3]],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: js.UndefOr[scala.Nothing],
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    scene: Scene,
+    holes: js.Array[js.Array[Vector3]],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    scene: Scene,
+    holes: js.Array[js.Array[Vector3]],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double,
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    scene: Scene,
+    holes: js.Array[js.Array[Vector3]],
     updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    scene: Scene,
+    holes: js.Array[js.Array[Vector3]],
+    updatable: Boolean,
+    sideOrientation: js.UndefOr[scala.Nothing],
+    earcutInjection: js.Any
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreatePolygon(
     name: String,
@@ -506,6 +733,7 @@ object Mesh extends js.Object {
     sideOrientation: Double,
     earcutInjection: js.Any
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a polyhedron mesh.
     * Please consider using the same method from the MeshBuilder class instead.
@@ -526,6 +754,7 @@ object Mesh extends js.Object {
     * @returns a new Mesh
     */
   def CreatePolyhedron(name: String, options: FaceColors, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a ribbon mesh. Please consider using the same method from the MeshBuilder class instead
     * @see http://doc.babylonjs.com/how_to/parametric_shapes
@@ -553,6 +782,79 @@ object Mesh extends js.Object {
     closeArray: Boolean,
     closePath: Boolean,
     offset: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: js.UndefOr[scala.Nothing],
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(
+    name: String,
+    pathArray: js.Array[js.Array[Vector3]],
+    closeArray: Boolean,
+    closePath: Boolean,
+    offset: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(
+    name: String,
+    pathArray: js.Array[js.Array[Vector3]],
+    closeArray: Boolean,
+    closePath: Boolean,
+    offset: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double,
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(
+    name: String,
+    pathArray: js.Array[js.Array[Vector3]],
+    closeArray: Boolean,
+    closePath: Boolean,
+    offset: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(
+    name: String,
+    pathArray: js.Array[js.Array[Vector3]],
+    closeArray: Boolean,
+    closePath: Boolean,
+    offset: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: js.UndefOr[scala.Nothing],
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(
+    name: String,
+    pathArray: js.Array[js.Array[Vector3]],
+    closeArray: Boolean,
+    closePath: Boolean,
+    offset: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(
+    name: String,
+    pathArray: js.Array[js.Array[Vector3]],
+    closeArray: Boolean,
+    closePath: Boolean,
+    offset: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: Double,
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(
+    name: String,
+    pathArray: js.Array[js.Array[Vector3]],
+    closeArray: Boolean,
+    closePath: Boolean,
+    offset: Double,
     scene: Scene
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateRibbon(
@@ -562,7 +864,50 @@ object Mesh extends js.Object {
     closePath: Boolean,
     offset: Double,
     scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: js.UndefOr[scala.Nothing],
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(
+    name: String,
+    pathArray: js.Array[js.Array[Vector3]],
+    closeArray: Boolean,
+    closePath: Boolean,
+    offset: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(
+    name: String,
+    pathArray: js.Array[js.Array[Vector3]],
+    closeArray: Boolean,
+    closePath: Boolean,
+    offset: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double,
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(
+    name: String,
+    pathArray: js.Array[js.Array[Vector3]],
+    closeArray: Boolean,
+    closePath: Boolean,
+    offset: Double,
+    scene: Scene,
     updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(
+    name: String,
+    pathArray: js.Array[js.Array[Vector3]],
+    closeArray: Boolean,
+    closePath: Boolean,
+    offset: Double,
+    scene: Scene,
+    updatable: Boolean,
+    sideOrientation: js.UndefOr[scala.Nothing],
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateRibbon(
     name: String,
@@ -585,6 +930,7 @@ object Mesh extends js.Object {
     sideOrientation: Double,
     instance: typingsSlinky.babylonjs.meshMod.Mesh
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a sphere mesh. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -596,7 +942,38 @@ object Mesh extends js.Object {
     * @returns a new Mesh
     */
   def CreateSphere(name: String, segments: Double, diameter: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateSphere(
+    name: String,
+    segments: Double,
+    diameter: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateSphere(
+    name: String,
+    segments: Double,
+    diameter: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateSphere(
+    name: String,
+    segments: Double,
+    diameter: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateSphere(name: String, segments: Double, diameter: Double, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateSphere(
+    name: String,
+    segments: Double,
+    diameter: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateSphere(name: String, segments: Double, diameter: Double, scene: Scene, updatable: Boolean): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateSphere(
     name: String,
@@ -606,6 +983,7 @@ object Mesh extends js.Object {
     updatable: Boolean,
     sideOrientation: Double
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a tiled ground mesh.
     * Please consider using the same method from the MeshBuilder class instead
@@ -641,6 +1019,7 @@ object Mesh extends js.Object {
     scene: Scene,
     updatable: Boolean
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a torus mesh. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -653,7 +1032,42 @@ object Mesh extends js.Object {
     * @returns a new Mesh
     */
   def CreateTorus(name: String, diameter: Double, thickness: Double, tessellation: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorus(
+    name: String,
+    diameter: Double,
+    thickness: Double,
+    tessellation: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorus(
+    name: String,
+    diameter: Double,
+    thickness: Double,
+    tessellation: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorus(
+    name: String,
+    diameter: Double,
+    thickness: Double,
+    tessellation: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateTorus(name: String, diameter: Double, thickness: Double, tessellation: Double, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorus(
+    name: String,
+    diameter: Double,
+    thickness: Double,
+    tessellation: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateTorus(
     name: String,
     diameter: Double,
@@ -671,6 +1085,7 @@ object Mesh extends js.Object {
     updatable: Boolean,
     sideOrientation: Double
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a torus knot mesh. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -702,7 +1117,54 @@ object Mesh extends js.Object {
     tubularSegments: Double,
     p: Double,
     q: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorusKnot(
+    name: String,
+    radius: Double,
+    tube: Double,
+    radialSegments: Double,
+    tubularSegments: Double,
+    p: Double,
+    q: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorusKnot(
+    name: String,
+    radius: Double,
+    tube: Double,
+    radialSegments: Double,
+    tubularSegments: Double,
+    p: Double,
+    q: Double,
+    scene: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorusKnot(
+    name: String,
+    radius: Double,
+    tube: Double,
+    radialSegments: Double,
+    tubularSegments: Double,
+    p: Double,
+    q: Double,
     scene: Scene
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorusKnot(
+    name: String,
+    radius: Double,
+    tube: Double,
+    radialSegments: Double,
+    tubularSegments: Double,
+    p: Double,
+    q: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateTorusKnot(
     name: String,
@@ -727,6 +1189,7 @@ object Mesh extends js.Object {
     updatable: Boolean,
     sideOrientation: Double
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a tube mesh.
     * The tube is a parametric shape.
@@ -762,7 +1225,54 @@ object Mesh extends js.Object {
     radiusFunction: js.Function2[/* i */ Double, /* distance */ Double, Double],
     cap: Double,
     scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: js.UndefOr[scala.Nothing],
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTube(
+    name: String,
+    path: js.Array[Vector3],
+    radius: Double,
+    tessellation: Double,
+    radiusFunction: js.Function2[/* i */ Double, /* distance */ Double, Double],
+    cap: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTube(
+    name: String,
+    path: js.Array[Vector3],
+    radius: Double,
+    tessellation: Double,
+    radiusFunction: js.Function2[/* i */ Double, /* distance */ Double, Double],
+    cap: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double,
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTube(
+    name: String,
+    path: js.Array[Vector3],
+    radius: Double,
+    tessellation: Double,
+    radiusFunction: js.Function2[/* i */ Double, /* distance */ Double, Double],
+    cap: Double,
+    scene: Scene,
     updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTube(
+    name: String,
+    path: js.Array[Vector3],
+    radius: Double,
+    tessellation: Double,
+    radiusFunction: js.Function2[/* i */ Double, /* distance */ Double, Double],
+    cap: Double,
+    scene: Scene,
+    updatable: Boolean,
+    sideOrientation: js.UndefOr[scala.Nothing],
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateTube(
     name: String,
@@ -787,6 +1297,17 @@ object Mesh extends js.Object {
     sideOrientation: Double,
     instance: typingsSlinky.babylonjs.meshMod.Mesh
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
+  /**
+    * Mesh side orientation : by default, `FRONTSIDE`
+    */
+  val DEFAULTSIDE: Double = js.native
+  
+  /**
+    * Mesh side orientation : both internal and external or front and back surfaces
+    */
+  val DOUBLESIDE: Double = js.native
+  
   /**
     * Creates an extruded polygon mesh, with depth in the Y direction. Please consider using the same method from the MeshBuilder class instead.
     * @see http://doc.babylonjs.com/how_to/parametric_shapes#extruded-non-regular-polygon
@@ -806,6 +1327,72 @@ object Mesh extends js.Object {
     shape: js.Array[Vector3],
     depth: Double,
     scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: js.UndefOr[scala.Nothing],
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    depth: Double,
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    depth: Double,
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double,
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    depth: Double,
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    depth: Double,
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: js.UndefOr[scala.Nothing],
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    depth: Double,
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    depth: Double,
+    scene: Scene,
+    holes: js.UndefOr[scala.Nothing],
+    updatable: Boolean,
+    sideOrientation: Double,
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    depth: Double,
+    scene: Scene,
     holes: js.Array[js.Array[Vector3]]
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def ExtrudePolygon(
@@ -814,7 +1401,46 @@ object Mesh extends js.Object {
     depth: Double,
     scene: Scene,
     holes: js.Array[js.Array[Vector3]],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: js.UndefOr[scala.Nothing],
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    depth: Double,
+    scene: Scene,
+    holes: js.Array[js.Array[Vector3]],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    depth: Double,
+    scene: Scene,
+    holes: js.Array[js.Array[Vector3]],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double,
+    earcutInjection: js.Any
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    depth: Double,
+    scene: Scene,
+    holes: js.Array[js.Array[Vector3]],
     updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(
+    name: String,
+    shape: js.Array[Vector3],
+    depth: Double,
+    scene: Scene,
+    holes: js.Array[js.Array[Vector3]],
+    updatable: Boolean,
+    sideOrientation: js.UndefOr[scala.Nothing],
+    earcutInjection: js.Any
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def ExtrudePolygon(
     name: String,
@@ -835,6 +1461,7 @@ object Mesh extends js.Object {
     sideOrientation: Double,
     earcutInjection: js.Any
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates an extruded shape mesh.
     * The extrusion is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters. Please consider using the same method from the MeshBuilder class instead
@@ -867,7 +1494,10 @@ object Mesh extends js.Object {
     scale: Double,
     rotation: Double,
     cap: Double,
-    scene: Nullable[Scene]
+    scene: js.UndefOr[Nullable[Scene]],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: js.UndefOr[scala.Nothing],
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def ExtrudeShape(
     name: String,
@@ -876,7 +1506,30 @@ object Mesh extends js.Object {
     scale: Double,
     rotation: Double,
     cap: Double,
-    scene: Nullable[Scene],
+    scene: js.UndefOr[Nullable[Scene]],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShape(
+    name: String,
+    shape: js.Array[Vector3],
+    path: js.Array[Vector3],
+    scale: Double,
+    rotation: Double,
+    cap: Double,
+    scene: js.UndefOr[Nullable[Scene]],
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double,
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShape(
+    name: String,
+    shape: js.Array[Vector3],
+    path: js.Array[Vector3],
+    scale: Double,
+    rotation: Double,
+    cap: Double,
+    scene: js.UndefOr[Nullable[Scene]],
     updatable: Boolean
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def ExtrudeShape(
@@ -886,7 +1539,19 @@ object Mesh extends js.Object {
     scale: Double,
     rotation: Double,
     cap: Double,
-    scene: Nullable[Scene],
+    scene: js.UndefOr[Nullable[Scene]],
+    updatable: Boolean,
+    sideOrientation: js.UndefOr[scala.Nothing],
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShape(
+    name: String,
+    shape: js.Array[Vector3],
+    path: js.Array[Vector3],
+    scale: Double,
+    rotation: Double,
+    cap: Double,
+    scene: js.UndefOr[Nullable[Scene]],
     updatable: Boolean,
     sideOrientation: Double
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
@@ -897,11 +1562,21 @@ object Mesh extends js.Object {
     scale: Double,
     rotation: Double,
     cap: Double,
-    scene: Nullable[Scene],
+    scene: js.UndefOr[Nullable[Scene]],
     updatable: Boolean,
     sideOrientation: Double,
     instance: typingsSlinky.babylonjs.meshMod.Mesh
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShape(
+    name: String,
+    shape: js.Array[Vector3],
+    path: js.Array[Vector3],
+    scale: Double,
+    rotation: Double,
+    cap: Double,
+    scene: Nullable[Scene]
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates an custom extruded shape mesh.
     * The custom extrusion is a parametric shape.
@@ -943,7 +1618,62 @@ object Mesh extends js.Object {
     ribbonClosePath: Boolean,
     cap: Double,
     scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: js.UndefOr[scala.Nothing],
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShapeCustom(
+    name: String,
+    shape: js.Array[Vector3],
+    path: js.Array[Vector3],
+    scaleFunction: js.Function,
+    rotationFunction: js.Function,
+    ribbonCloseArray: Boolean,
+    ribbonClosePath: Boolean,
+    cap: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShapeCustom(
+    name: String,
+    shape: js.Array[Vector3],
+    path: js.Array[Vector3],
+    scaleFunction: js.Function,
+    rotationFunction: js.Function,
+    ribbonCloseArray: Boolean,
+    ribbonClosePath: Boolean,
+    cap: Double,
+    scene: Scene,
+    updatable: js.UndefOr[scala.Nothing],
+    sideOrientation: Double,
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShapeCustom(
+    name: String,
+    shape: js.Array[Vector3],
+    path: js.Array[Vector3],
+    scaleFunction: js.Function,
+    rotationFunction: js.Function,
+    ribbonCloseArray: Boolean,
+    ribbonClosePath: Boolean,
+    cap: Double,
+    scene: Scene,
     updatable: Boolean
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShapeCustom(
+    name: String,
+    shape: js.Array[Vector3],
+    path: js.Array[Vector3],
+    scaleFunction: js.Function,
+    rotationFunction: js.Function,
+    ribbonCloseArray: Boolean,
+    ribbonClosePath: Boolean,
+    cap: Double,
+    scene: Scene,
+    updatable: Boolean,
+    sideOrientation: js.UndefOr[scala.Nothing],
+    instance: typingsSlinky.babylonjs.meshMod.Mesh
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def ExtrudeShapeCustom(
     name: String,
@@ -972,6 +1702,37 @@ object Mesh extends js.Object {
     sideOrientation: Double,
     instance: typingsSlinky.babylonjs.meshMod.Mesh
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
+  /**
+    * Mesh pattern setting : rotate pattern and rotate
+    */
+  val FLIP_N_ROTATE_ROW: Double = js.native
+  
+  /**
+    * Mesh pattern setting : flip and rotate alternate tiles on each row or column
+    */
+  val FLIP_N_ROTATE_TILE: Double = js.native
+  
+  /**
+    * Mesh pattern setting : flip (reflect in y axis) all tiles on alternate rows
+    */
+  val FLIP_ROW: Double = js.native
+  
+  /**
+    * Mesh pattern setting : flip (reflect in y axis) alternate tiles on each row or column
+    */
+  val FLIP_TILE: Double = js.native
+  
+  /**
+    * Mesh side orientation : usually the external or front surface
+    */
+  val FRONTSIDE: Double = js.native
+  
+  /**
+    * Mesh tile positioning : part tiles on left
+    */
+  val LEFT: Double = js.native
+  
   /**
     * Merge the array of meshes into a single mesh for performance reasons.
     * @param meshes defines he vertices source.  They should all be of the same material.  Entries can empty
@@ -983,7 +1744,168 @@ object Mesh extends js.Object {
     * @returns a new mesh
     */
   def MergeMeshes(meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh]): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: js.UndefOr[scala.Nothing],
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: Boolean,
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh,
+    subdivideWithSubMeshes: js.UndefOr[scala.Nothing],
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh,
+    subdivideWithSubMeshes: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh,
+    subdivideWithSubMeshes: Boolean,
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: Boolean,
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: js.UndefOr[scala.Nothing],
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: Boolean,
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: Boolean,
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: Boolean,
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: Boolean,
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: Boolean,
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh,
+    subdivideWithSubMeshes: js.UndefOr[scala.Nothing],
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: Boolean,
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh,
+    subdivideWithSubMeshes: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: js.UndefOr[scala.Nothing],
+    allow32BitsIndices: Boolean,
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh,
+    subdivideWithSubMeshes: Boolean,
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
   def MergeMeshes(meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh], disposeSource: Boolean): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: Boolean,
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: js.UndefOr[scala.Nothing],
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: Boolean,
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: Boolean,
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: Boolean,
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: Boolean,
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: Boolean,
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh,
+    subdivideWithSubMeshes: js.UndefOr[scala.Nothing],
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: Boolean,
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh,
+    subdivideWithSubMeshes: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: Boolean,
+    allow32BitsIndices: js.UndefOr[scala.Nothing],
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh,
+    subdivideWithSubMeshes: Boolean,
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
   def MergeMeshes(
     meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
     disposeSource: Boolean,
@@ -993,7 +1915,38 @@ object Mesh extends js.Object {
     meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
     disposeSource: Boolean,
     allow32BitsIndices: Boolean,
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: js.UndefOr[scala.Nothing],
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: Boolean,
+    allow32BitsIndices: Boolean,
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: Boolean,
+    allow32BitsIndices: Boolean,
+    meshSubclass: js.UndefOr[scala.Nothing],
+    subdivideWithSubMeshes: Boolean,
+    multiMultiMaterials: Boolean
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: Boolean,
+    allow32BitsIndices: Boolean,
     meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh
+  ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  def MergeMeshes(
+    meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
+    disposeSource: Boolean,
+    allow32BitsIndices: Boolean,
+    meshSubclass: typingsSlinky.babylonjs.meshMod.Mesh,
+    subdivideWithSubMeshes: js.UndefOr[scala.Nothing],
+    multiMultiMaterials: Boolean
   ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
   def MergeMeshes(
     meshes: js.Array[typingsSlinky.babylonjs.meshMod.Mesh],
@@ -1010,12 +1963,24 @@ object Mesh extends js.Object {
     subdivideWithSubMeshes: Boolean,
     multiMultiMaterials: Boolean
   ): Nullable[typingsSlinky.babylonjs.meshMod.Mesh] = js.native
+  
   /**
     * Returns an object containing a min and max Vector3 which are the minimum and maximum vectors of each mesh bounding box from the passed array, in the world coordinates
     * @param meshes defines the list of meshes to scan
     * @returns an object `{min:` Vector3`, max:` Vector3`}`
     */
   def MinMax(meshes: js.Array[typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh]): Max = js.native
+  
+  /**
+    * Mesh cap setting : no cap
+    */
+  val NO_CAP: Double = js.native
+  
+  /**
+    * Mesh pattern setting : no flip or rotate
+    */
+  val NO_FLIP: Double = js.native
+  
   /**
     * Returns a new Mesh object parsed from the source provided.
     * @param parsedMesh is the source
@@ -1024,6 +1989,27 @@ object Mesh extends js.Object {
     * @returns a new Mesh
     */
   def Parse(parsedMesh: js.Any, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
+  /**
+    * Mesh tile positioning : part tiles on right
+    */
+  val RIGHT: Double = js.native
+  
+  /**
+    * Mesh pattern setting : rotate (180degs) all tiles on alternate rows
+    */
+  val ROTATE_ROW: Double = js.native
+  
+  /**
+    * Mesh pattern setting : rotate (180degs) alternate tiles on each row or column
+    */
+  val ROTATE_TILE: Double = js.native
+  
+  /**
+    * Mesh tile positioning : part tiles on top
+    */
+  val TOP: Double = js.native
+  
   /**
     * Gets the default side orientation.
     * @param orientation the orientation to value to attempt to get
@@ -1032,11 +2018,13 @@ object Mesh extends js.Object {
     */
   def _GetDefaultSideOrientation(): Double = js.native
   def _GetDefaultSideOrientation(orientation: Double): Double = js.native
+  
   /** @hidden */
   def _GroundMeshParser(parsedMesh: js.Any, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /** @hidden */
   def _PhysicsImpostorParser(scene: Scene, physicObject: IPhysicsEnabledObject, jsonObject: js.Any): PhysicsImpostor = js.native
+  
   /** @hidden */
   def _instancedMeshFactory(name: String, mesh: typingsSlinky.babylonjs.meshMod.Mesh): typingsSlinky.babylonjs.instancedMeshMod.InstancedMesh = js.native
 }
-

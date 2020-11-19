@@ -4,7 +4,7 @@ import typingsSlinky.typescriptServices.TypeScript.IExpressionSyntax
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "ElementAccessExpressionSyntax")
 @js.native
@@ -18,11 +18,10 @@ class ElementAccessExpressionSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSImport("typescript-services", "ElementAccessExpressionSyntax")
 @js.native
 object ElementAccessExpressionSyntax extends js.Object {
+  
   def create1(expression: IExpressionSyntax, argumentExpression: IExpressionSyntax): typingsSlinky.typescriptServices.TypeScript.ElementAccessExpressionSyntax = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.BaseDynamicLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.BaseDynamicLayer")
 @js.native
@@ -16,4 +16,3 @@ class BaseDynamicLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.BaseDynamicLayer {
   def this(properties: BaseDynamicLayerProperties) = this()
 }
-

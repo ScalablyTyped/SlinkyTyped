@@ -11,17 +11,22 @@ import typingsSlinky.grpcGrpcJs.metadataMod.Metadata
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@grpc/grpc-js/build/src/client", "Client")
 @js.native
 class Client protected () extends js.Object {
   def this(address: String, credentials: ChannelCredentials) = this()
   def this(address: String, credentials: ChannelCredentials, options: ClientOptions) = this()
+  
   var checkMetadataAndOptions: js.Any = js.native
+  
   var checkOptionalUnaryResponseArguments: js.Any = js.native
+  
   def close(): Unit = js.native
+  
   def getChannel(): Channel = js.native
+  
   def makeBidiStreamRequest[RequestType, ResponseType](
     method: String,
     serialize: js.Function1[/* value */ RequestType, Buffer],
@@ -46,6 +51,7 @@ class Client protected () extends js.Object {
     deserialize: js.Function1[/* value */ Buffer, ResponseType],
     options: CallOptions
   ): ClientDuplexStream[RequestType, ResponseType] = js.native
+  
   def makeClientStreamRequest[RequestType, ResponseType](
     method: String,
     serialize: js.Function1[/* value */ RequestType, Buffer],
@@ -74,6 +80,7 @@ class Client protected () extends js.Object {
     options: CallOptions,
     callback: UnaryCallback[ResponseType]
   ): ClientWritableStream[RequestType] = js.native
+  
   def makeServerStreamRequest[RequestType, ResponseType](
     method: String,
     serialize: js.Function1[/* value */ RequestType, Buffer],
@@ -102,6 +109,7 @@ class Client protected () extends js.Object {
     argument: RequestType,
     options: CallOptions
   ): ClientReadableStream[ResponseType] = js.native
+  
   def makeUnaryRequest[RequestType, ResponseType](
     method: String,
     serialize: js.Function1[/* value */ RequestType, Buffer],
@@ -134,6 +142,6 @@ class Client protected () extends js.Object {
     options: CallOptions,
     callback: UnaryCallback[ResponseType]
   ): ClientUnaryCall = js.native
+  
   def waitForReady(deadline: Deadline, callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit]): Unit = js.native
 }
-

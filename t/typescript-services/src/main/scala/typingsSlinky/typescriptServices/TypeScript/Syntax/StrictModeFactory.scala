@@ -98,12 +98,12 @@ import typingsSlinky.typescriptServices.TypeScript.WhileStatementSyntax
 import typingsSlinky.typescriptServices.TypeScript.WithStatementSyntax
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait StrictModeFactory extends IFactory
-
 object StrictModeFactory {
+  
   @scala.inline
   def apply(
     argumentList: (TypeArgumentListSyntax, ISyntaxToken, ISeparatedSyntaxList, ISyntaxToken) => ArgumentListSyntax,
@@ -196,4 +196,3 @@ object StrictModeFactory {
     __obj.asInstanceOf[StrictModeFactory]
   }
 }
-

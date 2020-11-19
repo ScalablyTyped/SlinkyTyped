@@ -8,11 +8,12 @@ import typingsSlinky.tanemSvgInjector.typesMod.Errback
 import typingsSlinky.tanemSvgInjector.typesMod.EvalScripts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tanem/svg-injector/dist/inject-element", JSImport.Namespace)
 @js.native
 object injectElementMod extends js.Object {
+  
   def default(
     el: NonNullable[ElementType],
     evalScripts: EvalScripts,
@@ -20,6 +21,6 @@ object injectElementMod extends js.Object {
     beforeEach: BeforeEach,
     callback: Errback
   ): Unit = js.native
+  
   type ElementType = Element | HTMLElement | Null
 }
-

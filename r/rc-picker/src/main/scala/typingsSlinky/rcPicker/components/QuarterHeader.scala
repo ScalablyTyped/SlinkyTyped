@@ -7,9 +7,10 @@ import typingsSlinky.rcPicker.interfaceMod.Locale
 import typingsSlinky.rcPicker.quarterHeaderMod.QuarterHeaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object QuarterHeader {
+  
   @JSImport("rc-picker/es/panels/QuarterPanel/QuarterHeader", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -20,6 +21,7 @@ object QuarterHeader {
        with StBuildingComponent[tag.type, js.Object]
   
   def withProps[DateType](p: QuarterHeaderProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[DateType](
     generateConfig: GenerateConfig[DateType],
@@ -34,4 +36,3 @@ object QuarterHeader {
     new Builder[DateType](js.Array(this.component, __props.asInstanceOf[QuarterHeaderProps[DateType]]))
   }
 }
-

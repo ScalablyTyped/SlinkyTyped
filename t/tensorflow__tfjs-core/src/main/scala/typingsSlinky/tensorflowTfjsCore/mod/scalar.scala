@@ -4,11 +4,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core", "scalar")
 @js.native
 object scalar extends js.Object {
+  
   def apply(value: String): Scalar = js.native
   def apply(value: String, dtype: DataType): Scalar = js.native
   def apply(value: Boolean): Scalar = js.native
@@ -32,4 +33,3 @@ object scalar extends js.Object {
   def apply(value: js.typedarray.Uint8Array): Scalar = js.native
   def apply(value: js.typedarray.Uint8Array, dtype: DataType): Scalar = js.native
 }
-

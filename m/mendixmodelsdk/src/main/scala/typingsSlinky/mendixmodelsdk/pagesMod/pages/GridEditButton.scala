@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/edit-button relevant section in reference guide}
@@ -26,25 +26,27 @@ class GridEditButton protected () extends GridControlBarButton {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FGridEditButton: IModel = js.native
+  
   def pageSettings: PageSettings = js.native
   def pageSettings_=(newValue: PageSettings): Unit = js.native
+  
   def pagesForSpecializations: IList[PageForSpecialization] = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.GridEditButton")
 @js.native
 object GridEditButton extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new GridEditButton instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): GridEditButton = js.native
+  
   /**
     * Creates and returns a new GridEditButton instance in the SDK and on the server.
     * The new GridEditButton will be automatically stored in the 'items' property
@@ -54,5 +56,8 @@ object GridEditButton extends js.Object {
     *  6.0.0 to 7.16.0
     */
   def createIn(container: ControlBar): GridEditButton = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

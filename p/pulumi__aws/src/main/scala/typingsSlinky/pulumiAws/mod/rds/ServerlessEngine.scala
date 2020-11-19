@@ -4,9 +4,8 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.pulumiAws.engineModeMod.EngineMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws", "rds.ServerlessEngine")
 @js.native
 object ServerlessEngine extends TopLevel[EngineMode]
-

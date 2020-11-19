@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.PopupTemplateProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.PopupTemplate")
 @js.native
@@ -16,4 +16,3 @@ class PopupTemplateCls ()
   extends typingsSlinky.arcgisJsApi.esri.PopupTemplate {
   def this(properties: PopupTemplateProperties) = this()
 }
-

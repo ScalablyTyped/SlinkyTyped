@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "updateFunctionTypeNode")
 @js.native
 object updateFunctionTypeNode extends js.Object {
+  
   def apply(
     node: FunctionTypeNode,
     typeParameters: js.UndefOr[scala.Nothing],
@@ -30,4 +31,3 @@ object updateFunctionTypeNode extends js.Object {
     `type`: TypeNode
   ): FunctionTypeNode = js.native
 }
-

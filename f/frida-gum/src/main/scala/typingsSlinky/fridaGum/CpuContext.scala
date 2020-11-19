@@ -2,7 +2,7 @@ package typingsSlinky.fridaGum
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.fridaGum.PortableCpuContext
@@ -13,13 +13,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fridaGum.MipsCpuContext
 */
 trait CpuContext extends js.Object
-
 object CpuContext {
+  
   @scala.inline
   def PortableCpuContext(pc: NativePointer, sp: NativePointer): CpuContext = {
     val __obj = js.Dynamic.literal(pc = pc.asInstanceOf[js.Any], sp = sp.asInstanceOf[js.Any])
     __obj.asInstanceOf[CpuContext]
   }
+  
   @scala.inline
   def ArmCpuContext(
     lr: NativePointer,
@@ -42,6 +43,7 @@ object CpuContext {
     val __obj = js.Dynamic.literal(lr = lr.asInstanceOf[js.Any], pc = pc.asInstanceOf[js.Any], r0 = r0.asInstanceOf[js.Any], r1 = r1.asInstanceOf[js.Any], r10 = r10.asInstanceOf[js.Any], r11 = r11.asInstanceOf[js.Any], r12 = r12.asInstanceOf[js.Any], r2 = r2.asInstanceOf[js.Any], r3 = r3.asInstanceOf[js.Any], r4 = r4.asInstanceOf[js.Any], r5 = r5.asInstanceOf[js.Any], r6 = r6.asInstanceOf[js.Any], r7 = r7.asInstanceOf[js.Any], r8 = r8.asInstanceOf[js.Any], r9 = r9.asInstanceOf[js.Any], sp = sp.asInstanceOf[js.Any])
     __obj.asInstanceOf[CpuContext]
   }
+  
   @scala.inline
   def Ia32CpuContext(
     eax: NativePointer,
@@ -59,6 +61,7 @@ object CpuContext {
     val __obj = js.Dynamic.literal(eax = eax.asInstanceOf[js.Any], ebp = ebp.asInstanceOf[js.Any], ebx = ebx.asInstanceOf[js.Any], ecx = ecx.asInstanceOf[js.Any], edi = edi.asInstanceOf[js.Any], edx = edx.asInstanceOf[js.Any], eip = eip.asInstanceOf[js.Any], esi = esi.asInstanceOf[js.Any], esp = esp.asInstanceOf[js.Any], pc = pc.asInstanceOf[js.Any], sp = sp.asInstanceOf[js.Any])
     __obj.asInstanceOf[CpuContext]
   }
+  
   @scala.inline
   def Arm64CpuContext(
     fp: NativePointer,
@@ -98,6 +101,7 @@ object CpuContext {
     val __obj = js.Dynamic.literal(fp = fp.asInstanceOf[js.Any], lr = lr.asInstanceOf[js.Any], pc = pc.asInstanceOf[js.Any], sp = sp.asInstanceOf[js.Any], x0 = x0.asInstanceOf[js.Any], x1 = x1.asInstanceOf[js.Any], x10 = x10.asInstanceOf[js.Any], x11 = x11.asInstanceOf[js.Any], x12 = x12.asInstanceOf[js.Any], x13 = x13.asInstanceOf[js.Any], x14 = x14.asInstanceOf[js.Any], x15 = x15.asInstanceOf[js.Any], x16 = x16.asInstanceOf[js.Any], x17 = x17.asInstanceOf[js.Any], x18 = x18.asInstanceOf[js.Any], x19 = x19.asInstanceOf[js.Any], x2 = x2.asInstanceOf[js.Any], x20 = x20.asInstanceOf[js.Any], x21 = x21.asInstanceOf[js.Any], x22 = x22.asInstanceOf[js.Any], x23 = x23.asInstanceOf[js.Any], x24 = x24.asInstanceOf[js.Any], x25 = x25.asInstanceOf[js.Any], x26 = x26.asInstanceOf[js.Any], x27 = x27.asInstanceOf[js.Any], x28 = x28.asInstanceOf[js.Any], x3 = x3.asInstanceOf[js.Any], x4 = x4.asInstanceOf[js.Any], x5 = x5.asInstanceOf[js.Any], x6 = x6.asInstanceOf[js.Any], x7 = x7.asInstanceOf[js.Any], x8 = x8.asInstanceOf[js.Any], x9 = x9.asInstanceOf[js.Any])
     __obj.asInstanceOf[CpuContext]
   }
+  
   @scala.inline
   def X64CpuContext(
     pc: NativePointer,
@@ -123,6 +127,7 @@ object CpuContext {
     val __obj = js.Dynamic.literal(pc = pc.asInstanceOf[js.Any], r10 = r10.asInstanceOf[js.Any], r11 = r11.asInstanceOf[js.Any], r12 = r12.asInstanceOf[js.Any], r13 = r13.asInstanceOf[js.Any], r14 = r14.asInstanceOf[js.Any], r15 = r15.asInstanceOf[js.Any], r8 = r8.asInstanceOf[js.Any], r9 = r9.asInstanceOf[js.Any], rax = rax.asInstanceOf[js.Any], rbp = rbp.asInstanceOf[js.Any], rbx = rbx.asInstanceOf[js.Any], rcx = rcx.asInstanceOf[js.Any], rdi = rdi.asInstanceOf[js.Any], rdx = rdx.asInstanceOf[js.Any], rip = rip.asInstanceOf[js.Any], rsi = rsi.asInstanceOf[js.Any], rsp = rsp.asInstanceOf[js.Any], sp = sp.asInstanceOf[js.Any])
     __obj.asInstanceOf[CpuContext]
   }
+  
   @scala.inline
   def MipsCpuContext(
     a0: NativePointer,
@@ -164,4 +169,3 @@ object CpuContext {
     __obj.asInstanceOf[CpuContext]
   }
 }
-

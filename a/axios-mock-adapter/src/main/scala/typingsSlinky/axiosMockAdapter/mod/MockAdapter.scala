@@ -5,30 +5,15 @@ import typingsSlinky.axios.mod.AxiosAdapter
 import typingsSlinky.axios.mod.AxiosRequestConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MockAdapter extends js.Object {
-  var history: StringDictionary[js.Array[AxiosRequestConfig]] = js.native
-  @JSName("onAny")
-  var onAny_Original: RequestMatcherFunc = js.native
-  @JSName("onDelete")
-  var onDelete_Original: RequestMatcherFunc = js.native
-  @JSName("onGet")
-  var onGet_Original: RequestMatcherFunc = js.native
-  @JSName("onHead")
-  var onHead_Original: RequestMatcherFunc = js.native
-  @JSName("onList")
-  var onList_Original: RequestMatcherFunc = js.native
-  @JSName("onOptions")
-  var onOptions_Original: RequestMatcherFunc = js.native
-  @JSName("onPatch")
-  var onPatch_Original: RequestMatcherFunc = js.native
-  @JSName("onPost")
-  var onPost_Original: RequestMatcherFunc = js.native
-  @JSName("onPut")
-  var onPut_Original: RequestMatcherFunc = js.native
+  
   def adapter(): AxiosAdapter = js.native
+  
+  var history: StringDictionary[js.Array[AxiosRequestConfig]] = js.native
+  
   def onAny(): RequestHandler = js.native
   def onAny(matcher: js.UndefOr[scala.Nothing], body: js.UndefOr[scala.Nothing], headers: HeadersMatcher): RequestHandler = js.native
   def onAny(matcher: js.UndefOr[scala.Nothing], body: String): RequestHandler = js.native
@@ -47,6 +32,9 @@ trait MockAdapter extends js.Object {
   def onAny(matcher: js.RegExp, body: String, headers: HeadersMatcher): RequestHandler = js.native
   def onAny(matcher: js.RegExp, body: RequestDataMatcher): RequestHandler = js.native
   def onAny(matcher: js.RegExp, body: RequestDataMatcher, headers: HeadersMatcher): RequestHandler = js.native
+  @JSName("onAny")
+  var onAny_Original: RequestMatcherFunc = js.native
+  
   def onDelete(): RequestHandler = js.native
   def onDelete(matcher: js.UndefOr[scala.Nothing], body: js.UndefOr[scala.Nothing], headers: HeadersMatcher): RequestHandler = js.native
   def onDelete(matcher: js.UndefOr[scala.Nothing], body: String): RequestHandler = js.native
@@ -65,6 +53,9 @@ trait MockAdapter extends js.Object {
   def onDelete(matcher: js.RegExp, body: String, headers: HeadersMatcher): RequestHandler = js.native
   def onDelete(matcher: js.RegExp, body: RequestDataMatcher): RequestHandler = js.native
   def onDelete(matcher: js.RegExp, body: RequestDataMatcher, headers: HeadersMatcher): RequestHandler = js.native
+  @JSName("onDelete")
+  var onDelete_Original: RequestMatcherFunc = js.native
+  
   def onGet(): RequestHandler = js.native
   def onGet(matcher: js.UndefOr[scala.Nothing], body: js.UndefOr[scala.Nothing], headers: HeadersMatcher): RequestHandler = js.native
   def onGet(matcher: js.UndefOr[scala.Nothing], body: String): RequestHandler = js.native
@@ -83,6 +74,9 @@ trait MockAdapter extends js.Object {
   def onGet(matcher: js.RegExp, body: String, headers: HeadersMatcher): RequestHandler = js.native
   def onGet(matcher: js.RegExp, body: RequestDataMatcher): RequestHandler = js.native
   def onGet(matcher: js.RegExp, body: RequestDataMatcher, headers: HeadersMatcher): RequestHandler = js.native
+  @JSName("onGet")
+  var onGet_Original: RequestMatcherFunc = js.native
+  
   def onHead(): RequestHandler = js.native
   def onHead(matcher: js.UndefOr[scala.Nothing], body: js.UndefOr[scala.Nothing], headers: HeadersMatcher): RequestHandler = js.native
   def onHead(matcher: js.UndefOr[scala.Nothing], body: String): RequestHandler = js.native
@@ -101,6 +95,9 @@ trait MockAdapter extends js.Object {
   def onHead(matcher: js.RegExp, body: String, headers: HeadersMatcher): RequestHandler = js.native
   def onHead(matcher: js.RegExp, body: RequestDataMatcher): RequestHandler = js.native
   def onHead(matcher: js.RegExp, body: RequestDataMatcher, headers: HeadersMatcher): RequestHandler = js.native
+  @JSName("onHead")
+  var onHead_Original: RequestMatcherFunc = js.native
+  
   def onList(): RequestHandler = js.native
   def onList(matcher: js.UndefOr[scala.Nothing], body: js.UndefOr[scala.Nothing], headers: HeadersMatcher): RequestHandler = js.native
   def onList(matcher: js.UndefOr[scala.Nothing], body: String): RequestHandler = js.native
@@ -119,6 +116,9 @@ trait MockAdapter extends js.Object {
   def onList(matcher: js.RegExp, body: String, headers: HeadersMatcher): RequestHandler = js.native
   def onList(matcher: js.RegExp, body: RequestDataMatcher): RequestHandler = js.native
   def onList(matcher: js.RegExp, body: RequestDataMatcher, headers: HeadersMatcher): RequestHandler = js.native
+  @JSName("onList")
+  var onList_Original: RequestMatcherFunc = js.native
+  
   def onOptions(): RequestHandler = js.native
   def onOptions(matcher: js.UndefOr[scala.Nothing], body: js.UndefOr[scala.Nothing], headers: HeadersMatcher): RequestHandler = js.native
   def onOptions(matcher: js.UndefOr[scala.Nothing], body: String): RequestHandler = js.native
@@ -137,6 +137,9 @@ trait MockAdapter extends js.Object {
   def onOptions(matcher: js.RegExp, body: String, headers: HeadersMatcher): RequestHandler = js.native
   def onOptions(matcher: js.RegExp, body: RequestDataMatcher): RequestHandler = js.native
   def onOptions(matcher: js.RegExp, body: RequestDataMatcher, headers: HeadersMatcher): RequestHandler = js.native
+  @JSName("onOptions")
+  var onOptions_Original: RequestMatcherFunc = js.native
+  
   def onPatch(): RequestHandler = js.native
   def onPatch(matcher: js.UndefOr[scala.Nothing], body: js.UndefOr[scala.Nothing], headers: HeadersMatcher): RequestHandler = js.native
   def onPatch(matcher: js.UndefOr[scala.Nothing], body: String): RequestHandler = js.native
@@ -155,6 +158,9 @@ trait MockAdapter extends js.Object {
   def onPatch(matcher: js.RegExp, body: String, headers: HeadersMatcher): RequestHandler = js.native
   def onPatch(matcher: js.RegExp, body: RequestDataMatcher): RequestHandler = js.native
   def onPatch(matcher: js.RegExp, body: RequestDataMatcher, headers: HeadersMatcher): RequestHandler = js.native
+  @JSName("onPatch")
+  var onPatch_Original: RequestMatcherFunc = js.native
+  
   def onPost(): RequestHandler = js.native
   def onPost(matcher: js.UndefOr[scala.Nothing], body: js.UndefOr[scala.Nothing], headers: HeadersMatcher): RequestHandler = js.native
   def onPost(matcher: js.UndefOr[scala.Nothing], body: String): RequestHandler = js.native
@@ -173,6 +179,9 @@ trait MockAdapter extends js.Object {
   def onPost(matcher: js.RegExp, body: String, headers: HeadersMatcher): RequestHandler = js.native
   def onPost(matcher: js.RegExp, body: RequestDataMatcher): RequestHandler = js.native
   def onPost(matcher: js.RegExp, body: RequestDataMatcher, headers: HeadersMatcher): RequestHandler = js.native
+  @JSName("onPost")
+  var onPost_Original: RequestMatcherFunc = js.native
+  
   def onPut(): RequestHandler = js.native
   def onPut(matcher: js.UndefOr[scala.Nothing], body: js.UndefOr[scala.Nothing], headers: HeadersMatcher): RequestHandler = js.native
   def onPut(matcher: js.UndefOr[scala.Nothing], body: String): RequestHandler = js.native
@@ -191,9 +200,14 @@ trait MockAdapter extends js.Object {
   def onPut(matcher: js.RegExp, body: String, headers: HeadersMatcher): RequestHandler = js.native
   def onPut(matcher: js.RegExp, body: RequestDataMatcher): RequestHandler = js.native
   def onPut(matcher: js.RegExp, body: RequestDataMatcher, headers: HeadersMatcher): RequestHandler = js.native
+  @JSName("onPut")
+  var onPut_Original: RequestMatcherFunc = js.native
+  
   def reset(): Unit = js.native
+  
   def resetHandlers(): Unit = js.native
+  
   def resetHistory(): Unit = js.native
+  
   def restore(): Unit = js.native
 }
-

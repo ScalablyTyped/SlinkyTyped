@@ -5,17 +5,16 @@ import typingsSlinky.typedGithubApi.githubRefMod.OptionsOrRef
 import typingsSlinky.typedGithubApi.interfacesLabelMod.Label
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typed-github-api/dist/label", JSImport.Namespace)
 @js.native
 object distLabelMod extends js.Object {
+  
   @js.native
   class LabelClass protected ()
     extends GitHubRef
        with Label {
     def this(data: typingsSlinky.typedGithubApi.labelMod.Label, options: OptionsOrRef) = this()
   }
-  
 }
-

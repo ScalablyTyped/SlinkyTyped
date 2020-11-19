@@ -5,7 +5,7 @@ import typingsSlinky.babylonjs.BABYLON.IMotionControllerLayout
 import typingsSlinky.babylonjs.BABYLON.MotionControllerHandness
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.WebXRAbstractMotionController")
 @js.native
@@ -44,10 +44,4 @@ abstract class WebXRAbstractMotionController protected ()
   handness: MotionControllerHandness,
     _doNotLoadControllerMesh: Boolean
   ) = this()
-  /**
-    * Releases all held resources
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
 }
-

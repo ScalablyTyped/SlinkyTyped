@@ -3,20 +3,11 @@ package typingsSlinky.page.PageJS
 import typingsSlinky.page.anon.PartialOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Static extends js.Object {
-  /**
-    * Export Context
-    * @type {Context}
-    */
-  var Context: typingsSlinky.page.PageJS.Context = js.native
-  /**
-    * Expose Route
-    * @type {Route}
-    */
-  var Route: typingsSlinky.page.PageJS.Route = js.native
+  
   /**
     * Register page's popstate / click bindings. If you're doing selective binding you'll like want to pass { click: false } to specify this yourself. The following options are available:
     *
@@ -78,11 +69,25 @@ trait Static extends js.Object {
     *  Links that are not of the same origin are disregarded and will not be dispatched.
     */
   def apply(path: js.RegExp, callbacks: Callback*): Unit = js.native
+  
+  /**
+    * Export Context
+    * @type {Context}
+    */
+  var Context: typingsSlinky.page.PageJS.Context = js.native
+  
+  /**
+    * Expose Route
+    * @type {Route}
+    */
+  var Route: typingsSlinky.page.PageJS.Route = js.native
+  
   /**
     * Get or set the base path. For example if page.js is operating within /blog/ * set the base path to "/blog".
     */
   def base(): Unit = js.native
   def base(path: String): Unit = js.native
+  
   /**
     * Equivalent to page.exit('*', callback).
     */
@@ -104,6 +109,7 @@ trait Static extends js.Object {
     */
   def exit(path: String, callback: Callback): Unit = js.native
   def exit(path: String, callback: Callback, moreCallbacks: js.Array[Callback]): Unit = js.native
+  
   /**
     * Identical to page(fromPath, toPath)
     */
@@ -124,6 +130,7 @@ trait Static extends js.Object {
     *
     */
   def redirect(page: String): Unit = js.native
+  
   /**
     * Replace `path` with optional `state` object.
     *
@@ -136,6 +143,7 @@ trait Static extends js.Object {
   def replace(path: String, state: js.Any, init: js.UndefOr[scala.Nothing], dispatch: Boolean): Context = js.native
   def replace(path: String, state: js.Any, init: Boolean): Context = js.native
   def replace(path: String, state: js.Any, init: Boolean, dispatch: Boolean): Context = js.native
+  
   /**
     *  Navigate to the given path.
     *
@@ -147,6 +155,7 @@ trait Static extends js.Object {
     * Identical to page(path).
     */
   def show(path: String): Unit = js.native
+  
   /**
     * Register page's popstate / click bindings. If you're doing selective binding you'll like want to pass { click: false } to specify this yourself. The following options are available:
     *
@@ -171,9 +180,9 @@ trait Static extends js.Object {
     * Identical to page([options]).
     */
   def start(options: PartialOptions): Unit = js.native
+  
   /**
     * Unbind both the popstate and click handlers.
     */
   def stop(): Unit = js.native
 }
-

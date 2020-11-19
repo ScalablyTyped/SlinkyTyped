@@ -2,12 +2,13 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LayerOptions
   extends Accessor
      with JSONSupport {
+  
   /**
     * Applicable to [Imagery Layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html). Indicates whether or not only the topmost raster should be displayed.
     *
@@ -16,6 +17,7 @@ trait LayerOptions
     * @default false
     */
   var returnTopmostRaster: Boolean = js.native
+  
   /**
     * Applicable to [Imagery Layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html). Indicates whether records without data should display within the popup.
     *
@@ -25,4 +27,3 @@ trait LayerOptions
     */
   var showNoDataRecords: Boolean = js.native
 }
-

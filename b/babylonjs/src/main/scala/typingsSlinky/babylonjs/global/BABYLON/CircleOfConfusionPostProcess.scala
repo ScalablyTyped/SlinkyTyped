@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.BABYLON.PostProcessOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.CircleOfConfusionPostProcess")
 @js.native
@@ -25,104 +25,12 @@ class CircleOfConfusionPostProcess protected ()
   def this(
     name: String,
     depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: Double,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera]
-  ) = this()
-  def this(
-    name: String,
-    depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: PostProcessOptions,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera]
-  ) = this()
-  def this(
-    name: String,
-    depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: Double,
+    options: Double | PostProcessOptions,
     camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    samplingMode: Double
-  ) = this()
-  def this(
-    name: String,
-    depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: PostProcessOptions,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    samplingMode: Double
-  ) = this()
-  def this(
-    name: String,
-    depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: Double,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    samplingMode: Double,
-    engine: typingsSlinky.babylonjs.BABYLON.Engine
-  ) = this()
-  def this(
-    name: String,
-    depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: PostProcessOptions,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    samplingMode: Double,
-    engine: typingsSlinky.babylonjs.BABYLON.Engine
-  ) = this()
-  def this(
-    name: String,
-    depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: Double,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    samplingMode: Double,
-    engine: typingsSlinky.babylonjs.BABYLON.Engine,
-    reusable: Boolean
-  ) = this()
-  def this(
-    name: String,
-    depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: PostProcessOptions,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    samplingMode: Double,
-    engine: typingsSlinky.babylonjs.BABYLON.Engine,
-    reusable: Boolean
-  ) = this()
-  def this(
-    name: String,
-    depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: Double,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    samplingMode: Double,
-    engine: typingsSlinky.babylonjs.BABYLON.Engine,
-    reusable: Boolean,
-    textureType: Double
-  ) = this()
-  def this(
-    name: String,
-    depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: PostProcessOptions,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    samplingMode: Double,
-    engine: typingsSlinky.babylonjs.BABYLON.Engine,
-    reusable: Boolean,
-    textureType: Double
-  ) = this()
-  def this(
-    name: String,
-    depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: Double,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    samplingMode: Double,
-    engine: typingsSlinky.babylonjs.BABYLON.Engine,
-    reusable: Boolean,
-    textureType: Double,
-    blockCompilation: Boolean
-  ) = this()
-  def this(
-    name: String,
-    depthTexture: Nullable[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture],
-    options: PostProcessOptions,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    samplingMode: Double,
-    engine: typingsSlinky.babylonjs.BABYLON.Engine,
-    reusable: Boolean,
-    textureType: Double,
-    blockCompilation: Boolean
+    samplingMode: js.UndefOr[Double],
+    engine: js.UndefOr[typingsSlinky.babylonjs.BABYLON.Engine],
+    reusable: js.UndefOr[Boolean],
+    textureType: js.UndefOr[Double],
+    blockCompilation: js.UndefOr[Boolean]
   ) = this()
 }
-

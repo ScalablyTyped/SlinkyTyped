@@ -2,12 +2,12 @@ package typingsSlinky.tstl.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "Latch")
 @js.native
 class Latch protected ()
-  extends typingsSlinky.tstl.threadMod.Latch {
+  extends typingsSlinky.tstl.tstlModuleMod.Latch {
   /**
     * Initializer Constructor.
     *
@@ -15,4 +15,3 @@ class Latch protected ()
     */
   def this(size: Double) = this()
 }
-

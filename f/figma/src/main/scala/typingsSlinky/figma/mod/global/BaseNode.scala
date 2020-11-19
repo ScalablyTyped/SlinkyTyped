@@ -2,7 +2,7 @@ package typingsSlinky.figma.mod.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.figma.mod.global.DocumentNode
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.figma.mod.global.SceneNode
 */
 trait BaseNode extends js.Object
-

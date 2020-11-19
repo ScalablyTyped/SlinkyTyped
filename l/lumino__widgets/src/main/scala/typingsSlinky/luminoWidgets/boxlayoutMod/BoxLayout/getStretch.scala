@@ -3,11 +3,12 @@ package typingsSlinky.luminoWidgets.boxlayoutMod.BoxLayout
 import typingsSlinky.luminoWidgets.widgetMod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@lumino/widgets/types/boxlayout", "BoxLayout.getStretch")
 @js.native
 object getStretch extends js.Object {
+  
   /**
     * Get the box layout stretch factor for the given widget.
     *
@@ -17,4 +18,3 @@ object getStretch extends js.Object {
     */
   def apply(widget: Widget): Double = js.native
 }
-

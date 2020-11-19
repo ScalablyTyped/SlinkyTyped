@@ -2,7 +2,7 @@ package typingsSlinky.pahoMqtt.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The JavaScript application communicates to the server using a {@link Paho.MQTT.Client} object.
@@ -48,4 +48,3 @@ class Client protected ()
     */
   def this(host: String, port: Double, path: String, clientId: String) = this()
 }
-

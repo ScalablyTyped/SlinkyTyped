@@ -4,12 +4,13 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FeatureTableViewModelConstructor
   extends Instantiable0[FeatureTableViewModel]
      with Instantiable1[/* properties */ js.Any, FeatureTableViewModel] {
+  
   /**
     * Returns a field value given the specified row (feature) `ObjectId` and an associated `fieldName`.
     *
@@ -21,4 +22,3 @@ trait FeatureTableViewModelConstructor
     */
   def getValue(objectId: Double, fieldName: String): String | Double | js.Any = js.native
 }
-

@@ -16,7 +16,7 @@ import typingsSlinky.react.mod.WeakValidationMap
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd/lib/date-picker", JSImport.Default)
 @js.native
@@ -25,7 +25,6 @@ class default protected ()
   def this(props: PickerProps[Moment]) = this()
   def this(props: PickerProps[Moment], context: js.Any) = this()
 }
-
 @JSImport("antd/lib/date-picker", JSImport.Default)
 @js.native
 object default
@@ -35,19 +34,32 @@ object default
       /* context */ js.Any, 
       ReactComponentClass[PickerProps[Moment]]
     ] {
+  
   var MonthPicker: ReactComponentClass[PickPickPickerDatePropsMo] = js.native
+  
   var QuarterPicker: ReactComponentClass[PickPickPickerTimePropsMo] = js.native
+  
   var RangePicker: ReactComponentClass[typingsSlinky.antd.generatePickerMod.RangePickerProps[Moment]] = js.native
+  
   var TimePicker: ReactComponentClass[PickPickPickerTimePropsMo] = js.native
+  
   var WeekPicker: ReactComponentClass[PickPickPickerDatePropsMo] = js.native
+  
   var YearPicker: ReactComponentClass[PickPickPickerDatePropsMo] = js.native
+  
   var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native
+  
   var contextType: js.UndefOr[Context[_]] = js.native
+  
   var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
+  
   var defaultProps: js.UndefOr[Partial[PickerProps[Moment]]] = js.native
+  
   var displayName: js.UndefOr[String] = js.native
+  
   var getDerivedStateFromError: js.UndefOr[GetDerivedStateFromError[PickerProps[Moment], _]] = js.native
+  
   var getDerivedStateFromProps: js.UndefOr[GetDerivedStateFromProps[PickerProps[Moment], _]] = js.native
+  
   var propTypes: js.UndefOr[WeakValidationMap[PickerProps[Moment]]] = js.native
 }
-

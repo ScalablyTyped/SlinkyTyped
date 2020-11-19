@@ -2,10 +2,11 @@ package typingsSlinky.chai.Chai
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Throw extends js.Object {
+  
   def apply(): Assertion = js.native
   def apply(constructor: js.Function): Assertion = js.native
   def apply(constructor: js.Function, expected: js.UndefOr[scala.Nothing], message: String): Assertion = js.native
@@ -25,4 +26,3 @@ trait Throw extends js.Object {
   def apply(expected: js.RegExp): Assertion = js.native
   def apply(expected: js.RegExp, message: String): Assertion = js.native
 }
-

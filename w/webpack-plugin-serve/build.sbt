@@ -1,36 +1,36 @@
 organization := "org.scalablytyped.slinky"
 name := "webpack-plugin-serve"
-version := "0.10-dt-20190506Z-95509f"
+version := "0.10-dt-20190506Z-0b690f"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "accepts" % "1.3-dt-20200515Z-079784",
-  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-b686e3",
-  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200515Z-46705a",
-  "org.scalablytyped.slinky" %%% "connect-history-api-fallback" % "1.3-dt-20200515Z-357dbf",
-  "org.scalablytyped.slinky" %%% "content-disposition" % "0.5-dt-20200515Z-3ce3e6",
-  "org.scalablytyped.slinky" %%% "cookies" % "0.7-dt-20191002Z-ea126d",
-  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200706Z-e24f67",
-  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200722Z-f4d568",
-  "org.scalablytyped.slinky" %%% "fast-glob" % "3.2.4-48ef1f",
-  "org.scalablytyped.slinky" %%% "http-proxy" % "1.17-dt-20200320Z-cdf220",
-  "org.scalablytyped.slinky" %%% "http-proxy-middleware" % "0.19-dt-20200515Z-e5fac5",
-  "org.scalablytyped.slinky" %%% "keygrip" % "1.0-dt-20200515Z-ea1650",
-  "org.scalablytyped.slinky" %%% "koa" % "2.11.0-dt-20200515Z-4b89ef",
-  "org.scalablytyped.slinky" %%% "koa-compress" % "v4.x-dt-20200515Z-ef3e44",
-  "org.scalablytyped.slinky" %%% "koa-send" % "4.1-dt-20200226Z-722607",
-  "org.scalablytyped.slinky" %%% "koa-static" % "4.0-dt-20200515Z-b4b20a",
-  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200722Z-cba958",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-df8c17",
-  "org.scalablytyped.slinky" %%% "nodelib__fs_dot_scandir" % "2.1.3-bcbf4b",
-  "org.scalablytyped.slinky" %%% "nodelib__fs_dot_stat" % "2.0.3-a7874d",
-  "org.scalablytyped.slinky" %%% "nodelib__fs_dot_walk" % "1.2.4-08b3da",
-  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200519Z-7e078d",
-  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-d7b143",
-  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200519Z-0a0205",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "accepts" % "1.3-dt-20200515Z-a883a7",
+  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-e4419c",
+  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200515Z-41abee",
+  "org.scalablytyped.slinky" %%% "connect-history-api-fallback" % "1.3-dt-20200515Z-0d785c",
+  "org.scalablytyped.slinky" %%% "content-disposition" % "0.5-dt-20200515Z-8dac25",
+  "org.scalablytyped.slinky" %%% "cookies" % "0.7-dt-20191002Z-0a7a1c",
+  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200706Z-a5f9b2",
+  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200722Z-5cbccc",
+  "org.scalablytyped.slinky" %%% "fast-glob" % "3.2.4-df6e9c",
+  "org.scalablytyped.slinky" %%% "http-proxy" % "1.17-dt-20200320Z-c2a039",
+  "org.scalablytyped.slinky" %%% "http-proxy-middleware" % "0.19-dt-20200515Z-8cdd2e",
+  "org.scalablytyped.slinky" %%% "keygrip" % "1.0-dt-20200515Z-f3092a",
+  "org.scalablytyped.slinky" %%% "koa" % "2.11.0-dt-20200515Z-64d711",
+  "org.scalablytyped.slinky" %%% "koa-compress" % "v4.x-dt-20200515Z-fd89e6",
+  "org.scalablytyped.slinky" %%% "koa-send" % "4.1-dt-20200226Z-04cbbf",
+  "org.scalablytyped.slinky" %%% "koa-static" % "4.0-dt-20200515Z-b2b9e3",
+  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200722Z-600803",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
+  "org.scalablytyped.slinky" %%% "nodelib__fs_dot_scandir" % "2.1.3-22b3f9",
+  "org.scalablytyped.slinky" %%% "nodelib__fs_dot_stat" % "2.0.3-4e891a",
+  "org.scalablytyped.slinky" %%% "nodelib__fs_dot_walk" % "1.2.4-150c3f",
+  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200519Z-524837",
+  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-18f701",
+  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200519Z-04f03f",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

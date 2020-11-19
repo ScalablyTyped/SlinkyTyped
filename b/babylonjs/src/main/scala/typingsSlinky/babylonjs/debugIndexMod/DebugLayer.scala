@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.debugIndexMod
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Debug/index", "DebugLayer")
 @js.native
@@ -18,11 +18,11 @@ class DebugLayer protected ()
     */
   def this(scene: Scene) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Debug/index", "DebugLayer")
 @js.native
 object DebugLayer extends js.Object {
+  
   /**
     * Define the url to get the inspector script from.
     * By default it uses the babylonjs CDN.
@@ -30,4 +30,3 @@ object DebugLayer extends js.Object {
     */
   var InspectorURL: String = js.native
 }
-

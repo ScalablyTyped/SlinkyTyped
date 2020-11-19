@@ -11,24 +11,27 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.stddev
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.sum
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait StatisticDefinition
   extends Accessor
      with JSONSupport {
+  
   /**
     * Defines the field for which statistics will be calculated. This can be service field names or SQL expressions. See the snippets below for examples.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-StatisticDefinition.html#onStatisticField)
     */
   var onStatisticField: String = js.native
+  
   /**
     * Specifies the output field name for the requested statistic. Output field names can only contain alpha-numeric characters and an underscore. If no output field name is specified, the server assigns a field name to the returned statistic field.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-StatisticDefinition.html#outStatisticFieldName)
     */
   var outStatisticFieldName: String = js.native
+  
   /**
     * The parameters for [percentile statistics](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-StatisticDefinition.html#statisticType). This property must be set when the [statisticType](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-StatisticDefinition.html#statisticType) is set to either `percentile-continuous` or `percentile-discrete`.
     *
@@ -37,6 +40,7 @@ trait StatisticDefinition
     * @default null
     */
   var statisticParameters: StatisticDefinitionStatisticParameters = js.native
+  
   /**
     * Defines the type of statistic.  **Possible Values**
     *
@@ -61,4 +65,3 @@ trait StatisticDefinition
     */
   var statisticType: count | sum | min | max | avg | stddev | `var` | `percentile-continuous` | `percentile-discrete` = js.native
 }
-

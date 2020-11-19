@@ -2,13 +2,12 @@ package typingsSlinky.faker
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object fakerStrings {
-  @js.native
-  sealed trait key extends js.Object
   
   @scala.inline
   def key: key = "key".asInstanceOf[key]
+  @js.native
+  sealed trait key extends js.Object
 }
-

@@ -8,7 +8,7 @@ import typingsSlinky.three.constantsMod.TextureFilter
 import typingsSlinky.three.constantsMod.Wrapping
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aframe", "THREE.VideoTexture")
 @js.native
@@ -26,4 +26,3 @@ class VideoTexture protected ()
     anisotropy: js.UndefOr[Double]
   ) = this()
 }
-

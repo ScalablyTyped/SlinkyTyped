@@ -2,7 +2,7 @@ package typingsSlinky.angularCompiler.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler", "Statement")
 @js.native
@@ -19,4 +19,3 @@ abstract class Statement ()
   ) = this()
   def this(modifiers: Null, sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan) = this()
 }
-

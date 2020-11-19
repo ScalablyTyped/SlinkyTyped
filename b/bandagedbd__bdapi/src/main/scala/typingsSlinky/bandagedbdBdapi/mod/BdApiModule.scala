@@ -67,63 +67,77 @@ import typingsSlinky.reactDom.mod.Renderer
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@bandagedbd/bdapi", "BdApiModule")
 @js.native
 object BdApiModule extends js.Object {
+  
   /**
     * Creates an shows an alert modal to the user. A preview of how it may look can be found [here](https://i.zackrauen.com/7qnnNC.png).
     */
   def alert(title: String, content: String): Unit = js.native
+  
   /**
     * Removes a style added with [`injectCSS`](#injectcssid-css) below.
     */
   def clearCSS(id: String): Unit = js.native
+  
   /**
     * Deletes some saved data for plugin `pluginName` with key `key`.
     */
   def deleteData(pluginName: String, key: String): Unit = js.native
+  
   /**
     * Searches for multiple internal Discord webpack module based on `filter`. It's the same as [`findModule`](#findmodulefilter) but will return all matches
     */
   def findAllModules(filter: js.Function0[Unit]): js.Array[_] = js.native
+  
   /**
     * Searches for an internal Discord webpack module based on `filter`.
     */
   def findModule(filter: js.Function0[Unit]): js.Any = js.native
+  
   /**
     * Searches for an internal Discord webpack module that has every property passed.
     */
   def findModuleByProps(props: String*): js.Any = js.native
+  
   /**
     * Returns BandagedBD's instance of the core module. Only use this if you know what you are doing.
     */
   def getCore(): js.Any = js.native
+  
   /**
     * Alias for [loadData(pluginName, key)](#loaddatapluginname-key)
     */
   def getData(pluginName: String, key: String): js.Any = js.native
+  
   /**
     * Gets the internal react instance for a particular node.
     */
   def getInternalInstance(node: HTMLElement): js.UndefOr[js.Object] = js.native
+  
   /**
     * Gets the instance of another plugin with the name `name`.
     */
   def getPlugin(name: String): js.Object | Null = js.native
+  
   /**
     * Adds a block of css to the current document's `head`.
     */
   def injectCSS(id: String, css: String): js.Object | Null = js.native
+  
   /**
     * Links some remote JavaScript to be added to the page. Useful for libraries like `Sortable.js`.
     */
   def linkJS(id: String, url: String): Unit = js.native
+  
   /**
     * Gets some saved data for plugin `pluginName` with key `key`. Data can be saved with [`saveData`](#savedatapluginname-key-data).
     */
   def loadData(pluginName: String, key: String): js.Any = js.native
+  
   /**
     * This function monkey-patches a method on an object. The patching callback may be run before, after or instead of target method.
     * - Be careful when monkey-patching. Think not only about original functionality of target method and your changes,
@@ -133,60 +147,69 @@ object BdApiModule extends js.Object {
     * Also, patched methods have property `__monkeyPatched` set to `true`, in case you want to check something programmatically.
     */
   def monkeyPatch(module: js.Object, methodName: String, options: MonkeyPatchOptions): CancelPatch = js.native
+  
   /**
     * Adds a listener for when the node is removed from the document body.
     */
   def onRemoved(node: HTMLElement, callback: js.Function0[Unit]): Unit = js.native
+  
   /**
     * Saved some `data` for plugin `pluginName` under `key` key. Gets saved in the plugins folder under `pluginName.config.json`. Data can be saved with [`loadData`](#loaddatapluginname-key).
     */
   def saveData(pluginName: String, key: String, data: js.Any): Unit = js.native
+  
   /**
     * Alias for [saveData(pluginName, key, data)](#savedatapluginname-key-data)
     *
     */
   def setData(pluginName: String, key: String, data: js.Any): Unit = js.native
+  
   /**
     * Shows a simple toast message similar to on Android. An example of the `success` toast can be seen [here](https://i.zackrauen.com/zIagVa.png).
     */
   def showToast(content: String): Unit = js.native
   def showToast(content: String, options: ToastOptions): Unit = js.native
+  
   /**
     * Wraps a function in a try catch block.
     */
   def suppressErrors(method: js.Function0[Unit]): js.Function0[Unit] = js.native
   def suppressErrors(method: js.Function0[Unit], message: String): js.Function0[Unit] = js.native
+  
   /**
     * Determines if the input is valid and parseable JSON.
     */
   def testJSON(data: String): Boolean = js.native
+  
   /**
     * Removes some previously linked JS by [`linkJS`](#linkjsid-url).
     */
   def unlinkJS(id: String): Unit = js.native
+  
   /**
     * The React module being used inside Discord.
     */
   @js.native
   object React extends js.Object {
-    @js.native
-    class PureComponent[P, S, SS] ()
-      extends typingsSlinky.react.mod.PureComponent[P, S, SS]
     
     val Children: ReactChildren = js.native
+    
     // Base component for plain JS classes
     // tslint:disable-next-line:no-empty-interface
     var Component: TypeofComponent = js.native
+    
     val Fragment: ReactComponentClass[typingsSlinky.react.anon.Children] = js.native
+    
     val Profiler: ReactComponentClass[ProfilerProps] = js.native
+    
     val StrictMode: ReactComponentClass[typingsSlinky.react.anon.Children] = js.native
+    
     /**
       * This feature is not yet available for server-side rendering.
       * Suspense support will be added in a later release.
       */
     val Suspense: ReactComponentClass[SuspenseProps] = js.native
-    val unstable_SuspenseList: ReactComponentClass[SuspenseListProps] = js.native
-    val version: String = js.native
+    
     // Custom components
     def cloneElement[P](element: FunctionComponentElement[P], props: Partial[P] with Attributes, children: ReactElement*): FunctionComponentElement[P] = js.native
     def cloneElement[P](element: FunctionComponentElement[P], props: js.UndefOr[scala.Nothing], children: ReactElement*): FunctionComponentElement[P] = js.native
@@ -205,23 +228,25 @@ object BdApiModule extends js.Object {
     // DOM Element (has to be the last, because type checking stops at first overload that fits)
     def cloneElement[P /* <: DOMAttributes[T] */, T /* <: Element */](element: DOMElement[P, T], props: DOMAttributes[T] with P, children: ReactElement*): ReactElement = js.native
     def cloneElement[P /* <: DOMAttributes[T] */, T /* <: Element */](element: DOMElement[P, T], props: js.UndefOr[scala.Nothing], children: ReactElement*): ReactElement = js.native
-    // DOM Elements
-    // ReactHTMLElement
-    def cloneElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: DetailedReactHTMLElement[P, T], props: P, children: ReactElement*): DetailedReactHTMLElement[P, T] = js.native
-    def cloneElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: DetailedReactHTMLElement[P, T], props: js.UndefOr[scala.Nothing], children: ReactElement*): DetailedReactHTMLElement[P, T] = js.native
+    // ReactHTMLElement, less specific
+    def cloneElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: ReactHTMLElement[T], props: P, children: ReactElement*): ReactHTMLElement[T] = js.native
+    def cloneElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: ReactHTMLElement[T], props: js.UndefOr[scala.Nothing], children: ReactElement*): ReactHTMLElement[T] = js.native
     // SVGElement
     def cloneElement[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](element: ReactSVGElement, props: P, children: ReactElement*): ReactSVGElement = js.native
     def cloneElement[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](element: ReactSVGElement, props: js.UndefOr[scala.Nothing], children: ReactElement*): ReactSVGElement = js.native
-    // ReactHTMLElement, less specific
+    // DOM Elements
+    // ReactHTMLElement
     @JSName("cloneElement")
-    def cloneElement_P_HTMLAttributesTT_HTMLElement_ReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: ReactHTMLElement[T], props: P, children: ReactElement*): ReactHTMLElement[T] = js.native
+    def cloneElement_P_HTMLAttributesTT_HTMLElement_DetailedReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: DetailedReactHTMLElement[P, T], props: P, children: ReactElement*): DetailedReactHTMLElement[P, T] = js.native
     @JSName("cloneElement")
-    def cloneElement_P_HTMLAttributesTT_HTMLElement_ReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: ReactHTMLElement[T], props: js.UndefOr[scala.Nothing], children: ReactElement*): ReactHTMLElement[T] = js.native
+    def cloneElement_P_HTMLAttributesTT_HTMLElement_DetailedReactHTMLElement[P /* <: HTMLAttributes[T] */, T /* <: HTMLElement */](element: DetailedReactHTMLElement[P, T], props: js.UndefOr[scala.Nothing], children: ReactElement*): DetailedReactHTMLElement[P, T] = js.native
+    
     def createContext[T](
       // If you thought this should be optional, see
     // https://github.com/DefinitelyTyped/DefinitelyTyped/pull/24509#issuecomment-382213106
     defaultValue: T
     ): Context[T] = js.native
+    
     def createElement[P /* <: js.Object */](`type`: String, props: Attributes with P, children: ReactElement*): ReactElement = js.native
     def createElement[P /* <: js.Object */](`type`: String, props: js.UndefOr[scala.Nothing], children: ReactElement*): ReactElement = js.native
     def createElement[P /* <: js.Object */](`type`: String, props: Null, children: ReactElement*): ReactElement = js.native
@@ -306,6 +331,7 @@ object BdApiModule extends js.Object {
     def createElement_input(`type`: input, props: js.UndefOr[scala.Nothing], children: ReactElement*): DetailedReactHTMLElement[InputHTMLAttributes[HTMLInputElement], HTMLInputElement] = js.native
     @JSName("createElement")
     def createElement_input(`type`: input, props: Null, children: ReactElement*): DetailedReactHTMLElement[InputHTMLAttributes[HTMLInputElement], HTMLInputElement] = js.native
+    
     def createFactory(`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any): SVGFactory = js.native
     def createFactory[P](`type`: ClassType[P, ReactComponentClass[P], ReactComponentClass[P]]): CFactory[P, ReactComponentClass[P]] = js.native
     def createFactory[P](`type`: ComponentClass[P, js.Object]): Factory[P] = js.native
@@ -319,11 +345,16 @@ object BdApiModule extends js.Object {
     // DOM Elements
     @JSName("createFactory")
     def createFactory_T_HTMLElement_HTMLFactory[T /* <: HTMLElement */](`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 116 */ js.Any): HTMLFactory[T] = js.native
+    
     def createRef[T](): ReactRef[T] = js.native
+    
     def forwardRef[T, P](render: ForwardRefRenderFunction[T, P]): ForwardRefExoticComponent[PropsWithoutRef[P] with RefAttributes[T]] = js.native
+    
     def isValidElement[P](): /* is react.react.ReactElement */ Boolean = js.native
     def isValidElement[P](`object`: js.Object): /* is react.react.ReactElement */ Boolean = js.native
+    
     def `lazy`[T /* <: ReactComponentClass[_] */](factory: js.Function0[js.Promise[Default[T]]]): ReactComponentClass[T] = js.native
+    
     def memo[T /* <: ReactComponentClass[_] */](Component: T): ReactComponentClass[T] = js.native
     def memo[T /* <: ReactComponentClass[_] */](
       Component: T,
@@ -334,12 +365,18 @@ object BdApiModule extends js.Object {
       Component: ReactComponentClass[P],
       propsAreEqual: js.Function2[/* prevProps */ PropsWithChildren[P], /* nextProps */ PropsWithChildren[P], Boolean]
     ): ReactComponentClass[P] = js.native
+    
+    val unstable_SuspenseList: ReactComponentClass[SuspenseListProps] = js.native
+    
     def unstable_useDeferredValue[T](value: T): T = js.native
     def unstable_useDeferredValue[T](value: T, config: TimeoutConfig): T = js.native
+    
     def unstable_useTransition(): js.Tuple2[TransitionStartFunction, Boolean] = js.native
     def unstable_useTransition(config: SuspenseConfig): js.Tuple2[TransitionStartFunction, Boolean] = js.native
+    
     def unstable_withSuspenseConfig(scope: js.Function0[js.UndefOr[Unit]]): Unit = js.native
     def unstable_withSuspenseConfig(scope: js.Function0[js.UndefOr[Unit]], config: SuspenseConfig): Unit = js.native
+    
     // I made 'inputs' required here and in useMemo as there's no point to memoizing without the memoization key
     // useCallback(X) is identical to just using X, useMemo(() => Y) is identical to just using Y.
     /**
@@ -351,6 +388,7 @@ object BdApiModule extends js.Object {
       */
     // TODO (TypeScript 3.0): <T extends (...args: never[]) => unknown>
     def useCallback[T /* <: js.Function1[/* repeated */ js.Any, _] */](callback: T, deps: DependencyList): T = js.native
+    
     // This will technically work if you give a Consumer<T> or Provider<T> but it's deprecated and warns
     /**
       * Accepts a context object (the value returned from `React.createContext`) and returns the current
@@ -360,6 +398,7 @@ object BdApiModule extends js.Object {
       * @see https://reactjs.org/docs/hooks-reference.html#usecontext
       */
     def useContext[T](context: Context[T]): T = js.native
+    
     /**
       * `useDebugValue` can be used to display a label for custom hooks in React DevTools.
       *
@@ -373,6 +412,7 @@ object BdApiModule extends js.Object {
     // it's just the function name without the "use" prefix.
     def useDebugValue[T](value: T): Unit = js.native
     def useDebugValue[T](value: T, format: js.Function1[/* value */ T, _]): Unit = js.native
+    
     /**
       * Accepts a function that contains imperative, possibly effectful code.
       *
@@ -384,6 +424,7 @@ object BdApiModule extends js.Object {
       */
     def useEffect(effect: EffectCallback): Unit = js.native
     def useEffect(effect: EffectCallback, deps: DependencyList): Unit = js.native
+    
     // NOTE: this does not accept strings, but this will have to be fixed by removing strings from type Ref<T>
     /**
       * `useImperativeHandle` customizes the instance value that is exposed to parent components when using
@@ -396,6 +437,7 @@ object BdApiModule extends js.Object {
       */
     def useImperativeHandle[T, R /* <: T */](ref: js.UndefOr[Ref[T]], init: js.Function0[R]): Unit = js.native
     def useImperativeHandle[T, R /* <: T */](ref: js.UndefOr[Ref[T]], init: js.Function0[R], deps: DependencyList): Unit = js.native
+    
     /**
       * The signature is identical to `useEffect`, but it fires synchronously after all DOM mutations.
       * Use this to read layout from the DOM and synchronously re-render. Updates scheduled inside
@@ -411,6 +453,7 @@ object BdApiModule extends js.Object {
       */
     def useLayoutEffect(effect: EffectCallback): Unit = js.native
     def useLayoutEffect(effect: EffectCallback, deps: DependencyList): Unit = js.native
+    
     /**
       * `useMemo` will only recompute the memoized value when one of the `deps` has changed.
       *
@@ -432,6 +475,7 @@ object BdApiModule extends js.Object {
     // allow undefined, but don't make it optional as that is very likely a mistake
     def useMemo[T](factory: js.Function0[T]): T = js.native
     def useMemo[T](factory: js.Function0[T], deps: DependencyList): T = js.native
+    
     /**
       * An alternative to `useState`.
       *
@@ -499,6 +543,7 @@ object BdApiModule extends js.Object {
       initializerArg: (I with ReducerState[R]) | I,
       initializer: js.Function1[(/* arg */ I with ReducerState[R]) | (/* arg */ I), ReducerState[R]]
     ): js.Tuple2[ReducerState[R], Dispatch[ReducerAction[R]]] = js.native
+    
     // convenience overload for potentially undefined initialValue / call with 0 arguments
     // has a default to stop it from defaulting to {} instead
     /**
@@ -544,6 +589,7 @@ object BdApiModule extends js.Object {
     def useRef_T_RefObject[T](): ReactRef[T] = js.native
     @JSName("useRef")
     def useRef_T_RefObject[T](initialValue: T): ReactRef[T] = js.native
+    
     // convenience overload when first argument is ommitted
     /**
       * Returns a stateful value, and a function to update it.
@@ -560,10 +606,15 @@ object BdApiModule extends js.Object {
       */
     def useState[S](initialState: S): js.Tuple2[S, Dispatch[SetStateAction[S]]] = js.native
     def useState[S](initialState: js.Function0[S]): js.Tuple2[S, Dispatch[SetStateAction[S]]] = js.native
+    
+    val version: String = js.native
+    
+    @js.native
+    class PureComponent[P, S, SS] ()
+      extends typingsSlinky.react.mod.PureComponent[P, S, SS]
     @js.native
     object PureComponent
       extends TopLevel[Instantiable0[ReactComponentClass[js.Object]]]
-    
   }
   
   /**
@@ -571,18 +622,24 @@ object BdApiModule extends js.Object {
     */
   @js.native
   object ReactDOM extends js.Object {
-    val hydrate: Renderer = js.native
-    val render: Renderer = js.native
-    val version: String = js.native
+    
     def createPortal(children: ReactElement, container: Element): ReactPortal = js.native
     def createPortal(children: ReactElement, container: Element, key: String): ReactPortal = js.native
+    
     def findDOMNode(): Element | Null | Text = js.native
     def findDOMNode(instance: ReactInstance): Element | Null | Text = js.native
+    
+    val hydrate: Renderer = js.native
+    
+    val render: Renderer = js.native
+    
     def unmountComponentAtNode(container: DocumentFragment): Boolean = js.native
     def unmountComponentAtNode(container: Element): Boolean = js.native
+    
     def unstable_batchedUpdates(callback: js.Function0[_]): Unit = js.native
     def unstable_batchedUpdates[A](callback: js.Function1[/* a */ A, _], a: A): Unit = js.native
     def unstable_batchedUpdates[A, B](callback: js.Function2[/* a */ A, /* b */ B, _], a: A, b: B): Unit = js.native
+    
     def unstable_renderSubtreeIntoContainer[T /* <: Element */](
       parentComponent: ReactComponentClass[_],
       element: DOMElement[DOMAttributes[T], T],
@@ -612,7 +669,7 @@ object BdApiModule extends js.Object {
       container: Element,
       callback: js.Function1[/* component */ T, _]
     ): T = js.native
+    
+    val version: String = js.native
   }
-  
 }
-

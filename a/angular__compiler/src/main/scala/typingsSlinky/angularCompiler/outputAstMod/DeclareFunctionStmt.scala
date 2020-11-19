@@ -3,7 +3,7 @@ package typingsSlinky.angularCompiler.outputAstMod
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/output/output_ast", "DeclareFunctionStmt")
 @js.native
@@ -103,9 +103,12 @@ class DeclareFunctionStmt protected () extends Statement {
     modifiers: Null,
     sourceSpan: ParseSourceSpan
   ) = this()
+  
   var name: String = js.native
+  
   var params: js.Array[FnParam] = js.native
+  
   var statements: js.Array[Statement] = js.native
+  
   var `type`: Type | Null = js.native
 }
-

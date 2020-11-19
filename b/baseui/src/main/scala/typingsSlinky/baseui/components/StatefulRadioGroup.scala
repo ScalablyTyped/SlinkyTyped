@@ -12,9 +12,10 @@ import typingsSlinky.baseui.radioMod.StatefulRadioGroupProps
 import typingsSlinky.react.mod.ChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StatefulRadioGroup {
+  
   @JSImport("baseui/radio", "StatefulRadioGroup")
   @js.native
   object component extends js.Object
@@ -23,21 +24,27 @@ object StatefulRadioGroup {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def align(value: horizontal | vertical): this.type = set("align", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def initialState(value: State): this.type = set("initialState", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onChange(value: ChangeEvent[HTMLInputElement] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    
     @scala.inline
     def overrides(value: RadioOverrides with RadioGroupOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: StatefulRadioGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: StatefulRadioGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

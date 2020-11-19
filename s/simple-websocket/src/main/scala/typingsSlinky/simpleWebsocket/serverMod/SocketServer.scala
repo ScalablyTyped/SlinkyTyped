@@ -11,13 +11,11 @@ import typingsSlinky.simpleWebsocket.simpleWebsocketStrings.listening
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SocketServer extends EventEmitter {
-  var clients: Set[typingsSlinky.ws.mod.^] = js.native
-  var options: Options = js.native
-  var path: String = js.native
+  
   // Events
   @JSName("addListener")
   def addListener_connection(event: connection, cb: js.Function1[/* client */ typingsSlinky.simpleWebsocket.mod.^, Unit]): this.type = js.native
@@ -30,8 +28,12 @@ trait SocketServer extends EventEmitter {
   ): this.type = js.native
   @JSName("addListener")
   def addListener_listening(event: listening, cb: js.Function0[Unit]): this.type = js.native
+  
+  var clients: Set[typingsSlinky.ws.mod.^] = js.native
+  
   def close(): Unit = js.native
   def close(cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
+  
   @JSName("emit")
   def emit_connection(event: connection, socket: typingsSlinky.simpleWebsocket.mod.^): Boolean = js.native
   @JSName("emit")
@@ -40,12 +42,14 @@ trait SocketServer extends EventEmitter {
   def emit_headers(event: headers, headers: js.Array[String], request: IncomingMessage): Boolean = js.native
   @JSName("emit")
   def emit_listening(event: listening): Boolean = js.native
+  
   def handleUpgrade(
     request: IncomingMessage,
     socket: Socket,
     upgradeHead: Buffer,
     callback: js.Function1[/* client */ typingsSlinky.ws.mod.^, Unit]
   ): Unit = js.native
+  
   @JSName("listeners")
   def listeners_connection(event: connection): js.Array[
     js.Function2[
@@ -62,6 +66,7 @@ trait SocketServer extends EventEmitter {
   ] = js.native
   @JSName("listeners")
   def listeners_listening(event: listening): js.Array[js.Function0[Unit]] = js.native
+  
   @JSName("off")
   def off_connection(
     event: connection,
@@ -80,6 +85,7 @@ trait SocketServer extends EventEmitter {
   ): this.type = js.native
   @JSName("off")
   def off_listening(event: listening, cb: js.Function0[Unit]): this.type = js.native
+  
   @JSName("on")
   def on_connection(
     event: connection,
@@ -98,6 +104,7 @@ trait SocketServer extends EventEmitter {
   ): this.type = js.native
   @JSName("on")
   def on_listening(event: listening, cb: js.Function0[Unit]): this.type = js.native
+  
   @JSName("once")
   def once_connection(
     event: connection,
@@ -116,6 +123,11 @@ trait SocketServer extends EventEmitter {
   ): this.type = js.native
   @JSName("once")
   def once_listening(event: listening, cb: js.Function0[Unit]): this.type = js.native
+  
+  var options: Options = js.native
+  
+  var path: String = js.native
+  
   @JSName("prependListener")
   def prependListener_connection(event: connection, cb: js.Function1[/* client */ typingsSlinky.simpleWebsocket.mod.^, Unit]): this.type = js.native
   @JSName("prependListener")
@@ -127,6 +139,7 @@ trait SocketServer extends EventEmitter {
   ): this.type = js.native
   @JSName("prependListener")
   def prependListener_listening(event: listening, cb: js.Function0[Unit]): this.type = js.native
+  
   @JSName("prependOnceListener")
   def prependOnceListener_connection(event: connection, cb: js.Function1[/* client */ typingsSlinky.simpleWebsocket.mod.^, Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -138,6 +151,7 @@ trait SocketServer extends EventEmitter {
   ): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_listening(event: listening, cb: js.Function0[Unit]): this.type = js.native
+  
   @JSName("rawListeners")
   def rawListeners_connection(event: connection): js.Array[
     js.Function2[
@@ -154,6 +168,7 @@ trait SocketServer extends EventEmitter {
   ] = js.native
   @JSName("rawListeners")
   def rawListeners_listening(event: listening): js.Array[js.Function0[Unit]] = js.native
+  
   @JSName("removeListener")
   def removeListener_connection(event: connection, cb: js.Function1[/* client */ typingsSlinky.simpleWebsocket.mod.^, Unit]): this.type = js.native
   @JSName("removeListener")
@@ -165,6 +180,6 @@ trait SocketServer extends EventEmitter {
   ): this.type = js.native
   @JSName("removeListener")
   def removeListener_listening(event: listening, cb: js.Function0[Unit]): this.type = js.native
+  
   def shouldHandle(request: IncomingMessage): Boolean = js.native
 }
-

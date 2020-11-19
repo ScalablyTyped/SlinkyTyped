@@ -94,15 +94,11 @@ import typingsSlinky.jqueryui.jqueryuiStrings.widget
 import typingsSlinky.std.ThisType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
-  var jQuery: JQueryStatic = js.native
-  @JSName("menu")
-  var menu_Original: Call = js.native
-  @JSName("widget")
-  var widget_Original: Widget = js.native
+  
   def accordion(): JQuery = js.native
   def accordion(methodName: String): JQuery = js.native
   def accordion(optionLiteral: String, optionName: String): js.Any = js.native
@@ -119,6 +115,7 @@ trait JQuery extends js.Object {
   def accordion_refresh(methodName: refresh): Unit = js.native
   @JSName("accordion")
   def accordion_widget(methodName: widget): JQuery = js.native
+  
   def addClass(classNames: String): JQuery = js.native
   def addClass(classNames: String, speed: js.UndefOr[scala.Nothing], callback: js.Function): JQuery = js.native
   def addClass(
@@ -139,6 +136,7 @@ trait JQuery extends js.Object {
   def addClass(classNames: String, speed: Double, easing: js.UndefOr[scala.Nothing], callback: js.Function): JQuery = js.native
   def addClass(classNames: String, speed: Double, easing: String): JQuery = js.native
   def addClass(classNames: String, speed: Double, easing: String, callback: js.Function): JQuery = js.native
+  
   def autocomplete(): JQuery = js.native
   def autocomplete(methodName: String): JQuery = js.native
   def autocomplete(optionLiteral: String, optionName: String): js.Any = js.native
@@ -159,6 +157,7 @@ trait JQuery extends js.Object {
   def autocomplete_search(methodName: search, value: String): Unit = js.native
   @JSName("autocomplete")
   def autocomplete_widget(methodName: widget): JQuery = js.native
+  
   def button(): JQuery = js.native
   def button(methodName: String): JQuery = js.native
   def button(optionLiteral: String, optionName: String): js.Any = js.native
@@ -175,6 +174,7 @@ trait JQuery extends js.Object {
   def button_refresh(methodName: refresh): Unit = js.native
   @JSName("button")
   def button_widget(methodName: widget): JQuery = js.native
+  
   def buttonset(): JQuery = js.native
   def buttonset(methodName: String): JQuery = js.native
   def buttonset(optionLiteral: String, optionName: String): js.Any = js.native
@@ -191,6 +191,7 @@ trait JQuery extends js.Object {
   def buttonset_refresh(methodName: refresh): Unit = js.native
   @JSName("buttonset")
   def buttonset_widget(methodName: widget): JQuery = js.native
+  
   /**
     * Initialize a datepicker
     */
@@ -850,6 +851,7 @@ trait JQuery extends js.Object {
     */
   @JSName("datepicker")
   def datepicker_widget(methodName: widget): JQuery = js.native
+  
   def dialog(): JQuery = js.native
   def dialog(methodName: String): JQuery = js.native
   def dialog(optionLiteral: String, optionName: String): js.Any = js.native
@@ -868,7 +870,9 @@ trait JQuery extends js.Object {
   def dialog_open(methodName: open): JQuery = js.native
   @JSName("dialog")
   def dialog_widget(methodName: widget): JQuery = js.native
+  
   def disableSelection(): JQuery = js.native
+  
   def draggable(): JQuery = js.native
   def draggable(methodName: String): JQuery = js.native
   def draggable(optionLiteral: String, optionName: String): js.Any = js.native
@@ -883,6 +887,7 @@ trait JQuery extends js.Object {
   def draggable_enable(methodName: enable): Unit = js.native
   @JSName("draggable")
   def draggable_widget(methodName: widget): JQuery = js.native
+  
   def droppable(): JQuery = js.native
   def droppable(methodName: String): JQuery = js.native
   def droppable(optionLiteral: String, optionName: String): js.Any = js.native
@@ -897,6 +902,7 @@ trait JQuery extends js.Object {
   def droppable_enable(methodName: enable): Unit = js.native
   @JSName("droppable")
   def droppable_widget(methodName: widget): JQuery = js.native
+  
   def effect(effect: String): JQuery = js.native
   def effect(
     effect: String,
@@ -915,9 +921,12 @@ trait JQuery extends js.Object {
   def effect(effect: String, options: js.Any, duration: Double): JQuery = js.native
   def effect(effect: String, options: js.Any, duration: Double, complete: js.Function): JQuery = js.native
   def effect(options: js.Any): JQuery = js.native
+  
   def enableSelection(): JQuery = js.native
+  
   def focus(delay: Double): JQuery = js.native
   def focus(delay: Double, callback: js.Function): JQuery = js.native
+  
   def hide(effect: String): JQuery = js.native
   def hide(
     effect: String,
@@ -936,6 +945,9 @@ trait JQuery extends js.Object {
   def hide(effect: String, options: js.Any, duration: Double): JQuery = js.native
   def hide(effect: String, options: js.Any, duration: Double, complete: js.Function): JQuery = js.native
   def hide(options: js.Any): JQuery = js.native
+  
+  var jQuery: JQueryStatic = js.native
+  
   def menu(): JQuery = js.native
   def menu(methodName: String): JQuery = js.native
   def menu(methodName: String, event: JQueryEventObject, item: JQuery): Unit = js.native
@@ -943,6 +955,8 @@ trait JQuery extends js.Object {
   def menu(optionLiteral: String, optionName: String, optionValue: js.Any): JQuery = js.native
   def menu(optionLiteral: String, options: MenuOptions): js.Any = js.native
   def menu(options: MenuOptions): JQuery = js.native
+  @JSName("menu")
+  var menu_Original: Call = js.native
   @JSName("menu")
   def menu_blur(methodName: blur): Unit = js.native
   @JSName("menu")
@@ -993,7 +1007,9 @@ trait JQuery extends js.Object {
   def menu_select(methodName: select, event: JQueryEventObject): Unit = js.native
   @JSName("menu")
   def menu_widget(methodName: widget): JQuery = js.native
+  
   def position(options: JQueryPositionOptions): JQuery = js.native
+  
   def progressbar(): JQuery = js.native
   def progressbar(methodName: String): JQuery = js.native
   def progressbar(optionLiteral: String, optionName: String): js.Any = js.native
@@ -1017,6 +1033,7 @@ trait JQuery extends js.Object {
   def progressbar_value(methodName: value, value: Double): Unit = js.native
   @JSName("progressbar")
   def progressbar_widget(methodName: widget): JQuery = js.native
+  
   def removeClass(classNames: String): JQuery = js.native
   def removeClass(classNames: String, speed: js.UndefOr[scala.Nothing], callback: js.Function): JQuery = js.native
   def removeClass(
@@ -1037,7 +1054,9 @@ trait JQuery extends js.Object {
   def removeClass(classNames: String, speed: Double, easing: js.UndefOr[scala.Nothing], callback: js.Function): JQuery = js.native
   def removeClass(classNames: String, speed: Double, easing: String): JQuery = js.native
   def removeClass(classNames: String, speed: Double, easing: String, callback: js.Function): JQuery = js.native
+  
   def removeUniqueId(): JQuery = js.native
+  
   def resizable(): JQuery = js.native
   def resizable(methodName: String): JQuery = js.native
   def resizable(optionLiteral: String, optionName: String): js.Any = js.native
@@ -1052,7 +1071,9 @@ trait JQuery extends js.Object {
   def resizable_enable(methodName: enable): Unit = js.native
   @JSName("resizable")
   def resizable_widget(methodName: widget): JQuery = js.native
+  
   def scrollParent(): JQuery = js.native
+  
   def selectable(): JQuery = js.native
   def selectable(methodName: String): JQuery = js.native
   def selectable(optionLiteral: String, optionName: String): js.Any = js.native
@@ -1067,6 +1088,7 @@ trait JQuery extends js.Object {
   def selectable_enable(methodName: enable): Unit = js.native
   @JSName("selectable")
   def selectable_widget(methodName: widget): JQuery = js.native
+  
   def selectmenu(): JQuery = js.native
   def selectmenu(methodName: String): JQuery = js.native
   def selectmenu(optionLiteral: String, optionName: String): js.Any = js.native
@@ -1091,6 +1113,7 @@ trait JQuery extends js.Object {
   def selectmenu_refresh(methodName: refresh): JQuery = js.native
   @JSName("selectmenu")
   def selectmenu_widget(methodName: widget): JQuery = js.native
+  
   def show(effect: String): JQuery = js.native
   def show(
     effect: String,
@@ -1109,6 +1132,7 @@ trait JQuery extends js.Object {
   def show(effect: String, options: js.Any, duration: Double): JQuery = js.native
   def show(effect: String, options: js.Any, duration: Double, complete: js.Function): JQuery = js.native
   def show(options: js.Any): JQuery = js.native
+  
   def slider(): JQuery = js.native
   def slider(methodName: String): JQuery = js.native
   def slider(methodName: String, index: Double, value: Double): Unit = js.native
@@ -1139,6 +1163,7 @@ trait JQuery extends js.Object {
   def slider_values(methodName: values, values: js.Array[Double]): Unit = js.native
   @JSName("slider")
   def slider_widget(methodName: widget): JQuery = js.native
+  
   def sortable(): JQuery = js.native
   def sortable(methodName: String): JQuery = js.native
   def sortable(optionLiteral: String, optionName: String): js.Any = js.native
@@ -1161,6 +1186,7 @@ trait JQuery extends js.Object {
   def sortable_toArray(methodName: toArray, options: Attribute): js.Array[String] = js.native
   @JSName("sortable")
   def sortable_widget(methodName: widget): JQuery = js.native
+  
   def spinner(): JQuery = js.native
   def spinner(methodName: String): JQuery = js.native
   def spinner(optionLiteral: String, optionName: String): js.Any = js.native
@@ -1195,6 +1221,7 @@ trait JQuery extends js.Object {
   def spinner_value(methodName: value, value: Double): Unit = js.native
   @JSName("spinner")
   def spinner_widget(methodName: widget): JQuery = js.native
+  
   def switchClass(removeClassName: String, addClassName: String): JQuery = js.native
   def switchClass(
     removeClassName: String,
@@ -1243,6 +1270,7 @@ trait JQuery extends js.Object {
     easing: String,
     complete: js.Function
   ): JQuery = js.native
+  
   def tabs(): JQuery = js.native
   def tabs(methodName: String): JQuery = js.native
   def tabs(optionLiteral: String, optionName: String): js.Any = js.native
@@ -1267,6 +1295,7 @@ trait JQuery extends js.Object {
   def tabs_select(methodName: select, index: Double): JQuery = js.native
   @JSName("tabs")
   def tabs_widget(methodName: widget): JQuery = js.native
+  
   def toggle(effect: String): JQuery = js.native
   def toggle(
     effect: String,
@@ -1285,6 +1314,7 @@ trait JQuery extends js.Object {
   def toggle(effect: String, options: js.Any, duration: Double): JQuery = js.native
   def toggle(effect: String, options: js.Any, duration: Double, complete: js.Function): JQuery = js.native
   def toggle(options: js.Any): JQuery = js.native
+  
   def toggleClass(className: String): JQuery = js.native
   def toggleClass(
     className: String,
@@ -1389,6 +1419,7 @@ trait JQuery extends js.Object {
   def toggleClass(className: String, duration: Double, easing: js.UndefOr[scala.Nothing], complete: js.Function): JQuery = js.native
   def toggleClass(className: String, duration: Double, easing: String): JQuery = js.native
   def toggleClass(className: String, duration: Double, easing: String, complete: js.Function): JQuery = js.native
+  
   def tooltip(): JQuery = js.native
   def tooltip(methodName: String): JQuery = js.native
   def tooltip(optionLiteral: String, optionName: String): js.Any = js.native
@@ -1407,7 +1438,9 @@ trait JQuery extends js.Object {
   def tooltip_open(methodName: open): Unit = js.native
   @JSName("tooltip")
   def tooltip_widget(methodName: widget): JQuery = js.native
+  
   def uniqueId(): JQuery = js.native
+  
   def widget(methodName: String): JQuery = js.native
   def widget(optionLiteral: String, optionName: String): js.Any = js.native
   def widget(optionLiteral: String, optionName: String, optionValue: js.Any): JQuery = js.native
@@ -1416,7 +1449,9 @@ trait JQuery extends js.Object {
   def widget(options: WidgetOptions): JQuery = js.native
   def widget[T](name: String, base: js.Function, prototype: T with (ThisType[T with WidgetCommonProperties])): JQuery = js.native
   def widget[T](name: String, prototype: T with (ThisType[T with WidgetCommonProperties])): JQuery = js.native
+  @JSName("widget")
+  var widget_Original: Widget = js.native
+  
   def zIndex(): Double = js.native
   def zIndex(zIndex: Double): JQuery = js.native
 }
-

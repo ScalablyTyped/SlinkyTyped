@@ -2,12 +2,12 @@ package typingsSlinky.winrt.Windows.Graphics.Printing
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PrintTaskSourceRequestedArgs extends IPrintTaskSourceRequestedArgs
-
 object PrintTaskSourceRequestedArgs {
+  
   @scala.inline
   def apply(
     deadline: js.Date,
@@ -18,4 +18,3 @@ object PrintTaskSourceRequestedArgs {
     __obj.asInstanceOf[PrintTaskSourceRequestedArgs]
   }
 }
-

@@ -7,14 +7,16 @@ import typingsSlinky.storybookComponents.tabsMod.FuncChilden
 import typingsSlinky.storybookComponents.tabsMod.TabsStateProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TabsState {
+  
   @JSImport("@storybook/components", "TabsState")
   @js.native
   object component extends js.Object
   
   def withProps(p: TabsStateProps): Default[tag.type, typingsSlinky.storybookComponents.mod.TabsState] = new Default[tag.type, typingsSlinky.storybookComponents.mod.TabsState](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     absolute: Boolean,
@@ -27,4 +29,3 @@ object TabsState {
     new Default[tag.type, typingsSlinky.storybookComponents.mod.TabsState](js.Array(this.component, __props.asInstanceOf[TabsStateProps]))
   }
 }
-

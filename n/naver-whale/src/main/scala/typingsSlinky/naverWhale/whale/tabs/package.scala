@@ -2,12 +2,14 @@ package typingsSlinky.naverWhale.whale
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object tabs {
+  
   type TabActivatedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function1[/* activeInfo */ typingsSlinky.chrome.chrome.tabs.TabActiveInfo, scala.Unit]
   ]
+  
   type TabAttachedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* tabId */ scala.Double, 
@@ -15,7 +17,9 @@ package object tabs {
       scala.Unit
     ]
   ]
+  
   type TabCreatedEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* tab */ typingsSlinky.chrome.chrome.tabs.Tab, scala.Unit]]
+  
   type TabDetachedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* tabId */ scala.Double, 
@@ -23,9 +27,11 @@ package object tabs {
       scala.Unit
     ]
   ]
+  
   type TabHighlightedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function1[/* highlightInfo */ typingsSlinky.chrome.chrome.tabs.TabHighlightInfo, scala.Unit]
   ]
+  
   type TabMovedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* tabId */ scala.Double, 
@@ -33,6 +39,7 @@ package object tabs {
       scala.Unit
     ]
   ]
+  
   type TabRemovedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* tabId */ scala.Double, 
@@ -40,9 +47,11 @@ package object tabs {
       scala.Unit
     ]
   ]
+  
   type TabReplacedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[/* addedTabId */ scala.Double, /* removedTabId */ scala.Double, scala.Unit]
   ]
+  
   type TabSelectedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* tabId */ scala.Double, 
@@ -50,6 +59,7 @@ package object tabs {
       scala.Unit
     ]
   ]
+  
   type TabUpdatedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* tabId */ scala.Double, 
@@ -58,6 +68,7 @@ package object tabs {
       scala.Unit
     ]
   ]
+  
   type TabZoomChangeEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function1[/* ZoomChangeInfo */ typingsSlinky.chrome.chrome.tabs.ZoomChangeInfo, scala.Unit]
   ]

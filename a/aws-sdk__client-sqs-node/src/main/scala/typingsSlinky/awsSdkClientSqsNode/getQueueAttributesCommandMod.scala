@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-sqs-node/commands/GetQueueAttributesCommand", JSImport.Namespace)
 @js.native
 object getQueueAttributesCommandMod extends js.Object {
+  
   @js.native
   class GetQueueAttributesCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getQueueAttributesCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetQueueAttributesInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetQueueAttributesInput, GetQueueAttributesOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: SQSResolvedConfiguration
     ): Handler[GetQueueAttributesInput, GetQueueAttributesOutput] = js.native
   }
-  
 }
-

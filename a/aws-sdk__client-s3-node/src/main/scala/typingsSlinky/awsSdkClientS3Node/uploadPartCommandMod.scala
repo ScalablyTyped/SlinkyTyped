@@ -12,11 +12,12 @@ import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-s3-node/commands/UploadPartCommand", JSImport.Namespace)
 @js.native
 object uploadPartCommandMod extends js.Object {
+  
   @js.native
   class UploadPartCommand protected () extends Command[
           InputTypesUnion, 
@@ -27,13 +28,14 @@ object uploadPartCommandMod extends js.Object {
           Readable
         ] {
     def this(input: UploadPartInput[Readable]) = this()
+    
     val middlewareStack: MiddlewareStack[UploadPartInput[Readable], UploadPartOutput, Readable] = js.native
+    
     val model: OperationModel = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[UploadPartInput[Readable], UploadPartOutput] = js.native
   }
-  
 }
-

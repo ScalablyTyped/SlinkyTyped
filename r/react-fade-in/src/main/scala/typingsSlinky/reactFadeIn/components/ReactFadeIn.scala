@@ -6,9 +6,10 @@ import typingsSlinky.reactFadeIn.mod.FadeInProps
 import typingsSlinky.reactFadeIn.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactFadeIn {
+  
   @JSImport("react-fade-in", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -17,15 +18,18 @@ object ReactFadeIn {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def transitionDuration(value: Double): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: FadeInProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: ReactFadeIn.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

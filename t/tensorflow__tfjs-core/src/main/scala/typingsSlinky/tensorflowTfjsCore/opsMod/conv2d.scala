@@ -10,11 +10,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/ops", "conv2d")
 @js.native
 object conv2d extends js.Object {
+  
   def apply[T /* <: Tensor3D | Tensor4D */](
     x: T | TensorLike,
     filter: Tensor4D | TensorLike,
@@ -27,4 +28,3 @@ object conv2d extends js.Object {
     ]
   ): T = js.native
 }
-

@@ -6,11 +6,12 @@ import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.vector3Mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/ParametricGeometry", JSImport.Namespace)
 @js.native
 object parametricGeometryMod extends js.Object {
+  
   @js.native
   class ParametricBufferGeometry protected () extends BufferGeometry {
     def this(
@@ -18,6 +19,7 @@ object parametricGeometryMod extends js.Object {
       slices: Double,
       stacks: Double
     ) = this()
+    
     var parameters: Func = js.native
   }
   
@@ -28,8 +30,7 @@ object parametricGeometryMod extends js.Object {
       slices: Double,
       stacks: Double
     ) = this()
+    
     var parameters: Func = js.native
   }
-  
 }
-

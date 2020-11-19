@@ -3,11 +3,12 @@ package typingsSlinky.koaWebsocket.mod
 import typingsSlinky.node.httpsMod.ServerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("koa-websocket", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   def apply[StateT, CustomT](app: typingsSlinky.koa.mod.^[StateT, CustomT]): App[StateT, CustomT] = js.native
   def apply[StateT, CustomT](
     app: typingsSlinky.koa.mod.^[StateT, CustomT],
@@ -21,4 +22,3 @@ object ^ extends js.Object {
     httpsOptions: ServerOptions
   ): App[StateT, CustomT] = js.native
 }
-

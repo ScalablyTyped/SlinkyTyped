@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/search-bar relevant section in reference guide}
@@ -25,30 +25,33 @@ class SearchBar protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "pages.SearchBar")
 @js.native
 object SearchBar extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new SearchBar instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.pagesMod.pages.SearchBar = js.native
+  
   /**
     * Creates and returns a new SearchBar instance in the SDK and on the server.
     * The new SearchBar will be automatically stored in the 'searchBar' property
     * of the parent GridBaseSource element passed as argument.
     */
   def createInGridBaseSourceUnderSearchBar(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.GridBaseSource): typingsSlinky.mendixmodelsdk.pagesMod.pages.SearchBar = js.native
+  
   /**
     * Creates and returns a new SearchBar instance in the SDK and on the server.
     * The new SearchBar will be automatically stored in the 'searchBar' property
     * of the parent GridDatabaseSource element passed as argument.
     */
   def createInGridDatabaseSourceUnderSearchBar(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.GridDatabaseSource): typingsSlinky.mendixmodelsdk.pagesMod.pages.SearchBar = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

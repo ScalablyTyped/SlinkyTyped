@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-lambda-node/commands/DeleteEventSourceMappingCommand", JSImport.Namespace)
 @js.native
 object deleteEventSourceMappingCommandMod extends js.Object {
+  
   @js.native
   class DeleteEventSourceMappingCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteEventSourceMappingCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteEventSourceMappingInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteEventSourceMappingInput, DeleteEventSourceMappingOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[DeleteEventSourceMappingInput, DeleteEventSourceMappingOutput] = js.native
   }
-  
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.SlideProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Slide")
 @js.native
@@ -16,4 +16,3 @@ class SlideCls ()
   extends typingsSlinky.arcgisJsApi.esri.Slide {
   def this(properties: SlideProperties) = this()
 }
-

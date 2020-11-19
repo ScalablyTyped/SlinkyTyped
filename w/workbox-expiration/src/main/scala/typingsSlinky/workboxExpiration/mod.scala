@@ -4,11 +4,12 @@ import typingsSlinky.workboxExpiration.cacheExpirationMod.CacheExpirationConfig
 import typingsSlinky.workboxExpiration.pluginMod.ExpirationPluginConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("workbox-expiration", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class CacheExpiration protected ()
     extends typingsSlinky.workboxExpiration.cacheExpirationMod.CacheExpiration {
@@ -21,6 +22,4 @@ object mod extends js.Object {
     extends typingsSlinky.workboxExpiration.pluginMod.Plugin {
     def this(config: ExpirationPluginConfig) = this()
   }
-  
 }
-

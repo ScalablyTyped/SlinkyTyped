@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.FlyCameraMouseInput")
 @js.native
@@ -15,4 +15,3 @@ class FlyCameraMouseInput ()
   extends typingsSlinky.babylonjs.BABYLON.FlyCameraMouseInput {
   def this(touchEnabled: Boolean) = this()
 }
-

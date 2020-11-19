@@ -4,26 +4,14 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.multipoint
 import typingsSlinky.arcgisJsApi.esri.geometry.Geometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Multipoint
   extends Geometry_
      with Geometry
      with geometryGeometry {
-  /**
-    * An array of points.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Multipoint.html#points)
-    */
-  var points: js.Array[js.Array[Double]] = js.native
-  /**
-    * The string value representing the type of geometry.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Multipoint.html#type)
-    */
-  @JSName("type")
-  val type_Multipoint: multipoint = js.native
+  
   def addPoint(point: js.Array[Double]): Multipoint = js.native
   /**
     * Adds a point to the Multipoint.
@@ -34,6 +22,7 @@ trait Multipoint
     *
     */
   def addPoint(point: Point): Multipoint = js.native
+  
   /**
     * Returns the point at the specified index.
     *
@@ -43,6 +32,14 @@ trait Multipoint
     *
     */
   def getPoint(index: Double): Point = js.native
+  
+  /**
+    * An array of points.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Multipoint.html#points)
+    */
+  var points: js.Array[js.Array[Double]] = js.native
+  
   /**
     * Removes a point from the Multipoint. The index specifies which point to remove.
     *
@@ -52,6 +49,7 @@ trait Multipoint
     *
     */
   def removePoint(index: Double): Point = js.native
+  
   def setPoint(index: Double, point: js.Array[Double]): Multipoint = js.native
   /**
     * Updates the point at the specified index.
@@ -63,5 +61,12 @@ trait Multipoint
     *
     */
   def setPoint(index: Double, point: Point): Multipoint = js.native
+  
+  /**
+    * The string value representing the type of geometry.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Multipoint.html#type)
+    */
+  @JSName("type")
+  val type_Multipoint: multipoint = js.native
 }
-

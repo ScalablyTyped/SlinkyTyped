@@ -3,11 +3,12 @@ package typingsSlinky.pbkdf2
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pbkdf2", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def pbkdf2(
     password: String,
     salt: String,
@@ -248,6 +249,7 @@ object mod extends js.Object {
     digest: String,
     callback: js.Function2[/* err */ js.Error, /* derivedKey */ Buffer, Unit]
   ): Unit = js.native
+  
   def pbkdf2Sync(password: String, salt: String, iterations: Double, keylen: Double): Buffer = js.native
   def pbkdf2Sync(password: String, salt: String, iterations: Double, keylen: Double, digest: String): Buffer = js.native
   def pbkdf2Sync(password: String, salt: Buffer, iterations: Double, keylen: Double): Buffer = js.native
@@ -298,7 +300,7 @@ object mod extends js.Object {
     keylen: Double,
     digest: String
   ): Buffer = js.native
+  
   // No need to export this
   type TypedArray = js.typedarray.Int8Array | js.typedarray.Uint8Array | js.typedarray.Uint8ClampedArray | js.typedarray.Int16Array | js.typedarray.Uint16Array | js.typedarray.Int32Array | js.typedarray.Uint32Array | js.typedarray.Float32Array | js.typedarray.Float64Array
 }
-

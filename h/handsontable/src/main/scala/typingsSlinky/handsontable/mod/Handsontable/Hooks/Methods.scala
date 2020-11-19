@@ -213,10 +213,11 @@ import typingsSlinky.handsontable.mod.Handsontable.wot.CellRange
 import typingsSlinky.std.HTMLTableHeaderCellElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Methods extends js.Object {
+  
   def add(
     key: afterModifyTransformEnd,
     callback: js.UndefOr[
@@ -5504,21 +5505,29 @@ trait Methods extends js.Object {
     callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]],
     context: Handsontable
   ): Methods = js.native
+  
   def createEmptyBucket(): Bucket = js.native
+  
   def deregister(key: String): Unit = js.native
+  
   def destroy(): Unit = js.native
   def destroy(context: Handsontable): Unit = js.native
+  
   def getBucket(): Bucket = js.native
   def getBucket(context: Handsontable): Bucket = js.native
+  
   def getRegistered(): js.Array[
     /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any
   ] = js.native
+  
   def has(key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any): Boolean = js.native
   def has(
     key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any,
     context: Handsontable
   ): Boolean = js.native
+  
   def isRegistered(key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any): Boolean = js.native
+  
   def once(
     key: afterModifyTransformEnd,
     callback: js.UndefOr[
@@ -10806,7 +10815,9 @@ trait Methods extends js.Object {
     callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]],
     context: Handsontable
   ): Unit = js.native
+  
   def register(key: String): Unit = js.native
+  
   def remove(
     key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any,
     callback: js.Function
@@ -10816,6 +10827,7 @@ trait Methods extends js.Object {
     callback: js.Function,
     context: Handsontable
   ): Boolean = js.native
+  
   def run(
     context: Handsontable,
     key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any,
@@ -10827,4 +10839,3 @@ trait Methods extends js.Object {
     p6: js.UndefOr[js.Any]
   ): js.Any = js.native
 }
-

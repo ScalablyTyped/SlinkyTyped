@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.legacyMod
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "MorphTargetManager")
 @js.native
@@ -15,11 +15,11 @@ class MorphTargetManager ()
   extends typingsSlinky.babylonjs.indexMod.MorphTargetManager {
   def this(scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Legacy/legacy", "MorphTargetManager")
 @js.native
 object MorphTargetManager extends js.Object {
+  
   /**
     * Creates a new MorphTargetManager from serialized data
     * @param serializationObject defines the serialized data
@@ -28,4 +28,3 @@ object MorphTargetManager extends js.Object {
     */
   def Parse(serializationObject: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene): typingsSlinky.babylonjs.morphTargetManagerMod.MorphTargetManager = js.native
 }
-

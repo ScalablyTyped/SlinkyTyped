@@ -5,9 +5,8 @@ import typingsSlinky.workerpool.workerpoolStrings.browser
 import typingsSlinky.workerpool.workerpoolStrings.node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("workerpool", "platform")
 @js.native
 object platform extends TopLevel[node | browser]
-

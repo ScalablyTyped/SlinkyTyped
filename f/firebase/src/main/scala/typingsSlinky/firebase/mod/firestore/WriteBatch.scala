@@ -3,11 +3,12 @@ package typingsSlinky.firebase.mod.firestore
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "firestore.WriteBatch")
 @js.native
 class WriteBatch protected () extends js.Object {
+  
   /**
     * Commits all of the writes in this write batch as a single atomic unit.
     *
@@ -16,6 +17,7 @@ class WriteBatch protected () extends js.Object {
     * resolve while you're offline.
     */
   def commit(): js.Promise[Unit] = js.native
+  
   /**
     * Deletes the document referred to by the provided `DocumentReference`.
     *
@@ -23,6 +25,7 @@ class WriteBatch protected () extends js.Object {
     * @return This `WriteBatch` instance. Used for chaining method calls.
     */
   def delete(documentRef: DocumentReference[_]): WriteBatch = js.native
+  
   /**
     * Writes to the document referred to by the provided `DocumentReference`.
     * If the document does not exist yet, it will be created. If you pass
@@ -44,6 +47,7 @@ class WriteBatch protected () extends js.Object {
     * @return This `WriteBatch` instance. Used for chaining method calls.
     */
   def set[T](documentRef: DocumentReference[T], data: Partial[T], options: SetOptions): WriteBatch = js.native
+  
   /**
     * Updates fields in the document referred to by the provided
     * `DocumentReference`. The update will fail if applied to a document that
@@ -73,4 +77,3 @@ class WriteBatch protected () extends js.Object {
   def update(documentRef: DocumentReference[_], field: String, value: js.Any, moreFieldsAndValues: js.Any*): WriteBatch = js.native
   def update(documentRef: DocumentReference[_], field: FieldPath, value: js.Any, moreFieldsAndValues: js.Any*): WriteBatch = js.native
 }
-

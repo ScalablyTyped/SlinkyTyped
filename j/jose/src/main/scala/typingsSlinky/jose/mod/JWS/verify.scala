@@ -8,11 +8,12 @@ import typingsSlinky.jose.mod.NoneKey
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jose", "JWS.verify")
 @js.native
 object verify extends js.Object {
+  
   def apply(jws: String, key: ConsumeKeyInputWithNone | EmbeddedVerifyKeys): String | js.Object = js.native
   def apply(
     jws: String,
@@ -38,4 +39,3 @@ object verify extends js.Object {
   def apply(jws: GeneralJWS, key: NoneKey): completeVerification[String | js.Object, NoneKey] = js.native
   def apply(jws: GeneralJWS, key: NoneKey, options: VerifyOptions[`true`, `false`]): completeVerification[Buffer, NoneKey] = js.native
 }
-

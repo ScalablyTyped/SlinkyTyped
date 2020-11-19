@@ -2,7 +2,7 @@ package typingsSlinky.saxes.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.saxes.saxesStrings.xmldecl
@@ -20,4 +20,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.saxes.saxesStrings.ready
 */
 trait EventName extends js.Object
-

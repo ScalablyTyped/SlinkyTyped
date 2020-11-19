@@ -11,14 +11,16 @@ import typingsSlinky.reactJsonschemaForm.schemaFieldMod.SchemaFieldProps
 import typingsSlinky.reactJsonschemaForm.schemaFieldMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SchemaField {
+  
   @JSImport("react-jsonschema-form/lib/components/fields/SchemaField", JSImport.Default)
   @js.native
   object component extends js.Object
   
   def withProps(p: SchemaFieldProps[js.Any]): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     errorSchema: ErrorSchema,
@@ -33,4 +35,3 @@ object SchemaField {
     new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[SchemaFieldProps[js.Any]]))
   }
 }
-

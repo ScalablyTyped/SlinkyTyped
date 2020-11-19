@@ -2,11 +2,13 @@ package typingsSlinky.gulpTaskListing.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GulpTaskListing extends js.Object {
+  
   def apply(cb: js.Function): Unit = js.native
+  
   def withFilters(subTaskFilter: FilterFunction): js.Function1[/* cb */ js.Function, Unit] = js.native
   def withFilters(subTaskFilter: FilterFunction, excludeFilter: FilterFunction): js.Function1[/* cb */ js.Function, Unit] = js.native
   def withFilters(subTaskFilter: FilterFunction, excludeFilter: js.RegExp): js.Function1[/* cb */ js.Function, Unit] = js.native
@@ -20,4 +22,3 @@ trait GulpTaskListing extends js.Object {
   def withFilters(subTaskFilter: js.RegExp, excludeFilter: FilterFunction): js.Function1[/* cb */ js.Function, Unit] = js.native
   def withFilters(subTaskFilter: js.RegExp, excludeFilter: js.RegExp): js.Function1[/* cb */ js.Function, Unit] = js.native
 }
-

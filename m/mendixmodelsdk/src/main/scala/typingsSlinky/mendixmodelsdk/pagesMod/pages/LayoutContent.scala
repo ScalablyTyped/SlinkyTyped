@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 8.0.0: introduced
@@ -29,18 +29,20 @@ abstract class LayoutContent protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsLayout: Layout = js.native
   @JSName("containerAsLayout")
   val containerAsLayout_FLayoutContent: ILayout = js.native
+  
   @JSName("model")
   var model_FLayoutContent: IModel = js.native
-  def containerAsLayout: Layout = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.LayoutContent")
 @js.native
 object LayoutContent extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

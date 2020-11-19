@@ -12,11 +12,12 @@ import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-s3-node/commands/GetBucketLifecycleConfigurationCommand", JSImport.Namespace)
 @js.native
 object getBucketLifecycleConfigurationCommandMod extends js.Object {
+  
   @js.native
   class GetBucketLifecycleConfigurationCommand protected () extends Command[
           InputTypesUnion, 
@@ -27,17 +28,18 @@ object getBucketLifecycleConfigurationCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetBucketLifecycleConfigurationInput) = this()
+    
     val middlewareStack: MiddlewareStack[
         GetBucketLifecycleConfigurationInput, 
         GetBucketLifecycleConfigurationOutput, 
         Readable
       ] = js.native
+    
     val model: OperationModel = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: S3ResolvedConfiguration
     ): Handler[GetBucketLifecycleConfigurationInput, GetBucketLifecycleConfigurationOutput] = js.native
   }
-  
 }
-

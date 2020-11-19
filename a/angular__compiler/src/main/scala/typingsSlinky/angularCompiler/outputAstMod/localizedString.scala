@@ -4,11 +4,12 @@ import typingsSlinky.angularCompiler.metaMod.I18nMeta
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/output/output_ast", "localizedString")
 @js.native
 object localizedString extends js.Object {
+  
   def apply(
     metaBlock: I18nMeta,
     messageParts: js.Array[String],
@@ -23,4 +24,3 @@ object localizedString extends js.Object {
     sourceSpan: ParseSourceSpan
   ): LocalizedString_ = js.native
 }
-

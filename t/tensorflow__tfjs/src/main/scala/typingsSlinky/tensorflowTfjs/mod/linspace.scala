@@ -3,11 +3,12 @@ package typingsSlinky.tensorflowTfjs.mod
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "linspace")
 @js.native
 object linspace extends js.Object {
+  
   /**
     * Return an evenly spaced sequence of numbers over the given interval.
     *
@@ -21,4 +22,3 @@ object linspace extends js.Object {
   /** @doc {heading: 'Tensors', subheading: 'Creation'} */
   def apply(start: Double, stop: Double, num: Double): Tensor1D = js.native
 }
-

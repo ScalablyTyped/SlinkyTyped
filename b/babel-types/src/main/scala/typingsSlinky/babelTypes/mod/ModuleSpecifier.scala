@@ -8,7 +8,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.ImportNamespaceSpecifier
 import typingsSlinky.babelTypes.babelTypesStrings.ImportSpecifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ExportSpecifier_
@@ -19,8 +19,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ExportNamespaceSpecifier_
 */
 trait ModuleSpecifier extends js.Object
-
 object ModuleSpecifier {
+  
   @scala.inline
   def ImportDefaultSpecifier_(
     end: Double,
@@ -33,6 +33,7 @@ object ModuleSpecifier {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleSpecifier]
   }
+  
   @scala.inline
   def ImportNamespaceSpecifier_(
     end: Double,
@@ -45,6 +46,7 @@ object ModuleSpecifier {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleSpecifier]
   }
+  
   @scala.inline
   def ExportSpecifier_(
     end: Double,
@@ -59,6 +61,7 @@ object ModuleSpecifier {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleSpecifier]
   }
+  
   @scala.inline
   def ExportNamespaceSpecifier_(
     end: Double,
@@ -71,6 +74,7 @@ object ModuleSpecifier {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleSpecifier]
   }
+  
   @scala.inline
   def ImportSpecifier_(
     end: Double,
@@ -84,6 +88,7 @@ object ModuleSpecifier {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleSpecifier]
   }
+  
   @scala.inline
   def ExportDefaultSpecifier_(
     end: Double,
@@ -97,4 +102,3 @@ object ModuleSpecifier {
     __obj.asInstanceOf[ModuleSpecifier]
   }
 }
-

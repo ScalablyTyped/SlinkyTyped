@@ -2,7 +2,7 @@ package typingsSlinky.powerappsComponentFramework.ComponentFramework.PropertyHel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Column Sort Direction
@@ -16,13 +16,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`1`
 */
 trait SortDirection extends js.Object
-
 object SortDirection {
+  
   @scala.inline
   def `-1`: typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`-1` = -1.asInstanceOf[typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`-1`]
+  
   @scala.inline
   def `0`: typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`0` = 0.asInstanceOf[typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`0`]
+  
   @scala.inline
   def `1`: typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`1` = 1.asInstanceOf[typingsSlinky.powerappsComponentFramework.powerappsComponentFrameworkNumbers.`1`]
 }
-

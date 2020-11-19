@@ -16,9 +16,10 @@ import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OperationNode {
+  
   @JSImport("rc-tabs/es/TabNavList/OperationNode", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -27,25 +28,34 @@ object OperationNode {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, HTMLDivElement] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def editable(value: EditableConfig): this.type = set("editable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def locale(value: TabsLocale): this.type = set("locale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def moreIconReactElement(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def moreIcon(value: ReactElement): this.type = set("moreIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def moreTransitionName(value: String): this.type = set("moreTransitionName", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def tabBarGutter(value: Double): this.type = set("tabBarGutter", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: OperationNodeProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     activeKey: String,
@@ -60,4 +70,3 @@ object OperationNode {
     new Builder(js.Array(this.component, __props.asInstanceOf[OperationNodeProps with RefAttributes[HTMLDivElement]]))
   }
 }
-

@@ -7,11 +7,16 @@ import typingsSlinky.ionicReact.viewLifeCycleManagerMod.ViewTransitionManagerPro
 import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/react/dist/types/routing", JSImport.Namespace)
 @js.native
 object routingMod extends js.Object {
+  
+  val RouteManagerContext: Context[RouteManagerContextState] = js.native
+  
+  val StackContext: Context[StackContextState] = js.native
+  
   @js.native
   class LocationHistory ()
     extends typingsSlinky.ionicReact.locationHistoryMod.LocationHistory
@@ -31,8 +36,4 @@ object routingMod extends js.Object {
   @js.native
   abstract class ViewStacks ()
     extends typingsSlinky.ionicReact.viewStacksMod.ViewStacks
-  
-  val RouteManagerContext: Context[RouteManagerContextState] = js.native
-  val StackContext: Context[StackContextState] = js.native
 }
-

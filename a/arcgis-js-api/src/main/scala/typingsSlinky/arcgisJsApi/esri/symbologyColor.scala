@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Object containing helper methods for generating optimal symbols for data-driven color visualizations. The [getSchemes()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-color.html#getSchemes) method is used to generate symbol properties best suited to the given geometry type and basemap.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait symbologyColor extends js.Object {
+  
   /**
     * Clones a color scheme object.
     *
@@ -20,6 +21,7 @@ trait symbologyColor extends js.Object {
     *
     */
   def cloneScheme(scheme: ColorScheme): ColorScheme = js.native
+  
   /**
     * Flips the colors in reverse order of the input color scheme.
     *
@@ -29,6 +31,7 @@ trait symbologyColor extends js.Object {
     *
     */
   def flipColors(scheme: ColorScheme): ColorScheme = js.native
+  
   /**
     * Returns all schemes matching the given color ramp.
     *
@@ -43,6 +46,7 @@ trait symbologyColor extends js.Object {
     *
     */
   def getMatchingSchemes(params: colorGetMatchingSchemesParams): js.Array[ColorScheme] = js.native
+  
   /**
     * Returns a color scheme with the provided name.
     *
@@ -67,6 +71,7 @@ trait symbologyColor extends js.Object {
     *
     */
   def getSchemeByName(params: colorGetSchemeByNameParams): ColorScheme = js.native
+  
   /**
     * Returns a primary scheme and secondary schemes defining symbol properties for data-driven color visualizations in a [FeatureLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html). The `basemap` parameter determines the color schemes of the graphics used to visualize each feature. The `geometryType` determines which type of symbol to return.
     *
@@ -90,6 +95,7 @@ trait symbologyColor extends js.Object {
     *
     */
   def getSchemes(params: colorGetSchemesParams): ColorSchemes = js.native
+  
   /**
     * Returns an array of color schemes with the provided tags. These schemes define symbol properties for data-driven color visualizations in any layer that can be rendered with a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html).
     *
@@ -115,6 +121,7 @@ trait symbologyColor extends js.Object {
     *
     */
   def getSchemesByTag(params: colorGetSchemesByTagParams): js.Array[ColorScheme] = js.native
+  
   /**
     * Returns metadata for the available themes. If a basemap is provided, returns themes that work best with the given basemap.
     *
@@ -127,4 +134,3 @@ trait symbologyColor extends js.Object {
   def getThemes(basemap: String): js.Array[Theme] = js.native
   def getThemes(basemap: Basemap): js.Array[Theme] = js.native
 }
-

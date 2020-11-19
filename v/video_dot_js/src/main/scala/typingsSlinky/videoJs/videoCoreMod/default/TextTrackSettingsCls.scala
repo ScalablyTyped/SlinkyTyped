@@ -3,7 +3,7 @@ package typingsSlinky.videoJs.videoCoreMod.default
 import typingsSlinky.videoJs.mod.videojs.TextTrackSettingsOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js/dist/alt/video.core", "TextTrackSettings")
 @js.native
@@ -20,4 +20,3 @@ class TextTrackSettingsCls protected ()
     */
   def this(player: typingsSlinky.videoJs.mod.videojs.Player, options: TextTrackSettingsOptions) = this()
 }
-

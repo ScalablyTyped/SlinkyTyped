@@ -2,7 +2,7 @@ package typingsSlinky.typedGraphql.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.typedGraphql.mod.GraphQLScalarType
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.typedGraphql.mod.GraphQLList
 */
 trait GraphQLNullableType extends js.Object
-

@@ -3,7 +3,7 @@ package typingsSlinky.amapJsApi.global.AMap
 import typingsSlinky.amapJsApi.AMap.Marker.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AMap.Marker")
 @js.native
@@ -15,4 +15,3 @@ class Marker[ExtraData] ()
   extends typingsSlinky.amapJsApi.AMap.Marker[ExtraData] {
   def this(options: Options[ExtraData]) = this()
 }
-

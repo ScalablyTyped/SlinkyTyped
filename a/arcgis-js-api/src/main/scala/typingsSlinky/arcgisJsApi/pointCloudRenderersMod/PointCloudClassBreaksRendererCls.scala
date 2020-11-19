@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.pointCloudRenderersMod
 import typingsSlinky.arcgisJsApi.esri.PointCloudClassBreaksRendererProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/pointCloudRenderers", "PointCloudClassBreaksRenderer")
 @js.native
@@ -16,4 +16,3 @@ class PointCloudClassBreaksRendererCls ()
   extends typingsSlinky.arcgisJsApi.esri.PointCloudClassBreaksRenderer {
   def this(properties: PointCloudClassBreaksRendererProperties) = this()
 }
-

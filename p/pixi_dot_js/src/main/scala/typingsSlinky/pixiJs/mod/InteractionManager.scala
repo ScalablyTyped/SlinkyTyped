@@ -3,7 +3,7 @@ package typingsSlinky.pixiJs.mod
 import typingsSlinky.pixiJs.anon.AutoPreventDefault
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The interaction manager deals with mouse, touch and pointer events.
@@ -25,4 +25,3 @@ class InteractionManager protected ()
   def this(renderer: typingsSlinky.pixiJs.PIXI.Renderer) = this()
   def this(renderer: typingsSlinky.pixiJs.PIXI.Renderer, options: AutoPreventDefault) = this()
 }
-

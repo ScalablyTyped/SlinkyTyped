@@ -5,9 +5,10 @@ import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.officeUiFabricReact.announcedLazyLoadingExampleMod.IAnnouncedLazyLoadingExampleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AnnouncedLazyLoadingExample {
+  
   @JSImport("office-ui-fabric-react/lib/components/Announced/examples/Announced.LazyLoading.Example", "AnnouncedLazyLoadingExample")
   @js.native
   object component extends js.Object
@@ -19,6 +20,7 @@ object AnnouncedLazyLoadingExample {
     tag.type, 
     typingsSlinky.officeUiFabricReact.announcedLazyLoadingExampleMod.AnnouncedLazyLoadingExample
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: AnnouncedLazyLoadingExample.type): Default[
     tag.type, 
     typingsSlinky.officeUiFabricReact.announcedLazyLoadingExampleMod.AnnouncedLazyLoadingExample
@@ -27,4 +29,3 @@ object AnnouncedLazyLoadingExample {
     typingsSlinky.officeUiFabricReact.announcedLazyLoadingExampleMod.AnnouncedLazyLoadingExample
   ](js.Array(this.component, js.Dictionary.empty))()
 }
-

@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.File
 import typingsSlinky.ol.olFeatureMod.FeatureLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/interaction/DragAndDrop", "DragAndDropEvent")
 @js.native
@@ -28,8 +28,10 @@ class DragAndDropEvent protected ()
     opt_features: js.Array[typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]],
     opt_projection: typingsSlinky.ol.projectionMod.default
   ) = this()
+  
   var features: js.Array[FeatureLike] = js.native
+  
   var file: File = js.native
+  
   var projection: typingsSlinky.ol.projectionMod.default = js.native
 }
-

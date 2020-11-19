@@ -3,7 +3,7 @@ package typingsSlinky.chrome.global.chrome
 import typingsSlinky.chrome.chrome.wallpaper.WallpaperDetails
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 ////////////////////
 // Wallpaper
@@ -17,6 +17,6 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.wallpaper")
 @js.native
 object wallpaper extends js.Object {
+  
   def setWallpaper(details: WallpaperDetails, callback: js.Function1[/* thumbnail */ js.Any, Unit]): Unit = js.native
 }
-

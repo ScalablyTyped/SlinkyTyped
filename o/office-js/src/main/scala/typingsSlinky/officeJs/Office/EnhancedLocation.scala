@@ -2,10 +2,11 @@ package typingsSlinky.officeJs.Office
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait EnhancedLocation extends js.Object {
+  
   /**
     * Adds to the set of locations associated with the appointment.
     * 
@@ -43,6 +44,7 @@ trait EnhancedLocation extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  
   /**
     * Gets the set of locations associated with the appointment.
     * 
@@ -70,6 +72,7 @@ trait EnhancedLocation extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[LocationDetails]], Unit]
   ): Unit = js.native
+  
   /**
     * Removes the set of locations associated with the appointment.
     * 
@@ -106,4 +109,3 @@ trait EnhancedLocation extends js.Object {
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
 }
-

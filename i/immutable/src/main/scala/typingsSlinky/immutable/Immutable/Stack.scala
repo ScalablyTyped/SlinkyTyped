@@ -3,18 +3,16 @@ package typingsSlinky.immutable.Immutable
 import typingsSlinky.immutable.Immutable.Collection.Indexed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Stack[T] extends Indexed[T] {
-  /**
-    * The number of items in this Stack.
-    */
-  val size: Double = js.native
+  
   /**
     * @see `Map#asImmutable`
     */
   def asImmutable(): this.type = js.native
+  
   /**
     * Note: Not all methods can be used on a mutable collection or within
     * `withMutations`! Check the documentation for each method to see if it
@@ -23,6 +21,7 @@ trait Stack[T] extends Indexed[T] {
     * @see `Map#asMutable`
     */
   def asMutable(): this.type = js.native
+  
   // Persistent changes
   /**
     * Returns a new Stack with 0 size and no values.
@@ -30,6 +29,7 @@ trait Stack[T] extends Indexed[T] {
     * Note: `clear` can be used in `withMutations`.
     */
   def clear(): Stack[T] = js.native
+  
   /**
     * Returns a new Set with only the values for which the `predicate`
     * function returns true.
@@ -46,23 +46,28 @@ trait Stack[T] extends Indexed[T] {
     predicate: js.Function3[/* value */ T, /* index */ Double, /* iter */ this.type, /* is F */ Boolean],
     context: js.Any
   ): Set[F] = js.native
+  
   // Reading values
   /**
     * Alias for `Stack.first()`.
     */
   def peek(): js.UndefOr[T] = js.native
+  
   /**
     * Alias for `Stack#shift` and is not equivalent to `List#pop`.
     */
   def pop(): Stack[T] = js.native
+  
   /**
     * Alias for `Stack#unshift` and is not equivalent to `List#push`.
     */
   def push(values: T*): Stack[T] = js.native
+  
   /**
     * Alias for `Stack#unshiftAll`.
     */
   def pushAll(iter: js.Iterable[T]): Stack[T] = js.native
+  
   /**
     * Returns a new Stack with a size ones less than this Stack, excluding
     * the first item in this Stack, shifting all other values to a lower index.
@@ -74,6 +79,12 @@ trait Stack[T] extends Indexed[T] {
     * Note: `shift` can be used in `withMutations`.
     */
   def shift(): Stack[T] = js.native
+  
+  /**
+    * The number of items in this Stack.
+    */
+  val size: Double = js.native
+  
   /**
     * Returns a new Stack with the provided `values` prepended, shifting other
     * values ahead to higher indices.
@@ -83,16 +94,19 @@ trait Stack[T] extends Indexed[T] {
     * Note: `unshift` can be used in `withMutations`.
     */
   def unshift(values: T*): Stack[T] = js.native
+  
   /**
     * Like `Stack#unshift`, but accepts a collection rather than varargs.
     *
     * Note: `unshiftAll` can be used in `withMutations`.
     */
   def unshiftAll(iter: js.Iterable[T]): Stack[T] = js.native
+  
   /**
     * @see `Map#wasAltered`
     */
   def wasAltered(): Boolean = js.native
+  
   // Transient changes
   /**
     * Note: Not all methods can be used on a mutable collection or within
@@ -103,4 +117,3 @@ trait Stack[T] extends Indexed[T] {
     */
   def withMutations(mutator: js.Function1[/* mutable */ this.type, _]): this.type = js.native
 }
-

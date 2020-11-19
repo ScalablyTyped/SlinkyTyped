@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AceAjax.Document")
 @js.native
@@ -18,4 +18,3 @@ Instantiable0[typingsSlinky.ace.AceAjax.Document]
       (/* text */ js.Array[String]) | (/* text */ String), 
       typingsSlinky.ace.AceAjax.Document
     ]
-

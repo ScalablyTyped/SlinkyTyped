@@ -3,14 +3,16 @@ package typingsSlinky.multiaddr.mod
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Multiaddr extends js.Object {
+  
   /**
     * The raw bytes representing this multiaddress
     */
   val buffer: Buffer = js.native
+  
   /**
     * Decapsulates a Multiaddr from another Multiaddr
     *
@@ -31,6 +33,7 @@ trait Multiaddr extends js.Object {
   def decapsulate(addr: String): Multiaddr = js.native
   def decapsulate(addr: Multiaddr): Multiaddr = js.native
   def decapsulate(addr: Buffer): Multiaddr = js.native
+  
   /**
     * A more reliable version of `decapsulate` if you are targeting a
     * specific code, such as 421 (the `p2p` protocol code). The last index of the code
@@ -49,6 +52,7 @@ trait Multiaddr extends js.Object {
     * // '/ip4/127.0.0.1/tcp/8080'
     */
   def decapsulateCode(code: Code): Multiaddr = js.native
+  
   /**
     * Encapsulates a Multiaddr in another Multiaddr
     *
@@ -69,6 +73,7 @@ trait Multiaddr extends js.Object {
   def encapsulate(addr: String): Multiaddr = js.native
   def encapsulate(addr: Multiaddr): Multiaddr = js.native
   def encapsulate(addr: Buffer): Multiaddr = js.native
+  
   /**
     * Checks if two Multiaddrs are the same
     *
@@ -86,6 +91,7 @@ trait Multiaddr extends js.Object {
     * // false
     */
   def equals(other: Multiaddr): Boolean = js.native
+  
   /**
     * Extract the path if the multiaddr contains one
     *
@@ -97,6 +103,7 @@ trait Multiaddr extends js.Object {
     * const path = mh1.getPath()
     */
   def getPath(): String | Null = js.native
+  
   /**
     * Extract the peerId if the multiaddr contains one
     *
@@ -108,6 +115,7 @@ trait Multiaddr extends js.Object {
     * const peerId = mh1.getPeerId()
     */
   def getPeerId(): String | Null = js.native
+  
   /**
     * Returns Multiaddr as a human-readable string
     *
@@ -116,6 +124,7 @@ trait Multiaddr extends js.Object {
     * // '<Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001>'
     */
   def inspect(): String = js.native
+  
   /**
     * Returns if a Multiaddr is a Thin Waist address or not.
     *
@@ -139,6 +148,7 @@ trait Multiaddr extends js.Object {
     */
   def isThinWaistAddress(): Boolean = js.native
   def isThinWaistAddress(addr: Multiaddr): Boolean = js.native
+  
   /**
     * Gets a Multiaddrs node-friendly address object. Note that protocol information
     * is left out: in Node (and most network systems) the protocol is unknowable
@@ -151,6 +161,7 @@ trait Multiaddr extends js.Object {
     * // {family: 'IPv4', address: '127.0.0.1', port: '4001'}
     */
   def nodeAddress(): NodeAddress = js.native
+  
   /**
     * Returns the codes of the protocols in left-to-right order.
     * [See list of protocols](https://github.com/multiformats/multiaddr/blob/master/protocols.csv)
@@ -160,6 +171,7 @@ trait Multiaddr extends js.Object {
     * // [ 4, 6 ]
     */
   def protoCodes(): js.Array[Code] = js.native
+  
   /**
     * Returns the names of the protocols in left-to-right order.
     * [See list of protocols](https://github.com/multiformats/multiaddr/blob/master/protocols.csv)
@@ -169,6 +181,7 @@ trait Multiaddr extends js.Object {
     * // [ 'ip4', 'tcp' ]
     */
   def protoNames(): js.Array[String] = js.native
+  
   /**
     * Returns the protocols the Multiaddr is defined with, as an array of objects, in
     * left-to-right order. Each object contains the protocol code, protocol name,
@@ -181,6 +194,7 @@ trait Multiaddr extends js.Object {
     * //   { code: 6, size: 16, name: 'tcp' } ]
     */
   def protos(): js.Array[Protocol] = js.native
+  
   /**
     * Returns a tuple of string/number parts
     *
@@ -189,6 +203,7 @@ trait Multiaddr extends js.Object {
     * // [ [ 4, '127.0.0.1' ], [ 6, 4001 ] ]
     */
   def stringTuples(): js.Array[js.Tuple2[Code, js.UndefOr[String | Double]]] = js.native
+  
   /**
     * Returns Multiaddr as a JSON encoded object
     *
@@ -197,6 +212,7 @@ trait Multiaddr extends js.Object {
     * // '/ip4/127.0.0.1/tcp/4001'
     */
   def toJSON(): String = js.native
+  
   /**
     * Returns Multiaddr as a convenient options object to be used with net.createConnection
     *
@@ -205,6 +221,7 @@ trait Multiaddr extends js.Object {
     * // { family: 'ipv4', host: '127.0.0.1', transport: 'tcp', port: 4001 }
     */
   def toOptions(): Options = js.native
+  
   /**
     * Returns a tuple of parts
     *
@@ -214,4 +231,3 @@ trait Multiaddr extends js.Object {
     */
   def tuples(): js.Array[js.Tuple2[Code, Buffer]] = js.native
 }
-

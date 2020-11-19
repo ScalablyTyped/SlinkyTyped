@@ -6,7 +6,7 @@ import typingsSlinky.summernote.summernoteStrings.fontsize_
 import typingsSlinky.summernote.summernoteStrings.forecolor_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.summernote.summernoteStrings.fontname_
@@ -23,31 +23,41 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.summernote.summernoteStrings.clear
 */
 trait toolbarFontGroupOptions extends js.Object
-
 object toolbarFontGroupOptions {
+  
   @scala.inline
   def backcolor: backcolor_ = "backcolor".asInstanceOf[backcolor_]
+  
   @scala.inline
   def bold: typingsSlinky.summernote.summernoteStrings.bold = "bold".asInstanceOf[typingsSlinky.summernote.summernoteStrings.bold]
+  
   @scala.inline
   def clear: typingsSlinky.summernote.summernoteStrings.clear = "clear".asInstanceOf[typingsSlinky.summernote.summernoteStrings.clear]
+  
   @scala.inline
   def color: typingsSlinky.summernote.summernoteStrings.color = "color".asInstanceOf[typingsSlinky.summernote.summernoteStrings.color]
+  
   @scala.inline
   def fontname: fontname_ = "fontname".asInstanceOf[fontname_]
+  
   @scala.inline
   def fontsize: fontsize_ = "fontsize".asInstanceOf[fontsize_]
+  
   @scala.inline
   def forecolor: forecolor_ = "forecolor".asInstanceOf[forecolor_]
+  
   @scala.inline
   def italic: typingsSlinky.summernote.summernoteStrings.italic = "italic".asInstanceOf[typingsSlinky.summernote.summernoteStrings.italic]
+  
   @scala.inline
   def strikethrough: typingsSlinky.summernote.summernoteStrings.strikethrough = "strikethrough".asInstanceOf[typingsSlinky.summernote.summernoteStrings.strikethrough]
+  
   @scala.inline
   def subscript: typingsSlinky.summernote.summernoteStrings.subscript = "subscript".asInstanceOf[typingsSlinky.summernote.summernoteStrings.subscript]
+  
   @scala.inline
   def superscript: typingsSlinky.summernote.summernoteStrings.superscript = "superscript".asInstanceOf[typingsSlinky.summernote.summernoteStrings.superscript]
+  
   @scala.inline
   def underline: typingsSlinky.summernote.summernoteStrings.underline = "underline".asInstanceOf[typingsSlinky.summernote.summernoteStrings.underline]
 }
-

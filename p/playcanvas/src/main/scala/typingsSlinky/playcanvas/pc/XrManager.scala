@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.pc
 import typingsSlinky.playcanvas.pc.callbacks.XrError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Manage and update XR session and its states.
@@ -20,36 +20,17 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait XrManager extends EventHandler {
+  
   /**
     * True if XR session is running.
     */
   var active: Boolean = js.native
+  
   /**
     * Active camera for which XR session is running or null.
     */
   var camera: Entity | Null = js.native
-  /**
-    * provides ability to hit test representation of real world geometry of underlying AR system.
-    */
-  var hitTest: XrHitTest = js.native
-  /**
-    * provides access to Input Sources.
-    */
-  var input: XrInput = js.native
-  /**
-    * Returns reference space type of currently running XR session or null if no session
-    is running. Can be any of pc.XRSPACE_*.
-    */
-  var spaceType: String | Null = js.native
-  /**
-    * True if XR is supported.
-    */
-  var supported: Boolean = js.native
-  /**
-    * Returns type of currently running XR session or null if no session is running. Can be
-    any of pc.XRTYPE_*.
-    */
-  var `type`: String | Null = js.native
+  
   /**
     * Attempts to end XR session and optionally fires callback when session is ended or failed to end.
     * @example
@@ -62,6 +43,17 @@ trait XrManager extends EventHandler {
     */
   def end(): Unit = js.native
   def end(callback: XrError): Unit = js.native
+  
+  /**
+    * provides ability to hit test representation of real world geometry of underlying AR system.
+    */
+  var hitTest: XrHitTest = js.native
+  
+  /**
+    * provides access to Input Sources.
+    */
+  var input: XrInput = js.native
+  
   /**
     * Check if specific type of session is available
     * @example
@@ -76,6 +68,13 @@ trait XrManager extends EventHandler {
     * @returns True if specified session type is available.
     */
   def isAvailable(`type`: String): Boolean = js.native
+  
+  /**
+    * Returns reference space type of currently running XR session or null if no session
+    is running. Can be any of pc.XRSPACE_*.
+    */
+  var spaceType: String | Null = js.native
+  
   /**
     * Attempts to start XR session for provided {@link pc.CameraComponent} and optionally fires callback when session is created or failed to create.
     * @example
@@ -99,5 +98,15 @@ trait XrManager extends EventHandler {
     */
   def start(camera: CameraComponent, `type`: String, spaceType: String): Unit = js.native
   def start(camera: CameraComponent, `type`: String, spaceType: String, callback: XrError): Unit = js.native
+  
+  /**
+    * True if XR is supported.
+    */
+  var supported: Boolean = js.native
+  
+  /**
+    * Returns type of currently running XR session or null if no session is running. Can be
+    any of pc.XRTYPE_*.
+    */
+  var `type`: String | Null = js.native
 }
-

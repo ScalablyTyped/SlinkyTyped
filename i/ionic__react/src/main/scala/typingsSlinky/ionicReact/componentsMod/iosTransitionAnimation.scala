@@ -5,11 +5,11 @@ import typingsSlinky.ionicCore.animationInterfaceMod.Animation
 import typingsSlinky.ionicCore.transitionMod.TransitionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/react/dist/types/components", "iosTransitionAnimation")
 @js.native
 object iosTransitionAnimation extends js.Object {
+  
   def apply(navEl: HTMLElement, opts: TransitionOptions): Animation = js.native
 }
-

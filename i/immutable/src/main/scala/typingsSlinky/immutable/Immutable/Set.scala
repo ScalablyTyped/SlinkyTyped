@@ -2,15 +2,12 @@ package typingsSlinky.immutable.Immutable
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Set[T]
   extends typingsSlinky.immutable.Immutable.Collection.Set[T] {
-  /**
-    * The number of items in this Set.
-    */
-  val size: Double = js.native
+  
   // Persistent changes
   /**
     * Returns a new Set which also includes this value.
@@ -18,10 +15,12 @@ trait Set[T]
     * Note: `add` can be used in `withMutations`.
     */
   def add(value: T): this.type = js.native
+  
   /**
     * @see `Map#asImmutable`
     */
   def asImmutable(): this.type = js.native
+  
   /**
     * Note: Not all methods can be used on a mutable collection or within
     * `withMutations`! Check the documentation for each method to see if it
@@ -30,12 +29,14 @@ trait Set[T]
     * @see `Map#asMutable`
     */
   def asMutable(): this.type = js.native
+  
   /**
     * Returns a new Set containing no values.
     *
     * Note: `clear` can be used in `withMutations`.
     */
   def clear(): this.type = js.native
+  
   /**
     * Returns a new Set which excludes this value.
     *
@@ -47,6 +48,7 @@ trait Set[T]
     * @alias remove
     */
   def delete(value: T): this.type = js.native
+  
   /**
     * Returns a Set which has removed any values not also contained
     * within `collections`.
@@ -54,8 +56,16 @@ trait Set[T]
     * Note: `intersect` can be used in `withMutations`.
     */
   def intersect(collections: js.Iterable[T]*): this.type = js.native
+  
   def merge[C](collections: js.Iterable[C]*): Set[T | C] = js.native
+  
   def remove(value: T): this.type = js.native
+  
+  /**
+    * The number of items in this Set.
+    */
+  val size: Double = js.native
+  
   /**
     * Returns a Set excluding any values contained within `collections`.
     *
@@ -69,6 +79,7 @@ trait Set[T]
     * Note: `subtract` can be used in `withMutations`.
     */
   def subtract(collections: js.Iterable[T]*): this.type = js.native
+  
   /**
     * Returns a Set including any value from `collections` that does not already
     * exist in this Set.
@@ -78,10 +89,12 @@ trait Set[T]
     * @alias concat
     */
   def union[C](collections: js.Iterable[C]*): Set[T | C] = js.native
+  
   /**
     * @see `Map#wasAltered`
     */
   def wasAltered(): Boolean = js.native
+  
   // Transient changes
   /**
     * Note: Not all methods can be used on a mutable collection or within
@@ -92,4 +105,3 @@ trait Set[T]
     */
   def withMutations(mutator: js.Function1[/* mutable */ this.type, _]): this.type = js.native
 }
-

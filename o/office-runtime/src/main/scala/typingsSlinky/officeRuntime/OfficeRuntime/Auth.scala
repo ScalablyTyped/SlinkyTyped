@@ -2,7 +2,7 @@ package typingsSlinky.officeRuntime.OfficeRuntime
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interface that contains authorization related APIs.
@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Auth extends js.Object {
+  
   /**
     * Calls the Azure Active Directory V 2.0 endpoint to get an access token to your add-in's web application. Enables add-ins to identify users.
     * Server side code can use this token to access Microsoft Graph for the add-in's web application by using the
@@ -31,4 +32,3 @@ trait Auth extends js.Object {
   def getAccessToken(): js.Promise[String] = js.native
   def getAccessToken(options: AuthOptions): js.Promise[String] = js.native
 }
-

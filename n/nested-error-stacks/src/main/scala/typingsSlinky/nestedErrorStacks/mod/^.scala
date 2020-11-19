@@ -3,7 +3,7 @@ package typingsSlinky.nestedErrorStacks.mod
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("nested-error-stacks", JSImport.Namespace)
 @js.native
@@ -12,4 +12,3 @@ class ^ () extends Error {
   def this(message: js.UndefOr[scala.Nothing], nested: js.Error) = this()
   def this(message: js.Any, nested: js.Error) = this()
 }
-

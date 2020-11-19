@@ -36,9 +36,10 @@ import typingsSlinky.reactPlaidLink.reactPlaidLinkStrings.tartan
 import typingsSlinky.reactPlaidLink.reactPlaidLinkStrings.transactions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactPlaidLink {
+  
   @JSImport("react-plaid-link", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -47,33 +48,45 @@ object ReactPlaidLink {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def apiVersion(value: String): this.type = set("apiVersion", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def institution(value: String): this.type = set("institution", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onEvent(
       value: (/* eventName */ ERROR | EXIT | HANDOFF | OPEN | OPEN_MY_PLAID | SEARCH_INSTITUTION | SELECT_INSTITUTION | SUBMIT_CREDENTIALS | SUBMIT_MFA | TRANSITION_VIEW, /* metadata */ Errorcode) => Unit
     ): this.type = set("onEvent", js.Any.fromFunction2(value))
+    
     @scala.inline
     def onExit(value: (/* error */ Displaymessage | Null, /* metadata */ Institution) => Unit): this.type = set("onExit", js.Any.fromFunction2(value))
+    
     @scala.inline
     def onLoad(value: () => Unit): this.type = set("onLoad", js.Any.fromFunction0(value))
+    
     @scala.inline
     def selectAccount(value: Boolean): this.type = set("selectAccount", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def token(value: String): this.type = set("token", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def user(value: EmailAddress): this.type = set("user", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def webhook(value: String): this.type = set("webhook", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: PlaidLinkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     clientName: String,
@@ -88,4 +101,3 @@ object ReactPlaidLink {
     new Builder(js.Array(this.component, __props.asInstanceOf[PlaidLinkProps]))
   }
 }
-

@@ -63,44 +63,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.selectionModeChanged
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojDataGrid_[K, D] extends baseComponent[ojDataGridSettableProperties[K, D]] {
-  var bandingInterval: Column = js.native
-  var cell: ClassName[K, D] = js.native
-  var currentCell: CurrentCell[K] | Null = js.native
-  var data: DataProvider[K, D] = js.native
-  var dnd: Reorder = js.native
-  var editMode: none | cellNavigation | cellEdit = js.native
-  var gridlines: Horizontal = js.native
-  var header: ColumnEnd[K, D] = js.native
-  var onBandingIntervalChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onCellChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onCurrentCellChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDndChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onEditModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onGridlinesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHeaderChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeCurrentCell: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeEdit: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeEditEnd: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjResize: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjScroll: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjSort: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onScrollPolicyChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onScrollPolicyOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onScrollPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var scrollPolicy: auto | loadMoreOnScroll | scroll = js.native
-  var scrollPolicyOptions: MaxColumnCount = js.native
-  var scrollPosition: ColumnIndex[K] = js.native
-  var selection: js.Array[Selection[K]] = js.native
-  var selectionMode: Cell = js.native
-  @JSName("translations")
-  var translations_ojDataGrid_ : AccessibleActionableMode = js.native
+  
   def addEventListener(`type`: editModeChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: editModeChanged,
@@ -252,7 +219,21 @@ trait ojDataGrid_[K, D] extends baseComponent[ojDataGridSettableProperties[K, D]
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var bandingInterval: Column = js.native
+  
+  var cell: ClassName[K, D] = js.native
+  
+  var currentCell: CurrentCell[K] | Null = js.native
+  
+  var data: DataProvider[K, D] = js.native
+  
+  var dnd: Reorder = js.native
+  
+  var editMode: none | cellNavigation | cellEdit = js.native
+  
   def getContextByNode(node: Element): ((CellContext[K, D]) with SubId) | ((HeaderContext[K, D]) with `2`) | ((LabelContext[K, D]) with `3`) = js.native
+  
   @JSName("getProperty")
   def getProperty_bandingInterval(property: bandingInterval): Column = js.native
   @JSName("getProperty")
@@ -279,7 +260,61 @@ trait ojDataGrid_[K, D] extends baseComponent[ojDataGridSettableProperties[K, D]
   def getProperty_selection(property: selection): js.Array[Selection[K]] = js.native
   @JSName("getProperty")
   def getProperty_selectionMode(property: selectionMode): Cell = js.native
+  
+  var gridlines: Horizontal = js.native
+  
+  var header: ColumnEnd[K, D] = js.native
+  
+  var onBandingIntervalChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onCellChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onCurrentCellChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDndChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onEditModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onGridlinesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHeaderChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeCurrentCell: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeEdit: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeEditEnd: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjResize: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjScroll: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjSort: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onScrollPolicyChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onScrollPolicyOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onScrollPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var scrollPolicy: auto | loadMoreOnScroll | scroll = js.native
+  
+  var scrollPolicyOptions: MaxColumnCount = js.native
+  
+  var scrollPosition: ColumnIndex[K] = js.native
+  
+  var selection: js.Array[Selection[K]] = js.native
+  
+  var selectionMode: Cell = js.native
+  
   def setProperties(properties: ojDataGridSettablePropertiesLenient[K, D]): Unit = js.native
+  
   def setProperty(property: editMode, value: cellEdit): Unit = js.native
   def setProperty(property: editMode, value: cellNavigation): Unit = js.native
   def setProperty(property: editMode, value: none): Unit = js.native
@@ -314,5 +349,7 @@ trait ojDataGrid_[K, D] extends baseComponent[ojDataGridSettableProperties[K, D]
   def setProperty_selectionMode(property: selectionMode, value: Cell): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: AccessibleActionableMode): Unit = js.native
+  
+  @JSName("translations")
+  var translations_ojDataGrid_ : AccessibleActionableMode = js.native
 }
-

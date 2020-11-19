@@ -7,17 +7,16 @@ import typingsSlinky.three.loaderMod.Loader
 import typingsSlinky.three.loadingManagerMod.LoadingManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/loaders/FileLoader", JSImport.Namespace)
 @js.native
 object fileLoaderMod extends js.Object {
+  
   @js.native
   class FileLoader () extends Loader {
     def this(manager: LoadingManager) = this()
-    var mimeType: js.UndefOr[MimeType] = js.native
-    var responseType: js.UndefOr[String] = js.native
-    var withCredentials: js.UndefOr[String] = js.native
+    
     def load(url: String): js.Any = js.native
     def load(
       url: String,
@@ -54,10 +53,17 @@ object fileLoaderMod extends js.Object {
       onProgress: js.Function1[/* request */ ProgressEvent, Unit],
       onError: js.Function1[/* event */ ErrorEvent, Unit]
     ): js.Any = js.native
+    
+    var mimeType: js.UndefOr[MimeType] = js.native
+    
+    var responseType: js.UndefOr[String] = js.native
+    
     def setMimeType(mimeType: MimeType): FileLoader = js.native
+    
     def setResponseType(responseType: String): FileLoader = js.native
+    
     def setWithCredentials(value: Boolean): FileLoader = js.native
+    
+    var withCredentials: js.UndefOr[String] = js.native
   }
-  
 }
-

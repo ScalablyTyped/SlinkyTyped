@@ -2,7 +2,7 @@ package typingsSlinky.zoneJs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Task type: `notScheduled`, `scheduling`, `scheduled`, `running`, `canceling`, 'unknown'.
@@ -16,19 +16,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.zoneJs.zoneJsStrings.unknown
 */
 trait TaskState extends js.Object
-
 object TaskState {
+  
   @scala.inline
   def canceling: typingsSlinky.zoneJs.zoneJsStrings.canceling = "canceling".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.canceling]
+  
   @scala.inline
   def notScheduled: typingsSlinky.zoneJs.zoneJsStrings.notScheduled = "notScheduled".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.notScheduled]
+  
   @scala.inline
   def running: typingsSlinky.zoneJs.zoneJsStrings.running = "running".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.running]
+  
   @scala.inline
   def scheduled: typingsSlinky.zoneJs.zoneJsStrings.scheduled = "scheduled".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.scheduled]
+  
   @scala.inline
   def scheduling: typingsSlinky.zoneJs.zoneJsStrings.scheduling = "scheduling".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.scheduling]
+  
   @scala.inline
   def unknown: typingsSlinky.zoneJs.zoneJsStrings.unknown = "unknown".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.unknown]
 }
-

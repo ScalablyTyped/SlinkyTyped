@@ -2,7 +2,7 @@ package typingsSlinky.agGrid.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ag-grid", "ClientSideNodeManager")
 @js.native
@@ -19,12 +19,12 @@ class ClientSideNodeManager protected ()
     selectionController: typingsSlinky.agGrid.selectionControllerMod.SelectionController
   ) = this()
 }
-
 /* static members */
 @JSImport("ag-grid", "ClientSideNodeManager")
 @js.native
 object ClientSideNodeManager extends js.Object {
+  
   var ROOT_NODE_ID: js.Any = js.native
+  
   var TOP_LEVEL: js.Any = js.native
 }
-

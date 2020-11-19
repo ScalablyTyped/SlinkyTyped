@@ -3,11 +3,12 @@ package typingsSlinky.fecha.mod
 import typingsSlinky.fecha.anon.PartialI18nSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fecha", "format")
 @js.native
 object format extends js.Object {
+  
   /***
     * Format a date
     * @method format
@@ -20,4 +21,3 @@ object format extends js.Object {
   def apply(dateObj: js.Date, mask: String): String = js.native
   def apply(dateObj: js.Date, mask: String, i18n: PartialI18nSettings): String = js.native
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Cameras/index", "TargetCamera")
 @js.native
@@ -22,13 +22,14 @@ class TargetCamera protected ()
   def this(name: String, position: Vector3, scene: Scene) = this()
   def this(name: String, position: Vector3, scene: Scene, setActiveOnSceneIfNoneActive: Boolean) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Cameras/index", "TargetCamera")
 @js.native
 object TargetCamera extends js.Object {
+  
   var _RigCamTransformMatrix: js.Any = js.native
+  
   var _TargetFocalPoint: js.Any = js.native
+  
   var _TargetTransformMatrix: js.Any = js.native
 }
-

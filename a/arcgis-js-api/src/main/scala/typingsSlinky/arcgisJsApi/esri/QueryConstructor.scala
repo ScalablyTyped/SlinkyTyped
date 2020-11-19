@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait QueryConstructor
@@ -15,6 +15,6 @@ trait QueryConstructor
   */
 Instantiable0[Query]
      with Instantiable1[/* properties */ QueryProperties, Query] {
+  
   def fromJSON(json: js.Any): Query = js.native
 }
-

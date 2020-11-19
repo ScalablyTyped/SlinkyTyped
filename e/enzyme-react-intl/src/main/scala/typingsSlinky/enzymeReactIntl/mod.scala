@@ -9,13 +9,16 @@ import typingsSlinky.enzyme.mod.ShallowRendererProps
 import typingsSlinky.enzyme.mod.ShallowWrapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("enzyme-react-intl", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def getLocale(): String = js.native
+  
   def loadTranslation(translationFilePath: String): js.Any = js.native
+  
   def mountWithIntl[P](node: ReactElement): ReactWrapper[P, _, ReactComponentClass[js.Object]] = js.native
   def mountWithIntl[P](node: ReactElement, options: MountRendererProps): ReactWrapper[P, _, ReactComponentClass[js.Object]] = js.native
   @JSName("mountWithIntl")
@@ -26,9 +29,12 @@ object mod extends js.Object {
   def mountWithIntl_PS[P, S](node: ReactElement): ReactWrapper[P, S, ReactComponentClass[js.Object]] = js.native
   @JSName("mountWithIntl")
   def mountWithIntl_PS[P, S](node: ReactElement, options: MountRendererProps): ReactWrapper[P, S, ReactComponentClass[js.Object]] = js.native
+  
   def renderWithIntl[P, S](node: ReactElement): Cheerio = js.native
   def renderWithIntl[P, S](node: ReactElement, options: js.Any): Cheerio = js.native
+  
   def setLocale(locale: String): Unit = js.native
+  
   def shallowWithIntl[P](node: ReactElement): ShallowWrapper[P, _, ReactComponentClass[js.Object]] = js.native
   def shallowWithIntl[P](node: ReactElement, options: ShallowRendererProps): ShallowWrapper[P, _, ReactComponentClass[js.Object]] = js.native
   @JSName("shallowWithIntl")
@@ -40,4 +46,3 @@ object mod extends js.Object {
   @JSName("shallowWithIntl")
   def shallowWithIntl_PS[P, S](node: ReactElement, options: ShallowRendererProps): ShallowWrapper[P, S, ReactComponentClass[js.Object]] = js.native
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.officeUiFabricReact
 import typingsSlinky.officeUiFabricReact.contextualMenuItemWrapperTypesMod.IContextualMenuItemWrapperProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/ContextualMenu/ContextualMenuItemWrapper", JSImport.Namespace)
 @js.native
 object contextualMenuItemWrapperMod extends js.Object {
+  
   @js.native
   class ContextualMenuAnchor ()
     extends typingsSlinky.officeUiFabricReact.contextualMenuAnchorMod.ContextualMenuAnchor
@@ -27,6 +28,4 @@ object contextualMenuItemWrapperMod extends js.Object {
     extends typingsSlinky.officeUiFabricReact.contextualMenuSplitButtonMod.ContextualMenuSplitButton {
     def this(props: IContextualMenuItemWrapperProps) = this()
   }
-  
 }
-

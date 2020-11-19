@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait meshUtils extends js.Object {
+  
   /**
     * Creates an elevation sampler from a mesh. The sampler can be used to query elevation values on the surface of the mesh. The elevation sampler uses a snapshot of the Mesh geometry and will not update if the mesh changes after the sampler has been created.
     *
@@ -18,6 +19,7 @@ trait meshUtils extends js.Object {
     */
   def createElevationSampler(mesh: Mesh): js.Promise[ElevationSampler] = js.native
   def createElevationSampler(mesh: Mesh, options: meshUtilsCreateElevationSamplerOptions): js.Promise[ElevationSampler] = js.native
+  
   /**
     * Creates a mesh geometry by sampling elevation data from an elevation service on a regular grid.
     *
@@ -35,6 +37,7 @@ trait meshUtils extends js.Object {
   def createFromElevation(source: ElevationSampler, extent: Extent, options: meshUtilsCreateFromElevationOptions): js.Promise[Mesh] = js.native
   def createFromElevation(source: Ground, extent: Extent): js.Promise[Mesh] = js.native
   def createFromElevation(source: Ground, extent: Extent, options: meshUtilsCreateFromElevationOptions): js.Promise[Mesh] = js.native
+  
   /**
     * Georeferences vertices specified in a Cartesian coordinate system. This is useful when converting general 3D model meshes not typically georeferenced. This method operates on mesh vertex attributes and will convert positions and normals (if specified) from a local (0, 0, 0) Cartesian system to the properly georeferenced coordinates at the specified `location`. The unit of the source data defaults to the unit of the `location`'s spatial reference. If the coordinate system is WGS84, metric units are used as the default. The unit of the source data may be specified in the additional `options` in which case a linear unit scale will automatically be applied to bring the source data in the unit of the spatial reference.
     *
@@ -49,6 +52,7 @@ trait meshUtils extends js.Object {
     */
   def georeference(vertexAttributes: VertexAttributes, location: Point): VertexAttributes = js.native
   def georeference(vertexAttributes: VertexAttributes, location: Point, options: meshUtilsGeoreferenceOptions): VertexAttributes = js.native
+  
   /**
     * Merges multiple meshes into a single mesh. All mesh geometries must be in the same spatial reference.
     *
@@ -58,6 +62,7 @@ trait meshUtils extends js.Object {
     *
     */
   def merge(geometries: js.Array[Mesh]): Mesh = js.native
+  
   /**
     * Projects georeferenced vertices to a Cartesian coordinate system. This is useful for converting existing scene geometry so that it can be used as source material for generating new 3D meshes. This method operates on mesh vertex attributes and will convert positions and normals (if specified) from georeferenced coordinates at the specified `location` to a local (0, 0, 0) Cartesian system. The unit of the resulting data defaults to the unit of the `location`'s spatial reference. If the coordinate system is WGS84, metric units are used as the default. The unit of the resulting data may be specified in the additional `options` in which case a linear unit scale will automatically be applied.
     *
@@ -73,4 +78,3 @@ trait meshUtils extends js.Object {
   def ungeoreference(vertexAttributes: VertexAttributes, location: Point): VertexAttributes = js.native
   def ungeoreference(vertexAttributes: VertexAttributes, location: Point, options: meshUtilsUngeoreferenceOptions): VertexAttributes = js.native
 }
-

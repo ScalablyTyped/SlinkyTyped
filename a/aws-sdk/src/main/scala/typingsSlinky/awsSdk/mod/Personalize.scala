@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.personalizeMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "Personalize")
 @js.native
@@ -14,4 +14,3 @@ class Personalize ()
   extends typingsSlinky.awsSdk.allMod.Personalize {
   def this(options: ClientConfiguration) = this()
 }
-

@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RotationVariableConstructor
@@ -15,6 +15,6 @@ trait RotationVariableConstructor
   */
 Instantiable0[RotationVariable]
      with Instantiable1[/* properties */ RotationVariableProperties, RotationVariable] {
+  
   def fromJSON(json: js.Any): RotationVariable = js.native
 }
-

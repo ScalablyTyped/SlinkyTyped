@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ej.DateRangePicker")
 @js.native
@@ -15,12 +15,12 @@ class DateRangePicker protected ()
   def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.DateRangePicker.Model) = this()
   def this(element: Element, options: typingsSlinky.ejWebAll.ej.DateRangePicker.Model) = this()
 }
-
 /* static members */
 @JSGlobal("ej.DateRangePicker")
 @js.native
 object DateRangePicker extends js.Object {
+  
   var Locale: js.Any = js.native
+  
   var fn: typingsSlinky.ejWebAll.ej.DateRangePicker = js.native
 }
-

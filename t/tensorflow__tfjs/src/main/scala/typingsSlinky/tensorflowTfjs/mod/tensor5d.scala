@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike5D
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor5D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "tensor5d")
 @js.native
 object tensor5d extends js.Object {
+  
   /**
     * Creates rank-5 `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -37,4 +38,3 @@ object tensor5d extends js.Object {
   def apply(values: TensorLike5D, shape: js.Tuple5[Double, Double, Double, Double, Double]): Tensor5D = js.native
   def apply(values: TensorLike5D, shape: js.Tuple5[Double, Double, Double, Double, Double], dtype: DataType): Tensor5D = js.native
 }
-

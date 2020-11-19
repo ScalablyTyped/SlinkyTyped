@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.semanticUiReact.checkboxCheckboxMod.CheckboxProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semantic-ui-react", "Checkbox")
 @js.native
@@ -15,8 +15,6 @@ class Checkbox protected ()
   def this(props: CheckboxProps) = this()
   def this(props: CheckboxProps, context: js.Any) = this()
 }
-
 @JSImport("semantic-ui-react", "Checkbox")
 @js.native
 object Checkbox extends TopLevel[ReactComponentClass[CheckboxProps]]
-

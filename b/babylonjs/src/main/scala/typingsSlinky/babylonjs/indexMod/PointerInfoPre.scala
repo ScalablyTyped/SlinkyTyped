@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.PointerEvent
 import org.scalajs.dom.raw.WheelEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "PointerInfoPre")
 @js.native
@@ -20,4 +20,3 @@ class PointerInfoPre protected ()
     */
   def this(`type`: Double, event: PointerEvent, localX: Double, localY: Double) = this()
 }
-

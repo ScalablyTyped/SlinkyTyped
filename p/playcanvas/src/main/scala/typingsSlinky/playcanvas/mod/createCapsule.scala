@@ -3,11 +3,12 @@ package typingsSlinky.playcanvas.mod
 import typingsSlinky.playcanvas.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("playcanvas", "createCapsule")
 @js.native
 object createCapsule extends js.Object {
+  
   /**
     * Creates a procedural capsule-shaped mesh.
     *
@@ -29,4 +30,3 @@ object createCapsule extends js.Object {
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice): typingsSlinky.playcanvas.pc.Mesh = js.native
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, opts: Height): typingsSlinky.playcanvas.pc.Mesh = js.native
 }
-

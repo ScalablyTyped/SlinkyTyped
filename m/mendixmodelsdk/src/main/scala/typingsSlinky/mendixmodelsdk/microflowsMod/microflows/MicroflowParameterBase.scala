@@ -11,7 +11,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -31,14 +31,28 @@ abstract class MicroflowParameterBase protected ()
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsMicroflow: Microflow = js.native
   @JSName("containerAsMicroflow")
   val containerAsMicroflow_FMicroflowParameterBase: IMicroflow = js.native
+  
+  def containerAsRule: Rule = js.native
   @JSName("containerAsRule")
   val containerAsRule_FMicroflowParameterBase: IRule = js.native
+  
   @JSName("model")
   var model_FMicroflowParameterBase: IModel = js.native
+  
+  def name: String = js.native
+  def name_=(newValue: String): Unit = js.native
   @JSName("name")
   val name_FMicroflowParameterBase: String = js.native
+  
+  /**
+    * In version 7.9.0: introduced
+    */
+  def parameterType: DataType = js.native
+  def parameterType_=(newValue: DataType): Unit = js.native
   /**
     * This property is required and cannot be set to null.
     *
@@ -46,24 +60,10 @@ abstract class MicroflowParameterBase protected ()
     */
   @JSName("parameterType")
   val parameterType_FMicroflowParameterBase: IDataType = js.native
-  /**
-    * The value of this property is conceptually of type dataTypes.LegacyDataType.
-    *
-    * In version 7.9.0: deleted
-    */
-  @JSName("type")
-  val type_FMicroflowParameterBase: String | Null = js.native
-  def containerAsMicroflow: Microflow = js.native
-  def containerAsRule: Rule = js.native
-  def name: String = js.native
-  def name_=(newValue: String): Unit = js.native
-  /**
-    * In version 7.9.0: introduced
-    */
-  def parameterType: DataType = js.native
-  def parameterType_=(newValue: DataType): Unit = js.native
+  
   @JSName("qualifiedName")
   def qualifiedName_MMicroflowParameterBase: String | Null = js.native
+  
   /**
     * The value of this property is conceptually of type dataTypes.LegacyDataType.
     *
@@ -71,13 +71,20 @@ abstract class MicroflowParameterBase protected ()
     */
   def `type`: String = js.native
   def type_=(newValue: String): Unit = js.native
+  /**
+    * The value of this property is conceptually of type dataTypes.LegacyDataType.
+    *
+    * In version 7.9.0: deleted
+    */
+  @JSName("type")
+  val type_FMicroflowParameterBase: String | Null = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.MicroflowParameterBase")
 @js.native
 object MicroflowParameterBase extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

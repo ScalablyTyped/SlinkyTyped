@@ -3,10 +3,11 @@ package typingsSlinky.puppeteer.mod
 import typingsSlinky.puppeteer.anon.Steps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Mouse extends js.Object {
+  
   /**
     * Shortcut for `mouse.move`, `mouse.down` and `mouse.up`.
     * @param x The x position.
@@ -15,12 +16,14 @@ trait Mouse extends js.Object {
     */
   def click(x: Double, y: Double): js.Promise[Unit] = js.native
   def click(x: Double, y: Double, options: ClickOptions): js.Promise[Unit] = js.native
+  
   /**
     * Dispatches a `mousedown` event.
     * @param options The mouse press options.
     */
   def down(): js.Promise[Unit] = js.native
   def down(options: MousePressOptions): js.Promise[Unit] = js.native
+  
   /**
     * Dispatches a `mousemove` event.
     * @param x The x position.
@@ -29,6 +32,7 @@ trait Mouse extends js.Object {
     */
   def move(x: Double, y: Double): js.Promise[Unit] = js.native
   def move(x: Double, y: Double, options: Steps): js.Promise[Unit] = js.native
+  
   /**
     * Dispatches a `mouseup` event.
     * @param options The mouse press options.
@@ -36,4 +40,3 @@ trait Mouse extends js.Object {
   def up(): js.Promise[Unit] = js.native
   def up(options: MousePressOptions): js.Promise[Unit] = js.native
 }
-

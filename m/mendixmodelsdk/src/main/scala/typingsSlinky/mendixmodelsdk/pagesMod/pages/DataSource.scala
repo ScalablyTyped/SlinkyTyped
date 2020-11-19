@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/data-sources relevant section in reference guide}
@@ -25,17 +25,20 @@ abstract class DataSource protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsEntityWidget: EntityWidget = js.native
+  
+  def containerAsWidgetValue: WidgetValue = js.native
+  
   @JSName("model")
   var model_FDataSource: IModel = js.native
-  def containerAsEntityWidget: EntityWidget = js.native
-  def containerAsWidgetValue: WidgetValue = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.DataSource")
 @js.native
 object DataSource extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

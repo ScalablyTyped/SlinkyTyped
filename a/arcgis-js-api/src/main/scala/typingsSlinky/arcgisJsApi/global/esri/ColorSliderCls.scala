@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.ColorSliderProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.ColorSlider")
 @js.native
@@ -16,4 +16,3 @@ class ColorSliderCls ()
   extends typingsSlinky.arcgisJsApi.esri.ColorSlider {
   def this(properties: ColorSliderProperties) = this()
 }
-

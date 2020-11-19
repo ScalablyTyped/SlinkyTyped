@@ -6,13 +6,13 @@ import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrt.Windows.Foundation.Collections.IObservableMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ApplicationDataContainerSettings
   extends IObservableMap[String, js.Any]
-
 object ApplicationDataContainerSettings {
+  
   @scala.inline
   def apply(
     clear: () => Unit,
@@ -29,4 +29,3 @@ object ApplicationDataContainerSettings {
     __obj.asInstanceOf[ApplicationDataContainerSettings]
   }
 }
-

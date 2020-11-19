@@ -3,11 +3,13 @@ package typingsSlinky.globalize.globalizeMod
 import typingsSlinky.cldrjs.mod.CldrStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Shared extends js.Object {
+  
   var cldr: CldrStatic = js.native
+  
   /**
     * Return a function that formats a currency according to the given options or locale's defaults.
     * The returned function is invoked with one argument: the Number value to be formatted.
@@ -20,6 +22,7 @@ trait Shared extends js.Object {
     currency: String,
     options: typingsSlinky.globalize.currencyMod.globalizeDistGlobalizeAugmentingMod.CurrencyFormatterOptions
   ): js.Function1[/* value */ Double, String] = js.native
+  
   /**
     * .dateFormatter( options )
     * @param {DateFormatterOptions} options see date/expand_pattern for more info.
@@ -27,9 +30,11 @@ trait Shared extends js.Object {
     */
   def dateFormatter(): js.Function1[/* value */ js.Date, String] = js.native
   def dateFormatter(options: typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatterOptions): js.Function1[/* value */ js.Date, String] = js.native
+  
   //Return a function that parses a string representing a date into a JavaScript Date object according to the given options. The default parsing assumes numeric year, month, and day (i.e., { skeleton: "yMd" }).
   def dateParser(): js.Function1[/* value */ String, js.Date] = js.native
   def dateParser(options: typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatterOptions): js.Function1[/* value */ String, js.Date] = js.native
+  
   /**
     * .dateToPartsFormatter( options )
     * @param {DateFormatterOptions} options see date/expand_pattern for more info.
@@ -47,6 +52,7 @@ trait Shared extends js.Object {
       typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatPart
     ]
   ] = js.native
+  
   /**
     * Return a currency formatted according to the given options or locale's defaults.
     * @param {number} value The value to format.
@@ -60,12 +66,14 @@ trait Shared extends js.Object {
     currency: String,
     options: typingsSlinky.globalize.currencyMod.globalizeDistGlobalizeAugmentingMod.CurrencyFormatterOptions
   ): String = js.native
+  
   //Alias for .dateFormatter( [options] )( value ).
   def formatDate(value: js.Date): String = js.native
   def formatDate(
     value: js.Date,
     options: typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatterOptions
   ): String = js.native
+  
   //Alias for .dateToPartsFormatter( [options] )( value ).
   def formatDateToParts(value: js.Date): js.Array[
     typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatPart
@@ -76,6 +84,7 @@ trait Shared extends js.Object {
   ): js.Array[
     typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatPart
   ] = js.native
+  
   /**
     * Formats a message (using ICU message format pattern) given its path and a set of variables into a user-readable string
     * @param path String or Array containing the path of the message content, eg. "greetings/bye", or [ "greetings", "bye" ].
@@ -90,6 +99,7 @@ trait Shared extends js.Object {
   def formatMessage(path: js.Array[String], variables: String): String = js.native
   def formatMessage(path: js.Array[String], variables: js.Array[String]): String = js.native
   def formatMessage(path: js.Array[String], variables: js.Object): String = js.native
+  
   /**
     * Return a number formatted according to the given options or locale's defaults.
     * @param {number} value The number to format
@@ -107,6 +117,7 @@ trait Shared extends js.Object {
     value: Double,
     options: typingsSlinky.globalize.numberMod.globalizeDistGlobalizeAugmentingMod.NumberFormatterOptions
   ): String = js.native
+  
   /**
     * Return a relative time according to the given unit
     * @param {number} value The number to be formatted.
@@ -120,6 +131,7 @@ trait Shared extends js.Object {
     unit: String,
     options: typingsSlinky.globalize.relativeTimeMod.globalizeDistGlobalizeAugmentingMod.RelativeTimeFormatterOptions
   ): String = js.native
+  
   /**
     * Alias for .unitFormatter( unit, options )( value ).
     * @param {number} value The number to be formatted.
@@ -133,6 +145,7 @@ trait Shared extends js.Object {
     unit: String,
     options: typingsSlinky.globalize.unitMod.globalizeDistGlobalizeAugmentingMod.UnitFormatterOptions
   ): String = js.native
+  
   /**
     * Return a function that formats a message (using ICU message format pattern) given its path and a set of variables into a user-readable string. It supports pluralization and gender inflections.
     * @param path String or Array containing the path of the message content, eg. "greetings/bye", or [ "greetings", "bye" ].
@@ -140,6 +153,7 @@ trait Shared extends js.Object {
     */
   def messageFormatter(path: String): js.Function1[/* variables */ js.UndefOr[String | js.Array[String] | js.Object], String] = js.native
   def messageFormatter(path: js.Array[String]): js.Function1[/* variables */ js.UndefOr[String | js.Array[String] | js.Object], String] = js.native
+  
   /**
     * Return a function that formats a number according to the given options or locale's defaults.
     * @param {NumberFormatterOptions} options A JSON object including none or any of the following options.
@@ -155,6 +169,7 @@ trait Shared extends js.Object {
   def numberFormatter(
     options: typingsSlinky.globalize.numberMod.globalizeDistGlobalizeAugmentingMod.NumberFormatterOptions
   ): js.Function1[/* value */ Double, String] = js.native
+  
   /**
     * Return a function that parses a string representing a number according to the given options or locale's defaults.
     * @param {NumberParserOptions} options A JSON object including none or any of the following options.
@@ -163,6 +178,7 @@ trait Shared extends js.Object {
     */
   def numberParser(): js.Function1[/* value */ String, Double] = js.native
   def numberParser(options: typingsSlinky.globalize.numberMod.globalizeDistGlobalizeAugmentingMod.NumberParserOptions): js.Function1[/* value */ String, Double] = js.native
+  
   /**
     * Alias for .dateParser( [options] )( value ).
     * @param {string} value The object whose module id you wish to determine.
@@ -174,6 +190,7 @@ trait Shared extends js.Object {
     value: String,
     options: typingsSlinky.globalize.dateMod.globalizeDistGlobalizeAugmentingMod.DateFormatterOptions
   ): js.Date = js.native
+  
   /**
     * A function that parses a string representing a number according to the given options or locale's defaults.
     * @param {string} value The number as string to parse
@@ -186,6 +203,7 @@ trait Shared extends js.Object {
     value: String,
     options: typingsSlinky.globalize.numberMod.globalizeDistGlobalizeAugmentingMod.NumberParserOptions
   ): Double = js.native
+  
   /**
     * Returns the value's corresponding plural group: zero, one, two, few, many, or other.
     * @param {number} value A Number for which to return the plural group.
@@ -198,6 +216,7 @@ trait Shared extends js.Object {
     value: Double,
     options: typingsSlinky.globalize.pluralMod.globalizeDistGlobalizeAugmentingMod.PluralGeneratorOptions
   ): String = js.native
+  
   /**
     * Return a function that returns the value's corresponding plural group: zero, one, two, few, many, or other.
     * The returned function is invoked with one argument: the Number value for which to return the plural group.
@@ -209,6 +228,7 @@ trait Shared extends js.Object {
   def pluralGenerator(
     options: typingsSlinky.globalize.pluralMod.globalizeDistGlobalizeAugmentingMod.PluralGeneratorOptions
   ): js.Function1[/* value */ Double, String] = js.native
+  
   /**
     * Returns a function that formats a relative time according to the given unit, options, and the default/instance locale.
     * The returned function is invoked with one argument: the number value to be formatted.
@@ -221,6 +241,7 @@ trait Shared extends js.Object {
     unit: String,
     options: typingsSlinky.globalize.relativeTimeMod.globalizeDistGlobalizeAugmentingMod.RelativeTimeFormatterOptions
   ): js.Function1[/* value */ Double, String] = js.native
+  
   /**
     * Returns a function that formats a unit according to the given unit, options, and the default/instance locale.
     * The returned function is invoked with one argument: the number value to be formatted.
@@ -234,4 +255,3 @@ trait Shared extends js.Object {
     options: typingsSlinky.globalize.unitMod.globalizeDistGlobalizeAugmentingMod.UnitFormatterOptions
   ): js.Function1[/* value */ Double, String] = js.native
 }
-

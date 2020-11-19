@@ -10,11 +10,12 @@ import typingsSlinky.typescript.mod.QuestionToken
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateParameter")
 @js.native
 object updateParameter extends js.Object {
+  
   def apply(
     node: ParameterDeclaration,
     decorators: js.UndefOr[js.Array[Decorator]],
@@ -26,4 +27,3 @@ object updateParameter extends js.Object {
     initializer: js.UndefOr[Expression]
   ): ParameterDeclaration = js.native
 }
-

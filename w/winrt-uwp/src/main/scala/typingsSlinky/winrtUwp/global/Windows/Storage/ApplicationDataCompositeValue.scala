@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.Storage
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents related app settings that must be serialized and deserialized atomically. */
 @JSGlobal("Windows.Storage.ApplicationDataCompositeValue")
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
 /** Creates and initializes a new, initially empty, instance of the object. */
 class ApplicationDataCompositeValue ()
   extends typingsSlinky.winrtUwp.Windows.Storage.ApplicationDataCompositeValue
-

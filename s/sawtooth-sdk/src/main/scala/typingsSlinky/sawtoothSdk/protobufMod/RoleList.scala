@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "RoleList")
 @js.native
@@ -16,20 +16,22 @@ import scala.scalajs.js.annotation._
   */
 class RoleList () extends IRoleList {
   def this(properties: IRoleList) = this()
+  
   /** RoleList roles. */
   @JSName("roles")
   var roles_RoleList: js.Array[IRole] = js.native
+  
   /**
     * Converts this RoleList to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "RoleList")
 @js.native
 object RoleList extends js.Object {
+  
   /**
     * Creates a new RoleList instance using the specified properties.
     * @param [properties] Properties to set
@@ -37,6 +39,7 @@ object RoleList extends js.Object {
     */
   def create(): RoleList = js.native
   def create(properties: IRoleList): RoleList = js.native
+  
   /**
     * Decodes a RoleList message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -49,6 +52,7 @@ object RoleList extends js.Object {
   def decode(reader: Reader, length: Double): RoleList = js.native
   def decode(reader: js.typedarray.Uint8Array): RoleList = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): RoleList = js.native
+  
   /**
     * Decodes a RoleList message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -58,6 +62,7 @@ object RoleList extends js.Object {
     */
   def decodeDelimited(reader: Reader): RoleList = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): RoleList = js.native
+  
   /**
     * Encodes the specified RoleList message. Does not implicitly {@link RoleList.verify|verify} messages.
     * @param message RoleList message or plain object to encode
@@ -66,6 +71,7 @@ object RoleList extends js.Object {
     */
   def encode(message: IRoleList): Writer = js.native
   def encode(message: IRoleList, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified RoleList message, length delimited. Does not implicitly {@link RoleList.verify|verify} messages.
     * @param message RoleList message or plain object to encode
@@ -74,12 +80,14 @@ object RoleList extends js.Object {
     */
   def encodeDelimited(message: IRoleList): Writer = js.native
   def encodeDelimited(message: IRoleList, writer: Writer): Writer = js.native
+  
   /**
     * Creates a RoleList message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns RoleList
     */
   def fromObject(`object`: StringDictionary[js.Any]): RoleList = js.native
+  
   /**
     * Creates a plain object from a RoleList message. Also converts values to other types if specified.
     * @param message RoleList
@@ -88,6 +96,7 @@ object RoleList extends js.Object {
     */
   def toObject(message: RoleList): StringDictionary[js.Any] = js.native
   def toObject(message: RoleList, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a RoleList message.
     * @param message Plain object to verify
@@ -95,4 +104,3 @@ object RoleList extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

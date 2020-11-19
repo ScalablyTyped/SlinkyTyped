@@ -3,11 +3,11 @@ package typingsSlinky.winjs.mod.UI.XYFocus
 import org.scalajs.dom.raw.CustomEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("winjs", "UI.XYFocus.onfocuschanged")
 @js.native
 object onfocuschanged extends js.Object {
+  
   def apply(eventInfo: CustomEvent): Unit = js.native
 }
-

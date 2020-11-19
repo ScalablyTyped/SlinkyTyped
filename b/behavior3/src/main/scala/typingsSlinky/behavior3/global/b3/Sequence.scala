@@ -3,7 +3,7 @@ package typingsSlinky.behavior3.global.b3
 import typingsSlinky.behavior3.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Sequence node ticks its children sequentially until one of them
@@ -20,4 +20,3 @@ class Sequence ()
   extends typingsSlinky.behavior3.b3.Sequence {
   def this(hasChildren: `0`) = this()
 }
-

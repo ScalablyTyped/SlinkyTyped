@@ -5,11 +5,12 @@ import typingsSlinky.d3Selection.mod.Selection_
 import typingsSlinky.d3Selection.mod.ValueFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DragBehavior[GElement /* <: Element */, Datum, Subject]
   extends js.Function {
+  
   /**
     * Applies the drag behavior to the selected elements.
     * This function is typically not invoked directly, and is instead invoked via selection.call.
@@ -20,6 +21,7 @@ trait DragBehavior[GElement /* <: Element */, Datum, Subject]
     * @param args Optional arguments to be passed in.
     */
   def apply(selection: Selection_[GElement, Datum, _, _], args: js.Any*): Unit = js.native
+  
   /**
     * Return the current click distance threshold, which defaults to zero.
     */
@@ -33,6 +35,7 @@ trait DragBehavior[GElement /* <: Element */, Datum, Subject]
     * The default is zero.
     */
   def clickDistance(distance: Double): this.type = js.native
+  
   /**
     * Returns the current container accessor function.
     */
@@ -70,6 +73,7 @@ trait DragBehavior[GElement /* <: Element */, Datum, Subject]
     * @param container Container element for the drag gesture.
     */
   def container(container: DragContainerElement): this.type = js.native
+  
   /**
     * Returns the current filter function.
     */
@@ -86,6 +90,7 @@ trait DragBehavior[GElement /* <: Element */, Datum, Subject]
     * with this as the current DOM element. The function returns a boolean value.
     */
   def filter(filterFn: ValueFn[GElement, Datum, Boolean]): this.type = js.native
+  
   /**
     * Return the first currently-assigned listener matching the specified typenames, if any.
     *
@@ -129,6 +134,7 @@ trait DragBehavior[GElement /* <: Element */, Datum, Subject]
     * with this as the current DOM element.
     */
   def on(typenames: String, listener: ValueFn[GElement, Datum, Unit]): this.type = js.native
+  
   /**
     *  Returns the current subject accessor functions.
     */
@@ -166,6 +172,7 @@ trait DragBehavior[GElement /* <: Element */, Datum, Subject]
     * however, other starting touches may yet start drag gestures.
     */
   def subject(accessor: ValueFn[GElement, Datum, Subject]): this.type = js.native
+  
   /**
     * Returns the current touch support detector, which defaults to a function returning true,
     * if the "ontouchstart" event is supported on the current element.
@@ -194,4 +201,3 @@ trait DragBehavior[GElement /* <: Element */, Datum, Subject]
     */
   def touchable(touchable: ValueFn[GElement, Datum, Boolean]): this.type = js.native
 }
-

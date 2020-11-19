@@ -35,9 +35,10 @@ import typingsSlinky.mjmlReact.mod.PaddingProps
 import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MjmlSocialElement {
+  
   @JSImport("mjml-react", "MjmlSocialElement")
   @js.native
   object component extends js.Object
@@ -46,55 +47,77 @@ object MjmlSocialElement {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlSocialElement] {
+    
     @scala.inline
     def align(value: String): this.type = set("align", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def alt(value: String): this.type = set("alt", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def backgroundColor(value: BackgroundColor): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def borderRadius(value: String | Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fontSize(value: String | Double): this.type = set("fontSize", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def iconHeight(value: String): this.type = set("iconHeight", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def iconSize(value: String): this.type = set("iconSize", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def lineHeight(value: String | Double): this.type = set("lineHeight", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def mode(value: vertical | horizontal): this.type = set("mode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def name(
       value: facebook | `facebook-noshare` | twitter | `twitter-noshare` | google | `google-noshare` | pinterest | `pinterest-noshare` | linkedin | `linkedin-noshare` | tumblr | `tumblr-noshare` | xing | `xing-noshare` | github | instagram | web | snapchat | youtube | vimeo | medium | soundcloud | dribbble
     ): this.type = set("name", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def padding(value: String | Double): this.type = set("padding", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def paddingBottom(value: String | Double): this.type = set("paddingBottom", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def paddingLeft(value: String | Double): this.type = set("paddingLeft", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def paddingRight(value: String | Double): this.type = set("paddingRight", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def paddingTop(value: String | Double): this.type = set("paddingTop", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def rel(value: String): this.type = set("rel", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def src(value: String): this.type = set("src", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def textDecoration(value: String): this.type = set("textDecoration", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: MjmlSocialElementProps with RequiredChildrenProps with HrefProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: MjmlSocialElement.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

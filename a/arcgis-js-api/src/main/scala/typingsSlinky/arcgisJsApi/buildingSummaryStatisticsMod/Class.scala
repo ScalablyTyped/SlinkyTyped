@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.BuildingSummaryStatistics
 import typingsSlinky.arcgisJsApi.esri.BuildingSummaryStatisticsProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/layers/support/BuildingSummaryStatistics", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends BuildingSummaryStatistics {
   def this(properties: BuildingSummaryStatisticsProperties) = this()
 }
-

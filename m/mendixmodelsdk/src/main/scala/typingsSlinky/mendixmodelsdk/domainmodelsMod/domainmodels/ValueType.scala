@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 6.6.0: added public
@@ -29,18 +29,20 @@ abstract class ValueType protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsAttribute: Attribute = js.native
   @JSName("containerAsAttribute")
   val containerAsAttribute_FValueType: IAttribute = js.native
+  
   @JSName("model")
   var model_FValueType: IModel = js.native
-  def containerAsAttribute: Attribute = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.ValueType")
 @js.native
 object ValueType extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

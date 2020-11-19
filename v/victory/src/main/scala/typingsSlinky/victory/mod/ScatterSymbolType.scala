@@ -2,7 +2,7 @@ package typingsSlinky.victory.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.victory.victoryStrings.circle
@@ -14,21 +14,26 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.victory.victoryStrings.triangleUp
 */
 trait ScatterSymbolType extends js.Object
-
 object ScatterSymbolType {
+  
   @scala.inline
   def circle: typingsSlinky.victory.victoryStrings.circle = "circle".asInstanceOf[typingsSlinky.victory.victoryStrings.circle]
+  
   @scala.inline
   def diamond: typingsSlinky.victory.victoryStrings.diamond = "diamond".asInstanceOf[typingsSlinky.victory.victoryStrings.diamond]
+  
   @scala.inline
   def plus: typingsSlinky.victory.victoryStrings.plus = "plus".asInstanceOf[typingsSlinky.victory.victoryStrings.plus]
+  
   @scala.inline
   def square: typingsSlinky.victory.victoryStrings.square = "square".asInstanceOf[typingsSlinky.victory.victoryStrings.square]
+  
   @scala.inline
   def star: typingsSlinky.victory.victoryStrings.star = "star".asInstanceOf[typingsSlinky.victory.victoryStrings.star]
+  
   @scala.inline
   def triangleDown: typingsSlinky.victory.victoryStrings.triangleDown = "triangleDown".asInstanceOf[typingsSlinky.victory.victoryStrings.triangleDown]
+  
   @scala.inline
   def triangleUp: typingsSlinky.victory.victoryStrings.triangleUp = "triangleUp".asInstanceOf[typingsSlinky.victory.victoryStrings.triangleUp]
 }
-

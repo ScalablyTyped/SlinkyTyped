@@ -3,11 +3,12 @@ package typingsSlinky.stropheJs.mod.Strophe
 import org.scalajs.dom.raw.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("strophe.js", "Strophe.xmlHtmlNode")
 @js.native
 object xmlHtmlNode extends js.Object {
+  
   /** Function: xmlHtmlNode
     *  Creates an XML DOM html node.
     *
@@ -19,4 +20,3 @@ object xmlHtmlNode extends js.Object {
     */
   def apply(html: String): Document = js.native
 }
-

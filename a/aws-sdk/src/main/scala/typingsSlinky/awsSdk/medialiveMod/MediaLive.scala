@@ -20,12 +20,11 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MediaLive extends Service {
-  @JSName("config")
-  var config_MediaLive: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Update a channel schedule
     */
@@ -39,6 +38,10 @@ trait MediaLive extends Service {
     params: BatchUpdateScheduleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchUpdateScheduleResponse, Unit]
   ): Request[BatchUpdateScheduleResponse, AWSError] = js.native
+  
+  @JSName("config")
+  var config_MediaLive: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates a new channel
     */
@@ -52,6 +55,7 @@ trait MediaLive extends Service {
     params: CreateChannelRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateChannelResponse, Unit]
   ): Request[CreateChannelResponse, AWSError] = js.native
+  
   /**
     * Create an input
     */
@@ -65,6 +69,7 @@ trait MediaLive extends Service {
     params: CreateInputRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateInputResponse, Unit]
   ): Request[CreateInputResponse, AWSError] = js.native
+  
   /**
     * Creates a Input Security Group
     */
@@ -78,6 +83,7 @@ trait MediaLive extends Service {
     params: CreateInputSecurityGroupRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateInputSecurityGroupResponse, Unit]
   ): Request[CreateInputSecurityGroupResponse, AWSError] = js.native
+  
   /**
     * Create a new multiplex.
     */
@@ -91,6 +97,7 @@ trait MediaLive extends Service {
     params: CreateMultiplexRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateMultiplexResponse, Unit]
   ): Request[CreateMultiplexResponse, AWSError] = js.native
+  
   /**
     * Create a new program in the multiplex.
     */
@@ -104,6 +111,7 @@ trait MediaLive extends Service {
     params: CreateMultiplexProgramRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateMultiplexProgramResponse, Unit]
   ): Request[CreateMultiplexProgramResponse, AWSError] = js.native
+  
   /**
     * Create tags for a resource
     */
@@ -114,6 +122,7 @@ trait MediaLive extends Service {
     */
   def createTags(params: CreateTagsRequest): Request[js.Object, AWSError] = js.native
   def createTags(params: CreateTagsRequest, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  
   /**
     * Starts deletion of channel. The associated outputs are also deleted.
     */
@@ -127,6 +136,7 @@ trait MediaLive extends Service {
     params: DeleteChannelRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteChannelResponse, Unit]
   ): Request[DeleteChannelResponse, AWSError] = js.native
+  
   /**
     * Deletes the input end point
     */
@@ -140,6 +150,7 @@ trait MediaLive extends Service {
     params: DeleteInputRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteInputResponse, Unit]
   ): Request[DeleteInputResponse, AWSError] = js.native
+  
   /**
     * Deletes an Input Security Group
     */
@@ -153,6 +164,7 @@ trait MediaLive extends Service {
     params: DeleteInputSecurityGroupRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteInputSecurityGroupResponse, Unit]
   ): Request[DeleteInputSecurityGroupResponse, AWSError] = js.native
+  
   /**
     * Delete a multiplex. The multiplex must be idle.
     */
@@ -166,6 +178,7 @@ trait MediaLive extends Service {
     params: DeleteMultiplexRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteMultiplexResponse, Unit]
   ): Request[DeleteMultiplexResponse, AWSError] = js.native
+  
   /**
     * Delete a program from a multiplex.
     */
@@ -179,6 +192,7 @@ trait MediaLive extends Service {
     params: DeleteMultiplexProgramRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteMultiplexProgramResponse, Unit]
   ): Request[DeleteMultiplexProgramResponse, AWSError] = js.native
+  
   /**
     * Delete an expired reservation.
     */
@@ -192,6 +206,7 @@ trait MediaLive extends Service {
     params: DeleteReservationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteReservationResponse, Unit]
   ): Request[DeleteReservationResponse, AWSError] = js.native
+  
   /**
     * Delete all schedule actions on a channel.
     */
@@ -205,6 +220,7 @@ trait MediaLive extends Service {
     params: DeleteScheduleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteScheduleResponse, Unit]
   ): Request[DeleteScheduleResponse, AWSError] = js.native
+  
   /**
     * Removes tags for a resource
     */
@@ -215,6 +231,7 @@ trait MediaLive extends Service {
     */
   def deleteTags(params: DeleteTagsRequest): Request[js.Object, AWSError] = js.native
   def deleteTags(params: DeleteTagsRequest, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  
   /**
     * Gets details about a channel
     */
@@ -228,6 +245,7 @@ trait MediaLive extends Service {
     params: DescribeChannelRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeChannelResponse, Unit]
   ): Request[DescribeChannelResponse, AWSError] = js.native
+  
   /**
     * Produces details about an input
     */
@@ -241,6 +259,7 @@ trait MediaLive extends Service {
     params: DescribeInputRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputResponse, Unit]
   ): Request[DescribeInputResponse, AWSError] = js.native
+  
   /**
     * Gets the details for the input device
     */
@@ -254,6 +273,7 @@ trait MediaLive extends Service {
     params: DescribeInputDeviceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputDeviceResponse, Unit]
   ): Request[DescribeInputDeviceResponse, AWSError] = js.native
+  
   /**
     * Get the latest thumbnail data for the input device.
     */
@@ -267,6 +287,7 @@ trait MediaLive extends Service {
     params: DescribeInputDeviceThumbnailRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputDeviceThumbnailResponse, Unit]
   ): Request[DescribeInputDeviceThumbnailResponse, AWSError] = js.native
+  
   /**
     * Produces a summary of an Input Security Group
     */
@@ -280,6 +301,7 @@ trait MediaLive extends Service {
     params: DescribeInputSecurityGroupRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeInputSecurityGroupResponse, Unit]
   ): Request[DescribeInputSecurityGroupResponse, AWSError] = js.native
+  
   /**
     * Gets details about a multiplex.
     */
@@ -293,6 +315,7 @@ trait MediaLive extends Service {
     params: DescribeMultiplexRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeMultiplexResponse, Unit]
   ): Request[DescribeMultiplexResponse, AWSError] = js.native
+  
   /**
     * Get the details for a program in a multiplex.
     */
@@ -306,6 +329,7 @@ trait MediaLive extends Service {
     params: DescribeMultiplexProgramRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeMultiplexProgramResponse, Unit]
   ): Request[DescribeMultiplexProgramResponse, AWSError] = js.native
+  
   /**
     * Get details for an offering.
     */
@@ -319,6 +343,7 @@ trait MediaLive extends Service {
     params: DescribeOfferingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeOfferingResponse, Unit]
   ): Request[DescribeOfferingResponse, AWSError] = js.native
+  
   /**
     * Get details for a reservation.
     */
@@ -332,6 +357,7 @@ trait MediaLive extends Service {
     params: DescribeReservationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeReservationResponse, Unit]
   ): Request[DescribeReservationResponse, AWSError] = js.native
+  
   /**
     * Get a channel schedule
     */
@@ -345,6 +371,7 @@ trait MediaLive extends Service {
     params: DescribeScheduleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeScheduleResponse, Unit]
   ): Request[DescribeScheduleResponse, AWSError] = js.native
+  
   /**
     * Produces list of channels that have been created
     */
@@ -358,6 +385,7 @@ trait MediaLive extends Service {
     params: ListChannelsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListChannelsResponse, Unit]
   ): Request[ListChannelsResponse, AWSError] = js.native
+  
   /**
     * List input devices
     */
@@ -371,6 +399,7 @@ trait MediaLive extends Service {
     params: ListInputDevicesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListInputDevicesResponse, Unit]
   ): Request[ListInputDevicesResponse, AWSError] = js.native
+  
   /**
     * Produces a list of Input Security Groups for an account
     */
@@ -384,6 +413,7 @@ trait MediaLive extends Service {
     params: ListInputSecurityGroupsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListInputSecurityGroupsResponse, Unit]
   ): Request[ListInputSecurityGroupsResponse, AWSError] = js.native
+  
   /**
     * Produces list of inputs that have been created
     */
@@ -397,6 +427,7 @@ trait MediaLive extends Service {
     params: ListInputsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListInputsResponse, Unit]
   ): Request[ListInputsResponse, AWSError] = js.native
+  
   /**
     * List the programs that currently exist for a specific multiplex.
     */
@@ -410,6 +441,7 @@ trait MediaLive extends Service {
     params: ListMultiplexProgramsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListMultiplexProgramsResponse, Unit]
   ): Request[ListMultiplexProgramsResponse, AWSError] = js.native
+  
   /**
     * Retrieve a list of the existing multiplexes.
     */
@@ -423,6 +455,7 @@ trait MediaLive extends Service {
     params: ListMultiplexesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListMultiplexesResponse, Unit]
   ): Request[ListMultiplexesResponse, AWSError] = js.native
+  
   /**
     * List offerings available for purchase.
     */
@@ -436,6 +469,7 @@ trait MediaLive extends Service {
     params: ListOfferingsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListOfferingsResponse, Unit]
   ): Request[ListOfferingsResponse, AWSError] = js.native
+  
   /**
     * List purchased reservations.
     */
@@ -449,6 +483,7 @@ trait MediaLive extends Service {
     params: ListReservationsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListReservationsResponse, Unit]
   ): Request[ListReservationsResponse, AWSError] = js.native
+  
   /**
     * Produces list of tags that have been created for a resource
     */
@@ -462,6 +497,7 @@ trait MediaLive extends Service {
     params: ListTagsForResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
   ): Request[ListTagsForResourceResponse, AWSError] = js.native
+  
   /**
     * Purchase an offering and create a reservation.
     */
@@ -475,6 +511,7 @@ trait MediaLive extends Service {
     params: PurchaseOfferingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PurchaseOfferingResponse, Unit]
   ): Request[PurchaseOfferingResponse, AWSError] = js.native
+  
   /**
     * Starts an existing channel
     */
@@ -488,6 +525,7 @@ trait MediaLive extends Service {
     params: StartChannelRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartChannelResponse, Unit]
   ): Request[StartChannelResponse, AWSError] = js.native
+  
   /**
     * Start (run) the multiplex. Starting the multiplex does not start the channels. You must explicitly start each channel.
     */
@@ -501,6 +539,7 @@ trait MediaLive extends Service {
     params: StartMultiplexRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartMultiplexResponse, Unit]
   ): Request[StartMultiplexResponse, AWSError] = js.native
+  
   /**
     * Stops a running channel
     */
@@ -514,6 +553,7 @@ trait MediaLive extends Service {
     params: StopChannelRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopChannelResponse, Unit]
   ): Request[StopChannelResponse, AWSError] = js.native
+  
   /**
     * Stops a running multiplex. If the multiplex isn't running, this action has no effect.
     */
@@ -527,6 +567,7 @@ trait MediaLive extends Service {
     params: StopMultiplexRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopMultiplexResponse, Unit]
   ): Request[StopMultiplexResponse, AWSError] = js.native
+  
   /**
     * Updates a channel.
     */
@@ -540,6 +581,7 @@ trait MediaLive extends Service {
     params: UpdateChannelRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateChannelResponse, Unit]
   ): Request[UpdateChannelResponse, AWSError] = js.native
+  
   /**
     * Changes the class of the channel.
     */
@@ -553,6 +595,7 @@ trait MediaLive extends Service {
     params: UpdateChannelClassRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateChannelClassResponse, Unit]
   ): Request[UpdateChannelClassResponse, AWSError] = js.native
+  
   /**
     * Updates an input.
     */
@@ -566,6 +609,7 @@ trait MediaLive extends Service {
     params: UpdateInputRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateInputResponse, Unit]
   ): Request[UpdateInputResponse, AWSError] = js.native
+  
   /**
     * Updates the parameters for the input device.
     */
@@ -579,6 +623,7 @@ trait MediaLive extends Service {
     params: UpdateInputDeviceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateInputDeviceResponse, Unit]
   ): Request[UpdateInputDeviceResponse, AWSError] = js.native
+  
   /**
     * Update an Input Security Group's Whilelists.
     */
@@ -592,6 +637,7 @@ trait MediaLive extends Service {
     params: UpdateInputSecurityGroupRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateInputSecurityGroupResponse, Unit]
   ): Request[UpdateInputSecurityGroupResponse, AWSError] = js.native
+  
   /**
     * Updates a multiplex.
     */
@@ -605,6 +651,7 @@ trait MediaLive extends Service {
     params: UpdateMultiplexRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateMultiplexResponse, Unit]
   ): Request[UpdateMultiplexResponse, AWSError] = js.native
+  
   /**
     * Update a program in a multiplex.
     */
@@ -618,6 +665,7 @@ trait MediaLive extends Service {
     params: UpdateMultiplexProgramRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateMultiplexProgramResponse, Unit]
   ): Request[UpdateMultiplexProgramResponse, AWSError] = js.native
+  
   /**
     * Update reservation.
     */
@@ -631,6 +679,7 @@ trait MediaLive extends Service {
     params: UpdateReservationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateReservationResponse, Unit]
   ): Request[UpdateReservationResponse, AWSError] = js.native
+  
   /**
     * Waits for the channelCreated state by periodically calling the underlying MediaLive.describeChanneloperation every 3 seconds (at most 5 times). Wait until a channel has been created
     */
@@ -863,4 +912,3 @@ trait MediaLive extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeMultiplexResponse, Unit]
   ): Request[DescribeMultiplexResponse, AWSError] = js.native
 }
-

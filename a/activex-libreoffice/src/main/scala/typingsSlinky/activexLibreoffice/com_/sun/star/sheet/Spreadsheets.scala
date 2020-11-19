@@ -9,7 +9,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.table.XCellRange
 import typingsSlinky.std.SafeArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * represents the collection of spreadsheets in a spreadsheet document.
@@ -21,8 +21,8 @@ trait Spreadsheets
      with XIndexAccess
      with XEnumerationAccess
      with XCellRangesAccess
-
 object Spreadsheets {
+  
   @scala.inline
   def apply(
     Count: Double,
@@ -53,4 +53,3 @@ object Spreadsheets {
     __obj.asInstanceOf[Spreadsheets]
   }
 }
-

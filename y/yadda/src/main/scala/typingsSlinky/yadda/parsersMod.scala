@@ -5,11 +5,12 @@ import typingsSlinky.yadda.featureParserMod.Options
 import typingsSlinky.yadda.languageMod.Library
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("yadda/lib/parsers", JSImport.Namespace)
 @js.native
 object parsersMod extends js.Object {
+  
   @js.native
   class FeatureFileParser () extends ^ {
     def this(language: typingsSlinky.yadda.languageMod.^[Library]) = this()
@@ -26,6 +27,4 @@ object parsersMod extends js.Object {
   @js.native
   class StepParser ()
     extends typingsSlinky.yadda.stepParserMod.^
-  
 }
-

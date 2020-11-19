@@ -2,7 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactNative.reactNativeStrings.ios
@@ -12,17 +12,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactNative.reactNativeStrings.web
 */
 trait PlatformOSType extends js.Object
-
 object PlatformOSType {
+  
   @scala.inline
   def android: typingsSlinky.reactNative.reactNativeStrings.android = "android".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.android]
+  
   @scala.inline
   def ios: typingsSlinky.reactNative.reactNativeStrings.ios = "ios".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.ios]
+  
   @scala.inline
   def macos: typingsSlinky.reactNative.reactNativeStrings.macos = "macos".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.macos]
+  
   @scala.inline
   def web: typingsSlinky.reactNative.reactNativeStrings.web = "web".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.web]
+  
   @scala.inline
   def windows: typingsSlinky.reactNative.reactNativeStrings.windows = "windows".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.windows]
 }
-

@@ -80,12 +80,11 @@ import typingsSlinky.semanticUiPopup.semanticUiPopupStrings.variation
 import typingsSlinky.semanticUiPopup.semanticUiPopupStrings.verbose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
-  @JSName("popup")
-  var popup_Original: Popup = js.native
+  
   def popup(): JQuery = js.native
   def popup(behavior: setting, name: `inline`, value: js.UndefOr[scala.Nothing]): Boolean = js.native
   def popup(behavior: setting, name: `inline`, value: Boolean): JQuery = js.native
@@ -236,6 +235,8 @@ trait JQuery extends js.Object {
   def popup_JQuery(behavior: setting, name: error, value: ErrorSettings): JQuery = js.native
   @JSName("popup")
   def popup_MetadataSettings(behavior: setting, name: metadata, value: js.UndefOr[scala.Nothing]): MetadataSettings = js.native
+  @JSName("popup")
+  var popup_Original: Popup = js.native
   /**
     * @since 2.2.11
     */
@@ -319,4 +320,3 @@ trait JQuery extends js.Object {
   @JSName("popup")
   def popup_toggle(behavior: toggle): JQuery = js.native
 }
-

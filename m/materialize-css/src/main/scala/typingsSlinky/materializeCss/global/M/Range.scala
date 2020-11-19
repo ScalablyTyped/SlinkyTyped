@@ -4,21 +4,22 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
 - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Component<undefined> * / any */ @JSGlobal("M.Range")
 @js.native
 class Range () extends js.Object
-
 /* static members */
 @JSGlobal("M.Range")
 @js.native
 object Range extends js.Object {
+  
   /**
     * Get Instance
     */
   def getInstance(elem: Element): typingsSlinky.materializeCss.M.Range = js.native
+  
   /**
     * Init Ranges
     */
@@ -35,4 +36,3 @@ object Range extends js.Object {
   def init(els: Element): typingsSlinky.materializeCss.M.Range = js.native
   def init(els: Element, options: Partial[js.UndefOr[scala.Nothing]]): typingsSlinky.materializeCss.M.Range = js.native
 }
-

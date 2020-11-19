@@ -6,9 +6,8 @@ import typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty
 import typingsSlinky.styledComponents.styledComponentsMod.DefaultTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@xstyled/styled-components", "ThemeContext")
 @js.native
 object ThemeContext extends TopLevel[Context[AnyIfEmpty[DefaultTheme]]]
-

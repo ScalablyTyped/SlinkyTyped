@@ -3,9 +3,43 @@ package typingsSlinky.nivoGeo
 import typingsSlinky.nivoGeo.mod.GeoProjectionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nivoGeoStrings {
+  
+  @scala.inline
+  def azimuthalEqualArea: azimuthalEqualArea = "azimuthalEqualArea".asInstanceOf[azimuthalEqualArea]
+  
+  @scala.inline
+  def azimuthalEquidistant: azimuthalEquidistant = "azimuthalEquidistant".asInstanceOf[azimuthalEquidistant]
+  
+  @scala.inline
+  def equalEarth: equalEarth = "equalEarth".asInstanceOf[equalEarth]
+  
+  @scala.inline
+  def equirectangular: equirectangular = "equirectangular".asInstanceOf[equirectangular]
+  
+  @scala.inline
+  def gnomonic: gnomonic = "gnomonic".asInstanceOf[gnomonic]
+  
+  @scala.inline
+  def mercator: mercator = "mercator".asInstanceOf[mercator]
+  
+  @scala.inline
+  def naturalEarth1: naturalEarth1 = "naturalEarth1".asInstanceOf[naturalEarth1]
+  
+  @scala.inline
+  def orthographic: orthographic = "orthographic".asInstanceOf[orthographic]
+  
+  @scala.inline
+  def stereographic: stereographic = "stereographic".asInstanceOf[stereographic]
+  
+  @scala.inline
+  def `string VerticallineNobreakspacenumber`: `string VerticallineNobreakspacenumber` = ("string |\u00A0number").asInstanceOf[`string VerticallineNobreakspacenumber`]
+  
+  @scala.inline
+  def transverseMercator: transverseMercator = "transverseMercator".asInstanceOf[transverseMercator]
+  
   @js.native
   sealed trait azimuthalEqualArea extends GeoProjectionType
   
@@ -38,28 +72,4 @@ object nivoGeoStrings {
   
   @js.native
   sealed trait transverseMercator extends GeoProjectionType
-  
-  @scala.inline
-  def azimuthalEqualArea: azimuthalEqualArea = "azimuthalEqualArea".asInstanceOf[azimuthalEqualArea]
-  @scala.inline
-  def azimuthalEquidistant: azimuthalEquidistant = "azimuthalEquidistant".asInstanceOf[azimuthalEquidistant]
-  @scala.inline
-  def equalEarth: equalEarth = "equalEarth".asInstanceOf[equalEarth]
-  @scala.inline
-  def equirectangular: equirectangular = "equirectangular".asInstanceOf[equirectangular]
-  @scala.inline
-  def gnomonic: gnomonic = "gnomonic".asInstanceOf[gnomonic]
-  @scala.inline
-  def mercator: mercator = "mercator".asInstanceOf[mercator]
-  @scala.inline
-  def naturalEarth1: naturalEarth1 = "naturalEarth1".asInstanceOf[naturalEarth1]
-  @scala.inline
-  def orthographic: orthographic = "orthographic".asInstanceOf[orthographic]
-  @scala.inline
-  def stereographic: stereographic = "stereographic".asInstanceOf[stereographic]
-  @scala.inline
-  def `string VerticallineNobreakspacenumber`: `string VerticallineNobreakspacenumber` = ("string |\u00A0number").asInstanceOf[`string VerticallineNobreakspacenumber`]
-  @scala.inline
-  def transverseMercator: transverseMercator = "transverseMercator".asInstanceOf[transverseMercator]
 }
-

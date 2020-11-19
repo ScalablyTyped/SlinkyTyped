@@ -7,16 +7,20 @@ import typingsSlinky.ol.pluggableMapMod.FrameState
 import typingsSlinky.ol.renderEventTypeMod.EventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/renderer/Map", JSImport.Namespace)
 @js.native
 object mapMod extends js.Object {
+  
   @js.native
   trait MapRenderer
     extends typingsSlinky.ol.disposableMod.default {
+    
     /* protected */ def calculateMatrices2D(frameState: FrameState): Unit = js.native
+    
     def dispatchRenderEvent(`type`: EventType, frameState: FrameState): Unit = js.native
+    
     def forEachFeatureAtCoordinate[S, T, U](
       coordinate: Coordinate,
       frameState: FrameState,
@@ -36,6 +40,7 @@ object mapMod extends js.Object {
         ],
       thisArg2: U
     ): T = js.native
+    
     def forEachLayerAtPixel[S, T, U](
       pixel: Pixel,
       frameState: FrameState,
@@ -52,7 +57,9 @@ object mapMod extends js.Object {
           Boolean
         ]
     ): T = js.native
+    
     def getMap(): typingsSlinky.ol.pluggableMapMod.default = js.native
+    
     def hasFeatureAtCoordinate[U](
       coordinate: Coordinate,
       frameState: FrameState,
@@ -65,7 +72,9 @@ object mapMod extends js.Object {
         ],
       thisArg: U
     ): Boolean = js.native
+    
     def renderFrame(frameState: FrameState): Unit = js.native
+    
     /* protected */ def scheduleExpireIconCache(frameState: FrameState): Unit = js.native
   }
   
@@ -73,6 +82,4 @@ object mapMod extends js.Object {
   abstract class default protected () extends MapRenderer {
     def this(map: typingsSlinky.ol.pluggableMapMod.default) = this()
   }
-  
 }
-

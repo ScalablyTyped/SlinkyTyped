@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.rest.ODataKeyPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -28,21 +28,25 @@ abstract class IntegerAttributeTypeBase protected () extends NumericAttributeTyp
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FIntegerAttributeTypeBase: IModel = js.native
+  
   @JSName("containerAsAttribute")
   def containerAsAttribute_MIntegerAttributeTypeBase: Attribute = js.native
+  
   @JSName("containerAsEntityKeyPart")
   def containerAsEntityKeyPart_MIntegerAttributeTypeBase: EntityKeyPart = js.native
+  
   @JSName("containerAsODataKeyPart")
   def containerAsODataKeyPart_MIntegerAttributeTypeBase: ODataKeyPart = js.native
+  
+  @JSName("model")
+  var model_FIntegerAttributeTypeBase: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.IntegerAttributeTypeBase")
 @js.native
 object IntegerAttributeTypeBase extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

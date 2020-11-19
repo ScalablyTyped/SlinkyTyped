@@ -2,7 +2,7 @@ package typingsSlinky.fabric.mod.fabric
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fabric", "fabric.Intersection")
 @js.native
@@ -10,11 +10,11 @@ class Intersection ()
   extends typingsSlinky.fabric.fabricImplMod.Intersection {
   def this(status: String) = this()
 }
-
 /* static members */
 @JSImport("fabric", "fabric.Intersection")
 @js.native
 object Intersection extends js.Object {
+  
   /**
     * Checks if one line intersects another
     */
@@ -24,6 +24,7 @@ object Intersection extends js.Object {
     b1: typingsSlinky.fabric.fabricImplMod.Point,
     b2: typingsSlinky.fabric.fabricImplMod.Point
   ): typingsSlinky.fabric.fabricImplMod.Intersection = js.native
+  
   /**
     * Checks if line intersects polygon
     */
@@ -32,6 +33,7 @@ object Intersection extends js.Object {
     a2: typingsSlinky.fabric.fabricImplMod.Point,
     points: js.Array[typingsSlinky.fabric.fabricImplMod.Point]
   ): typingsSlinky.fabric.fabricImplMod.Intersection = js.native
+  
   /**
     * Checks if polygon intersects another polygon
     */
@@ -39,9 +41,9 @@ object Intersection extends js.Object {
     points1: js.Array[typingsSlinky.fabric.fabricImplMod.Point],
     points2: js.Array[typingsSlinky.fabric.fabricImplMod.Point]
   ): typingsSlinky.fabric.fabricImplMod.Intersection = js.native
+  
   /**
     * Checks if polygon intersects rectangle
     */
   def intersectPolygonRectangle(points: js.Array[typingsSlinky.fabric.fabricImplMod.Point], r1: Double, r2: Double): typingsSlinky.fabric.fabricImplMod.Intersection = js.native
 }
-

@@ -15,9 +15,10 @@ import typingsSlinky.rcTabs.tabNodeMod.TabNodeProps
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TabNode {
+  
   @JSImport("rc-tabs/es/TabNavList/TabNode", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -26,27 +27,37 @@ object TabNode {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, HTMLDivElement] {
+    
     @scala.inline
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def editable(value: EditableConfig): this.type = set("editable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onClick(value: /* e */ SyntheticMouseEvent[Element] | SyntheticKeyboardEvent[Element] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onResize(value: (/* width */ Double, /* height */ Double, /* left */ Double, /* top */ Double) => Unit): this.type = set("onResize", js.Any.fromFunction4(value))
+    
     @scala.inline
     def removeAriaLabel(value: String): this.type = set("removeAriaLabel", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def removeIconReactElement(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def removeIcon(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def renderWrapper(value: /* node */ ReactElement => ReactElement): this.type = set("renderWrapper", js.Any.fromFunction1(value))
+    
     @scala.inline
     def tabBarGutter(value: Double): this.type = set("tabBarGutter", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TabNodeProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     active: Boolean,
@@ -62,4 +73,3 @@ object TabNode {
     new Builder(js.Array(this.component, __props.asInstanceOf[TabNodeProps with RefAttributes[HTMLDivElement]]))
   }
 }
-

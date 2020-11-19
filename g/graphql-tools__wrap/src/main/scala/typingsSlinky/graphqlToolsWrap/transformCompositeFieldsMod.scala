@@ -11,23 +11,28 @@ import typingsSlinky.graphqlToolsWrap.typesMod.FieldTransformer
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/transforms/TransformCompositeFields", JSImport.Namespace)
 @js.native
 object transformCompositeFieldsMod extends js.Object {
+  
   @js.native
   trait TransformCompositeFields
     extends Transform[Record[String, js.Any]] {
+    
     val dataTransformer: js.Any = js.native
+    
     val errorsTransformer: js.Any = js.native
+    
     val fieldNodeTransformer: js.Any = js.native
+    
     val fieldTransformer: js.Any = js.native
+    
     var mapping: js.Any = js.native
+    
     var transformDocument: js.Any = js.native
-    var transformSelectionSet: js.Any = js.native
-    var transformedSchema: js.Any = js.native
-    var typeInfo: js.Any = js.native
+    
     @JSName("transformRequest")
     def transformRequest_MTransformCompositeFields(originalRequest: Request): Request = js.native
     @JSName("transformRequest")
@@ -44,6 +49,7 @@ object transformCompositeFieldsMod extends js.Object {
       _delegationContext: Record[String, _],
       transformationContext: Record[String, _]
     ): Request = js.native
+    
     @JSName("transformResult")
     def transformResult_MTransformCompositeFields(result: ExecutionResult[Record[String, _]]): ExecutionResult[Record[String, _]] = js.native
     @JSName("transformResult")
@@ -60,8 +66,15 @@ object transformCompositeFieldsMod extends js.Object {
       _delegationContext: Record[String, _],
       transformationContext: Record[String, _]
     ): ExecutionResult[Record[String, _]] = js.native
+    
     @JSName("transformSchema")
     def transformSchema_MTransformCompositeFields(originalSchema: GraphQLSchema): GraphQLSchema = js.native
+    
+    var transformSelectionSet: js.Any = js.native
+    
+    var transformedSchema: js.Any = js.native
+    
+    var typeInfo: js.Any = js.native
   }
   
   @js.native
@@ -103,6 +116,4 @@ object transformCompositeFieldsMod extends js.Object {
       errorsTransformer: ErrorsTransformer
     ) = this()
   }
-  
 }
-

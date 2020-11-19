@@ -4,10 +4,11 @@ import typingsSlinky.monacoEditor.mod.Range
 import typingsSlinky.monacoEditor.mod.Selection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IEditOperationBuilder extends js.Object {
+  
   /**
     * Add a new edit operation (a replace operation).
     * @param range The range to replace (delete). May be empty to represent a simple insert.
@@ -17,6 +18,7 @@ trait IEditOperationBuilder extends js.Object {
   def addEditOperation(range: Range, text: String): Unit = js.native
   def addEditOperation(range: Range, text: String, forceMoveMarkers: Boolean): Unit = js.native
   def addEditOperation(range: Range, text: Null, forceMoveMarkers: Boolean): Unit = js.native
+  
   /**
     * Add a new edit operation (a replace operation).
     * The inverse edits will be accessible in `ICursorStateComputerData.getInverseEditOperations()`
@@ -27,6 +29,7 @@ trait IEditOperationBuilder extends js.Object {
   def addTrackedEditOperation(range: Range, text: String): Unit = js.native
   def addTrackedEditOperation(range: Range, text: String, forceMoveMarkers: Boolean): Unit = js.native
   def addTrackedEditOperation(range: Range, text: Null, forceMoveMarkers: Boolean): Unit = js.native
+  
   /**
     * Track `selection` when applying edit operations.
     * A best effort will be made to not grow/expand the selection.
@@ -39,4 +42,3 @@ trait IEditOperationBuilder extends js.Object {
   def trackSelection(selection: Selection): String = js.native
   def trackSelection(selection: Selection, trackPreviousOnEmpty: Boolean): String = js.native
 }
-

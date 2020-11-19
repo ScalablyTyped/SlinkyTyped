@@ -4,11 +4,12 @@ import typingsSlinky.ol.groupMod.Options
 import typingsSlinky.ol.groupMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/layer", JSImport.Namespace)
 @js.native
 object layerMod extends js.Object {
+  
   @js.native
   class Group () extends default {
     def this(opt_options: Options) = this()
@@ -55,6 +56,4 @@ object layerMod extends js.Object {
     extends typingsSlinky.ol.vectorTileMod.default {
     def this(opt_options: typingsSlinky.ol.vectorTileMod.Options) = this()
   }
-  
 }
-

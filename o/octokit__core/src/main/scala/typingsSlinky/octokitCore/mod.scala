@@ -24,23 +24,19 @@ import typingsSlinky.octokitTypes.requestInterfaceMod.RequestInterface
 import typingsSlinky.octokitTypes.routeMod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@octokit/core", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class Octokit ()
     extends /* key */ StringDictionary[js.Any] {
     def this(options: OctokitOptions) = this()
-    @JSName("graphql")
-    var graphql_Original: graphql = js.native
-    @JSName("hook")
-    var hook_Original: HookCollection = js.native
-    var log: Dictkey = js.native
-    @JSName("request")
-    var request_Original: RequestInterface[js.Object] = js.native
+    
     def auth(args: js.Any*): js.Promise[_] = js.native
+    
     /**
       * Sends a GraphQL query request based on endpoint options
       * The GraphQL query must be specified in `options`.
@@ -56,6 +52,9 @@ object mod extends js.Object {
       */
     def graphql[ResponseData](query: Query): GraphQlResponse[ResponseData] = js.native
     def graphql[ResponseData](query: Query, parameters: RequestParameters): GraphQlResponse[ResponseData] = js.native
+    @JSName("graphql")
+    var graphql_Original: graphql = js.native
+    
     /**
       * Invoke before and after hooks
       */
@@ -63,6 +62,11 @@ object mod extends js.Object {
     def hook(name: String, hookMethod: HookMethod[_, _], options: js.Any): js.Promise[_] = js.native
     def hook(name: js.Array[String], hookMethod: HookMethod[_, _]): js.Promise[_] = js.native
     def hook(name: js.Array[String], hookMethod: HookMethod[_, _], options: js.Any): js.Promise[_] = js.native
+    @JSName("hook")
+    var hook_Original: HookCollection = js.native
+    
+    var log: Dictkey = js.native
+    
     def request[R /* <: Route */](route: R): js.Promise[
         (/* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints[R]['response'] */ js.Any) | OctokitResponse[_]
       ] = js.native
@@ -87,6 +91,8 @@ object mod extends js.Object {
     ): js.Promise[
         (/* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints[R]['response'] */ js.Any) | OctokitResponse[_]
       ] = js.native
+    @JSName("request")
+    var request_Original: RequestInterface[js.Object] = js.native
     /**
       * Sends a request based on endpoint options
       *
@@ -95,14 +101,15 @@ object mod extends js.Object {
     @JSName("request")
     def request_url[T, O /* <: typingsSlinky.octokitTypes.requestParametersMod.RequestParameters */](options: O with Method with (UrlString | Url)): js.Promise[OctokitResponse[T]] = js.native
   }
-  
   /* static members */
   @js.native
   object Octokit extends js.Object {
+    
     var VERSION: String = js.native
-    var plugins: js.Array[OctokitPlugin] = js.native
+    
     def defaults[S /* <: Constructor[_] */](defaults: js.Function): Instantiable with S = js.native
     def defaults[S /* <: Constructor[_] */](defaults: OctokitOptions): Instantiable with S = js.native
+    
     /**
       * Attach a plugin (or many) to your Octokit instance.
       *
@@ -112,7 +119,7 @@ object mod extends js.Object {
     def plugin[S /* <: Constructor[_] with Plugins */, T /* <: js.Array[OctokitPlugin] */](
       /* import warning: parser.TsParser#functionParam Dropping repeated marker of param newPlugins because its type T is not an array type */ newPlugins: T
     ): InstantiablePlugins with S with Constructor[UnionToIntersection[ReturnTypeOf[T]]] = js.native
+    
+    var plugins: js.Array[OctokitPlugin] = js.native
   }
-  
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.baidumapWebSdk.global.BMap
 import typingsSlinky.baidumapWebSdk.BMap.TransitRouteOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BMap.TransitRoute")
 @js.native
@@ -16,4 +16,3 @@ class TransitRoute protected ()
   def this(location: typingsSlinky.baidumapWebSdk.BMap.Map, opts: TransitRouteOptions) = this()
   def this(location: typingsSlinky.baidumapWebSdk.BMap.Point, opts: TransitRouteOptions) = this()
 }
-

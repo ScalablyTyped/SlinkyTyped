@@ -3,16 +3,16 @@ package typingsSlinky.amapJsApiMap3d.global.AMap
 import typingsSlinky.amapJsApiMap3d.AMap.Object3D.MeshLine.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AMap.Object3D")
 @js.native
 class Object3D ()
   extends typingsSlinky.amapJsApiMap3d.AMap.Object3D
-
 @JSGlobal("AMap.Object3D")
 @js.native
 object Object3D extends js.Object {
+  
   @js.native
   class Line ()
     extends typingsSlinky.amapJsApiMap3d.AMap.Object3D.Line
@@ -56,6 +56,4 @@ object Object3D extends js.Object {
   @js.native
   class Wall ()
     extends typingsSlinky.amapJsApiMap3d.AMap.Object3D.MeshAcceptLights
-  
 }
-

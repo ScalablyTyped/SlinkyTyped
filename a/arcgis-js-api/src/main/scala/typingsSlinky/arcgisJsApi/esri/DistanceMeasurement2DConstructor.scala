@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DistanceMeasurement2DConstructor
@@ -15,4 +15,3 @@ trait DistanceMeasurement2DConstructor
   */
 Instantiable0[DistanceMeasurement2D]
      with Instantiable1[/* properties */ DistanceMeasurement2DProperties, DistanceMeasurement2D]
-

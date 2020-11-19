@@ -8,14 +8,17 @@ import typingsSlinky.gapiClientClouddebugger.anon.Bearertoken
 import typingsSlinky.gapiClientClouddebugger.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BreakpointsResource extends js.Object {
+  
   /** Deletes the breakpoint from the debuggee. */
   def delete(request: Bearertoken): Request[js.Object] = js.native
+  
   /** Gets breakpoint information. */
   def get(request: Bearertoken): Request[GetBreakpointResponse] = js.native
+  
   /**
     * Returns the list of all active breakpoints for the debuggee.
     *
@@ -34,8 +37,10 @@ trait BreakpointsResource extends js.Object {
   def list(request: Accesstoken): Request[ListActiveBreakpointsResponse] = js.native
   /** Lists all breakpoints for the debuggee. */
   def list(request: Actionvalue): Request[ListBreakpointsResponse] = js.native
+  
   /** Sets the breakpoint to the debuggee. */
   def set(request: Callback): Request[SetBreakpointResponse] = js.native
+  
   /**
     * Updates the breakpoint state or mutable fields.
     * The entire Breakpoint message must be sent back to the controller service.
@@ -48,4 +53,3 @@ trait BreakpointsResource extends js.Object {
     */
   def update(request: Alt): Request[js.Object] = js.native
 }
-

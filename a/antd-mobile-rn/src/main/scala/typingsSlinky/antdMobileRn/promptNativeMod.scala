@@ -5,11 +5,12 @@ import typingsSlinky.antdMobileRn.modalPropsTypeMod.CallbackOrActions
 import typingsSlinky.reactNative.mod.TextStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd-mobile-rn/lib/modal/prompt.native", JSImport.Namespace)
 @js.native
 object promptNativeMod extends js.Object {
+  
   def default(title: ReactElement, message: ReactElement, callbackOrActions: CallbackOrActions[TextStyle]): Unit = js.native
   def default(
     title: ReactElement,
@@ -64,4 +65,3 @@ object promptNativeMod extends js.Object {
     placeholders: js.Array[String]
   ): Unit = js.native
 }
-

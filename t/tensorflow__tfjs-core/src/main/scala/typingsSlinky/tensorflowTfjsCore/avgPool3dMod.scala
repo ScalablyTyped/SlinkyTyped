@@ -12,13 +12,15 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/avg_pool_3d", JSImport.Namespace)
 @js.native
 object avgPool3dMod extends js.Object {
+  
   @js.native
   object avgPool3d extends js.Object {
+    
     def apply[T /* <: Tensor4D | Tensor5D */](
       x: T | TensorLike,
       filterSize: (js.Tuple3[Double, Double, Double]) | Double,
@@ -29,6 +31,4 @@ object avgPool3dMod extends js.Object {
       dilations: js.UndefOr[(js.Tuple3[Double, Double, Double]) | Double]
     ): T = js.native
   }
-  
 }
-

@@ -10,9 +10,10 @@ import typingsSlinky.reactNavigationStack.vendorTypesMod.StackHeaderMode
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackNavigationHelpers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StackView {
+  
   @JSImport("react-navigation-stack", "StackView")
   @js.native
   object component extends js.Object
@@ -21,15 +22,19 @@ object StackView {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNavigationStack.mod.StackView] {
+    
     @scala.inline
     def headerMode(value: StackHeaderMode): this.type = set("headerMode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def keyboardHandlingEnabled(value: Boolean): this.type = set("keyboardHandlingEnabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def mode(value: StackCardMode): this.type = set("mode", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     descriptors: StackDescriptorMap,
@@ -41,4 +46,3 @@ object StackView {
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
-

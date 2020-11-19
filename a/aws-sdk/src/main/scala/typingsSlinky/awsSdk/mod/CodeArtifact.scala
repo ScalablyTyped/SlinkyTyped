@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.codeartifactMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "CodeArtifact")
 @js.native
@@ -14,4 +14,3 @@ class CodeArtifact ()
   extends typingsSlinky.awsSdk.allMod.CodeArtifact {
   def this(options: ClientConfiguration) = this()
 }
-

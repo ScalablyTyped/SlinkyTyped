@@ -10,11 +10,33 @@ import typingsSlinky.graphqlBinding.distTypesMod.FragmentReplacement
 import typingsSlinky.graphqlBinding.distTypesMod.Operation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-binding", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  def addFragmentToInfo(info: GraphQLResolveInfo, fragment: String): GraphQLResolveInfo = js.native
+  
+  def buildInfo(rootFieldName: String, operation: Operation, schema: GraphQLSchema): GraphQLResolveInfo = js.native
+  def buildInfo(rootFieldName: String, operation: Operation, schema: GraphQLSchema, info: String): GraphQLResolveInfo = js.native
+  def buildInfo(rootFieldName: String, operation: Operation, schema: GraphQLSchema, info: DocumentNode): GraphQLResolveInfo = js.native
+  def buildInfo(rootFieldName: String, operation: Operation, schema: GraphQLSchema, info: GraphQLResolveInfo): GraphQLResolveInfo = js.native
+  
+  def extractFragmentReplacements(
+    resolvers: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IResolvers */ js.Any
+  ): js.Array[FragmentReplacement] = js.native
+  
+  def forwardTo(bindingName: String): js.Function4[
+    /* parent */ js.Any, 
+    /* args */ js.Any, 
+    /* context */ js.Any, 
+    /* info */ GraphQLResolveInfo, 
+    _
+  ] = js.native
+  
+  def makeBindingClass[T](hasSchema: Schema): T = js.native
+  
   @js.native
   class Binding protected ()
     extends typingsSlinky.graphqlBinding.bindingMod.Binding {
@@ -44,22 +66,4 @@ object mod extends js.Object {
     extends typingsSlinky.graphqlBinding.typescriptGeneratorMod.TypescriptGenerator {
     def this(hasSchemaInputSchemaPathOutputBindingPathIsDefaultExport: InputSchemaPath) = this()
   }
-  
-  def addFragmentToInfo(info: GraphQLResolveInfo, fragment: String): GraphQLResolveInfo = js.native
-  def buildInfo(rootFieldName: String, operation: Operation, schema: GraphQLSchema): GraphQLResolveInfo = js.native
-  def buildInfo(rootFieldName: String, operation: Operation, schema: GraphQLSchema, info: String): GraphQLResolveInfo = js.native
-  def buildInfo(rootFieldName: String, operation: Operation, schema: GraphQLSchema, info: DocumentNode): GraphQLResolveInfo = js.native
-  def buildInfo(rootFieldName: String, operation: Operation, schema: GraphQLSchema, info: GraphQLResolveInfo): GraphQLResolveInfo = js.native
-  def extractFragmentReplacements(
-    resolvers: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IResolvers */ js.Any
-  ): js.Array[FragmentReplacement] = js.native
-  def forwardTo(bindingName: String): js.Function4[
-    /* parent */ js.Any, 
-    /* args */ js.Any, 
-    /* context */ js.Any, 
-    /* info */ GraphQLResolveInfo, 
-    _
-  ] = js.native
-  def makeBindingClass[T](hasSchema: Schema): T = js.native
 }
-

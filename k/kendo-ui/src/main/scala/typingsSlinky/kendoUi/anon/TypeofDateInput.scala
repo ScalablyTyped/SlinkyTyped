@@ -7,13 +7,14 @@ import typingsSlinky.kendoUi.kendo.ui.DateInput
 import typingsSlinky.kendoUi.kendo.ui.DateInputOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofDateInput
   extends Instantiable1[/* element */ Element, DateInput]
      with Instantiable2[/* element */ Element, /* options */ DateInputOptions, DateInput] {
-  var fn: DateInput = js.native
+  
   def extend(proto: js.Object): DateInput = js.native
+  
+  var fn: DateInput = js.native
 }
-

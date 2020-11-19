@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.pollyMod.ClientConfiguration
 import typingsSlinky.awsSdk.presignerMod.Presigner.PresignerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "Polly")
 @js.native
@@ -15,10 +15,10 @@ class Polly ()
   extends typingsSlinky.awsSdk.mod.Polly {
   def this(options: ClientConfiguration) = this()
 }
-
 @JSImport("mock-aws-s3", "Polly")
 @js.native
 object Polly extends js.Object {
+  
   @js.native
   /**
     * Creates a presigner object with a set of configuration options.
@@ -27,6 +27,4 @@ object Polly extends js.Object {
     extends typingsSlinky.awsSdk.mod.Polly.Presigner {
     def this(options: PresignerOptions) = this()
   }
-  
 }
-

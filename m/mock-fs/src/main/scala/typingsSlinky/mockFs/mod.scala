@@ -8,11 +8,12 @@ import typingsSlinky.mockFs.filesystemMod.Options
 import typingsSlinky.mockFs.filesystemMod.SymlinkOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-fs", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * Swap out the fs bindings for a mock file system.
     *
@@ -30,28 +31,32 @@ object mod extends js.Object {
   def apply(config: js.UndefOr[scala.Nothing], options: Options): Unit = js.native
   def apply(config: DirectoryItems): Unit = js.native
   def apply(config: DirectoryItems, options: Options): Unit = js.native
+  
   /**
     * Create a directory factory.
     */
   def directory(): js.Function0[^] = js.native
   def directory(config: DirectoryOptions): js.Function0[^] = js.native
+  
   /**
     * Create a file factory.
     */
   def file(): js.Function0[typingsSlinky.mockFs.fileMod.^] = js.native
   def file(config: FileOptions): js.Function0[typingsSlinky.mockFs.fileMod.^] = js.native
+  
   /**
     * Get hold of the mocked filesystem's 'root'
     * If fs hasn't currently been replaced, this will return an empty object
     */
   def getMockRoot(): ^  | js.Object = js.native
+  
   /**
     * Restore the fs bindings for the real file system.
     */
   def restore(): Unit = js.native
+  
   /**
     * Create a symbolic link factory.
     */
   def symlink(config: SymlinkOptions): js.Function0[typingsSlinky.mockFs.symlinkMod.^] = js.native
 }
-

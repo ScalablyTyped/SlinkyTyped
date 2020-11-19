@@ -4,26 +4,11 @@ import typingsSlinky.firefoxWebextBrowser.WebExtEvent
 import typingsSlinky.firefoxWebextBrowser.browser.devtools.inspectedWindow.Resource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofinspectedWindow extends js.Object {
-  /* devtools.inspectedWindow events */
-  /**
-    * Fired when a new resource is added to the inspected page.
-    * @deprecated Unsupported on Firefox at this time.
-    */
-  val onResourceAdded: js.UndefOr[WebExtEvent[js.Function1[/* resource */ Resource, Unit]]] = js.native
-  /**
-    * Fired when a new revision of the resource is committed (e.g. user saves an edited version of the resource in the
-    * Developer Tools).
-    * @param content New content of the resource.
-    * @deprecated Unsupported on Firefox at this time.
-    */
-  val onResourceContentCommitted: js.UndefOr[WebExtEvent[js.Function2[/* resource */ Resource, /* content */ String, Unit]]] = js.native
-  /* devtools.inspectedWindow properties */
-  /** The ID of the tab being inspected. This ID may be used with browser.tabs.* API. */
-  val tabId: Double = js.native
+  
   /* devtools.inspectedWindow functions */
   /**
     * Evaluates a JavaScript expression in the context of the main frame of the inspected page. The expression must
@@ -37,13 +22,33 @@ trait TypeofinspectedWindow extends js.Object {
     */
   def eval(expression: String): js.Promise[js.Object] = js.native
   def eval(expression: String, options: ContextSecurityOrigin): js.Promise[js.Object] = js.native
+  
   /**
     * Retrieves the list of resources from the inspected page.
     * @deprecated Unsupported on Firefox at this time.
     */
   def getResources(): js.Promise[js.Array[Resource]] = js.native
+  
+  /* devtools.inspectedWindow events */
+  /**
+    * Fired when a new resource is added to the inspected page.
+    * @deprecated Unsupported on Firefox at this time.
+    */
+  val onResourceAdded: js.UndefOr[WebExtEvent[js.Function1[/* resource */ Resource, Unit]]] = js.native
+  
+  /**
+    * Fired when a new revision of the resource is committed (e.g. user saves an edited version of the resource in the
+    * Developer Tools).
+    * @param content New content of the resource.
+    * @deprecated Unsupported on Firefox at this time.
+    */
+  val onResourceContentCommitted: js.UndefOr[WebExtEvent[js.Function2[/* resource */ Resource, /* content */ String, Unit]]] = js.native
+  
   /** Reloads the inspected page. */
   def reload(): Unit = js.native
   def reload(reloadOptions: IgnoreCache): Unit = js.native
+  
+  /* devtools.inspectedWindow properties */
+  /** The ID of the tab being inspected. This ID may be used with browser.tabs.* API. */
+  val tabId: Double = js.native
 }
-

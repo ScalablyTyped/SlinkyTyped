@@ -3,6 +3,7 @@ package typingsSlinky.rcTable.components
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.rcTable.anon.Children
 import typingsSlinky.rcTable.bodyRowMod.BodyRowProps
 import typingsSlinky.rcTable.interfaceMod.CustomizeComponent
 import typingsSlinky.rcTable.interfaceMod.Key
@@ -11,28 +12,33 @@ import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object BodyRow {
+  
   @JSImport("rc-table/lib/Body/BodyRow", JSImport.Default)
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[/* <: typingsSlinky.rcTable.anon.Children[RecordType] */ RecordType] (val args: js.Array[js.Any])
+  class Builder[RecordType /* <: Children[RecordType] */] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def indent(value: Double): this.type = set("indent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps[/* <: typingsSlinky.rcTable.anon.Children[RecordType] */ RecordType](p: BodyRowProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[RecordType /* <: Children[RecordType] */](p: BodyRowProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
-  def apply[/* <: typingsSlinky.rcTable.anon.Children[RecordType] */ RecordType](
+  def apply[RecordType /* <: Children[RecordType] */](
     cellComponent: CustomizeComponent,
     childrenColumnName: String,
     expandedKeys: Set[Key],
@@ -49,4 +55,3 @@ object BodyRow {
     new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[BodyRowProps[RecordType]]))
   }
 }
-

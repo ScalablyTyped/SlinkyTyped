@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.global.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,10 +13,13 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.ShapeTextVerticalOverflow")
 @js.native
 object ShapeTextVerticalOverflow extends js.Object {
-  /* "Clip" */ val clip: typingsSlinky.officeJs.Excel.ShapeTextVerticalOverflow.clip with String = js.native
-  /* "Ellipsis" */ val ellipsis: typingsSlinky.officeJs.Excel.ShapeTextVerticalOverflow.ellipsis with String = js.native
-  /* "Overflow" */ val overflow: typingsSlinky.officeJs.Excel.ShapeTextVerticalOverflow.overflow with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Excel.ShapeTextVerticalOverflow with String] = js.native
+  
+  /* "Clip" */ val clip: typingsSlinky.officeJs.Excel.ShapeTextVerticalOverflow.clip with String = js.native
+  
+  /* "Ellipsis" */ val ellipsis: typingsSlinky.officeJs.Excel.ShapeTextVerticalOverflow.ellipsis with String = js.native
+  
+  /* "Overflow" */ val overflow: typingsSlinky.officeJs.Excel.ShapeTextVerticalOverflow.overflow with String = js.native
 }
-

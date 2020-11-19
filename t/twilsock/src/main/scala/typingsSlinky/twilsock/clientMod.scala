@@ -5,11 +5,12 @@ import typingsSlinky.twilsock.offlinestorageMod.OfflineProductStorage
 import typingsSlinky.twilsock.upstreamMod.Result
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("twilsock/lib/client", JSImport.Namespace)
 @js.native
 object clientMod extends js.Object {
+  
   /**
     * @alias Twilsock
     * @classdesc Client library for the Twilsock service
@@ -50,12 +51,11 @@ object clientMod extends js.Object {
       */
     def this(token: String, productId: String) = this()
     def this(token: String, productId: String, options: js.Any) = this()
+    
     val channel: js.Any = js.native
+    
     val config: js.Any = js.native
-    var handleStorageId: js.Any = js.native
-    var offlineStorageDeferred: js.Any = js.native
-    val registrations: js.Any = js.native
-    val upstream: js.Any = js.native
+    
     /**
       * Connect to the server
       * @fires Twilsock#connected
@@ -63,6 +63,7 @@ object clientMod extends js.Object {
       * @returns {Promise<void>}
       */
     def connect(): Unit = js.native
+    
     /**
       * Delete HTTP request to upstream service
       * @param {string} url Upstream service url
@@ -70,6 +71,7 @@ object clientMod extends js.Object {
       * @returns {Promise}
       */
     def delete(url: String, headers: js.Any): js.Promise[Result] = js.native
+    
     /**
       * Disconnect from the server
       * @fires Twilsock#disconnected
@@ -77,6 +79,7 @@ object clientMod extends js.Object {
       * @returns {Promise<void>}
       */
     def disconnect(): js.Promise[Unit] = js.native
+    
     /**
       * Get HTTP request to upstream service
       * @param {string} url Upstream service url
@@ -84,11 +87,17 @@ object clientMod extends js.Object {
       * @returns {Promise}
       */
     def get(url: String, headers: js.Any): js.Promise[Result] = js.native
+    
+    var handleStorageId: js.Any = js.native
+    
     /**
       * Indicates if twilsock is connected now
       * @returns {Boolean}
       */
     def isConnected: Boolean = js.native
+    
+    var offlineStorageDeferred: js.Any = js.native
+    
     /**
       * Post HTTP request to upstream service
       * @param {string} url Upstream service url
@@ -97,6 +106,7 @@ object clientMod extends js.Object {
       * @returns {Promise}
       */
     def post(url: String, headers: js.Any, body: js.Any): js.Promise[Result] = js.native
+    
     /**
       * Put HTTP request to upstream service
       * @param {string} url Upstream service url
@@ -105,6 +115,9 @@ object clientMod extends js.Object {
       * @returns {Promise}
       */
     def put(url: String, headers: js.Any, body: js.Any): js.Promise[Result] = js.native
+    
+    val registrations: js.Any = js.native
+    
     /**
       * Remove notification context.
       * This method shouldn't be used anyone except twilio notifications library
@@ -112,6 +125,7 @@ object clientMod extends js.Object {
       * @private
       */
     def removeNotificationsContext(contextId: String): Unit = js.native
+    
     /**
       * Updates notification context.
       * This method shouldn't be used anyone except twilio notifications library
@@ -120,24 +134,28 @@ object clientMod extends js.Object {
       * @private
       */
     def setNotificationsContext(contextId: String, context: Context): Unit = js.native
+    
     /**
       * Current state
       * @returns {String}
       */
     def state: String = js.native
+    
     /**
       * Get offline storage ID
       * @returns {Promise<OfflineProductStorage>}
       */
     def storageId(): js.Promise[OfflineProductStorage] = js.native
+    
     /**
       * Update token
       * @param {String} token
       * @returns {Promise<void>}
       */
     def updateToken(token: String): js.Promise[Unit] = js.native
+    
+    val upstream: js.Any = js.native
   }
   
   type Context = typingsSlinky.twilsock.protocolMod.Protocol.Context
 }
-

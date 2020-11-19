@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "createPartiallyEmittedExpression")
 @js.native
 object createPartiallyEmittedExpression extends js.Object {
+  
   /**
     * Creates a synthetic expression to act as a placeholder for a not-emitted expression in
     * order to preserve comments or sourcemap positions.
@@ -18,4 +19,3 @@ object createPartiallyEmittedExpression extends js.Object {
   def apply(expression: Expression): PartiallyEmittedExpression = js.native
   def apply(expression: Expression, original: Node): PartiallyEmittedExpression = js.native
 }
-

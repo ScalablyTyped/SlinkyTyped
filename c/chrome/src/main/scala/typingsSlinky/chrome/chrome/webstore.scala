@@ -3,7 +3,7 @@ package typingsSlinky.chrome.chrome
 import typingsSlinky.chrome.chrome.events.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 ////////////////////
 // Web Store
@@ -15,7 +15,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.webstore")
 @js.native
 object webstore extends js.Object {
+  
   type DownloadProgressEvent = Event[js.Function1[/* percentDownloaded */ Double, Unit]]
+  
   type InstallationStageEvent = Event[js.Function1[/* stage */ String, Unit]]
 }
-

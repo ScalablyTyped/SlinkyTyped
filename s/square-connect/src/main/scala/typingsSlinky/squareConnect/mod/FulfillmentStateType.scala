@@ -2,7 +2,7 @@ package typingsSlinky.squareConnect.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.squareConnect.squareConnectStrings.PROPOSED
@@ -13,19 +13,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.squareConnect.squareConnectStrings.FAILED
 */
 trait FulfillmentStateType extends js.Object
-
 object FulfillmentStateType {
+  
   @scala.inline
   def CANCELED: typingsSlinky.squareConnect.squareConnectStrings.CANCELED = "CANCELED".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CANCELED]
+  
   @scala.inline
   def COMPLETED: typingsSlinky.squareConnect.squareConnectStrings.COMPLETED = "COMPLETED".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.COMPLETED]
+  
   @scala.inline
   def FAILED: typingsSlinky.squareConnect.squareConnectStrings.FAILED = "FAILED".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.FAILED]
+  
   @scala.inline
   def PREPARED: typingsSlinky.squareConnect.squareConnectStrings.PREPARED = "PREPARED".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PREPARED]
+  
   @scala.inline
   def PROPOSED: typingsSlinky.squareConnect.squareConnectStrings.PROPOSED = "PROPOSED".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PROPOSED]
+  
   @scala.inline
   def RESERVED: typingsSlinky.squareConnect.squareConnectStrings.RESERVED = "RESERVED".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.RESERVED]
 }
-

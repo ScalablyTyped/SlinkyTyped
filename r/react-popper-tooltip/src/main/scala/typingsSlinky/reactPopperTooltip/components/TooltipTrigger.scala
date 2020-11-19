@@ -10,14 +10,16 @@ import typingsSlinky.reactPopperTooltip.typesMod.TooltipTriggerProps
 import typingsSlinky.reactPopperTooltip.typesMod.Trigger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TooltipTrigger {
+  
   @JSImport("react-popper-tooltip/dist/TooltipTrigger", JSImport.Default)
   @js.native
   object component extends js.Object
   
   def withProps(p: TooltipTriggerProps): SharedBuilder_TooltipTriggerProps102580951[default] = new SharedBuilder_TooltipTriggerProps102580951[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     children: ChildrenArg => ReactElement,
@@ -38,4 +40,3 @@ object TooltipTrigger {
     new SharedBuilder_TooltipTriggerProps102580951[default](js.Array(this.component, __props.asInstanceOf[TooltipTriggerProps]))
   }
 }
-

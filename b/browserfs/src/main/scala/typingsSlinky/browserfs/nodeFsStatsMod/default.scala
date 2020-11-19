@@ -3,7 +3,7 @@ package typingsSlinky.browserfs.nodeFsStatsMod
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("browserfs/dist/node/core/node_fs_stats", JSImport.Default)
 @js.native
@@ -90,11 +90,10 @@ class default protected () extends Stats {
   ) = this()
   def this(itemType: FileType, size: Double, mode: Double, atime: js.Date, mtime: js.Date, ctime: js.Date) = this()
 }
-
 /* static members */
 @JSImport("browserfs/dist/node/core/node_fs_stats", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   def fromBuffer(buffer: Buffer): Stats = js.native
 }
-

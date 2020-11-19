@@ -2,7 +2,7 @@ package typingsSlinky.videoJs.mod.default
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js", "TrackList")
 @js.native
@@ -16,4 +16,3 @@ class TrackListCls ()
   extends typingsSlinky.videoJs.mod.videojs.TrackList {
   def this(tracks: js.Array[typingsSlinky.videoJs.mod.videojs.Track]) = this()
 }
-

@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 8.4.0: introduced
@@ -26,19 +26,18 @@ class PageVariable protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.PageVariable")
 @js.native
 object PageVariable extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new PageVariable instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.pagesMod.pages.PageVariable = js.native
+  
   /**
     * Creates and returns a new PageVariable instance in the SDK and on the server.
     * The new PageVariable will be automatically stored in the 'sourceVariable' property
@@ -48,6 +47,7 @@ object PageVariable extends js.Object {
     *  8.8.0 and higher
     */
   def createInAttributeWidgetUnderSourceVariable(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.AttributeWidget): typingsSlinky.mendixmodelsdk.pagesMod.pages.PageVariable = js.native
+  
   /**
     * Creates and returns a new PageVariable instance in the SDK and on the server.
     * The new PageVariable will be automatically stored in the 'variable' property
@@ -57,6 +57,7 @@ object PageVariable extends js.Object {
     *  8.4.0 and higher
     */
   def createInMicroflowParameterMappingUnderVariable(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.MicroflowParameterMapping): typingsSlinky.mendixmodelsdk.pagesMod.pages.PageVariable = js.native
+  
   /**
     * Creates and returns a new PageVariable instance in the SDK and on the server.
     * The new PageVariable will be automatically stored in the 'variable' property
@@ -66,6 +67,7 @@ object PageVariable extends js.Object {
     *  8.4.0 and higher
     */
   def createInNanoflowParameterMappingUnderVariable(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NanoflowParameterMapping): typingsSlinky.mendixmodelsdk.pagesMod.pages.PageVariable = js.native
+  
   /**
     * Creates and returns a new PageVariable instance in the SDK and on the server.
     * The new PageVariable will be automatically stored in the 'sourceVariable' property
@@ -75,5 +77,8 @@ object PageVariable extends js.Object {
     *  8.8.0 and higher
     */
   def createInWidgetValueUnderSourceVariable(container: WidgetValue): typingsSlinky.mendixmodelsdk.pagesMod.pages.PageVariable = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.pulumiCloud.serviceMod.Container
 import typingsSlinky.pulumiPulumi.resourceMod.ResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/cloud", "Task")
 @js.native
@@ -20,4 +20,3 @@ class TaskCls protected ()
   def this(name: String, container: Container) = this()
   def this(name: String, container: Container, opts: ResourceOptions) = this()
 }
-

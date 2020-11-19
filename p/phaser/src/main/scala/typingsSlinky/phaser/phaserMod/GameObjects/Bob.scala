@@ -3,7 +3,7 @@ package typingsSlinky.phaser.phaserMod.GameObjects
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A Bob Game Object.
@@ -47,4 +47,3 @@ class Bob protected ()
     visible: Boolean
   ) = this()
 }
-

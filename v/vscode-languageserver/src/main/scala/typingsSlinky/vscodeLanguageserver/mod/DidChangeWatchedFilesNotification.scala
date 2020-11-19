@@ -5,11 +5,11 @@ import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DidChangeWatchedFi
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DidChangeWatchedFilesRegistrationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageserver", "DidChangeWatchedFilesNotification")
 @js.native
 object DidChangeWatchedFilesNotification extends js.Object {
+  
   val `type`: ProtocolNotificationType[DidChangeWatchedFilesParams, DidChangeWatchedFilesRegistrationOptions] = js.native
 }
-

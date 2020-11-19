@@ -4,12 +4,13 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-area`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-box`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Input
   extends Accessor
      with JSONSupport {
+  
   /**
     * The type of form element input displayed.
     *
@@ -17,4 +18,3 @@ trait Input
     */
   val `type`: `text-area` | `text-box` = js.native
 }
-

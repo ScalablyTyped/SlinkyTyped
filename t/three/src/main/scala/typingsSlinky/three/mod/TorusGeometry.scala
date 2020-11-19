@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "TorusGeometry")
 @js.native
@@ -150,4 +150,3 @@ class TorusGeometry ()
   ) = this()
   def this(radius: Double, tube: Double, radialSegments: Double, tubularSegments: Double, arc: Double) = this()
 }
-

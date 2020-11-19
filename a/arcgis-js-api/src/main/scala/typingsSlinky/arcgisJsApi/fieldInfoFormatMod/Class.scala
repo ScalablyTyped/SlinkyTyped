@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.FieldInfoFormat
 import typingsSlinky.arcgisJsApi.esri.FieldInfoFormatProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/popup/support/FieldInfoFormat", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends FieldInfoFormat {
   def this(properties: FieldInfoFormatProperties) = this()
 }
-

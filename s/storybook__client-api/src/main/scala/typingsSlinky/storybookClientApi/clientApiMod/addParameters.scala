@@ -3,11 +3,11 @@ package typingsSlinky.storybookClientApi.clientApiMod
 import typingsSlinky.storybookAddons.typesMod.Parameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/client-api/dist/client_api", "addParameters")
 @js.native
 object addParameters extends js.Object {
+  
   def apply(parameters: Parameters): Unit = js.native
 }
-

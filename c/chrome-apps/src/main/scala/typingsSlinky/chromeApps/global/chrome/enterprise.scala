@@ -3,11 +3,12 @@ package typingsSlinky.chromeApps.global.chrome
 import typingsSlinky.chromeApps.chrome.enterprise.platformKeys.Token
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("chrome.enterprise")
 @js.native
 object enterprise extends js.Object {
+  
   // #endregion
   // #region chrome.enterprise.*
   ////////////////
@@ -23,6 +24,7 @@ object enterprise extends js.Object {
     */
   @js.native
   object deviceAttributes extends js.Object {
+    
     /**
       * @since Chrome 66.
       * @description
@@ -31,6 +33,7 @@ object enterprise extends js.Object {
       * @param callback Called with the Annotated Location of the device.
       */
     def getDeviceAnnotatedLocation(callback: js.Function1[/* annotatedLocation */ String, Unit]): Unit = js.native
+    
     /**
       * @since Chrome 66.
       * @description
@@ -39,6 +42,7 @@ object enterprise extends js.Object {
       * @param callback Called with the Asset ID of the device.
       */
     def getDeviceAssetId(callback: js.Function1[/* assetId */ String, Unit]): Unit = js.native
+    
     /**
       * @since Chrome 66.
       * @description
@@ -50,6 +54,7 @@ object enterprise extends js.Object {
       * @param callback Called with the serial number of the device.
       */
     def getDeviceSerialNumber(callback: js.Function1[/* serialNumber */ String, Unit]): Unit = js.native
+    
     /**
       * @description
       * Fetches the value of the device identifier of the directory API,
@@ -72,6 +77,7 @@ object enterprise extends js.Object {
     */
   @js.native
   object platformKeys extends js.Object {
+    
     /**
       * @since Chrome 50.
       * @description
@@ -122,6 +128,7 @@ object enterprise extends js.Object {
       registerKey: Boolean,
       callback: js.Function1[/* response */ js.typedarray.ArrayBuffer, Unit]
     ): Unit = js.native
+    
     /**
       * @since Chrome 50.
       * Challenges a hardware-backed Enterprise User Key and emits the response as part of a remote attestation protocol.
@@ -147,6 +154,7 @@ object enterprise extends js.Object {
       registerKey: Boolean,
       callback: js.Function1[/* response */ js.typedarray.ArrayBuffer, Unit]
     ): Unit = js.native
+    
     /**
       * Returns the list of all client certificates available from the given token.
       * Can be used to check for the existence and expiration of client certificates that are usable for a certain authentication.
@@ -157,6 +165,7 @@ object enterprise extends js.Object {
       tokenId: String,
       callback: js.Function1[/* certificates */ js.Array[js.typedarray.ArrayBuffer], Unit]
     ): Unit = js.native
+    
     /**
       * Returns the available Tokens.
       * In a regular user's session the list will always contain the user's token with id 'user'.
@@ -165,6 +174,7 @@ object enterprise extends js.Object {
       * @param callback Invoked by getTokens with the list of available Tokens.
       */
     def getTokens(callback: js.Function1[/* tokens */ js.Array[Token], Unit]): Unit = js.native
+    
     /**
       * Imports certificate to the given token if the certified key is already stored in this token.
       * After a successful certification request, this function should be used to store the obtained
@@ -174,6 +184,7 @@ object enterprise extends js.Object {
       * @param [callback] Called back when this operation is finished.
       */
     def importCertificate(tokenId: String, certificate: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
+    
     /**
       * Removes certificate from the given token if present.
       * Should be used to remove obsolete certificates so that they are not
@@ -185,6 +196,4 @@ object enterprise extends js.Object {
       */
     def removeCertificate(tokenId: String, certificate: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
   }
-  
 }
-

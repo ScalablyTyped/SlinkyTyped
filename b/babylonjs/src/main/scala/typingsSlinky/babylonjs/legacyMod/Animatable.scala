@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "Animatable")
 @js.native
@@ -38,4 +38,3 @@ class Animatable protected ()
   onAnimationLoop: js.UndefOr[js.Function0[Unit] | Null]
   ) = this()
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.relayCompiler.schemaMod.LinkedFieldTypeID
 import typingsSlinky.relayCompiler.schemaMod.ScalarFieldTypeID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.relayCompiler.iRMod.ClientExtension
@@ -20,8 +20,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.relayCompiler.iRMod.Stream
 */
 trait Selection extends js.Object
-
 object Selection {
+  
   @scala.inline
   def ScalarField(
     alias: String,
@@ -36,6 +36,7 @@ object Selection {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Selection]
   }
+  
   @scala.inline
   def InlineFragment(
     directives: js.Array[Directive],
@@ -47,6 +48,7 @@ object Selection {
     val __obj = js.Dynamic.literal(directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any], typeCondition = typeCondition.asInstanceOf[js.Any])
     __obj.asInstanceOf[Selection]
   }
+  
   @scala.inline
   def InlineDataFragmentSpread(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.InlineDataFragmentSpread,
@@ -57,6 +59,7 @@ object Selection {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[Selection]
   }
+  
   @scala.inline
   def FragmentSpread(
     args: js.Array[Argument],
@@ -68,6 +71,7 @@ object Selection {
     val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Selection]
   }
+  
   @scala.inline
   def ClientExtension(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.ClientExtension,
@@ -77,6 +81,7 @@ object Selection {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[Selection]
   }
+  
   @scala.inline
   def ModuleImport(
     documentName: String,
@@ -90,6 +95,7 @@ object Selection {
     val __obj = js.Dynamic.literal(documentName = documentName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], module = module.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[Selection]
   }
+  
   @scala.inline
   def Defer(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.Defer,
@@ -100,6 +106,7 @@ object Selection {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[Selection]
   }
+  
   @scala.inline
   def Stream(
     initialCount: ArgumentValue,
@@ -111,6 +118,7 @@ object Selection {
     val __obj = js.Dynamic.literal(initialCount = initialCount.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[Selection]
   }
+  
   @scala.inline
   def LinkedField(
     alias: String,
@@ -127,6 +135,7 @@ object Selection {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Selection]
   }
+  
   @scala.inline
   def Condition(
     condition: Literal | Variable,
@@ -139,4 +148,3 @@ object Selection {
     __obj.asInstanceOf[Selection]
   }
 }
-

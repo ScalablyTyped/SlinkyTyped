@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "SceneOptimizerOptions")
 @js.native
@@ -21,6 +21,16 @@ class SceneOptimizerOptions ()
     /**
     * Defines the target frame rate to reach (60 by default)
     */
+  targetFrameRate: js.UndefOr[scala.Nothing],
+    /**
+    * Defines the interval between two checkes (2000ms by default)
+    */
+  trackerDuration: Double
+  ) = this()
+  def this(
+    /**
+    * Defines the target frame rate to reach (60 by default)
+    */
   targetFrameRate: Double,
     /**
     * Defines the interval between two checkes (2000ms by default)
@@ -28,11 +38,11 @@ class SceneOptimizerOptions ()
   trackerDuration: Double
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/index", "SceneOptimizerOptions")
 @js.native
 object SceneOptimizerOptions extends js.Object {
+  
   /**
     * Creates a list of pre-defined optimizations aimed to have a big impact on the scene visual
     * @param targetFrameRate defines the target frame rate (60 by default)
@@ -40,6 +50,7 @@ object SceneOptimizerOptions extends js.Object {
     */
   def HighDegradationAllowed(): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizerOptions = js.native
   def HighDegradationAllowed(targetFrameRate: Double): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizerOptions = js.native
+  
   /**
     * Creates a list of pre-defined optimizations aimed to reduce the visual impact on the scene
     * @param targetFrameRate defines the target frame rate (60 by default)
@@ -47,6 +58,7 @@ object SceneOptimizerOptions extends js.Object {
     */
   def LowDegradationAllowed(): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizerOptions = js.native
   def LowDegradationAllowed(targetFrameRate: Double): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizerOptions = js.native
+  
   /**
     * Creates a list of pre-defined optimizations aimed to have a moderate impact on the scene visual
     * @param targetFrameRate defines the target frame rate (60 by default)
@@ -55,4 +67,3 @@ object SceneOptimizerOptions extends js.Object {
   def ModerateDegradationAllowed(): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizerOptions = js.native
   def ModerateDegradationAllowed(targetFrameRate: Double): typingsSlinky.babylonjs.sceneOptimizerMod.SceneOptimizerOptions = js.native
 }
-

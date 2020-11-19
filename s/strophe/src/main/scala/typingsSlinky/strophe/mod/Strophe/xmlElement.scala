@@ -3,11 +3,12 @@ package typingsSlinky.strophe.mod.Strophe
 import org.scalajs.dom.raw.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("strophe", "Strophe.xmlElement")
 @js.native
 object xmlElement extends js.Object {
+  
   /** Function: xmlElement
     *  Create an XML DOM element.
     *
@@ -34,4 +35,3 @@ object xmlElement extends js.Object {
   def apply(name: String, text: String): Element = js.native
   def apply(name: String, text: String, attrs: js.Any): Element = js.native
 }
-

@@ -3,42 +3,17 @@ package typingsSlinky.qunitDom.assertionsMod
 import typingsSlinky.qunitDom.anon.Any
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DOMAssertions extends js.Object {
-  /**
-    * Finds a valid HTMLElement from target
-    * @private
-    * @returns (HTMLElement|null) a valid HTMLElement, or null
-    * @throws TypeError will be thrown if target is an unrecognized type
-    */
-  var findElement: js.Any = js.native
-  /**
-    * Finds a collection of Element instances from target using querySelectorAll
-    * @private
-    * @returns (Element[]) an array of Element instances
-    * @throws TypeError will be thrown if target is an unrecognized type
-    */
-  var findElements: js.Any = js.native
-  /**
-    * Finds a valid HTMLElement from target, or pushes a failing assertion if a valid
-    * element is not found.
-    * @private
-    * @returns (HTMLElement|null) a valid HTMLElement, or null
-    */
-  var findTargetElement: js.Any = js.native
-  /**
-    * @private
-    */
-  var pushResult: js.Any = js.native
-  var rootElement: js.Any = js.native
-  var target: js.Any = js.native
-  var testContext: js.Any = js.native
+  
   def containsText(expected: String): DOMAssertions = js.native
   def containsText(expected: String, message: String): DOMAssertions = js.native
+  
   def doesNotContainText(unexpected: String): DOMAssertions = js.native
   def doesNotContainText(unexpected: String, message: String): DOMAssertions = js.native
+  
   /**
     * Assert an {@link HTMLElement} matching the `selector` does not exists.
     *
@@ -51,6 +26,7 @@ trait DOMAssertions extends js.Object {
     */
   def doesNotExist(): DOMAssertions = js.native
   def doesNotExist(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} has no ARIA attribute with the
     * provided `name`.
@@ -65,6 +41,7 @@ trait DOMAssertions extends js.Object {
     */
   def doesNotHaveAria(name: String): DOMAssertions = js.native
   def doesNotHaveAria(name: String, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} has no attribute with the provided `name`.
     *
@@ -80,6 +57,7 @@ trait DOMAssertions extends js.Object {
     */
   def doesNotHaveAttribute(name: String): DOMAssertions = js.native
   def doesNotHaveAttribute(name: String, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} does not have the `expected` CSS class using
     * [`classList`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList).
@@ -104,7 +82,9 @@ trait DOMAssertions extends js.Object {
   def doesNotHaveClass(expected: String, message: String): DOMAssertions = js.native
   def doesNotHaveClass(expected: js.RegExp): DOMAssertions = js.native
   def doesNotHaveClass(expected: js.RegExp, message: String): DOMAssertions = js.native
+  
   def doesNotHavePseudoElementStyle(selector: String, expected: js.Object, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the [HTMLElement][] does not have the `expected` style declarations using
     * [`window.getComputedStyle`](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle).
@@ -122,6 +102,7 @@ trait DOMAssertions extends js.Object {
     */
   def doesNotHaveStyle(expected: js.Object): DOMAssertions = js.native
   def doesNotHaveStyle(expected: js.Object, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the tagName of the {@link HTMLElement} or an {@link HTMLElement}
     * matching the `selector` does not match the `expected` tagName, using the
@@ -140,8 +121,10 @@ trait DOMAssertions extends js.Object {
     */
   def doesNotHaveTagName(tagName: String): DOMAssertions = js.native
   def doesNotHaveTagName(tagName: String, message: String): DOMAssertions = js.native
+  
   def doesNotHaveTextContaining(unexpected: String): DOMAssertions = js.native
   def doesNotHaveTextContaining(unexpected: String, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the text of the {@link HTMLElement} or an {@link HTMLElement}
     * matching the `selector` does not include the given `text`, using the
@@ -158,6 +141,7 @@ trait DOMAssertions extends js.Object {
     */
   def doesNotIncludeText(text: String): DOMAssertions = js.native
   def doesNotIncludeText(text: String, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the target selector selects only Elements that are not also selected by
     * compareSelector.
@@ -170,6 +154,7 @@ trait DOMAssertions extends js.Object {
     */
   def doesNotMatchSelector(compareSelector: String): DOMAssertions = js.native
   def doesNotMatchSelector(compareSelector: String, message: String): DOMAssertions = js.native
+  
   /**
     * Assert an {@link HTMLElement} (or multiple) matching the `selector` exists.
     *
@@ -196,6 +181,31 @@ trait DOMAssertions extends js.Object {
     */
   def exists(options: ExistsOptions): DOMAssertions = js.native
   def exists(options: ExistsOptions, message: String): DOMAssertions = js.native
+  
+  /**
+    * Finds a valid HTMLElement from target
+    * @private
+    * @returns (HTMLElement|null) a valid HTMLElement, or null
+    * @throws TypeError will be thrown if target is an unrecognized type
+    */
+  var findElement: js.Any = js.native
+  
+  /**
+    * Finds a collection of Element instances from target using querySelectorAll
+    * @private
+    * @returns (Element[]) an array of Element instances
+    * @throws TypeError will be thrown if target is an unrecognized type
+    */
+  var findElements: js.Any = js.native
+  
+  /**
+    * Finds a valid HTMLElement from target, or pushes a failing assertion if a valid
+    * element is not found.
+    * @private
+    * @returns (HTMLElement|null) a valid HTMLElement, or null
+    */
+  var findTargetElement: js.Any = js.native
+  
   /**
     * Assert that the `textContent` property of an {@link HTMLElement} is not empty.
     *
@@ -208,6 +218,7 @@ trait DOMAssertions extends js.Object {
     */
   def hasAnyText(): DOMAssertions = js.native
   def hasAnyText(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the `value` property of an {@link HTMLInputElement} is not empty.
     *
@@ -221,6 +232,7 @@ trait DOMAssertions extends js.Object {
     */
   def hasAnyValue(): DOMAssertions = js.native
   def hasAnyValue(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} has an ARIA attribute with the provided
     * `name` and optionally checks if the attribute `value` matches the provided
@@ -243,6 +255,7 @@ trait DOMAssertions extends js.Object {
   def hasAria(name: String, value: Any, message: String): DOMAssertions = js.native
   def hasAria(name: String, value: js.RegExp): DOMAssertions = js.native
   def hasAria(name: String, value: js.RegExp, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} has an attribute with the provided `name`.
     *
@@ -274,6 +287,7 @@ trait DOMAssertions extends js.Object {
   def hasAttribute(name: String, value: Any, message: String): DOMAssertions = js.native
   def hasAttribute(name: String, value: js.RegExp): DOMAssertions = js.native
   def hasAttribute(name: String, value: js.RegExp, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} has the `expected` CSS class using
     * [`classList`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList).
@@ -296,12 +310,15 @@ trait DOMAssertions extends js.Object {
   def hasClass(expected: String, message: String): DOMAssertions = js.native
   def hasClass(expected: js.RegExp): DOMAssertions = js.native
   def hasClass(expected: js.RegExp, message: String): DOMAssertions = js.native
+  
   def hasNoAttribute(name: String): DOMAssertions = js.native
   def hasNoAttribute(name: String, message: String): DOMAssertions = js.native
+  
   def hasNoClass(expected: String): DOMAssertions = js.native
   def hasNoClass(expected: String, message: String): DOMAssertions = js.native
   def hasNoClass(expected: js.RegExp): DOMAssertions = js.native
   def hasNoClass(expected: js.RegExp, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the `textContent` property of an {@link HTMLElement} is empty.
     *
@@ -314,6 +331,7 @@ trait DOMAssertions extends js.Object {
     */
   def hasNoText(): DOMAssertions = js.native
   def hasNoText(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the `value` property of an {@link HTMLInputElement} is empty.
     *
@@ -329,6 +347,7 @@ trait DOMAssertions extends js.Object {
     */
   def hasNoValue(): DOMAssertions = js.native
   def hasNoValue(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} has a property with the provided `name`
     * and checks if the property `value` matches the provided text or regular
@@ -347,8 +366,10 @@ trait DOMAssertions extends js.Object {
   def hasProperty(name: String, value: String, message: String): DOMAssertions = js.native
   def hasProperty(name: String, value: js.RegExp): DOMAssertions = js.native
   def hasProperty(name: String, value: js.RegExp, message: String): DOMAssertions = js.native
+  
   def hasPseudoElementStyle(selector: String, expected: js.Object): DOMAssertions = js.native
   def hasPseudoElementStyle(selector: String, expected: js.Object, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the [HTMLElement][] has the `expected` style declarations using
     * [`window.getComputedStyle`](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle).
@@ -366,6 +387,7 @@ trait DOMAssertions extends js.Object {
     */
   def hasStyle(expected: js.Object): DOMAssertions = js.native
   def hasStyle(expected: js.Object, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the tagName of the {@link HTMLElement} or an {@link HTMLElement}
     * matching the `selector` matches the `expected` tagName, using the
@@ -384,6 +406,7 @@ trait DOMAssertions extends js.Object {
     */
   def hasTagName(tagName: String): DOMAssertions = js.native
   def hasTagName(tagName: String, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the text of the {@link HTMLElement} or an {@link HTMLElement}
     * matching the `selector` matches the `expected` text, using the
@@ -419,8 +442,10 @@ trait DOMAssertions extends js.Object {
   def hasText(expected: Any, message: String): DOMAssertions = js.native
   def hasText(expected: js.RegExp): DOMAssertions = js.native
   def hasText(expected: js.RegExp, message: String): DOMAssertions = js.native
+  
   def hasTextContaining(expected: String): DOMAssertions = js.native
   def hasTextContaining(expected: String, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the `value` property of an {@link HTMLInputElement} matches
     * the `expected` text or regular expression.
@@ -445,6 +470,7 @@ trait DOMAssertions extends js.Object {
   def hasValue(expected: Any, message: String): DOMAssertions = js.native
   def hasValue(expected: js.RegExp): DOMAssertions = js.native
   def hasValue(expected: js.RegExp, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the text of the {@link HTMLElement} or an {@link HTMLElement}
     * matching the `selector` contains the given `text`, using the
@@ -468,6 +494,7 @@ trait DOMAssertions extends js.Object {
     */
   def includesText(text: String): DOMAssertions = js.native
   def includesText(text: String, message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} or an {@link HTMLElement} matching the
     * `selector` is currently checked.
@@ -483,6 +510,7 @@ trait DOMAssertions extends js.Object {
     */
   def isChecked(): DOMAssertions = js.native
   def isChecked(message: String): DOMAssertions = js.native
+  
   /**
     *  Assert that the {@link HTMLElement} or an {@link HTMLElement} matching the
     * `selector` is disabled.
@@ -496,8 +524,10 @@ trait DOMAssertions extends js.Object {
     */
   def isDisabled(): DOMAssertions = js.native
   def isDisabled(message: String): DOMAssertions = js.native
+  
   def isEnabled(): DOMAssertions = js.native
   def isEnabled(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} or an {@link HTMLElement} matching the
     * `selector` is currently focused.
@@ -511,6 +541,7 @@ trait DOMAssertions extends js.Object {
     */
   def isFocused(): DOMAssertions = js.native
   def isFocused(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} or an {@link HTMLElement} matching the
     * `selector` is currently unchecked.
@@ -526,6 +557,7 @@ trait DOMAssertions extends js.Object {
     */
   def isNotChecked(): DOMAssertions = js.native
   def isNotChecked(message: String): DOMAssertions = js.native
+  
   /**
     *  Assert that the {@link HTMLElement} or an {@link HTMLElement} matching the
     * `selector` is not disabled.
@@ -541,6 +573,7 @@ trait DOMAssertions extends js.Object {
     */
   def isNotDisabled(): DOMAssertions = js.native
   def isNotDisabled(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} or an {@link HTMLElement} matching the
     * `selector` is not currently focused.
@@ -554,6 +587,7 @@ trait DOMAssertions extends js.Object {
     */
   def isNotFocused(): DOMAssertions = js.native
   def isNotFocused(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} or an {@link HTMLElement} matching the
     * `selector` is currently not required.
@@ -567,6 +601,7 @@ trait DOMAssertions extends js.Object {
     */
   def isNotRequired(): DOMAssertions = js.native
   def isNotRequired(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} does not pass validation
     *
@@ -583,6 +618,7 @@ trait DOMAssertions extends js.Object {
     */
   def isNotValid(): DOMAssertions = js.native
   def isNotValid(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} or an {@link HTMLElement} matching the
     * `selector` does not exist or is not visible on the page.
@@ -604,6 +640,7 @@ trait DOMAssertions extends js.Object {
     */
   def isNotVisible(): DOMAssertions = js.native
   def isNotVisible(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} or an {@link HTMLElement} matching the
     * `selector` is currently required.
@@ -617,6 +654,7 @@ trait DOMAssertions extends js.Object {
     */
   def isRequired(): DOMAssertions = js.native
   def isRequired(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} passes validation
     *
@@ -633,6 +671,7 @@ trait DOMAssertions extends js.Object {
     */
   def isValid(): DOMAssertions = js.native
   def isValid(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the {@link HTMLElement} or an {@link HTMLElement} matching the
     * `selector` exists and is visible.
@@ -677,14 +716,18 @@ trait DOMAssertions extends js.Object {
     */
   def isVisible(options: ExistsOptions): DOMAssertions = js.native
   def isVisible(options: ExistsOptions, message: String): DOMAssertions = js.native
+  
   def lacksAttribute(name: String): DOMAssertions = js.native
   def lacksAttribute(name: String, message: String): DOMAssertions = js.native
+  
   def lacksClass(expected: String): DOMAssertions = js.native
   def lacksClass(expected: String, message: String): DOMAssertions = js.native
   def lacksClass(expected: js.RegExp): DOMAssertions = js.native
   def lacksClass(expected: js.RegExp, message: String): DOMAssertions = js.native
+  
   def lacksValue(): DOMAssertions = js.native
   def lacksValue(message: String): DOMAssertions = js.native
+  
   /**
     * Assert that the target selector selects only Elements that are also selected by
     * compareSelector.
@@ -697,15 +740,27 @@ trait DOMAssertions extends js.Object {
     */
   def matchesSelector(compareSelector: String): DOMAssertions = js.native
   def matchesSelector(compareSelector: String, message: String): DOMAssertions = js.native
+  
   def matchesText(expected: String): DOMAssertions = js.native
   def matchesText(expected: String, message: String): DOMAssertions = js.native
   def matchesText(expected: Any): DOMAssertions = js.native
   def matchesText(expected: Any, message: String): DOMAssertions = js.native
   def matchesText(expected: js.RegExp): DOMAssertions = js.native
   def matchesText(expected: js.RegExp, message: String): DOMAssertions = js.native
+  
+  /**
+    * @private
+    */
+  var pushResult: js.Any = js.native
+  
+  var rootElement: js.Any = js.native
+  
+  var target: js.Any = js.native
+  
   /**
     * @private
     */
   /* private */ def targetDescription: js.Any = js.native
+  
+  var testContext: js.Any = js.native
 }
-

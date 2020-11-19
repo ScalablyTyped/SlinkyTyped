@@ -2,7 +2,7 @@ package typingsSlinky.openpgp.mod.`type`
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Wrapper to an OID value
@@ -21,30 +21,33 @@ import scala.scalajs.js.annotation._
 @JSImport("openpgp", "type.oid")
 @js.native
 object oid extends js.Object {
+  
   @js.native
   class OID () extends js.Object {
+    
     /**
       * If a known curve object identifier, return the canonical name of the curve
       * @returns String with the canonical name of the curve
       */
     def getName(): String = js.native
+    
     /**
       * Method to read an OID object
       * @param input Where to read the OID from
       * @returns Number of read bytes
       */
     def read(input: js.typedarray.Uint8Array): Double = js.native
+    
     /**
       * Serialize an OID object as a hex string
       * @returns String with the hex value of the OID
       */
     def toHex(): String = js.native
+    
     /**
       * Serialize an OID object
       * @returns Array with the serialized value the OID
       */
     def write(): js.typedarray.Uint8Array = js.native
   }
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.jsts.mod.geom
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jsts", "geom.GeometryFactory")
 @js.native
@@ -13,4 +13,3 @@ class GeometryFactory ()
   extends typingsSlinky.jsts.jsts.geom.GeometryFactory {
   def this(precisionModel: typingsSlinky.jsts.jsts.geom.PrecisionModel) = this()
 }
-

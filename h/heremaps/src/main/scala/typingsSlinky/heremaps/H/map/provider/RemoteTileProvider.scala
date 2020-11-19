@@ -8,7 +8,7 @@ import typingsSlinky.heremaps.H.util.ICancelable
 import typingsSlinky.heremaps.H.util.Job.Priority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * RemoteTileProvider is an abstract class which should be used by classes implementing data provision on a tile basis. Every child class needs to implement 'requestInternal'
@@ -16,16 +16,19 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait RemoteTileProvider extends TileProvider {
+  
   /**
     * This method returns cache which should be used to store tiles
     * @returns {H.util.ICache} - cache
     */
   def getCache(): ICache = js.native
+  
   /**
     * This method instructs the provider to reload data from it's source.
     * @param hard {boolean} - a boolean flag indicating whether to invalidate in hard mode (true) or in soft mode (false);
     */
   def reload(hard: Boolean): Unit = js.native
+  
   /**
     * This method request tile from remote service
     * @param x {number} - The row number of the tile
@@ -106,4 +109,3 @@ trait RemoteTileProvider extends TileProvider {
     opt_priority: Priority
   ): ICancelable = js.native
 }
-

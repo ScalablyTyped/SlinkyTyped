@@ -4,11 +4,10 @@ import typingsSlinky.arcgisJsApi.esri.StatisticDefinition
 import typingsSlinky.arcgisJsApi.esri.StatisticDefinitionProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/tasks/support/StatisticDefinition", JSImport.Namespace)
 @js.native
 class Class () extends StatisticDefinition {
   def this(properties: StatisticDefinitionProperties) = this()
 }
-

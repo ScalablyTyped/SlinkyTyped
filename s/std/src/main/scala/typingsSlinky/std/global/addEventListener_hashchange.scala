@@ -5,11 +5,12 @@ import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.stdStrings.hashchange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("addEventListener")
 @js.native
 object addEventListener_hashchange extends js.Object {
+  
   def apply(
     `type`: hashchange,
     listener: js.ThisFunction1[/* this */ Window, /* ev */ org.scalajs.dom.raw.HashChangeEvent, _]
@@ -25,4 +26,3 @@ object addEventListener_hashchange extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
 }
-

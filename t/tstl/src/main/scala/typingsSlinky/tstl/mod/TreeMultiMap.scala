@@ -8,7 +8,7 @@ import typingsSlinky.tstl.ipairMod.IPair
 import typingsSlinky.tstl.mapContainerMod.MapContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "TreeMultiMap")
 @js.native
@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
   * @param comp A binary function predicates *x* element would be placed before *y*. When returns `true`, then *x* precedes *y*. Note that, because *equality* is predicated by `!comp(x, y) && !comp(y, x)`, the function must not cover the *equality* like `<=` or `>=`. It must exclude the *equality* like `<` or `>`. Default is {@link less}.
   */
 class TreeMultiMap[Key, T] ()
-  extends typingsSlinky.tstl.tstlMod.TreeMultiMap[Key, T] {
+  extends typingsSlinky.tstl.tstlModuleMod.TreeMultiMap[Key, T] {
   def this(comp: Comparator[Key, Key]) = this()
   /**
     * Initializer Constructor.
@@ -51,10 +51,10 @@ class TreeMultiMap[Key, T] ()
     comp: Comparator[Key, Key]
   ) = this()
 }
-
 @JSImport("tstl", "TreeMultiMap")
 @js.native
 object TreeMultiMap extends js.Object {
+  
   val Iterator: Instantiable0[
     typingsSlinky.tstl.mapElementListMod.MapElementList.Iterator[
       js.Object, 
@@ -75,6 +75,7 @@ object TreeMultiMap extends js.Object {
       ]
     ]
   ] = js.native
+  
   val ReverseIterator: Instantiable0[
     typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator[
       js.Object, 
@@ -96,4 +97,3 @@ object TreeMultiMap extends js.Object {
     ]
   ] = js.native
 }
-

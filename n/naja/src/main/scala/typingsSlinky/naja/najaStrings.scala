@@ -3,9 +3,61 @@ package typingsSlinky.naja
 import typingsSlinky.naja.mod.RequestMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object najaStrings {
+  
+  @scala.inline
+  def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]
+  
+  @scala.inline
+  def GET: GET = "GET".asInstanceOf[GET]
+  
+  @scala.inline
+  def PATCH: PATCH = "PATCH".asInstanceOf[PATCH]
+  
+  @scala.inline
+  def POST: POST = "POST".asInstanceOf[POST]
+  
+  @scala.inline
+  def PUT: PUT = "PUT".asInstanceOf[PUT]
+  
+  @scala.inline
+  def abort: abort = "abort".asInstanceOf[abort]
+  
+  @scala.inline
+  def afterUpdate: afterUpdate = "afterUpdate".asInstanceOf[afterUpdate]
+  
+  @scala.inline
+  def before: before = "before".asInstanceOf[before]
+  
+  @scala.inline
+  def beforeUpdate: beforeUpdate = "beforeUpdate".asInstanceOf[beforeUpdate]
+  
+  @scala.inline
+  def complete: complete = "complete".asInstanceOf[complete]
+  
+  @scala.inline
+  def error: error = "error".asInstanceOf[error]
+  
+  @scala.inline
+  def init: init = "init".asInstanceOf[init]
+  
+  @scala.inline
+  def interaction: interaction = "interaction".asInstanceOf[interaction]
+  
+  @scala.inline
+  def load: load = "load".asInstanceOf[load]
+  
+  @scala.inline
+  def replace: replace = "replace".asInstanceOf[replace]
+  
+  @scala.inline
+  def start: start = "start".asInstanceOf[start]
+  
+  @scala.inline
+  def success: success = "success".asInstanceOf[success]
+  
   @js.native
   sealed trait DELETE extends RequestMethod
   
@@ -56,40 +108,4 @@ object najaStrings {
   
   @js.native
   sealed trait success extends js.Object
-  
-  @scala.inline
-  def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]
-  @scala.inline
-  def GET: GET = "GET".asInstanceOf[GET]
-  @scala.inline
-  def PATCH: PATCH = "PATCH".asInstanceOf[PATCH]
-  @scala.inline
-  def POST: POST = "POST".asInstanceOf[POST]
-  @scala.inline
-  def PUT: PUT = "PUT".asInstanceOf[PUT]
-  @scala.inline
-  def abort: abort = "abort".asInstanceOf[abort]
-  @scala.inline
-  def afterUpdate: afterUpdate = "afterUpdate".asInstanceOf[afterUpdate]
-  @scala.inline
-  def before: before = "before".asInstanceOf[before]
-  @scala.inline
-  def beforeUpdate: beforeUpdate = "beforeUpdate".asInstanceOf[beforeUpdate]
-  @scala.inline
-  def complete: complete = "complete".asInstanceOf[complete]
-  @scala.inline
-  def error: error = "error".asInstanceOf[error]
-  @scala.inline
-  def init: init = "init".asInstanceOf[init]
-  @scala.inline
-  def interaction: interaction = "interaction".asInstanceOf[interaction]
-  @scala.inline
-  def load: load = "load".asInstanceOf[load]
-  @scala.inline
-  def replace: replace = "replace".asInstanceOf[replace]
-  @scala.inline
-  def start: start = "start".asInstanceOf[start]
-  @scala.inline
-  def success: success = "success".asInstanceOf[success]
 }
-

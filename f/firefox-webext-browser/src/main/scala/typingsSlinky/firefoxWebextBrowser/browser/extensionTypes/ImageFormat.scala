@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser.extensionTypes
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* extensionTypes types */
 /** The format of an image. */
@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.png
 */
 trait ImageFormat extends js.Object
-
 object ImageFormat {
+  
   @scala.inline
   def jpeg: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.jpeg = "jpeg".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.jpeg]
+  
   @scala.inline
   def png: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.png = "png".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.png]
 }
-

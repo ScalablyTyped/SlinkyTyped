@@ -8,10 +8,11 @@ import typingsSlinky.gapiClientPubsub.anon.Callback
 import typingsSlinky.gapiClientPubsub.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SubscriptionsResource extends js.Object {
+  
   /**
     * Acknowledges the messages associated with the `ack_ids` in the
     * `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
@@ -22,6 +23,7 @@ trait SubscriptionsResource extends js.Object {
     * than once will not result in an error.
     */
   def acknowledge(request: Alt): Request[js.Object] = js.native
+  
   /**
     * Creates a subscription to a given topic.
     * If the subscription already exists, returns `ALREADY_EXISTS`.
@@ -35,6 +37,7 @@ trait SubscriptionsResource extends js.Object {
     * Note that for REST API requests, you must specify a name in the request.
     */
   def create(request: Bearertoken): Request[Subscription] = js.native
+  
   /**
     * Deletes an existing subscription. All messages retained in the subscription
     * are immediately dropped. Calls to `Pull` after deletion will return
@@ -43,18 +46,22 @@ trait SubscriptionsResource extends js.Object {
     * subscription or its topic unless the same topic is specified.
     */
   def delete(request: Alt): Request[js.Object] = js.native
+  
   /** Gets the configuration details of a subscription. */
   def get(request: Alt): Request[Subscription] = js.native
+  
   /**
     * Gets the access control policy for a resource.
     * Returns an empty policy if the resource exists and does not have a policy
     * set.
     */
   def getIamPolicy(request: Accesstoken): Request[Policy] = js.native
+  
   /** Lists matching subscriptions. */
   def list(request: Callback): Request[ListSubscriptionsResponse] = js.native
   /** Lists the name of the subscriptions for this topic. */
   def list(request: Fields): Request[ListTopicSubscriptionsResponse] = js.native
+  
   /**
     * Modifies the ack deadline for a specific message. This method is useful
     * to indicate that more time is needed to process a message by the
@@ -63,6 +70,7 @@ trait SubscriptionsResource extends js.Object {
     * subscription-level `ackDeadlineSeconds` used for subsequent messages.
     */
   def modifyAckDeadline(request: Alt): Request[js.Object] = js.native
+  
   /**
     * Modifies the `PushConfig` for a specified subscription.
     *
@@ -72,6 +80,7 @@ trait SubscriptionsResource extends js.Object {
     * continuously through the call regardless of changes to the `PushConfig`.
     */
   def modifyPushConfig(request: Alt): Request[js.Object] = js.native
+  
   /**
     * Pulls messages from the server. Returns an empty list if there are no
     * messages available in the backlog. The server may return `UNAVAILABLE` if
@@ -79,11 +88,13 @@ trait SubscriptionsResource extends js.Object {
     * subscription.
     */
   def pull(request: Alt): Request[PullResponse] = js.native
+  
   /**
     * Sets the access control policy on the specified resource. Replaces any
     * existing policy.
     */
   def setIamPolicy(request: Accesstoken): Request[Policy] = js.native
+  
   /**
     * Returns permissions that a caller has on the specified resource.
     * If the resource does not exist, this will return an empty set of
@@ -95,4 +106,3 @@ trait SubscriptionsResource extends js.Object {
     */
   def testIamPermissions(request: Accesstoken): Request[TestIamPermissionsResponse] = js.native
 }
-

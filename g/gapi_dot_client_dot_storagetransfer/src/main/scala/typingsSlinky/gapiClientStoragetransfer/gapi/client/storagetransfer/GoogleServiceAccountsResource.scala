@@ -4,10 +4,11 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.gapiClientStoragetransfer.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GoogleServiceAccountsResource extends js.Object {
+  
   /**
     * Returns the Google service account that is used by Storage Transfer
     * Service to access buckets in the project where transfers
@@ -20,27 +21,30 @@ trait GoogleServiceAccountsResource extends js.Object {
     */
   def get(request: Accesstoken): Request[GoogleServiceAccount] = js.native
 }
-
 object GoogleServiceAccountsResource {
+  
   @scala.inline
   def apply(get: Accesstoken => Request[GoogleServiceAccount]): GoogleServiceAccountsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[GoogleServiceAccountsResource]
   }
+  
   @scala.inline
   implicit class GoogleServiceAccountsResourceOps[Self <: GoogleServiceAccountsResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setGet(value: Accesstoken => Request[GoogleServiceAccount]): Self = this.set("get", js.Any.fromFunction1(value))
   }
-  
 }
-

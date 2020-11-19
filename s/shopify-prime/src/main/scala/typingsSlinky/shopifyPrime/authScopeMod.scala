@@ -2,11 +2,12 @@ package typingsSlinky.shopifyPrime
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("shopify-prime/dist/enums/auth_scope", JSImport.Namespace)
 @js.native
 object authScopeMod extends js.Object {
+  
   trait _AuthScope extends js.Object
   
   /* Rewritten from type alias, can be one of: 
@@ -33,4 +34,3 @@ object authScopeMod extends js.Object {
   */
   type AuthScope = _AuthScope | String
 }
-

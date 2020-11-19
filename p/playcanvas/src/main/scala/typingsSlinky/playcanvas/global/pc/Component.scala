@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Base constructor for a Component.
@@ -18,4 +18,3 @@ class Component protected ()
   extends typingsSlinky.playcanvas.pc.Component {
   def this(system: typingsSlinky.playcanvas.pc.ComponentSystem, entity: typingsSlinky.playcanvas.pc.Entity) = this()
 }
-

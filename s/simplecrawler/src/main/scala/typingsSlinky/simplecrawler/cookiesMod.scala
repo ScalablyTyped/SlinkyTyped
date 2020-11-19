@@ -3,11 +3,12 @@ package typingsSlinky.simplecrawler
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("simplecrawler/cookies", JSImport.Namespace)
 @js.native
 object cookiesMod extends js.Object {
+  
   @js.native
   class Cookie protected () extends js.Object {
     def this(name: String, value: String, expires: String) = this()
@@ -68,22 +69,39 @@ object cookiesMod extends js.Object {
       httponly: Boolean
     ) = this()
     def this(name: String, value: String, expires: Double, path: String, domain: String, httponly: Boolean) = this()
+    
     var domain: js.UndefOr[String] = js.native
+    
     var expires: String | Double = js.native
+    
     var httponly: js.UndefOr[Boolean] = js.native
-    var name: String = js.native
-    var path: js.UndefOr[String] = js.native
-    var value: String = js.native
+    
     def isExpired(): Boolean = js.native
+    
     def matchDomain(domain: String): Boolean = js.native
+    
     def matchPath(path: String): Boolean = js.native
+    
+    var name: String = js.native
+    
+    var path: js.UndefOr[String] = js.native
+    
     def toOutboundString(): String = js.native
+    
     def toString(includeHeader: Boolean): String = js.native
+    
+    var value: String = js.native
+  }
+  /* static members */
+  @js.native
+  object Cookie extends js.Object {
+    
+    def fromString(content: String): Cookie = js.native
   }
   
   @js.native
   trait CookieJar extends EventEmitter {
-    var cookies: js.Array[Cookie] = js.native
+    
     def add(name: String, value: String, expiry: String): this.type = js.native
     def add(
       name: String,
@@ -286,10 +304,14 @@ object cookiesMod extends js.Object {
       httponly: Boolean,
       callback: js.Function2[/* error */ js.UndefOr[js.Error], /* cookie */ js.UndefOr[Cookie], Unit]
     ): this.type = js.native
+    
     def addFromHeaders(headers: String): this.type = js.native
     def addFromHeaders(headers: String, callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit]): this.type = js.native
     def addFromHeaders(headers: js.Array[String]): this.type = js.native
     def addFromHeaders(headers: js.Array[String], callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit]): this.type = js.native
+    
+    var cookies: js.Array[Cookie] = js.native
+    
     def get(): js.Array[Cookie] = js.native
     def get(
       name: js.UndefOr[scala.Nothing],
@@ -314,6 +336,7 @@ object cookiesMod extends js.Object {
       domain: String,
       callback: js.Function2[/* error */ js.UndefOr[js.Error], /* cookies */ js.UndefOr[js.Array[Cookie]], Unit]
     ): js.Array[Cookie] = js.native
+    
     def getAsHeader(): js.Array[String] = js.native
     def getAsHeader(
       name: js.UndefOr[scala.Nothing],
@@ -338,6 +361,7 @@ object cookiesMod extends js.Object {
       domain: String,
       callback: js.Function2[/* error */ js.UndefOr[js.Error], /* cookies */ js.UndefOr[js.Array[Cookie]], Unit]
     ): js.Array[String] = js.native
+    
     def remove(): js.Array[Cookie] = js.native
     def remove(
       name: js.UndefOr[scala.Nothing],
@@ -382,12 +406,4 @@ object cookiesMod extends js.Object {
   
   @js.native
   class default () extends CookieJar
-  
-  /* static members */
-  @js.native
-  object Cookie extends js.Object {
-    def fromString(content: String): Cookie = js.native
-  }
-  
 }
-

@@ -2,10 +2,11 @@ package typingsSlinky.chaiSpies.ChaiSpies
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Spy extends js.Object {
+  
   /**
     * #### chai.spy (function)
     *
@@ -41,6 +42,7 @@ trait Spy extends js.Object {
   def apply[A1, A2, A3, A4, A5, A6, A7, A8, A9, R](name: String, fn: SpyFunc9[A1, A2, A3, A4, A5, A6, A7, A8, A9, R]): SpyFunc9Proxy[A1, A2, A3, A4, A5, A6, A7, A8, A9, R] = js.native
   def apply[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R](fn: SpyFunc10[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R]): SpyFunc10Proxy[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R] = js.native
   def apply[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R](name: String, fn: SpyFunc10[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R]): SpyFunc10Proxy[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R] = js.native
+  
   def `object`(methods: js.Array[String]): js.Any = js.native
   /**
     * #### chai.spy.object (function)
@@ -56,6 +58,7 @@ trait Spy extends js.Object {
   def `object`(name: String, methods: js.Array[String]): js.Any = js.native
   def `object`[T](methods: T): T = js.native
   def `object`[T](name: String, methods: T): T = js.native
+  
   /**
     * #### chai.spy.on (function)
     *
@@ -80,6 +83,7 @@ trait Spy extends js.Object {
     methodNames: js.Array[String],
     fn: js.Function1[/* parameters */ js.Array[_] | js.Any, _]
   ): js.Any = js.native
+  
   /**
     * #### chai.spy.restore (function)
     *
@@ -98,6 +102,7 @@ trait Spy extends js.Object {
   def restore(`object`: js.Object): Unit = js.native
   def restore(`object`: js.Object, methodNames: String): Unit = js.native
   def restore(`object`: js.Object, methodNames: js.Array[String]): Unit = js.native
+  
   /**
     * #### chai.spy.returns (function)
     *
@@ -110,6 +115,7 @@ trait Spy extends js.Object {
     * @api public
     */
   def returns[T](value: T): SpyFunc0Proxy[T] = js.native
+  
   /**
     * ### chai.spy.sandbox
     *
@@ -122,4 +128,3 @@ trait Spy extends js.Object {
     */
   def sandbox(): Sandbox = js.native
 }
-

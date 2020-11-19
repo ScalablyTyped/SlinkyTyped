@@ -3,11 +3,12 @@ package typingsSlinky.gitlab
 import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gitlab/dist/types/core/templates", JSImport.Namespace)
 @js.native
 object templatesMod extends js.Object {
+  
   @js.native
   class ResourceAccessRequests protected ()
     extends typingsSlinky.gitlab.resourceAccessRequestsMod.ResourceAccessRequests {
@@ -79,6 +80,4 @@ object templatesMod extends js.Object {
     extends typingsSlinky.gitlab.resourceVariablesMod.ResourceVariables {
     def this(resourceType: String, options: BaseServiceOptions) = this()
   }
-  
 }
-

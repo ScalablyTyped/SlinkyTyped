@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Access information about the script._
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Script")
 @js.native
 object Script extends js.Object {
+  
   /**
     * _Informs the system about script completion._
     *
@@ -23,11 +24,13 @@ object Script extends js.Object {
     * @see https://docs.scriptable.app/script/#complete
     */
   def complete(): Unit = js.native
+  
   /**
     * _Name of the script._
     * @see https://docs.scriptable.app/script/#name
     */
   def name(): String = js.native
+  
   /**
     * _Sets output when running the script as a shortcut action._
     *
@@ -40,4 +43,3 @@ object Script extends js.Object {
     */
   def setShortcutOutput(value: js.Any): Unit = js.native
 }
-

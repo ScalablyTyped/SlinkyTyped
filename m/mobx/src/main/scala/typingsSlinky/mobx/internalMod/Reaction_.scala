@@ -4,7 +4,7 @@ import typingsSlinky.mobx.derivationMod.IDerivation
 import typingsSlinky.mobx.reactionMod.Reaction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mobx/lib/internal", "Reaction")
 @js.native
@@ -28,4 +28,3 @@ class Reaction_ protected () extends Reaction {
     requiresObservable: Boolean
   ) = this()
 }
-

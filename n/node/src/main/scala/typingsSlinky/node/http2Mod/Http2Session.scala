@@ -13,22 +13,11 @@ import typingsSlinky.node.nodeStrings.timeout
 import typingsSlinky.node.tlsMod.TLSSocket
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Http2Session extends EventEmitter {
-  val alpnProtocol: js.UndefOr[String] = js.native
-  val closed: Boolean = js.native
-  val connecting: Boolean = js.native
-  val destroyed: Boolean = js.native
-  val encrypted: js.UndefOr[Boolean] = js.native
-  val localSettings: Settings = js.native
-  val originSet: js.UndefOr[js.Array[String]] = js.native
-  val pendingSettingsAck: Boolean = js.native
-  val remoteSettings: Settings = js.native
-  val socket: Socket | TLSSocket = js.native
-  val state: SessionState = js.native
-  val `type`: Double = js.native
+  
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
@@ -57,12 +46,23 @@ trait Http2Session extends EventEmitter {
   ): this.type = js.native
   @JSName("addListener")
   def addListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  
+  val alpnProtocol: js.UndefOr[String] = js.native
+  
   def close(): Unit = js.native
   def close(callback: js.Function0[Unit]): Unit = js.native
+  
+  val closed: Boolean = js.native
+  
+  val connecting: Boolean = js.native
+  
   def destroy(): Unit = js.native
   def destroy(error: js.UndefOr[scala.Nothing], code: Double): Unit = js.native
   def destroy(error: js.Error): Unit = js.native
   def destroy(error: js.Error, code: Double): Unit = js.native
+  
+  val destroyed: Boolean = js.native
+  
   @JSName("emit")
   def emit_close(event: close): Boolean = js.native
   @JSName("emit")
@@ -79,6 +79,9 @@ trait Http2Session extends EventEmitter {
   def emit_remoteSettings(event: typingsSlinky.node.nodeStrings.remoteSettings, settings: Settings): Boolean = js.native
   @JSName("emit")
   def emit_timeout(event: timeout): Boolean = js.native
+  
+  val encrypted: js.UndefOr[Boolean] = js.native
+  
   def goaway(): Unit = js.native
   def goaway(
     code: js.UndefOr[scala.Nothing],
@@ -91,6 +94,9 @@ trait Http2Session extends EventEmitter {
   def goaway(code: Double, lastStreamID: js.UndefOr[scala.Nothing], opaqueData: ArrayBufferView): Unit = js.native
   def goaway(code: Double, lastStreamID: Double): Unit = js.native
   def goaway(code: Double, lastStreamID: Double, opaqueData: ArrayBufferView): Unit = js.native
+  
+  val localSettings: Settings = js.native
+  
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -119,6 +125,7 @@ trait Http2Session extends EventEmitter {
   ): this.type = js.native
   @JSName("on")
   def on_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("once")
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -147,6 +154,11 @@ trait Http2Session extends EventEmitter {
   ): this.type = js.native
   @JSName("once")
   def once_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  
+  val originSet: js.UndefOr[js.Array[String]] = js.native
+  
+  val pendingSettingsAck: Boolean = js.native
+  
   def ping(
     callback: js.Function3[/* err */ js.Error | Null, /* duration */ Double, /* payload */ Buffer, Unit]
   ): Boolean = js.native
@@ -154,6 +166,7 @@ trait Http2Session extends EventEmitter {
     payload: ArrayBufferView,
     callback: js.Function3[/* err */ js.Error | Null, /* duration */ Double, /* payload */ Buffer, Unit]
   ): Boolean = js.native
+  
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -182,6 +195,7 @@ trait Http2Session extends EventEmitter {
   ): this.type = js.native
   @JSName("prependListener")
   def prependListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -210,10 +224,21 @@ trait Http2Session extends EventEmitter {
   ): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  
   def ref(): Unit = js.native
+  
+  val remoteSettings: Settings = js.native
+  
   def setTimeout(msecs: Double): Unit = js.native
   def setTimeout(msecs: Double, callback: js.Function0[Unit]): Unit = js.native
+  
   def settings(settings: Settings): Unit = js.native
+  
+  val socket: Socket | TLSSocket = js.native
+  
+  val state: SessionState = js.native
+  
+  val `type`: Double = js.native
+  
   def unref(): Unit = js.native
 }
-

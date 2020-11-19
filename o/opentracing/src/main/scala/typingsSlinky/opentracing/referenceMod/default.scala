@@ -2,7 +2,7 @@ package typingsSlinky.opentracing.referenceMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("opentracing/lib/reference", JSImport.Default)
 @js.native
@@ -19,4 +19,3 @@ class default protected () extends Reference {
   def this(`type`: String, referencedContext: typingsSlinky.opentracing.spanContextMod.default) = this()
   def this(`type`: String, referencedContext: typingsSlinky.opentracing.spanMod.default) = this()
 }
-

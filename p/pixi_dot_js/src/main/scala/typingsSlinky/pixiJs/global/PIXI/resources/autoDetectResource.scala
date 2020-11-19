@@ -3,11 +3,12 @@ package typingsSlinky.pixiJs.global.PIXI.resources
 import typingsSlinky.pixiJs.anon.Crossorigin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("PIXI.resources.autoDetectResource")
 @js.native
 object autoDetectResource extends js.Object {
+  
   /**
     * Create a resource element from a single source element. This
     * auto-detects which type of resource to create. All resources that
@@ -42,4 +43,3 @@ object autoDetectResource extends js.Object {
   def apply(source: js.Any): typingsSlinky.pixiJs.PIXI.resources.Resource = js.native
   def apply(source: js.Any, options: Crossorigin): typingsSlinky.pixiJs.PIXI.resources.Resource = js.native
 }
-

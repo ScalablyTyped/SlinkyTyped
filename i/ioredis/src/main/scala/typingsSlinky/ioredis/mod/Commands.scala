@@ -23,143 +23,26 @@ import typingsSlinky.std.Map
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Commands extends js.Object {
-  @JSName("blpop")
-  var blpop_Original: OverloadedBlockingListCommand[KeyType, js.Tuple2[String, String]] = js.native
-  @JSName("brpop")
-  var brpop_Original: OverloadedBlockingListCommand[KeyType, js.Tuple2[String, String]] = js.native
-  @JSName("client")
-  var client_Original: OverloadedSubCommand[ValueType, _] = js.native
-  @JSName("cluster")
-  var cluster_Original: OverloadedSubCommand[ValueType, _] = js.native
-  @JSName("debug")
-  var debug_Original: OverloadedSubCommand[ValueType, _] = js.native
-  @JSName("del")
-  var del_Original: OverloadedListCommand[KeyType, Double] = js.native
-  @JSName("eval")
-  var eval_Original: OverloadedEvalCommand[ValueType, _] = js.native
-  @JSName("evalsha")
-  var evalsha_Original: OverloadedEvalCommand[ValueType, _] = js.native
-  @JSName("hdel")
-  var hdel_Original: OverloadedKeyCommand[KeyType, Double] = js.native
-  @JSName("hmget")
-  var hmget_Original: OverloadedKeyCommand[KeyType, js.Array[String | Null]] = js.native
-  @JSName("hmset")
-  var hmset_Original: OverloadedKeyedHashCommand[ValueType, Ok] = js.native
-  @JSName("hscan")
-  var hscan_Original: OverloadedKeyCommand[ValueType, js.Tuple2[String, js.Array[String]]] = js.native
-  @JSName("lpushBuffer")
-  var lpushBuffer_Original: OverloadedKeyCommand[Buffer, Double] = js.native
-  @JSName("lpush")
-  var lpush_Original: OverloadedKeyCommand[ValueType, Double] = js.native
-  @JSName("lpushx")
-  var lpushx_Original: OverloadedKeyCommand[ValueType, Double] = js.native
-  @JSName("mget")
-  var mget_Original: OverloadedListCommand[KeyType, js.Array[String | Null]] = js.native
-  @JSName("migrate")
-  var migrate_Original: OverloadedListCommand[ValueType, Ok | NOKEY] = js.native
-  @JSName("mset")
-  var mset_Original: OverloadedHashCommand[ValueType, Ok] = js.native
-  @JSName("msetnx")
-  var msetnx_Original: OverloadedHashCommand[ValueType, BooleanResponse] = js.native
-  @JSName("object")
-  var object_Original: OverloadedListCommand[ValueType, _] = js.native
-  @JSName("pfadd")
-  var pfadd_Original: OverloadedKeyCommand[String, Double] = js.native
-  @JSName("pfcount")
-  var pfcount_Original: OverloadedListCommand[KeyType, Double] = js.native
-  @JSName("pfmerge")
-  var pfmerge_Original: OverloadedKeyCommand[KeyType, Ok] = js.native
-  @JSName("psubscribe")
-  var psubscribe_Original: OverloadedListCommand[String, Double] = js.native
-  @JSName("punsubscribe")
-  var punsubscribe_Original: OverloadedCommand[String, Double] = js.native
-  @JSName("restore")
-  var restore_Original: OverloadedListCommand[ValueType, Ok] = js.native
-  @JSName("rpushBuffer")
-  var rpushBuffer_Original: OverloadedKeyCommand[Buffer, Double] = js.native
-  @JSName("rpush")
-  var rpush_Original: OverloadedKeyCommand[ValueType, Double] = js.native
-  @JSName("rpushx")
-  var rpushx_Original: OverloadedKeyCommand[ValueType, Double] = js.native
-  @JSName("sadd")
-  var sadd_Original: OverloadedKeyCommand[ValueType, Double] = js.native
-  @JSName("script")
-  var script_Original: OverloadedSubCommand[ValueType, _] = js.native
-  @JSName("sdiff")
-  var sdiff_Original: OverloadedListCommand[KeyType, js.Array[String]] = js.native
-  @JSName("sdiffstore")
-  var sdiffstore_Original: OverloadedKeyCommand[KeyType, Double] = js.native
-  @JSName("sinter")
-  var sinter_Original: OverloadedListCommand[KeyType, js.Array[String]] = js.native
-  @JSName("sinterstore")
-  var sinterstore_Original: OverloadedKeyCommand[KeyType, Double] = js.native
-  @JSName("sort")
-  var sort_Original: OverloadedListCommand[KeyType | Double, js.Array[String] | Double] = js.native
-  @JSName("srem")
-  var srem_Original: OverloadedKeyCommand[ValueType, Double] = js.native
-  @JSName("sscan")
-  var sscan_Original: OverloadedKeyCommand[ValueType, js.Tuple2[String, js.Array[String]]] = js.native
-  @JSName("subscribe")
-  var subscribe_Original: OverloadedListCommand[String, Double] = js.native
-  @JSName("sunion")
-  var sunion_Original: OverloadedListCommand[KeyType, js.Array[String]] = js.native
-  @JSName("sunionstore")
-  var sunionstore_Original: OverloadedKeyCommand[KeyType, Double] = js.native
-  @JSName("unlink")
-  var unlink_Original: OverloadedListCommand[KeyType, Double] = js.native
-  @JSName("unsubscribe")
-  var unsubscribe_Original: OverloadedCommand[String, Double] = js.native
-  @JSName("watch")
-  var watch_Original: OverloadedListCommand[KeyType, Ok] = js.native
-  @JSName("xack")
-  var xack_Original: OverloadedKeyCommand[ValueType, Double] = js.native
-  @JSName("xadd")
-  var xadd_Original: OverloadedKeyCommand[ValueType, String] = js.native
-  @JSName("xclaim")
-  var xclaim_Original: OverloadedKeyCommand[ValueType, js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
-  @JSName("xdel")
-  var xdel_Original: OverloadedKeyCommand[String, Double] = js.native
-  @JSName("xgroup")
-  var xgroup_Original: OverloadedSubCommand[ValueType, Ok] = js.native
-  @JSName("xinfo")
-  var xinfo_Original: OverloadedSubCommand[ValueType, _] = js.native
-  @JSName("xpending")
-  var xpending_Original: OverloadedKeyCommand[ValueType, _] = js.native
-  @JSName("xrange")
-  var xrange_Original: OverloadedKeyCommand[ValueType, js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
-  @JSName("xread")
-  var xread_Original: OverloadedListCommand[ValueType, js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
-  @JSName("xreadgroup")
-  var xreadgroup_Original: OverloadedKeyCommand[ValueType, js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
-  @JSName("xrevrange")
-  var xrevrange_Original: OverloadedKeyCommand[ValueType, js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
-  @JSName("xtrim")
-  var xtrim_Original: OverloadedKeyCommand[ValueType, Double] = js.native
-  @JSName("zadd")
-  var zadd_Original: OverloadedKeyCommand[KeyType | Double, Double | String] = js.native
-  @JSName("zinterstore")
-  var zinterstore_Original: OverloadedKeyCommand[KeyType | Double, Double] = js.native
-  @JSName("zrem")
-  var zrem_Original: OverloadedKeyCommand[ValueType, Double] = js.native
-  @JSName("zscan")
-  var zscan_Original: OverloadedKeyCommand[ValueType, js.Tuple2[String, js.Array[String]]] = js.native
-  @JSName("zunionstore")
-  var zunionstore_Original: OverloadedKeyCommand[KeyType | Double, Double] = js.native
+  
   def append(key: KeyType, value: ValueType): js.Promise[Double] = js.native
   def append(key: KeyType, value: ValueType, callback: Callback[Double]): Unit = js.native
+  
   def auth(password: String): js.Promise[String] = js.native
   def auth(password: String, callback: Callback[String]): Unit = js.native
   // tslint:disable-next-line unified-signatures
   def auth(username: String, password: String): js.Promise[String] = js.native
   def auth(username: String, password: String, callback: Callback[String]): Unit = js.native
+  
   def bgrewriteaof(): js.Promise[String] = js.native
   def bgrewriteaof(callback: Callback[String]): Unit = js.native
+  
   def bgsave(): js.Promise[String] = js.native
   def bgsave(callback: Callback[String]): Unit = js.native
+  
   def bitcount(key: KeyType): js.Promise[Double] = js.native
   def bitcount(key: KeyType, callback: Callback[Double]): Unit = js.native
   def bitcount(key: KeyType, start: Double, end: Double): js.Promise[Double] = js.native
@@ -169,6 +52,7 @@ trait Commands extends js.Object {
     end: Double,
     callback: js.Function2[/* err */ js.Error, /* res */ Double, Unit]
   ): Unit = js.native
+  
   def blpop(arg1: js.Array[KeyType | Double]): js.Promise[js.Tuple2[String, String]] = js.native
   def blpop(arg1: js.Array[KeyType | Double], cb: Callback[js.Tuple2[String, String]]): Unit = js.native
   def blpop(
@@ -208,6 +92,9 @@ trait Commands extends js.Object {
   def blpop(arg1: KeyType, arg2: KeyType, timeout: Double, cb: Callback[js.Tuple2[String, String]]): Unit = js.native
   def blpop(arg1: KeyType, timeout: Double, cb: Callback[js.Tuple2[String, String]]): Unit = js.native
   def blpop(args: (KeyType | Double)*): js.Promise[js.Tuple2[String, String]] = js.native
+  @JSName("blpop")
+  var blpop_Original: OverloadedBlockingListCommand[KeyType, js.Tuple2[String, String]] = js.native
+  
   def brpop(arg1: js.Array[KeyType | Double]): js.Promise[js.Tuple2[String, String]] = js.native
   def brpop(arg1: js.Array[KeyType | Double], cb: Callback[js.Tuple2[String, String]]): Unit = js.native
   def brpop(
@@ -247,8 +134,12 @@ trait Commands extends js.Object {
   def brpop(arg1: KeyType, arg2: KeyType, timeout: Double, cb: Callback[js.Tuple2[String, String]]): Unit = js.native
   def brpop(arg1: KeyType, timeout: Double, cb: Callback[js.Tuple2[String, String]]): Unit = js.native
   def brpop(args: (KeyType | Double)*): js.Promise[js.Tuple2[String, String]] = js.native
+  @JSName("brpop")
+  var brpop_Original: OverloadedBlockingListCommand[KeyType, js.Tuple2[String, String]] = js.native
+  
   def brpoplpush(source: String, destination: String, timeout: Double): js.Promise[String] = js.native
   def brpoplpush(source: String, destination: String, timeout: Double, callback: Callback[String]): Unit = js.native
+  
   def client(arg1: js.Array[ValueType]): js.Promise[_] = js.native
   def client(arg1: js.Array[ValueType], cb: Callback[_]): Unit = js.native
   def client(arg1: ValueType, arg2: js.Array[ValueType], cb: Callback[_]): Unit = js.native
@@ -274,6 +165,9 @@ trait Commands extends js.Object {
   def client(arg1: ValueType, arg2: ValueType, cb: Callback[_]): Unit = js.native
   def client(arg1: ValueType, cb: Callback[_]): Unit = js.native
   def client(args: ValueType*): js.Promise[_] = js.native
+  @JSName("client")
+  var client_Original: OverloadedSubCommand[ValueType, _] = js.native
+  
   def cluster(arg1: js.Array[ValueType]): js.Promise[_] = js.native
   def cluster(arg1: js.Array[ValueType], cb: Callback[_]): Unit = js.native
   def cluster(arg1: ValueType, arg2: js.Array[ValueType], cb: Callback[_]): Unit = js.native
@@ -299,6 +193,9 @@ trait Commands extends js.Object {
   def cluster(arg1: ValueType, arg2: ValueType, cb: Callback[_]): Unit = js.native
   def cluster(arg1: ValueType, cb: Callback[_]): Unit = js.native
   def cluster(args: ValueType*): js.Promise[_] = js.native
+  @JSName("cluster")
+  var cluster_Original: OverloadedSubCommand[ValueType, _] = js.native
+  
   @JSName("config")
   def config_GET(op: GET, cfg: String): js.Promise[js.Array[String]] = js.native
   @JSName("config")
@@ -315,8 +212,10 @@ trait Commands extends js.Object {
   def config_SET(op: SET, key: String, value: ValueType): js.Promise[Ok] = js.native
   @JSName("config")
   def config_SET(op: SET, key: String, value: ValueType, callback: Callback[Ok]): Unit = js.native
+  
   def dbsize(): js.Promise[Double] = js.native
   def dbsize(callback: Callback[Double]): Unit = js.native
+  
   def debug(arg1: js.Array[ValueType]): js.Promise[_] = js.native
   def debug(arg1: js.Array[ValueType], cb: Callback[_]): Unit = js.native
   def debug(arg1: ValueType, arg2: js.Array[ValueType], cb: Callback[_]): Unit = js.native
@@ -342,10 +241,15 @@ trait Commands extends js.Object {
   def debug(arg1: ValueType, arg2: ValueType, cb: Callback[_]): Unit = js.native
   def debug(arg1: ValueType, cb: Callback[_]): Unit = js.native
   def debug(args: ValueType*): js.Promise[_] = js.native
+  @JSName("debug")
+  var debug_Original: OverloadedSubCommand[ValueType, _] = js.native
+  
   def decr(key: KeyType): js.Promise[Double] = js.native
   def decr(key: KeyType, callback: Callback[Double]): Unit = js.native
+  
   def decrby(key: KeyType, decrement: Double): js.Promise[Double] = js.native
   def decrby(key: KeyType, decrement: Double, callback: Callback[Double]): Unit = js.native
+  
   def del(arg1: js.Array[KeyType]): js.Promise[Double] = js.native
   def del(arg1: js.Array[KeyType], cb: Callback[Double]): Unit = js.native
   def del(
@@ -363,12 +267,18 @@ trait Commands extends js.Object {
   def del(arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native
   def del(arg1: KeyType, cb: Callback[Double]): Unit = js.native
   def del(args: KeyType*): js.Promise[Double] = js.native
+  @JSName("del")
+  var del_Original: OverloadedListCommand[KeyType, Double] = js.native
+  
   def discard(): js.Promise[Ok] = js.native
   def discard(callback: Callback[Ok]): Unit = js.native
+  
   def dump(key: KeyType): js.Promise[String] = js.native
   def dump(key: KeyType, callback: Callback[String]): Unit = js.native
+  
   def echo(message: String): js.Promise[String] = js.native
   def echo(message: String, callback: Callback[String]): Unit = js.native
+  
   // This overload exists specifically to retain compatibility to `redlock`
   // All arguments are by default flattened, declaring all possible permuatations
   // would be unreasonable (and probably impossible)
@@ -417,6 +327,9 @@ trait Commands extends js.Object {
   def eval(script: String, numKeys: Double, arg1: ValueType, arg2: ValueType, cb: Callback[_]): Unit = js.native
   def eval(script: String, numKeys: Double, arg1: ValueType, cb: Callback[_]): Unit = js.native
   def eval(script: String, numKeys: Double, args: ValueType*): js.Promise[_] = js.native
+  @JSName("eval")
+  var eval_Original: OverloadedEvalCommand[ValueType, _] = js.native
+  
   // This overload exists specifically to retain compatibility to `redlock`
   // All arguments are by default flattened, declaring all possible permuatations
   // would be unreasonable (and probably impossible)
@@ -465,28 +378,42 @@ trait Commands extends js.Object {
   def evalsha(script: String, numKeys: Double, arg1: ValueType, arg2: ValueType, cb: Callback[_]): Unit = js.native
   def evalsha(script: String, numKeys: Double, arg1: ValueType, cb: Callback[_]): Unit = js.native
   def evalsha(script: String, numKeys: Double, args: ValueType*): js.Promise[_] = js.native
+  @JSName("evalsha")
+  var evalsha_Original: OverloadedEvalCommand[ValueType, _] = js.native
+  
   def exec(): js.Promise[js.Array[js.Tuple2[js.Error | Null, String]]] = js.native
   def exec(callback: Callback[js.Array[js.Tuple2[js.Error | Null, String]]]): Unit = js.native
+  
   def exists(keys: KeyType*): js.Promise[Double] = js.native
   def exists(key: KeyType, callback: Callback[Double]): Unit = js.native
+  
   def expire(key: KeyType, seconds: Double): js.Promise[BooleanResponse] = js.native
   def expire(key: KeyType, seconds: Double, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def expireat(key: KeyType, timestamp: Double): js.Promise[BooleanResponse] = js.native
   def expireat(key: KeyType, timestamp: Double, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def flushall(): js.Promise[Ok] = js.native
   def flushall(callback: Callback[Ok]): Unit = js.native
+  
   def flushdb(): js.Promise[Ok] = js.native
   def flushdb(callback: Callback[Ok]): Unit = js.native
+  
   def get(key: KeyType): js.Promise[String | Null] = js.native
   def get(key: KeyType, callback: Callback[String | Null]): Unit = js.native
+  
   def getBuffer(key: KeyType): js.Promise[Buffer] = js.native
   def getBuffer(key: KeyType, callback: Callback[Buffer]): Unit = js.native
+  
   def getbit(key: KeyType, offset: Double): js.Promise[Double] = js.native
   def getbit(key: KeyType, offset: Double, callback: Callback[Double]): Unit = js.native
+  
   def getrange(key: KeyType, start: Double, end: Double): js.Promise[String] = js.native
   def getrange(key: KeyType, start: Double, end: Double, callback: Callback[String]): Unit = js.native
+  
   def getset(key: KeyType, value: ValueType): js.Promise[String | Null] = js.native
   def getset(key: KeyType, value: ValueType, callback: Callback[String | Null]): Unit = js.native
+  
   def hdel(key: KeyType, arg1: js.Array[KeyType]): js.Promise[Double] = js.native
   def hdel(key: KeyType, arg1: js.Array[KeyType], cb: Callback[Double]): Unit = js.native
   def hdel(
@@ -513,22 +440,33 @@ trait Commands extends js.Object {
   def hdel(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native
   def hdel(key: KeyType, arg1: KeyType, cb: Callback[Double]): Unit = js.native
   def hdel(key: KeyType, args: KeyType*): js.Promise[Double] = js.native
+  @JSName("hdel")
+  var hdel_Original: OverloadedKeyCommand[KeyType, Double] = js.native
+  
   def hexists(key: KeyType, field: String): js.Promise[BooleanResponse] = js.native
   def hexists(key: KeyType, field: String, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def hget(key: KeyType, field: String): js.Promise[String | Null] = js.native
   def hget(key: KeyType, field: String, callback: Callback[String | Null]): Unit = js.native
+  
   def hgetBuffer(key: KeyType, field: String): js.Promise[Buffer] = js.native
   def hgetBuffer(key: KeyType, field: String, callback: Callback[Buffer]): Unit = js.native
+  
   def hgetall(key: KeyType): js.Promise[Record[String, String]] = js.native
   def hgetall(key: KeyType, callback: Callback[Record[String, String]]): Unit = js.native
+  
   def hincrby(key: KeyType, field: String, increment: Double): js.Promise[Double] = js.native
   def hincrby(key: KeyType, field: String, increment: Double, callback: Callback[Double]): Unit = js.native
+  
   def hincrbyfloat(key: KeyType, field: String, increment: Double): js.Promise[Double] = js.native
   def hincrbyfloat(key: KeyType, field: String, increment: Double, callback: Callback[Double]): Unit = js.native
+  
   def hkeys(key: KeyType): js.Promise[js.Array[String]] = js.native
   def hkeys(key: KeyType, callback: Callback[js.Array[String]]): Unit = js.native
+  
   def hlen(key: KeyType): js.Promise[Double] = js.native
   def hlen(key: KeyType, callback: Callback[Double]): Unit = js.native
+  
   def hmget(key: KeyType, arg1: js.Array[KeyType]): js.Promise[js.Array[String | Null]] = js.native
   def hmget(key: KeyType, arg1: js.Array[KeyType], cb: Callback[js.Array[String | Null]]): Unit = js.native
   def hmget(
@@ -562,6 +500,9 @@ trait Commands extends js.Object {
   def hmget(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[js.Array[String | Null]]): Unit = js.native
   def hmget(key: KeyType, arg1: KeyType, cb: Callback[js.Array[String | Null]]): Unit = js.native
   def hmget(key: KeyType, args: KeyType*): js.Promise[js.Array[String | Null]] = js.native
+  @JSName("hmget")
+  var hmget_Original: OverloadedKeyCommand[KeyType, js.Array[String | Null]] = js.native
+  
   def hmset(
     key: KeyType,
     arg1: ValueType,
@@ -581,6 +522,9 @@ trait Commands extends js.Object {
   def hmset(key: KeyType, data: StringDictionary[ValueType], cb: Callback[Ok]): Unit = js.native
   def hmset(key: KeyType, data: Map[String, ValueType]): js.Promise[Ok] = js.native
   def hmset(key: KeyType, data: Map[String, ValueType], cb: Callback[Ok]): Unit = js.native
+  @JSName("hmset")
+  var hmset_Original: OverloadedKeyedHashCommand[ValueType, Ok] = js.native
+  
   def hscan(key: KeyType, arg1: js.Array[ValueType]): js.Promise[js.Tuple2[String, js.Array[String]]] = js.native
   def hscan(key: KeyType, arg1: js.Array[ValueType], cb: Callback[js.Tuple2[String, js.Array[String]]]): Unit = js.native
   def hscan(
@@ -620,32 +564,48 @@ trait Commands extends js.Object {
   def hscan(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[js.Tuple2[String, js.Array[String]]]): Unit = js.native
   def hscan(key: KeyType, arg1: ValueType, cb: Callback[js.Tuple2[String, js.Array[String]]]): Unit = js.native
   def hscan(key: KeyType, args: ValueType*): js.Promise[js.Tuple2[String, js.Array[String]]] = js.native
+  
   def hscanStream(key: KeyType): Readable = js.native
   def hscanStream(key: KeyType, options: ScanStreamOption): Readable = js.native
+  
+  @JSName("hscan")
+  var hscan_Original: OverloadedKeyCommand[ValueType, js.Tuple2[String, js.Array[String]]] = js.native
+  
   def hset(key: KeyType, field: String, value: ValueType): js.Promise[BooleanResponse] = js.native
   def hset(key: KeyType, field: String, value: ValueType, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def hsetBuffer(key: KeyType, field: String, value: ValueType): js.Promise[Buffer] = js.native
   def hsetBuffer(key: KeyType, field: String, value: ValueType, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def hsetnx(key: KeyType, field: String, value: ValueType): js.Promise[BooleanResponse] = js.native
   def hsetnx(key: KeyType, field: String, value: ValueType, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def hvals(key: KeyType): js.Promise[js.Array[String]] = js.native
   def hvals(key: KeyType, callback: Callback[js.Array[String]]): Unit = js.native
+  
   def incr(key: KeyType): js.Promise[Double] = js.native
   def incr(key: KeyType, callback: Callback[Double]): Unit = js.native
+  
   def incrby(key: KeyType, increment: Double): js.Promise[Double] = js.native
   def incrby(key: KeyType, increment: Double, callback: Callback[Double]): Unit = js.native
+  
   def incrbyfloat(key: KeyType, increment: Double): js.Promise[Double] = js.native
   def incrbyfloat(key: KeyType, increment: Double, callback: Callback[Double]): Unit = js.native
+  
   def info(): js.Promise[String] = js.native
   def info(callback: Callback[String]): Unit = js.native
   def info(section: String): js.Promise[String] = js.native
   def info(section: String, callback: Callback[String]): Unit = js.native
+  
   def keys(pattern: String): js.Promise[js.Array[String]] = js.native
   def keys(pattern: String, callback: Callback[js.Array[String]]): Unit = js.native
+  
   def lastsave(): js.Promise[Double] = js.native
   def lastsave(callback: Callback[Double]): Unit = js.native
+  
   def lindex(key: KeyType, index: Double): js.Promise[String] = js.native
   def lindex(key: KeyType, index: Double, callback: Callback[String]): Unit = js.native
+  
   @JSName("linsert")
   def linsert_AFTER(key: KeyType, direction: AFTER, pivot: String, value: ValueType): js.Promise[Double] = js.native
   @JSName("linsert")
@@ -654,12 +614,16 @@ trait Commands extends js.Object {
   def linsert_BEFORE(key: KeyType, direction: BEFORE, pivot: String, value: ValueType): js.Promise[Double] = js.native
   @JSName("linsert")
   def linsert_BEFORE(key: KeyType, direction: BEFORE, pivot: String, value: ValueType, callback: Callback[Double]): Unit = js.native
+  
   def llen(key: KeyType): js.Promise[Double] = js.native
   def llen(key: KeyType, callback: Callback[Double]): Unit = js.native
+  
   def lpop(key: KeyType): js.Promise[String] = js.native
   def lpop(key: KeyType, callback: Callback[String]): Unit = js.native
+  
   def lpopBuffer(key: KeyType): js.Promise[Buffer] = js.native
   def lpopBuffer(key: KeyType, callback: Callback[Buffer]): Unit = js.native
+  
   def lpush(key: KeyType, arg1: js.Array[ValueType]): js.Promise[Double] = js.native
   def lpush(key: KeyType, arg1: js.Array[ValueType], cb: Callback[Double]): Unit = js.native
   def lpush(
@@ -693,6 +657,7 @@ trait Commands extends js.Object {
   def lpush(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[Double]): Unit = js.native
   def lpush(key: KeyType, arg1: ValueType, cb: Callback[Double]): Unit = js.native
   def lpush(key: KeyType, args: ValueType*): js.Promise[Double] = js.native
+  
   def lpushBuffer(key: KeyType, arg1: js.Array[Buffer]): js.Promise[Double] = js.native
   def lpushBuffer(key: KeyType, arg1: js.Array[Buffer], cb: Callback[Double]): Unit = js.native
   def lpushBuffer(
@@ -719,6 +684,12 @@ trait Commands extends js.Object {
   def lpushBuffer(key: KeyType, arg1: Buffer, arg2: Buffer, cb: Callback[Double]): Unit = js.native
   def lpushBuffer(key: KeyType, arg1: Buffer, cb: Callback[Double]): Unit = js.native
   def lpushBuffer(key: KeyType, args: Buffer*): js.Promise[Double] = js.native
+  @JSName("lpushBuffer")
+  var lpushBuffer_Original: OverloadedKeyCommand[Buffer, Double] = js.native
+  
+  @JSName("lpush")
+  var lpush_Original: OverloadedKeyCommand[ValueType, Double] = js.native
+  
   def lpushx(key: KeyType, arg1: js.Array[ValueType]): js.Promise[Double] = js.native
   def lpushx(key: KeyType, arg1: js.Array[ValueType], cb: Callback[Double]): Unit = js.native
   def lpushx(
@@ -752,16 +723,24 @@ trait Commands extends js.Object {
   def lpushx(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[Double]): Unit = js.native
   def lpushx(key: KeyType, arg1: ValueType, cb: Callback[Double]): Unit = js.native
   def lpushx(key: KeyType, args: ValueType*): js.Promise[Double] = js.native
+  @JSName("lpushx")
+  var lpushx_Original: OverloadedKeyCommand[ValueType, Double] = js.native
+  
   def lrange(key: KeyType, start: Double, stop: Double): js.Promise[js.Array[String]] = js.native
   def lrange(key: KeyType, start: Double, stop: Double, callback: Callback[js.Array[String]]): Unit = js.native
+  
   def lrangeBuffer(key: KeyType, start: Double, stop: Double): js.Promise[js.Array[Buffer]] = js.native
   def lrangeBuffer(key: KeyType, start: Double, stop: Double, callback: Callback[js.Array[Buffer]]): Unit = js.native
+  
   def lrem(key: KeyType, count: Double, value: ValueType): js.Promise[Double] = js.native
   def lrem(key: KeyType, count: Double, value: ValueType, callback: Callback[Double]): Unit = js.native
+  
   def lset(key: KeyType, index: Double, value: ValueType): js.Promise[Ok] = js.native
   def lset(key: KeyType, index: Double, value: ValueType, callback: Callback[Ok]): Unit = js.native
+  
   def ltrim(key: KeyType, start: Double, stop: Double): js.Promise[Ok] = js.native
   def ltrim(key: KeyType, start: Double, stop: Double, callback: Callback[Ok]): Unit = js.native
+  
   def mget(arg1: js.Array[KeyType]): js.Promise[js.Array[String | Null]] = js.native
   def mget(arg1: js.Array[KeyType], cb: Callback[js.Array[String | Null]]): Unit = js.native
   def mget(
@@ -786,6 +765,9 @@ trait Commands extends js.Object {
   def mget(arg1: KeyType, arg2: KeyType, cb: Callback[js.Array[String | Null]]): Unit = js.native
   def mget(arg1: KeyType, cb: Callback[js.Array[String | Null]]): Unit = js.native
   def mget(args: KeyType*): js.Promise[js.Array[String | Null]] = js.native
+  @JSName("mget")
+  var mget_Original: OverloadedListCommand[KeyType, js.Array[String | Null]] = js.native
+  
   def migrate(arg1: js.Array[ValueType]): js.Promise[Ok | NOKEY] = js.native
   def migrate(args: ValueType*): js.Promise[Ok | NOKEY] = js.native
   @JSName("migrate")
@@ -817,10 +799,15 @@ trait Commands extends js.Object {
   def migrate_NOKEY(arg1: ValueType, arg2: ValueType, cb: Callback[Ok | NOKEY]): Unit = js.native
   @JSName("migrate")
   def migrate_NOKEY(arg1: ValueType, cb: Callback[Ok | NOKEY]): Unit = js.native
+  @JSName("migrate")
+  var migrate_Original: OverloadedListCommand[ValueType, Ok | NOKEY] = js.native
+  
   def monitor(): js.Promise[EventEmitter] = js.native
   def monitor(callback: Callback[EventEmitter]): Unit = js.native
+  
   def move(key: KeyType, db: String): js.Promise[BooleanResponse] = js.native
   def move(key: KeyType, db: String, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def mset(
     arg1: ValueType,
     arg2: ValueType,
@@ -839,6 +826,9 @@ trait Commands extends js.Object {
   def mset(data: StringDictionary[ValueType], cb: Callback[Ok]): Unit = js.native
   def mset(data: Map[String, ValueType]): js.Promise[Ok] = js.native
   def mset(data: Map[String, ValueType], cb: Callback[Ok]): Unit = js.native
+  @JSName("mset")
+  var mset_Original: OverloadedHashCommand[ValueType, Ok] = js.native
+  
   def msetnx(
     arg1: ValueType,
     arg2: ValueType,
@@ -857,11 +847,15 @@ trait Commands extends js.Object {
   def msetnx(data: StringDictionary[ValueType], cb: Callback[BooleanResponse]): Unit = js.native
   def msetnx(data: Map[String, ValueType]): js.Promise[BooleanResponse] = js.native
   def msetnx(data: Map[String, ValueType], cb: Callback[BooleanResponse]): Unit = js.native
+  @JSName("msetnx")
+  var msetnx_Original: OverloadedHashCommand[ValueType, BooleanResponse] = js.native
+  
   def multi(): Pipeline = js.native
   def multi(commands: js.UndefOr[scala.Nothing], options: MultiOptions): Pipeline = js.native
   def multi(commands: js.Array[js.Array[String]]): Pipeline = js.native
   def multi(commands: js.Array[js.Array[String]], options: MultiOptions): Pipeline = js.native
   def multi(options: typingsSlinky.ioredis.anon.Pipeline): js.Promise[Ok] = js.native
+  
   def `object`(arg1: js.Array[ValueType]): js.Promise[_] = js.native
   def `object`(arg1: js.Array[ValueType], cb: Callback[_]): Unit = js.native
   def `object`(
@@ -886,12 +880,18 @@ trait Commands extends js.Object {
   def `object`(arg1: ValueType, arg2: ValueType, cb: Callback[_]): Unit = js.native
   def `object`(arg1: ValueType, cb: Callback[_]): Unit = js.native
   def `object`(args: ValueType*): js.Promise[_] = js.native
+  @JSName("object")
+  var object_Original: OverloadedListCommand[ValueType, _] = js.native
+  
   def persist(key: KeyType): js.Promise[BooleanResponse] = js.native
   def persist(key: KeyType, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def pexpire(key: KeyType, milliseconds: Double): js.Promise[BooleanResponse] = js.native
   def pexpire(key: KeyType, milliseconds: Double, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def pexpireat(key: KeyType, millisecondsTimestamp: Double): js.Promise[BooleanResponse] = js.native
   def pexpireat(key: KeyType, millisecondsTimestamp: Double, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def pfadd(
     key: KeyType,
     arg1: String,
@@ -918,6 +918,9 @@ trait Commands extends js.Object {
   def pfadd(key: KeyType, arg1: js.Array[String]): js.Promise[Double] = js.native
   def pfadd(key: KeyType, arg1: js.Array[String], cb: Callback[Double]): Unit = js.native
   def pfadd(key: KeyType, args: String*): js.Promise[Double] = js.native
+  @JSName("pfadd")
+  var pfadd_Original: OverloadedKeyCommand[String, Double] = js.native
+  
   def pfcount(arg1: js.Array[KeyType]): js.Promise[Double] = js.native
   def pfcount(arg1: js.Array[KeyType], cb: Callback[Double]): Unit = js.native
   def pfcount(
@@ -935,6 +938,9 @@ trait Commands extends js.Object {
   def pfcount(arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native
   def pfcount(arg1: KeyType, cb: Callback[Double]): Unit = js.native
   def pfcount(args: KeyType*): js.Promise[Double] = js.native
+  @JSName("pfcount")
+  var pfcount_Original: OverloadedListCommand[KeyType, Double] = js.native
+  
   def pfmerge(key: KeyType, arg1: js.Array[KeyType]): js.Promise[Ok] = js.native
   def pfmerge(key: KeyType, arg1: js.Array[KeyType], cb: Callback[Ok]): Unit = js.native
   def pfmerge(
@@ -961,14 +967,20 @@ trait Commands extends js.Object {
   def pfmerge(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[Ok]): Unit = js.native
   def pfmerge(key: KeyType, arg1: KeyType, cb: Callback[Ok]): Unit = js.native
   def pfmerge(key: KeyType, args: KeyType*): js.Promise[Ok] = js.native
+  @JSName("pfmerge")
+  var pfmerge_Original: OverloadedKeyCommand[KeyType, Ok] = js.native
+  
   def ping(): js.Promise[String] = js.native
   def ping(callback: Callback[String]): Unit = js.native
   def ping(message: String): js.Promise[String] = js.native
   def ping(message: String, callback: Callback[String]): Unit = js.native
+  
   def pipeline(): Pipeline = js.native
   def pipeline(commands: js.Array[js.Array[String]]): Pipeline = js.native
+  
   def psetex(key: KeyType, milliseconds: Double, value: ValueType): js.Promise[Ok] = js.native
   def psetex(key: KeyType, milliseconds: Double, value: ValueType, callback: Callback[Ok]): Unit = js.native
+  
   def psubscribe(
     arg1: String,
     arg2: String,
@@ -986,11 +998,17 @@ trait Commands extends js.Object {
   def psubscribe(arg1: js.Array[String]): js.Promise[Double] = js.native
   def psubscribe(arg1: js.Array[String], cb: Callback[Double]): Unit = js.native
   def psubscribe(args: String*): js.Promise[Double] = js.native
+  @JSName("psubscribe")
+  var psubscribe_Original: OverloadedListCommand[String, Double] = js.native
+  
   def pttl(key: KeyType): js.Promise[Double] = js.native
   def pttl(key: KeyType, callback: Callback[Double]): Unit = js.native
+  
   def publish(channel: String, message: String): js.Promise[Double] = js.native
   def publish(channel: String, message: String, callback: Callback[Double]): Unit = js.native
+  
   def publishBuffer(channel: String, message: Buffer): js.Promise[Double] = js.native
+  
   def punsubscribe(
     arg1: String,
     arg2: String,
@@ -1009,14 +1027,21 @@ trait Commands extends js.Object {
   def punsubscribe(arg1: js.Array[String], cb: Callback[Double]): Unit = js.native
   def punsubscribe(args: String*): js.Promise[Double] = js.native
   def punsubscribe(cb: Callback[Double]): Unit = js.native
+  @JSName("punsubscribe")
+  var punsubscribe_Original: OverloadedCommand[String, Double] = js.native
+  
   def quit(): js.Promise[Ok] = js.native
   def quit(callback: Callback[Ok]): Unit = js.native
+  
   def randomkey(): js.Promise[String] = js.native
   def randomkey(callback: Callback[String]): Unit = js.native
+  
   def rename(key: KeyType, newkey: KeyType): js.Promise[Ok] = js.native
   def rename(key: KeyType, newkey: KeyType, callback: Callback[Ok]): Unit = js.native
+  
   def renamenx(key: KeyType, newkey: KeyType): js.Promise[BooleanResponse] = js.native
   def renamenx(key: KeyType, newkey: KeyType, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def restore(arg1: js.Array[ValueType]): js.Promise[Ok] = js.native
   def restore(arg1: js.Array[ValueType], cb: Callback[Ok]): Unit = js.native
   def restore(
@@ -1041,12 +1066,18 @@ trait Commands extends js.Object {
   def restore(arg1: ValueType, arg2: ValueType, cb: Callback[Ok]): Unit = js.native
   def restore(arg1: ValueType, cb: Callback[Ok]): Unit = js.native
   def restore(args: ValueType*): js.Promise[Ok] = js.native
+  @JSName("restore")
+  var restore_Original: OverloadedListCommand[ValueType, Ok] = js.native
+  
   def rpop(key: KeyType): js.Promise[String] = js.native
   def rpop(key: KeyType, callback: Callback[String]): Unit = js.native
+  
   def rpoplpush(source: String, destination: String): js.Promise[String] = js.native
   def rpoplpush(source: String, destination: String, callback: Callback[String]): Unit = js.native
+  
   def rpoplpushBuffer(source: String, destination: String): js.Promise[Buffer] = js.native
   def rpoplpushBuffer(source: String, destination: String, callback: Callback[Buffer]): Unit = js.native
+  
   def rpush(key: KeyType, arg1: js.Array[ValueType]): js.Promise[Double] = js.native
   def rpush(key: KeyType, arg1: js.Array[ValueType], cb: Callback[Double]): Unit = js.native
   def rpush(
@@ -1080,6 +1111,7 @@ trait Commands extends js.Object {
   def rpush(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[Double]): Unit = js.native
   def rpush(key: KeyType, arg1: ValueType, cb: Callback[Double]): Unit = js.native
   def rpush(key: KeyType, args: ValueType*): js.Promise[Double] = js.native
+  
   def rpushBuffer(key: KeyType, arg1: js.Array[Buffer]): js.Promise[Double] = js.native
   def rpushBuffer(key: KeyType, arg1: js.Array[Buffer], cb: Callback[Double]): Unit = js.native
   def rpushBuffer(
@@ -1106,6 +1138,12 @@ trait Commands extends js.Object {
   def rpushBuffer(key: KeyType, arg1: Buffer, arg2: Buffer, cb: Callback[Double]): Unit = js.native
   def rpushBuffer(key: KeyType, arg1: Buffer, cb: Callback[Double]): Unit = js.native
   def rpushBuffer(key: KeyType, args: Buffer*): js.Promise[Double] = js.native
+  @JSName("rpushBuffer")
+  var rpushBuffer_Original: OverloadedKeyCommand[Buffer, Double] = js.native
+  
+  @JSName("rpush")
+  var rpush_Original: OverloadedKeyCommand[ValueType, Double] = js.native
+  
   def rpushx(key: KeyType, arg1: js.Array[ValueType]): js.Promise[Double] = js.native
   def rpushx(key: KeyType, arg1: js.Array[ValueType], cb: Callback[Double]): Unit = js.native
   def rpushx(
@@ -1139,6 +1177,9 @@ trait Commands extends js.Object {
   def rpushx(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[Double]): Unit = js.native
   def rpushx(key: KeyType, arg1: ValueType, cb: Callback[Double]): Unit = js.native
   def rpushx(key: KeyType, args: ValueType*): js.Promise[Double] = js.native
+  @JSName("rpushx")
+  var rpushx_Original: OverloadedKeyCommand[ValueType, Double] = js.native
+  
   def sadd(key: KeyType, arg1: js.Array[ValueType]): js.Promise[Double] = js.native
   def sadd(key: KeyType, arg1: js.Array[ValueType], cb: Callback[Double]): Unit = js.native
   def sadd(
@@ -1172,8 +1213,12 @@ trait Commands extends js.Object {
   def sadd(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[Double]): Unit = js.native
   def sadd(key: KeyType, arg1: ValueType, cb: Callback[Double]): Unit = js.native
   def sadd(key: KeyType, args: ValueType*): js.Promise[Double] = js.native
+  @JSName("sadd")
+  var sadd_Original: OverloadedKeyCommand[ValueType, Double] = js.native
+  
   def save(): js.Promise[String] = js.native
   def save(callback: Callback[String]): Unit = js.native
+  
   def scan(cursor: String, countOption: COUNT, count: Double, matchOption: MATCH, pattern: String): js.Promise[js.Tuple2[String, js.Array[String]]] = js.native
   def scan(
     cursor: String,
@@ -1318,8 +1363,10 @@ trait Commands extends js.Object {
     count: Double,
     callback: Callback[js.Tuple2[String, js.Array[String]]]
   ): Unit = js.native
+  
   def scanStream(): Readable = js.native
   def scanStream(options: ScanStreamOption): Readable = js.native
+  
   @JSName("scan")
   def scan_COUNT(cursor: String, countOption: COUNT, count: Double): js.Promise[js.Tuple2[String, js.Array[String]]] = js.native
   @JSName("scan")
@@ -1392,8 +1439,10 @@ trait Commands extends js.Object {
     pattern: String,
     callback: Callback[js.Tuple2[String, js.Array[String]]]
   ): Unit = js.native
+  
   def scard(key: KeyType): js.Promise[Double] = js.native
   def scard(key: KeyType, callback: Callback[Double]): Unit = js.native
+  
   def script(arg1: js.Array[ValueType]): js.Promise[_] = js.native
   def script(arg1: js.Array[ValueType], cb: Callback[_]): Unit = js.native
   def script(arg1: ValueType, arg2: js.Array[ValueType], cb: Callback[_]): Unit = js.native
@@ -1419,6 +1468,9 @@ trait Commands extends js.Object {
   def script(arg1: ValueType, arg2: ValueType, cb: Callback[_]): Unit = js.native
   def script(arg1: ValueType, cb: Callback[_]): Unit = js.native
   def script(args: ValueType*): js.Promise[_] = js.native
+  @JSName("script")
+  var script_Original: OverloadedSubCommand[ValueType, _] = js.native
+  
   def sdiff(arg1: js.Array[KeyType]): js.Promise[js.Array[String]] = js.native
   def sdiff(arg1: js.Array[KeyType], cb: Callback[js.Array[String]]): Unit = js.native
   def sdiff(
@@ -1443,6 +1495,9 @@ trait Commands extends js.Object {
   def sdiff(arg1: KeyType, arg2: KeyType, cb: Callback[js.Array[String]]): Unit = js.native
   def sdiff(arg1: KeyType, cb: Callback[js.Array[String]]): Unit = js.native
   def sdiff(args: KeyType*): js.Promise[js.Array[String]] = js.native
+  @JSName("sdiff")
+  var sdiff_Original: OverloadedListCommand[KeyType, js.Array[String]] = js.native
+  
   def sdiffstore(key: KeyType, arg1: js.Array[KeyType]): js.Promise[Double] = js.native
   def sdiffstore(key: KeyType, arg1: js.Array[KeyType], cb: Callback[Double]): Unit = js.native
   def sdiffstore(
@@ -1469,8 +1524,12 @@ trait Commands extends js.Object {
   def sdiffstore(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native
   def sdiffstore(key: KeyType, arg1: KeyType, cb: Callback[Double]): Unit = js.native
   def sdiffstore(key: KeyType, args: KeyType*): js.Promise[Double] = js.native
+  @JSName("sdiffstore")
+  var sdiffstore_Original: OverloadedKeyCommand[KeyType, Double] = js.native
+  
   def select(index: Double): js.Promise[Ok] = js.native
   def select(index: Double, callback: Callback[Ok]): Unit = js.native
+  
   def set(key: KeyType, value: ValueType): js.Promise[Ok | Null] = js.native
   def set(key: KeyType, value: ValueType, callback: Callback[Ok]): Unit = js.native
   def set(
@@ -1595,6 +1654,7 @@ trait Commands extends js.Object {
   def set(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: Double, setMode: Double): js.Promise[Ok | Null] = js.native
   def set(key: KeyType, value: ValueType, setMode: String, callback: Callback[Ok | Null]): Unit = js.native
   def set(key: KeyType, value: ValueType, setMode: js.Array[_], callback: Callback[Ok | Null]): Unit = js.native
+  
   def setBuffer(key: KeyType, value: ValueType): js.Promise[Buffer] = js.native
   def setBuffer(key: KeyType, value: ValueType, callback: Callback[Buffer]): Unit = js.native
   def setBuffer(
@@ -1717,14 +1777,19 @@ trait Commands extends js.Object {
   def setBuffer(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: Double, setMode: String): js.Promise[Buffer] = js.native
   def setBuffer(key: KeyType, value: ValueType, expiryMode: js.Array[_], time: Double, setMode: Double): js.Promise[Buffer] = js.native
   def setBuffer(key: KeyType, value: ValueType, setMode: String, callback: Callback[Buffer]): Unit = js.native
+  
   def setbit(key: KeyType, offset: Double, value: ValueType): js.Promise[Double] = js.native
   def setbit(key: KeyType, offset: Double, value: ValueType, callback: Callback[Double]): Unit = js.native
+  
   def setex(key: KeyType, seconds: Double, value: ValueType): js.Promise[Ok] = js.native
   def setex(key: KeyType, seconds: Double, value: ValueType, callback: Callback[Ok]): Unit = js.native
+  
   def setnx(key: KeyType, value: ValueType): js.Promise[BooleanResponse] = js.native
   def setnx(key: KeyType, value: ValueType, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def setrange(key: KeyType, offset: Double, value: ValueType): js.Promise[Double] = js.native
   def setrange(key: KeyType, offset: Double, value: ValueType, callback: Callback[Double]): Unit = js.native
+  
   @JSName("shutdown")
   def shutdown_NOSAVE(save: NOSAVE): js.Promise[scala.Nothing] = js.native
   @JSName("shutdown")
@@ -1733,6 +1798,7 @@ trait Commands extends js.Object {
   def shutdown_SAVE(save: SAVE): js.Promise[scala.Nothing] = js.native
   @JSName("shutdown")
   def shutdown_SAVE(save: SAVE, callback: Callback[scala.Nothing]): Unit = js.native
+  
   def sinter(arg1: js.Array[KeyType]): js.Promise[js.Array[String]] = js.native
   def sinter(arg1: js.Array[KeyType], cb: Callback[js.Array[String]]): Unit = js.native
   def sinter(
@@ -1757,6 +1823,9 @@ trait Commands extends js.Object {
   def sinter(arg1: KeyType, arg2: KeyType, cb: Callback[js.Array[String]]): Unit = js.native
   def sinter(arg1: KeyType, cb: Callback[js.Array[String]]): Unit = js.native
   def sinter(args: KeyType*): js.Promise[js.Array[String]] = js.native
+  @JSName("sinter")
+  var sinter_Original: OverloadedListCommand[KeyType, js.Array[String]] = js.native
+  
   def sinterstore(key: KeyType, arg1: js.Array[KeyType]): js.Promise[Double] = js.native
   def sinterstore(key: KeyType, arg1: js.Array[KeyType], cb: Callback[Double]): Unit = js.native
   def sinterstore(
@@ -1783,14 +1852,21 @@ trait Commands extends js.Object {
   def sinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native
   def sinterstore(key: KeyType, arg1: KeyType, cb: Callback[Double]): Unit = js.native
   def sinterstore(key: KeyType, args: KeyType*): js.Promise[Double] = js.native
+  @JSName("sinterstore")
+  var sinterstore_Original: OverloadedKeyCommand[KeyType, Double] = js.native
+  
   def sismember(key: KeyType, member: String): js.Promise[BooleanResponse] = js.native
   def sismember(key: KeyType, member: String, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def slaveof(host: String, port: Double): js.Promise[String] = js.native
   def slaveof(host: String, port: Double, callback: Callback[String]): Unit = js.native
+  
   def smembers(key: KeyType): js.Promise[js.Array[String]] = js.native
   def smembers(key: KeyType, callback: Callback[js.Array[String]]): Unit = js.native
+  
   def smove(source: String, destination: String, member: String): js.Promise[BooleanResponse] = js.native
   def smove(source: String, destination: String, member: String, callback: Callback[BooleanResponse]): Unit = js.native
+  
   def sort(
     arg1: KeyType | Double,
     arg2: KeyType | Double,
@@ -2094,14 +2170,19 @@ trait Commands extends js.Object {
   def sort(arg1: KeyType, arg2: KeyType, arg3: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(arg1: KeyType, arg2: KeyType, cb: Callback[js.Array[String] | Double]): Unit = js.native
   def sort(args: (KeyType | Double)*): js.Promise[js.Array[String] | Double] = js.native
+  @JSName("sort")
+  var sort_Original: OverloadedListCommand[KeyType | Double, js.Array[String] | Double] = js.native
+  
   def spop(key: KeyType): js.Promise[String | Null] = js.native
   def spop(key: KeyType, callback: Callback[String | Null]): Unit = js.native
   def spop(key: KeyType, count: Double): js.Promise[js.Array[String]] = js.native
   def spop(key: KeyType, count: Double, callback: Callback[js.Array[String]]): Unit = js.native
+  
   def srandmember(key: KeyType): js.Promise[String | Null] = js.native
   def srandmember(key: KeyType, callback: Callback[String | Null]): Unit = js.native
   def srandmember(key: KeyType, count: Double): js.Promise[js.Array[String]] = js.native
   def srandmember(key: KeyType, count: Double, callback: Callback[js.Array[String]]): Unit = js.native
+  
   def srem(key: KeyType, arg1: js.Array[ValueType]): js.Promise[Double] = js.native
   def srem(key: KeyType, arg1: js.Array[ValueType], cb: Callback[Double]): Unit = js.native
   def srem(
@@ -2135,6 +2216,9 @@ trait Commands extends js.Object {
   def srem(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[Double]): Unit = js.native
   def srem(key: KeyType, arg1: ValueType, cb: Callback[Double]): Unit = js.native
   def srem(key: KeyType, args: ValueType*): js.Promise[Double] = js.native
+  @JSName("srem")
+  var srem_Original: OverloadedKeyCommand[ValueType, Double] = js.native
+  
   def sscan(key: KeyType, arg1: js.Array[ValueType]): js.Promise[js.Tuple2[String, js.Array[String]]] = js.native
   def sscan(key: KeyType, arg1: js.Array[ValueType], cb: Callback[js.Tuple2[String, js.Array[String]]]): Unit = js.native
   def sscan(
@@ -2174,10 +2258,16 @@ trait Commands extends js.Object {
   def sscan(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[js.Tuple2[String, js.Array[String]]]): Unit = js.native
   def sscan(key: KeyType, arg1: ValueType, cb: Callback[js.Tuple2[String, js.Array[String]]]): Unit = js.native
   def sscan(key: KeyType, args: ValueType*): js.Promise[js.Tuple2[String, js.Array[String]]] = js.native
+  
   def sscanStream(key: KeyType): Readable = js.native
   def sscanStream(key: KeyType, options: ScanStreamOption): Readable = js.native
+  
+  @JSName("sscan")
+  var sscan_Original: OverloadedKeyCommand[ValueType, js.Tuple2[String, js.Array[String]]] = js.native
+  
   def strlen(key: KeyType): js.Promise[Double] = js.native
   def strlen(key: KeyType, callback: Callback[Double]): Unit = js.native
+  
   def subscribe(
     arg1: String,
     arg2: String,
@@ -2195,8 +2285,12 @@ trait Commands extends js.Object {
   def subscribe(arg1: js.Array[String]): js.Promise[Double] = js.native
   def subscribe(arg1: js.Array[String], cb: Callback[Double]): Unit = js.native
   def subscribe(args: String*): js.Promise[Double] = js.native
+  @JSName("subscribe")
+  var subscribe_Original: OverloadedListCommand[String, Double] = js.native
+  
   def substr(key: KeyType, start: Double, end: Double): js.Promise[String] = js.native
   def substr(key: KeyType, start: Double, end: Double, callback: Callback[String]): Unit = js.native
+  
   def sunion(arg1: js.Array[KeyType]): js.Promise[js.Array[String]] = js.native
   def sunion(arg1: js.Array[KeyType], cb: Callback[js.Array[String]]): Unit = js.native
   def sunion(
@@ -2221,6 +2315,9 @@ trait Commands extends js.Object {
   def sunion(arg1: KeyType, arg2: KeyType, cb: Callback[js.Array[String]]): Unit = js.native
   def sunion(arg1: KeyType, cb: Callback[js.Array[String]]): Unit = js.native
   def sunion(args: KeyType*): js.Promise[js.Array[String]] = js.native
+  @JSName("sunion")
+  var sunion_Original: OverloadedListCommand[KeyType, js.Array[String]] = js.native
+  
   def sunionstore(key: KeyType, arg1: js.Array[KeyType]): js.Promise[Double] = js.native
   def sunionstore(key: KeyType, arg1: js.Array[KeyType], cb: Callback[Double]): Unit = js.native
   def sunionstore(
@@ -2247,14 +2344,21 @@ trait Commands extends js.Object {
   def sunionstore(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native
   def sunionstore(key: KeyType, arg1: KeyType, cb: Callback[Double]): Unit = js.native
   def sunionstore(key: KeyType, args: KeyType*): js.Promise[Double] = js.native
+  @JSName("sunionstore")
+  var sunionstore_Original: OverloadedKeyCommand[KeyType, Double] = js.native
+  
   def sync(): js.Promise[_] = js.native
   def sync(callback: Callback[_]): Unit = js.native
+  
   def time(): js.Promise[js.Tuple2[String, String]] = js.native
   def time(callback: Callback[js.Tuple2[String, String]]): Unit = js.native
+  
   def ttl(key: KeyType): js.Promise[Double] = js.native
   def ttl(key: KeyType, callback: Callback[Double]): Unit = js.native
+  
   def `type`(key: KeyType): js.Promise[String] = js.native
   def `type`(key: KeyType, callback: Callback[String]): Unit = js.native
+  
   def unlink(arg1: js.Array[KeyType]): js.Promise[Double] = js.native
   def unlink(arg1: js.Array[KeyType], cb: Callback[Double]): Unit = js.native
   def unlink(
@@ -2272,6 +2376,9 @@ trait Commands extends js.Object {
   def unlink(arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native
   def unlink(arg1: KeyType, cb: Callback[Double]): Unit = js.native
   def unlink(args: KeyType*): js.Promise[Double] = js.native
+  @JSName("unlink")
+  var unlink_Original: OverloadedListCommand[KeyType, Double] = js.native
+  
   def unsubscribe(
     arg1: String,
     arg2: String,
@@ -2290,8 +2397,12 @@ trait Commands extends js.Object {
   def unsubscribe(arg1: js.Array[String], cb: Callback[Double]): Unit = js.native
   def unsubscribe(args: String*): js.Promise[Double] = js.native
   def unsubscribe(cb: Callback[Double]): Unit = js.native
+  @JSName("unsubscribe")
+  var unsubscribe_Original: OverloadedCommand[String, Double] = js.native
+  
   def unwatch(): js.Promise[String] = js.native
   def unwatch(callback: Callback[String]): Unit = js.native
+  
   def watch(arg1: js.Array[KeyType]): js.Promise[Ok] = js.native
   def watch(arg1: js.Array[KeyType], cb: Callback[Ok]): Unit = js.native
   def watch(
@@ -2309,6 +2420,9 @@ trait Commands extends js.Object {
   def watch(arg1: KeyType, arg2: KeyType, cb: Callback[Ok]): Unit = js.native
   def watch(arg1: KeyType, cb: Callback[Ok]): Unit = js.native
   def watch(args: KeyType*): js.Promise[Ok] = js.native
+  @JSName("watch")
+  var watch_Original: OverloadedListCommand[KeyType, Ok] = js.native
+  
   def xack(key: KeyType, arg1: js.Array[ValueType]): js.Promise[Double] = js.native
   def xack(key: KeyType, arg1: js.Array[ValueType], cb: Callback[Double]): Unit = js.native
   def xack(
@@ -2342,6 +2456,9 @@ trait Commands extends js.Object {
   def xack(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[Double]): Unit = js.native
   def xack(key: KeyType, arg1: ValueType, cb: Callback[Double]): Unit = js.native
   def xack(key: KeyType, args: ValueType*): js.Promise[Double] = js.native
+  @JSName("xack")
+  var xack_Original: OverloadedKeyCommand[ValueType, Double] = js.native
+  
   def xadd(key: KeyType, arg1: js.Array[ValueType]): js.Promise[String] = js.native
   def xadd(key: KeyType, arg1: js.Array[ValueType], cb: Callback[String]): Unit = js.native
   def xadd(
@@ -2375,6 +2492,9 @@ trait Commands extends js.Object {
   def xadd(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[String]): Unit = js.native
   def xadd(key: KeyType, arg1: ValueType, cb: Callback[String]): Unit = js.native
   def xadd(key: KeyType, args: ValueType*): js.Promise[String] = js.native
+  @JSName("xadd")
+  var xadd_Original: OverloadedKeyCommand[ValueType, String] = js.native
+  
   def xclaim(key: KeyType, arg1: js.Array[ValueType]): js.Promise[js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
   def xclaim(
     key: KeyType,
@@ -2423,6 +2543,9 @@ trait Commands extends js.Object {
   ): Unit = js.native
   def xclaim(key: KeyType, arg1: ValueType, cb: Callback[js.Array[js.Tuple2[String, js.Array[String]]]]): Unit = js.native
   def xclaim(key: KeyType, args: ValueType*): js.Promise[js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
+  @JSName("xclaim")
+  var xclaim_Original: OverloadedKeyCommand[ValueType, js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
+  
   def xdel(
     key: KeyType,
     arg1: String,
@@ -2449,6 +2572,9 @@ trait Commands extends js.Object {
   def xdel(key: KeyType, arg1: js.Array[String]): js.Promise[Double] = js.native
   def xdel(key: KeyType, arg1: js.Array[String], cb: Callback[Double]): Unit = js.native
   def xdel(key: KeyType, args: String*): js.Promise[Double] = js.native
+  @JSName("xdel")
+  var xdel_Original: OverloadedKeyCommand[String, Double] = js.native
+  
   def xgroup(arg1: js.Array[ValueType]): js.Promise[Ok] = js.native
   def xgroup(arg1: js.Array[ValueType], cb: Callback[Ok]): Unit = js.native
   def xgroup(arg1: ValueType, arg2: js.Array[ValueType], cb: Callback[Ok]): Unit = js.native
@@ -2474,6 +2600,9 @@ trait Commands extends js.Object {
   def xgroup(arg1: ValueType, arg2: ValueType, cb: Callback[Ok]): Unit = js.native
   def xgroup(arg1: ValueType, cb: Callback[Ok]): Unit = js.native
   def xgroup(args: ValueType*): js.Promise[Ok] = js.native
+  @JSName("xgroup")
+  var xgroup_Original: OverloadedSubCommand[ValueType, Ok] = js.native
+  
   def xinfo(arg1: js.Array[ValueType]): js.Promise[_] = js.native
   def xinfo(arg1: js.Array[ValueType], cb: Callback[_]): Unit = js.native
   def xinfo(arg1: ValueType, arg2: js.Array[ValueType], cb: Callback[_]): Unit = js.native
@@ -2499,8 +2628,12 @@ trait Commands extends js.Object {
   def xinfo(arg1: ValueType, arg2: ValueType, cb: Callback[_]): Unit = js.native
   def xinfo(arg1: ValueType, cb: Callback[_]): Unit = js.native
   def xinfo(args: ValueType*): js.Promise[_] = js.native
+  @JSName("xinfo")
+  var xinfo_Original: OverloadedSubCommand[ValueType, _] = js.native
+  
   def xlen(key: KeyType): js.Promise[Double] = js.native
   def xlen(key: KeyType, callback: Callback[Double]): Unit = js.native
+  
   def xpending(key: KeyType, arg1: js.Array[ValueType]): js.Promise[_] = js.native
   def xpending(key: KeyType, arg1: js.Array[ValueType], cb: Callback[_]): Unit = js.native
   def xpending(
@@ -2527,6 +2660,9 @@ trait Commands extends js.Object {
   def xpending(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[_]): Unit = js.native
   def xpending(key: KeyType, arg1: ValueType, cb: Callback[_]): Unit = js.native
   def xpending(key: KeyType, args: ValueType*): js.Promise[_] = js.native
+  @JSName("xpending")
+  var xpending_Original: OverloadedKeyCommand[ValueType, _] = js.native
+  
   def xrange(key: KeyType, arg1: js.Array[ValueType]): js.Promise[js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
   def xrange(
     key: KeyType,
@@ -2575,6 +2711,9 @@ trait Commands extends js.Object {
   ): Unit = js.native
   def xrange(key: KeyType, arg1: ValueType, cb: Callback[js.Array[js.Tuple2[String, js.Array[String]]]]): Unit = js.native
   def xrange(key: KeyType, args: ValueType*): js.Promise[js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
+  @JSName("xrange")
+  var xrange_Original: OverloadedKeyCommand[ValueType, js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
+  
   def xread(arg1: js.Array[ValueType]): js.Promise[js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
   def xread(arg1: js.Array[ValueType], cb: Callback[js.Array[js.Tuple2[String, js.Array[String]]]]): Unit = js.native
   def xread(
@@ -2610,6 +2749,9 @@ trait Commands extends js.Object {
   def xread(arg1: ValueType, arg2: ValueType, cb: Callback[js.Array[js.Tuple2[String, js.Array[String]]]]): Unit = js.native
   def xread(arg1: ValueType, cb: Callback[js.Array[js.Tuple2[String, js.Array[String]]]]): Unit = js.native
   def xread(args: ValueType*): js.Promise[js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
+  @JSName("xread")
+  var xread_Original: OverloadedListCommand[ValueType, js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
+  
   def xreadgroup(key: KeyType, arg1: js.Array[ValueType]): js.Promise[js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
   def xreadgroup(
     key: KeyType,
@@ -2658,6 +2800,9 @@ trait Commands extends js.Object {
   ): Unit = js.native
   def xreadgroup(key: KeyType, arg1: ValueType, cb: Callback[js.Array[js.Tuple2[String, js.Array[String]]]]): Unit = js.native
   def xreadgroup(key: KeyType, args: ValueType*): js.Promise[js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
+  @JSName("xreadgroup")
+  var xreadgroup_Original: OverloadedKeyCommand[ValueType, js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
+  
   def xrevrange(key: KeyType, arg1: js.Array[ValueType]): js.Promise[js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
   def xrevrange(
     key: KeyType,
@@ -2706,6 +2851,9 @@ trait Commands extends js.Object {
   ): Unit = js.native
   def xrevrange(key: KeyType, arg1: ValueType, cb: Callback[js.Array[js.Tuple2[String, js.Array[String]]]]): Unit = js.native
   def xrevrange(key: KeyType, args: ValueType*): js.Promise[js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
+  @JSName("xrevrange")
+  var xrevrange_Original: OverloadedKeyCommand[ValueType, js.Array[js.Tuple2[String, js.Array[String]]]] = js.native
+  
   def xtrim(key: KeyType, arg1: js.Array[ValueType]): js.Promise[Double] = js.native
   def xtrim(key: KeyType, arg1: js.Array[ValueType], cb: Callback[Double]): Unit = js.native
   def xtrim(
@@ -2739,6 +2887,9 @@ trait Commands extends js.Object {
   def xtrim(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[Double]): Unit = js.native
   def xtrim(key: KeyType, arg1: ValueType, cb: Callback[Double]): Unit = js.native
   def xtrim(key: KeyType, args: ValueType*): js.Promise[Double] = js.native
+  @JSName("xtrim")
+  var xtrim_Original: OverloadedKeyCommand[ValueType, Double] = js.native
+  
   def zadd(
     key: KeyType,
     arg1: KeyType | Double,
@@ -3181,10 +3332,16 @@ trait Commands extends js.Object {
   def zadd(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: KeyType, cb: Callback[Double | String]): Unit = js.native
   def zadd(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[Double | String]): Unit = js.native
   def zadd(key: KeyType, args: (KeyType | Double)*): js.Promise[Double | String] = js.native
+  
   def zaddBuffer(key: KeyType, score1: Double, member1: Buffer): js.Promise[String | Double] = js.native
   def zaddBuffer(key: KeyType, score1: Double, member1: Buffer, callback: Callback[String | Double]): Unit = js.native
+  
+  @JSName("zadd")
+  var zadd_Original: OverloadedKeyCommand[KeyType | Double, Double | String] = js.native
+  
   def zcard(key: KeyType): js.Promise[Double] = js.native
   def zcard(key: KeyType, callback: Callback[Double]): Unit = js.native
+  
   def zcount(key: KeyType, min: String, max: String): js.Promise[Double] = js.native
   def zcount(key: KeyType, min: String, max: String, callback: Callback[Double]): Unit = js.native
   def zcount(key: KeyType, min: String, max: Double): js.Promise[Double] = js.native
@@ -3193,8 +3350,10 @@ trait Commands extends js.Object {
   def zcount(key: KeyType, min: Double, max: String, callback: Callback[Double]): Unit = js.native
   def zcount(key: KeyType, min: Double, max: Double): js.Promise[Double] = js.native
   def zcount(key: KeyType, min: Double, max: Double, callback: Callback[Double]): Unit = js.native
+  
   def zincrby(key: KeyType, increment: Double, member: String): js.Promise[String] = js.native
   def zincrby(key: KeyType, increment: Double, member: String, callback: Callback[String]): Unit = js.native
+  
   def zinterstore(
     key: KeyType,
     arg1: KeyType | Double,
@@ -3525,14 +3684,19 @@ trait Commands extends js.Object {
   def zinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native
   def zinterstore(key: KeyType, args: (KeyType | Double)*): js.Promise[Double] = js.native
+  @JSName("zinterstore")
+  var zinterstore_Original: OverloadedKeyCommand[KeyType | Double, Double] = js.native
+  
   def zpopmax(key: KeyType): js.Promise[js.Array[String]] = js.native
   def zpopmax(key: KeyType, callback: Callback[js.Array[String]]): Unit = js.native
   def zpopmax(key: KeyType, count: Double): js.Promise[js.Array[String]] = js.native
   def zpopmax(key: KeyType, count: Double, callback: Callback[js.Array[String]]): Unit = js.native
+  
   def zpopmin(key: KeyType): js.Promise[js.Array[String]] = js.native
   def zpopmin(key: KeyType, callback: Callback[js.Array[String]]): Unit = js.native
   def zpopmin(key: KeyType, count: Double): js.Promise[js.Array[String]] = js.native
   def zpopmin(key: KeyType, count: Double, callback: Callback[js.Array[String]]): Unit = js.native
+  
   def zrange(key: KeyType, start: Double, stop: Double): js.Promise[js.Array[String]] = js.native
   def zrange(key: KeyType, start: Double, stop: Double, callback: Callback[js.Array[String]]): Unit = js.native
   @JSName("zrange")
@@ -3545,6 +3709,7 @@ trait Commands extends js.Object {
     withScores: WITHSCORES,
     callback: Callback[js.Array[String]]
   ): Unit = js.native
+  
   def zrangebylex(key: KeyType, min: String, max: String): js.Promise[js.Array[String]] = js.native
   def zrangebylex(key: KeyType, min: String, max: String, callback: Callback[js.Array[String]]): Unit = js.native
   @JSName("zrangebylex")
@@ -3559,6 +3724,7 @@ trait Commands extends js.Object {
     count: Double,
     callback: Callback[js.Array[String]]
   ): Unit = js.native
+  
   def zrangebyscore(key: KeyType, min: String, max: String): js.Promise[js.Array[String]] = js.native
   def zrangebyscore(key: KeyType, min: String, max: String, callback: Callback[js.Array[String]]): Unit = js.native
   def zrangebyscore(
@@ -3731,8 +3897,10 @@ trait Commands extends js.Object {
     withScores: WITHSCORES,
     callback: Callback[js.Array[String]]
   ): Unit = js.native
+  
   def zrank(key: KeyType, member: String): js.Promise[Double | Null] = js.native
   def zrank(key: KeyType, member: String, callback: Callback[Double | Null]): Unit = js.native
+  
   def zrem(key: KeyType, arg1: js.Array[ValueType]): js.Promise[Double] = js.native
   def zrem(key: KeyType, arg1: js.Array[ValueType], cb: Callback[Double]): Unit = js.native
   def zrem(
@@ -3766,10 +3934,15 @@ trait Commands extends js.Object {
   def zrem(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[Double]): Unit = js.native
   def zrem(key: KeyType, arg1: ValueType, cb: Callback[Double]): Unit = js.native
   def zrem(key: KeyType, args: ValueType*): js.Promise[Double] = js.native
+  @JSName("zrem")
+  var zrem_Original: OverloadedKeyCommand[ValueType, Double] = js.native
+  
   def zremrangebylex(key: KeyType, min: String, max: String): js.Promise[Double] = js.native
   def zremrangebylex(key: KeyType, min: String, max: String, callback: Callback[Double]): Unit = js.native
+  
   def zremrangebyrank(key: KeyType, start: Double, stop: Double): js.Promise[Double] = js.native
   def zremrangebyrank(key: KeyType, start: Double, stop: Double, callback: Callback[Double]): Unit = js.native
+  
   def zremrangebyscore(key: KeyType, min: String, max: String): js.Promise[Double] = js.native
   def zremrangebyscore(key: KeyType, min: String, max: String, callback: Callback[Double]): Unit = js.native
   def zremrangebyscore(key: KeyType, min: String, max: Double): js.Promise[Double] = js.native
@@ -3778,6 +3951,7 @@ trait Commands extends js.Object {
   def zremrangebyscore(key: KeyType, min: Double, max: String, callback: Callback[Double]): Unit = js.native
   def zremrangebyscore(key: KeyType, min: Double, max: Double): js.Promise[Double] = js.native
   def zremrangebyscore(key: KeyType, min: Double, max: Double, callback: Callback[Double]): Unit = js.native
+  
   def zrevrange(key: KeyType, start: Double, stop: Double): js.Promise[js.Array[String]] = js.native
   def zrevrange(key: KeyType, start: Double, stop: Double, callback: Callback[js.Array[String]]): Unit = js.native
   @JSName("zrevrange")
@@ -3790,6 +3964,7 @@ trait Commands extends js.Object {
     withScores: WITHSCORES,
     callback: Callback[js.Array[String]]
   ): Unit = js.native
+  
   def zrevrangebylex(key: KeyType, min: String, max: String): js.Promise[js.Array[String]] = js.native
   def zrevrangebylex(key: KeyType, min: String, max: String, callback: Callback[js.Array[String]]): Unit = js.native
   @JSName("zrevrangebylex")
@@ -3804,6 +3979,7 @@ trait Commands extends js.Object {
     count: Double,
     callback: Callback[js.Array[String]]
   ): Unit = js.native
+  
   def zrevrangebyscore(key: KeyType, max: String, min: String): js.Promise[js.Array[String]] = js.native
   def zrevrangebyscore(key: KeyType, max: String, min: String, callback: Callback[js.Array[String]]): Unit = js.native
   def zrevrangebyscore(
@@ -3976,8 +4152,10 @@ trait Commands extends js.Object {
     withScores: WITHSCORES,
     callback: Callback[js.Array[String]]
   ): Unit = js.native
+  
   def zrevrank(key: KeyType, member: String): js.Promise[Double | Null] = js.native
   def zrevrank(key: KeyType, member: String, callback: Callback[Double | Null]): Unit = js.native
+  
   def zscan(key: KeyType, arg1: js.Array[ValueType]): js.Promise[js.Tuple2[String, js.Array[String]]] = js.native
   def zscan(key: KeyType, arg1: js.Array[ValueType], cb: Callback[js.Tuple2[String, js.Array[String]]]): Unit = js.native
   def zscan(
@@ -4017,10 +4195,16 @@ trait Commands extends js.Object {
   def zscan(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[js.Tuple2[String, js.Array[String]]]): Unit = js.native
   def zscan(key: KeyType, arg1: ValueType, cb: Callback[js.Tuple2[String, js.Array[String]]]): Unit = js.native
   def zscan(key: KeyType, args: ValueType*): js.Promise[js.Tuple2[String, js.Array[String]]] = js.native
+  
   def zscanStream(key: KeyType): Readable = js.native
   def zscanStream(key: KeyType, options: ScanStreamOption): Readable = js.native
+  
+  @JSName("zscan")
+  var zscan_Original: OverloadedKeyCommand[ValueType, js.Tuple2[String, js.Array[String]]] = js.native
+  
   def zscore(key: KeyType, member: String): js.Promise[String] = js.native
   def zscore(key: KeyType, member: String, callback: Callback[String]): Unit = js.native
+  
   def zunionstore(
     key: KeyType,
     arg1: KeyType | Double,
@@ -4351,5 +4535,6 @@ trait Commands extends js.Object {
   def zunionstore(key: KeyType, arg1: KeyType, arg2: KeyType, arg3: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, arg1: KeyType, arg2: KeyType, cb: Callback[Double]): Unit = js.native
   def zunionstore(key: KeyType, args: (KeyType | Double)*): js.Promise[Double] = js.native
+  @JSName("zunionstore")
+  var zunionstore_Original: OverloadedKeyCommand[KeyType | Double, Double] = js.native
 }
-

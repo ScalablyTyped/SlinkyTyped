@@ -2,19 +2,16 @@ package typingsSlinky.reReselect.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CreateSelectorInstance extends js.Object {
-  def apply[S1, R1, T](
-    selectors: js.Array[typingsSlinky.reselect.mod.Selector[S1, R1]],
-    combiner: js.Function1[/* res1 */ R1, T]
-  ): typingsSlinky.reselect.mod.OutputSelector[S1, T, js.Function1[/* res1 */ R1, T]] = js.native
-  def apply[S, R1, T](selector: typingsSlinky.reselect.mod.Selector[S, R1], combiner: js.Function1[/* res */ R1, T]): typingsSlinky.reselect.mod.OutputSelector[S, T, js.Function1[/* res */ R1, T]] = js.native
-  def apply[S1, P1, R1, T](
-    selector1: typingsSlinky.reselect.mod.ParametricSelector[S1, P1, R1],
-    combiner: js.Function1[/* res1 */ R1, T]
-  ): typingsSlinky.reselect.mod.OutputParametricSelector[S1, P1, T, js.Function1[/* res1 */ R1, T]] = js.native
+  
+  def apply[S1, R1, T](selector1: typingsSlinky.reselect.mod.Selector[S1, R1], combiner: js.Function1[/* res1 */ R1, T]): typingsSlinky.reselect.mod.OutputSelector[S1, T, js.Function1[/* res1 */ R1, T]] = js.native
+  def apply[S, R1, T](
+    selectors: js.Array[typingsSlinky.reselect.mod.Selector[S, R1]],
+    combiner: js.Function1[/* res */ R1, T]
+  ): typingsSlinky.reselect.mod.OutputSelector[S, T, js.Function1[/* res */ R1, T]] = js.native
   def apply[S, R1, R2, T](
     selector1: typingsSlinky.reselect.mod.Selector[S, R1],
     selector2: typingsSlinky.reselect.mod.Selector[S, R2],
@@ -27,6 +24,10 @@ trait CreateSelectorInstance extends js.Object {
     ],
     combiner: js.Function2[/* res1 */ R1, /* res2 */ R2, T]
   ): typingsSlinky.reselect.mod.OutputSelector[S, T, js.Function2[/* res1 */ R1, /* res2 */ R2, T]] = js.native
+  def apply[S, P, R1, T](
+    selector: typingsSlinky.reselect.mod.ParametricSelector[S, P, R1],
+    combiner: js.Function1[/* res */ R1, T]
+  ): typingsSlinky.reselect.mod.OutputParametricSelector[S, P, T, js.Function1[/* res */ R1, T]] = js.native
   def apply[S, P, R1, R2, T](
     selector1: typingsSlinky.reselect.mod.ParametricSelector[S, P, R1],
     selector2: typingsSlinky.reselect.mod.ParametricSelector[S, P, R2],
@@ -886,4 +887,3 @@ trait CreateSelectorInstance extends js.Object {
     ]
   ] = js.native
 }
-

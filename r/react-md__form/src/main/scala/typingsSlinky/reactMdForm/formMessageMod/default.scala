@@ -5,7 +5,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.reactMdForm.anon.FormMessagePropsPartialFo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `FormMessage` component is used to create additional helper messages or
@@ -19,4 +19,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/form/types/text-field/FormMessage", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[FormMessagePropsPartialFo]]
-

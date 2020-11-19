@@ -5,11 +5,12 @@ import typingsSlinky.unist.mod.Node
 import typingsSlinky.vfile.mod.VFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("hast-util-from-parse5", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Transform [Parse5’s AST](https://github.com/inikulin/parse5/blob/master/packages/parse5/docs/tree-adapter/default/interface-list.md)
     * to a [**hast**](https://github.com/syntax-tree/hast)
@@ -22,4 +23,3 @@ object ^ extends js.Object {
   def apply(ast: Document, options: HastUtilFromParse5Options): Node = js.native
   def apply(ast: Document, options: VFile): Node = js.native
 }
-

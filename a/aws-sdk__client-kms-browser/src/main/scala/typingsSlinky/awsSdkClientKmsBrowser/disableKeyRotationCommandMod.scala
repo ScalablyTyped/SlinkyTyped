@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/commands/DisableKeyRotationCommand", JSImport.Namespace)
 @js.native
 object disableKeyRotationCommandMod extends js.Object {
+  
   @js.native
   class DisableKeyRotationCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object disableKeyRotationCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DisableKeyRotationInput) = this()
+    
     val middlewareStack: MiddlewareStack[DisableKeyRotationInput, DisableKeyRotationOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[DisableKeyRotationInput, DisableKeyRotationOutput] = js.native
   }
-  
 }
-

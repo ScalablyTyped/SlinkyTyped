@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.materialsIndexMod
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/index", "MultiMaterial")
 @js.native
@@ -19,11 +19,11 @@ class MultiMaterial protected ()
     */
   def this(name: String, scene: Scene) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Materials/index", "MultiMaterial")
 @js.native
 object MultiMaterial extends js.Object {
+  
   /**
     * Creates a MultiMaterial from parsed MultiMaterial data.
     * @param parsedMultiMaterial defines parsed MultiMaterial data.
@@ -32,4 +32,3 @@ object MultiMaterial extends js.Object {
     */
   def ParseMultiMaterial(parsedMultiMaterial: js.Any, scene: Scene): typingsSlinky.babylonjs.multiMaterialMod.MultiMaterial = js.native
 }
-

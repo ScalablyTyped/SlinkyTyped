@@ -11,11 +11,12 @@ import typingsSlinky.three.constantsMod.Wrapping
 import typingsSlinky.three.textureMod.Texture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/textures/CanvasTexture", JSImport.Namespace)
 @js.native
 object canvasTextureMod extends js.Object {
+  
   @js.native
   class CanvasTexture protected () extends Texture {
     def this(
@@ -30,6 +31,4 @@ object canvasTextureMod extends js.Object {
       anisotropy: js.UndefOr[Double]
     ) = this()
   }
-  
 }
-

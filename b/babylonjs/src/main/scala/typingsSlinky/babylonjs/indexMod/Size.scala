@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "Size")
 @js.native
@@ -15,11 +15,11 @@ class Size protected ()
     */
   def this(width: Double, height: Double) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/index", "Size")
 @js.native
 object Size extends js.Object {
+  
   /**
     * Creates a new Size set at the linear interpolation "amount" between "start" and "end"
     * @param start starting size to lerp between
@@ -32,10 +32,10 @@ object Size extends js.Object {
     end: typingsSlinky.babylonjs.mathSizeMod.Size,
     amount: Double
   ): typingsSlinky.babylonjs.mathSizeMod.Size = js.native
+  
   /**
     * Create a new size of zero
     * @returns a new Size set to (0.0, 0.0)
     */
   def Zero(): typingsSlinky.babylonjs.mathSizeMod.Size = js.native
 }
-

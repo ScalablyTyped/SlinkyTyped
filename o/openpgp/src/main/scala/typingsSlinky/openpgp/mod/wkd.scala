@@ -4,16 +4,18 @@ import typingsSlinky.openpgp.anon.Email
 import typingsSlinky.openpgp.anon.Err
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "wkd")
 @js.native
 object wkd extends js.Object {
+  
   @js.native
   /**
     * Initialize the WKD client
     */
   class WKD () extends js.Object {
+    
     /**
       * Search for a public key using Web Key Directory protocol.
       * @param options.email User's email.
@@ -22,6 +24,4 @@ object wkd extends js.Object {
       */
     def lookup(options: Email): js.Promise[js.typedarray.Uint8Array | Err] = js.native
   }
-  
 }
-

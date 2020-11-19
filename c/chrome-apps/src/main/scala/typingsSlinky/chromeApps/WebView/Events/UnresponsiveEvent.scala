@@ -4,7 +4,7 @@ import typingsSlinky.chromeApps.chrome.integer
 import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Fired when the process rendering the guest web content has become unresponsive.
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait UnresponsiveEvent extends Event {
+  
   /** Chrome's internal ID of the process that has become unresponsive. */
   var processID: integer = js.native
 }
-

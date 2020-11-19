@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "Batch")
 @js.native
@@ -16,29 +16,34 @@ import scala.scalajs.js.annotation._
   */
 class Batch () extends IBatch {
   def this(properties: IBatch) = this()
+  
   /** Batch headerSignature. */
   @JSName("headerSignature")
   var headerSignature_Batch: String = js.native
+  
   /** Batch header. */
   @JSName("header")
   var header_Batch: js.typedarray.Uint8Array = js.native
-  /** Batch trace. */
-  @JSName("trace")
-  var trace_Batch: Boolean = js.native
-  /** Batch transactions. */
-  @JSName("transactions")
-  var transactions_Batch: js.Array[ITransaction] = js.native
+  
   /**
     * Converts this Batch to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
+  
+  /** Batch trace. */
+  @JSName("trace")
+  var trace_Batch: Boolean = js.native
+  
+  /** Batch transactions. */
+  @JSName("transactions")
+  var transactions_Batch: js.Array[ITransaction] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "Batch")
 @js.native
 object Batch extends js.Object {
+  
   /**
     * Creates a new Batch instance using the specified properties.
     * @param [properties] Properties to set
@@ -46,6 +51,7 @@ object Batch extends js.Object {
     */
   def create(): Batch = js.native
   def create(properties: IBatch): Batch = js.native
+  
   /**
     * Decodes a Batch message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -58,6 +64,7 @@ object Batch extends js.Object {
   def decode(reader: Reader, length: Double): Batch = js.native
   def decode(reader: js.typedarray.Uint8Array): Batch = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): Batch = js.native
+  
   /**
     * Decodes a Batch message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -67,6 +74,7 @@ object Batch extends js.Object {
     */
   def decodeDelimited(reader: Reader): Batch = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): Batch = js.native
+  
   /**
     * Encodes the specified Batch message. Does not implicitly {@link Batch.verify|verify} messages.
     * @param message Batch message or plain object to encode
@@ -75,6 +83,7 @@ object Batch extends js.Object {
     */
   def encode(message: IBatch): Writer = js.native
   def encode(message: IBatch, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified Batch message, length delimited. Does not implicitly {@link Batch.verify|verify} messages.
     * @param message Batch message or plain object to encode
@@ -83,12 +92,14 @@ object Batch extends js.Object {
     */
   def encodeDelimited(message: IBatch): Writer = js.native
   def encodeDelimited(message: IBatch, writer: Writer): Writer = js.native
+  
   /**
     * Creates a Batch message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns Batch
     */
   def fromObject(`object`: StringDictionary[js.Any]): Batch = js.native
+  
   /**
     * Creates a plain object from a Batch message. Also converts values to other types if specified.
     * @param message Batch
@@ -97,6 +108,7 @@ object Batch extends js.Object {
     */
   def toObject(message: Batch): StringDictionary[js.Any] = js.native
   def toObject(message: Batch, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a Batch message.
     * @param message Plain object to verify
@@ -104,4 +116,3 @@ object Batch extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

@@ -4,11 +4,12 @@ import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.featureMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/featureloader", JSImport.Namespace)
 @js.native
 object featureloaderMod extends js.Object {
+  
   def loadFeaturesXhr(
     url: String,
     format: default,
@@ -27,9 +28,12 @@ object featureloaderMod extends js.Object {
       Unit
     ]
   ): FeatureLoader = js.native
+  
   def setWithCredentials(xhrWithCredentials: Boolean): Unit = js.native
+  
   def xhr(url: String, format: default): FeatureLoader = js.native
   def xhr(url: FeatureUrlFunction, format: default): FeatureLoader = js.native
+  
   type FeatureLoader = js.ThisFunction3[
     /* this */ typingsSlinky.ol.sourceVectorMod.default[typingsSlinky.ol.geometryMod.default] | typingsSlinky.ol.olVectorTileMod.default, 
     /* p0 */ Extent, 
@@ -37,6 +41,7 @@ object featureloaderMod extends js.Object {
     /* p2 */ typingsSlinky.ol.projectionMod.default, 
     Unit
   ]
+  
   type FeatureUrlFunction = js.Function3[
     /* p0 */ Extent, 
     /* p1 */ Double, 
@@ -44,4 +49,3 @@ object featureloaderMod extends js.Object {
     String
   ]
 }
-

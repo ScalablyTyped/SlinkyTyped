@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/GetDifferencesCommand", JSImport.Namespace)
 @js.native
 object getDifferencesCommandMod extends js.Object {
+  
   @js.native
   class GetDifferencesCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getDifferencesCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetDifferencesInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetDifferencesInput, GetDifferencesOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[GetDifferencesInput, GetDifferencesOutput] = js.native
   }
-  
 }
-

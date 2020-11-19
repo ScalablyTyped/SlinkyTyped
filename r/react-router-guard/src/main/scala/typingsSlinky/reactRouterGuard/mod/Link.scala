@@ -7,14 +7,14 @@ import typingsSlinky.reactRouterDom.mod.LinkProps
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-router-guard", "Link")
 @js.native
 object Link extends js.Object {
+  
   def apply[S](
     // TODO: Define this as ...params: Parameters<Link<S>> when only TypeScript >= 3.1 support is needed.
   props: PropsWithoutRef[LinkProps[S]] with RefAttributes[HTMLAnchorElement]
   ): ReturnType[typingsSlinky.reactRouterDom.mod.Link[S]] = js.native
 }
-

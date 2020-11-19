@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.simpledbMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.SimpleDB")
 @js.native
@@ -14,4 +14,3 @@ class SimpleDB ()
   extends typingsSlinky.awsSdk.mod.SimpleDB {
   def this(options: ClientConfiguration) = this()
 }
-

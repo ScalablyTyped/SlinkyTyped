@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Legend
 import typingsSlinky.arcgisJsApi.esri.LegendProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Legend", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Legend {
   def this(properties: LegendProperties) = this()
 }
-

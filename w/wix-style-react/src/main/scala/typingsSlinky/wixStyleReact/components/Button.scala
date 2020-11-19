@@ -11,9 +11,10 @@ import typingsSlinky.wixStyleReact.buttonMod.ButtonSize
 import typingsSlinky.wixStyleReact.buttonMod.ButtonSkin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Button {
+  
   @JSImport("wix-style-react", "Button")
   @js.native
   object component extends js.Object
@@ -22,31 +23,42 @@ object Button {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.wixStyleReact.mod.Button] {
+    
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def dataHook(value: String): this.type = set("dataHook", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    
     @scala.inline
     def prefixIcon(value: ReactElement): this.type = set("prefixIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def priority(value: ButtonPriority): this.type = set("priority", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def size(value: ButtonSize): this.type = set("size", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def skin(value: ButtonSkin): this.type = set("skin", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Button.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

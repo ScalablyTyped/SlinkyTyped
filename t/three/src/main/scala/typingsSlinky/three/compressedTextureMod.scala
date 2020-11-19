@@ -11,11 +11,12 @@ import typingsSlinky.three.constantsMod.Wrapping
 import typingsSlinky.three.textureMod.Texture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/textures/CompressedTexture", JSImport.Namespace)
 @js.native
 object compressedTextureMod extends js.Object {
+  
   @js.native
   class CompressedTexture protected () extends Texture {
     def this(
@@ -32,9 +33,8 @@ object compressedTextureMod extends js.Object {
       anisotropy: js.UndefOr[Double],
       encoding: js.UndefOr[TextureEncoding]
     ) = this()
+    
     @JSName("image")
     var image_CompressedTexture: HeightWidth = js.native
   }
-  
 }
-

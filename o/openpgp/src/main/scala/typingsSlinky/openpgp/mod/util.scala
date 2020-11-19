@@ -3,24 +3,12 @@ package typingsSlinky.openpgp.mod
 import typingsSlinky.openpgp.anon.Comment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "util")
 @js.native
 object util extends js.Object {
-  /**
-    * Concat a list of Uint8Arrays, Strings or Streams
-    * The caller must not mix Uint8Arrays with Strings, but may mix Streams with non-Streams.
-    * @param Array of Uint8Arrays/Strings/Streams to concatenate
-    * @returns Concatenated array
-    */
-  var concat: js.Any = js.native
-  /**
-    * Concat Uint8Arrays
-    * @param Array of Uint8Arrays to concatenate
-    * @returns Concatenated array
-    */
-  var concatUint8Array: js.Any = js.native
+  
   /**
     * Convert an array of 8-bit integer to a Base-64 encoded string
     * @param bytes An array of 8-bit integers to convert
@@ -31,6 +19,7 @@ object util extends js.Object {
   def Uint8ArrayToB64(bytes: js.typedarray.Uint8Array): String = js.native
   @JSName("Uint8Array_to_b64")
   def Uint8ArrayToB64(bytes: js.typedarray.Uint8Array, url: Boolean): String = js.native
+  
   /**
     * Convert an array of 8-bit integers to a hex string
     * @param bytes Array of 8-bit integers to convert
@@ -38,6 +27,7 @@ object util extends js.Object {
     */
   @JSName("Uint8Array_to_hex")
   def Uint8ArrayToHex(bytes: js.typedarray.Uint8Array): String = js.native
+  
   /**
     * Convert a Uint8Array to an MPI-formatted Uint8Array.
     * Note: the output is **not** an MPI object.
@@ -48,6 +38,7 @@ object util extends js.Object {
     */
   @JSName("Uint8Array_to_MPI")
   def Uint8ArrayToMPI(bin: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
+  
   /**
     * Convert an array of 8-bit integers to a string
     * @param bytes An array of 8-bit integers to convert
@@ -55,6 +46,7 @@ object util extends js.Object {
     */
   @JSName("Uint8Array_to_str")
   def Uint8ArrayToStr(bytes: js.typedarray.Uint8Array): String = js.native
+  
   /**
     * Convert a Base-64 encoded string an array of 8-bit integer
     * Note: accepts both Radix-64 and URL-safe strings
@@ -63,10 +55,27 @@ object util extends js.Object {
     */
   @JSName("b64_to_Uint8Array")
   def b64ToUint8Array(base64: String): js.typedarray.Uint8Array = js.native
+  
   /**
     * Normalize line endings to \r\n
     */
   def canonicalizeEOL(): Unit = js.native
+  
+  /**
+    * Concat a list of Uint8Arrays, Strings or Streams
+    * The caller must not mix Uint8Arrays with Strings, but may mix Streams with non-Streams.
+    * @param Array of Uint8Arrays/Strings/Streams to concatenate
+    * @returns Concatenated array
+    */
+  var concat: js.Any = js.native
+  
+  /**
+    * Concat Uint8Arrays
+    * @param Array of Uint8Arrays to concatenate
+    * @returns Concatenated array
+    */
+  var concatUint8Array: js.Any = js.native
+  
   @JSName("decode_utf8")
   def decodeUtf8(utf8: ReadableStream[String]): String | ReadableStream[String] = js.native
   /**
@@ -76,10 +85,12 @@ object util extends js.Object {
     */
   @JSName("decode_utf8")
   def decodeUtf8(utf8: js.typedarray.Uint8Array): String | ReadableStream[String] = js.native
+  
   /**
     * Detect Node.js runtime.
     */
   def detectNode(): Unit = js.native
+  
   /**
     * Convert a native javascript string to a Uint8Array of utf8 bytes
     * @param str The string to convert
@@ -89,6 +100,7 @@ object util extends js.Object {
   def encodeUtf8(str: String): js.typedarray.Uint8Array | ReadableStream[String] = js.native
   @JSName("encode_utf8")
   def encodeUtf8(str: ReadableStream[String]): js.typedarray.Uint8Array | ReadableStream[String] = js.native
+  
   /**
     * Encode input buffer using Z-Base32 encoding.
     * See: https://tools.ietf.org/html/rfc6189#section-5.1.6
@@ -96,6 +108,7 @@ object util extends js.Object {
     * @returns Binary data encoded using Z-Base32
     */
   def encodeZBase32(data: js.typedarray.Uint8Array): String = js.native
+  
   /**
     * Check Uint8Array equality
     * @param first array
@@ -103,22 +116,26 @@ object util extends js.Object {
     * @returns equality
     */
   def equalsUint8Array(first: js.typedarray.Uint8Array, second: js.typedarray.Uint8Array): Boolean = js.native
+  
   /**
     * Format user id for internal use.
     */
   def formatUserId(id: Comment): String = js.native
+  
   /**
     * Get native Node.js Buffer constructor. This should be used since
     * Buffer is not available under browserify.
     * @returns The Buffer constructor or 'undefined'
     */
   def getNodeBuffer(): js.Function = js.native
+  
   /**
     * Get native Node.js crypto api. The default configuration is to use
     * the api when available. But it can also be deactivated with config.use_native
     * @returns The crypto module or 'undefined'
     */
   def getNodeCrypto(): js.Object = js.native
+  
   /**
     * Get transferable objects to pass buffers with zero copy (similar to "pass by reference" in C++)
     * See: https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage
@@ -127,6 +144,7 @@ object util extends js.Object {
     * @returns an array of binary data to be passed
     */
   def getTransferables(obj: js.Object): js.Array[_] = js.native
+  
   /**
     * Get native Web Cryptography api, only the current version of the spec.
     * The default configuration is to use the api when available. But it can
@@ -134,6 +152,7 @@ object util extends js.Object {
     * @returns The SubtleCrypto api or 'undefined'
     */
   def getWebCrypto(): js.Object = js.native
+  
   /**
     * Get native Web Cryptography api for all browsers, including legacy
     * implementations of the spec e.g IE11 and Safari 8/9. The default
@@ -142,6 +161,7 @@ object util extends js.Object {
     * @returns The SubtleCrypto api or 'undefined'
     */
   def getWebCryptoAll(): js.Object = js.native
+  
   /**
     * Create binary string from a hex encoded string
     * @param str Hex string to convert
@@ -149,6 +169,7 @@ object util extends js.Object {
     */
   @JSName("hex_to_str")
   def hexToStr(str: String): String = js.native
+  
   /**
     * Convert a hex string to an array of 8-bit integers
     * @param hex A hex string to convert
@@ -156,20 +177,24 @@ object util extends js.Object {
     */
   @JSName("hex_to_Uint8Array")
   def hexToUint8Array(hex: String): js.typedarray.Uint8Array = js.native
+  
   /**
     * Convert line endings from canonicalized \r\n to native \n
     */
   def nativeEOL(): Unit = js.native
+  
   /**
     * Get native Node.js module
     * @param The module to require
     * @returns The required module or 'undefined'
     */
   def nodeRequire(The: String): js.Object = js.native
+  
   /**
     * Parse user id.
     */
   def parseUserId(userId: String): Comment = js.native
+  
   /**
     * Helper function to print a debug message. Debug
     * messages are only printed if
@@ -177,6 +202,7 @@ object util extends js.Object {
     */
   @JSName("print_debug")
   def printDebug(str: String): Unit = js.native
+  
   /**
     * Helper function to print a debug error. Debug
     * messages are only printed if
@@ -184,6 +210,7 @@ object util extends js.Object {
     */
   @JSName("print_debug_error")
   def printDebugError(str: String): Unit = js.native
+  
   /**
     * Helper function to print a debug message. Debug
     * messages are only printed if
@@ -191,6 +218,7 @@ object util extends js.Object {
     */
   @JSName("print_debug_hexarray_dump")
   def printDebugHexarrayDump(str: String): Unit = js.native
+  
   /**
     * Helper function to print a debug message. Debug
     * messages are only printed if
@@ -198,6 +226,7 @@ object util extends js.Object {
     */
   @JSName("print_debug_hexstr_dump")
   def printDebugHexstrDump(str: String): Unit = js.native
+  
   @JSName("print_entire_stream")
   def printEntireStream(str: String, input: String, concat: js.Function): Unit = js.native
   /**
@@ -210,16 +239,19 @@ object util extends js.Object {
   def printEntireStream(str: String, input: ReadableStream[String], concat: js.Function): Unit = js.native
   @JSName("print_entire_stream")
   def printEntireStream(str: String, input: js.typedarray.Uint8Array, concat: js.Function): Unit = js.native
+  
   /**
     * Remove trailing spaces and tabs from each line
     */
   def removeTrailingSpaces(): Unit = js.native
+  
   /**
     * Convert MessagePorts back to ReadableStreams
     * @param obj
     * @returns
     */
   def restoreStreams(obj: js.Object): js.Object = js.native
+  
   /**
     * If S[1] == 0, then double(S) == (S[2..128] || 0);
     * otherwise, double(S) == (S[2..128] || 0) xor
@@ -238,6 +270,7 @@ object util extends js.Object {
     * @returns Resulting array.
     */
   def shiftRight(array: js.typedarray.Uint8Array, bits: Integer): String = js.native
+  
   /**
     * Create hex string from a binary
     * @param str String to convert
@@ -245,6 +278,7 @@ object util extends js.Object {
     */
   @JSName("str_to_hex")
   def strToHex(str: String): String = js.native
+  
   /**
     * Convert a string to an array of 8-bit integers
     * @param str String to convert
@@ -252,6 +286,7 @@ object util extends js.Object {
     */
   @JSName("str_to_Uint8Array")
   def strToUint8Array(str: String): js.typedarray.Uint8Array = js.native
+  
   /**
     * Calculates a 16bit sum of a Uint8Array by adding each character
     * codes modulus 65535
@@ -261,4 +296,3 @@ object util extends js.Object {
   @JSName("write_checksum")
   def writeChecksum(Uint8Array: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
 }
-

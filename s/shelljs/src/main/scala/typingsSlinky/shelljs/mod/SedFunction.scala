@@ -2,10 +2,11 @@ package typingsSlinky.shelljs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SedFunction extends js.Object {
+  
   def apply(options: String, searchRegex: String, replacement: String, files: String*): ShellString = js.native
   /**
     * Reads an input string from file and performs a JavaScript `replace()`
@@ -35,4 +36,3 @@ trait SedFunction extends js.Object {
   def apply(searchRegex: js.RegExp, replacement: String, files: String*): ShellString = js.native
   def apply(searchRegex: js.RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
 }
-

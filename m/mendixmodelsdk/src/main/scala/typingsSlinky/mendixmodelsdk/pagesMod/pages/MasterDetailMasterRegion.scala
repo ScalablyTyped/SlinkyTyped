@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -26,26 +26,28 @@ class MasterDetailMasterRegion protected () extends MasterDetailRegion {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FMasterDetailMasterRegion: IModel = js.native
+  
   def responsiveWeight: Double = js.native
   def responsiveWeight_=(newValue: Double): Unit = js.native
+  
   def tabletWeight: Double = js.native
   def tabletWeight_=(newValue: Double): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.MasterDetailMasterRegion")
 @js.native
 object MasterDetailMasterRegion extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new MasterDetailMasterRegion instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): MasterDetailMasterRegion = js.native
+  
   /**
     * Creates and returns a new MasterDetailMasterRegion instance in the SDK and on the server.
     * The new MasterDetailMasterRegion will be automatically stored in the 'master' property
@@ -55,5 +57,8 @@ object MasterDetailMasterRegion extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createIn(container: MasterDetail): MasterDetailMasterRegion = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

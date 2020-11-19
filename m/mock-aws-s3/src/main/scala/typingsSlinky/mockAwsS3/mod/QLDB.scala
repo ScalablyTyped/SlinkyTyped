@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.qldbMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "QLDB")
 @js.native
@@ -14,4 +14,3 @@ class QLDB ()
   extends typingsSlinky.awsSdk.mod.QLDB {
   def this(options: ClientConfiguration) = this()
 }
-

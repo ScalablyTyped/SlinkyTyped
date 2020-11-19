@@ -3,7 +3,7 @@ package typingsSlinky.jupyterlabServices.mod
 import typingsSlinky.jupyterlabServices.contentsMod.ContentsManager.IOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/services", "ContentsManager")
 @js.native
@@ -16,4 +16,3 @@ class ContentsManager ()
   extends typingsSlinky.jupyterlabServices.contentsMod.ContentsManager {
   def this(options: IOptions) = this()
 }
-

@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 8.10.0: introduced
@@ -29,18 +29,20 @@ abstract class EntitySource protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsEntity: Entity = js.native
   @JSName("containerAsEntity")
   val containerAsEntity_FEntitySource: IEntity = js.native
+  
   @JSName("model")
   var model_FEntitySource: IModel = js.native
-  def containerAsEntity: Entity = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.EntitySource")
 @js.native
 object EntitySource extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.typedoc.mod.TypeScript
 import typingsSlinky.typescript.mod.SourceFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createSourceFile")
 @js.native
 object createSourceFile extends js.Object {
+  
   def apply(fileName: String, sourceText: String, languageVersion: typingsSlinky.typescript.mod.ScriptTarget): SourceFile = js.native
   def apply(
     fileName: String,
@@ -30,4 +31,3 @@ object createSourceFile extends js.Object {
     scriptKind: typingsSlinky.typescript.mod.ScriptKind
   ): SourceFile = js.native
 }
-

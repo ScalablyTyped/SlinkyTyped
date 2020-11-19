@@ -4,11 +4,12 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rc-picker/es/utils/getExtraFooter", JSImport.Namespace)
 @js.native
 object getExtraFooterMod extends js.Object {
+  
   def default(prefixCls: String, mode: PanelMode): ReactElement = js.native
   def default(
     prefixCls: String,
@@ -16,4 +17,3 @@ object getExtraFooterMod extends js.Object {
     renderExtraFooter: js.Function1[/* mode */ PanelMode, ReactElement]
   ): ReactElement = js.native
 }
-

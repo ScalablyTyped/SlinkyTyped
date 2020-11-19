@@ -2,11 +2,12 @@ package typingsSlinky.applicationinsightsJs.global.Microsoft
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Microsoft.Telemetry")
 @js.native
 object Telemetry extends js.Object {
+  
   @js.native
   class Base ()
     extends typingsSlinky.applicationinsightsJs.Microsoft.Telemetry.Base
@@ -18,6 +19,4 @@ object Telemetry extends js.Object {
   @js.native
   class Domain ()
     extends typingsSlinky.applicationinsightsJs.Microsoft.Telemetry.Domain
-  
 }
-

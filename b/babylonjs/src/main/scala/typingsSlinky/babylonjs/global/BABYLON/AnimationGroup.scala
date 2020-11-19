@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.AnimationGroup")
 @js.native
@@ -23,17 +23,12 @@ class AnimationGroup protected ()
   name: String,
     scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]
   ) = this()
-  /**
-    * Releases all held resources
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.AnimationGroup")
 @js.native
 object AnimationGroup extends js.Object {
+  
   /**
     * Returns a new AnimationGroup object parsed from the source provided.
     * @param parsedAnimationGroup defines the source
@@ -42,4 +37,3 @@ object AnimationGroup extends js.Object {
     */
   def Parse(parsedAnimationGroup: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
 }
-

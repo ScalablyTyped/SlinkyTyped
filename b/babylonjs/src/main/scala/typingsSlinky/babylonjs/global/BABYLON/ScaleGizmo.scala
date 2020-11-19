@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.ScaleGizmo")
 @js.native
@@ -13,10 +13,4 @@ import scala.scalajs.js.annotation._
 class ScaleGizmo ()
   extends typingsSlinky.babylonjs.BABYLON.ScaleGizmo {
   def this(gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer) = this()
-  /**
-    * Releases all held resources
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
 }
-

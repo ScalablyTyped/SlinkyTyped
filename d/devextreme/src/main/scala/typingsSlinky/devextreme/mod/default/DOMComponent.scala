@@ -6,7 +6,7 @@ import typingsSlinky.devextreme.mod.DevExpress.DOMComponentOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "DOMComponent")
 @js.native
@@ -23,15 +23,15 @@ class DOMComponent protected ()
     options: DOMComponentOptions[typingsSlinky.devextreme.mod.DevExpress.DOMComponent]
   ) = this()
 }
-
 /* static members */
 @JSImport("devextreme", "DOMComponent")
 @js.native
 object DOMComponent extends js.Object {
+  
   /** @name DOMComponent.defaultOptions(rule) */
   def defaultOptions(rule: Device): Unit = js.native
+  
   def getInstance(element: JQuery): typingsSlinky.devextreme.mod.DevExpress.DOMComponent = js.native
   /** @name DOMComponent.getInstance(element) */
   def getInstance(element: Element): typingsSlinky.devextreme.mod.DevExpress.DOMComponent = js.native
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.xregexp.mod
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xregexp", "build")
 @js.native
 object build extends js.Object {
+  
   /**
     * Builds regexes using named subpatterns, for readability and pattern reuse. Backreferences in
     * the outer pattern and provided subpatterns are automatically renumbered to work correctly.
@@ -35,4 +36,3 @@ object build extends js.Object {
   def apply(pattern: String, subs: Record[String, Pattern]): js.RegExp = js.native
   def apply(pattern: String, subs: Record[String, Pattern], flags: String): js.RegExp = js.native
 }
-

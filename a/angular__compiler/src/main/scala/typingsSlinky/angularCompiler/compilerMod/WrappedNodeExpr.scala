@@ -2,7 +2,7 @@ package typingsSlinky.angularCompiler.compilerMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/compiler", "WrappedNodeExpr")
 @js.native
@@ -22,4 +22,3 @@ class WrappedNodeExpr[T] protected ()
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
 }
-

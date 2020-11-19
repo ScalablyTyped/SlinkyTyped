@@ -3,11 +3,12 @@ package typingsSlinky.dropkickjs
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   class Dropkick protected ()
     extends typingsSlinky.dropkickjs.Dropkick {
@@ -16,6 +17,4 @@ object global extends js.Object {
     def this(id: String, options: DropkickOptions) = this()
     def this(id: HTMLElement, options: DropkickOptions) = this()
   }
-  
 }
-

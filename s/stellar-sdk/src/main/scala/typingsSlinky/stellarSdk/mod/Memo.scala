@@ -10,7 +10,7 @@ import typingsSlinky.stellarBase.mod.MemoType.Text
 import typingsSlinky.stellarBase.mod.MemoValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stellar-sdk", "Memo")
 @js.native
@@ -21,16 +21,20 @@ class Memo[T /* <: MemoType */] protected ()
   def this(`type`: Hash | ID | Return | Text, value: String) = this()
   def this(`type`: Hash | Return, value: Buffer) = this()
 }
-
 /* static members */
 @JSImport("stellar-sdk", "Memo")
 @js.native
 object Memo extends js.Object {
+  
   def fromXDRObject(memo: typingsSlinky.stellarBase.xdrMod.default.Memo): typingsSlinky.stellarBase.mod.Memo[MemoType] = js.native
+  
   def hash(hash: String): typingsSlinky.stellarBase.mod.Memo[Hash] = js.native
+  
   def id(id: String): typingsSlinky.stellarBase.mod.Memo[ID] = js.native
+  
   def none(): typingsSlinky.stellarBase.mod.Memo[None] = js.native
+  
   def `return`(hash: String): typingsSlinky.stellarBase.mod.Memo[Return] = js.native
+  
   def text(text: String): typingsSlinky.stellarBase.mod.Memo[Text] = js.native
 }
-

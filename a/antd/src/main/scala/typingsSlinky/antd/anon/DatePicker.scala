@@ -7,11 +7,13 @@ import typingsSlinky.rcPicker.pickerMod.PickerTimeProps
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DatePicker[DateType] extends js.Object {
+  
   var DatePicker: ReactComponentClass[PickerProps[DateType]] = js.native
+  
   var MonthPicker: ReactComponentClass[
     Pick[
       (Pick[
@@ -21,6 +23,7 @@ trait DatePicker[DateType] extends js.Object {
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 102 */ js.Any
     ]
   ] = js.native
+  
   var QuarterPicker: ReactComponentClass[
     Pick[
       (Pick[
@@ -30,6 +33,7 @@ trait DatePicker[DateType] extends js.Object {
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 111 */ js.Any
     ]
   ] = js.native
+  
   var TimePicker: ReactComponentClass[
     Pick[
       (Pick[
@@ -39,6 +43,7 @@ trait DatePicker[DateType] extends js.Object {
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 111 */ js.Any
     ]
   ] = js.native
+  
   var WeekPicker: ReactComponentClass[
     Pick[
       (Pick[
@@ -48,6 +53,7 @@ trait DatePicker[DateType] extends js.Object {
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 102 */ js.Any
     ]
   ] = js.native
+  
   var YearPicker: ReactComponentClass[
     Pick[
       (Pick[
@@ -58,8 +64,8 @@ trait DatePicker[DateType] extends js.Object {
     ]
   ] = js.native
 }
-
 object DatePicker {
+  
   @scala.inline
   def apply[DateType](
     DatePicker: ReactComponentClass[PickerProps[DateType]],
@@ -112,19 +118,25 @@ object DatePicker {
     val __obj = js.Dynamic.literal(DatePicker = DatePicker.asInstanceOf[js.Any], MonthPicker = MonthPicker.asInstanceOf[js.Any], QuarterPicker = QuarterPicker.asInstanceOf[js.Any], TimePicker = TimePicker.asInstanceOf[js.Any], WeekPicker = WeekPicker.asInstanceOf[js.Any], YearPicker = YearPicker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatePicker[DateType]]
   }
+  
   @scala.inline
   implicit class DatePickerOps[Self <: DatePicker[_], DateType] (val x: Self with DatePicker[DateType]) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setDatePicker(value: ReactComponentClass[PickerProps[DateType]]): Self = this.set("DatePicker", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMonthPicker(
       value: ReactComponentClass[
@@ -137,6 +149,7 @@ object DatePicker {
           ]
         ]
     ): Self = this.set("MonthPicker", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setQuarterPicker(
       value: ReactComponentClass[
@@ -149,6 +162,7 @@ object DatePicker {
           ]
         ]
     ): Self = this.set("QuarterPicker", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTimePicker(
       value: ReactComponentClass[
@@ -161,6 +175,7 @@ object DatePicker {
           ]
         ]
     ): Self = this.set("TimePicker", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setWeekPicker(
       value: ReactComponentClass[
@@ -173,6 +188,7 @@ object DatePicker {
           ]
         ]
     ): Self = this.set("WeekPicker", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setYearPicker(
       value: ReactComponentClass[
@@ -186,6 +202,4 @@ object DatePicker {
         ]
     ): Self = this.set("YearPicker", value.asInstanceOf[js.Any])
   }
-  
 }
-

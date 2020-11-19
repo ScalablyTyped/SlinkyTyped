@@ -12,42 +12,11 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-trailing`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.manual
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait UI extends Accessor {
-  /**
-    * The HTML Element that contains the view.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#container)
-    */
-  var container: HTMLElement = js.native
-  /**
-    * The height of the UI container.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#height)
-    */
-  val height: Double = js.native
-  /**
-    * Defines the padding for the UI from the top, left, right, and bottom sides of the container or [View](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html). If the value is a number, it will be used to pad all sides of the container.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#padding)
-    *
-    * @default { left: 15, top: 15, right: 15, bottom: 15 }
-    */
-  var padding: js.Any | Double = js.native
-  /**
-    * The view associated with the UI components.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#view)
-    */
-  var view: MapView | SceneView = js.native
-  /**
-    * The width of the UI container.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#width)
-    */
-  val width: Double = js.native
+  
   def add(component: String): Unit = js.native
   def add(component: String, position: String): Unit = js.native
   def add(component: String, position: UIAddPosition): Unit = js.native
@@ -77,6 +46,14 @@ trait UI extends Accessor {
   def add(component: HTMLElement): Unit = js.native
   def add(component: HTMLElement, position: String): Unit = js.native
   def add(component: HTMLElement, position: UIAddPosition): Unit = js.native
+  
+  /**
+    * The HTML Element that contains the view.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#container)
+    */
+  var container: HTMLElement = js.native
+  
   /**
     * Removes all components from a given position.
     *
@@ -104,6 +81,7 @@ trait UI extends Accessor {
   def empty_topright(position: `top-right`): Unit = js.native
   @JSName("empty")
   def empty_toptrailing(position: `top-trailing`): Unit = js.native
+  
   /**
     * Find a component by widget or DOM ID.
     *
@@ -113,6 +91,14 @@ trait UI extends Accessor {
     *
     */
   def find(id: String): HTMLElement | Widget_ = js.native
+  
+  /**
+    * The height of the UI container.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#height)
+    */
+  val height: Double = js.native
+  
   def move(component: String): Unit = js.native
   def move(component: String, position: String): Unit = js.native
   def move(component: String, position: UIMovePosition): Unit = js.native
@@ -142,6 +128,16 @@ trait UI extends Accessor {
   def move(component: HTMLElement): Unit = js.native
   def move(component: HTMLElement, position: String): Unit = js.native
   def move(component: HTMLElement, position: UIMovePosition): Unit = js.native
+  
+  /**
+    * Defines the padding for the UI from the top, left, right, and bottom sides of the container or [View](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html). If the value is a number, it will be used to pad all sides of the container.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#padding)
+    *
+    * @default { left: 15, top: 15, right: 15, bottom: 15 }
+    */
+  var padding: js.Any | Double = js.native
+  
   def remove(component: String): Unit = js.native
   def remove(component: js.Array[_]): Unit = js.native
   /**
@@ -154,5 +150,18 @@ trait UI extends Accessor {
     */
   def remove(component: Widget_): Unit = js.native
   def remove(component: HTMLElement): Unit = js.native
+  
+  /**
+    * The view associated with the UI components.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#view)
+    */
+  var view: MapView | SceneView = js.native
+  
+  /**
+    * The width of the UI container.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#width)
+    */
+  val width: Double = js.native
 }
-

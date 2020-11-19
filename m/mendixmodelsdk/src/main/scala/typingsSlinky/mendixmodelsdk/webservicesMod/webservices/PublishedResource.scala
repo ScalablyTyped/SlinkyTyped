@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.restMod.rest.PublishedODataService
 import typingsSlinky.mendixmodelsdk.webservicesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/webservices", "webservices.PublishedResource")
 @js.native
@@ -22,19 +22,23 @@ abstract class PublishedResource protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FPublishedResource: IModel = js.native
+  
   def containerAsPublishedODataService: PublishedODataService = js.native
+  
   def containerAsVersionedService: VersionedService = js.native
+  
   def dataEntity: DataEntity = js.native
   def dataEntity_=(newValue: DataEntity): Unit = js.native
+  
+  @JSName("model")
+  var model_FPublishedResource: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/webservices", "webservices.PublishedResource")
 @js.native
 object PublishedResource extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

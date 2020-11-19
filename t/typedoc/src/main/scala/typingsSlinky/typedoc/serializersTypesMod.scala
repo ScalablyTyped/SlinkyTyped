@@ -2,11 +2,12 @@ package typingsSlinky.typedoc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc/dist/lib/serialization/serializers/types", JSImport.Namespace)
 @js.native
 object serializersTypesMod extends js.Object {
+  
   @js.native
   class ArrayTypeSerializer ()
     extends typingsSlinky.typedoc.serializersTypesArrayMod.ArrayTypeSerializer
@@ -66,6 +67,12 @@ object serializersTypesMod extends js.Object {
   @js.native
   class TypeSerializer ()
     extends typingsSlinky.typedoc.serializersTypesAbstractMod.TypeSerializer
+  /* static members */
+  @js.native
+  object TypeSerializer extends js.Object {
+    
+    var PRIORITY: Double = js.native
+  }
   
   @js.native
   class UnionTypeSerializer ()
@@ -74,12 +81,4 @@ object serializersTypesMod extends js.Object {
   @js.native
   class UnknownTypeSerializer ()
     extends typingsSlinky.typedoc.serializersTypesUnknownMod.UnknownTypeSerializer
-  
-  /* static members */
-  @js.native
-  object TypeSerializer extends js.Object {
-    var PRIORITY: Double = js.native
-  }
-  
 }
-

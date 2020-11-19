@@ -5,11 +5,12 @@ import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/cameras/PerspectiveCamera", JSImport.Namespace)
 @js.native
 object perspectiveCameraMod extends js.Object {
+  
   @js.native
   /**
   	 * @param fov Camera frustum vertical field of view. Default value is 50.
@@ -38,41 +39,53 @@ object perspectiveCameraMod extends js.Object {
     def this(fov: Double, aspect: js.UndefOr[scala.Nothing], near: Double, far: Double) = this()
     def this(fov: Double, aspect: Double, near: js.UndefOr[scala.Nothing], far: Double) = this()
     def this(fov: Double, aspect: Double, near: Double, far: Double) = this()
+    
     /**
     	 * Camera frustum aspect ratio, window width divided by window height.
     	 */
     var aspect: Double = js.native
+    
+    def clearViewOffset(): Unit = js.native
+    
     /**
     	 * Camera frustum far plane.
     	 */
     var far: Double = js.native
+    
     var filmGauge: Double = js.native
+    
     var filmOffset: Double = js.native
+    
     var focus: Double = js.native
+    
     /**
     	 * Camera frustum vertical field of view, from bottom to top of view, in degrees.
     	 */
     var fov: Double = js.native
+    
+    def getEffectiveFOV(): Double = js.native
+    
+    def getFilmHeight(): Double = js.native
+    
+    def getFilmWidth(): Double = js.native
+    
+    def getFocalLength(): Double = js.native
+    
     val isPerspectiveCamera: `true` = js.native
+    
     /**
     	 * Camera frustum near plane.
     	 */
     var near: Double = js.native
-    @JSName("type")
-    var type_PerspectiveCamera: typingsSlinky.three.threeStrings.PerspectiveCamera = js.native
-    var view: Null | Enabled = js.native
-    var zoom: Double = js.native
-    def clearViewOffset(): Unit = js.native
-    def getEffectiveFOV(): Double = js.native
-    def getFilmHeight(): Double = js.native
-    def getFilmWidth(): Double = js.native
-    def getFocalLength(): Double = js.native
+    
     def setFocalLength(focalLength: Double): Unit = js.native
+    
     /**
     	 * @deprecated Use {@link PerspectiveCamera#setFocalLength .setFocalLength()} and {@link PerspectiveCamera#filmGauge .filmGauge} instead.
     	 */
     def setLens(focalLength: Double): Unit = js.native
     def setLens(focalLength: Double, frameHeight: Double): Unit = js.native
+    
     /**
     	 * Sets an offset in a larger frustum. This is useful for multi-window or multi-monitor/multi-machine setups.
     	 * For example, if you have 3x2 monitors and each monitor is 1920x1080 and the monitors are in grid like this:
@@ -111,12 +124,19 @@ object perspectiveCameraMod extends js.Object {
     	 * @param height height of subcamera
     	 */
     def setViewOffset(fullWidth: Double, fullHeight: Double, x: Double, y: Double, width: Double, height: Double): Unit = js.native
+    
     def toJSON(meta: js.Any): js.Any = js.native
+    
+    @JSName("type")
+    var type_PerspectiveCamera: typingsSlinky.three.threeStrings.PerspectiveCamera = js.native
+    
     /**
     	 * Updates the camera projection matrix. Must be called after change of parameters.
     	 */
     def updateProjectionMatrix(): Unit = js.native
+    
+    var view: Null | Enabled = js.native
+    
+    var zoom: Double = js.native
   }
-  
 }
-

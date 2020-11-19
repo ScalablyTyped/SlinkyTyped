@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs/dist/index_with_polyfills", "tensor")
 @js.native
 object tensor extends js.Object {
+  
   /**
     * Creates a `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -49,4 +50,3 @@ object tensor extends js.Object {
     dtype: DataType
   ): Tensor[R] = js.native
 }
-

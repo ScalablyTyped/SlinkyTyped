@@ -3,7 +3,7 @@ package typingsSlinky.openlayers.mod.source
 import typingsSlinky.openlayers.mod.events.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @classdesc
@@ -25,10 +25,10 @@ class TileEvent protected () extends Event {
     * @param tile The tile.
     */
   def this(`type`: String, tile: typingsSlinky.openlayers.mod.Tile) = this()
+  
   /**
     * The tile related to the event.
     * @api
     */
   var tile: typingsSlinky.openlayers.mod.Tile = js.native
 }
-

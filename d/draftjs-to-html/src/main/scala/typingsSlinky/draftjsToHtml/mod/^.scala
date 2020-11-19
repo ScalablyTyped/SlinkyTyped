@@ -3,11 +3,12 @@ package typingsSlinky.draftjsToHtml.mod
 import typingsSlinky.draftJs.mod.Draft.Model.Encoding.RawDraftContentState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("draftjs-to-html", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   def apply(editorContent: RawDraftContentState): String = js.native
   def apply(
     editorContent: RawDraftContentState,
@@ -41,4 +42,3 @@ object ^ extends js.Object {
     customEntityTransform: js.Function1[/* repeated */ js.Any, _]
   ): String = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.xRIndexMod
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/XR/index", "WebXRExperienceHelper")
 @js.native
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
   */
 class WebXRExperienceHelper protected ()
   extends typingsSlinky.babylonjs.webXRExperienceHelperMod.WebXRExperienceHelper
-
 /* static members */
 @JSImport("babylonjs/XR/index", "WebXRExperienceHelper")
 @js.native
 object WebXRExperienceHelper extends js.Object {
+  
   /**
     * Creates the experience helper
     * @param scene the scene to attach the experience helper to
@@ -25,4 +25,3 @@ object WebXRExperienceHelper extends js.Object {
     */
   def CreateAsync(scene: Scene): js.Promise[typingsSlinky.babylonjs.webXRExperienceHelperMod.WebXRExperienceHelper] = js.native
 }
-

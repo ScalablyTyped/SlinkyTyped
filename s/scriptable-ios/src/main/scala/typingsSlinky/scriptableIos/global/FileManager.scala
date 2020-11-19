@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Read and write files on disk._
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class FileManager ()
   extends typingsSlinky.scriptableIos.FileManager
-
 /* static members */
 @JSGlobal("FileManager")
 @js.native
 object FileManager extends js.Object {
+  
   /**
     * _Creates an iCloud FileManager._
     *
@@ -24,6 +24,7 @@ object FileManager extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#icloud
     */
   def iCloud(): typingsSlinky.scriptableIos.FileManager = js.native
+  
   /**
     * _Creates a local FileManager._
     *
@@ -32,4 +33,3 @@ object FileManager extends js.Object {
     */
   def local(): typingsSlinky.scriptableIos.FileManager = js.native
 }
-

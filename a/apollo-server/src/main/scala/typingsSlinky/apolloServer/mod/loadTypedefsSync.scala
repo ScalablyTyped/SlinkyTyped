@@ -6,11 +6,12 @@ import typingsSlinky.graphqlToolsUtils.loadersMod.Source
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server", "loadTypedefsSync")
 @js.native
 object loadTypedefsSync extends js.Object {
+  
   def apply[AdditionalConfig](
     pointerOrPointers: js.Array[UnnormalizedTypeDefPointer],
     options: LoadTypedefsOptions[Partial[AdditionalConfig]]
@@ -20,4 +21,3 @@ object loadTypedefsSync extends js.Object {
     options: LoadTypedefsOptions[Partial[AdditionalConfig]]
   ): js.Array[Source] = js.native
 }
-

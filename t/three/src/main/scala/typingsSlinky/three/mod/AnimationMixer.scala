@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "AnimationMixer")
 @js.native
@@ -11,4 +11,3 @@ class AnimationMixer protected ()
   def this(root: typingsSlinky.three.animationObjectGroupMod.AnimationObjectGroup) = this()
   def this(root: typingsSlinky.three.object3DMod.Object3D) = this()
 }
-

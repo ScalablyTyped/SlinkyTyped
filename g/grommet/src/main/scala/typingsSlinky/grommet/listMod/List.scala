@@ -8,7 +8,7 @@ import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/List", "List")
 @js.native
@@ -24,7 +24,6 @@ class List protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("grommet/es6/components/List", "List")
 @js.native
 object List extends TopLevel[
@@ -32,4 +31,3 @@ object List extends TopLevel[
         ListProps with (DetailedHTMLProps[HTMLAttributes[HTMLUListElement], HTMLUListElement])
       ]
     ]
-

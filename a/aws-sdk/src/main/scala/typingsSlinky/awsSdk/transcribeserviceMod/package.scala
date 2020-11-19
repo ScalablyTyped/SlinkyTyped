@@ -2,15 +2,22 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object transcribeserviceMod {
+  
   type Boolean = scala.Boolean
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.transcribeserviceMod.ClientApiVersions
+  
   type DataAccessRoleArn = java.lang.String
+  
   type DateTime = js.Date
+  
   type FailureReason = java.lang.String
+  
   type KMSKeyId = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`en-US`
     - typingsSlinky.awsSdk.awsSdkStrings.`es-US`
@@ -46,9 +53,13 @@ package object transcribeserviceMod {
     - java.lang.String
   */
   type LanguageCode = typingsSlinky.awsSdk.transcribeserviceMod._LanguageCode | java.lang.String
+  
   type MaxAlternatives = scala.Double
+  
   type MaxResults = scala.Double
+  
   type MaxSpeakers = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.mp3_
     - typingsSlinky.awsSdk.awsSdkStrings.mp4_
@@ -57,27 +68,39 @@ package object transcribeserviceMod {
     - java.lang.String
   */
   type MediaFormat = typingsSlinky.awsSdk.transcribeserviceMod._MediaFormat | java.lang.String
+  
   type MediaSampleRateHertz = scala.Double
+  
   type MedicalTranscriptionJobSummaries = js.Array[typingsSlinky.awsSdk.transcribeserviceMod.MedicalTranscriptionJobSummary]
+  
   type NextToken = java.lang.String
+  
   type OutputBucketName = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CUSTOMER_BUCKET
     - typingsSlinky.awsSdk.awsSdkStrings.SERVICE_BUCKET
     - java.lang.String
   */
   type OutputLocationType = typingsSlinky.awsSdk.transcribeserviceMod._OutputLocationType | java.lang.String
+  
   type Phrase = java.lang.String
+  
   type Phrases = js.Array[typingsSlinky.awsSdk.transcribeserviceMod.Phrase]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.redacted
     - typingsSlinky.awsSdk.awsSdkStrings.redacted_and_unredacted
     - java.lang.String
   */
   type RedactionOutput = typingsSlinky.awsSdk.transcribeserviceMod._RedactionOutput | java.lang.String
+  
   type RedactionType = typingsSlinky.awsSdk.awsSdkStrings.PII | java.lang.String
+  
   type Specialty = typingsSlinky.awsSdk.awsSdkStrings.PRIMARYCARE | java.lang.String
+  
   type TranscriptionJobName = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.QUEUED
     - typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS
@@ -86,24 +109,33 @@ package object transcribeserviceMod {
     - java.lang.String
   */
   type TranscriptionJobStatus = typingsSlinky.awsSdk.transcribeserviceMod._TranscriptionJobStatus | java.lang.String
+  
   type TranscriptionJobSummaries = js.Array[typingsSlinky.awsSdk.transcribeserviceMod.TranscriptionJobSummary]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CONVERSATION
     - typingsSlinky.awsSdk.awsSdkStrings.DICTATION
     - java.lang.String
   */
   type Type = typingsSlinky.awsSdk.transcribeserviceMod._Type | java.lang.String
+  
   type Uri = java.lang.String
+  
   type Vocabularies = js.Array[typingsSlinky.awsSdk.transcribeserviceMod.VocabularyInfo]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.remove__
     - typingsSlinky.awsSdk.awsSdkStrings.mask
     - java.lang.String
   */
   type VocabularyFilterMethod = typingsSlinky.awsSdk.transcribeserviceMod._VocabularyFilterMethod | java.lang.String
+  
   type VocabularyFilterName = java.lang.String
+  
   type VocabularyFilters = js.Array[typingsSlinky.awsSdk.transcribeserviceMod.VocabularyFilterInfo]
+  
   type VocabularyName = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PENDING
     - typingsSlinky.awsSdk.awsSdkStrings.READY
@@ -111,8 +143,11 @@ package object transcribeserviceMod {
     - java.lang.String
   */
   type VocabularyState = typingsSlinky.awsSdk.transcribeserviceMod._VocabularyState | java.lang.String
+  
   type Word = java.lang.String
+  
   type Words = js.Array[typingsSlinky.awsSdk.transcribeserviceMod.Word]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2017-10-26`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

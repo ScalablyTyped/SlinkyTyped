@@ -2,11 +2,12 @@ package typingsSlinky.libsodiumWrappersSumo.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("libsodium-wrappers-sumo", "crypto_sign_verify_detached")
 @js.native
 object cryptoSignVerifyDetached extends js.Object {
+  
   def apply(signature: js.typedarray.Uint8Array, message: String, publicKey: js.typedarray.Uint8Array): Boolean = js.native
   def apply(
     signature: js.typedarray.Uint8Array,
@@ -14,4 +15,3 @@ object cryptoSignVerifyDetached extends js.Object {
     publicKey: js.typedarray.Uint8Array
   ): Boolean = js.native
 }
-

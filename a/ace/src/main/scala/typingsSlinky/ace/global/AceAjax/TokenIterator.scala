@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.ace.AceAjax.IEditSession
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AceAjax.TokenIterator")
 @js.native
@@ -21,4 +21,3 @@ Instantiable3[
       /* initialColumn */ Double, 
       typingsSlinky.ace.AceAjax.TokenIterator
     ]
-

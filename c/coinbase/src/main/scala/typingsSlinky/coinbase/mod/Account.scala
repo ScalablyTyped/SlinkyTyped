@@ -3,64 +3,27 @@ package typingsSlinky.coinbase.mod
 import typingsSlinky.coinbase.coinbaseStrings.account
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("coinbase", "Account")
 @js.native
 class Account () extends Resource {
+  
   /**
     * Allow deposits
     */
   var allow_deposits: Boolean = js.native
+  
   /**
     * Allow withdrawls
     */
   var allow_withdrawals: Boolean = js.native
+  
   /**
     * Balance
     */
   var balance: MoneyHash = js.native
-  /**
-    * ISO timestamp (sometimes needs additional permissions)
-    */
-  var created_at: js.UndefOr[String] = js.native
-  /**
-    * Account’s currency (see Client#getCurrencies() for available strings)
-    */
-  var currency: String = js.native
-  /**
-    * Resource ID
-    */
-  var id: String = js.native
-  /**
-    * User or system defined name
-    */
-  var name: String = js.native
-  /**
-    * Account worth in fiat.
-    */
-  var native_balance: MoneyHash = js.native
-  /**
-    * Primary account
-    */
-  var primary: Boolean = js.native
-  /**
-    * Type of resource, constant string "account"
-    */
-  @JSName("resource")
-  var resource_Account: account = js.native
-  /**
-    * REST endpoint
-    */
-  var resource_path: String = js.native
-  /**
-    * Account’s type
-    */
-  var `type`: AccountType = js.native
-  /**
-    * ISO timestamp (sometimes needs additional permissions)
-    */
-  var updated_at: js.UndefOr[String] = js.native
+  
   /**
     * Buys a user-defined amount of bitcoin, litecoin or ethereum.
     * There are two ways to define buy amounts–you can use either the amount or the total parameter:
@@ -80,6 +43,7 @@ class Account () extends Resource {
     * @param cb receives transaction that you can use to commit the buy
     */
   def buy(opts: BuyOpts, cb: js.Function2[/* error */ js.Error | Null, /* result */ Buy, Unit]): Unit = js.native
+  
   def createAddress(opts: Null, cb: js.Function2[/* error */ js.Error | Null, /* result */ Address, Unit]): Unit = js.native
   /**
     * Creates a new address for an account. As all the arguments are optinal, it’s possible just to do a empty POST which will create a new
@@ -89,6 +53,17 @@ class Account () extends Resource {
     * @param opts can be null, optional address name
     */
   def createAddress(opts: CreateAddressOpts, cb: js.Function2[/* error */ js.Error | Null, /* result */ Address, Unit]): Unit = js.native
+  
+  /**
+    * ISO timestamp (sometimes needs additional permissions)
+    */
+  var created_at: js.UndefOr[String] = js.native
+  
+  /**
+    * Account’s currency (see Client#getCurrencies() for available strings)
+    */
+  var currency: String = js.native
+  
   /**
     * Removes user’s account. In order to remove an account it can’t be:
     * - Primary account
@@ -98,11 +73,13 @@ class Account () extends Resource {
     * Scope: wallet:accounts:delete
     */
   def delete(cb: js.Function1[/* error */ js.Error | Null, Unit]): Unit = js.native
+  
   /**
     * Deposits user-defined amount of funds to a fiat account.
     * Scope: wallet:deposits:create
     */
   def deposit(opts: DepositOpts, cb: js.Function2[/* error */ js.Error | Null, /* result */ Deposit, Unit]): Unit = js.native
+  
   /**
     * Show an individual address for an account. A regular bitcoin, litecoin or ethereum address can be used in place of `id` but the
     * address has to be associated to the correct account. Important: Addresses should be considered one time use only. Create new addresses.
@@ -110,50 +87,59 @@ class Account () extends Resource {
     * @param id resource id or a regular bitcoin, litecoin or ethereum address
     */
   def getAddress(id: String, cb: js.Function2[/* error */ js.Error | Null, /* result */ Address, Unit]): Unit = js.native
+  
   /**
     * Lists addresses for an account. Important: Addresses should be considered one time use only. Create new addresses.
     * Scope: wallet:addresses:read
     */
   def getAddresses(cb: js.Function2[/* error */ js.Error | Null, /* result */ js.Array[Address], Unit]): Unit = js.native
+  
   /**
     * Show an individual buy.
     * Scope: wallet:buys:read
     * @param id resource id
     */
   def getBuy(id: String, cb: js.Function2[/* error */ js.Error | Null, /* result */ Buy, Unit]): Unit = js.native
+  
   /**
     * Lists buys for an account.
     * Scope: wallet:buys:read
     */
   def getBuys(opts: Null, cb: js.Function2[/* error */ js.Error | Null, /* result */ js.Array[Buy], Unit]): Unit = js.native
+  
   /**
     * Show an individual deposit.
     * Scope: wallet:deposits:read
     * @param id resource id
     */
   def getDeposit(id: String, cb: js.Function2[/* error */ js.Error | Null, /* result */ Deposit, Unit]): Unit = js.native
+  
   /**
     * Lists deposits for an account.
     * Scope: wallet:deposits:read
     */
   def getDeposits(cb: js.Function2[/* error */ js.Error | Null, /* result */ js.Array[Deposit], Unit]): Unit = js.native
+  
   /**
     * Show an individual sell.
     * Scope: wallet:sells:read
     * @param id resource id
     */
   def getSell(id: String, cb: js.Function2[/* error */ js.Error | Null, /* result */ Sell, Unit]): Unit = js.native
+  
   /**
     * Lists sells for an account.
     * Scope: wallet:sells:read
     */
   def getSells(opts: Null, cb: js.Function2[/* error */ js.Error | Null, /* result */ js.Array[Sell], Unit]): Unit = js.native
+  
   /**
     * Show an individual transaction for an account
     * Scope: wallet:transactions:read
     * @param id resource id
     */
   def getTransaction(id: String, cb: js.Function2[/* error */ js.Error | Null, /* result */ Transaction, Unit]): Unit = js.native
+  
   /**
     * Lists account’s transactions.
     * Scope: wallet:transactions:read
@@ -162,17 +148,40 @@ class Account () extends Resource {
     opts: js.Object,
     cb: js.Function2[/* error */ js.Error | Null, /* result */ js.Array[Transaction], Unit]
   ): Unit = js.native
+  
   /**
     * Show an individual withdrawal.
     * Scope: wallet:withdrawals:read
     * @param id resource id
     */
   def getWithdrawal(id: String, cb: js.Function2[/* error */ js.Error | Null, /* result */ Withdrawal, Unit]): Unit = js.native
+  
   /**
     * Lists withdrawals for an account.
     * Scope: wallet:withdrawals:read
     */
   def getWithdrawals(cb: js.Function2[/* error */ js.Error | Null, /* result */ js.Array[Withdrawal], Unit]): Unit = js.native
+  
+  /**
+    * Resource ID
+    */
+  var id: String = js.native
+  
+  /**
+    * User or system defined name
+    */
+  var name: String = js.native
+  
+  /**
+    * Account worth in fiat.
+    */
+  var native_balance: MoneyHash = js.native
+  
+  /**
+    * Primary account
+    */
+  var primary: Boolean = js.native
+  
   /**
     * Requests money from an email address.
     * Scope: wallet:transactions:request
@@ -181,6 +190,18 @@ class Account () extends Resource {
     opts: RequestMoneyOpts,
     cb: js.Function2[/* error */ js.Error | Null, /* result */ Transaction, Unit]
   ): Unit = js.native
+  
+  /**
+    * Type of resource, constant string "account"
+    */
+  @JSName("resource")
+  var resource_Account: account = js.native
+  
+  /**
+    * REST endpoint
+    */
+  var resource_path: String = js.native
+  
   /**
     * Sells a user-defined amount of bitcoin, litecoin or ethereum.
     *
@@ -200,6 +221,7 @@ class Account () extends Resource {
     * Scope: wallet:sells:create
     */
   def sell(opts: SellOpts, cb: js.Function2[/* error */ js.Error | Null, /* result */ Sell, Unit]): Unit = js.native
+  
   /**
     * Send funds to a bitcoin address, litecoin address, ethereum address, or email address. No transaction fees are required for off
     * blockchain bitcoin transactions.
@@ -217,11 +239,13 @@ class Account () extends Resource {
     * Scope: wallet:transactions:send, wallet:transactions:send:bypass-2fa
     */
   def sendMoney(opts: SendMoneyOpts, cb: js.Function2[/* error */ js.Error | Null, /* result */ Transaction, Unit]): Unit = js.native
+  
   /**
     * Promote an account as primary account.
     * Scope: wallet:accounts:update
     */
   def setPrimary(cb: js.Function2[/* error */ js.Error | Null, /* result */ this.type, Unit]): Unit = js.native
+  
   /**
     * Transfer bitcoin, litecoin or ethereum between two of a user’s accounts. Following transfers are allowed:
     * - wallet to wallet
@@ -232,6 +256,12 @@ class Account () extends Resource {
     opts: TransferMoneyOpts,
     cb: js.Function2[/* error */ js.Error | Null, /* result */ Transaction, Unit]
   ): Unit = js.native
+  
+  /**
+    * Account’s type
+    */
+  var `type`: AccountType = js.native
+  
   /**
     * Modifies user’s account.
     * Scope: wallet:accounts:update
@@ -240,10 +270,15 @@ class Account () extends Resource {
     opts: UpdateAccountOpts,
     cb: js.Function2[/* error */ js.Error | Null, /* result */ this.type, Unit]
   ): Unit = js.native
+  
+  /**
+    * ISO timestamp (sometimes needs additional permissions)
+    */
+  var updated_at: js.UndefOr[String] = js.native
+  
   /**
     * Withdraws user-defined amount of funds from a fiat account.
     * Scope: wallet:withdrawals:create
     */
   def withdraw(opts: WithdrawOpts, cb: js.Function2[/* error */ js.Error | Null, /* result */ Withdrawal, Unit]): Unit = js.native
 }
-

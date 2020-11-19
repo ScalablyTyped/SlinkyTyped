@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/ops", "zeros")
 @js.native
 object zeros extends js.Object {
+  
   /**
     * Creates a `tf.Tensor` with all elements set to 0.
     *
@@ -30,4 +31,3 @@ object zeros extends js.Object {
     dtype: DataType
   ): Tensor[R] = js.native
 }
-

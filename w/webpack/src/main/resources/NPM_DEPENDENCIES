@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "webpack" : "4.44.1"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "webpack" : "4.44.1"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

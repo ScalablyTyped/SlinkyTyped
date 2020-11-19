@@ -2,7 +2,7 @@ package typingsSlinky.angularCompiler.publicApiMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/public_api", "Comment")
 @js.native
@@ -11,4 +11,3 @@ class Comment protected ()
   def this(value: String, sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan) = this()
   def this(value: Null, sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan) = this()
 }
-

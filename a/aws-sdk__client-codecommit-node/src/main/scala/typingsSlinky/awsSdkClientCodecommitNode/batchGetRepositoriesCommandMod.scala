@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/BatchGetRepositoriesCommand", JSImport.Namespace)
 @js.native
 object batchGetRepositoriesCommandMod extends js.Object {
+  
   @js.native
   class BatchGetRepositoriesCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object batchGetRepositoriesCommandMod extends js.Object {
           Readable
         ] {
     def this(input: BatchGetRepositoriesInput) = this()
+    
     val middlewareStack: MiddlewareStack[BatchGetRepositoriesInput, BatchGetRepositoriesOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[BatchGetRepositoriesInput, BatchGetRepositoriesOutput] = js.native
   }
-  
 }
-

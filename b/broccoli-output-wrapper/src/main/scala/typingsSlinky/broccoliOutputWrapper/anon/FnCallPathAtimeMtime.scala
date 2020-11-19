@@ -3,10 +3,11 @@ package typingsSlinky.broccoliOutputWrapper.anon
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCallPathAtimeMtime extends js.Object {
+  
   def apply(path: PathLike, atime: String, mtime: String): Unit = js.native
   def apply(path: PathLike, atime: String, mtime: Double): Unit = js.native
   def apply(path: PathLike, atime: String, mtime: js.Date): Unit = js.native
@@ -17,4 +18,3 @@ trait FnCallPathAtimeMtime extends js.Object {
   def apply(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
   def apply(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
 }
-

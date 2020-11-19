@@ -4,7 +4,7 @@ import typingsSlinky.tstl.comparatorMod.Comparator
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "PriorityQueue")
 @js.native
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
   * @param comp A binary function predicates *x* element would be placed before *y*. When returns `true`, then *x* precedes *y*. Note that, because *equality* is predicated by `!comp(x, y) && !comp(y, x)`, the function must not cover the *equality* like `<=` or `>=`. It must exclude the *equality* like `<` or `>`. Default is {@link less}.
   */
 class PriorityQueue[T] ()
-  extends typingsSlinky.tstl.tstlMod.PriorityQueue[T] {
+  extends typingsSlinky.tstl.tstlModuleMod.PriorityQueue[T] {
   def this(comp: Comparator[T, T]) = this()
   /**
     * Copy Constructor.
@@ -39,4 +39,3 @@ class PriorityQueue[T] ()
     comp: Comparator[T, T]
   ) = this()
 }
-

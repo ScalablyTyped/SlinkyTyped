@@ -7,11 +7,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs/dist/index_with_polyfills", "avgPool")
 @js.native
 object avgPool extends js.Object {
+  
   def apply[T /* <: Tensor3D | Tensor4D */](
     x: T | TensorLike,
     filterSize: (js.Tuple2[Double, Double]) | Double,
@@ -22,4 +23,3 @@ object avgPool extends js.Object {
     ]
   ): T = js.native
 }
-

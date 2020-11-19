@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/UpdateBaiduChannelCommand", JSImport.Namespace)
 @js.native
 object updateBaiduChannelCommandMod extends js.Object {
+  
   @js.native
   class UpdateBaiduChannelCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object updateBaiduChannelCommandMod extends js.Object {
           Blob
         ] {
     def this(input: UpdateBaiduChannelInput) = this()
+    
     val middlewareStack: MiddlewareStack[UpdateBaiduChannelInput, UpdateBaiduChannelOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[UpdateBaiduChannelInput, UpdateBaiduChannelOutput] = js.native
   }
-  
 }
-

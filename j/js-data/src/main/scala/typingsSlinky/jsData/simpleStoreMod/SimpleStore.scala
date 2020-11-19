@@ -6,18 +6,13 @@ import typingsSlinky.jsData.collectionMod.CollectionOpts
 import typingsSlinky.jsData.containerMod.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SimpleStore extends Container {
+  
   var _collections: StringDictionary[typingsSlinky.jsData.collectionMod.default] = js.native
-  var collectionClass: Instantiable2[
-    /* records */ js.UndefOr[js.Any], 
-    /* opts */ js.UndefOr[CollectionOpts | String | js.Any], 
-    typingsSlinky.jsData.collectionMod.default
-  ] = js.native
-  var usePendingFind: Boolean = js.native
-  var usePendingFindAll: Boolean = js.native
+  
   /**
     * Internal method used to handle Mapper responses.
     *
@@ -30,6 +25,7 @@ trait SimpleStore extends Container {
     * @returns {(Object|Array)} Result.
     */
   def _end(name: js.Any, result: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Register a new event listener on this SimpleStore.
     *
@@ -75,6 +71,7 @@ trait SimpleStore extends Container {
     * @param {...*} [args] Args passed to {@link Collection#emit}.
     */
   def _onCollectionEvent(name: js.Any, args: js.Any*): Unit = js.native
+  
   /**
     * Wrapper for {@link Collection#add}.
     *
@@ -106,6 +103,7 @@ trait SimpleStore extends Container {
     */
   def add(name: js.Any, records: js.Any): js.Any = js.native
   def add(name: js.Any, records: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * This method takes the data received from {@link SimpleStore#find},
     * {@link SimpleStore#findAll}, {@link SimpleStore#update}, etc., and adds the
@@ -149,6 +147,7 @@ trait SimpleStore extends Container {
     * @param {object} [opts] Configuration options.
     */
   def addToCache(name: js.Any, data: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Wrapper for {@link Collection#between}.
     *
@@ -171,6 +170,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def between(name: js.Any, leftKeys: js.Any, rightKeys: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Mark a {@link Mapper#find} result as cached by adding an entry to
     * {@link SimpleStore#_completedQueries}. By default, once a `find` entry is
@@ -217,6 +217,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def cacheFind(name: js.Any, data: js.Any, id: js.Any, opts: js.Any): Unit = js.native
+  
   /**
     * Mark a {@link Mapper#findAll} result as cached by adding an entry to
     * {@link SimpleStore#_completedQueries}. By default, once a `findAll` entry is
@@ -264,6 +265,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def cacheFindAll(name: js.Any, data: js.Any, hash: js.Any, opts: js.Any): Unit = js.native
+  
   /**
     * Retrieve a cached `find` result, if any. This method is called during
     * {@link SimpleStore#find} to determine if {@link Mapper#find} needs to be
@@ -309,6 +311,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def cachedFind(name: js.Any, hashOrId: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Retrieve a cached `findAll` result, if any. This method is called during
     * {@link SimpleStore#findAll} to determine if {@link Mapper#findAll} needs to be
@@ -355,6 +358,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def cachedFindAll(name: js.Any, hashOrId: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Remove __all__ records from the in-memory store and reset
     * {@link SimpleStore#_completedQueries}.
@@ -366,6 +370,13 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def clear(): js.Object = js.native
+  
+  var collectionClass: Instantiable2[
+    /* records */ js.UndefOr[js.Any], 
+    /* opts */ js.UndefOr[CollectionOpts | String | js.Any], 
+    typingsSlinky.jsData.collectionMod.default
+  ] = js.native
+  
   /**
     * Fired during {@link SimpleStore#create}. See
     * {@link SimpleStore~beforeCreateListener} for how to listen for this event.
@@ -453,6 +464,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def create(name: js.Any, record: js.Any): js.Promise[_] = js.native
+  
   /**
     * Wrapper for {@link Collection#createIndex}.
     *
@@ -481,6 +493,7 @@ trait SimpleStore extends Container {
   def createIndex(name: Double, indexName: String, fieldList: js.UndefOr[scala.Nothing], opts: js.Any): Unit = js.native
   def createIndex(name: Double, indexName: String, fieldList: js.Array[String]): Unit = js.native
   def createIndex(name: Double, indexName: String, fieldList: js.Array[String], opts: js.Any): Unit = js.native
+  
   /**
     * Fired during {@link SimpleStore#createMany}. See
     * {@link SimpleStore~beforeCreateManyListener} for how to listen for this event.
@@ -573,6 +586,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def createMany(name: js.Any, records: js.Any): js.Promise[_] = js.native
+  
   /**
     * Fired during {@link SimpleStore#destroy}. See
     * {@link SimpleStore~beforeDestroyListener} for how to listen for this event.
@@ -665,6 +679,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def destroy(name: js.Any, id: js.Any): js.Promise[_] = js.native
+  
   /**
     * Fired during {@link SimpleStore#destroyAll}. See
     * {@link SimpleStore~beforeDestroyAllListener} for how to listen for this event.
@@ -755,8 +770,11 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def destroyAll(name: js.Any, query: js.Any): js.Promise[_] = js.native
+  
   def eject(name: js.Any, id: js.Any, opts: js.Any): js.Any = js.native
+  
   def ejectAll(name: js.Any, query: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Wrapper for {@link Collection#filter}.
     *
@@ -800,6 +818,7 @@ trait SimpleStore extends Container {
   def filter(name: js.Any, queryOrFn: js.UndefOr[scala.Nothing], thisArg: js.Any): js.Any = js.native
   def filter(name: js.Any, queryOrFn: js.Any): js.Any = js.native
   def filter(name: js.Any, queryOrFn: js.Any, thisArg: js.Any): js.Any = js.native
+  
   /**
     * Fired during {@link SimpleStore#find}. See
     * {@link SimpleStore~beforeFindListener} for how to listen for this event.
@@ -884,6 +903,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def find(name: js.Any, id: js.Any): js.Any = js.native
+  
   /**
     * Fired during {@link SimpleStore#findAll}. See
     * {@link SimpleStore~beforeFindAllListener} for how to listen for this event.
@@ -968,6 +988,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def findAll(name: js.Any, query: js.Any): js.Any = js.native
+  
   /**
     * Wrapper for {@link Collection#get}.
     *
@@ -994,6 +1015,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def get(name: js.Any, id: js.Any): js.Any = js.native
+  
   /**
     * Wrapper for {@link Collection#getAll}.
     *
@@ -1015,6 +1037,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def getAll(name: js.Any, args: js.Any*): js.Any = js.native
+  
   /**
     * Return the {@link Collection} with the given name, if for some
     * reason you need a direct reference to the collection.
@@ -1025,6 +1048,7 @@ trait SimpleStore extends Container {
     * exist.
     */
   def getCollection(name: js.Any): typingsSlinky.jsData.collectionMod.default = js.native
+  
   /**
     * Hashing function used to cache {@link SimpleStore#find} and
     * {@link SimpleStore#findAll} requests. This method simply JSONifies the
@@ -1041,7 +1065,9 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def hashQuery(name: js.Any, query: js.Any, opts: js.Any): String = js.native
+  
   def inject(name: js.Any, records: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Wrapper for {@link Collection#prune}.
     *
@@ -1055,6 +1081,7 @@ trait SimpleStore extends Container {
     */
   def prune(name: String): js.Any = js.native
   def prune(name: String, opts: js.Any): js.Any = js.native
+  
   /**
     * Wrapper for {@link Collection#query}.
     *
@@ -1074,6 +1101,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def query(name: js.Any): typingsSlinky.jsData.queryMod.default = js.native
+  
   /**
     * Wrapper for {@link Collection#remove}. Removes the specified
     * {@link Record} from the store.
@@ -1105,6 +1133,7 @@ trait SimpleStore extends Container {
     */
   def remove(name: js.Any, id: js.Any): js.Any = js.native
   def remove(name: js.Any, id: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Wrapper for {@link Collection#removeAll}. Removes the selected
     * {@link Record}s from the store.
@@ -1139,6 +1168,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def removeAll(name: js.Any, query: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Remove from the store {@link Record}s that are related to the provided
     * {@link Record}(s).
@@ -1154,6 +1184,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def removeRelated(name: js.Any, records: js.Any, opts: js.Any): Unit = js.native
+  
   /**
     * Wrapper for {@link Collection#unsaved}.
     *
@@ -1165,6 +1196,7 @@ trait SimpleStore extends Container {
     */
   def unsaved(name: js.Any): js.Any = js.native
   def unsaved(name: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Fired during {@link SimpleStore#update}. See
     * {@link SimpleStore~beforeUpdateListener} for how to listen for this event.
@@ -1252,6 +1284,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def update(name: js.Any, id: js.Any, record: js.Any): js.Promise[_] = js.native
+  
   /**
     * Fired during {@link SimpleStore#updateAll}. See
     * {@link SimpleStore~beforeUpdateAllListener} for how to listen for this event.
@@ -1339,6 +1372,7 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def updateAll(name: js.Any, props: js.Any, query: js.Any): js.Promise[_] = js.native
+  
   /**
     * Fired during {@link SimpleStore#updateMany}. See
     * {@link SimpleStore~beforeUpdateManyListener} for how to listen for this event.
@@ -1426,5 +1460,8 @@ trait SimpleStore extends Container {
     * @since 3.0.0
     */
   def updateMany(name: js.Any, records: js.Any): js.Promise[_] = js.native
+  
+  var usePendingFind: Boolean = js.native
+  
+  var usePendingFindAll: Boolean = js.native
 }
-

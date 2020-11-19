@@ -2,7 +2,7 @@ package typingsSlinky.easeljs.global.createjs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("createjs.MouseEvent")
 @js.native
@@ -21,4 +21,3 @@ class MouseEvent protected ()
     rawY: Double
   ) = this()
 }
-

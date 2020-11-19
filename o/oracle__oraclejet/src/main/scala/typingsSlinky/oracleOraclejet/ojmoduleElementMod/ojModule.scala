@@ -122,18 +122,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojModule extends JetElement[ojModuleSettableProperties] {
-  var animation: js.Object = js.native
-  var config: CleanupMode = js.native
-  var onAnimationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onConfigChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjTransitionEnd: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjTransitionStart: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjViewConnected: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjViewDisconnected: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def addEventListener(`type`: animationChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: animationChanged,
@@ -952,25 +945,46 @@ trait ojModule extends JetElement[ojModuleSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var animation: js.Object = js.native
+  
+  var config: CleanupMode = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_animation(property: animation): /* import warning: importer.ImportType#apply Failed type conversion: @oracle/oraclejet.@oracle/oraclejet/ojmodule-element.ojModule['animation'] */ js.Any = js.native
   @JSName("getProperty")
   def getProperty_config(property: config): CleanupMode = js.native
+  
+  var onAnimationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onConfigChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjTransitionEnd: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjTransitionStart: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjViewConnected: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjViewDisconnected: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def setProperties(properties: ojModuleSettablePropertiesLenient): Unit = js.native
+  
   def setProperty[T /* <: String */](property: T, value: JetSetPropertyType[T, ojModuleSettableProperties]): Unit = js.native
   @JSName("setProperty")
   def setProperty_animation(property: animation, value: js.Object): Unit = js.native
   @JSName("setProperty")
   def setProperty_config(property: config, value: CleanupMode): Unit = js.native
 }
-
 @JSImport("@oracle/oraclejet/ojmodule-element", "ojModule")
 @js.native
 object ojModule extends js.Object {
+  
   type ojTransitionEnd = CustomEvent
+  
   type ojTransitionStart = CustomEvent
+  
   type ojViewConnected = CustomEvent
+  
   type ojViewDisconnected = CustomEvent
 }
-

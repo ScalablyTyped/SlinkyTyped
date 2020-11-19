@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.TextSymbol3DLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.TextSymbol3DLayer")
 @js.native
@@ -16,4 +16,3 @@ class TextSymbol3DLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.TextSymbol3DLayer {
   def this(properties: TextSymbol3DLayerProperties) = this()
 }
-

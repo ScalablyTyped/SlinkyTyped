@@ -3,11 +3,12 @@ package typingsSlinky.servicenow.global_
 import typingsSlinky.servicenow.servicenow.RestHTTPMethods
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("sn_ws")
 @js.native
 object snWs extends js.Object {
+  
   @js.native
   class RESTMessageV2 ()
     extends typingsSlinky.servicenow.snWs.RESTMessageV2 {
@@ -19,6 +20,4 @@ object snWs extends js.Object {
     extends typingsSlinky.servicenow.snWs.SOAPMessageV2 {
     def this(soapMessage: String, soapFunction: String) = this()
   }
-  
 }
-

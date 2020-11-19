@@ -5,7 +5,7 @@ import typingsSlinky.mnemonist.lruCacheMod.default
 import typingsSlinky.mnemonist.typesMod.IArrayLikeConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mnemonist", "LRUCache")
 @js.native
@@ -14,11 +14,11 @@ class LRUCache[K, V] protected () extends default[K, V] {
   def this(capacity: Double) = this()
   def this(KeyArrayClass: IArrayLikeConstructor, ValueArrayClass: IArrayLikeConstructor, capacity: Double) = this()
 }
-
 /* static members */
 @JSImport("mnemonist", "LRUCache")
 @js.native
 object LRUCache extends js.Object {
+  
   def from[I, J](iterable: StringDictionary[J]): typingsSlinky.mnemonist.lruCacheMod.LRUCache[I, J] = js.native
   def from[I, J](
     iterable: StringDictionary[J],
@@ -47,4 +47,3 @@ object LRUCache extends js.Object {
   ): typingsSlinky.mnemonist.lruCacheMod.LRUCache[I, J] = js.native
   def from[I, J](iterable: js.Iterable[js.Tuple2[I, J]], capacity: Double): typingsSlinky.mnemonist.lruCacheMod.LRUCache[I, J] = js.native
 }
-

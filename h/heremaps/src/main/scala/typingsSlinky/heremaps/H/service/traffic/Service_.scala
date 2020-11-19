@@ -6,7 +6,7 @@ import typingsSlinky.heremaps.H.service.ServiceParameters
 import typingsSlinky.heremaps.H.service.ServiceResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * TrafficIncindentsService provides functionality to the low level traffic incidents api Traffic API documentation where it is possible to retrieve traffic incident information on a
@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Service_ extends AbstractRestService {
+  
   /**
     * This method requests traffic incidents based on the service parameters provided.
     * @param serviceParams {H.service.ServiceParameters}
@@ -26,6 +27,7 @@ trait Service_ extends AbstractRestService {
     onResponse: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): JsonpRequestHandle = js.native
+  
   /**
     * This method requests traffic incident information by tile coordinates
     * @param x {number} - tile column number
@@ -52,4 +54,3 @@ trait Service_ extends AbstractRestService {
     opt_serviceParams: ServiceParameters
   ): JsonpRequestHandle = js.native
 }
-

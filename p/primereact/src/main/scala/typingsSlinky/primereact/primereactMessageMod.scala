@@ -4,14 +4,13 @@ import typingsSlinky.primereact.messageMod.MessageProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("primereact/message", JSImport.Namespace)
 @js.native
 object primereactMessageMod extends js.Object {
+  
   @js.native
   class Message ()
     extends Component[MessageProps, js.Any, js.Any]
-  
 }
-

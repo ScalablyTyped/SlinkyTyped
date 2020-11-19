@@ -2,7 +2,7 @@ package typingsSlinky.solidityParserAntlr.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.solidityParserAntlr.mod.IfStatement
@@ -20,8 +20,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.solidityParserAntlr.mod.VariableDeclarationStatement
 */
 trait Statement extends js.Object
-
 object Statement {
+  
   @scala.inline
   def EmitStatement(
     eventCall: FunctionCall,
@@ -31,12 +31,14 @@ object Statement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def ReturnStatement(`type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.ReturnStatement): Statement = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def InlineAssemblyStatement(
     body: AssemblyBlock,
@@ -47,18 +49,21 @@ object Statement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def ForStatement(body: Statement, `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.ForStatement): Statement = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def WhileStatement(`type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.WhileStatement): Statement = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def Block(
     statements: js.Array[Statement],
@@ -68,6 +73,7 @@ object Statement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def VariableDeclarationStatement(
     `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.VariableDeclarationStatement,
@@ -77,6 +83,7 @@ object Statement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def IfStatement(
     condition: Expression,
@@ -87,6 +94,7 @@ object Statement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def ExpressionStatement(
     expression: Expression,
@@ -96,12 +104,14 @@ object Statement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def ContinueStatement(`type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.ContinueStatement): Statement = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def DoWhileStatement(
     body: Statement,
@@ -112,12 +122,14 @@ object Statement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def BreakStatement(`type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.BreakStatement): Statement = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  
   @scala.inline
   def ThrowStatement(`type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.ThrowStatement): Statement = {
     val __obj = js.Dynamic.literal()
@@ -125,4 +137,3 @@ object Statement {
     __obj.asInstanceOf[Statement]
   }
 }
-

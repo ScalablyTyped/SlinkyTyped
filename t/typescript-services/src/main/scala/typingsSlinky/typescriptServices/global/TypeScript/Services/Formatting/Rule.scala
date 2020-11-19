@@ -2,7 +2,7 @@ package typingsSlinky.typescriptServices.global.TypeScript.Services.Formatting
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.Services.Formatting.Rule")
 @js.native
@@ -18,4 +18,3 @@ class Rule protected ()
     Flag: typingsSlinky.typescriptServices.TypeScript.Services.Formatting.RuleFlags
   ) = this()
 }
-

@@ -11,7 +11,7 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.BottomBarItem
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/image relevant section in reference guide}
@@ -27,20 +27,26 @@ abstract class Icon protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsBottomBarItem: BottomBarItem = js.native
+  
+  def containerAsButton: Button = js.native
+  
+  def containerAsControlBarButton: ControlBarButton = js.native
+  
+  def containerAsMenuItem: MenuItem = js.native
+  
+  def containerAsWidgetValue: WidgetValue = js.native
+  
   @JSName("model")
   var model_FIcon: IModel = js.native
-  def containerAsBottomBarItem: BottomBarItem = js.native
-  def containerAsButton: Button = js.native
-  def containerAsControlBarButton: ControlBarButton = js.native
-  def containerAsMenuItem: MenuItem = js.native
-  def containerAsWidgetValue: WidgetValue = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.Icon")
 @js.native
 object Icon extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

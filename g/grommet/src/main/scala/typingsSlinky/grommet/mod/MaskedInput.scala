@@ -19,7 +19,7 @@ import typingsSlinky.react.mod.InputHTMLAttributes
 import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6", "MaskedInput")
 @js.native
@@ -44,7 +44,6 @@ class MaskedInput protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("grommet/es6", "MaskedInput")
 @js.native
 object MaskedInput extends TopLevel[
@@ -55,4 +54,3 @@ object MaskedInput extends TopLevel[
         ])
       ]
     ]
-

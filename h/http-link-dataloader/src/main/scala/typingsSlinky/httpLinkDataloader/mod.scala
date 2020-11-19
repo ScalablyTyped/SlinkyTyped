@@ -5,11 +5,12 @@ import typingsSlinky.httpLinkDataloader.typesMod.HttpOptions
 import typingsSlinky.httpLinkDataloader.typesMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("http-link-dataloader", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class BatchedGraphQLClient protected ()
     extends typingsSlinky.httpLinkDataloader.batchedGraphQLClientMod.BatchedGraphQLClient {
@@ -22,12 +23,10 @@ object mod extends js.Object {
     extends typingsSlinky.httpLinkDataloader.httplinkdataloaderMod.HTTPLinkDataloader {
     def this(options: HttpOptions) = this()
   }
-  
   /* static members */
   @js.native
   object HTTPLinkDataloader extends js.Object {
+    
     /* private */ def createBatchedHttpRequest(options: js.Any): js.Any = js.native
   }
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.microsoftAjax.global.Sys
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 //#endregion
 //#region Exception Types
@@ -66,6 +66,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Sys.Net")
 @js.native
 object Net extends js.Object {
+  
+  var WebRequestManager: typingsSlinky.microsoftAjax.Sys.Net.IWebRequestManager = js.native
+  
   /**
     * Manages the flow of the Web requests issued by the Sys.Net.WebRequest object to the associated executor object.
     * @see {@link http://msdn.microsoft.com/en-us/library/bb397435(v=vs.100).aspx}
@@ -133,11 +136,10 @@ object Net extends js.Object {
   @js.native
   class WebServiceProxy ()
     extends typingsSlinky.microsoftAjax.Sys.Net.WebServiceProxy
-  
-  var WebRequestManager: typingsSlinky.microsoftAjax.Sys.Net.IWebRequestManager = js.native
   /* static members */
   @js.native
   object WebServiceProxy extends js.Object {
+    
     def invoke(
       servicePath: String,
       methodName: String,
@@ -155,6 +157,4 @@ object Net extends js.Object {
       jsonpCallbackParameter: js.UndefOr[String]
     ): typingsSlinky.microsoftAjax.Sys.Net.WebRequest = js.native
   }
-  
 }
-

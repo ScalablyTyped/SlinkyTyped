@@ -11,7 +11,7 @@ import typingsSlinky.jsrsasign.jsrsasignStrings.keyusage
 import typingsSlinky.jsrsasign.jsrsasignStrings.subjectaltname
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * base Extension ASN.1 structure class
@@ -30,11 +30,11 @@ class Extension ()
   extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509.Extension {
   def this(params: CriticalBoolean) = this()
 }
-
 /* static members */
 @JSGlobal("jsrsasign.KJUR.asn1.x509.Extension")
 @js.native
 object Extension extends js.Object {
+  
   @JSName("appendByNameToArray")
   def appendByNameToArray_authorityinfoaccess(
     name: authorityinfoaccess,
@@ -98,4 +98,3 @@ object Extension extends js.Object {
     a: js.Array[_]
   ): Unit = js.native
 }
-

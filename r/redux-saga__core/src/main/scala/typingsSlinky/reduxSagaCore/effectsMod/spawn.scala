@@ -6,11 +6,12 @@ import typingsSlinky.reduxSagaCore.anon.ContextFn
 import typingsSlinky.std.Parameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@redux-saga/core/types/effects", "spawn")
 @js.native
 object spawn extends js.Object {
+  
   def apply[Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     fn: Fn,
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
@@ -36,4 +37,3 @@ object spawn extends js.Object {
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): ForkEffect = js.native
 }
-

@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "Texture")
 @js.native
@@ -24,12 +24,12 @@ class Texture protected ()
     encoding: js.UndefOr[typingsSlinky.three.constantsMod.TextureEncoding]
   ) = this()
 }
-
 /* static members */
 @JSImport("three", "Texture")
 @js.native
 object Texture extends js.Object {
+  
   var DEFAULT_IMAGE: js.Any = js.native
+  
   var DEFAULT_MAPPING: js.Any = js.native
 }
-

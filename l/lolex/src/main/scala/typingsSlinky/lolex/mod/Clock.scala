@@ -2,7 +2,7 @@ package typingsSlinky.lolex.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Clock object created by lolex.
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.lolex.mod.NodeClock
 */
 trait Clock extends js.Object
-

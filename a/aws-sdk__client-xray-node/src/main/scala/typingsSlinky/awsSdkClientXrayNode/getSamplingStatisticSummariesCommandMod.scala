@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-xray-node/commands/GetSamplingStatisticSummariesCommand", JSImport.Namespace)
 @js.native
 object getSamplingStatisticSummariesCommandMod extends js.Object {
+  
   @js.native
   class GetSamplingStatisticSummariesCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getSamplingStatisticSummariesCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetSamplingStatisticSummariesInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetSamplingStatisticSummariesInput, GetSamplingStatisticSummariesOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: XRayResolvedConfiguration
     ): Handler[GetSamplingStatisticSummariesInput, GetSamplingStatisticSummariesOutput] = js.native
   }
-  
 }
-

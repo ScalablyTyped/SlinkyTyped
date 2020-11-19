@@ -2,11 +2,12 @@ package typingsSlinky.shopifyPrime
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("shopify-prime/dist/enums/webhook_topic", JSImport.Namespace)
 @js.native
 object webhookTopicMod extends js.Object {
+  
   trait _WebhookTopic extends js.Object
   
   /* Rewritten from type alias, can be one of: 
@@ -49,4 +50,3 @@ object webhookTopicMod extends js.Object {
   */
   type WebhookTopic = _WebhookTopic | String
 }
-

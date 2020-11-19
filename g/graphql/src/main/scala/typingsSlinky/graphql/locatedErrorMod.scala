@@ -5,11 +5,12 @@ import typingsSlinky.graphql.graphQLErrorMod.GraphQLError
 import typingsSlinky.graphql.maybeMod.Maybe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/error/locatedError", JSImport.Namespace)
 @js.native
 object locatedErrorMod extends js.Object {
+  
   def locatedError(originalError: GraphQLError): GraphQLError = js.native
   def locatedError(
     originalError: GraphQLError,
@@ -27,4 +28,3 @@ object locatedErrorMod extends js.Object {
   def locatedError(originalError: js.Error, nodes: ASTNode): GraphQLError = js.native
   def locatedError(originalError: js.Error, nodes: ASTNode, path: Maybe[js.Array[String | Double]]): GraphQLError = js.native
 }
-

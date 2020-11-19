@@ -10,11 +10,12 @@ import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/regularexpressions", JSImport.Namespace)
 @js.native
 object regularexpressionsMod extends js.Object {
+  
   @js.native
   class StructureVersionInfo protected ()
     extends typingsSlinky.mendixmodelsdk.internalMod.StructureVersionInfo {
@@ -23,6 +24,7 @@ object regularexpressionsMod extends js.Object {
   
   @js.native
   object regularexpressions extends js.Object {
+    
     /**
       * Interfaces and instance classes for types from the Mendix sub meta model `RegularExpressions`.
       */
@@ -53,27 +55,29 @@ object regularexpressionsMod extends js.Object {
         isPartial: Boolean,
         container: IFolderBase
       ) = this()
-      @JSName("model")
-      var model_FRegularExpression: IModel = js.native
+      
       @JSName("containerAsFolderBase")
       def containerAsFolderBase_MRegularExpression: FolderBase = js.native
+      
+      @JSName("model")
+      var model_FRegularExpression: IModel = js.native
+      
       def regEx: String = js.native
       def regEx_=(newValue: String): Unit = js.native
     }
-    
     /* static members */
     @js.native
     object RegularExpression extends js.Object {
-      var structureTypeName: String = js.native
-      var versionInfo: StructureVersionInfo = js.native
+      
       /**
         * Creates a new RegularExpression unit in the SDK and on the server.
         * Expects one argument, the projects.IFolderBase in which this unit is contained.
         */
       def createIn(container: IFolderBase): RegularExpression = js.native
+      
+      var structureTypeName: String = js.native
+      
+      var versionInfo: StructureVersionInfo = js.native
     }
-    
   }
-  
 }
-

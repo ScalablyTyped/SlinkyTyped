@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/PhoneNumberValidateCommand", JSImport.Namespace)
 @js.native
 object phoneNumberValidateCommandMod extends js.Object {
+  
   @js.native
   class PhoneNumberValidateCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object phoneNumberValidateCommandMod extends js.Object {
           Blob
         ] {
     def this(input: PhoneNumberValidateInput) = this()
+    
     val middlewareStack: MiddlewareStack[PhoneNumberValidateInput, PhoneNumberValidateOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[PhoneNumberValidateInput, PhoneNumberValidateOutput] = js.native
   }
-  
 }
-

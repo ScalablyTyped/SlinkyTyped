@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -27,22 +27,27 @@ abstract class MasterDetailRegion protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FMasterDetailRegion: IModel = js.native
+  
   def `class`: String = js.native
   def class_=(newValue: String): Unit = js.native
+  
   def containerAsMasterDetail: MasterDetail = js.native
+  
+  @JSName("model")
+  var model_FMasterDetailRegion: IModel = js.native
+  
   def style: String = js.native
   def style_=(newValue: String): Unit = js.native
+  
   def widget: Widget | Null = js.native
   def widget_=(newValue: Widget | Null): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.MasterDetailRegion")
 @js.native
 object MasterDetailRegion extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

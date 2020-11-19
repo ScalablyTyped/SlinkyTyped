@@ -2,7 +2,7 @@ package typingsSlinky.paper.global.paper
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** 
   * The Curve object represents the parts of a path that are connected by
@@ -34,4 +34,3 @@ class Curve protected ()
     point2: typingsSlinky.paper.paper.Point
   ) = this()
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.grpc.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grpc", "Client")
 @js.native
@@ -15,15 +15,18 @@ class Client protected () extends js.Object {
     */
   def this(address: String, credentials: ChannelCredentials) = this()
   def this(address: String, credentials: ChannelCredentials, options: js.Object) = this()
+  
   /**
     * Close this client.
     */
   def close(): Unit = js.native
+  
   /**
     * Return the underlying channel object for the specified client
     * @return The channel
     */
   def getChannel(): Channel = js.native
+  
   /**
     * Make a bidirectional stream request with this method on the given channel.
     * @param method The name of the method to request
@@ -63,6 +66,7 @@ class Client protected () extends js.Object {
     metadata: Metadata,
     options: CallOptions
   ): ClientDuplexStream[RequestType, ResponseType] = js.native
+  
   def makeClientStreamRequest[RequestType, ResponseType](
     method: String,
     serialize: serialize[RequestType],
@@ -106,6 +110,7 @@ class Client protected () extends js.Object {
     options: CallOptions,
     callback: requestCallback[ResponseType]
   ): ClientWritableStream[RequestType] = js.native
+  
   /**
     * Make a server stream request to the given method, with the given serialize
     * and deserialize function, using the given argument
@@ -155,6 +160,7 @@ class Client protected () extends js.Object {
     metadata: Metadata,
     options: CallOptions
   ): ClientReadableStream[ResponseType] = js.native
+  
   def makeUnaryRequest[RequestType, ResponseType](
     method: String,
     serialize: serialize[RequestType],
@@ -240,6 +246,7 @@ class Client protected () extends js.Object {
     options: CallOptions,
     callback: requestCallback[ResponseType]
   ): ClientUnaryCall = js.native
+  
   /**
     * Wait for the client to be ready. The callback will be called when the
     * client has successfully connected to the server, and it will be called
@@ -251,4 +258,3 @@ class Client protected () extends js.Object {
     */
   def waitForReady(deadline: Deadline, callback: js.Function1[/* error */ js.Error | Null, Unit]): Unit = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.reactSketchapp.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactSketchapp.reactSketchappStrings.contain
@@ -13,19 +13,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactSketchapp.reactSketchappStrings.none
 */
 trait ResizeMode extends js.Object
-
 object ResizeMode {
+  
   @scala.inline
   def center: typingsSlinky.reactSketchapp.reactSketchappStrings.center = "center".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.center]
+  
   @scala.inline
   def contain: typingsSlinky.reactSketchapp.reactSketchappStrings.contain = "contain".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.contain]
+  
   @scala.inline
   def cover: typingsSlinky.reactSketchapp.reactSketchappStrings.cover = "cover".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.cover]
+  
   @scala.inline
   def none: typingsSlinky.reactSketchapp.reactSketchappStrings.none = "none".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.none]
+  
   @scala.inline
   def repeat: typingsSlinky.reactSketchapp.reactSketchappStrings.repeat = "repeat".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.repeat]
+  
   @scala.inline
   def stretch: typingsSlinky.reactSketchapp.reactSketchappStrings.stretch = "stretch".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.stretch]
 }
-

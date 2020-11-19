@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SSOOIDC extends Service {
+  
   @JSName("config")
   var config_SSOOIDC: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates and returns an access token for the authorized client. The access token issued will be used to fetch short-term credentials for the assigned roles in the AWS account.
     */
@@ -25,6 +27,7 @@ trait SSOOIDC extends Service {
     params: CreateTokenRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateTokenResponse, Unit]
   ): Request[CreateTokenResponse, AWSError] = js.native
+  
   /**
     * Registers a client with AWS SSO. This allows clients to initiate device authorization. The output should be persisted for reuse through many authentication requests.
     */
@@ -38,6 +41,7 @@ trait SSOOIDC extends Service {
     params: RegisterClientRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ RegisterClientResponse, Unit]
   ): Request[RegisterClientResponse, AWSError] = js.native
+  
   /**
     * Initiates device authorization by requesting a pair of verification codes from the authorization service.
     */
@@ -52,4 +56,3 @@ trait SSOOIDC extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ StartDeviceAuthorizationResponse, Unit]
   ): Request[StartDeviceAuthorizationResponse, AWSError] = js.native
 }
-

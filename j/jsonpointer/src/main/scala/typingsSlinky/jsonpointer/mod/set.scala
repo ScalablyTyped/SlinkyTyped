@@ -2,11 +2,11 @@ package typingsSlinky.jsonpointer.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jsonpointer", "set")
 @js.native
 object set extends js.Object {
+  
   def apply(`object`: js.Object, pointer: String, value: js.Any): Unit = js.native
 }
-

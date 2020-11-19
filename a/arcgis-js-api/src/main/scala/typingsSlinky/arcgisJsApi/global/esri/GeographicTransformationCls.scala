@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.GeographicTransformation")
 @js.native
@@ -15,4 +15,3 @@ class GeographicTransformationCls ()
   extends typingsSlinky.arcgisJsApi.esri.GeographicTransformation {
   def this(properties: js.Any) = this()
 }
-

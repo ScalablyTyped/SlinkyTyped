@@ -4,11 +4,11 @@ import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IDetailsListStylePr
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IDetailsListStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/DetailsList/DetailsList.styles", JSImport.Namespace)
 @js.native
 object detailsListStylesMod extends js.Object {
+  
   def getStyles(props: IDetailsListStyleProps): IDetailsListStyles = js.native
 }
-

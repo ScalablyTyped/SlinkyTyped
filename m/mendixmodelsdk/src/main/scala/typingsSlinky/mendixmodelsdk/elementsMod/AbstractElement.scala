@@ -6,7 +6,7 @@ import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
@@ -24,8 +24,7 @@ abstract class AbstractElement protected ()
     isPartial: Boolean,
     container: IContainer
   ) = this()
-  @JSName("container")
-  val container_FAbstractElement: Container = js.native
+  
   def asLoaded(): IAbstractElement = js.native
   /**
     * Transforms a IElement interface into a Element class, loading the containing unit if necessary.
@@ -36,16 +35,22 @@ abstract class AbstractElement protected ()
     */
   @JSName("asLoaded")
   def asLoaded_This(): this.type = js.native
+  
+  @JSName("container")
+  val container_FAbstractElement: Container = js.native
+  
   /**
     * Given an element id, returns the element in this abstract element with that id, otherwise null.
     */
   def findElementById(id: String): AbstractElement | Null = js.native
+  
   /**
     * Checks whether all properties are available at the moment
     *  - if false, a load is required to access these properties.
     */
   @JSName("isLoaded")
   def isLoaded_MAbstractElement: Boolean = js.native
+  
   def load(): js.Promise[this.type] = js.native
   /**
     * Transforms a IElement interface into a Element class, loading the containing unit if necessary.
@@ -58,4 +63,3 @@ abstract class AbstractElement protected ()
   def load(callback: js.Function1[/* elem */ /* element */ this.type, Unit], forceRefresh: Boolean): Unit = js.native
   def load(forceRefresh: Boolean): js.Promise[this.type] = js.native
 }
-

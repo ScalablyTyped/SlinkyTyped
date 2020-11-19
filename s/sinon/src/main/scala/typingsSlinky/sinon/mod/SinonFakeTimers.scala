@@ -7,33 +7,22 @@ import typingsSlinky.sinonjsFakeTimers.mod.NodeTimer
 import typingsSlinky.std.DateConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined @sinonjs/fake-timers.@sinonjs/fake-timers.InstalledMethods & @sinonjs/fake-timers.@sinonjs/fake-timers.NodeClock & @sinonjs/fake-timers.@sinonjs/fake-timers.BrowserClock & {restore (): void} */
 @js.native
 trait SinonFakeTimers extends js.Object {
+  
+  /**
+    * Implements the Date object but using this clock to provide the correct time.
+    */
+  def Date(): String = js.native
   /**
     * Implements the Date object but using this clock to provide the correct time.
     */
   @JSName("Date")
   var Date_Original: DateConstructor with (Instantiable1[/* value */ Double, js.Date]) = js.native
-  /**
-    * Maximum number of timers that will be run when calling runAll().
-    */
-  var loopLimit: Double = js.native
-  var methods: js.Array[FakeMethod] = js.native
-  /**
-    * Current clock time.
-    */
-  var now: Double = js.native
-  /**
-    * Mimics performance.now().
-    */
-  var performance: Now = js.native
-  /**
-    * Implements the Date object but using this clock to provide the correct time.
-    */
-  def Date(): String = js.native
+  
   /**
     * Cancel animation frame request.
     *
@@ -46,6 +35,7 @@ trait SinonFakeTimers extends js.Object {
     * @param id   The id returned from requestAnimationFrame method.
     */
   def cancelAnimationFrame(id: NodeTimer): Unit = js.native
+  
   /**
     * Clears a timer, as long as it was created using requestIdleCallback.
     *
@@ -58,6 +48,7 @@ trait SinonFakeTimers extends js.Object {
     * @param id   Timer ID or object.
     */
   def cancelIdleCallback(id: NodeTimer): Unit = js.native
+  
   /**
     * Clears a timer, as long as it was created using setImmediate.
     *
@@ -70,6 +61,7 @@ trait SinonFakeTimers extends js.Object {
     * @param id   Timer ID or object.
     */
   def clearImmediate(id: NodeTimer): Unit = js.native
+  
   /**
     * Clears a timer, as long as it was created using setInterval.
     *
@@ -82,6 +74,7 @@ trait SinonFakeTimers extends js.Object {
     * @param id   Timer ID or object.
     */
   def clearInterval(id: NodeTimer): Unit = js.native
+  
   /**
     * Clears a timer, as long as it was created using setTimeout.
     *
@@ -94,12 +87,14 @@ trait SinonFakeTimers extends js.Object {
     * @param id   Timer ID or object.
     */
   def clearTimeout(id: NodeTimer): Unit = js.native
+  
   /**
     * Get the number of waiting timers.
     *
     * @returns number of waiting timers.
     */
   def countTimers(): Double = js.native
+  
   /**
     * Mimicks process.hrtime().
     *
@@ -108,11 +103,20 @@ trait SinonFakeTimers extends js.Object {
     */
   def hrtime(): js.Tuple2[Double, Double] = js.native
   def hrtime(prevTime: js.Tuple2[Double, Double]): js.Tuple2[Double, Double] = js.native
+  
+  /**
+    * Maximum number of timers that will be run when calling runAll().
+    */
+  var loopLimit: Double = js.native
+  
+  var methods: js.Array[FakeMethod] = js.native
+  
   /**
     * Advances the clock to the the moment of the first scheduled timer, firing it.
     * @returns Fake milliseconds since the unix epoch.
     */
   def next(): Double = js.native
+  
   /**
     * Advances the clock to the the moment of the first scheduled timer, firing it.
     *
@@ -120,14 +124,27 @@ trait SinonFakeTimers extends js.Object {
     * @returns Fake milliseconds since the unix epoch.
     */
   def nextAsync(): js.Promise[Double] = js.native
+  
   /**
     * Simulates process.nextTick().
     */
   def nextTick(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Unit = js.native
+  
+  /**
+    * Current clock time.
+    */
+  var now: Double = js.native
+  
+  /**
+    * Mimics performance.now().
+    */
+  var performance: Now = js.native
+  
   /**
     * Mimics process.nextTick() explicitly dropping additional arguments.
     */
   def queueMicrotask(callback: js.Function0[Unit]): Unit = js.native
+  
   /**
     * Schedule callback to run in the next animation frame.
     *
@@ -143,6 +160,7 @@ trait SinonFakeTimers extends js.Object {
     */
   @JSName("requestAnimationFrame")
   def requestAnimationFrame_Double(callback: js.Function1[/* time */ Double, Unit]): Double = js.native
+  
   /**
     * Queues the callback to be fired during idle periods to perform background and low priority work on the main event loop.
     *
@@ -163,15 +181,18 @@ trait SinonFakeTimers extends js.Object {
   def requestIdleCallback_Double(callback: js.Function0[Unit]): Double = js.native
   @JSName("requestIdleCallback")
   def requestIdleCallback_Double(callback: js.Function0[Unit], timeout: Double): Double = js.native
+  
   /**
     * Removes all timers and tick without firing them and restore now to its original value.
     */
   def reset(): Unit = js.native
+  
   /**
     * Restore the faked methods.
     * Call in e.g. tearDown.
     */
   def restore(): Unit = js.native
+  
   /**
     * Runs all pending timers until there are none remaining.
     *
@@ -179,6 +200,7 @@ trait SinonFakeTimers extends js.Object {
     * @returns Fake milliseconds since the unix epoch.
     */
   def runAll(): Double = js.native
+  
   /**
     * Runs all pending timers until there are none remaining.
     *
@@ -188,21 +210,25 @@ trait SinonFakeTimers extends js.Object {
     * @returns Fake milliseconds since the unix epoch.
     */
   def runAllAsync(): js.Promise[Double] = js.native
+  
   /**
     * Run all pending microtasks scheduled with nextTick.
     */
   def runMicrotasks(): Unit = js.native
+  
   /**
     * Advanced the clock to the next animation frame while firing all scheduled callbacks.
     * @returns Fake milliseconds since the unix epoch.
     */
   def runToFrame(): Double = js.native
+  
   /**
     * Takes note of the last scheduled timer when it is run, and advances the clock to
     * that time firing callbacks as necessary.
     * @returns Fake milliseconds since the unix epoch.
     */
   def runToLast(): Double = js.native
+  
   /**
     * Takes note of the last scheduled timer when it is run, and advances the clock to
     * that time firing callbacks as necessary.
@@ -211,6 +237,7 @@ trait SinonFakeTimers extends js.Object {
     * @returns Fake milliseconds since the unix epoch.
     */
   def runToLastAsync(): js.Promise[Double] = js.native
+  
   /**
     * Schedules the callback to be fired once 0 milliseconds have ticked by.
     *
@@ -230,6 +257,7 @@ trait SinonFakeTimers extends js.Object {
     */
   @JSName("setImmediate")
   def setImmediate_Double(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Double = js.native
+  
   /**
     * Schedules a callback to be fired every time timeout milliseconds have ticked by.
     *
@@ -249,6 +277,7 @@ trait SinonFakeTimers extends js.Object {
     */
   @JSName("setInterval")
   def setInterval_Double(callback: js.Function1[/* repeated */ js.Any, Unit], timeout: Double, args: js.Any*): Double = js.native
+  
   /**
     * Simulates a user changing the system clock.
     *
@@ -258,6 +287,7 @@ trait SinonFakeTimers extends js.Object {
   def setSystemTime(): Unit = js.native
   def setSystemTime(now: Double): Unit = js.native
   def setSystemTime(now: js.Date): Unit = js.native
+  
   /**
     * Schedules a callback to be fired once timeout milliseconds have ticked by.
     *
@@ -277,6 +307,7 @@ trait SinonFakeTimers extends js.Object {
     */
   @JSName("setTimeout")
   def setTimeout_Double(callback: js.Function1[/* repeated */ js.Any, Unit], timeout: Double, args: js.Any*): Double = js.native
+  
   def tick(time: String): Double = js.native
   /**
     * Advance the clock, firing callbacks if necessary.
@@ -285,6 +316,7 @@ trait SinonFakeTimers extends js.Object {
     * @returns Fake milliseconds since the unix epoch.
     */
   def tick(time: Double): Double = js.native
+  
   def tickAsync(time: String): js.Promise[Double] = js.native
   /**
     * Advance the clock, firing callbacks if necessary.
@@ -295,10 +327,10 @@ trait SinonFakeTimers extends js.Object {
     * @returns Fake milliseconds since the unix epoch.
     */
   def tickAsync(time: Double): js.Promise[Double] = js.native
+  
   /**
     * Restores the original methods on the context that was passed to FakeTimers.install,
     * or the native timers if no context was given.
     */
   def uninstall(): Unit = js.native
 }
-

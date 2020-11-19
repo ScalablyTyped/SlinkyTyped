@@ -12,16 +12,18 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.square
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.x
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LineSymbolMarker extends Accessor {
+  
   /**
     * The color of the marker. If not specified, the marker will match the color of the line.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-LineSymbolMarker.html#color)
     */
   var color: Color_ = js.native
+  
   /**
     * The placement of the marker(s) on the line. Possible values are listed in the table below.
     *
@@ -37,6 +39,7 @@ trait LineSymbolMarker extends Accessor {
     * @default "begin-end"
     */
   var placement: begin | end | `begin-end` = js.native
+  
   /**
     * The marker style. Possible values are listed in the table below.
     *
@@ -55,6 +58,7 @@ trait LineSymbolMarker extends Accessor {
     * @default "arrow"
     */
   var style: arrow | circle | square | diamond | cross | x = js.native
+  
   /**
     * The symbol type.
     *
@@ -62,4 +66,3 @@ trait LineSymbolMarker extends Accessor {
     */
   val `type`: `line-marker` = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.Office
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents the appointment organizer, even if an alias or a delegate was used to create the appointment. 
@@ -18,6 +18,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Organizer extends js.Object {
+  
   /**
     * Gets the organizer value of an appointment as an {@link Office.EmailAddressDetails | EmailAddressDetails} object in the asyncResult.value property.
     * 
@@ -58,4 +59,3 @@ trait Organizer extends js.Object {
     callback: js.Function1[/* asyncResult */ AsyncResult[EmailAddressDetails], Unit]
   ): Unit = js.native
 }
-

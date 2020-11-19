@@ -3,14 +3,16 @@ package typingsSlinky.jsData
 import typingsSlinky.jsData.anon.Added
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("js-data/dist/Record", JSImport.Namespace)
 @js.native
 object recordMod extends js.Object {
+  
   @js.native
   trait Record
     extends typingsSlinky.jsData.settableMod.default {
+    
     /**
       * Returns the {@link Mapper} paired with this record's class, if any.
       *
@@ -19,6 +21,7 @@ object recordMod extends js.Object {
       * @since 3.0.0
       */
     def _mapper(): js.Any = js.native
+    
     /**
       * Lifecycle hook.
       *
@@ -29,6 +32,7 @@ object recordMod extends js.Object {
       */
     def afterLoadRelations(relations: js.Array[String]): Unit = js.native
     def afterLoadRelations(relations: js.Array[String], opts: js.Any): Unit = js.native
+    
     /**
       * Lifecycle hook.
       *
@@ -39,6 +43,7 @@ object recordMod extends js.Object {
       */
     def beforeLoadRelations(relations: js.Array[String]): Unit = js.native
     def beforeLoadRelations(relations: js.Array[String], opts: js.Any): Unit = js.native
+    
     /**
       * Return the change history of this record since it was instantiated or
       * {@link Record#commit} was called.
@@ -47,6 +52,7 @@ object recordMod extends js.Object {
       * @since 3.0.0
       */
     def changeHistory(): js.Any = js.native
+    
     /**
       * Return changes to this record since it was instantiated or
       * {@link Record#commit} was called.
@@ -73,6 +79,7 @@ object recordMod extends js.Object {
       */
     def changes(): Added = js.native
     def changes(opts: js.Any): Added = js.native
+    
     /**
       * Make the record's current in-memory state it's only state, with any
       * previous property values being set to current values.
@@ -97,6 +104,7 @@ object recordMod extends js.Object {
       */
     def commit(): Unit = js.native
     def commit(opts: js.Any): Unit = js.native
+    
     /**
       * Call {@link Mapper#destroy} using this record's primary key.
       *
@@ -122,6 +130,7 @@ object recordMod extends js.Object {
       */
     def destroy(): js.Any = js.native
     def destroy(opts: js.Any): js.Any = js.native
+    
     /**
       * Return the value at the given path for this instance.
       *
@@ -141,6 +150,7 @@ object recordMod extends js.Object {
       * @since 3.0.0
       */
     def get(key: js.Any): js.Any = js.native
+    
     /**
       * Return whether this record has changed since it was instantiated or
       * {@link Record#commit} was called.
@@ -168,6 +178,7 @@ object recordMod extends js.Object {
       */
     def hasChanges(): Boolean = js.native
     def hasChanges(opts: js.Any): Boolean = js.native
+    
     /**
       * Return whether the record is unsaved. Records that have primary keys are
       * considered "saved". Records without primary keys are considered "unsaved".
@@ -191,6 +202,7 @@ object recordMod extends js.Object {
       */
     def isNew(): Boolean = js.native
     def isNew(opts: js.Any): Boolean = js.native
+    
     /**
       * Return whether the record in its current state passes validation.
       *
@@ -222,6 +234,7 @@ object recordMod extends js.Object {
       * @since 3.0.0
       */
     def isValid(opts: js.Any): Boolean = js.native
+    
     /**
       * Lazy load relations of this record, to be attached to the record once their
       * loaded.
@@ -277,6 +290,7 @@ object recordMod extends js.Object {
     def loadRelations(relations: js.Any, opts: js.Any): js.Promise[this.type] = js.native
     def loadRelations(relations: js.Array[String]): js.Promise[this.type] = js.native
     def loadRelations(relations: js.Array[String], opts: js.Any): js.Promise[this.type] = js.native
+    
     /**
       * Return the properties with which this record was instantiated.
       *
@@ -302,7 +316,9 @@ object recordMod extends js.Object {
       * @since 3.0.0
       */
     def previous(key: js.Any): js.Any = js.native
+    
     def removeInverseRelation(currentParent: js.Any, id: js.Any, inverseDef: js.Any, idAttribute: js.Any): Unit = js.native
+    
     /**
       * Revert changes to this record back to the properties it had when it was
       * instantiated.
@@ -330,6 +346,7 @@ object recordMod extends js.Object {
       */
     def revert(): Unit = js.native
     def revert(opts: js.Any): Unit = js.native
+    
     /**
       * Delegates to {@link Mapper#create} or {@link Mapper#update}.
       *
@@ -366,6 +383,7 @@ object recordMod extends js.Object {
       */
     def save(): js.Any = js.native
     def save(opts: js.Any): js.Any = js.native
+    
     /**
       * Set the value for a given key, or the values for the given keys if "key" is
       * an object. Triggers change events on those properties that have `track: true`
@@ -403,7 +421,9 @@ object recordMod extends js.Object {
     def set(key: js.Any, value: js.UndefOr[scala.Nothing], opts: js.Any): Unit = js.native
     def set(key: js.Any, value: js.Any): Unit = js.native
     def set(key: js.Any, value: js.Any, opts: js.Any): Unit = js.native
+    
     def setupInverseRelation(record: js.Any, id: js.Any, inverseDef: js.Any, idAttribute: js.Any): Unit = js.native
+    
     /**
       * Return a plain object representation of this record. If the class from
       * which this record was created has a Mapper, then {@link Mapper#toJSON} will
@@ -439,6 +459,7 @@ object recordMod extends js.Object {
       */
     def toJSON(): js.Any = js.native
     def toJSON(opts: js.Any): js.Any = js.native
+    
     /**
       * Unset the value for a given key. Triggers change events on those properties
       * that have `track: true` in {@link Mapper#schema}.
@@ -466,6 +487,7 @@ object recordMod extends js.Object {
       */
     def unset(key: String): Unit = js.native
     def unset(key: String, opts: js.Any): Unit = js.native
+    
     /**
       * Validate this record based on its current properties.
       *
@@ -504,16 +526,18 @@ object recordMod extends js.Object {
     def this(props: js.UndefOr[scala.Nothing], opts: js.Any) = this()
     def this(props: js.Any, opts: js.Any) = this()
   }
-  
   /* static members */
   @js.native
   object default extends js.Object {
+    
     var creatingPath: String = js.native
+    
     var keepChangeHistoryPath: String = js.native
+    
     var mapper: typingsSlinky.jsData.mapperMod.default = js.native
+    
     var noValidatePath: String = js.native
+    
     var previousPath: String = js.native
   }
-  
 }
-

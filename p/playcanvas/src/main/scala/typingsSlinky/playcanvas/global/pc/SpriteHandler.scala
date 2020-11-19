@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.global.pc
 import typingsSlinky.playcanvas.pc.ResourceHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Resource handler used for loading {@link pc.Sprite} resources.
@@ -18,4 +18,3 @@ class SpriteHandler protected () extends ResourceHandler {
     device: typingsSlinky.playcanvas.pc.GraphicsDevice
   ) = this()
 }
-

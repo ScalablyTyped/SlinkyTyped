@@ -2,10 +2,12 @@ package typingsSlinky.recharts
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type AreaChartProps = typingsSlinky.recharts.mod.CategoricalChartWrapper[typingsSlinky.recharts.mod.LayoutType] with typingsSlinky.recharts.mod.EventAttributes
+  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - scala.Double
@@ -15,6 +17,7 @@ package object mod {
     - typingsSlinky.recharts.rechartsStrings.dataMax
   */
   type AxisDomain = typingsSlinky.recharts.mod._AxisDomain | typingsSlinky.recharts.mod.ContentRenderer[js.Any] | java.lang.String | scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - scala.Double
     - typingsSlinky.recharts.rechartsStrings.preserveStart
@@ -22,8 +25,11 @@ package object mod {
     - typingsSlinky.recharts.rechartsStrings.preserveStartEnd
   */
   type AxisInterval = typingsSlinky.recharts.mod._AxisInterval | scala.Double
+  
   type BBoxUpdateCallback = js.Function1[/* box */ typingsSlinky.recharts.anon.Width, scala.Unit]
+  
   type BarChartProps = typingsSlinky.recharts.mod.CategoricalChartWrapper[typingsSlinky.recharts.mod.LayoutType] with typingsSlinky.recharts.mod.EventAttributes
+  
   /* Rewritten from type alias, can be one of: 
     - scala.Double
     - typingsSlinky.recharts.rechartsStrings.auto
@@ -31,21 +37,30 @@ package object mod {
     - typingsSlinky.recharts.rechartsStrings.dataMax
   */
   type BaseValueType = typingsSlinky.recharts.mod._BaseValueType | scala.Double
+  
   type ComposedChartProps = typingsSlinky.recharts.mod.CategoricalChartWrapper[typingsSlinky.recharts.mod.LayoutType] with typingsSlinky.recharts.mod.EventAttributes
+  
   type ContentRenderer[P] = js.Function1[/* props */ P, slinky.core.facade.ReactElement]
+  
   type DataKey = java.lang.String | scala.Double | (js.Function1[
     /* dataObject */ js.Any, 
     java.lang.String | scala.Double | (js.Tuple2[scala.Double, scala.Double]) | scala.Null
   ])
+  
   type DataPointFormatter = js.Function2[
     /* entry */ js.Any, 
     /* dataKey */ typingsSlinky.recharts.mod.DataKey, 
     typingsSlinky.recharts.anon.ErrorVal
   ]
+  
   type HorizontalCoordinatesGenerator = js.Function1[/* arg */ typingsSlinky.recharts.anon.Height, js.Array[scala.Double]]
+  
   type ItemSorter[T] = js.Function2[/* a */ T, /* b */ T, scala.Double]
+  
   type LabelFormatter = js.Function1[/* label */ java.lang.String | scala.Double, slinky.core.facade.ReactElement]
+  
   type LabelListProps = typingsSlinky.recharts.anon.Angle with (typingsSlinky.recharts.anon.DataKey | typingsSlinky.recharts.anon.ValueAccessor)
+  
   type LegendValueFormatter = js.Function3[
     /* value */ js.UndefOr[
       /* import warning: importer.ImportType#apply Failed type conversion: recharts.recharts.LegendPayload['value'] */ js.Any
@@ -54,7 +69,9 @@ package object mod {
     /* i */ js.UndefOr[scala.Double], 
     js.Any
   ]
+  
   type LineChartProps = typingsSlinky.recharts.mod.CategoricalChartWrapper[typingsSlinky.recharts.mod.LayoutType] with typingsSlinky.recharts.mod.EventAttributes
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.recharts.rechartsStrings.basis
     - typingsSlinky.recharts.rechartsStrings.basisClosed
@@ -71,7 +88,9 @@ package object mod {
     - typingsSlinky.d3Shape.mod.CurveFactory
   */
   type LineType = typingsSlinky.recharts.mod._LineType | typingsSlinky.d3Shape.mod.CurveFactory
+  
   type Percentage = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - scala.Double
     - typingsSlinky.recharts.rechartsStrings.auto
@@ -79,11 +98,17 @@ package object mod {
     - typingsSlinky.recharts.rechartsStrings.dataMax
   */
   type PolarRadiusAxisDomain = typingsSlinky.recharts.mod._PolarRadiusAxisDomain | scala.Double
+  
   type RechartsFunction = js.Function1[/* repeated */ js.Any, scala.Unit]
+  
   type ScaleCalculator = js.Function1[/* x */ scala.Double | java.lang.String, scala.Double]
+  
   type ScatterChartProps = typingsSlinky.recharts.mod.CategoricalChartWrapper[typingsSlinky.recharts.mod.LayoutType] with typingsSlinky.recharts.mod.EventAttributes
+  
   type TickFormatterFunction = js.Function1[/* value */ js.Any, js.Any]
+  
   type TickGeneratorFunction = js.Function1[/* noTicksProps */ js.Object, js.Array[js.Any]]
+  
   type TooltipFormatter = js.Function4[
     /* value */ java.lang.String | scala.Double | (js.Array[java.lang.String | scala.Double]), 
     /* name */ java.lang.String, 
@@ -91,5 +116,6 @@ package object mod {
     /* index */ scala.Double, 
     slinky.core.facade.ReactElement
   ]
+  
   type VerticalCoordinatesGenerator = js.Function1[/* arg */ typingsSlinky.recharts.anon.Offset, js.Array[scala.Double]]
 }

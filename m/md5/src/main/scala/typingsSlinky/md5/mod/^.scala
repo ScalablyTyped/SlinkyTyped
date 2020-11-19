@@ -3,11 +3,12 @@ package typingsSlinky.md5.mod
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("md5", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * js function for hashing messages with MD5
     *
@@ -22,4 +23,3 @@ object ^ extends js.Object {
   def apply(message: Buffer): String = js.native
   def apply(message: Buffer, options: Options): String = js.native
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/GetSegmentCommand", JSImport.Namespace)
 @js.native
 object getSegmentCommandMod extends js.Object {
+  
   @js.native
   class GetSegmentCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getSegmentCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetSegmentInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetSegmentInput, GetSegmentOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[GetSegmentInput, GetSegmentOutput] = js.native
   }
-  
 }
-

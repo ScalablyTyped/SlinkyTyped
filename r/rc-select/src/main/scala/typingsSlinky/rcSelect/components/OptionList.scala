@@ -18,9 +18,10 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object OptionList {
+  
   @JSImport("rc-select/lib/OptionList", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -29,23 +30,31 @@ object OptionList {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, RefOptionListProps] {
+    
     @scala.inline
     def defaultActiveFirstOption(value: Boolean): this.type = set("defaultActiveFirstOption", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def menuItemSelectedIconReactElement(value: ReactElement): this.type = set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def menuItemSelectedIconFunction1(value: /* props */ js.Any => ReactElement): this.type = set("menuItemSelectedIcon", js.Any.fromFunction1(value))
+    
     @scala.inline
     def menuItemSelectedIcon(value: RenderNode): this.type = set("menuItemSelectedIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def notFoundContent(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onMouseEnter(value: SyntheticMouseEvent[Element] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
   }
   
   def withProps(p: OptionListProps[OptionsType] with RefAttributes[RefOptionListProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     childrenAsData: Boolean,
@@ -69,4 +78,3 @@ object OptionList {
     new Builder(js.Array(this.component, __props.asInstanceOf[OptionListProps[OptionsType] with RefAttributes[RefOptionListProps]]))
   }
 }
-

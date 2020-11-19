@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ClassedColorSliderConstructor
@@ -15,6 +15,7 @@ trait ClassedColorSliderConstructor
   */
 Instantiable0[ClassedColorSlider]
      with Instantiable1[/* properties */ ClassedColorSliderProperties, ClassedColorSlider] {
+  
   /**
     * A convenience function used to create a ClassedColorSlider widget from the result of the [createClassBreaksRenderer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-color.html#createClassBreaksRenderer) method.
     *
@@ -27,4 +28,3 @@ Instantiable0[ClassedColorSlider]
   def fromRendererResult(rendererResult: ClassBreaksRendererResult): ClassedColorSlider = js.native
   def fromRendererResult(rendererResult: ClassBreaksRendererResult, histogramResult: HistogramResult): ClassedColorSlider = js.native
 }
-

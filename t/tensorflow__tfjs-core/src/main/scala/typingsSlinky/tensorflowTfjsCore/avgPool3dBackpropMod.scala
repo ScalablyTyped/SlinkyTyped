@@ -10,13 +10,15 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/avg_pool_3d_backprop", JSImport.Namespace)
 @js.native
 object avgPool3dBackpropMod extends js.Object {
+  
   @js.native
   object avgPool3dBackprop extends js.Object {
+    
     def apply[T /* <: Tensor4D | Tensor5D */](
       dy: T | TensorLike,
       input: T | TensorLike,
@@ -27,6 +29,4 @@ object avgPool3dBackpropMod extends js.Object {
       dimRoundingMode: js.UndefOr[floor | round | ceil]
     ): T = js.native
   }
-  
 }
-

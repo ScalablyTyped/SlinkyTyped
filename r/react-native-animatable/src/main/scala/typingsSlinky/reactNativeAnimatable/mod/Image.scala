@@ -5,9 +5,8 @@ import typingsSlinky.reactNative.mod.ImageProperties
 import typingsSlinky.reactNative.mod.ImageStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-animatable", "Image")
 @js.native
 object Image extends TopLevel[AnimatableComponent[ImageProperties, ImageStyle]]
-

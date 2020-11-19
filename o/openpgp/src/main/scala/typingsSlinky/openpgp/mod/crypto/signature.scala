@@ -3,11 +3,12 @@ package typingsSlinky.openpgp.mod.crypto
 import typingsSlinky.openpgp.mod.`type`.mpi.MPI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "crypto.signature")
 @js.native
 object signature extends js.Object {
+  
   /**
     * Creates a signature on data using specified algorithms and private key parameters.
     * See {@link https://tools.ietf.org/html/rfc4880#section-9.1|RFC 4880 9.1}
@@ -27,6 +28,7 @@ object signature extends js.Object {
     data: js.typedarray.Uint8Array,
     hashed: js.typedarray.Uint8Array
   ): js.typedarray.Uint8Array = js.native
+  
   /**
     * Verifies the signature provided for data using specified algorithms and public key parameters.
     * See {@link https://tools.ietf.org/html/rfc4880#section-9.1|RFC 4880 9.1}
@@ -49,4 +51,3 @@ object signature extends js.Object {
     hashed: js.typedarray.Uint8Array
   ): Boolean = js.native
 }
-

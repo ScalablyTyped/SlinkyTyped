@@ -3,11 +3,10 @@ package typingsSlinky.tinymce.mod
 import typingsSlinky.tinymce.mod.html.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tinymce", "TreeWalker")
 @js.native
 class TreeWalker protected () extends js.Object {
   def this(startNode: Node, rootNode: Node) = this()
 }
-

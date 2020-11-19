@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-node/commands/PutKeyPolicyCommand", JSImport.Namespace)
 @js.native
 object putKeyPolicyCommandMod extends js.Object {
+  
   @js.native
   class PutKeyPolicyCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object putKeyPolicyCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutKeyPolicyInput) = this()
+    
     val middlewareStack: MiddlewareStack[PutKeyPolicyInput, PutKeyPolicyOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[PutKeyPolicyInput, PutKeyPolicyOutput] = js.native
   }
-  
 }
-

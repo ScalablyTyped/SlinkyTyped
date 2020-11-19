@@ -9,11 +9,12 @@ import typingsSlinky.typescript.mod.Modifier
 import typingsSlinky.typescript.mod.TypeParameterDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createClassDeclaration")
 @js.native
 object createClassDeclaration extends js.Object {
+  
   def apply(
     decorators: js.UndefOr[scala.Nothing],
     modifiers: js.UndefOr[scala.Nothing],
@@ -399,4 +400,3 @@ object createClassDeclaration extends js.Object {
     members: js.Array[ClassElement]
   ): ClassDeclaration = js.native
 }
-

@@ -9,10 +9,11 @@ import typingsSlinky.gapiClientClassroom.anon.FieldsKey
 import typingsSlinky.gapiClientClassroom.anon.Oauthtoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TopicsResource extends js.Object {
+  
   def create(request: Alt, body: Topic): Request[Topic] = js.native
   /**
     * Creates a topic.
@@ -26,6 +27,7 @@ trait TopicsResource extends js.Object {
     * &#42; `NOT_FOUND` if the requested course does not exist.
     */
   def create(request: FieldsKey): Request[Topic] = js.native
+  
   /**
     * Deletes a topic.
     *
@@ -39,6 +41,7 @@ trait TopicsResource extends js.Object {
     */
   def delete(): Request[js.Object] = js.native
   def delete(request: Fields): Request[js.Object] = js.native
+  
   /**
     * Returns a topic.
     *
@@ -51,6 +54,7 @@ trait TopicsResource extends js.Object {
     */
   def get(): Request[Topic] = js.native
   def get(request: Fields): Request[Topic] = js.native
+  
   /**
     * Returns the list of topics that the requester is permitted to view.
     *
@@ -63,6 +67,7 @@ trait TopicsResource extends js.Object {
     */
   def list(): Request[ListTopicResponse] = js.native
   def list(request: Callback): Request[ListTopicResponse] = js.native
+  
   /**
     * Updates one or more fields of a topic.
     *
@@ -76,4 +81,3 @@ trait TopicsResource extends js.Object {
   def patch(request: FieldsId): Request[Topic] = js.native
   def patch(request: Oauthtoken, body: Topic): Request[Topic] = js.native
 }
-

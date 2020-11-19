@@ -5,7 +5,7 @@ import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/index", "InternalTexture")
 @js.native
@@ -24,11 +24,11 @@ class InternalTexture protected ()
     delayAllocation: Boolean
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Materials/index", "InternalTexture")
 @js.native
 object InternalTexture extends js.Object {
+  
   /** @hidden */
   def _UpdateRGBDAsync(
     internalTexture: typingsSlinky.babylonjs.internalTextureMod.InternalTexture,
@@ -38,4 +38,3 @@ object InternalTexture extends js.Object {
     lodOffset: Double
   ): js.Promise[Unit] = js.native
 }
-

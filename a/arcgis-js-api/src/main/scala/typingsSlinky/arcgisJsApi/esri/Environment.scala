@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Environment extends Accessor {
+  
   /**
     * Specifies whether the atmosphere should be displayed. Typically this consists of haze and sky.
     *
@@ -14,6 +15,7 @@ trait Environment extends Accessor {
     * @default true
     */
   var atmosphereEnabled: Boolean = js.native
+  
   /**
     * Specifies how the background of the scene (which lies behind sky, stars and atmosphere) should be displayed. The default value of `null` displays a single, fully opaque, black color.
     *
@@ -22,12 +24,14 @@ trait Environment extends Accessor {
     * @default null
     */
   var background: Background = js.native
+  
   /**
     * Settings for defining the lighting of the scene.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Environment.html#lighting)
     */
   var lighting: Lighting = js.native
+  
   /**
     * Specifies whether stars should be displayed in the sky.
     *
@@ -37,4 +41,3 @@ trait Environment extends Accessor {
     */
   var starsEnabled: Boolean = js.native
 }
-

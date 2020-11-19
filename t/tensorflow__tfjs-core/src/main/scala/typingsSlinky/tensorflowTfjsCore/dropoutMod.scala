@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/dropout", JSImport.Namespace)
 @js.native
 object dropoutMod extends js.Object {
+  
   val dropout: js.Function4[
     /* x */ Tensor[Rank] | TensorLike, 
     /* rate */ Double, 
@@ -18,4 +19,3 @@ object dropoutMod extends js.Object {
     Tensor[Rank]
   ] = js.native
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/PostProcesses/index", "BlackAndWhitePostProcess")
 @js.native
@@ -25,8 +25,46 @@ class BlackAndWhitePostProcess protected ()
   def this(name: String, options: PostProcessOptions, camera: Camera) = this()
   def this(name: String, options: Double, camera: Camera, samplingMode: Double) = this()
   def this(name: String, options: PostProcessOptions, camera: Camera, samplingMode: Double) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Camera,
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: Engine
+  ) = this()
   def this(name: String, options: Double, camera: Camera, samplingMode: Double, engine: Engine) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Camera,
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: Engine
+  ) = this()
   def this(name: String, options: PostProcessOptions, camera: Camera, samplingMode: Double, engine: Engine) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Camera,
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Camera,
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: Engine,
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Camera,
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
   def this(
     name: String,
     options: Double,
@@ -39,9 +77,32 @@ class BlackAndWhitePostProcess protected ()
     name: String,
     options: PostProcessOptions,
     camera: Camera,
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Camera,
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: Engine,
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Camera,
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Camera,
     samplingMode: Double,
     engine: Engine,
     reusable: Boolean
   ) = this()
 }
-

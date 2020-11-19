@@ -7,7 +7,7 @@ import typingsSlinky.videoJs.mod.videojs.TextTrackMenuItem
 import typingsSlinky.videoJs.mod.videojs.TextTrackMenuItemOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantiableTextTrackMenuItem
@@ -22,4 +22,3 @@ trait InstantiableTextTrackMenuItem
   */
 Instantiable1[/* player */ Player, TextTrackMenuItem]
      with Instantiable2[/* player */ Player, /* options */ TextTrackMenuItemOptions, TextTrackMenuItem]
-

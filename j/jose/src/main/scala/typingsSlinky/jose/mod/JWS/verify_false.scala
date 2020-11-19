@@ -6,11 +6,12 @@ import typingsSlinky.jose.mod.EmbeddedVerifyKeys
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jose", "JWS.verify")
 @js.native
 object verify_false extends js.Object {
+  
   def apply(
     jws: String,
     key: ConsumeKeyInputWithNone | EmbeddedVerifyKeys,
@@ -27,4 +28,3 @@ object verify_false extends js.Object {
     options: VerifyOptions[`false`, `false`]
   ): Buffer = js.native
 }
-

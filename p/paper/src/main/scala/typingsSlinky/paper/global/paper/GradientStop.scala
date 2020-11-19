@@ -2,7 +2,7 @@ package typingsSlinky.paper.global.paper
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** 
   * The GradientStop object.
@@ -23,4 +23,3 @@ class GradientStop ()
   def this(color: js.UndefOr[scala.Nothing], offset: Double) = this()
   def this(color: typingsSlinky.paper.paper.Color, offset: Double) = this()
 }
-

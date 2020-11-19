@@ -3,7 +3,7 @@ package typingsSlinky.grammarkdown.nodesMod
 import typingsSlinky.grammarkdown.tokensMod.ProductionSeperatorKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown/dist/nodes", "Production")
 @js.native
@@ -41,13 +41,17 @@ class Production protected ()
     colonToken: Token[ProductionSeperatorKind],
     body: ProductionBody
   ) = this()
+  
   val body: js.UndefOr[ProductionBody] = js.native
+  
   val colonToken: js.UndefOr[Token[ProductionSeperatorKind]] = js.native
+  
   val name: Identifier = js.native
+  
   val parameterList: js.UndefOr[ParameterList] = js.native
+  
   def update(name: Identifier): Production = js.native
   def update(name: Identifier, parameterList: js.UndefOr[scala.Nothing], body: ProductionBody): Production = js.native
   def update(name: Identifier, parameterList: ParameterList): Production = js.native
   def update(name: Identifier, parameterList: ParameterList, body: ProductionBody): Production = js.native
 }
-

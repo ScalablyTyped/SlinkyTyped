@@ -6,17 +6,20 @@ import typingsSlinky.typedGithubApi.interfacesIssueMod.Issue
 import typingsSlinky.typedGithubApi.interfacesIssueMod.IssueComment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typed-github-api/dist/issue", JSImport.Namespace)
 @js.native
 object distIssueMod extends js.Object {
+  
   @js.native
   class IssueClass protected ()
     extends GitHubRef
        with Issue {
     def this(data: typingsSlinky.typedGithubApi.issueMod.Issue, options: OptionsOrRef) = this()
+    
     var repository: js.Any = js.native
+    
     var repositoryUri: js.Any = js.native
   }
   
@@ -26,6 +29,4 @@ object distIssueMod extends js.Object {
        with IssueComment {
     def this(data: typingsSlinky.typedGithubApi.issueMod.IssueComment, options: OptionsOrRef) = this()
   }
-  
 }
-

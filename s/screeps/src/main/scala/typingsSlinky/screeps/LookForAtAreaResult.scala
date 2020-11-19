@@ -17,10 +17,10 @@ import typingsSlinky.screeps.screepsStrings.terrain
 import typingsSlinky.screeps.screepsStrings.tombstone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LookForAtAreaResult[T, K /* <: tombstone | exit | resource | creep | structure | source | deposit | constructionSite | mineral | nuke | flag | energy | ruin | terrain | powerCreep */] extends js.Object {
+  
   var `type`: K = js.native
 }
-

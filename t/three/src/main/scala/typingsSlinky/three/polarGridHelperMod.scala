@@ -7,11 +7,12 @@ import typingsSlinky.three.lineSegmentsMod.LineSegments
 import typingsSlinky.three.materialMod.Material
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/helpers/PolarGridHelper", JSImport.Namespace)
 @js.native
 object polarGridHelperMod extends js.Object {
+  
   @js.native
   class PolarGridHelper protected ()
     extends LineSegments[Geometry | BufferGeometry, Material | js.Array[Material]] {
@@ -81,6 +82,4 @@ object polarGridHelperMod extends js.Object {
     def this(radius: Double, radials: Double, circles: Double, divisions: Double, color1: Color, color2: Double) = this()
     def this(radius: Double, radials: Double, circles: Double, divisions: Double, color1: Color, color2: Color) = this()
   }
-  
 }
-

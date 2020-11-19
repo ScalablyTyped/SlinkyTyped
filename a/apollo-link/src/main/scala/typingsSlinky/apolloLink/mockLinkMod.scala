@@ -4,11 +4,12 @@ import typingsSlinky.apolloLink.linkMod.ApolloLink
 import typingsSlinky.apolloLink.typesMod.RequestHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-link/lib/test-utils/mockLink", JSImport.Namespace)
 @js.native
 object mockLinkMod extends js.Object {
+  
   @js.native
   trait MockLink extends ApolloLink
   
@@ -16,6 +17,4 @@ object mockLinkMod extends js.Object {
   class default () extends MockLink {
     def this(handleRequest: RequestHandler) = this()
   }
-  
 }
-

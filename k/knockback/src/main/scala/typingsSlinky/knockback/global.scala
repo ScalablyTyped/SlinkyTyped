@@ -9,14 +9,17 @@ import typingsSlinky.knockback.Knockback.StoreOptions
 import typingsSlinky.knockback.Knockback.ViewModelOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   var kb: Static = js.native
+  
   @js.native
   object Knockback extends js.Object {
+    
     @js.native
     class DefaultObservable protected ()
       extends typingsSlinky.knockback.Knockback.DefaultObservable {
@@ -33,11 +36,28 @@ object global extends js.Object {
     @js.native
     class EventWatcher ()
       extends typingsSlinky.knockback.Knockback.EventWatcher
+    /* static members */
+    @js.native
+    object EventWatcher extends js.Object {
+      
+      def useOptionsOrCreate(
+        options: js.Any,
+        emitter: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<any> */ js.Any,
+        obj: Model[_, ModelSetOptions],
+        callback_options: js.Any
+      ): js.Any = js.native
+    }
     
     @js.native
     class Factory protected ()
       extends typingsSlinky.knockback.Knockback.Factory {
       def this(parent_factory: js.Any) = this()
+    }
+    /* static members */
+    @js.native
+    object Factory extends js.Object {
+      
+      def useOptionsOrCreate(options: FactoryOptions, obj: js.Any, owner_path: String): js.Any = js.native
     }
     
     @js.native
@@ -64,6 +84,16 @@ object global extends js.Object {
     class Store protected ()
       extends typingsSlinky.knockback.Knockback.Store {
       def this(model: Model[_, ModelSetOptions], options: StoreOptions) = this()
+    }
+    /* static members */
+    @js.native
+    object Store extends js.Object {
+      
+      def useOptionsOrCreate(
+        options: StoreOptions,
+        obj: js.Any,
+        observable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<any> */ js.Any
+      ): js.Any = js.native
     }
     
     @js.native
@@ -99,35 +129,5 @@ object global extends js.Object {
         viewModel: typingsSlinky.knockback.Knockback.ViewModel
       ) = this()
     }
-    
-    /* static members */
-    @js.native
-    object EventWatcher extends js.Object {
-      def useOptionsOrCreate(
-        options: js.Any,
-        emitter: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<any> */ js.Any,
-        obj: Model[_, ModelSetOptions],
-        callback_options: js.Any
-      ): js.Any = js.native
-    }
-    
-    /* static members */
-    @js.native
-    object Factory extends js.Object {
-      def useOptionsOrCreate(options: FactoryOptions, obj: js.Any, owner_path: String): js.Any = js.native
-    }
-    
-    /* static members */
-    @js.native
-    object Store extends js.Object {
-      def useOptionsOrCreate(
-        options: StoreOptions,
-        obj: js.Any,
-        observable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<any> */ js.Any
-      ): js.Any = js.native
-    }
-    
   }
-  
 }
-

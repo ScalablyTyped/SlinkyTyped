@@ -27,42 +27,52 @@ import typingsSlinky.recurlyRecurlyJs.tokenMod.TokenHandler
 import typingsSlinky.recurlyRecurlyJs.validateMod.Validate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Recurly extends Emitter[RecurlyEvent] {
-  @JSName("Adyen")
-  var Adyen_Original: Adyen = js.native
-  @JSName("ApplePay")
-  var ApplePay_Original: ApplePay = js.native
-  @JSName("Elements")
-  var Elements_Original: Elements = js.native
-  @JSName("PayPal")
-  var PayPal_Original: PayPal = js.native
-  var Pricing: typingsSlinky.recurlyRecurlyJs.pricingMod.Pricing = js.native
-  @JSName("Risk")
-  var Risk_Original: Risk = js.native
-  var bankAccount: BankAccount = js.native
-  @JSName("configure")
-  var configure_Original: Configure = js.native
-  @JSName("giftCard")
-  var giftCard_Original: GiftCard = js.native
-  @JSName("token")
-  var token_Original: Token = js.native
-  var validate: Validate = js.native
+  
   def Adyen(): AdyenInstance = js.native
   def Adyen(adyenOptions: AdyenOptions): AdyenInstance = js.native
+  @JSName("Adyen")
+  var Adyen_Original: Adyen = js.native
+  
   def ApplePay(config: ApplePayConfig): ApplePayInstance = js.native
+  @JSName("ApplePay")
+  var ApplePay_Original: ApplePay = js.native
+  
   def Elements(): ElementsInstance = js.native
+  @JSName("Elements")
+  var Elements_Original: Elements = js.native
+  
   def PayPal(): PayPalInstance = js.native
   def PayPal(config: PayPalConfig): PayPalInstance = js.native
+  @JSName("PayPal")
+  var PayPal_Original: PayPal = js.native
+  
+  var Pricing: typingsSlinky.recurlyRecurlyJs.pricingMod.Pricing = js.native
+  
   def Risk(): ThreeDSecure = js.native
+  @JSName("Risk")
+  var Risk_Original: Risk = js.native
+  
+  var bankAccount: BankAccount = js.native
+  
   def configure(recurlyConfig: String): Unit = js.native
   def configure(recurlyConfig: RecurlyOptions): Unit = js.native
+  @JSName("configure")
+  var configure_Original: Configure = js.native
+  
   def giftCard(giftCardOptions: GiftCardOptions, done: Done): Unit = js.native
+  @JSName("giftCard")
+  var giftCard_Original: GiftCard = js.native
+  
   def token(elements: ElementsInstance, second: CustomerData, third: TokenHandler): Unit = js.native
   def token(elements: ElementsInstance, second: HTMLFormElement, third: TokenHandler): Unit = js.native
   def token(form: CustomerData, second: TokenHandler): Unit = js.native
   def token(form: HTMLFormElement, second: TokenHandler): Unit = js.native
+  @JSName("token")
+  var token_Original: Token = js.native
+  
+  var validate: Validate = js.native
 }
-

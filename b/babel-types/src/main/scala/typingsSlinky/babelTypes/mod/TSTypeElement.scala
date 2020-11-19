@@ -2,7 +2,7 @@ package typingsSlinky.babelTypes.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.TSCallSignatureDeclaration
@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.TSPropertySignature
 */
 trait TSTypeElement extends js.Object
-
 object TSTypeElement {
+  
   @scala.inline
   def TSConstructSignatureDeclaration(
     end: Double,
@@ -25,6 +25,7 @@ object TSTypeElement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSTypeElement]
   }
+  
   @scala.inline
   def TSPropertySignature(
     end: Double,
@@ -37,6 +38,7 @@ object TSTypeElement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSTypeElement]
   }
+  
   @scala.inline
   def TSMethodSignature(
     end: Double,
@@ -49,6 +51,7 @@ object TSTypeElement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSTypeElement]
   }
+  
   @scala.inline
   def TSIndexSignature(
     end: Double,
@@ -61,6 +64,7 @@ object TSTypeElement {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSTypeElement]
   }
+  
   @scala.inline
   def TSCallSignatureDeclaration(
     end: Double,
@@ -73,4 +77,3 @@ object TSTypeElement {
     __obj.asInstanceOf[TSTypeElement]
   }
 }
-

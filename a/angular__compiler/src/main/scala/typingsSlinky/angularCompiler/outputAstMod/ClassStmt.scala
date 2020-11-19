@@ -3,7 +3,7 @@ package typingsSlinky.angularCompiler.outputAstMod
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/output/output_ast", "ClassStmt")
 @js.native
@@ -102,11 +102,16 @@ class ClassStmt protected () extends Statement {
     modifiers: Null,
     sourceSpan: ParseSourceSpan
   ) = this()
+  
   var constructorMethod: ClassMethod = js.native
+  
   var fields: js.Array[ClassField] = js.native
+  
   var getters: js.Array[ClassGetter] = js.native
+  
   var methods: js.Array[ClassMethod] = js.native
+  
   var name: String = js.native
+  
   var parent: Expression | Null = js.native
 }
-

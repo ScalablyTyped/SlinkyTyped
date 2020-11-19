@@ -2,12 +2,12 @@ package typingsSlinky.dateformat.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dateformat", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  var i18n: DateFormatI18n = js.native
+  
   /**
     * dateFormat()
     *
@@ -59,5 +59,6 @@ object ^ extends js.Object {
   def apply(mask: js.UndefOr[scala.Nothing], utc: Boolean, gmt: Boolean): String = js.native
   def apply(mask: String, utc: Boolean): String = js.native
   def apply(mask: String, utc: Boolean, gmt: Boolean): String = js.native
+  
+  var i18n: DateFormatI18n = js.native
 }
-

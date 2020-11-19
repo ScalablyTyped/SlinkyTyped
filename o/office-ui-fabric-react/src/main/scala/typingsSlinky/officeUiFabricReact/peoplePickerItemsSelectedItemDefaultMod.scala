@@ -4,11 +4,11 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.officeUiFabricReact.extendedPeoplePickerMod.IPeoplePickerItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/FloatingPicker/PeoplePicker/PeoplePickerItems/SelectedItemDefault", JSImport.Namespace)
 @js.native
 object peoplePickerItemsSelectedItemDefaultMod extends js.Object {
+  
   def SelectedItemDefault(props: IPeoplePickerItemProps): ReactElement = js.native
 }
-

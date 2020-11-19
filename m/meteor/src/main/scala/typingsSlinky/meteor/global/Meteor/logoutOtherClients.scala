@@ -2,11 +2,12 @@ package typingsSlinky.meteor.global.Meteor
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Meteor.logoutOtherClients")
 @js.native
 object logoutOtherClients extends js.Object {
+  
   def apply(): Unit = js.native
   def apply(
     callback: js.Function1[
@@ -17,4 +18,3 @@ object logoutOtherClients extends js.Object {
     ]
   ): Unit = js.native
 }
-

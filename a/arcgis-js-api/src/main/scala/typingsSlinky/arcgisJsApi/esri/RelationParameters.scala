@@ -13,24 +13,27 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.touch
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.within
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RelationParameters
   extends Accessor
      with JSONSupport {
+  
   /**
     * The first array of geometries to compute the relation. The structure of each geometry in the array is same as the structure of the json geometry objects returned by the ArcGIS REST API.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-RelationParameters.html#geometries1)
     */
   var geometries1: js.Array[Geometry_] = js.native
+  
   /**
     * The second array of geometries to compute the relation. The structure of each geometry in the array is same as the structure of the json geometry objects returned by the ArcGIS REST API.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-RelationParameters.html#geometries2)
     */
   var geometries2: js.Array[Geometry_] = js.native
+  
   /**
     * The spatial relationship to be tested between the two input geometry arrays. See table below for a list of possible values. If the relation is specified as `relation`, the `relationParameter` parameter describes the spatial relationship and must be specified.
     *
@@ -53,6 +56,7 @@ trait RelationParameters
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-RelationParameters.html#relation)
     */
   var relation: cross | disjoint | in_ | `interior-intersection` | intersection | `line-coincidence` | `line-touch` | overlap | `point-touch` | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.relation | touch | within = js.native
+  
   /**
     * The string describes the spatial relationship to be tested when `RelationParameters.relation = 'relation'`. The [Relational functions for ST_Geometry](https://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/relational-functions-for-st-geometry.htm) topic has additional details. An example of a valid string is: `FFFTTT**`. Also see the description of [geometryEngine.relate()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-geometryEngine.html#relate) for additional examples of valid strings.
     *
@@ -60,4 +64,3 @@ trait RelationParameters
     */
   var relationParameter: String = js.native
 }
-

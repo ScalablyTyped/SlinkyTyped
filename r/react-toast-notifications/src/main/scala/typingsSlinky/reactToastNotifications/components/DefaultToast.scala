@@ -8,14 +8,16 @@ import typingsSlinky.reactToastNotifications.mod.ToastProps
 import typingsSlinky.reactToastNotifications.mod.TransitionState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DefaultToast {
+  
   @JSImport("react-toast-notifications", "DefaultToast")
   @js.native
   object component extends js.Object
   
   def withProps(p: ToastProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     appearance: AppearanceTypes,
@@ -33,4 +35,3 @@ object DefaultToast {
     new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ToastProps]))
   }
 }
-

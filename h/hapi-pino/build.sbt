@@ -1,25 +1,25 @@
 organization := "org.scalablytyped.slinky"
 name := "hapi-pino"
-version := "8.0-dt-20200426Z-a1879d"
+version := "8.0-dt-20200426Z-0c6c65"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "hapi__boom" % "9.1.0-d06251",
-  "org.scalablytyped.slinky" %%% "hapi__catbox" % "10.2-dt-20190521Z-c3f13d",
-  "org.scalablytyped.slinky" %%% "hapi__hapi" % "19.0-dt-20200722Z-4ad2a3",
-  "org.scalablytyped.slinky" %%% "hapi__iron" % "6.0.0-1ce8e4",
-  "org.scalablytyped.slinky" %%% "hapi__joi" % "17.1-dt-20200710Z-59c6a1",
-  "org.scalablytyped.slinky" %%% "hapi__mimos" % "4.1-dt-20200424Z-7dc6c5",
-  "org.scalablytyped.slinky" %%% "hapi__podium" % "3.4-dt-20200515Z-1541cc",
-  "org.scalablytyped.slinky" %%% "hapi__shot" % "4.1-dt-20190404Z-96e427",
-  "org.scalablytyped.slinky" %%% "mime-db" % "1.43-dt-20200424Z-0b33f9",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-df8c17",
-  "org.scalablytyped.slinky" %%% "pino" % "6.3-dt-20200613Z-40c61c",
-  "org.scalablytyped.slinky" %%% "pino-std-serializers" % "2.4-dt-20200515Z-edc12e",
-  "org.scalablytyped.slinky" %%% "sonic-boom" % "0.7-dt-20190819Z-745314",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "hapi__boom" % "9.1.0-758312",
+  "org.scalablytyped.slinky" %%% "hapi__catbox" % "10.2-dt-20190521Z-295fd8",
+  "org.scalablytyped.slinky" %%% "hapi__hapi" % "19.0-dt-20200722Z-a49bfa",
+  "org.scalablytyped.slinky" %%% "hapi__iron" % "6.0.0-de150e",
+  "org.scalablytyped.slinky" %%% "hapi__joi" % "17.1-dt-20200710Z-32b2ec",
+  "org.scalablytyped.slinky" %%% "hapi__mimos" % "4.1-dt-20200424Z-14f7b0",
+  "org.scalablytyped.slinky" %%% "hapi__podium" % "3.4-dt-20200515Z-406789",
+  "org.scalablytyped.slinky" %%% "hapi__shot" % "4.1-dt-20190404Z-47ef55",
+  "org.scalablytyped.slinky" %%% "mime-db" % "1.43-dt-20200424Z-f64a1e",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
+  "org.scalablytyped.slinky" %%% "pino" % "6.3-dt-20200613Z-ad0de4",
+  "org.scalablytyped.slinky" %%% "pino-std-serializers" % "2.4-dt-20200515Z-be4dd3",
+  "org.scalablytyped.slinky" %%% "sonic-boom" % "0.7-dt-20190819Z-62ea2f",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

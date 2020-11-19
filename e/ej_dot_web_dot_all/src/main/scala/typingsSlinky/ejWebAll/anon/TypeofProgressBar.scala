@@ -8,13 +8,14 @@ import typingsSlinky.ejWebAll.ej.ProgressBar
 import typingsSlinky.ejWebAll.ej.ProgressBar.Model
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofProgressBar
   extends Instantiable1[(/* element */ Element) | (/* element */ JQuery), ProgressBar]
      with Instantiable2[(/* element */ Element) | (/* element */ JQuery), /* options */ Model, ProgressBar] {
+  
   var Locale: js.Any = js.native
+  
   var fn: ProgressBar = js.native
 }
-

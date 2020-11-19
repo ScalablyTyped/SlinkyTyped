@@ -7,11 +7,12 @@ import typingsSlinky.std.ArrayLike
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pretty-format/build/collections", JSImport.Namespace)
 @js.native
 object collectionsMod extends js.Object {
+  
   def printIteratorEntries(
     iterator: js.Iterator[js.Tuple2[_, _]],
     config: Config,
@@ -29,6 +30,7 @@ object collectionsMod extends js.Object {
     printer: Printer,
     separator: String
   ): String = js.native
+  
   def printIteratorValues(
     iterator: js.Iterator[_],
     config: Config,
@@ -37,6 +39,7 @@ object collectionsMod extends js.Object {
     refs: Refs,
     printer: Printer
   ): String = js.native
+  
   def printListItems(
     list: ArrayLike[_],
     config: Config,
@@ -45,6 +48,7 @@ object collectionsMod extends js.Object {
     refs: Refs,
     printer: Printer
   ): String = js.native
+  
   def printObjectProperties(
     `val`: Record[String, _],
     config: Config,
@@ -54,4 +58,3 @@ object collectionsMod extends js.Object {
     printer: Printer
   ): String = js.native
 }
-

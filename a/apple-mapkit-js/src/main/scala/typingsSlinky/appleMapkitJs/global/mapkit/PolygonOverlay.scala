@@ -3,7 +3,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 import typingsSlinky.appleMapkitJs.mapkit.StylesOverlayOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An overlay made up of one or more points, forming a closed shape.
@@ -24,4 +24,3 @@ class PolygonOverlay protected ()
   def this(points: js.Array[typingsSlinky.appleMapkitJs.mapkit.Coordinate]) = this()
   def this(points: js.Array[typingsSlinky.appleMapkitJs.mapkit.Coordinate], options: StylesOverlayOptions) = this()
 }
-

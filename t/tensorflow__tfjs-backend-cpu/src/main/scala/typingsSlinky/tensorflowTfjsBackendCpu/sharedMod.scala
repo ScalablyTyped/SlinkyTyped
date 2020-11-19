@@ -4,12 +4,14 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TypedArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-backend-cpu/dist/shared", JSImport.Namespace)
 @js.native
 object sharedMod extends js.Object {
+  
   def maxImpl(aVals: TypedArray, reduceSize: Double, outShape: js.Array[Double], dtype: DataType): TypedArray = js.native
+  
   def transposeImpl(
     xVals: TypedArray,
     xShape: js.Array[Double],
@@ -18,4 +20,3 @@ object sharedMod extends js.Object {
     newShape: js.Array[Double]
   ): TypedArray = js.native
 }
-

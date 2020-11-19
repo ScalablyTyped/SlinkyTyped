@@ -3,7 +3,7 @@ package typingsSlinky.phaser.global
 import typingsSlinky.phaser.Phaser.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("SpineGameObject")
 @js.native
@@ -64,4 +64,3 @@ class SpineGameObject protected ()
     loop: Boolean
   ) = this()
 }
-

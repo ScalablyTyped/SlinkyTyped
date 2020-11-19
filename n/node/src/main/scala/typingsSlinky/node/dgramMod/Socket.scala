@@ -10,11 +10,12 @@ import typingsSlinky.node.nodeStrings.listening
 import typingsSlinky.node.nodeStrings.message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dgram", "Socket")
 @js.native
 class Socket () extends EventEmitter {
+  
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
@@ -25,8 +26,10 @@ class Socket () extends EventEmitter {
   def addListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_message(event: message, listener: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): this.type = js.native
+  
   def addMembership(multicastAddress: String): Unit = js.native
   def addMembership(multicastAddress: String, multicastInterface: String): Unit = js.native
+  
   /**
     * Tells the kernel to join a source-specific multicast channel at the given
     * `sourceAddress` and `groupAddress`, using the `multicastInterface` with the
@@ -39,7 +42,9 @@ class Socket () extends EventEmitter {
     */
   def addSourceSpecificMembership(sourceAddress: String, groupAddress: String): Unit = js.native
   def addSourceSpecificMembership(sourceAddress: String, groupAddress: String, multicastInterface: String): Unit = js.native
+  
   def address(): AddressInfo = js.native
+  
   def bind(): Unit = js.native
   def bind(callback: js.Function0[Unit]): Unit = js.native
   def bind(options: BindOptions): Unit = js.native
@@ -53,16 +58,21 @@ class Socket () extends EventEmitter {
   def bind(port: Double, address: String): Unit = js.native
   def bind(port: Double, address: String, callback: js.Function0[Unit]): Unit = js.native
   def bind(port: Double, callback: js.Function0[Unit]): Unit = js.native
+  
   def close(): Unit = js.native
   def close(callback: js.Function0[Unit]): Unit = js.native
+  
   def connect(port: Double): Unit = js.native
   def connect(port: Double, address: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
   def connect(port: Double, address: String): Unit = js.native
   def connect(port: Double, address: String, callback: js.Function0[Unit]): Unit = js.native
   def connect(port: Double, callback: js.Function0[Unit]): Unit = js.native
+  
   def disconnect(): Unit = js.native
+  
   def dropMembership(multicastAddress: String): Unit = js.native
   def dropMembership(multicastAddress: String, multicastInterface: String): Unit = js.native
+  
   /**
     * Instructs the kernel to leave a source-specific multicast channel at the given
     * `sourceAddress` and `groupAddress` using the `IP_DROP_SOURCE_MEMBERSHIP`
@@ -75,6 +85,7 @@ class Socket () extends EventEmitter {
     */
   def dropSourceSpecificMembership(sourceAddress: String, groupAddress: String): Unit = js.native
   def dropSourceSpecificMembership(sourceAddress: String, groupAddress: String, multicastInterface: String): Unit = js.native
+  
   @JSName("emit")
   def emit_close(event: close): Boolean = js.native
   @JSName("emit")
@@ -85,8 +96,11 @@ class Socket () extends EventEmitter {
   def emit_listening(event: listening): Boolean = js.native
   @JSName("emit")
   def emit_message(event: message, msg: Buffer, rinfo: RemoteInfo): Boolean = js.native
+  
   def getRecvBufferSize(): Double = js.native
+  
   def getSendBufferSize(): Double = js.native
+  
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -97,6 +111,7 @@ class Socket () extends EventEmitter {
   def on_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
   def on_message(event: message, listener: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): this.type = js.native
+  
   @JSName("once")
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -107,6 +122,7 @@ class Socket () extends EventEmitter {
   def once_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
   def once_message(event: message, listener: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): this.type = js.native
+  
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -117,6 +133,7 @@ class Socket () extends EventEmitter {
   def prependListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_message(event: message, listener: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): this.type = js.native
+  
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -127,8 +144,11 @@ class Socket () extends EventEmitter {
   def prependOnceListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_message(event: message, listener: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): this.type = js.native
+  
   def ref(): this.type = js.native
+  
   def remoteAddress(): AddressInfo = js.native
+  
   def send(msg: String): Unit = js.native
   def send(msg: String, callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]): Unit = js.native
   def send(msg: String, offset: Double, length: Double): Unit = js.native
@@ -367,13 +387,20 @@ class Socket () extends EventEmitter {
     port: Double,
     callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
   ): Unit = js.native
+  
   def setBroadcast(flag: Boolean): Unit = js.native
+  
   def setMulticastInterface(multicastInterface: String): Unit = js.native
+  
   def setMulticastLoopback(flag: Boolean): Unit = js.native
+  
   def setMulticastTTL(ttl: Double): Unit = js.native
+  
   def setRecvBufferSize(size: Double): Unit = js.native
+  
   def setSendBufferSize(size: Double): Unit = js.native
+  
   def setTTL(ttl: Double): Unit = js.native
+  
   def unref(): this.type = js.native
 }
-

@@ -6,7 +6,7 @@ import typingsSlinky.reactMdDialog.anon.FixedDialogPropsPickFixed
 import typingsSlinky.reactMdDialog.anon.FixedDialogPropsPickFixedAbout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `FixedDialog` is a wrapper for the `Dialog` component that can be used to
@@ -18,4 +18,3 @@ import scala.scalajs.js.annotation._
 object default extends TopLevel[
       ForwardRefExoticComponent[FixedDialogPropsPickFixed | FixedDialogPropsPickFixedAbout]
     ]
-

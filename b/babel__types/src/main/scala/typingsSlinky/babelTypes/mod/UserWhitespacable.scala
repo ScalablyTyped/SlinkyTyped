@@ -13,7 +13,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.method
 import typingsSlinky.babelTypes.babelTypesStrings.set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ObjectMethod_
@@ -25,14 +25,15 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ObjectTypeSpreadProperty_
 */
 trait UserWhitespacable extends _Node
-
 object UserWhitespacable {
+  
   @scala.inline
   def ObjectTypeCallProperty_(static: Boolean, `type`: ObjectTypeCallProperty, value: FlowType): UserWhitespacable = {
     val __obj = js.Dynamic.literal(static = static.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserWhitespacable]
   }
+  
   @scala.inline
   def ObjectMethod_(
     async: Boolean,
@@ -48,6 +49,7 @@ object UserWhitespacable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserWhitespacable]
   }
+  
   @scala.inline
   def ObjectTypeProperty_(
     key: Identifier_ | StringLiteral_,
@@ -62,6 +64,7 @@ object UserWhitespacable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserWhitespacable]
   }
+  
   @scala.inline
   def ObjectProperty_(
     computed: Boolean,
@@ -74,6 +77,7 @@ object UserWhitespacable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserWhitespacable]
   }
+  
   @scala.inline
   def ObjectTypeInternalSlot_(
     id: Identifier_,
@@ -87,12 +91,14 @@ object UserWhitespacable {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserWhitespacable]
   }
+  
   @scala.inline
   def ObjectTypeIndexer_(key: FlowType, static: Boolean, `type`: ObjectTypeIndexer, value: FlowType): UserWhitespacable = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserWhitespacable]
   }
+  
   @scala.inline
   def ObjectTypeSpreadProperty_(argument: FlowType, `type`: ObjectTypeSpreadProperty): UserWhitespacable = {
     val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any])
@@ -100,4 +106,3 @@ object UserWhitespacable {
     __obj.asInstanceOf[UserWhitespacable]
   }
 }
-

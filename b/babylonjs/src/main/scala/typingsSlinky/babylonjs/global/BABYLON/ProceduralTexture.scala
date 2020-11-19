@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.ProceduralTexture")
 @js.native
@@ -40,7 +40,7 @@ class ProceduralTexture protected ()
     size: js.Any,
     fragment: js.Any,
     scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene],
-    fallbackTexture: Nullable[typingsSlinky.babylonjs.BABYLON.Texture],
+    fallbackTexture: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.Texture]],
     generateMipMaps: Boolean
   ) = this()
   def this(
@@ -48,14 +48,17 @@ class ProceduralTexture protected ()
     size: js.Any,
     fragment: js.Any,
     scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene],
-    fallbackTexture: Nullable[typingsSlinky.babylonjs.BABYLON.Texture],
+    fallbackTexture: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.Texture]],
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    isCube: Boolean
+  ) = this()
+  def this(
+    name: String,
+    size: js.Any,
+    fragment: js.Any,
+    scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene],
+    fallbackTexture: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.Texture]],
     generateMipMaps: Boolean,
     isCube: Boolean
   ) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-

@@ -9,11 +9,12 @@ import typingsSlinky.ol.styleCircleMod.Options
 import typingsSlinky.ol.styleCircleMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/style", JSImport.Namespace)
 @js.native
 object styleMod extends js.Object {
+  
   @js.native
   class Circle () extends default {
     def this(opt_options: Options) = this()
@@ -97,6 +98,4 @@ object styleMod extends js.Object {
     extends typingsSlinky.ol.textMod.default {
     def this(opt_options: typingsSlinky.ol.textMod.Options) = this()
   }
-  
 }
-

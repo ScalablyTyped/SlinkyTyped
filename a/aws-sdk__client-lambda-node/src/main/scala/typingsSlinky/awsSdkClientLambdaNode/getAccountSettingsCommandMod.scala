@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-lambda-node/commands/GetAccountSettingsCommand", JSImport.Namespace)
 @js.native
 object getAccountSettingsCommandMod extends js.Object {
+  
   @js.native
   class GetAccountSettingsCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getAccountSettingsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetAccountSettingsInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetAccountSettingsInput, GetAccountSettingsOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[GetAccountSettingsInput, GetAccountSettingsOutput] = js.native
   }
-  
 }
-

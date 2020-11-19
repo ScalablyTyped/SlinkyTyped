@@ -4,20 +4,18 @@ import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a certificate enrollment manager. */
 @JSGlobal("Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager")
 @js.native
 abstract class CertificateEnrollmentManager ()
   extends typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager
-
 /* static members */
 @JSGlobal("Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager")
 @js.native
 object CertificateEnrollmentManager extends js.Object {
-  /** Gets the associated UserCertificateEnrollmentManager . */
-  var userCertificateEnrollmentManager: typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager = js.native
+  
   /**
     * Asynchronously creates a PKCS #10 certificate request based on properties specified in a CertificateRequestProperties object.
     * @param request A CertificateRequestProperties object that contains the property values used to create the certificate request.
@@ -26,6 +24,7 @@ object CertificateEnrollmentManager extends js.Object {
   def createRequestAsync(
     request: typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.CertificateRequestProperties
   ): IPromiseWithIAsyncOperation[String] = js.native
+  
   /**
     * Asynchronously imports a certificate from a Personal Information Exchange (PFX) message.
     * @param pfxData Base64-encoded PFX message.
@@ -76,6 +75,7 @@ object CertificateEnrollmentManager extends js.Object {
     password: String,
     pfxImportParameters: typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.PfxImportParameters
   ): IPromiseWithIAsyncAction = js.native
+  
   /**
     * Asynchronously Installs a certificate chain into the app container on the local computer.
     * @param certificate The encoded certificate. The certificate is encoded by using Distinguished Encoding Rules (DER) as defined by the Abstract Syntax Notation One (ASN.1) standard.
@@ -86,5 +86,7 @@ object CertificateEnrollmentManager extends js.Object {
     certificate: String,
     installOption: typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.InstallOptions
   ): IPromiseWithIAsyncAction = js.native
+  
+  /** Gets the associated UserCertificateEnrollmentManager . */
+  var userCertificateEnrollmentManager: typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager = js.native
 }
-

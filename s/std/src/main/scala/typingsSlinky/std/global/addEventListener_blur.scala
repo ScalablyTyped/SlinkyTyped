@@ -4,11 +4,12 @@ import org.scalajs.dom.raw.Window
 import typingsSlinky.std.AddEventListenerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("addEventListener")
 @js.native
 object addEventListener_blur extends js.Object {
+  
   def apply(
     `type`: typingsSlinky.std.stdStrings.blur,
     listener: js.ThisFunction1[/* this */ Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _]
@@ -24,4 +25,3 @@ object addEventListener_blur extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
 }
-

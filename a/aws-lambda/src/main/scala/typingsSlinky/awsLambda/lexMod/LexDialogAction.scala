@@ -10,7 +10,7 @@ import typingsSlinky.awsLambda.awsLambdaStrings.Failed_
 import typingsSlinky.awsLambda.awsLambdaStrings.Fulfilled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.awsLambda.lexMod.LexDialogActionClose
@@ -20,26 +20,29 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.awsLambda.lexMod.LexDialogActionDelegate
 */
 trait LexDialogAction extends js.Object
-
 object LexDialogAction {
+  
   @scala.inline
   def LexDialogActionElicitIntent(`type`: ElicitIntent): LexDialogAction = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LexDialogAction]
   }
+  
   @scala.inline
   def LexDialogActionDelegate(slots: StringDictionary[String | Null], `type`: Delegate): LexDialogAction = {
     val __obj = js.Dynamic.literal(slots = slots.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LexDialogAction]
   }
+  
   @scala.inline
   def LexDialogActionConfirmIntent(intentName: String, slots: StringDictionary[String | Null], `type`: ConfirmIntent): LexDialogAction = {
     val __obj = js.Dynamic.literal(intentName = intentName.asInstanceOf[js.Any], slots = slots.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LexDialogAction]
   }
+  
   @scala.inline
   def LexDialogActionElicitSlot(
     intentName: String,
@@ -51,6 +54,7 @@ object LexDialogAction {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LexDialogAction]
   }
+  
   @scala.inline
   def LexDialogActionClose(fulfillmentState: Fulfilled | Failed_, `type`: Close): LexDialogAction = {
     val __obj = js.Dynamic.literal(fulfillmentState = fulfillmentState.asInstanceOf[js.Any])
@@ -58,4 +62,3 @@ object LexDialogAction {
     __obj.asInstanceOf[LexDialogAction]
   }
 }
-

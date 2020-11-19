@@ -10,7 +10,7 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws/ec2/defaultSecurityGroup", "DefaultSecurityGroup")
 @js.native
@@ -26,34 +26,43 @@ class DefaultSecurityGroup protected () extends CustomResource {
   def this(name: String, args: DefaultSecurityGroupArgs) = this()
   def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
   def this(name: String, args: DefaultSecurityGroupArgs, opts: CustomResourceOptions) = this()
+  
   val arn: Output_[String] = js.native
+  
   /**
     * The description of the security group
     */
   val description: Output_[String] = js.native
+  
   /**
     * Can be specified multiple times for each
     * egress rule. Each egress block supports fields documented below.
     */
   val egress: Output_[js.UndefOr[js.Array[DefaultSecurityGroupEgress]]] = js.native
+  
   /**
     * Can be specified multiple times for each
     * ingress rule. Each ingress block supports fields documented below.
     */
   val ingress: Output_[js.UndefOr[js.Array[DefaultSecurityGroupIngress]]] = js.native
+  
   /**
     * The name of the security group
     */
   val name: Output_[String] = js.native
+  
   /**
     * The owner ID.
     */
   val ownerId: Output_[String] = js.native
+  
   val revokeRulesOnDelete: Output_[js.UndefOr[Boolean]] = js.native
+  
   /**
     * A map of tags to assign to the resource.
     */
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
+  
   /**
     * The VPC ID. **Note that changing
     * the `vpcId` will _not_ restore any default security group rules that were
@@ -61,11 +70,11 @@ class DefaultSecurityGroup protected () extends CustomResource {
     */
   val vpcId: Output_[String] = js.native
 }
-
 /* static members */
 @JSImport("@pulumi/aws/ec2/defaultSecurityGroup", "DefaultSecurityGroup")
 @js.native
 object DefaultSecurityGroup extends js.Object {
+  
   /**
     * Get an existing DefaultSecurityGroup resource's state with the given name, ID, and optional extra
     * properties used to qualify the lookup.
@@ -79,10 +88,10 @@ object DefaultSecurityGroup extends js.Object {
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): DefaultSecurityGroup = js.native
   def get(name: String, id: Input[ID], state: DefaultSecurityGroupState): DefaultSecurityGroup = js.native
   def get(name: String, id: Input[ID], state: DefaultSecurityGroupState, opts: CustomResourceOptions): DefaultSecurityGroup = js.native
+  
   /**
     * Returns true if the given object is an instance of DefaultSecurityGroup.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/ec2/defaultSecurityGroup.DefaultSecurityGroup */ Boolean = js.native
 }
-

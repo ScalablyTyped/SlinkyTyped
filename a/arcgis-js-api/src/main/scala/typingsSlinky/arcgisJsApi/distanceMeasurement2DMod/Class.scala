@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.DistanceMeasurement2D
 import typingsSlinky.arcgisJsApi.esri.DistanceMeasurement2DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/DistanceMeasurement2D", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends DistanceMeasurement2D {
   def this(properties: DistanceMeasurement2DProperties) = this()
 }
-

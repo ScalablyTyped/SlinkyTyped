@@ -7,11 +7,12 @@ import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@lingui/react/withI18n", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   def apply(): js.Function1[
     /* WrappedComponent */ ComponentConstructor[_], 
     ReactComponentClass[Pick[_, Exclude[/* keyof any */ String, i18n | i18nHash]]]
@@ -21,4 +22,3 @@ object default extends js.Object {
     ReactComponentClass[Pick[_, Exclude[/* keyof any */ String, i18n | i18nHash]]]
   ] = js.native
 }
-

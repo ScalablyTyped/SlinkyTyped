@@ -5,7 +5,7 @@ import typingsSlinky.xrm.xrmStrings.INFO
 import typingsSlinky.xrm.xrmStrings.WARNING
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Constant Enum: Form Notification Levels for {@link Ui.setFormNotification formContext.ui.setFormNotification()}.
@@ -17,13 +17,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.WARNING
 */
 trait FormNotificationLevel extends js.Object
-
 object FormNotificationLevel {
+  
   @scala.inline
   def Error: ERROR = "ERROR".asInstanceOf[ERROR]
+  
   @scala.inline
   def Info: INFO = "INFO".asInstanceOf[INFO]
+  
   @scala.inline
   def Warning: WARNING = "WARNING".asInstanceOf[WARNING]
 }
-

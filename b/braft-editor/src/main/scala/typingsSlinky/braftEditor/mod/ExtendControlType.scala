@@ -2,7 +2,7 @@ package typingsSlinky.braftEditor.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.braftEditor.braftEditorStrings.separator
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.braftEditor.anon.Component
 */
 trait ExtendControlType extends ControlType
-

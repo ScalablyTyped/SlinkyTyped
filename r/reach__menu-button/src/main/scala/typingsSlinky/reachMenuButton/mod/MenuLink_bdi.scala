@@ -4,11 +4,11 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.bdi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@reach/menu-button", "MenuLink")
 @js.native
 object MenuLink_bdi extends js.Object {
+  
   def apply(props: MenuLinkProps[bdi]): ReactElement = js.native
 }
-

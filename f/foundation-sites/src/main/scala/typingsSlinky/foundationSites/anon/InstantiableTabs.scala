@@ -7,10 +7,9 @@ import typingsSlinky.foundationSites.FoundationSites.Tabs
 import typingsSlinky.foundationSites.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantiableTabs
   extends Instantiable1[/* element */ JQuery, Tabs]
      with Instantiable2[/* element */ JQuery, /* options */ ITabsOptions, Tabs]
-

@@ -3,7 +3,7 @@ package typingsSlinky.roslib.mod
 import typingsSlinky.roslib.anon.GroovyCompatibility
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("roslib", "Ros")
 @js.native
@@ -26,6 +26,7 @@ class Ros protected () extends js.Object {
     *   * transportOptions (optional) - the options to use use when creating a connection. Currently only used if `transportLibrary` is RTCPeerConnection.
     */
   def this(options: GroovyCompatibility) = this()
+  
   /**
     * Sends an authorization request to the server.
     *
@@ -38,27 +39,32 @@ class Ros protected () extends js.Object {
     * @param end - End time of the client's session.
     */
   def authenticate(mac: String, client: String, dest: String, rand: String, t: Double, level: String, end: Double): Unit = js.native
+  
   /**
     * Sends the message over the WebSocket, but queues the message up if not yet
     * connected.
     */
   def callOnConnection(message: js.Any): Unit = js.native
+  
   /**
     * Disconnect from the WebSocket server.
     */
   def close(): Unit = js.native
+  
   /**
     * Connect to the specified WebSocket.
     *
     * @param url - WebSocket URL for Rosbridge
     */
   def connect(url: String): Unit = js.native
+  
   /**
     * Decode a typedefs into a dictionary like `rosmsg show foo/bar`
     *
     * @param defs - array of type_def dictionary
     */
   def decodeTypeDefs(defs: js.Any): Unit = js.native
+  
   /**
     * Retrieves list of actionlib servers in ROS as an array.
     *
@@ -72,6 +78,7 @@ class Ros protected () extends js.Object {
     callback: js.Function1[/* action_servers */ js.Array[String], Unit],
     failedCallback: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
+  
   /**
     * Retrieves a detail of ROS message.
     *
@@ -87,6 +94,7 @@ class Ros protected () extends js.Object {
     callback: js.Function1[/* detail */ js.Any, Unit],
     failedCallback: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
+  
   /**
     * Retrieves list of active node names in ROS.
     *
@@ -100,6 +108,7 @@ class Ros protected () extends js.Object {
     callback: js.Function1[/* nodes */ js.Array[String], Unit],
     failedCallback: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
+  
   /**
     * Retrieves list of param names from the ROS Parameter Server.
     *
@@ -113,6 +122,7 @@ class Ros protected () extends js.Object {
     callback: js.Function1[/* params */ js.Array[String], Unit],
     failedCallback: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
+  
   /**
     * Retrieves a type of ROS service.
     *
@@ -128,6 +138,7 @@ class Ros protected () extends js.Object {
     callback: js.Function1[/* type */ String, Unit],
     failedCallback: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
+  
   /**
     * Retrieves list of active service names in ROS.
     *
@@ -141,6 +152,7 @@ class Ros protected () extends js.Object {
     callback: js.Function1[/* services */ js.Array[String], Unit],
     failedCallback: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
+  
   /**
     * Retrieves list of services in ROS as an array as specific type
     *
@@ -156,6 +168,7 @@ class Ros protected () extends js.Object {
     callback: js.Function1[/* services */ js.Array[String], Unit],
     failedCallback: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
+  
   /**
     * Retrieves a type of ROS topic.
     *
@@ -171,6 +184,7 @@ class Ros protected () extends js.Object {
     callback: js.Function1[/* type */ String, Unit],
     failedCallback: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
+  
   /**
     * Retrieves list of topics in ROS as an array.
     *
@@ -184,6 +198,7 @@ class Ros protected () extends js.Object {
     callback: js.Function1[/* topics */ js.Array[String], Unit],
     failedCallback: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
+  
   /**
     * Retrieves Topics in ROS as an array as specific type
     *
@@ -199,6 +214,6 @@ class Ros protected () extends js.Object {
     callback: js.Function1[/* topics */ js.Array[String], Unit],
     failedCallback: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
+  
   def on(eventName: String, callback: js.Function1[/* event */ js.Any, Unit]): Unit = js.native
 }
-

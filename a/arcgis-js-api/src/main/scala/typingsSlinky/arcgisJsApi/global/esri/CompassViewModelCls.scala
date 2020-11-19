@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.CompassViewModelProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.CompassViewModel")
 @js.native
@@ -16,4 +16,3 @@ class CompassViewModelCls ()
   extends typingsSlinky.arcgisJsApi.esri.CompassViewModel {
   def this(properties: CompassViewModelProperties) = this()
 }
-

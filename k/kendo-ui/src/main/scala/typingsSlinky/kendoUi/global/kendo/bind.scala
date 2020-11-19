@@ -5,11 +5,12 @@ import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.kendo.data.ObservableObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("kendo.bind")
 @js.native
 object bind extends js.Object {
+  
   def apply(element: String, viewModel: js.Any): Unit = js.native
   def apply(element: String, viewModel: js.Any, namespace: js.Any): Unit = js.native
   def apply(element: String, viewModel: ObservableObject): Unit = js.native
@@ -23,4 +24,3 @@ object bind extends js.Object {
   def apply(element: Element, viewModel: ObservableObject): Unit = js.native
   def apply(element: Element, viewModel: ObservableObject, namespace: js.Any): Unit = js.native
 }
-

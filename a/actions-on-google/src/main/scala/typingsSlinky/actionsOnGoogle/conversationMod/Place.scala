@@ -3,7 +3,7 @@ package typingsSlinky.actionsOnGoogle.conversationMod
 import typingsSlinky.actionsOnGoogle.placeMod.PlaceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("actions-on-google/dist/service/actionssdk/conversation", "Place")
 @js.native
@@ -15,4 +15,3 @@ class Place protected ()
     */
   def this(options: PlaceOptions) = this()
 }
-

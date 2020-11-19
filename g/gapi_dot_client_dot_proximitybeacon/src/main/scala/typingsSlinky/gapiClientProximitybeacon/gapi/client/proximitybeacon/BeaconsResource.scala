@@ -6,12 +6,11 @@ import typingsSlinky.gapiClientProximitybeacon.anon.Bearertoken
 import typingsSlinky.gapiClientProximitybeacon.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BeaconsResource extends js.Object {
-  var attachments: AttachmentsResource = js.native
-  var diagnostics: DiagnosticsResource = js.native
+  
   /**
     * Activates a beacon. A beacon that is active will return information
     * and attachment data when queried via `beaconinfo.getforobserved`.
@@ -23,6 +22,9 @@ trait BeaconsResource extends js.Object {
     * Google Developers Console project.
     */
   def activate(request: BeaconName): Request[js.Object] = js.native
+  
+  var attachments: AttachmentsResource = js.native
+  
   /**
     * Deactivates a beacon. Once deactivated, the API will not return
     * information nor attachment data for the beacon when queried via
@@ -34,6 +36,7 @@ trait BeaconsResource extends js.Object {
     * Google Developers Console project.
     */
   def deactivate(request: BeaconName): Request[js.Object] = js.native
+  
   /**
     * Decommissions the specified beacon in the service. This beacon will no
     * longer be returned from `beaconinfo.getforobserved`. This operation is
@@ -45,6 +48,7 @@ trait BeaconsResource extends js.Object {
     * Google Developers Console project.
     */
   def decommission(request: BeaconName): Request[js.Object] = js.native
+  
   /**
     * Deletes the specified beacon including all diagnostics data for the beacon
     * as well as any attachments on the beacon (including those belonging to
@@ -55,6 +59,9 @@ trait BeaconsResource extends js.Object {
     * Google Developers Console project.
     */
   def delete(request: BeaconName): Request[js.Object] = js.native
+  
+  var diagnostics: DiagnosticsResource = js.native
+  
   /**
     * Returns detailed information about the specified beacon.
     *
@@ -69,6 +76,7 @@ trait BeaconsResource extends js.Object {
     * beacon's ephemeral Eddystone-EID broadcast will receive an error.
     */
   def get(request: BeaconName): Request[Beacon] = js.native
+  
   /**
     * Searches the beacon registry for beacons that match the given search
     * criteria. Only those beacons that the client has permission to list
@@ -79,6 +87,7 @@ trait BeaconsResource extends js.Object {
     * permissions in the Google Developers Console project.
     */
   def list(request: Bearertoken): Request[ListBeaconsResponse] = js.native
+  
   /**
     * Registers a previously unregistered beacon given its `advertisedId`.
     * These IDs are unique within the system. An ID can be registered only once.
@@ -88,6 +97,7 @@ trait BeaconsResource extends js.Object {
     * Google Developers Console project.
     */
   def register(request: Callback): Request[Beacon] = js.native
+  
   /**
     * Updates the information about the specified beacon. &#42;&#42;Any field that you do
     * not populate in the submitted beacon will be permanently erased&#42;&#42;, so you
@@ -103,8 +113,8 @@ trait BeaconsResource extends js.Object {
     */
   def update(request: BeaconName): Request[Beacon] = js.native
 }
-
 object BeaconsResource {
+  
   @scala.inline
   def apply(
     activate: BeaconName => Request[js.Object],
@@ -121,38 +131,50 @@ object BeaconsResource {
     val __obj = js.Dynamic.literal(activate = js.Any.fromFunction1(activate), attachments = attachments.asInstanceOf[js.Any], deactivate = js.Any.fromFunction1(deactivate), decommission = js.Any.fromFunction1(decommission), delete = js.Any.fromFunction1(delete), diagnostics = diagnostics.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), register = js.Any.fromFunction1(register), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[BeaconsResource]
   }
+  
   @scala.inline
   implicit class BeaconsResourceOps[Self <: BeaconsResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setActivate(value: BeaconName => Request[js.Object]): Self = this.set("activate", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setAttachments(value: AttachmentsResource): Self = this.set("attachments", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setDeactivate(value: BeaconName => Request[js.Object]): Self = this.set("deactivate", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDecommission(value: BeaconName => Request[js.Object]): Self = this.set("decommission", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDelete(value: BeaconName => Request[js.Object]): Self = this.set("delete", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDiagnostics(value: DiagnosticsResource): Self = this.set("diagnostics", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setGet(value: BeaconName => Request[Beacon]): Self = this.set("get", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setList(value: Bearertoken => Request[ListBeaconsResponse]): Self = this.set("list", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setRegister(value: Callback => Request[Beacon]): Self = this.set("register", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setUpdate(value: BeaconName => Request[Beacon]): Self = this.set("update", js.Any.fromFunction1(value))
   }
-  
 }
-

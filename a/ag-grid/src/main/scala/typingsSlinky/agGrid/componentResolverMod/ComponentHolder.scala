@@ -2,7 +2,7 @@ package typingsSlinky.agGrid.componentResolverMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.agGrid.gridOptionsMod.GridOptions
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.agGrid.iRichCellEditorParamsMod.IRichCellEditorParams
 */
 trait ComponentHolder extends js.Object
-

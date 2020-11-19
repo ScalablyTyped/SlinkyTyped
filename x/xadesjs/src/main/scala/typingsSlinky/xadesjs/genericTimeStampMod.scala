@@ -6,11 +6,12 @@ import typingsSlinky.xmlCore.mod.XmlCollection
 import typingsSlinky.xmlCore.mod.XmlObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xadesjs/build/types/xml/generic_time_stamp", JSImport.Namespace)
 @js.native
 object genericTimeStampMod extends js.Object {
+  
   @js.native
   class EncapsulatedTimeStamp () extends EncapsulatedPKIData
   
@@ -19,25 +20,37 @@ object genericTimeStampMod extends js.Object {
   
   @js.native
   class GenericTimeStamp () extends XmlObject {
+    
     var CanonicalizationMethod: typingsSlinky.xmldsigjs.mod.CanonicalizationMethod = js.native
+    
     var EncapsulatedTimeStamp: EncapsulatedTimeStampCollection = js.native
+    
     var Id: String = js.native
+    
     var Include: typingsSlinky.xadesjs.genericTimeStampMod.Include = js.native
+    
     var ReferenceInfo: ReferenceInfos = js.native
+    
     var XMLTimeStamp: XMLTimeStampCollection = js.native
   }
   
   @js.native
   class Include () extends XmlObject {
+    
     var ReferencedData: Boolean = js.native
+    
     var Uri: String = js.native
   }
   
   @js.native
   class ReferenceInfo () extends XmlObject {
+    
     var DigestMethod: String = js.native
+    
     var DigestValue: js.typedarray.Uint8Array = js.native
+    
     var Id: String = js.native
+    
     var Uri: String = js.native
   }
   
@@ -49,6 +62,4 @@ object genericTimeStampMod extends js.Object {
   
   @js.native
   class XMLTimeStampCollection () extends XmlCollection[XMLTimeStamp]
-  
 }
-

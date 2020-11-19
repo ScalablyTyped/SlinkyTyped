@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.global.pc
 import typingsSlinky.playcanvas.anon.TypeofScriptType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Container of Script Attribute definitions. Implements an interface to add/remove attributes and store their definition for a {@link pc.ScriptType}.
@@ -16,4 +16,3 @@ class ScriptAttributes protected ()
   extends typingsSlinky.playcanvas.pc.ScriptAttributes {
   def this(scriptType: TypeofScriptType) = this()
 }
-

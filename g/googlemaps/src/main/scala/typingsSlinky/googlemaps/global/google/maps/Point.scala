@@ -2,7 +2,7 @@ package typingsSlinky.googlemaps.global.google.maps
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("google.maps.Point")
 @js.native
@@ -11,4 +11,3 @@ class Point protected ()
   /** A point on a two-dimensional plane. */
   def this(x: Double, y: Double) = this()
 }
-

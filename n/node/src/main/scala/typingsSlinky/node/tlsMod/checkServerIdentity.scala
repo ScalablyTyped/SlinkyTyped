@@ -2,11 +2,12 @@ package typingsSlinky.node.tlsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tls", "checkServerIdentity")
 @js.native
 object checkServerIdentity extends js.Object {
+  
   /*
     * Verifies the certificate `cert` is issued to host `host`.
     * @host The hostname to verify the certificate against
@@ -16,4 +17,3 @@ object checkServerIdentity extends js.Object {
     */
   def apply(host: String, cert: PeerCertificate): js.UndefOr[js.Error] = js.native
 }
-

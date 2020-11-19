@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.mod
 import typingsSlinky.babylonjs.soundTrackMod.ISoundTrackOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "SoundTrack")
 @js.native
@@ -18,4 +18,3 @@ class SoundTrack protected ()
   def this(scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
   def this(scene: typingsSlinky.babylonjs.sceneMod.Scene, options: ISoundTrackOptions) = this()
 }
-

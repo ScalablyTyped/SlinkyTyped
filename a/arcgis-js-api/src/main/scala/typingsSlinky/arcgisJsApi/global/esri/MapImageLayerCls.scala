@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.MapImageLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.MapImageLayer")
 @js.native
@@ -16,4 +16,3 @@ class MapImageLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.MapImageLayer {
   def this(properties: MapImageLayerProperties) = this()
 }
-

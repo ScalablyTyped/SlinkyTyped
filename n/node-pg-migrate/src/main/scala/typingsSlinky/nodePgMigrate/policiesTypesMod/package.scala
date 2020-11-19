@@ -2,16 +2,19 @@ package typingsSlinky.nodePgMigrate
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object policiesTypesMod {
+  
   type AlterPolicy = js.Function3[
     /* tableName */ typingsSlinky.nodePgMigrate.generalTypesMod.Name, 
     /* policyName */ java.lang.String, 
     /* options */ typingsSlinky.nodePgMigrate.policiesTypesMod.PolicyOptions, 
     java.lang.String | js.Array[java.lang.String]
   ]
+  
   type CreatePolicy = typingsSlinky.nodePgMigrate.policiesTypesMod.CreatePolicyFn with typingsSlinky.nodePgMigrate.anon.ReverseCreatePolicyFn
+  
   type CreatePolicyFn = js.Function3[
     /* tableName */ typingsSlinky.nodePgMigrate.generalTypesMod.Name, 
     /* policyName */ java.lang.String, 
@@ -20,14 +23,18 @@ package object policiesTypesMod {
     ], 
     java.lang.String | js.Array[java.lang.String]
   ]
+  
   type CreatePolicyOptions = typingsSlinky.nodePgMigrate.policiesTypesMod.CreatePolicyOptionsEn with typingsSlinky.nodePgMigrate.policiesTypesMod.PolicyOptions
+  
   type DropPolicy = js.Function3[
     /* tableName */ typingsSlinky.nodePgMigrate.generalTypesMod.Name, 
     /* policyName */ java.lang.String, 
     /* options */ js.UndefOr[typingsSlinky.nodePgMigrate.generalTypesMod.IfExistsOption], 
     java.lang.String | js.Array[java.lang.String]
   ]
+  
   type RenamePolicy = typingsSlinky.nodePgMigrate.policiesTypesMod.RenamePolicyFn with typingsSlinky.nodePgMigrate.anon.ReverseRenamePolicyFn
+  
   type RenamePolicyFn = js.Function3[
     /* tableName */ typingsSlinky.nodePgMigrate.generalTypesMod.Name, 
     /* policyName */ java.lang.String, 

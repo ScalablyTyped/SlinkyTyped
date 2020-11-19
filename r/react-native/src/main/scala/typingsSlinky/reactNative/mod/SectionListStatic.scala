@@ -3,11 +3,12 @@ package typingsSlinky.reactNative.mod
 import typingsSlinky.react.mod.ComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SectionListStatic[SectionT]
   extends ComponentClass[SectionListProps[SectionT], js.Object] {
+  
   /**
     * Scrolls to the item at the specified sectionIndex and itemIndex (within the section)
     * positioned in the viewable area such that viewPosition 0 places it at the top
@@ -15,4 +16,3 @@ trait SectionListStatic[SectionT]
     */
   var scrollToLocation: js.UndefOr[js.Function1[/* params */ SectionListScrollParams, Unit]] = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.jestMock.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Possible types of a MockFunctionResult.
@@ -18,13 +18,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jestMock.jestMockStrings.incomplete
 */
 trait MockFunctionResultType extends js.Object
-
 object MockFunctionResultType {
+  
   @scala.inline
   def incomplete: typingsSlinky.jestMock.jestMockStrings.incomplete = "incomplete".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.incomplete]
+  
   @scala.inline
   def `return`: typingsSlinky.jestMock.jestMockStrings.`return` = "return".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.`return`]
+  
   @scala.inline
   def `throw`: typingsSlinky.jestMock.jestMockStrings.`throw` = "throw".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.`throw`]
 }
-

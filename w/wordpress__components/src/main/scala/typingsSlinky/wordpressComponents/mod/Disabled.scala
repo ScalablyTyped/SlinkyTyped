@@ -6,12 +6,13 @@ import typingsSlinky.react.mod.ConsumerProps
 import typingsSlinky.wordpressComponents.disabledMod.Disabled.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/components", "Disabled")
 @js.native
 object Disabled extends js.Object {
-  var Consumer: ReactComponentClass[ConsumerProps[Boolean]] = js.native
+  
   def apply(props: Props): ReactElement = js.native
+  
+  var Consumer: ReactComponentClass[ConsumerProps[Boolean]] = js.native
 }
-

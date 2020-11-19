@@ -2,20 +2,22 @@ package typingsSlinky.mendixmodelsdk.mod.microflows
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "microflows.ChangeListActionType")
 @js.native
 class ChangeListActionType ()
   extends typingsSlinky.mendixmodelsdk.allModelClassesMod.microflows.ChangeListActionType
-
 /* static members */
 @JSImport("mendixmodelsdk", "microflows.ChangeListActionType")
 @js.native
 object ChangeListActionType extends js.Object {
+  
   var Add: typingsSlinky.mendixmodelsdk.microflowsMod.microflows.ChangeListActionType = js.native
+  
   var Clear: typingsSlinky.mendixmodelsdk.microflowsMod.microflows.ChangeListActionType = js.native
+  
   var Remove: typingsSlinky.mendixmodelsdk.microflowsMod.microflows.ChangeListActionType = js.native
+  
   var Set: typingsSlinky.mendixmodelsdk.microflowsMod.microflows.ChangeListActionType = js.native
 }
-

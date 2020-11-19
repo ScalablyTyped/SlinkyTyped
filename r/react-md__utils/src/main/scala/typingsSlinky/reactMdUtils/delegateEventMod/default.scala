@@ -3,11 +3,12 @@ package typingsSlinky.reactMdUtils.delegateEventMod
 import typingsSlinky.std.AddEventListenerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/utils/types/events/delegateEvent", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   def apply(eventType: String): DelegatedEventHandler = js.native
   def apply(
     eventType: String,
@@ -36,4 +37,3 @@ object default extends js.Object {
   ): DelegatedEventHandler = js.native
   def apply(eventType: String, eventTarget: DelegatedEventTarget): DelegatedEventHandler = js.native
 }
-

@@ -3,14 +3,16 @@ package typingsSlinky.ol
 import typingsSlinky.ol.extentMod.Extent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/reproj/Image", JSImport.Namespace)
 @js.native
 object reprojImageMod extends js.Object {
+  
   @js.native
   trait ReprojImage
     extends typingsSlinky.ol.imageBaseMod.default {
+    
     def getProjection(): typingsSlinky.ol.projectionMod.default = js.native
   }
   
@@ -33,4 +35,3 @@ object reprojImageMod extends js.Object {
     typingsSlinky.ol.imageBaseMod.default
   ]
 }
-

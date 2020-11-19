@@ -5,11 +5,12 @@ import typingsSlinky.reactToolbox.radioButtonMod.RadioButtonProps
 import typingsSlinky.reactToolbox.radioGroupMod.RadioGroupProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-toolbox/components/radio", JSImport.Namespace)
 @js.native
 object radioMod extends js.Object {
+  
   @js.native
   class RadioButton ()
     extends Component[RadioButtonProps, js.Object, js.Any]
@@ -21,6 +22,4 @@ object radioMod extends js.Object {
   @js.native
   class default ()
     extends Component[RadioButtonProps, js.Object, js.Any]
-  
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.GroupElementProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.GroupElement")
 @js.native
@@ -16,4 +16,3 @@ class GroupElementCls ()
   extends typingsSlinky.arcgisJsApi.esri.GroupElement {
   def this(properties: GroupElementProperties) = this()
 }
-

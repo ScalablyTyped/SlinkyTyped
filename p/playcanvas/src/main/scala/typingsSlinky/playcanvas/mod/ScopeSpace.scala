@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The scope for variables and subspaces.
@@ -15,4 +15,3 @@ class ScopeSpace protected ()
   extends typingsSlinky.playcanvas.pc.ScopeSpace {
   def this(name: String) = this()
 }
-

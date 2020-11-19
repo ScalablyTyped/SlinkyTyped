@@ -4,52 +4,12 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.jsData.anon.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Collection
   extends typingsSlinky.jsData.componentMod.default {
-  var emit: js.Any = js.native
-  var emitRecordEvents: js.Any = js.native
-  var idAttribute: js.Any = js.native
-  /**
-    * The main index, which uses @{link Collection#recordId} as the key.
-    *
-    * @name Collection#index
-    * @type {Index}
-    */
-  var index: typingsSlinky.jsData.mindexMod.default = js.native
-  /**
-    * Object that holds the secondary indexes of this collection.
-    *
-    * @name Collection#indexes
-    * @type {Object.<string, Index>}
-    */
-  var indexes: StringDictionary[typingsSlinky.jsData.mindexMod.default] = js.native
-  /**
-    * Default Mapper for this collection. Optional. If a Mapper is provided, then
-    * the collection will use the {@link Mapper#idAttribute} setting, and will
-    * wrap records in {@link Mapper#recordClass}.
-    *
-    * @example <caption>Collection#mapper</caption>
-    * const JSData = require('js-data');
-    * const {Collection, Mapper} = JSData;
-    * console.log('Using JSData v' + JSData.version.full);
-    *
-    * class MyMapperClass extends Mapper {
-    *   foo () { return 'bar'; }
-    * }
-    * const myMapper = new MyMapperClass({ name: 'myMapper' });
-    * const collection = new Collection(null, { mapper: myMapper });
-    *
-    * @name Collection#mapper
-    * @type {Mapper}
-    * @default null
-    * @since 3.0.0
-    */
-  var mapper: js.Any = js.native
-  var onConflict: String = js.native
-  var queryClass: js.Any = js.native
+  
   /**
     * Used to bind to events emitted by records in this Collection.
     *
@@ -59,6 +19,7 @@ trait Collection
     * @param {...*} [args] Args passed to {@link Collection#emit}.
     */
   def _onRecordEvent(args: js.Any*): Unit = js.native
+  
   /**
     * Insert the provided record or records.
     *
@@ -80,6 +41,7 @@ trait Collection
     */
   def add(records: js.Any): js.Any = js.native
   def add(records: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Lifecycle hook called by {@link Collection#add}. If this method returns a
     * value then {@link Collection#add} will return that same value.
@@ -92,6 +54,7 @@ trait Collection
     * @param result
     */
   def afterAdd(record: js.Any, opts: js.Any, result: js.Any): js.Any = js.native
+  
   /**
     * Lifecycle hook called by {@link Collection#remove}. If this method returns
     * a value then {@link Collection#remove} will return that same value.
@@ -103,6 +66,7 @@ trait Collection
     * @param {object} record The result that will be returned by {@link Collection#remove}.
     */
   def afterRemove(id: js.Any, opts: js.Any, record: js.Any): js.Any = js.native
+  
   /**
     * Lifecycle hook called by {@link Collection#removeAll}. If this method
     * returns a value then {@link Collection#removeAll} will return that same
@@ -115,6 +79,7 @@ trait Collection
     * @param {object} records The result that will be returned by {@link Collection#removeAll}.
     */
   def afterRemoveAll(query: js.Any, opts: js.Any, records: js.Any): js.Any = js.native
+  
   /**
     * Lifecycle hook called by {@link Collection#add}. If this method returns a
     * value then the `records` argument in {@link Collection#add} will be
@@ -126,6 +91,7 @@ trait Collection
     * @param {object} opts The `opts` argument passed to {@link Collection#add}.
     */
   def beforeAdd(records: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Lifecycle hook called by {@link Collection#remove}.
     *
@@ -135,6 +101,7 @@ trait Collection
     * @param {object} opts The `opts` argument passed to {@link Collection#remove}.
     */
   def beforeRemove(id: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Lifecycle hook called by {@link Collection#removeAll}.
     *
@@ -144,6 +111,7 @@ trait Collection
     * @param {object} opts The `opts` argument passed to {@link Collection#removeAll}.
     */
   def beforeRemoveAll(query: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Find all records between two boundaries.
     *
@@ -173,6 +141,7 @@ trait Collection
     * @returns {Object[]|Record[]} The result.
     */
   def between(leftKeys: js.Any, rightKeys: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Create a new secondary index on the contents of the collection.
     *
@@ -196,6 +165,11 @@ trait Collection
   def createIndex(name: js.Any, fieldList: js.UndefOr[scala.Nothing], opts: js.Any): Unit = js.native
   def createIndex(name: js.Any, fieldList: js.Any): Unit = js.native
   def createIndex(name: js.Any, fieldList: js.Any, opts: js.Any): Unit = js.native
+  
+  var emit: js.Any = js.native
+  
+  var emitRecordEvents: js.Any = js.native
+  
   /**
     * Find the record or records that match the provided query or pass the
     * provided filter function.
@@ -238,6 +212,7 @@ trait Collection
     */
   def filter(queryOrFn: js.Any): js.Any = js.native
   def filter(queryOrFn: js.Any, thisArg: js.Any): js.Any = js.native
+  
   /**
     * Iterate over all records.
     *
@@ -254,6 +229,7 @@ trait Collection
     */
   def forEach(forEachFn: js.Any): Unit = js.native
   def forEach(forEachFn: js.Any, thisArg: js.Any): Unit = js.native
+  
   /**
     * Get the record with the given id.
     *
@@ -263,6 +239,7 @@ trait Collection
     * @returns {(Object|Record)} The record with the given id.
     */
   def get(id: js.Any): js.Any = js.native
+  
   /**
     * Find the record or records that match the provided keyLists.
     *
@@ -298,6 +275,7 @@ trait Collection
   def getAll(keyList: Double): js.Any = js.native
   def getAll(keyList: Double, args: js.Any*): js.Any = js.native
   def getAll(keyList: Double, opts: js.Any): js.Any = js.native
+  
   /**
     * Return the index with the given name. If no name is provided, return the
     * main index. Throws an error if the specified index does not exist.
@@ -307,6 +285,25 @@ trait Collection
     * @param {string} [name] The name of the index to retrieve.
     */
   def getIndex(name: js.Any): typingsSlinky.jsData.mindexMod.default = js.native
+  
+  var idAttribute: js.Any = js.native
+  
+  /**
+    * The main index, which uses @{link Collection#recordId} as the key.
+    *
+    * @name Collection#index
+    * @type {Index}
+    */
+  var index: typingsSlinky.jsData.mindexMod.default = js.native
+  
+  /**
+    * Object that holds the secondary indexes of this collection.
+    *
+    * @name Collection#indexes
+    * @type {Object.<string, Index>}
+    */
+  var indexes: StringDictionary[typingsSlinky.jsData.mindexMod.default] = js.native
+  
   /**
     * Limit the result.
     *
@@ -321,6 +318,7 @@ trait Collection
     * @returns {Array} The result.
     */
   def limit(num: js.Any): js.Any = js.native
+  
   /**
     * Apply a mapping function to all records.
     *
@@ -334,6 +332,7 @@ trait Collection
     * @returns {Array} The result of the mapping.
     */
   def map(cb: js.Any, thisArg: js.Any): js.Array[_] = js.native
+  
   /**
     * Return the result of calling the specified function on each record in this
     * collection's main index.
@@ -345,6 +344,32 @@ trait Collection
     * @returns {Array} The result.
     */
   def mapCall(funcName: js.Any, args: js.Any*): js.Array[_] = js.native
+  
+  /**
+    * Default Mapper for this collection. Optional. If a Mapper is provided, then
+    * the collection will use the {@link Mapper#idAttribute} setting, and will
+    * wrap records in {@link Mapper#recordClass}.
+    *
+    * @example <caption>Collection#mapper</caption>
+    * const JSData = require('js-data');
+    * const {Collection, Mapper} = JSData;
+    * console.log('Using JSData v' + JSData.version.full);
+    *
+    * class MyMapperClass extends Mapper {
+    *   foo () { return 'bar'; }
+    * }
+    * const myMapper = new MyMapperClass({ name: 'myMapper' });
+    * const collection = new Collection(null, { mapper: myMapper });
+    *
+    * @name Collection#mapper
+    * @type {Mapper}
+    * @default null
+    * @since 3.0.0
+    */
+  var mapper: js.Any = js.native
+  
+  var onConflict: String = js.native
+  
   /**
     * Return all "unsaved" (not uniquely identifiable) records in this colleciton.
     *
@@ -354,6 +379,7 @@ trait Collection
     * @returns {Array} The removed records, if any.
     */
   def prune(opts: js.Any): js.Any = js.native
+  
   /**
     * Create a new query to be executed against the contents of the collection.
     * The result will be all or a subset of the contents of the collection.
@@ -371,6 +397,9 @@ trait Collection
     * @returns {Query} New query object.
     */
   def query(): typingsSlinky.jsData.queryMod.default = js.native
+  
+  var queryClass: js.Any = js.native
+  
   /**
     * Return the primary key of the given, or if no record is provided, return the
     * name of the field that holds the primary key of records in this Collection.
@@ -384,6 +413,7 @@ trait Collection
     */
   def recordId(): js.Any = js.native
   def recordId(record: js.Any): js.Any = js.native
+  
   /**
     * Reduce the data in the collection to a single value and return the result.
     *
@@ -399,6 +429,7 @@ trait Collection
     * @returns {*} The result.
     */
   def reduce(cb: js.Any, initialValue: js.Any): js.Any = js.native
+  
   /**
     * Remove the record with the given id from this Collection.
     *
@@ -411,6 +442,7 @@ trait Collection
     */
   def remove(idOrRecord: js.Any): js.Any = js.native
   def remove(idOrRecord: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Remove from this collection the given records or the records selected by
     * the given "query".
@@ -427,6 +459,7 @@ trait Collection
     */
   def removeAll(queryOrRecords: js.Any): js.Any = js.native
   def removeAll(queryOrRecords: js.Any, opts: js.Any): js.Any = js.native
+  
   /**
     * Skip a number of results.
     *
@@ -441,6 +474,7 @@ trait Collection
     * @returns {Array} The result.
     */
   def skip(num: js.Any): js.Any = js.native
+  
   /**
     * Return the plain JSON representation of all items in this collection.
     * Assumes records in this collection have a toJSON method.
@@ -454,6 +488,7 @@ trait Collection
     */
   def toJSON(): js.Array[_] = js.native
   def toJSON(opts: js.Any): js.Array[_] = js.native
+  
   /**
     * Return all "unsaved" (not uniquely identifiable) records in this colleciton.
     *
@@ -463,6 +498,7 @@ trait Collection
     */
   def unsaved(): js.Any = js.native
   def unsaved(opts: js.Any): js.Any = js.native
+  
   /**
     * Update a record's position in a single index of this collection. See
     * {@link Collection#updateIndexes} to update a record's position in all
@@ -478,6 +514,7 @@ trait Collection
     */
   def updateIndex(record: js.Any): Unit = js.native
   def updateIndex(record: js.Any, opts: Index): Unit = js.native
+  
   /**
     * Updates all indexes in this collection for the provided record. Has no
     * effect if the record is not in the collection.
@@ -488,4 +525,3 @@ trait Collection
     */
   def updateIndexes(record: js.Any): Unit = js.native
 }
-

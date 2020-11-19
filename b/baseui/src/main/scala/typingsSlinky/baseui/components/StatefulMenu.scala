@@ -23,9 +23,10 @@ import typingsSlinky.baseui.menuMod.StatefulMenuProps
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StatefulMenu {
+  
   @JSImport("baseui/menu", "StatefulMenu")
   @js.native
   object component extends js.Object
@@ -34,38 +35,55 @@ object StatefulMenu {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.baseui.menuMod.StatefulMenu] {
+    
     @scala.inline
     def addMenuToNesting(value: /* ref */ Ref[HTMLElement] => Unit): this.type = set("addMenuToNesting", js.Any.fromFunction1(value))
+    
     @scala.inline
     def children(value: /* args */ RenderProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    
     @scala.inline
     def getChildMenu(value: /* ref */ Ref[HTMLElement] => Unit): this.type = set("getChildMenu", js.Any.fromFunction1(value))
+    
     @scala.inline
     def getParentMenu(value: /* ref */ Ref[HTMLElement] => Unit): this.type = set("getParentMenu", js.Any.fromFunction1(value))
+    
     @scala.inline
     def getRequiredItemProps(value: (/* item */ js.Any, /* index */ Double) => RenderItemProps): this.type = set("getRequiredItemProps", js.Any.fromFunction2(value))
+    
     @scala.inline
     def initialState(value: StatefulContainerState): this.type = set("initialState", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onActiveDescendantChange(value: /* id */ js.UndefOr[String] => Unit): this.type = set("onActiveDescendantChange", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onItemSelect(value: /* args */ EventItem => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
+    
     @scala.inline
     def overrides(value: EmptyState): this.type = set("overrides", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def removeMenuFromNesting(value: /* ref */ Ref[HTMLElement] => Unit): this.type = set("removeMenuFromNesting", js.Any.fromFunction1(value))
+    
     @scala.inline
     def renderAll(value: Boolean): this.type = set("renderAll", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def rootRefRefObject(value: ReactRef[_]): this.type = set("rootRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def rootRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("rootRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def rootRef(value: Ref[_]): this.type = set("rootRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def rootRefNull: this.type = set("rootRef", null)
+    
     @scala.inline
     def size(value: default_ | compact): this.type = set("size", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def stateReducer(
       value: (/* changeType */ moveDown | moveUp | reset | click | focus | mouseEnter, /* changes */ StatefulContainerState, /* currentState */ StatefulContainerState) => StatefulContainerState
@@ -73,10 +91,10 @@ object StatefulMenu {
   }
   
   def withProps(p: StatefulMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(items: ItemsT): Builder = {
     val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[StatefulMenuProps]))
   }
 }
-

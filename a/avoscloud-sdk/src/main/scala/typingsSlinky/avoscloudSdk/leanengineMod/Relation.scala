@@ -2,7 +2,7 @@ package typingsSlinky.avoscloudSdk.leanengineMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A class that is used to access all of the children of a many-to-many relationship.
@@ -16,4 +16,3 @@ class Relation ()
   def this(parent: js.UndefOr[scala.Nothing], key: String) = this()
   def this(parent: typingsSlinky.avoscloudSdk.mod.Object, key: String) = this()
 }
-

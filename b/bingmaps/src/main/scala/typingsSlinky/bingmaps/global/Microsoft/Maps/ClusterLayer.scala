@@ -3,7 +3,7 @@ package typingsSlinky.bingmaps.global.Microsoft.Maps
 import typingsSlinky.bingmaps.Microsoft.Maps.IClusterLayerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Microsoft.Maps.ClusterLayer")
 @js.native
@@ -18,4 +18,3 @@ class ClusterLayer protected ()
   def this(pushpins: js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin]) = this()
   def this(pushpins: js.Array[typingsSlinky.bingmaps.Microsoft.Maps.Pushpin], options: IClusterLayerOptions) = this()
 }
-

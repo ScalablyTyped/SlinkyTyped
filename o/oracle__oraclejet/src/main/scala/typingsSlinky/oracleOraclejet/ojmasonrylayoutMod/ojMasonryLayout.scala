@@ -19,24 +19,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.reorderHandleChanged
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojMasonryLayout extends baseComponent[ojMasonryLayoutSettableProperties] {
-  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeInsert: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeRemove: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeReorder: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeResize: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjInsert: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjRemove: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjReorder: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjResize: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onReorderHandleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var reorderHandle: String | Null = js.native
-  @JSName("translations")
-  var translations_ojMasonryLayout: LabelCut = js.native
+  
   @JSName("addEventListener")
   def addEventListener_ojAnimateEnd(`type`: ojAnimateEnd, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
@@ -125,32 +112,73 @@ trait ojMasonryLayout extends baseComponent[ojMasonryLayoutSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
   @JSName("getProperty")
   def getProperty_reorderHandle(property: reorderHandle): String | Null = js.native
+  
   def insertTile(selector: String, index: Double): Unit = js.native
+  
+  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeInsert: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeRemove: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeReorder: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeResize: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjInsert: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjRemove: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjReorder: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjResize: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onReorderHandleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def removeTile(selector: String): Unit = js.native
+  
+  var reorderHandle: String | Null = js.native
+  
   def resizeTile(selector: String, sizeStyleClass: String): Unit = js.native
+  
   def setProperties(properties: ojMasonryLayoutSettablePropertiesLenient): Unit = js.native
+  
   @JSName("setProperty")
   def setProperty_reorderHandle(property: reorderHandle): Unit = js.native
   @JSName("setProperty")
   def setProperty_reorderHandle(property: reorderHandle, value: String): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: LabelCut): Unit = js.native
+  
+  @JSName("translations")
+  var translations_ojMasonryLayout: LabelCut = js.native
 }
-
 @JSImport("@oracle/oraclejet/ojmasonrylayout", "ojMasonryLayout")
 @js.native
 object ojMasonryLayout extends js.Object {
+  
   type ojAnimateEnd = CustomEvent
+  
   type ojAnimateStart = CustomEvent
+  
   type ojBeforeInsert = CustomEvent
+  
   type ojBeforeRemove = CustomEvent
+  
   type ojBeforeReorder = CustomEvent
+  
   type ojBeforeResize = CustomEvent
+  
   type ojInsert = CustomEvent
+  
   type ojRemove = CustomEvent
+  
   type ojReorder = CustomEvent
+  
   type ojResize = CustomEvent
 }
-

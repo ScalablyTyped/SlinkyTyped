@@ -4,7 +4,7 @@ import typingsSlinky.angularCompiler.compileMetadataMod.CompileProviderMetadata
 import typingsSlinky.angularCompiler.srcUtilMod.Console
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/compiler", "JitCompiler")
 @js.native
@@ -24,4 +24,3 @@ class JitCompiler protected ()
     getExtraNgModuleProviders: js.Function1[/* ngModule */ js.Any, js.Array[CompileProviderMetadata]]
   ) = this()
 }
-

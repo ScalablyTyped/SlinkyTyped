@@ -3,7 +3,7 @@ package typingsSlinky.timezonecomplete.mod
 import typingsSlinky.timezonecomplete.periodMod.PeriodJson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("timezonecomplete", "Period")
 @js.native
@@ -80,4 +80,3 @@ class Period protected ()
     dst: typingsSlinky.timezonecomplete.periodMod.PeriodDst
   ) = this()
 }
-

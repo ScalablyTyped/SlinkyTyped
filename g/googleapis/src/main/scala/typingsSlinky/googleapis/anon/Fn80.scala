@@ -5,11 +5,11 @@ import typingsSlinky.googleapis.groupssettingsV1Mod.groupssettingsV1.Groupssetti
 import typingsSlinky.googleapis.groupssettingsV1Mod.groupssettingsV1.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Fn80 extends js.Object {
+  
   def apply(options: Options): Groupssettings = js.native
   def apply(version: v1): Groupssettings = js.native
 }
-

@@ -4,15 +4,15 @@ import typingsSlinky.babelTypes.babelTypesStrings.ClassProperty
 import typingsSlinky.babelTypes.babelTypesStrings.ObjectProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ObjectProperty_
   - typingsSlinky.babelTypes.mod.ClassProperty_
 */
 trait Property extends js.Object
-
 object Property {
+  
   @scala.inline
   def ObjectProperty_(
     computed: Boolean,
@@ -28,6 +28,7 @@ object Property {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Property]
   }
+  
   @scala.inline
   def ClassProperty_(
     end: Double,
@@ -42,4 +43,3 @@ object Property {
     __obj.asInstanceOf[Property]
   }
 }
-

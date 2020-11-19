@@ -4,11 +4,12 @@ import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageserver", "createConnection")
 @js.native
 object createConnection extends js.Object {
+  
   def apply(): IConnection = js.native
   def apply(inputStream: ReadableStream, outputStream: WritableStream): IConnection = js.native
   def apply(
@@ -54,4 +55,3 @@ object createConnection extends js.Object {
     strategy: typingsSlinky.vscodeJsonrpc.mod.ConnectionStrategy
   ): Connection[PConsole, PTracer, PTelemetry, PClient, PWindow, PWorkspace, PLanguages] = js.native
 }
-

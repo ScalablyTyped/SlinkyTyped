@@ -15,11 +15,11 @@ import typingsSlinky.typescript.mod.SyntaxKind.UnknownKeyword
 import typingsSlinky.typescript.mod.SyntaxKind.VoidKeyword
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait KeywordTypeNode extends TypeNode {
+  
   @JSName("kind")
   var kind_KeywordTypeNode: AnyKeyword | UnknownKeyword | NumberKeyword | BigIntKeyword | ObjectKeyword | BooleanKeyword | StringKeyword | SymbolKeyword | ThisKeyword | VoidKeyword | UndefinedKeyword | NullKeyword | NeverKeyword = js.native
 }
-

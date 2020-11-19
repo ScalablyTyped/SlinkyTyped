@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.codeartifactMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.CodeArtifact")
 @js.native
@@ -14,4 +14,3 @@ class CodeArtifact ()
   extends typingsSlinky.awsSdk.mod.CodeArtifact {
   def this(options: ClientConfiguration) = this()
 }
-

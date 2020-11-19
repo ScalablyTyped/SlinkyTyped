@@ -2,7 +2,7 @@ package typingsSlinky.openjscad.global.CSG
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("CSG.Connector")
 @js.native
@@ -35,4 +35,3 @@ class Connector protected ()
     normalvector: typingsSlinky.openjscad.CSG.Vector3D
   ) = this()
 }
-

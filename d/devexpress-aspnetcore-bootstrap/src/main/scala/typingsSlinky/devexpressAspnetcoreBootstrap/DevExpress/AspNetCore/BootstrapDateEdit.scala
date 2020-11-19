@@ -14,21 +14,33 @@ import typingsSlinky.devexpressAspnetcoreBootstrap.devexpressAspnetcoreBootstrap
 import typingsSlinky.devexpressAspnetcoreBootstrap.devexpressAspnetcoreBootstrapStrings.userInput
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BootstrapDateEdit extends BootstrapClientEdit {
+  
   def adjustDropDownWindow(): Unit = js.native
+  
   def getButtonVisible(number: Double): Boolean = js.native
+  
   def getCalendar(): BootstrapCalendar | Null = js.native
+  
   def getCaretPosition(): Double = js.native
+  
   def getDate(): js.Date = js.native
+  
   def getMaxDate(): js.Date = js.native
+  
   def getMinDate(): js.Date = js.native
+  
   def getRangeDayCount(): Double = js.native
+  
   def getText(): String = js.native
+  
   def getTimeEdit(): BootstrapTimeEdit | Null = js.native
+  
   def hideDropDown(): Unit = js.native
+  
   @JSName("off")
   def off_buttonClick(eventName: buttonClick): this.type = js.native
   @JSName("off")
@@ -117,6 +129,7 @@ trait BootstrapDateEdit extends BootstrapClientEdit {
     eventName: userInput,
     callback: js.ThisFunction1[/* this */ this.type, /* args */ js.UndefOr[EventArgs], Unit]
   ): this.type = js.native
+  
   @JSName("on")
   def on_buttonClick(
     eventName: buttonClick,
@@ -181,6 +194,7 @@ trait BootstrapDateEdit extends BootstrapClientEdit {
     eventName: userInput,
     callback: js.ThisFunction1[/* this */ this.type, /* args */ js.UndefOr[EventArgs], Unit]
   ): this.type = js.native
+  
   @JSName("once")
   def once_buttonClick(
     eventName: buttonClick,
@@ -245,14 +259,22 @@ trait BootstrapDateEdit extends BootstrapClientEdit {
     eventName: userInput,
     callback: js.ThisFunction1[/* this */ this.type, /* args */ js.UndefOr[EventArgs], Unit]
   ): this.type = js.native
+  
   def selectAll(): Unit = js.native
+  
   def setButtonVisible(number: Double, value: Boolean): Unit = js.native
+  
   def setCaretPosition(position: Double): Unit = js.native
+  
   def setDate(date: js.Date): Unit = js.native
+  
   def setMaxDate(date: js.Date): Unit = js.native
+  
   def setMinDate(date: js.Date): Unit = js.native
+  
   def setSelection(startPos: Double, endPos: Double, scrollToSelection: Boolean): Unit = js.native
+  
   def setText(text: String): Unit = js.native
+  
   def showDropDown(): Unit = js.native
 }
-

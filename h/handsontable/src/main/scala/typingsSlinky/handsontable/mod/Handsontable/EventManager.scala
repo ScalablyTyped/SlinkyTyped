@@ -3,7 +3,7 @@ package typingsSlinky.handsontable.mod.Handsontable
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait EventManager
@@ -11,4 +11,3 @@ trait EventManager
       /* context */ js.Object, 
       typingsSlinky.handsontable.mod.Handsontable.plugins.EventManager
     ]
-

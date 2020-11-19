@@ -3,11 +3,12 @@ package typingsSlinky.d3Delaunay.mod.Delaunay
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("d3-delaunay", "Delaunay")
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Returns the Delaunay triangulation for the given array or iterable of points where each point is an array in the form: [x, y].
     */
@@ -42,4 +43,3 @@ object ^ extends js.Object {
     that: js.Any
   ): typingsSlinky.d3Delaunay.mod.Delaunay[P] = js.native
 }
-

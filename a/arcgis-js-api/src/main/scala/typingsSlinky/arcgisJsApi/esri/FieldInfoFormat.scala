@@ -25,12 +25,13 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.default
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.year
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FieldInfoFormat
   extends Accessor
      with JSONSupport {
+  
   /**
     * Used only with `Date` fields. Specifies how the date should appear in a popup.  **Possible Values**
     *
@@ -64,6 +65,7 @@ trait FieldInfoFormat
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-popup-support-FieldInfoFormat.html#dateFormat)
     */
   var dateFormat: default | `short-date` | `short-date-short-time` | `short-date-long-time` | `short-date-long-time-24` | `long-month-day-year` | `long-month-day-year-short-time` | `long-month-day-year-short-time-24` | `long-month-day-year-long-time` | `long-month-day-year-long-time-24` | `day-short-month-year` | `day-short-month-year-short-time` | `day-short-month-year-short-time-24` | `day-short-month-year-long-time` | `day-short-month-year-long-time-24` | `long-date` | `long-date-short-time` | `long-date-short-time-24` | `long-date-long-time` | `long-date-long-time-24` | `long-month-year` | `short-month-year` | year = js.native
+  
   /**
     * Used only with `Number` fields. A value of `true` indicates the number should have a digit (or thousands) separator when the value appears in popups. A value of `false` means that no separator will be used.
     *
@@ -72,6 +74,7 @@ trait FieldInfoFormat
     * @default false
     */
   var digitSeparator: Boolean = js.native
+  
   /**
     * Used only with `Number` fields to specify the number of supported decimal places that should appear in popups. Any places beyond this value are rounded.
     *
@@ -79,4 +82,3 @@ trait FieldInfoFormat
     */
   var places: Double = js.native
 }
-

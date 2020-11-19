@@ -3,11 +3,12 @@ package typingsSlinky.jointjs.mod.shapes
 import typingsSlinky.jointjs.mod.dia.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jointjs", "shapes.chess")
 @js.native
 object chess extends js.Object {
+  
   @js.native
   class BishopBlack () extends Element
   
@@ -43,6 +44,4 @@ object chess extends js.Object {
   
   @js.native
   class RookWhite () extends Element
-  
 }
-

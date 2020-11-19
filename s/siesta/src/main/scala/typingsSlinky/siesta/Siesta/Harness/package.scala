@@ -2,9 +2,10 @@ package typingsSlinky.siesta.Siesta
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object Harness {
+  
   /**
     * @singleton
     */

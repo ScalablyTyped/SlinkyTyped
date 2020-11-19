@@ -2,16 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Locator extends Task {
-  /**
-    * The spatial reference of the output geometries. If not specified, the output geometries are in the spatial reference of the input geometries when performing a reverse geocode and in the default spatial reference returned by the service if finding locations by address.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#outSpatialReference)
-    */
-  var outSpatialReference: SpatialReference = js.native
+  
   /**
     * Sends a request to the ArcGIS REST geocode resource to find candidates for a single address specified in the address parameter.
     *
@@ -53,6 +48,7 @@ trait Locator extends Task {
     */
   def addressToLocations(params: LocatorAddressToLocationsParams): js.Promise[js.Array[AddressCandidate]] = js.native
   def addressToLocations(params: LocatorAddressToLocationsParams, requestOptions: js.Any): js.Promise[js.Array[AddressCandidate]] = js.native
+  
   /**
     * Find address candidates for multiple input addresses. This method requires an ArcGIS Server 10.1 or greater geocode service.
     *
@@ -74,6 +70,7 @@ trait Locator extends Task {
     */
   def addressesToLocations(params: LocatorAddressesToLocationsParams): js.Promise[js.Array[AddressCandidate]] = js.native
   def addressesToLocations(params: LocatorAddressesToLocationsParams, requestOptions: js.Any): js.Promise[js.Array[AddressCandidate]] = js.native
+  
   /**
     * Locates an address based on a given point.
     *
@@ -87,6 +84,14 @@ trait Locator extends Task {
     */
   def locationToAddress(params: LocatorLocationToAddressParams): js.Promise[AddressCandidate] = js.native
   def locationToAddress(params: LocatorLocationToAddressParams, requestOptions: js.Any): js.Promise[AddressCandidate] = js.native
+  
+  /**
+    * The spatial reference of the output geometries. If not specified, the output geometries are in the spatial reference of the input geometries when performing a reverse geocode and in the default spatial reference returned by the service if finding locations by address.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#outSpatialReference)
+    */
+  var outSpatialReference: SpatialReference = js.native
+  
   /**
     * Get character by character auto complete suggestions.
     *
@@ -102,4 +107,3 @@ trait Locator extends Task {
   def suggestLocations(params: LocatorSuggestLocationsParams): js.Promise[js.Array[SuggestionResult]] = js.native
   def suggestLocations(params: LocatorSuggestLocationsParams, requestOptions: js.Any): js.Promise[js.Array[SuggestionResult]] = js.native
 }
-

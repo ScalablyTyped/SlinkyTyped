@@ -3,7 +3,7 @@ package typingsSlinky.bingmaps.global.Microsoft.Maps
 import typingsSlinky.bingmaps.Microsoft.Maps.IGeoXmlLayerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Microsoft.Maps.GeoXmlLayer")
 @js.native
@@ -35,4 +35,3 @@ class GeoXmlLayer ()
   ) = this()
   def this(dataSource: js.typedarray.ArrayBuffer, isUrl: Boolean, options: IGeoXmlLayerOptions) = this()
 }
-

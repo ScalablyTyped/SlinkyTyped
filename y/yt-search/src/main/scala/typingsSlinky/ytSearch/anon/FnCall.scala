@@ -8,10 +8,11 @@ import typingsSlinky.ytSearch.mod.VideoMetadataOptions
 import typingsSlinky.ytSearch.mod.VideoMetadataResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCall extends js.Object {
+  
   def apply(query: String): js.Promise[SearchResult] = js.native
   def apply(
     query: String,
@@ -37,4 +38,3 @@ trait FnCall extends js.Object {
     callback: js.Function2[/* err */ js.UndefOr[js.Error | String | Null], /* data */ VideoMetadataResult, Unit]
   ): Unit = js.native
 }
-

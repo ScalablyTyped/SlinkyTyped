@@ -10,9 +10,10 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object WingBlank {
+  
   @JSImport("@ant-design/react-native", "WingBlank")
   @js.native
   object component extends js.Object
@@ -21,15 +22,18 @@ object WingBlank {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.mod.WingBlank] {
+    
     @scala.inline
     def size(value: sm | md | lg): this.type = set("size", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def styleNull: this.type = set("style", null)
   }
   
   def withProps(p: WingBlankProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: WingBlank.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

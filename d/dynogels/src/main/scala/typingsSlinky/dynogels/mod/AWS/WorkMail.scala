@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.workmailMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.WorkMail")
 @js.native
@@ -14,4 +14,3 @@ class WorkMail ()
   extends typingsSlinky.awsSdk.mod.WorkMail {
   def this(options: ClientConfiguration) = this()
 }
-

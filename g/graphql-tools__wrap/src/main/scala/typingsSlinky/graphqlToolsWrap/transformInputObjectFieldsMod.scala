@@ -9,26 +9,35 @@ import typingsSlinky.graphqlToolsWrap.typesMod.InputObjectNodeTransformer
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/transforms/TransformInputObjectFields", JSImport.Namespace)
 @js.native
 object transformInputObjectFieldsMod extends js.Object {
+  
   @js.native
   trait TransformInputObjectFields
     extends Transform[Record[String, js.Any]] {
+    
     val inputFieldNodeTransformer: js.Any = js.native
+    
     val inputFieldTransformer: js.Any = js.native
+    
     val inputObjectNodeTransformer: js.Any = js.native
+    
     var mapping: js.Any = js.native
+    
     var transformDocument: js.Any = js.native
-    var transformedSchema: js.Any = js.native
+    
     @JSName("transformRequest")
     def transformRequest_MTransformInputObjectFields(originalRequest: Request): Request = js.native
     @JSName("transformRequest")
     def transformRequest_MTransformInputObjectFields(originalRequest: Request, delegationContext: Record[String, _]): Request = js.native
+    
     @JSName("transformSchema")
     def transformSchema_MTransformInputObjectFields(originalSchema: GraphQLSchema): GraphQLSchema = js.native
+    
+    var transformedSchema: js.Any = js.native
   }
   
   @js.native
@@ -46,6 +55,4 @@ object transformInputObjectFieldsMod extends js.Object {
       inputObjectNodeTransformer: InputObjectNodeTransformer
     ) = this()
   }
-  
 }
-

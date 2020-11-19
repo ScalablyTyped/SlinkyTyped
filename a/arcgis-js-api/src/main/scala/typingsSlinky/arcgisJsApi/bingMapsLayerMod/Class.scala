@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.BingMapsLayer
 import typingsSlinky.arcgisJsApi.esri.BingMapsLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/layers/BingMapsLayer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends BingMapsLayer {
   def this(properties: BingMapsLayerProperties) = this()
 }
-

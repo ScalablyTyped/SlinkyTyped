@@ -2,11 +2,11 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JSDocAllType extends JSDocType {
+  
   @JSName("kind")
   var kind_JSDocAllType: typingsSlinky.typescript.mod.SyntaxKind.JSDocAllType = js.native
 }
-

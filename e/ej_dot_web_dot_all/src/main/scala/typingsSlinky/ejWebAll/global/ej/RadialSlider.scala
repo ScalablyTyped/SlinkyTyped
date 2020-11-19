@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ej.RadialSlider")
 @js.native
@@ -15,12 +15,12 @@ class RadialSlider protected ()
   def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.RadialSlider.Model) = this()
   def this(element: Element, options: typingsSlinky.ejWebAll.ej.RadialSlider.Model) = this()
 }
-
 /* static members */
 @JSGlobal("ej.RadialSlider")
 @js.native
 object RadialSlider extends js.Object {
+  
   var Locale: js.Any = js.native
+  
   var fn: typingsSlinky.ejWebAll.ej.RadialSlider = js.native
 }
-

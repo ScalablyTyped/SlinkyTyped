@@ -2,13 +2,15 @@ package typingsSlinky.activexAdodb
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object ADODB extends js.Object {
+    
     @js.native
     class Bookmark protected ()
       extends typingsSlinky.activexAdodb.ADODB.Bookmark
@@ -44,8 +46,5 @@ object global extends js.Object {
     @js.native
     class Stream protected ()
       extends typingsSlinky.activexAdodb.ADODB.Stream
-    
   }
-  
 }
-

@@ -11,7 +11,7 @@ import typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.IJavaAction
 import typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.JavaAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -31,6 +31,12 @@ abstract class CodeActionParameter protected ()
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  /**
+    * In version 7.21.0: introduced
+    */
+  def actionParameterType: ParameterType = js.native
+  def actionParameterType_=(newValue: ParameterType): Unit = js.native
   /**
     * This property is required and cannot be set to null.
     *
@@ -38,47 +44,49 @@ abstract class CodeActionParameter protected ()
     */
   @JSName("actionParameterType")
   val actionParameterType_FCodeActionParameter: IParameterType = js.native
-  @JSName("containerAsCodeAction")
-  val containerAsCodeAction_FCodeActionParameter: ICodeAction = js.native
-  @JSName("containerAsJavaAction")
-  val containerAsJavaAction_FCodeActionParameter: IJavaAction = js.native
-  /**
-    * In version 6.10.0: introduced
-    */
-  @JSName("description")
-  val description_FCodeActionParameter: String = js.native
-  @JSName("model")
-  var model_FCodeActionParameter: IModel = js.native
-  @JSName("name")
-  val name_FCodeActionParameter: String = js.native
-  /**
-    * In version 7.21.0: introduced
-    */
-  def actionParameterType: ParameterType = js.native
-  def actionParameterType_=(newValue: ParameterType): Unit = js.native
+  
   /**
     * In version 7.18.0: introduced
     */
   def category: String = js.native
   def category_=(newValue: String): Unit = js.native
+  
   def containerAsCodeAction: CodeAction = js.native
+  @JSName("containerAsCodeAction")
+  val containerAsCodeAction_FCodeActionParameter: ICodeAction = js.native
+  
   def containerAsJavaAction: JavaAction = js.native
+  @JSName("containerAsJavaAction")
+  val containerAsJavaAction_FCodeActionParameter: IJavaAction = js.native
+  
   /**
     * In version 6.10.0: introduced
     */
   def description: String = js.native
   def description_=(newValue: String): Unit = js.native
+  /**
+    * In version 6.10.0: introduced
+    */
+  @JSName("description")
+  val description_FCodeActionParameter: String = js.native
+  
+  @JSName("model")
+  var model_FCodeActionParameter: IModel = js.native
+  
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native
+  @JSName("name")
+  val name_FCodeActionParameter: String = js.native
+  
   @JSName("qualifiedName")
   def qualifiedName_MCodeActionParameter: String | Null = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/codeactions", "codeactions.CodeActionParameter")
 @js.native
 object CodeActionParameter extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

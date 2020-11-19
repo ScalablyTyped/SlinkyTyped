@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Object containing helper methods for generating optimal symbols for heatmap visualizations. The [getSchemes()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-heatmap.html#getSchemes) method is used to get the heatmap color schemes best suited to the given basemap.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait symbologyHeatmap extends js.Object {
+  
   /**
     * Clones a heatmap scheme object.
     *
@@ -20,6 +21,7 @@ trait symbologyHeatmap extends js.Object {
     *
     */
   def cloneScheme(scheme: HeatmapScheme): HeatmapScheme = js.native
+  
   /**
     * Returns a heatmap scheme with the provided name.
     *
@@ -32,6 +34,7 @@ trait symbologyHeatmap extends js.Object {
     *
     */
   def getSchemeByName(params: heatmapGetSchemeByNameParams): HeatmapScheme = js.native
+  
   /**
     * Returns a primary scheme and secondary schemes defining properties for heatmap visualizations in a point [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The `basemap` parameter determines the color schemes of the heatmap.
     *
@@ -43,6 +46,7 @@ trait symbologyHeatmap extends js.Object {
     *
     */
   def getSchemes(params: heatmapGetSchemesParams): HeatmapSchemes = js.native
+  
   /**
     * Returns an array of heatmap schemes with the provided tags. These schemes define color stop properties for any layer that can be rendered with a [HeatmapRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-HeatmapRenderer.html).
     *
@@ -56,6 +60,7 @@ trait symbologyHeatmap extends js.Object {
     *
     */
   def getSchemesByTag(params: heatmapGetSchemesByTagParams): js.Array[HeatmapScheme] = js.native
+  
   /**
     * Returns metadata for the available themes. If a basemap is provided, returns themes that work best with the given basemap.
     *
@@ -68,4 +73,3 @@ trait symbologyHeatmap extends js.Object {
   def getThemes(basemap: String): js.Array[Theme] = js.native
   def getThemes(basemap: Basemap): js.Array[Theme] = js.native
 }
-

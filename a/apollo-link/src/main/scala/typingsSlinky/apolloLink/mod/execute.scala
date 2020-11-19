@@ -6,11 +6,11 @@ import typingsSlinky.apolloLink.typesMod.GraphQLRequest
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-link", "execute")
 @js.native
 object execute extends js.Object {
+  
   def apply(link: typingsSlinky.apolloLink.linkMod.ApolloLink, operation: GraphQLRequest): typingsSlinky.zenObservableTs.zenObservableMod.Observable[FetchResult[StringDictionary[_], Record[String, _], Record[String, _]]] = js.native
 }
-

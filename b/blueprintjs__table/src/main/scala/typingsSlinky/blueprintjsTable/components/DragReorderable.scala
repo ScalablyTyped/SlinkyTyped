@@ -9,9 +9,10 @@ import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
 import typingsSlinky.blueprintjsTable.reorderableMod.IDragReorderable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DragReorderable {
+  
   @JSImport("@blueprintjs/table/lib/esm/interactions/reorderable", "DragReorderable")
   @js.native
   object component extends js.Object
@@ -20,17 +21,22 @@ object DragReorderable {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.reorderableMod.DragReorderable] {
+    
     @scala.inline
     def disabledFunction1(value: /* event */ MouseEvent => Boolean): this.type = set("disabled", js.Any.fromFunction1(value))
+    
     @scala.inline
     def disabled(value: Boolean | (js.Function1[/* event */ MouseEvent, Boolean])): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def selectedRegionsVarargs(value: IRegion*): this.type = set("selectedRegions", js.Array(value :_*))
+    
     @scala.inline
     def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IDragReorderable): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     locateClick: MouseEvent => IRegion,
@@ -45,4 +51,3 @@ object DragReorderable {
     new Builder(js.Array(this.component, __props.asInstanceOf[IDragReorderable]))
   }
 }
-

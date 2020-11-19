@@ -3,7 +3,7 @@ package typingsSlinky.typescriptServices.global.TypeScript
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.FunctionPropertyAssignmentSyntax")
 @js.native
@@ -16,11 +16,10 @@ class FunctionPropertyAssignmentSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSGlobal("TypeScript.FunctionPropertyAssignmentSyntax")
 @js.native
 object FunctionPropertyAssignmentSyntax extends js.Object {
+  
   def create1(propertyName: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.FunctionPropertyAssignmentSyntax = js.native
 }
-

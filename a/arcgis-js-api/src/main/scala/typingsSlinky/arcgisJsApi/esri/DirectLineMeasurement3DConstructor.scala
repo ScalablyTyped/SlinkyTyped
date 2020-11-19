@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DirectLineMeasurement3DConstructor
@@ -15,4 +15,3 @@ trait DirectLineMeasurement3DConstructor
   */
 Instantiable0[DirectLineMeasurement3D]
      with Instantiable1[/* properties */ DirectLineMeasurement3DProperties, DirectLineMeasurement3D]
-

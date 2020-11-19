@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ScaleRanges extends Accessor {
+  
   /**
     * Clamps the scale to the closest minScale or maxScale on the scale range. If the provided scale goes beyond the allowed range, it snaps back to the clamped value.
     *
@@ -15,6 +16,7 @@ trait ScaleRanges extends Accessor {
     *
     */
   def clampScale(scale: Double): Double = js.native
+  
   /**
     * Determines whether the given scale is within the current scale range.
     *
@@ -24,6 +26,7 @@ trait ScaleRanges extends Accessor {
     *
     */
   def contains(scale: Double): Boolean = js.native
+  
   /**
     * Finds the scale range name at a given index.
     *
@@ -33,6 +36,7 @@ trait ScaleRanges extends Accessor {
     *
     */
   def findScaleRangeByIndex(index: Double): NamedScaleRange = js.native
+  
   /**
     * Helper to create a ScaleRanges object from a minimum and maximum scale.
     *
@@ -43,6 +47,7 @@ trait ScaleRanges extends Accessor {
     *
     */
   def fromScaleRange(minScale: Double, maxScale: Double): ScaleRanges = js.native
+  
   /**
     * Determines if the input scale value can be considered to be at the smallest scale range edge.
     *
@@ -52,6 +57,7 @@ trait ScaleRanges extends Accessor {
     *
     */
   def isMaxScaleEdge(scale: Unit): Boolean = js.native
+  
   /**
     * Determines if the input scale value can be considered to be at the largest scale range edge.
     *
@@ -62,4 +68,3 @@ trait ScaleRanges extends Accessor {
     */
   def isMinScaleEdge(scale: Unit): Boolean = js.native
 }
-

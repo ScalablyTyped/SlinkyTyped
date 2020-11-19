@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.organizationsMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.Organizations")
 @js.native
@@ -14,4 +14,3 @@ class Organizations ()
   extends typingsSlinky.awsSdk.mod.Organizations {
   def this(options: ClientConfiguration) = this()
 }
-

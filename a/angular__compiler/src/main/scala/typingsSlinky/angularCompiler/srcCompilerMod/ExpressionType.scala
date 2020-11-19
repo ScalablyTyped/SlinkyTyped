@@ -4,7 +4,7 @@ import typingsSlinky.angularCompiler.outputAstMod.ExpressionType_
 import typingsSlinky.angularCompiler.outputAstMod.TypeModifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/compiler", "ExpressionType")
 @js.native
@@ -27,4 +27,3 @@ class ExpressionType protected () extends ExpressionType_ {
     typeParams: js.Array[typingsSlinky.angularCompiler.outputAstMod.Type]
   ) = this()
 }
-

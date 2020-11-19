@@ -7,44 +7,52 @@ import typingsSlinky.web3CoreHelpers.mod.TransactionRevertInstructionError
 import typingsSlinky.web3EthContract.mod.Contract
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("web3-eth-ens", "Registry")
 @js.native
 class Registry protected () extends js.Object {
   def this(ens: Ens) = this()
+  
   var contract: Contract | Null = js.native
+  
   var ens: Ens = js.native
+  
   /**
     * @deprecated This callback signature is deprecated
     */
   def getOwner(name: String): js.Promise[String] = js.native
   def getOwner(name: String, callback: js.Function1[/* value */ js.Any, Unit]): js.Promise[String] = js.native
   def getOwner(name: String, callback: js.Function2[/* error */ js.Error, /* address */ String, Unit]): js.Promise[String] = js.native
+  
   /**
     * @deprecated This callback signature is deprecated
     */
   def getResolver(name: String): js.Promise[Contract] = js.native
   def getResolver(name: String, callback: js.Function1[/* value */ js.Any, Unit]): js.Promise[Contract] = js.native
   def getResolver(name: String, callback: js.Function2[/* error */ js.Error, /* contract */ Contract, Unit]): js.Promise[Contract] = js.native
+  
   /**
     * @deprecated This callback signature is deprecated
     */
   def getTTl(name: String): js.Promise[String] = js.native
   def getTTl(name: String, callback: js.Function1[/* value */ js.Any, Unit]): js.Promise[String] = js.native
   def getTTl(name: String, callback: js.Function2[/* error */ js.Error, /* ttl */ String, Unit]): js.Promise[String] = js.native
+  
   /**
     * @deprecated Please use the "getOwner" method instead of "owner"
     */
   def owner(name: String): js.Promise[String] = js.native
   def owner(name: String, callback: js.Function1[/* value */ js.Any, Unit]): js.Promise[String] = js.native
   def owner(name: String, callback: js.Function2[/* error */ js.Error, /* address */ String, Unit]): js.Promise[String] = js.native
+  
   /**
     * @deprecated Please use the "getResolver" method instead of "resolver"
     */
   def resolver(name: String): js.Promise[Contract] = js.native
   def resolver(name: String, callback: js.Function1[/* value */ js.Any, Unit]): js.Promise[Contract] = js.native
   def resolver(name: String, callback: js.Function2[/* error */ js.Error, /* contract */ Contract, Unit]): js.Promise[Contract] = js.native
+  
   def setOwner(name: String, address: String): PromiEvent[TransactionReceipt | TransactionRevertInstructionError] = js.native
   def setOwner(
     name: String,
@@ -67,6 +75,7 @@ class Registry protected () extends js.Object {
       Unit
     ]
   ): PromiEvent[TransactionReceipt | TransactionRevertInstructionError] = js.native
+  
   def setResolver(name: String, address: String): PromiEvent[TransactionReceipt | TransactionRevertInstructionError] = js.native
   def setResolver(
     name: String,
@@ -89,6 +98,7 @@ class Registry protected () extends js.Object {
       Unit
     ]
   ): PromiEvent[TransactionReceipt | TransactionRevertInstructionError] = js.native
+  
   def setSubnodeOwner(name: String, label: String, address: String): PromiEvent[TransactionReceipt | TransactionRevertInstructionError] = js.native
   def setSubnodeOwner(
     name: String,
@@ -113,6 +123,7 @@ class Registry protected () extends js.Object {
       Unit
     ]
   ): PromiEvent[TransactionReceipt | TransactionRevertInstructionError] = js.native
+  
   def setTTL(name: String, ttl: String): PromiEvent[TransactionReceipt | TransactionRevertInstructionError] = js.native
   def setTTL(
     name: String,
@@ -158,4 +169,3 @@ class Registry protected () extends js.Object {
     ]
   ): PromiEvent[TransactionReceipt | TransactionRevertInstructionError] = js.native
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.fileType.coreMod
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("file-type/core", "fromBuffer")
 @js.native
 object fromBuffer extends js.Object {
+  
   /**
   	Detect the file type of a `Buffer`, `Uint8Array`, or `ArrayBuffer`.
   	The file type is detected by checking the [magic number](https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files) of the buffer.
@@ -19,4 +20,3 @@ object fromBuffer extends js.Object {
   def apply(buffer: js.typedarray.ArrayBuffer): js.Promise[js.UndefOr[FileTypeResult]] = js.native
   def apply(buffer: js.typedarray.Uint8Array): js.Promise[js.UndefOr[FileTypeResult]] = js.native
 }
-

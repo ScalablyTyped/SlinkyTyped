@@ -4,7 +4,7 @@ import typingsSlinky.electron.Electron.TouchBarButton
 import typingsSlinky.electron.Electron.TouchBarButtonConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Electron.remote.TouchBarButton")
 @js.native
@@ -15,4 +15,3 @@ class TouchBarButtonCls protected () extends TouchBarButton {
     */
   def this(options: TouchBarButtonConstructorOptions) = this()
 }
-

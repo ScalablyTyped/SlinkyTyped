@@ -3,11 +3,12 @@ package typingsSlinky.enhancedResolve.descriptionFileUtilsMod
 import typingsSlinky.enhancedResolve.resolverMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("enhanced-resolve/lib/DescriptionFileUtils", "loadDescriptionFile")
 @js.native
 object loadDescriptionFile extends js.Object {
+  
   def apply(
     resolver: ^,
     directory: String,
@@ -19,4 +20,3 @@ object loadDescriptionFile extends js.Object {
     ]
   ): Unit = js.native
 }
-

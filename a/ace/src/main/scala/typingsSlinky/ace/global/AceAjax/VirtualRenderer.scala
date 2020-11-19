@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AceAjax.VirtualRenderer")
 @js.native
@@ -21,4 +21,3 @@ Instantiable1[/* container */ HTMLElement, typingsSlinky.ace.AceAjax.VirtualRend
       /* theme */ String, 
       typingsSlinky.ace.AceAjax.VirtualRenderer
     ]
-

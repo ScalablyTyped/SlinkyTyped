@@ -2,9 +2,10 @@ package typingsSlinky.luminoDatagrid.cellrendererMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object CellRenderer {
+  
   /**
     * A type alias for a cell renderer config function.
     *
@@ -14,6 +15,7 @@ package object CellRenderer {
     /* config */ typingsSlinky.luminoDatagrid.cellrendererMod.CellRenderer.CellConfig, 
     T
   ]
+  
   /**
     * A type alias for a cell renderer config option.
     *

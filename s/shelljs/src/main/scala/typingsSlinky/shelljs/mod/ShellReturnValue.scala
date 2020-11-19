@@ -5,86 +5,11 @@ import typingsSlinky.shelljs.anon.ExecOptionsasyncfalseunde
 import typingsSlinky.shelljs.anon.ExecOptionsasynctrue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ShellReturnValue extends ExecOutputReturnValue {
-  /**
-    * Returns a string containing the given pipeline, or a concatenated string
-    * containing the pipelines if more than one input stream is given
-    * (a new line character is introduced between each input).
-    *
-    * @return A string containing the given pipeline, or a concatenated string
-    *         containing the pipelines if more than one input stream is given
-    *         (a new line character is introduced between each input).
-    */
-  @JSName("cat")
-  var cat_Original: CatFunction = js.native
-  /**
-    * Executes the given command.
-    *
-    * @param command The command to execute.
-    * @param options Silence and synchronous options.
-    * @param [callback] Receives code and output asynchronously.
-    * @return Returns an object containing the return code and output as string,
-    *         or if `{async: true}` or a `callback` was passed, a `ChildProcess`.
-    */
-  @JSName("exec")
-  var exec_Original: ExecFunction = js.native
-  /**
-    * Reads input string from given files and returns a string containing all lines
-    * of the file that match the given `regex_filter`. Wildcard `*` accepted.
-    *
-    * @param options Available options:
-    *        - `-v`: Inverse the sense of the regex and print
-    *                the lines not matching the criteria.
-    *        - `-l`: Print only filenames of matching files
-    * @param regex_filter The regular expression to use.
-    * @return Returns a string containing all lines of the file that match the given `regex_filter`.
-    */
-  @JSName("grep")
-  var grep_Original: GrepFunction = js.native
-  /**
-    * Read the start of a pipeline input.
-    */
-  @JSName("head")
-  var head_Original: HeadFunction = js.native
-  /**
-    * Reads an input string from pipeline and performs a JavaScript `replace()`
-    * on the input using the given search regex and replacement string or function.
-    *
-    * @param options Available options:
-    *        - `-i`: Replace contents of 'file' in-place. Note that no backups will be created!
-    * @param searchRegex The regular expression to use for search.
-    * @param replacement The replacement.
-    * @return            The new string after replacement.
-    */
-  @JSName("sed")
-  var sed_Original: SedFunction = js.native
-  /**
-    * Return the contents of the pipeline, sorted line-by-line.
-    *
-    * @param options Available options:
-    *        - `-r`: Reverse the results
-    *        - `-n`: Compare according to numerical value
-    */
-  @JSName("sort")
-  var sort_Original: SortFunction = js.native
-  /**
-    * Read the end of a pipeline input.
-    */
-  @JSName("tail")
-  var tail_Original: TailFunction = js.native
-  /**
-    * Filter adjacent matching lines from input.
-    *
-    * @param options Available options:
-    *        - `-i`: Ignore case while comparing
-    *        - `-c`: Prefix lines by the number of occurrences
-    *        - `-d`: Only print duplicate lines, one for each group of identical lines
-    */
-  @JSName("uniq")
-  var uniq_Original: UniqFunction = js.native
+  
   /**
     * Returns a string containing the given pipeline, or a concatenated string
     * containing the pipelines if more than one input stream is given
@@ -115,6 +40,18 @@ trait ShellReturnValue extends ExecOutputReturnValue {
     *         (a new line character is introduced between each input).
     */
   def cat(files: js.Array[String]): ShellString = js.native
+  /**
+    * Returns a string containing the given pipeline, or a concatenated string
+    * containing the pipelines if more than one input stream is given
+    * (a new line character is introduced between each input).
+    *
+    * @return A string containing the given pipeline, or a concatenated string
+    *         containing the pipelines if more than one input stream is given
+    *         (a new line character is introduced between each input).
+    */
+  @JSName("cat")
+  var cat_Original: CatFunction = js.native
+  
   /**
     * Executes the given command synchronously.
     *
@@ -219,6 +156,18 @@ trait ShellReturnValue extends ExecOutputReturnValue {
     */
   def exec(command: String, options: ExecOptions, callback: ExecCallback): ChildProcess = js.native
   /**
+    * Executes the given command.
+    *
+    * @param command The command to execute.
+    * @param options Silence and synchronous options.
+    * @param [callback] Receives code and output asynchronously.
+    * @return Returns an object containing the return code and output as string,
+    *         or if `{async: true}` or a `callback` was passed, a `ChildProcess`.
+    */
+  @JSName("exec")
+  var exec_Original: ExecFunction = js.native
+  
+  /**
     * Reads input string from given files and returns a string containing all lines
     * of the file that match the given `regex_filter`. Wildcard `*` accepted.
     *
@@ -291,6 +240,20 @@ trait ShellReturnValue extends ExecOutputReturnValue {
   def grep(regex_filter: js.RegExp, files: String*): ShellString = js.native
   def grep(regex_filter: js.RegExp, files: js.Array[String]): ShellString = js.native
   /**
+    * Reads input string from given files and returns a string containing all lines
+    * of the file that match the given `regex_filter`. Wildcard `*` accepted.
+    *
+    * @param options Available options:
+    *        - `-v`: Inverse the sense of the regex and print
+    *                the lines not matching the criteria.
+    *        - `-l`: Print only filenames of matching files
+    * @param regex_filter The regular expression to use.
+    * @return Returns a string containing all lines of the file that match the given `regex_filter`.
+    */
+  @JSName("grep")
+  var grep_Original: GrepFunction = js.native
+  
+  /**
     * Read the start of a pipeline input.
     */
   def head(files: String*): ShellString = js.native
@@ -306,6 +269,12 @@ trait ShellReturnValue extends ExecOutputReturnValue {
     * Read the start of a pipeline input.
     */
   def head(options: HeadOptions, files: js.Array[String]): ShellString = js.native
+  /**
+    * Read the start of a pipeline input.
+    */
+  @JSName("head")
+  var head_Original: HeadFunction = js.native
+  
   /**
     * Reads an input string from pipeline and performs a JavaScript `replace()`
     * on the input using the given search regex and replacement string or function.
@@ -375,6 +344,19 @@ trait ShellReturnValue extends ExecOutputReturnValue {
   def sed(searchRegex: js.RegExp, replacement: String, files: String*): ShellString = js.native
   def sed(searchRegex: js.RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
   /**
+    * Reads an input string from pipeline and performs a JavaScript `replace()`
+    * on the input using the given search regex and replacement string or function.
+    *
+    * @param options Available options:
+    *        - `-i`: Replace contents of 'file' in-place. Note that no backups will be created!
+    * @param searchRegex The regular expression to use for search.
+    * @param replacement The replacement.
+    * @return            The new string after replacement.
+    */
+  @JSName("sed")
+  var sed_Original: SedFunction = js.native
+  
+  /**
     * Return the contents of the pipeline, sorted line-by-line.
     *
     * @param options Available options:
@@ -419,6 +401,16 @@ trait ShellReturnValue extends ExecOutputReturnValue {
     */
   def sort(options: String, files: js.Array[String]): ShellString = js.native
   /**
+    * Return the contents of the pipeline, sorted line-by-line.
+    *
+    * @param options Available options:
+    *        - `-r`: Reverse the results
+    *        - `-n`: Compare according to numerical value
+    */
+  @JSName("sort")
+  var sort_Original: SortFunction = js.native
+  
+  /**
     * Read the end of a pipeline input.
     */
   def tail(files: String*): ShellString = js.native
@@ -435,6 +427,12 @@ trait ShellReturnValue extends ExecOutputReturnValue {
     */
   def tail(options: TailOptions, files: js.Array[String]): ShellString = js.native
   /**
+    * Read the end of a pipeline input.
+    */
+  @JSName("tail")
+  var tail_Original: TailFunction = js.native
+  
+  /**
     * Analogous to the redirection operator `>` in Unix, but works with JavaScript strings
     * (such as those returned by `cat`, `grep`, etc).
     *
@@ -443,6 +441,7 @@ trait ShellReturnValue extends ExecOutputReturnValue {
     * @param file The file to use.
     */
   def to(file: String): Unit = js.native
+  
   /**
     * Analogous to the redirect-and-append operator `>>` in Unix, but works with JavaScript strings
     * (such as those returned by `cat`, `grep`, etc).
@@ -450,6 +449,7 @@ trait ShellReturnValue extends ExecOutputReturnValue {
     * @param file The file to append to.
     */
   def toEnd(file: String): Unit = js.native
+  
   /**
     * Filter adjacent matching lines from input.
     */
@@ -472,5 +472,14 @@ trait ShellReturnValue extends ExecOutputReturnValue {
     */
   def uniq(options: String, input: String): ShellString = js.native
   def uniq(options: String, input: String, output: String): ShellString = js.native
+  /**
+    * Filter adjacent matching lines from input.
+    *
+    * @param options Available options:
+    *        - `-i`: Ignore case while comparing
+    *        - `-c`: Prefix lines by the number of occurrences
+    *        - `-d`: Only print duplicate lines, one for each group of identical lines
+    */
+  @JSName("uniq")
+  var uniq_Original: UniqFunction = js.native
 }
-

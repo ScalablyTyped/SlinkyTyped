@@ -6,7 +6,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.ExportNamedDeclaration
 import typingsSlinky.babelTypes.babelTypesStrings.ImportDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ExportAllDeclaration_
@@ -15,8 +15,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ImportDeclaration_
 */
 trait ModuleDeclaration extends js.Object
-
 object ModuleDeclaration {
+  
   @scala.inline
   def ExportAllDeclaration_(
     end: Double,
@@ -29,6 +29,7 @@ object ModuleDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleDeclaration]
   }
+  
   @scala.inline
   def ExportDefaultDeclaration_(
     declaration: Declaration | Expression,
@@ -41,6 +42,7 @@ object ModuleDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleDeclaration]
   }
+  
   @scala.inline
   def ExportNamedDeclaration_(
     declaration: Declaration,
@@ -54,6 +56,7 @@ object ModuleDeclaration {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleDeclaration]
   }
+  
   @scala.inline
   def ImportDeclaration_(
     end: Double,
@@ -68,4 +71,3 @@ object ModuleDeclaration {
     __obj.asInstanceOf[ModuleDeclaration]
   }
 }
-

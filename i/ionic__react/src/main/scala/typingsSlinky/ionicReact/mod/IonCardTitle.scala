@@ -5,9 +5,8 @@ import typingsSlinky.ionicReact.anon.IonCardTitlePickHTMLAttri
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/react", "IonCardTitle")
 @js.native
 object IonCardTitle extends TopLevel[ForwardRefExoticComponent[IonCardTitlePickHTMLAttri]]
-

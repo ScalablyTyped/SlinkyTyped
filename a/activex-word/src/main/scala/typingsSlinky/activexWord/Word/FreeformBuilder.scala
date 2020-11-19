@@ -4,15 +4,11 @@ import typingsSlinky.activexOffice.Office.MsoEditingType
 import typingsSlinky.activexOffice.Office.MsoSegmentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FreeformBuilder extends js.Object {
-  val Application: typingsSlinky.activexWord.Word.Application = js.native
-  val Creator: Double = js.native
-  val Parent: js.Any = js.native
-  @JSName("Word.FreeformBuilder_typekey")
-  var WordDotFreeformBuilder_typekey: FreeformBuilder = js.native
+  
   /**
     * @param number [X2=0]
     * @param number [Y2=0]
@@ -153,7 +149,16 @@ trait FreeformBuilder extends js.Object {
     X3: Double,
     Y3: Double
   ): Unit = js.native
+  
+  val Application: typingsSlinky.activexWord.Word.Application = js.native
+  
   def ConvertToShape(): Shape = js.native
   def ConvertToShape(Anchor: js.Any): Shape = js.native
+  
+  val Creator: Double = js.native
+  
+  val Parent: js.Any = js.native
+  
+  @JSName("Word.FreeformBuilder_typekey")
+  var WordDotFreeformBuilder_typekey: FreeformBuilder = js.native
 }
-

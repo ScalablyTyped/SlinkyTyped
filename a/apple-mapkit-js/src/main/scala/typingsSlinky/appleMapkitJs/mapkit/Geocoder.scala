@@ -3,7 +3,7 @@ package typingsSlinky.appleMapkitJs.mapkit
 import typingsSlinky.appleMapkitJs.anon.PickGeocoderConstructorOp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A geocoder that converts human-readable addresses to geographic coordinates
@@ -11,22 +11,26 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Geocoder extends js.Object {
-  /**
-    * A Boolean value that indicates whether the geocoder should return results
-    * near the user's current location.
-    */
-  var getsUserLocation: String = js.native
-  /**
-    * A Boolean value that indicates whether the geocoder should return results
-    * near the user's current location.
-    */
-  var language: String = js.native
+  
   /**
     * Cancels the pending lookup or reverse lookup specified by its request ID.
     *
     * @param id The request ID of the lookup or reverseLookup to cancel.
     */
   def cancel(id: Double): Boolean = js.native
+  
+  /**
+    * A Boolean value that indicates whether the geocoder should return results
+    * near the user's current location.
+    */
+  var getsUserLocation: String = js.native
+  
+  /**
+    * A Boolean value that indicates whether the geocoder should return results
+    * near the user's current location.
+    */
+  var language: String = js.native
+  
   /**
     * Converts an address to geographic coordinates.
     */
@@ -39,6 +43,7 @@ trait Geocoder extends js.Object {
     callback: js.Function2[/* error */ js.Error | Null, /* data */ GeocoderResponse, Unit],
     options: GeocoderLookupOptions
   ): Double = js.native
+  
   /**
     * Converts a geographic coordinate to an address.
     *
@@ -58,4 +63,3 @@ trait Geocoder extends js.Object {
     options: PickGeocoderConstructorOp
   ): Double = js.native
 }
-

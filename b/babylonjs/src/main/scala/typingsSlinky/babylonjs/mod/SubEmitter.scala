@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "SubEmitter")
 @js.native
@@ -17,11 +17,11 @@ class SubEmitter protected ()
     */
   particleSystem: typingsSlinky.babylonjs.particleSystemMod.ParticleSystem) = this()
 }
-
 /* static members */
 @JSImport("babylonjs", "SubEmitter")
 @js.native
 object SubEmitter extends js.Object {
+  
   /**
     * Creates a new SubEmitter from a serialized JSON version
     * @param serializationObject defines the JSON object to read from
@@ -30,7 +30,7 @@ object SubEmitter extends js.Object {
     * @returns a new SubEmitter
     */
   def Parse(serializationObject: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): typingsSlinky.babylonjs.subEmitterMod.SubEmitter = js.native
+  
   /** @hidden */
   def _ParseParticleSystem(system: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): typingsSlinky.babylonjs.particleSystemMod.ParticleSystem = js.native
 }
-

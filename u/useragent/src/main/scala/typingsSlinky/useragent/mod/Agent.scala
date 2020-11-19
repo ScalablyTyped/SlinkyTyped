@@ -2,7 +2,7 @@ package typingsSlinky.useragent.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("useragent", "Agent")
 @js.native
@@ -117,24 +117,33 @@ class Agent () extends js.Object {
   def this(family: String, major: String, minor: js.UndefOr[scala.Nothing], patch: String, source: String) = this()
   def this(family: String, major: String, minor: String, patch: js.UndefOr[scala.Nothing], source: String) = this()
   def this(family: String, major: String, minor: String, patch: String, source: String) = this()
+  
   var device: Device = js.native
+  
   var family: String = js.native
+  
   var major: String = js.native
+  
   var minor: String = js.native
+  
   var os: OperatingSystem = js.native
+  
   var patch: String = js.native
+  
   var source: String = js.native
+  
   /**
     * Generates a string output of the parsed user agent.
     */
   def toAgent(): String = js.native
+  
   /**
     * The representation of a parsed Operating System.
     */
   def toJSON(): typingsSlinky.useragent.anon.Device = js.native
+  
   /**
     * Outputs a compiled veersion number of the user agent.
     */
   def toVersion(): String = js.native
 }
-

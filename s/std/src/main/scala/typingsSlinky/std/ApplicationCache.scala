@@ -10,36 +10,26 @@ import typingsSlinky.std.stdStrings.progress
 import typingsSlinky.std.stdStrings.updateready
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ApplicationCache extends EventTarget {
+  
   val CHECKING: Double = js.native
+  
   val DOWNLOADING: Double = js.native
+  
   val IDLE: Double = js.native
+  
   val OBSOLETE: Double = js.native
+  
   val UNCACHED: Double = js.native
+  
   val UPDATEREADY: Double = js.native
-  /** @deprecated */
-  var oncached: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  /** @deprecated */
-  var onchecking: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  /** @deprecated */
-  var ondownloading: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  /** @deprecated */
-  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  /** @deprecated */
-  var onnoupdate: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  /** @deprecated */
-  var onobsolete: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  /** @deprecated */
-  var onprogress: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _]) | Null = js.native
-  /** @deprecated */
-  var onupdateready: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  /** @deprecated */
-  val status: Double = js.native
+  
   /** @deprecated */
   def abort(): Unit = js.native
+  
   @JSName("addEventListener")
   def addEventListener_cached(
     `type`: cached,
@@ -176,6 +166,31 @@ trait ApplicationCache extends EventTarget {
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
+  
+  /** @deprecated */
+  var oncached: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  /** @deprecated */
+  var onchecking: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  /** @deprecated */
+  var ondownloading: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  /** @deprecated */
+  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  /** @deprecated */
+  var onnoupdate: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  /** @deprecated */
+  var onobsolete: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  /** @deprecated */
+  var onprogress: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _]) | Null = js.native
+  
+  /** @deprecated */
+  var onupdateready: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
   @JSName("removeEventListener")
   def removeEventListener_cached(
     `type`: cached,
@@ -312,9 +327,13 @@ trait ApplicationCache extends EventTarget {
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  
+  /** @deprecated */
+  val status: Double = js.native
+  
   /** @deprecated */
   def swapCache(): Unit = js.native
+  
   /** @deprecated */
   def update(): Unit = js.native
 }
-

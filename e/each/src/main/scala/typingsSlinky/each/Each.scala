@@ -6,18 +6,18 @@ import typingsSlinky.each.eachStrings.error
 import typingsSlinky.each.eachStrings.item
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Each extends js.Object {
+  
   var done: Double = js.native
-  var paused: Boolean = js.native
-  var readable: Boolean = js.native
-  var started: Double = js.native
-  var total: Double = js.native
+  
   def end(): Each = js.native
+  
   def files(base: js.Any, glob: js.Any): Unit = js.native
   def files(glob: js.Any): Unit = js.native
+  
   def on(eventName: String, onCallback: js.Function): Each = js.native
   @JSName("on")
   def on_both(eventName: both, onBoth: js.Function1[/* error */ js.UndefOr[js.Array[js.Error]], Unit]): Each = js.native
@@ -37,13 +37,27 @@ trait Each extends js.Object {
       Unit
     ]
   ): Each = js.native
+  
   def parallel(mode: Boolean): Each = js.native
   def parallel(mode: Double): Each = js.native
+  
+  var paused: Boolean = js.native
+  
+  var readable: Boolean = js.native
+  
   def repeat(): Each = js.native
+  
   def shift(items: js.Array[_]): Unit = js.native
+  
+  var started: Double = js.native
+  
   def sync(): Each = js.native
+  
   def times(): Each = js.native
+  
+  var total: Double = js.native
+  
   def unshift(items: js.Array[_]): Unit = js.native
+  
   def write(items: js.Array[_]): Unit = js.native
 }
-

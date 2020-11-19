@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.imodelserverclientMod.IModelServerClient
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Instantiable[CT /* <: AbstractModel with IT */, IT /* <: IAbstractModel */] extends Instantiable3[
@@ -17,4 +17,3 @@ trait Instantiable[CT /* <: AbstractModel with IT */, IT /* <: IAbstractModel */
       /* _connectionConfig */ ISdkConfig, 
       CT
     ]
-

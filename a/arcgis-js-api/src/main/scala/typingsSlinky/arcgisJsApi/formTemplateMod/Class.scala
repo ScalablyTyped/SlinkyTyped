@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.FormTemplate
 import typingsSlinky.arcgisJsApi.esri.FormTemplateProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/form/FormTemplate", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends FormTemplate {
   def this(properties: FormTemplateProperties) = this()
 }
-

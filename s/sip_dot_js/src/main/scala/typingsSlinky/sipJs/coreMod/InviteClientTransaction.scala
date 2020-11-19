@@ -4,7 +4,7 @@ import typingsSlinky.sipJs.coreTransportMod.Transport
 import typingsSlinky.sipJs.transactionUserMod.ClientTransactionUser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js/lib/core", "InviteClientTransaction")
 @js.native
@@ -27,4 +27,3 @@ class InviteClientTransaction protected ()
     user: ClientTransactionUser
   ) = this()
 }
-

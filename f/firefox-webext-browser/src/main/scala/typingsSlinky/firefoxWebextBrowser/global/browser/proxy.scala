@@ -6,7 +6,7 @@ import typingsSlinky.firefoxWebextBrowser.browser.proxy.ProxyOnRequestEvent
 import typingsSlinky.firefoxWebextBrowser.browser.types.Setting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides access to global proxy settings for Firefox and proxy event listeners to handle dynamic proxy
@@ -19,13 +19,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("browser.proxy")
 @js.native
 object proxy extends js.Object {
+  
   /** Notifies about errors caused by the invalid use of the proxy API. */
   val onError: WebExtEvent[js.Function1[/* error */ js.Error, Unit]] = js.native
+  
   /* proxy events */
   /** Fired when proxy data is needed for a request. */
   val onRequest: ProxyOnRequestEvent[js.Function1[/* details */ CookieStoreId, Unit]] = js.native
+  
   /* proxy properties */
   /** Configures proxy settings. This setting's value is an object of type ProxyConfig. */
   val settings: Setting = js.native
 }
-

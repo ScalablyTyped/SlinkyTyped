@@ -5,7 +5,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.ClassProperty
 import typingsSlinky.babelTypes.babelTypesStrings.ObjectProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ObjectProperty_
@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ClassPrivateProperty_
 */
 trait Property extends _Node
-
 object Property {
+  
   @scala.inline
   def ObjectProperty_(
     computed: Boolean,
@@ -27,6 +27,7 @@ object Property {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Property]
   }
+  
   @scala.inline
   def ClassProperty_(
     computed: Boolean,
@@ -38,6 +39,7 @@ object Property {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Property]
   }
+  
   @scala.inline
   def ClassPrivateProperty_(key: PrivateName_, `type`: ClassPrivateProperty): Property = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
@@ -45,4 +47,3 @@ object Property {
     __obj.asInstanceOf[Property]
   }
 }
-

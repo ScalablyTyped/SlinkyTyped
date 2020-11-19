@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.BottomBarItem
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.3.0: introduced
@@ -26,26 +26,28 @@ class OpenLinkClientAction protected () extends ClientAction {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FOpenLinkClientAction: IModel = js.native
+  
   def address: StaticOrDynamicString = js.native
   def address_=(newValue: StaticOrDynamicString): Unit = js.native
+  
   def linkType: LinkType = js.native
   def linkType_=(newValue: LinkType): Unit = js.native
+  
+  @JSName("model")
+  var model_FOpenLinkClientAction: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.OpenLinkClientAction")
 @js.native
 object OpenLinkClientAction extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'action' property
@@ -55,6 +57,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.3.0 and higher
     */
   def createInActionButtonUnderAction(container: ActionButton): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'action' property
@@ -64,6 +67,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.3.0 and higher
     */
   def createInActionItemUnderAction(container: ActionItem): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'onChangeAction' property
@@ -73,6 +77,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.13.0 and higher
     */
   def createInAssociationWidgetUnderOnChangeAction(container: AssociationWidget): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'onChangeAction' property
@@ -82,6 +87,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.13.0 and higher
     */
   def createInAttributeWidgetUnderOnChangeAction(container: AttributeWidget): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'onEnterAction' property
@@ -91,6 +97,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.13.0 and higher
     */
   def createInAttributeWidgetUnderOnEnterAction(container: AttributeWidget): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'onLeaveAction' property
@@ -100,6 +107,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.13.0 and higher
     */
   def createInAttributeWidgetUnderOnLeaveAction(container: AttributeWidget): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'action' property
@@ -109,6 +117,7 @@ object OpenLinkClientAction extends js.Object {
     *  8.0.0 and higher
     */
   def createInBottomBarItemUnderAction(container: BottomBarItem): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'onClickAction' property
@@ -118,6 +127,7 @@ object OpenLinkClientAction extends js.Object {
     *  8.3.0 and higher
     */
   def createInDivContainerUnderOnClickAction(container: DivContainer): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'clickAction' property
@@ -127,6 +137,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.18.0 and higher
     */
   def createInDynamicImageViewerUnderClickAction(container: DynamicImageViewer): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'action' property
@@ -136,6 +147,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.3.0 and higher
     */
   def createInGridActionButtonUnderAction(container: GridActionButton): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'clickAction' property
@@ -145,6 +157,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.3.0 and higher
     */
   def createInListViewUnderClickAction(container: ListView): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'pullDownAction' property
@@ -154,6 +167,7 @@ object OpenLinkClientAction extends js.Object {
     *  8.0.0 and higher
     */
   def createInListViewUnderPullDownAction(container: ListView): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'action' property
@@ -163,6 +177,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.3.0 and higher
     */
   def createInMenuItemUnderAction(container: MenuItem): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'onChangeAction' property
@@ -172,6 +187,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.13.0 and higher
     */
   def createInReferenceSetSelectorUnderOnChangeAction(container: ReferenceSetSelector): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'clickAction' property
@@ -181,6 +197,7 @@ object OpenLinkClientAction extends js.Object {
     *  7.3.0 and higher
     */
   def createInStaticImageViewerUnderClickAction(container: StaticImageViewer): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'onEnterKeyPressAction' property
@@ -190,6 +207,7 @@ object OpenLinkClientAction extends js.Object {
     *  8.7.0 and higher
     */
   def createInTextBoxUnderOnEnterKeyPressAction(container: TextBox): OpenLinkClientAction = js.native
+  
   /**
     * Creates and returns a new OpenLinkClientAction instance in the SDK and on the server.
     * The new OpenLinkClientAction will be automatically stored in the 'action' property
@@ -199,5 +217,8 @@ object OpenLinkClientAction extends js.Object {
     *  7.19.0 and higher
     */
   def createInWidgetValueUnderAction(container: WidgetValue): OpenLinkClientAction = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.jointjs.mod.anchors
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined jointjs.jointjs.anchors.GenericAnchorArguments<jointjs.jointjs.anchors.AnchorType> */
 /* Rewritten from type alias, can be one of: 
@@ -14,19 +14,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jointjs.jointjsStrings.dy
 */
 trait AnchorArguments extends js.Object
-
 object AnchorArguments {
+  
   @scala.inline
   def dx: typingsSlinky.jointjs.jointjsStrings.dx = "dx".asInstanceOf[typingsSlinky.jointjs.jointjsStrings.dx]
+  
   @scala.inline
   def dy: typingsSlinky.jointjs.jointjsStrings.dy = "dy".asInstanceOf[typingsSlinky.jointjs.jointjsStrings.dy]
+  
   @scala.inline
   def fallbackAt: typingsSlinky.jointjs.jointjsStrings.fallbackAt = "fallbackAt".asInstanceOf[typingsSlinky.jointjs.jointjsStrings.fallbackAt]
+  
   @scala.inline
   def fixedAt: typingsSlinky.jointjs.jointjsStrings.fixedAt = "fixedAt".asInstanceOf[typingsSlinky.jointjs.jointjsStrings.fixedAt]
+  
   @scala.inline
   def length: typingsSlinky.jointjs.jointjsStrings.length = "length".asInstanceOf[typingsSlinky.jointjs.jointjsStrings.length]
+  
   @scala.inline
   def padding: typingsSlinky.jointjs.jointjsStrings.padding = "padding".asInstanceOf[typingsSlinky.jointjs.jointjsStrings.padding]
 }
-

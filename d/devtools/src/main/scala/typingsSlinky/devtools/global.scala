@@ -4,13 +4,15 @@ import typingsSlinky.devtools.DevTools.Client
 import typingsSlinky.webdriver.WebDriver.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object DevTools extends js.Object {
+    
     def newSession(): js.Promise[Client] = js.native
     def newSession(
       options: js.UndefOr[scala.Nothing],
@@ -71,8 +73,7 @@ object global extends js.Object {
       proto: js.Object,
       commandWrapper: js.Function2[/* commandName */ String, /* fn */ js.Function1[/* repeated */ js.Any, _], _]
     ): js.Promise[Client] = js.native
+    
     def reloadSession(instance: Client): js.Promise[Client] = js.native
   }
-  
 }
-

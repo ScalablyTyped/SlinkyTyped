@@ -15,20 +15,25 @@ import typingsSlinky.std.NonNullable
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined react-navigation.react-navigation.NavigationScreenProp<State, Params> & {openDrawer (): void, closeDrawer (): void, toggleDrawer (): void, jumpTo (routeName : string, key : string | undefined): void} */
 @js.native
 trait NavigationDrawerProp[State, Params] extends js.Object {
-  var dispatch: NavigationDispatch = js.native
-  var router: js.UndefOr[NavigationRouter[NavigationState, js.Object]] = js.native
-  var state: State with `2`[Params] = js.native
+  
   def addListener(eventName: String, callback: NavigationEventCallback): NavigationEventSubscription = js.native
+  
   def closeDrawer(): Unit = js.native
+  
   def dangerouslyGetParent(): js.UndefOr[NavigationScreenProp[State, NavigationParams]] = js.native
+  
   def dismiss(): Boolean = js.native
+  
+  var dispatch: NavigationDispatch = js.native
+  
   @JSName("emit")
   def emit_refocus(eventName: refocus): Unit = js.native
+  
   def getParam[T /* <: /* keyof Params */ String */](param: T): /* import warning: importer.ImportType#apply Failed type conversion: Params[T] */ js.Any = js.native
   def getParam[T /* <: /* keyof Params */ String */](
     param: T,
@@ -38,19 +43,30 @@ trait NavigationDrawerProp[State, Params] extends js.Object {
   ): NonNullable[
     /* import warning: importer.ImportType#apply Failed type conversion: Params[T] */ js.Any
   ] = js.native
+  
   def goBack(): Boolean = js.native
   def goBack(routeKey: String): Boolean = js.native
+  
   def isFirstRouteInParent(): Boolean = js.native
+  
   def isFocused(): Boolean = js.native
+  
   def jumpTo(routeName: String): Unit = js.native
   def jumpTo(routeName: String, key: String): Unit = js.native
+  
   def navigate[T /* <: NavigationParams */](options: Key[T]): Boolean = js.native
   def navigate[T /* <: NavigationParams */](routeNameOrOptions: String): Boolean = js.native
   def navigate[T /* <: NavigationParams */](routeNameOrOptions: String, params: T): Boolean = js.native
   def navigate[T /* <: NavigationParams */](routeNameOrOptions: String, params: T, action: NavigationAction): Boolean = js.native
   def navigate[T /* <: NavigationParams */](routeNameOrOptions: String, params: js.UndefOr[scala.Nothing], action: NavigationAction): Boolean = js.native
+  
   def openDrawer(): Unit = js.native
+  
+  var router: js.UndefOr[NavigationRouter[NavigationState, js.Object]] = js.native
+  
   def setParams(newParams: Partial[Params]): Boolean = js.native
+  
+  var state: State with `2`[Params] = js.native
+  
   def toggleDrawer(): Unit = js.native
 }
-

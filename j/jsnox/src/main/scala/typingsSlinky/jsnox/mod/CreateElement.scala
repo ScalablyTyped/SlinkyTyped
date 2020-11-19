@@ -5,10 +5,11 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CreateElement extends js.Object {
+  
   /**
     * Renders a React component, with optional props and children
     * @param component A plain React component (created from React.createClass()) or
@@ -52,4 +53,3 @@ trait CreateElement extends js.Object {
   def apply[P](specString: String, props: HTMLAttributes[js.Object]): ReactElement = js.native
   def apply[P](specString: String, props: HTMLAttributes[js.Object], children: ReactElement): ReactElement = js.native
 }
-

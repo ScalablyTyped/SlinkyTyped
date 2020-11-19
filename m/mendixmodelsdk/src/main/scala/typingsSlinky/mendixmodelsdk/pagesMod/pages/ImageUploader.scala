@@ -12,7 +12,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/image-uploader relevant section in reference guide}
@@ -28,28 +28,31 @@ class ImageUploader protected () extends InputWidget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FImageUploader: IModel = js.native
+  
   def allowedExtensions: String = js.native
   def allowedExtensions_=(newValue: String): Unit = js.native
+  
   def maxFileSize: Double = js.native
   def maxFileSize_=(newValue: Double): Unit = js.native
+  
+  @JSName("model")
+  var model_FImageUploader: IModel = js.native
+  
   def thumbnailSize: ISize = js.native
   def thumbnailSize_=(newValue: ISize): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.ImageUploader")
 @js.native
 object ImageUploader extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -59,6 +62,7 @@ object ImageUploader extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: BuildingBlock): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -68,6 +72,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: BuildingBlock): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'footerWidget' property
@@ -77,6 +82,7 @@ object ImageUploader extends js.Object {
     *  6.7.0 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'footerWidgets' property
@@ -86,6 +92,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: DataView): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -95,6 +102,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDataViewUnderWidget(container: DataView): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -104,6 +112,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: DataView): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -113,6 +122,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -122,6 +132,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: DivContainer): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -131,6 +142,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -140,6 +152,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: GroupBox): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'leftWidget' property
@@ -149,6 +162,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: Header): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'leftWidgets' property
@@ -158,6 +172,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: Header): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'rightWidget' property
@@ -167,6 +182,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: Header): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'rightWidgets' property
@@ -176,6 +192,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: Header): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -185,6 +202,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -194,6 +212,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: LayoutCallArgument): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -203,6 +222,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -212,6 +232,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: LayoutGridColumn): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -221,6 +242,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutUnderWidget(container: Layout): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -230,6 +252,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: Layout): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -239,6 +262,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -248,6 +272,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: ListViewTemplate): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -257,6 +282,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewUnderWidget(container: ListView): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -266,6 +292,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: ListView): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -275,6 +302,7 @@ object ImageUploader extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: MasterDetailRegion): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -284,6 +312,7 @@ object ImageUploader extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'sidebarWidgets' property
@@ -293,6 +322,7 @@ object ImageUploader extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -302,6 +332,7 @@ object ImageUploader extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: NativeLayoutContent): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'headerWidget' property
@@ -311,6 +342,7 @@ object ImageUploader extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -320,6 +352,7 @@ object ImageUploader extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -329,6 +362,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -338,6 +372,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: NavigationListItem): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'parameterWidget' property
@@ -347,6 +382,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'reportWidget' property
@@ -356,6 +392,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -365,6 +402,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -374,6 +412,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: ScrollContainerRegion): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -383,6 +422,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSnippetUnderWidget(container: Snippet): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -392,6 +432,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: Snippet): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'firstWidget' property
@@ -401,6 +442,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'firstWidgets' property
@@ -410,6 +452,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: SplitPane): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'secondWidget' property
@@ -419,6 +462,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'secondWidgets' property
@@ -428,6 +472,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: SplitPane): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -437,6 +482,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTabPageUnderWidget(container: TabPage): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -446,6 +492,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: TabPage): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -455,6 +502,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTableCellUnderWidget(container: TableCell): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -464,6 +512,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: TableCell): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widget' property
@@ -473,6 +522,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -482,6 +532,7 @@ object ImageUploader extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: TemplateGridContents): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -491,6 +542,7 @@ object ImageUploader extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -500,6 +552,7 @@ object ImageUploader extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: WebLayoutContent): ImageUploader = js.native
+  
   /**
     * Creates and returns a new ImageUploader instance in the SDK and on the server.
     * The new ImageUploader will be automatically stored in the 'widgets' property
@@ -509,5 +562,8 @@ object ImageUploader extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): ImageUploader = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

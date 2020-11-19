@@ -4,7 +4,7 @@ import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/message-definitions relevant section in reference guide}
@@ -13,6 +13,6 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IMessageDefinitionCollection extends IDocument {
+  
   val messageDefinitions: IList[IMessageDefinition] = js.native
 }
-

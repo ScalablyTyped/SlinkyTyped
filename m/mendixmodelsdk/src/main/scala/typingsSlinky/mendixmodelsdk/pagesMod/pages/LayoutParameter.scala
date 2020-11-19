@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -29,24 +29,28 @@ class LayoutParameter protected ()
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsLayout: Layout = js.native
   @JSName("containerAsLayout")
   val containerAsLayout_FLayoutParameter: ILayout = js.native
+  
   @JSName("model")
   var model_FLayoutParameter: IModel = js.native
-  @JSName("name")
-  val name_FLayoutParameter: String = js.native
-  def containerAsLayout: Layout = js.native
+  
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native
+  @JSName("name")
+  val name_FLayoutParameter: String = js.native
+  
   @JSName("qualifiedName")
   def qualifiedName_MLayoutParameter: String | Null = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.LayoutParameter")
 @js.native
 object LayoutParameter extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

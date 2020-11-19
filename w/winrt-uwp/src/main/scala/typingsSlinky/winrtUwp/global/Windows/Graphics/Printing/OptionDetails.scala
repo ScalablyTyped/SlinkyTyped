@@ -2,12 +2,13 @@ package typingsSlinky.winrtUwp.global.Windows.Graphics.Printing
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Extends the basic print task options to enable you to have greater control over the printing experience that you present to your users. */
 @JSGlobal("Windows.Graphics.Printing.OptionDetails")
 @js.native
 object OptionDetails extends js.Object {
+  
   /** Represents the list of print binding options. */
   @js.native
   abstract class PrintBindingOptionDetails ()
@@ -63,6 +64,40 @@ object OptionDetails extends js.Object {
   abstract class PrintMediaTypeOptionDetails ()
     extends typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintMediaTypeOptionDetails
   
+  /** Specifies the print task option states. */
+  @js.native
+  object PrintOptionStates extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[
+        typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionStates with Double
+      ] = js.native
+    
+    /* 2 */ val constrained: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionStates.constrained with Double = js.native
+    
+    /* 1 */ val enabled: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionStates.enabled with Double = js.native
+    
+    /* 0 */ val none: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionStates.none with Double = js.native
+  }
+  
+  /** Specifies the print task option types. */
+  @js.native
+  object PrintOptionType extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[
+        typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionType with Double
+      ] = js.native
+    
+    /* 3 */ val itemList: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionType.itemList with Double = js.native
+    
+    /* 1 */ val number: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionType.number with Double = js.native
+    
+    /* 2 */ val text: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionType.text with Double = js.native
+    
+    /* 0 */ val unknown: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionType.unknown with Double = js.native
+  }
+  
   /** Represents the list of print orientation options. */
   @js.native
   abstract class PrintOrientationOptionDetails ()
@@ -87,35 +122,10 @@ object OptionDetails extends js.Object {
   @js.native
   abstract class PrintTaskOptionDetails ()
     extends typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails
-  
-  /** Specifies the print task option states. */
-  @js.native
-  object PrintOptionStates extends js.Object {
-    /* 2 */ val constrained: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionStates.constrained with Double = js.native
-    /* 1 */ val enabled: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionStates.enabled with Double = js.native
-    /* 0 */ val none: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionStates.none with Double = js.native
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[
-        typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionStates with Double
-      ] = js.native
-  }
-  
-  /** Specifies the print task option types. */
-  @js.native
-  object PrintOptionType extends js.Object {
-    /* 3 */ val itemList: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionType.itemList with Double = js.native
-    /* 1 */ val number: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionType.number with Double = js.native
-    /* 2 */ val text: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionType.text with Double = js.native
-    /* 0 */ val unknown: typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionType.unknown with Double = js.native
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[
-        typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintOptionType with Double
-      ] = js.native
-  }
-  
   /* static members */
   @js.native
   object PrintTaskOptionDetails extends js.Object {
+    
     /**
       * Used to retrieve the available options for a print task.
       * @param printTaskOptions Pointer to a PrintTaskOptions object.
@@ -123,6 +133,4 @@ object OptionDetails extends js.Object {
       */
     def getFromPrintTaskOptions(printTaskOptions: typingsSlinky.winrtUwp.Windows.Graphics.Printing.PrintTaskOptions): typingsSlinky.winrtUwp.Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails = js.native
   }
-  
 }
-

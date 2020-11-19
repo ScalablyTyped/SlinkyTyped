@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.ui.CalendarOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("kendo.ui.Calendar")
 @js.native
@@ -13,12 +13,12 @@ class Calendar protected ()
   def this(element: Element) = this()
   def this(element: Element, options: CalendarOptions) = this()
 }
-
 /* static members */
 @JSGlobal("kendo.ui.Calendar")
 @js.native
 object Calendar extends js.Object {
-  var fn: typingsSlinky.kendoUi.kendo.ui.Calendar = js.native
+  
   def extend(proto: js.Object): typingsSlinky.kendoUi.kendo.ui.Calendar = js.native
+  
+  var fn: typingsSlinky.kendoUi.kendo.ui.Calendar = js.native
 }
-

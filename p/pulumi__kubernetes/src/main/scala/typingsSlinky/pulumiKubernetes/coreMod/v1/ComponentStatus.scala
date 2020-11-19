@@ -6,7 +6,7 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/kubernetes/core", "v1.ComponentStatus")
 @js.native
@@ -24,11 +24,11 @@ class ComponentStatus protected ()
   def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
   def this(name: String, args: ComponentStatusArgs, opts: CustomResourceOptions) = this()
 }
-
 /* static members */
 @JSImport("@pulumi/kubernetes/core", "v1.ComponentStatus")
 @js.native
 object ComponentStatus extends js.Object {
+  
   /**
     * Get an existing ComponentStatus resource's state with the given name, ID, and optional extra
     * properties used to qualify the lookup.
@@ -39,10 +39,10 @@ object ComponentStatus extends js.Object {
     */
   def get(name: String, id: Input[ID]): typingsSlinky.pulumiKubernetes.componentStatusMod.ComponentStatus = js.native
   def get(name: String, id: Input[ID], opts: CustomResourceOptions): typingsSlinky.pulumiKubernetes.componentStatusMod.ComponentStatus = js.native
+  
   /**
     * Returns true if the given object is an instance of ComponentStatus.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
   def isInstance(obj: js.Any): /* is @pulumi/kubernetes.@pulumi/kubernetes/core/v1/componentStatus.ComponentStatus */ Boolean = js.native
 }
-

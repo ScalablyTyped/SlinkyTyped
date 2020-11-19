@@ -7,14 +7,14 @@ import typingsSlinky.apolloServerCore.graphqlOptionsMod.GraphQLServerOptions
 import typingsSlinky.apolloServerTypes.mod.WithRequired
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server-core/dist/runHttpQuery", "processHTTPRequest")
 @js.native
 object processHTTPRequest extends js.Object {
+  
   def apply[TContext](
     options: (WithRequired[GraphQLServerOptions[TContext, _], cache | plugins]) with Context[TContext],
     httpRequest: HttpQueryRequest
   ): js.Promise[HttpQueryResponse] = js.native
 }
-

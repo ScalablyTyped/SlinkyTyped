@@ -2,7 +2,7 @@ package typingsSlinky.tstl.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "Stack")
 @js.native
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
   * Default Constructor.
   */
 class Stack[T] ()
-  extends typingsSlinky.tstl.tstlMod.Stack[T] {
+  extends typingsSlinky.tstl.tstlModuleMod.Stack[T] {
   /**
     * Copy Constructor.
     *
@@ -18,4 +18,3 @@ class Stack[T] ()
     */
   def this(obj: typingsSlinky.tstl.stackMod.Stack[T]) = this()
 }
-

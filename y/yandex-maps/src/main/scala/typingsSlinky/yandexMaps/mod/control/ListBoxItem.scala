@@ -6,7 +6,7 @@ import typingsSlinky.yandexMaps.mod.ISelectableControl
 import typingsSlinky.yandexMaps.mod.Map_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.yandexMaps.mod.IEventEmitter because Already inherited
@@ -14,10 +14,14 @@ import scala.scalajs.js.annotation._
 @js.native
 class ListBoxItem () extends ISelectableControl {
   def this(parameters: IListBoxItemParameters) = this()
+  
   var data: typingsSlinky.yandexMaps.mod.data.Manager = js.native
-  var options: IOptionManager = js.native
-  var state: typingsSlinky.yandexMaps.mod.data.Manager = js.native
+  
   def getMap(): Map_ = js.native
+  
+  var options: IOptionManager = js.native
+  
   def setParent(parent: IControlParent): this.type = js.native
+  
+  var state: typingsSlinky.yandexMaps.mod.data.Manager = js.native
 }
-

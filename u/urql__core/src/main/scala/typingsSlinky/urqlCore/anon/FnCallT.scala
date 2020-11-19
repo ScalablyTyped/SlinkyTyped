@@ -9,14 +9,14 @@ import typingsSlinky.urqlCore.urqlCoreStrings.fetchSuccess
 import typingsSlinky.urqlCore.urqlCoreStrings.retryRetrying
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCallT extends js.Object {
+  
   def apply(
     t: DebugEventArg[
       String | cacheHit | cacheInvalidation | fetchError | fetchRequest | fetchSuccess | retryRetrying
     ]
   ): Unit = js.native
 }
-

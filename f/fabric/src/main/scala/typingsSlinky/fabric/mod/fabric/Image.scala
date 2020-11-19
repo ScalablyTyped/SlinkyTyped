@@ -7,7 +7,7 @@ import typingsSlinky.fabric.fabricImplMod.IAllFilters
 import typingsSlinky.fabric.fabricImplMod.IImageOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fabric", "fabric.Image")
 @js.native
@@ -26,17 +26,20 @@ class Image ()
   def this(element: HTMLImageElement, options: IImageOptions) = this()
   def this(element: HTMLVideoElement, options: IImageOptions) = this()
 }
-
 /* static members */
 @JSImport("fabric", "fabric.Image")
 @js.native
 object Image extends js.Object {
+  
   var ATTRIBUTE_NAMES: js.Array[String] = js.native
+  
   /**
     * Default CSS class name for canvas
     */
   var CSS_CANVAS: String = js.native
+  
   var filters: IAllFilters = js.native
+  
   /**
     * Returns Image instance from an SVG element
     * @param element Element to parse
@@ -45,6 +48,7 @@ object Image extends js.Object {
     */
   def fromElement(element: SVGElement, callback: js.Function): typingsSlinky.fabric.fabricImplMod.Image = js.native
   def fromElement(element: SVGElement, callback: js.Function, options: IImageOptions): typingsSlinky.fabric.fabricImplMod.Image = js.native
+  
   /**
     * Creates an instance of fabric.Image from an URL string
     * @param url URL to create an image from
@@ -56,4 +60,3 @@ object Image extends js.Object {
   def fromURL(url: String, callback: js.Function1[/* image */ this.type, Unit]): typingsSlinky.fabric.fabricImplMod.Image = js.native
   def fromURL(url: String, callback: js.Function1[/* image */ this.type, Unit], imgOptions: IImageOptions): typingsSlinky.fabric.fabricImplMod.Image = js.native
 }
-

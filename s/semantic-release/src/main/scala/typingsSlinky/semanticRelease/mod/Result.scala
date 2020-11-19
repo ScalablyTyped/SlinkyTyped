@@ -2,7 +2,7 @@ package typingsSlinky.semanticRelease.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An object with details of the release if a release was published, or
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.semanticRelease.anon.Commits
 */
 trait Result extends js.Object
-

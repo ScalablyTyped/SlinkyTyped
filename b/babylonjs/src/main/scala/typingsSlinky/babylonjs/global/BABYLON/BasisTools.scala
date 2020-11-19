@@ -2,36 +2,29 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.BasisTools")
 @js.native
 class BasisTools ()
   extends typingsSlinky.babylonjs.BABYLON.BasisTools
-
 /* static members */
 @JSGlobal("BABYLON.BasisTools")
 @js.native
 object BasisTools extends js.Object {
-  /**
-    * URL to use when loading the basis transcoder
-    */
-  var JSModuleURL: String = js.native
-  /**
-    * URL to use when loading the wasm module for the transcoder
-    */
-  var WasmModuleURL: String = js.native
-  var _CreateWorkerAsync: js.Any = js.native
-  var _IgnoreSupportedFormats: js.Any = js.native
-  var _Worker: js.Any = js.native
-  var _WorkerPromise: js.Any = js.native
-  var _actionId: js.Any = js.native
+  
   /**
     * Get the internal format to be passed to texImage2D corresponding to the .basis format value
     * @param basisFormat format chosen from GetSupportedTranscodeFormat
     * @returns internal format corresponding to the Basis format
     */
   def GetInternalFormatFromBasisFormat(basisFormat: Double): Double = js.native
+  
+  /**
+    * URL to use when loading the basis transcoder
+    */
+  var JSModuleURL: String = js.native
+  
   /**
     * Loads a texture from the transcode result
     * @param texture texture load to
@@ -41,6 +34,7 @@ object BasisTools extends js.Object {
     texture: typingsSlinky.babylonjs.BABYLON.InternalTexture,
     transcodeResult: typingsSlinky.babylonjs.BABYLON.TranscodeResult
   ): Unit = js.native
+  
   def TranscodeAsync(
     data: js.typedarray.ArrayBufferView,
     config: typingsSlinky.babylonjs.BABYLON.BasisTranscodeConfiguration
@@ -55,5 +49,19 @@ object BasisTools extends js.Object {
     data: js.typedarray.ArrayBuffer,
     config: typingsSlinky.babylonjs.BABYLON.BasisTranscodeConfiguration
   ): js.Promise[typingsSlinky.babylonjs.BABYLON.TranscodeResult] = js.native
+  
+  /**
+    * URL to use when loading the wasm module for the transcoder
+    */
+  var WasmModuleURL: String = js.native
+  
+  var _CreateWorkerAsync: js.Any = js.native
+  
+  var _IgnoreSupportedFormats: js.Any = js.native
+  
+  var _Worker: js.Any = js.native
+  
+  var _WorkerPromise: js.Any = js.native
+  
+  var _actionId: js.Any = js.native
 }
-

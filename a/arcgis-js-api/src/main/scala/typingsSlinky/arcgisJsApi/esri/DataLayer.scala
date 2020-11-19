@@ -12,24 +12,27 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.touches
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.within
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DataLayer
   extends Accessor
      with JSONSupport {
+  
   /**
     * The geometry to apply to the spatial filter. The spatial relationship as specified by [spatialRelationship](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-DataLayer.html#spatialRelationship) is applied to this geometry while performing the query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-DataLayer.html#geometry)
     */
   var geometry: Geometry_ = js.native
+  
   /**
     * The name of the data layer in the map service that is being referenced.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-DataLayer.html#name)
     */
   var name: String = js.native
+  
   /**
     * The spatial relationship to be applied on the input geometry while performing the query.
     *
@@ -49,7 +52,9 @@ trait DataLayer
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-DataLayer.html#spatialRelationship)
     */
   var spatialRelationship: intersects | contains | crosses | `envelope-intersects` | `index-intersects` | overlaps | touches | within | relation = js.native
+  
   var `type`: layer = js.native
+  
   /**
     * A where clause for the query. Any legal SQL where clause operating on the fields in the layer is allowed.
     *
@@ -57,4 +62,3 @@ trait DataLayer
     */
   var where: String = js.native
 }
-

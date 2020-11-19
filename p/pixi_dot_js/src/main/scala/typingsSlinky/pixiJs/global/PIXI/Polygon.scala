@@ -3,7 +3,7 @@ package typingsSlinky.pixiJs.global.PIXI
 import typingsSlinky.pixiJs.PIXI.IPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A class to define a shape via user defined co-orinates.
@@ -17,4 +17,3 @@ class Polygon protected ()
   extends typingsSlinky.pixiJs.PIXI.Polygon {
   def this(points: (js.Array[Double | IPoint])*) = this()
 }
-

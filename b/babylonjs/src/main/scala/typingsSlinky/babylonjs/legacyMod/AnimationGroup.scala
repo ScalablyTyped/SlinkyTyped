@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.legacyMod
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "AnimationGroup")
 @js.native
@@ -24,11 +24,11 @@ class AnimationGroup protected ()
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Legacy/legacy", "AnimationGroup")
 @js.native
 object AnimationGroup extends js.Object {
+  
   /**
     * Returns a new AnimationGroup object parsed from the source provided.
     * @param parsedAnimationGroup defines the source
@@ -37,4 +37,3 @@ object AnimationGroup extends js.Object {
     */
   def Parse(parsedAnimationGroup: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene): typingsSlinky.babylonjs.animationGroupMod.AnimationGroup = js.native
 }
-

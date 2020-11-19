@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.FieldsContent
 import typingsSlinky.arcgisJsApi.esri.FieldsContentProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/popup/content/FieldsContent", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends FieldsContent {
   def this(properties: FieldsContentProperties) = this()
 }
-

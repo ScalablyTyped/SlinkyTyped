@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/commands/UpdateAliasCommand", JSImport.Namespace)
 @js.native
 object updateAliasCommandMod extends js.Object {
+  
   @js.native
   class UpdateAliasCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object updateAliasCommandMod extends js.Object {
           Blob
         ] {
     def this(input: UpdateAliasInput) = this()
+    
     val middlewareStack: MiddlewareStack[UpdateAliasInput, UpdateAliasOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[UpdateAliasInput, UpdateAliasOutput] = js.native
   }
-  
 }
-

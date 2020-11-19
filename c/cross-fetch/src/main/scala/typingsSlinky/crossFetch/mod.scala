@@ -13,16 +13,20 @@ import typingsSlinky.std.HeadersInit
 import typingsSlinky.std.RequestInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cross-fetch", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class Headers ()
     extends typingsSlinky.std.Headers {
     def this(init: HeadersInit) = this()
   }
+  @js.native
+  object Headers
+    extends TopLevel[InstantiableHeaders with Instantiable0[org.scalajs.dom.experimental.Headers]]
   
   @js.native
   class Request protected ()
@@ -30,6 +34,11 @@ object mod extends js.Object {
     def this(input: RequestInfo) = this()
     def this(input: RequestInfo, init: RequestInit) = this()
   }
+  @js.native
+  object Request
+    extends TopLevel[
+          Instantiable with (Instantiable1[/* input */ RequestInfo, org.scalajs.dom.experimental.Request])
+        ]
   
   @js.native
   class Response ()
@@ -38,32 +47,21 @@ object mod extends js.Object {
     def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
     def this(body: Null, init: ResponseInit) = this()
   }
-  
-  @js.native
-  object Headers
-    extends TopLevel[InstantiableHeaders with Instantiable0[org.scalajs.dom.experimental.Headers]]
-  
-  @js.native
-  object Request
-    extends TopLevel[
-          Instantiable with (Instantiable1[/* input */ RequestInfo, org.scalajs.dom.experimental.Request])
-        ]
-  
   @js.native
   object Response
     extends TopLevel[Error with Instantiable0[org.scalajs.dom.experimental.Response]]
   
   @js.native
   object default extends js.Object {
+    
     def apply(input: RequestInfo): js.Promise[org.scalajs.dom.experimental.Response] = js.native
     def apply(input: RequestInfo, init: RequestInit): js.Promise[org.scalajs.dom.experimental.Response] = js.native
   }
   
   @js.native
   object fetch extends js.Object {
+    
     def apply(input: RequestInfo): js.Promise[org.scalajs.dom.experimental.Response] = js.native
     def apply(input: RequestInfo, init: RequestInit): js.Promise[org.scalajs.dom.experimental.Response] = js.native
   }
-  
 }
-

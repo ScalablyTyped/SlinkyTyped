@@ -5,9 +5,10 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFocusLock.interfacesMod.FreeFocusProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FreeFocusInside {
+  
   @JSImport("react-focus-lock", "FreeFocusInside")
   @js.native
   object component extends js.Object
@@ -16,11 +17,12 @@ object FreeFocusInside {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactFocusLock.mod.FreeFocusInside] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: FreeFocusProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: FreeFocusInside.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

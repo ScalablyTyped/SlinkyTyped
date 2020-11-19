@@ -1,9 +1,8 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
-import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.RawTexture")
 @js.native
@@ -54,8 +53,59 @@ class RawTexture protected ()
     */
   format: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    /**
+    * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+    */
+  format: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
     generateMipMaps: Boolean,
     invertY: Boolean
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    /**
+    * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+    */
+  format: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    /**
+    * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+    */
+  format: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    /**
+    * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+    */
+  format: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
   ) = this()
   def this(
     data: js.typedarray.ArrayBufferView,
@@ -79,22 +129,115 @@ class RawTexture protected ()
     */
   format: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    /**
+    * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+    */
+  format: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double,
+    `type`: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    /**
+    * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+    */
+  format: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    /**
+    * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+    */
+  format: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double,
+    `type`: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    /**
+    * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+    */
+  format: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    /**
+    * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+    */
+  format: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double,
+    `type`: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    /**
+    * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+    */
+  format: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ) = this()
+  def this(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    /**
+    * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+    */
+  format: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double,
     `type`: Double
   ) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.RawTexture")
 @js.native
 object RawTexture extends js.Object {
+  
   /**
     * Creates an alpha texture from some data.
     * @param data Define the texture data
@@ -117,7 +260,42 @@ object RawTexture extends js.Object {
     width: Double,
     height: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateAlphaTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateAlphaTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateAlphaTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
     generateMipMaps: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateAlphaTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
   def CreateAlphaTexture(
     data: js.typedarray.ArrayBufferView,
@@ -136,6 +314,7 @@ object RawTexture extends js.Object {
     invertY: Boolean,
     samplingMode: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  
   /**
     * Creates a luminance alpha texture from some data.
     * @param data Define the texture data
@@ -158,7 +337,42 @@ object RawTexture extends js.Object {
     width: Double,
     height: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateLuminanceAlphaTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateLuminanceAlphaTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateLuminanceAlphaTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
     generateMipMaps: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateLuminanceAlphaTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
   def CreateLuminanceAlphaTexture(
     data: js.typedarray.ArrayBufferView,
@@ -177,6 +391,7 @@ object RawTexture extends js.Object {
     invertY: Boolean,
     samplingMode: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  
   /**
     * Creates a luminance texture from some data.
     * @param data Define the texture data
@@ -199,7 +414,42 @@ object RawTexture extends js.Object {
     width: Double,
     height: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateLuminanceTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateLuminanceTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateLuminanceTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
     generateMipMaps: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateLuminanceTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
   def CreateLuminanceTexture(
     data: js.typedarray.ArrayBufferView,
@@ -218,6 +468,7 @@ object RawTexture extends js.Object {
     invertY: Boolean,
     samplingMode: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  
   /**
     * Creates a RGBA texture from some data.
     * @param data Define the texture data
@@ -241,6 +492,72 @@ object RawTexture extends js.Object {
     width: Double,
     height: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBATexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBATexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double,
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBATexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBATexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBATexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBATexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double,
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBATexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
     generateMipMaps: Boolean
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
   def CreateRGBATexture(
@@ -249,7 +566,46 @@ object RawTexture extends js.Object {
     height: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBATexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBATexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double,
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBATexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
     invertY: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBATexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
   def CreateRGBATexture(
     data: js.typedarray.ArrayBufferView,
@@ -270,6 +626,7 @@ object RawTexture extends js.Object {
     samplingMode: Double,
     `type`: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  
   /**
     * Creates a RGB texture from some data.
     * @param data Define the texture data
@@ -293,6 +650,72 @@ object RawTexture extends js.Object {
     width: Double,
     height: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double,
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double,
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
     generateMipMaps: Boolean
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
   def CreateRGBTexture(
@@ -301,7 +724,46 @@ object RawTexture extends js.Object {
     height: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double,
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
     invertY: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRGBTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
   def CreateRGBTexture(
     data: js.typedarray.ArrayBufferView,
@@ -322,6 +784,7 @@ object RawTexture extends js.Object {
     samplingMode: Double,
     `type`: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  
   /**
     * Creates a R texture from some data.
     * @param data Define the texture data
@@ -345,6 +808,72 @@ object RawTexture extends js.Object {
     width: Double,
     height: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double,
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: js.UndefOr[scala.Nothing],
+    invertY: Boolean,
+    samplingMode: Double,
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
     generateMipMaps: Boolean
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
   def CreateRTexture(
@@ -353,7 +882,46 @@ object RawTexture extends js.Object {
     height: Double,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: js.UndefOr[scala.Nothing],
+    samplingMode: Double,
+    `type`: Double
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
     invertY: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
+  def CreateRTexture(
+    data: js.typedarray.ArrayBufferView,
+    width: Double,
+    height: Double,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    generateMipMaps: Boolean,
+    invertY: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    `type`: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
   def CreateRTexture(
     data: js.typedarray.ArrayBufferView,
@@ -375,4 +943,3 @@ object RawTexture extends js.Object {
     `type`: Double
   ): typingsSlinky.babylonjs.BABYLON.RawTexture = js.native
 }
-

@@ -3,10 +3,24 @@ package typingsSlinky.vscode.mod
 import typingsSlinky.vscode.Thenable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Webview extends js.Object {
+  
+  /**
+    * Convert a uri for the local file system to one that can be used inside webviews.
+    *
+    * Webviews cannot directly load resources from the workspace or local file system using `file:` uris. The
+    * `asWebviewUri` function takes a local `file:` uri and converts it into a uri that can be used inside of
+    * a webview to load the same resource:
+    *
+    * ```ts
+    * webview.html = `<img src="${webview.asWebviewUri(vscode.Uri.file('/Users/codey/workspace/cat.gif'))}">`
+    * ```
+    */
+  def asWebviewUri(localResource: Uri): Uri = js.native
+  
   /**
     * Content security policy source for webview resources.
     *
@@ -17,6 +31,7 @@ trait Webview extends js.Object {
     * ```
     */
   val cspSource: String = js.native
+  
   /**
     * HTML contents of the webview.
     *
@@ -43,22 +58,7 @@ trait Webview extends js.Object {
     * setting a [content security policy](https://aka.ms/vscode-api-webview-csp).
     */
   var html: String = js.native
-  /**
-    * Content settings for the webview.
-    */
-  var options: WebviewOptions = js.native
-  /**
-    * Convert a uri for the local file system to one that can be used inside webviews.
-    *
-    * Webviews cannot directly load resources from the workspace or local file system using `file:` uris. The
-    * `asWebviewUri` function takes a local `file:` uri and converts it into a uri that can be used inside of
-    * a webview to load the same resource:
-    *
-    * ```ts
-    * webview.html = `<img src="${webview.asWebviewUri(vscode.Uri.file('/Users/codey/workspace/cat.gif'))}">`
-    * ```
-    */
-  def asWebviewUri(localResource: Uri): Uri = js.native
+  
   /**
     * Fired when the webview content posts a message.
     *
@@ -74,6 +74,12 @@ trait Webview extends js.Object {
   ): Disposable = js.native
   def onDidReceiveMessage(listener: js.Function1[/* e */ js.Any, _], thisArgs: js.Any): Disposable = js.native
   def onDidReceiveMessage(listener: js.Function1[/* e */ js.Any, _], thisArgs: js.Any, disposables: js.Array[Disposable]): Disposable = js.native
+  
+  /**
+    * Content settings for the webview.
+    */
+  var options: WebviewOptions = js.native
+  
   /**
     * Post a message to the webview content.
     *
@@ -84,4 +90,3 @@ trait Webview extends js.Object {
     */
   def postMessage(message: js.Any): Thenable[Boolean] = js.native
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.babylonjs.rayMod.Ray
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Debug/index", "RayHelper")
 @js.native
@@ -20,11 +20,11 @@ class RayHelper protected ()
     */
   def this(ray: Ray) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Debug/index", "RayHelper")
 @js.native
 object RayHelper extends js.Object {
+  
   /**
     * Helper function to create a colored helper in a scene in one line.
     * @param ray Defines the ray we are currently tryin to visualize
@@ -34,4 +34,3 @@ object RayHelper extends js.Object {
     */
   def CreateAndShow(ray: Ray, scene: Scene, color: Color3): typingsSlinky.babylonjs.rayHelperMod.RayHelper = js.native
 }
-

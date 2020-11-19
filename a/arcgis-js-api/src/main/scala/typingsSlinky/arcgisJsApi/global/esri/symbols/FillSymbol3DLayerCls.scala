@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri.symbols
 import typingsSlinky.arcgisJsApi.esri.FillSymbol3DLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.symbols.FillSymbol3DLayer")
 @js.native
@@ -16,4 +16,3 @@ class FillSymbol3DLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.FillSymbol3DLayer {
   def this(properties: FillSymbol3DLayerProperties) = this()
 }
-

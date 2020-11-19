@@ -5,7 +5,7 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-portal", "Portal")
 @js.native
@@ -14,8 +14,6 @@ class Portal protected ()
   def this(props: PortalProps) = this()
   def this(props: PortalProps, context: js.Any) = this()
 }
-
 @JSImport("react-portal", "Portal")
 @js.native
 object Portal extends TopLevel[ReactComponentClass[PortalProps]]
-

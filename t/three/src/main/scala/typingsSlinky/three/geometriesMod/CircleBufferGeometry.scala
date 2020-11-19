@@ -2,7 +2,7 @@ package typingsSlinky.three.geometriesMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/Geometries", "CircleBufferGeometry")
 @js.native
@@ -44,4 +44,3 @@ class CircleBufferGeometry ()
   def this(radius: Double, segments: Double, thetaStart: js.UndefOr[scala.Nothing], thetaLength: Double) = this()
   def this(radius: Double, segments: Double, thetaStart: Double, thetaLength: Double) = this()
 }
-

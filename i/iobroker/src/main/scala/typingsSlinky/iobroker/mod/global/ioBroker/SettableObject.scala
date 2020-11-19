@@ -17,7 +17,7 @@ import typingsSlinky.iobroker.iobrokerStrings.user
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // In set[Foreign]Object[NotExists] methods, the ID and acl of the object is optional
 /* Rewritten from type alias, can be one of: 
@@ -28,14 +28,15 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.iobroker.anon.SettableObjectWorkerOther
 */
 trait SettableObject extends js.Object
-
 object SettableObject {
+  
   @scala.inline
   def SettableObjectWorkerState(common: StateCommon, native: Record[String, ObjectField], `type`: state): SettableObject = {
     val __obj = js.Dynamic.literal(common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SettableObject]
   }
+  
   @scala.inline
   def SettableObjectWorkerOther(
     common: OtherCommon,
@@ -46,18 +47,21 @@ object SettableObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SettableObject]
   }
+  
   @scala.inline
   def SettableObjectWorkerChann(common: ChannelCommon, native: Record[String, ObjectField], `type`: channel): SettableObject = {
     val __obj = js.Dynamic.literal(common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SettableObject]
   }
+  
   @scala.inline
   def SettableObjectWorkerDevic(common: DeviceCommon, native: Record[String, ObjectField], `type`: device): SettableObject = {
     val __obj = js.Dynamic.literal(common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SettableObject]
   }
+  
   @scala.inline
   def SettableObjectWorkerFolde(common: OtherCommon, native: Record[String, ObjectField], `type`: folder): SettableObject = {
     val __obj = js.Dynamic.literal(common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
@@ -65,4 +69,3 @@ object SettableObject {
     __obj.asInstanceOf[SettableObject]
   }
 }
-

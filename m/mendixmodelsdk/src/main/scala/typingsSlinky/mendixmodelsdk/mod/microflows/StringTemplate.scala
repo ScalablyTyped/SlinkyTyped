@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.workflowsMod.workflows.UserTask
 import typingsSlinky.mendixmodelsdk.workflowsMod.workflows.Workflow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "microflows.StringTemplate")
 @js.native
@@ -24,25 +24,25 @@ class StringTemplate protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "microflows.StringTemplate")
 @js.native
 object StringTemplate extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new StringTemplate instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
+  
   /**
     * Creates and returns a new StringTemplate instance in the SDK and on the server.
     * The new StringTemplate will be automatically stored in the 'template' property
     * of the parent CustomRequestHandling element passed as argument.
     */
   def createInCustomRequestHandlingUnderTemplate(container: typingsSlinky.mendixmodelsdk.microflowsMod.microflows.CustomRequestHandling): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
+  
   /**
     * Creates and returns a new StringTemplate instance in the SDK and on the server.
     * The new StringTemplate will be automatically stored in the 'customLocationTemplate' property
@@ -52,12 +52,14 @@ object StringTemplate extends js.Object {
     *  6.6.0 and higher
     */
   def createInHttpConfigurationUnderCustomLocationTemplate(container: typingsSlinky.mendixmodelsdk.microflowsMod.microflows.HttpConfiguration): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
+  
   /**
     * Creates and returns a new StringTemplate instance in the SDK and on the server.
     * The new StringTemplate will be automatically stored in the 'messageTemplate' property
     * of the parent LogMessageAction element passed as argument.
     */
   def createInLogMessageActionUnderMessageTemplate(container: typingsSlinky.mendixmodelsdk.microflowsMod.microflows.LogMessageAction): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
+  
   /**
     * Creates and returns a new StringTemplate instance in the SDK and on the server.
     * The new StringTemplate will be automatically stored in the 'template' property
@@ -67,6 +69,7 @@ object StringTemplate extends js.Object {
     *  8.4.0 to 8.5.0
     */
   def createInStringTemplateParameterValueUnderTemplate(container: typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplateParameterValue): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
+  
   /**
     * Creates and returns a new StringTemplate instance in the SDK and on the server.
     * The new StringTemplate will be automatically stored in the 'description' property
@@ -76,6 +79,7 @@ object StringTemplate extends js.Object {
     *  8.10.0 and higher
     */
   def createInUserTaskUnderDescription(container: UserTask): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
+  
   /**
     * Creates and returns a new StringTemplate instance in the SDK and on the server.
     * The new StringTemplate will be automatically stored in the 'subject' property
@@ -85,6 +89,7 @@ object StringTemplate extends js.Object {
     *  8.10.0 and higher
     */
   def createInUserTaskUnderSubject(container: UserTask): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
+  
   /**
     * Creates and returns a new StringTemplate instance in the SDK and on the server.
     * The new StringTemplate will be automatically stored in the 'subject' property
@@ -94,5 +99,8 @@ object StringTemplate extends js.Object {
     *  8.11.0 and higher
     */
   def createInWorkflowUnderSubject(container: Workflow): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

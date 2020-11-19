@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.FindTask
 import typingsSlinky.arcgisJsApi.esri.FindTaskProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/tasks/FindTask", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends FindTask {
   def this(properties: FindTaskProperties) = this()
 }
-

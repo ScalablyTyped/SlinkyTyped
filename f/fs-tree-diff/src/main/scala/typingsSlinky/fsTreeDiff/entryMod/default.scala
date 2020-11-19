@@ -3,7 +3,7 @@ package typingsSlinky.fsTreeDiff.entryMod
 import typingsSlinky.node.fsMod.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs-tree-diff/lib/entry", JSImport.Default)
 @js.native
@@ -26,13 +26,14 @@ class default protected () extends Entry {
   def this(relativePath: String, size: Double, mtime: Double, mode: Double) = this()
   def this(relativePath: String, size: Double, mtime: js.Date, mode: Double) = this()
 }
-
 /* static members */
 @JSImport("fs-tree-diff/lib/entry", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   def fromStat(relativePath: String, stat: Stats): Entry = js.native
+  
   def isDirectory(entry: Entry): Boolean = js.native
+  
   def isFile(entry: Entry): Boolean = js.native
 }
-

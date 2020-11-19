@@ -6,7 +6,7 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ComponentPropsWithRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native", "Animated.ScrollView")
 @js.native
@@ -16,4 +16,3 @@ object ScrollView
         ComponentProps[Instantiable0[typingsSlinky.reactNative.mod.ScrollView]] | AnimatedProps[ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.ScrollView]]]
       ]
     ]
-

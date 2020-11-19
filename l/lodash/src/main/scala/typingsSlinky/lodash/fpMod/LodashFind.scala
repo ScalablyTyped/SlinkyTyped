@@ -6,10 +6,11 @@ import typingsSlinky.lodash.mod.ValueIteratorTypeGuard
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashFind extends LodashConvertible {
+  
   def apply[T](predicate: ValueIterateeCustom[T, Boolean]): js.UndefOr[T] = js.native
   def apply[T /* <: js.Object */](
     predicate: ValueIterateeCustom[
@@ -29,7 +30,7 @@ trait LodashFind extends LodashConvertible {
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 
       S
     ]
-  ): LodashFind3x1[T, S] = js.native
+  ): js.UndefOr[S] = js.native
   def apply[T /* <: js.Object */, S /* <: /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any */](
     predicate: ValueIteratorTypeGuard[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 
@@ -39,4 +40,3 @@ trait LodashFind extends LodashConvertible {
   ): js.UndefOr[S] = js.native
   def apply[T, S /* <: T */](predicate: ValueIteratorTypeGuard[T, S], collection: List[T]): js.UndefOr[S] = js.native
 }
-

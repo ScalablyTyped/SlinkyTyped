@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-glacier-node/commands/CompleteMultipartUploadCommand", JSImport.Namespace)
 @js.native
 object completeMultipartUploadCommandMod extends js.Object {
+  
   @js.native
   class CompleteMultipartUploadCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object completeMultipartUploadCommandMod extends js.Object {
           Readable
         ] {
     def this(input: CompleteMultipartUploadInput) = this()
+    
     val middlewareStack: MiddlewareStack[CompleteMultipartUploadInput, CompleteMultipartUploadOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[CompleteMultipartUploadInput, CompleteMultipartUploadOutput] = js.native
   }
-  
 }
-

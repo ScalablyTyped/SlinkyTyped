@@ -5,13 +5,15 @@ import typingsSlinky.sharepoint.SP.JsonObjectResult
 import typingsSlinky.sharepoint.anon.High
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Microsoft.SharePoint.Client.Search.Administration")
 @js.native
 object Administration extends js.Object {
+  
   @js.native
   trait DocumentCrawlLog extends ClientObject {
+    
     def getCrawledUrls(
       getCountOnly: Boolean,
       maxRows: High,
@@ -27,9 +29,9 @@ object Administration extends js.Object {
   
   @js.native
   sealed trait SearchObjectLevel extends js.Object
-  
   @js.native
   object SearchObjectLevel extends js.Object {
+    
     @js.native
     sealed trait spSite extends SearchObjectLevel
     
@@ -41,9 +43,7 @@ object Administration extends js.Object {
     
     @js.native
     sealed trait ssa extends SearchObjectLevel
-    
   }
   
   type SearchObjectOwner = ClientObject
 }
-

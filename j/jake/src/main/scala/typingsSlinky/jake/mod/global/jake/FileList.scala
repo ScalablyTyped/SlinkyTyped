@@ -2,15 +2,17 @@ package typingsSlinky.jake.mod.global.jake
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("jake.FileList")
 @js.native
 class FileList () extends js.Object {
+  
   /**
     * Get rid of any current exclusion rules
     */
   def clearExclude(): Unit = js.native
+  
   def exclude(file: (FileFilter | js.RegExp | String)*): Unit = js.native
   /**
     * Excludes file-patterns from the FileList. Should be called with one or more
@@ -20,6 +22,7 @@ class FileList () extends js.Object {
     * 3. Functions to be run on the filename that return a true/false
     */
   def exclude(file: js.Array[FileFilter | js.RegExp | String]): Unit = js.native
+  
   def include(files: String*): Unit = js.native
   /**
     * Includes file-patterns in the FileList. Should be called with one or more
@@ -27,11 +30,13 @@ class FileList () extends js.Object {
     * for either a glob-pattern or a specific file-name, or an array of them
     */
   def include(files: js.Array[String]): Unit = js.native
+  
   /**
     * Populates the FileList from the include/exclude rules with a list of
     * actual files
     */
   def resolve(): Unit = js.native
+  
   /**
     * Indicates whether a particular file would be filtered out by the current
     * exclusion rules for this FileList.
@@ -39,9 +44,9 @@ class FileList () extends js.Object {
     * @return Whether or not the file should be excluded
     */
   def shouldExclude(name: String): Boolean = js.native
+  
   /**
     * Convert to a plain-jane array
     */
   def toArray(): js.Array[String] = js.native
 }
-

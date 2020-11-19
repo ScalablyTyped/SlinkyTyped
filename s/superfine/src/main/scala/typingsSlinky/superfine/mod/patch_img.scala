@@ -4,11 +4,11 @@ import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.superfine.superfineStrings.img
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("superfine", "patch")
 @js.native
 object patch_img extends js.Object {
+  
   def apply(rootElement: HTMLImageElement, vNode: VNode[img]): Unit = js.native
 }
-

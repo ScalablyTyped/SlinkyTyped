@@ -8,11 +8,12 @@ import typingsSlinky.graphqlToolsDelegate.typesMod.SubschemaConfig
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/delegate/results/handleList", JSImport.Namespace)
 @js.native
 object handleListMod extends js.Object {
+  
   def handleList(
     `type`: GraphQLList[_],
     list: js.Array[_],
@@ -48,4 +49,3 @@ object handleListMod extends js.Object {
     skipTypeMerging: Boolean
   ): js.Array[_] = js.native
 }
-

@@ -2,21 +2,26 @@ package typingsSlinky.prando
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("prando", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   trait Prando extends js.Object {
+    
     var _seed: js.Any = js.native
+    
     var _value: js.Any = js.native
+    
     var getSafeSeed: js.Any = js.native
+    
     @JSName("hashCode")
     var hashCode_FPrando: js.Any = js.native
+    
     var map: js.Any = js.native
-    var recalculate: js.Any = js.native
-    var xorshift: js.Any = js.native
+    
     /**
       * Generates a pseudo-random number between a lower (inclusive) and a higher (exclusive) bounds.
       *
@@ -28,6 +33,7 @@ object mod extends js.Object {
     def next(min: js.UndefOr[scala.Nothing], pseudoMax: Double): Double = js.native
     def next(min: Double): Double = js.native
     def next(min: Double, pseudoMax: Double): Double = js.native
+    
     /**
       * Picks a pseudo-random item from an array. The array is left unmodified.
       *
@@ -40,12 +46,14 @@ object mod extends js.Object {
       * @return An item from the array.
       */
     def nextArrayItem[T](array: js.Array[T]): T = js.native
+    
     /**
       * Generates a pseudo-random boolean.
       *
       * @return A value of true or false.
       */
     def nextBoolean(): Boolean = js.native
+    
     /**
       * Generates a pseudo-random string of 1 character specific character range.
       *
@@ -54,6 +62,7 @@ object mod extends js.Object {
       */
     def nextChar(): String = js.native
     def nextChar(chars: String): String = js.native
+    
     /**
       * Generates a pseudo-random integer number in a range (inclusive).
       *
@@ -65,6 +74,7 @@ object mod extends js.Object {
     def nextInt(min: js.UndefOr[scala.Nothing], max: Double): Double = js.native
     def nextInt(min: Double): Double = js.native
     def nextInt(min: Double, max: Double): Double = js.native
+    
     /**
       * Generates a pseudo-random string sequence of a particular length from a specific character range.
       *
@@ -80,6 +90,9 @@ object mod extends js.Object {
     def nextString(length: js.UndefOr[scala.Nothing], chars: String): String = js.native
     def nextString(length: Double): String = js.native
     def nextString(length: Double, chars: String): String = js.native
+    
+    var recalculate: js.Any = js.native
+    
     /**
       * Reset the pseudo-random number sequence back to its starting seed. Further calls to next()
       * will then produce the same sequence of numbers it had produced before. This is equivalent to
@@ -94,6 +107,7 @@ object mod extends js.Object {
       * console.log(rng.next()); // 0.5784605181725837 again
       */
     def reset(): Unit = js.native
+    
     /**
       * Skips ahead in the sequence of numbers that are being generated. This is equivalent to
       * calling next() a specified number of times, but faster since it doesn't need to map the
@@ -103,6 +117,8 @@ object mod extends js.Object {
       */
     def skip(): Unit = js.native
     def skip(iterations: Double): Unit = js.native
+    
+    var xorshift: js.Any = js.native
   }
   
   @js.native
@@ -115,13 +131,12 @@ object mod extends js.Object {
     def this(seed: String) = this()
     def this(seed: Double) = this()
   }
-  
   /* static members */
   @js.native
   object default extends js.Object {
+    
     var MAX: js.Any = js.native
+    
     var MIN: js.Any = js.native
   }
-  
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.pulumiPulumi.outputMod.Inputs
 import typingsSlinky.pulumiPulumi.outputMod.Output_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/pulumi/resource", "Resource")
 @js.native
@@ -25,18 +25,19 @@ abstract class Resource protected () extends js.Object {
   def this(t: String, name: String, custom: Boolean, props: Inputs) = this()
   def this(t: String, name: String, custom: Boolean, props: js.UndefOr[scala.Nothing], opts: ResourceOptions) = this()
   def this(t: String, name: String, custom: Boolean, props: Inputs, opts: ResourceOptions) = this()
+  
+  def getProvider(moduleMember: String): js.UndefOr[ProviderResource] = js.native
+  
   /**
     * urn is the stable logical URN used to distinctly address a resource, both before and after
     * deployments.
     */
   val urn: Output_[URN] = js.native
-  def getProvider(moduleMember: String): js.UndefOr[ProviderResource] = js.native
 }
-
 /* static members */
 @JSImport("@pulumi/pulumi/resource", "Resource")
 @js.native
 object Resource extends js.Object {
+  
   def isInstance(obj: js.Any): /* is @pulumi/pulumi.@pulumi/pulumi/resource.Resource */ Boolean = js.native
 }
-

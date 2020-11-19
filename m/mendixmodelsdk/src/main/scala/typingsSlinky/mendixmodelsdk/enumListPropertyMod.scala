@@ -8,11 +8,12 @@ import typingsSlinky.mendixmodelsdk.structuresMod.Structure
 import typingsSlinky.mendixmodelsdk.versionChecksMod.ILifeCycle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/sdk/internal/properties/EnumListProperty", JSImport.Namespace)
 @js.native
 object enumListPropertyMod extends js.Object {
+  
   @js.native
   class EnumListProperty[T /* <: AbstractEnum */] protected () extends PrimitiveListProperty[T] {
     def this(
@@ -22,9 +23,9 @@ object enumListPropertyMod extends js.Object {
       initialValue: js.Array[T],
       enumType: Instantiable2[/* key */ String, /* lifeCycle */ ILifeCycle, AbstractEnum]
     ) = this()
+    
     var enumType: Instantiable2[/* key */ String, /* lifeCycle */ ILifeCycle, AbstractEnum] = js.native
+    
     var initialValue: js.Any = js.native
   }
-  
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.phaser.global.Phaser.GameObjects
 import typingsSlinky.phaser.Phaser.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Game Object Creator is a Scene plugin that allows you to quickly create many common
@@ -23,4 +23,3 @@ class GameObjectCreator protected ()
     */
   def this(scene: Scene) = this()
 }
-

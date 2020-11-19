@@ -7,11 +7,12 @@ import typingsSlinky.graphql.definitionMod.GraphQLFieldResolver
 import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/execution/execute", "resolveFieldValueOrError")
 @js.native
 object resolveFieldValueOrError extends js.Object {
+  
   def apply(
     exeContext: ExecutionContext,
     fieldDef: GraphQLField[_, _, StringDictionary[_]],
@@ -21,4 +22,3 @@ object resolveFieldValueOrError extends js.Object {
     info: GraphQLResolveInfo
   ): js.Any = js.native
 }
-

@@ -10,11 +10,11 @@ import typingsSlinky.gapiClientClassroom.anon.Oauthtoken
 import typingsSlinky.gapiClientClassroom.anon.Xgafv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CourseWorkResource extends js.Object {
-  var studentSubmissions: StudentSubmissionsResource = js.native
+  
   def create(request: Alt, body: CourseWork): Request[CourseWork] = js.native
   /**
     * Creates course work.
@@ -37,6 +37,7 @@ trait CourseWorkResource extends js.Object {
     * &#42; AttachmentNotVisible
     */
   def create(request: Xgafv): Request[CourseWork] = js.native
+  
   /**
     * Deletes a course work.
     *
@@ -55,6 +56,7 @@ trait CourseWorkResource extends js.Object {
     */
   def delete(): Request[js.Object] = js.native
   def delete(request: Fields): Request[js.Object] = js.native
+  
   /**
     * Returns course work.
     *
@@ -67,6 +69,7 @@ trait CourseWorkResource extends js.Object {
     */
   def get(): Request[CourseWork] = js.native
   def get(request: Fields): Request[CourseWork] = js.native
+  
   /**
     * Returns a list of course work that the requester is permitted to view.
     *
@@ -82,6 +85,7 @@ trait CourseWorkResource extends js.Object {
     */
   def list(): Request[ListCourseWorkResponse] = js.native
   def list(request: CourseWorkStates): Request[ListCourseWorkResponse] = js.native
+  
   /**
     * Modifies assignee mode and options of a coursework.
     *
@@ -97,6 +101,7 @@ trait CourseWorkResource extends js.Object {
     */
   def modifyAssignees(request: AccesstokenAlt): Request[CourseWork] = js.native
   def modifyAssignees(request: Fields, body: ModifyCourseWorkAssigneesRequest): Request[CourseWork] = js.native
+  
   /**
     * Updates one or more fields of a course work.
     *
@@ -121,5 +126,6 @@ trait CourseWorkResource extends js.Object {
     */
   def patch(request: AltCallback): Request[CourseWork] = js.native
   def patch(request: Oauthtoken, body: CourseWork): Request[CourseWork] = js.native
+  
+  var studentSubmissions: StudentSubmissionsResource = js.native
 }
-

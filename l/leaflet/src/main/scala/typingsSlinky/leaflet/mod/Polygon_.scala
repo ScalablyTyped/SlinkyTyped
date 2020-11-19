@@ -4,7 +4,7 @@ import typingsSlinky.geojson.mod.MultiPolygon
 import typingsSlinky.geojson.mod.Polygon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("leaflet", "Polygon")
 @js.native
@@ -15,4 +15,3 @@ class Polygon_[P] protected () extends Polyline_[Polygon | MultiPolygon, P] {
     options: PolylineOptions
   ) = this()
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.mendixmodelsdk.mod
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "AbstractElement")
 @js.native
@@ -23,4 +23,3 @@ abstract class AbstractElement protected ()
     container: IContainer
   ) = this()
 }
-

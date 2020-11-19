@@ -6,15 +6,15 @@ import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineInputs
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ionic/commands/enterprise/register", JSImport.Namespace)
 @js.native
 object registerMod extends js.Object {
+  
   @js.native
   class RegisterCommand () extends Command {
+    
     def run(inputs: CommandLineInputs, options: CommandLineOptions, runinfo: CommandInstanceInfo): js.Promise[Unit] = js.native
   }
-  
 }
-

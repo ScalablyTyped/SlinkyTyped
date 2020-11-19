@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait S3Control extends Service {
+  
   @JSName("config")
   var config_S3Control: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates an access point and associates it with the specified bucket.
     */
@@ -25,6 +27,7 @@ trait S3Control extends Service {
     params: CreateAccessPointRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * You can use Amazon S3 Batch Operations to perform large-scale Batch Operations on Amazon S3 objects. Amazon S3 Batch Operations can execute a single operation or action on lists of Amazon S3 objects that you specify. For more information, see Amazon S3 Batch Operations in the Amazon Simple Storage Service Developer Guide. Related actions include:    DescribeJob     ListJobs     UpdateJobPriority     UpdateJobStatus   
     */
@@ -38,6 +41,7 @@ trait S3Control extends Service {
     params: CreateJobRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateJobResult, Unit]
   ): Request[CreateJobResult, AWSError] = js.native
+  
   /**
     * Deletes the specified access point.
     */
@@ -51,6 +55,7 @@ trait S3Control extends Service {
     params: DeleteAccessPointRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Deletes the access point policy for the specified access point.
     */
@@ -64,6 +69,7 @@ trait S3Control extends Service {
     params: DeleteAccessPointPolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Removes the entire tag set from the specified Amazon S3 Batch Operations job. To use this operation, you must have permission to perform the s3:DeleteJobTagging action. For more information, see Using Job Tags in the Amazon Simple Storage Service Developer Guide.  Related actions include:    CreateJob     GetJobTagging     PutJobTagging   
     */
@@ -77,6 +83,7 @@ trait S3Control extends Service {
     params: DeleteJobTaggingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteJobTaggingResult, Unit]
   ): Request[DeleteJobTaggingResult, AWSError] = js.native
+  
   /**
     * Removes the PublicAccessBlock configuration for an Amazon Web Services account.
     */
@@ -90,6 +97,7 @@ trait S3Control extends Service {
     params: DeletePublicAccessBlockRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Retrieves the configuration parameters and status for a Batch Operations job. For more information, see Amazon S3 Batch Operations in the Amazon Simple Storage Service Developer Guide.  Related actions include:    CreateJob     ListJobs     UpdateJobPriority     UpdateJobStatus   
     */
@@ -103,6 +111,7 @@ trait S3Control extends Service {
     params: DescribeJobRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeJobResult, Unit]
   ): Request[DescribeJobResult, AWSError] = js.native
+  
   /**
     * Returns configuration information about the specified access point.
     */
@@ -116,6 +125,7 @@ trait S3Control extends Service {
     params: GetAccessPointRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetAccessPointResult, Unit]
   ): Request[GetAccessPointResult, AWSError] = js.native
+  
   /**
     * Returns the access point policy associated with the specified access point.
     */
@@ -129,6 +139,7 @@ trait S3Control extends Service {
     params: GetAccessPointPolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetAccessPointPolicyResult, Unit]
   ): Request[GetAccessPointPolicyResult, AWSError] = js.native
+  
   /**
     * Indicates whether the specified access point currently has a policy that allows public access. For more information about public access through access points, see Managing Data Access with Amazon S3 Access Points in the Amazon Simple Storage Service Developer Guide.
     */
@@ -142,6 +153,7 @@ trait S3Control extends Service {
     params: GetAccessPointPolicyStatusRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetAccessPointPolicyStatusResult, Unit]
   ): Request[GetAccessPointPolicyStatusResult, AWSError] = js.native
+  
   /**
     * Returns the tags on an Amazon S3 Batch Operations job. To use this operation, you must have permission to perform the s3:GetJobTagging action. For more information, see Using Job Tags in the Amazon Simple Storage Service Developer Guide.  Related actions include:    CreateJob     PutJobTagging     DeleteJobTagging   
     */
@@ -155,6 +167,7 @@ trait S3Control extends Service {
     params: GetJobTaggingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetJobTaggingResult, Unit]
   ): Request[GetJobTaggingResult, AWSError] = js.native
+  
   /**
     * Retrieves the PublicAccessBlock configuration for an Amazon Web Services account.
     */
@@ -168,6 +181,7 @@ trait S3Control extends Service {
     params: GetPublicAccessBlockRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetPublicAccessBlockOutput, Unit]
   ): Request[GetPublicAccessBlockOutput, AWSError] = js.native
+  
   /**
     * Returns a list of the access points currently associated with the specified bucket. You can retrieve up to 1000 access points per call. If the specified bucket has more than 1,000 access points (or the number specified in maxResults, whichever is less), the response will include a continuation token that you can use to list the additional access points.
     */
@@ -181,6 +195,7 @@ trait S3Control extends Service {
     params: ListAccessPointsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListAccessPointsResult, Unit]
   ): Request[ListAccessPointsResult, AWSError] = js.native
+  
   /**
     * Lists current Amazon S3 Batch Operations jobs and jobs that have ended within the last 30 days for the AWS account making the request. For more information, see Amazon S3 Batch Operations in the Amazon Simple Storage Service Developer Guide. Related actions include:     CreateJob     DescribeJob     UpdateJobPriority     UpdateJobStatus   
     */
@@ -194,6 +209,7 @@ trait S3Control extends Service {
     params: ListJobsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListJobsResult, Unit]
   ): Request[ListJobsResult, AWSError] = js.native
+  
   /**
     * Associates an access policy with the specified access point. Each access point can have only one policy, so a request made to this API replaces any existing policy associated with the specified access point.
     */
@@ -207,6 +223,7 @@ trait S3Control extends Service {
     params: PutAccessPointPolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Set the supplied tag-set on an Amazon S3 Batch Operations job. A tag is a key-value pair. You can associate Amazon S3 Batch Operations tags with any job by sending a PUT request against the tagging subresource that is associated with the job. To modify the existing tag set, you can either replace the existing tag set entirely, or make changes within the existing tag set by retrieving the existing tag set using GetJobTagging, modify that tag set, and use this API action to replace the tag set with the one you have modified.. For more information, see Using Job Tags in the Amazon Simple Storage Service Developer Guide.      If you send this request with an empty tag set, Amazon S3 deletes the existing tag set on the Batch Operations job. If you use this method, you will be charged for a Tier 1 Request (PUT). For more information, see Amazon S3 pricing.   For deleting existing tags for your batch operations job, DeleteJobTagging request is preferred because it achieves the same result without incurring charges.   A few things to consider about using tags:   Amazon S3 limits the maximum number of tags to 50 tags per job.   You can associate up to 50 tags with a job as long as they have unique tag keys.   A tag key can be up to 128 Unicode characters in length, and tag values can be up to 256 Unicode characters in length.   The key and values are case sensitive.   For tagging-related restrictions related to characters and encodings, see User-Defined Tag Restrictions.       To use this operation, you must have permission to perform the s3:PutJobTagging action. Related actions include:    CreateJob     GetJobTagging     DeleteJobTagging   
     */
@@ -220,6 +237,7 @@ trait S3Control extends Service {
     params: PutJobTaggingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutJobTaggingResult, Unit]
   ): Request[PutJobTaggingResult, AWSError] = js.native
+  
   /**
     * Creates or modifies the PublicAccessBlock configuration for an Amazon Web Services account.
     */
@@ -233,6 +251,7 @@ trait S3Control extends Service {
     params: PutPublicAccessBlockRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Updates an existing Amazon S3 Batch Operations job's priority. For more information, see Amazon S3 Batch Operations in the Amazon Simple Storage Service Developer Guide.  Related actions include:    CreateJob     ListJobs     DescribeJob     UpdateJobStatus   
     */
@@ -246,6 +265,7 @@ trait S3Control extends Service {
     params: UpdateJobPriorityRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateJobPriorityResult, Unit]
   ): Request[UpdateJobPriorityResult, AWSError] = js.native
+  
   /**
     * Updates the status for the specified job. Use this operation to confirm that you want to run a job or to cancel an existing job. For more information, see Amazon S3 Batch Operations in the Amazon Simple Storage Service Developer Guide.  Related actions include:    CreateJob     ListJobs     DescribeJob     UpdateJobStatus   
     */
@@ -260,4 +280,3 @@ trait S3Control extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateJobStatusResult, Unit]
   ): Request[UpdateJobStatusResult, AWSError] = js.native
 }
-

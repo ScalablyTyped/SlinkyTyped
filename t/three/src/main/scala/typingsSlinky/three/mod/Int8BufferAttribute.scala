@@ -3,7 +3,7 @@ package typingsSlinky.three.mod
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "Int8BufferAttribute")
 @js.native
@@ -18,4 +18,3 @@ class Int8BufferAttribute protected ()
   def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
   def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
 }
-

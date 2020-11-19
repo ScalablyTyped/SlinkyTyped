@@ -11,11 +11,12 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws/codebuild", JSImport.Namespace)
 @js.native
 object codebuildMod extends js.Object {
+  
   @js.native
   class Project protected ()
     extends typingsSlinky.pulumiAws.projectMod.Project {
@@ -28,6 +29,30 @@ object codebuildMod extends js.Object {
       */
     def this(name: String, args: ProjectArgs) = this()
     def this(name: String, args: ProjectArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object Project extends js.Object {
+    
+    /**
+      * Get an existing Project resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.projectMod.Project = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.projectMod.Project = js.native
+    def get(name: String, id: Input[ID], state: ProjectState): typingsSlinky.pulumiAws.projectMod.Project = js.native
+    def get(name: String, id: Input[ID], state: ProjectState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.projectMod.Project = js.native
+    
+    /**
+      * Returns true if the given object is an instance of Project.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codebuild/project.Project */ Boolean = js.native
   }
   
   @js.native
@@ -43,6 +68,30 @@ object codebuildMod extends js.Object {
     def this(name: String, args: SourceCredentialArgs) = this()
     def this(name: String, args: SourceCredentialArgs, opts: CustomResourceOptions) = this()
   }
+  /* static members */
+  @js.native
+  object SourceCredential extends js.Object {
+    
+    /**
+      * Get an existing SourceCredential resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
+    def get(name: String, id: Input[ID], state: SourceCredentialState): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
+    def get(name: String, id: Input[ID], state: SourceCredentialState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
+    
+    /**
+      * Returns true if the given object is an instance of SourceCredential.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codebuild/sourceCredential.SourceCredential */ Boolean = js.native
+  }
   
   @js.native
   class Webhook protected ()
@@ -57,56 +106,10 @@ object codebuildMod extends js.Object {
     def this(name: String, args: WebhookArgs) = this()
     def this(name: String, args: WebhookArgs, opts: CustomResourceOptions) = this()
   }
-  
-  /* static members */
-  @js.native
-  object Project extends js.Object {
-    /**
-      * Get an existing Project resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.projectMod.Project = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.projectMod.Project = js.native
-    def get(name: String, id: Input[ID], state: ProjectState): typingsSlinky.pulumiAws.projectMod.Project = js.native
-    def get(name: String, id: Input[ID], state: ProjectState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.projectMod.Project = js.native
-    /**
-      * Returns true if the given object is an instance of Project.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codebuild/project.Project */ Boolean = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object SourceCredential extends js.Object {
-    /**
-      * Get an existing SourceCredential resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
-    def get(name: String, id: Input[ID], state: SourceCredentialState): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
-    def get(name: String, id: Input[ID], state: SourceCredentialState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.sourceCredentialMod.SourceCredential = js.native
-    /**
-      * Returns true if the given object is an instance of SourceCredential.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codebuild/sourceCredential.SourceCredential */ Boolean = js.native
-  }
-  
   /* static members */
   @js.native
   object Webhook extends js.Object {
+    
     /**
       * Get an existing Webhook resource's state with the given name, ID, and optional extra
       * properties used to qualify the lookup.
@@ -120,12 +123,11 @@ object codebuildMod extends js.Object {
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.webhookMod.Webhook = js.native
     def get(name: String, id: Input[ID], state: WebhookState): typingsSlinky.pulumiAws.webhookMod.Webhook = js.native
     def get(name: String, id: Input[ID], state: WebhookState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.webhookMod.Webhook = js.native
+    
     /**
       * Returns true if the given object is an instance of Webhook.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/codebuild/webhook.Webhook */ Boolean = js.native
   }
-  
 }
-

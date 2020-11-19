@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GeometryService extends Task {
+  
   /**
     * Computes the area and length for the input [polygons](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Polygon.html).
     *
@@ -17,6 +18,7 @@ trait GeometryService extends Task {
     */
   def areasAndLengths(areasAndLengthsParameters: AreasAndLengthsParameters): js.Promise[_] = js.native
   def areasAndLengths(areasAndLengthsParameters: AreasAndLengthsParameters, requestOptions: js.Any): js.Promise[_] = js.native
+  
   /**
     * The Auto Complete operation is performed on a geometry service resource. The AutoComplete operation simplifies the process of constructing new polygons that are adjacent to other polygons. It constructs polygons that fill in the gaps between existing polygons and a set of polylines.
     *
@@ -29,6 +31,7 @@ trait GeometryService extends Task {
     */
   def autoComplete(polygons: js.Array[Polygon], polylines: js.Array[Polyline]): js.Promise[Polygon] = js.native
   def autoComplete(polygons: js.Array[Polygon], polylines: js.Array[Polyline], requestOptions: js.Any): js.Promise[Polygon] = js.native
+  
   /**
     * Creates buffer polygons at a specified distance around the given geometries.
     *
@@ -40,6 +43,7 @@ trait GeometryService extends Task {
     */
   def buffer(bufferParameters: BufferParameters): js.Promise[js.Array[Polygon]] = js.native
   def buffer(bufferParameters: BufferParameters, requestOptions: js.Any): js.Promise[js.Array[Polygon]] = js.native
+  
   /**
     * The convexHull operation is performed on a geometry service resource. It returns the convex hull of the input geometry. The input geometry can be a point, multipoint, polyline or polygon. The hull is typically a polygon but can also be a polyline or point in degenerate cases.
     *
@@ -51,6 +55,7 @@ trait GeometryService extends Task {
     */
   def convexHull(geometries: js.Array[Geometry_]): js.Promise[Geometry_] = js.native
   def convexHull(geometries: js.Array[Geometry_], requestOptions: js.Any): js.Promise[Geometry_] = js.native
+  
   /**
     * The cut operation is performed on a geometry service resource. This operation splits the input polyline or polygon where it crosses a cutting polyline.
     *
@@ -63,6 +68,7 @@ trait GeometryService extends Task {
     */
   def cut(geometries: js.Array[Geometry_], cutter: Polyline): js.Promise[_] = js.native
   def cut(geometries: js.Array[Geometry_], cutter: Polyline, requestOptions: js.Any): js.Promise[_] = js.native
+  
   /**
     * The densify operation is performed on a geometry service resource. This operation densifies geometries by plotting points between existing vertices.
     *
@@ -74,6 +80,7 @@ trait GeometryService extends Task {
     */
   def densify(densifyParameters: DensifyParameters): js.Promise[js.Array[Geometry_]] = js.native
   def densify(densifyParameters: DensifyParameters, requestOptions: js.Any): js.Promise[js.Array[Geometry_]] = js.native
+  
   /**
     * The difference operation is performed on a geometry service resource. This operation constructs the set-theoretic difference between an array of geometries and another geometry.
     *
@@ -86,6 +93,7 @@ trait GeometryService extends Task {
     */
   def difference(geometries: js.Array[Geometry_], geometry: Geometry_): js.Promise[Geometry_] = js.native
   def difference(geometries: js.Array[Geometry_], geometry: Geometry_, requestOptions: js.Any): js.Promise[Geometry_] = js.native
+  
   /**
     * Measures the planar or geodesic distance between geometries.
     *
@@ -97,6 +105,7 @@ trait GeometryService extends Task {
     */
   def distance(params: DistanceParameters): js.Promise[Double] = js.native
   def distance(params: DistanceParameters, requestOptions: js.Any): js.Promise[Double] = js.native
+  
   /**
     * Converts an array of well-known strings into xy-coordinates based on the conversion type and spatial reference supplied by the user. Only available with ArcGIS Server 10.3 or above.
     *
@@ -112,6 +121,7 @@ trait GeometryService extends Task {
     */
   def fromGeoCoordinateString(params: GeometryServiceFromGeoCoordinateStringParams): js.Promise[_] = js.native
   def fromGeoCoordinateString(params: GeometryServiceFromGeoCoordinateStringParams, requestOptions: js.Any): js.Promise[_] = js.native
+  
   /**
     * Generalizes the input geometries using the Douglas-Peucker algorithm.
     *
@@ -123,6 +133,7 @@ trait GeometryService extends Task {
     */
   def generalize(params: GeneralizeParameters): js.Promise[js.Array[Geometry_]] = js.native
   def generalize(params: GeneralizeParameters, requestOptions: js.Any): js.Promise[js.Array[Geometry_]] = js.native
+  
   /**
     * The intersect operation is performed on a geometry service resource. This operation constructs the set-theoretic intersection between an array of geometries and another geometry.
     *
@@ -135,6 +146,7 @@ trait GeometryService extends Task {
     */
   def intersect(geometries: js.Array[Geometry_], intersector: Geometry_): js.Promise[js.Array[Geometry_]] = js.native
   def intersect(geometries: js.Array[Geometry_], intersector: Geometry_, requestOptions: js.Any): js.Promise[js.Array[Geometry_]] = js.native
+  
   /**
     * Calculates an interior point for each polygon specified. These interior points can be used by clients for labeling the polygons.
     *
@@ -146,6 +158,7 @@ trait GeometryService extends Task {
     */
   def labelPoints(polygons: js.Array[Polygon]): js.Promise[Point] = js.native
   def labelPoints(polygons: js.Array[Polygon], requestOptions: js.Any): js.Promise[Point] = js.native
+  
   /**
     * Gets the lengths for a [Geometry](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Geometry.html) when the geometry type is [Polyline](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Polyline.html)
     *
@@ -157,6 +170,7 @@ trait GeometryService extends Task {
     */
   def lengths(params: LengthsParameters): js.Promise[_] = js.native
   def lengths(params: LengthsParameters, requestOptions: js.Any): js.Promise[_] = js.native
+  
   /**
     * Constructs the offset of the input geometries based on a planar distance. If the offsetDistance is positive the constructed offset will be on the right side of the geometry. Left side offsets are constructed with negative values.
     *
@@ -168,6 +182,7 @@ trait GeometryService extends Task {
     */
   def offset(params: OffsetParameters): js.Promise[js.Array[Geometry_]] = js.native
   def offset(params: OffsetParameters, requestOptions: js.Any): js.Promise[js.Array[Geometry_]] = js.native
+  
   /**
     * Projects a set of geometries to a new spatial reference.
     *
@@ -179,6 +194,7 @@ trait GeometryService extends Task {
     */
   def project(params: ProjectParameters): js.Promise[js.Array[Geometry_]] = js.native
   def project(params: ProjectParameters, requestOptions: js.Any): js.Promise[js.Array[Geometry_]] = js.native
+  
   /**
     * Computes the set of pairs of geometries from the input geometry arrays that belong to the specified relation. Both arrays are assumed to be in the same spatial reference. The relations are evaluated in 2D. Z-coordinates are not used. Geometry types cannot be mixed within an array.
     *
@@ -190,6 +206,7 @@ trait GeometryService extends Task {
     */
   def relation(params: RelationParameters): js.Promise[js.Array[Polygon]] = js.native
   def relation(params: RelationParameters, requestOptions: js.Any): js.Promise[js.Array[Polygon]] = js.native
+  
   /**
     * The reshape operation is performed on a geometry service resource. It reshapes a [Polyline](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Polyline.html) or a part of a [Polygon](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Polygon.html) using a reshaping line.
     *
@@ -202,6 +219,7 @@ trait GeometryService extends Task {
     */
   def reshape(targetGeometry: Geometry_, reshaper: Polyline): js.Promise[Geometry_] = js.native
   def reshape(targetGeometry: Geometry_, reshaper: Polyline, requestOptions: js.Any): js.Promise[Geometry_] = js.native
+  
   /**
     * Alters the given geometries to make their definitions topologically legal with respect to their geometry type.
     *
@@ -213,6 +231,7 @@ trait GeometryService extends Task {
     */
   def simplify(geometries: js.Array[Geometry_]): js.Promise[js.Array[Geometry_]] = js.native
   def simplify(geometries: js.Array[Geometry_], requestOptions: js.Any): js.Promise[js.Array[Geometry_]] = js.native
+  
   /**
     * Converts an array of XY-coordinates into well-known strings based on the conversion type and spatial reference supplied by the user. Only available with ArcGIS Server 10.3 or above.
     *
@@ -231,6 +250,7 @@ trait GeometryService extends Task {
     */
   def toGeoCoordinateString(params: GeometryServiceToGeoCoordinateStringParams): js.Promise[js.Array[String]] = js.native
   def toGeoCoordinateString(params: GeometryServiceToGeoCoordinateStringParams, requestOptions: js.Any): js.Promise[js.Array[String]] = js.native
+  
   /**
     * Trims or extends the input polylines using the user specified guide polyline. When trimming features, the portion to the left of the cutting line is preserved in the output and the rest is discarded. If the input polyline is not cut or extended then an empty polyline is added to the output array.
     *
@@ -242,6 +262,7 @@ trait GeometryService extends Task {
     */
   def trimExtend(params: TrimExtendParameters): js.Promise[js.Array[Polyline]] = js.native
   def trimExtend(params: TrimExtendParameters, requestOptions: js.Any): js.Promise[js.Array[Polyline]] = js.native
+  
   /**
     * The union operation is performed on a geometry service resource. This operation constructs the set-theoretic union of the geometries in the input array. All inputs must be of the same type.
     *
@@ -254,4 +275,3 @@ trait GeometryService extends Task {
   def union(geometries: js.Array[Geometry_]): js.Promise[Geometry_] = js.native
   def union(geometries: js.Array[Geometry_], requestOptions: js.Any): js.Promise[Geometry_] = js.native
 }
-

@@ -2,11 +2,14 @@ package typingsSlinky.reactMdTabs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object useTabIndicatorStyleMod {
+  
   type CSSProperties = typingsSlinky.react.mod.CSSProperties with typingsSlinky.reactMdTabs.useTabIndicatorStyleMod.CSSVariables
+  
   type MergedTabRef = js.Function1[/* instance */ org.scalajs.dom.raw.HTMLDivElement | scala.Null, scala.Unit]
+  
   type ReturnValue = js.Tuple3[
     typingsSlinky.reactMdTabs.useTabIndicatorStyleMod.CSSProperties, 
     typingsSlinky.reactMdTabs.useTabIndicatorStyleMod.MergedTabRef, 

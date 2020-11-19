@@ -16,36 +16,45 @@ import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.auto
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.none
 import typingsSlinky.reactNativeTabView.typesMod.Layout
 import typingsSlinky.reactNativeTabView.typesMod.NavigationState
+import typingsSlinky.reactNativeTabView.typesMod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ScrollPager {
+  
   @JSImport("react-native-tab-view", "ScrollPager")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T] (val args: js.Array[js.Any])
+  class Builder[T /* <: Route */] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeTabView.mod.ScrollPager[T]] {
+    
     @scala.inline
     def onSwipeEnd(value: () => Unit): this.type = set("onSwipeEnd", js.Any.fromFunction0(value))
+    
     @scala.inline
     def onSwipeStart(value: () => Unit): this.type = set("onSwipeStart", js.Any.fromFunction0(value))
+    
     @scala.inline
     def overscroll(value: Boolean): this.type = set("overscroll", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def removeClippedSubviews(value: Boolean): this.type = set("removeClippedSubviews", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def springVelocityScale(value: Double): this.type = set("springVelocityScale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def swipeVelocityImpact(value: Double): this.type = set("swipeVelocityImpact", value.asInstanceOf[js.Any])
   }
   
-  def withProps[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T](p: Props[T] with Overscroll): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[T /* <: Route */](p: Props[T] with Overscroll): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
-  def apply[/* <: typingsSlinky.reactNativeTabView.typesMod.Route */ T](
+  def apply[T /* <: Route */](
     children: EventEmitterPropsposition => ReactElement,
     gestureHandlerProps: ComponentProps[Instantiable0[PanGestureHandler]],
     keyboardDismissMode: none | `on-drag` | auto,
@@ -60,4 +69,3 @@ object ScrollPager {
     new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T] with Overscroll]))
   }
 }
-

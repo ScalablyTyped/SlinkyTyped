@@ -6,7 +6,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.projectsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/project relevant section in reference guide}
@@ -27,18 +27,20 @@ abstract class ProjectDocument protected () extends ModelUnit {
     isPartial: Boolean,
     container: IProject
   ) = this()
+  
+  def containerAsProject: Project = js.native
   @JSName("containerAsProject")
   val containerAsProject_FProjectDocument: IProject = js.native
+  
   @JSName("model")
   var model_FProjectDocument: IModel = js.native
-  def containerAsProject: Project = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/projects", "projects.ProjectDocument")
 @js.native
 object ProjectDocument extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.victory.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.victory.victoryStrings.brush
@@ -12,17 +12,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.victory.victoryStrings.zoom
 */
 trait ContainerType extends js.Object
-
 object ContainerType {
+  
   @scala.inline
   def brush: typingsSlinky.victory.victoryStrings.brush = "brush".asInstanceOf[typingsSlinky.victory.victoryStrings.brush]
+  
   @scala.inline
   def cursor: typingsSlinky.victory.victoryStrings.cursor = "cursor".asInstanceOf[typingsSlinky.victory.victoryStrings.cursor]
+  
   @scala.inline
   def selection: typingsSlinky.victory.victoryStrings.selection = "selection".asInstanceOf[typingsSlinky.victory.victoryStrings.selection]
+  
   @scala.inline
   def voronoi: typingsSlinky.victory.victoryStrings.voronoi = "voronoi".asInstanceOf[typingsSlinky.victory.victoryStrings.voronoi]
+  
   @scala.inline
   def zoom: typingsSlinky.victory.victoryStrings.zoom = "zoom".asInstanceOf[typingsSlinky.victory.victoryStrings.zoom]
 }
-

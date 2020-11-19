@@ -6,7 +6,7 @@ import typingsSlinky.rxjs.rxjsNumbers.`1`
 import typingsSlinky.rxjs.typesMod.SchedulerAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rxjs", "VirtualAction")
 @js.native
@@ -22,14 +22,13 @@ class VirtualAction[T] protected ()
     index: Double
   ) = this()
 }
-
 /* static members */
 @JSImport("rxjs", "VirtualAction")
 @js.native
 object VirtualAction extends js.Object {
+  
   def sortActions[T](
     a: typingsSlinky.rxjs.virtualTimeSchedulerMod.VirtualAction[T],
     b: typingsSlinky.rxjs.virtualTimeSchedulerMod.VirtualAction[T]
   ): `1` | `0` | `-1` = js.native
 }
-

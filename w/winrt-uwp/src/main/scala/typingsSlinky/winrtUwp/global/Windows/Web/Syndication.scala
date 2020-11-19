@@ -6,12 +6,13 @@ import typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus
 import typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationTextType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Manages syndication feeds. */
 @JSGlobal("Windows.Web.Syndication")
 @js.native
 object Syndication extends js.Object {
+  
   /** Represents a custom attribute not defined in the specification. */
   @js.native
   /** Creates a new SyndicationAttribute object. */
@@ -79,6 +80,39 @@ object Syndication extends js.Object {
   @js.native
   abstract class SyndicationError ()
     extends typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationError
+  /* static members */
+  @js.native
+  object SyndicationError extends js.Object {
+    
+    /**
+      * Gets the specific error using the returned HRESULT value. Possible values are defined by SyndicationErrorStatus .
+      * @param hresult An HRESULT returned during the operation.
+      * @return The error encountered.
+      */
+    def getStatus(hresult: Double): SyndicationErrorStatus = js.native
+  }
+  
+  /** Defines errors encountered during a Syndication operation. */
+  @js.native
+  object SyndicationErrorStatus extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[
+        typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus with Double
+      ] = js.native
+    
+    /* 3 */ val invalidXml: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.invalidXml with Double = js.native
+    
+    /* 2 */ val missingRequiredAttribute: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.missingRequiredAttribute with Double = js.native
+    
+    /* 1 */ val missingRequiredElement: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.missingRequiredElement with Double = js.native
+    
+    /* 4 */ val unexpectedContent: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.unexpectedContent with Double = js.native
+    
+    /* 0 */ val unknown: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.unknown with Double = js.native
+    
+    /* 5 */ val unsupportedFormat: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.unsupportedFormat with Double = js.native
+  }
   
   /** Contains information about a feed. This class encapsulates the information in the /rss/channel element in RSS 2.0 or the atom:feed element in Atom 1.0. */
   @js.native
@@ -92,6 +126,26 @@ object Syndication extends js.Object {
       * @param uri The Uri value.
       */
     def this(title: String, subtitle: String, uri: Uri) = this()
+  }
+  
+  /** Specifies the syndication formats supported by the API. */
+  @js.native
+  object SyndicationFormat extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat with Double] = js.native
+    
+    /* 5 */ val atom03: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.atom03 with Double = js.native
+    
+    /* 0 */ val atom10: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.atom10 with Double = js.native
+    
+    /* 4 */ val rss091: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.rss091 with Double = js.native
+    
+    /* 3 */ val rss092: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.rss092 with Double = js.native
+    
+    /* 2 */ val rss10: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.rss10 with Double = js.native
+    
+    /* 1 */ val rss20: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.rss20 with Double = js.native
   }
   
   /** Describes the agent or the tool used to generate the feed. This class encapsulates information in the /rss/channel/generator element in RSS 2.0 or the /atom:feed/atom:generator element in Atom 1.0. */
@@ -196,54 +250,17 @@ object Syndication extends js.Object {
     def this(text: String, `type`: SyndicationTextType) = this()
   }
   
-  /* static members */
-  @js.native
-  object SyndicationError extends js.Object {
-    /**
-      * Gets the specific error using the returned HRESULT value. Possible values are defined by SyndicationErrorStatus .
-      * @param hresult An HRESULT returned during the operation.
-      * @return The error encountered.
-      */
-    def getStatus(hresult: Double): SyndicationErrorStatus = js.native
-  }
-  
-  /** Defines errors encountered during a Syndication operation. */
-  @js.native
-  object SyndicationErrorStatus extends js.Object {
-    /* 3 */ val invalidXml: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.invalidXml with Double = js.native
-    /* 2 */ val missingRequiredAttribute: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.missingRequiredAttribute with Double = js.native
-    /* 1 */ val missingRequiredElement: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.missingRequiredElement with Double = js.native
-    /* 4 */ val unexpectedContent: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.unexpectedContent with Double = js.native
-    /* 0 */ val unknown: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.unknown with Double = js.native
-    /* 5 */ val unsupportedFormat: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus.unsupportedFormat with Double = js.native
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[
-        typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationErrorStatus with Double
-      ] = js.native
-  }
-  
-  /** Specifies the syndication formats supported by the API. */
-  @js.native
-  object SyndicationFormat extends js.Object {
-    /* 5 */ val atom03: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.atom03 with Double = js.native
-    /* 0 */ val atom10: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.atom10 with Double = js.native
-    /* 4 */ val rss091: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.rss091 with Double = js.native
-    /* 3 */ val rss092: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.rss092 with Double = js.native
-    /* 2 */ val rss10: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.rss10 with Double = js.native
-    /* 1 */ val rss20: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat.rss20 with Double = js.native
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationFormat with Double] = js.native
-  }
-  
   /** Specifies the text types supported for syndication content. */
   @js.native
   object SyndicationTextType extends js.Object {
-    /* 1 */ val html: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationTextType.html with Double = js.native
-    /* 0 */ val text: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationTextType.text with Double = js.native
-    /* 2 */ val xhtml: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationTextType.xhtml with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationTextType with Double] = js.native
+    
+    /* 1 */ val html: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationTextType.html with Double = js.native
+    
+    /* 0 */ val text: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationTextType.text with Double = js.native
+    
+    /* 2 */ val xhtml: typingsSlinky.winrtUwp.Windows.Web.Syndication.SyndicationTextType.xhtml with Double = js.native
   }
-  
 }
-

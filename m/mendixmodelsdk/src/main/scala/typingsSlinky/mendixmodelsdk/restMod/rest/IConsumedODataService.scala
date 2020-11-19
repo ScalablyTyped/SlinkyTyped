@@ -3,7 +3,7 @@ package typingsSlinky.mendixmodelsdk.restMod.rest
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IRemoteEntitySourceDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interfaces and instance classes for types from the Mendix sub meta model `Rest`.
@@ -17,20 +17,22 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IConsumedODataService extends IRemoteEntitySourceDocument {
+  
   /**
     * In version 8.12.0: added public
     * In version 8.11.0: introduced
     */
   val applicationId: String = js.native
+  
   /**
     * In version 8.10.0: added public
     * In version 8.0.0: introduced
     */
   val serviceName: String = js.native
+  
   /**
     * In version 8.10.0: added public
     * In version 8.0.0: introduced
     */
   val version: String = js.native
 }
-

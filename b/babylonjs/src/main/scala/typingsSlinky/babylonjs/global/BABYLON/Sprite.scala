@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.ISpriteManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.Sprite")
 @js.native
@@ -17,4 +17,3 @@ class Sprite protected ()
   def this(/** defines the name */
   name: String, manager: ISpriteManager) = this()
 }
-

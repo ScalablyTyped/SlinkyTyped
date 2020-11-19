@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.Office
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides objects and methods that you can use to create and manipulate UI components, such as dialog boxes, in your Office Add-ins.
@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait UI extends js.Object {
+  
   /**
     * Adds an event handler to the object using the specified event type.
     *
@@ -46,6 +47,7 @@ trait UI extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* result */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  
   /**
     * Closes the UI container where the JavaScript is executing.
     *
@@ -65,6 +67,7 @@ trait UI extends js.Object {
     * - Called from a module extension: No effect.
     */
   def closeContainer(): Unit = js.native
+  
   /**
     * Displays a dialog to show or collect information from the user or to facilitate Web navigation.
     *
@@ -178,6 +181,7 @@ trait UI extends js.Object {
     options: DialogOptions,
     callback: js.Function1[/* result */ AsyncResult[Dialog], Unit]
   ): Unit = js.native
+  
   def messageParent(message: String): Unit = js.native
   /**
     * Delivers a message from the dialog box to its parent/opener page. The page calling this API must be on the same domain as the parent.
@@ -190,4 +194,3 @@ trait UI extends js.Object {
     */
   def messageParent(message: Boolean): Unit = js.native
 }
-

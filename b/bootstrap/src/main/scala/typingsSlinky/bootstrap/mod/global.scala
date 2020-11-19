@@ -19,7 +19,7 @@ import typingsSlinky.jquery.JQuery.EventHandler
 import typingsSlinky.jquery.JQuery.EventHandlerBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // --------------------------------------------------------------------------------------
 // jQuery
@@ -27,8 +27,10 @@ import scala.scalajs.js.annotation._
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   trait JQuery[TElement] extends js.Object {
+    
     /**
       * If no _method_ is specified, makes an alert listen for click events on descendant elements which have the `data-dismiss="alert"` attribute.
       * (Not necessary when using the data-api's auto-initialization.)
@@ -41,6 +43,7 @@ object global extends js.Object {
     def alert_close(action: close): this.type = js.native
     @JSName("alert")
     def alert_dispose(action: dispose): this.type = js.native
+    
     @JSName("button")
     def button_dispose(action: dispose): this.type = js.native
     /**
@@ -50,6 +53,7 @@ object global extends js.Object {
       */
     @JSName("button")
     def button_toggle(action: toggle): this.type = js.native
+    
     /**
       * Initializes the carousel and starts cycling through items.
       */
@@ -77,6 +81,7 @@ object global extends js.Object {
     def carousel_pause(action: pause): this.type = js.native
     @JSName("carousel")
     def carousel_prev(action: prev): this.type = js.native
+    
     /**
       * Activates a content as a collapsible element.
       */
@@ -99,6 +104,7 @@ object global extends js.Object {
       */
     @JSName("collapse")
     def collapse_toggle(action: toggle): this.type = js.native
+    
     /**
       * Toggle contextual overlays for displaying lists of links.
       *
@@ -124,6 +130,7 @@ object global extends js.Object {
     def dropdown_toggle(action: toggle): this.type = js.native
     @JSName("dropdown")
     def dropdown_update(action: update): this.type = js.native
+    
     /**
       * Activates a content as a modal.
       */
@@ -149,6 +156,7 @@ object global extends js.Object {
       */
     @JSName("modal")
     def modal_toggle(action: toggle): this.type = js.native
+    
     def on(events: AlertEvent, handler: EventHandler[TElement, js.UndefOr[scala.Nothing]]): this.type = js.native
     def on(events: CarouselEvent, handler: EventHandlerBase[TElement, CarouselEventHandler[TElement]]): this.type = js.native
     def on(events: CollapseEvent, handler: EventHandler[TElement, js.UndefOr[scala.Nothing]]): this.type = js.native
@@ -159,6 +167,7 @@ object global extends js.Object {
     def on(events: TapEvent, handler: EventHandlerBase[TElement, TapEventHandler[TElement]]): this.type = js.native
     def on(events: ToastEvent, handler: EventHandler[TElement, js.UndefOr[scala.Nothing]]): this.type = js.native
     def on(events: TooltipEvent, handler: EventHandler[TElement, js.UndefOr[scala.Nothing]]): this.type = js.native
+    
     /**
       * Initializes popovers for an element collection.
       */
@@ -195,6 +204,7 @@ object global extends js.Object {
     def popover_toggleEnabled(action: toggleEnabled): this.type = js.native
     @JSName("popover")
     def popover_update(action: update): this.type = js.native
+    
     /**
       * Add scrollspy behavior to a topbar navigation.
       */
@@ -218,6 +228,7 @@ object global extends js.Object {
     // tslint:enable:jsdoc-format
     @JSName("scrollspy")
     def scrollspy_refresh(action: refresh): this.type = js.native
+    
     @JSName("tab")
     def tab_dispose(action: dispose): this.type = js.native
     /**
@@ -230,6 +241,7 @@ object global extends js.Object {
       */
     @JSName("tab")
     def tab_show(action: show): this.type = js.native
+    
     /**
       * Attaches a toast handler to an element collection.
       */
@@ -249,6 +261,7 @@ object global extends js.Object {
       */
     @JSName("toast")
     def toast_show(action: show): this.type = js.native
+    
     /**
       * Attaches a tooltip handler to an element collection.
       */
@@ -286,6 +299,4 @@ object global extends js.Object {
     @JSName("tooltip")
     def tooltip_update(action: update): this.type = js.native
   }
-  
 }
-

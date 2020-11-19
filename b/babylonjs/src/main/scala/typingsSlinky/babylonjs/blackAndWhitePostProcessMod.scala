@@ -6,11 +6,12 @@ import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/PostProcesses/blackAndWhitePostProcess", JSImport.Namespace)
 @js.native
 object blackAndWhitePostProcessMod extends js.Object {
+  
   @js.native
   class BlackAndWhitePostProcess protected () extends PostProcess {
     /**
@@ -27,8 +28,46 @@ object blackAndWhitePostProcessMod extends js.Object {
     def this(name: String, options: PostProcessOptions, camera: Camera) = this()
     def this(name: String, options: Double, camera: Camera, samplingMode: Double) = this()
     def this(name: String, options: PostProcessOptions, camera: Camera, samplingMode: Double) = this()
+    def this(
+      name: String,
+      options: Double,
+      camera: Camera,
+      samplingMode: js.UndefOr[scala.Nothing],
+      engine: Engine
+    ) = this()
     def this(name: String, options: Double, camera: Camera, samplingMode: Double, engine: Engine) = this()
+    def this(
+      name: String,
+      options: PostProcessOptions,
+      camera: Camera,
+      samplingMode: js.UndefOr[scala.Nothing],
+      engine: Engine
+    ) = this()
     def this(name: String, options: PostProcessOptions, camera: Camera, samplingMode: Double, engine: Engine) = this()
+    def this(
+      name: String,
+      options: Double,
+      camera: Camera,
+      samplingMode: js.UndefOr[scala.Nothing],
+      engine: js.UndefOr[scala.Nothing],
+      reusable: Boolean
+    ) = this()
+    def this(
+      name: String,
+      options: Double,
+      camera: Camera,
+      samplingMode: js.UndefOr[scala.Nothing],
+      engine: Engine,
+      reusable: Boolean
+    ) = this()
+    def this(
+      name: String,
+      options: Double,
+      camera: Camera,
+      samplingMode: Double,
+      engine: js.UndefOr[scala.Nothing],
+      reusable: Boolean
+    ) = this()
     def this(
       name: String,
       options: Double,
@@ -41,15 +80,38 @@ object blackAndWhitePostProcessMod extends js.Object {
       name: String,
       options: PostProcessOptions,
       camera: Camera,
+      samplingMode: js.UndefOr[scala.Nothing],
+      engine: js.UndefOr[scala.Nothing],
+      reusable: Boolean
+    ) = this()
+    def this(
+      name: String,
+      options: PostProcessOptions,
+      camera: Camera,
+      samplingMode: js.UndefOr[scala.Nothing],
+      engine: Engine,
+      reusable: Boolean
+    ) = this()
+    def this(
+      name: String,
+      options: PostProcessOptions,
+      camera: Camera,
+      samplingMode: Double,
+      engine: js.UndefOr[scala.Nothing],
+      reusable: Boolean
+    ) = this()
+    def this(
+      name: String,
+      options: PostProcessOptions,
+      camera: Camera,
       samplingMode: Double,
       engine: Engine,
       reusable: Boolean
     ) = this()
+    
     /**
       * Linear about to convert he result to black and white (default: 1)
       */
     var degree: Double = js.native
   }
-  
 }
-

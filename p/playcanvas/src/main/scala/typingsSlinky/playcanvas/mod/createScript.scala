@@ -3,11 +3,12 @@ package typingsSlinky.playcanvas.mod
 import typingsSlinky.playcanvas.anon.TypeofScriptType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("playcanvas", "createScript")
 @js.native
 object createScript extends js.Object {
+  
   /**
     * Create and register a new {@link pc.ScriptType}.
     * It returns new class type (constructor function), which is auto-registered to {@link pc.ScriptRegistry} using it's name.
@@ -39,4 +40,3 @@ object createScript extends js.Object {
   def apply(name: String): TypeofScriptType = js.native
   def apply(name: String, app: typingsSlinky.playcanvas.pc.Application): TypeofScriptType = js.native
 }
-

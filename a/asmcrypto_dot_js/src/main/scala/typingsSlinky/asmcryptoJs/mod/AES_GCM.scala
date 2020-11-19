@@ -2,7 +2,7 @@ package typingsSlinky.asmcryptoJs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("asmcrypto.js", "AES_GCM")
 @js.native
@@ -23,11 +23,11 @@ class AES_GCM protected ()
     tagSize: Double
   ) = this()
 }
-
 /* static members */
 @JSImport("asmcrypto.js", "AES_GCM")
 @js.native
 object AES_GCM extends js.Object {
+  
   def decrypt(
     ciphertext: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
@@ -53,6 +53,7 @@ object AES_GCM extends js.Object {
     adata: js.typedarray.Uint8Array,
     tagsize: Double
   ): js.typedarray.Uint8Array = js.native
+  
   def encrypt(
     cleartext: js.typedarray.Uint8Array,
     key: js.typedarray.Uint8Array,
@@ -79,4 +80,3 @@ object AES_GCM extends js.Object {
     tagsize: Double
   ): js.typedarray.Uint8Array = js.native
 }
-

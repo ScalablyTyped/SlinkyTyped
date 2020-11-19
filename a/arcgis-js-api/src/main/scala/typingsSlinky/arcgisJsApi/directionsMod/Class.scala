@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Directions
 import typingsSlinky.arcgisJsApi.esri.DirectionsProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Directions", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Directions {
   def this(properties: DirectionsProperties) = this()
 }
-

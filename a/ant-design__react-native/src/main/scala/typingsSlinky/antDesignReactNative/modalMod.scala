@@ -9,18 +9,19 @@ import typingsSlinky.antDesignReactNative.modalPropsTypeMod.CallbackOrActions
 import typingsSlinky.reactNative.mod.TextStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ant-design/react-native/lib/modal", JSImport.Namespace)
 @js.native
 object modalMod extends js.Object {
+  
   @js.native
   class default ()
     extends typingsSlinky.antDesignReactNative.modalModalMod.default
-  
   /* static members */
   @js.native
   object default extends js.Object {
+    
     var alert: js.Function4[
         /* title */ ReactElement, 
         /* content */ ReactElement, 
@@ -28,13 +29,17 @@ object modalMod extends js.Object {
         /* onBackHandler */ js.UndefOr[CallbackOnBackHandler], 
         Double
       ] = js.native
+    
     var contextTypes: AntLocale = js.native
+    
     var defaultProps: AnimateAppear = js.native
+    
     var operation: js.Function2[
         /* actions */ js.Array[_], 
         /* onBackHandler */ js.UndefOr[CallbackOnBackHandler], 
         Double
       ] = js.native
+    
     var prompt: js.Function7[
         /* title */ ReactElement, 
         /* message */ ReactElement, 
@@ -46,6 +51,4 @@ object modalMod extends js.Object {
         js.UndefOr[Double]
       ] = js.native
   }
-  
 }
-

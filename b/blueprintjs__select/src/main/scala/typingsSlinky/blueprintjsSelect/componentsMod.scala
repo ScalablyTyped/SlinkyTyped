@@ -12,33 +12,11 @@ import typingsSlinky.blueprintjsSelect.selectMod.ISelectProps
 import typingsSlinky.blueprintjsSelect.suggestMod.ISuggestProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@blueprintjs/select/lib/esm/components", JSImport.Namespace)
 @js.native
 object componentsMod extends js.Object {
-  @js.native
-  class MultiSelect[T] ()
-    extends typingsSlinky.blueprintjsSelect.multiSelectMod.MultiSelect[T]
-  
-  @js.native
-  class Omnibar[T] ()
-    extends typingsSlinky.blueprintjsSelect.omnibarMod.Omnibar[T]
-  
-  @js.native
-  class QueryList[T] protected ()
-    extends typingsSlinky.blueprintjsSelect.queryListMod.QueryList[T] {
-    def this(props: IQueryListProps[T]) = this()
-    def this(props: IQueryListProps[T], context: js.Any) = this()
-  }
-  
-  @js.native
-  class Select[T] ()
-    extends typingsSlinky.blueprintjsSelect.selectMod.Select[T]
-  
-  @js.native
-  class Suggest[T] ()
-    extends typingsSlinky.blueprintjsSelect.suggestMod.Suggest[T]
   
   def getFirstEnabledItem[T](items: js.Array[T]): T | ICreateNewItem | Null = js.native
   def getFirstEnabledItem[T](
@@ -76,55 +54,85 @@ object componentsMod extends js.Object {
     direction: Double,
     startIndex: Double
   ): T | ICreateNewItem | Null = js.native
+  
+  @js.native
+  class MultiSelect[T] ()
+    extends typingsSlinky.blueprintjsSelect.multiSelectMod.MultiSelect[T]
   /* static members */
   @js.native
   object MultiSelect extends js.Object {
+    
     var defaultProps: Fill = js.native
+    
     var displayName: String = js.native
+    
     def ofType[T](): Instantiable1[
         /* props */ IMultiSelectProps[T], 
         typingsSlinky.blueprintjsSelect.multiSelectMod.MultiSelect[T]
       ] = js.native
   }
   
+  @js.native
+  class Omnibar[T] ()
+    extends typingsSlinky.blueprintjsSelect.omnibarMod.Omnibar[T]
   /* static members */
   @js.native
   object Omnibar extends js.Object {
+    
     var displayName: String = js.native
+    
     def ofType[T](): Instantiable1[
         /* props */ IOmnibarProps[T], 
         typingsSlinky.blueprintjsSelect.omnibarMod.Omnibar[T]
       ] = js.native
   }
   
+  @js.native
+  class QueryList[T] protected ()
+    extends typingsSlinky.blueprintjsSelect.queryListMod.QueryList[T] {
+    def this(props: IQueryListProps[T]) = this()
+    def this(props: IQueryListProps[T], context: js.Any) = this()
+  }
   /* static members */
   @js.native
   object QueryList extends js.Object {
+    
     var defaultProps: Disabled = js.native
+    
     var displayName: String = js.native
+    
     def ofType[T](): Instantiable1[
         /* props */ IQueryListProps[T], 
         typingsSlinky.blueprintjsSelect.queryListMod.QueryList[T]
       ] = js.native
   }
   
+  @js.native
+  class Select[T] ()
+    extends typingsSlinky.blueprintjsSelect.selectMod.Select[T]
   /* static members */
   @js.native
   object Select extends js.Object {
+    
     var displayName: String = js.native
+    
     def ofType[T](): Instantiable1[/* props */ ISelectProps[T], typingsSlinky.blueprintjsSelect.selectMod.Select[T]] = js.native
   }
   
+  @js.native
+  class Suggest[T] ()
+    extends typingsSlinky.blueprintjsSelect.suggestMod.Suggest[T]
   /* static members */
   @js.native
   object Suggest extends js.Object {
+    
     var defaultProps: PartialISuggestPropsany = js.native
+    
     var displayName: String = js.native
+    
     def ofType[T](): Instantiable1[
         /* props */ ISuggestProps[T], 
         typingsSlinky.blueprintjsSelect.suggestMod.Suggest[T]
       ] = js.native
   }
-  
 }
-

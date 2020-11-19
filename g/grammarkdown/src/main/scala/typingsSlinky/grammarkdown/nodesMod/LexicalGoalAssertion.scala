@@ -6,7 +6,7 @@ import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.LexicalKeyword
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.OpenBracketToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown/dist/nodes", "LexicalGoalAssertion")
 @js.native
@@ -61,10 +61,13 @@ class LexicalGoalAssertion protected ()
     symbol: Identifier,
     closeBracketToken: Token[CloseBracketToken]
   ) = this()
+  
   val goalKeyword: js.UndefOr[Token[GoalKeyword]] = js.native
+  
   val lexicalKeyword: Token[LexicalKeyword] = js.native
+  
   val symbol: js.UndefOr[Identifier] = js.native
+  
   def update(): LexicalGoalAssertion = js.native
   def update(symbol: Identifier): LexicalGoalAssertion = js.native
 }
-

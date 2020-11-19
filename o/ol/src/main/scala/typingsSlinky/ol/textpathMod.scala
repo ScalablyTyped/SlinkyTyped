@@ -3,11 +3,12 @@ package typingsSlinky.ol
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/geom/flat/textpath", JSImport.Namespace)
 @js.native
 object textpathMod extends js.Object {
+  
   def drawTextOnPath(
     flatCoordinates: js.Array[Double],
     offset: Double,
@@ -22,4 +23,3 @@ object textpathMod extends js.Object {
     cache: StringDictionary[Double]
   ): js.Array[js.Array[_]] = js.native
 }
-

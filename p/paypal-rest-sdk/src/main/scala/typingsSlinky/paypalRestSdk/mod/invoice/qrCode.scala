@@ -4,11 +4,12 @@ import typingsSlinky.node.httpMod.RequestOptions
 import typingsSlinky.paypalRestSdk.mod.CallbackFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("paypal-rest-sdk", "invoice.qrCode")
 @js.native
 object qrCode extends js.Object {
+  
   def apply(id: String, height: Double, width: Double, config: RequestOptions): Unit = js.native
   def apply(
     id: String,
@@ -26,4 +27,3 @@ object qrCode extends js.Object {
     cb: CallbackFunction[QrResponse]
   ): Unit = js.native
 }
-

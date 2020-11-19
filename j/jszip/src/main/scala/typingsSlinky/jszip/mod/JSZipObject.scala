@@ -14,19 +14,11 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JSZipObject extends js.Object {
-  var comment: String = js.native
-  var date: js.Date = js.native
-  var dir: Boolean = js.native
-  /** The UNIX permissions of the file, if any. */
-  var dosPermissions: Double | Null = js.native
-  var name: String = js.native
-  var options: JSZipObjectOptions = js.native
-  /** The UNIX permissions of the file, if any. */
-  var unixPermissions: Double | String | Null = js.native
+  
   @JSName("async")
   def async_array(`type`: array): js.Promise[js.Array[Double]] = js.native
   @JSName("async")
@@ -69,11 +61,27 @@ trait JSZipObject extends js.Object {
   def async_uint8array(`type`: uint8array): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("async")
   def async_uint8array(`type`: uint8array, onUpdate: OnUpdateCallback): js.Promise[js.typedarray.Uint8Array] = js.native
+  
+  var comment: String = js.native
+  
+  var date: js.Date = js.native
+  
+  var dir: Boolean = js.native
+  
+  /** The UNIX permissions of the file, if any. */
+  var dosPermissions: Double | Null = js.native
+  
+  var name: String = js.native
+  
   def nodeStream(): ReadableStream = js.native
   def nodeStream(`type`: js.UndefOr[scala.Nothing], onUpdate: OnUpdateCallback): ReadableStream = js.native
   @JSName("nodeStream")
   def nodeStream_nodebuffer(`type`: nodebuffer): ReadableStream = js.native
   @JSName("nodeStream")
   def nodeStream_nodebuffer(`type`: nodebuffer, onUpdate: OnUpdateCallback): ReadableStream = js.native
+  
+  var options: JSZipObjectOptions = js.native
+  
+  /** The UNIX permissions of the file, if any. */
+  var unixPermissions: Double | String | Null = js.native
 }
-

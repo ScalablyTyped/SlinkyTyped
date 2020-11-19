@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Handles extends Accessor {
+  
   def add(handles: js.Array[WatchHandle]): Unit = js.native
   def add(handles: js.Array[WatchHandle], key: js.Any): Unit = js.native
   def add(handles: Collection[WatchHandle]): Unit = js.native
@@ -21,6 +22,7 @@ trait Handles extends Accessor {
     */
   def add(handles: WatchHandle): Unit = js.native
   def add(handles: WatchHandle, key: js.Any): Unit = js.native
+  
   /**
     * Returns true if a group exists for the provided key, false otherwise.
     *
@@ -30,6 +32,7 @@ trait Handles extends Accessor {
     *
     */
   def has(key: js.Any): Boolean = js.native
+  
   /**
     * Removes a group of handles.
     *
@@ -40,6 +43,7 @@ trait Handles extends Accessor {
     */
   def remove(): Unit = js.native
   def remove(key: js.Any): Unit = js.native
+  
   /**
     * Removes all handles.
     *
@@ -49,4 +53,3 @@ trait Handles extends Accessor {
     */
   def removeAll(): Unit = js.native
 }
-

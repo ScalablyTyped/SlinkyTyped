@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/GetBlobCommand", JSImport.Namespace)
 @js.native
 object getBlobCommandMod extends js.Object {
+  
   @js.native
   class GetBlobCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getBlobCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetBlobInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetBlobInput, GetBlobOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[GetBlobInput, GetBlobOutput] = js.native
   }
-  
 }
-

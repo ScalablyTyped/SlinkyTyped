@@ -2,23 +2,26 @@ package typingsSlinky.coinbase.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("coinbase", "Client")
 @js.native
 class Client protected () extends js.Object {
   def this(opts: ClientConstructOpts) = this()
+  
   /**
     * Creates a new account for user.
     * Scopes: wallet:accounts:create
     */
   def createAccount(opts: CreateAccountOpts, cb: js.Function2[/* error */ js.Error | Null, /* result */ Account, Unit]): Unit = js.native
+  
   /**
     * Get one account by its Resource ID
     * Scope: wallet:accounts:read
     * @param id resource ID or "primary"
     */
   def getAccount(id: String, cb: js.Function2[/* error */ js.Error | Null, /* result */ Account, Unit]): Unit = js.native
+  
   /**
     * Returns all accounts for the current user
     * Scope: wallet:accounts:read
@@ -27,6 +30,7 @@ class Client protected () extends js.Object {
     opts: js.Object,
     cb: js.Function2[/* error */ js.Error | Null, /* result */ js.Array[Account], Unit]
   ): Unit = js.native
+  
   /**
     * Get the total price to buy one bitcoin or ether. Note that exchange rates fluctuates so the price is only correct for seconds at the time.
     * This buy price includes standard Coinbase fee (1%) but excludes any other fees including bank fees.
@@ -34,18 +38,21 @@ class Client protected () extends js.Object {
     * Scope: none
     */
   def getBuyPrice(opts: GetBuyPriceOpts, cb: js.Function2[/* error */ js.Error | Null, /* result */ Price, Unit]): Unit = js.native
+  
   /**
     * List known currencies. Currency codes will conform to the ISO 4217 standard where possible. Currencies which have or had no
     * representation in ISO 4217 may use a custom code (e.g. BTC).
     * Scope: none
     */
   def getCurrencies(cb: js.Function2[/* error */ js.Error | Null, /* result */ Currencies, Unit]): Unit = js.native
+  
   /**
     * Get the current user. To get user’s email or private information, use permissions wallet:user:email and wallet:user:read. If current
     * request has a wallet:transactions:send scope, then the response will contain a boolean sends_disabled field that indicates
     * if the user’s send functionality has been disabled.
     */
   def getCurrentUser(cb: js.Function2[/* error */ js.Error | Null, /* result */ User, Unit]): Unit = js.native
+  
   /**
     * Get current exchange rates. Default base currency is USD but it can be defined as any supported currency.
     * Returned rates will define the exchange rate for one unit of the base currency.
@@ -55,16 +62,19 @@ class Client protected () extends js.Object {
     opts: GetExchangeRateOpts,
     cb: js.Function2[/* error */ js.Error | Null, /* result */ ExchangeRate, Unit]
   ): Unit = js.native
+  
   /**
     * Show current user’s payment method.
     * Scope: wallet:payment-methods:read
     */
   def getPaymentMethod(id: String, cb: js.Function2[/* error */ js.Error | Null, /* result */ PaymentMethod, Unit]): Unit = js.native
+  
   /**
     * Lists current user’s payment methods
     * Scope: wallet:payment-methods:read
     */
   def getPaymentMethods(cb: js.Function2[/* error */ js.Error | Null, /* result */ js.Array[PaymentMethod], Unit]): Unit = js.native
+  
   /**
     * Get the total price to sell one bitcoin or ether. Note that exchange rates fluctuates so the price is only correct for seconds at the time.
     * This sell price includes standard Coinbase fee (1%) but excludes any other fees including bank fees. If you need more accurate price
@@ -72,6 +82,7 @@ class Client protected () extends js.Object {
     * Scope: none
     */
   def getSellPrice(opts: GetSellPriceOpts, cb: js.Function2[/* error */ js.Error | Null, /* result */ Price, Unit]): Unit = js.native
+  
   /**
     * Get the current market price for bitcoin. This is usually somewhere in between the buy and sell price.
     * Note that exchange rates fluctuates so the price is only correct for seconds at the time.
@@ -79,10 +90,12 @@ class Client protected () extends js.Object {
     * Scope: none
     */
   def getSpotPrice(opts: GetSpotPriceOpts, cb: js.Function2[/* error */ js.Error | Null, /* result */ Price, Unit]): Unit = js.native
+  
   /**
     * Get the API server time.
     */
   def getTime(cb: js.Function2[/* error */ js.Error | Null, /* result */ Time, Unit]): Unit = js.native
+  
   /**
     * Get any user’s information with their ID.
     * Scopes: none
@@ -90,4 +103,3 @@ class Client protected () extends js.Object {
     */
   def getUser(id: String, cb: js.Function2[/* error */ js.Error | Null, /* result */ User, Unit]): Unit = js.native
 }
-

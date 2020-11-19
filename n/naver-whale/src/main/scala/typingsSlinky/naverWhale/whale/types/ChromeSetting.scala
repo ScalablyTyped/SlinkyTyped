@@ -2,12 +2,11 @@ package typingsSlinky.naverWhale.whale.types
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ChromeSetting extends js.Object {
-  /** Fired after the setting changes. */
-  var onChange: typingsSlinky.chrome.chrome.types.ChromeSettingChangedEvent = js.native
+  
   /**
     * Clears the setting, restoring any default value.
     * @param details Which setting to clear.
@@ -15,6 +14,7 @@ trait ChromeSetting extends js.Object {
     */
   def clear(details: typingsSlinky.chrome.chrome.types.ChromeSettingClearDetails): Unit = js.native
   def clear(details: typingsSlinky.chrome.chrome.types.ChromeSettingClearDetails, callback: js.Function): Unit = js.native
+  
   /**
     * Gets the value of a setting.
     * @param details Which setting to consider.
@@ -24,6 +24,10 @@ trait ChromeSetting extends js.Object {
     details: typingsSlinky.chrome.chrome.types.ChromeSettingGetDetails,
     callback: typingsSlinky.chrome.chrome.types.DetailsCallback
   ): Unit = js.native
+  
+  /** Fired after the setting changes. */
+  var onChange: typingsSlinky.chrome.chrome.types.ChromeSettingChangedEvent = js.native
+  
   /**
     * Sets the value of a setting.
     * @param details Which setting to change.
@@ -32,4 +36,3 @@ trait ChromeSetting extends js.Object {
   def set(details: typingsSlinky.chrome.chrome.types.ChromeSettingSetDetails): Unit = js.native
   def set(details: typingsSlinky.chrome.chrome.types.ChromeSettingSetDetails, callback: js.Function): Unit = js.native
 }
-

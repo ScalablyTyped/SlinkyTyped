@@ -2,11 +2,12 @@ package typingsSlinky.babelTypes.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@babel/types", "valueToNode")
 @js.native
 object valueToNode extends js.Object {
+  
   def apply(): Expression = js.native
   def apply(value: js.UndefOr[scala.Nothing]): Identifier_ = js.native
   def apply(value: String): Expression = js.native
@@ -17,4 +18,3 @@ object valueToNode extends js.Object {
   def apply(value: Null): NullLiteral_ = js.native
   def apply(value: js.RegExp): RegExpLiteral_ = js.native
 }
-

@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "TpEventAddRequest")
 @js.native
@@ -16,20 +16,22 @@ import scala.scalajs.js.annotation._
   */
 class TpEventAddRequest () extends ITpEventAddRequest {
   def this(properties: ITpEventAddRequest) = this()
+  
   /** TpEventAddRequest contextId. */
   @JSName("contextId")
   var contextId_TpEventAddRequest: String = js.native
+  
   /**
     * Converts this TpEventAddRequest to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "TpEventAddRequest")
 @js.native
 object TpEventAddRequest extends js.Object {
+  
   /**
     * Creates a new TpEventAddRequest instance using the specified properties.
     * @param [properties] Properties to set
@@ -37,6 +39,7 @@ object TpEventAddRequest extends js.Object {
     */
   def create(): TpEventAddRequest = js.native
   def create(properties: ITpEventAddRequest): TpEventAddRequest = js.native
+  
   /**
     * Decodes a TpEventAddRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -49,6 +52,7 @@ object TpEventAddRequest extends js.Object {
   def decode(reader: Reader, length: Double): TpEventAddRequest = js.native
   def decode(reader: js.typedarray.Uint8Array): TpEventAddRequest = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): TpEventAddRequest = js.native
+  
   /**
     * Decodes a TpEventAddRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -58,6 +62,7 @@ object TpEventAddRequest extends js.Object {
     */
   def decodeDelimited(reader: Reader): TpEventAddRequest = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): TpEventAddRequest = js.native
+  
   /**
     * Encodes the specified TpEventAddRequest message. Does not implicitly {@link TpEventAddRequest.verify|verify} messages.
     * @param message TpEventAddRequest message or plain object to encode
@@ -66,6 +71,7 @@ object TpEventAddRequest extends js.Object {
     */
   def encode(message: ITpEventAddRequest): Writer = js.native
   def encode(message: ITpEventAddRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified TpEventAddRequest message, length delimited. Does not implicitly {@link TpEventAddRequest.verify|verify} messages.
     * @param message TpEventAddRequest message or plain object to encode
@@ -74,12 +80,14 @@ object TpEventAddRequest extends js.Object {
     */
   def encodeDelimited(message: ITpEventAddRequest): Writer = js.native
   def encodeDelimited(message: ITpEventAddRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a TpEventAddRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns TpEventAddRequest
     */
   def fromObject(`object`: StringDictionary[js.Any]): TpEventAddRequest = js.native
+  
   /**
     * Creates a plain object from a TpEventAddRequest message. Also converts values to other types if specified.
     * @param message TpEventAddRequest
@@ -88,6 +96,7 @@ object TpEventAddRequest extends js.Object {
     */
   def toObject(message: TpEventAddRequest): StringDictionary[js.Any] = js.native
   def toObject(message: TpEventAddRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a TpEventAddRequest message.
     * @param message Plain object to verify
@@ -95,4 +104,3 @@ object TpEventAddRequest extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

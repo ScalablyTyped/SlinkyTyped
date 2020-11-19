@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.LocateViewModelProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.LocateViewModel")
 @js.native
@@ -16,4 +16,3 @@ class LocateViewModelCls ()
   extends typingsSlinky.arcgisJsApi.esri.LocateViewModel {
   def this(properties: LocateViewModelProperties) = this()
 }
-

@@ -4,15 +4,15 @@ import typingsSlinky.relayCompiler.schemaMod.LinkedFieldTypeID
 import typingsSlinky.relayCompiler.schemaMod.ScalarFieldTypeID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.relayCompiler.iRMod.LinkedField
   - typingsSlinky.relayCompiler.iRMod.ScalarField
 */
 trait Field extends js.Object
-
 object Field {
+  
   @scala.inline
   def LinkedField(
     alias: String,
@@ -29,6 +29,7 @@ object Field {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Field]
   }
+  
   @scala.inline
   def ScalarField(
     alias: String,
@@ -44,4 +45,3 @@ object Field {
     __obj.asInstanceOf[Field]
   }
 }
-

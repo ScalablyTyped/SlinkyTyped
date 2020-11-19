@@ -3,7 +3,7 @@ package typingsSlinky.amapJsApi.global.AMap
 import typingsSlinky.amapJsApi.AMap.TileLayer.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AMap.TileLayer")
 @js.native
@@ -15,10 +15,10 @@ class TileLayer ()
   extends typingsSlinky.amapJsApi.AMap.TileLayer {
   def this(options: Options) = this()
 }
-
 @JSGlobal("AMap.TileLayer")
 @js.native
 object TileLayer extends js.Object {
+  
   @js.native
   /**
     * 灵活切片图层
@@ -72,6 +72,4 @@ object TileLayer extends js.Object {
       */
     def this(options: typingsSlinky.amapJsApi.AMap.TileLayer.WMTS.Options) = this()
   }
-  
 }
-

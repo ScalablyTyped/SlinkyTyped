@@ -2,7 +2,7 @@ package typingsSlinky.angularCompiler.srcCompilerMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/compiler", "ClassField")
 @js.native
@@ -80,4 +80,3 @@ class ClassField protected ()
     initializer: typingsSlinky.angularCompiler.outputAstMod.Expression
   ) = this()
 }
-

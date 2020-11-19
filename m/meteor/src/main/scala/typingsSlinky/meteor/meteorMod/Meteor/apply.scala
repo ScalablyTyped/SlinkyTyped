@@ -5,11 +5,12 @@ import typingsSlinky.meteor.EJSONableProperty
 import typingsSlinky.meteor.anon.OnResultReceived
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("meteor/meteor", "Meteor.apply")
 @js.native
 object apply extends js.Object {
+  
   def apply[Result /* <: EJSONable | (js.Array[EJSONable | EJSONableProperty]) | EJSONableProperty */](name: String, args: js.Array[EJSONable | EJSONableProperty]): js.Any = js.native
   def apply[Result /* <: EJSONable | (js.Array[EJSONable | EJSONableProperty]) | EJSONableProperty */](
     name: String,
@@ -25,4 +26,3 @@ object apply extends js.Object {
     asyncCallback: js.Function2[/* error */ js.UndefOr[js.Error | Error], /* result */ js.UndefOr[Result], Unit]
   ): js.Any = js.native
 }
-

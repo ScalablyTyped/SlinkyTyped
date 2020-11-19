@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.LineOfSightViewModel
 import typingsSlinky.arcgisJsApi.esri.LineOfSightViewModelProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/LineOfSight/LineOfSightViewModel", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends LineOfSightViewModel {
   def this(properties: LineOfSightViewModelProperties) = this()
 }
-

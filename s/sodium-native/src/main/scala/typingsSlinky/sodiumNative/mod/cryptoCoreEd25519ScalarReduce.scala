@@ -3,11 +3,11 @@ package typingsSlinky.sodiumNative.mod
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sodium-native", "crypto_core_ed25519_scalar_reduce")
 @js.native
 object cryptoCoreEd25519ScalarReduce extends js.Object {
+  
   def apply(r: Buffer, s: Buffer): Unit = js.native
 }
-

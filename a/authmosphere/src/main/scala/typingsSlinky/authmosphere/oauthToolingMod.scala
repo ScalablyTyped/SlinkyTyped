@@ -7,25 +7,12 @@ import typingsSlinky.authmosphere.loggerMod.Logger
 import typingsSlinky.authmosphere.oauthconfigMod.OAuthConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("authmosphere/lib/src/oauth-tooling", JSImport.Namespace)
 @js.native
 object oauthToolingMod extends js.Object {
-  /**
-    * Makes a request to the `tokenInfoUrl` to validate the given `accessToken`.
-    * In case of success resolves with a token.
-    * Otherwise, rejects with an error message.
-    *
-    * Specify `T` to extend the type `Token`.
-    *
-    * @param tokenInfoUrl - OAuth endpoint for validating tokens
-    * @param accessToken - access token to be validated
-    * @param logger - optional logger
-    *
-    * @returns { Promise<Token<T>> }
-    */
-  val getTokenInfo: GetTokenInfo[js.Object] = js.native
+  
   /**
     * Returns URI to request authorization code with the given parameters.
     *
@@ -42,6 +29,7 @@ object oauthToolingMod extends js.Object {
     clientId: String,
     queryParams: StringDictionary[String]
   ): String = js.native
+  
   /**
     * Requests a token based on the given configuration (which specifies the grant type and corresponding parameters).
     *
@@ -54,5 +42,19 @@ object oauthToolingMod extends js.Object {
     */
   def getAccessToken(options: OAuthConfig): js.Promise[Token] = js.native
   def getAccessToken(options: OAuthConfig, logger: Logger): js.Promise[Token] = js.native
+  
+  /**
+    * Makes a request to the `tokenInfoUrl` to validate the given `accessToken`.
+    * In case of success resolves with a token.
+    * Otherwise, rejects with an error message.
+    *
+    * Specify `T` to extend the type `Token`.
+    *
+    * @param tokenInfoUrl - OAuth endpoint for validating tokens
+    * @param accessToken - access token to be validated
+    * @param logger - optional logger
+    *
+    * @returns { Promise<Token<T>> }
+    */
+  val getTokenInfo: GetTokenInfo[js.Object] = js.native
 }
-

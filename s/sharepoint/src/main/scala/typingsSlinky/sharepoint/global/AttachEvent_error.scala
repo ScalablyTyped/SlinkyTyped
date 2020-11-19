@@ -6,15 +6,15 @@ import typingsSlinky.sharepoint.sharepointStrings.error
 import typingsSlinky.std.GlobalEventHandlers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AttachEvent")
 @js.native
 object AttachEvent_error extends js.Object {
+  
   def apply(
     `type`: error,
     eventFunc: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ErrorEvent, _],
     el: GlobalEventHandlers
   ): js.Any = js.native
 }
-

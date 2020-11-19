@@ -32,10 +32,11 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_unhover
 import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PlotlyHTMLElement extends HTMLElement {
+  
   @JSName("on")
   def on_plotlyafterexport(event: plotly_afterexport, callback: js.Function0[Unit]): Unit = js.native
   @JSName("on")
@@ -94,6 +95,6 @@ trait PlotlyHTMLElement extends HTMLElement {
   def on_plotlytransitioninterrupted(event: plotly_transitioninterrupted, callback: js.Function0[Unit]): Unit = js.native
   @JSName("on")
   def on_plotlyunhover(event: plotly_unhover, callback: js.Function1[/* event */ PlotMouseEvent, Unit]): Unit = js.native
+  
   def removeAllListeners(handler: String): Unit = js.native
 }
-

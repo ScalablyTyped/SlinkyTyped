@@ -2,7 +2,7 @@ package typingsSlinky.firebaseStorage.observerMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@firebase/storage/dist/src/implementation/observer", "Observer")
 @js.native
@@ -26,4 +26,3 @@ class Observer[T] () extends StorageObserver[T] {
   def this(nextOrObserver: StorageObserver[T], error: Null, complete: CompleteFn) = this()
   def this(nextOrObserver: StorageObserver[T], error: ErrorFn, complete: CompleteFn) = this()
 }
-

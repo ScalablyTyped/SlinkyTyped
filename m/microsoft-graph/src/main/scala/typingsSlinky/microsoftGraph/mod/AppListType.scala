@@ -3,7 +3,7 @@ package typingsSlinky.microsoftGraph.mod
 import typingsSlinky.microsoftGraph.microsoftGraphStrings.none_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.none_
@@ -11,13 +11,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.appsNotInListCompliant
 */
 trait AppListType extends js.Object
-
 object AppListType {
+  
   @scala.inline
   def appsInListCompliant: typingsSlinky.microsoftGraph.microsoftGraphStrings.appsInListCompliant = "appsInListCompliant".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.appsInListCompliant]
+  
   @scala.inline
   def appsNotInListCompliant: typingsSlinky.microsoftGraph.microsoftGraphStrings.appsNotInListCompliant = "appsNotInListCompliant".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.appsNotInListCompliant]
+  
   @scala.inline
   def none: none_ = "none".asInstanceOf[none_]
 }
-

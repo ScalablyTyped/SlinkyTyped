@@ -10,11 +10,12 @@ import typingsSlinky.typescript.mod.TypeNode
 import typingsSlinky.typescript.mod.TypeParameterDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateArrowFunction")
 @js.native
 object updateArrowFunction extends js.Object {
+  
   def apply(
     node: ArrowFunction,
     modifiers: js.UndefOr[scala.Nothing],
@@ -88,4 +89,3 @@ object updateArrowFunction extends js.Object {
     body: ConciseBody
   ): ArrowFunction = js.native
 }
-

@@ -5,9 +5,8 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.wordpressComponents.colorIndicatorMod.ColorIndicator.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/components", "ColorIndicator")
 @js.native
 object ColorIndicator extends TopLevel[ReactComponentClass[Props]]
-

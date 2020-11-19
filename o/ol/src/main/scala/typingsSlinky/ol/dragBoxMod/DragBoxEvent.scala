@@ -3,7 +3,7 @@ package typingsSlinky.ol.dragBoxMod
 import typingsSlinky.ol.coordinateMod.Coordinate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/interaction/DragBox", "DragBoxEvent")
 @js.native
@@ -14,7 +14,8 @@ class DragBoxEvent protected ()
     coordinate: Coordinate,
     mapBrowserEvent: typingsSlinky.ol.mapBrowserEventMod.default
   ) = this()
+  
   var coordinate: Coordinate = js.native
+  
   var mapBrowserEvent: typingsSlinky.ol.mapBrowserEventMod.default = js.native
 }
-

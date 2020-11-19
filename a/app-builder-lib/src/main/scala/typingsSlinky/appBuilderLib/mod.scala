@@ -7,11 +7,30 @@ import typingsSlinky.builderUtil.archMod.Arch
 import typingsSlinky.electronPublish.mod.PublishOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("app-builder-lib", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  val DEFAULT_TARGET: /* "default" */ String = js.native
+  
+  val DIR_TARGET: /* "dir" */ String = js.native
+  
+  def archFromString(name: String): Arch = js.native
+  
+  def build(options: PackagerOptions with PublishOptions): js.Promise[js.Array[String]] = js.native
+  def build(
+    options: PackagerOptions with PublishOptions,
+    packager: typingsSlinky.appBuilderLib.packagerMod.Packager
+  ): js.Promise[js.Array[String]] = js.native
+  
+  def buildForge(forgeOptions: ForgeOptions, options: PackagerOptions): js.Promise[js.Array[String]] = js.native
+  
+  def checkBuildRequestOptions(options: PackagerOptions with PublishOptions): Unit = js.native
+  
+  def getArchSuffix(arch: Arch): String = js.native
+  
   @js.native
   class AppInfo protected ()
     extends typingsSlinky.appBuilderLib.appInfoMod.AppInfo {
@@ -32,6 +51,21 @@ object mod extends js.Object {
       buildVersion: Null,
       platformSpecificOptions: PlatformSpecificBuildOptions
     ) = this()
+  }
+  
+  @js.native
+  object Arch extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.builderUtil.archMod.Arch with Double] = js.native
+    
+    /* 3 */ val arm64: typingsSlinky.builderUtil.archMod.Arch.arm64 with Double = js.native
+    
+    /* 2 */ val armv7l: typingsSlinky.builderUtil.archMod.Arch.armv7l with Double = js.native
+    
+    /* 0 */ val ia32: typingsSlinky.builderUtil.archMod.Arch.ia32 with Double = js.native
+    
+    /* 1 */ val x64: typingsSlinky.builderUtil.archMod.Arch.x64 with Double = js.native
   }
   
   @js.native
@@ -59,11 +93,33 @@ object mod extends js.Object {
       nodeName: typingsSlinky.node.processMod.global.NodeJS.Platform
     ) = this()
   }
+  /* static members */
+  @js.native
+  object Platform extends js.Object {
+    
+    var LINUX: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    
+    var MAC: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    
+    var WINDOWS: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    
+    def current(): typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+    
+    def fromString(name: String): typingsSlinky.appBuilderLib.coreMod.Platform = js.native
+  }
   
   @js.native
   abstract class PlatformPackager[DC /* <: PlatformSpecificBuildOptions */] protected ()
     extends typingsSlinky.appBuilderLib.platformPackagerMod.PlatformPackager[DC] {
     protected def this(info: Packager, platform: Platform) = this()
+  }
+  /* static members */
+  @js.native
+  object PlatformPackager extends js.Object {
+    
+    var buildAsyncTargets: js.Any = js.native
+    
+    var normalizePlatformSpecificBuildOptions: js.Any = js.native
   }
   
   @js.native
@@ -83,44 +139,4 @@ object mod extends js.Object {
     protected def this(name: String) = this()
     protected def this(name: String, isAsyncSupported: Boolean) = this()
   }
-  
-  val DEFAULT_TARGET: /* "default" */ String = js.native
-  val DIR_TARGET: /* "dir" */ String = js.native
-  def archFromString(name: String): Arch = js.native
-  def build(options: PackagerOptions with PublishOptions): js.Promise[js.Array[String]] = js.native
-  def build(
-    options: PackagerOptions with PublishOptions,
-    packager: typingsSlinky.appBuilderLib.packagerMod.Packager
-  ): js.Promise[js.Array[String]] = js.native
-  def buildForge(forgeOptions: ForgeOptions, options: PackagerOptions): js.Promise[js.Array[String]] = js.native
-  def checkBuildRequestOptions(options: PackagerOptions with PublishOptions): Unit = js.native
-  def getArchSuffix(arch: Arch): String = js.native
-  @js.native
-  object Arch extends js.Object {
-    /* 3 */ val arm64: typingsSlinky.builderUtil.archMod.Arch.arm64 with Double = js.native
-    /* 2 */ val armv7l: typingsSlinky.builderUtil.archMod.Arch.armv7l with Double = js.native
-    /* 0 */ val ia32: typingsSlinky.builderUtil.archMod.Arch.ia32 with Double = js.native
-    /* 1 */ val x64: typingsSlinky.builderUtil.archMod.Arch.x64 with Double = js.native
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[typingsSlinky.builderUtil.archMod.Arch with Double] = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object Platform extends js.Object {
-    var LINUX: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
-    var MAC: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
-    var WINDOWS: typingsSlinky.appBuilderLib.coreMod.Platform = js.native
-    def current(): typingsSlinky.appBuilderLib.coreMod.Platform = js.native
-    def fromString(name: String): typingsSlinky.appBuilderLib.coreMod.Platform = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object PlatformPackager extends js.Object {
-    var buildAsyncTargets: js.Any = js.native
-    var normalizePlatformSpecificBuildOptions: js.Any = js.native
-  }
-  
 }
-

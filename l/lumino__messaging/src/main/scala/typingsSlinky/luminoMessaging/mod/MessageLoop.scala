@@ -2,11 +2,12 @@ package typingsSlinky.luminoMessaging.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@lumino/messaging", "MessageLoop")
 @js.native
 object MessageLoop extends js.Object {
+  
   /**
     * Clear all message data associated with a message handler.
     *
@@ -16,6 +17,7 @@ object MessageLoop extends js.Object {
     * This will clear all posted messages and hooks for the handler.
     */
   def clearData(handler: IMessageHandler): Unit = js.native
+  
   /**
     * Process the pending posted messages in the queue immediately.
     *
@@ -29,6 +31,7 @@ object MessageLoop extends js.Object {
     * Recursing into this function is a no-op.
     */
   def flush(): Unit = js.native
+  
   /**
     * Get the message loop exception handler.
     *
@@ -38,6 +41,7 @@ object MessageLoop extends js.Object {
     * The default exception handler is `console.error`.
     */
   def getExceptionHandler(): ExceptionHandler = js.native
+  
   /**
     * Install a message hook for a message handler.
     *
@@ -55,6 +59,7 @@ object MessageLoop extends js.Object {
     * If the hook is already installed, this is a no-op.
     */
   def installMessageHook(handler: IMessageHandler, hook: MessageHook): Unit = js.native
+  
   /**
     * Post a message to a message handler to process in the future.
     *
@@ -70,6 +75,7 @@ object MessageLoop extends js.Object {
     * Exceptions in hooks and handlers will be caught and logged.
     */
   def postMessage(handler: IMessageHandler, msg: Message): Unit = js.native
+  
   /**
     * Remove an installed message hook for a message handler.
     *
@@ -83,6 +89,7 @@ object MessageLoop extends js.Object {
     * If the hook is not installed, this is a no-op.
     */
   def removeMessageHook(handler: IMessageHandler, hook: MessageHook): Unit = js.native
+  
   /**
     * Send a message to a message handler to process immediately.
     *
@@ -100,6 +107,7 @@ object MessageLoop extends js.Object {
     * Exceptions in hooks and handlers will be caught and logged.
     */
   def sendMessage(handler: IMessageHandler, msg: Message): Unit = js.native
+  
   /**
     * Set the message loop exception handler.
     *
@@ -112,9 +120,9 @@ object MessageLoop extends js.Object {
     * message hook throws an exception.
     */
   def setExceptionHandler(handler: ExceptionHandler): ExceptionHandler = js.native
+  
   /**
     * A type alias for the exception handler function.
     */
   type ExceptionHandler = js.Function1[/* err */ js.Error, Unit]
 }
-

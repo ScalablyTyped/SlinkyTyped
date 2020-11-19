@@ -15,7 +15,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.ReferenceSetSelector
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.SelectorXPathSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.11.0: introduced
@@ -31,23 +31,32 @@ abstract class EntityRef protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsCreateObjectClientAction: CreateObjectClientAction = js.native
+  
+  def containerAsEntityPathSource: EntityPathSource = js.native
+  
+  def containerAsEntityWidget: EntityWidget = js.native
+  
+  def containerAsMemberRef: MemberRef = js.native
+  
+  def containerAsNewButton: NewButton = js.native
+  
+  def containerAsReferenceSetSelector: ReferenceSetSelector = js.native
+  
+  def containerAsSelectorXPathSource: SelectorXPathSource = js.native
+  
+  def containerAsWidgetValue: WidgetValue = js.native
+  
   @JSName("model")
   var model_FEntityRef: IModel = js.native
-  def containerAsCreateObjectClientAction: CreateObjectClientAction = js.native
-  def containerAsEntityPathSource: EntityPathSource = js.native
-  def containerAsEntityWidget: EntityWidget = js.native
-  def containerAsMemberRef: MemberRef = js.native
-  def containerAsNewButton: NewButton = js.native
-  def containerAsReferenceSetSelector: ReferenceSetSelector = js.native
-  def containerAsSelectorXPathSource: SelectorXPathSource = js.native
-  def containerAsWidgetValue: WidgetValue = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.EntityRef")
 @js.native
 object EntityRef extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.ElementProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Element")
 @js.native
@@ -16,4 +16,3 @@ class ElementCls ()
   extends typingsSlinky.arcgisJsApi.esri.Element {
   def this(properties: ElementProperties) = this()
 }
-

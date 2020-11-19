@@ -6,11 +6,12 @@ import typingsSlinky.react.mod.ComponentClass
 import typingsSlinky.react.mod.StatelessComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-hyperscript", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def apply(componentOrTag: String): ReactElement = js.native
   def apply(componentOrTag: String, children: js.Array[Element]): ReactElement = js.native
   def apply(componentOrTag: String, children: Element): ReactElement = js.native
@@ -29,6 +30,6 @@ object mod extends js.Object {
   def apply[P /* <: StringDictionary[js.Any] */](componentOrTag: StatelessComponent[P], properties: P): ReactElement = js.native
   def apply[P /* <: StringDictionary[js.Any] */](componentOrTag: StatelessComponent[P], properties: P, children: js.Array[Element]): ReactElement = js.native
   def apply[P /* <: StringDictionary[js.Any] */](componentOrTag: StatelessComponent[P], properties: P, children: Element): ReactElement = js.native
+  
   type Element = ReactElement | String | Double | Null
 }
-

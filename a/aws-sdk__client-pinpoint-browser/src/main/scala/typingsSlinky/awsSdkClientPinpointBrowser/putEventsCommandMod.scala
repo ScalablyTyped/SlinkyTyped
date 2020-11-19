@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/PutEventsCommand", JSImport.Namespace)
 @js.native
 object putEventsCommandMod extends js.Object {
+  
   @js.native
   class PutEventsCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object putEventsCommandMod extends js.Object {
           Blob
         ] {
     def this(input: PutEventsInput) = this()
+    
     val middlewareStack: MiddlewareStack[PutEventsInput, PutEventsOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[PutEventsInput, PutEventsOutput] = js.native
   }
-  
 }
-

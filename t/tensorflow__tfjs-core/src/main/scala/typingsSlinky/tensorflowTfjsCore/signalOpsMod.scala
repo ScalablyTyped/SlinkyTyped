@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/signal_ops", JSImport.Namespace)
 @js.native
 object signalOpsMod extends js.Object {
+  
   val frame: js.Function5[
     /* signal */ Tensor1D, 
     /* frameLength */ Double, 
@@ -18,8 +19,11 @@ object signalOpsMod extends js.Object {
     /* padValue */ js.UndefOr[Double], 
     Tensor[Rank]
   ] = js.native
+  
   val hammingWindow: js.Function1[/* windowLength */ Double, Tensor1D] = js.native
+  
   val hannWindow: js.Function1[/* windowLength */ Double, Tensor1D] = js.native
+  
   val stft: js.Function5[
     /* signal */ Tensor1D, 
     /* frameLength */ Double, 
@@ -29,4 +33,3 @@ object signalOpsMod extends js.Object {
     Tensor[Rank]
   ] = js.native
 }
-

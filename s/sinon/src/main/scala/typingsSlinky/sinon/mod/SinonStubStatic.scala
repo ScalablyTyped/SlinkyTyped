@@ -2,10 +2,11 @@ package typingsSlinky.sinon.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SinonStubStatic extends js.Object {
+  
   /**
     * Creates an anonymous stub function
     */
@@ -24,4 +25,3 @@ trait SinonStubStatic extends js.Object {
     */
   def apply[T](obj: T, method: /* keyof T */ String): SinonStub = js.native
 }
-

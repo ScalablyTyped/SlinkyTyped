@@ -12,34 +12,22 @@ import typingsSlinky.synaptic.anon.Typeofsquash
 import typingsSlinky.synaptic.mod.Network.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
-  @js.native
-  /**
-    * Networks are basically an array of layers. They have an input layer, a number of hidden layers, and an output layer.
-    */
-  class Network ()
-    extends typingsSlinky.synaptic.mod.Network {
-    def this(options: Options) = this()
-  }
-  
-  @js.native
-  /**
-    * Neurons are the basic unit of the neural network. They can be connected together, or used to gate connections between other neurons.
-    */
-  class Neuron ()
-    extends typingsSlinky.synaptic.mod.Neuron
   
   var Layer: (Instantiable1[/* numberOfNeurons */ Double, typingsSlinky.synaptic.mod.Layer]) with TypeofLayer = js.native
+  
   var Trainer: (Instantiable1[
     /* network */ typingsSlinky.synaptic.mod.Network, 
     typingsSlinky.synaptic.mod.Trainer
   ]) with TypeofTrainer = js.native
+  
   @js.native
   object Architect extends js.Object {
+    
     /**
       * The Hopfield architecture serves as content-addressable memory. They are trained to remember patterns and then when feeding new patterns to the network it returns the most similar one from the patterns it was trained to remember.
       */
@@ -52,6 +40,14 @@ object global extends js.Object {
         */
       def this(patternSize: Double) = this()
     }
+    /**
+      * The Hopfield architecture serves as content-addressable memory. They are trained to remember patterns and then when feeding new patterns to the network it returns the most similar one from the patterns it was trained to remember.
+      */
+    @js.native
+    object Hopfield
+      extends TopLevel[
+              Instantiable1[/* patternSize */ Double, typingsSlinky.synaptic.mod.Architect.Hopfield]
+            ]
     
     /**
       * The long short-term memory is an architecture well-suited to learn from experience to classify, process and predict time series when there are very long time lags of unknown size between important events.
@@ -65,6 +61,14 @@ object global extends js.Object {
         */
       def this(numberOfNeurons: Double*) = this()
     }
+    /**
+      * The long short-term memory is an architecture well-suited to learn from experience to classify, process and predict time series when there are very long time lags of unknown size between important events.
+      */
+    @js.native
+    object LSTM
+      extends TopLevel[
+              Instantiable1[/* numberOfNeurons (repeated) */ Double, typingsSlinky.synaptic.mod.Architect.LSTM]
+            ]
     
     /**
       * The Liquid architecture allows you to create Liquid State Machines. In these networks, neurons are randomly connected to each other. The recurrent nature of the connections turns the time varying input into a spatio-temporal pattern of activations in the network nodes.
@@ -82,38 +86,6 @@ object global extends js.Object {
         */
       def this(input: Double, pool: Double, output: Double, connections: Double, gates: Double) = this()
     }
-    
-    /**
-      * This architecture allows you to create multilayer perceptrons, also known as feed-forward neural networks. They consist of a sequence of layers, each fully connected to the next one.
-      */
-    @js.native
-    class Perceptron protected ()
-      extends typingsSlinky.synaptic.mod.Architect.Perceptron {
-      /**
-        * This architecture allows you to create multilayer perceptrons, also known as feed-forward neural networks. They consist of a sequence of layers, each fully connected to the next one.
-        * @param numberOfNeurons You have to provide a minimum of 3 layers (input, hidden and output), but you can use as many hidden layers as you wish.
-        */
-      def this(numberOfNeurons: Double*) = this()
-    }
-    
-    /**
-      * The Hopfield architecture serves as content-addressable memory. They are trained to remember patterns and then when feeding new patterns to the network it returns the most similar one from the patterns it was trained to remember.
-      */
-    @js.native
-    object Hopfield
-      extends TopLevel[
-              Instantiable1[/* patternSize */ Double, typingsSlinky.synaptic.mod.Architect.Hopfield]
-            ]
-    
-    /**
-      * The long short-term memory is an architecture well-suited to learn from experience to classify, process and predict time series when there are very long time lags of unknown size between important events.
-      */
-    @js.native
-    object LSTM
-      extends TopLevel[
-              Instantiable1[/* numberOfNeurons (repeated) */ Double, typingsSlinky.synaptic.mod.Architect.LSTM]
-            ]
-    
     /**
       * The Liquid architecture allows you to create Liquid State Machines. In these networks, neurons are randomly connected to each other. The recurrent nature of the connections turns the time varying input into a spatio-temporal pattern of activations in the network nodes.
       */
@@ -134,6 +106,18 @@ object global extends js.Object {
       * This architecture allows you to create multilayer perceptrons, also known as feed-forward neural networks. They consist of a sequence of layers, each fully connected to the next one.
       */
     @js.native
+    class Perceptron protected ()
+      extends typingsSlinky.synaptic.mod.Architect.Perceptron {
+      /**
+        * This architecture allows you to create multilayer perceptrons, also known as feed-forward neural networks. They consist of a sequence of layers, each fully connected to the next one.
+        * @param numberOfNeurons You have to provide a minimum of 3 layers (input, hidden and output), but you can use as many hidden layers as you wish.
+        */
+      def this(numberOfNeurons: Double*) = this()
+    }
+    /**
+      * This architecture allows you to create multilayer perceptrons, also known as feed-forward neural networks. They consist of a sequence of layers, each fully connected to the next one.
+      */
+    @js.native
     object Perceptron
       extends TopLevel[
               Instantiable1[
@@ -141,17 +125,26 @@ object global extends js.Object {
                 typingsSlinky.synaptic.mod.Architect.Perceptron
               ]
             ]
-    
   }
   
+  @js.native
+  /**
+    * Networks are basically an array of layers. They have an input layer, a number of hidden layers, and an output layer.
+    */
+  class Network ()
+    extends typingsSlinky.synaptic.mod.Network {
+    def this(options: Options) = this()
+  }
   @js.native
   object Network
     extends Instantiable0[typingsSlinky.synaptic.mod.Network]
        with Instantiable1[/* options */ Options, typingsSlinky.synaptic.mod.Network] {
+    
     /**
       * Rebuild a network that has been stored in a json using the method toJSON().
       */
     def fromJSON(exported: js.Any): typingsSlinky.synaptic.mod.Network = js.native
+    
     /**
       * Creates a static String to store the source code of the functions that are identical for all the workers (train, _trainSet, test).
       * @returns Source code that can train a network inside a worker.
@@ -160,13 +153,21 @@ object global extends js.Object {
   }
   
   @js.native
+  /**
+    * Neurons are the basic unit of the neural network. They can be connected together, or used to gate connections between other neurons.
+    */
+  class Neuron ()
+    extends typingsSlinky.synaptic.mod.Neuron
+  @js.native
   object Neuron
     extends Instantiable0[typingsSlinky.synaptic.mod.Neuron] {
+    
     var Connection: TypeofConnection = js.native
-    val squash: Typeofsquash = js.native
+    
     def quantity(): Connections = js.native
+    
+    val squash: Typeofsquash = js.native
+    
     def uid(): Double = js.native
   }
-  
 }
-

@@ -2,11 +2,11 @@ package typingsSlinky.tensorflowTfjsCore.tensorMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/tensor", "setOpHandler")
 @js.native
 object setOpHandler extends js.Object {
+  
   def apply(handler: OpHandler): Unit = js.native
 }
-

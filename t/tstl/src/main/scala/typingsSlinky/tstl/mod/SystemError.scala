@@ -2,12 +2,12 @@ package typingsSlinky.tstl.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "SystemError")
 @js.native
 class SystemError protected ()
-  extends typingsSlinky.tstl.exceptionMod.SystemError {
+  extends typingsSlinky.tstl.tstlModuleMod.SystemError {
   /**
     * Initializer Constructor.
     *
@@ -26,4 +26,3 @@ class SystemError protected ()
   def this(`val`: Double, category: typingsSlinky.tstl.errorCategoryMod.ErrorCategory) = this()
   def this(`val`: Double, category: typingsSlinky.tstl.errorCategoryMod.ErrorCategory, message: String) = this()
 }
-

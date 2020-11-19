@@ -6,17 +6,22 @@ import typingsSlinky.ol.pixelMod.Pixel
 import typingsSlinky.ol.pluggableMapMod.FrameState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/MapBrowserEvent", JSImport.Namespace)
 @js.native
 object mapBrowserEventMod extends js.Object {
+  
   @js.native
   trait MapBrowserEvent
     extends typingsSlinky.ol.mapEventMod.default {
+    
     var coordinate: Coordinate = js.native
+    
     var dragging: Boolean = js.native
+    
     var originalEvent: Event = js.native
+    
     var pixel: Pixel = js.native
   }
   
@@ -44,6 +49,4 @@ object mapBrowserEventMod extends js.Object {
       opt_frameState: FrameState
     ) = this()
   }
-  
 }
-

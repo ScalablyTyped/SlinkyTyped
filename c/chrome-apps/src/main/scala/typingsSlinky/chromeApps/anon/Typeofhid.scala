@@ -7,27 +7,11 @@ import typingsSlinky.chromeApps.chrome.hid.UserSelectedDevicePickerOptions
 import typingsSlinky.chromeApps.chrome.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Typeofhid extends js.Object {
-  /**
-    * Event generated when a device is added to the system.
-    * Events are only broadcast to apps that
-    * have permission to access the device. Permission may
-    * have been granted at install time or when the user
-    * accepted an optional permission.
-    * @since Chrome 41.
-    * @see[permissions.request]{@link https://developer.chrome.com/apps/permissions#method-request}
-    */
-  val onDeviceAdded: Event[js.Function1[/* device */ HidDeviceInfo, Unit]] = js.native
-  /**
-    * Event generated when a device is removed from the system.
-    * The callback will contain the deviceId property of the device passed to onDeviceAdded.
-    * @since Chrome 41.
-    * @see[See onDeviceAdded for which events are delivered]{@link https://developer.chrome.com/apps/hid#event-onDeviceAdded}.
-    */
-  val onDeviceRemoved: Event[js.Function1[/* deviceId */ integer, Unit]] = js.native
+  
   /**
     * Open a connection to an HID device for communication.
     * @param deviceId The HidDeviceInfo.deviceId of the device to open.
@@ -35,6 +19,7 @@ trait Typeofhid extends js.Object {
     *                 The connectionId is the opaque ID used to identify this connection in all other functions.
     */
   def connect(deviceId: integer, callback: js.Function1[/* connection */ ConnectionId, Unit]): Unit = js.native
+  
   /**
     * Disconnect from a device.
     * Invoking operations on a device after calling this is safe but has no effect.
@@ -43,12 +28,14 @@ trait Typeofhid extends js.Object {
     */
   def disconnect(connectionId: integer): Unit = js.native
   def disconnect(connectionId: integer, callback: js.Function0[Unit]): Unit = js.native
+  
   /**
     * Enumerate connected HID devices.
     * @param options The properties to search for on target devices.
     * @param callback
     */
   def getDevices(options: DeviceOptions, callback: js.Function1[/* devices */ js.Array[HidDeviceInfo], Unit]): Unit = js.native
+  
   /**
     * @requires(dev) **Dev channel only!**
     * @see[Learn more]{@link https://developer.chrome.com/apps/api_index#dev_apis}
@@ -79,6 +66,26 @@ trait Typeofhid extends js.Object {
     options: UserSelectedDevicePickerOptions,
     callback: js.Function1[/* devices */ HidDeviceInfo, Unit]
   ): Unit = js.native
+  
+  /**
+    * Event generated when a device is added to the system.
+    * Events are only broadcast to apps that
+    * have permission to access the device. Permission may
+    * have been granted at install time or when the user
+    * accepted an optional permission.
+    * @since Chrome 41.
+    * @see[permissions.request]{@link https://developer.chrome.com/apps/permissions#method-request}
+    */
+  val onDeviceAdded: Event[js.Function1[/* device */ HidDeviceInfo, Unit]] = js.native
+  
+  /**
+    * Event generated when a device is removed from the system.
+    * The callback will contain the deviceId property of the device passed to onDeviceAdded.
+    * @since Chrome 41.
+    * @see[See onDeviceAdded for which events are delivered]{@link https://developer.chrome.com/apps/hid#event-onDeviceAdded}.
+    */
+  val onDeviceRemoved: Event[js.Function1[/* deviceId */ integer, Unit]] = js.native
+  
   /**
     * Receive the next input report from the device.
     * @param connectionId The connectionId returned by connect.
@@ -90,6 +97,7 @@ trait Typeofhid extends js.Object {
     connectionId: integer,
     callback: js.Function2[/* reportId */ integer, /* data */ js.typedarray.ArrayBuffer, Unit]
   ): Unit = js.native
+  
   /**
     * Request a feature report from the device.
     * @param connectionId The connectionId returned by connect.
@@ -101,6 +109,7 @@ trait Typeofhid extends js.Object {
     reportId: integer,
     callback: js.Function1[/* data */ js.typedarray.ArrayBuffer, Unit]
   ): Unit = js.native
+  
   /**
     * Send an output report to the device.
     * Note: Do not include a report ID prefix in data. It will be added if necessary.
@@ -115,6 +124,7 @@ trait Typeofhid extends js.Object {
     data: js.typedarray.ArrayBuffer,
     callback: js.Function0[Unit]
   ): Unit = js.native
+  
   /**
     * Send a feature report to the device.
     * Note: Do not include a report ID prefix in data. It will be added if necessary.
@@ -130,4 +140,3 @@ trait Typeofhid extends js.Object {
     callback: js.Function0[Unit]
   ): Unit = js.native
 }
-

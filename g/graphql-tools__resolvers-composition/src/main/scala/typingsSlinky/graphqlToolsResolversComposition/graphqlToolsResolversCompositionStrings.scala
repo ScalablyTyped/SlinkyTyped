@@ -2,13 +2,12 @@ package typingsSlinky.graphqlToolsResolversComposition
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object graphqlToolsResolversCompositionStrings {
-  @js.native
-  sealed trait ResolversComposerMapping extends js.Object
   
   @scala.inline
   def ResolversComposerMapping: ResolversComposerMapping = "ResolversComposerMapping".asInstanceOf[ResolversComposerMapping]
+  @js.native
+  sealed trait ResolversComposerMapping extends js.Object
 }
-

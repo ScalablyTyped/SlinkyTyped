@@ -11,16 +11,22 @@ import typingsSlinky.semanticUiReact.itemImageMod.ItemImageProps
 import typingsSlinky.semanticUiReact.itemMetaMod.ItemMetaProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ItemComponent extends FunctionComponent[ItemProps] {
+  
   var Content: ReactComponentClass[ItemContentProps] = js.native
+  
   var Description: ReactComponentClass[ItemDescriptionProps] = js.native
+  
   var Extra: ReactComponentClass[ItemExtraProps] = js.native
+  
   var Group: ReactComponentClass[ItemGroupProps] = js.native
+  
   var Header: ReactComponentClass[ItemHeaderProps] = js.native
+  
   var Image: ReactComponentClass[ItemImageProps] = js.native
+  
   var Meta: ReactComponentClass[ItemMetaProps] = js.native
 }
-

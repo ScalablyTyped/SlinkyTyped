@@ -21,9 +21,10 @@ import typingsSlinky.baseui.buttonGroupMod.ButtonGroupOverrides
 import typingsSlinky.baseui.buttonGroupMod.ButtonGroupProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ButtonGroup {
+  
   @JSImport("baseui/button-group", "ButtonGroup")
   @js.native
   object component extends js.Object
@@ -32,29 +33,39 @@ object ButtonGroup {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def kind(value: primary | secondary | tertiary | minimal): this.type = set("kind", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def mode(value: checkbox | radio): this.type = set("mode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onClick(value: (/* event */ SyntheticMouseEvent[HTMLButtonElement], /* index */ Double) => _): this.type = set("onClick", js.Any.fromFunction2(value))
+    
     @scala.inline
     def overrides(value: ButtonGroupOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def selectedVarargs(value: Double*): this.type = set("selected", js.Array(value :_*))
+    
     @scala.inline
     def selected(value: Double | js.Array[Double]): this.type = set("selected", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def shape(value: default_ | pill | round | square): this.type = set("shape", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def size(value: compact | default_ | large_ | mini): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ButtonGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: ButtonGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

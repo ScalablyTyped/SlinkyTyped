@@ -7,11 +7,12 @@ import typingsSlinky.reactToolbox.menuItemMod.MenuItemProps
 import typingsSlinky.reactToolbox.menuMenuMod.MenuProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-toolbox/components/menu", JSImport.Namespace)
 @js.native
 object menuMod extends js.Object {
+  
   @js.native
   class IconMenu ()
     extends Component[IconMenuProps, js.Object, js.Any]
@@ -27,6 +28,4 @@ object menuMod extends js.Object {
   @js.native
   class MenuItem ()
     extends Component[MenuItemProps, js.Object, js.Any]
-  
 }
-

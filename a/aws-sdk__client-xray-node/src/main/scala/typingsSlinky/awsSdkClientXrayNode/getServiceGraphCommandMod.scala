@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-xray-node/commands/GetServiceGraphCommand", JSImport.Namespace)
 @js.native
 object getServiceGraphCommandMod extends js.Object {
+  
   @js.native
   class GetServiceGraphCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getServiceGraphCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetServiceGraphInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetServiceGraphInput, GetServiceGraphOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: XRayResolvedConfiguration
     ): Handler[GetServiceGraphInput, GetServiceGraphOutput] = js.native
   }
-  
 }
-

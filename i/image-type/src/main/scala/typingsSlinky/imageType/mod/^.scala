@@ -3,17 +3,12 @@ package typingsSlinky.imageType.mod
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("image-type", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  // TODO: Remove this for the next major release
-  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof imageType */ js.Any = js.native
-  /**
-  	The minimum amount of bytes needed to detect a file type. Currently, it's 4100 bytes, but it can change, so don't hard-code it.
-  	*/
-  val minimumBytes: Double = js.native
+  
   /**
   	Detect the image type of a `Buffer`/`Uint8Array`.
   	@param input - Input to examine to determine the file type. It only needs the first `.minimumBytes` bytes.
@@ -39,5 +34,12 @@ object ^ extends js.Object {
   	*/
   def apply(input: Buffer): ImageTypeResult | Null = js.native
   def apply(input: js.typedarray.Uint8Array): ImageTypeResult | Null = js.native
+  
+  // TODO: Remove this for the next major release
+  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof imageType */ js.Any = js.native
+  
+  /**
+  	The minimum amount of bytes needed to detect a file type. Currently, it's 4100 bytes, but it can change, so don't hard-code it.
+  	*/
+  val minimumBytes: Double = js.native
 }
-

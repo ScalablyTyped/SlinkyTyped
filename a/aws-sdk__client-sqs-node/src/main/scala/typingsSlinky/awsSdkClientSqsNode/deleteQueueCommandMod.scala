@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-sqs-node/commands/DeleteQueueCommand", JSImport.Namespace)
 @js.native
 object deleteQueueCommandMod extends js.Object {
+  
   @js.native
   class DeleteQueueCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteQueueCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteQueueInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteQueueInput, DeleteQueueOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: SQSResolvedConfiguration
     ): Handler[DeleteQueueInput, DeleteQueueOutput] = js.native
   }
-  
 }
-

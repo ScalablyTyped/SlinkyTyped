@@ -6,11 +6,11 @@ import typingsSlinky.graphqlToolsDelegate.typesMod.Executor
 import typingsSlinky.graphqlToolsDelegate.typesMod.Subscriber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap", "defaultCreateRemoteResolver")
 @js.native
 object defaultCreateRemoteResolver extends js.Object {
+  
   def apply(executor: Executor, subscriber: Subscriber): GraphQLFieldResolver[_, _, StringDictionary[_]] = js.native
 }
-

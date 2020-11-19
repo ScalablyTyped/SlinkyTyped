@@ -3,10 +3,11 @@ package typingsSlinky.gapiClientServiceuser.gapi.client.serviceuser
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MetricRule extends js.Object {
+  
   /**
     * Metrics to update when the selected methods are called, and the associated
     * cost applied to each metric.
@@ -16,6 +17,7 @@ trait MetricRule extends js.Object {
     * The value must not be negative.
     */
   var metricCosts: js.UndefOr[Record[String, String]] = js.native
+  
   /**
     * Selects the methods to which this rule applies.
     *
@@ -23,33 +25,39 @@ trait MetricRule extends js.Object {
     */
   var selector: js.UndefOr[String] = js.native
 }
-
 object MetricRule {
+  
   @scala.inline
   def apply(): MetricRule = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[MetricRule]
   }
+  
   @scala.inline
   implicit class MetricRuleOps[Self <: MetricRule] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setMetricCosts(value: Record[String, String]): Self = this.set("metricCosts", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteMetricCosts: Self = this.set("metricCosts", js.undefined)
+    
     @scala.inline
     def setSelector(value: String): Self = this.set("selector", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteSelector: Self = this.set("selector", js.undefined)
   }
-  
 }
-

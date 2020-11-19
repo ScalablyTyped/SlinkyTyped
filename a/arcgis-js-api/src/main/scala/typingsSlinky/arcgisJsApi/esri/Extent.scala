@@ -3,99 +3,21 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.esri.geometry.Geometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Extent
   extends Geometry_
      with Geometry
      with geometryGeometry {
+  
   /**
     * The center point of the extent in map units.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#center)
     */
   val center: Point = js.native
-  /**
-    * The height of the extent in map units (the distance between [ymin](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymin) and [ymax](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymax)).
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#height)
-    */
-  val height: Double = js.native
-  /**
-    * The maximum possible `m` value in an extent envelope.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#mmax)
-    *
-    * @default undefined
-    */
-  var mmax: Double = js.native
-  /**
-    * The minimum possible `m` value of an extent envelope.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#mmin)
-    *
-    * @default undefined
-    */
-  var mmin: Double = js.native
-  @JSName("type")
-  val type_Extent: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.extent = js.native
-  /**
-    * The width of the extent in map units (the distance between [xmin](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmin) and [xmax](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmax)).
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#width)
-    */
-  val width: Double = js.native
-  /**
-    * The maximum X-coordinate of an extent envelope.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmax)
-    *
-    * @default 0
-    */
-  var xmax: Double = js.native
-  /**
-    * The minimum X-coordinate of an extent envelope.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmin)
-    *
-    * @default 0
-    */
-  var xmin: Double = js.native
-  /**
-    * The maximum Y-coordinate of an extent envelope.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymax)
-    *
-    * @default 0
-    */
-  var ymax: Double = js.native
-  /**
-    * The minimum Y-coordinate of an extent envelope.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymin)
-    *
-    * @default 0
-    */
-  var ymin: Double = js.native
-  /**
-    * The maximum possible `z`, or elevation, value in an extent envelope.
-    * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#zmax)
-    *
-    * @default undefined
-    */
-  var zmax: Double = js.native
-  /**
-    * The minimum possible `z`, or elevation, value of an extent envelope.
-    * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#zmin)
-    *
-    * @default undefined
-    */
-  var zmin: Double = js.native
+  
   /**
     * Centers the extent to the specified [Point](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html). This method modifies the extent geometry in-place. You should [clone](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#clone) the extent object before calling this method where appropriate.
     *
@@ -105,6 +27,7 @@ trait Extent
     *
     */
   def centerAt(point: Point): Extent = js.native
+  
   def contains(geometry: Extent): Boolean = js.native
   /**
     * Checks if the input geometry is contained within the extent.
@@ -115,6 +38,7 @@ trait Extent
     *
     */
   def contains(geometry: Point): Boolean = js.native
+  
   /**
     * Indicates if the input extent is equal to the testing extent.
     *
@@ -124,6 +48,7 @@ trait Extent
     *
     */
   def equals(extent: Extent): Boolean = js.native
+  
   /**
     * Expands the extent by the given factor. For example, a value of 1.5 will expand the extent to be 50 percent larger than the original extent. This method modifies the extent geometry in-place. You should [clone](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#clone) the extent object before calling this method where appropriate.
     *
@@ -133,6 +58,14 @@ trait Extent
     *
     */
   def expand(factor: Double): Extent = js.native
+  
+  /**
+    * The height of the extent in map units (the distance between [ymin](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymin) and [ymax](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymax)).
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#height)
+    */
+  val height: Double = js.native
+  
   /**
     * Shrinks the original extent to the intersection with the input extent. This method modifies the extent geometry in-place. You should [clone](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#clone) the extent object before calling this method where appropriate. If the original extent and the input extent have no intersection, the extent is not modified and null is returned.
     *
@@ -142,6 +75,7 @@ trait Extent
     *
     */
   def intersection(extent: Extent): Extent = js.native
+  
   /**
     * Tests to validate if the input geometry intersects the extent and returns a Boolean value.
     *
@@ -151,6 +85,25 @@ trait Extent
     *
     */
   def intersects(geometry: Geometry_): Boolean = js.native
+  
+  /**
+    * The maximum possible `m` value in an extent envelope.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#mmax)
+    *
+    * @default undefined
+    */
+  var mmax: Double = js.native
+  
+  /**
+    * The minimum possible `m` value of an extent envelope.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#mmin)
+    *
+    * @default undefined
+    */
+  var mmin: Double = js.native
+  
   /**
     * Returns an array with either one Extent that's been shifted to within +/- 180 or two Extents if the original extent intersects the International Dateline.  This method modifies the extent geometry in-place. You should [clone](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#clone) the extent object before calling this method where appropriate.
     *
@@ -159,6 +112,7 @@ trait Extent
     *
     */
   def normalize(): js.Array[Extent] = js.native
+  
   /**
     * Modifies the extent geometry in-place with X and Y offsets in map units. You should [clone](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#clone) the extent object before calling this method where appropriate.
     *
@@ -170,6 +124,10 @@ trait Extent
     *
     */
   def offset(dx: Double, dy: Double, dz: Double): Extent = js.native
+  
+  @JSName("type")
+  val type_Extent: typingsSlinky.arcgisJsApi.arcgisJsApiStrings.extent = js.native
+  
   /**
     * Expands the original extent to include the extent of the input Extent. This method modifies the extent geometry in-place. You should [clone](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#clone) the extent object before calling this method where appropriate.
     *
@@ -179,5 +137,67 @@ trait Extent
     *
     */
   def union(extent: Extent): Extent = js.native
+  
+  /**
+    * The width of the extent in map units (the distance between [xmin](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmin) and [xmax](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmax)).
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#width)
+    */
+  val width: Double = js.native
+  
+  /**
+    * The maximum X-coordinate of an extent envelope.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmax)
+    *
+    * @default 0
+    */
+  var xmax: Double = js.native
+  
+  /**
+    * The minimum X-coordinate of an extent envelope.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmin)
+    *
+    * @default 0
+    */
+  var xmin: Double = js.native
+  
+  /**
+    * The maximum Y-coordinate of an extent envelope.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymax)
+    *
+    * @default 0
+    */
+  var ymax: Double = js.native
+  
+  /**
+    * The minimum Y-coordinate of an extent envelope.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymin)
+    *
+    * @default 0
+    */
+  var ymin: Double = js.native
+  
+  /**
+    * The maximum possible `z`, or elevation, value in an extent envelope.
+    * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#zmax)
+    *
+    * @default undefined
+    */
+  var zmax: Double = js.native
+  
+  /**
+    * The minimum possible `z`, or elevation, value of an extent envelope.
+    * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#zmin)
+    *
+    * @default undefined
+    */
+  var zmin: Double = js.native
 }
-

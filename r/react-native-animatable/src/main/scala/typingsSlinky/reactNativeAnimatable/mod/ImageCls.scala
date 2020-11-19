@@ -5,7 +5,7 @@ import typingsSlinky.reactNative.mod.ImageProperties
 import typingsSlinky.reactNative.mod.ImageStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-animatable", "Image")
 @js.native
@@ -14,4 +14,3 @@ class ImageCls protected ()
   def this(props: AnimatableProperties[ImageStyle] with ImageProperties) = this()
   def this(props: AnimatableProperties[ImageStyle] with ImageProperties, context: js.Any) = this()
 }
-

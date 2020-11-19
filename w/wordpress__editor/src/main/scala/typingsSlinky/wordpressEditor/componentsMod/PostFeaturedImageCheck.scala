@@ -5,9 +5,8 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.wordpressEditor.postFeaturedImageCheckMod.PostFeaturedImageCheck.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/editor/components", "PostFeaturedImageCheck")
 @js.native
 object PostFeaturedImageCheck extends TopLevel[ReactComponentClass[Props]]
-

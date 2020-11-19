@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new vertex buffer object.
@@ -42,4 +42,3 @@ class VertexBuffer protected ()
     initialData: js.typedarray.ArrayBuffer
   ) = this()
 }
-

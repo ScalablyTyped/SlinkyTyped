@@ -5,7 +5,7 @@ import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.AtToken
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.DefineKeyword
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown", "Define")
 @js.native
@@ -23,4 +23,3 @@ class Define protected ()
     valueToken: typingsSlinky.grammarkdown.nodesMod.Token[BooleanKind]
   ) = this()
 }
-

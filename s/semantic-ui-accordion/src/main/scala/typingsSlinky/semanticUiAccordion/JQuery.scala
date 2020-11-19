@@ -36,12 +36,11 @@ import typingsSlinky.semanticUiAccordion.semanticUiAccordionStrings.toggle
 import typingsSlinky.semanticUiAccordion.semanticUiAccordionStrings.verbose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
-  @JSName("accordion")
-  var accordion_Original: Accordion = js.native
+  
   def accordion(): JQuery = js.native
   def accordion(behavior: setting, name: animateChildren, value: js.UndefOr[scala.Nothing]): Boolean = js.native
   def accordion(behavior: setting, name: animateChildren, value: Boolean): JQuery = js.native
@@ -89,6 +88,8 @@ trait JQuery extends js.Object {
   @JSName("accordion")
   def accordion_ClassNameSettings(behavior: setting, name: className, value: js.UndefOr[scala.Nothing]): ClassNameSettings = js.native
   @JSName("accordion")
+  var accordion_Original: Accordion = js.native
+  @JSName("accordion")
   def accordion_SelectorSettings(behavior: setting, name: selector, value: js.UndefOr[scala.Nothing]): SelectorSettings = js.native
   /**
     * Closes accordion content at index
@@ -120,4 +121,3 @@ trait JQuery extends js.Object {
   @JSName("accordion")
   def accordion_toggle(behavior: toggle, index: Double): JQuery = js.native
 }
-

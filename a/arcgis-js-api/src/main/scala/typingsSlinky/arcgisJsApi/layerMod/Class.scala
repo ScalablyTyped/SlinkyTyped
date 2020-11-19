@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Layer
 import typingsSlinky.arcgisJsApi.esri.LayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/layers/Layer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Layer {
   def this(properties: LayerProperties) = this()
 }
-

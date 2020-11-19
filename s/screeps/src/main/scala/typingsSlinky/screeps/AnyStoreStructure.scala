@@ -2,7 +2,7 @@ package typingsSlinky.screeps
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.screeps.StructureExtension
@@ -18,4 +18,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.screeps.StructureContainer
 */
 trait AnyStoreStructure extends js.Object
-

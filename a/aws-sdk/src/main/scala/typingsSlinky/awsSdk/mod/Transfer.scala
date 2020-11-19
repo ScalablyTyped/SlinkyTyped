@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.transferMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "Transfer")
 @js.native
@@ -14,4 +14,3 @@ class Transfer ()
   extends typingsSlinky.awsSdk.allMod.Transfer {
   def this(options: ClientConfiguration) = this()
 }
-

@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.6.0: introduced
@@ -26,14 +26,16 @@ class WidgetValidation protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FWidgetValidation: IModel = js.native
+  
   def containerAsAttributeWidget: AttributeWidget = js.native
+  
   def containerAsReferenceSelector: ReferenceSelector = js.native
+  
   /**
     * The value of this property is conceptually of type microflowExpressions.MicroflowExpression.
     */
   def expression: String = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
@@ -41,23 +43,27 @@ class WidgetValidation protected () extends Element {
     */
   def expressionModel: Expression = js.native
   def expressionModel_=(newValue: Expression): Unit = js.native
+  
   def expression_=(newValue: String): Unit = js.native
+  
   def message: Text = js.native
   def message_=(newValue: Text): Unit = js.native
+  
+  @JSName("model")
+  var model_FWidgetValidation: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.WidgetValidation")
 @js.native
 object WidgetValidation extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new WidgetValidation instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): WidgetValidation = js.native
+  
   /**
     * Creates and returns a new WidgetValidation instance in the SDK and on the server.
     * The new WidgetValidation will be automatically stored in the 'validation' property
@@ -67,6 +73,7 @@ object WidgetValidation extends js.Object {
     *  7.6.0 and higher
     */
   def createInAttributeWidgetUnderValidation(container: AttributeWidget): WidgetValidation = js.native
+  
   /**
     * Creates and returns a new WidgetValidation instance in the SDK and on the server.
     * The new WidgetValidation will be automatically stored in the 'validation' property
@@ -76,5 +83,8 @@ object WidgetValidation extends js.Object {
     *  7.6.0 and higher
     */
   def createInReferenceSelectorUnderValidation(container: ReferenceSelector): WidgetValidation = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

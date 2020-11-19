@@ -7,11 +7,12 @@ import typingsSlinky.graphqlToolsUtils.interfacesMod.IResolvers
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/schema/addResolversToSchema", JSImport.Namespace)
 @js.native
 object addResolversToSchemaMod extends js.Object {
+  
   def addResolversToSchema(schemaOrOptions: GraphQLSchema): GraphQLSchema = js.native
   def addResolversToSchema(
     schemaOrOptions: GraphQLSchema,
@@ -40,4 +41,3 @@ object addResolversToSchemaMod extends js.Object {
     legacyInputValidationOptions: IResolverValidationOptions
   ): GraphQLSchema = js.native
 }
-

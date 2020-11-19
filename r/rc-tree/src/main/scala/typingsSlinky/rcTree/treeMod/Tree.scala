@@ -17,30 +17,48 @@ import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Tree
   extends Component[TreeProps, TreeState, js.Any] {
-  var delayedDragEnterLogic: Record[Key, Double] = js.native
-  var dragNode: NodeInstance = js.native
-  var listRef: ReactRef[NodeListRef] = js.native
-  var onBlur: FocusEventHandler[HTMLDivElement] = js.native
-  var onFocus: FocusEventHandler[HTMLDivElement] = js.native
-  var onKeyDown: KeyboardEventHandler[HTMLDivElement] = js.native
-  var scrollTo: ScrollTo = js.native
+  
   def cleanDragState(): Unit = js.native
+  
+  var delayedDragEnterLogic: Record[Key, Double] = js.native
+  
+  var dragNode: NodeInstance = js.native
+  
   def getActiveItem(): FlattenNode = js.native
+  
   def getTreeNodeRequiredProps(): CheckedKeys = js.native
+  
+  var listRef: ReactRef[NodeListRef] = js.native
+  
   def offsetActiveKey(offset: Double): Unit = js.native
+  
   def onActiveChange(newActiveKey: Key): Unit = js.native
+  
+  var onBlur: FocusEventHandler[HTMLDivElement] = js.native
+  
+  var onFocus: FocusEventHandler[HTMLDivElement] = js.native
+  
+  var onKeyDown: KeyboardEventHandler[HTMLDivElement] = js.native
+  
   def onListChangeEnd(): Unit = js.native
+  
   def onListChangeStart(): Unit = js.native
+  
   def onNodeCheck(e: SyntheticMouseEvent[HTMLDivElement], treeNode: EventDataNode, checked: Boolean): Unit = js.native
+  
   def onNodeClick(e: SyntheticMouseEvent[HTMLDivElement], treeNode: EventDataNode): Unit = js.native
+  
   def onNodeContextMenu(event: SyntheticMouseEvent[HTMLDivElement], node: EventDataNode): Unit = js.native
+  
   def onNodeDoubleClick(e: SyntheticMouseEvent[HTMLDivElement], treeNode: EventDataNode): Unit = js.native
+  
   def onNodeDragEnd(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  
   /**
     * [Legacy] Select handler is less small than node,
     * so that this will trigger when drag enter node or select handler.
@@ -49,17 +67,30 @@ trait Tree
     * But let's just keep it to avoid event trigger logic change.
     */
   def onNodeDragEnter(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  
   def onNodeDragLeave(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  
   def onNodeDragOver(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  
   def onNodeDragStart(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  
   def onNodeDrop(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  
   def onNodeExpand(e: SyntheticMouseEvent[HTMLDivElement], treeNode: EventDataNode): Unit = js.native
+  
   def onNodeLoad(treeNode: EventDataNode): js.Promise[_] = js.native
+  
   def onNodeMouseEnter(event: SyntheticMouseEvent[HTMLDivElement], node: EventDataNode): Unit = js.native
+  
   def onNodeMouseLeave(event: SyntheticMouseEvent[HTMLDivElement], node: EventDataNode): Unit = js.native
+  
   def onNodeSelect(e: SyntheticMouseEvent[HTMLDivElement], treeNode: EventDataNode): Unit = js.native
+  
+  var scrollTo: ScrollTo = js.native
+  
   /** Set uncontrolled `expandedKeys`. This will also auto update `flattenNodes`. */
   def setExpandedKeys(expandedKeys: js.Array[Key]): Unit = js.native
+  
   /**
     * Only update the value which is not in props
     */
@@ -68,4 +99,3 @@ trait Tree
   def setUncontrolledState(state: PartialTreeState, atomic: Boolean): Unit = js.native
   def setUncontrolledState(state: PartialTreeState, atomic: Boolean, forceState: PartialTreeState): Unit = js.native
 }
-

@@ -2,10 +2,11 @@ package typingsSlinky.sinon.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SinonSpyStatic extends js.Object {
+  
   /**
     * Creates an anonymous function that records arguments, this value, exceptions and return values for all calls.
     */
@@ -24,4 +25,3 @@ trait SinonSpyStatic extends js.Object {
   def apply[T](obj: T, method: /* keyof T */ String): SinonSpy = js.native
   def apply[T](obj: T, method: /* keyof T */ String, types: js.Array[String]): SinonSpy = js.native
 }
-

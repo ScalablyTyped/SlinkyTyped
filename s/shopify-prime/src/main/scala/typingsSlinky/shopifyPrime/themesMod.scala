@@ -5,24 +5,28 @@ import typingsSlinky.shopifyPrime.optionsBaseMod.FieldOptions
 import typingsSlinky.shopifyPrime.themeMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("shopify-prime/dist/services/themes", JSImport.Namespace)
 @js.native
 object themesMod extends js.Object {
+  
   @js.native
   class Themes protected () extends BaseService {
     def this(shopDomain: String, accessToken: String) = this()
+    
     /**
       * Creates a theme by providing the public URL of a ZIP file that contains the theme.
       * @param themes The theme being created.
       */
     def create(themes: Theme): js.Promise[Theme] = js.native
+    
     /**
       * Deletes the themes with the given id.
       * @param id Id of the theme being deleted.
       */
     def delete(id: Double): js.Promise[Unit] = js.native
+    
     /**
       * Gets a tsingle hemes with the given id.
       * @param id Id of the theme to retrieve.
@@ -30,12 +34,14 @@ object themesMod extends js.Object {
       */
     def get(id: Double): js.Promise[Theme] = js.native
     def get(id: Double, options: FieldOptions): js.Promise[Theme] = js.native
+    
     /**
       * Gets a list of all themes on the shop.
       * @param options Options for filtering the results.
       */
     def list(): js.Promise[js.Array[Theme]] = js.native
     def list(options: FieldOptions): js.Promise[js.Array[Theme]] = js.native
+    
     /**
       * Updates an existing theme.
       * @param id Id of the themes being updated.
@@ -48,6 +54,4 @@ object themesMod extends js.Object {
   class default protected () extends Themes {
     def this(shopDomain: String, accessToken: String) = this()
   }
-  
 }
-

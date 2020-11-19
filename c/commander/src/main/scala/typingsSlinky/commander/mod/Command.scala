@@ -4,14 +4,12 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Command
   extends /* key */ StringDictionary[js.Any] {
-   // options as properties
-  var args: js.Array[String] = js.native
-  var commands: js.Array[Command] = js.native
+  
   /**
     * Register callback `fn` for the command.
     *
@@ -26,6 +24,7 @@ trait Command
     * @returns `this` command for chaining
     */
   def action(fn: js.Function1[/* repeated */ js.Any, Unit | js.Promise[Unit]]): this.type = js.native
+  
   /**
     * Add a prepared subcommand.
     *
@@ -35,6 +34,7 @@ trait Command
     */
   def addCommand(cmd: Command): this.type = js.native
   def addCommand(cmd: Command, opts: CommandOptions): this.type = js.native
+  
   /**
     * Get alias for the command.
     */
@@ -47,6 +47,7 @@ trait Command
     * @returns `this` command for chaining
     */
   def alias(alias: String): this.type = js.native
+  
   /**
     * Get aliases for the command.
     */
@@ -59,6 +60,7 @@ trait Command
     * @returns `this` command for chaining
     */
   def aliases(aliases: js.Array[String]): this.type = js.native
+  
   /**
     * Allow unknown options on the command line.
     *
@@ -67,12 +69,17 @@ trait Command
     */
   def allowUnknownOption(): this.type = js.native
   def allowUnknownOption(arg: Boolean): this.type = js.native
+  
+   // options as properties
+  var args: js.Array[String] = js.native
+  
   /**
     * Define argument syntax for command.
     *
     * @returns `this` command for chaining
     */
   def arguments(desc: String): this.type = js.native
+  
   /**
     * Define a command, implemented using an action handler.
     *
@@ -119,6 +126,9 @@ trait Command
   def command(nameAndArgs: String, opts: CommandOptions): ReturnType[
     /* import warning: importer.ImportType#apply Failed type conversion: this['createCommand'] */ js.Any
   ] = js.native
+  
+  var commands: js.Array[Command] = js.native
+  
   /**
     * Factory routine to create a new unattached command.
     *
@@ -127,6 +137,7 @@ trait Command
     */
   def createCommand(): Command = js.native
   def createCommand(name: String): Command = js.native
+  
   /**
     * Get the description.
     */
@@ -138,20 +149,24 @@ trait Command
     */
   def description(str: String): this.type = js.native
   def description(str: String, argsDescription: StringDictionary[String]): this.type = js.native
+  
   /**
     * Register callback to use as replacement for calling process.exit.
     */
   def exitOverride(): this.type = js.native
   def exitOverride(callback: js.Function1[/* err */ CommanderError, scala.Nothing | Unit]): this.type = js.native
+  
   /**
     * Output help information and exit.
     */
   def help(): scala.Nothing = js.native
   def help(cb: js.Function1[/* str */ String, String]): scala.Nothing = js.native
+  
   /**
     * Return command help documentation.
     */
   def helpInformation(): String = js.native
+  
   /**
     * You can pass in flags and a description to override the help
     * flags and help description for your command.
@@ -160,6 +175,7 @@ trait Command
   def helpOption(flags: js.UndefOr[scala.Nothing], description: String): this.type = js.native
   def helpOption(flags: String): this.type = js.native
   def helpOption(flags: String, description: String): this.type = js.native
+  
   /**
     * Get the name of the command.
     */
@@ -170,6 +186,7 @@ trait Command
     * @returns `this` command for chaining
     */
   def name(str: String): this.type = js.native
+  
   /**
     * Add a listener (callback) for when events occur. (Implemented using EventEmitter.)
     *
@@ -181,6 +198,7 @@ trait Command
     */
   def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  
   /**
     * Define option with `flags`, `description` and optional
     * coercion `fn`.
@@ -239,10 +257,12 @@ trait Command
     fn: js.Function2[/* value */ String, /* previous */ T, T],
     defaultValue: T
   ): this.type = js.native
+  
   /**
     * Return an object containing options as key-value pairs
     */
   def opts(): StringDictionary[js.Any] = js.native
+  
   /**
     * Output help information for this command.
     *
@@ -251,6 +271,7 @@ trait Command
     */
   def outputHelp(): Unit = js.native
   def outputHelp(cb: js.Function1[/* str */ String, String]): Unit = js.native
+  
   /**
     * Parse `argv`, setting options and invoking commands when defined.
     *
@@ -269,6 +290,7 @@ trait Command
   def parse(argv: js.UndefOr[scala.Nothing], options: ParseOptions): this.type = js.native
   def parse(argv: js.Array[String]): this.type = js.native
   def parse(argv: js.Array[String], options: ParseOptions): this.type = js.native
+  
   /**
     * Parse `argv`, setting options and invoking commands when defined.
     *
@@ -289,6 +311,7 @@ trait Command
   def parseAsync(argv: js.UndefOr[scala.Nothing], options: ParseOptions): js.Promise[this.type] = js.native
   def parseAsync(argv: js.Array[String]): js.Promise[this.type] = js.native
   def parseAsync(argv: js.Array[String], options: ParseOptions): js.Promise[this.type] = js.native
+  
   /**
     * Parse options from `argv` removing known options,
     * and return argv split into operands and unknown arguments.
@@ -301,6 +324,7 @@ trait Command
     *    sub -- --unknown uuu op => [sub --unknown uuu op], []
     */
   def parseOptions(argv: js.Array[String]): ParseOptionsResult = js.native
+  
   /**
     * Whether to pass command to action handler,
     * or just the options (specify false).
@@ -309,6 +333,7 @@ trait Command
     */
   def passCommandToAction(): this.type = js.native
   def passCommandToAction(value: Boolean): this.type = js.native
+  
   /**
     * Define a required option, which must have a value after parsing. This usually means
     * the option must be specified on the command line. (Otherwise the same as .option().)
@@ -331,6 +356,7 @@ trait Command
     fn: js.Function2[/* value */ String, /* previous */ T, T],
     defaultValue: T
   ): this.type = js.native
+  
   /**
     * Whether to store option values as properties on command object,
     * or store separately (specify false). In both cases the option values can be accessed using .opts().
@@ -339,6 +365,7 @@ trait Command
     */
   def storeOptionsAsProperties(): this.type = js.native
   def storeOptionsAsProperties(value: Boolean): this.type = js.native
+  
   /**
     * Get the command usage.
     */
@@ -349,6 +376,7 @@ trait Command
     * @returns `this` command for chaining
     */
   def usage(str: String): this.type = js.native
+  
   /**
     * Set the program version to `str`.
     *
@@ -362,4 +390,3 @@ trait Command
   def version(str: String, flags: String): this.type = js.native
   def version(str: String, flags: String, description: String): this.type = js.native
 }
-

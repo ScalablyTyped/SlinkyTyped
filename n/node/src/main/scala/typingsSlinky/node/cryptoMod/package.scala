@@ -2,11 +2,14 @@ package typingsSlinky.node
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object cryptoMod {
+  
   type BinaryLike = java.lang.String | typingsSlinky.node.NodeJS.ArrayBufferView
+  
   type CipherKey = typingsSlinky.node.cryptoMod.BinaryLike | typingsSlinky.node.cryptoMod.KeyObject
+  
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - typingsSlinky.node.Buffer

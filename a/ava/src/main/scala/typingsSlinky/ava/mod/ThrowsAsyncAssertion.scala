@@ -2,10 +2,11 @@ package typingsSlinky.ava.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ThrowsAsyncAssertion extends js.Object {
+  
   /**
   	 * Assert that the async function throws [an error](https://www.npmjs.com/package/is-error). If so, returns the error
   	 * value. You must await the result.
@@ -32,10 +33,10 @@ trait ThrowsAsyncAssertion extends js.Object {
   	 */
   def apply[ThrownError /* <: js.Error */](promise: js.Thenable[_], expectations: ThrowsExpectation): js.Promise[ThrownError] = js.native
   def apply[ThrownError /* <: js.Error */](promise: js.Thenable[_], expectations: ThrowsExpectation, message: String): js.Promise[ThrownError] = js.native
+  
   /** Skip this assertion. */
   def skip(thrower: js.Any): Unit = js.native
   def skip(thrower: js.Any, expectations: js.UndefOr[scala.Nothing], message: String): Unit = js.native
   def skip(thrower: js.Any, expectations: js.Any): Unit = js.native
   def skip(thrower: js.Any, expectations: js.Any, message: String): Unit = js.native
 }
-

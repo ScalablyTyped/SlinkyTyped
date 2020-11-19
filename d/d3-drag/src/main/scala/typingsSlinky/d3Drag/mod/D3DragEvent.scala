@@ -8,10 +8,11 @@ import typingsSlinky.d3Selection.mod.Selection_
 import typingsSlinky.d3Selection.mod.ValueFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait D3DragEvent[GElement /* <: Element */, Datum, Subject] extends js.Object {
+  
   /**
     * The number of currently active drag gestures (on start and end, not including this one).
     *
@@ -20,44 +21,22 @@ trait D3DragEvent[GElement /* <: Element */, Datum, Subject] extends js.Object {
     * and zero when the last drag gesture ends.
     */
   var active: Double = js.native
+  
   /**
     * The change in x-coordinate since the previous drag event.
     */
   var dx: Double = js.native
+  
   /**
     * The change in y-coordinate since the previous drag event.
     */
   var dy: Double = js.native
+  
   /**
     * The string “mouse”, or a numeric touch identifier.
     */
   var identifier: mouse | Double = js.native
-  /**
-    * The underlying input event, such as mousemove or touchmove.
-    */
-  var sourceEvent: js.Any = js.native
-    // Leave failsafe string type for cases like 'drag.foo'
-  /**
-    * The drag subject, defined by drag.subject.
-    */
-  var subject: Subject = js.native
-  /**
-    * The DragBehavior associated with the event
-    */
-  @JSName("target")
-  var target_Original: DragBehavior[GElement, Datum, Subject] = js.native
-  /**
-    * The event type for the DragEvent
-    */
-  var `type`: start | typingsSlinky.d3Drag.d3DragStrings.drag | end | String = js.native
-  /**
-    * The new x-coordinate of the subject, relative to the container
-    */
-  var x: Double = js.native
-  /**
-    * The new y-coordinate of the subject, relative to the container
-    */
-  var y: Double = js.native
+  
   /**
     * Return the first currently-assigned listener matching the specified typenames, if any.
     *
@@ -107,6 +86,18 @@ trait D3DragEvent[GElement /* <: Element */, Datum, Subject] extends js.Object {
     * with this as the current DOM element.
     */
   def on(typenames: String, listener: ValueFn[GElement, Datum, Unit]): this.type = js.native
+  
+  /**
+    * The underlying input event, such as mousemove or touchmove.
+    */
+  var sourceEvent: js.Any = js.native
+  
+    // Leave failsafe string type for cases like 'drag.foo'
+  /**
+    * The drag subject, defined by drag.subject.
+    */
+  var subject: Subject = js.native
+  
   /**
     * Applies the drag behavior to the selected elements.
     * This function is typically not invoked directly, and is instead invoked via selection.call.
@@ -120,5 +111,24 @@ trait D3DragEvent[GElement /* <: Element */, Datum, Subject] extends js.Object {
     * The DragBehavior associated with the event
     */
   def target(selection: Selection_[GElement, Datum, _, _], args: js.Any*): Unit = js.native
+  /**
+    * The DragBehavior associated with the event
+    */
+  @JSName("target")
+  var target_Original: DragBehavior[GElement, Datum, Subject] = js.native
+  
+  /**
+    * The event type for the DragEvent
+    */
+  var `type`: start | typingsSlinky.d3Drag.d3DragStrings.drag | end | String = js.native
+  
+  /**
+    * The new x-coordinate of the subject, relative to the container
+    */
+  var x: Double = js.native
+  
+  /**
+    * The new y-coordinate of the subject, relative to the container
+    */
+  var y: Double = js.native
 }
-

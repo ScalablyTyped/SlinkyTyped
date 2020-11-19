@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.semanticUiReact.menuItemMod.MenuItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semantic-ui-react", "MenuItem")
 @js.native
@@ -15,8 +15,6 @@ class MenuItem protected ()
   def this(props: MenuItemProps) = this()
   def this(props: MenuItemProps, context: js.Any) = this()
 }
-
 @JSImport("semantic-ui-react", "MenuItem")
 @js.native
 object MenuItem extends TopLevel[ReactComponentClass[MenuItemProps]]
-

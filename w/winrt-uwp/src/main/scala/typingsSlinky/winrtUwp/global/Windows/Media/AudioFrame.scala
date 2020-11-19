@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.Media
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a single frame of audio data. */
 @JSGlobal("Windows.Media.AudioFrame")
@@ -15,4 +15,3 @@ class AudioFrame protected ()
     */
   def this(capacity: Double) = this()
 }
-

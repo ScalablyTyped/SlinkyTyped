@@ -2,7 +2,7 @@ package typingsSlinky.reactDates.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // shapes/CalendarInfoPositionShape.js
 /* Rewritten from type alias, can be one of: 
@@ -12,15 +12,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactDates.reactDatesStrings.after
 */
 trait CalendarInfoPositionShape extends js.Object
-
 object CalendarInfoPositionShape {
+  
   @scala.inline
   def after: typingsSlinky.reactDates.reactDatesStrings.after = "after".asInstanceOf[typingsSlinky.reactDates.reactDatesStrings.after]
+  
   @scala.inline
   def before: typingsSlinky.reactDates.reactDatesStrings.before = "before".asInstanceOf[typingsSlinky.reactDates.reactDatesStrings.before]
+  
   @scala.inline
   def bottom: typingsSlinky.reactDates.reactDatesStrings.bottom = "bottom".asInstanceOf[typingsSlinky.reactDates.reactDatesStrings.bottom]
+  
   @scala.inline
   def top: typingsSlinky.reactDates.reactDatesStrings.top = "top".asInstanceOf[typingsSlinky.reactDates.reactDatesStrings.top]
 }
-

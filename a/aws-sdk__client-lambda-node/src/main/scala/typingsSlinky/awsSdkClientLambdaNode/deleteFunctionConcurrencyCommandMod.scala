@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-lambda-node/commands/DeleteFunctionConcurrencyCommand", JSImport.Namespace)
 @js.native
 object deleteFunctionConcurrencyCommandMod extends js.Object {
+  
   @js.native
   class DeleteFunctionConcurrencyCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteFunctionConcurrencyCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteFunctionConcurrencyInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteFunctionConcurrencyInput, DeleteFunctionConcurrencyOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[DeleteFunctionConcurrencyInput, DeleteFunctionConcurrencyOutput] = js.native
   }
-  
 }
-

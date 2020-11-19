@@ -11,18 +11,25 @@ import typingsSlinky.rebass.mod.LinkProps
 import typingsSlinky.rebass.mod.TextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rebass/styled-components", JSImport.Namespace)
 @js.native
 object styledComponentsMod extends js.Object {
+  
   val Box: ReactComponentClass[BoxProps] = js.native
+  
   val Button: ReactComponentClass[ButtonProps] = js.native
+  
   val Card: ReactComponentClass[BoxKnownProps] = js.native
+  
   val Flex: ReactComponentClass[FlexProps] = js.native
+  
   val Heading: ReactComponentClass[HeadingProps] = js.native
+  
   val Image: ReactComponentClass[ImageProps] = js.native
+  
   val Link: ReactComponentClass[LinkProps] = js.native
+  
   val Text: ReactComponentClass[TextProps] = js.native
 }
-

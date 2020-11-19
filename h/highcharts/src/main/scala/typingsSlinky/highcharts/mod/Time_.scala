@@ -2,7 +2,7 @@ package typingsSlinky.highcharts.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts", "Time")
 @js.native
@@ -19,6 +19,7 @@ class Time_ protected () extends js.Object {
     *        Time options as defined in chart.options.time.
     */
   def this(options: TimeOptions) = this()
+  
   /**
     * Formats a JavaScript date timestamp (milliseconds since Jan 1st 1970)
     * into a human readable date string. The available format keys are listed
@@ -79,6 +80,7 @@ class Time_ protected () extends js.Object {
     */
   def dateFormat(format: String, timestamp: Double): String = js.native
   def dateFormat(format: String, timestamp: Double, capitalize: Boolean): String = js.native
+  
   /**
     * Get the value of a date object in given units, and subject to the Time
     * object's current timezone settings. This function corresponds directly to
@@ -89,6 +91,7 @@ class Time_ protected () extends js.Object {
     * @return The given time unit
     */
   def get(unit: TimeUnitValue, date: js.Date): Double = js.native
+  
   /**
     * Return an array with time positions distributed on round time values
     * right and right after min and max. Used in datetime axes as well as for
@@ -126,6 +129,7 @@ class Time_ protected () extends js.Object {
   ): AxisTickPositionsArray = js.native
   def getTimeTicks(normalizedInterval: TimeNormalizedObject, min: Double, max: Double): AxisTickPositionsArray = js.native
   def getTimeTicks(normalizedInterval: TimeNormalizedObject, min: Double, max: Double, startOfWeek: Double): AxisTickPositionsArray = js.native
+  
   /**
     * Get the time zone offset based on the current timezone information as set
     * in the global options.
@@ -136,6 +140,7 @@ class Time_ protected () extends js.Object {
     * @return The timezone offset in minutes compared to UTC.
     */
   def getTimezoneOffset(timestamp: Double): Double = js.native
+  
   /**
     * Make a time and returns milliseconds. Interprets the inputs as UTC time,
     * local time or a specific timezone time depending on the current time
@@ -232,6 +237,7 @@ class Time_ protected () extends js.Object {
   ): Double = js.native
   def makeTime(year: Double, month: Double, date: Double, hours: Double, minutes: Double): Double = js.native
   def makeTime(year: Double, month: Double, date: Double, hours: Double, minutes: Double, seconds: Double): Double = js.native
+  
   /**
     * Set the value of a date object in given units, and subject to the Time
     * object's current timezone settings. This function corresponds directly to
@@ -243,4 +249,3 @@ class Time_ protected () extends js.Object {
     */
   def set(unit: TimeUnitValue, date: js.Date, value: Double): Double = js.native
 }
-

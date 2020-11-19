@@ -2,7 +2,7 @@ package typingsSlinky.twilioSync.listitemMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @class
@@ -25,21 +25,30 @@ class ListItem protected () extends js.Object {
     * @param {Object} data.value Item data
     */
   def this(data: ListItemDescriptor) = this()
+  
   val data: js.Any = js.native
+  
   def dateExpires: String = js.native
+  
   def dateUpdated: js.Date = js.native
+  
   def index: Double = js.native
+  
   def lastEventId: Double = js.native
+  
   def revision: String = js.native
+  
   /**
     * @private
     */
   def update(eventId: Double, revision: String, value: js.Object, dateUpdated: js.Date): ListItem = js.native
+  
   /**
     * @private
     */
   def updateDateExpires(dateExpires: String): Unit = js.native
+  
   def uri: String = js.native
+  
   def value: js.Object = js.native
 }
-

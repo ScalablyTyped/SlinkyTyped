@@ -8,11 +8,12 @@ import typingsSlinky.graphql.mod.GraphQLDirective
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/utils/getArgumentValues", JSImport.Namespace)
 @js.native
 object getArgumentValuesMod extends js.Object {
+  
   def getArgumentValues(`def`: GraphQLField[_, _, StringDictionary[_]], node: DirectiveNode): Record[String, _] = js.native
   def getArgumentValues(
     `def`: GraphQLField[_, _, StringDictionary[_]],
@@ -26,4 +27,3 @@ object getArgumentValuesMod extends js.Object {
   def getArgumentValues(`def`: GraphQLDirective, node: FieldNode): Record[String, _] = js.native
   def getArgumentValues(`def`: GraphQLDirective, node: FieldNode, variableValues: Record[String, _]): Record[String, _] = js.native
 }
-

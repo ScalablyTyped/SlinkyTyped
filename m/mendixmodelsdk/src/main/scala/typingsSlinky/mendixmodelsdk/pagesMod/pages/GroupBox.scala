@@ -12,7 +12,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/group-box relevant section in reference guide}
@@ -28,40 +28,45 @@ class GroupBox protected () extends ConditionallyVisibleWidget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FGroupBox: IModel = js.native
+  
   def caption: ClientTemplate | Null = js.native
   def caption_=(newValue: ClientTemplate | Null): Unit = js.native
+  
   def collapsible: GroupBoxCollapsible = js.native
   def collapsible_=(newValue: GroupBoxCollapsible): Unit = js.native
+  
   /**
     * In version 8.10.0: introduced
     */
   def headerMode: GroupBoxRenderMode = js.native
   def headerMode_=(newValue: GroupBoxRenderMode): Unit = js.native
+  
+  @JSName("model")
+  var model_FGroupBox: IModel = js.native
+  
   /**
     * In version 7.15.0: deleted
     */
   def widget: Widget | Null = js.native
   def widget_=(newValue: Widget | Null): Unit = js.native
+  
   /**
     * In version 7.15.0: introduced
     */
   def widgets: IList[Widget] = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.GroupBox")
 @js.native
 object GroupBox extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -71,6 +76,7 @@ object GroupBox extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: BuildingBlock): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -80,6 +86,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: BuildingBlock): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'footerWidget' property
@@ -89,6 +96,7 @@ object GroupBox extends js.Object {
     *  6.7.0 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'footerWidgets' property
@@ -98,6 +106,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: DataView): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -107,6 +116,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDataViewUnderWidget(container: DataView): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -116,6 +126,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: DataView): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -125,6 +136,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -134,6 +146,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: DivContainer): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -143,6 +156,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -152,6 +166,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: GroupBox): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'leftWidget' property
@@ -161,6 +176,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: Header): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'leftWidgets' property
@@ -170,6 +186,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: Header): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'rightWidget' property
@@ -179,6 +196,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: Header): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'rightWidgets' property
@@ -188,6 +206,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: Header): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -197,6 +216,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -206,6 +226,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: LayoutCallArgument): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -215,6 +236,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -224,6 +246,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: LayoutGridColumn): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -233,6 +256,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutUnderWidget(container: Layout): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -242,6 +266,7 @@ object GroupBox extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: Layout): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -251,6 +276,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -260,6 +286,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: ListViewTemplate): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -269,6 +296,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewUnderWidget(container: ListView): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -278,6 +306,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: ListView): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -287,6 +316,7 @@ object GroupBox extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: MasterDetailRegion): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -296,6 +326,7 @@ object GroupBox extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'sidebarWidgets' property
@@ -305,6 +336,7 @@ object GroupBox extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -314,6 +346,7 @@ object GroupBox extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: NativeLayoutContent): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'headerWidget' property
@@ -323,6 +356,7 @@ object GroupBox extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -332,6 +366,7 @@ object GroupBox extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -341,6 +376,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -350,6 +386,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: NavigationListItem): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'parameterWidget' property
@@ -359,6 +396,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'reportWidget' property
@@ -368,6 +406,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -377,6 +416,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -386,6 +426,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: ScrollContainerRegion): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -395,6 +436,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSnippetUnderWidget(container: Snippet): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -404,6 +446,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: Snippet): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'firstWidget' property
@@ -413,6 +456,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'firstWidgets' property
@@ -422,6 +466,7 @@ object GroupBox extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: SplitPane): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'secondWidget' property
@@ -431,6 +476,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'secondWidgets' property
@@ -440,6 +486,7 @@ object GroupBox extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: SplitPane): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -449,6 +496,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTabPageUnderWidget(container: TabPage): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -458,6 +506,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: TabPage): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -467,6 +516,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTableCellUnderWidget(container: TableCell): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -476,6 +526,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: TableCell): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widget' property
@@ -485,6 +536,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -494,6 +546,7 @@ object GroupBox extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: TemplateGridContents): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -503,6 +556,7 @@ object GroupBox extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -512,6 +566,7 @@ object GroupBox extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: WebLayoutContent): GroupBox = js.native
+  
   /**
     * Creates and returns a new GroupBox instance in the SDK and on the server.
     * The new GroupBox will be automatically stored in the 'widgets' property
@@ -521,5 +576,8 @@ object GroupBox extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): GroupBox = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -3,10 +3,9 @@ package typingsSlinky.reactNativeIndicators.mod
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-indicators", "MaterialIndicator")
 @js.native
 class MaterialIndicator ()
   extends Component[MaterialIndicatorProps, js.Object, js.Any]
-

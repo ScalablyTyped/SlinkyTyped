@@ -6,7 +6,7 @@ import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.INTERSECTION
 import typingsSlinky.tizenCommonWeb.tizenCommonWebStrings.UNION
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CompositeFilterConstructor
@@ -16,4 +16,3 @@ trait CompositeFilterConstructor
       /* filters */ js.Array[AbstractFilter], 
       CompositeFilter
     ]
-

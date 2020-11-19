@@ -2,7 +2,7 @@ package typingsSlinky.googlemaps.google.maps
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.googlemaps.googlemapsStrings.Point
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.googlemaps.googlemapsStrings.Polygon
 */
 trait DrawingMode extends js.Object
-
 object DrawingMode {
+  
   @scala.inline
   def LineString: typingsSlinky.googlemaps.googlemapsStrings.LineString = "LineString".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.LineString]
+  
   @scala.inline
   def Point: typingsSlinky.googlemaps.googlemapsStrings.Point = "Point".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.Point]
+  
   @scala.inline
   def Polygon: typingsSlinky.googlemaps.googlemapsStrings.Polygon = "Polygon".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.Polygon]
 }
-

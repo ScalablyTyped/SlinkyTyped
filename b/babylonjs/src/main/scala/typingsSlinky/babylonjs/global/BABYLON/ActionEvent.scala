@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Event
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.ActionEvent")
 @js.native
@@ -51,28 +51,30 @@ class ActionEvent protected ()
     /** The mesh that is currently pointed at (can be null) */
   meshUnderPointer: Nullable[typingsSlinky.babylonjs.BABYLON.AbstractMesh],
     /** the original (browser) event that triggered the ActionEvent */
+  sourceEvent: js.UndefOr[scala.Nothing],
+    /** additional data for the event */
+  additionalData: js.Any
+  ) = this()
+  def this(
+    /** The mesh or sprite that triggered the action */
+  source: js.Any,
+    /** The X mouse cursor position at the time of the event */
+  pointerX: Double,
+    /** The Y mouse cursor position at the time of the event */
+  pointerY: Double,
+    /** The mesh that is currently pointed at (can be null) */
+  meshUnderPointer: Nullable[typingsSlinky.babylonjs.BABYLON.AbstractMesh],
+    /** the original (browser) event that triggered the ActionEvent */
   sourceEvent: js.Any,
     /** additional data for the event */
   additionalData: js.Any
   ) = this()
-  /** The mesh that is currently pointed at (can be null) */
-  /* CompleteClass */
-  override var meshUnderPointer: Nullable[typingsSlinky.babylonjs.BABYLON.AbstractMesh] = js.native
-  /** The X mouse cursor position at the time of the event */
-  /* CompleteClass */
-  override var pointerX: Double = js.native
-  /** The Y mouse cursor position at the time of the event */
-  /* CompleteClass */
-  override var pointerY: Double = js.native
-  /** The mesh or sprite that triggered the action */
-  /* CompleteClass */
-  override var source: js.Any = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.ActionEvent")
 @js.native
 object ActionEvent extends js.Object {
+  
   /**
     * Helper function to auto-create an ActionEvent from a source mesh.
     * @param source The source mesh that triggered the event
@@ -81,8 +83,14 @@ object ActionEvent extends js.Object {
     * @returns the new ActionEvent
     */
   def CreateNew(source: typingsSlinky.babylonjs.BABYLON.AbstractMesh): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  def CreateNew(
+    source: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
+    evt: js.UndefOr[scala.Nothing],
+    additionalData: js.Any
+  ): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
   def CreateNew(source: typingsSlinky.babylonjs.BABYLON.AbstractMesh, evt: Event): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
   def CreateNew(source: typingsSlinky.babylonjs.BABYLON.AbstractMesh, evt: Event, additionalData: js.Any): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  
   /**
     * Helper function to auto-create an ActionEvent from a primitive
     * @param prim defines the target primitive
@@ -92,6 +100,12 @@ object ActionEvent extends js.Object {
     * @returns the new ActionEvent
     */
   def CreateNewFromPrimitive(prim: js.Any, pointerPos: typingsSlinky.babylonjs.BABYLON.Vector2): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  def CreateNewFromPrimitive(
+    prim: js.Any,
+    pointerPos: typingsSlinky.babylonjs.BABYLON.Vector2,
+    evt: js.UndefOr[scala.Nothing],
+    additionalData: js.Any
+  ): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
   def CreateNewFromPrimitive(prim: js.Any, pointerPos: typingsSlinky.babylonjs.BABYLON.Vector2, evt: Event): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
   def CreateNewFromPrimitive(
     prim: js.Any,
@@ -99,6 +113,7 @@ object ActionEvent extends js.Object {
     evt: Event,
     additionalData: js.Any
   ): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  
   /**
     * Helper function to auto-create an ActionEvent from a scene. If triggered by a mesh use ActionEvent.CreateNew
     * @param scene the scene where the event occurred
@@ -106,6 +121,7 @@ object ActionEvent extends js.Object {
     * @returns the new ActionEvent
     */
   def CreateNewFromScene(scene: typingsSlinky.babylonjs.BABYLON.Scene, evt: Event): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  
   /**
     * Helper function to auto-create an ActionEvent from a source sprite
     * @param source The source sprite that triggered the event
@@ -118,6 +134,12 @@ object ActionEvent extends js.Object {
   def CreateNewFromSprite(
     source: typingsSlinky.babylonjs.BABYLON.Sprite,
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    evt: js.UndefOr[scala.Nothing],
+    additionalData: js.Any
+  ): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
+  def CreateNewFromSprite(
+    source: typingsSlinky.babylonjs.BABYLON.Sprite,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
     evt: Event
   ): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
   def CreateNewFromSprite(
@@ -127,4 +149,3 @@ object ActionEvent extends js.Object {
     additionalData: js.Any
   ): typingsSlinky.babylonjs.BABYLON.ActionEvent = js.native
 }
-

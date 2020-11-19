@@ -4,7 +4,7 @@ import typingsSlinky.videoJs.mod.videojs.Component.ReadyCallback
 import typingsSlinky.videoJs.mod.videojs.ComponentOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js", "VolumeLevel")
 @js.native
@@ -36,4 +36,3 @@ class VolumeLevelCls protected ()
   ) = this()
   def this(player: typingsSlinky.videoJs.mod.videojs.Player, options: ComponentOptions, ready: ReadyCallback) = this()
 }
-

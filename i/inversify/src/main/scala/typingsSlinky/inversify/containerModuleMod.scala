@@ -4,11 +4,12 @@ import typingsSlinky.inversify.interfacesMod.interfaces.AsyncContainerModuleCall
 import typingsSlinky.inversify.interfacesMod.interfaces.ContainerModuleCallBack
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("inversify/dts/container/container_module", JSImport.Namespace)
 @js.native
 object containerModuleMod extends js.Object {
+  
   @js.native
   class AsyncContainerModule protected ()
     extends typingsSlinky.inversify.interfacesMod.interfaces.AsyncContainerModule {
@@ -20,6 +21,4 @@ object containerModuleMod extends js.Object {
     extends typingsSlinky.inversify.interfacesMod.interfaces.ContainerModule {
     def this(registry: ContainerModuleCallBack) = this()
   }
-  
 }
-

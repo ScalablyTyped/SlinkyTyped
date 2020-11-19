@@ -2,7 +2,7 @@ package typingsSlinky.grammarkdown.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown", "Node")
 @js.native
@@ -10,4 +10,3 @@ abstract class Node[TKind /* <: typingsSlinky.grammarkdown.tokensMod.SyntaxKind 
   extends typingsSlinky.grammarkdown.nodesMod.Node[TKind] {
   def this(kind: TKind) = this()
 }
-

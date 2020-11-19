@@ -7,14 +7,16 @@ import typingsSlinky.reactNative.mod.SwipeableListViewDataSource
 import typingsSlinky.reactNative.mod.SwipeableListViewProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SwipeableListView {
+  
   @JSImport("react-native", "SwipeableListView")
   @js.native
   object component extends js.Object
   
   def withProps(p: SwipeableListViewProps): Default[tag.type, typingsSlinky.reactNative.mod.SwipeableListView] = new Default[tag.type, typingsSlinky.reactNative.mod.SwipeableListView](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     bounceFirstRowOnMount: Boolean,
@@ -27,4 +29,3 @@ object SwipeableListView {
     new Default[tag.type, typingsSlinky.reactNative.mod.SwipeableListView](js.Array(this.component, __props.asInstanceOf[SwipeableListViewProps]))
   }
 }
-

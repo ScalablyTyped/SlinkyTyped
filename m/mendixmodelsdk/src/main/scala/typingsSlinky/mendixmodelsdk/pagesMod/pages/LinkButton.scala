@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/button-widgets relevant section in reference guide}
@@ -26,26 +26,28 @@ class LinkButton protected () extends Button {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FLinkButton: IModel = js.native
+  
   def address: StaticOrDynamicString = js.native
   def address_=(newValue: StaticOrDynamicString): Unit = js.native
+  
   def linkType: LinkType = js.native
   def linkType_=(newValue: LinkType): Unit = js.native
+  
+  @JSName("model")
+  var model_FLinkButton: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.LinkButton")
 @js.native
 object LinkButton extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'footerWidget' property
@@ -55,6 +57,7 @@ object LinkButton extends js.Object {
     *  6.7.0 to 7.2.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -64,6 +67,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInDataViewUnderWidget(container: DataView): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -73,6 +77,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -82,6 +87,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'leftWidget' property
@@ -91,6 +97,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInHeaderUnderLeftWidget(container: Header): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'rightWidget' property
@@ -100,6 +107,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInHeaderUnderRightWidget(container: Header): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -109,6 +117,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -118,6 +127,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -127,6 +137,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInLayoutUnderWidget(container: Layout): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -136,6 +147,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -145,6 +157,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInListViewUnderWidget(container: ListView): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -154,6 +167,7 @@ object LinkButton extends js.Object {
     *  7.1.0 to 7.2.0
     */
   def createInMasterDetailRegionUnderWidget(container: MasterDetailRegion): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -163,6 +177,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'parameterWidget' property
@@ -172,6 +187,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'reportWidget' property
@@ -181,6 +197,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -190,6 +207,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -199,6 +217,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInSnippetUnderWidget(container: Snippet): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'firstWidget' property
@@ -208,6 +227,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'secondWidget' property
@@ -217,6 +237,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -226,6 +247,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInTabPageUnderWidget(container: TabPage): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -235,6 +257,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInTableCellUnderWidget(container: TableCell): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widget' property
@@ -244,6 +267,7 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): LinkButton = js.native
+  
   /**
     * Creates and returns a new LinkButton instance in the SDK and on the server.
     * The new LinkButton will be automatically stored in the 'widgets' property
@@ -253,5 +277,8 @@ object LinkButton extends js.Object {
     *  6.0.0 to 7.2.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): LinkButton = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MapNotesLayerConstructor
@@ -15,6 +15,6 @@ trait MapNotesLayerConstructor
   */
 Instantiable0[MapNotesLayer]
      with Instantiable1[/* properties */ MapNotesLayerProperties, MapNotesLayer] {
+  
   def fromJSON(json: js.Any): MapNotesLayer = js.native
 }
-

@@ -12,12 +12,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.servicesCloudfrontMod.CloudFrontCustomizations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CloudFront extends CloudFrontCustomizations {
+  
   @JSName("config")
   var config_CloudFront: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates a cache policy. After you create a cache policy, you can attach it to one or more cache behaviors. When it’s attached to a cache behavior, the cache policy determines the following:   The values that CloudFront includes in the cache key. These values can include HTTP headers, cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that it can return to the viewer.   The default, minimum, and maximum time to live (TTL) values that you want objects to stay in the CloudFront cache.   The headers, cookies, and query strings that are included in the cache key are automatically included in requests that CloudFront sends to the origin. CloudFront sends a request when it can’t find an object in its cache that matches the request’s cache key. If you want to send values to the origin but not include them in the cache key, use CreateOriginRequestPolicy. For more information about cache policies, see Controlling the cache key in the Amazon CloudFront Developer Guide.
     */
@@ -31,6 +33,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: CreateCachePolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateCachePolicyResult, Unit]
   ): Request[CreateCachePolicyResult, AWSError] = js.native
+  
   /**
     * Creates a new origin access identity. If you're using Amazon S3 for your origin, you can use an origin access identity to require users to access your content using a CloudFront URL instead of the Amazon S3 URL. For more information about how to use origin access identities, see Serving Private Content through CloudFront in the Amazon CloudFront Developer Guide.
     */
@@ -46,6 +49,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: CreateCloudFrontOriginAccessIdentityRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateCloudFrontOriginAccessIdentityResult, Unit]
   ): Request[CreateCloudFrontOriginAccessIdentityResult, AWSError] = js.native
+  
   /**
     * Creates a new web distribution. You create a CloudFront distribution to tell CloudFront where you want content to be delivered from, and the details about how to track and manage content delivery. Send a POST request to the /CloudFront API version/distribution/distribution ID resource.  When you update a distribution, there are more required fields than when you create a distribution. When you update your distribution by using UpdateDistribution, follow the steps included in the documentation to get the current configuration and then make your updates. This helps to make sure that you include all of the required fields. To view a summary, see Required Fields for Create Distribution and Update Distribution in the Amazon CloudFront Developer Guide. 
     */
@@ -59,6 +63,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: CreateDistributionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateDistributionResult, Unit]
   ): Request[CreateDistributionResult, AWSError] = js.native
+  
   /**
     * Create a new distribution with tags.
     */
@@ -72,6 +77,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: CreateDistributionWithTagsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateDistributionWithTagsResult, Unit]
   ): Request[CreateDistributionWithTagsResult, AWSError] = js.native
+  
   /**
     * Create a new field-level encryption configuration.
     */
@@ -87,6 +93,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: CreateFieldLevelEncryptionConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateFieldLevelEncryptionConfigResult, Unit]
   ): Request[CreateFieldLevelEncryptionConfigResult, AWSError] = js.native
+  
   /**
     * Create a field-level encryption profile.
     */
@@ -102,6 +109,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: CreateFieldLevelEncryptionProfileRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateFieldLevelEncryptionProfileResult, Unit]
   ): Request[CreateFieldLevelEncryptionProfileResult, AWSError] = js.native
+  
   /**
     * Create a new invalidation. 
     */
@@ -115,6 +123,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: CreateInvalidationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateInvalidationResult, Unit]
   ): Request[CreateInvalidationResult, AWSError] = js.native
+  
   /**
     * Creates an origin request policy. After you create an origin request policy, you can attach it to one or more cache behaviors. When it’s attached to a cache behavior, the origin request policy determines the values that CloudFront includes in requests that it sends to the origin. Each request that CloudFront sends to the origin includes the following:   The request body and the URL path (without the domain name) from the viewer request.   The headers that CloudFront automatically includes in every origin request, including Host, User-Agent, and X-Amz-Cf-Id.   All HTTP headers, cookies, and URL query strings that are specified in the cache policy or the origin request policy. These can include items from the viewer request and, in the case of headers, additional ones that are added by CloudFront.   CloudFront sends a request when it can’t find a valid object in its cache that matches the request. If you want to send values to the origin and also include them in the cache key, use CreateCachePolicy. For more information about origin request policies, see Controlling origin requests in the Amazon CloudFront Developer Guide.
     */
@@ -128,6 +137,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: CreateOriginRequestPolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateOriginRequestPolicyResult, Unit]
   ): Request[CreateOriginRequestPolicyResult, AWSError] = js.native
+  
   /**
     * Add a new public key to CloudFront to use, for example, for field-level encryption. You can add a maximum of 10 public keys with one AWS account.
     */
@@ -141,6 +151,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: CreatePublicKeyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreatePublicKeyResult, Unit]
   ): Request[CreatePublicKeyResult, AWSError] = js.native
+  
   /**
     * Creates a new RTMP distribution. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams media files using the Adobe Real-Time Messaging Protocol (RTMP) instead of serving files using HTTP.  To create a new distribution, submit a POST request to the CloudFront API version/distribution resource. The request body must include a document with a StreamingDistributionConfig element. The response echoes the StreamingDistributionConfig element and returns other information about the RTMP distribution. To get the status of your request, use the GET StreamingDistribution API action. When the value of Enabled is true and the value of Status is Deployed, your distribution is ready. A distribution usually deploys in less than 15 minutes. For more information about web distributions, see Working with RTMP Distributions in the Amazon CloudFront Developer Guide.  Beginning with the 2012-05-05 version of the CloudFront API, we made substantial changes to the format of the XML document that you include in the request body when you create or update a web distribution or an RTMP distribution, and when you invalidate objects. With previous versions of the API, we discovered that it was too easy to accidentally delete one or more values for an element that accepts multiple values, for example, CNAMEs and trusted signers. Our changes for the 2012-05-05 release are intended to prevent these accidental deletions and to notify you when there's a mismatch between the number of values you say you're specifying in the Quantity element and the number of values specified. 
     */
@@ -154,6 +165,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: CreateStreamingDistributionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateStreamingDistributionResult, Unit]
   ): Request[CreateStreamingDistributionResult, AWSError] = js.native
+  
   /**
     * Create a new streaming distribution with tags.
     */
@@ -169,6 +181,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: CreateStreamingDistributionWithTagsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateStreamingDistributionWithTagsResult, Unit]
   ): Request[CreateStreamingDistributionWithTagsResult, AWSError] = js.native
+  
   /**
     * Deletes a cache policy. You cannot delete a cache policy if it’s attached to a cache behavior. First update your distributions to remove the cache policy from all cache behaviors, then delete the cache policy. To delete a cache policy, you must provide the policy’s identifier and version. To get these values, you can use ListCachePolicies or GetCachePolicy.
     */
@@ -182,6 +195,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: DeleteCachePolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Delete an origin access identity. 
     */
@@ -195,6 +209,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: DeleteCloudFrontOriginAccessIdentityRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Delete a distribution. 
     */
@@ -208,6 +223,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: DeleteDistributionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Remove a field-level encryption configuration.
     */
@@ -221,6 +237,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: DeleteFieldLevelEncryptionConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Remove a field-level encryption profile.
     */
@@ -234,6 +251,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: DeleteFieldLevelEncryptionProfileRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Deletes an origin request policy. You cannot delete an origin request policy if it’s attached to any cache behaviors. First update your distributions to remove the origin request policy from all cache behaviors, then delete the origin request policy. To delete an origin request policy, you must provide the policy’s identifier and version. To get the identifier, you can use ListOriginRequestPolicies or GetOriginRequestPolicy.
     */
@@ -247,6 +265,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: DeleteOriginRequestPolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Remove a public key you previously added to CloudFront.
     */
@@ -260,6 +279,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: DeletePublicKeyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Delete a streaming distribution. To delete an RTMP distribution using the CloudFront API, perform the following steps.  To delete an RTMP distribution using the CloudFront API:   Disable the RTMP distribution.   Submit a GET Streaming Distribution Config request to get the current configuration and the Etag header for the distribution.    Update the XML document that was returned in the response to your GET Streaming Distribution Config request to change the value of Enabled to false.   Submit a PUT Streaming Distribution Config request to update the configuration for your distribution. In the request body, include the XML document that you updated in Step 3. Then set the value of the HTTP If-Match header to the value of the ETag header that CloudFront returned when you submitted the GET Streaming Distribution Config request in Step 2.   Review the response to the PUT Streaming Distribution Config request to confirm that the distribution was successfully disabled.   Submit a GET Streaming Distribution Config request to confirm that your changes have propagated. When propagation is complete, the value of Status is Deployed.   Submit a DELETE Streaming Distribution request. Set the value of the HTTP If-Match header to the value of the ETag header that CloudFront returned when you submitted the GET Streaming Distribution Config request in Step 2.   Review the response to your DELETE Streaming Distribution request to confirm that the distribution was successfully deleted.   For information about deleting a distribution using the CloudFront console, see Deleting a Distribution in the Amazon CloudFront Developer Guide.
     */
@@ -273,6 +293,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: DeleteStreamingDistributionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Gets a cache policy, including the following metadata:   The policy’s identifier.   The date and time when the policy was last modified.   To get a cache policy, you must provide the policy’s identifier. If the cache policy is attached to a distribution’s cache behavior, you can get the policy’s identifier using ListDistributions or GetDistribution. If the cache policy is not attached to a cache behavior, you can get the identifier using ListCachePolicies.
     */
@@ -286,6 +307,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetCachePolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetCachePolicyResult, Unit]
   ): Request[GetCachePolicyResult, AWSError] = js.native
+  
   /**
     * Gets a cache policy configuration. To get a cache policy configuration, you must provide the policy’s identifier. If the cache policy is attached to a distribution’s cache behavior, you can get the policy’s identifier using ListDistributions or GetDistribution. If the cache policy is not attached to a cache behavior, you can get the identifier using ListCachePolicies.
     */
@@ -299,6 +321,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetCachePolicyConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetCachePolicyConfigResult, Unit]
   ): Request[GetCachePolicyConfigResult, AWSError] = js.native
+  
   /**
     * Get the information about an origin access identity. 
     */
@@ -314,6 +337,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetCloudFrontOriginAccessIdentityRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetCloudFrontOriginAccessIdentityResult, Unit]
   ): Request[GetCloudFrontOriginAccessIdentityResult, AWSError] = js.native
+  
   /**
     * Get the configuration information about an origin access identity. 
     */
@@ -329,6 +353,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetCloudFrontOriginAccessIdentityConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetCloudFrontOriginAccessIdentityConfigResult, Unit]
   ): Request[GetCloudFrontOriginAccessIdentityConfigResult, AWSError] = js.native
+  
   /**
     * Get the information about a distribution.
     */
@@ -342,6 +367,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetDistributionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetDistributionResult, Unit]
   ): Request[GetDistributionResult, AWSError] = js.native
+  
   /**
     * Get the configuration information about a distribution. 
     */
@@ -355,6 +381,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetDistributionConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetDistributionConfigResult, Unit]
   ): Request[GetDistributionConfigResult, AWSError] = js.native
+  
   /**
     * Get the field-level encryption configuration information.
     */
@@ -368,6 +395,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetFieldLevelEncryptionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetFieldLevelEncryptionResult, Unit]
   ): Request[GetFieldLevelEncryptionResult, AWSError] = js.native
+  
   /**
     * Get the field-level encryption configuration information.
     */
@@ -381,6 +409,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetFieldLevelEncryptionConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetFieldLevelEncryptionConfigResult, Unit]
   ): Request[GetFieldLevelEncryptionConfigResult, AWSError] = js.native
+  
   /**
     * Get the field-level encryption profile information.
     */
@@ -394,6 +423,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetFieldLevelEncryptionProfileRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetFieldLevelEncryptionProfileResult, Unit]
   ): Request[GetFieldLevelEncryptionProfileResult, AWSError] = js.native
+  
   /**
     * Get the field-level encryption profile configuration information.
     */
@@ -409,6 +439,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetFieldLevelEncryptionProfileConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetFieldLevelEncryptionProfileConfigResult, Unit]
   ): Request[GetFieldLevelEncryptionProfileConfigResult, AWSError] = js.native
+  
   /**
     * Get the information about an invalidation. 
     */
@@ -422,6 +453,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetInvalidationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetInvalidationResult, Unit]
   ): Request[GetInvalidationResult, AWSError] = js.native
+  
   /**
     * Gets an origin request policy, including the following metadata:   The policy’s identifier.   The date and time when the policy was last modified.   To get an origin request policy, you must provide the policy’s identifier. If the origin request policy is attached to a distribution’s cache behavior, you can get the policy’s identifier using ListDistributions or GetDistribution. If the origin request policy is not attached to a cache behavior, you can get the identifier using ListOriginRequestPolicies.
     */
@@ -435,6 +467,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetOriginRequestPolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetOriginRequestPolicyResult, Unit]
   ): Request[GetOriginRequestPolicyResult, AWSError] = js.native
+  
   /**
     * Gets an origin request policy configuration. To get an origin request policy configuration, you must provide the policy’s identifier. If the origin request policy is attached to a distribution’s cache behavior, you can get the policy’s identifier using ListDistributions or GetDistribution. If the origin request policy is not attached to a cache behavior, you can get the identifier using ListOriginRequestPolicies.
     */
@@ -448,6 +481,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetOriginRequestPolicyConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetOriginRequestPolicyConfigResult, Unit]
   ): Request[GetOriginRequestPolicyConfigResult, AWSError] = js.native
+  
   /**
     * Get the public key information.
     */
@@ -461,6 +495,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetPublicKeyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetPublicKeyResult, Unit]
   ): Request[GetPublicKeyResult, AWSError] = js.native
+  
   /**
     * Return public key configuration informaation
     */
@@ -474,6 +509,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetPublicKeyConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetPublicKeyConfigResult, Unit]
   ): Request[GetPublicKeyConfigResult, AWSError] = js.native
+  
   /**
     * Gets information about a specified RTMP distribution, including the distribution configuration.
     */
@@ -487,6 +523,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetStreamingDistributionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetStreamingDistributionResult, Unit]
   ): Request[GetStreamingDistributionResult, AWSError] = js.native
+  
   /**
     * Get the configuration information about a streaming distribution. 
     */
@@ -500,6 +537,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: GetStreamingDistributionConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetStreamingDistributionConfigResult, Unit]
   ): Request[GetStreamingDistributionConfigResult, AWSError] = js.native
+  
   /**
     * Gets a list of cache policies. You can optionally apply a filter to return only the managed policies created by AWS, or only the custom policies created in your AWS account. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request.
     */
@@ -513,6 +551,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListCachePoliciesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListCachePoliciesResult, Unit]
   ): Request[ListCachePoliciesResult, AWSError] = js.native
+  
   /**
     * Lists origin access identities.
     */
@@ -528,6 +567,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListCloudFrontOriginAccessIdentitiesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListCloudFrontOriginAccessIdentitiesResult, Unit]
   ): Request[ListCloudFrontOriginAccessIdentitiesResult, AWSError] = js.native
+  
   /**
     * List CloudFront distributions.
     */
@@ -541,6 +581,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListDistributionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListDistributionsResult, Unit]
   ): Request[ListDistributionsResult, AWSError] = js.native
+  
   /**
     * Gets a list of distribution IDs for distributions that have a cache behavior that’s associated with the specified cache policy. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request.
     */
@@ -556,6 +597,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListDistributionsByCachePolicyIdRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListDistributionsByCachePolicyIdResult, Unit]
   ): Request[ListDistributionsByCachePolicyIdResult, AWSError] = js.native
+  
   /**
     * Gets a list of distribution IDs for distributions that have a cache behavior that’s associated with the specified origin request policy. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request.
     */
@@ -571,6 +613,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListDistributionsByOriginRequestPolicyIdRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListDistributionsByOriginRequestPolicyIdResult, Unit]
   ): Request[ListDistributionsByOriginRequestPolicyIdResult, AWSError] = js.native
+  
   /**
     * List the distributions that are associated with a specified AWS WAF web ACL. 
     */
@@ -584,6 +627,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListDistributionsByWebACLIdRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListDistributionsByWebACLIdResult, Unit]
   ): Request[ListDistributionsByWebACLIdResult, AWSError] = js.native
+  
   /**
     * List all field-level encryption configurations that have been created in CloudFront for this account.
     */
@@ -597,6 +641,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListFieldLevelEncryptionConfigsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListFieldLevelEncryptionConfigsResult, Unit]
   ): Request[ListFieldLevelEncryptionConfigsResult, AWSError] = js.native
+  
   /**
     * Request a list of field-level encryption profiles that have been created in CloudFront for this account.
     */
@@ -612,6 +657,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListFieldLevelEncryptionProfilesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListFieldLevelEncryptionProfilesResult, Unit]
   ): Request[ListFieldLevelEncryptionProfilesResult, AWSError] = js.native
+  
   /**
     * Lists invalidation batches. 
     */
@@ -625,6 +671,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListInvalidationsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListInvalidationsResult, Unit]
   ): Request[ListInvalidationsResult, AWSError] = js.native
+  
   /**
     * Gets a list of origin request policies. You can optionally apply a filter to return only the managed policies created by AWS, or only the custom policies created in your AWS account. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request.
     */
@@ -638,6 +685,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListOriginRequestPoliciesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListOriginRequestPoliciesResult, Unit]
   ): Request[ListOriginRequestPoliciesResult, AWSError] = js.native
+  
   /**
     * List all public keys that have been added to CloudFront for this account.
     */
@@ -651,6 +699,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListPublicKeysRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListPublicKeysResult, Unit]
   ): Request[ListPublicKeysResult, AWSError] = js.native
+  
   /**
     * List streaming distributions. 
     */
@@ -664,6 +713,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListStreamingDistributionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListStreamingDistributionsResult, Unit]
   ): Request[ListStreamingDistributionsResult, AWSError] = js.native
+  
   /**
     * List tags for a CloudFront resource.
     */
@@ -677,6 +727,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListTagsForResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResult, Unit]
   ): Request[ListTagsForResourceResult, AWSError] = js.native
+  
   /**
     * Add tags to a CloudFront resource.
     */
@@ -687,6 +738,7 @@ trait CloudFront extends CloudFrontCustomizations {
     */
   def tagResource(params: TagResourceRequest): Request[js.Object, AWSError] = js.native
   def tagResource(params: TagResourceRequest, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  
   /**
     * Remove tags from a CloudFront resource.
     */
@@ -700,6 +752,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: UntagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Updates a cache policy configuration. When you update a cache policy configuration, all the fields are updated with the values provided in the request. You cannot update some fields independent of others. To update a cache policy configuration:   Use GetCachePolicyConfig to get the current configuration.   Locally modify the fields in the cache policy configuration that you want to update.   Call UpdateCachePolicy by providing the entire cache policy configuration, including the fields that you modified and those that you didn’t.  
     */
@@ -713,6 +766,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: UpdateCachePolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateCachePolicyResult, Unit]
   ): Request[UpdateCachePolicyResult, AWSError] = js.native
+  
   /**
     * Update an origin access identity. 
     */
@@ -728,6 +782,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: UpdateCloudFrontOriginAccessIdentityRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateCloudFrontOriginAccessIdentityResult, Unit]
   ): Request[UpdateCloudFrontOriginAccessIdentityResult, AWSError] = js.native
+  
   /**
     * Updates the configuration for a web distribution.   When you update a distribution, there are more required fields than when you create a distribution. When you update your distribution by using this API action, follow the steps here to get the current configuration and then make your updates, to make sure that you include all of the required fields. To view a summary, see Required Fields for Create Distribution and Update Distribution in the Amazon CloudFront Developer Guide.  The update process includes getting the current distribution configuration, updating the XML document that is returned to make your changes, and then submitting an UpdateDistribution request to make the updates. For information about updating a distribution using the CloudFront console instead, see Creating a Distribution in the Amazon CloudFront Developer Guide.  To update a web distribution using the CloudFront API    Submit a GetDistributionConfig request to get the current configuration and an Etag header for the distribution.  If you update the distribution again, you must get a new Etag header.    Update the XML document that was returned in the response to your GetDistributionConfig request to include your changes.   When you edit the XML file, be aware of the following:   You must strip out the ETag parameter that is returned.   Additional fields are required when you update a distribution. There may be fields included in the XML file for features that you haven't configured for your distribution. This is expected and required to successfully update the distribution.   You can't change the value of CallerReference. If you try to change this value, CloudFront returns an IllegalUpdate error.    The new configuration replaces the existing configuration; the values that you specify in an UpdateDistribution request are not merged into your existing configuration. When you add, delete, or replace values in an element that allows multiple values (for example, CNAME), you must specify all of the values that you want to appear in the updated distribution. In addition, you must update the corresponding Quantity element.      Submit an UpdateDistribution request to update the configuration for your distribution:   In the request body, include the XML document that you updated in Step 2. The request body must include an XML document with a DistributionConfig element.   Set the value of the HTTP If-Match header to the value of the ETag header that CloudFront returned when you submitted the GetDistributionConfig request in Step 1.     Review the response to the UpdateDistribution request to confirm that the configuration was successfully updated.   Optional: Submit a GetDistribution request to confirm that your changes have propagated. When propagation is complete, the value of Status is Deployed.  
     */
@@ -741,6 +796,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: UpdateDistributionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateDistributionResult, Unit]
   ): Request[UpdateDistributionResult, AWSError] = js.native
+  
   /**
     * Update a field-level encryption configuration. 
     */
@@ -756,6 +812,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: UpdateFieldLevelEncryptionConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateFieldLevelEncryptionConfigResult, Unit]
   ): Request[UpdateFieldLevelEncryptionConfigResult, AWSError] = js.native
+  
   /**
     * Update a field-level encryption profile. 
     */
@@ -771,6 +828,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: UpdateFieldLevelEncryptionProfileRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateFieldLevelEncryptionProfileResult, Unit]
   ): Request[UpdateFieldLevelEncryptionProfileResult, AWSError] = js.native
+  
   /**
     * Updates an origin request policy configuration. When you update an origin request policy configuration, all the fields are updated with the values provided in the request. You cannot update some fields independent of others. To update an origin request policy configuration:   Use GetOriginRequestPolicyConfig to get the current configuration.   Locally modify the fields in the origin request policy configuration that you want to update.   Call UpdateOriginRequestPolicy by providing the entire origin request policy configuration, including the fields that you modified and those that you didn’t.  
     */
@@ -784,6 +842,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: UpdateOriginRequestPolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateOriginRequestPolicyResult, Unit]
   ): Request[UpdateOriginRequestPolicyResult, AWSError] = js.native
+  
   /**
     * Update public key information. Note that the only value you can change is the comment.
     */
@@ -797,6 +856,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: UpdatePublicKeyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdatePublicKeyResult, Unit]
   ): Request[UpdatePublicKeyResult, AWSError] = js.native
+  
   /**
     * Update a streaming distribution. 
     */
@@ -810,6 +870,7 @@ trait CloudFront extends CloudFrontCustomizations {
     params: UpdateStreamingDistributionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateStreamingDistributionResult, Unit]
   ): Request[UpdateStreamingDistributionResult, AWSError] = js.native
+  
   /**
     * Waits for the distributionDeployed state by periodically calling the underlying CloudFront.getDistributionoperation every 60 seconds (at most 35 times). Wait until a distribution is deployed.
     */
@@ -874,4 +935,3 @@ trait CloudFront extends CloudFrontCustomizations {
     callback: js.Function2[/* err */ AWSError, /* data */ GetStreamingDistributionResult, Unit]
   ): Request[GetStreamingDistributionResult, AWSError] = js.native
 }
-

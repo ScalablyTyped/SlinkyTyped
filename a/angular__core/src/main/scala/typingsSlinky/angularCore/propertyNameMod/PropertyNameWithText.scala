@@ -2,7 +2,7 @@ package typingsSlinky.angularCore.propertyNameMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Type that describes a property name with an obtainable text. */
 /* Inlined std.Exclude<typescript.typescript.PropertyName, typescript.typescript.ComputedPropertyName> */
@@ -13,15 +13,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.angularCore.angularCoreStrings.isInJSDocNamespace
 */
 trait PropertyNameWithText extends js.Object
-
 object PropertyNameWithText {
+  
   @scala.inline
   def escapedText: typingsSlinky.angularCore.angularCoreStrings.escapedText = "escapedText".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.escapedText]
+  
   @scala.inline
   def isInJSDocNamespace: typingsSlinky.angularCore.angularCoreStrings.isInJSDocNamespace = "isInJSDocNamespace".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.isInJSDocNamespace]
+  
   @scala.inline
   def originalKeywordKind: typingsSlinky.angularCore.angularCoreStrings.originalKeywordKind = "originalKeywordKind".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.originalKeywordKind]
+  
   @scala.inline
   def text: typingsSlinky.angularCore.angularCoreStrings.text = "text".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.text]
 }
-

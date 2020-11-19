@@ -9,13 +9,15 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/separable_conv2d", JSImport.Namespace)
 @js.native
 object separableConv2dMod extends js.Object {
+  
   @js.native
   object separableConv2d extends js.Object {
+    
     def apply[T /* <: Tensor3D | Tensor4D */](
       x: T | TensorLike,
       depthwiseFilter: Tensor4D | TensorLike,
@@ -26,6 +28,4 @@ object separableConv2dMod extends js.Object {
       dataFormat: js.UndefOr[NHWC | NCHW]
     ): T = js.native
   }
-  
 }
-

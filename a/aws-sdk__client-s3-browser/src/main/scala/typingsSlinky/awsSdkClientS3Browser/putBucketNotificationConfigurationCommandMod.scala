@@ -12,11 +12,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-s3-browser/commands/PutBucketNotificationConfigurationCommand", JSImport.Namespace)
 @js.native
 object putBucketNotificationConfigurationCommandMod extends js.Object {
+  
   @js.native
   class PutBucketNotificationConfigurationCommand protected () extends Command[
           InputTypesUnion, 
@@ -27,17 +28,18 @@ object putBucketNotificationConfigurationCommandMod extends js.Object {
           Blob
         ] {
     def this(input: PutBucketNotificationConfigurationInput) = this()
+    
     val middlewareStack: MiddlewareStack[
         PutBucketNotificationConfigurationInput, 
         PutBucketNotificationConfigurationOutput, 
         Blob
       ] = js.native
+    
     val model: OperationModel = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: S3ResolvedConfiguration
     ): Handler[PutBucketNotificationConfigurationInput, PutBucketNotificationConfigurationOutput] = js.native
   }
-  
 }
-

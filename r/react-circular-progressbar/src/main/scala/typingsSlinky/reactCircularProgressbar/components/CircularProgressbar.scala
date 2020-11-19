@@ -7,14 +7,16 @@ import typingsSlinky.reactCircularProgressbar.typesMod.CircularProgressbarProps
 import typingsSlinky.reactCircularProgressbar.typesMod.CircularProgressbarStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CircularProgressbar {
+  
   @JSImport("react-circular-progressbar", "CircularProgressbar")
   @js.native
   object component extends js.Object
   
   def withProps(p: CircularProgressbarProps): Default[tag.type, typingsSlinky.reactCircularProgressbar.mod.CircularProgressbar] = new Default[tag.type, typingsSlinky.reactCircularProgressbar.mod.CircularProgressbar](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     background: Boolean,
@@ -34,4 +36,3 @@ object CircularProgressbar {
     new Default[tag.type, typingsSlinky.reactCircularProgressbar.mod.CircularProgressbar](js.Array(this.component, __props.asInstanceOf[CircularProgressbarProps]))
   }
 }
-

@@ -7,11 +7,12 @@ import typingsSlinky.strtok3.typesMod.ITokenizer
 import typingsSlinky.tokenizerToken.mod.IToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("strtok3/lib/BufferTokenizer", JSImport.Namespace)
 @js.native
 object bufferTokenizerMod extends js.Object {
+  
   @js.native
   class BufferTokenizer protected () extends ITokenizer {
     /**
@@ -21,14 +22,17 @@ object bufferTokenizerMod extends js.Object {
       */
     def this(buffer: Buffer) = this()
     def this(buffer: Buffer, fileInfo: IFileInfo) = this()
+    
     var buffer: js.Any = js.native
+    
     def peekBuffer(buffer: js.typedarray.Uint8Array): js.Promise[Double] = js.native
     def peekBuffer(buffer: js.typedarray.Uint8Array, options: IReadChunkOptions): js.Promise[Double] = js.native
+    
     def peekNumber(token: IToken[Double]): js.Promise[Double] = js.native
+    
     def readBuffer(buffer: js.typedarray.Uint8Array): js.Promise[Double] = js.native
     def readBuffer(buffer: js.typedarray.Uint8Array, options: IReadChunkOptions): js.Promise[Double] = js.native
+    
     def readNumber(token: IToken[Double]): js.Promise[Double] = js.native
   }
-  
 }
-

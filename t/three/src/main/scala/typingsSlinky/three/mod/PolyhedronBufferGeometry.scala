@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "PolyhedronBufferGeometry")
 @js.native
@@ -18,4 +18,3 @@ class PolyhedronBufferGeometry protected ()
   ) = this()
   def this(vertices: js.Array[Double], indices: js.Array[Double], radius: Double, detail: Double) = this()
 }
-

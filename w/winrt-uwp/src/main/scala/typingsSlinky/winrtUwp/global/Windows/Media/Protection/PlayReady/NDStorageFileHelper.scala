@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.Media.Protection.PlayReady
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Manages PlayReady-ND storage files. */
 @JSGlobal("Windows.Media.Protection.PlayReady.NDStorageFileHelper")
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
 /** Creates a new instance of the NDStorageFileHelper class. */
 class NDStorageFileHelper ()
   extends typingsSlinky.winrtUwp.Windows.Media.Protection.PlayReady.NDStorageFileHelper
-

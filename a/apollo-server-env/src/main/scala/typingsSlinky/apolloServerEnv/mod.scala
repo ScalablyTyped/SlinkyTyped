@@ -8,11 +8,16 @@ import typingsSlinky.apolloServerEnv.fetchMod.ResponseInit
 import typingsSlinky.apolloServerEnv.urlMod.URLSearchParamsInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server-env", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  def fetch(): js.Promise[typingsSlinky.apolloServerEnv.fetchMod.Response] = js.native
+  def fetch(input: js.UndefOr[RequestInfo], init: RequestInit): js.Promise[typingsSlinky.apolloServerEnv.fetchMod.Response] = js.native
+  def fetch(input: RequestInfo): js.Promise[typingsSlinky.apolloServerEnv.fetchMod.Response] = js.native
+  
   @js.native
   class Body ()
     extends typingsSlinky.apolloServerEnv.fetchMod.Body
@@ -38,6 +43,15 @@ object mod extends js.Object {
     def this(body: BodyInit) = this()
     def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
   }
+  /* static members */
+  @js.native
+  object Response extends js.Object {
+    
+    def error(): typingsSlinky.apolloServerEnv.fetchMod.Response = js.native
+    
+    def redirect(url: String): typingsSlinky.apolloServerEnv.fetchMod.Response = js.native
+    def redirect(url: String, status: Double): typingsSlinky.apolloServerEnv.fetchMod.Response = js.native
+  }
   
   @js.native
   class URL protected ()
@@ -52,17 +66,4 @@ object mod extends js.Object {
     extends typingsSlinky.apolloServerEnv.urlMod.URLSearchParams {
     def this(init: URLSearchParamsInit) = this()
   }
-  
-  def fetch(): js.Promise[typingsSlinky.apolloServerEnv.fetchMod.Response] = js.native
-  def fetch(input: js.UndefOr[RequestInfo], init: RequestInit): js.Promise[typingsSlinky.apolloServerEnv.fetchMod.Response] = js.native
-  def fetch(input: RequestInfo): js.Promise[typingsSlinky.apolloServerEnv.fetchMod.Response] = js.native
-  /* static members */
-  @js.native
-  object Response extends js.Object {
-    def error(): typingsSlinky.apolloServerEnv.fetchMod.Response = js.native
-    def redirect(url: String): typingsSlinky.apolloServerEnv.fetchMod.Response = js.native
-    def redirect(url: String, status: Double): typingsSlinky.apolloServerEnv.fetchMod.Response = js.native
-  }
-  
 }
-

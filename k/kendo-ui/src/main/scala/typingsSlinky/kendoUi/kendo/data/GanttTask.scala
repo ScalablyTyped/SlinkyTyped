@@ -2,17 +2,24 @@ package typingsSlinky.kendoUi.kendo.data
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GanttTask extends Model {
+  
   var end: js.Date = js.native
+  
   var expanded: Boolean = js.native
+  
   var orderId: Double = js.native
+  
   var parentId: Double = js.native
+  
   var percentComplete: Double = js.native
+  
   var start: js.Date = js.native
+  
   var summary: Boolean = js.native
+  
   var title: String = js.native
 }
-

@@ -6,12 +6,12 @@ import typingsSlinky.popmotion.tweenTypesMod.TweenInterface
 import typingsSlinky.popmotion.tweenTypesMod.TweenProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("popmotion", "timeline")
 @js.native
 object timeline extends js.Object {
+  
   def apply[V](instructions: js.Array[Instruction]): Action[TweenInterface[V]] = js.native
   def apply[V](instructions: js.Array[Instruction], hasDurationElapsedEaseLoopFlipYoyo: TweenProps): Action[TweenInterface[V]] = js.native
 }
-

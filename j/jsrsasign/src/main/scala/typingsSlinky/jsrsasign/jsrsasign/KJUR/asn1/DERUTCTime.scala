@@ -2,7 +2,7 @@ package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * class for ASN.1 DER UTCTime
@@ -26,6 +26,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait DERUTCTime extends DERAbstractTime {
+  
   /**
     * set value by a Date object
     * @param dateObject Date object to set ASN.1 value(V)
@@ -35,4 +36,3 @@ trait DERUTCTime extends DERAbstractTime {
     */
   def setByDate(dateObject: js.Date): Unit = js.native
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.BABYLON.PostProcessOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.DepthOfFieldBlurPostProcess")
 @js.native
@@ -31,22 +31,7 @@ class DepthOfFieldBlurPostProcess protected ()
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     direction: typingsSlinky.babylonjs.BABYLON.Vector2,
     kernel: Double,
-    options: Double,
-    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
-    circleOfConfusion: typingsSlinky.babylonjs.BABYLON.PostProcess,
-    imageToBlur: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.PostProcess]],
-    samplingMode: js.UndefOr[Double],
-    engine: js.UndefOr[typingsSlinky.babylonjs.BABYLON.Engine],
-    reusable: js.UndefOr[Boolean],
-    textureType: js.UndefOr[Double],
-    blockCompilation: js.UndefOr[Boolean]
-  ) = this()
-  def this(
-    name: String,
-    scene: typingsSlinky.babylonjs.BABYLON.Scene,
-    direction: typingsSlinky.babylonjs.BABYLON.Vector2,
-    kernel: Double,
-    options: PostProcessOptions,
+    options: Double | PostProcessOptions,
     camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
     circleOfConfusion: typingsSlinky.babylonjs.BABYLON.PostProcess,
     imageToBlur: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.PostProcess]],
@@ -57,4 +42,3 @@ class DepthOfFieldBlurPostProcess protected ()
     blockCompilation: js.UndefOr[Boolean]
   ) = this()
 }
-

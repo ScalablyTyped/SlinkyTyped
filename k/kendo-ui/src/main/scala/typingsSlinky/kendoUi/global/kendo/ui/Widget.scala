@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("kendo.ui.Widget")
 @js.native
@@ -17,12 +17,12 @@ class Widget protected ()
   def this(element: Element, options: js.Object) = this()
   def this(selector: String, options: js.Object) = this()
 }
-
 /* static members */
 @JSGlobal("kendo.ui.Widget")
 @js.native
 object Widget extends js.Object {
-  var fn: js.Any = js.native
+  
   def extend(prototype: js.Object): typingsSlinky.kendoUi.kendo.ui.Widget = js.native
+  
+  var fn: js.Any = js.native
 }
-

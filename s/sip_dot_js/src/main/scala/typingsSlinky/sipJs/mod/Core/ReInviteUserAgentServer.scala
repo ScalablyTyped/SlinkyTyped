@@ -3,7 +3,7 @@ package typingsSlinky.sipJs.mod.Core
 import typingsSlinky.sipJs.incomingRequestMod.IncomingRequestDelegate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js", "Core.ReInviteUserAgentServer")
 @js.native
@@ -19,4 +19,3 @@ class ReInviteUserAgentServer protected ()
     delegate: IncomingRequestDelegate
   ) = this()
 }
-

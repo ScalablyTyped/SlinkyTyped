@@ -2,7 +2,7 @@ package typingsSlinky.pixiJs.global.PIXI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Graphics class contains methods used to draw primitive shapes such as lines, circles and
@@ -23,4 +23,3 @@ class Graphics ()
   extends typingsSlinky.pixiJs.PIXI.Graphics {
   def this(geometry: typingsSlinky.pixiJs.PIXI.GraphicsGeometry) = this()
 }
-

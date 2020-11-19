@@ -2,13 +2,15 @@ package typingsSlinky.seleniumWebdriver
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("selenium-webdriver/lib/promise", JSImport.Namespace)
 @js.native
 object promiseMod extends js.Object {
+  
   @js.native
   object promise extends js.Object {
+    
     /**
       * Wraps a function that expects a node-style callback as its final
       * argument. This callback expects two arguments: an error value (which will
@@ -18,10 +20,12 @@ object promiseMod extends js.Object {
       */
     // tslint:disable-next-line:no-any  Variable args have variable types.
     def checkedNodeCall[T](fn: js.Function, varArgs: js.Any*): js.Promise[T] = js.native
+    
     /**
       * Creates a promise that will be resolved at a set time in the future.
       */
     def delayed(ms: Double): js.Promise[Unit] = js.native
+    
     /**
       * Calls a function for each element in an array, and if the function returns
       * true adds the element to a new array.
@@ -57,6 +61,7 @@ object promiseMod extends js.Object {
     // value
     optSelf: js.Any
     ): js.Promise[js.Array[V]] = js.native
+    
     /**
       * Returns a promise that will be resolved with the input value in a
       * fully-resolved state. If the value is an array, each element will be fully
@@ -74,6 +79,7 @@ object promiseMod extends js.Object {
       */
     // tslint:disable-next-line:no-any Complex relation between input and output
     def fullyResolved(value: js.Any): js.Promise[_] = js.native
+    
     // region Functions
     /**
       * Determines whether a {@code value} should be treated as a promise.
@@ -81,6 +87,7 @@ object promiseMod extends js.Object {
       * promise.
       */
     def isPromise(value: js.Any): Boolean = js.native
+    
     /**
       * Calls a function for each element in an array and inserts the result into a
       * new array, which is used as the fulfillment value of the promise returned
@@ -113,6 +120,7 @@ object promiseMod extends js.Object {
       fn: js.Function4[/* self */ js.Any, /* type */ T, /* index */ Double, /* array */ js.Array[T], V],
       optSelf: js.Any
     ): js.Promise[js.Array[V]] = js.native
+    
     /**
       * Registers a listener to invoke when a promise is resolved, regardless
       * of whether the promise's value was successfully computed. This function
@@ -145,6 +153,4 @@ object promiseMod extends js.Object {
       */
     def thenFinally[R](promise: js.Any, callback: js.Function0[R | js.Promise[R]]): js.Promise[R] = js.native
   }
-  
 }
-

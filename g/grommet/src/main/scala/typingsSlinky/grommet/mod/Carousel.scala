@@ -9,7 +9,7 @@ import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6", "Carousel")
 @js.native
@@ -25,7 +25,6 @@ class Carousel protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("grommet/es6", "Carousel")
 @js.native
 object Carousel extends TopLevel[
@@ -33,4 +32,3 @@ object Carousel extends TopLevel[
         CarouselProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])
       ]
     ]
-

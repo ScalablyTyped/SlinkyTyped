@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This is probably one of the least useful components available as it doesn't
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/form/types/Form", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[FormProps with RefAttributes[HTMLFormElement]]]
-

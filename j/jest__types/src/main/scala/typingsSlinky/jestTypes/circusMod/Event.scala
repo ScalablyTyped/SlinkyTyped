@@ -2,7 +2,7 @@ package typingsSlinky.jestTypes.circusMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.jestTypes.anon.Name
@@ -30,4 +30,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jestTypes.anon.`5`
 */
 trait Event extends js.Object
-

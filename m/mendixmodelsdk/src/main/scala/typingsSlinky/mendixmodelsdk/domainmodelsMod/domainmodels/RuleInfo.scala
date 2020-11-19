@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.RuleInfo")
 @js.native
@@ -21,16 +21,18 @@ abstract class RuleInfo protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsValidationRule: ValidationRule = js.native
+  
   @JSName("model")
   var model_FRuleInfo: IModel = js.native
-  def containerAsValidationRule: ValidationRule = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.RuleInfo")
 @js.native
 object RuleInfo extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

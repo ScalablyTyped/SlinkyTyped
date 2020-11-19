@@ -12,7 +12,7 @@ import typingsSlinky.tedious.tediousStrings.returnValue
 import typingsSlinky.tedious.tediousStrings.row
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tedious", "Request")
 @js.native
@@ -29,6 +29,7 @@ class Request protected () extends EventEmitter {
     sql: String,
     callback: js.Function3[/* error */ js.Error, /* rowCount */ Double, /* rows */ js.Array[_], Unit]
   ) = this()
+  
   /**
     * Add an output parameter to the request. The parameter's value will be provide by an emitted returnValue event.
     * @param name The parameter name. This should correspond to a parameter in the SQL, or a parameter that a called procedure expects.
@@ -40,6 +41,7 @@ class Request protected () extends EventEmitter {
   def addOutputParameter(name: String, `type`: TediousType, value: js.UndefOr[scala.Nothing], options: ParameterOptions): Unit = js.native
   def addOutputParameter(name: String, `type`: TediousType, value: js.Any): Unit = js.native
   def addOutputParameter(name: String, `type`: TediousType, value: js.Any, options: ParameterOptions): Unit = js.native
+  
   /**
     * Add an input parameter to the request.
     * @param name The parameter name. This should correspond to a parameter in the SQL, or a parameter that a called procedure expects. The name should not start with '@'.
@@ -49,6 +51,7 @@ class Request protected () extends EventEmitter {
     */
   def addParameter(name: String, `type`: TediousType, value: js.Any): Unit = js.native
   def addParameter(name: String, `type`: TediousType, value: js.Any, options: ParameterOptions): Unit = js.native
+  
   /**
     * This event, describing result set columns, will be emitted before row events are emitted. This event may be emited multiple times when more than one recordset is produced by the statement.
     */
@@ -112,13 +115,14 @@ class Request protected () extends EventEmitter {
     */
   @JSName("on")
   def on_row(event: row, listener: js.Function1[/* columns */ js.Array[ColumnValue], Unit]): this.type = js.native
+  
   /**
     * Temporarily suspends the flow of data from the database. No more 'row' events will be emitted until request.resume() is called.
     */
   def pause(): Unit = js.native
+  
   /**
     * Resumes the flow of data from the database.
     */
   def resume(): Unit = js.native
 }
-

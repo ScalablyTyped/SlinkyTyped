@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Enables an Entity to render a simple static sprite or sprite animations.
@@ -38,4 +38,3 @@ class SpriteComponent protected ()
     entity: typingsSlinky.playcanvas.pc.Entity
   ) = this()
 }
-

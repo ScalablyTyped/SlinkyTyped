@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @hidden
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class PhoneAuthProviderInstance () extends AuthProvider {
   def this(auth: Auth) = this()
+  
   def verifyPhoneNumber(phoneInfoOptions: String, applicationVerifier: ApplicationVerifier): js.Promise[String] = js.native
   /**
     * Starts a phone number authentication flow by sending a verification code to
@@ -53,4 +54,3 @@ class PhoneAuthProviderInstance () extends AuthProvider {
     */
   def verifyPhoneNumber(phoneInfoOptions: PhoneInfoOptions, applicationVerifier: ApplicationVerifier): js.Promise[String] = js.native
 }
-

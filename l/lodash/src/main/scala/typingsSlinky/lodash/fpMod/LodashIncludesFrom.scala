@@ -6,10 +6,11 @@ import typingsSlinky.lodash.mod.NumericDictionary
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashIncludesFrom extends LodashConvertible {
+  
   def apply(target: __, fromIndex: Double): LodashIncludesFrom1x2 = js.native
   def apply[T](target: T): LodashIncludesFrom1x1[T] = js.native
   def apply[T](target: T, fromIndex: Double): LodashIncludesFrom1x3[T] = js.native
@@ -28,4 +29,3 @@ trait LodashIncludesFrom extends LodashConvertible {
   def apply[T](target: __, fromIndex: __, collection: List[T]): LodashIncludesFrom1x4[T] = js.native
   def apply[T](target: __, fromIndex: __, collection: NumericDictionary[T]): LodashIncludesFrom1x4[T] = js.native
 }
-

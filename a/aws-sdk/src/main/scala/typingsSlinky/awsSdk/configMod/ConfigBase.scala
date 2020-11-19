@@ -8,16 +8,18 @@ import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.std.PromiseConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/lib/config", "ConfigBase")
 @js.native
 class ConfigBase () extends ConfigurationOptions {
   def this(options: ConfigurationOptions) = this()
+  
   /**
     * Loads credentials from the configuration object.
     */
   def getCredentials(callback: js.Function1[/* err */ AWSError, Unit]): Unit = js.native
+  
   /**
     * Gets the promise dependency the SDK will use wherever Promises are returned.
     */
@@ -34,6 +36,7 @@ class ConfigBase () extends ConfigurationOptions {
     ], 
     js.Promise[js.Object]
   ])) | Unit = js.native
+  
   /**
     * Loads configuration data from a JSON file into this config object.
     * Loading configuration will reset all existing configuration on the object.
@@ -42,11 +45,13 @@ class ConfigBase () extends ConfigurationOptions {
     * @param {string} path - the path relative to your process's current working directory to load configuration from.
     */
   def loadFromPath(path: String): ConfigBase = js.native
+  
   /**
     * Sets the promise dependency the SDK will use wherever Promises are returned.
     * @param {function} dep - a reference to a Promise constructor
     */
   def setPromisesDependency(dep: js.Any): Unit = js.native
+  
   /**
     * Updates the current configuration object with new options.
     *
@@ -65,4 +70,3 @@ class ConfigBase () extends ConfigurationOptions {
   @JSName("update")
   def update_true(options: ConfigurationOptionskeyst, allowUnknownKeys: `true`): Unit = js.native
 }
-

@@ -15,51 +15,57 @@ import typingsSlinky.rdflib.typesMod.PredicateType
 import typingsSlinky.rdflib.typesMod.SubjectType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait UpdateManager extends js.Object {
-  /** Object of namespaces */
-  var ns: js.Any = js.native
-  /** Index of objects for coordinating incoming and outgoing patches */
-  var patchControl: js.Array[js.Any] = js.native
-  var store: UpdateManagerFormula = js.native
+  
   def addDownstreamChangeListener(doc: NamedNode, listener: js.Any): Unit = js.native
+  
   def anonymize(obj: js.Any): js.Any = js.native
+  
   def anonymizeNT(stmt: Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]): String = js.native
+  
   /**
     * @private
     */
   def bnodeContext(bnodes: js.Any, doc: js.Any): js.Array[scala.Nothing] = js.native
+  
   /**
     * Returns the smallest context to bind a given single bnode
     * @private
     */
   def bnodeContext1(x: js.Any, source: js.Any): js.Any = js.native
+  
   /**
     * Returns a context to bind a given node, up to a given depth
     * @private
     */
   def bnodeContext2(x: js.Any, source: js.Any, depth: js.Any): js.Any = js.native
+  
   /**
     * Makes a cached list of [Inverse-]Functional properties
     * @private
     */
   def cacheIfps(): Unit = js.native
+  
   /**
     * We want to start counting websocket notifications
     * to distinguish the ones from others from our own.
     */
   def clearUpstreamCount(doc: NamedNode): Unit = js.native
+  
   /**
     * @private
     */
   def contextWhere(context: js.Any): String = js.native
+  
   def delete_statement(
     st: js.Array[Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]],
     callbackFunction: CallBackFunction
   ): Unit = js.native
   def delete_statement(st: Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph], callbackFunction: CallBackFunction): Unit = js.native
+  
   /**
     * Tests whether a file is editable.
     * Files have to have a specific annotation that they are machine written,
@@ -74,17 +80,29 @@ trait UpdateManager extends js.Object {
   def editable(uri: String, kb: typingsSlinky.rdflib.storeMod.default): js.UndefOr[String | Boolean] = js.native
   def editable(uri: NamedNode): js.UndefOr[String | Boolean] = js.native
   def editable(uri: NamedNode, kb: typingsSlinky.rdflib.storeMod.default): js.UndefOr[String | Boolean] = js.native
+  
   /**
     * @private
     */
   def fire(uri: String, query: String, callbackFunction: CallBackFunction): js.Promise[Unit] = js.native
+  
   def getUpdatesVia(doc: NamedNode): String | Null = js.native
+  
   def insert_statement(st: Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph], callbackFunction: CallBackFunction): Unit = js.native
+  
   /**
     * @private
     */
   def mentioned(x: js.Any): Boolean = js.native
+  
+  /** Object of namespaces */
+  var ns: js.Any = js.native
+  
+  /** Index of objects for coordinating incoming and outgoing patches */
+  var patchControl: js.Array[js.Any] = js.native
+  
   def patchControlFor(doc: NamedNode): js.Any = js.native
+  
   /**
     * This is suitable for an initial creation of a document.
     */
@@ -112,6 +130,7 @@ trait UpdateManager extends js.Object {
       Unit
     ]
   ): js.Promise[Unit] = js.native
+  
   /**
     * Reloads a document.
     *
@@ -134,7 +153,9 @@ trait UpdateManager extends js.Object {
       js.Object | Unit
     ]
   ): Unit = js.native
+  
   def reloadAndSync(doc: NamedNode): Unit = js.native
+  
   /**
     * Requests a now or future action to refresh changes coming downstream
     * This is designed to allow the system to re-request the server version,
@@ -145,6 +166,7 @@ trait UpdateManager extends js.Object {
     * @param action
     */
   def requestDownstreamAction(doc: NamedNode, action: js.Any): Unit = js.native
+  
   /**
     * @throws {Error} On unsupported content type
     *
@@ -156,6 +178,7 @@ trait UpdateManager extends js.Object {
     data: js.Array[Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]],
     contentType: String
   ): String = js.native
+  
   /**
     * Sets up websocket to listen on
     *
@@ -174,21 +197,27 @@ trait UpdateManager extends js.Object {
     * @returns {boolean}
     */
   def setRefreshHandler(doc: NamedNode, handler: js.Any): Boolean = js.native
+  
   /**
     * Returns a list of all bnodes occurring in a list of statements
     * @private
     */
   def statementArrayBnodes(sts: js.Array[Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]]): js.Array[BlankNode] = js.native
+  
   /**
     * Returns a list of all bnodes occurring in a statement
     * @private
     */
   def statementBnodes(st: Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]): js.Array[BlankNode] = js.native
+  
   /**
     * Returns the best context for a single statement
     * @private
     */
   def statementContext(st: Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]): js.Array[scala.Nothing] = js.native
+  
+  var store: UpdateManagerFormula = js.native
+  
   /**
     * This high-level function updates the local store iff the web is changed successfully.
     * Deletions, insertions may be undefined or single statements or lists or formulae (may contain bnodes which can be indirectly identified by a where clause).
@@ -247,7 +276,9 @@ trait UpdateManager extends js.Object {
     ],
     secondTry: Boolean
   ): Unit | js.Promise[Unit] = js.native
+  
   def updateDav(doc: QuadSubject, ds: js.Any, is: js.Any, callbackFunction: js.Any): Null | js.Promise[Unit] = js.native
+  
   /**
     * Likely deprecated, since this lib no longer deals with browser extension
     *
@@ -257,6 +288,7 @@ trait UpdateManager extends js.Object {
     * @param callbackFunction
     */
   def updateLocalFile(doc: NamedNode, ds: js.Any, is: js.Any, callbackFunction: js.Any): Unit = js.native
+  
   /**
     * This high-level function updates the local store iff the web is changed successfully.
     * Deletions, insertions may be undefined or single statements or lists or formulae (may contain bnodes which can be indirectly identified by a where clause).
@@ -274,6 +306,7 @@ trait UpdateManager extends js.Object {
       typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
     ]
   ): js.Promise[js.Array[Unit]] = js.native
+  
   /** return a statemnet updating function
     *
     * This does NOT update the statement.
@@ -282,4 +315,3 @@ trait UpdateManager extends js.Object {
     */
   def update_statement(statement: Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]): js.UndefOr[Setobject] = js.native
 }
-

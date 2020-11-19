@@ -1,19 +1,19 @@
 organization := "org.scalablytyped.slinky"
 name := "jimp__types"
-version := "0.14.0-8a5d9e"
+version := "0.14.0-4dcd7a"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "jimp__bmp" % "0.14.0-5f2e6c",
-  "org.scalablytyped.slinky" %%% "jimp__core" % "0.14.0-ac0df3",
-  "org.scalablytyped.slinky" %%% "jimp__gif" % "0.14.0-49854c",
-  "org.scalablytyped.slinky" %%% "jimp__jpeg" % "0.14.0-0d50b0",
-  "org.scalablytyped.slinky" %%% "jimp__png" % "0.14.0-46a451",
-  "org.scalablytyped.slinky" %%% "jimp__tiff" % "0.14.0-7b9717",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-df8c17",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "jimp__bmp" % "0.14.0-314762",
+  "org.scalablytyped.slinky" %%% "jimp__core" % "0.14.0-3e9ab4",
+  "org.scalablytyped.slinky" %%% "jimp__gif" % "0.14.0-f8b6cd",
+  "org.scalablytyped.slinky" %%% "jimp__jpeg" % "0.14.0-905fcd",
+  "org.scalablytyped.slinky" %%% "jimp__png" % "0.14.0-1d7ba8",
+  "org.scalablytyped.slinky" %%% "jimp__tiff" % "0.14.0-c77857",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

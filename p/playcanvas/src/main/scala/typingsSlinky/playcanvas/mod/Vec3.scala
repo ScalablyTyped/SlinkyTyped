@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new Vec3 object.
@@ -28,42 +28,48 @@ class Vec3 ()
   def this(x: Double, y: js.UndefOr[scala.Nothing], z: Double) = this()
   def this(x: Double, y: Double, z: Double) = this()
 }
-
 /* static members */
 @JSImport("playcanvas", "Vec3")
 @js.native
 object Vec3 extends js.Object {
+  
   /**
     * A constant vector set to [0, 0, 1].
     */
   val BACK: typingsSlinky.playcanvas.pc.Vec3 = js.native
+  
   /**
     * A constant vector set to [0, -1, 0].
     */
   val DOWN: typingsSlinky.playcanvas.pc.Vec3 = js.native
+  
   /**
     * A constant vector set to [0, 0, -1].
     */
   val FORWARD: typingsSlinky.playcanvas.pc.Vec3 = js.native
+  
   /**
     * A constant vector set to [-1, 0, 0].
     */
   val LEFT: typingsSlinky.playcanvas.pc.Vec3 = js.native
+  
   /**
     * A constant vector set to [1, 1, 1].
     */
   val ONE: typingsSlinky.playcanvas.pc.Vec3 = js.native
+  
   /**
     * A constant vector set to [1, 0, 0].
     */
   val RIGHT: typingsSlinky.playcanvas.pc.Vec3 = js.native
+  
   /**
     * A constant vector set to [0, 1, 0].
     */
   val UP: typingsSlinky.playcanvas.pc.Vec3 = js.native
+  
   /**
     * A constant vector set to [0, 0, 0].
     */
   val ZERO: typingsSlinky.playcanvas.pc.Vec3 = js.native
 }
-

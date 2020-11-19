@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Kafka extends Service {
+  
   @JSName("config")
   var config_Kafka: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * 
     Creates a new MSK cluster.
@@ -29,6 +31,7 @@ trait Kafka extends Service {
     params: CreateClusterRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateClusterResponse, Unit]
   ): Request[CreateClusterResponse, AWSError] = js.native
+  
   /**
     * 
     Creates a new MSK configuration.
@@ -46,6 +49,7 @@ trait Kafka extends Service {
     params: CreateConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateConfigurationResponse, Unit]
   ): Request[CreateConfigurationResponse, AWSError] = js.native
+  
   /**
     * 
     Deletes the MSK cluster specified by the Amazon Resource Name (ARN) in the request.
@@ -63,6 +67,7 @@ trait Kafka extends Service {
     params: DeleteClusterRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteClusterResponse, Unit]
   ): Request[DeleteClusterResponse, AWSError] = js.native
+  
   /**
     * 
     Returns a description of the MSK cluster whose Amazon Resource Name (ARN) is specified in the request.
@@ -80,6 +85,7 @@ trait Kafka extends Service {
     params: DescribeClusterRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeClusterResponse, Unit]
   ): Request[DescribeClusterResponse, AWSError] = js.native
+  
   /**
     * 
     Returns a description of the cluster operation specified by the ARN.
@@ -97,6 +103,7 @@ trait Kafka extends Service {
     params: DescribeClusterOperationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeClusterOperationResponse, Unit]
   ): Request[DescribeClusterOperationResponse, AWSError] = js.native
+  
   /**
     * 
     Returns a description of this MSK configuration.
@@ -114,6 +121,7 @@ trait Kafka extends Service {
     params: DescribeConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeConfigurationResponse, Unit]
   ): Request[DescribeConfigurationResponse, AWSError] = js.native
+  
   /**
     * 
     Returns a description of this revision of the configuration.
@@ -131,6 +139,7 @@ trait Kafka extends Service {
     params: DescribeConfigurationRevisionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeConfigurationRevisionResponse, Unit]
   ): Request[DescribeConfigurationRevisionResponse, AWSError] = js.native
+  
   /**
     * 
     A list of brokers that a client application can use to bootstrap.
@@ -148,6 +157,7 @@ trait Kafka extends Service {
     params: GetBootstrapBrokersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetBootstrapBrokersResponse, Unit]
   ): Request[GetBootstrapBrokersResponse, AWSError] = js.native
+  
   /**
     * 
     Gets the Apache Kafka versions to which you can update the MSK cluster.
@@ -165,6 +175,7 @@ trait Kafka extends Service {
     params: GetCompatibleKafkaVersionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetCompatibleKafkaVersionsResponse, Unit]
   ): Request[GetCompatibleKafkaVersionsResponse, AWSError] = js.native
+  
   /**
     * 
     Returns a list of all the operations that have been performed on the specified MSK cluster.
@@ -182,6 +193,7 @@ trait Kafka extends Service {
     params: ListClusterOperationsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListClusterOperationsResponse, Unit]
   ): Request[ListClusterOperationsResponse, AWSError] = js.native
+  
   /**
     * 
     Returns a list of all the MSK clusters in the current Region.
@@ -199,6 +211,7 @@ trait Kafka extends Service {
     params: ListClustersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListClustersResponse, Unit]
   ): Request[ListClustersResponse, AWSError] = js.native
+  
   /**
     * 
     Returns a list of all the MSK configurations in this Region.
@@ -216,6 +229,7 @@ trait Kafka extends Service {
     params: ListConfigurationRevisionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListConfigurationRevisionsResponse, Unit]
   ): Request[ListConfigurationRevisionsResponse, AWSError] = js.native
+  
   /**
     * 
     Returns a list of all the MSK configurations in this Region.
@@ -233,6 +247,7 @@ trait Kafka extends Service {
     params: ListConfigurationsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListConfigurationsResponse, Unit]
   ): Request[ListConfigurationsResponse, AWSError] = js.native
+  
   /**
     * 
     Returns a list of Kafka versions.
@@ -250,6 +265,7 @@ trait Kafka extends Service {
     params: ListKafkaVersionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListKafkaVersionsResponse, Unit]
   ): Request[ListKafkaVersionsResponse, AWSError] = js.native
+  
   /**
     * 
     Returns a list of the broker nodes in the cluster.
@@ -267,6 +283,7 @@ trait Kafka extends Service {
     params: ListNodesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListNodesResponse, Unit]
   ): Request[ListNodesResponse, AWSError] = js.native
+  
   /**
     * 
     Returns a list of the tags associated with the specified resource.
@@ -284,6 +301,7 @@ trait Kafka extends Service {
     params: ListTagsForResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
   ): Request[ListTagsForResourceResponse, AWSError] = js.native
+  
   /**
     * Reboots brokers.
     */
@@ -297,6 +315,7 @@ trait Kafka extends Service {
     params: RebootBrokerRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ RebootBrokerResponse, Unit]
   ): Request[RebootBrokerResponse, AWSError] = js.native
+  
   /**
     * 
     Adds tags to the specified MSK resource.
@@ -311,6 +330,7 @@ trait Kafka extends Service {
     */
   def tagResource(params: TagResourceRequest): Request[js.Object, AWSError] = js.native
   def tagResource(params: TagResourceRequest, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  
   /**
     * 
     Removes the tags associated with the keys that are provided in the query.
@@ -328,6 +348,7 @@ trait Kafka extends Service {
     params: UntagResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * 
     Updates the number of broker nodes in the cluster.
@@ -345,6 +366,7 @@ trait Kafka extends Service {
     params: UpdateBrokerCountRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateBrokerCountResponse, Unit]
   ): Request[UpdateBrokerCountResponse, AWSError] = js.native
+  
   /**
     * 
     Updates the EBS storage associated with MSK brokers.
@@ -362,6 +384,7 @@ trait Kafka extends Service {
     params: UpdateBrokerStorageRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateBrokerStorageResponse, Unit]
   ): Request[UpdateBrokerStorageResponse, AWSError] = js.native
+  
   /**
     * 
     Updates the cluster with the configuration that is specified in the request body.
@@ -379,6 +402,7 @@ trait Kafka extends Service {
     params: UpdateClusterConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateClusterConfigurationResponse, Unit]
   ): Request[UpdateClusterConfigurationResponse, AWSError] = js.native
+  
   /**
     * 
     Updates the Apache Kafka version for the cluster.
@@ -396,6 +420,7 @@ trait Kafka extends Service {
     params: UpdateClusterKafkaVersionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateClusterKafkaVersionResponse, Unit]
   ): Request[UpdateClusterKafkaVersionResponse, AWSError] = js.native
+  
   /**
     * 
     Updates the monitoring settings for the cluster. You can use this operation to specify which Apache Kafka metrics you want Amazon MSK to send to Amazon CloudWatch. You can also specify settings for open monitoring with Prometheus.
@@ -414,4 +439,3 @@ trait Kafka extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateMonitoringResponse, Unit]
   ): Request[UpdateMonitoringResponse, AWSError] = js.native
 }
-

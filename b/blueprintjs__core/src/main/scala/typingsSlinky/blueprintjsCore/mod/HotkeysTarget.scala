@@ -5,11 +5,11 @@ import typingsSlinky.blueprintjsCore.constructorMod.IConstructor
 import typingsSlinky.blueprintjsCore.hotkeysTargetMod.IHotkeysTargetComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@blueprintjs/core", "HotkeysTarget")
 @js.native
 object HotkeysTarget extends js.Object {
+  
   def apply[T /* <: IConstructor[IHotkeysTargetComponent] */](WrappedComponent: T): DisplayName with T = js.native
 }
-

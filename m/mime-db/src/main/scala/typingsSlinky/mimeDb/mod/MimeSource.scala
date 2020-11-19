@@ -2,7 +2,7 @@ package typingsSlinky.mimeDb.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Sources:
@@ -16,13 +16,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.mimeDb.mimeDbStrings.nginx
 */
 trait MimeSource extends js.Object
-
 object MimeSource {
+  
   @scala.inline
   def apache: typingsSlinky.mimeDb.mimeDbStrings.apache = "apache".asInstanceOf[typingsSlinky.mimeDb.mimeDbStrings.apache]
+  
   @scala.inline
   def iana: typingsSlinky.mimeDb.mimeDbStrings.iana = "iana".asInstanceOf[typingsSlinky.mimeDb.mimeDbStrings.iana]
+  
   @scala.inline
   def nginx: typingsSlinky.mimeDb.mimeDbStrings.nginx = "nginx".asInstanceOf[typingsSlinky.mimeDb.mimeDbStrings.nginx]
 }
-

@@ -7,15 +7,15 @@ import typingsSlinky.babelTypes.babelTypesStrings.method
 import typingsSlinky.babelTypes.babelTypesStrings.set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ObjectMethod_
   - typingsSlinky.babelTypes.mod.ObjectProperty_
 */
 trait ObjectMember extends js.Object
-
 object ObjectMember {
+  
   @scala.inline
   def ObjectMethod_(
     async: Boolean,
@@ -37,6 +37,7 @@ object ObjectMember {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectMember]
   }
+  
   @scala.inline
   def ObjectProperty_(
     computed: Boolean,
@@ -53,4 +54,3 @@ object ObjectMember {
     __obj.asInstanceOf[ObjectMember]
   }
 }
-

@@ -4,17 +4,17 @@ import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.Offset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.RibbonBuilder")
 @js.native
 class RibbonBuilder ()
   extends typingsSlinky.babylonjs.BABYLON.RibbonBuilder
-
 /* static members */
 @JSGlobal("BABYLON.RibbonBuilder")
 @js.native
 object RibbonBuilder extends js.Object {
+  
   /**
     * Creates a ribbon mesh. The ribbon is a parametric shape.  It has no predefined shape. Its final shape will depend on the input parameters
     * * The parameter `pathArray` is a required array of paths, what are each an array of successive Vector3. The pathArray parameter depicts the ribbon geometry
@@ -41,4 +41,3 @@ object RibbonBuilder extends js.Object {
   def CreateRibbon(name: String, options: Offset): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
   def CreateRibbon(name: String, options: Offset, scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
 }
-

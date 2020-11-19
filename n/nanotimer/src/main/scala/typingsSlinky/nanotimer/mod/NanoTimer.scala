@@ -2,22 +2,26 @@ package typingsSlinky.nanotimer.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait NanoTimer extends js.Object {
+  
   /**
     * Clears current running interval.
     */
   def clearInterval(): Unit = js.native
+  
   /**
     * Clears current running timeOut.
     */
   def clearTimeout(): Unit = js.native
+  
   /**
     * Returns true if the timer currently has a scheduled timeout, or false otherwise
     */
   def hasTimeout(): Boolean = js.native
+  
   def setInterval(task: js.Function1[/* repeated */ js.Any, Unit], args: String, interval: String): Unit = js.native
   def setInterval(
     task: js.Function1[/* repeated */ js.Any, Unit],
@@ -35,6 +39,7 @@ trait NanoTimer extends js.Object {
     interval: String,
     callback: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   def setTimeout(task: js.Function1[/* repeated */ js.Any, Unit], args: String, timeout: String): Unit = js.native
   def setTimeout(
     task: js.Function1[/* repeated */ js.Any, Unit],
@@ -52,6 +57,7 @@ trait NanoTimer extends js.Object {
     timeout: String,
     callback: js.Function1[/* results */ TimeoutResults, Unit]
   ): Unit = js.native
+  
   /**
     * Calculate the time it tooks to execute the task.
     */
@@ -70,4 +76,3 @@ trait NanoTimer extends js.Object {
     callback: js.Function1[/* error */ js.Error, Unit]
   ): Double = js.native
 }
-

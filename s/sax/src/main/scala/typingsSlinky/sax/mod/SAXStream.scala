@@ -30,7 +30,7 @@ import typingsSlinky.sax.saxStrings.text
 import typingsSlinky.sax.saxStrings.unpipe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sax", "SAXStream")
 @js.native
@@ -38,7 +38,9 @@ class SAXStream () extends Duplex {
   def this(strict: Boolean) = this()
   def this(strict: js.UndefOr[scala.Nothing], opt: SAXOptions) = this()
   def this(strict: Boolean, opt: SAXOptions) = this()
+  
   var _parser: SAXParser = js.native
+  
   def on(event: String, listener: js.ThisFunction1[/* this */ this.type, /* repeated */ js.Any, Unit]): this.type = js.native
   def on(event: js.Symbol, listener: js.ThisFunction1[/* this */ this.type, /* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("on")
@@ -94,4 +96,3 @@ class SAXStream () extends Duplex {
   @JSName("on")
   def on_unpipe(event: unpipe, listener: js.ThisFunction1[/* this */ this.type, /* src */ Readable, Unit]): this.type = js.native
 }
-

@@ -5,20 +5,23 @@ import typingsSlinky.firebase.anon.Delete
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "firestore.Firestore")
 @js.native
 class Firestore protected () extends js.Object {
+  
   /**
     * @hidden
     */
   var INTERNAL: Delete = js.native
+  
   /**
     * The {@link firebase.app.App app} associated with this `Firestore` service
     * instance.
     */
   var app: App = js.native
+  
   /**
     * Creates a write batch, used for performing multiple writes as a single
     * atomic operation. The maximum number of writes allowed in a single WriteBatch
@@ -30,6 +33,7 @@ class Firestore protected () extends js.Object {
     *   A `WriteBatch` that can be used to atomically execute multiple writes.
     */
   def batch(): WriteBatch = js.native
+  
   /**
     * Clears the persistent storage. This includes pending writes and cached
     * documents.
@@ -51,6 +55,7 @@ class Firestore protected () extends js.Object {
     * cleared. Otherwise, the promise is rejected with an error.
     */
   def clearPersistence(): js.Promise[Unit] = js.native
+  
   /**
     * Gets a `CollectionReference` instance that refers to the collection at
     * the specified path.
@@ -59,6 +64,7 @@ class Firestore protected () extends js.Object {
     * @return The `CollectionReference` instance.
     */
   def collection(collectionPath: String): CollectionReference[DocumentData] = js.native
+  
   /**
     * Creates and returns a new Query that includes all documents in the
     * database that are contained in a collection or subcollection with the
@@ -70,6 +76,7 @@ class Firestore protected () extends js.Object {
     * @return The created Query.
     */
   def collectionGroup(collectionId: String): Query[DocumentData] = js.native
+  
   /**
     * Disables network usage for this instance. It can be re-enabled via
     * {@link firebase.firestore.Firestore.enableNetwork `enableNetwork()`}. While
@@ -81,6 +88,7 @@ class Firestore protected () extends js.Object {
     *   disabled.
     */
   def disableNetwork(): js.Promise[Unit] = js.native
+  
   /**
     * Gets a `DocumentReference` instance that refers to the document at the
     * specified path.
@@ -89,6 +97,7 @@ class Firestore protected () extends js.Object {
     * @return The `DocumentReference` instance.
     */
   def doc(documentPath: String): DocumentReference[DocumentData] = js.native
+  
   /**
     * Re-enables use of the network for this Firestore instance after a prior
     * call to {@link firebase.firestore.Firestore.disableNetwork
@@ -98,6 +107,7 @@ class Firestore protected () extends js.Object {
     *   enabled.
     */
   def enableNetwork(): js.Promise[Unit] = js.native
+  
   /**
     * Attempts to enable persistent storage, if possible.
     *
@@ -121,6 +131,7 @@ class Firestore protected () extends js.Object {
     */
   def enablePersistence(): js.Promise[Unit] = js.native
   def enablePersistence(settings: PersistenceSettings): js.Promise[Unit] = js.native
+  
   /**
     * Attaches a listener for a snapshots-in-sync event. The snapshots-in-sync
     * event indicates that all listeners affected by a given change have fired,
@@ -152,6 +163,7 @@ class Firestore protected () extends js.Object {
     * listener.
     */
   def onSnapshotsInSync(onSync: js.Function0[Unit]): js.Function0[Unit] = js.native
+  
   /**
     * Executes the given `updateFunction` and then attempts to commit the changes
     * applied within the transaction. If any document read within the transaction
@@ -174,6 +186,7 @@ class Firestore protected () extends js.Object {
     *   error will be returned.
     */
   def runTransaction[T](updateFunction: js.Function1[/* transaction */ Transaction, js.Promise[T]]): js.Promise[T] = js.native
+  
   /**
     * Specifies custom settings to be used to configure the `Firestore`
     * instance. Must be set before invoking any other methods.
@@ -181,6 +194,7 @@ class Firestore protected () extends js.Object {
     * @param settings The settings to use.
     */
   def settings(settings: Settings): Unit = js.native
+  
   /**
     * Terminates this Firestore instance.
     *
@@ -202,6 +216,7 @@ class Firestore protected () extends js.Object {
     * @return A promise that is resolved when the instance has been successfully terminated.
     */
   def terminate(): js.Promise[Unit] = js.native
+  
   /**
     * Waits until all currently pending writes for the active user have been acknowledged by the
     * backend.
@@ -218,4 +233,3 @@ class Firestore protected () extends js.Object {
     */
   def waitForPendingWrites(): js.Promise[Unit] = js.native
 }
-

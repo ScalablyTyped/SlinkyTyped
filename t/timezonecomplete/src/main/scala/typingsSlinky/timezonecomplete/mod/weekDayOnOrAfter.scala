@@ -2,11 +2,12 @@ package typingsSlinky.timezonecomplete.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("timezonecomplete", "weekDayOnOrAfter")
 @js.native
 object weekDayOnOrAfter extends js.Object {
+  
   def apply(
     year: Double,
     month: Double,
@@ -14,4 +15,3 @@ object weekDayOnOrAfter extends js.Object {
     weekDay: typingsSlinky.timezonecomplete.basicsMod.WeekDay
   ): Double = js.native
 }
-

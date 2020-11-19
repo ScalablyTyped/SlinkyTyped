@@ -2,14 +2,18 @@ package typingsSlinky.std
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MSMediaKeySession extends EventTarget {
-  val error: MSMediaKeyError | Null = js.native
-  val keySystem: java.lang.String = js.native
-  val sessionId: java.lang.String = js.native
+  
   def close(): Unit = js.native
+  
+  val error: MSMediaKeyError | Null = js.native
+  
+  val keySystem: java.lang.String = js.native
+  
+  val sessionId: java.lang.String = js.native
+  
   def update(key: js.typedarray.Uint8Array): Unit = js.native
 }
-

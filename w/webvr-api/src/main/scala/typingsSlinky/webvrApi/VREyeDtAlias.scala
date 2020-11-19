@@ -2,7 +2,7 @@ package typingsSlinky.webvrApi
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // Typescript doesn't allow redefinition of type aliases even if they match,
 // thus the _dt_alias to signal this being an alias for the use of DefinitelyTyped
@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.webvrApi.webvrApiStrings.right
 */
 trait VREyeDtAlias extends js.Object
-
 object VREyeDtAlias {
+  
   @scala.inline
   def left: typingsSlinky.webvrApi.webvrApiStrings.left = "left".asInstanceOf[typingsSlinky.webvrApi.webvrApiStrings.left]
+  
   @scala.inline
   def right: typingsSlinky.webvrApi.webvrApiStrings.right = "right".asInstanceOf[typingsSlinky.webvrApi.webvrApiStrings.right]
 }
-

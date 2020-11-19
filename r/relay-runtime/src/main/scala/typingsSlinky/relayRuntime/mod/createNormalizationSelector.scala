@@ -6,11 +6,11 @@ import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Variables
 import typingsSlinky.relayRuntime.relayStoreTypesMod.NormalizationSelector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("relay-runtime", "createNormalizationSelector")
 @js.native
 object createNormalizationSelector extends js.Object {
+  
   def apply(node: NormalizationSelectableNode, dataID: DataID, variables: Variables): NormalizationSelector = js.native
 }
-

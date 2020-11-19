@@ -5,7 +5,7 @@ import typingsSlinky.alexaSdk.mod.ListItem
 import typingsSlinky.alexaSdk.mod.TextField
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Used to build a list of ListItems for ListTemplate
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @JSImport("alexa-sdk", "templateBuilders.ListItemBuilder")
 @js.native
 class ListItemBuilder () extends js.Object {
-  var items: js.Array[ListItem] = js.native
+  
   /**
     * Add an item to the list of template
     * @param image image
@@ -38,6 +38,8 @@ class ListItemBuilder () extends js.Object {
     secondaryText: TextField,
     tertiaryText: TextField
   ): ListItemBuilder = js.native
+  
   def build(): js.Array[ListItem] = js.native
+  
+  var items: js.Array[ListItem] = js.native
 }
-

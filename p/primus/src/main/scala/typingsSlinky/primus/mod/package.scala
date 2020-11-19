@@ -2,9 +2,10 @@ package typingsSlinky.primus
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type AuthorizationHandler = js.Function2[
     /* req */ typingsSlinky.node.httpMod.IncomingMessage, 
     /* done */ js.Function1[
@@ -13,6 +14,7 @@ package object mod {
     ], 
     scala.Unit
   ]
+  
   type Middleware = js.Function2[
     /* req */ typingsSlinky.node.httpMod.IncomingMessage, 
     /* res */ typingsSlinky.node.httpMod.ServerResponse, 

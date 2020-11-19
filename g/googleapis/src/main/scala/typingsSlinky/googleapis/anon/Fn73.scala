@@ -6,13 +6,13 @@ import typingsSlinky.googleapis.googleapisStrings.v1
 import typingsSlinky.googleapis.googleapisStrings.v2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Fn73 extends js.Object {
+  
   def apply(options: Options): Fusiontables = js.native
   def apply(options: typingsSlinky.googleapis.fusiontablesV2Mod.fusiontablesV2.Options): typingsSlinky.googleapis.fusiontablesV2Mod.fusiontablesV2.Fusiontables = js.native
   def apply(version: v1): Fusiontables = js.native
   def apply(version: v2): typingsSlinky.googleapis.fusiontablesV2Mod.fusiontablesV2.Fusiontables = js.native
 }
-

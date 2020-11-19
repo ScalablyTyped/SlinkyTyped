@@ -5,17 +5,17 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Meshes/index", "LatheBuilder")
 @js.native
 class LatheBuilder ()
   extends typingsSlinky.babylonjs.buildersIndexMod.LatheBuilder
-
 /* static members */
 @JSImport("babylonjs/Meshes/index", "LatheBuilder")
 @js.native
 object LatheBuilder extends js.Object {
+  
   /**
     * Creates lathe mesh.
     * The lathe is a shape with a symetry axis : a 2D model shape is rotated around this axis to design the lathe
@@ -39,4 +39,3 @@ object LatheBuilder extends js.Object {
   def CreateLathe(name: String, options: Clip): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateLathe(name: String, options: Clip, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
-

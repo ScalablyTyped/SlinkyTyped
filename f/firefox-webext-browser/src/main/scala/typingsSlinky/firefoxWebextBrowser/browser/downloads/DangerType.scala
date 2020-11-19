@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser.downloads
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * *file*:
@@ -29,23 +29,29 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.accepted
 */
 trait DangerType extends js.Object
-
 object DangerType {
+  
   @scala.inline
   def accepted: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.accepted = "accepted".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.accepted]
+  
   @scala.inline
   def content: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.content = "content".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.content]
+  
   @scala.inline
   def file: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.file = "file".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.file]
+  
   @scala.inline
   def host: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.host = "host".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.host]
+  
   @scala.inline
   def safe: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.safe = "safe".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.safe]
+  
   @scala.inline
   def uncommon: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.uncommon = "uncommon".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.uncommon]
+  
   @scala.inline
   def unwanted: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unwanted = "unwanted".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unwanted]
+  
   @scala.inline
   def url: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url = "url".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url]
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.stellarSdk.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stellar-sdk", "InvalidSep10ChallengeError")
 @js.native
@@ -10,4 +10,3 @@ class InvalidSep10ChallengeError protected ()
   extends typingsSlinky.stellarSdk.errorsMod.InvalidSep10ChallengeError {
   def this(message: String) = this()
 }
-

@@ -8,18 +8,29 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.meters_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.miles_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FeatureFilter
   extends Accessor
      with JSONSupport {
+  
+  /**
+    * Creates [query](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html) parameters that can be used to fetch features that satisfy the layer's current filters and definitions.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#createQuery)
+    *
+    *
+    */
+  def createQuery(): Query = js.native
+  
   /**
     * Specifies a search distance from a given [geometry](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#geometry) in a spatial filter. The [units property](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#units) indicates the unit of measurement. In essence, setting this property creates a buffer at the specified size around the input [geometry](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#geometry). The filter will use that buffer to display features in the layer or layer view that adhere to the to the indicated [spatial relationship](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#spatialRelationship).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#distance)
     */
   var distance: Double = js.native
+  
   /**
     * The geometry to apply to the spatial filter. The spatial relationship as specified by [spatialRelationship](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#spatialRelationship) will indicate how the geometry should be used to filter features.
     * > **Known Limitations**  [Mesh](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Mesh.html) geometry types are currently not supported.
@@ -27,12 +38,14 @@ trait FeatureFilter
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#geometry)
     */
   var geometry: Geometry_ = js.native
+  
   /**
     * An array of objectIds of the features to be filtered.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#objectIds)
     */
   var objectIds: js.Array[Double] = js.native
+  
   /**
     * For spatial filters, this parameter defines the spatial relationship to filter features in the layer view against the filter [geometry](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#geometry). The spatial relationships discover how features are spatially related to each other. For example, you may want to know if a polygon representing a county completely contains points representing settlements.  The spatial relationship is determined by whether the boundaries or interiors of a geometry intersect.
     *   * Boundary — The endpoints of all linear parts for line features, or the linear outline of a polygon. Only lines and polygons have boundaries.
@@ -48,6 +61,7 @@ trait FeatureFilter
     * @default intersects
     */
   var spatialRelationship: String = js.native
+  
   /**
     * A range of time with start and end date. Only the features that fall within this time extent will be displayed. The Date field to be used for `timeExtent` should be added to [outFields](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#outFields) list when the layer is initialized. This ensures the best user experience when switching or updating fields for time filters.
     *
@@ -56,6 +70,7 @@ trait FeatureFilter
     * @default null
     */
   var timeExtent: TimeExtent = js.native
+  
   /**
     * The unit for calculating the buffer distance when [distance](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#distance) is specified in a spatial filter. If `units` is not specified, the unit is derived from the filter [geometry's](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#geometry) spatial reference.
     *
@@ -64,19 +79,11 @@ trait FeatureFilter
     * @default null
     */
   var units: feet_ | miles_ | `nautical-miles` | `us-nautical-miles` | meters_ | kilometers_ = js.native
+  
   /**
     * A where clause for the feature filter. Any legal SQL92 where clause operating on the fields in the layer is allowed. Be sure to have the correct sequence of single and double quotes when writing the where clause in JavaScript.  For apps where users can interactively change fields used for attribute filter, we suggest you include all possible fields in the [outFields](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#outFields) of the layer. This ensures the best user experience when switching or updating fields for attribute filters.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#where)
     */
   var where: String = js.native
-  /**
-    * Creates [query](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html) parameters that can be used to fetch features that satisfy the layer's current filters and definitions.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#createQuery)
-    *
-    *
-    */
-  def createQuery(): Query = js.native
 }
-

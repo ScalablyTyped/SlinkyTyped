@@ -4,11 +4,12 @@ import typingsSlinky.three.cylinderGeometryMod.CylinderBufferGeometry
 import typingsSlinky.three.cylinderGeometryMod.CylinderGeometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/ConeGeometry", JSImport.Namespace)
 @js.native
 object coneGeometryMod extends js.Object {
+  
   @js.native
   class ConeBufferGeometry protected () extends CylinderBufferGeometry {
     def this(
@@ -34,6 +35,4 @@ object coneGeometryMod extends js.Object {
       thetaLength: js.UndefOr[Double]
     ) = this()
   }
-  
 }
-

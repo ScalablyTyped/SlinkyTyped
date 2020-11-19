@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.CodeActionParameterMapping")
 @js.native
@@ -21,17 +21,20 @@ abstract class CodeActionParameterMapping protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsJavaActionCallAction: JavaActionCallAction = js.native
+  
+  def containerAsJavaScriptActionCallAction: JavaScriptActionCallAction = js.native
+  
   @JSName("model")
   var model_FCodeActionParameterMapping: IModel = js.native
-  def containerAsJavaActionCallAction: JavaActionCallAction = js.native
-  def containerAsJavaScriptActionCallAction: JavaScriptActionCallAction = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.CodeActionParameterMapping")
 @js.native
 object CodeActionParameterMapping extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

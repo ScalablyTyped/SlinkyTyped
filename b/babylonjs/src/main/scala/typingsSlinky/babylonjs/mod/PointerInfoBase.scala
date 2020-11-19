@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.PointerEvent
 import org.scalajs.dom.raw.WheelEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "PointerInfoBase")
 @js.native
@@ -36,4 +36,3 @@ class PointerInfoBase protected ()
   event: PointerEvent
   ) = this()
 }
-

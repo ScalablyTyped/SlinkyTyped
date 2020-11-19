@@ -3,7 +3,7 @@ package typingsSlinky.expressBruteRedis.mod
 import typingsSlinky.redis.mod.ClientOpts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @summary Redis store for Express Brute
@@ -18,13 +18,12 @@ class ^ protected () extends expressBruteRedis {
     */
   def this(options: ClientOpts, args: js.Any*) = this()
 }
-
 @JSImport("express-brute-redis", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Default options for the Redis client
     */
   var defaults: ClientOpts = js.native
 }
-

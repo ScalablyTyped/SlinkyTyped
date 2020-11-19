@@ -4,11 +4,11 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.reactImageMagnify.anon.ReactImageMagnifyPropsRea
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-image-magnify", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   def apply(props: ReactImageMagnifyPropsRea): ReactElement = js.native
 }
-

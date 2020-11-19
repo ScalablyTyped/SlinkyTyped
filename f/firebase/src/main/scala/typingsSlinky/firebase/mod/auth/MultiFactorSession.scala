@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The multi-factor session object used for enrolling a second factor on a
@@ -11,4 +11,3 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.MultiFactorSession")
 @js.native
 class MultiFactorSession protected () extends js.Object
-

@@ -7,11 +7,12 @@ import typingsSlinky.reactRouter.reactRouterStrings.location_
 import typingsSlinky.reactRouter.reactRouterStrings.staticContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-router", "withRouter")
 @js.native
 object withRouter extends js.Object {
+  
   def apply[P /* <: RouteComponentProps[_, StaticContext, LocationState] */, C /* <: ReactComponentClass[P] */](component: C with ReactComponentClass[P]): (ReactComponentClass[
     (Omit[
       P, 
@@ -19,4 +20,3 @@ object withRouter extends js.Object {
     ]) with WithRouterProps[C]
   ]) with WithRouterStatics[C] = js.native
 }
-

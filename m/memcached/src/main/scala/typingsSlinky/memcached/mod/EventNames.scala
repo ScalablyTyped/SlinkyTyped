@@ -2,7 +2,7 @@ package typingsSlinky.memcached.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * <ul>
@@ -21,17 +21,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.memcached.memcachedStrings.remove
 */
 trait EventNames extends js.Object
-
 object EventNames {
+  
   @scala.inline
   def failure: typingsSlinky.memcached.memcachedStrings.failure = "failure".asInstanceOf[typingsSlinky.memcached.memcachedStrings.failure]
+  
   @scala.inline
   def issue: typingsSlinky.memcached.memcachedStrings.issue = "issue".asInstanceOf[typingsSlinky.memcached.memcachedStrings.issue]
+  
   @scala.inline
   def reconnect: typingsSlinky.memcached.memcachedStrings.reconnect = "reconnect".asInstanceOf[typingsSlinky.memcached.memcachedStrings.reconnect]
+  
   @scala.inline
   def reconnecting: typingsSlinky.memcached.memcachedStrings.reconnecting = "reconnecting".asInstanceOf[typingsSlinky.memcached.memcachedStrings.reconnecting]
+  
   @scala.inline
   def remove: typingsSlinky.memcached.memcachedStrings.remove = "remove".asInstanceOf[typingsSlinky.memcached.memcachedStrings.remove]
 }
-

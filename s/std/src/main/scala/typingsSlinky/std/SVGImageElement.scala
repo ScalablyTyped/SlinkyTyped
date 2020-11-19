@@ -2,18 +2,14 @@ package typingsSlinky.std
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Corresponds to the <image> element. */
 @js.native
 trait SVGImageElement
   extends SVGGraphicsElement
      with SVGURIReference {
-  val height: org.scalajs.dom.raw.SVGAnimatedLength = js.native
-  val preserveAspectRatio: org.scalajs.dom.raw.SVGAnimatedPreserveAspectRatio = js.native
-  val width: org.scalajs.dom.raw.SVGAnimatedLength = js.native
-  val x: org.scalajs.dom.raw.SVGAnimatedLength = js.native
-  val y: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -24,6 +20,11 @@ trait SVGImageElement
     listener: EventListenerOrEventListenerObject,
     options: AddEventListenerOptions
   ): Unit = js.native
+  
+  val height: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  
+  val preserveAspectRatio: org.scalajs.dom.raw.SVGAnimatedPreserveAspectRatio = js.native
+  
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -34,5 +35,10 @@ trait SVGImageElement
     callback: EventListenerOrEventListenerObject,
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  
+  val width: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  
+  val x: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  
+  val y: org.scalajs.dom.raw.SVGAnimatedLength = js.native
 }
-

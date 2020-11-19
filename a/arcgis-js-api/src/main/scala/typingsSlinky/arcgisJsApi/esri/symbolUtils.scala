@@ -3,10 +3,11 @@ package typingsSlinky.arcgisJsApi.esri
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait symbolUtils extends js.Object {
+  
   /**
     * Returns a symbol representing the input [Graphic](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html). This method is useful when you need to know the exact visual properties of a [Graphic's symbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html#symbol), particularly when the graphic comes from the result of a [hitTest()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#hitTest) and its symbol properties may be empty. A symbol's properties won't be populated when a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) defines the visualization of a layer rather than symbols set individually on each graphic of a layer. This is the case for [FeatureLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html), and any other layer that has a `renderer` property.
     *
@@ -23,6 +24,7 @@ trait symbolUtils extends js.Object {
     */
   def getDisplayedSymbol(graphic: Graphic): js.Promise[Symbol] = js.native
   def getDisplayedSymbol(graphic: Graphic, options: symbolUtilsGetDisplayedSymbolOptions): js.Promise[Symbol] = js.native
+  
   /**
     * Generates a preview image of a color ramp to display in a custom widget or other DOM element.
     *
@@ -38,6 +40,7 @@ trait symbolUtils extends js.Object {
     */
   def renderColorRampPreviewHTML(colors: js.Array[Color_]): HTMLElement = js.native
   def renderColorRampPreviewHTML(colors: js.Array[Color_], options: symbolUtilsRenderColorRampPreviewHTMLOptions): HTMLElement = js.native
+  
   /**
     * Generates a preview image of a given symbol that can be displayed in a custom widget or other DOM element.
     *
@@ -58,4 +61,3 @@ trait symbolUtils extends js.Object {
   def renderPreviewHTML(symbol: Symbol): js.Promise[HTMLElement] = js.native
   def renderPreviewHTML(symbol: Symbol, options: symbolUtilsRenderPreviewHTMLOptions): js.Promise[HTMLElement] = js.native
 }
-

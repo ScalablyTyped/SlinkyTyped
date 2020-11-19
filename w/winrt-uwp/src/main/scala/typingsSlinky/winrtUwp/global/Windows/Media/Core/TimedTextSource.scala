@@ -4,18 +4,18 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a source of timed text data. */
 @JSGlobal("Windows.Media.Core.TimedTextSource")
 @js.native
 abstract class TimedTextSource ()
   extends typingsSlinky.winrtUwp.Windows.Media.Core.TimedTextSource
-
 /* static members */
 @JSGlobal("Windows.Media.Core.TimedTextSource")
 @js.native
 object TimedTextSource extends js.Object {
+  
   /**
     * Creates a new instance of TimedTextSource from the provided stream.
     * @param stream The stream from which the timed text source is created.
@@ -29,6 +29,7 @@ object TimedTextSource extends js.Object {
     * @return The new timed text source.
     */
   def createFromStream(stream: IRandomAccessStream, defaultLanguage: String): typingsSlinky.winrtUwp.Windows.Media.Core.TimedTextSource = js.native
+  
   /**
     * Creates a new instance of TimedTextSource from the provided URI.
     * @param uri The URI from which the timed text source is created.
@@ -43,4 +44,3 @@ object TimedTextSource extends js.Object {
     */
   def createFromUri(uri: Uri, defaultLanguage: String): typingsSlinky.winrtUwp.Windows.Media.Core.TimedTextSource = js.native
 }
-

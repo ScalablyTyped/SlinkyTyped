@@ -2,9 +2,10 @@ package typingsSlinky.reactAddonsUpdate.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object reactAugmentingMod {
+  
   /* Rewritten from type alias, can be one of: 
     - js.Array[js.Array[scala.Double]]
     - typingsSlinky.reactAddonsUpdate.mod.reactAugmentingMod.UpdateSpecCommand

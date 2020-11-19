@@ -5,13 +5,15 @@ import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.CodeLensParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.CodeLensRegistrationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageclient", "CodeLensRequest")
 @js.native
 object CodeLensRequest extends js.Object {
+  
   /** @deprecated Use CodeLensRequest.type */
   val resultType: typingsSlinky.vscodeJsonrpc.mod.ProgressType[js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.CodeLens]] = js.native
+  
   val `type`: ProtocolRequestType[
     CodeLensParams, 
     js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.CodeLens] | Null, 
@@ -20,4 +22,3 @@ object CodeLensRequest extends js.Object {
     CodeLensRegistrationOptions
   ] = js.native
 }
-

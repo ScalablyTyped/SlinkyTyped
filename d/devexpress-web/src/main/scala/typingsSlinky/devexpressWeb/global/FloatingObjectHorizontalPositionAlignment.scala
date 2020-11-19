@@ -2,7 +2,7 @@ package typingsSlinky.devexpressWeb.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Lists values specifying how a floating object is horizontally aligned relative to the specified element.
@@ -10,15 +10,21 @@ import scala.scalajs.js.annotation._
 @JSGlobal("FloatingObjectHorizontalPositionAlignment")
 @js.native
 object FloatingObjectHorizontalPositionAlignment extends js.Object {
-  /* 2 */ val Center: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.Center with Double = js.native
-  /* 4 */ val Inside: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.Inside with Double = js.native
-  /* 1 */ val Left: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.Left with Double = js.native
-  /* 0 */ val None: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.None with Double = js.native
-  /* 5 */ val Outside: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.Outside with Double = js.native
-  /* 3 */ val Right: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.Right with Double = js.native
+  
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[
     typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment with Double
   ] = js.native
+  
+  /* 2 */ val Center: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.Center with Double = js.native
+  
+  /* 4 */ val Inside: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.Inside with Double = js.native
+  
+  /* 1 */ val Left: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.Left with Double = js.native
+  
+  /* 0 */ val None: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.None with Double = js.native
+  
+  /* 5 */ val Outside: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.Outside with Double = js.native
+  
+  /* 3 */ val Right: typingsSlinky.devexpressWeb.FloatingObjectHorizontalPositionAlignment.Right with Double = js.native
 }
-

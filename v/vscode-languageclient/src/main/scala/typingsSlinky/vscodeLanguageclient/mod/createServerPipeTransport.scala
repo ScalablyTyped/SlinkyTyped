@@ -3,11 +3,12 @@ package typingsSlinky.vscodeLanguageclient.mod
 import typingsSlinky.node.BufferEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageclient", "createServerPipeTransport")
 @js.native
 object createServerPipeTransport extends js.Object {
+  
   def apply(pipeName: String): js.Tuple2[
     typingsSlinky.vscodeJsonrpc.messageReaderMod.MessageReader, 
     typingsSlinky.vscodeJsonrpc.messageWriterMod.MessageWriter
@@ -17,4 +18,3 @@ object createServerPipeTransport extends js.Object {
     typingsSlinky.vscodeJsonrpc.messageWriterMod.MessageWriter
   ] = js.native
 }
-

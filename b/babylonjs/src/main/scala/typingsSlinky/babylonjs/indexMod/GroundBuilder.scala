@@ -6,17 +6,17 @@ import typingsSlinky.babylonjs.anon.Xmax
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "GroundBuilder")
 @js.native
 class GroundBuilder ()
   extends typingsSlinky.babylonjs.babylonjsIndexMod.GroundBuilder
-
 /* static members */
 @JSImport("babylonjs/index", "GroundBuilder")
 @js.native
 object GroundBuilder extends js.Object {
+  
   /**
     * Creates a ground mesh
     * * The parameters `width` and `height` (floats, default 1) set the width and height sizes of the ground
@@ -29,6 +29,7 @@ object GroundBuilder extends js.Object {
     * @see https://doc.babylonjs.com/how_to/set_shapes#ground
     */
   def CreateGround(name: String, options: SubdivisionsX, scene: js.Any): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a ground mesh from a height map
     * * The parameter `url` sets the URL of the height map image resource.
@@ -55,6 +56,7 @@ object GroundBuilder extends js.Object {
     options: ColorFilter,
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]
   ): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
+  
   /**
     * Creates a tiled ground mesh
     * * The parameters `xmin` and `xmax` (floats, default -1 and 1) set the ground minimum and maximum X coordinates
@@ -71,4 +73,3 @@ object GroundBuilder extends js.Object {
   def CreateTiledGround(name: String, options: Xmax): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateTiledGround(name: String, options: Xmax, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
-

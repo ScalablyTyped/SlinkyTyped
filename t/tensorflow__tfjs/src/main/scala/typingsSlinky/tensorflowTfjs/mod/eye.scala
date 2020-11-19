@@ -5,7 +5,7 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "eye")
 @js.native
@@ -21,4 +21,3 @@ object eye
         Tensor2D
       ]
     ]
-

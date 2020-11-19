@@ -5,18 +5,29 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsSelect.listItemsUtilsMod.ICreateNewItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@blueprintjs/select/lib/esm/common/itemListRenderer", JSImport.Namespace)
 @js.native
 object itemListRendererMod extends js.Object {
+  
+  def renderFilteredItems(props: IItemListRendererProps[_]): ReactElement = js.native
+  def renderFilteredItems(
+    props: IItemListRendererProps[_],
+    noResults: js.UndefOr[ReactElement],
+    initialContent: ReactElement
+  ): ReactElement = js.native
+  def renderFilteredItems(props: IItemListRendererProps[_], noResults: ReactElement): ReactElement = js.native
+  
   @js.native
   trait IItemListRendererProps[T] extends js.Object {
+    
     /**
       * The currently focused item (for keyboard interactions), or `null` to
       * indicate that no item is active.
       */
     var activeItem: T | ICreateNewItem | Null = js.native
+    
     /**
       * Array of items filtered by `itemListPredicate` or `itemPredicate`.
       * See `items` for the full list of items.
@@ -26,21 +37,25 @@ object itemListRendererMod extends js.Object {
       * optional `noResults` and `initialContent` states.
       */
     var filteredItems: js.Array[T] = js.native
+    
     /**
       * Array of all items in the list.
       * See `filteredItems` for a filtered array based on `query` and predicate props.
       */
     var items: js.Array[T] = js.native
-    /**
-      * The current query string.
-      */
-    var query: String = js.native
+    
     /**
       * A ref handler that should be attached to the parent HTML element of the menu items.
       * This is required for the active item to scroll into view automatically.
       */
     def itemsParentRef(): Unit = js.native
     def itemsParentRef(ref: HTMLElement): Unit = js.native
+    
+    /**
+      * The current query string.
+      */
+    var query: String = js.native
+    
     /**
       * Call this function to render an item.
       * This retrieves the modifiers for the item and delegates actual rendering
@@ -49,13 +64,5 @@ object itemListRendererMod extends js.Object {
     def renderItem(item: T, index: Double): ReactElement | Null = js.native
   }
   
-  def renderFilteredItems(props: IItemListRendererProps[_]): ReactElement = js.native
-  def renderFilteredItems(
-    props: IItemListRendererProps[_],
-    noResults: js.UndefOr[ReactElement],
-    initialContent: ReactElement
-  ): ReactElement = js.native
-  def renderFilteredItems(props: IItemListRendererProps[_], noResults: ReactElement): ReactElement = js.native
   type ItemListRenderer[T] = js.Function1[/* itemListProps */ IItemListRendererProps[T], ReactElement | Null]
 }
-

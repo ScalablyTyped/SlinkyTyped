@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.legacyMod
 import typingsSlinky.babylonjs.typesMod.DeepImmutable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "Ray")
 @js.native
@@ -30,14 +30,11 @@ class Ray protected ()
   length: Double
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Legacy/legacy", "Ray")
 @js.native
 object Ray extends js.Object {
-  val TmpVector3: js.Any = js.native
-  var rayl: js.Any = js.native
-  var smallnum: js.Any = js.native
+  
   /**
     * Creates a new ray from screen space and viewport
     * @param x position
@@ -58,6 +55,7 @@ object Ray extends js.Object {
     view: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     projection: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]
   ): typingsSlinky.babylonjs.rayMod.Ray = js.native
+  
   /**
     * Function will create a new transformed ray starting from origin and ending at the end point. Ray's length will be set, and ray will be
     * transformed to the given world matrix.
@@ -75,6 +73,9 @@ object Ray extends js.Object {
     end: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     world: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]
   ): typingsSlinky.babylonjs.rayMod.Ray = js.native
+  
+  val TmpVector3: js.Any = js.native
+  
   /**
     * Transforms a ray by a matrix
     * @param ray ray to transform
@@ -85,6 +86,7 @@ object Ray extends js.Object {
     ray: DeepImmutable[typingsSlinky.babylonjs.rayMod.Ray],
     matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]
   ): typingsSlinky.babylonjs.rayMod.Ray = js.native
+  
   /**
     * Transforms a ray by a matrix
     * @param ray ray to transform
@@ -96,10 +98,14 @@ object Ray extends js.Object {
     matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     result: typingsSlinky.babylonjs.rayMod.Ray
   ): Unit = js.native
+  
   /**
     * Creates a ray with origin and direction of 0,0,0
     * @returns the new ray
     */
   def Zero(): typingsSlinky.babylonjs.rayMod.Ray = js.native
+  
+  var rayl: js.Any = js.native
+  
+  var smallnum: js.Any = js.native
 }
-

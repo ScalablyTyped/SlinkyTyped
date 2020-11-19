@@ -3,16 +3,12 @@ package typingsSlinky.firebase.mod.firestore
 import typingsSlinky.firebase.anon.CompleteError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "firestore.Query")
 @js.native
 class Query[T] protected () extends js.Object {
-  /**
-    * The `Firestore` for the Firestore database (useful for performing
-    * transactions, etc.).
-    */
-  val firestore: Firestore = js.native
+  
   /**
     * Creates and returns a new Query that ends at the provided fields
     * relative to the order of the query. The order of the field values
@@ -33,6 +29,7 @@ class Query[T] protected () extends js.Object {
     * @return The created Query.
     */
   def endAt(snapshot: DocumentSnapshot[_]): Query[T] = js.native
+  
   /**
     * Creates and returns a new Query that ends before the provided fields
     * relative to the order of the query. The order of the field values
@@ -53,6 +50,13 @@ class Query[T] protected () extends js.Object {
     * @return The created Query.
     */
   def endBefore(snapshot: DocumentSnapshot[_]): Query[T] = js.native
+  
+  /**
+    * The `Firestore` for the Firestore database (useful for performing
+    * transactions, etc.).
+    */
+  val firestore: Firestore = js.native
+  
   /**
     * Executes the query and returns the results as a `QuerySnapshot`.
     *
@@ -66,6 +70,7 @@ class Query[T] protected () extends js.Object {
     */
   def get(): js.Promise[QuerySnapshot[T]] = js.native
   def get(options: GetOptions): js.Promise[QuerySnapshot[T]] = js.native
+  
   /**
     * Returns true if this `Query` is equal to the provided one.
     *
@@ -73,6 +78,7 @@ class Query[T] protected () extends js.Object {
     * @return true if this `Query` is equal to the provided one.
     */
   def isEqual(other: Query[T]): Boolean = js.native
+  
   /**
     * Creates and returns a new Query that only returns the first matching
     * documents.
@@ -81,6 +87,7 @@ class Query[T] protected () extends js.Object {
     * @return The created Query.
     */
   def limit(limit: Double): Query[T] = js.native
+  
   /**
     * Creates and returns a new Query that only returns the last matching
     * documents.
@@ -92,6 +99,7 @@ class Query[T] protected () extends js.Object {
     * @return The created Query.
     */
   def limitToLast(limit: Double): Query[T] = js.native
+  
   /**
     * Attaches a listener for QuerySnapshot events. You may either pass
     * individual `onNext` and `onError` callbacks or pass a single observer
@@ -187,6 +195,7 @@ class Query[T] protected () extends js.Object {
     onError: js.Function1[/* error */ js.Error, Unit],
     onCompletion: js.Function0[Unit]
   ): js.Function0[Unit] = js.native
+  
   /**
     * Creates and returns a new Query that's additionally sorted by the
     * specified field, optionally in descending order instead of ascending.
@@ -200,6 +209,7 @@ class Query[T] protected () extends js.Object {
   def orderBy(fieldPath: String, directionStr: OrderByDirection): Query[T] = js.native
   def orderBy(fieldPath: FieldPath): Query[T] = js.native
   def orderBy(fieldPath: FieldPath, directionStr: OrderByDirection): Query[T] = js.native
+  
   /**
     * Creates and returns a new Query that starts after the provided fields
     * relative to the order of the query. The order of the field values
@@ -220,6 +230,7 @@ class Query[T] protected () extends js.Object {
     * @return The created Query.
     */
   def startAfter(snapshot: DocumentSnapshot[_]): Query[T] = js.native
+  
   /**
     * Creates and returns a new Query that starts at the provided fields
     * relative to the order of the query. The order of the field values
@@ -240,6 +251,7 @@ class Query[T] protected () extends js.Object {
     * @return The created Query.
     */
   def startAt(snapshot: DocumentSnapshot[_]): Query[T] = js.native
+  
   /**
     * Creates and returns a new Query with the additional filter that documents
     * must contain the specified field and the value should satisfy the
@@ -252,6 +264,7 @@ class Query[T] protected () extends js.Object {
     */
   def where(fieldPath: String, opStr: WhereFilterOp, value: js.Any): Query[T] = js.native
   def where(fieldPath: FieldPath, opStr: WhereFilterOp, value: js.Any): Query[T] = js.native
+  
   /**
     * Applies a custom data converter to this Query, allowing you to use your
     * own custom model objects with Firestore. When you call get() on the
@@ -263,4 +276,3 @@ class Query[T] protected () extends js.Object {
     */
   def withConverter[U](converter: FirestoreDataConverter[U]): Query[U] = js.native
 }
-

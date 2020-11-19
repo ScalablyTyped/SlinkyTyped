@@ -2,7 +2,7 @@ package typingsSlinky.feathersjsErrors.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@feathersjs/errors", "BadRequest")
 @js.native
@@ -13,4 +13,3 @@ class BadRequest () extends FeathersError {
   def this(msg: String, data: js.Any) = this()
   def this(msg: js.Error, data: js.Any) = this()
 }
-

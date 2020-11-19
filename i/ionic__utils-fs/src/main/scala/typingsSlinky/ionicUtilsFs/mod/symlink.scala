@@ -5,11 +5,12 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/utils-fs", "symlink")
 @js.native
 object symlink extends js.Object {
+  
   def apply(srcpath: String, dstpath: String): js.Promise[Unit] = js.native
   def apply(srcpath: String, dstpath: String, callback: js.Function1[/* err */ ErrnoException, Unit]): Unit = js.native
   def apply(
@@ -71,4 +72,3 @@ object symlink extends js.Object {
     callback: js.Function1[/* err */ ErrnoException, Unit]
   ): Unit = js.native
 }
-

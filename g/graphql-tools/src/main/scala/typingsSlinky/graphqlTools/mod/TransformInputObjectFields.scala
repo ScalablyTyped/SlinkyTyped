@@ -5,7 +5,7 @@ import typingsSlinky.graphqlToolsWrap.typesMod.InputFieldTransformer
 import typingsSlinky.graphqlToolsWrap.typesMod.InputObjectNodeTransformer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-tools", "TransformInputObjectFields")
 @js.native
@@ -24,4 +24,3 @@ class TransformInputObjectFields protected ()
     inputObjectNodeTransformer: InputObjectNodeTransformer
   ) = this()
 }
-

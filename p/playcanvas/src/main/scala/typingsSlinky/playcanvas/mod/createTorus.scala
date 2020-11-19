@@ -3,11 +3,12 @@ package typingsSlinky.playcanvas.mod
 import typingsSlinky.playcanvas.anon.RingRadius
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("playcanvas", "createTorus")
 @js.native
 object createTorus extends js.Object {
+  
   /**
     * Creates a procedural torus-shaped mesh.
     *
@@ -28,4 +29,3 @@ object createTorus extends js.Object {
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice): typingsSlinky.playcanvas.pc.Mesh = js.native
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, opts: RingRadius): typingsSlinky.playcanvas.pc.Mesh = js.native
 }
-

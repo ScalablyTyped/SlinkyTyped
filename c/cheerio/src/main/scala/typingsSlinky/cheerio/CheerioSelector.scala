@@ -2,10 +2,11 @@ package typingsSlinky.cheerio
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CheerioSelector extends js.Object {
+  
   def apply(selector: String): Cheerio = js.native
   def apply(selector: String, context: String): Cheerio = js.native
   def apply(selector: String, context: String, root: String): Cheerio = js.native
@@ -17,4 +18,3 @@ trait CheerioSelector extends js.Object {
   def apply(selector: String, context: Cheerio, root: String): Cheerio = js.native
   def apply(selector: js.Any): Cheerio = js.native
 }
-

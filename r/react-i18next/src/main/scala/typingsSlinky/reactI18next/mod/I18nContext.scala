@@ -5,9 +5,8 @@ import typingsSlinky.i18next.mod.i18n
 import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-i18next", "I18nContext")
 @js.native
 object I18nContext extends TopLevel[Context[i18n]]
-

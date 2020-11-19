@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientCognitoIdentityBrowser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-cognito-identity-browser/types/UnlinkIdentityExceptionsUnion", JSImport.Namespace)
 @js.native
 object unlinkIdentityExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesInvalidParameterExceptionMod.InvalidParameterException
     - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesResourceNotFoundExceptionMod.ResourceNotFoundException
@@ -17,6 +18,4 @@ object unlinkIdentityExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesExternalServiceExceptionMod.ExternalServiceException
   */
   trait UnlinkIdentityExceptionsUnion extends js.Object
-  
 }
-

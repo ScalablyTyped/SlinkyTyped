@@ -2,39 +2,23 @@ package typingsSlinky.babylonjs.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PBRSheenConfiguration extends js.Object {
+  
   /** @hidden */
   var _internalMarkAllSubMeshesAsTexturesDirty: js.Any = js.native
+  
   var _isEnabled: js.Any = js.native
+  
   var _linkSheenWithAlbedo: js.Any = js.native
-  var _texture: js.Any = js.native
-  /**
-    * Defines the sheen color.
-    */
-  var color: Color3 = js.native
-  /**
-    * Defines the sheen intensity.
-    */
-  var intensity: Double = js.native
-  /**
-    * Defines if the material uses sheen.
-    */
-  var isEnabled: Boolean = js.native
-  /**
-    * Defines if the sheen is linked to the sheen color.
-    */
-  var linkSheenWithAlbedo: Boolean = js.native
-  /**
-    * Stores the sheen tint values in a texture.
-    * rgb is tint
-    * a is a intensity
-    */
-  var texture: Nullable[BaseTexture] = js.native
+  
   /** @hidden */
   def _markAllSubMeshesAsTexturesDirty(): Unit = js.native
+  
+  var _texture: js.Any = js.native
+  
   /**
     * Binds the material data.
     * @param uniformBuffer defines the Uniform buffer to fill in.
@@ -42,38 +26,60 @@ trait PBRSheenConfiguration extends js.Object {
     * @param isFrozen defines wether the material is frozen or not.
     */
   def bindForSubMesh(uniformBuffer: UniformBuffer, scene: Scene, isFrozen: Boolean): Unit = js.native
+  
+  /**
+    * Defines the sheen color.
+    */
+  var color: Color3 = js.native
+  
   /**
     * Makes a duplicate of the current configuration into another one.
     * @param sheenConfiguration define the config where to copy the info
     */
   def copyTo(sheenConfiguration: PBRSheenConfiguration): Unit = js.native
+  
   /**
     * Disposes the resources of the material.
     * @param forceDisposeTextures - Forces the disposal of all textures.
     */
   def dispose(): Unit = js.native
   def dispose(forceDisposeTextures: Boolean): Unit = js.native
+  
   /**
     * Returns an array of the actively used textures.
     * @param activeTextures Array of BaseTextures
     */
   def getActiveTextures(activeTextures: js.Array[BaseTexture]): Unit = js.native
+  
   /**
     * Returns the animatable textures.
     * @param animatables Array of animatable textures.
     */
   def getAnimatables(animatables: js.Array[IAnimatable]): Unit = js.native
+  
   /**
     * Get the current class name of the texture useful for serialization or dynamic coding.
     * @returns "PBRSheenConfiguration"
     */
   def getClassName(): String = js.native
+  
   /**
     * Checks to see if a texture is used in the material.
     * @param texture - Base texture to use.
     * @returns - Boolean specifying if a texture is used in the material.
     */
   def hasTexture(texture: BaseTexture): Boolean = js.native
+  
+  /**
+    * Defines the sheen intensity.
+    */
+  var intensity: Double = js.native
+  
+  /**
+    * Defines if the material uses sheen.
+    */
+  var isEnabled: Boolean = js.native
+  
   /**
     * Specifies that the submesh is ready to be used.
     * @param defines the list of "defines" to update.
@@ -81,6 +87,12 @@ trait PBRSheenConfiguration extends js.Object {
     * @returns - boolean indicating that the submesh is ready or not.
     */
   def isReadyForSubMesh(defines: IMaterialSheenDefines, scene: Scene): Boolean = js.native
+  
+  /**
+    * Defines if the sheen is linked to the sheen color.
+    */
+  var linkSheenWithAlbedo: Boolean = js.native
+  
   /**
     * Parses a anisotropy Configuration from a serialized object.
     * @param source - Serialized object.
@@ -88,16 +100,24 @@ trait PBRSheenConfiguration extends js.Object {
     * @param rootUrl Defines the rootUrl to load from
     */
   def parse(source: js.Any, scene: Scene, rootUrl: String): Unit = js.native
+  
   /**
     * Checks to see if a texture is used in the material.
     * @param defines the list of "defines" to update.
     * @param scene defines the scene the material belongs to.
     */
   def prepareDefines(defines: IMaterialSheenDefines, scene: Scene): Unit = js.native
+  
   /**
     * Serializes this BRDF configuration.
     * @returns - An object with the serialized config.
     */
   def serialize(): js.Any = js.native
+  
+  /**
+    * Stores the sheen tint values in a texture.
+    * rgb is tint
+    * a is a intensity
+    */
+  var texture: Nullable[BaseTexture] = js.native
 }
-

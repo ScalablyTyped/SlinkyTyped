@@ -2,11 +2,12 @@ package typingsSlinky.react.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react", "unstable_useTransition")
 @js.native
 object unstableUseTransition extends js.Object {
+  
   def apply(): js.Tuple2[
     typingsSlinky.react.experimentalMod.reactAugmentingMod.TransitionStartFunction, 
     Boolean
@@ -16,4 +17,3 @@ object unstableUseTransition extends js.Object {
     Boolean
   ] = js.native
 }
-

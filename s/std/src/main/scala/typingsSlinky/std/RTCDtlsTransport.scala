@@ -4,16 +4,13 @@ import typingsSlinky.std.stdStrings.error
 import typingsSlinky.std.stdStrings.statechange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RTCDtlsTransport
   extends EventTarget
      with RTCTransport {
-  val iceTransport: RTCIceTransport = js.native
-  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _]) | Null = js.native
-  var onstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  val state: RTCDtlsTransportState = js.native
+  
   @JSName("addEventListener")
   def addEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _]): Unit = js.native
   @JSName("addEventListener")
@@ -45,7 +42,15 @@ trait RTCDtlsTransport
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
+  
   def getRemoteCertificates(): js.Array[js.typedarray.ArrayBuffer] = js.native
+  
+  val iceTransport: RTCIceTransport = js.native
+  
+  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _]) | Null = js.native
+  
+  var onstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _]): Unit = js.native
   @JSName("removeEventListener")
@@ -77,5 +82,6 @@ trait RTCDtlsTransport
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  
+  val state: RTCDtlsTransportState = js.native
 }
-

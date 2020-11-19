@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Symbol
 import typingsSlinky.arcgisJsApi.esri.SymbolProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols/Symbol", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Symbol {
   def this(properties: SymbolProperties) = this()
 }
-

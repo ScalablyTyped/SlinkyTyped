@@ -2,7 +2,7 @@ package typingsSlinky.socketclusterServer.serverMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.socketclusterServer.socketclusterServerStrings.handshake
@@ -11,15 +11,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.socketclusterServer.socketclusterServerStrings.outbound
 */
 trait Middlewares extends js.Object
-
 object Middlewares {
+  
   @scala.inline
   def handshake: typingsSlinky.socketclusterServer.socketclusterServerStrings.handshake = "handshake".asInstanceOf[typingsSlinky.socketclusterServer.socketclusterServerStrings.handshake]
+  
   @scala.inline
   def inbound: typingsSlinky.socketclusterServer.socketclusterServerStrings.inbound = "inbound".asInstanceOf[typingsSlinky.socketclusterServer.socketclusterServerStrings.inbound]
+  
   @scala.inline
   def inboundRaw: typingsSlinky.socketclusterServer.socketclusterServerStrings.inboundRaw = "inboundRaw".asInstanceOf[typingsSlinky.socketclusterServer.socketclusterServerStrings.inboundRaw]
+  
   @scala.inline
   def outbound: typingsSlinky.socketclusterServer.socketclusterServerStrings.outbound = "outbound".asInstanceOf[typingsSlinky.socketclusterServer.socketclusterServerStrings.outbound]
 }
-

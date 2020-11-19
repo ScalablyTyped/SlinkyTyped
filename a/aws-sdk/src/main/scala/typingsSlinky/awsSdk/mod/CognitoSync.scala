@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.cognitosyncMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "CognitoSync")
 @js.native
@@ -14,4 +14,3 @@ class CognitoSync ()
   extends typingsSlinky.awsSdk.allMod.CognitoSync {
   def this(options: ClientConfiguration) = this()
 }
-

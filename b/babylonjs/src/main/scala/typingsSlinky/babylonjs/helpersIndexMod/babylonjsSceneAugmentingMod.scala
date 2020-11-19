@@ -10,14 +10,16 @@ import typingsSlinky.babylonjs.webXRDefaultExperienceMod.WebXRDefaultExperience
 import typingsSlinky.babylonjs.webXRDefaultExperienceMod.WebXRDefaultExperienceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
 @JSImport("babylonjs/Helpers/index", "babylonjs/scene")
 @js.native
 object babylonjsSceneAugmentingMod extends js.Object {
+  
   @js.native
   trait Scene extends js.Object {
+    
     /**
       * Creates a default camera for the scene.
       * @see http://doc.babylonjs.com/How_To/Fast_Build#create-default-camera
@@ -26,9 +28,18 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * @param attachCameraControls has default false, when true attaches camera controls to the canvas.
       */
     def createDefaultCamera(): Unit = js.native
+    def createDefaultCamera(
+      createArcRotateCamera: js.UndefOr[scala.Nothing],
+      replace: js.UndefOr[scala.Nothing],
+      attachCameraControls: Boolean
+    ): Unit = js.native
+    def createDefaultCamera(createArcRotateCamera: js.UndefOr[scala.Nothing], replace: Boolean): Unit = js.native
+    def createDefaultCamera(createArcRotateCamera: js.UndefOr[scala.Nothing], replace: Boolean, attachCameraControls: Boolean): Unit = js.native
     def createDefaultCamera(createArcRotateCamera: Boolean): Unit = js.native
+    def createDefaultCamera(createArcRotateCamera: Boolean, replace: js.UndefOr[scala.Nothing], attachCameraControls: Boolean): Unit = js.native
     def createDefaultCamera(createArcRotateCamera: Boolean, replace: Boolean): Unit = js.native
     def createDefaultCamera(createArcRotateCamera: Boolean, replace: Boolean, attachCameraControls: Boolean): Unit = js.native
+    
     /**
       * Creates a default camera and a default light.
       * @see http://doc.babylonjs.com/how_to/Fast_Build#create-default-camera-or-light
@@ -37,9 +48,18 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * @param attachCameraControls has the default false, when true attaches camera controls to the canvas.
       */
     def createDefaultCameraOrLight(): Unit = js.native
+    def createDefaultCameraOrLight(
+      createArcRotateCamera: js.UndefOr[scala.Nothing],
+      replace: js.UndefOr[scala.Nothing],
+      attachCameraControls: Boolean
+    ): Unit = js.native
+    def createDefaultCameraOrLight(createArcRotateCamera: js.UndefOr[scala.Nothing], replace: Boolean): Unit = js.native
+    def createDefaultCameraOrLight(createArcRotateCamera: js.UndefOr[scala.Nothing], replace: Boolean, attachCameraControls: Boolean): Unit = js.native
     def createDefaultCameraOrLight(createArcRotateCamera: Boolean): Unit = js.native
+    def createDefaultCameraOrLight(createArcRotateCamera: Boolean, replace: js.UndefOr[scala.Nothing], attachCameraControls: Boolean): Unit = js.native
     def createDefaultCameraOrLight(createArcRotateCamera: Boolean, replace: Boolean): Unit = js.native
     def createDefaultCameraOrLight(createArcRotateCamera: Boolean, replace: Boolean, attachCameraControls: Boolean): Unit = js.native
+    
     /**
       * Creates a new environment
       * @see http://doc.babylonjs.com/How_To/Fast_Build#create-default-environment
@@ -48,6 +68,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       */
     def createDefaultEnvironment(): Nullable[typingsSlinky.babylonjs.environmentHelperMod.EnvironmentHelper] = js.native
     def createDefaultEnvironment(options: PartialIEnvironmentHelper): Nullable[typingsSlinky.babylonjs.environmentHelperMod.EnvironmentHelper] = js.native
+    
     /**
       * Creates a default light for the scene.
       * @see http://doc.babylonjs.com/How_To/Fast_Build#create-default-light
@@ -55,6 +76,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       */
     def createDefaultLight(): Unit = js.native
     def createDefaultLight(replace: Boolean): Unit = js.native
+    
     /**
       * Creates a new sky box
       * @see http://doc.babylonjs.com/how_to/Fast_Build#create-default-skybox
@@ -66,9 +88,145 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * @returns a new mesh holding the sky box
       */
     def createDefaultSkybox(): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: js.UndefOr[scala.Nothing],
+      pbr: js.UndefOr[scala.Nothing],
+      scale: js.UndefOr[scala.Nothing],
+      blur: js.UndefOr[scala.Nothing],
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: js.UndefOr[scala.Nothing],
+      pbr: js.UndefOr[scala.Nothing],
+      scale: js.UndefOr[scala.Nothing],
+      blur: Double
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: js.UndefOr[scala.Nothing],
+      pbr: js.UndefOr[scala.Nothing],
+      scale: js.UndefOr[scala.Nothing],
+      blur: Double,
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(environmentTexture: js.UndefOr[scala.Nothing], pbr: js.UndefOr[scala.Nothing], scale: Double): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: js.UndefOr[scala.Nothing],
+      pbr: js.UndefOr[scala.Nothing],
+      scale: Double,
+      blur: js.UndefOr[scala.Nothing],
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: js.UndefOr[scala.Nothing],
+      pbr: js.UndefOr[scala.Nothing],
+      scale: Double,
+      blur: Double
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: js.UndefOr[scala.Nothing],
+      pbr: js.UndefOr[scala.Nothing],
+      scale: Double,
+      blur: Double,
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(environmentTexture: js.UndefOr[scala.Nothing], pbr: Boolean): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: js.UndefOr[scala.Nothing],
+      pbr: Boolean,
+      scale: js.UndefOr[scala.Nothing],
+      blur: js.UndefOr[scala.Nothing],
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: js.UndefOr[scala.Nothing],
+      pbr: Boolean,
+      scale: js.UndefOr[scala.Nothing],
+      blur: Double
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: js.UndefOr[scala.Nothing],
+      pbr: Boolean,
+      scale: js.UndefOr[scala.Nothing],
+      blur: Double,
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(environmentTexture: js.UndefOr[scala.Nothing], pbr: Boolean, scale: Double): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: js.UndefOr[scala.Nothing],
+      pbr: Boolean,
+      scale: Double,
+      blur: js.UndefOr[scala.Nothing],
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(environmentTexture: js.UndefOr[scala.Nothing], pbr: Boolean, scale: Double, blur: Double): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: js.UndefOr[scala.Nothing],
+      pbr: Boolean,
+      scale: Double,
+      blur: Double,
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
     def createDefaultSkybox(environmentTexture: BaseTexture): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: BaseTexture,
+      pbr: js.UndefOr[scala.Nothing],
+      scale: js.UndefOr[scala.Nothing],
+      blur: js.UndefOr[scala.Nothing],
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: BaseTexture,
+      pbr: js.UndefOr[scala.Nothing],
+      scale: js.UndefOr[scala.Nothing],
+      blur: Double
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: BaseTexture,
+      pbr: js.UndefOr[scala.Nothing],
+      scale: js.UndefOr[scala.Nothing],
+      blur: Double,
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(environmentTexture: BaseTexture, pbr: js.UndefOr[scala.Nothing], scale: Double): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: BaseTexture,
+      pbr: js.UndefOr[scala.Nothing],
+      scale: Double,
+      blur: js.UndefOr[scala.Nothing],
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(environmentTexture: BaseTexture, pbr: js.UndefOr[scala.Nothing], scale: Double, blur: Double): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: BaseTexture,
+      pbr: js.UndefOr[scala.Nothing],
+      scale: Double,
+      blur: Double,
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
     def createDefaultSkybox(environmentTexture: BaseTexture, pbr: Boolean): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: BaseTexture,
+      pbr: Boolean,
+      scale: js.UndefOr[scala.Nothing],
+      blur: js.UndefOr[scala.Nothing],
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
+    def createDefaultSkybox(environmentTexture: BaseTexture, pbr: Boolean, scale: js.UndefOr[scala.Nothing], blur: Double): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: BaseTexture,
+      pbr: Boolean,
+      scale: js.UndefOr[scala.Nothing],
+      blur: Double,
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
     def createDefaultSkybox(environmentTexture: BaseTexture, pbr: Boolean, scale: Double): Nullable[Mesh] = js.native
+    def createDefaultSkybox(
+      environmentTexture: BaseTexture,
+      pbr: Boolean,
+      scale: Double,
+      blur: js.UndefOr[scala.Nothing],
+      setGlobalEnvTexture: Boolean
+    ): Nullable[Mesh] = js.native
     def createDefaultSkybox(environmentTexture: BaseTexture, pbr: Boolean, scale: Double, blur: Double): Nullable[Mesh] = js.native
     def createDefaultSkybox(
       environmentTexture: BaseTexture,
@@ -77,6 +235,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       blur: Double,
       setGlobalEnvTexture: Boolean
     ): Nullable[Mesh] = js.native
+    
     /**
       * Creates a new VREXperienceHelper
       * @see http://doc.babylonjs.com/how_to/webvr_helper
@@ -85,6 +244,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       */
     def createDefaultVRExperience(): VRExperienceHelper = js.native
     def createDefaultVRExperience(webVROptions: VRExperienceHelperOptions): VRExperienceHelper = js.native
+    
     /**
       * Creates a new WebXRDefaultExperience
       * @see http://doc.babylonjs.com/how_to/webxr
@@ -93,6 +253,4 @@ object babylonjsSceneAugmentingMod extends js.Object {
       */
     def createDefaultXRExperienceAsync(options: WebXRDefaultExperienceOptions): js.Promise[WebXRDefaultExperience] = js.native
   }
-  
 }
-

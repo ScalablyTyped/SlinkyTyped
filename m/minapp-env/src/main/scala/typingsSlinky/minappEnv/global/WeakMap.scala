@@ -5,7 +5,7 @@ import typingsSlinky.minappEnv.Iterable
 import typingsSlinky.minappEnv.WeakMapConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("WeakMap")
 @js.native
@@ -14,8 +14,6 @@ class WeakMap[K /* <: js.Object */, V] ()
   def this(entries: typingsSlinky.minappEnv.Array[js.Tuple2[K, V]]) = this()
   def this(iterable: Iterable[js.Tuple2[K, V]]) = this()
 }
-
 @JSGlobal("WeakMap")
 @js.native
 object WeakMap extends TopLevel[WeakMapConstructor]
-

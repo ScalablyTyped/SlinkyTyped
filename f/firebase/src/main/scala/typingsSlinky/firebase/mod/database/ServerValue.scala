@@ -2,11 +2,12 @@ package typingsSlinky.firebase.mod.database
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "database.ServerValue")
 @js.native
 object ServerValue extends js.Object {
+  
   /**
     * A placeholder value for auto-populating the current timestamp (time
     * since the Unix epoch, in milliseconds) as determined by the Firebase
@@ -21,6 +22,7 @@ object ServerValue extends js.Object {
     * ```
     */
   var TIMESTAMP: js.Object = js.native
+  
   /**
     * Returns a placeholder value that can be used to atomically increment the
     * current database value by the provided delta.
@@ -30,4 +32,3 @@ object ServerValue extends js.Object {
     */
   def increment(delta: Double): js.Object = js.native
 }
-

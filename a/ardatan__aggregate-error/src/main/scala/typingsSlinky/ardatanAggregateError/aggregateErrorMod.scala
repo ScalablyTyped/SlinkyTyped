@@ -6,11 +6,12 @@ import typingsSlinky.std.Iterable
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ardatan/aggregate-error/AggregateError", JSImport.Namespace)
 @js.native
 object aggregateErrorMod extends js.Object {
+  
   @js.native
   class AggregateError protected ()
     extends Error
@@ -49,12 +50,13 @@ object aggregateErrorMod extends js.Object {
       ```
       */
     def this(errors: js.Array[js.Error | StringDictionary[_] | String]) = this()
+    
     val _errors: js.Any = js.native
+    
     @JSName(js.Symbol.iterator)
     var iterator_AggregateError: js.Function0[IterableIterator[js.Error]] = js.native
+    
     @JSName("name")
     val name_AggregateError: typingsSlinky.ardatanAggregateError.ardatanAggregateErrorStrings.AggregateError = js.native
   }
-  
 }
-

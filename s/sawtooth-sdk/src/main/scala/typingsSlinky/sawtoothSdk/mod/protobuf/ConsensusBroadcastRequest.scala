@@ -7,7 +7,7 @@ import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.IConsensusBroadcastRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk", "protobuf.ConsensusBroadcastRequest")
 @js.native
@@ -19,11 +19,11 @@ class ConsensusBroadcastRequest ()
   extends typingsSlinky.sawtoothSdk.protobufMod.ConsensusBroadcastRequest {
   def this(properties: IConsensusBroadcastRequest) = this()
 }
-
 /* static members */
 @JSImport("sawtooth-sdk", "protobuf.ConsensusBroadcastRequest")
 @js.native
 object ConsensusBroadcastRequest extends js.Object {
+  
   /**
     * Creates a new ConsensusBroadcastRequest instance using the specified properties.
     * @param [properties] Properties to set
@@ -31,6 +31,7 @@ object ConsensusBroadcastRequest extends js.Object {
     */
   def create(): typingsSlinky.sawtoothSdk.protobufMod.ConsensusBroadcastRequest = js.native
   def create(properties: IConsensusBroadcastRequest): typingsSlinky.sawtoothSdk.protobufMod.ConsensusBroadcastRequest = js.native
+  
   /**
     * Decodes a ConsensusBroadcastRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -43,6 +44,7 @@ object ConsensusBroadcastRequest extends js.Object {
   def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusBroadcastRequest = js.native
   def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusBroadcastRequest = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusBroadcastRequest = js.native
+  
   /**
     * Decodes a ConsensusBroadcastRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,6 +54,7 @@ object ConsensusBroadcastRequest extends js.Object {
     */
   def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ConsensusBroadcastRequest = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusBroadcastRequest = js.native
+  
   /**
     * Encodes the specified ConsensusBroadcastRequest message. Does not implicitly {@link ConsensusBroadcastRequest.verify|verify} messages.
     * @param message ConsensusBroadcastRequest message or plain object to encode
@@ -60,6 +63,7 @@ object ConsensusBroadcastRequest extends js.Object {
     */
   def encode(message: IConsensusBroadcastRequest): Writer = js.native
   def encode(message: IConsensusBroadcastRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ConsensusBroadcastRequest message, length delimited. Does not implicitly {@link ConsensusBroadcastRequest.verify|verify} messages.
     * @param message ConsensusBroadcastRequest message or plain object to encode
@@ -68,12 +72,14 @@ object ConsensusBroadcastRequest extends js.Object {
     */
   def encodeDelimited(message: IConsensusBroadcastRequest): Writer = js.native
   def encodeDelimited(message: IConsensusBroadcastRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ConsensusBroadcastRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ConsensusBroadcastRequest
     */
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.ConsensusBroadcastRequest = js.native
+  
   /**
     * Creates a plain object from a ConsensusBroadcastRequest message. Also converts values to other types if specified.
     * @param message ConsensusBroadcastRequest
@@ -85,6 +91,7 @@ object ConsensusBroadcastRequest extends js.Object {
     message: typingsSlinky.sawtoothSdk.protobufMod.ConsensusBroadcastRequest,
     options: IConversionOptions
   ): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ConsensusBroadcastRequest message.
     * @param message Plain object to verify
@@ -92,4 +99,3 @@ object ConsensusBroadcastRequest extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.xRIndexMod
 import typingsSlinky.babylonjs.webXRInputMod.IWebXRInputOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/XR/index", "WebXRInput")
 @js.native
@@ -37,4 +37,3 @@ class WebXRInput protected ()
     options: IWebXRInputOptions
   ) = this()
 }
-

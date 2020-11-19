@@ -2,11 +2,12 @@ package typingsSlinky.yadda.spanishMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Library
   extends typingsSlinky.yadda.englishMod.Library {
+  
   def cuando(
     step: String,
     fn: js.Function1[
@@ -213,6 +214,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def dada(
     step: String,
     fn: js.Function1[
@@ -419,6 +421,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def dadas(
     step: String,
     fn: js.Function1[
@@ -625,6 +628,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def dado(
     step: String,
     fn: js.Function1[
@@ -831,6 +835,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def dados(
     step: String,
     fn: js.Function1[
@@ -1037,6 +1042,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def entonces(
     step: String,
     fn: js.Function1[
@@ -1243,6 +1249,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def sea(
     step: String,
     fn: js.Function1[
@@ -1449,6 +1456,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def sean(
     step: String,
     fn: js.Function1[
@@ -1655,6 +1663,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def si(
     step: String,
     fn: js.Function1[
@@ -1862,4 +1871,3 @@ trait Library
     ]
   ): this.type = js.native
 }
-

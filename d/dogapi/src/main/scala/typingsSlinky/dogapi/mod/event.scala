@@ -4,10 +4,11 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dogapi.anon.Aggregationkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait event extends js.Object {
+  
   def create(
     title: String,
     text: String,
@@ -20,8 +21,6 @@ trait event extends js.Object {
     callback: js.Function2[/* err */ js.Error | Null, /* res */ EventCreateResponse, Unit]
   ): Unit = js.native
 }
-
 @JSImport("dogapi", "event")
 @js.native
 object event extends TopLevel[event]
-

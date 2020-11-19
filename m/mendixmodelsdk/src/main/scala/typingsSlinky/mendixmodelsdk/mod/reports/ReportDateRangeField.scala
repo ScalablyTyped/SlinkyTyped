@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/date-range-field relevant section in reference guide}
@@ -25,24 +25,26 @@ class ReportDateRangeField protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "reports.ReportDateRangeField")
 @js.native
 object ReportDateRangeField extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeField instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeField = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeField instance in the SDK and on the server.
     * The new ReportDateRangeField will be automatically stored in the 'fields' property
     * of the parent ReportDateRangeSelector element passed as argument.
     */
   def createIn(container: typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeField = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -7,7 +7,7 @@ import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/PostProcesses/index", "FilterPostProcess")
 @js.native
@@ -59,7 +59,25 @@ class FilterPostProcess protected ()
   kernelMatrix: Matrix,
     options: Double,
     camera: Nullable[Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: Engine
+  ) = this()
+  def this(
+    name: String,
+    /** The matrix to be applied to the image */
+  kernelMatrix: Matrix,
+    options: Double,
+    camera: Nullable[Camera],
     samplingMode: Double,
+    engine: Engine
+  ) = this()
+  def this(
+    name: String,
+    /** The matrix to be applied to the image */
+  kernelMatrix: Matrix,
+    options: PostProcessOptions,
+    camera: Nullable[Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
     engine: Engine
   ) = this()
   def this(
@@ -77,8 +95,68 @@ class FilterPostProcess protected ()
   kernelMatrix: Matrix,
     options: Double,
     camera: Nullable[Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    /** The matrix to be applied to the image */
+  kernelMatrix: Matrix,
+    options: Double,
+    camera: Nullable[Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: Engine,
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    /** The matrix to be applied to the image */
+  kernelMatrix: Matrix,
+    options: Double,
+    camera: Nullable[Camera],
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    /** The matrix to be applied to the image */
+  kernelMatrix: Matrix,
+    options: Double,
+    camera: Nullable[Camera],
     samplingMode: Double,
     engine: Engine,
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    /** The matrix to be applied to the image */
+  kernelMatrix: Matrix,
+    options: PostProcessOptions,
+    camera: Nullable[Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    /** The matrix to be applied to the image */
+  kernelMatrix: Matrix,
+    options: PostProcessOptions,
+    camera: Nullable[Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: Engine,
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    /** The matrix to be applied to the image */
+  kernelMatrix: Matrix,
+    options: PostProcessOptions,
+    camera: Nullable[Camera],
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
     reusable: Boolean
   ) = this()
   def this(
@@ -92,4 +170,3 @@ class FilterPostProcess protected ()
     reusable: Boolean
   ) = this()
 }
-

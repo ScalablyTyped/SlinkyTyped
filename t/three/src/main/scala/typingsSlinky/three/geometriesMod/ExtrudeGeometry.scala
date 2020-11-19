@@ -5,7 +5,7 @@ import typingsSlinky.three.extrudeGeometryMod.UVGenerator
 import typingsSlinky.three.shapeMod.Shape
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/Geometries", "ExtrudeGeometry")
 @js.native
@@ -16,11 +16,10 @@ class ExtrudeGeometry protected ()
   def this(shapes: js.Array[Shape], options: ExtrudeGeometryOptions) = this()
   def this(shapes: Shape, options: ExtrudeGeometryOptions) = this()
 }
-
 /* static members */
 @JSImport("three/src/geometries/Geometries", "ExtrudeGeometry")
 @js.native
 object ExtrudeGeometry extends js.Object {
+  
   var WorldUVGenerator: UVGenerator = js.native
 }
-

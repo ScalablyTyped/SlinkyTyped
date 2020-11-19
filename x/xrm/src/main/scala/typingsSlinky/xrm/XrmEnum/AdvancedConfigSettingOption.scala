@@ -2,7 +2,7 @@ package typingsSlinky.xrm.XrmEnum
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Constant Enum: Settings for {@link GlobalContext.getAdvancedConfigSetting globalContext.getAdvancedConfigSetting(setting)}
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.MaxIncidentMergeNumber
 */
 trait AdvancedConfigSettingOption extends js.Object
-
 object AdvancedConfigSettingOption {
+  
   @scala.inline
   def MaxChildIncidentNumber: typingsSlinky.xrm.xrmStrings.MaxChildIncidentNumber = "MaxChildIncidentNumber".asInstanceOf[typingsSlinky.xrm.xrmStrings.MaxChildIncidentNumber]
+  
   @scala.inline
   def MaxIncidentMergeNumber: typingsSlinky.xrm.xrmStrings.MaxIncidentMergeNumber = "MaxIncidentMergeNumber".asInstanceOf[typingsSlinky.xrm.xrmStrings.MaxIncidentMergeNumber]
 }
-

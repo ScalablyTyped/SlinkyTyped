@@ -2,11 +2,10 @@ package typingsSlinky.officeJsPreview.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait ValueFilterCondition extends js.Object
-
 /**
   *
   * Enum representing all accepted conditions by which a value filter can be applied.
@@ -19,6 +18,7 @@ sealed trait ValueFilterCondition extends js.Object
 @JSGlobal("Excel.ValueFilterCondition")
 @js.native
 object ValueFilterCondition extends js.Object {
+  
   /**
     * Between `lowerBound` and `upperBound` criteria.
     
@@ -99,6 +99,4 @@ object ValueFilterCondition extends js.Object {
     */
   @js.native
   sealed trait unknown extends ValueFilterCondition
-  
 }
-

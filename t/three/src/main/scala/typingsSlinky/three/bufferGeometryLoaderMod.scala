@@ -8,14 +8,16 @@ import typingsSlinky.three.loaderMod.Loader
 import typingsSlinky.three.loadingManagerMod.LoadingManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/loaders/BufferGeometryLoader", JSImport.Namespace)
 @js.native
 object bufferGeometryLoaderMod extends js.Object {
+  
   @js.native
   class BufferGeometryLoader () extends Loader {
     def this(manager: LoadingManager) = this()
+    
     def load(
       url: String,
       onLoad: js.Function1[/* bufferGeometry */ InstancedBufferGeometry | BufferGeometry, Unit]
@@ -37,8 +39,7 @@ object bufferGeometryLoaderMod extends js.Object {
       onProgress: js.Function1[/* request */ ProgressEvent, Unit],
       onError: js.Function1[/* event */ ErrorEvent, Unit]
     ): Unit = js.native
+    
     def parse(json: js.Any): InstancedBufferGeometry | BufferGeometry = js.native
   }
-  
 }
-

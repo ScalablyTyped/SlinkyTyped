@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-glacier-node/commands/SetVaultNotificationsCommand", JSImport.Namespace)
 @js.native
 object setVaultNotificationsCommandMod extends js.Object {
+  
   @js.native
   class SetVaultNotificationsCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object setVaultNotificationsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: SetVaultNotificationsInput) = this()
+    
     val middlewareStack: MiddlewareStack[SetVaultNotificationsInput, SetVaultNotificationsOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[SetVaultNotificationsInput, SetVaultNotificationsOutput] = js.native
   }
-  
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.vscodeLanguageclient.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageclient", "SelectionRange")
 @js.native
 object SelectionRange extends js.Object {
+  
   /**
     * Creates a new SelectionRange
     * @param range the range.
@@ -17,6 +18,6 @@ object SelectionRange extends js.Object {
     range: typingsSlinky.vscodeLanguageserverTypes.mod.Range,
     parent: typingsSlinky.vscodeLanguageserverTypes.mod.SelectionRange
   ): typingsSlinky.vscodeLanguageserverTypes.mod.SelectionRange = js.native
+  
   def is(value: js.Any): /* is vscode-languageserver-types.vscode-languageserver-types.SelectionRange */ Boolean = js.native
 }
-

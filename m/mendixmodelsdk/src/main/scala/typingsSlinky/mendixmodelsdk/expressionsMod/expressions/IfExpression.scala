@@ -36,7 +36,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.WidgetValidation
 import typingsSlinky.mendixmodelsdk.restMod.rest.ConsumedODataService
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -54,37 +54,40 @@ class IfExpression protected () extends Expression {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FIfExpression: IModel = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
   def condition: Expression = js.native
   def condition_=(newValue: Expression): Unit = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
   def ifFalse: Expression = js.native
   def ifFalse_=(newValue: Expression): Unit = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
   def ifTrue: Expression = js.native
   def ifTrue_=(newValue: Expression): Unit = js.native
+  
+  @JSName("model")
+  var model_FIfExpression: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/expressions", "expressions.IfExpression")
 @js.native
 object IfExpression extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'argumentModel' property
@@ -94,6 +97,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInAppServiceCallParameterMappingUnderArgumentModel(container: AppServiceCallParameterMapping): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'argumentModel' property
@@ -103,6 +107,7 @@ object IfExpression extends js.Object {
     *  7.21.0 and higher
     */
   def createInBasicCodeActionParameterValueUnderArgumentModel(container: BasicCodeActionParameterValue): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'argumentModel' property
@@ -112,6 +117,7 @@ object IfExpression extends js.Object {
     *  7.9.0 to 7.20.0
     */
   def createInBasicJavaActionParameterValueUnderArgumentModel(container: BasicJavaActionParameterValue): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'left' property
@@ -121,6 +127,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryExpressionUnderLeft(container: BinaryExpression): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'right' property
@@ -130,6 +137,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryExpressionUnderRight(container: BinaryExpression): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'expressionModel' property
@@ -139,6 +147,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryRequestHandlingUnderExpressionModel(container: BinaryRequestHandling): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'valueModel' property
@@ -148,6 +157,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInChangeListActionUnderValueModel(container: ChangeListAction): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'valueModel' property
@@ -157,6 +167,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInChangeVariableActionUnderValueModel(container: ChangeVariableAction): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'expressionModel' property
@@ -166,6 +177,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInConditionalSettingsUnderExpressionModel(container: ConditionalSettings): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'timeoutModel' property
@@ -175,6 +187,7 @@ object IfExpression extends js.Object {
     *  8.5.0 and higher
     */
   def createInConsumedODataServiceUnderTimeoutModel(container: ConsumedODataService): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'initialValueModel' property
@@ -184,6 +197,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInCreateVariableActionUnderInitialValueModel(container: CreateVariableAction): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'limitExpressionModel' property
@@ -193,6 +207,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInCustomRangeUnderLimitExpressionModel(container: CustomRange): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'offsetExpressionModel' property
@@ -202,6 +217,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInCustomRangeUnderOffsetExpressionModel(container: CustomRange): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'argumentModel' property
@@ -211,6 +227,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInDocumentTemplateParameterMappingUnderArgumentModel(container: DocumentTemplateParameterMapping): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'returnValueModel' property
@@ -220,6 +237,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInEndEventUnderReturnValueModel(container: EndEvent): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'expressionModel' property
@@ -229,6 +247,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInExpressionSplitConditionUnderExpressionModel(container: ExpressionSplitCondition): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'valueModel' property
@@ -238,6 +257,7 @@ object IfExpression extends js.Object {
     *  8.0.0 and higher
     */
   def createInFormDataPartUnderValueModel(container: FormDataPart): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'arguments' property
@@ -247,6 +267,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInFunctionCallExpressionUnderArguments(container: FunctionCallExpression): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'marginBottomInInchModel' property
@@ -256,6 +277,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginBottomInInchModel(container: GenerateDocumentAction): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'marginLeftInInchModel' property
@@ -265,6 +287,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginLeftInInchModel(container: GenerateDocumentAction): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'marginRightInInchModel' property
@@ -274,6 +297,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginRightInInchModel(container: GenerateDocumentAction): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'marginTopInInchModel' property
@@ -283,6 +307,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginTopInInchModel(container: GenerateDocumentAction): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'customLocationModel' property
@@ -292,6 +317,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderCustomLocationModel(container: HttpConfiguration): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'password' property
@@ -301,6 +327,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderPassword(container: HttpConfiguration): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'username' property
@@ -310,6 +337,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderUsername(container: HttpConfiguration): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'valueModel' property
@@ -319,6 +347,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpHeaderEntryUnderValueModel(container: HttpHeaderEntry): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'condition' property
@@ -328,6 +357,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderCondition(container: IfExpression): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'ifFalse' property
@@ -337,6 +367,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderIfFalse(container: IfExpression): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'ifTrue' property
@@ -346,6 +377,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderIfTrue(container: IfExpression): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'expressionModel' property
@@ -355,6 +387,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInInspectAttributeUnderExpressionModel(container: InspectAttribute): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'nodeModel' property
@@ -364,6 +397,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInLogMessageActionUnderNodeModel(container: LogMessageAction): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'valueModel' property
@@ -373,6 +407,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInMemberChangeUnderValueModel(container: MemberChange): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'argumentModel' property
@@ -382,6 +417,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInMicroflowCallParameterMappingUnderArgumentModel(container: MicroflowCallParameterMapping): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'argumentModel' property
@@ -391,6 +427,7 @@ object IfExpression extends js.Object {
     *  8.0.0 and higher
     */
   def createInNanoflowCallParameterMappingUnderArgumentModel(container: NanoflowCallParameterMapping): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'expression' property
@@ -400,6 +437,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInParenthesisExpressionUnderExpression(container: ParenthesisExpression): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'hostExpressionModel' property
@@ -409,6 +447,7 @@ object IfExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderHostExpressionModel(container: ProxyConfiguration): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'passwordExpressionModel' property
@@ -418,6 +457,7 @@ object IfExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderPasswordExpressionModel(container: ProxyConfiguration): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'portExpressionModel' property
@@ -427,6 +467,7 @@ object IfExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderPortExpressionModel(container: ProxyConfiguration): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'useConfigurationExpressionModel' property
@@ -436,6 +477,7 @@ object IfExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderUseConfigurationExpressionModel(container: ProxyConfiguration): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'usernameExpressionModel' property
@@ -445,6 +487,7 @@ object IfExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderUsernameExpressionModel(container: ProxyConfiguration): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'timeOutModel' property
@@ -454,6 +497,7 @@ object IfExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInRestCallActionUnderTimeOutModel(container: RestCallAction): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'argumentModel' property
@@ -463,6 +507,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInRuleCallParameterMappingUnderArgumentModel(container: RuleCallParameterMapping): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'expressionModel' property
@@ -472,6 +517,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInTemplateArgumentUnderExpressionModel(container: TemplateArgument): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'expression' property
@@ -481,6 +527,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInUnaryExpressionUnderExpression(container: UnaryExpression): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'timeOutModel' property
@@ -490,6 +537,7 @@ object IfExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInWebServiceCallActionUnderTimeOutModel(container: WebServiceCallAction): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'argumentModel' property
@@ -499,6 +547,7 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInWebServiceOperationParameterMappingUnderArgumentModel(container: WebServiceOperationParameterMapping): IfExpression = js.native
+  
   /**
     * Creates and returns a new IfExpression instance in the SDK and on the server.
     * The new IfExpression will be automatically stored in the 'expressionModel' property
@@ -508,5 +557,8 @@ object IfExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInWidgetValidationUnderExpressionModel(container: WidgetValidation): IfExpression = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

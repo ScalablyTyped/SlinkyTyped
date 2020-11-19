@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This is the root card component that should be used along side all the other
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/card/types/Card", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[CardProps with RefAttributes[HTMLDivElement]]]
-

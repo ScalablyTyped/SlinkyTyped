@@ -3,7 +3,7 @@ package typingsSlinky.knuddelsUserappsApi.mod.global
 import typingsSlinky.knuddelsUserappsApi.mod.KnuddelsEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
 	 * @see https://developer.knuddels.de/docs/classes/AppInstance.html
@@ -11,38 +11,45 @@ import scala.scalajs.js.annotation._
 @JSGlobal("AppInstance")
 @js.native
 class AppInstance () extends js.Object {
+  
   /**
   		 * @see https://developer.knuddels.de/docs/classes/AppInstance.html#method_getAllInstances
   		 */
   def getAllInstances(): js.Array[AppInstance] = js.native
   def getAllInstances(includeSelf: Boolean): js.Array[AppInstance] = js.native
+  
   /**
   		 * @see https://developer.knuddels.de/docs/classes/AppInstance.html#method_getAppInfo
   		 */
   def getAppInfo(): AppInfo = js.native
+  
   /**
   		 * @see https://developer.knuddels.de/docs/classes/AppInstance.html#method_getChannelName
   		 */
   def getChannelName(): java.lang.String = js.native
+  
   /**
   		 * @see https://developer.knuddels.de/docs/classes/AppInstance.html#method_getRegisteredChatCommandNames
   		 */
   def getRegisteredChatCommandNames(): js.Array[java.lang.String] | Null = js.native
+  
   /**
   		 * @see https://developer.knuddels.de/docs/classes/AppInstance.html#method_getRootInstance
   		 */
   def getRootInstance(): RootAppInstance = js.native
+  
   /**
   		 * @see https://developer.knuddels.de/docs/classes/AppInstance.html#method_getStartDate
   		 */
   def getStartDate(): js.Date = js.native
+  
   /**
   		 * @see https://developer.knuddels.de/docs/classes/AppInstance.html#method_isRootInstance
   		 */
   def isRootInstance(): Boolean = js.native
+  
   /**
   		 * @see https://developer.knuddels.de/docs/classes/AppInstance.html#method_sendAppEvent
   		 */
   def sendAppEvent(`type`: java.lang.String, data: KnuddelsEvent): Unit = js.native
 }
-

@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Fires when the user clicks the right mouse button in the client area, opening the context menu.
@@ -16,4 +16,3 @@ object oncontextmenu
   extends TopLevel[
       (js.ThisFunction1[/* this */ Window, /* ev */ org.scalajs.dom.raw.MouseEvent, js.Any]) | Null
     ]
-

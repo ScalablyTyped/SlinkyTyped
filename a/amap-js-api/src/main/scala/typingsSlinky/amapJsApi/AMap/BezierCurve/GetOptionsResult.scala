@@ -7,13 +7,13 @@ import typingsSlinky.amapJsApi.AMap.StrokeLineJoin
 import typingsSlinky.amapJsApi.AMap.StrokeStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GetOptionsResult[ExtraData]
   extends typingsSlinky.amapJsApi.AMap.Polyline.GetOptionsResult[ExtraData]
-
 object GetOptionsResult {
+  
   @scala.inline
   def apply[ExtraData](
     borderWeight: Double,
@@ -41,4 +41,3 @@ object GetOptionsResult {
     __obj.asInstanceOf[GetOptionsResult[ExtraData]]
   }
 }
-

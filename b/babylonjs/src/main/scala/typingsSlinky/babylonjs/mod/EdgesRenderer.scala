@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "EdgesRenderer")
 @js.native
@@ -20,8 +20,31 @@ class EdgesRenderer protected ()
   def this(source: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh, epsilon: Double) = this()
   def this(
     source: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
+    epsilon: js.UndefOr[scala.Nothing],
+    checkVerticesInsteadOfIndices: Boolean
+  ) = this()
+  def this(
+    source: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
     epsilon: Double,
     checkVerticesInsteadOfIndices: Boolean
+  ) = this()
+  def this(
+    source: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
+    epsilon: js.UndefOr[scala.Nothing],
+    checkVerticesInsteadOfIndices: js.UndefOr[scala.Nothing],
+    generateEdgesLines: Boolean
+  ) = this()
+  def this(
+    source: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
+    epsilon: js.UndefOr[scala.Nothing],
+    checkVerticesInsteadOfIndices: Boolean,
+    generateEdgesLines: Boolean
+  ) = this()
+  def this(
+    source: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
+    epsilon: Double,
+    checkVerticesInsteadOfIndices: js.UndefOr[scala.Nothing],
+    generateEdgesLines: Boolean
   ) = this()
   def this(
     source: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
@@ -30,4 +53,3 @@ class EdgesRenderer protected ()
     generateEdgesLines: Boolean
   ) = this()
 }
-

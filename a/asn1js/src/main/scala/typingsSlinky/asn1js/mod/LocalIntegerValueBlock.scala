@@ -2,7 +2,7 @@ package typingsSlinky.asn1js.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.asn1js.mod.ILocalHexBlock because var conflicts: isHexOnly, valueHex. Inlined 
@@ -10,9 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class LocalIntegerValueBlock () extends LocalValueBlock {
   def this(params: LocalIntegerValueBlockParams) = this()
-  var isHexOnly: scala.Boolean = js.native
-  var valueDec: Double = js.native
-  var valueHex: js.typedarray.ArrayBuffer = js.native
+  
   /**
     * Base function for converting block from DER encoded array of bytes
     * 
@@ -29,6 +27,9 @@ class LocalIntegerValueBlock () extends LocalValueBlock {
     inputLength: Double,
     expectedLength: Double
   ): Double = js.native
+  
+  var isHexOnly: scala.Boolean = js.native
+  
   /**
     * Encoding of current ASN.1 block into ASN.1 encoded array (DER rules)
     * 
@@ -37,5 +38,8 @@ class LocalIntegerValueBlock () extends LocalValueBlock {
     */
   def toDER(): js.typedarray.ArrayBuffer = js.native
   def toDER(sizeOnly: scala.Boolean): js.typedarray.ArrayBuffer = js.native
+  
+  var valueDec: Double = js.native
+  
+  var valueHex: js.typedarray.ArrayBuffer = js.native
 }
-

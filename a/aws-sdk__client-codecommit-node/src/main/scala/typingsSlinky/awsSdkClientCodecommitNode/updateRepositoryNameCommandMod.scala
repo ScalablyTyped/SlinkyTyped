@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/UpdateRepositoryNameCommand", JSImport.Namespace)
 @js.native
 object updateRepositoryNameCommandMod extends js.Object {
+  
   @js.native
   class UpdateRepositoryNameCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object updateRepositoryNameCommandMod extends js.Object {
           Readable
         ] {
     def this(input: UpdateRepositoryNameInput) = this()
+    
     val middlewareStack: MiddlewareStack[UpdateRepositoryNameInput, UpdateRepositoryNameOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[UpdateRepositoryNameInput, UpdateRepositoryNameOutput] = js.native
   }
-  
 }
-

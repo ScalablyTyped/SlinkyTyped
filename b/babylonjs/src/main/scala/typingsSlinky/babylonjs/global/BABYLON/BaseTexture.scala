@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.BaseTexture")
 @js.native
@@ -17,22 +17,18 @@ class BaseTexture protected ()
     * @param scene Define the scene the texture blongs to
     */
   def this(scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.BaseTexture")
 @js.native
 object BaseTexture extends js.Object {
+  
   /**
     * Default anisotropic filtering level for the application.
     * It is set to 4 as a good tradeoff between perf and quality.
     */
   var DEFAULT_ANISOTROPIC_FILTERING_LEVEL: Double = js.native
+  
   /**
     * Helper function to be called back once a list of texture contains only ready textures.
     * @param textures Define the list of textures to wait for
@@ -40,4 +36,3 @@ object BaseTexture extends js.Object {
     */
   def WhenAllReady(textures: js.Array[typingsSlinky.babylonjs.BABYLON.BaseTexture], callback: js.Function0[Unit]): Unit = js.native
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.reactMdForm.useIndeterminateCheckedMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/form/types/useIndeterminateChecked", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   def apply[T /* <: String */](values: js.Array[T]): IndeterminateCheckedReturnValue[T] = js.native
   def apply[T /* <: String */](
     values: js.Array[T],
@@ -26,4 +27,3 @@ object default extends js.Object {
     onChange: js.Function1[/* checkedValues */ js.Array[T], Unit]
   ): IndeterminateCheckedReturnValue[T] = js.native
 }
-

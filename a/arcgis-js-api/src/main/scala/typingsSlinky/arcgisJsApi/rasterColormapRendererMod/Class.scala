@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.RasterColormapRenderer
 import typingsSlinky.arcgisJsApi.esri.RasterColormapRendererProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/renderers/RasterColormapRenderer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends RasterColormapRenderer {
   def this(properties: RasterColormapRendererProperties) = this()
 }
-

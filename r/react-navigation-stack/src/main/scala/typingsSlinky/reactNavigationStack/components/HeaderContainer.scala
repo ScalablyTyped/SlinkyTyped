@@ -17,9 +17,10 @@ import typingsSlinky.reactNavigationStack.vendorTypesMod.StackHeaderInterpolated
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackHeaderInterpolationProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object HeaderContainer {
+  
   @JSImport("react-navigation-stack/lib/typescript/src/vendor/views/Header/HeaderContainer", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -28,15 +29,19 @@ object HeaderContainer {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def onContentHeightChange(value: /* props */ Height => Unit): this.type = set("onContentHeightChange", js.Any.fromFunction1(value))
+    
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def styleNull: this.type = set("style", null)
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     gestureDirection: GestureDirection,
@@ -52,4 +57,3 @@ object HeaderContainer {
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SpreadAssignment
@@ -12,10 +12,12 @@ trait SpreadAssignment
      with _BindingOrAssignmentElement
      with _BindingOrAssignmentElementRestIndicator
      with _HasJSDoc {
+  
   var expression: Expression = js.native
+  
   @JSName("kind")
   var kind_SpreadAssignment: typingsSlinky.typescript.mod.SyntaxKind.SpreadAssignment = js.native
+  
   @JSName("parent")
   var parent_SpreadAssignment: ObjectLiteralExpression = js.native
 }
-

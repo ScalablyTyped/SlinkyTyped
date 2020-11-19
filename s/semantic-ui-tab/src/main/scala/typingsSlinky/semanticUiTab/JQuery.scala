@@ -58,12 +58,11 @@ import typingsSlinky.semanticUiTab.semanticUiTabStrings.templates
 import typingsSlinky.semanticUiTab.semanticUiTabStrings.verbose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
-  @JSName("tab")
-  var tab_Original: Tab = js.native
+  
   def tab(): JQuery = js.native
   def tab(behavior: setting, name: alwaysRefresh, value: js.UndefOr[scala.Nothing]): Boolean = js.native
   def tab(behavior: setting, name: alwaysRefresh, value: Boolean): JQuery = js.native
@@ -178,6 +177,8 @@ trait JQuery extends js.Object {
   @JSName("tab")
   def tab_JQuery(behavior: setting, name: metadata, value: MetadataSettings): JQuery = js.native
   @JSName("tab")
+  var tab_Original: Tab = js.native
+  @JSName("tab")
   def tab_SelectorSettings(behavior: setting, name: selector, value: js.UndefOr[scala.Nothing]): SelectorSettings = js.native
   /**
     * Sets cached HTML for path
@@ -224,4 +225,3 @@ trait JQuery extends js.Object {
   @JSName("tab")
   def tab_setting(behavior: setting, value: TabSettings): JQuery = js.native
 }
-

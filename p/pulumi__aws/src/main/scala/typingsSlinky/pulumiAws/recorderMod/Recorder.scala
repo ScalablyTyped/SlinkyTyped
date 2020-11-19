@@ -8,7 +8,7 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws/cfg/recorder", "Recorder")
 @js.native
@@ -22,14 +22,17 @@ class Recorder protected () extends CustomResource {
     */
   def this(name: String, args: RecorderArgs) = this()
   def this(name: String, args: RecorderArgs, opts: CustomResourceOptions) = this()
+  
   /**
     * The name of the recorder. Defaults to `default`. Changing it recreates the resource.
     */
   val name: Output_[String] = js.native
+  
   /**
     * Recording group - see below.
     */
   val recordingGroup: Output_[RecorderRecordingGroup] = js.native
+  
   /**
     * Amazon Resource Name (ARN) of the IAM role.
     * used to make read or write requests to the delivery channel and to describe the AWS resources associated with the account.
@@ -37,11 +40,11 @@ class Recorder protected () extends CustomResource {
     */
   val roleArn: Output_[String] = js.native
 }
-
 /* static members */
 @JSImport("@pulumi/aws/cfg/recorder", "Recorder")
 @js.native
 object Recorder extends js.Object {
+  
   /**
     * Get an existing Recorder resource's state with the given name, ID, and optional extra
     * properties used to qualify the lookup.
@@ -55,10 +58,10 @@ object Recorder extends js.Object {
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): Recorder = js.native
   def get(name: String, id: Input[ID], state: RecorderState): Recorder = js.native
   def get(name: String, id: Input[ID], state: RecorderState, opts: CustomResourceOptions): Recorder = js.native
+  
   /**
     * Returns true if the given object is an instance of Recorder.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/cfg/recorder.Recorder */ Boolean = js.native
 }
-

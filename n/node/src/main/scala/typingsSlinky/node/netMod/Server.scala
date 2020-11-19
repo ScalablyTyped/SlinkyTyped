@@ -9,7 +9,7 @@ import typingsSlinky.node.nodeStrings.error
 import typingsSlinky.node.nodeStrings.listening
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // https://github.com/nodejs/node/blob/master/lib/net.js
 @JSImport("net", "Server")
@@ -21,9 +21,7 @@ class Server ()
   def this(options: AllowHalfOpen) = this()
   def this(options: js.UndefOr[scala.Nothing], connectionListener: js.Function1[/* socket */ Socket, Unit]) = this()
   def this(options: AllowHalfOpen, connectionListener: js.Function1[/* socket */ Socket, Unit]) = this()
-  var connections: Double = js.native
-  var listening: Boolean = js.native
-  var maxConnections: Double = js.native
+  
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
@@ -32,9 +30,14 @@ class Server ()
   def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
+  
   def address(): AddressInfo | String | Null = js.native
+  
   def close(): this.type = js.native
   def close(callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): this.type = js.native
+  
+  var connections: Double = js.native
+  
   @JSName("emit")
   def emit_close(event: close): Boolean = js.native
   @JSName("emit")
@@ -43,7 +46,9 @@ class Server ()
   def emit_error(event: error, err: js.Error): Boolean = js.native
   @JSName("emit")
   def emit_listening(event: listening): Boolean = js.native
+  
   def getConnections(cb: js.Function2[/* error */ js.Error | Null, /* count */ Double, Unit]): Unit = js.native
+  
   def listen(): this.type = js.native
   def listen(handle: js.Any): this.type = js.native
   def listen(handle: js.Any, backlog: js.UndefOr[scala.Nothing], listeningListener: js.Function0[Unit]): this.type = js.native
@@ -121,6 +126,11 @@ class Server ()
   def listen(port: Double, hostname: String, backlog: Double, listeningListener: js.Function0[Unit]): this.type = js.native
   def listen(port: Double, hostname: String, listeningListener: js.Function0[Unit]): this.type = js.native
   def listen(port: Double, listeningListener: js.Function0[Unit]): this.type = js.native
+  
+  var listening: Boolean = js.native
+  
+  var maxConnections: Double = js.native
+  
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -129,6 +139,7 @@ class Server ()
   def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("on")
   def on_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("once")
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -137,6 +148,7 @@ class Server ()
   def once_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("once")
   def once_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -145,6 +157,7 @@ class Server ()
   def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -153,7 +166,8 @@ class Server ()
   def prependOnceListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
+  
   def ref(): this.type = js.native
+  
   def unref(): this.type = js.native
 }
-

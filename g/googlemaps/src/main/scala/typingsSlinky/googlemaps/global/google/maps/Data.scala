@@ -5,7 +5,7 @@ import typingsSlinky.googlemaps.google.maps.Data.FeatureOptions
 import typingsSlinky.googlemaps.google.maps.LatLngLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("google.maps.Data")
 @js.native
@@ -13,10 +13,10 @@ class Data ()
   extends typingsSlinky.googlemaps.google.maps.Data {
   def this(options: DataOptions) = this()
 }
-
 @JSGlobal("google.maps.Data")
 @js.native
 object Data extends js.Object {
+  
   @js.native
   class Feature ()
     extends typingsSlinky.googlemaps.google.maps.Data.Feature {
@@ -87,6 +87,4 @@ object Data extends js.Object {
             typingsSlinky.googlemaps.google.maps.Data.LinearRing | (js.Array[typingsSlinky.googlemaps.google.maps.LatLng | LatLngLiteral])
           ]) = this()
   }
-  
 }
-

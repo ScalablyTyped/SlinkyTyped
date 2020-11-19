@@ -2,11 +2,10 @@ package typingsSlinky.winrtUwp.global.Windows.System.RemoteSystems
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Watches for activity related to the discovery of remote systems and raises the appropriate events. */
 @JSGlobal("Windows.System.RemoteSystems.RemoteSystemWatcher")
 @js.native
 abstract class RemoteSystemWatcher ()
   extends typingsSlinky.winrtUwp.Windows.System.RemoteSystems.RemoteSystemWatcher
-

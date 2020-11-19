@@ -11,7 +11,7 @@ import typingsSlinky.ssh2.ssh2Strings.error
 import typingsSlinky.ssh2.ssh2Strings.listening
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ssh2", "Server")
 @js.native
@@ -28,11 +28,13 @@ class Server protected () extends EventEmitter {
     config: ServerConfig,
     connectionListener: js.Function2[/* client */ Connection, /* info */ ClientInfo, Unit]
   ) = this()
+  
   /**
     * Returns the bound address, the address family name, and port of the server as reported
     * by the operating system.
     */
   def address(): Address = js.native
+  
   /**
     * Stops the server from accepting new connections and keeps existing connections. This
     * function is asynchronous, the server is finally closed when all connections are ended
@@ -44,10 +46,12 @@ class Server protected () extends EventEmitter {
     */
   def close(): this.type = js.native
   def close(callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): this.type = js.native
+  
   /**
     * Asynchronously get the number of concurrent connections on the server.
     */
   def getConnections(callback: js.Function2[/* err */ js.UndefOr[js.Error], /* count */ Double, Unit]): Unit = js.native
+  
   /**
     * Begin accepting connections on a random port.
     *
@@ -143,6 +147,7 @@ class Server protected () extends EventEmitter {
   def listen(port: Double, hostname: String, backlog: Double): this.type = js.native
   def listen(port: Double, hostname: String, backlog: Double, callback: js.Function0[Unit]): this.type = js.native
   def listen(port: Double, hostname: String, callback: js.Function0[Unit]): this.type = js.native
+  
   def on(event: String, listener: js.Function): this.type = js.native
   def on(event: js.Symbol, listener: js.Function): this.type = js.native
   /**
@@ -166,12 +171,14 @@ class Server protected () extends EventEmitter {
     */
   @JSName("on")
   def on_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
+  
   /**
     * Opposite of `unref`, calling `ref` on a previously unrefd server will not let the
     * program exit if it's the only server left (the default behavior). If the server is
     * refd calling `ref` again will have no effect.
     */
   def ref(): Unit = js.native
+  
   /**
     * Calling `unref` on a server will allow the program to exit if this is the only active
     * server in the event system. If the server is already unrefd calling `unref` again
@@ -179,14 +186,17 @@ class Server protected () extends EventEmitter {
     */
   def unref(): Unit = js.native
 }
-
 /* static members */
 @JSImport("ssh2", "Server")
 @js.native
 object Server extends js.Object {
+  
   var KEEPALIVE_CLIENT_COUNT_MAX: Double = js.native
+  
   var KEEPALIVE_CLIENT_INTERVAL: Double = js.native
+  
   var KEEPALIVE_INTERVAL: Double = js.native
+  
   /**
     * Creates and returns a new Server instance.
     *
@@ -199,4 +209,3 @@ object Server extends js.Object {
     connectionListener: js.Function2[/* client */ Connection, /* info */ ClientInfo, Unit]
   ): Server = js.native
 }
-

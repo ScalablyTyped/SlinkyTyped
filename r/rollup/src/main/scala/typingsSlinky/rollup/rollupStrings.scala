@@ -11,9 +11,166 @@ import typingsSlinky.rollup.mod.SequentialPluginHooks
 import typingsSlinky.rollup.mod.SyncPluginHooks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object rollupStrings {
+  
+  @scala.inline
+  def BUNDLE_END: BUNDLE_END = "BUNDLE_END".asInstanceOf[BUNDLE_END]
+  
+  @scala.inline
+  def BUNDLE_START: BUNDLE_START = "BUNDLE_START".asInstanceOf[BUNDLE_START]
+  
+  @scala.inline
+  def END: END = "END".asInstanceOf[END]
+  
+  @scala.inline
+  def ERROR: ERROR = "ERROR".asInstanceOf[ERROR]
+  
+  @scala.inline
+  def START: START = "START".asInstanceOf[START]
+  
+  @scala.inline
+  def _empty: _empty = "".asInstanceOf[_empty]
+  
+  @scala.inline
+  def `allow-extension`: `allow-extension` = "allow-extension".asInstanceOf[`allow-extension`]
+  
+  @scala.inline
+  def amd: amd = "amd".asInstanceOf[amd]
+  
+  @scala.inline
+  def asset: asset = "asset".asInstanceOf[asset]
+  
+  @scala.inline
+  def augmentChunkHash: augmentChunkHash = "augmentChunkHash".asInstanceOf[augmentChunkHash]
+  
+  @scala.inline
+  def auto: auto = "auto".asInstanceOf[auto]
+  
+  @scala.inline
+  def banner: banner = "banner".asInstanceOf[banner]
+  
+  @scala.inline
+  def buildEnd: buildEnd = "buildEnd".asInstanceOf[buildEnd]
+  
+  @scala.inline
+  def buildStart: buildStart = "buildStart".asInstanceOf[buildStart]
+  
+  @scala.inline
+  def chunk: chunk = "chunk".asInstanceOf[chunk]
+  
+  @scala.inline
+  def cjs: cjs = "cjs".asInstanceOf[cjs]
+  
+  @scala.inline
+  def commonjs: commonjs = "commonjs".asInstanceOf[commonjs]
+  
+  @scala.inline
+  def default: default = "default".asInstanceOf[default]
+  
+  @scala.inline
+  def es: es = "es".asInstanceOf[es]
+  
+  @scala.inline
+  def esm: esm = "esm".asInstanceOf[esm]
+  
+  @scala.inline
+  def footer: footer = "footer".asInstanceOf[footer]
+  
+  @scala.inline
+  def generateBundle: generateBundle = "generateBundle".asInstanceOf[generateBundle]
+  
+  @scala.inline
+  def hidden: hidden = "hidden".asInstanceOf[hidden]
+  
+  @scala.inline
+  def iife: iife = "iife".asInstanceOf[iife]
+  
+  @scala.inline
+  def `inline`: `inline` = "inline".asInstanceOf[`inline`]
+  
+  @scala.inline
+  def intro: intro = "intro".asInstanceOf[intro]
+  
+  @scala.inline
+  def load: load = "load".asInstanceOf[load]
+  
+  @scala.inline
+  def module: module = "module".asInstanceOf[module]
+  
+  @scala.inline
+  def named: named = "named".asInstanceOf[named]
+  
+  @scala.inline
+  def `no-external`: `no-external` = "no-external".asInstanceOf[`no-external`]
+  
+  @scala.inline
+  def `no-treeshake`: `no-treeshake` = "no-treeshake".asInstanceOf[`no-treeshake`]
+  
+  @scala.inline
+  def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def options: options = "options".asInstanceOf[options]
+  
+  @scala.inline
+  def outputOptions: outputOptions = "outputOptions".asInstanceOf[outputOptions]
+  
+  @scala.inline
+  def outro: outro = "outro".asInstanceOf[outro]
+  
+  @scala.inline
+  def placeholder: placeholder = "placeholder".asInstanceOf[placeholder]
+  
+  @scala.inline
+  def renderChunk: renderChunk = "renderChunk".asInstanceOf[renderChunk]
+  
+  @scala.inline
+  def renderDynamicImport: renderDynamicImport = "renderDynamicImport".asInstanceOf[renderDynamicImport]
+  
+  @scala.inline
+  def renderError: renderError = "renderError".asInstanceOf[renderError]
+  
+  @scala.inline
+  def renderStart: renderStart = "renderStart".asInstanceOf[renderStart]
+  
+  @scala.inline
+  def resolveAssetUrl: resolveAssetUrl = "resolveAssetUrl".asInstanceOf[resolveAssetUrl]
+  
+  @scala.inline
+  def resolveDynamicImport: resolveDynamicImport = "resolveDynamicImport".asInstanceOf[resolveDynamicImport]
+  
+  @scala.inline
+  def resolveFileUrl: resolveFileUrl = "resolveFileUrl".asInstanceOf[resolveFileUrl]
+  
+  @scala.inline
+  def resolveId: resolveId = "resolveId".asInstanceOf[resolveId]
+  
+  @scala.inline
+  def resolveImportMeta: resolveImportMeta = "resolveImportMeta".asInstanceOf[resolveImportMeta]
+  
+  @scala.inline
+  def strict: strict = "strict".asInstanceOf[strict]
+  
+  @scala.inline
+  def system: system = "system".asInstanceOf[system]
+  
+  @scala.inline
+  def systemjs: systemjs = "systemjs".asInstanceOf[systemjs]
+  
+  @scala.inline
+  def transform: transform = "transform".asInstanceOf[transform]
+  
+  @scala.inline
+  def umd: umd = "umd".asInstanceOf[umd]
+  
+  @scala.inline
+  def watchChange: watchChange = "watchChange".asInstanceOf[watchChange]
+  
+  @scala.inline
+  def writeBundle: writeBundle = "writeBundle".asInstanceOf[writeBundle]
+  
   @js.native
   sealed trait BUNDLE_END extends js.Object
   
@@ -227,110 +384,4 @@ object rollupStrings {
   sealed trait writeBundle
     extends AsyncPluginHooks
        with ParallelPluginHooks
-  
-  @scala.inline
-  def BUNDLE_END: BUNDLE_END = "BUNDLE_END".asInstanceOf[BUNDLE_END]
-  @scala.inline
-  def BUNDLE_START: BUNDLE_START = "BUNDLE_START".asInstanceOf[BUNDLE_START]
-  @scala.inline
-  def END: END = "END".asInstanceOf[END]
-  @scala.inline
-  def ERROR: ERROR = "ERROR".asInstanceOf[ERROR]
-  @scala.inline
-  def START: START = "START".asInstanceOf[START]
-  @scala.inline
-  def _empty: _empty = "".asInstanceOf[_empty]
-  @scala.inline
-  def `allow-extension`: `allow-extension` = "allow-extension".asInstanceOf[`allow-extension`]
-  @scala.inline
-  def amd: amd = "amd".asInstanceOf[amd]
-  @scala.inline
-  def asset: asset = "asset".asInstanceOf[asset]
-  @scala.inline
-  def augmentChunkHash: augmentChunkHash = "augmentChunkHash".asInstanceOf[augmentChunkHash]
-  @scala.inline
-  def auto: auto = "auto".asInstanceOf[auto]
-  @scala.inline
-  def banner: banner = "banner".asInstanceOf[banner]
-  @scala.inline
-  def buildEnd: buildEnd = "buildEnd".asInstanceOf[buildEnd]
-  @scala.inline
-  def buildStart: buildStart = "buildStart".asInstanceOf[buildStart]
-  @scala.inline
-  def chunk: chunk = "chunk".asInstanceOf[chunk]
-  @scala.inline
-  def cjs: cjs = "cjs".asInstanceOf[cjs]
-  @scala.inline
-  def commonjs: commonjs = "commonjs".asInstanceOf[commonjs]
-  @scala.inline
-  def default: default = "default".asInstanceOf[default]
-  @scala.inline
-  def es: es = "es".asInstanceOf[es]
-  @scala.inline
-  def esm: esm = "esm".asInstanceOf[esm]
-  @scala.inline
-  def footer: footer = "footer".asInstanceOf[footer]
-  @scala.inline
-  def generateBundle: generateBundle = "generateBundle".asInstanceOf[generateBundle]
-  @scala.inline
-  def hidden: hidden = "hidden".asInstanceOf[hidden]
-  @scala.inline
-  def iife: iife = "iife".asInstanceOf[iife]
-  @scala.inline
-  def `inline`: `inline` = "inline".asInstanceOf[`inline`]
-  @scala.inline
-  def intro: intro = "intro".asInstanceOf[intro]
-  @scala.inline
-  def load: load = "load".asInstanceOf[load]
-  @scala.inline
-  def module: module = "module".asInstanceOf[module]
-  @scala.inline
-  def named: named = "named".asInstanceOf[named]
-  @scala.inline
-  def `no-external`: `no-external` = "no-external".asInstanceOf[`no-external`]
-  @scala.inline
-  def `no-treeshake`: `no-treeshake` = "no-treeshake".asInstanceOf[`no-treeshake`]
-  @scala.inline
-  def none: none = "none".asInstanceOf[none]
-  @scala.inline
-  def options: options = "options".asInstanceOf[options]
-  @scala.inline
-  def outputOptions: outputOptions = "outputOptions".asInstanceOf[outputOptions]
-  @scala.inline
-  def outro: outro = "outro".asInstanceOf[outro]
-  @scala.inline
-  def placeholder: placeholder = "placeholder".asInstanceOf[placeholder]
-  @scala.inline
-  def renderChunk: renderChunk = "renderChunk".asInstanceOf[renderChunk]
-  @scala.inline
-  def renderDynamicImport: renderDynamicImport = "renderDynamicImport".asInstanceOf[renderDynamicImport]
-  @scala.inline
-  def renderError: renderError = "renderError".asInstanceOf[renderError]
-  @scala.inline
-  def renderStart: renderStart = "renderStart".asInstanceOf[renderStart]
-  @scala.inline
-  def resolveAssetUrl: resolveAssetUrl = "resolveAssetUrl".asInstanceOf[resolveAssetUrl]
-  @scala.inline
-  def resolveDynamicImport: resolveDynamicImport = "resolveDynamicImport".asInstanceOf[resolveDynamicImport]
-  @scala.inline
-  def resolveFileUrl: resolveFileUrl = "resolveFileUrl".asInstanceOf[resolveFileUrl]
-  @scala.inline
-  def resolveId: resolveId = "resolveId".asInstanceOf[resolveId]
-  @scala.inline
-  def resolveImportMeta: resolveImportMeta = "resolveImportMeta".asInstanceOf[resolveImportMeta]
-  @scala.inline
-  def strict: strict = "strict".asInstanceOf[strict]
-  @scala.inline
-  def system: system = "system".asInstanceOf[system]
-  @scala.inline
-  def systemjs: systemjs = "systemjs".asInstanceOf[systemjs]
-  @scala.inline
-  def transform: transform = "transform".asInstanceOf[transform]
-  @scala.inline
-  def umd: umd = "umd".asInstanceOf[umd]
-  @scala.inline
-  def watchChange: watchChange = "watchChange".asInstanceOf[watchChange]
-  @scala.inline
-  def writeBundle: writeBundle = "writeBundle".asInstanceOf[writeBundle]
 }
-

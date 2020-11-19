@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.graphql.definitionMod.GraphQLFieldResolver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/transforms/WrapFields", JSImport.Default)
 @js.native
@@ -63,4 +63,3 @@ class default protected () extends WrapFields {
     prefix: String
   ) = this()
 }
-

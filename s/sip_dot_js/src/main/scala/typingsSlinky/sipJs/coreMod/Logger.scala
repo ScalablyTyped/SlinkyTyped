@@ -2,7 +2,7 @@ package typingsSlinky.sipJs.coreMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js/lib/core", "Logger")
 @js.native
@@ -11,4 +11,3 @@ class Logger protected ()
   def this(logger: typingsSlinky.sipJs.loggerFactoryMod.LoggerFactory, category: String) = this()
   def this(logger: typingsSlinky.sipJs.loggerFactoryMod.LoggerFactory, category: String, label: String) = this()
 }
-

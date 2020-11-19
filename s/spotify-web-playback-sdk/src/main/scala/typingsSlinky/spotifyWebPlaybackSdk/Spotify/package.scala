@@ -2,9 +2,10 @@ package typingsSlinky.spotifyWebPlaybackSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object Spotify {
+  
   type AddListenerFn = (js.Function2[
     /* event */ typingsSlinky.spotifyWebPlaybackSdk.spotifyWebPlaybackSdkStrings.ready | typingsSlinky.spotifyWebPlaybackSdk.spotifyWebPlaybackSdkStrings.not_ready, 
     /* cb */ typingsSlinky.spotifyWebPlaybackSdk.Spotify.PlaybackInstanceListener, 
@@ -18,10 +19,13 @@ package object Spotify {
     /* cb */ typingsSlinky.spotifyWebPlaybackSdk.Spotify.ErrorListener, 
     scala.Unit
   ])
+  
   type ErrorListener = js.Function1[/* err */ typingsSlinky.spotifyWebPlaybackSdk.Spotify.Error, scala.Unit]
+  
   type PlaybackInstanceListener = js.Function1[
     /* inst */ typingsSlinky.spotifyWebPlaybackSdk.Spotify.WebPlaybackInstance, 
     scala.Unit
   ]
+  
   type PlaybackStateListener = js.Function1[/* s */ typingsSlinky.spotifyWebPlaybackSdk.Spotify.PlaybackState, scala.Unit]
 }

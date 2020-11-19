@@ -6,7 +6,7 @@ import typingsSlinky.storybookAddons.typesMod.StoryApi
 import typingsSlinky.storybookHtml.typesMod.StoryFnHtmlReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/html/dist/client/preview", "storiesOf")
 @js.native
@@ -14,4 +14,3 @@ object storiesOf
   extends TopLevel[
       js.Function2[/* kind */ String, /* module */ NodeModule, StoryApi[StoryFnHtmlReturnType]]
     ]
-

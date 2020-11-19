@@ -6,7 +6,7 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "whereAsync")
 @js.native
@@ -17,4 +17,3 @@ object whereAsync
         js.Promise[Tensor2D]
       ]
     ]
-

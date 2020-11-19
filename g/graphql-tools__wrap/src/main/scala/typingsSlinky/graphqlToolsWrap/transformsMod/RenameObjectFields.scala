@@ -5,7 +5,7 @@ import typingsSlinky.graphql.definitionMod.GraphQLFieldConfig
 import typingsSlinky.graphqlToolsWrap.renameObjectFieldsMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/transforms", "RenameObjectFields")
 @js.native
@@ -17,4 +17,3 @@ class RenameObjectFields protected () extends default {
         String
       ]) = this()
 }
-

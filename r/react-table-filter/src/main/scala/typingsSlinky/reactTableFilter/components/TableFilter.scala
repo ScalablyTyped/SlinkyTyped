@@ -6,9 +6,10 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTableFilter.mod.TabfilterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TableFilter {
+  
   @JSImport("react-table-filter", "TableFilter")
   @js.native
   object component extends js.Object
@@ -17,15 +18,19 @@ object TableFilter {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactTableFilter.mod.TableFilter] {
+    
     @scala.inline
     def initialFiltersVarargs(value: String*): this.type = set("initialFilters", js.Array(value :_*))
+    
     @scala.inline
     def initialFilters(value: String | js.Array[String] | StringDictionary[Boolean]): this.type = set("initialFilters", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def rowClass(value: String): this.type = set("rowClass", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TabfilterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     onFilterUpdate: (js.Array[String], js.Array[_]) => js.Array[_] | Unit,
@@ -35,4 +40,3 @@ object TableFilter {
     new Builder(js.Array(this.component, __props.asInstanceOf[TabfilterProps]))
   }
 }
-

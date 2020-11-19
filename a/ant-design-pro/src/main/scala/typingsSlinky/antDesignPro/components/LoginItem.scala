@@ -3,14 +3,16 @@ package typingsSlinky.antDesignPro.components
 import typingsSlinky.antDesignPro.loginItemMod.LoginItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object LoginItem {
+  
   @JSImport("ant-design-pro/lib/Login/LoginItem", JSImport.Default)
   @js.native
   object component extends js.Object
   
   def withProps(p: LoginItemProps): SharedBuilder_LoginItemProps638664218 = new SharedBuilder_LoginItemProps638664218(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     form: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify WrappedFormUtils */ js.Any,
@@ -22,4 +24,3 @@ object LoginItem {
     new SharedBuilder_LoginItemProps638664218(js.Array(this.component, __props.asInstanceOf[LoginItemProps]))
   }
 }
-

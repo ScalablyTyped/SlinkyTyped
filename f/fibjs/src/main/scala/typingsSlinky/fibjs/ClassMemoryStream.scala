@@ -2,10 +2,11 @@ package typingsSlinky.fibjs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ClassMemoryStream extends ClassSeekableStream {
+  
   /**
     * 
     * @brief 清空内存文件数据，复位指针
@@ -13,6 +14,7 @@ trait ClassMemoryStream extends ClassSeekableStream {
     * 
     */
   def clear(): Unit = js.native
+  
   /**
     * 
     * @brief 强制设定内存流对象的最后更新时间
@@ -23,4 +25,3 @@ trait ClassMemoryStream extends ClassSeekableStream {
     */
   def setTime(d: js.Date): Unit = js.native
 }
-

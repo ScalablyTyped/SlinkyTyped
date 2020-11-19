@@ -4,11 +4,11 @@ import typingsSlinky.vscodeLanguageserverProtocol.messagesMod.ProtocolNotificati
 import typingsSlinky.vscodeLanguageserverProtocol.protocolWorkspaceFoldersMod.DidChangeWorkspaceFoldersParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageclient/lib/client", "DidChangeWorkspaceFoldersNotification")
 @js.native
 object DidChangeWorkspaceFoldersNotification extends js.Object {
+  
   val `type`: ProtocolNotificationType[DidChangeWorkspaceFoldersParams, Unit] = js.native
 }
-

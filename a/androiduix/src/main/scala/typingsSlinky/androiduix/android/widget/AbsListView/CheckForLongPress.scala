@@ -3,14 +3,14 @@ package typingsSlinky.androiduix.android.widget.AbsListView
 import typingsSlinky.androiduix.java_.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CheckForLongPress
   extends WindowRunnnable
      with Runnable
-
 object CheckForLongPress {
+  
   @scala.inline
   def apply(
     _AbsListView_this: typingsSlinky.androiduix.android.widget.AbsListView,
@@ -23,4 +23,3 @@ object CheckForLongPress {
     __obj.asInstanceOf[CheckForLongPress]
   }
 }
-

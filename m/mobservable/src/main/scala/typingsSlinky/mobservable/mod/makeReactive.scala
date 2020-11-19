@@ -4,11 +4,12 @@ import typingsSlinky.mobservable.interfacesMod.IObservableArray
 import typingsSlinky.mobservable.interfacesMod.IObservableValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mobservable", "makeReactive")
 @js.native
 object makeReactive extends js.Object {
+  
   def apply(target: js.Object, key: String): js.Any = js.native
   def apply(target: js.Object, key: String, baseDescriptor: js.PropertyDescriptor): js.Any = js.native
   def apply(value: String): IObservableValue[String] = js.native
@@ -23,4 +24,3 @@ object makeReactive extends js.Object {
   def apply[T, S /* <: js.Object */](value: js.Function0[T]): IObservableValue[T] = js.native
   def apply[T, S /* <: js.Object */](value: js.Function0[T], thisArg: S): IObservableValue[T] = js.native
 }
-

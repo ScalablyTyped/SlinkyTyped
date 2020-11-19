@@ -9,11 +9,12 @@ import typingsSlinky.graphql.subscribeMod.SubscriptionArgs
 import typingsSlinky.std.AsyncIterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql", "subscribe")
 @js.native
 object subscribe extends js.Object {
+  
   def apply(args: SubscriptionArgs): js.Promise[
     (AsyncIterableIterator[ExecutionResult[StringDictionary[_], StringDictionary[_]]]) | (ExecutionResult[StringDictionary[_], StringDictionary[_]])
   ] = js.native
@@ -30,4 +31,3 @@ object subscribe extends js.Object {
     (AsyncIterableIterator[ExecutionResult[StringDictionary[_], StringDictionary[_]]]) | (ExecutionResult[StringDictionary[_], StringDictionary[_]])
   ] = js.native
 }
-

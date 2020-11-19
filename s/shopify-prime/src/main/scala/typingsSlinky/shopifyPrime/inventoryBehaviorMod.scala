@@ -2,11 +2,12 @@ package typingsSlinky.shopifyPrime
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("shopify-prime/dist/enums/inventory_behavior", JSImport.Namespace)
 @js.native
 object inventoryBehaviorMod extends js.Object {
+  
   trait _InventoryBehavior extends js.Object
   
   /* Rewritten from type alias, can be one of: 
@@ -17,4 +18,3 @@ object inventoryBehaviorMod extends js.Object {
   */
   type InventoryBehavior = _InventoryBehavior | String
 }
-

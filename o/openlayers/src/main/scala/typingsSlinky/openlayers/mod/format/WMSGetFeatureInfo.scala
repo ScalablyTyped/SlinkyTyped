@@ -7,7 +7,7 @@ import typingsSlinky.openlayers.mod.olx.format.ReadOptions
 import typingsSlinky.openlayers.mod.olx.format.WMSGetFeatureInfoOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @classdesc
@@ -29,6 +29,7 @@ import scala.scalajs.js.annotation._
   */
 class WMSGetFeatureInfo () extends XMLFeature {
   def this(opt_options: WMSGetFeatureInfoOptions) = this()
+  
   def readFeatures(source: String): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: String, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: GlobalObject): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
@@ -46,4 +47,3 @@ class WMSGetFeatureInfo () extends XMLFeature {
   def readFeatures(source: Node): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
 }
-

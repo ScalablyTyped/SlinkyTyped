@@ -7,11 +7,12 @@ import typingsSlinky.reactNativeElements.reactNativeElementsStrings.updateTheme
 import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-elements", "withTheme")
 @js.native
 object withTheme extends js.Object {
+  
   def apply[P, T](component: ReactComponentClass[P with ThemeProps[T]]): ReactComponentClass[
     Omit[
       P, 
@@ -25,4 +26,3 @@ object withTheme extends js.Object {
     ]
   ] = js.native
 }
-

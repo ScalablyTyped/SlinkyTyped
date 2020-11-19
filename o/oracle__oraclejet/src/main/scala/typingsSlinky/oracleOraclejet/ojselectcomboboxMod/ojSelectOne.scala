@@ -35,39 +35,12 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valueOption
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valueOptionChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojSelectOne[K, D]
   extends ojSelect[js.Any, ojSelectOneSettableProperties[K, D], js.Any] {
-  var minimumResultsForSearch: Double = js.native
-  var onMinimumResultsForSearchChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  @JSName("onOjAnimateEnd")
-  var onOjAnimateEnd_ojSelectOne: (js.Function1[CustomEvent, _]) | Null = js.native
-  @JSName("onOjAnimateStart")
-  var onOjAnimateStart_ojSelectOne: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOptionRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOptionsKeysChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onPickerAttributesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onPlaceholderChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onReadOnlyChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onRenderModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onRequiredChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onValueOptionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var optionRenderer: js.UndefOr[(js.Function1[/* param0 */ OptionContext, Element]) | Null] = js.native
-  var options: (js.Array[
-    typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Option | typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Optgroup
-  ]) | (DataProvider[K, D]) | Null = js.native
-  var optionsKeys: ChildrenLabel = js.native
-  var pickerAttributes: Class = js.native
-  var placeholder: String | Null = js.native
-  var readOnly: Boolean = js.native
-  var renderMode: jet | native = js.native
-  var required: Boolean = js.native
-  @JSName("translations")
-  var translations_ojSelectOne: MoreMatchesFound = js.native
-  var valueOption: LabelValue = js.native
+  
   def addEventListener(`type`: renderModeChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: renderModeChanged,
@@ -158,6 +131,7 @@ trait ojSelectOne[K, D]
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
   @JSName("getProperty")
   def getProperty_minimumResultsForSearch(property: minimumResultsForSearch): Double = js.native
   @JSName("getProperty")
@@ -180,7 +154,55 @@ trait ojSelectOne[K, D]
   def getProperty_required(property: required): Boolean = js.native
   @JSName("getProperty")
   def getProperty_valueOption(property: valueOption): LabelValue = js.native
+  
+  var minimumResultsForSearch: Double = js.native
+  
+  var onMinimumResultsForSearchChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  @JSName("onOjAnimateEnd")
+  var onOjAnimateEnd_ojSelectOne: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  @JSName("onOjAnimateStart")
+  var onOjAnimateStart_ojSelectOne: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOptionRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOptionsKeysChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onPickerAttributesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onPlaceholderChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onReadOnlyChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onRenderModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onRequiredChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onValueOptionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var optionRenderer: js.UndefOr[(js.Function1[/* param0 */ OptionContext, Element]) | Null] = js.native
+  
+  var options: (js.Array[
+    typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Option | typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Optgroup
+  ]) | (DataProvider[K, D]) | Null = js.native
+  
+  var optionsKeys: ChildrenLabel = js.native
+  
+  var pickerAttributes: Class = js.native
+  
+  var placeholder: String | Null = js.native
+  
+  var readOnly: Boolean = js.native
+  
+  var renderMode: jet | native = js.native
+  
+  var required: Boolean = js.native
+  
   def setProperties(properties: ojSelectOneSettablePropertiesLenient[K, D]): Unit = js.native
+  
   def setProperty(property: renderMode, value: jet): Unit = js.native
   def setProperty(property: renderMode, value: native): Unit = js.native
   @JSName("setProperty")
@@ -216,12 +238,17 @@ trait ojSelectOne[K, D]
   def setProperty_translations(property: translations, value: MoreMatchesFound): Unit = js.native
   @JSName("setProperty")
   def setProperty_valueOption(property: valueOption, value: LabelValue): Unit = js.native
+  
+  @JSName("translations")
+  var translations_ojSelectOne: MoreMatchesFound = js.native
+  
+  var valueOption: LabelValue = js.native
 }
-
 @JSImport("@oracle/oraclejet/ojselectcombobox", "ojSelectOne")
 @js.native
 object ojSelectOne extends js.Object {
+  
   type ojAnimateEnd = CustomEvent
+  
   type ojAnimateStart = CustomEvent
 }
-

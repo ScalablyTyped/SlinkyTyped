@@ -3,12 +3,12 @@ package typingsSlinky.winrt.Windows.Media.Capture
 import typingsSlinky.winrt.Windows.Foundation.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CameraCaptureUIPhotoCaptureSettings extends ICameraCaptureUIPhotoCaptureSettings
-
 object CameraCaptureUIPhotoCaptureSettings {
+  
   @scala.inline
   def apply(
     allowCropping: Boolean,
@@ -21,4 +21,3 @@ object CameraCaptureUIPhotoCaptureSettings {
     __obj.asInstanceOf[CameraCaptureUIPhotoCaptureSettings]
   }
 }
-

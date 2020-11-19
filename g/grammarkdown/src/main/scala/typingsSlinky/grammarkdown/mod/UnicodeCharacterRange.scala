@@ -3,7 +3,7 @@ package typingsSlinky.grammarkdown.mod
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.ThroughKeyword
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown", "UnicodeCharacterRange")
 @js.native
@@ -15,4 +15,3 @@ class UnicodeCharacterRange protected ()
     right: typingsSlinky.grammarkdown.nodesMod.UnicodeCharacterLiteral
   ) = this()
 }
-

@@ -13,17 +13,19 @@ import typingsSlinky.typescript.mod.ShorthandPropertyAssignment
 import typingsSlinky.typescript.mod.VariableDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc/dist/lib/converter/nodes/variable", JSImport.Namespace)
 @js.native
 object variableMod extends js.Object {
+  
   @js.native
   class VariableConverter () extends ConverterNodeComponent[VariableDeclaration] {
+    
     def convert(context: Context, node: VarNodeType): js.UndefOr[Reflection] = js.native
+    
     def isSimpleObjectLiteral(objectLiteral: ObjectLiteralExpression): Boolean = js.native
   }
   
   type VarNodeType = PropertySignature | PropertyDeclaration | PropertyAssignment | ShorthandPropertyAssignment | VariableDeclaration | ImportEqualsDeclaration | BindingElement
 }
-

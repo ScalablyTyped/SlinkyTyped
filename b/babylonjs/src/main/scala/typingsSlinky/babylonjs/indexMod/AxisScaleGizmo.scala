@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.indexMod
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "AxisScaleGizmo")
 @js.native
@@ -22,8 +22,31 @@ class AxisScaleGizmo protected ()
   ) = this()
   def this(
     dragAxis: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer
+  ) = this()
+  def this(
+    dragAxis: typingsSlinky.babylonjs.mathVectorMod.Vector3,
     color: typingsSlinky.babylonjs.mathColorMod.Color3,
     gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer
+  ) = this()
+  def this(
+    dragAxis: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    parent: Nullable[typingsSlinky.babylonjs.scaleGizmoMod.ScaleGizmo]
+  ) = this()
+  def this(
+    dragAxis: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    gizmoLayer: typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer,
+    parent: Nullable[typingsSlinky.babylonjs.scaleGizmoMod.ScaleGizmo]
+  ) = this()
+  def this(
+    dragAxis: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    parent: Nullable[typingsSlinky.babylonjs.scaleGizmoMod.ScaleGizmo]
   ) = this()
   def this(
     dragAxis: typingsSlinky.babylonjs.mathVectorMod.Vector3,
@@ -32,4 +55,3 @@ class AxisScaleGizmo protected ()
     parent: Nullable[typingsSlinky.babylonjs.scaleGizmoMod.ScaleGizmo]
   ) = this()
 }
-

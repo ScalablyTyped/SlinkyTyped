@@ -7,13 +7,14 @@ import typingsSlinky.kendoUi.kendo.mobile.ui.PopOver
 import typingsSlinky.kendoUi.kendo.mobile.ui.PopOverOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofPopOver
   extends Instantiable1[/* element */ Element, PopOver]
      with Instantiable2[/* element */ Element, /* options */ PopOverOptions, PopOver] {
-  var fn: PopOver = js.native
+  
   def extend(proto: js.Object): PopOver = js.native
+  
+  var fn: PopOver = js.native
 }
-

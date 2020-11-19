@@ -2,7 +2,7 @@ package typingsSlinky.reactEmailEditor.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactEmailEditor.mod.SimpleMergeTag
@@ -10,18 +10,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactEmailEditor.mod.GroupedMergeTag
 */
 trait MergeTag extends js.Object
-
 object MergeTag {
+  
   @scala.inline
   def SimpleMergeTag(name: String, value: String): MergeTag = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[MergeTag]
   }
+  
   @scala.inline
   def ConditionalMergeTag(name: String, rules: js.Array[ConditionalMergeTagRule]): MergeTag = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], rules = rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[MergeTag]
   }
+  
   @scala.inline
   def GroupedMergeTag(
     mergeTags: js.Array[SimpleMergeTag | typingsSlinky.reactEmailEditor.mod.GroupedMergeTag],
@@ -31,4 +33,3 @@ object MergeTag {
     __obj.asInstanceOf[MergeTag]
   }
 }
-

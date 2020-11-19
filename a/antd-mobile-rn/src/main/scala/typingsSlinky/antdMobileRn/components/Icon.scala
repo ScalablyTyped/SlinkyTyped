@@ -12,9 +12,10 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Icon {
+  
   @JSImport("antd-mobile-rn", "Icon")
   @js.native
   object component extends js.Object
@@ -23,17 +24,22 @@ object Icon {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.antdMobileRn.mod.Icon] {
+    
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def size(value: xxs | xs | sm | md | lg | Double): this.type = set("size", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def styleNull: this.type = set("style", null)
   }
   
   def withProps(p: IconProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(`type`: String): Builder = {
     val __props = js.Dynamic.literal()
@@ -41,4 +47,3 @@ object Icon {
     new Builder(js.Array(this.component, __props.asInstanceOf[IconProps]))
   }
 }
-

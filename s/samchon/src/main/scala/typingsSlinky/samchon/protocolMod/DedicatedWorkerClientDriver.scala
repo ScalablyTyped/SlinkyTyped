@@ -2,7 +2,7 @@ package typingsSlinky.samchon.protocolMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("samchon/protocol", "DedicatedWorkerClientDriver")
 @js.native
@@ -11,4 +11,3 @@ import scala.scalajs.js.annotation._
   */
 class DedicatedWorkerClientDriver ()
   extends typingsSlinky.samchon.dedicatedWorkerClientDriverMod.DedicatedWorkerClientDriver
-

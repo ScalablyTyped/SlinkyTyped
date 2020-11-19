@@ -2,7 +2,7 @@ package typingsSlinky.recharts.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.recharts.rechartsStrings.start
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.recharts.rechartsStrings.end
 */
 trait ReferenceLinePosition extends js.Object
-
 object ReferenceLinePosition {
+  
   @scala.inline
   def end: typingsSlinky.recharts.rechartsStrings.end = "end".asInstanceOf[typingsSlinky.recharts.rechartsStrings.end]
+  
   @scala.inline
   def middle: typingsSlinky.recharts.rechartsStrings.middle = "middle".asInstanceOf[typingsSlinky.recharts.rechartsStrings.middle]
+  
   @scala.inline
   def start: typingsSlinky.recharts.rechartsStrings.start = "start".asInstanceOf[typingsSlinky.recharts.rechartsStrings.start]
 }
-

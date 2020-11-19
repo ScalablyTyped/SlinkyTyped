@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.RasterShadedReliefRenderer
 import typingsSlinky.arcgisJsApi.esri.RasterShadedReliefRendererProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/renderers/RasterShadedReliefRenderer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends RasterShadedReliefRenderer {
   def this(properties: RasterShadedReliefRendererProperties) = this()
 }
-

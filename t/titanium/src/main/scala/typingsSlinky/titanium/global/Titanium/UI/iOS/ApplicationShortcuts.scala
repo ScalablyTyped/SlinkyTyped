@@ -2,7 +2,7 @@ package typingsSlinky.titanium.global.Titanium.UI.iOS
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Home screen quick actions API is for adding shortcuts to your app icon that anticipate and accelerate a
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class ApplicationShortcuts ()
   extends typingsSlinky.titanium.Titanium.UI.iOS.ApplicationShortcuts
-

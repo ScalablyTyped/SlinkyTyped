@@ -4,14 +4,16 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.ol.tilecoordMod.TileCoord
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/reproj/Tile", JSImport.Namespace)
 @js.native
 object reprojTileMod extends js.Object {
+  
   @js.native
   trait ReprojTile
     extends typingsSlinky.ol.olTileMod.default {
+    
     def getImage(): HTMLCanvasElement = js.native
   }
   
@@ -76,4 +78,3 @@ object reprojTileMod extends js.Object {
     typingsSlinky.ol.olTileMod.default
   ]
 }
-

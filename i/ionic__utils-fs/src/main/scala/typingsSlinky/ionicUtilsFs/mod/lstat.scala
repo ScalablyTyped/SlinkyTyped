@@ -4,11 +4,12 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/utils-fs", "lstat")
 @js.native
 object lstat extends js.Object {
+  
   def apply(path: String): js.Promise[typingsSlinky.node.fsMod.Stats] = js.native
   def apply(
     path: String,
@@ -20,4 +21,3 @@ object lstat extends js.Object {
     callback: js.Function2[/* err */ ErrnoException, /* stats */ typingsSlinky.node.fsMod.Stats, _]
   ): Unit = js.native
 }
-

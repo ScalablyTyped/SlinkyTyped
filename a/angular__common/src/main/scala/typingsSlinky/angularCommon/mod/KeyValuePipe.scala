@@ -7,15 +7,19 @@ import typingsSlinky.angularCore.mod.PipeTransform
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/common", "KeyValuePipe")
 @js.native
 class KeyValuePipe protected () extends PipeTransform {
   def this(differs: KeyValueDiffers) = this()
+  
   var differ: js.Any = js.native
+  
   val differs: js.Any = js.native
+  
   var keyValues: js.Any = js.native
+  
   def transform[V](): (js.Array[KeyValue[String, V]]) | Null = js.native
   def transform[V](input: NumberDictionary[V]): js.Array[KeyValue[Double, V]] = js.native
   def transform[V](
@@ -74,4 +78,3 @@ class KeyValuePipe protected () extends PipeTransform {
     compareFn: js.Function2[/* a */ KeyValue[Double | String, V], /* b */ KeyValue[Double | String, V], Double]
   ): (js.Array[KeyValue[String, V]]) | Null = js.native
 }
-

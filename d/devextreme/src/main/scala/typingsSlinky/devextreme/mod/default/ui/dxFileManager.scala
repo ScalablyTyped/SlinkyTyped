@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxFileManagerOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxFileManager")
 @js.native
@@ -16,4 +16,3 @@ class dxFileManager protected ()
   def this(element: JQuery, options: dxFileManagerOptions) = this()
   def this(element: Element, options: dxFileManagerOptions) = this()
 }
-

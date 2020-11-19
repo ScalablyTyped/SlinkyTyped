@@ -2,7 +2,7 @@ package typingsSlinky.googlepay.google.payments.api
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Payment method tokenization type enum string.
@@ -21,11 +21,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.googlepay.googlepayStrings.DIRECT
 */
 trait PaymentMethodTokenizationType extends js.Object
-
 object PaymentMethodTokenizationType {
+  
   @scala.inline
   def DIRECT: typingsSlinky.googlepay.googlepayStrings.DIRECT = "DIRECT".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.DIRECT]
+  
   @scala.inline
   def PAYMENT_GATEWAY: typingsSlinky.googlepay.googlepayStrings.PAYMENT_GATEWAY = "PAYMENT_GATEWAY".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.PAYMENT_GATEWAY]
 }
-

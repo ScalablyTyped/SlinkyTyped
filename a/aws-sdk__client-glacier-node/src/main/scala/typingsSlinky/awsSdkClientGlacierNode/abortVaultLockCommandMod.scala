@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-glacier-node/commands/AbortVaultLockCommand", JSImport.Namespace)
 @js.native
 object abortVaultLockCommandMod extends js.Object {
+  
   @js.native
   class AbortVaultLockCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object abortVaultLockCommandMod extends js.Object {
           Readable
         ] {
     def this(input: AbortVaultLockInput) = this()
+    
     val middlewareStack: MiddlewareStack[AbortVaultLockInput, AbortVaultLockOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[AbortVaultLockInput, AbortVaultLockOutput] = js.native
   }
-  
 }
-

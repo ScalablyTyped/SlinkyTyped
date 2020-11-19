@@ -12,16 +12,11 @@ import typingsSlinky.graphql.maybeMod.Maybe
 import typingsSlinky.graphql.schemaMod.GraphQLSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/execution/values", JSImport.Namespace)
 @js.native
 object valuesMod extends js.Object {
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.graphql.anon.Coerced
-    - typingsSlinky.graphql.anon.Errors
-  */
-  trait CoercedVariableValues extends js.Object
   
   def getArgumentValues(`def`: GraphQLField[_, _, StringDictionary[_]], node: DirectiveNode): StringDictionary[js.Any] = js.native
   def getArgumentValues(
@@ -39,8 +34,10 @@ object valuesMod extends js.Object {
   def getArgumentValues(`def`: GraphQLDirective, node: DirectiveNode, variableValues: Maybe[StringDictionary[_]]): StringDictionary[js.Any] = js.native
   def getArgumentValues(`def`: GraphQLDirective, node: FieldNode): StringDictionary[js.Any] = js.native
   def getArgumentValues(`def`: GraphQLDirective, node: FieldNode, variableValues: Maybe[StringDictionary[_]]): StringDictionary[js.Any] = js.native
+  
   def getDirectiveValues(directiveDef: GraphQLDirective, node: Directives): js.UndefOr[StringDictionary[js.Any]] = js.native
   def getDirectiveValues(directiveDef: GraphQLDirective, node: Directives, variableValues: Maybe[StringDictionary[_]]): js.UndefOr[StringDictionary[js.Any]] = js.native
+  
   def getVariableValues(
     schema: GraphQLSchema,
     varDefNodes: js.Array[VariableDefinitionNode],
@@ -52,5 +49,10 @@ object valuesMod extends js.Object {
     inputs: StringDictionary[js.Any],
     options: MaxErrors
   ): CoercedVariableValues = js.native
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.graphql.anon.Coerced
+    - typingsSlinky.graphql.anon.Errors
+  */
+  trait CoercedVariableValues extends js.Object
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.reactReduxToastr.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactReduxToastr.reactReduxToastrStrings.bounceIn
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactReduxToastr.reactReduxToastrStrings.fadeIn
 */
 trait transitionInType extends js.Object
-
 object transitionInType {
+  
   @scala.inline
   def bounceIn: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.bounceIn = "bounceIn".asInstanceOf[typingsSlinky.reactReduxToastr.reactReduxToastrStrings.bounceIn]
+  
   @scala.inline
   def bounceInDown: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.bounceInDown = "bounceInDown".asInstanceOf[typingsSlinky.reactReduxToastr.reactReduxToastrStrings.bounceInDown]
+  
   @scala.inline
   def fadeIn: typingsSlinky.reactReduxToastr.reactReduxToastrStrings.fadeIn = "fadeIn".asInstanceOf[typingsSlinky.reactReduxToastr.reactReduxToastrStrings.fadeIn]
 }
-

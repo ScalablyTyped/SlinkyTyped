@@ -6,7 +6,7 @@ import typingsSlinky.semanticUiReact.searchSearchMod.SearchComponent
 import typingsSlinky.semanticUiReact.searchSearchMod.SearchProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semantic-ui-react", "Search")
 @js.native
@@ -15,8 +15,6 @@ class Search protected ()
   def this(props: SearchProps) = this()
   def this(props: SearchProps, context: js.Any) = this()
 }
-
 @JSImport("semantic-ui-react", "Search")
 @js.native
 object Search extends TopLevel[SearchComponent]
-

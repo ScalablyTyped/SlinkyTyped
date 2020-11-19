@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-dynamodb-node/commands/CreateTableCommand", JSImport.Namespace)
 @js.native
 object createTableCommandMod extends js.Object {
+  
   @js.native
   class CreateTableCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object createTableCommandMod extends js.Object {
           Readable
         ] {
     def this(input: CreateTableInput) = this()
+    
     val middlewareStack: MiddlewareStack[CreateTableInput, CreateTableOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[CreateTableInput, CreateTableOutput] = js.native
   }
-  
 }
-

@@ -2,12 +2,11 @@ package typingsSlinky.asn1js.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ILocalHexBlock extends js.Object {
-  var isHexOnly: scala.Boolean = js.native
-  var valueHex: js.typedarray.ArrayBuffer = js.native
+  
   /**
     * Base function for converting block from BER encoded array of bytes
     * 
@@ -19,6 +18,9 @@ trait ILocalHexBlock extends js.Object {
     * @memberOf LocalHexBlockMixin
     */
   def fromBER(inputBuffer: js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Double = js.native
+  
+  var isHexOnly: scala.Boolean = js.native
+  
   /**
     * Encoding of current ASN.1 block into ASN.1 encoded array (BER rules)
     * 
@@ -29,10 +31,12 @@ trait ILocalHexBlock extends js.Object {
     */
   def toBER(): js.typedarray.ArrayBuffer = js.native
   def toBER(sizeOnly: scala.Boolean): js.typedarray.ArrayBuffer = js.native
+  
   /**
     * Convertion for the block to JSON object
     * @returns {*}
     */
   def toJSON(): js.Any = js.native
+  
+  var valueHex: js.typedarray.ArrayBuffer = js.native
 }
-

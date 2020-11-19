@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.settingsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/settings", "settings.ProjectSettingsPart")
 @js.native
@@ -21,16 +21,18 @@ abstract class ProjectSettingsPart protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsProjectSettings: ProjectSettings = js.native
+  
   @JSName("model")
   var model_FProjectSettingsPart: IModel = js.native
-  def containerAsProjectSettings: ProjectSettings = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/settings", "settings.ProjectSettingsPart")
 @js.native
 object ProjectSettingsPart extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

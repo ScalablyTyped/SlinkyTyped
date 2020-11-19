@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.videoJs.mod.videojs.TextTrackMenuItemOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js", "TextTrackMenuItem")
 @js.native
@@ -28,4 +28,3 @@ Instantiable1[
       /* options */ TextTrackMenuItemOptions, 
       typingsSlinky.videoJs.mod.videojs.TextTrackMenuItem
     ]
-

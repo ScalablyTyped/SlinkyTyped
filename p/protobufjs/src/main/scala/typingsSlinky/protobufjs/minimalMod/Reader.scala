@@ -2,7 +2,7 @@ package typingsSlinky.protobufjs.minimalMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("protobufjs/minimal", "Reader")
 @js.native
@@ -14,11 +14,11 @@ class Reader protected ()
     */
   def this(buffer: js.typedarray.Uint8Array) = this()
 }
-
 /* static members */
 @JSImport("protobufjs/minimal", "Reader")
 @js.native
 object Reader extends js.Object {
+  
   /**
     * Creates a new reader using the specified buffer.
     * @param buffer Buffer to read from
@@ -27,4 +27,3 @@ object Reader extends js.Object {
     */
   def create(buffer: js.typedarray.Uint8Array): typingsSlinky.protobufjs.mod.Reader | typingsSlinky.protobufjs.mod.BufferReader = js.native
 }
-

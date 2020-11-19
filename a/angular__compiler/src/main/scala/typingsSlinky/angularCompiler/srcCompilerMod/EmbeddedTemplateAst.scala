@@ -4,7 +4,7 @@ import typingsSlinky.angularCompiler.templateAstMod.QueryMatch
 import typingsSlinky.angularCompiler.templateAstMod.TemplateAst
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/compiler", "EmbeddedTemplateAst")
 @js.native
@@ -24,4 +24,3 @@ class EmbeddedTemplateAst protected ()
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
 }
-

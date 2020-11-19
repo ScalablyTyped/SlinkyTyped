@@ -8,17 +8,19 @@ import typingsSlinky.reactMdTypography.textMod.TextElement
 import typingsSlinky.reactMdTypography.textMod.TextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/typography", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * This component is used to create text that is only visible to screen readers.
     * If you enable the `focusable` prop, the text will become visible to all users
     * while focused.
     */
   val SrOnly: ForwardRefExoticComponent[SrOnlyProps with RefAttributes[TextElement]] = js.native
+  
   /**
     * The `Text` component is used to render text with the material design
     * typography styles applied.  By default, everything will be rendered in a
@@ -46,10 +48,10 @@ object mod extends js.Object {
     * the provided `component` will be used instead.
     */
   val Text: ForwardRefExoticComponent[TextProps with RefAttributes[TextElement]] = js.native
+  
   val TextContainer: ForwardRefExoticComponent[
     TextContainerProps with (RefAttributes[
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 178 */ js.Any
     ])
   ] = js.native
 }
-

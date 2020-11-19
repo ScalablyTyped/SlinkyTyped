@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.AudioBuffer
 import org.scalajs.dom.raw.HTMLAudioElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents the resource of an audio asset.
@@ -21,4 +21,3 @@ class Sound protected ()
   def this(resource: AudioBuffer) = this()
   def this(resource: HTMLAudioElement) = this()
 }
-

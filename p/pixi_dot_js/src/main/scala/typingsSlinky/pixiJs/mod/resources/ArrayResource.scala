@@ -3,7 +3,7 @@ package typingsSlinky.pixiJs.mod.resources
 import typingsSlinky.pixiJs.anon.Width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A resource that contains a number of sources.
@@ -26,4 +26,3 @@ class ArrayResource protected ()
   def this(source: js.Array[_], options: Width) = this()
   def this(source: Double, options: Width) = this()
 }
-

@@ -1,12 +1,13 @@
 package typingsSlinky.samchon.collectionsMod
 
-import typingsSlinky.tstl.mod.base.Container
+import typingsSlinky.tstl.icontainerMod.IContainer
+import typingsSlinky.tstl.icontainerMod.IContainer.Iterator
+import typingsSlinky.tstl.icontainerMod.IContainer.ReverseIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("samchon/collections", "EventDispatcher")
 @js.native
-class EventDispatcher[T, SourceT /* <: Container[T, SourceT, IteratorT, ReverseT, T] */, IteratorT /* <: js.Iterator[T] */, ReverseT /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify std.base.ReverseIterator<T, SourceT, IteratorT, ReverseT> */ js.Any */] ()
+class EventDispatcher[T, SourceT /* <: IContainer[T, SourceT, IteratorT, ReverseT, T] */, IteratorT /* <: Iterator[T, SourceT, IteratorT, ReverseT, T] */, ReverseT /* <: ReverseIterator[T, SourceT, IteratorT, ReverseT, T] */] ()
   extends typingsSlinky.ecol.mod.EventDispatcher[T, SourceT, IteratorT, ReverseT]
-

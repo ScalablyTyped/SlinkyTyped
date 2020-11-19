@@ -2,7 +2,7 @@ package typingsSlinky.sharepoint.global.SP.Social
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // For some reasons this enum doesn't exist
 // enum SocialFollowResult {
@@ -16,9 +16,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SP.Social.SocialFeedAttributes")
 @js.native
 object SocialFeedAttributes extends js.Object {
-  /* 1 */ val moreThreadsAvailable: typingsSlinky.sharepoint.SP.Social.SocialFeedAttributes.moreThreadsAvailable with Double = js.native
-  /* 0 */ val none: typingsSlinky.sharepoint.SP.Social.SocialFeedAttributes.none with Double = js.native
+  
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.sharepoint.SP.Social.SocialFeedAttributes with Double] = js.native
+  
+  /* 1 */ val moreThreadsAvailable: typingsSlinky.sharepoint.SP.Social.SocialFeedAttributes.moreThreadsAvailable with Double = js.native
+  
+  /* 0 */ val none: typingsSlinky.sharepoint.SP.Social.SocialFeedAttributes.none with Double = js.native
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.actionsOnGoogle.basicMod.BasicCardOptions
 import typingsSlinky.actionsOnGoogle.incomingMod._IncomingMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("actions-on-google/dist/service/actionssdk", "BasicCard")
 @js.native
@@ -14,4 +14,3 @@ class BasicCard protected ()
   /** @public */
   def this(options: BasicCardOptions) = this()
 }
-

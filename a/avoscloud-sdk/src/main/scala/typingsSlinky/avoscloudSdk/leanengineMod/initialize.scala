@@ -2,11 +2,12 @@ package typingsSlinky.avoscloudSdk.leanengineMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("leanengine", "initialize")
 @js.native
 object initialize extends js.Object {
+  
   /**
     * Call this method first to set up your authentication tokens for AV.
     * @param {String} applicationId Your Application ID.
@@ -16,4 +17,3 @@ object initialize extends js.Object {
   def apply(applicationId: String, applicationKey: String): Unit = js.native
   def apply(applicationId: String, applicationKey: String, masterKey: String): Unit = js.native
 }
-

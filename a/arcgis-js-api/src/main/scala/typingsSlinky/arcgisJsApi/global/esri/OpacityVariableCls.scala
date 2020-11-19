@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.OpacityVariableProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.OpacityVariable")
 @js.native
@@ -16,4 +16,3 @@ class OpacityVariableCls ()
   extends typingsSlinky.arcgisJsApi.esri.OpacityVariable {
   def this(properties: OpacityVariableProperties) = this()
 }
-

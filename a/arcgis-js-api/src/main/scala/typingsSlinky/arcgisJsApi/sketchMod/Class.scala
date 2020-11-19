@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Sketch
 import typingsSlinky.arcgisJsApi.esri.SketchProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Sketch", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Sketch {
   def this(properties: SketchProperties) = this()
 }
-

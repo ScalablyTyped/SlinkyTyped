@@ -3,27 +3,14 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.elevation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ElevationLayer
   extends Layer
      with ArcGISCachedService
      with PortalLayer {
-  /**
-    * The [image service's metadata JSON](https://developers.arcgis.com/rest/services-reference/image-service.htm) exposed by the ArcGIS REST API. While most commonly used [properties](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#properties-summary) are exposed on the ElevationLayer class directly, this property gives access to all information returned by the elevation image service. This property is useful if working in an application built using an older version of the API which requires access to elevation image service properties from a more recent version.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#sourceJSON)
-    */
-  var sourceJSON: js.Any = js.native
-  @JSName("type")
-  val type_ElevationLayer: elevation = js.native
-  /**
-    * URL pointing to the Elevation layer resource on an ArcGIS Image Server.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#url)
-    */
-  var url: String = js.native
+  
   /**
     * Creates an elevation sampler for the given [Extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html) by querying the service layer for elevation data and caching it so values may be sampled quickly afterwards. The resolution of the cached data can be set using the `demResolution` option. In many cases, `auto` demResolution can be used to get high quality elevation samples without the need to know exactly where the data in the service is located. This is particularly useful for services which combine elevation data from many sources (such as the world elevation service). If more control, or higher quality samples are required, use either `finest-contiguous` or a fixed `{number}` resolution.
     *
@@ -37,6 +24,7 @@ trait ElevationLayer
     */
   def createElevationSampler(extent: Extent): js.Promise[ElevationSampler] = js.native
   def createElevationSampler(extent: Extent, options: ElevationLayerCreateElevationSamplerOptions): js.Promise[ElevationSampler] = js.native
+  
   /**
     * Requests a tile from the service and decodes the data into a linear array of elevation values.  The returned promise resolves with a plain object describing the obtained elevation data for the tile. The object has the following properties:
     *
@@ -60,6 +48,7 @@ trait ElevationLayer
     */
   def fetchTile(level: Double, row: Double, column: Double): js.Promise[ElevationTileData] = js.native
   def fetchTile(level: Double, row: Double, column: Double, options: ElevationLayerFetchTileOptions): js.Promise[ElevationTileData] = js.native
+  
   /**
     * This method returns a URL to a tile for a given level, row and column.
     *
@@ -71,6 +60,7 @@ trait ElevationLayer
     *
     */
   def getTileUrl(level: Double, row: Double, col: Double): String = js.native
+  
   def queryElevation(geometry: Multipoint): js.Promise[ElevationLayerElevationQueryResult] = js.native
   def queryElevation(geometry: Multipoint, options: ElevationLayerQueryElevationOptions): js.Promise[ElevationLayerElevationQueryResult] = js.native
   /**
@@ -97,5 +87,21 @@ trait ElevationLayer
   def queryElevation(geometry: Point, options: ElevationLayerQueryElevationOptions): js.Promise[ElevationLayerElevationQueryResult] = js.native
   def queryElevation(geometry: Polyline): js.Promise[ElevationLayerElevationQueryResult] = js.native
   def queryElevation(geometry: Polyline, options: ElevationLayerQueryElevationOptions): js.Promise[ElevationLayerElevationQueryResult] = js.native
+  
+  /**
+    * The [image service's metadata JSON](https://developers.arcgis.com/rest/services-reference/image-service.htm) exposed by the ArcGIS REST API. While most commonly used [properties](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#properties-summary) are exposed on the ElevationLayer class directly, this property gives access to all information returned by the elevation image service. This property is useful if working in an application built using an older version of the API which requires access to elevation image service properties from a more recent version.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#sourceJSON)
+    */
+  var sourceJSON: js.Any = js.native
+  
+  @JSName("type")
+  val type_ElevationLayer: elevation = js.native
+  
+  /**
+    * URL pointing to the Elevation layer resource on an ArcGIS Image Server.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#url)
+    */
+  var url: String = js.native
 }
-

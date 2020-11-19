@@ -5,11 +5,12 @@ import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("bwip-js", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * The Browser version of the library's functionality, which makes use of an HTMLCanvasElement for rendering.
     * @param canvas ID string or HTML element of the canvas to render within
@@ -37,4 +38,3 @@ object ^ extends js.Object {
   def apply(req: IncomingMessage, res: ServerResponse): Unit = js.native
   def apply(req: IncomingMessage, res: ServerResponse, opts: ToBufferOptions): Unit = js.native
 }
-

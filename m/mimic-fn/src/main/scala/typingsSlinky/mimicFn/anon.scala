@@ -2,13 +2,15 @@ package typingsSlinky.mimicFn
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object anon extends js.Object {
+  
   @js.native
   trait Call extends js.Object {
+    
     /**
     	Make a function mimic another one. It will copy over the properties `name`, `length`, `displayName`, and any custom properties you may have set.
     	@param to - Mimicking function.
@@ -33,6 +35,4 @@ object anon extends js.Object {
     	*/
     def apply[ArgumentsType /* <: js.Array[_] */, ReturnType, FunctionType /* <: js.Function1[/* arguments */ ArgumentsType, ReturnType] */](to: js.Function1[/* arguments */ ArgumentsType, ReturnType], from: FunctionType): FunctionType = js.native
   }
-  
 }
-

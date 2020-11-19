@@ -2,12 +2,13 @@ package typingsSlinky.zipJs.zip
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Reader extends js.Object {
-  var size: Double = js.native
+  
   def init(callback: js.Function0[Unit], onerror: js.Function1[/* error */ js.Any, Unit]): Unit = js.native
+  
   def readUint8Array(index: Double, length: Double, callback: js.Function1[/* result */ js.typedarray.Uint8Array, Unit]): Unit = js.native
   def readUint8Array(
     index: Double,
@@ -15,5 +16,6 @@ trait Reader extends js.Object {
     callback: js.Function1[/* result */ js.typedarray.Uint8Array, Unit],
     onerror: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
+  
+  var size: Double = js.native
 }
-

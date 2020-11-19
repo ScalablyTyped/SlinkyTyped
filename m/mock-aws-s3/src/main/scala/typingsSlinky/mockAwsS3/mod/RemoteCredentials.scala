@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.remoteCredentialsMod.RemoteCredentialsOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "RemoteCredentials")
 @js.native
@@ -15,4 +15,3 @@ class RemoteCredentials ()
   extends typingsSlinky.awsSdk.mod.RemoteCredentials {
   def this(options: RemoteCredentialsOptions) = this()
 }
-

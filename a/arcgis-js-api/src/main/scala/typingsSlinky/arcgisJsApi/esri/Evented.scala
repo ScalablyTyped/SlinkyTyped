@@ -3,10 +3,11 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.IHandle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Evented extends js.Object {
+  
   /**
     * Emits an event on the instance. This method should only be used when creating subclasses of this class.
     *
@@ -18,6 +19,7 @@ trait Evented extends js.Object {
     */
   def emit(`type`: String): Boolean = js.native
   def emit(`type`: String, event: js.Any): Boolean = js.native
+  
   /**
     * Indicates whether there is an event listener on the instance that matches the provided event name.
     *
@@ -27,6 +29,7 @@ trait Evented extends js.Object {
     *
     */
   def hasEventListener(`type`: String): Boolean = js.native
+  
   /**
     * Registers an event handler on the instance. Call this method to hook an event with a listener.
     *
@@ -39,4 +42,3 @@ trait Evented extends js.Object {
   def on(`type`: String, listener: EventHandler): IHandle = js.native
   def on(`type`: js.Array[String], listener: EventHandler): IHandle = js.native
 }
-

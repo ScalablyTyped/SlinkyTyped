@@ -6,7 +6,7 @@ import typingsSlinky.firebird.firebirdBooleans.`true`
 import typingsSlinky.firebird.firebirdStrings.all
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents results of SQL query if any.
@@ -18,6 +18,7 @@ import scala.scalajs.js.annotation._
 @JSImport("firebird", "FBResult")
 @js.native
 class FBResult () extends js.Object {
+  
   /**
     * Asynchronously fetches rows one by one.
     *
@@ -44,6 +45,7 @@ class FBResult () extends js.Object {
     rowCallback: js.Function1[/* row */ StringDictionary[DataType], Unit],
     eofCallback: js.Function2[/* err */ js.Error | Null, /* eof */ Boolean, Unit]
   ): Unit = js.native
+  
   /**
     * @summary
     * Synchronously fetches result rows.
@@ -70,6 +72,7 @@ class FBResult () extends js.Object {
   def fetchSync_true(rowCount: Double, asObject: `true`): js.Array[StringDictionary[DataType]] = js.native
   @JSName("fetchSync")
   def fetchSync_true_T_Object[T /* <: js.Object */](rowCount: Double, asObject: `true`): js.Array[T] = js.native
+  
   @JSName("fetch")
   def fetch_T_Object[T /* <: js.Object */](
     rowCount: all,
@@ -106,4 +109,3 @@ class FBResult () extends js.Object {
     eofCallback: js.Function2[/* err */ js.Error | Null, /* eof */ Boolean, Unit]
   ): Unit = js.native
 }
-

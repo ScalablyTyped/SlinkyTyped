@@ -7,7 +7,7 @@ import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.IStateChangeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk", "protobuf.StateChangeList")
 @js.native
@@ -19,11 +19,11 @@ class StateChangeList ()
   extends typingsSlinky.sawtoothSdk.protobufMod.StateChangeList {
   def this(properties: IStateChangeList) = this()
 }
-
 /* static members */
 @JSImport("sawtooth-sdk", "protobuf.StateChangeList")
 @js.native
 object StateChangeList extends js.Object {
+  
   /**
     * Creates a new StateChangeList instance using the specified properties.
     * @param [properties] Properties to set
@@ -31,6 +31,7 @@ object StateChangeList extends js.Object {
     */
   def create(): typingsSlinky.sawtoothSdk.protobufMod.StateChangeList = js.native
   def create(properties: IStateChangeList): typingsSlinky.sawtoothSdk.protobufMod.StateChangeList = js.native
+  
   /**
     * Decodes a StateChangeList message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -43,6 +44,7 @@ object StateChangeList extends js.Object {
   def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.StateChangeList = js.native
   def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.StateChangeList = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.StateChangeList = js.native
+  
   /**
     * Decodes a StateChangeList message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,6 +54,7 @@ object StateChangeList extends js.Object {
     */
   def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.StateChangeList = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.StateChangeList = js.native
+  
   /**
     * Encodes the specified StateChangeList message. Does not implicitly {@link StateChangeList.verify|verify} messages.
     * @param message StateChangeList message or plain object to encode
@@ -60,6 +63,7 @@ object StateChangeList extends js.Object {
     */
   def encode(message: IStateChangeList): Writer = js.native
   def encode(message: IStateChangeList, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified StateChangeList message, length delimited. Does not implicitly {@link StateChangeList.verify|verify} messages.
     * @param message StateChangeList message or plain object to encode
@@ -68,12 +72,14 @@ object StateChangeList extends js.Object {
     */
   def encodeDelimited(message: IStateChangeList): Writer = js.native
   def encodeDelimited(message: IStateChangeList, writer: Writer): Writer = js.native
+  
   /**
     * Creates a StateChangeList message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns StateChangeList
     */
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.StateChangeList = js.native
+  
   /**
     * Creates a plain object from a StateChangeList message. Also converts values to other types if specified.
     * @param message StateChangeList
@@ -82,6 +88,7 @@ object StateChangeList extends js.Object {
     */
   def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.StateChangeList): StringDictionary[js.Any] = js.native
   def toObject(message: typingsSlinky.sawtoothSdk.protobufMod.StateChangeList, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a StateChangeList message.
     * @param message Plain object to verify
@@ -89,4 +96,3 @@ object StateChangeList extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

@@ -160,46 +160,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojPictoChartItem extends JetElement[ojPictoChartItemSettableProperties] {
-  var borderColor: String = js.native
-  var borderWidth: Double = js.native
-  var categories: js.Array[String] = js.native
-  var color: String = js.native
-  var columnSpan: Double = js.native
-  var count: Double = js.native
-  var drilling: inherit | off | on = js.native
-  var name: String = js.native
-  var onBorderColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onBorderWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onColumnSpanChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onCountChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDrillingChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onRowSpanChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onShapeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSourceChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSourceHoverChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSourceHoverSelectedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSourceSelectedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var rowSpan: Double = js.native
-  var shape: js.UndefOr[
-    circle | diamond | human | plus | rectangle | square | star | triangleDown | triangleUp | none | String
-  ] = js.native
-  var shortDesc: String = js.native
-  var source: String = js.native
-  var sourceHover: String = js.native
-  var sourceHoverSelected: String = js.native
-  var sourceSelected: String = js.native
-  var svgClassName: String = js.native
-  var svgStyle: js.Object = js.native
+  
   def addEventListener(`type`: drillingChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: drillingChanged,
@@ -1105,6 +1070,21 @@ trait ojPictoChartItem extends JetElement[ojPictoChartItemSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var borderColor: String = js.native
+  
+  var borderWidth: Double = js.native
+  
+  var categories: js.Array[String] = js.native
+  
+  var color: String = js.native
+  
+  var columnSpan: Double = js.native
+  
+  var count: Double = js.native
+  
+  var drilling: inherit | off | on = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_borderColor(property: borderColor): String = js.native
@@ -1142,7 +1122,47 @@ trait ojPictoChartItem extends JetElement[ojPictoChartItemSettableProperties] {
   def getProperty_svgClassName(property: svgClassName): String = js.native
   @JSName("getProperty")
   def getProperty_svgStyle(property: svgStyle): /* import warning: importer.ImportType#apply Failed type conversion: @oracle/oraclejet.@oracle/oraclejet/ojpictochart.ojPictoChartItem['svgStyle'] */ js.Any = js.native
+  
+  var name: String = js.native
+  
+  var onBorderColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onBorderWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onColumnSpanChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onCountChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDrillingChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onRowSpanChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onShapeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSourceChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSourceHoverChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSourceHoverSelectedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSourceSelectedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var rowSpan: Double = js.native
+  
   def setProperties(properties: ojPictoChartItemSettablePropertiesLenient): Unit = js.native
+  
   def setProperty(property: drilling, value: inherit): Unit = js.native
   def setProperty(property: drilling, value: off): Unit = js.native
   def setProperty(property: drilling, value: on): Unit = js.native
@@ -1191,5 +1211,22 @@ trait ojPictoChartItem extends JetElement[ojPictoChartItemSettableProperties] {
   def setProperty_svgClassName(property: svgClassName, value: String): Unit = js.native
   @JSName("setProperty")
   def setProperty_svgStyle(property: svgStyle, value: js.Object): Unit = js.native
+  
+  var shape: js.UndefOr[
+    circle | diamond | human | plus | rectangle | square | star | triangleDown | triangleUp | none | String
+  ] = js.native
+  
+  var shortDesc: String = js.native
+  
+  var source: String = js.native
+  
+  var sourceHover: String = js.native
+  
+  var sourceHoverSelected: String = js.native
+  
+  var sourceSelected: String = js.native
+  
+  var svgClassName: String = js.native
+  
+  var svgStyle: js.Object = js.native
 }
-

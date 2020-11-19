@@ -3,7 +3,7 @@ package typingsSlinky.sawtoothSdk.mod.exceptions
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk", "exceptions._TransactionProcessorError")
 @js.native
@@ -15,4 +15,3 @@ class TransactionProcessorError protected ()
   protected def this(message: String, extendedData: Buffer) = this()
   protected def this(message: String, extendedData: js.typedarray.Uint8Array) = this()
 }
-

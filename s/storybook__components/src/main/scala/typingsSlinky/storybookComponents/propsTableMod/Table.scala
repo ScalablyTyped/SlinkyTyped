@@ -8,7 +8,7 @@ import typingsSlinky.react.mod.TableHTMLAttributes
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/components/dist/blocks/PropsTable/PropsTable", "Table")
 @js.native
@@ -20,4 +20,3 @@ object Table
         Theme
       ]
     ]
-

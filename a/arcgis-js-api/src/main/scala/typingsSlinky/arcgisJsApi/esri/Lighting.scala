@@ -2,12 +2,13 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Lighting
   extends Accessor
      with corePromise {
+  
   /**
     * The time and date for which the sun position and light direction is computed.
     *
@@ -16,6 +17,7 @@ trait Lighting
     * @default null
     */
   var date: js.Date = js.native
+  
   /**
     * Indicates whether to show shadows cast by the sun. Shadows are only displayed for real world 3D objects. Terrain doesn't cast shadows. In local scenes at small zoom levels, shadows are not displayed.
     *
@@ -24,6 +26,7 @@ trait Lighting
     * @default false
     */
   var directShadowsEnabled: Boolean = js.native
+  
   /**
     * The UTC time zone offset in hours that should be displayed in the UI to represent the date. This value does not have an impact on the actual lighting of the scene.
     *
@@ -33,4 +36,3 @@ trait Lighting
     */
   var displayUTCOffset: Double = js.native
 }
-

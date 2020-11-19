@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.SubMesh")
 @js.native
@@ -58,30 +58,30 @@ class SubMesh protected ()
     /** indices count */
   indexCount: Double,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
+    renderingMesh: js.UndefOr[scala.Nothing],
+    createBoundingBox: Boolean
+  ) = this()
+  def this(
+    /** the material index to use */
+  materialIndex: Double,
+    /** vertex index start */
+  verticesStart: Double,
+    /** vertices count */
+  verticesCount: Double,
+    /** index start */
+  indexStart: Double,
+    /** indices count */
+  indexCount: Double,
+    mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     renderingMesh: typingsSlinky.babylonjs.BABYLON.Mesh,
     createBoundingBox: Boolean
   ) = this()
-  /**
-    * Checks if a cullable object (mesh...) is in the camera frustum
-    * Unlike isInFrustum this cheks the full bounding box
-    * @param frustumPlanes Camera near/planes
-    * @returns true if the object is in frustum otherwise false
-    */
-  /* CompleteClass */
-  override def isCompletelyInFrustum(frustumPlanes: js.Array[typingsSlinky.babylonjs.BABYLON.Plane]): Boolean = js.native
-  /**
-    * Checks if the object or part of the object is in the frustum
-    * @param frustumPlanes Camera near/planes
-    * @returns true if the object is in frustum otherwise false
-    */
-  /* CompleteClass */
-  override def isInFrustum(frustumPlanes: js.Array[typingsSlinky.babylonjs.BABYLON.Plane]): Boolean = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.SubMesh")
 @js.native
 object SubMesh extends js.Object {
+  
   /**
     * Add a new submesh to a mesh
     * @param materialIndex defines the material index to use
@@ -109,6 +109,16 @@ object SubMesh extends js.Object {
     indexStart: Double,
     indexCount: Double,
     mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
+    renderingMesh: js.UndefOr[scala.Nothing],
+    createBoundingBox: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.SubMesh = js.native
+  def AddToMesh(
+    materialIndex: Double,
+    verticesStart: Double,
+    verticesCount: Double,
+    indexStart: Double,
+    indexCount: Double,
+    mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh,
     renderingMesh: typingsSlinky.babylonjs.BABYLON.Mesh
   ): typingsSlinky.babylonjs.BABYLON.SubMesh = js.native
   def AddToMesh(
@@ -121,6 +131,7 @@ object SubMesh extends js.Object {
     renderingMesh: typingsSlinky.babylonjs.BABYLON.Mesh,
     createBoundingBox: Boolean
   ): typingsSlinky.babylonjs.BABYLON.SubMesh = js.native
+  
   /**
     * Creates a new submesh from indices data
     * @param materialIndex the index of the main mesh material
@@ -144,4 +155,3 @@ object SubMesh extends js.Object {
     renderingMesh: typingsSlinky.babylonjs.BABYLON.Mesh
   ): typingsSlinky.babylonjs.BABYLON.SubMesh = js.native
 }
-

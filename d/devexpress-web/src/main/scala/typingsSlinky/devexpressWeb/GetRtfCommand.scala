@@ -2,13 +2,14 @@ package typingsSlinky.devexpressWeb
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A command to receive a document's content in RTF format.
   */
 @js.native
 trait GetRtfCommand extends CommandWithSimpleStateBase {
+  
   /**
     * Executes the GetRtfCommand command with the specified parameters. true if the command has been successfully executed; false if the command execution has failed.
     * @param interval An object specifying the required interval in the specified sub-document.
@@ -18,4 +19,3 @@ trait GetRtfCommand extends CommandWithSimpleStateBase {
   def execute(interval: Interval, callback: js.Function1[/* rtf */ String, Unit]): Boolean = js.native
   def execute(interval: Interval, callback: js.Function1[/* rtf */ String, Unit], subDocumentId: Double): Boolean = js.native
 }
-

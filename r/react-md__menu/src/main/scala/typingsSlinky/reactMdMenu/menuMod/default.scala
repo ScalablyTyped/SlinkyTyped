@@ -6,7 +6,7 @@ import typingsSlinky.reactMdMenu.anon.MenuPropsPickMenuPropshid
 import typingsSlinky.reactMdMenu.anon.MenuPropsPickMenuPropshidAbout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `Menu` component is a fully controlled component that will animate in and
@@ -18,4 +18,3 @@ import scala.scalajs.js.annotation._
 object default extends TopLevel[
       ForwardRefExoticComponent[MenuPropsPickMenuPropshid | MenuPropsPickMenuPropshidAbout]
     ]
-

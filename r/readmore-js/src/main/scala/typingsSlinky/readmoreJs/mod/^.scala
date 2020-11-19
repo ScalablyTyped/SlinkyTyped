@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("readmore-js", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ class ^ protected () extends Readmore {
   def this(element: Element, options: Options) = this()
   def this(element: NodeList, options: Options) = this()
 }
-

@@ -10,7 +10,7 @@ import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.InputHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/FormField", "FormField")
 @js.native
@@ -35,7 +35,6 @@ class FormField protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("grommet/es6/components/FormField", "FormField")
 @js.native
 object FormField extends TopLevel[
@@ -46,4 +45,3 @@ object FormField extends TopLevel[
         ])
       ]
     ]
-

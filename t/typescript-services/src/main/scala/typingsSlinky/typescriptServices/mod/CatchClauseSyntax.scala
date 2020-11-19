@@ -3,7 +3,7 @@ package typingsSlinky.typescriptServices.mod
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "CatchClauseSyntax")
 @js.native
@@ -19,11 +19,11 @@ class CatchClauseSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSImport("typescript-services", "CatchClauseSyntax")
 @js.native
 object CatchClauseSyntax extends js.Object {
+  
   def create(
     catchKeyword: ISyntaxToken,
     openParenToken: ISyntaxToken,
@@ -31,6 +31,6 @@ object CatchClauseSyntax extends js.Object {
     closeParenToken: ISyntaxToken,
     block: typingsSlinky.typescriptServices.TypeScript.BlockSyntax
   ): typingsSlinky.typescriptServices.TypeScript.CatchClauseSyntax = js.native
+  
   def create1(identifier: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.CatchClauseSyntax = js.native
 }
-

@@ -5,11 +5,12 @@ import typingsSlinky.twilsock.initregistrationMod.InitRegistration
 import typingsSlinky.twilsock.protocolMod.Protocol.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("twilsock/lib/protocol/messages", JSImport.Namespace)
 @js.native
 object messagesMod extends js.Object {
+  
   @js.native
   class Close ()
     extends typingsSlinky.twilsock.closeMod.Close
@@ -70,6 +71,4 @@ object messagesMod extends js.Object {
     extends typingsSlinky.twilsock.updateMod.Update {
     def this(token: String) = this()
   }
-  
 }
-

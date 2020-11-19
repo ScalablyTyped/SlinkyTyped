@@ -9,13 +9,15 @@ import typingsSlinky.openpgp.mod.crypto.publicKey.elliptic.curve.Curve
 import typingsSlinky.openpgp.mod.enums.symmetric
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "crypto.public_key")
 @js.native
 object publicKey extends js.Object {
+  
   @js.native
   object dsa extends js.Object {
+    
     /**
       * DSA Sign function
       * @param hash_algo
@@ -34,6 +36,7 @@ object publicKey extends js.Object {
       q: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       x: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any
     ): js.Object = js.native
+    
     /**
       * DSA Verify function
       * @param hash_algo
@@ -60,6 +63,7 @@ object publicKey extends js.Object {
   
   @js.native
   object elgamal extends js.Object {
+    
     /**
       * ElGamal Encryption function
       * @param c1
@@ -74,6 +78,7 @@ object publicKey extends js.Object {
       p: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       x: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any
     ): js.Any = js.native
+    
     /**
       * ElGamal Encryption function
       * @param m
@@ -98,15 +103,17 @@ object publicKey extends js.Object {
     */
   @js.native
   object elliptic extends js.Object {
+    
     @js.native
     object curve extends js.Object {
+      
       @js.native
       class Curve () extends js.Object
-      
     }
     
     @js.native
     object ecdh extends js.Object {
+      
       /**
         * Decrypt and unwrap the value derived from session key
         * @param oid Elliptic curve object identifier
@@ -129,6 +136,7 @@ object publicKey extends js.Object {
       ): js.Promise[
             /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ _
           ] = js.native
+      
       /**
         * Encrypt and wrap a session key
         * @param oid Elliptic curve object identifier
@@ -147,6 +155,7 @@ object publicKey extends js.Object {
         Q: js.typedarray.Uint8Array,
         fingerprint: String
       ): js.Promise[C] = js.native
+      
       /**
         * Generate ECDHE secret from private key and public part of ephemeral key
         * @param curve Elliptic curve object
@@ -157,6 +166,7 @@ object publicKey extends js.Object {
       def genPrivateEphemeralKey(curve: Curve, V: js.typedarray.Uint8Array, d: js.typedarray.Uint8Array): js.Promise[
             /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ _
           ] = js.native
+      
       /**
         * Generate ECDHE ephemeral key and secret from public key
         * @param curve Elliptic curve object
@@ -168,6 +178,7 @@ object publicKey extends js.Object {
     
     @js.native
     object ecdsa extends js.Object {
+      
       /**
         * Sign a message using the provided key
         * @param oid Elliptic curve object identifier
@@ -184,6 +195,7 @@ object publicKey extends js.Object {
         d: js.typedarray.Uint8Array,
         hashed: js.typedarray.Uint8Array
       ): js.Object = js.native
+      
       /**
         * Verifies if a signature is valid for a message
         * @param oid Elliptic curve object identifier
@@ -206,6 +218,7 @@ object publicKey extends js.Object {
     
     @js.native
     object eddsa extends js.Object {
+      
       /**
         * Sign a message using the provided keygit
         * @param oid Elliptic curve object identifier
@@ -222,6 +235,7 @@ object publicKey extends js.Object {
         d: js.typedarray.Uint8Array,
         hashed: js.typedarray.Uint8Array
       ): js.Object = js.native
+      
       /**
         * Verifies if a signature is valid for a message
         * @param oid Elliptic curve object identifier
@@ -244,15 +258,15 @@ object publicKey extends js.Object {
     
     @js.native
     object key extends js.Object {
+      
       @js.native
       class KeyPair () extends js.Object
-      
     }
-    
   }
   
   @js.native
   object prime extends js.Object {
+    
     /**
       * Tests whether n is probably prime or not using Fermat's test with b = 2.
       * Fails if b^(n-1) mod n === 1.
@@ -264,6 +278,7 @@ object publicKey extends js.Object {
       n: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       b: Integer
     ): Boolean = js.native
+    
     /**
       * Probabilistic primality testing
       * @param n Number to test
@@ -276,6 +291,7 @@ object publicKey extends js.Object {
       e: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       k: Integer
     ): Boolean = js.native
+    
     /**
       * Tests whether n is probably prime or not using the Miller-Rabin test.
       * See HAC Remark 4.28.
@@ -289,6 +305,7 @@ object publicKey extends js.Object {
       k: Integer,
       rand: js.Function
     ): Boolean = js.native
+    
     /**
       * Probabilistic random number generator
       * @param bits Bit length of the prime
@@ -305,6 +322,7 @@ object publicKey extends js.Object {
   
   @js.native
   object rsa extends js.Object {
+    
     /**
       * Decrypt RSA message
       * @param m message
@@ -325,6 +343,7 @@ object publicKey extends js.Object {
       q: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       u: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any
     ): js.Any = js.native
+    
     /**
       * Encrypt message
       * @param m message
@@ -337,6 +356,7 @@ object publicKey extends js.Object {
       n: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       e: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any
     ): js.Any = js.native
+    
     /**
       * Generate a new random private key B bits long with public exponent E.
       * When possible, webCrypto is used. Otherwise, primes are generated using
@@ -348,6 +368,7 @@ object publicKey extends js.Object {
       *          RSA private prime p, RSA private prime q, u = q ** -1 mod p
       */
     def generate(B: Integer, E: String): js.Object = js.native
+    
     /**
       * Create signature
       * @param m message
@@ -362,6 +383,7 @@ object publicKey extends js.Object {
       e: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       d: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any
     ): js.Any = js.native
+    
     /**
       * Verify signature
       * @param s signature
@@ -375,6 +397,4 @@ object publicKey extends js.Object {
       e: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any
     ): js.Any = js.native
   }
-  
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.ServiceAreaParametersProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.ServiceAreaParameters")
 @js.native
@@ -16,4 +16,3 @@ class ServiceAreaParametersCls ()
   extends typingsSlinky.arcgisJsApi.esri.ServiceAreaParameters {
   def this(properties: ServiceAreaParametersProperties) = this()
 }
-

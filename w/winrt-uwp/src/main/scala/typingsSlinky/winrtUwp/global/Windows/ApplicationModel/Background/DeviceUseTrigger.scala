@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Background
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents an event that a Windows Runtime app can trigger to initiate a long-running operation with a device or sensor. */
 @JSGlobal("Windows.ApplicationModel.Background.DeviceUseTrigger")
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
 /** Constructor for DeviceUseTrigger . Takes no parameters. */
 class DeviceUseTrigger ()
   extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Background.DeviceUseTrigger
-

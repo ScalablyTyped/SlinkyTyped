@@ -2,7 +2,7 @@ package typingsSlinky.yandexMaps.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.yandexMaps.mod.IEventEmitter because Already inherited
@@ -15,6 +15,7 @@ import scala.scalajs.js.annotation._
 class Balloon protected () extends Popup[Balloon] {
   def this(map: Map_) = this()
   def this(map: Map_, options: IBalloonOptions) = this()
+  
   def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
   def add(
     types: String,
@@ -47,13 +48,20 @@ class Balloon protected () extends Popup[Balloon] {
     context: js.Object,
     priority: Double
   ): this.type = js.native
+  
   def autoPan(): js.Promise[Balloon] = js.native
+  
   def fire(`type`: String, eventobject: js.Object): this.type = js.native
   def fire(`type`: String, eventobject: IEvent): this.type = js.native
+  
   def freeze(): IFreezable = js.native
+  
   def getParent(): Balloon | Null = js.native
+  
   def group(): IEventGroup = js.native
+  
   def isFrozen(): Boolean = js.native
+  
   def remove(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
   def remove(
     types: String,
@@ -86,9 +94,10 @@ class Balloon protected () extends Popup[Balloon] {
     context: js.Object,
     priority: Double
   ): this.type = js.native
+  
   def setParent(): this.type = js.native
   def setParent(parent: js.Object): this.type = js.native
   def setParent(parent: Balloon): this.type = js.native
+  
   def unfreeze(): IFreezable = js.native
 }
-

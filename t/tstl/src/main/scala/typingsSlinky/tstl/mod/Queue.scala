@@ -2,7 +2,7 @@ package typingsSlinky.tstl.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "Queue")
 @js.native
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
   * Default Constructor.
   */
 class Queue[T] ()
-  extends typingsSlinky.tstl.tstlMod.Queue[T] {
+  extends typingsSlinky.tstl.tstlModuleMod.Queue[T] {
   /**
     * Copy Constructor.
     *
@@ -18,4 +18,3 @@ class Queue[T] ()
     */
   def this(obj: typingsSlinky.tstl.queueMod.Queue[T]) = this()
 }
-

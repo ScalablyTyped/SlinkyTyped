@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IWorkflow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -26,34 +26,40 @@ class WorkflowCallAction protected () extends MicroflowAction {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FWorkflowCallAction: IModel = js.native
+  
   def outputVariableName: String = js.native
   def outputVariableName_=(newValue: String): Unit = js.native
+  
   def useReturnVariable: Boolean = js.native
   def useReturnVariable_=(newValue: Boolean): Unit = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
   def workflow: IWorkflow | Null = js.native
+  
   def workflowContextVariable: String = js.native
   def workflowContextVariable_=(newValue: String): Unit = js.native
+  
   def workflowQualifiedName: String | Null = js.native
+  
   def workflow_=(newValue: IWorkflow | Null): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.WorkflowCallAction")
 @js.native
 object WorkflowCallAction extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new WorkflowCallAction instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): WorkflowCallAction = js.native
+  
   /**
     * Creates and returns a new WorkflowCallAction instance in the SDK and on the server.
     * The new WorkflowCallAction will be automatically stored in the 'action' property
@@ -63,5 +69,8 @@ object WorkflowCallAction extends js.Object {
     *  8.10.0 and higher
     */
   def createIn(container: ActionActivity): WorkflowCallAction = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

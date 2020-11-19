@@ -2,7 +2,7 @@ package typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.21.0: introduced
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IMicroflowJavaActionParameterType
   extends typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.IParameterType
-

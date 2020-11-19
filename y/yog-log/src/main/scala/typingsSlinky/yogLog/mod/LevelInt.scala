@@ -2,7 +2,7 @@ package typingsSlinky.yogLog.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.yogLog.yogLogStrings.`0`
@@ -21,4 +21,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.yogLog.yogLogNumbers.`16`
 */
 trait LevelInt extends js.Object
-

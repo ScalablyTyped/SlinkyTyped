@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.videoJs.mod.videojs.TextTrackCueList.TextTrackCue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js/dist/alt/video.core", "TextTrackCueList")
 @js.native
@@ -19,7 +19,6 @@ class ^ protected ()
     */
   def this(cues: js.Array[TextTrackCue]) = this()
 }
-
 @JSImport("video.js/dist/alt/video.core", "TextTrackCueList")
 @js.native
 object ^
@@ -35,4 +34,3 @@ Instantiable1[
         typingsSlinky.videoJs.mod.videojs.TextTrackCueList
       ]
     ]
-

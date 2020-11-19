@@ -3,7 +3,7 @@ package typingsSlinky.openlayers.mod.interaction
 import typingsSlinky.openlayers.mod.olx.interaction.DragRotateAndZoomOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @classdesc
@@ -36,4 +36,3 @@ import scala.scalajs.js.annotation._
 class DragRotateAndZoom () extends Pointer {
   def this(opt_options: DragRotateAndZoomOptions) = this()
 }
-

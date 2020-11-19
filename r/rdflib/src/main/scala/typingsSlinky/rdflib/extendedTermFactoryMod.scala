@@ -7,17 +7,11 @@ import typingsSlinky.rdflib.factoryTypesMod.Indexable
 import typingsSlinky.rdflib.typesMod.ValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rdflib/lib/factories/extended-term-factory", JSImport.Namespace)
 @js.native
 object extendedTermFactoryMod extends js.Object {
-  @js.native
-  trait CollectionFactory extends DataFactory[DefaultFactoryTypes, Indexable] {
-    def collection(elements: js.Array[ValueType]): typingsSlinky.rdflib.collectionMod.default[
-        typingsSlinky.rdflib.nodeInternalMod.default | typingsSlinky.rdflib.blankNodeMod.default | Collection[_] | typingsSlinky.rdflib.literalMod.default | typingsSlinky.rdflib.variableMod.default
-      ] = js.native
-  }
   
   /**
     * Data factory which also supports Collections
@@ -25,5 +19,12 @@ object extendedTermFactoryMod extends js.Object {
     * Necessary for preventing circular dependencies.
     */
   val default: CollectionFactory = js.native
+  
+  @js.native
+  trait CollectionFactory extends DataFactory[DefaultFactoryTypes, Indexable] {
+    
+    def collection(elements: js.Array[ValueType]): typingsSlinky.rdflib.collectionMod.default[
+        typingsSlinky.rdflib.nodeInternalMod.default | typingsSlinky.rdflib.blankNodeMod.default | Collection[_] | typingsSlinky.rdflib.literalMod.default | typingsSlinky.rdflib.variableMod.default
+      ] = js.native
+  }
 }
-

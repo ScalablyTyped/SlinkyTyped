@@ -2,7 +2,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An object representing the latitude and longitude for a point on the
@@ -17,4 +17,3 @@ class Coordinate protected ()
     */
   def this(latitude: Double, longitude: Double) = this()
 }
-

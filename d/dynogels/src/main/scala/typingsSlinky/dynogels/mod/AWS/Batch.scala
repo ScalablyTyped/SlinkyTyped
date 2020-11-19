@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.batchMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.Batch")
 @js.native
@@ -14,4 +14,3 @@ class Batch ()
   extends typingsSlinky.awsSdk.mod.Batch {
   def this(options: ClientConfiguration) = this()
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.jsrsasign.global.jsrsasign
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("jsrsasign.zulutodate")
 @js.native
 object zulutodate extends js.Object {
+  
   /**
     * GeneralizedTime or UTCTime string to Date object
     * @param s GeneralizedTime or UTCTime string (ex. 20170412235959.384Z)
@@ -26,4 +27,3 @@ object zulutodate extends js.Object {
     */
   def apply(s: String): js.Date = js.native
 }
-

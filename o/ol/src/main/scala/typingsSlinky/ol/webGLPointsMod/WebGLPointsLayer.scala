@@ -6,11 +6,12 @@ import typingsSlinky.ol.olStrings.precompose
 import typingsSlinky.ol.olStrings.rendercomplete
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait WebGLPointsLayer
   extends typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default] {
+  
   @JSName("on")
   def on_postcompose(
     `type`: postcompose,
@@ -26,6 +27,7 @@ trait WebGLPointsLayer
     `type`: rendercomplete,
     listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
   ): EventsKey = js.native
+  
   @JSName("once")
   def once_postcompose(
     `type`: postcompose,
@@ -41,6 +43,7 @@ trait WebGLPointsLayer
     `type`: rendercomplete,
     listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
   ): EventsKey = js.native
+  
   @JSName("un")
   def un_postcompose(
     `type`: postcompose,
@@ -57,4 +60,3 @@ trait WebGLPointsLayer
     listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
   ): Unit = js.native
 }
-

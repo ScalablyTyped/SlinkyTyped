@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Contacts
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Used to specify the query options when searching for contacts. */
 @JSGlobal("Windows.ApplicationModel.Contacts.ContactQueryOptions")
@@ -25,4 +25,3 @@ class ContactQueryOptions ()
     fields: typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.ContactQuerySearchFields
   ) = this()
 }
-

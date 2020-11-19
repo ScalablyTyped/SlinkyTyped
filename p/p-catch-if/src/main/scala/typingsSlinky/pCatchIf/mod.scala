@@ -4,23 +4,12 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("p-catch-if", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  @js.native
-  trait ErrorConstructor
-    extends Instantiable0[js.Error]
-       with Instantiable1[/* message */ String, js.Error]
   
-  // TODO: Remove this for the next major release, refactor the whole definition to:
-  // declare function pCatchIf<T>(
-  // 	predicate: pCatchIf.Predicate,
-  // 	catchHandler: (error: Error) => T
-  // ): (error: Error) => T;
-  // export = pCatchIf;
-  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof pCatchIf */ js.Any = js.native
   /**
   	Conditional promise catch handler.
   	@param predicate - Specify either an `Error` constructor, array of `Error` constructors, `boolean`, or function that returns a promise for a `boolean` or a `boolean`. If the function returns a promise, it's awaited.
@@ -47,6 +36,19 @@ object mod extends js.Object {
   	```
   	*/
   def apply[T](predicate: Predicate, catchHandler: js.Function1[/* error */ js.Error, T]): js.Function1[/* error */ js.Error, T] = js.native
+  
+  // TODO: Remove this for the next major release, refactor the whole definition to:
+  // declare function pCatchIf<T>(
+  // 	predicate: pCatchIf.Predicate,
+  // 	catchHandler: (error: Error) => T
+  // ): (error: Error) => T;
+  // export = pCatchIf;
+  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof pCatchIf */ js.Any = js.native
+  
+  @js.native
+  trait ErrorConstructor
+    extends Instantiable0[js.Error]
+       with Instantiable1[/* message */ String, js.Error]
+  
   type Predicate = ErrorConstructor | js.Array[ErrorConstructor] | Boolean | (js.Function1[/* error */ js.Error, Boolean | js.Thenable[Boolean]])
 }
-

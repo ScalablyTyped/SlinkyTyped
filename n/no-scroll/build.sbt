@@ -1,11 +1,11 @@
 organization := "org.scalablytyped.slinky"
 name := "no-scroll"
-version := "2.1-dt-20190214Z-f5587d"
+version := "2.1-dt-20190214Z-9c83a5"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5")
+  "me.shadaj" %%% "slinky-web" % "0.6.6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -9,7 +9,7 @@ import typingsSlinky.firebaseFunctionsTypes.mod.FirebaseFunctions
 import typingsSlinky.firebaseMessagingTypes.mod.FirebaseMessagingName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@firebase/functions/dist/src/api/service", "Service")
 @js.native
@@ -32,19 +32,36 @@ class Service protected ()
     messagingProvider: Provider[FirebaseMessagingName],
     region_ : String
   ) = this()
+  
   @JSName("INTERNAL")
   var INTERNAL_Service: Delete = js.native
+  
+  /**
+    * Returns the URL for a callable with the given name.
+    * @param name The name of the callable.
+    */
+  def _url(name: String): String = js.native
+  
   var app_ : js.Any = js.native
+  
+  @JSName("app")
+  def app_MService: FirebaseApp = js.native
+  
   /**
     * Calls a callable function asynchronously and returns the result.
     * @param name The name of the callable trigger.
     * @param data The data to pass as params to the function.s
     */
   var call: js.Any = js.native
+  
   var cancelAllRequests: js.Any = js.native
+  
   val contextProvider: js.Any = js.native
+  
   var deleteService: js.Any = js.native
+  
   var emulatorOrigin: js.Any = js.native
+  
   /**
     * Does an HTTP POST and returns the completed response.
     * @param url The url to post to.
@@ -53,14 +70,8 @@ class Service protected ()
     * @return A Promise that will succeed when the request finishes.
     */
   var postJSON: js.Any = js.native
+  
   var region_ : js.Any = js.native
+  
   val serializer: js.Any = js.native
-  /**
-    * Returns the URL for a callable with the given name.
-    * @param name The name of the callable.
-    */
-  def _url(name: String): String = js.native
-  @JSName("app")
-  def app_MService: FirebaseApp = js.native
 }
-

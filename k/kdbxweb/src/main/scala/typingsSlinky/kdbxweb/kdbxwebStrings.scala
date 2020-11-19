@@ -2,13 +2,12 @@ package typingsSlinky.kdbxweb
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object kdbxwebStrings {
-  @js.native
-  sealed trait KdbxError extends js.Object
   
   @scala.inline
   def KdbxError: KdbxError = "KdbxError".asInstanceOf[KdbxError]
+  @js.native
+  sealed trait KdbxError extends js.Object
 }
-

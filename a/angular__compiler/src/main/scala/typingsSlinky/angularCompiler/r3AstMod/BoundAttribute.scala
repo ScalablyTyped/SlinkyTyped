@@ -9,7 +9,7 @@ import typingsSlinky.angularCompiler.i18nAstMod.Message
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/render3/r3_ast", "BoundAttribute")
 @js.native
@@ -128,20 +128,26 @@ class BoundAttribute protected () extends Node {
     valueSpan: ParseSourceSpan,
     i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
   ) = this()
+  
   var i18n: js.UndefOr[Message | typingsSlinky.angularCompiler.i18nAstMod.Node] = js.native
+  
   var name: String = js.native
+  
   var securityContext: SecurityContext = js.native
+  
   var `type`: BindingType = js.native
+  
   var unit: String | Null = js.native
+  
   var value: AST = js.native
+  
   var valueSpan: js.UndefOr[ParseSourceSpan] = js.native
 }
-
 /* static members */
 @JSImport("@angular/compiler/src/render3/r3_ast", "BoundAttribute")
 @js.native
 object BoundAttribute extends js.Object {
+  
   def fromBoundElementProperty(prop: BoundElementProperty): BoundAttribute = js.native
   def fromBoundElementProperty(prop: BoundElementProperty, i18n: I18nMeta): BoundAttribute = js.native
 }
-

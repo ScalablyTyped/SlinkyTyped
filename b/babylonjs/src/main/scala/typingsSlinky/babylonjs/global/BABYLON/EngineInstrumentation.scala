@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.EngineInstrumentation")
 @js.native
@@ -18,10 +18,4 @@ class EngineInstrumentation protected ()
     * Define the instrumented engine.
     */
   engine: typingsSlinky.babylonjs.BABYLON.Engine) = this()
-  /**
-    * Releases all held resources
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.yeomanAssert.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("yeoman-assert", "fileContent")
 @js.native
 object fileContent extends js.Object {
+  
   /**
     * Assert that a file's content matches a regex or string
     * @param file path to a file
@@ -31,4 +32,3 @@ object fileContent extends js.Object {
     */
   def apply(pairs: js.Array[js.Tuple2[String, js.RegExp]]): Unit = js.native
 }
-

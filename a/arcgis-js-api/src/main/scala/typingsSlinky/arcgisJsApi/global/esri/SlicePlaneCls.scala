@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.SlicePlaneProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.SlicePlane")
 @js.native
@@ -16,4 +16,3 @@ class SlicePlaneCls ()
   extends typingsSlinky.arcgisJsApi.esri.SlicePlane {
   def this(properties: SlicePlaneProperties) = this()
 }
-

@@ -50,21 +50,15 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx/components/menu", JSImport.Namespace)
 @js.native
 object menuMod extends js.Object {
+  
   @js.native
   object Menu extends js.Object {
-    @JSName("$$typeof")
-    var DollarDollartypeof: js.Symbol = js.native
-    var Label: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var List: NoneTAsComponentextendsElDefaultProps = js.native
-    var defaultProps: AsElementType with (Partial[
-        HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[_, String | Double | js.Symbol])
-      ]) = js.native
-    var displayName: js.UndefOr[String] = js.native
+    
     def apply[TAsComponent /* <: ReactElement */](
       props: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
           ComponentProps[TAsComponent], 
@@ -74,7 +68,18 @@ object menuMod extends js.Object {
           ]
         ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
     ): ReactElement | Null = js.native
+    
+    @JSName("$$typeof")
+    var DollarDollartypeof: js.Symbol = js.native
+    
+    var Label: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+    
+    var List: NoneTAsComponentextendsElDefaultProps = js.native
+    
+    var defaultProps: AsElementType with (Partial[
+        HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[_, String | Double | js.Symbol])
+      ]) = js.native
+    
+    var displayName: js.UndefOr[String] = js.native
   }
-  
 }
-

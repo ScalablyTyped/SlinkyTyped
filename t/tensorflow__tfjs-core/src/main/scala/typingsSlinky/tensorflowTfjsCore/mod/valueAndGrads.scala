@@ -4,11 +4,12 @@ import typingsSlinky.tensorflowTfjsCore.anon.GradsValue
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core", "valueAndGrads")
 @js.native
 object valueAndGrads extends js.Object {
+  
   /**
     * Like `tf.grads`, but returns also the value of `f()`. Useful when `f()`
     * returns a metric you want to show.
@@ -45,4 +46,3 @@ object valueAndGrads extends js.Object {
     GradsValue[O]
   ] = js.native
 }
-

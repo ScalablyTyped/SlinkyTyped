@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * map/scene on screen. The ArcGIS API for JavaScript offers a low-level interface to access the SceneView's WebGL context, and thus enables creating custom visualizations that interact with the scene the same way as built-in layers. Developers can either write WebGL code directly, or integrate with third-party WebGL libraries.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait externalRenderers extends js.Object {
+  
   /**
     * Adds an external renderer to the view. The external renderer is defined by an object that contains certain methods and properties, as defined by [ExternalRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#ExternalRenderer).
     *
@@ -21,6 +22,7 @@ trait externalRenderers extends js.Object {
     *
     */
   def add(view: SceneView, renderer: ExternalRenderer): Unit = js.native
+  
   /**
     * Transforms positions from the internal rendering coordinate system to the output spatial reference. The allowable output spatial reference is limited and depends on the [viewingMode](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#viewingMode):
     *   * In `global` mode, it can either be Web Mercator or WGS84.
@@ -76,6 +78,7 @@ trait externalRenderers extends js.Object {
     destSpatialReference: SpatialReference,
     count: Double
   ): js.Array[Double] | js.typedarray.Float32Array = js.native
+  
   /**
     * Get the render representation of the current camera of a view. This is the same camera as the one that is passed in the render context for an external renderer.
     *
@@ -85,6 +88,7 @@ trait externalRenderers extends js.Object {
     *
     */
   def getRenderCamera(view: SceneView): RenderCamera = js.native
+  
   /**
     * Removes an external renderer from the view.
     *
@@ -95,6 +99,7 @@ trait externalRenderers extends js.Object {
     *
     */
   def remove(view: SceneView, renderer: ExternalRenderer): Unit = js.native
+  
   /**
     * Computes a 4x4 affine transformation matrix that constitutes a linear coordinate transformation from a local Cartesian coordinate system to the virtual world coordinate system. For example, this matrix can be used to transform the vertices of a 3D model to the rendering coordinate system.  The local Cartesian system is defined by its origin and the following axis definition:
     *   * X: Easting
@@ -169,6 +174,7 @@ trait externalRenderers extends js.Object {
     srcSpatialReference: SpatialReference,
     dest: js.typedarray.Float32Array
   ): js.Array[Double] | js.typedarray.Float32Array = js.native
+  
   /**
     * Requests the view to be redrawn.
     *
@@ -178,6 +184,7 @@ trait externalRenderers extends js.Object {
     *
     */
   def requestRender(view: SceneView): Unit = js.native
+  
   /**
     * Transforms positions from the given spatial reference to the internal rendering coordinate system. The allowable input spatial reference is limited and depends on the [viewingMode](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#viewingMode):
     *   * In `global` mode, it can either be Web Mercator or WGS84.
@@ -234,4 +241,3 @@ trait externalRenderers extends js.Object {
     count: Double
   ): js.Array[Double] | js.typedarray.Float32Array = js.native
 }
-

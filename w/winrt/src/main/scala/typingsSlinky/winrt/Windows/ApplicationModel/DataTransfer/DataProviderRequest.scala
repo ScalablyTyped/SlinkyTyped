@@ -2,12 +2,12 @@ package typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DataProviderRequest extends IDataProviderRequest
-
 object DataProviderRequest {
+  
   @scala.inline
   def apply(
     deadline: js.Date,
@@ -19,4 +19,3 @@ object DataProviderRequest {
     __obj.asInstanceOf[DataProviderRequest]
   }
 }
-

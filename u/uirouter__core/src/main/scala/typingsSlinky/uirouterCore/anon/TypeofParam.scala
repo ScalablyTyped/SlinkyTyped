@@ -9,7 +9,7 @@ import typingsSlinky.uirouterCore.paramsMod.Param
 import typingsSlinky.uirouterCore.stateInterfaceMod.StateDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofParam extends Instantiable5[
@@ -20,6 +20,7 @@ trait TypeofParam extends Instantiable5[
       /* state */ StateDeclaration, 
       Param
     ] {
+  
   /**
     * Finds [[Param]] objects which have different param values
     *
@@ -43,6 +44,7 @@ trait TypeofParam extends Instantiable5[
     values1: RawParams,
     values2: RawParams
   ): js.Array[typingsSlinky.uirouterCore.paramMod.Param] = js.native
+  
   /**
     * Checks if two param value objects are equal (for a set of [[Param]] objects)
     *
@@ -64,10 +66,11 @@ trait TypeofParam extends Instantiable5[
     values1: js.Object,
     values2: js.Object
   ): Boolean = js.native
+  
   /** Returns true if a the parameter values are valid, according to the Param definitions */
   def validates(params: js.Array[typingsSlinky.uirouterCore.paramMod.Param]): Boolean = js.native
   def validates(params: js.Array[typingsSlinky.uirouterCore.paramMod.Param], values: RawParams): Boolean = js.native
+  
   def values(params: js.Array[typingsSlinky.uirouterCore.paramMod.Param]): RawParams = js.native
   def values(params: js.Array[typingsSlinky.uirouterCore.paramMod.Param], values: RawParams): RawParams = js.native
 }
-

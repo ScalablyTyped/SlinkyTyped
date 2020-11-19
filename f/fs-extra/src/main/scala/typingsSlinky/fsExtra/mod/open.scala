@@ -4,11 +4,12 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs-extra", "open")
 @js.native
 object open extends js.Object {
+  
   def apply(path: String, flags: String): js.Promise[Double] = js.native
   def apply(
     path: String,
@@ -62,4 +63,3 @@ object open extends js.Object {
     callback: js.Function2[/* err */ ErrnoException, /* fd */ Double, Unit]
   ): Unit = js.native
 }
-

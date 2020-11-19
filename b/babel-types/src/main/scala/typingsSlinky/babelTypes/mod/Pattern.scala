@@ -5,7 +5,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.AssignmentPattern
 import typingsSlinky.babelTypes.babelTypesStrings.ObjectPattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.AssignmentPattern_
@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ObjectPattern_
 */
 trait Pattern extends js.Object
-
 object Pattern {
+  
   @scala.inline
   def AssignmentPattern_(
     end: Double,
@@ -28,6 +28,7 @@ object Pattern {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pattern]
   }
+  
   @scala.inline
   def ArrayPattern_(
     elements: js.Array[Expression],
@@ -40,6 +41,7 @@ object Pattern {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pattern]
   }
+  
   @scala.inline
   def ObjectPattern_(
     end: Double,
@@ -53,4 +55,3 @@ object Pattern {
     __obj.asInstanceOf[Pattern]
   }
 }
-

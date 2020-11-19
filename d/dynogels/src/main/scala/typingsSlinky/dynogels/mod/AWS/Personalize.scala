@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.personalizeMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.Personalize")
 @js.native
@@ -14,4 +14,3 @@ class Personalize ()
   extends typingsSlinky.awsSdk.mod.Personalize {
   def this(options: ClientConfiguration) = this()
 }
-

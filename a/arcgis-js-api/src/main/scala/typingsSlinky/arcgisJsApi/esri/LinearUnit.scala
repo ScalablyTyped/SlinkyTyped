@@ -8,12 +8,13 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.miles_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.yards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LinearUnit
   extends Accessor
      with JSONSupport {
+  
   /**
     * Specifies the value of the linear distance.
     *
@@ -22,6 +23,7 @@ trait LinearUnit
     * @default 0
     */
   var distance: Double = js.native
+  
   /**
     * Specifies the unit type of the linear distance.
     *
@@ -29,4 +31,3 @@ trait LinearUnit
     */
   var units: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = js.native
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.babelTypes.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babel-types", "forInStatement")
 @js.native
 object forInStatement extends js.Object {
+  
   def apply(): ForInStatement_ = js.native
   def apply(left: js.UndefOr[scala.Nothing], right: js.UndefOr[scala.Nothing], body: Statement): ForInStatement_ = js.native
   def apply(left: js.UndefOr[scala.Nothing], right: Expression): ForInStatement_ = js.native
@@ -20,4 +21,3 @@ object forInStatement extends js.Object {
   def apply(left: VariableDeclaration_, right: Expression): ForInStatement_ = js.native
   def apply(left: VariableDeclaration_, right: Expression, body: Statement): ForInStatement_ = js.native
 }
-

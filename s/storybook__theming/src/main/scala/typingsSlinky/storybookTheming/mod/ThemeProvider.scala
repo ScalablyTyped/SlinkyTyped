@@ -4,11 +4,11 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.emotionTheming.mod.ThemeProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/theming", "ThemeProvider")
 @js.native
 object ThemeProvider extends js.Object {
+  
   def apply[Theme](props: ThemeProviderProps[Theme]): ReactElement = js.native
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/DeleteFileCommand", JSImport.Namespace)
 @js.native
 object deleteFileCommandMod extends js.Object {
+  
   @js.native
   class DeleteFileCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteFileCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteFileInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteFileInput, DeleteFileOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[DeleteFileInput, DeleteFileOutput] = js.native
   }
-  
 }
-

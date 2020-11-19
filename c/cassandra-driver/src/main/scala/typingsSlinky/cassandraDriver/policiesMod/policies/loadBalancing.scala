@@ -10,11 +10,12 @@ import typingsSlinky.cassandraDriver.typesMod.types.distance
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cassandra-driver/lib/policies", "policies.loadBalancing")
 @js.native
 object loadBalancing extends js.Object {
+  
   @js.native
   class DCAwareRoundRobinPolicy protected () extends LoadBalancingPolicy {
     def this(localDc: String) = this()
@@ -27,9 +28,13 @@ object loadBalancing extends js.Object {
   
   @js.native
   abstract class LoadBalancingPolicy () extends js.Object {
+    
     def getDistance(host: Host): distance = js.native
+    
     def getOptions(): Map[String, js.Object] = js.native
+    
     def init(client: Client, hosts: HostMap, callback: EmptyCallback): Unit = js.native
+    
     def newQueryPlan(
       keyspace: String,
       executionOptions: ExecutionOptions,
@@ -49,6 +54,4 @@ object loadBalancing extends js.Object {
   class WhiteListPolicy protected () extends LoadBalancingPolicy {
     def this(childPolicy: LoadBalancingPolicy, whiteList: js.Array[String]) = this()
   }
-  
 }
-

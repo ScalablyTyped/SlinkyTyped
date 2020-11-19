@@ -8,20 +8,16 @@ import typingsSlinky.prismaBinding.anon.TypeDefs
 import typingsSlinky.prismaBinding.typesMod.PrismaOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("prisma-binding", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  @js.native
-  class Prisma protected ()
-    extends typingsSlinky.prismaBinding.prismaMod.Prisma {
-    def this(hasTypeDefsEndpointSecretFragmentReplacementsDebugDisableCache: PrismaOptions) = this()
-  }
   
   def extractFragmentReplacements(
     resolvers: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IResolvers */ js.Any
   ): js.Array[FragmentReplacement] = js.native
+  
   def forwardTo(bindingName: String): js.Function4[
     /* parent */ js.Any, 
     /* args */ js.Any, 
@@ -29,7 +25,14 @@ object mod extends js.Object {
     /* info */ GraphQLResolveInfo, 
     _
   ] = js.native
+  
   def makePrismaBindingClass[T](hasTypeDefs: TypeDefs): T = js.native
+  
   def makePrismaLink(hasEndpointTokenDebug: Debug): ApolloLink = js.native
+  
+  @js.native
+  class Prisma protected ()
+    extends typingsSlinky.prismaBinding.prismaMod.Prisma {
+    def this(hasTypeDefsEndpointSecretFragmentReplacementsDebugDisableCache: PrismaOptions) = this()
+  }
 }
-

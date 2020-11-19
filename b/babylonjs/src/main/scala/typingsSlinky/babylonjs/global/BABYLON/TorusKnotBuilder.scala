@@ -3,17 +3,17 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.anon.Tube
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.TorusKnotBuilder")
 @js.native
 class TorusKnotBuilder ()
   extends typingsSlinky.babylonjs.BABYLON.TorusKnotBuilder
-
 /* static members */
 @JSGlobal("BABYLON.TorusKnotBuilder")
 @js.native
 object TorusKnotBuilder extends js.Object {
+  
   /**
     * Creates a torus knot mesh
     * * The parameter `radius` sets the global radius size (float) of the torus knot (default 2)
@@ -31,4 +31,3 @@ object TorusKnotBuilder extends js.Object {
     */
   def CreateTorusKnot(name: String, options: Tube, scene: js.Any): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
 }
-

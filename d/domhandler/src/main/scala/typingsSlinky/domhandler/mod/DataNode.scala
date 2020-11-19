@@ -5,7 +5,7 @@ import typingsSlinky.domhandler.domhandlerStrings.directive
 import typingsSlinky.domhandler.domhandlerStrings.text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("domhandler/lib", "DataNode")
 @js.native
@@ -20,4 +20,3 @@ class DataNode protected ()
   def this(`type`: directive, data: String) = this()
   def this(`type`: text, data: String) = this()
 }
-

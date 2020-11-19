@@ -9,14 +9,16 @@ import typingsSlinky.react.reactStrings.update
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Profiler {
+  
   @JSImport("@bandagedbd/bdapi", "BdApiModule.React.Profiler")
   @js.native
   object component extends js.Object
   
   def withProps(p: ProfilerProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     id: String,
@@ -26,4 +28,3 @@ object Profiler {
     new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ProfilerProps]))
   }
 }
-

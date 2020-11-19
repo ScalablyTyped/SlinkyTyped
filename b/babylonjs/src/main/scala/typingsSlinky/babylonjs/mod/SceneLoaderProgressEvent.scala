@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.mod
 import org.scalajs.dom.raw.ProgressEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "SceneLoaderProgressEvent")
 @js.native
@@ -24,11 +24,11 @@ class SceneLoaderProgressEvent protected ()
   total: Double
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs", "SceneLoaderProgressEvent")
 @js.native
 object SceneLoaderProgressEvent extends js.Object {
+  
   /**
     * Creates a new SceneLoaderProgressEvent from a ProgressEvent
     * @param event defines the source event
@@ -36,4 +36,3 @@ object SceneLoaderProgressEvent extends js.Object {
     */
   def FromProgressEvent(event: ProgressEvent): typingsSlinky.babylonjs.sceneLoaderMod.SceneLoaderProgressEvent = js.native
 }
-

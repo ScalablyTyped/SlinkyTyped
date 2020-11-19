@@ -2,22 +2,31 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object wafregionalMod {
+  
   type Action = java.lang.String
+  
   type ActivatedRules = js.Array[typingsSlinky.awsSdk.wafregionalMod.ActivatedRule]
+  
   type ByteMatchSetSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.ByteMatchSetSummary]
+  
   type ByteMatchSetUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.ByteMatchSetUpdate]
+  
   type ByteMatchTargetString = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.wafregionalMod.Blob | java.lang.String
+  
   type ByteMatchTuples = js.Array[typingsSlinky.awsSdk.wafregionalMod.ByteMatchTuple]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.INSERT
     - typingsSlinky.awsSdk.awsSdkStrings.DELETE
     - java.lang.String
   */
   type ChangeAction = typingsSlinky.awsSdk.wafregionalMod._ChangeAction | java.lang.String
+  
   type ChangeToken = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PROVISIONED
     - typingsSlinky.awsSdk.awsSdkStrings.PENDING
@@ -25,7 +34,9 @@ package object wafregionalMod {
     - java.lang.String
   */
   type ChangeTokenStatus = typingsSlinky.awsSdk.wafregionalMod._ChangeTokenStatus | java.lang.String
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.wafregionalMod.ClientApiVersions
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EQ
     - typingsSlinky.awsSdk.awsSdkStrings.NE
@@ -36,9 +47,13 @@ package object wafregionalMod {
     - java.lang.String
   */
   type ComparisonOperator = typingsSlinky.awsSdk.wafregionalMod._ComparisonOperator | java.lang.String
+  
   type Country = java.lang.String
+  
   type ExcludedRules = js.Array[typingsSlinky.awsSdk.wafregionalMod.ExcludedRule]
+  
   type GeoMatchConstraintType = typingsSlinky.awsSdk.awsSdkStrings.Country_ | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AF
     - typingsSlinky.awsSdk.awsSdkStrings.AX
@@ -292,32 +307,54 @@ package object wafregionalMod {
     - java.lang.String
   */
   type GeoMatchConstraintValue = typingsSlinky.awsSdk.wafregionalMod._GeoMatchConstraintValue | java.lang.String
+  
   type GeoMatchConstraints = js.Array[typingsSlinky.awsSdk.wafregionalMod.GeoMatchConstraint]
+  
   type GeoMatchSetSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.GeoMatchSetSummary]
+  
   type GeoMatchSetUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.GeoMatchSetUpdate]
+  
   type GetSampledRequestsMaxItems = scala.Double
+  
   type HTTPHeaders = js.Array[typingsSlinky.awsSdk.wafregionalMod.HTTPHeader]
+  
   type HTTPMethod = java.lang.String
+  
   type HTTPVersion = java.lang.String
+  
   type HeaderName = java.lang.String
+  
   type HeaderValue = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.IPV4
     - typingsSlinky.awsSdk.awsSdkStrings.IPV6
     - java.lang.String
   */
   type IPSetDescriptorType = typingsSlinky.awsSdk.wafregionalMod._IPSetDescriptorType | java.lang.String
+  
   type IPSetDescriptorValue = java.lang.String
+  
   type IPSetDescriptors = js.Array[typingsSlinky.awsSdk.wafregionalMod.IPSetDescriptor]
+  
   type IPSetSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.IPSetSummary]
+  
   type IPSetUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.IPSetUpdate]
+  
   type IPString = java.lang.String
+  
   type IgnoreUnsupportedType = scala.Boolean
+  
   type LogDestinationConfigs = js.Array[typingsSlinky.awsSdk.wafregionalMod.ResourceArn]
+  
   type LoggingConfigurations = js.Array[typingsSlinky.awsSdk.wafregionalMod.LoggingConfiguration]
+  
   type ManagedKey = java.lang.String
+  
   type ManagedKeys = js.Array[typingsSlinky.awsSdk.wafregionalMod.ManagedKey]
+  
   type MatchFieldData = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.URI
     - typingsSlinky.awsSdk.awsSdkStrings.QUERY_STRING
@@ -329,12 +366,19 @@ package object wafregionalMod {
     - java.lang.String
   */
   type MatchFieldType = typingsSlinky.awsSdk.wafregionalMod._MatchFieldType | java.lang.String
+  
   type MetricName = java.lang.String
+  
   type Negated = scala.Boolean
+  
   type NextMarker = java.lang.String
+  
   type PaginationLimit = scala.Double
+  
   type PolicyString = java.lang.String
+  
   type PopulationSize = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EXACTLY
     - typingsSlinky.awsSdk.awsSdkStrings.STARTS_WITH
@@ -344,6 +388,7 @@ package object wafregionalMod {
     - java.lang.String
   */
   type PositionalConstraint = typingsSlinky.awsSdk.wafregionalMod._PositionalConstraint | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.IPMatch
     - typingsSlinky.awsSdk.awsSdkStrings.ByteMatch
@@ -355,48 +400,86 @@ package object wafregionalMod {
     - java.lang.String
   */
   type PredicateType = typingsSlinky.awsSdk.wafregionalMod._PredicateType | java.lang.String
+  
   type Predicates = js.Array[typingsSlinky.awsSdk.wafregionalMod.Predicate]
+  
   type RateKey = typingsSlinky.awsSdk.awsSdkStrings.IP | java.lang.String
+  
   type RateLimit = scala.Double
+  
   type RedactedFields = js.Array[typingsSlinky.awsSdk.wafregionalMod.FieldToMatch]
+  
   type RegexMatchSetSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.RegexMatchSetSummary]
+  
   type RegexMatchSetUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.RegexMatchSetUpdate]
+  
   type RegexMatchTuples = js.Array[typingsSlinky.awsSdk.wafregionalMod.RegexMatchTuple]
+  
   type RegexPatternSetSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.RegexPatternSetSummary]
+  
   type RegexPatternSetUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.RegexPatternSetUpdate]
+  
   type RegexPatternString = java.lang.String
+  
   type RegexPatternStrings = js.Array[typingsSlinky.awsSdk.wafregionalMod.RegexPatternString]
+  
   type ResourceArn = java.lang.String
+  
   type ResourceArns = js.Array[typingsSlinky.awsSdk.wafregionalMod.ResourceArn]
+  
   type ResourceId = java.lang.String
+  
   type ResourceName = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.APPLICATION_LOAD_BALANCER
     - typingsSlinky.awsSdk.awsSdkStrings.API_GATEWAY
     - java.lang.String
   */
   type ResourceType = typingsSlinky.awsSdk.wafregionalMod._ResourceType | java.lang.String
+  
   type RuleGroupSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.RuleGroupSummary]
+  
   type RuleGroupUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.RuleGroupUpdate]
+  
   type RulePriority = scala.Double
+  
   type RuleSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.RuleSummary]
+  
   type RuleUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.RuleUpdate]
+  
   type S3BucketName = java.lang.String
+  
   type S3ObjectUrl = java.lang.String
+  
   type SampleWeight = scala.Double
+  
   type SampledHTTPRequests = js.Array[typingsSlinky.awsSdk.wafregionalMod.SampledHTTPRequest]
+  
   type Size = scala.Double
+  
   type SizeConstraintSetSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.SizeConstraintSetSummary]
+  
   type SizeConstraintSetUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.SizeConstraintSetUpdate]
+  
   type SizeConstraints = js.Array[typingsSlinky.awsSdk.wafregionalMod.SizeConstraint]
+  
   type SqlInjectionMatchSetSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.SqlInjectionMatchSetSummary]
+  
   type SqlInjectionMatchSetUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.SqlInjectionMatchSetUpdate]
+  
   type SqlInjectionMatchTuples = js.Array[typingsSlinky.awsSdk.wafregionalMod.SqlInjectionMatchTuple]
+  
   type SubscribedRuleGroupSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.SubscribedRuleGroupSummary]
+  
   type TagKey = java.lang.String
+  
   type TagKeyList = js.Array[typingsSlinky.awsSdk.wafregionalMod.TagKey]
+  
   type TagList = js.Array[typingsSlinky.awsSdk.wafregionalMod.Tag]
+  
   type TagValue = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NONE
     - typingsSlinky.awsSdk.awsSdkStrings.COMPRESS_WHITE_SPACE
@@ -407,8 +490,11 @@ package object wafregionalMod {
     - java.lang.String
   */
   type TextTransformation = typingsSlinky.awsSdk.wafregionalMod._TextTransformation | java.lang.String
+  
   type Timestamp = js.Date
+  
   type URIString = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.BLOCK
     - typingsSlinky.awsSdk.awsSdkStrings.ALLOW
@@ -416,12 +502,14 @@ package object wafregionalMod {
     - java.lang.String
   */
   type WafActionType = typingsSlinky.awsSdk.wafregionalMod._WafActionType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NONE
     - typingsSlinky.awsSdk.awsSdkStrings.COUNT
     - java.lang.String
   */
   type WafOverrideActionType = typingsSlinky.awsSdk.wafregionalMod._WafOverrideActionType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.REGULAR
     - typingsSlinky.awsSdk.awsSdkStrings.RATE_BASED
@@ -429,11 +517,17 @@ package object wafregionalMod {
     - java.lang.String
   */
   type WafRuleType = typingsSlinky.awsSdk.wafregionalMod._WafRuleType | java.lang.String
+  
   type WebACLSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.WebACLSummary]
+  
   type WebACLUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.WebACLUpdate]
+  
   type XssMatchSetSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.XssMatchSetSummary]
+  
   type XssMatchSetUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.XssMatchSetUpdate]
+  
   type XssMatchTuples = js.Array[typingsSlinky.awsSdk.wafregionalMod.XssMatchTuple]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2016-11-28`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

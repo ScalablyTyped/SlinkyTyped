@@ -2,7 +2,7 @@ package typingsSlinky.avoscloudSdk.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @class
@@ -29,8 +29,10 @@ import scala.scalajs.js.annotation._
 @JSImport("avoscloud-sdk", "Events")
 @js.native
 class Events () extends js.Object {
+  
   def bind(eventName: String, callback: js.Function): Events = js.native
   def bind(eventName: String, callback: js.Function, context: js.Any): Events = js.native
+  
   def off(): Events = js.native
   def off(eventName: js.UndefOr[scala.Nothing], callback: js.UndefOr[scala.Nothing], context: js.Any): Events = js.native
   def off(eventName: js.UndefOr[scala.Nothing], callback: js.Function): Events = js.native
@@ -39,11 +41,14 @@ class Events () extends js.Object {
   def off(eventName: String, callback: js.UndefOr[scala.Nothing], context: js.Any): Events = js.native
   def off(eventName: String, callback: js.Function): Events = js.native
   def off(eventName: String, callback: js.Function, context: js.Any): Events = js.native
+  
   def on(eventName: String): Events = js.native
   def on(eventName: String, callback: js.UndefOr[scala.Nothing], context: js.Any): Events = js.native
   def on(eventName: String, callback: js.Function): Events = js.native
   def on(eventName: String, callback: js.Function, context: js.Any): Events = js.native
+  
   def trigger(eventName: String, args: js.Any*): Events = js.native
+  
   def unbind(): Events = js.native
   def unbind(eventName: js.UndefOr[scala.Nothing], callback: js.UndefOr[scala.Nothing], context: js.Any): Events = js.native
   def unbind(eventName: js.UndefOr[scala.Nothing], callback: js.Function): Events = js.native
@@ -53,21 +58,24 @@ class Events () extends js.Object {
   def unbind(eventName: String, callback: js.Function): Events = js.native
   def unbind(eventName: String, callback: js.Function, context: js.Any): Events = js.native
 }
-
 /* static members */
 @JSImport("avoscloud-sdk", "Events")
 @js.native
 object Events extends js.Object {
+  
   def bind(): Events = js.native
+  
   def off(events: js.Array[String]): Events = js.native
   def off(events: js.Array[String], callback: js.UndefOr[scala.Nothing], context: js.Any): Events = js.native
   def off(events: js.Array[String], callback: js.Function): Events = js.native
   def off(events: js.Array[String], callback: js.Function, context: js.Any): Events = js.native
+  
   def on(events: js.Array[String]): Events = js.native
   def on(events: js.Array[String], callback: js.UndefOr[scala.Nothing], context: js.Any): Events = js.native
   def on(events: js.Array[String], callback: js.Function): Events = js.native
   def on(events: js.Array[String], callback: js.Function, context: js.Any): Events = js.native
+  
   def trigger(events: js.Array[String]): Events = js.native
+  
   def unbind(): Events = js.native
 }
-

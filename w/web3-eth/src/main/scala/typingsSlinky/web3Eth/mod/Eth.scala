@@ -34,37 +34,29 @@ import typingsSlinky.web3Net.mod.Network
 import typingsSlinky.web3Utils.mod.AbiItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("web3-eth", "Eth")
 @js.native
 class Eth () extends js.Object {
   def this(provider: typingsSlinky.web3Core.mod.provider) = this()
   def this(provider: typingsSlinky.web3Core.mod.provider, net: Socket) = this()
+  
   var BatchRequest: Instantiable0[typingsSlinky.web3Core.mod.BatchRequest] = js.native
+  
   var Contract: Instantiable3[
     /* jsonInterface */ js.Array[AbiItem] | AbiItem, 
     /* address */ js.UndefOr[String], 
     /* options */ js.UndefOr[ContractOptions], 
     typingsSlinky.web3EthContract.mod.Contract
   ] = js.native
+  
   var Iban: Instantiable1[/* iban */ String, typingsSlinky.web3EthIban.mod.Iban] = js.native
+  
   var abi: AbiCoder = js.native
+  
   var accounts: Accounts = js.native
-  val currentProvider: typingsSlinky.web3Core.mod.provider = js.native
-  var defaultAccount: String | Null = js.native
-  var defaultBlock: BlockNumber = js.native
-  var defaultChain: chain = js.native
-  var defaultCommon: Common = js.native
-  var defaultHardfork: hardfork = js.native
-  var ens: Ens = js.native
-  val givenProvider: js.Any = js.native
-  var handleRevert: Boolean = js.native
-  var net: Network = js.native
-  var personal: Personal = js.native
-  var transactionBlockTimeout: Double = js.native
-  var transactionConfirmationBlocks: Double = js.native
-  var transactionPollingTimeout: Double = js.native
+  
   def call(transactionConfig: TransactionConfig): js.Promise[String] = js.native
   def call(
     transactionConfig: TransactionConfig,
@@ -76,15 +68,34 @@ class Eth () extends js.Object {
     defaultBlock: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* data */ String, Unit]
   ): js.Promise[String] = js.native
+  
   def clearSubscriptions(callback: js.Function2[/* error */ js.Error, /* result */ Boolean, Unit]): Unit = js.native
+  
+  val currentProvider: typingsSlinky.web3Core.mod.provider = js.native
+  
+  var defaultAccount: String | Null = js.native
+  
+  var defaultBlock: BlockNumber = js.native
+  
+  var defaultChain: chain = js.native
+  
+  var defaultCommon: Common = js.native
+  
+  var defaultHardfork: hardfork = js.native
+  
+  var ens: Ens = js.native
+  
   def estimateGas(transactionConfig: TransactionConfig): js.Promise[Double] = js.native
   def estimateGas(
     transactionConfig: TransactionConfig,
     callback: js.Function2[/* error */ js.Error, /* gas */ Double, Unit]
   ): js.Promise[Double] = js.native
+  
   def extend(extension: Extension): js.Any = js.native
+  
   def getAccounts(): js.Promise[js.Array[String]] = js.native
   def getAccounts(callback: js.Function2[/* error */ js.Error, /* accounts */ js.Array[String], Unit]): js.Promise[js.Array[String]] = js.native
+  
   def getBalance(address: String): js.Promise[String] = js.native
   def getBalance(address: String, callback: js.Function2[/* error */ js.Error, /* balance */ String, Unit]): js.Promise[String] = js.native
   def getBalance(address: String, defaultBlock: BlockNumber): js.Promise[String] = js.native
@@ -93,6 +104,7 @@ class Eth () extends js.Object {
     defaultBlock: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* balance */ String, Unit]
   ): js.Promise[String] = js.native
+  
   def getBlock(blockHashOrBlockNumber: String): js.Promise[BlockTransactionString] = js.native
   def getBlock(
     blockHashOrBlockNumber: String,
@@ -115,8 +127,10 @@ class Eth () extends js.Object {
     returnTransactionObjects: Boolean,
     callback: js.Function2[/* error */ js.Error, /* block */ BlockTransactionObject, Unit]
   ): js.Promise[BlockTransactionObject] = js.native
+  
   def getBlockNumber(): js.Promise[Double] = js.native
   def getBlockNumber(callback: js.Function2[/* error */ js.Error, /* blockNumber */ Double, Unit]): js.Promise[Double] = js.native
+  
   def getBlockTransactionCount(blockHashOrBlockNumber: String): js.Promise[Double] = js.native
   def getBlockTransactionCount(
     blockHashOrBlockNumber: String,
@@ -127,6 +141,7 @@ class Eth () extends js.Object {
     blockHashOrBlockNumber: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* numberOfTransactions */ Double, Unit]
   ): js.Promise[Double] = js.native
+  
   def getBlockUncleCount(blockHashOrBlockNumber: String): js.Promise[Double] = js.native
   def getBlockUncleCount(
     blockHashOrBlockNumber: String,
@@ -137,8 +152,10 @@ class Eth () extends js.Object {
     blockHashOrBlockNumber: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* numberOfTransactions */ Double, Unit]
   ): js.Promise[Double] = js.native
+  
   def getChainId(): js.Promise[Double] = js.native
   def getChainId(callback: js.Function2[/* error */ js.Error, /* version */ Double, Unit]): js.Promise[Double] = js.native
+  
   def getCode(address: String): js.Promise[String] = js.native
   def getCode(address: String, callback: js.Function2[/* error */ js.Error, /* code */ String, Unit]): js.Promise[String] = js.native
   def getCode(address: String, defaultBlock: BlockNumber): js.Promise[String] = js.native
@@ -147,21 +164,28 @@ class Eth () extends js.Object {
     defaultBlock: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* code */ String, Unit]
   ): js.Promise[String] = js.native
+  
   def getCoinbase(): js.Promise[String] = js.native
   def getCoinbase(callback: js.Function2[/* error */ js.Error, /* coinbaseAddress */ String, Unit]): js.Promise[String] = js.native
+  
   def getGasPrice(): js.Promise[String] = js.native
   def getGasPrice(callback: js.Function2[/* error */ js.Error, /* gasPrice */ String, Unit]): js.Promise[String] = js.native
+  
   def getHashrate(): js.Promise[Double] = js.native
   def getHashrate(callback: js.Function2[/* error */ js.Error, /* hashes */ Double, Unit]): js.Promise[Double] = js.native
+  
   def getNodeInfo(): js.Promise[String] = js.native
   def getNodeInfo(callback: js.Function2[/* error */ js.Error, /* version */ String, Unit]): js.Promise[String] = js.native
+  
   def getPastLogs(options: PastLogsOptions): js.Promise[js.Array[Log]] = js.native
   def getPastLogs(
     options: PastLogsOptions,
     callback: js.Function2[/* error */ js.Error, /* logs */ js.Array[Log], Unit]
   ): js.Promise[js.Array[Log]] = js.native
+  
   def getPendingTransactions(): js.Promise[js.Array[Transaction]] = js.native
   def getPendingTransactions(callback: js.Function2[/* error */ js.Error, /* result */ js.Array[Transaction], Unit]): js.Promise[js.Array[Transaction]] = js.native
+  
   def getProof(address: String, storageKey: js.Array[BigNumber | Double | String | ^ ], blockNumber: BlockNumber): js.Promise[GetProof] = js.native
   def getProof(
     address: String,
@@ -169,8 +193,10 @@ class Eth () extends js.Object {
     blockNumber: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* result */ GetProof, Unit]
   ): js.Promise[GetProof] = js.native
+  
   def getProtocolVersion(): js.Promise[String] = js.native
   def getProtocolVersion(callback: js.Function2[/* error */ js.Error, /* protocolVersion */ String, Unit]): js.Promise[String] = js.native
+  
   def getStorageAt(address: String, position: String): js.Promise[String] = js.native
   def getStorageAt(
     address: String,
@@ -223,11 +249,13 @@ class Eth () extends js.Object {
     defaultBlock: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* storageAt */ String, Unit]
   ): js.Promise[String] = js.native
+  
   def getTransaction(transactionHash: String): js.Promise[Transaction] = js.native
   def getTransaction(
     transactionHash: String,
     callback: js.Function2[/* error */ js.Error, /* transaction */ Transaction, Unit]
   ): js.Promise[Transaction] = js.native
+  
   def getTransactionCount(address: String): js.Promise[Double] = js.native
   def getTransactionCount(address: String, callback: js.Function2[/* error */ js.Error, /* count */ Double, Unit]): js.Promise[Double] = js.native
   def getTransactionCount(address: String, defaultBlock: BlockNumber): js.Promise[Double] = js.native
@@ -236,6 +264,7 @@ class Eth () extends js.Object {
     defaultBlock: BlockNumber,
     callback: js.Function2[/* error */ js.Error, /* count */ Double, Unit]
   ): js.Promise[Double] = js.native
+  
   def getTransactionFromBlock(blockHashOrBlockNumber: String, indexNumber: String): js.Promise[Transaction] = js.native
   def getTransactionFromBlock(
     blockHashOrBlockNumber: String,
@@ -272,11 +301,13 @@ class Eth () extends js.Object {
     indexNumber: ^,
     callback: js.Function2[/* error */ js.Error, /* transaction */ Transaction, Unit]
   ): js.Promise[Transaction] = js.native
+  
   def getTransactionReceipt(hash: String): js.Promise[TransactionReceipt] = js.native
   def getTransactionReceipt(
     hash: String,
     callback: js.Function2[/* error */ js.Error, /* transactionReceipt */ TransactionReceipt, Unit]
   ): js.Promise[TransactionReceipt] = js.native
+  
   def getUncle(blockHashOrBlockNumber: String, uncleIndex: String): js.Promise[BlockTransactionString] = js.native
   def getUncle(
     blockHashOrBlockNumber: String,
@@ -355,25 +386,41 @@ class Eth () extends js.Object {
     returnTransactionObjects: Boolean,
     callback: js.Function2[/* error */ js.Error, /* uncle */ js.Any, Unit]
   ): js.Promise[BlockTransactionObject] = js.native
+  
   def getWork(): js.Promise[js.Array[String]] = js.native
   def getWork(callback: js.Function2[/* error */ js.Error, /* result */ js.Array[String], Unit]): js.Promise[js.Array[String]] = js.native
+  
+  val givenProvider: js.Any = js.native
+  
+  var handleRevert: Boolean = js.native
+  
   def isMining(): js.Promise[Boolean] = js.native
   def isMining(callback: js.Function2[/* error */ js.Error, /* mining */ Boolean, Unit]): js.Promise[Boolean] = js.native
+  
   def isSyncing(): js.Promise[Syncing | Boolean] = js.native
   def isSyncing(callback: js.Function2[/* error */ js.Error, /* syncing */ Syncing, Unit]): js.Promise[Syncing | Boolean] = js.native
+  
+  var net: Network = js.native
+  
+  var personal: Personal = js.native
+  
   def requestAccounts(): js.Promise[js.Array[String]] = js.native
   def requestAccounts(callback: js.Function2[/* error */ js.Error, /* result */ js.Array[String], Unit]): js.Promise[js.Array[String]] = js.native
+  
   def sendSignedTransaction(signedTransactionData: String): PromiEvent[TransactionReceipt] = js.native
   def sendSignedTransaction(
     signedTransactionData: String,
     callback: js.Function2[/* error */ js.Error, /* hash */ String, Unit]
   ): PromiEvent[TransactionReceipt] = js.native
+  
   def sendTransaction(transactionConfig: TransactionConfig): PromiEvent[TransactionReceipt] = js.native
   def sendTransaction(
     transactionConfig: TransactionConfig,
     callback: js.Function2[/* error */ js.Error, /* hash */ String, Unit]
   ): PromiEvent[TransactionReceipt] = js.native
+  
   def setProvider(provider: typingsSlinky.web3Core.mod.provider): Boolean = js.native
+  
   def sign(dataToSign: String, address: String): js.Promise[String] = js.native
   def sign(
     dataToSign: String,
@@ -386,6 +433,7 @@ class Eth () extends js.Object {
     address: Double,
     callback: js.Function2[/* error */ js.Error, /* signature */ String, Unit]
   ): js.Promise[String] = js.native
+  
   def signTransaction(transactionConfig: TransactionConfig): js.Promise[RLPEncodedTransaction] = js.native
   def signTransaction(transactionConfig: TransactionConfig, address: String): js.Promise[RLPEncodedTransaction] = js.native
   def signTransaction(
@@ -397,11 +445,13 @@ class Eth () extends js.Object {
     transactionConfig: TransactionConfig,
     callback: js.Function2[/* error */ js.Error, /* signedTransaction */ RLPEncodedTransaction, Unit]
   ): js.Promise[RLPEncodedTransaction] = js.native
+  
   def submitWork(data: js.Tuple3[String, String, String]): js.Promise[Boolean] = js.native
   def submitWork(
     data: js.Tuple3[String, String, String],
     callback: js.Function2[/* error */ js.Error, /* result */ Boolean, Unit]
   ): js.Promise[Boolean] = js.native
+  
   @JSName("subscribe")
   def subscribe_logs(`type`: logs, options: LogsOptions): Subscription[Log] = js.native
   @JSName("subscribe")
@@ -428,13 +478,19 @@ class Eth () extends js.Object {
   def subscribe_syncing(`type`: syncing): Subscription[Syncing] = js.native
   @JSName("subscribe")
   def subscribe_syncing(`type`: syncing, callback: js.Function2[/* error */ js.Error, /* result */ Syncing, Unit]): Subscription[Syncing] = js.native
+  
+  var transactionBlockTimeout: Double = js.native
+  
+  var transactionConfirmationBlocks: Double = js.native
+  
+  var transactionPollingTimeout: Double = js.native
 }
-
 /* static members */
 @JSImport("web3-eth", "Eth")
 @js.native
 object Eth extends js.Object {
+  
   val givenProvider: js.Any = js.native
+  
   val providers: Providers = js.native
 }
-

@@ -2,10 +2,12 @@ package typingsSlinky.chrome.chrome
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object omnibox {
+  
   type OmniboxInputCancelledEvent = typingsSlinky.chrome.chrome.events.Event[js.Function0[scala.Unit]]
+  
   type OmniboxInputChangedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* text */ java.lang.String, 
@@ -16,6 +18,7 @@ package object omnibox {
       scala.Unit
     ]
   ]
+  
   type OmniboxInputEnteredEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* text */ java.lang.String, 
@@ -23,6 +26,8 @@ package object omnibox {
       scala.Unit
     ]
   ]
+  
   type OmniboxInputStartedEvent = typingsSlinky.chrome.chrome.events.Event[js.Function0[scala.Unit]]
+  
   type OmniboxSuggestionDeletedEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* text */ java.lang.String, scala.Unit]]
 }

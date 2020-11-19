@@ -2,7 +2,7 @@ package typingsSlinky.httpLinkHeader.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("http-link-header", JSImport.Namespace)
 @js.native
@@ -13,10 +13,10 @@ import scala.scalajs.js.annotation._
 class ^ () extends Link {
   def this(value: String) = this()
 }
-
 @JSImport("http-link-header", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Creates a new Link by parsing a link header beginning at the provided
     * offset
@@ -27,4 +27,3 @@ object ^ extends js.Object {
   def parse(value: String): Link = js.native
   def parse(value: String, offset: Double): Link = js.native
 }
-

@@ -55,21 +55,12 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx", "Pagination")
 @js.native
 object Pagination extends js.Object {
-  @JSName("$$typeof")
-  var DollarDollartypeof: js.Symbol = js.native
-  var Ellipsis: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-  var Link: ForwardRefAsExoticComponent[PaginationLinkProps, ReactElement] = js.native
-  var List: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-  var Step: ForwardRefAsExoticComponent[PaginationStepProps, ReactElement] = js.native
-  var defaultProps: AsElementType with (Partial[
-    HelpersPropsOverrides with PickBadgeHelpersPropsFloa with PaginationModifiers with (Pick[_, String | Double | js.Symbol])
-  ]) = js.native
-  var displayName: js.UndefOr[String] = js.native
+  
   def apply[TAsComponent /* <: ReactElement */](
     props: `6`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with PaginationModifiers with (Pick[
       ComponentProps[TAsComponent], 
@@ -79,5 +70,21 @@ object Pagination extends js.Object {
       ]
     ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
   ): ReactElement | Null = js.native
+  
+  @JSName("$$typeof")
+  var DollarDollartypeof: js.Symbol = js.native
+  
+  var Ellipsis: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+  
+  var Link: ForwardRefAsExoticComponent[PaginationLinkProps, ReactElement] = js.native
+  
+  var List: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+  
+  var Step: ForwardRefAsExoticComponent[PaginationStepProps, ReactElement] = js.native
+  
+  var defaultProps: AsElementType with (Partial[
+    HelpersPropsOverrides with PickBadgeHelpersPropsFloa with PaginationModifiers with (Pick[_, String | Double | js.Symbol])
+  ]) = js.native
+  
+  var displayName: js.UndefOr[String] = js.native
 }
-

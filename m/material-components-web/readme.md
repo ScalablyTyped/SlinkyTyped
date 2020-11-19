@@ -1,7 +1,7 @@
 
 # Scala.js typings for material-components-web
 
-Typings are for version 4.0.0
+Typings are for version 7.0.0
 
 ## Library description:
 Modular and customizable Material Design UI components for the web

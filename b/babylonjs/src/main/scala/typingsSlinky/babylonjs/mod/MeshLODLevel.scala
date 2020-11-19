@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.mod
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "MeshLODLevel")
 @js.native
@@ -21,4 +21,3 @@ class MeshLODLevel protected ()
   mesh: Nullable[typingsSlinky.babylonjs.meshMod.Mesh]
   ) = this()
 }
-

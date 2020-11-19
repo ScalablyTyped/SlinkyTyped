@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Object containing helper methods for getting optimal symbol themes used to create data-driven visualizations of unique values or types. The [getSchemes()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-type.html#getSchemes) method is used to generate symbol properties best suited to the given basemap.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait symbologyType extends js.Object {
+  
   /**
     * Clones a type scheme object.
     *
@@ -20,6 +21,7 @@ trait symbologyType extends js.Object {
     *
     */
   def cloneScheme(scheme: TypeScheme): TypeScheme = js.native
+  
   /**
     * Returns a type scheme with the provided name.
     *
@@ -36,6 +38,7 @@ trait symbologyType extends js.Object {
     *
     */
   def getSchemeByName(params: typeGetSchemeByNameParams): TypeScheme = js.native
+  
   /**
     * Returns a primary scheme and secondary schemes defining symbol properties for type-based data-driven visualizations in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The `basemap` parameter determines the color of the graphics used to visualize each feature. The `geometryType` determines which type of symbol to return.
     *
@@ -51,6 +54,7 @@ trait symbologyType extends js.Object {
     *
     */
   def getSchemes(params: typeGetSchemesParams): TypeSchemes = js.native
+  
   /**
     * Returns an array of type schemes with the provided tags. These schemes define symbol properties for data-driven visualizations in any layer that can be rendered with a [UniqueValueRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-UniqueValueRenderer.html).
     *
@@ -68,6 +72,7 @@ trait symbologyType extends js.Object {
     *
     */
   def getSchemesByTag(params: typeGetSchemesByTagParams): js.Array[TypeScheme] = js.native
+  
   /**
     * Returns metadata for the available themes. If a basemap is provided, returns themes that work best with the given basemap.
     *
@@ -80,4 +85,3 @@ trait symbologyType extends js.Object {
   def getThemes(basemap: String): js.Array[Theme] = js.native
   def getThemes(basemap: Basemap): js.Array[Theme] = js.native
 }
-

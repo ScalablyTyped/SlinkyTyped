@@ -18,9 +18,10 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.star
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Rating {
+  
   @JSImport("semantic-ui-react", "Rating")
   @js.native
   object component extends js.Object
@@ -29,31 +30,44 @@ object Rating {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.Rating] {
+    
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def clearable(value: Boolean | auto): this.type = set("clearable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def defaultRating(value: Double | String): this.type = set("defaultRating", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def icon(value: star | heart): this.type = set("icon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def maxRating(value: Double | String): this.type = set("maxRating", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onRate(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ RatingProps) => Unit): this.type = set("onRate", js.Any.fromFunction2(value))
+    
     @scala.inline
     def rating(value: Double | String): this.type = set("rating", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def size(value: mini | tiny | small | large | huge | massive): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: RatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Rating.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
   object Icon {
+    
     @JSImport("semantic-ui-react", "Rating.Icon")
     @js.native
     object component extends js.Object
@@ -62,27 +76,34 @@ object Rating {
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
          with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
+      
       @scala.inline
       def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+      
       @scala.inline
       def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+      
       @scala.inline
       def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      
       @scala.inline
       def index(value: Double): this.type = set("index", value.asInstanceOf[js.Any])
+      
       @scala.inline
       def onClick(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ RatingIconProps) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+      
       @scala.inline
       def onKeyUp(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ RatingIconProps) => Unit): this.type = set("onKeyUp", js.Any.fromFunction2(value))
+      
       @scala.inline
       def onMouseEnter(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ RatingIconProps) => Unit): this.type = set("onMouseEnter", js.Any.fromFunction2(value))
+      
       @scala.inline
       def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
     }
     
     def withProps(p: RatingIconProps): typingsSlinky.semanticUiReact.components.Rating.Icon.Builder = new typingsSlinky.semanticUiReact.components.Rating.Icon.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    
     implicit def make(companion: Icon.type): typingsSlinky.semanticUiReact.components.Rating.Icon.Builder = new typingsSlinky.semanticUiReact.components.Rating.Icon.Builder(js.Array(this.component, js.Dictionary.empty))()
   }
-  
 }
-

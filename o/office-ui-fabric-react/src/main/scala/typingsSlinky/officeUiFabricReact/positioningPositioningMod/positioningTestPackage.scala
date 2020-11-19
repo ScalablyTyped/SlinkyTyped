@@ -7,18 +7,21 @@ import typingsSlinky.officeUiFabricReact.positioningTypesMod.IPositionDirectiona
 import typingsSlinky.officeUiFabricReact.positioningTypesMod.IPositionedData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/utilities/positioning/positioning", "__positioningTestPackage")
 @js.native
 object positioningTestPackage extends js.Object {
+  
   var _calculateActualBeakWidthInPixels: js.Function1[/* beakWidth */ Double, Double] = js.native
+  
   var _finalizeBeakPosition: js.Function3[
     /* elementPosition */ IElementPosition, 
     /* positionedBeak */ Rectangle, 
     /* bounds */ js.UndefOr[Rectangle], 
     ICalloutBeakPositionedInfo
   ] = js.native
+  
   var _finalizePositionData: js.Function5[
     /* positionedElement */ IElementPosition, 
     /* hostElement */ HTMLElement, 
@@ -27,6 +30,7 @@ object positioningTestPackage extends js.Object {
     /* doNotFinalizeReturnEdge */ js.UndefOr[Boolean], 
     IPositionedData
   ] = js.native
+  
   var _getMaxHeightFromTargetRectangle: js.Function5[
     /* targetRectangle */ Rectangle, 
     /* targetEdge */ DirectionalHint, 
@@ -35,13 +39,16 @@ object positioningTestPackage extends js.Object {
     /* coverTarget */ js.UndefOr[Boolean], 
     Double
   ] = js.native
+  
   var _getPositionData: js.Function3[
     /* directionalHint */ js.UndefOr[DirectionalHint], 
     /* directionalHintForRTL */ js.UndefOr[DirectionalHint], 
     /* previousPositions */ js.UndefOr[IPositionDirectionalHintData], 
     IPositionDirectionalHintData
   ] = js.native
+  
   var _positionBeak: js.Function2[/* beakWidth */ Double, /* elementPosition */ IElementPositionInfo, Rectangle] = js.native
+  
   var _positionElementWithinBounds: js.Function7[
     /* elementToPosition */ Rectangle, 
     /* target */ Rectangle, 
@@ -53,4 +60,3 @@ object positioningTestPackage extends js.Object {
     IElementPosition
   ] = js.native
 }
-

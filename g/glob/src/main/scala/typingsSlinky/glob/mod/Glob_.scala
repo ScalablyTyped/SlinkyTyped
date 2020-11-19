@@ -3,7 +3,7 @@ package typingsSlinky.glob.mod
 import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("glob", "Glob")
 @js.native
@@ -17,8 +17,6 @@ class Glob_ protected () extends IGlob {
     cb: js.Function2[/* err */ js.Error | Null, /* matches */ js.Array[String], Unit]
   ) = this()
 }
-
 @JSImport("glob", "Glob")
 @js.native
 object Glob_ extends TopLevel[IGlobStatic]
-

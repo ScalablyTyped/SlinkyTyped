@@ -2,10 +2,11 @@ package typingsSlinky.kefir.anon
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCallObssPassiveObssCombinator extends js.Object {
+  
   def apply[T, S, U](obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]]): typingsSlinky.kefir.mod.Observable[U, S] = js.native
   def apply[T, S, U](
     obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]],
@@ -22,4 +23,3 @@ trait FnCallObssPassiveObssCombinator extends js.Object {
     combinator: js.Function1[/* repeated */ T, U]
   ): typingsSlinky.kefir.mod.Observable[U, S] = js.native
 }
-

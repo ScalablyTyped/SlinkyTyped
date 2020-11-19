@@ -3,7 +3,7 @@ package typingsSlinky.mendixmodelsdk.mod
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "AbstractProperty")
 @js.native
@@ -25,4 +25,3 @@ abstract class AbstractProperty[T, P] protected ()
     moreArgs: js.Any*
   ) = this()
 }
-

@@ -6,11 +6,11 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdIcon.fontIconMod.FontIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/material-icons/types/FlashOffFontIcon", JSImport.Namespace)
 @js.native
 object flashOffFontIconMod extends js.Object {
+  
   val default: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }
-

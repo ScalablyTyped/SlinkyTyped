@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.webservicesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/published-web-services relevant section in reference guide}
@@ -32,22 +32,25 @@ class PublishedWebService protected () extends PublishedServiceBase {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
-  @JSName("model")
-  var model_FPublishedWebService: IModel = js.native
+  
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MPublishedWebService: FolderBase = js.native
+  
+  @JSName("model")
+  var model_FPublishedWebService: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/webservices", "webservices.PublishedWebService")
 @js.native
 object PublishedWebService extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates a new PublishedWebService unit in the SDK and on the server.
     * Expects one argument, the projects.IFolderBase in which this unit is contained.
     */
   def createIn(container: IFolderBase): PublishedWebService = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.greengrassMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "Greengrass")
 @js.native
@@ -14,4 +14,3 @@ class Greengrass ()
   extends typingsSlinky.awsSdk.allMod.Greengrass {
   def this(options: ClientConfiguration) = this()
 }
-

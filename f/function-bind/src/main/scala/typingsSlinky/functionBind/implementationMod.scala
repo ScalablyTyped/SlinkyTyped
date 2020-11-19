@@ -7,11 +7,12 @@ import org.scalablytyped.runtime.Instantiable4
 import org.scalablytyped.runtime.Instantiable5
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("function-bind/implementation", JSImport.Namespace)
 @js.native
 object implementationMod extends js.Object {
+  
   def apply[T](thisArg: js.Any): T = js.native
   def apply[AX, R](thisArg: js.Any, args: AX*): Instantiable1[/* args (repeated) */ AX, R] = js.native
   def apply[T, A /* <: js.Array[_] */, R](thisArg: T): js.Function1[/* args */ A, R] = js.native
@@ -24,6 +25,7 @@ object implementationMod extends js.Object {
   def apply[T, A0, A1, A2, A /* <: js.Array[_] */, R](thisArg: T, arg0: A0, arg1: A1, arg2: A2): js.Function1[/* args */ A, R] = js.native
   def apply[A0, A1, A2, A3, A /* <: js.Array[_] */, R](thisArg: js.Any, arg0: A0, arg1: A1, arg2: A2, arg3: A3): Instantiable1[/* args */ A, R] = js.native
   def apply[T, A0, A1, A2, A3, A /* <: js.Array[_] */, R](thisArg: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3): js.Function1[/* args */ A, R] = js.native
+  
   @JSName("apply")
   def apply[AX, R](func: Instantiable1[/* args (repeated) */ AX, R], args: Array[js.Any | AX]): Instantiable1[/* args (repeated) */ AX, R] = js.native
   // NewableFunction:
@@ -72,6 +74,7 @@ object implementationMod extends js.Object {
     func: js.ThisFunction5[/* this */ T, /* arg0 */ A0, /* arg1 */ A1, /* arg2 */ A2, /* arg3 */ A3, /* args */ A, R],
     args: js.Tuple5[T, A0, A1, A2, A3]
   ): js.Function1[/* args */ A, R] = js.native
+  
   // NewableFunction:
   def call[A /* <: js.Array[_] */, R](func: Instantiable1[/* args */ A, R], thisArg: js.Any): Instantiable1[/* args */ A, R] = js.native
   def call[AX, R](func: Instantiable1[/* args (repeated) */ AX, R], thisArg: js.Any, args: AX*): Instantiable1[/* args (repeated) */ AX, R] = js.native
@@ -129,4 +132,3 @@ object implementationMod extends js.Object {
     arg3: A3
   ): js.Function1[/* args */ A, R] = js.native
 }
-

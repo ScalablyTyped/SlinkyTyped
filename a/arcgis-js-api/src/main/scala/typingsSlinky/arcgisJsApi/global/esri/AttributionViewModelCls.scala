@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.AttributionViewModelProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.AttributionViewModel")
 @js.native
@@ -16,4 +16,3 @@ class AttributionViewModelCls ()
   extends typingsSlinky.arcgisJsApi.esri.AttributionViewModel {
   def this(properties: AttributionViewModelProperties) = this()
 }
-

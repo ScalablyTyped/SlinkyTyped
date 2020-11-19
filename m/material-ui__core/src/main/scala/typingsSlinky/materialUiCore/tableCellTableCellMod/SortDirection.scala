@@ -2,7 +2,7 @@ package typingsSlinky.materialUiCore.tableCellTableCellMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.materialUiCore.materialUiCoreBooleans.`false`
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.materialUiCore.materialUiCoreStrings.desc
 */
 trait SortDirection extends js.Object
-
 object SortDirection {
+  
   @scala.inline
   def asc: typingsSlinky.materialUiCore.materialUiCoreStrings.asc = "asc".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.asc]
+  
   @scala.inline
   def desc: typingsSlinky.materialUiCore.materialUiCoreStrings.desc = "desc".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.desc]
+  
   @scala.inline
   def `false`: typingsSlinky.materialUiCore.materialUiCoreBooleans.`false` = false.asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreBooleans.`false`]
 }
-

@@ -6,18 +6,21 @@ import typingsSlinky.vscodeLanguageserverProtocol.protocolDeclarationMod.Declara
 import typingsSlinky.vscodeLanguageserverProtocol.protocolDeclarationMod.DeclarationRegistrationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageclient", "DeclarationRequest")
 @js.native
 object DeclarationRequest extends js.Object {
+  
   val method: textDocumentSlashdeclaration = js.native
+  
   /** @deprecated Use DeclarationRequest.type */
   val resultType: typingsSlinky.vscodeJsonrpc.mod.ProgressType[
     js.Array[
       typingsSlinky.vscodeLanguageserverTypes.mod.Location | typingsSlinky.vscodeLanguageserverTypes.mod.LocationLink
     ]
   ] = js.native
+  
   val `type`: ProtocolRequestType[
     DeclarationParams, 
     typingsSlinky.vscodeLanguageserverTypes.mod.Location | (js.Array[
@@ -30,4 +33,3 @@ object DeclarationRequest extends js.Object {
     DeclarationRegistrationOptions
   ] = js.native
 }
-

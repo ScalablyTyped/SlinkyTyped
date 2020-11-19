@@ -3,7 +3,7 @@ package typingsSlinky.paper.mod
 import typingsSlinky.paper.paper.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("paper", "CurveLocation")
 @js.native
@@ -15,4 +15,3 @@ class CurveLocation protected ()
   def this(curve: typingsSlinky.paper.paper.Curve, time: Double) = this()
   def this(curve: typingsSlinky.paper.paper.Curve, time: Double, point: Point) = this()
 }
-

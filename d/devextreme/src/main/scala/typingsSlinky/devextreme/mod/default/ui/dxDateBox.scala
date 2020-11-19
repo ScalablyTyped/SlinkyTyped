@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxDateBoxOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxDateBox")
 @js.native
@@ -16,4 +16,3 @@ class dxDateBox protected ()
   def this(element: JQuery, options: dxDateBoxOptions) = this()
   def this(element: Element, options: dxDateBoxOptions) = this()
 }
-

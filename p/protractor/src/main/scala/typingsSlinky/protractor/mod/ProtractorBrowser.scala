@@ -2,7 +2,7 @@ package typingsSlinky.protractor.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("protractor", "ProtractorBrowser")
 @js.native
@@ -151,14 +151,13 @@ class ProtractorBrowser protected ()
     opt_blockingProxyUrl: String
   ) = this()
 }
-
 /* static members */
 @JSImport("protractor", "ProtractorBrowser")
 @js.native
 object ProtractorBrowser extends js.Object {
+  
   /**
     * @type {ProtractorBy}
     */
   var By: typingsSlinky.protractor.locatorsMod.ProtractorBy = js.native
 }
-

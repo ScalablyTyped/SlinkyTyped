@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.ColorVariableProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.ColorVariable")
 @js.native
@@ -16,4 +16,3 @@ class ColorVariableCls ()
   extends typingsSlinky.arcgisJsApi.esri.ColorVariable {
   def this(properties: ColorVariableProperties) = this()
 }
-

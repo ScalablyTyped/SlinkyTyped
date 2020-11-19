@@ -5,9 +5,127 @@ import typingsSlinky.typescript.mod.SignatureHelpRetriggerCharacter
 import typingsSlinky.typescript.mod.SignatureHelpTriggerCharacter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object typescriptStrings {
+  
+  @scala.inline
+  def `@`: `@` = "@".asInstanceOf[`@`]
+  
+  @scala.inline
+  def Apostrophe: Apostrophe = "'".asInstanceOf[Apostrophe]
+  
+  @scala.inline
+  def Comma: Comma = ",".asInstanceOf[Comma]
+  
+  @scala.inline
+  def Dot: Dot = ".".asInstanceOf[Dot]
+  
+  @scala.inline
+  def Graveaccent: Graveaccent = "`".asInstanceOf[Graveaccent]
+  
+  @scala.inline
+  def Leftparenthesis: Leftparenthesis = "(".asInstanceOf[Leftparenthesis]
+  
+  @scala.inline
+  def Lessthansign: Lessthansign = "<".asInstanceOf[Lessthansign]
+  
+  @scala.inline
+  def Numbersign: Numbersign = "#".asInstanceOf[Numbersign]
+  
+  @scala.inline
+  def Quotationmark: Quotationmark = "\"".asInstanceOf[Quotationmark]
+  
+  @scala.inline
+  def Rightparenthesis: Rightparenthesis = ")".asInstanceOf[Rightparenthesis]
+  
+  @scala.inline
+  def Slash: Slash = "/".asInstanceOf[Slash]
+  
+  @scala.inline
+  def actionColonColoninvalidate: actionColonColoninvalidate = "action::invalidate".asInstanceOf[actionColonColoninvalidate]
+  
+  @scala.inline
+  def actionColonColonpackageInstalled: actionColonColonpackageInstalled = "action::packageInstalled".asInstanceOf[actionColonColonpackageInstalled]
+  
+  @scala.inline
+  def actionColonColonset: actionColonColonset = "action::set".asInstanceOf[actionColonColonset]
+  
+  @scala.inline
+  def auto: auto = "auto".asInstanceOf[auto]
+  
+  @scala.inline
+  def camelCase: camelCase = "camelCase".asInstanceOf[camelCase]
+  
+  @scala.inline
+  def characterTyped: characterTyped = "characterTyped".asInstanceOf[characterTyped]
+  
+  @scala.inline
+  def closeProject: closeProject = "closeProject".asInstanceOf[closeProject]
+  
+  @scala.inline
+  def discover: discover = "discover".asInstanceOf[discover]
+  
+  @scala.inline
+  def double: double = "double".asInstanceOf[double]
+  
+  @scala.inline
+  def dts: dts = "dts".asInstanceOf[dts]
+  
+  @scala.inline
+  def eventColonColonbeginInstallTypes: eventColonColonbeginInstallTypes = "event::beginInstallTypes".asInstanceOf[eventColonColonbeginInstallTypes]
+  
+  @scala.inline
+  def eventColonColonendInstallTypes: eventColonColonendInstallTypes = "event::endInstallTypes".asInstanceOf[eventColonColonendInstallTypes]
+  
+  @scala.inline
+  def eventColonColoninitializationFailed: eventColonColoninitializationFailed = "event::initializationFailed".asInstanceOf[eventColonColoninitializationFailed]
+  
+  @scala.inline
+  def eventColonColontypesRegistry: eventColonColontypesRegistry = "event::typesRegistry".asInstanceOf[eventColonColontypesRegistry]
+  
+  @scala.inline
+  def exact: exact = "exact".asInstanceOf[exact]
+  
+  @scala.inline
+  def file: file = "file".asInstanceOf[file]
+  
+  @scala.inline
+  def index: index = "index".asInstanceOf[index]
+  
+  @scala.inline
+  def installPackage: installPackage = "installPackage".asInstanceOf[installPackage]
+  
+  @scala.inline
+  def invoked: invoked = "invoked".asInstanceOf[invoked]
+  
+  @scala.inline
+  def js_ : js_ = "js".asInstanceOf[js_]
+  
+  @scala.inline
+  def minimal: minimal = "minimal".asInstanceOf[minimal]
+  
+  @scala.inline
+  def `non-relative`: `non-relative` = "non-relative".asInstanceOf[`non-relative`]
+  
+  @scala.inline
+  def prefix: prefix = "prefix".asInstanceOf[prefix]
+  
+  @scala.inline
+  def relative: relative = "relative".asInstanceOf[relative]
+  
+  @scala.inline
+  def retrigger: retrigger = "retrigger".asInstanceOf[retrigger]
+  
+  @scala.inline
+  def single: single = "single".asInstanceOf[single]
+  
+  @scala.inline
+  def substring: substring = "substring".asInstanceOf[substring]
+  
+  @scala.inline
+  def typesRegistry: typesRegistry = "typesRegistry".asInstanceOf[typesRegistry]
+  
   @js.native
   sealed trait `@` extends CompletionsTriggerCharacter
   
@@ -131,84 +249,4 @@ object typescriptStrings {
   
   @js.native
   sealed trait typesRegistry extends js.Object
-  
-  @scala.inline
-  def `@`: `@` = "@".asInstanceOf[`@`]
-  @scala.inline
-  def Apostrophe: Apostrophe = "'".asInstanceOf[Apostrophe]
-  @scala.inline
-  def Comma: Comma = ",".asInstanceOf[Comma]
-  @scala.inline
-  def Dot: Dot = ".".asInstanceOf[Dot]
-  @scala.inline
-  def Graveaccent: Graveaccent = "`".asInstanceOf[Graveaccent]
-  @scala.inline
-  def Leftparenthesis: Leftparenthesis = "(".asInstanceOf[Leftparenthesis]
-  @scala.inline
-  def Lessthansign: Lessthansign = "<".asInstanceOf[Lessthansign]
-  @scala.inline
-  def Numbersign: Numbersign = "#".asInstanceOf[Numbersign]
-  @scala.inline
-  def Quotationmark: Quotationmark = "\"".asInstanceOf[Quotationmark]
-  @scala.inline
-  def Rightparenthesis: Rightparenthesis = ")".asInstanceOf[Rightparenthesis]
-  @scala.inline
-  def Slash: Slash = "/".asInstanceOf[Slash]
-  @scala.inline
-  def actionColonColoninvalidate: actionColonColoninvalidate = "action::invalidate".asInstanceOf[actionColonColoninvalidate]
-  @scala.inline
-  def actionColonColonpackageInstalled: actionColonColonpackageInstalled = "action::packageInstalled".asInstanceOf[actionColonColonpackageInstalled]
-  @scala.inline
-  def actionColonColonset: actionColonColonset = "action::set".asInstanceOf[actionColonColonset]
-  @scala.inline
-  def auto: auto = "auto".asInstanceOf[auto]
-  @scala.inline
-  def camelCase: camelCase = "camelCase".asInstanceOf[camelCase]
-  @scala.inline
-  def characterTyped: characterTyped = "characterTyped".asInstanceOf[characterTyped]
-  @scala.inline
-  def closeProject: closeProject = "closeProject".asInstanceOf[closeProject]
-  @scala.inline
-  def discover: discover = "discover".asInstanceOf[discover]
-  @scala.inline
-  def double: double = "double".asInstanceOf[double]
-  @scala.inline
-  def dts: dts = "dts".asInstanceOf[dts]
-  @scala.inline
-  def eventColonColonbeginInstallTypes: eventColonColonbeginInstallTypes = "event::beginInstallTypes".asInstanceOf[eventColonColonbeginInstallTypes]
-  @scala.inline
-  def eventColonColonendInstallTypes: eventColonColonendInstallTypes = "event::endInstallTypes".asInstanceOf[eventColonColonendInstallTypes]
-  @scala.inline
-  def eventColonColoninitializationFailed: eventColonColoninitializationFailed = "event::initializationFailed".asInstanceOf[eventColonColoninitializationFailed]
-  @scala.inline
-  def eventColonColontypesRegistry: eventColonColontypesRegistry = "event::typesRegistry".asInstanceOf[eventColonColontypesRegistry]
-  @scala.inline
-  def exact: exact = "exact".asInstanceOf[exact]
-  @scala.inline
-  def file: file = "file".asInstanceOf[file]
-  @scala.inline
-  def index: index = "index".asInstanceOf[index]
-  @scala.inline
-  def installPackage: installPackage = "installPackage".asInstanceOf[installPackage]
-  @scala.inline
-  def invoked: invoked = "invoked".asInstanceOf[invoked]
-  @scala.inline
-  def js_ : js_ = "js".asInstanceOf[js_]
-  @scala.inline
-  def minimal: minimal = "minimal".asInstanceOf[minimal]
-  @scala.inline
-  def `non-relative`: `non-relative` = "non-relative".asInstanceOf[`non-relative`]
-  @scala.inline
-  def prefix: prefix = "prefix".asInstanceOf[prefix]
-  @scala.inline
-  def relative: relative = "relative".asInstanceOf[relative]
-  @scala.inline
-  def retrigger: retrigger = "retrigger".asInstanceOf[retrigger]
-  @scala.inline
-  def single: single = "single".asInstanceOf[single]
-  @scala.inline
-  def substring: substring = "substring".asInstanceOf[substring]
-  @scala.inline
-  def typesRegistry: typesRegistry = "typesRegistry".asInstanceOf[typesRegistry]
 }
-

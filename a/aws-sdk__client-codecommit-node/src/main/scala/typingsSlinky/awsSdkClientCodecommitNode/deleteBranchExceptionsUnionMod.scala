@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientCodecommitNode
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/types/DeleteBranchExceptionsUnion", JSImport.Namespace)
 @js.native
 object deleteBranchExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
     - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
@@ -21,6 +22,4 @@ object deleteBranchExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
   */
   trait DeleteBranchExceptionsUnion extends js.Object
-  
 }
-

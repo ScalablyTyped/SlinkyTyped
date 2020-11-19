@@ -4,21 +4,22 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.materializeCss.anon.PartialDatepickerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("materialize-css", "Datepicker")
 @js.native
 class Datepicker ()
   extends typingsSlinky.materializeCss.M.Datepicker
-
 /* static members */
 @JSImport("materialize-css", "Datepicker")
 @js.native
 object Datepicker extends js.Object {
+  
   /**
     * Get Instance
     */
   def getInstance(elem: Element): typingsSlinky.materializeCss.M.Datepicker = js.native
+  
   /**
     * Init Datepickers
     */
@@ -35,4 +36,3 @@ object Datepicker extends js.Object {
   def init(els: Element): typingsSlinky.materializeCss.M.Datepicker = js.native
   def init(els: Element, options: PartialDatepickerOptions): typingsSlinky.materializeCss.M.Datepicker = js.native
 }
-

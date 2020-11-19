@@ -10,16 +10,21 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.SVGProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/components/primitives/svg", JSImport.Namespace)
 @js.native
 object svgMod extends js.Object {
+  
   val Circle: ReactComponentClass[SVGProps[SVGCircleElement]] = js.native
+  
   val G: ReactComponentClass[SVGProps[SVGGElement]] = js.native
+  
   val Path: ReactComponentClass[SVGProps[SVGPathElement]] = js.native
+  
   val Polygon: ReactComponentClass[SVGProps[SVGPolygonElement]] = js.native
+  
   val Rect: ReactComponentClass[SVGProps[SVGRectElement]] = js.native
+  
   val SVG: ReactComponentClass[SVGProps[SVGSVGElement]] = js.native
 }
-

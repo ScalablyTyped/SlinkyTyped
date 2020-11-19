@@ -8,19 +8,16 @@ import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.pluggableMapMod.FrameState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/renderer/canvas/TileLayer", JSImport.Namespace)
 @js.native
 object tileLayerMod extends js.Object {
+  
   @js.native
   trait CanvasTileLayerRenderer
     extends typingsSlinky.ol.canvasLayerMod.default[typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default]] {
-    var renderedPixelRatio: Double = js.native
-    var renderedProjection: typingsSlinky.ol.projectionMod.default = js.native
-    var renderedRevision: Double = js.native
-    var renderedTiles: js.Array[typingsSlinky.ol.olTileMod.default] = js.native
-    var tmpExtent: Extent = js.native
+    
     def drawTileImage(
       tile: typingsSlinky.ol.imageTileMod.default,
       frameState: FrameState,
@@ -32,9 +29,13 @@ object tileLayerMod extends js.Object {
       transition: Boolean,
       opacity: Double
     ): Unit = js.native
+    
     def getTile(z: Double, x: Double, y: Double, frameState: FrameState): typingsSlinky.ol.olTileMod.default = js.native
+    
     /* protected */ def getTileImage(tile: typingsSlinky.ol.imageTileMod.default): HTMLCanvasElement | HTMLImageElement | HTMLVideoElement = js.native
+    
     /* protected */ def isDrawableTile(tile: typingsSlinky.ol.olTileMod.default): Boolean = js.native
+    
     /* protected */ def manageTilePyramid(
       frameState: FrameState,
       tileSource: typingsSlinky.ol.sourceTileMod.default,
@@ -56,7 +57,19 @@ object tileLayerMod extends js.Object {
       preload: Double,
       opt_tileCallback: js.Function0[Unit]
     ): Unit = js.native
+    
+    var renderedPixelRatio: Double = js.native
+    
+    var renderedProjection: typingsSlinky.ol.projectionMod.default = js.native
+    
+    var renderedRevision: Double = js.native
+    
+    var renderedTiles: js.Array[typingsSlinky.ol.olTileMod.default] = js.native
+    
     /* protected */ def scheduleExpireCache(frameState: FrameState, tileSource: typingsSlinky.ol.sourceTileMod.default): Unit = js.native
+    
+    var tmpExtent: Extent = js.native
+    
     /* protected */ def updateUsedTiles(
       usedTiles: StringDictionary[StringDictionary[Boolean]],
       tileSource: typingsSlinky.ol.sourceTileMod.default,
@@ -69,6 +82,4 @@ object tileLayerMod extends js.Object {
     def this(tileLayer: typingsSlinky.ol.tileMod.default) = this()
     def this(tileLayer: typingsSlinky.ol.vectorTileMod.default) = this()
   }
-  
 }
-

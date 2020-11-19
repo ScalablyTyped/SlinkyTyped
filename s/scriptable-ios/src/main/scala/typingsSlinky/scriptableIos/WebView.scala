@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Presents websites and evaluates JavaScript on websites._
@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait WebView extends js.Object {
+  
   /**
     * _Evaluates JavaScript in the web view._
     *
@@ -30,11 +31,13 @@ trait WebView extends js.Object {
     */
   def evaluateJavaScript(javaScript: String): js.Promise[_] = js.native
   def evaluateJavaScript(javaScript: String, useCallback: Boolean): js.Promise[_] = js.native
+  
   /**
     * _Reads and returns HTML from the loaded website._
     * @see https://docs.scriptable.app/webview/#-gethtml
     */
   def getHTML(): js.Promise[_] = js.native
+  
   /**
     * _Loads file in the web view._
     *
@@ -45,6 +48,7 @@ trait WebView extends js.Object {
     * @see https://docs.scriptable.app/webview/#-loadfile
     */
   def loadFile(fileURL: String): js.Promise[Unit] = js.native
+  
   /**
     * _Loads HTML in web view._
     *
@@ -55,6 +59,7 @@ trait WebView extends js.Object {
     */
   def loadHTML(html: String): js.Promise[Unit] = js.native
   def loadHTML(html: String, baseURL: String): js.Promise[Unit] = js.native
+  
   /**
     * _Loads request in web view._
     *
@@ -63,6 +68,7 @@ trait WebView extends js.Object {
     * @see https://docs.scriptable.app/webview/#-loadrequest
     */
   def loadRequest(request: Request): js.Promise[Unit] = js.native
+  
   /**
     * _Loads URL in web view._
     *
@@ -71,6 +77,7 @@ trait WebView extends js.Object {
     * @see https://docs.scriptable.app/webview/#-loadurl
     */
   def loadURL(url: String): js.Promise[Unit] = js.native
+  
   /**
     * _Presents the web view._
     *
@@ -80,6 +87,7 @@ trait WebView extends js.Object {
     */
   def present(): js.Promise[Unit] = js.native
   def present(fullscreen: Boolean): js.Promise[Unit] = js.native
+  
   /**
     * _Function called upon load of a request._
     *
@@ -90,6 +98,7 @@ trait WebView extends js.Object {
     * @see https://docs.scriptable.app/webview/#shouldallowrequest
     */
   def shouldAllowRequest(arg0: Request): Boolean = js.native
+  
   /**
     * _Waits for the web view to load._
     *
@@ -103,4 +112,3 @@ trait WebView extends js.Object {
     */
   def waitForLoad(): js.Promise[_] = js.native
 }
-

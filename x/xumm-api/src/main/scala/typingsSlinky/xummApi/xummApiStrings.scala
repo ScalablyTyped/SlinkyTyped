@@ -6,9 +6,103 @@ import typingsSlinky.xummApi.mod.XummQrQuality
 import typingsSlinky.xummApi.mod.XummTransactionApprovalType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object xummApiStrings {
+  
+  @scala.inline
+  def ALREADY_CANCELLED: ALREADY_CANCELLED = "ALREADY_CANCELLED".asInstanceOf[ALREADY_CANCELLED]
+  
+  @scala.inline
+  def ALREADY_EXPIRED: ALREADY_EXPIRED = "ALREADY_EXPIRED".asInstanceOf[ALREADY_EXPIRED]
+  
+  @scala.inline
+  def ALREADY_OPENED: ALREADY_OPENED = "ALREADY_OPENED".asInstanceOf[ALREADY_OPENED]
+  
+  @scala.inline
+  def ALREADY_RESOLVED: ALREADY_RESOLVED = "ALREADY_RESOLVED".asInstanceOf[ALREADY_RESOLVED]
+  
+  @scala.inline
+  def AccountDelete: AccountDelete = "AccountDelete".asInstanceOf[AccountDelete]
+  
+  @scala.inline
+  def AccountSet: AccountSet = "AccountSet".asInstanceOf[AccountSet]
+  
+  @scala.inline
+  def BIOMETRIC: BIOMETRIC = "BIOMETRIC".asInstanceOf[BIOMETRIC]
+  
+  @scala.inline
+  def CheckCancel: CheckCancel = "CheckCancel".asInstanceOf[CheckCancel]
+  
+  @scala.inline
+  def CheckCash: CheckCash = "CheckCash".asInstanceOf[CheckCash]
+  
+  @scala.inline
+  def CheckCreate: CheckCreate = "CheckCreate".asInstanceOf[CheckCreate]
+  
+  @scala.inline
+  def DepositPreauth: DepositPreauth = "DepositPreauth".asInstanceOf[DepositPreauth]
+  
+  @scala.inline
+  def EnableAmendment: EnableAmendment = "EnableAmendment".asInstanceOf[EnableAmendment]
+  
+  @scala.inline
+  def EscrowCancel: EscrowCancel = "EscrowCancel".asInstanceOf[EscrowCancel]
+  
+  @scala.inline
+  def EscrowCreate: EscrowCreate = "EscrowCreate".asInstanceOf[EscrowCreate]
+  
+  @scala.inline
+  def EscrowFinish: EscrowFinish = "EscrowFinish".asInstanceOf[EscrowFinish]
+  
+  @scala.inline
+  def OTHER: OTHER = "OTHER".asInstanceOf[OTHER]
+  
+  @scala.inline
+  def OfferCancel: OfferCancel = "OfferCancel".asInstanceOf[OfferCancel]
+  
+  @scala.inline
+  def OfferCreate: OfferCreate = "OfferCreate".asInstanceOf[OfferCreate]
+  
+  @scala.inline
+  def PASSPHRASE: PASSPHRASE = "PASSPHRASE".asInstanceOf[PASSPHRASE]
+  
+  @scala.inline
+  def PIN: PIN = "PIN".asInstanceOf[PIN]
+  
+  @scala.inline
+  def Payment: Payment = "Payment".asInstanceOf[Payment]
+  
+  @scala.inline
+  def PaymentChannelCreate: PaymentChannelCreate = "PaymentChannelCreate".asInstanceOf[PaymentChannelCreate]
+  
+  @scala.inline
+  def PaymentChannelFund: PaymentChannelFund = "PaymentChannelFund".asInstanceOf[PaymentChannelFund]
+  
+  @scala.inline
+  def SetFee: SetFee = "SetFee".asInstanceOf[SetFee]
+  
+  @scala.inline
+  def SetRegularKey: SetRegularKey = "SetRegularKey".asInstanceOf[SetRegularKey]
+  
+  @scala.inline
+  def SignIn: SignIn = "SignIn".asInstanceOf[SignIn]
+  
+  @scala.inline
+  def SignerListSet: SignerListSet = "SignerListSet".asInstanceOf[SignerListSet]
+  
+  @scala.inline
+  def TrustSet: TrustSet = "TrustSet".asInstanceOf[TrustSet]
+  
+  @scala.inline
+  def h: h = "h".asInstanceOf[h]
+  
+  @scala.inline
+  def m: m = "m".asInstanceOf[m]
+  
+  @scala.inline
+  def q: q = "q".asInstanceOf[q]
+  
   @js.native
   sealed trait ALREADY_CANCELLED extends XummCancelReason
   
@@ -101,68 +195,4 @@ object xummApiStrings {
   
   @js.native
   sealed trait q extends XummQrQuality
-  
-  @scala.inline
-  def ALREADY_CANCELLED: ALREADY_CANCELLED = "ALREADY_CANCELLED".asInstanceOf[ALREADY_CANCELLED]
-  @scala.inline
-  def ALREADY_EXPIRED: ALREADY_EXPIRED = "ALREADY_EXPIRED".asInstanceOf[ALREADY_EXPIRED]
-  @scala.inline
-  def ALREADY_OPENED: ALREADY_OPENED = "ALREADY_OPENED".asInstanceOf[ALREADY_OPENED]
-  @scala.inline
-  def ALREADY_RESOLVED: ALREADY_RESOLVED = "ALREADY_RESOLVED".asInstanceOf[ALREADY_RESOLVED]
-  @scala.inline
-  def AccountDelete: AccountDelete = "AccountDelete".asInstanceOf[AccountDelete]
-  @scala.inline
-  def AccountSet: AccountSet = "AccountSet".asInstanceOf[AccountSet]
-  @scala.inline
-  def BIOMETRIC: BIOMETRIC = "BIOMETRIC".asInstanceOf[BIOMETRIC]
-  @scala.inline
-  def CheckCancel: CheckCancel = "CheckCancel".asInstanceOf[CheckCancel]
-  @scala.inline
-  def CheckCash: CheckCash = "CheckCash".asInstanceOf[CheckCash]
-  @scala.inline
-  def CheckCreate: CheckCreate = "CheckCreate".asInstanceOf[CheckCreate]
-  @scala.inline
-  def DepositPreauth: DepositPreauth = "DepositPreauth".asInstanceOf[DepositPreauth]
-  @scala.inline
-  def EnableAmendment: EnableAmendment = "EnableAmendment".asInstanceOf[EnableAmendment]
-  @scala.inline
-  def EscrowCancel: EscrowCancel = "EscrowCancel".asInstanceOf[EscrowCancel]
-  @scala.inline
-  def EscrowCreate: EscrowCreate = "EscrowCreate".asInstanceOf[EscrowCreate]
-  @scala.inline
-  def EscrowFinish: EscrowFinish = "EscrowFinish".asInstanceOf[EscrowFinish]
-  @scala.inline
-  def OTHER: OTHER = "OTHER".asInstanceOf[OTHER]
-  @scala.inline
-  def OfferCancel: OfferCancel = "OfferCancel".asInstanceOf[OfferCancel]
-  @scala.inline
-  def OfferCreate: OfferCreate = "OfferCreate".asInstanceOf[OfferCreate]
-  @scala.inline
-  def PASSPHRASE: PASSPHRASE = "PASSPHRASE".asInstanceOf[PASSPHRASE]
-  @scala.inline
-  def PIN: PIN = "PIN".asInstanceOf[PIN]
-  @scala.inline
-  def Payment: Payment = "Payment".asInstanceOf[Payment]
-  @scala.inline
-  def PaymentChannelCreate: PaymentChannelCreate = "PaymentChannelCreate".asInstanceOf[PaymentChannelCreate]
-  @scala.inline
-  def PaymentChannelFund: PaymentChannelFund = "PaymentChannelFund".asInstanceOf[PaymentChannelFund]
-  @scala.inline
-  def SetFee: SetFee = "SetFee".asInstanceOf[SetFee]
-  @scala.inline
-  def SetRegularKey: SetRegularKey = "SetRegularKey".asInstanceOf[SetRegularKey]
-  @scala.inline
-  def SignIn: SignIn = "SignIn".asInstanceOf[SignIn]
-  @scala.inline
-  def SignerListSet: SignerListSet = "SignerListSet".asInstanceOf[SignerListSet]
-  @scala.inline
-  def TrustSet: TrustSet = "TrustSet".asInstanceOf[TrustSet]
-  @scala.inline
-  def h: h = "h".asInstanceOf[h]
-  @scala.inline
-  def m: m = "m".asInstanceOf[m]
-  @scala.inline
-  def q: q = "q".asInstanceOf[q]
 }
-

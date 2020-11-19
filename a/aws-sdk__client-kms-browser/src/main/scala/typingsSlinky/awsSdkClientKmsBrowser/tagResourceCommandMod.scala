@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/commands/TagResourceCommand", JSImport.Namespace)
 @js.native
 object tagResourceCommandMod extends js.Object {
+  
   @js.native
   class TagResourceCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object tagResourceCommandMod extends js.Object {
           Blob
         ] {
     def this(input: TagResourceInput) = this()
+    
     val middlewareStack: MiddlewareStack[TagResourceInput, TagResourceOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[TagResourceInput, TagResourceOutput] = js.native
   }
-  
 }
-

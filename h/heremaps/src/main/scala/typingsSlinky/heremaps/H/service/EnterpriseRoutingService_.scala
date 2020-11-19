@@ -2,7 +2,7 @@ package typingsSlinky.heremaps.H.service
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This class encapsulates Enterprise Routing REST API as a service stub. An instance of this class can be retrieved by calling the factory method on a platform instance.
@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait EnterpriseRoutingService_ extends AbstractRestService {
+  
   /**
     * This method sends a "calculateisoline" request to Enterprise Routing REST API and calls the onResult callback function once the service response was received - providing
     * a H.service.ServiceResult object - or the onError callback if a communication error occurred.
@@ -22,6 +23,7 @@ trait EnterpriseRoutingService_ extends AbstractRestService {
     onResult: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * This method sends a "calculateroute" request to Enterprise Routing REST API and calls the onResult callback function once the service response was received - providing
     * a H.service.ServiceResult object - or the onError callback if a communication error occurred.
@@ -34,6 +36,7 @@ trait EnterpriseRoutingService_ extends AbstractRestService {
     onResult: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * This method sends a "getlinkinfo" request to Enterprise Routing REST API and calls the onResult callback function once the service response was received - providing
     * a H.service.ServiceResult object - or the onError callback if a communication error occured.
@@ -46,6 +49,7 @@ trait EnterpriseRoutingService_ extends AbstractRestService {
     onResult: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * This method sends a "getroute" request to Enterprise Routing REST API and calls the onResult callback function once the service response was received - providing
     * a H.service.ServiceResult object - or the onError callback if a communication error occurred.
@@ -59,4 +63,3 @@ trait EnterpriseRoutingService_ extends AbstractRestService {
     onError: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
 }
-

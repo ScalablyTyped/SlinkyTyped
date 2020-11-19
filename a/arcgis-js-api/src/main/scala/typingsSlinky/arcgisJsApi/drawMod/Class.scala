@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Draw
 import typingsSlinky.arcgisJsApi.esri.DrawProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/views/draw/Draw", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Draw {
   def this(properties: DrawProperties) = this()
 }
-

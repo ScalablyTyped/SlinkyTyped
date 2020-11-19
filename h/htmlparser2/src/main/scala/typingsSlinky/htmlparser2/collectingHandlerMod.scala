@@ -18,22 +18,24 @@ import typingsSlinky.htmlparser2.htmlparser2Strings.ontext
 import typingsSlinky.htmlparser2.multiplexHandlerMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("htmlparser2/lib/CollectingHandler", JSImport.Namespace)
 @js.native
 object collectingHandlerMod extends js.Object {
+  
   @js.native
   class CollectingHandler () extends default {
     def this(cbs: PartialHandler) = this()
+    
     var _cbs: PartialHandler = js.native
+    
     var events: js.Array[
         Array[
           onparserinit | onreset | onend | onerror | onclosetag | onopentagname | onattribute | onopentag | ontext | oncomment | oncdatastart | oncdataend | oncommentend | onprocessinginstruction | _
         ]
       ] = js.native
+    
     def restart(): Unit = js.native
   }
-  
 }
-

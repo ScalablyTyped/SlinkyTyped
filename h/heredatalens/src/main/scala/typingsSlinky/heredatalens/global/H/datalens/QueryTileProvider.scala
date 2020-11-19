@@ -3,7 +3,7 @@ package typingsSlinky.heredatalens.global.H.datalens
 import typingsSlinky.heredatalens.H.datalens.QueryTileProvider.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Providers define interfaces for layers to access data.
@@ -22,4 +22,3 @@ class QueryTileProvider protected ()
     */
   def this(service: typingsSlinky.heredatalens.H.datalens.Service, options: Options) = this()
 }
-

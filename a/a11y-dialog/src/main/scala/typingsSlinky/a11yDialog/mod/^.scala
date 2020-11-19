@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("a11y-dialog", JSImport.Namespace)
 @js.native
@@ -17,4 +17,3 @@ class ^ () extends A11yDialog {
   def this(el: Element, containers: Element) = this()
   def this(el: Element, containers: NodeList) = this()
 }
-

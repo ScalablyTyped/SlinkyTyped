@@ -5,11 +5,12 @@ import typingsSlinky.highcharts.mod.HTMLAttributes
 import typingsSlinky.highcharts.mod.SVGAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts/highstock", "attr")
 @js.native
 object attr extends js.Object {
+  
   def apply(elem: HTMLElement): js.UndefOr[String | Null] = js.native
   def apply(elem: HTMLElement, prop: js.UndefOr[scala.Nothing], value: String): js.UndefOr[String | Null] = js.native
   def apply(elem: HTMLElement, prop: js.UndefOr[scala.Nothing], value: Double): js.UndefOr[String | Null] = js.native
@@ -35,4 +36,3 @@ object attr extends js.Object {
   def apply(elem: org.scalajs.dom.raw.SVGElement, prop: SVGAttributes, value: String): js.UndefOr[String | Null] = js.native
   def apply(elem: org.scalajs.dom.raw.SVGElement, prop: SVGAttributes, value: Double): js.UndefOr[String | Null] = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.LocatorProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Locator")
 @js.native
@@ -16,4 +16,3 @@ class LocatorCls ()
   extends typingsSlinky.arcgisJsApi.esri.Locator {
   def this(properties: LocatorProperties) = this()
 }
-

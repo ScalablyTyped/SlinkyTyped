@@ -2,17 +2,20 @@ package typingsSlinky.gapiClientReseller.gapi.client.reseller
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Seats extends js.Object {
+  
   /** Identifies the resource as a subscription change plan request. Value: subscriptions#seats */
   var kind: js.UndefOr[String] = js.native
+  
   /**
     * Read-only field containing the current number of licensed seats for FLEXIBLE Google-Apps subscriptions and secondary subscriptions such as Google-Vault
     * and Drive-storage.
     */
   var licensedNumberOfSeats: js.UndefOr[Double] = js.native
+  
   /**
     * The maximumNumberOfSeats property is the maximum number of licenses that the customer can purchase. This property applies to plans other than the
     * annual commitment plan. How a user's licenses are managed depends on the subscription's payment plan:
@@ -24,6 +27,7 @@ trait Seats extends js.Object {
     * - 30-day free trial plan — A subscription in a 30-day free trial is restricted to maximum 10 seats.
     */
   var maximumNumberOfSeats: js.UndefOr[Double] = js.native
+  
   /**
     * The numberOfSeats property holds the customer's number of user licenses. How a user's licenses are managed depends on the subscription's plan:
     * - annual commitment plan (with monthly or yearly pay) — For this plan, a reseller is invoiced on the number of user licenses in the numberOfSeats
@@ -36,41 +40,51 @@ trait Seats extends js.Object {
     */
   var numberOfSeats: js.UndefOr[Double] = js.native
 }
-
 object Seats {
+  
   @scala.inline
   def apply(): Seats = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Seats]
   }
+  
   @scala.inline
   implicit class SeatsOps[Self <: Seats] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setKind(value: String): Self = this.set("kind", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteKind: Self = this.set("kind", js.undefined)
+    
     @scala.inline
     def setLicensedNumberOfSeats(value: Double): Self = this.set("licensedNumberOfSeats", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteLicensedNumberOfSeats: Self = this.set("licensedNumberOfSeats", js.undefined)
+    
     @scala.inline
     def setMaximumNumberOfSeats(value: Double): Self = this.set("maximumNumberOfSeats", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteMaximumNumberOfSeats: Self = this.set("maximumNumberOfSeats", js.undefined)
+    
     @scala.inline
     def setNumberOfSeats(value: Double): Self = this.set("numberOfSeats", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteNumberOfSeats: Self = this.set("numberOfSeats", js.undefined)
   }
-  
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.screeps.Id
 import typingsSlinky.screeps.StructureStorageConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("StructureStorage")
 @js.native
@@ -13,8 +13,6 @@ class StructureStorage protected ()
   extends typingsSlinky.screeps.StructureStorage {
   def this(id: Id[typingsSlinky.screeps.StructureStorage]) = this()
 }
-
 @JSGlobal("StructureStorage")
 @js.native
 object StructureStorage extends TopLevel[StructureStorageConstructor]
-

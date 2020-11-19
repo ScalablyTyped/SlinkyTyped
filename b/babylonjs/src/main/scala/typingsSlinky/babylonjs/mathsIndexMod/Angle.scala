@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.mathsIndexMod
 import typingsSlinky.babylonjs.typesMod.DeepImmutable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Maths/index", "Angle")
 @js.native
@@ -15,11 +15,11 @@ class Angle protected ()
     */
   def this(radians: Double) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Maths/index", "Angle")
 @js.native
 object Angle extends js.Object {
+  
   /**
     * Gets a new Angle object valued with the angle value in radians between the two given vectors
     * @param a defines first vector
@@ -30,12 +30,14 @@ object Angle extends js.Object {
     a: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector2],
     b: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector2]
   ): typingsSlinky.babylonjs.mathPathMod.Angle = js.native
+  
   /**
     * Gets a new Angle object from the given float in degrees
     * @param degrees defines the angle value in degrees
     * @returns a new Angle
     */
   def FromDegrees(degrees: Double): typingsSlinky.babylonjs.mathPathMod.Angle = js.native
+  
   /**
     * Gets a new Angle object from the given float in radians
     * @param radians defines the angle value in radians
@@ -43,4 +45,3 @@ object Angle extends js.Object {
     */
   def FromRadians(radians: Double): typingsSlinky.babylonjs.mathPathMod.Angle = js.native
 }
-

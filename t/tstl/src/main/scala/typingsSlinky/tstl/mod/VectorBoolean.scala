@@ -7,7 +7,7 @@ import typingsSlinky.tstl.arrayIteratorMod.ArrayIterator
 import typingsSlinky.tstl.arrayReverseIteratorMod.ArrayReverseIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "VectorBoolean")
 @js.native
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
   * Default Constructor.
   */
 class VectorBoolean ()
-  extends typingsSlinky.tstl.tstlMod.VectorBoolean {
+  extends typingsSlinky.tstl.tstlModuleMod.VectorBoolean {
   /**
     * Initializer Constructor.
     *
@@ -43,10 +43,10 @@ class VectorBoolean ()
     */
   def this(n: Double, `val`: Boolean) = this()
 }
-
 @JSImport("tstl", "VectorBoolean")
 @js.native
 object VectorBoolean extends js.Object {
+  
   val Iterator: Instantiable0[
     ArrayIterator[
       js.Object, 
@@ -66,6 +66,7 @@ object VectorBoolean extends js.Object {
       ]
     ]
   ] = js.native
+  
   val ReverseIterator: Instantiable0[
     ArrayReverseIterator[
       js.Object, 
@@ -86,4 +87,3 @@ object VectorBoolean extends js.Object {
     ]
   ] = js.native
 }
-

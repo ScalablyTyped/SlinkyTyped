@@ -6,10 +6,11 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.none
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.traditional
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RasterShadedReliefRendererProperties extends js.Object {
+  
   /**
     * The sun's angle of elevation above the horizon, ranging from 0 to 90 degrees. A value of 0 degrees indicates that the sun is on the horizon, that is, on the same horizontal plane as the frame of reference. A value of 90 degrees indicates that the sun is directly overhead.
     *
@@ -18,6 +19,7 @@ trait RasterShadedReliefRendererProperties extends js.Object {
     * @default 45
     */
   var altitude: js.UndefOr[Double] = js.native
+  
   /**
     * The sun's relative position along the horizon, ranging from 0 to 360 degrees. This position is indicated by the angle of the sun measured clockwise from due north. An azimuth of 0 degrees indicates north, east is 90 degrees, south is 180 degrees, and west is 270 degrees.
     *
@@ -26,6 +28,7 @@ trait RasterShadedReliefRendererProperties extends js.Object {
     * @default 315
     */
   var azimuth: js.UndefOr[Double] = js.native
+  
   /**
     * The color ramp to display the shaded relief. By default, the grayscale is applied.
     *
@@ -34,6 +37,7 @@ trait RasterShadedReliefRendererProperties extends js.Object {
     * @default null
     */
   var colorRamp: js.UndefOr[ColorRampProperties] = js.native
+  
   /**
     * The type of hillshading being applied on the elevation surface.
     *
@@ -48,6 +52,7 @@ trait RasterShadedReliefRendererProperties extends js.Object {
     * @default "multi-directional"
     */
   var hillshadeType: js.UndefOr[traditional | `multi-directional`] = js.native
+  
   /**
     * Pixel size factor accounts for changes in scale as the viewer zooms in and out on the map display. It controls the rate at which the Z Factor changes. This parameter is only valid when the [scalingType](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-RasterShadedReliefRenderer.html#scalingType) is `adjusted`.
     *
@@ -56,6 +61,7 @@ trait RasterShadedReliefRendererProperties extends js.Object {
     * @default 0.024
     */
   var pixelSizeFactor: js.UndefOr[Double] = js.native
+  
   /**
     * Pixel Size Power accounts for the altitude changes (or scale) as the viewer zooms in and out on the map display. It is the exponent applied to the pixel size term in the equation that controls the rate at which the Z Factor changes to avoid significant loss of relief. This parameter is only valid when the [scalingType](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-RasterShadedReliefRenderer.html#scalingType) is `adjusted`.
     *
@@ -64,6 +70,7 @@ trait RasterShadedReliefRendererProperties extends js.Object {
     * @default 0.664
     */
   var pixelSizePower: js.UndefOr[Double] = js.native
+  
   /**
     * Applies a constant or adjusted z-factor based on resolution changes. The shaded result is scaled dynamically by adjusting the z-factor using one of two options.  **Possible Values**
     *
@@ -78,6 +85,7 @@ trait RasterShadedReliefRendererProperties extends js.Object {
     * @default none
     */
   var scalingType: js.UndefOr[none | adjusted] = js.native
+  
   /**
     * A ratio of z unit / xy unit, with optional exaggeration factored in. If the units for the z (elevation) units are the same as the x,y (linear) units, then the z conversion factor is 1. If your dataset is using a projected coordinate system and your elevation and linear units are different, then you will need to define a z conversion factor to account for the difference.
     *
@@ -87,57 +95,75 @@ trait RasterShadedReliefRendererProperties extends js.Object {
     */
   var zFactor: js.UndefOr[Double] = js.native
 }
-
 object RasterShadedReliefRendererProperties {
+  
   @scala.inline
   def apply(): RasterShadedReliefRendererProperties = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[RasterShadedReliefRendererProperties]
   }
+  
   @scala.inline
   implicit class RasterShadedReliefRendererPropertiesOps[Self <: RasterShadedReliefRendererProperties] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setAltitude(value: Double): Self = this.set("altitude", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAltitude: Self = this.set("altitude", js.undefined)
+    
     @scala.inline
     def setAzimuth(value: Double): Self = this.set("azimuth", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAzimuth: Self = this.set("azimuth", js.undefined)
+    
     @scala.inline
     def setColorRamp(value: ColorRampProperties): Self = this.set("colorRamp", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteColorRamp: Self = this.set("colorRamp", js.undefined)
+    
     @scala.inline
     def setHillshadeType(value: traditional | `multi-directional`): Self = this.set("hillshadeType", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteHillshadeType: Self = this.set("hillshadeType", js.undefined)
+    
     @scala.inline
     def setPixelSizeFactor(value: Double): Self = this.set("pixelSizeFactor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deletePixelSizeFactor: Self = this.set("pixelSizeFactor", js.undefined)
+    
     @scala.inline
     def setPixelSizePower(value: Double): Self = this.set("pixelSizePower", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deletePixelSizePower: Self = this.set("pixelSizePower", js.undefined)
+    
     @scala.inline
     def setScalingType(value: none | adjusted): Self = this.set("scalingType", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteScalingType: Self = this.set("scalingType", js.undefined)
+    
     @scala.inline
     def setZFactor(value: Double): Self = this.set("zFactor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteZFactor: Self = this.set("zFactor", js.undefined)
   }
-  
 }
-

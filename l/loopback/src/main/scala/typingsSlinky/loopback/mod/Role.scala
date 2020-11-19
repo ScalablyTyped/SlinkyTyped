@@ -2,7 +2,7 @@ package typingsSlinky.loopback.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Role model
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
 @JSImport("loopback", "Role")
 @js.native
 class Role () extends PersistedModel
-
 /* static members */
 @JSImport("loopback", "Role")
 @js.native
 object Role extends js.Object {
+  
   /**
     * List roles for a given principal.
     * @param {any} context The security context.
@@ -26,6 +26,7 @@ object Role extends js.Object {
     * @param {string[]} roles An Array of role IDs
     */
   def getRoles(context: js.Any, callback: js.Function2[/* err */ js.Error, /* roles */ js.Array[String], Unit]): Unit = js.native
+  
   /**
     * Check if the user ID is authenticated
     * @param {any} context The security context.@callback {() => void} callback Callback function.
@@ -33,6 +34,7 @@ object Role extends js.Object {
     * @param {boolean} isAuthenticated True if the user is authenticated.
     */
   def isAuthenticated(context: js.Any, callback: js.Function2[/* err */ js.Error, /* isAuthenticated */ Boolean, Unit]): Unit = js.native
+  
   /**
     * Check if a given principal is in the specified role.
     * @param {string} role The role name.
@@ -46,6 +48,7 @@ object Role extends js.Object {
     context: js.Any,
     callback: js.Function2[/* err */ js.Error, /* isInRole */ Boolean, Unit]
   ): Unit = js.native
+  
   /**
     * Check if a given user ID is the owner the model instance.
     * @param {() => void} modelClass The model class
@@ -54,6 +57,7 @@ object Role extends js.Object {
     * @param {() => void} callback Callback function
     */
   def isOwner(modelClass: js.Function0[Unit], modelId: js.Any, userId: js.Any, callback: js.Function0[Unit]): Unit = js.native
+  
   /**
     * Add custom handler for roles.
     * @param {string} role Name of role.
@@ -71,4 +75,3 @@ object Role extends js.Object {
     ]
   ): Unit = js.native
 }
-

@@ -4,11 +4,12 @@ import typingsSlinky.semver.mod.Options
 import typingsSlinky.semver.rangeMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semver/functions/satisfies", JSImport.Namespace)
 @js.native
 object satisfiesMod extends js.Object {
+  
   /**
     * Return true if the version satisfies the range.
     */
@@ -25,4 +26,3 @@ object satisfiesMod extends js.Object {
   def apply(version: typingsSlinky.semver.semverMod.^, range: ^, optionsOrLoose: Boolean): Boolean = js.native
   def apply(version: typingsSlinky.semver.semverMod.^, range: ^, optionsOrLoose: Options): Boolean = js.native
 }
-

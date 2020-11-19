@@ -2,11 +2,12 @@ package typingsSlinky.ramda
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ramda/src/replace", JSImport.Namespace)
 @js.native
 object replaceMod extends js.Object {
+  
   def default(pattern: String): js.Function1[
     /* replacement */ String | (js.Function2[/* match */ String, /* repeated */ js.Any, String]), 
     js.Function1[/* str */ String, String]
@@ -32,4 +33,3 @@ object replaceMod extends js.Object {
     str: String
   ): String = js.native
 }
-

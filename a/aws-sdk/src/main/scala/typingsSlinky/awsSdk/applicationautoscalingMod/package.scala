@@ -2,9 +2,10 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object applicationautoscalingMod {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ChangeInCapacity
     - typingsSlinky.awsSdk.awsSdkStrings.PercentChangeInCapacity
@@ -12,11 +13,17 @@ package object applicationautoscalingMod {
     - java.lang.String
   */
   type AdjustmentType = typingsSlinky.awsSdk.applicationautoscalingMod._AdjustmentType | java.lang.String
+  
   type Alarms = js.Array[typingsSlinky.awsSdk.applicationautoscalingMod.Alarm]
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.applicationautoscalingMod.ClientApiVersions
+  
   type Cooldown = scala.Double
+  
   type DisableScaleIn = scala.Boolean
+  
   type MaxResults = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Average_
     - typingsSlinky.awsSdk.awsSdkStrings.Minimum_
@@ -24,12 +31,19 @@ package object applicationautoscalingMod {
     - java.lang.String
   */
   type MetricAggregationType = typingsSlinky.awsSdk.applicationautoscalingMod._MetricAggregationType | java.lang.String
+  
   type MetricDimensionName = java.lang.String
+  
   type MetricDimensionValue = java.lang.String
+  
   type MetricDimensions = js.Array[typingsSlinky.awsSdk.applicationautoscalingMod.MetricDimension]
+  
   type MetricName = java.lang.String
+  
   type MetricNamespace = java.lang.String
+  
   type MetricScale = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Average_
     - typingsSlinky.awsSdk.awsSdkStrings.Minimum_
@@ -39,6 +53,7 @@ package object applicationautoscalingMod {
     - java.lang.String
   */
   type MetricStatistic = typingsSlinky.awsSdk.applicationautoscalingMod._MetricStatistic | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DynamoDBReadCapacityUtilization
     - typingsSlinky.awsSdk.awsSdkStrings.DynamoDBWriteCapacityUtilization
@@ -59,20 +74,30 @@ package object applicationautoscalingMod {
     - java.lang.String
   */
   type MetricType = typingsSlinky.awsSdk.applicationautoscalingMod._MetricType | java.lang.String
+  
   type MetricUnit = java.lang.String
+  
   type MinAdjustmentMagnitude = scala.Double
+  
   type PolicyName = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.StepScaling
     - typingsSlinky.awsSdk.awsSdkStrings.TargetTrackingScaling
     - java.lang.String
   */
   type PolicyType = typingsSlinky.awsSdk.applicationautoscalingMod._PolicyType | java.lang.String
+  
   type ResourceCapacity = scala.Double
+  
   type ResourceId = java.lang.String
+  
   type ResourceIdMaxLen1600 = java.lang.String
+  
   type ResourceIdsMaxLen1600 = js.Array[typingsSlinky.awsSdk.applicationautoscalingMod.ResourceIdMaxLen1600]
+  
   type ResourceLabel = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ecsColonserviceColonDesiredCount
     - typingsSlinky.awsSdk.awsSdkStrings.`ec2Colonspot-fleet-requestColonTargetCapacity`
@@ -92,8 +117,11 @@ package object applicationautoscalingMod {
     - java.lang.String
   */
   type ScalableDimension = typingsSlinky.awsSdk.applicationautoscalingMod._ScalableDimension | java.lang.String
+  
   type ScalableTargets = js.Array[typingsSlinky.awsSdk.applicationautoscalingMod.ScalableTarget]
+  
   type ScalingActivities = js.Array[typingsSlinky.awsSdk.applicationautoscalingMod.ScalingActivity]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Pending_
     - typingsSlinky.awsSdk.awsSdkStrings.InProgress_
@@ -104,11 +132,17 @@ package object applicationautoscalingMod {
     - java.lang.String
   */
   type ScalingActivityStatusCode = typingsSlinky.awsSdk.applicationautoscalingMod._ScalingActivityStatusCode | java.lang.String
+  
   type ScalingAdjustment = scala.Double
+  
   type ScalingPolicies = js.Array[typingsSlinky.awsSdk.applicationautoscalingMod.ScalingPolicy]
+  
   type ScalingSuspended = scala.Boolean
+  
   type ScheduledActionName = java.lang.String
+  
   type ScheduledActions = js.Array[typingsSlinky.awsSdk.applicationautoscalingMod.ScheduledAction]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ecs_
     - typingsSlinky.awsSdk.awsSdkStrings.elasticmapreduce
@@ -124,9 +158,13 @@ package object applicationautoscalingMod {
     - java.lang.String
   */
   type ServiceNamespace = typingsSlinky.awsSdk.applicationautoscalingMod._ServiceNamespace | java.lang.String
+  
   type StepAdjustments = js.Array[typingsSlinky.awsSdk.applicationautoscalingMod.StepAdjustment]
+  
   type TimestampType = js.Date
+  
   type XmlString = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2016-02-06`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

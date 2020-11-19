@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Twitter auth provider.
@@ -42,18 +42,20 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.TwitterAuthProvider")
 @js.native
 class TwitterAuthProvider () extends TwitterAuthProviderInstance
-
 /* static members */
 @JSImport("firebase", "auth.TwitterAuthProvider")
 @js.native
 object TwitterAuthProvider extends js.Object {
+  
   var PROVIDER_ID: String = js.native
+  
   /**
     * This corresponds to the sign-in method identifier as returned in
     * {@link firebase.auth.Auth.fetchSignInMethodsForEmail}.
     *
     */
   var TWITTER_SIGN_IN_METHOD: String = js.native
+  
   /**
     * @param token Twitter access token.
     * @param secret Twitter secret.
@@ -61,4 +63,3 @@ object TwitterAuthProvider extends js.Object {
     */
   def credential(token: String, secret: String): OAuthCredential = js.native
 }
-

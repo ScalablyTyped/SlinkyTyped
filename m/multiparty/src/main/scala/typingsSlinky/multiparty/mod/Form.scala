@@ -9,12 +9,13 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.httpMod.IncomingMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("multiparty", "Form")
 @js.native
 class Form () extends EventEmitter {
   def this(options: FormOptions) = this()
+  
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -28,6 +29,7 @@ class Form () extends EventEmitter {
     event: progress,
     listener: js.Function2[/* bytesReceived */ Double, /* bytesExpected */ Double, Unit]
   ): this.type = js.native
+  
   /**
     * Parses an incoming node.js request containing form data.
     * This will cause form to emit events based off the incoming request
@@ -40,4 +42,3 @@ class Form () extends EventEmitter {
     callback: js.Function3[/* error */ js.Error, /* fields */ js.Any, /* files */ js.Any, _]
   ): Unit = js.native
 }
-

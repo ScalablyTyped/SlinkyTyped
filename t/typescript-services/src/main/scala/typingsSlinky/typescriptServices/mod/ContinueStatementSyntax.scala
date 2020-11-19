@@ -3,7 +3,7 @@ package typingsSlinky.typescriptServices.mod
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "ContinueStatementSyntax")
 @js.native
@@ -16,12 +16,12 @@ class ContinueStatementSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSImport("typescript-services", "ContinueStatementSyntax")
 @js.native
 object ContinueStatementSyntax extends js.Object {
+  
   def create(continueKeyword: ISyntaxToken, semicolonToken: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.ContinueStatementSyntax = js.native
+  
   def create1(): typingsSlinky.typescriptServices.TypeScript.ContinueStatementSyntax = js.native
 }
-

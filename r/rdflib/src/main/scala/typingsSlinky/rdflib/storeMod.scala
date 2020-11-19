@@ -22,71 +22,27 @@ import typingsSlinky.rdflib.typesMod.PredicateType
 import typingsSlinky.rdflib.typesMod.SubjectType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rdflib/lib/store", JSImport.Namespace)
 @js.native
 object storeMod extends js.Object {
+  
+  val defaultGraphURI: /* "chrome:theSession" */ String = js.native
+  
   @js.native
   trait IndexedFormula
     extends typingsSlinky.rdflib.formulaMod.default {
+    
     /** Redirections we got from HTTP */
     var HTTPRedirects: js.Array[
         typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
       ] = js.native
+    
     var _existentialVariables: js.UndefOr[js.Array[typingsSlinky.rdflib.blankNodeMod.default]] = js.native
+    
     var _universalVariables: js.UndefOr[js.Array[typingsSlinky.rdflib.namedNodeMod.default]] = js.native
-    /** Reverse mapping to redirection: aliases for this */
-    var aliases: js.Array[_] = js.native
-    /** Map of iri predicates to functions to call when adding { s type X } */
-    var classActions: StringDictionary[js.Array[js.Function]] = js.native
-    /** Callbacks which are triggered after a statement has been added to the store */
-    var dataCallbacks: js.Any = js.native
-    var features: FeaturesType = js.native
-    var index: js.Tuple4[
-        js.Array[
-          typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
-        ], 
-        js.Array[
-          typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
-        ], 
-        js.Array[
-          typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
-        ], 
-        js.Array[
-          typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
-        ]
-      ] = js.native
-    /**
-      * Dictionary of namespace prefixes
-      */
-    var namespaces: StringDictionary[String] = js.native
-    /** Array of statements with this X as object */
-    var objectIndex: js.Array[
-        typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
-      ] = js.native
-    /** Array of statements with this X as predicate */
-    var predicateIndex: js.Array[
-        typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
-      ] = js.native
-    /** Map of iri predicates to functions to call when getting statement with {s X o} */
-    var propertyActions: StringDictionary[js.Array[js.Function]] = js.native
-    /** Function to remove quads from the store arrays with */
-    var rdfArrayRemove: js.Any = js.native
-    /** Redirect to lexically smaller equivalent symbol */
-    var redirections: js.Array[_] = js.native
-    /** Array of statements with this X as subject */
-    var subjectIndex: js.Array[
-        typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
-      ] = js.native
-    /**
-      * An UpdateManager initialised to this store
-      */
-    var updater: js.UndefOr[typingsSlinky.rdflib.updateManagerMod.default] = js.native
-    /** Array of statements with X as provenance */
-    var whyIndex: js.Array[
-        typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
-      ] = js.native
+    
     /**
       * Adds a triple (quad) to the store.
       *
@@ -105,16 +61,22 @@ object storeMod extends js.Object {
       obj: js.UndefOr[Term | String],
       why: js.UndefOr[QuadGraph]
     ): (typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]) | Null | this.type | Double = js.native
+    
     /**
       * Add a callback which will be triggered after a statement has been added to the store.
       * @param cb
       */
     def addDataCallback(cb: js.Function1[/* q */ Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph], Unit]): Unit = js.native
+    
+    /** Reverse mapping to redirection: aliases for this */
+    var aliases: js.Array[_] = js.native
+    
     /**
       * Return all equivalent URIs by which this is known
       * @param x A named node
       */
     def allAliases(x: typingsSlinky.rdflib.namedNodeMod.default): js.Array[typingsSlinky.rdflib.namedNodeMod.default] = js.native
+    
     /**
       * Apply a set of statements to be deleted and to be inserted
       *
@@ -127,16 +89,19 @@ object storeMod extends js.Object {
       target: NamedNode,
       patchCallback: js.Function1[/* errorString */ js.UndefOr[String], Unit]
     ): Unit = js.native
+    
     /**
       * Returns the symbol with canonical URI as smushed
       * @param term - An RDF node
       */
     def canon(): typingsSlinky.rdflib.nodeMod.default = js.native
     def canon(term: Term): typingsSlinky.rdflib.nodeMod.default = js.native
+    
     /**
       * Checks this formula for consistency
       */
     def check(): Unit = js.native
+    
     /**
       * Checks a list of statements for consistency
       * @param sts - The list of statements to check
@@ -144,11 +109,17 @@ object storeMod extends js.Object {
       */
     def checkStatementList(sts: js.Array[Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]]): Boolean | Unit = js.native
     def checkStatementList(sts: js.Array[Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]], from: Double): Boolean | Unit = js.native
+    
+    /** Map of iri predicates to functions to call when adding { s type X } */
+    var classActions: StringDictionary[js.Array[js.Function]] = js.native
+    
     /**
       * Closes this formula (and return it)
       */
     def close(): IndexedFormula = js.native
+    
     def compareTerms(u1: Term, u2: Term): Double = js.native
+    
     /**
       * replaces @template with @target and add appropriate triples
       * removes no triples by default and is a one-direction replication
@@ -158,12 +129,17 @@ object storeMod extends js.Object {
       */
     def copyTo(template: QuadSubject, target: QuadSubject): Unit = js.native
     def copyTo(template: QuadSubject, target: QuadSubject, flags: js.Array[`two-direction` | delete_]): Unit = js.native
+    
+    /** Callbacks which are triggered after a statement has been added to the store */
+    var dataCallbacks: js.Any = js.native
+    
     /**
       * N3 allows for declaring blank nodes, this function enables that support
       *
       * @param x The blank node to be declared, supported in N3
       */
     def declareExistential(x: typingsSlinky.rdflib.blankNodeMod.default): typingsSlinky.rdflib.blankNodeMod.default = js.native
+    
     /**
       * Simplify graph in store when we realize two identifiers are equivalent
       * We replace the bigger with the smaller.
@@ -171,16 +147,36 @@ object storeMod extends js.Object {
       * @param u2in The second node
       */
     def equate(u1in: Term, u2in: Term): Boolean = js.native
+    
+    var features: FeaturesType = js.native
+    
     /**
       * Creates a new empty indexed formula
       * Only applicable for IndexedFormula, but TypeScript won't allow a subclass to override a property
       * @param features The list of features
       */
     def formula(features: FeaturesType): IndexedFormula = js.native
+    
+    var index: js.Tuple4[
+        js.Array[
+          typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
+        ], 
+        js.Array[
+          typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
+        ], 
+        js.Array[
+          typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
+        ], 
+        js.Array[
+          typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
+        ]
+      ] = js.native
+    
     /**
       * @param features
       */
     def initPropertyActions(features: FeaturesType): Unit = js.native
+    
     /**
       * Returns the number of statements contained in this IndexedFormula.
       * (Getter proxy to this.statements).
@@ -192,6 +188,7 @@ object storeMod extends js.Object {
       * @returns {Number}
       */
     def length: Double = js.native
+    
     /**
       * Returns any quads matching the given arguments.
       * Standard RDFJS spec method for Source objects, implemented as an
@@ -207,16 +204,24 @@ object storeMod extends js.Object {
       `object`: js.UndefOr[QuadObject | Null],
       graph: js.UndefOr[QuadGraph | Null]
     ): js.Array[Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]] = js.native
+    
     /**
       * Find out whether a given URI is used as symbol in the formula
       * @param uri The URI to look for
       */
     def mentionsURI(uri: String): Boolean = js.native
+    
+    /**
+      * Dictionary of namespace prefixes
+      */
+    var namespaces: StringDictionary[String] = js.native
+    
     /**
       * Existentials are BNodes - something exists without naming
       * @param uri An URI
       */
     def newExistential(uri: String): Term = js.native
+    
     /**
       * Adds a new property action
       * @param pred the predicate that the function should be triggered on
@@ -232,18 +237,34 @@ object storeMod extends js.Object {
           Boolean
         ]
     ): Boolean = js.native
+    
     /**
       * Creates a new universal node
       * Universals are Variables
       * @param uri An URI
       */
     def newUniversal(uri: String): NamedNode = js.native
+    
     /**
       * Find an unused id for a file being edited: return a symbol
       * (Note: Slow iff a lot of them -- could be O(log(k)) )
       * @param doc A document named node
       */
     def nextSymbol(doc: NamedNode): NamedNode = js.native
+    
+    /** Array of statements with this X as object */
+    var objectIndex: js.Array[
+        typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
+      ] = js.native
+    
+    /** Array of statements with this X as predicate */
+    var predicateIndex: js.Array[
+        typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
+      ] = js.native
+    
+    /** Map of iri predicates to functions to call when getting statement with {s X o} */
+    var propertyActions: StringDictionary[js.Array[js.Function]] = js.native
+    
     /**
       * Query this store asynchronously, return bindings in callback
       *
@@ -279,6 +300,7 @@ object storeMod extends js.Object {
       fetcher: typingsSlinky.rdflib.fetcherMod.default,
       onDone: js.Function0[Unit]
     ): Unit = js.native
+    
     /**
       * Query this store synchronously and return bindings
       *
@@ -287,17 +309,26 @@ object storeMod extends js.Object {
     def querySync(
       myQuery: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Query */ js.Any
     ): js.Array[_] = js.native
+    
+    /** Function to remove quads from the store arrays with */
+    var rdfArrayRemove: js.Any = js.native
+    
+    /** Redirect to lexically smaller equivalent symbol */
+    var redirections: js.Array[_] = js.native
+    
     def remove(st: js.Array[Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]]): IndexedFormula = js.native
     /**
       * Removes one or multiple statement(s) from this formula
       * @param st - A Statement or array of Statements to remove
       */
     def remove(st: Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]): IndexedFormula = js.native
+    
     /**
       * Removes all statemnts in a doc
       * @param doc - The document / graph
       */
     def removeDocument(doc: QuadGraph): IndexedFormula = js.native
+    
     /**
       * Remove all statements matching args (within limit) *
       * @param subj The subject
@@ -313,6 +344,7 @@ object storeMod extends js.Object {
       why: js.UndefOr[QuadGraph | Null],
       limit: js.UndefOr[Double]
     ): Unit = js.native
+    
     /**
       * Remove all matching statements
       * @param subject The subject
@@ -326,6 +358,7 @@ object storeMod extends js.Object {
       `object`: js.UndefOr[QuadObject | Null],
       graph: js.UndefOr[QuadGraph | Null]
     ): IndexedFormula = js.native
+    
     /**
       * Remove a particular statement object from the store
       *
@@ -334,27 +367,47 @@ object storeMod extends js.Object {
       *        Otherwise, you should use remove() above.
       */
     def removeStatement(st: Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]): IndexedFormula = js.native
+    
     /**
       * Removes statements
       * @param sts The statements to remove
       */
     def removeStatements(sts: js.Array[Quad[QuadSubject, QuadPredicate, QuadObject, QuadGraph]]): IndexedFormula = js.native
+    
     /**
       * Replace big with small, obsoleted with obsoleting.
       */
     def replaceWith(big: QuadSubject, small: QuadSubject): Boolean = js.native
+    
     /**
       * Compare by canonical URI as smushed
       * @param x A named node
       * @param y Another named node
       */
     def sameThings(x: typingsSlinky.rdflib.namedNodeMod.default, y: typingsSlinky.rdflib.namedNodeMod.default): Boolean = js.native
+    
     def setPrefixForURI(prefix: String, nsuri: String): Unit = js.native
+    
+    /** Array of statements with this X as subject */
+    var subjectIndex: js.Array[
+        typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
+      ] = js.native
+    
+    /**
+      * An UpdateManager initialised to this store
+      */
+    var updater: js.UndefOr[typingsSlinky.rdflib.updateManagerMod.default] = js.native
+    
     /**
       * A list of all the URIs by which this thing is known
       * @param term
       */
     def uris(term: QuadSubject): js.Array[String] = js.native
+    
+    /** Array of statements with X as provenance */
+    var whyIndex: js.Array[
+        typingsSlinky.rdflib.statementMod.default[SubjectType, PredicateType, ObjectType, GraphType]
+      ] = js.native
   }
   
   @js.native
@@ -371,18 +424,17 @@ object storeMod extends js.Object {
     def this(features: FeaturesType) = this()
     def this(features: js.UndefOr[FeaturesType], opts: FormulaOpts) = this()
   }
-  
-  val defaultGraphURI: /* "chrome:theSession" */ String = js.native
   /* static members */
   @js.native
   object default extends js.Object {
-    var handleRDFType: js.Function = js.native
+    
     /**
       * Gets the URI of the default graph
       */
     def defaultGraphURI: String = js.native
+    
+    var handleRDFType: js.Function = js.native
   }
   
   type FeaturesType = js.UndefOr[js.Array[sameAs | InverseFunctionalProperty | FunctionalProperty]]
 }
-

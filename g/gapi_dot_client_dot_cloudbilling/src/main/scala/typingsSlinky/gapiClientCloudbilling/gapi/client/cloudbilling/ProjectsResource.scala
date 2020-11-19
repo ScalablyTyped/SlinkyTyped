@@ -5,10 +5,11 @@ import typingsSlinky.gapiClientCloudbilling.anon.Accesstoken
 import typingsSlinky.gapiClientCloudbilling.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ProjectsResource extends js.Object {
+  
   /**
     * Gets the billing information for a project. The current authenticated user
     * must have [permission to view the
@@ -16,12 +17,14 @@ trait ProjectsResource extends js.Object {
     * ).
     */
   def getBillingInfo(request: Alt): Request[ProjectBillingInfo] = js.native
+  
   /**
     * Lists the projects associated with a billing account. The current
     * authenticated user must be an [owner of the billing
     * account](https://support.google.com/cloud/answer/4430947).
     */
   def list(request: Accesstoken): Request[ListProjectBillingInfoResponse] = js.native
+  
   /**
     * Sets or updates the billing account associated with a project. You specify
     * the new billing account by setting the `billing_account_name` in the
@@ -57,8 +60,8 @@ trait ProjectsResource extends js.Object {
     */
   def updateBillingInfo(request: Alt): Request[ProjectBillingInfo] = js.native
 }
-
 object ProjectsResource {
+  
   @scala.inline
   def apply(
     getBillingInfo: Alt => Request[ProjectBillingInfo],
@@ -68,24 +71,29 @@ object ProjectsResource {
     val __obj = js.Dynamic.literal(getBillingInfo = js.Any.fromFunction1(getBillingInfo), list = js.Any.fromFunction1(list), updateBillingInfo = js.Any.fromFunction1(updateBillingInfo))
     __obj.asInstanceOf[ProjectsResource]
   }
+  
   @scala.inline
   implicit class ProjectsResourceOps[Self <: ProjectsResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setGetBillingInfo(value: Alt => Request[ProjectBillingInfo]): Self = this.set("getBillingInfo", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setList(value: Accesstoken => Request[ListProjectBillingInfoResponse]): Self = this.set("list", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setUpdateBillingInfo(value: Alt => Request[ProjectBillingInfo]): Self = this.set("updateBillingInfo", js.Any.fromFunction1(value))
   }
-  
 }
-

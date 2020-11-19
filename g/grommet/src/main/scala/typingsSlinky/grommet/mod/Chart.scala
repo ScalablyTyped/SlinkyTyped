@@ -6,7 +6,7 @@ import typingsSlinky.grommet.chartMod.ChartProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6", "Chart")
 @js.native
@@ -15,8 +15,6 @@ class Chart protected ()
   def this(props: ChartProps) = this()
   def this(props: ChartProps, context: js.Any) = this()
 }
-
 @JSImport("grommet/es6", "Chart")
 @js.native
 object Chart extends TopLevel[ReactComponentClass[ChartProps]]
-

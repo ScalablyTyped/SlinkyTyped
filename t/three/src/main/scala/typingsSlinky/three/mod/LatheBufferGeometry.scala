@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "LatheBufferGeometry")
 @js.native
@@ -41,4 +41,3 @@ class LatheBufferGeometry protected ()
     phiLength: Double
   ) = this()
 }
-

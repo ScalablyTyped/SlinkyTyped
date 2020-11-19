@@ -21,7 +21,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/ExtendedPicker/BaseExtendedPicker", "BaseExtendedPicker")
 @js.native
@@ -29,7 +29,16 @@ class BaseExtendedPicker[T, P /* <: IBaseExtendedPickerProps[T] */] protected ()
   extends Component[P, IBaseExtendedPickerState[T], js.Any]
      with IBaseExtendedPicker[T] {
   def this(basePickerProps: P) = this()
+  
+  @JSName("UNSAFE_componentWillReceiveProps")
+  def UNSAFE_componentWillReceiveProps_MBaseExtendedPicker(newProps: P): Unit = js.native
+  
   var _addProcessedItem: js.Any = js.native
+  
+  /* protected */ def _onSelectedItemsChanged(): Unit = js.native
+  
+  /* protected */ def _onSuggestionSelected(item: T): Unit = js.native
+  
   /**
     * The floating picker is the source of truth for if the menu has been opened or not.
     *
@@ -40,32 +49,48 @@ class BaseExtendedPicker[T, P /* <: IBaseExtendedPickerProps[T] */] protected ()
     * Called when the suggestions is shown or closed
     */
   var _onSuggestionsShownOrHidden: js.Any = js.native
-  var floatingPicker: ReactRef[BaseFloatingPicker[T, IBaseFloatingPickerProps[T]]] = js.native
-  var floatingPickerProps: IBaseFloatingPickerProps[T] = js.native
-  val highlightedItems: js.Array[T] = js.native
-  var input: ReactRef[Autofill] = js.native
-  val inputElement: HTMLInputElement | Null = js.native
-  var root: ReactRef[HTMLDivElement] = js.native
-  var selectedItemsList: ReactRef[BaseSelectedItemsList[T, IBaseSelectedItemsListProps[T]]] = js.native
-  var selectedItemsListProps: IBaseSelectedItemsListProps[T] = js.native
-  var selection: Selection[IObjectWithKey] = js.native
-  @JSName("UNSAFE_componentWillReceiveProps")
-  def UNSAFE_componentWillReceiveProps_MBaseExtendedPicker(newProps: P): Unit = js.native
-  /* protected */ def _onSelectedItemsChanged(): Unit = js.native
-  /* protected */ def _onSuggestionSelected(item: T): Unit = js.native
+  
   /* protected */ def canAddItems(): Boolean = js.native
+  
   def clearInput(): Unit = js.native
+  
   @JSName("componentDidMount")
   def componentDidMount_MBaseExtendedPicker(): Unit = js.native
+  
+  var floatingPicker: ReactRef[BaseFloatingPicker[T, IBaseFloatingPickerProps[T]]] = js.native
+  
+  var floatingPickerProps: IBaseFloatingPickerProps[T] = js.native
+  
+  val highlightedItems: js.Array[T] = js.native
+  
+  var input: ReactRef[Autofill] = js.native
+  
+  val inputElement: HTMLInputElement | Null = js.native
+  
   /* protected */ def onBackspace(ev: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
+  
   /* protected */ def onCopy(ev: SyntheticClipboardEvent[HTMLElement]): Unit = js.native
+  
   /* protected */ def onInputChange(value: String): Unit = js.native
   /* protected */ def onInputChange(value: String, composing: Boolean): Unit = js.native
+  
   /* protected */ def onInputClick(ev: SyntheticMouseEvent[HTMLInputElement | Autofill]): Unit = js.native
+  
   /* protected */ def onInputFocus(ev: SyntheticFocusEvent[HTMLInputElement | Autofill]): Unit = js.native
+  
   /* protected */ def onPaste(ev: SyntheticClipboardEvent[HTMLInputElement | Autofill]): Unit = js.native
+  
   /* protected */ def onSelectionChange(): Unit = js.native
+  
   /* protected */ def renderFloatingPicker(): ReactElement = js.native
+  
   /* protected */ def renderSelectedItemsList(): ReactElement = js.native
+  
+  var root: ReactRef[HTMLDivElement] = js.native
+  
+  var selectedItemsList: ReactRef[BaseSelectedItemsList[T, IBaseSelectedItemsListProps[T]]] = js.native
+  
+  var selectedItemsListProps: IBaseSelectedItemsListProps[T] = js.native
+  
+  var selection: Selection[IObjectWithKey] = js.native
 }
-

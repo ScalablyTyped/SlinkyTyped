@@ -6,7 +6,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a FlattenNode. */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "Trace.QueryPlanNode.FlattenNode")
@@ -17,20 +17,22 @@ import scala.scalajs.js.annotation._
   */
 class FlattenNode () extends IFlattenNode {
   def this(properties: IFlattenNode) = this()
+  
   /** FlattenNode responsePath. */
   @JSName("responsePath")
   var responsePath_FlattenNode: js.Array[IResponsePathElement] = js.native
+  
   /**
     * Converts this FlattenNode to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "Trace.QueryPlanNode.FlattenNode")
 @js.native
 object FlattenNode extends js.Object {
+  
   /**
     * Creates a new FlattenNode instance using the specified properties.
     * @param [properties] Properties to set
@@ -38,6 +40,7 @@ object FlattenNode extends js.Object {
     */
   def create(): FlattenNode = js.native
   def create(properties: IFlattenNode): FlattenNode = js.native
+  
   /**
     * Decodes a FlattenNode message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -50,6 +53,7 @@ object FlattenNode extends js.Object {
   def decode(reader: Reader, length: Double): FlattenNode = js.native
   def decode(reader: js.typedarray.Uint8Array): FlattenNode = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): FlattenNode = js.native
+  
   /**
     * Decodes a FlattenNode message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -59,6 +63,7 @@ object FlattenNode extends js.Object {
     */
   def decodeDelimited(reader: Reader): FlattenNode = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): FlattenNode = js.native
+  
   /**
     * Encodes the specified FlattenNode message. Does not implicitly {@link Trace.QueryPlanNode.FlattenNode.verify|verify} messages.
     * @param message FlattenNode message or plain object to encode
@@ -67,6 +72,7 @@ object FlattenNode extends js.Object {
     */
   def encode(message: IFlattenNode): Writer = js.native
   def encode(message: IFlattenNode, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified FlattenNode message, length delimited. Does not implicitly {@link Trace.QueryPlanNode.FlattenNode.verify|verify} messages.
     * @param message FlattenNode message or plain object to encode
@@ -75,12 +81,14 @@ object FlattenNode extends js.Object {
     */
   def encodeDelimited(message: IFlattenNode): Writer = js.native
   def encodeDelimited(message: IFlattenNode, writer: Writer): Writer = js.native
+  
   /**
     * Creates a FlattenNode message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns FlattenNode
     */
   def fromObject(`object`: StringDictionary[js.Any]): FlattenNode = js.native
+  
   /**
     * Creates a plain object from a FlattenNode message. Also converts values to other types if specified.
     * @param message FlattenNode
@@ -89,6 +97,7 @@ object FlattenNode extends js.Object {
     */
   def toObject(message: FlattenNode): StringDictionary[js.Any] = js.native
   def toObject(message: FlattenNode, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a FlattenNode message.
     * @param message Plain object to verify
@@ -96,4 +105,3 @@ object FlattenNode extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

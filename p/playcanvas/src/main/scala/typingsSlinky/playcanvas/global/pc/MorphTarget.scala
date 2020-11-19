@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.global.pc
 import typingsSlinky.playcanvas.anon.Aabb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A Morph Target (also known as Blend Shape) contains deformation data to apply to existing mesh.
@@ -23,4 +23,3 @@ class MorphTarget protected ()
   extends typingsSlinky.playcanvas.pc.MorphTarget {
   def this(options: Aabb) = this()
 }
-

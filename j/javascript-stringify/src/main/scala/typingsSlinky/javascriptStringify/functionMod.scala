@@ -12,33 +12,31 @@ import typingsSlinky.std.RegExpExecArray
 import typingsSlinky.std.WeakSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("javascript-stringify/dist/function", JSImport.Namespace)
 @js.native
 object functionMod extends js.Object {
+  
+  val USED_METHOD_KEY: WeakSet[js.Function] = js.native
+  
+  def dedentFunction(fnString: String): String = js.native
+  
+  val functionToString: ToString = js.native
+  
   @js.native
   class FunctionParser protected () extends js.Object {
     def this(fn: js.Function, indent: String, next: Next) = this()
     def this(fn: js.Function, indent: String, next: Next, key: String) = this()
-    var fn: js.Function = js.native
-    var fnString: String = js.native
-    var fnType: /* keyof javascript-stringify.anon.AsyncFunction */ Function | GeneratorFunction | AsyncFunction | AsyncGeneratorFunction = js.native
-    var hadKeyword: Boolean = js.native
-    var indent: String = js.native
-    var isMethodCandidate: Boolean = js.native
-    var key: js.UndefOr[String] = js.native
-    var keyPrefix: String = js.native
-    var keyQuote: js.UndefOr[String] = js.native
-    @JSName("next")
-    var next_Original: Next = js.native
-    var pos: Double = js.native
+    
     def consumeMatch(re: js.RegExp): RegExpExecArray | Null = js.native
+    
     /**
       * Advance the parser past an arbitrary regular expression. Return `token`,
       * or the match object of the regexp.
       */
     def consumeRegExp(re: js.RegExp, token: String): js.UndefOr[String] = js.native
+    
     /**
       * Advance the parser past one element of JavaScript syntax. This could be a
       * matched pair of delimiters, like braces or parentheses, or an atomic unit
@@ -55,20 +53,50 @@ object functionMod extends js.Object {
       */
     def consumeSyntax(): js.UndefOr[String] = js.native
     def consumeSyntax(wordLikeToken: String): js.UndefOr[String] = js.native
+    
     def consumeSyntaxUntil(startToken: String, endToken: String): js.UndefOr[String] = js.native
+    
     /**
       * Advance the parser past a template string.
       */
     def consumeTemplate(): js.UndefOr[Graveaccent] = js.native
+    
     /**
       * Advance the parser past any whitespace or comments.
       */
     def consumeWhitespace(): Unit = js.native
+    
+    var fn: js.Function = js.native
+    
+    var fnString: String = js.native
+    
+    var fnType: /* keyof javascript-stringify.anon.AsyncFunction */ Function | GeneratorFunction | AsyncFunction | AsyncGeneratorFunction = js.native
+    
     def getPrefix(): String = js.native
+    
+    var hadKeyword: Boolean = js.native
+    
+    var indent: String = js.native
+    
+    var isMethodCandidate: Boolean = js.native
+    
+    var key: js.UndefOr[String] = js.native
+    
+    var keyPrefix: String = js.native
+    
+    var keyQuote: js.UndefOr[String] = js.native
+    
     def next(value: js.Any): js.UndefOr[String] = js.native
     def next(value: js.Any, key: PropertyKey): js.UndefOr[String] = js.native
+    @JSName("next")
+    var next_Original: Next = js.native
+    
+    var pos: Double = js.native
+    
     def stringify(): String = js.native
+    
     def tryParse(): js.UndefOr[String] = js.native
+    
     /**
       * Attempt to advance the parser past the keywords expected to be at the
       * start of this function's definition. This method sets `this.hadKeyword`
@@ -77,6 +105,7 @@ object functionMod extends js.Object {
       * @return {boolean}
       */
     def tryParsePrefixTokens(): Boolean = js.native
+    
     /**
       * Attempt to parse the function from the current position by first stripping
       * the function's name from the front. This is not a fool-proof method on all
@@ -85,9 +114,4 @@ object functionMod extends js.Object {
       */
     def tryStrippingName(): js.UndefOr[String] = js.native
   }
-  
-  val USED_METHOD_KEY: WeakSet[js.Function] = js.native
-  val functionToString: ToString = js.native
-  def dedentFunction(fnString: String): String = js.native
 }
-

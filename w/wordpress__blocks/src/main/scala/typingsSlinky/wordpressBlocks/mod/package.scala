@@ -2,9 +2,10 @@ package typingsSlinky.wordpressBlocks
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.wordpressBlocks.mod.AttributeSource.Attribute
     - typingsSlinky.wordpressBlocks.mod.AttributeSource.Children

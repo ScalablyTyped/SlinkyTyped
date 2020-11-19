@@ -5,10 +5,9 @@ import typingsSlinky.dateFns.CurriedFn3
 import typingsSlinky.dateFns.anon.FirstWeekContainsDateLocale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("date-fns/esm/fp", "setWeekYearWithOptions")
 @js.native
 object setWeekYearWithOptions
   extends TopLevel[CurriedFn3[FirstWeekContainsDateLocale, Double, js.Date | Double, js.Date]]
-

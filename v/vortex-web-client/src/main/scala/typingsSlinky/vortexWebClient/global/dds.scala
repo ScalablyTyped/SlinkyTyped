@@ -6,13 +6,13 @@ import org.scalablytyped.runtime.Instantiable5
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.vortexWebClient.DDS.EntityQos
 import typingsSlinky.vortexWebClient.DDS.Policy
-import typingsSlinky.vortexWebClient.DDS.Runtime
+import typingsSlinky.vortexWebClient.anon.Runtime
 import typingsSlinky.vortexWebClient.anon.TypeofDurability
 import typingsSlinky.vortexWebClient.anon.TypeofHistory
 import typingsSlinky.vortexWebClient.anon.TypeofReliability
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Defines the core Vortex-Web-Client javascript library. It includes the JavaScript API for DDS. This API allows
@@ -21,6 +21,29 @@ import scala.scalajs.js.annotation._
 @JSGlobal("dds")
 @js.native
 object dds extends js.Object {
+  
+  def ContentFilter(expr: String): Policy = js.native
+  
+  var DataReaderQos: EntityQos = js.native
+  
+  var DataWriterQos: EntityQos = js.native
+  
+  var Durability: TypeofDurability = js.native
+  
+  var History: TypeofHistory = js.native
+  
+  def Partition(policies: String*): Policy = js.native
+  
+  var Reliability: TypeofReliability = js.native
+  
+  def TimeFilter(period: Double): Policy = js.native
+  
+  var TopicQos: EntityQos = js.native
+  
+  var VERSION: String = js.native
+  
+  var runtime: Runtime = js.native
+  
   @js.native
   class DataCache protected ()
     extends typingsSlinky.vortexWebClient.DDS.DataCache {
@@ -38,6 +61,11 @@ object dds extends js.Object {
       */
     def this(depth: Double, cache: js.Any) = this()
   }
+  @js.native
+  object DataCache
+    extends TopLevel[
+          Instantiable2[/* depth */ Double, /* cache */ js.Any, typingsSlinky.vortexWebClient.DDS.DataCache]
+        ]
   
   @js.native
   class DataReader protected ()
@@ -55,8 +83,22 @@ object dds extends js.Object {
       * @param topic - DDS Topic
       * @param qos - DataReader quality of service
       */
-    def this(runtime: Runtime, topic: typingsSlinky.vortexWebClient.DDS.Topic, qos: EntityQos) = this()
+    def this(
+      runtime: typingsSlinky.vortexWebClient.DDS.Runtime,
+      topic: typingsSlinky.vortexWebClient.DDS.Topic,
+      qos: EntityQos
+    ) = this()
   }
+  @js.native
+  object DataReader
+    extends TopLevel[
+          Instantiable3[
+            /* runtime */ typingsSlinky.vortexWebClient.DDS.Runtime, 
+            /* topic */ typingsSlinky.vortexWebClient.DDS.Topic, 
+            /* qos */ EntityQos, 
+            typingsSlinky.vortexWebClient.DDS.DataReader
+          ]
+        ]
   
   @js.native
   class DataWriter protected ()
@@ -76,8 +118,22 @@ object dds extends js.Object {
       * @param topic - DDS Topic
       * @param qos - DataWriter quality of service
       */
-    def this(runtime: Runtime, topic: typingsSlinky.vortexWebClient.DDS.Topic, qos: EntityQos) = this()
+    def this(
+      runtime: typingsSlinky.vortexWebClient.DDS.Runtime,
+      topic: typingsSlinky.vortexWebClient.DDS.Topic,
+      qos: EntityQos
+    ) = this()
   }
+  @js.native
+  object DataWriter
+    extends TopLevel[
+          Instantiable3[
+            /* runtime */ typingsSlinky.vortexWebClient.DDS.Runtime, 
+            /* topic */ typingsSlinky.vortexWebClient.DDS.Topic, 
+            /* qos */ EntityQos, 
+            typingsSlinky.vortexWebClient.DDS.DataWriter
+          ]
+        ]
   
   @js.native
   class Topic protected ()
@@ -96,46 +152,6 @@ object dds extends js.Object {
     def this(did: Double, tname: String, qos: EntityQos, ttype: js.UndefOr[scala.Nothing], tregtype: String) = this()
     def this(did: Double, tname: String, qos: EntityQos, ttype: String, tregtype: String) = this()
   }
-  
-  var DataReaderQos: EntityQos = js.native
-  var DataWriterQos: EntityQos = js.native
-  var Durability: TypeofDurability = js.native
-  var History: TypeofHistory = js.native
-  var Reliability: TypeofReliability = js.native
-  var TopicQos: EntityQos = js.native
-  var VERSION: String = js.native
-  var runtime: typingsSlinky.vortexWebClient.anon.Runtime = js.native
-  def ContentFilter(expr: String): Policy = js.native
-  def Partition(policies: String*): Policy = js.native
-  def TimeFilter(period: Double): Policy = js.native
-  @js.native
-  object DataCache
-    extends TopLevel[
-          Instantiable2[/* depth */ Double, /* cache */ js.Any, typingsSlinky.vortexWebClient.DDS.DataCache]
-        ]
-  
-  @js.native
-  object DataReader
-    extends TopLevel[
-          Instantiable3[
-            /* runtime */ Runtime, 
-            /* topic */ typingsSlinky.vortexWebClient.DDS.Topic, 
-            /* qos */ EntityQos, 
-            typingsSlinky.vortexWebClient.DDS.DataReader
-          ]
-        ]
-  
-  @js.native
-  object DataWriter
-    extends TopLevel[
-          Instantiable3[
-            /* runtime */ Runtime, 
-            /* topic */ typingsSlinky.vortexWebClient.DDS.Topic, 
-            /* qos */ EntityQos, 
-            typingsSlinky.vortexWebClient.DDS.DataWriter
-          ]
-        ]
-  
   @js.native
   object Topic
     extends TopLevel[
@@ -148,6 +164,4 @@ object dds extends js.Object {
             typingsSlinky.vortexWebClient.DDS.Topic
           ]
         ]
-  
 }
-

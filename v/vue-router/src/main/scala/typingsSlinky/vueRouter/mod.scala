@@ -7,24 +7,23 @@ import typingsSlinky.vueRouter.routerMod.RouterOptions
 import typingsSlinky.vueRouter.routerMod.VueRouter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vue-router", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class default () extends VueRouter {
     def this(options: RouterOptions) = this()
   }
-  
   /* static members */
   @js.native
   object default extends js.Object {
-    @JSName("install")
-    var install_Original: PluginFunction[scala.Nothing] = js.native
+    
     def install(Vue: VueConstructor[Vue]): Unit = js.native
     def install(Vue: VueConstructor[Vue], options: scala.Nothing): Unit = js.native
+    @JSName("install")
+    var install_Original: PluginFunction[scala.Nothing] = js.native
   }
-  
 }
-

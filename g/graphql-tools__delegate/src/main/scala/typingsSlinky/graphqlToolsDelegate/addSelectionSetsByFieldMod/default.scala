@@ -5,11 +5,10 @@ import typingsSlinky.graphql.mod.GraphQLSchema
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/delegate/transforms/AddSelectionSetsByField", JSImport.Default)
 @js.native
 class default protected () extends AddSelectionSetsByField {
   def this(schema: GraphQLSchema, mapping: Record[String, Record[String, SelectionSetNode]]) = this()
 }
-

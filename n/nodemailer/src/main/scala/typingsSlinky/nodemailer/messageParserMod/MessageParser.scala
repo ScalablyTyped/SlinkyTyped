@@ -9,7 +9,7 @@ import typingsSlinky.nodemailer.nodemailerStrings.headers
 import typingsSlinky.nodemailer.nodemailerStrings.readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * MessageParser instance is a transform stream that separates message headers
@@ -18,6 +18,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait MessageParser extends Transform {
+  
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
@@ -30,6 +31,7 @@ trait MessageParser extends Transform {
   def addListener_headers(event: headers, listener: js.Function1[/* headers */ js.Array[Header], Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("emit")
   def emit_close(event: close): Boolean = js.native
   @JSName("emit")
@@ -42,6 +44,7 @@ trait MessageParser extends Transform {
   def emit_headers(event: headers, headers: js.Array[Header]): Boolean = js.native
   @JSName("emit")
   def emit_readable(event: readable): Boolean = js.native
+  
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -54,6 +57,7 @@ trait MessageParser extends Transform {
   def on_headers(event: headers, listener: js.Function1[/* headers */ js.Array[Header], Unit]): this.type = js.native
   @JSName("on")
   def on_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("once")
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -66,6 +70,7 @@ trait MessageParser extends Transform {
   def once_headers(event: headers, listener: js.Function1[/* headers */ js.Array[Header], Unit]): this.type = js.native
   @JSName("once")
   def once_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -78,6 +83,7 @@ trait MessageParser extends Transform {
   def prependListener_headers(event: headers, listener: js.Function1[/* headers */ js.Array[Header], Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -90,6 +96,7 @@ trait MessageParser extends Transform {
   def prependOnceListener_headers(event: headers, listener: js.Function1[/* headers */ js.Array[Header], Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("removeListener")
   def removeListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("removeListener")
@@ -103,4 +110,3 @@ trait MessageParser extends Transform {
   @JSName("removeListener")
   def removeListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
 }
-

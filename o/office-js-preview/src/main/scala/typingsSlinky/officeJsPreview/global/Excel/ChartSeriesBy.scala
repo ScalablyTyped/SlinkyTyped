@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.global.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,10 +13,13 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.ChartSeriesBy")
 @js.native
 object ChartSeriesBy extends js.Object {
-  /* "Auto" */ val auto: typingsSlinky.officeJsPreview.Excel.ChartSeriesBy.auto with String = js.native
-  /* "Columns" */ val columns: typingsSlinky.officeJsPreview.Excel.ChartSeriesBy.columns with String = js.native
-  /* "Rows" */ val rows: typingsSlinky.officeJsPreview.Excel.ChartSeriesBy.rows with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJsPreview.Excel.ChartSeriesBy with String] = js.native
+  
+  /* "Auto" */ val auto: typingsSlinky.officeJsPreview.Excel.ChartSeriesBy.auto with String = js.native
+  
+  /* "Columns" */ val columns: typingsSlinky.officeJsPreview.Excel.ChartSeriesBy.columns with String = js.native
+  
+  /* "Rows" */ val rows: typingsSlinky.officeJsPreview.Excel.ChartSeriesBy.rows with String = js.native
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxLookupOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxLookup")
 @js.native
@@ -16,4 +16,3 @@ class dxLookup protected ()
   def this(element: JQuery, options: dxLookupOptions) = this()
   def this(element: Element, options: dxLookupOptions) = this()
 }
-

@@ -66,53 +66,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.sticky
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojListView_[K, D] extends baseComponent[ojListViewSettableProperties[K, D]] {
-  var as: String = js.native
-  var currentItem: K = js.native
-  var data: DataProvider[K, D] = js.native
-  var dnd: DragDrop = js.native
-  var drillMode: collapsible | none = js.native
-  var expanded: KeySet[K] = js.native
-  val firstSelectedItem: Key[K, D] = js.native
-  var groupHeaderPosition: static | sticky = js.native
-  var item: Focusable[K, D] = js.native
-  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onCurrentItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDndChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDrillModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onExpandedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onFirstSelectedItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onGroupHeaderPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeCurrentItem: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeExpand: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjCopy: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjCut: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjExpand: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjPaste: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjReorder: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onScrollPolicyChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onScrollPolicyOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onScrollPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionRequiredChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var scrollPolicy: auto | loadMoreOnScroll = js.native
-  var scrollPolicyOptions: FetchSize = js.native
-  var scrollPosition: OffsetX[K] = js.native
-  var selection: js.Array[K] = js.native
-  var selectionMode: none | single | multiple = js.native
-  var selectionRequired: Boolean = js.native
-  @JSName("translations")
-  var translations_ojListView_ : AccessibleNavigateSkipItems = js.native
+  
   def addEventListener(`type`: drillModeChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: drillModeChanged,
@@ -325,8 +283,25 @@ trait ojListView_[K, D] extends baseComponent[ojListViewSettableProperties[K, D]
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var as: String = js.native
+  
+  var currentItem: K = js.native
+  
+  var data: DataProvider[K, D] = js.native
+  
+  var dnd: DragDrop = js.native
+  
+  var drillMode: collapsible | none = js.native
+  
+  var expanded: KeySet[K] = js.native
+  
+  val firstSelectedItem: Key[K, D] = js.native
+  
   def getContextByNode(node: Element): ContextByNode[K] | Null = js.native
+  
   def getDataForVisibleItem(context: Parent[K]): D = js.native
+  
   @JSName("getProperty")
   def getProperty_as(property: as): String = js.native
   @JSName("getProperty")
@@ -357,8 +332,79 @@ trait ojListView_[K, D] extends baseComponent[ojListViewSettableProperties[K, D]
   def getProperty_selectionMode(property: selectionMode): none | single | multiple = js.native
   @JSName("getProperty")
   def getProperty_selectionRequired(property: selectionRequired): Boolean = js.native
+  
+  var groupHeaderPosition: static | sticky = js.native
+  
+  var item: Focusable[K, D] = js.native
+  
+  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onCurrentItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDndChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDrillModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onExpandedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onFirstSelectedItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onGroupHeaderPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeCurrentItem: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeExpand: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjCopy: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjCut: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjExpand: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjPaste: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjReorder: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onScrollPolicyChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onScrollPolicyOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onScrollPositionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionRequiredChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var scrollPolicy: auto | loadMoreOnScroll = js.native
+  
+  var scrollPolicyOptions: FetchSize = js.native
+  
+  var scrollPosition: OffsetX[K] = js.native
+  
   def scrollToItem(item: KeyK[K]): Unit = js.native
+  
+  var selection: js.Array[K] = js.native
+  
+  var selectionMode: none | single | multiple = js.native
+  
+  var selectionRequired: Boolean = js.native
+  
   def setProperties(properties: ojListViewSettablePropertiesLenient[K, D]): Unit = js.native
+  
   def setProperty(property: drillMode, value: collapsible): Unit = js.native
   def setProperty(property: drillMode, value: none): Unit = js.native
   def setProperty(property: groupHeaderPosition, value: static): Unit = js.native
@@ -392,5 +438,7 @@ trait ojListView_[K, D] extends baseComponent[ojListViewSettableProperties[K, D]
   def setProperty_selectionRequired(property: selectionRequired, value: Boolean): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: AccessibleNavigateSkipItems): Unit = js.native
+  
+  @JSName("translations")
+  var translations_ojListView_ : AccessibleNavigateSkipItems = js.native
 }
-

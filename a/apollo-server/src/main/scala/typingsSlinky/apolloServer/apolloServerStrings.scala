@@ -2,9 +2,37 @@ package typingsSlinky.apolloServer
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object apolloServerStrings {
+  
+  @scala.inline
+  def FragmentDefinition: FragmentDefinition = "FragmentDefinition".asInstanceOf[FragmentDefinition]
+  
+  @scala.inline
+  def Mutation: Mutation = "Mutation".asInstanceOf[Mutation]
+  
+  @scala.inline
+  def OperationDefinition: OperationDefinition = "OperationDefinition".asInstanceOf[OperationDefinition]
+  
+  @scala.inline
+  def Query: Query = "Query".asInstanceOf[Query]
+  
+  @scala.inline
+  def Subscription: Subscription = "Subscription".asInstanceOf[Subscription]
+  
+  @scala.inline
+  def input: input = "input".asInstanceOf[input]
+  
+  @scala.inline
+  def interface: interface = "interface".asInstanceOf[interface]
+  
+  @scala.inline
+  def `object`: `object` = "object".asInstanceOf[`object`]
+  
+  @scala.inline
+  def output: output = "output".asInstanceOf[output]
+  
   @js.native
   sealed trait FragmentDefinition extends js.Object
   
@@ -31,24 +59,4 @@ object apolloServerStrings {
   
   @js.native
   sealed trait output extends js.Object
-  
-  @scala.inline
-  def FragmentDefinition: FragmentDefinition = "FragmentDefinition".asInstanceOf[FragmentDefinition]
-  @scala.inline
-  def Mutation: Mutation = "Mutation".asInstanceOf[Mutation]
-  @scala.inline
-  def OperationDefinition: OperationDefinition = "OperationDefinition".asInstanceOf[OperationDefinition]
-  @scala.inline
-  def Query: Query = "Query".asInstanceOf[Query]
-  @scala.inline
-  def Subscription: Subscription = "Subscription".asInstanceOf[Subscription]
-  @scala.inline
-  def input: input = "input".asInstanceOf[input]
-  @scala.inline
-  def interface: interface = "interface".asInstanceOf[interface]
-  @scala.inline
-  def `object`: `object` = "object".asInstanceOf[`object`]
-  @scala.inline
-  def output: output = "output".asInstanceOf[output]
 }
-

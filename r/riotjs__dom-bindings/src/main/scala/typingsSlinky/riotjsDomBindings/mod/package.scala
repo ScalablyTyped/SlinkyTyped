@@ -2,9 +2,10 @@ package typingsSlinky.riotjsDomBindings
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.riotjsDomBindings.mod.AttributeExpressionData
     - typingsSlinky.riotjsDomBindings.mod.EventExpressionData
@@ -12,5 +13,6 @@ package object mod {
     - typingsSlinky.riotjsDomBindings.mod.ValueExpressionData
   */
   type ExpressionData = typingsSlinky.riotjsDomBindings.mod._ExpressionData | typingsSlinky.riotjsDomBindings.mod.ValueExpressionData
+  
   type ValueExpressionData = typingsSlinky.riotjsDomBindings.mod.BaseExpressionData
 }

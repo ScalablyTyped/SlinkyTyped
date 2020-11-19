@@ -3,7 +3,7 @@ package typingsSlinky.graphqlCompose.mod.graphql
 import typingsSlinky.graphql.tokenKindMod.TokenKindEnum
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-compose", "graphql.Token")
 @js.native
@@ -37,4 +37,3 @@ class Token protected ()
     value: String
   ) = this()
 }
-

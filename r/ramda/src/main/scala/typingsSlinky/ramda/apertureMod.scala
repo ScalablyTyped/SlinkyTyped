@@ -12,11 +12,12 @@ import typingsSlinky.ramda.ramdaNumbers.`8`
 import typingsSlinky.ramda.ramdaNumbers.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ramda/src/aperture", JSImport.Namespace)
 @js.native
 object apertureMod extends js.Object {
+  
   def default(n: Double): js.Function1[/* list */ js.Array[_], js.Array[js.Array[_]]] = js.native
   def default[T](n: Double, list: js.Array[T]): js.Array[js.Array[T]] = js.native
   @JSName("default")
@@ -40,4 +41,3 @@ object apertureMod extends js.Object {
   @JSName("default")
   def default_9[T](n: `9`, list: js.Array[T]): js.Array[js.Tuple9[T, T, T, T, T, T, T, T, T]] = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.pixiJs.global.PIXI.resources
 import typingsSlinky.pixiJs.anon.HeightWidth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Buffer resource with data of typed array.
@@ -19,11 +19,11 @@ class BufferResource protected ()
   def this(source: js.typedarray.Uint32Array, options: HeightWidth) = this()
   def this(source: js.typedarray.Uint8Array, options: HeightWidth) = this()
 }
-
 /* static members */
 @JSGlobal("PIXI.resources.BufferResource")
 @js.native
 object BufferResource extends js.Object {
+  
   /**
     * Used to auto-detect the type of resource.
     *
@@ -33,4 +33,3 @@ object BufferResource extends js.Object {
     */
   def test(source: js.Any): Boolean = js.native
 }
-

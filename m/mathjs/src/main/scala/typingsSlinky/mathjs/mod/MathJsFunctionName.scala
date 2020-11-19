@@ -2,7 +2,7 @@ package typingsSlinky.mathjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.mathjs.mathjsStrings.e
@@ -25,4 +25,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.mathjs.mathjsStrings.json
 */
 trait MathJsFunctionName extends js.Object
-

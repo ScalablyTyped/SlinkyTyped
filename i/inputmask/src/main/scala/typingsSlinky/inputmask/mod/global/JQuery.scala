@@ -13,10 +13,11 @@ import typingsSlinky.inputmask.mod.Instance
 import typingsSlinky.inputmask.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
+  
   /**
     * Creates a new Inputmask instance.
     *
@@ -103,4 +104,3 @@ trait JQuery extends js.Object {
   @JSName("inputmask")
   def inputmask_unmaskedvalue(method: unmaskedvalue): String = js.native
 }
-

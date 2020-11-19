@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.global.Office.MailboxEnums
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Specifies the type of recipient for an appointment.
@@ -16,11 +16,15 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Office.MailboxEnums.RecipientType")
 @js.native
 object RecipientType extends js.Object {
-  /* "distributionList" */ val DistributionList: typingsSlinky.officeJsPreview.Office.MailboxEnums.RecipientType.DistributionList with String = js.native
-  /* "externalUser" */ val ExternalUser: typingsSlinky.officeJsPreview.Office.MailboxEnums.RecipientType.ExternalUser with String = js.native
-  /* "other" */ val Other: typingsSlinky.officeJsPreview.Office.MailboxEnums.RecipientType.Other with String = js.native
-  /* "user" */ val User: typingsSlinky.officeJsPreview.Office.MailboxEnums.RecipientType.User with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJsPreview.Office.MailboxEnums.RecipientType with String] = js.native
+  
+  /* "distributionList" */ val DistributionList: typingsSlinky.officeJsPreview.Office.MailboxEnums.RecipientType.DistributionList with String = js.native
+  
+  /* "externalUser" */ val ExternalUser: typingsSlinky.officeJsPreview.Office.MailboxEnums.RecipientType.ExternalUser with String = js.native
+  
+  /* "other" */ val Other: typingsSlinky.officeJsPreview.Office.MailboxEnums.RecipientType.Other with String = js.native
+  
+  /* "user" */ val User: typingsSlinky.officeJsPreview.Office.MailboxEnums.RecipientType.User with String = js.native
 }
-

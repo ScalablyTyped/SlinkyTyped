@@ -6,12 +6,11 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait EBS extends Service {
-  @JSName("config")
-  var config_EBS: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Seals and completes the snapshot after all of the required blocks of data have been written to it. Completing the snapshot changes the status to completed. You cannot write new blocks to a snapshot after it has been completed.
     */
@@ -25,6 +24,10 @@ trait EBS extends Service {
     params: CompleteSnapshotRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CompleteSnapshotResponse, Unit]
   ): Request[CompleteSnapshotResponse, AWSError] = js.native
+  
+  @JSName("config")
+  var config_EBS: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Returns the data in a block in an Amazon Elastic Block Store snapshot.
     */
@@ -38,6 +41,7 @@ trait EBS extends Service {
     params: GetSnapshotBlockRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetSnapshotBlockResponse, Unit]
   ): Request[GetSnapshotBlockResponse, AWSError] = js.native
+  
   /**
     * Returns the block indexes and block tokens for blocks that are different between two Amazon Elastic Block Store snapshots of the same volume/snapshot lineage.
     */
@@ -51,6 +55,7 @@ trait EBS extends Service {
     params: ListChangedBlocksRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListChangedBlocksResponse, Unit]
   ): Request[ListChangedBlocksResponse, AWSError] = js.native
+  
   /**
     * Returns the block indexes and block tokens for blocks in an Amazon Elastic Block Store snapshot.
     */
@@ -64,6 +69,7 @@ trait EBS extends Service {
     params: ListSnapshotBlocksRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListSnapshotBlocksResponse, Unit]
   ): Request[ListSnapshotBlocksResponse, AWSError] = js.native
+  
   /**
     * Writes a block of data to a block in the snapshot. If the specified block contains data, the existing data is overwritten. The target snapshot must be in the pending state. Data written to a snapshot must be aligned with 512-byte sectors.
     */
@@ -77,6 +83,7 @@ trait EBS extends Service {
     params: PutSnapshotBlockRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutSnapshotBlockResponse, Unit]
   ): Request[PutSnapshotBlockResponse, AWSError] = js.native
+  
   /**
     * Creates a new Amazon EBS snapshot. The new snapshot enters the pending state after the request completes.  After creating the snapshot, use  PutSnapshotBlock to write blocks of data to the snapshot.
     */
@@ -91,4 +98,3 @@ trait EBS extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ StartSnapshotResponse, Unit]
   ): Request[StartSnapshotResponse, AWSError] = js.native
 }
-

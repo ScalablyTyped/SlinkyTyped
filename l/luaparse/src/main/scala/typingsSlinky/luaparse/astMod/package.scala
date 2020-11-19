@@ -2,10 +2,12 @@ package typingsSlinky.luaparse
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object astMod {
+  
   type BreakStatement = typingsSlinky.luaparse.astMod.Base[typingsSlinky.luaparse.luaparseStrings.BreakStatement]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.luaparse.astMod.Statement
     - typingsSlinky.luaparse.astMod.Expression
@@ -19,6 +21,7 @@ package object astMod {
     - typingsSlinky.luaparse.astMod.Comment
   */
   type Node = typingsSlinky.luaparse.astMod._Node | typingsSlinky.luaparse.astMod.BreakStatement
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.luaparse.astMod.LabelStatement
     - typingsSlinky.luaparse.astMod.BreakStatement

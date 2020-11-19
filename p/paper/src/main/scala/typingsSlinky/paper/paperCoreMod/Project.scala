@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.paper.paper.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("paper/dist/paper-core", "Project")
 @js.native
@@ -26,4 +26,3 @@ class Project protected ()
     */
   def this(element: HTMLCanvasElement) = this()
 }
-

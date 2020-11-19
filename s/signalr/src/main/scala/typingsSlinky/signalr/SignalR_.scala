@@ -2,28 +2,18 @@ package typingsSlinky.signalr
 
 import typingsSlinky.signalr.SignalR.AjaxDefaults
 import typingsSlinky.signalr.SignalR.AvailableEvents
+import typingsSlinky.signalr.SignalR.Connection
 import typingsSlinky.signalr.SignalR.ConnectionStates
-import typingsSlinky.signalr.SignalR.Hub.Connection
 import typingsSlinky.signalr.SignalR.Hub.HubCreator
 import typingsSlinky.signalr.SignalR.Hub.Options
 import typingsSlinky.signalr.SignalR.Transports
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SignalR_ extends js.Object {
-  var ajaxDefaults: AjaxDefaults = js.native
-  var connectionState: ConnectionStates = js.native
-  var events: AvailableEvents = js.native
-  var hub: Connection = js.native
-  @JSName("hubConnection")
-  var hubConnection_Original: HubCreator = js.native
-  var transports: Transports = js.native
-  /**
-    *   Current SignalR version.
-    */
-  var version: String = js.native
+  
   /**
     * Creates a new SignalR connection for the given url
     *
@@ -31,21 +21,41 @@ trait SignalR_ extends js.Object {
     * @param queryString   [Optional] Custom querystring parameters to add to the connection URL. If an object, every non-function member will be added to the querystring. If a string, it's added to the QS as specified.
     * @param logging [Optional] A flag indicating whether connection logging is enabled to the browser console/log. Defaults to false.
     */
-  def apply(url: String): typingsSlinky.signalr.SignalR.Connection = js.native
-  def apply(url: String, queryString: js.UndefOr[scala.Nothing], logging: Boolean): typingsSlinky.signalr.SignalR.Connection = js.native
-  def apply(url: String, queryString: String): typingsSlinky.signalr.SignalR.Connection = js.native
-  def apply(url: String, queryString: String, logging: Boolean): typingsSlinky.signalr.SignalR.Connection = js.native
-  def apply(url: String, queryString: js.Object): typingsSlinky.signalr.SignalR.Connection = js.native
-  def apply(url: String, queryString: js.Object, logging: Boolean): typingsSlinky.signalr.SignalR.Connection = js.native
-  def changeState(connection: typingsSlinky.signalr.SignalR.Connection, expectedState: Double, newState: Double): Unit = js.native
-  def hubConnection(): Connection = js.native
-  def hubConnection(url: js.UndefOr[scala.Nothing], options: Options): Connection = js.native
-  def hubConnection(url: String): Connection = js.native
-  def hubConnection(url: String, options: Options): Connection = js.native
-  def isDisconnecting(connection: typingsSlinky.signalr.SignalR.Connection): Boolean = js.native
+  def apply(url: String): Connection = js.native
+  def apply(url: String, queryString: js.UndefOr[scala.Nothing], logging: Boolean): Connection = js.native
+  def apply(url: String, queryString: String): Connection = js.native
+  def apply(url: String, queryString: String, logging: Boolean): Connection = js.native
+  def apply(url: String, queryString: js.Object): Connection = js.native
+  def apply(url: String, queryString: js.Object, logging: Boolean): Connection = js.native
+  
+  var ajaxDefaults: AjaxDefaults = js.native
+  
+  def changeState(connection: Connection, expectedState: Double, newState: Double): Unit = js.native
+  
+  var connectionState: ConnectionStates = js.native
+  
+  var events: AvailableEvents = js.native
+  
+  var hub: typingsSlinky.signalr.SignalR.Hub.Connection = js.native
+  
+  def hubConnection(): typingsSlinky.signalr.SignalR.Hub.Connection = js.native
+  def hubConnection(url: js.UndefOr[scala.Nothing], options: Options): typingsSlinky.signalr.SignalR.Hub.Connection = js.native
+  def hubConnection(url: String): typingsSlinky.signalr.SignalR.Hub.Connection = js.native
+  def hubConnection(url: String, options: Options): typingsSlinky.signalr.SignalR.Hub.Connection = js.native
+  @JSName("hubConnection")
+  var hubConnection_Original: HubCreator = js.native
+  
+  def isDisconnecting(connection: Connection): Boolean = js.native
+  
   /**
     *   Reinstates the original value of $.connection and returns the signalR object for manual assignment.
     */
-  def noConflict(): typingsSlinky.signalr.SignalR.Connection = js.native
+  def noConflict(): Connection = js.native
+  
+  var transports: Transports = js.native
+  
+  /**
+    *   Current SignalR version.
+    */
+  var version: String = js.native
 }
-

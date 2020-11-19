@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri.symbols
 import typingsSlinky.arcgisJsApi.esri.PolygonSymbol3DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.symbols.PolygonSymbol3D")
 @js.native
@@ -16,4 +16,3 @@ class PolygonSymbol3DCls ()
   extends typingsSlinky.arcgisJsApi.esri.PolygonSymbol3D {
   def this(properties: PolygonSymbol3DProperties) = this()
 }
-

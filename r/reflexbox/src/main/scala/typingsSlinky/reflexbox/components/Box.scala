@@ -12,9 +12,10 @@ import typingsSlinky.reflexbox.reflexboxStrings.key
 import typingsSlinky.reflexbox.reflexboxStrings.ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Box {
+  
   @JSImport("reflexbox", "Box")
   @js.native
   object component extends js.Object
@@ -30,6 +31,6 @@ object Box {
       ]) with `0`[js.Object]
     ]
   ): SharedBuilder_PropsWithChildren920194122[HTMLDivElement] = new SharedBuilder_PropsWithChildren920194122[HTMLDivElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Box.type): SharedBuilder_PropsWithChildren920194122[HTMLDivElement] = new SharedBuilder_PropsWithChildren920194122[HTMLDivElement](js.Array(this.component, js.Dictionary.empty))()
 }
-

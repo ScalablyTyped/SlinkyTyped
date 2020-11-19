@@ -8,7 +8,7 @@ import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.InputHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/RadioButton", "RadioButton")
 @js.native
@@ -24,7 +24,6 @@ class RadioButton protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("grommet/es6/components/RadioButton", "RadioButton")
 @js.native
 object RadioButton extends TopLevel[
@@ -32,4 +31,3 @@ object RadioButton extends TopLevel[
         RadioButtonProps with (DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement])
       ]
     ]
-

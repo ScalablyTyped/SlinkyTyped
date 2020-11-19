@@ -2,11 +2,12 @@ package typingsSlinky.superstruct.indexCjsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("superstruct/lib/index.cjs", "nullable")
 @js.native
 object nullable extends js.Object {
+  
   /**
     * Augment a struct to make it accept `null` values.
     */
@@ -15,4 +16,3 @@ object nullable extends js.Object {
     */
   def apply[T](S: Struct_[T, _]): Struct_[T | Null, _] = js.native
 }
-

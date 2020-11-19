@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest")
 @js.native
@@ -16,26 +16,30 @@ import scala.scalajs.js.annotation._
   */
 class TpProcessRequest () extends ITpProcessRequest {
   def this(properties: ITpProcessRequest) = this()
+  
   /** TpProcessRequest contextId. */
   @JSName("contextId")
   var contextId_TpProcessRequest: String = js.native
+  
   /** TpProcessRequest payload. */
   @JSName("payload")
   var payload_TpProcessRequest: js.typedarray.Uint8Array = js.native
+  
   /** TpProcessRequest signature. */
   @JSName("signature")
   var signature_TpProcessRequest: String = js.native
+  
   /**
     * Converts this TpProcessRequest to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "TpProcessRequest")
 @js.native
 object TpProcessRequest extends js.Object {
+  
   /**
     * Creates a new TpProcessRequest instance using the specified properties.
     * @param [properties] Properties to set
@@ -43,6 +47,7 @@ object TpProcessRequest extends js.Object {
     */
   def create(): TpProcessRequest = js.native
   def create(properties: ITpProcessRequest): TpProcessRequest = js.native
+  
   /**
     * Decodes a TpProcessRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -55,6 +60,7 @@ object TpProcessRequest extends js.Object {
   def decode(reader: Reader, length: Double): TpProcessRequest = js.native
   def decode(reader: js.typedarray.Uint8Array): TpProcessRequest = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): TpProcessRequest = js.native
+  
   /**
     * Decodes a TpProcessRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -64,6 +70,7 @@ object TpProcessRequest extends js.Object {
     */
   def decodeDelimited(reader: Reader): TpProcessRequest = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): TpProcessRequest = js.native
+  
   /**
     * Encodes the specified TpProcessRequest message. Does not implicitly {@link TpProcessRequest.verify|verify} messages.
     * @param message TpProcessRequest message or plain object to encode
@@ -72,6 +79,7 @@ object TpProcessRequest extends js.Object {
     */
   def encode(message: ITpProcessRequest): Writer = js.native
   def encode(message: ITpProcessRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified TpProcessRequest message, length delimited. Does not implicitly {@link TpProcessRequest.verify|verify} messages.
     * @param message TpProcessRequest message or plain object to encode
@@ -80,12 +88,14 @@ object TpProcessRequest extends js.Object {
     */
   def encodeDelimited(message: ITpProcessRequest): Writer = js.native
   def encodeDelimited(message: ITpProcessRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a TpProcessRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns TpProcessRequest
     */
   def fromObject(`object`: StringDictionary[js.Any]): TpProcessRequest = js.native
+  
   /**
     * Creates a plain object from a TpProcessRequest message. Also converts values to other types if specified.
     * @param message TpProcessRequest
@@ -94,6 +104,7 @@ object TpProcessRequest extends js.Object {
     */
   def toObject(message: TpProcessRequest): StringDictionary[js.Any] = js.native
   def toObject(message: TpProcessRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a TpProcessRequest message.
     * @param message Plain object to verify
@@ -101,4 +112,3 @@ object TpProcessRequest extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

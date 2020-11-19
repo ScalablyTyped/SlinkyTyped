@@ -2,11 +2,12 @@ package typingsSlinky.superstruct.indexEsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("superstruct/lib/index.es", "empty")
 @js.native
 object empty extends js.Object {
+  
   /**
     * Check if a value is a plain object.
     */
@@ -21,4 +22,3 @@ object empty extends js.Object {
     */
   def apply[T /* <: String | js.Array[_] */](S: Struct_[T, _]): Struct_[T, _] = js.native
 }
-

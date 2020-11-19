@@ -2,7 +2,7 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typescript.mod.TextRange because Already inherited
@@ -13,11 +13,15 @@ trait PropertyAccessExpression
   extends MemberExpression
      with BindingOrAssignmentElementTarget
      with _BindingOrAssignmentElement {
+  
   var _declarationBrand: js.Any = js.native
+  
   var expression: LeftHandSideExpression = js.native
+  
   @JSName("kind")
   var kind_PropertyAccessExpression: typingsSlinky.typescript.mod.SyntaxKind.PropertyAccessExpression = js.native
+  
   var name: js.UndefOr[DeclarationName | Identifier | PrivateIdentifier] = js.native
+  
   var questionDotToken: js.UndefOr[QuestionDotToken] = js.native
 }
-

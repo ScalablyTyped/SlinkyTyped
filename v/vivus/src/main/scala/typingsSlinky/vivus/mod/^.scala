@@ -3,7 +3,7 @@ package typingsSlinky.vivus.mod
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vivus", JSImport.Namespace)
 @js.native
@@ -34,24 +34,29 @@ class ^ protected () extends Vivus {
     callback: js.Function1[/* vivusInstance */ Vivus, Unit]
   ) = this()
 }
-
 @JSImport("vivus", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
+  def EASE(input: Double): Double = js.native
+  
+  def EASE_IN(input: Double): Double = js.native
   @JSName("EASE_IN")
   var EASE_IN_Original: TimingFunction = js.native
+  
+  def EASE_OUT(input: Double): Double = js.native
+  
+  def EASE_OUT_BOUNCE(input: Double): Double = js.native
   @JSName("EASE_OUT_BOUNCE")
   var EASE_OUT_BOUNCE_Original: TimingFunction = js.native
+  
   @JSName("EASE_OUT")
   var EASE_OUT_Original: TimingFunction = js.native
+  
   @JSName("EASE")
   var EASE_Original: TimingFunction = js.native
+  
+  def LINEAR(input: Double): Double = js.native
   @JSName("LINEAR")
   var LINEAR_Original: TimingFunction = js.native
-  def EASE(input: Double): Double = js.native
-  def EASE_IN(input: Double): Double = js.native
-  def EASE_OUT(input: Double): Double = js.native
-  def EASE_OUT_BOUNCE(input: Double): Double = js.native
-  def LINEAR(input: Double): Double = js.native
 }
-

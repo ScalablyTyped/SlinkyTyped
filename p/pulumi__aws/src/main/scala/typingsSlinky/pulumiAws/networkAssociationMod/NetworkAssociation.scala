@@ -7,7 +7,7 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws/ec2clientvpn/networkAssociation", "NetworkAssociation")
 @js.native
@@ -21,32 +21,37 @@ class NetworkAssociation protected () extends CustomResource {
     */
   def this(name: String, args: NetworkAssociationArgs) = this()
   def this(name: String, args: NetworkAssociationArgs, opts: CustomResourceOptions) = this()
+  
   /**
     * The ID of the Client VPN endpoint.
     */
   val clientVpnEndpointId: Output_[String] = js.native
+  
   /**
     * The IDs of the security groups applied to the target network association.
     */
   val securityGroups: Output_[js.Array[String]] = js.native
+  
   /**
     * The current state of the target network association.
     */
   val status: Output_[String] = js.native
+  
   /**
     * The ID of the subnet to associate with the Client VPN endpoint.
     */
   val subnetId: Output_[String] = js.native
+  
   /**
     * The ID of the VPC in which the target network (subnet) is located.
     */
   val vpcId: Output_[String] = js.native
 }
-
 /* static members */
 @JSImport("@pulumi/aws/ec2clientvpn/networkAssociation", "NetworkAssociation")
 @js.native
 object NetworkAssociation extends js.Object {
+  
   /**
     * Get an existing NetworkAssociation resource's state with the given name, ID, and optional extra
     * properties used to qualify the lookup.
@@ -60,10 +65,10 @@ object NetworkAssociation extends js.Object {
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): NetworkAssociation = js.native
   def get(name: String, id: Input[ID], state: NetworkAssociationState): NetworkAssociation = js.native
   def get(name: String, id: Input[ID], state: NetworkAssociationState, opts: CustomResourceOptions): NetworkAssociation = js.native
+  
   /**
     * Returns true if the given object is an instance of NetworkAssociation.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/ec2clientvpn/networkAssociation.NetworkAssociation */ Boolean = js.native
 }
-

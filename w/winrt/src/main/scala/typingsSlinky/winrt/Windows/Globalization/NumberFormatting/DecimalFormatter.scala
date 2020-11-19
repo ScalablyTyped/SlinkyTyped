@@ -3,7 +3,7 @@ package typingsSlinky.winrt.Windows.Globalization.NumberFormatting
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DecimalFormatter
@@ -11,8 +11,8 @@ trait DecimalFormatter
      with INumberFormatter
      with INumberFormatter2
      with INumberParser
-
 object DecimalFormatter {
+  
   @scala.inline
   def apply(
     format: Double => String,
@@ -36,4 +36,3 @@ object DecimalFormatter {
     __obj.asInstanceOf[DecimalFormatter]
   }
 }
-

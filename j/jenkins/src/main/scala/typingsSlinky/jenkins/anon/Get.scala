@@ -5,11 +5,13 @@ import typingsSlinky.jenkins.jenkinsStrings.text
 import typingsSlinky.node.NodeJS.ReadableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Get extends js.Object {
+  
   def get(name: String, n: Double, callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
+  
   def log(name: String, callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
   def log(name: String, n: Double, callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
   def log(
@@ -18,8 +20,10 @@ trait Get extends js.Object {
     start: Double,
     callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]
   ): Unit = js.native
+  
   def logStream(name: String, n: Double): ReadableStream = js.native
   def logStream(name: String, n: Double, options: Delay): ReadableStream = js.native
+  
   @JSName("log")
   def log_html(
     name: String,
@@ -54,7 +58,8 @@ trait Get extends js.Object {
     meta: Boolean,
     callback: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]
   ): Unit = js.native
+  
   def stop(name: String, n: Double, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   def term(name: String, n: Double, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
-

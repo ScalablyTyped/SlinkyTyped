@@ -7,14 +7,16 @@ import typingsSlinky.nukaCarousel.mod.CarouselSlideRenderControlProps
 import typingsSlinky.nukaCarousel.mod.CarouselSlidesToScrollProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object PagingDots {
+  
   @JSImport("nuka-carousel", "PagingDots")
   @js.native
   object component extends js.Object
   
   def withProps(p: CarouselSlideRenderControlProps): Default[tag.type, typingsSlinky.nukaCarousel.mod.PagingDots] = new Default[tag.type, typingsSlinky.nukaCarousel.mod.PagingDots](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     cellAlign: CarouselCellAlignProp,
@@ -34,4 +36,3 @@ object PagingDots {
     new Default[tag.type, typingsSlinky.nukaCarousel.mod.PagingDots](js.Array(this.component, __props.asInstanceOf[CarouselSlideRenderControlProps]))
   }
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.reactFa.mod
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-fa", "IconStack")
 @js.native
@@ -12,4 +12,3 @@ class IconStackCls protected ()
   def this(props: IconStackProps) = this()
   def this(props: IconStackProps, context: js.Any) = this()
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.markdownIt.libMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * MarkdownIt provides named presets as a convenience to quickly
@@ -23,13 +23,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.markdownIt.markdownItStrings.commonmark
 */
 trait PresetName extends js.Object
-
 object PresetName {
+  
   @scala.inline
   def commonmark: typingsSlinky.markdownIt.markdownItStrings.commonmark = "commonmark".asInstanceOf[typingsSlinky.markdownIt.markdownItStrings.commonmark]
+  
   @scala.inline
   def default: typingsSlinky.markdownIt.markdownItStrings.default = "default".asInstanceOf[typingsSlinky.markdownIt.markdownItStrings.default]
+  
   @scala.inline
   def zero: typingsSlinky.markdownIt.markdownItStrings.zero = "zero".asInstanceOf[typingsSlinky.markdownIt.markdownItStrings.zero]
 }
-

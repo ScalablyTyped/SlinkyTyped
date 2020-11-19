@@ -3,11 +3,12 @@ package typingsSlinky.highland.global
 import typingsSlinky.highland.Highland.Stream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Highland")
 @js.native
 object Highland_ extends js.Object {
+  
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   /**
     * Used as an Error marker when writing to a Stream's incoming buffer
@@ -28,6 +29,4 @@ object Highland_ extends js.Object {
     extends typingsSlinky.highland.Highland.StreamRedirect[R] {
     def this(to: Stream[R]) = this()
   }
-  
 }
-

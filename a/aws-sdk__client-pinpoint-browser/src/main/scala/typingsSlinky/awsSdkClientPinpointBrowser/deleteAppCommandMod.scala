@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteAppCommand", JSImport.Namespace)
 @js.native
 object deleteAppCommandMod extends js.Object {
+  
   @js.native
   class DeleteAppCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteAppCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteAppInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteAppInput, DeleteAppOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[DeleteAppInput, DeleteAppOutput] = js.native
   }
-  
 }
-

@@ -28,81 +28,115 @@ import typingsSlinky.reactSortableTree.reactSortableTreeStrings.rtl
 import typingsSlinky.reactVirtualized.mod.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @scala.inline
 class SharedBuilder_ReactSortableTreeProps_1822274003 (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, scala.Nothing] {
+  
   @scala.inline
   def canDragFunction1(value: /* data */ ExtendedNodeData => Boolean): this.type = set("canDrag", js.Any.fromFunction1(value))
+  
   @scala.inline
   def canDrag(value: (js.Function1[/* data */ ExtendedNodeData, Boolean]) | Boolean): this.type = set("canDrag", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def canDrop(value: /* data */ OnDragPreviousAndNextLocation with NodeData => Boolean): this.type = set("canDrop", js.Any.fromFunction1(value))
+  
   @scala.inline
   def canNodeHaveChildren(value: /* node */ TreeItem => Boolean): this.type = set("canNodeHaveChildren", js.Any.fromFunction1(value))
+  
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def dndType(value: String): this.type = set("dndType", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def generateNodeProps(value: /* data */ ExtendedNodeData => StringDictionary[_]): this.type = set("generateNodeProps", js.Any.fromFunction1(value))
+  
   @scala.inline
   def getNodeKey(value: /* data */ TreeNode with TreeIndex => String | Double): this.type = set("getNodeKey", js.Any.fromFunction1(value))
+  
   @scala.inline
   def innerStyle(value: CSSProperties): this.type = set("innerStyle", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def isVirtualized(value: Boolean): this.type = set("isVirtualized", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def maxDepth(value: Double): this.type = set("maxDepth", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def nodeContentRendererFunctionComponent(value: ReactComponentClass[NodeRendererProps]): this.type = set("nodeContentRenderer", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def nodeContentRendererComponentClass(value: ReactComponentClass[NodeRendererProps]): this.type = set("nodeContentRenderer", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def nodeContentRenderer(value: NodeRenderer): this.type = set("nodeContentRenderer", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def onDragStateChanged(value: /* data */ OnDragStateChangedData => Unit): this.type = set("onDragStateChanged", js.Any.fromFunction1(value))
+  
   @scala.inline
   def onMoveNode(value: /* data */ NodeData with FullTree with OnMovePreviousAndNextLocation => Unit): this.type = set("onMoveNode", js.Any.fromFunction1(value))
+  
   @scala.inline
   def onVisibilityToggle(value: /* data */ OnVisibilityToggleData => Unit): this.type = set("onVisibilityToggle", js.Any.fromFunction1(value))
+  
   @scala.inline
   def onlyExpandSearchedNodes(value: Boolean): this.type = set("onlyExpandSearchedNodes", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def placeholderRendererFunctionComponent(value: ReactComponentClass[PlaceholderRendererProps]): this.type = set("placeholderRenderer", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def placeholderRendererComponentClass(value: ReactComponentClass[PlaceholderRendererProps]): this.type = set("placeholderRenderer", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def placeholderRenderer(value: PlaceholderRenderer): this.type = set("placeholderRenderer", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def reactVirtualizedListProps(value: PartialListProps): this.type = set("reactVirtualizedListProps", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def rowDirection(value: ltr | rtl): this.type = set("rowDirection", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def rowHeightFunction1(value: /* info */ NodeData with Index => Double): this.type = set("rowHeight", js.Any.fromFunction1(value))
+  
   @scala.inline
   def rowHeight(value: (js.Function1[/* info */ NodeData with Index, Double]) | Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def scaffoldBlockPxWidth(value: Double): this.type = set("scaffoldBlockPxWidth", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def searchFinishCallback(value: /* matches */ js.Array[NodeData] => Unit): this.type = set("searchFinishCallback", js.Any.fromFunction1(value))
+  
   @scala.inline
   def searchFocusOffset(value: Double): this.type = set("searchFocusOffset", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def searchMethod(value: /* data */ SearchData => Boolean): this.type = set("searchMethod", js.Any.fromFunction1(value))
+  
   @scala.inline
   def searchQuery(value: String | js.Any): this.type = set("searchQuery", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def shouldCopyOnOutsideDropFunction1(value: /* data */ ShouldCopyData => Boolean): this.type = set("shouldCopyOnOutsideDrop", js.Any.fromFunction1(value))
+  
   @scala.inline
   def shouldCopyOnOutsideDrop(value: Boolean | (js.Function1[/* data */ ShouldCopyData, Boolean])): this.type = set("shouldCopyOnOutsideDrop", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def slideRegionSize(value: Double): this.type = set("slideRegionSize", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def theme(value: ThemeProps): this.type = set("theme", value.asInstanceOf[js.Any])
 }
-

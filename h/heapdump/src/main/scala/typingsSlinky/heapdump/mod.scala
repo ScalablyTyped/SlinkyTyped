@@ -2,11 +2,12 @@ package typingsSlinky.heapdump
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("heapdump", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def writeSnapshot(): Unit = js.native
   def writeSnapshot(callback: js.Function2[/* err */ js.Error | Null, /* filename */ js.UndefOr[String], Unit]): Unit = js.native
   def writeSnapshot(
@@ -19,4 +20,3 @@ object mod extends js.Object {
     callback: js.Function2[/* err */ js.Error | Null, /* filename */ js.UndefOr[String], Unit]
   ): Unit = js.native
 }
-

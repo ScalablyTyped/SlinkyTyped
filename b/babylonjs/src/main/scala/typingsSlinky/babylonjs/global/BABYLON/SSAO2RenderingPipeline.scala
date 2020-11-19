@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.SSAO2RenderingPipeline")
 @js.native
@@ -23,15 +23,16 @@ class SSAO2RenderingPipeline protected ()
     cameras: js.Array[typingsSlinky.babylonjs.BABYLON.Camera]
   ) = this()
 }
-
 /* static members */
 @JSGlobal("BABYLON.SSAO2RenderingPipeline")
 @js.native
 object SSAO2RenderingPipeline extends js.Object {
+  
   /**
     *  Support test.
     */
   def IsSupported: Boolean = js.native
+  
   /**
     * Parse the serialized pipeline
     * @param source Source pipeline.
@@ -41,4 +42,3 @@ object SSAO2RenderingPipeline extends js.Object {
     */
   def Parse(source: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): typingsSlinky.babylonjs.BABYLON.SSAO2RenderingPipeline = js.native
 }
-

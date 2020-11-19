@@ -3,7 +3,7 @@ package typingsSlinky.bingmaps.global.Microsoft.Maps
 import typingsSlinky.bingmaps.Microsoft.Maps.IContourLayerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Microsoft.Maps.ContourLayer")
 @js.native
@@ -20,4 +20,3 @@ class ContourLayer protected ()
     options: IContourLayerOptions
   ) = this()
 }
-

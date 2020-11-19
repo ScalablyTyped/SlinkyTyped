@@ -7,12 +7,13 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.none
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.traditional
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RasterShadedReliefRenderer
   extends Accessor
      with JSONSupport {
+  
   /**
     * The sun's angle of elevation above the horizon, ranging from 0 to 90 degrees. A value of 0 degrees indicates that the sun is on the horizon, that is, on the same horizontal plane as the frame of reference. A value of 90 degrees indicates that the sun is directly overhead.
     *
@@ -21,6 +22,7 @@ trait RasterShadedReliefRenderer
     * @default 45
     */
   var altitude: Double = js.native
+  
   /**
     * The sun's relative position along the horizon, ranging from 0 to 360 degrees. This position is indicated by the angle of the sun measured clockwise from due north. An azimuth of 0 degrees indicates north, east is 90 degrees, south is 180 degrees, and west is 270 degrees.
     *
@@ -29,6 +31,7 @@ trait RasterShadedReliefRenderer
     * @default 315
     */
   var azimuth: Double = js.native
+  
   /**
     * The color ramp to display the shaded relief. By default, the grayscale is applied.
     *
@@ -37,6 +40,7 @@ trait RasterShadedReliefRenderer
     * @default null
     */
   var colorRamp: ColorRamp = js.native
+  
   /**
     * The type of hillshading being applied on the elevation surface.
     *
@@ -51,6 +55,7 @@ trait RasterShadedReliefRenderer
     * @default "multi-directional"
     */
   var hillshadeType: traditional | `multi-directional` = js.native
+  
   /**
     * Pixel size factor accounts for changes in scale as the viewer zooms in and out on the map display. It controls the rate at which the Z Factor changes. This parameter is only valid when the [scalingType](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-RasterShadedReliefRenderer.html#scalingType) is `adjusted`.
     *
@@ -59,6 +64,7 @@ trait RasterShadedReliefRenderer
     * @default 0.024
     */
   var pixelSizeFactor: Double = js.native
+  
   /**
     * Pixel Size Power accounts for the altitude changes (or scale) as the viewer zooms in and out on the map display. It is the exponent applied to the pixel size term in the equation that controls the rate at which the Z Factor changes to avoid significant loss of relief. This parameter is only valid when the [scalingType](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-RasterShadedReliefRenderer.html#scalingType) is `adjusted`.
     *
@@ -67,6 +73,7 @@ trait RasterShadedReliefRenderer
     * @default 0.664
     */
   var pixelSizePower: Double = js.native
+  
   /**
     * Applies a constant or adjusted z-factor based on resolution changes. The shaded result is scaled dynamically by adjusting the z-factor using one of two options.  **Possible Values**
     *
@@ -81,12 +88,14 @@ trait RasterShadedReliefRenderer
     * @default none
     */
   var scalingType: none | adjusted = js.native
+  
   /**
     * The type of Renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-RasterShadedReliefRenderer.html#type)
     */
   val `type`: `raster-shaded-relief` = js.native
+  
   /**
     * A ratio of z unit / xy unit, with optional exaggeration factored in. If the units for the z (elevation) units are the same as the x,y (linear) units, then the z conversion factor is 1. If your dataset is using a projected coordinate system and your elevation and linear units are different, then you will need to define a z conversion factor to account for the difference.
     *
@@ -96,4 +105,3 @@ trait RasterShadedReliefRenderer
     */
   var zFactor: Double = js.native
 }
-

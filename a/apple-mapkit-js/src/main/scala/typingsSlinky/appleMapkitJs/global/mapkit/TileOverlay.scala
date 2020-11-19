@@ -4,7 +4,7 @@ import typingsSlinky.appleMapkitJs.mapkit.TileOverlayConstructorOptions
 import typingsSlinky.appleMapkitJs.mapkit.URLTemplateCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An overlay that covers an area of the map with bitmap tiles.
@@ -21,4 +21,3 @@ class TileOverlay protected ()
   def this(urlTemplate: String, options: TileOverlayConstructorOptions) = this()
   def this(urlTemplate: URLTemplateCallback, options: TileOverlayConstructorOptions) = this()
 }
-

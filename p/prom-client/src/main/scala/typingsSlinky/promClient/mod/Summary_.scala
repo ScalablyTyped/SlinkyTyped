@@ -4,7 +4,7 @@ import typingsSlinky.promClient.mod.Summary.Config
 import typingsSlinky.promClient.mod.Summary.Internal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("prom-client", "Summary")
 @js.native
@@ -30,12 +30,14 @@ class Summary_ protected () extends js.Object {
   def this(name: String, help: String, labels: js.Array[String]) = this()
   def this(name: String, help: String, labels: js.UndefOr[scala.Nothing], config: Config) = this()
   def this(name: String, help: String, labels: js.Array[String], config: Config) = this()
+  
   /**
   	 * Return the child for given labels
   	 * @param values Label values
   	 * @return Configured summary with given labels
   	 */
   def labels(values: String*): Internal = js.native
+  
   /**
   	 * Observe value for given labels
   	 * @param labels Object with label keys and values
@@ -47,15 +49,18 @@ class Summary_ protected () extends js.Object {
   	 * @param value The value to observe
   	 */
   def observe(value: Double): Unit = js.native
+  
   /**
   	 * Remove metrics for the given label values
   	 * @param values Label values
   	 */
   def remove(values: String*): Unit = js.native
+  
   /**
   	 * Reset all values in the summary
   	 */
   def reset(): Unit = js.native
+  
   /**
   	 * Start a timer where the value in seconds will observed
   	 * @param labels Object with label keys and values
@@ -64,4 +69,3 @@ class Summary_ protected () extends js.Object {
   def startTimer(): js.Function1[/* labels */ js.UndefOr[labelValues], Unit] = js.native
   def startTimer(labels: labelValues): js.Function1[/* labels */ js.UndefOr[labelValues], Unit] = js.native
 }
-

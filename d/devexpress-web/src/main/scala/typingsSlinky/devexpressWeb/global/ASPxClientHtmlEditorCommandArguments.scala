@@ -2,7 +2,7 @@ package typingsSlinky.devexpressWeb.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The base class for parameters used in the ASPxHtmlEditor's client-side commands.
@@ -14,4 +14,3 @@ class ASPxClientHtmlEditorCommandArguments protected ()
   def this(htmlEditor: typingsSlinky.devexpressWeb.ASPxClientHtmlEditor) = this()
   def this(htmlEditor: typingsSlinky.devexpressWeb.ASPxClientHtmlEditor, selectedElement: js.Any) = this()
 }
-

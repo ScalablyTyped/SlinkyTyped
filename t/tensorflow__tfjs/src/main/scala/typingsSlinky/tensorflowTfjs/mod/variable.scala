@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Variable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "variable")
 @js.native
 object variable extends js.Object {
+  
   /**
     * Creates a new variable with the provided initial value.
     * ```js
@@ -39,4 +40,3 @@ object variable extends js.Object {
   def apply[R /* <: typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank */](initialValue: Tensor[R], trainable: Boolean, name: String): Variable[R] = js.native
   def apply[R /* <: typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank */](initialValue: Tensor[R], trainable: Boolean, name: String, dtype: DataType): Variable[R] = js.native
 }
-

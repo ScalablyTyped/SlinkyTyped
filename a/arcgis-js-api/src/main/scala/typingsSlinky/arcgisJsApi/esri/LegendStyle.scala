@@ -9,10 +9,11 @@ import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LegendStyle extends Object {
+  
   /**
     * When a `card` type is specified, you can specify one of the following layout options.
     *
@@ -28,6 +29,7 @@ trait LegendStyle extends Object {
     * @default stack
     */
   var layout: js.UndefOr[auto | `side-by-side` | stack] = js.native
+  
   /**
     * Specifies the style of the legend. There are two possible values listed in the table below:
     *
@@ -41,8 +43,8 @@ trait LegendStyle extends Object {
     */
   var `type`: classic | card = js.native
 }
-
 object LegendStyle {
+  
   @scala.inline
   def apply(
     constructor: js.Function,
@@ -54,24 +56,29 @@ object LegendStyle {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LegendStyle]
   }
+  
   @scala.inline
   implicit class LegendStyleOps[Self <: LegendStyle] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setType(value: classic | card): Self = this.set("type", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLayout(value: auto | `side-by-side` | stack): Self = this.set("layout", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteLayout: Self = this.set("layout", js.undefined)
   }
-  
 }
-

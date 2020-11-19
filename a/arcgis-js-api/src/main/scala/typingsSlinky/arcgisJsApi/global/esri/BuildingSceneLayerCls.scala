@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.BuildingSceneLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.BuildingSceneLayer")
 @js.native
@@ -16,4 +16,3 @@ class BuildingSceneLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.BuildingSceneLayer {
   def this(properties: BuildingSceneLayerProperties) = this()
 }
-

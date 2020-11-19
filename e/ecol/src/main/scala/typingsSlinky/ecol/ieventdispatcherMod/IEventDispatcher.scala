@@ -3,21 +3,28 @@ package typingsSlinky.ecol.ieventdispatcherMod
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
-import typingsSlinky.tstl.mod.base.Container
+import typingsSlinky.tstl.icontainerMod.IContainer
+import typingsSlinky.tstl.icontainerMod.IContainer.Iterator
+import typingsSlinky.tstl.icontainerMod.IContainer.ReverseIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait IEventDispatcher[T, SourceT /* <: Container[T, SourceT, IteratorT, ReverseT, T] */, IteratorT /* <: js.Iterator[T] */, ReverseT /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify std.base.ReverseIterator<T, SourceT, IteratorT, ReverseT> */ js.Any */] extends js.Object {
-  def addEventListener(`type`: Type, listener: Listener[T, SourceT, IteratorT, ReverseT]): Unit
-  def dispatchEvent(event: CollectionEvent[T, SourceT, IteratorT, ReverseT]): Unit
-  def hasEventListener(`type`: Type): Boolean
-  def removeEventListener(`type`: Type, listener: Listener[T, SourceT, IteratorT, ReverseT]): Unit
+@js.native
+trait IEventDispatcher[T, SourceT /* <: IContainer[T, SourceT, IteratorT, ReverseT, T] */, IteratorT /* <: Iterator[T, SourceT, IteratorT, ReverseT, T] */, ReverseT /* <: ReverseIterator[T, SourceT, IteratorT, ReverseT, T] */] extends js.Object {
+  
+  def addEventListener(`type`: Type, listener: Listener[T, SourceT, IteratorT, ReverseT]): Unit = js.native
+  
+  def dispatchEvent(event: CollectionEvent[T, SourceT, IteratorT, ReverseT]): Unit = js.native
+  
+  def hasEventListener(`type`: Type): Boolean = js.native
+  
+  def removeEventListener(`type`: Type, listener: Listener[T, SourceT, IteratorT, ReverseT]): Unit = js.native
 }
-
 object IEventDispatcher {
+  
   @scala.inline
-  def apply[T, SourceT, IteratorT, ReverseT](
+  def apply[T, SourceT /* <: IContainer[T, SourceT, IteratorT, ReverseT, T] */, IteratorT /* <: Iterator[T, SourceT, IteratorT, ReverseT, T] */, ReverseT /* <: ReverseIterator[T, SourceT, IteratorT, ReverseT, T] */](
     addEventListener: (Type, Listener[T, SourceT, IteratorT, ReverseT]) => Unit,
     dispatchEvent: CollectionEvent[T, SourceT, IteratorT, ReverseT] => Unit,
     hasEventListener: Type => Boolean,
@@ -26,5 +33,32 @@ object IEventDispatcher {
     val __obj = js.Dynamic.literal(addEventListener = js.Any.fromFunction2(addEventListener), dispatchEvent = js.Any.fromFunction1(dispatchEvent), hasEventListener = js.Any.fromFunction1(hasEventListener), removeEventListener = js.Any.fromFunction2(removeEventListener))
     __obj.asInstanceOf[IEventDispatcher[T, SourceT, IteratorT, ReverseT]]
   }
+  
+  @scala.inline
+  implicit class IEventDispatcherOps[Self <: IEventDispatcher[_, _, _, _], T, SourceT /* <: IContainer[T, SourceT, IteratorT, ReverseT, T] */, IteratorT /* <: Iterator[T, SourceT, IteratorT, ReverseT, T] */, ReverseT /* <: ReverseIterator[T, SourceT, IteratorT, ReverseT, T] */] (val x: Self with (IEventDispatcher[T, SourceT, IteratorT, ReverseT])) extends AnyVal {
+    
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
+    }
+    
+    @scala.inline
+    def setAddEventListener(value: (Type, Listener[T, SourceT, IteratorT, ReverseT]) => Unit): Self = this.set("addEventListener", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setDispatchEvent(value: CollectionEvent[T, SourceT, IteratorT, ReverseT] => Unit): Self = this.set("dispatchEvent", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setHasEventListener(value: Type => Boolean): Self = this.set("hasEventListener", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setRemoveEventListener(value: (Type, Listener[T, SourceT, IteratorT, ReverseT]) => Unit): Self = this.set("removeEventListener", js.Any.fromFunction2(value))
+  }
 }
-

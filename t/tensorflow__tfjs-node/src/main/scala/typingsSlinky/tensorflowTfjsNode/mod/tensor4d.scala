@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike4D
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-node", "tensor4d")
 @js.native
 object tensor4d extends js.Object {
+  
   /**
     * Creates rank-4 `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -37,4 +38,3 @@ object tensor4d extends js.Object {
   def apply(values: TensorLike4D, shape: js.Tuple4[Double, Double, Double, Double]): Tensor4D = js.native
   def apply(values: TensorLike4D, shape: js.Tuple4[Double, Double, Double, Double], dtype: DataType): Tensor4D = js.native
 }
-

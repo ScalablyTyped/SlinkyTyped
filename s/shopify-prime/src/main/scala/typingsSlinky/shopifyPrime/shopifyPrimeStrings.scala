@@ -14,9 +14,370 @@ import typingsSlinky.shopifyPrime.transactionStatusMod._TransactionStatus
 import typingsSlinky.shopifyPrime.webhookTopicMod._WebhookTopic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object shopifyPrimeStrings {
+  
+  @scala.inline
+  def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]
+  
+  @scala.inline
+  def GET: GET = "GET".asInstanceOf[GET]
+  
+  @scala.inline
+  def POST: POST = "POST".asInstanceOf[POST]
+  
+  @scala.inline
+  def PUT: PUT = "PUT".asInstanceOf[PUT]
+  
+  @scala.inline
+  def accepted: accepted = "accepted".asInstanceOf[accepted]
+  
+  @scala.inline
+  def across: across = "across".asInstanceOf[across]
+  
+  @scala.inline
+  def active: active = "active".asInstanceOf[active]
+  
+  @scala.inline
+  def all: all = "all".asInstanceOf[all]
+  
+  @scala.inline
+  def any: any = "any".asInstanceOf[any]
+  
+  @scala.inline
+  def appSlashuninstalled: appSlashuninstalled = "app/uninstalled".asInstanceOf[appSlashuninstalled]
+  
+  @scala.inline
+  def applies_to_resource: applies_to_resource = "applies_to_resource".asInstanceOf[applies_to_resource]
+  
+  @scala.inline
+  def authorization: authorization = "authorization".asInstanceOf[authorization]
+  
+  @scala.inline
+  def authorized: authorized = "authorized".asInstanceOf[authorized]
+  
+  @scala.inline
+  def bypass: bypass = "bypass".asInstanceOf[bypass]
+  
+  @scala.inline
+  def cancelled: cancelled = "cancelled".asInstanceOf[cancelled]
+  
+  @scala.inline
+  def capture: capture = "capture".asInstanceOf[capture]
+  
+  @scala.inline
+  def cartsSlashcreate: cartsSlashcreate = "carts/create".asInstanceOf[cartsSlashcreate]
+  
+  @scala.inline
+  def cartsSlashupdate: cartsSlashupdate = "carts/update".asInstanceOf[cartsSlashupdate]
+  
+  @scala.inline
+  def checkoutsSlashcreate: checkoutsSlashcreate = "checkouts/create".asInstanceOf[checkoutsSlashcreate]
+  
+  @scala.inline
+  def checkoutsSlashdelete: checkoutsSlashdelete = "checkouts/delete".asInstanceOf[checkoutsSlashdelete]
+  
+  @scala.inline
+  def checkoutsSlashupdate: checkoutsSlashupdate = "checkouts/update".asInstanceOf[checkoutsSlashupdate]
+  
+  @scala.inline
+  def closed: closed = "closed".asInstanceOf[closed]
+  
+  @scala.inline
+  def collectionsSlashcreate: collectionsSlashcreate = "collections/create".asInstanceOf[collectionsSlashcreate]
+  
+  @scala.inline
+  def collectionsSlashdelete: collectionsSlashdelete = "collections/delete".asInstanceOf[collectionsSlashdelete]
+  
+  @scala.inline
+  def collectionsSlashupdate: collectionsSlashupdate = "collections/update".asInstanceOf[collectionsSlashupdate]
+  
+  @scala.inline
+  def custom_collection: custom_collection = "custom_collection".asInstanceOf[custom_collection]
+  
+  @scala.inline
+  def customer: customer = "customer".asInstanceOf[customer]
+  
+  @scala.inline
+  def customer_groupsSlashcreate: customer_groupsSlashcreate = "customer_groups/create".asInstanceOf[customer_groupsSlashcreate]
+  
+  @scala.inline
+  def customer_groupsSlashdelete: customer_groupsSlashdelete = "customer_groups/delete".asInstanceOf[customer_groupsSlashdelete]
+  
+  @scala.inline
+  def customer_groupsSlashupdate: customer_groupsSlashupdate = "customer_groups/update".asInstanceOf[customer_groupsSlashupdate]
+  
+  @scala.inline
+  def customersSlashcreate: customersSlashcreate = "customers/create".asInstanceOf[customersSlashcreate]
+  
+  @scala.inline
+  def customersSlashdelete: customersSlashdelete = "customers/delete".asInstanceOf[customersSlashdelete]
+  
+  @scala.inline
+  def customersSlashdisable: customersSlashdisable = "customers/disable".asInstanceOf[customersSlashdisable]
+  
+  @scala.inline
+  def customersSlashenable: customersSlashenable = "customers/enable".asInstanceOf[customersSlashenable]
+  
+  @scala.inline
+  def customersSlashupdate: customersSlashupdate = "customers/update".asInstanceOf[customersSlashupdate]
+  
+  @scala.inline
+  def declined: declined = "declined".asInstanceOf[declined]
+  
+  @scala.inline
+  def decrement_ignoring_policy: decrement_ignoring_policy = "decrement_ignoring_policy".asInstanceOf[decrement_ignoring_policy]
+  
+  @scala.inline
+  def decrement_obeying_policy: decrement_obeying_policy = "decrement_obeying_policy".asInstanceOf[decrement_obeying_policy]
+  
+  @scala.inline
+  def demo: demo = "demo".asInstanceOf[demo]
+  
+  @scala.inline
+  def disputesSlashcreate: disputesSlashcreate = "disputes/create".asInstanceOf[disputesSlashcreate]
+  
+  @scala.inline
+  def disputesSlashupdate: disputesSlashupdate = "disputes/update".asInstanceOf[disputesSlashupdate]
+  
+  @scala.inline
+  def each: each = "each".asInstanceOf[each]
+  
+  @scala.inline
+  def entitled: entitled = "entitled".asInstanceOf[entitled]
+  
+  @scala.inline
+  def error: error = "error".asInstanceOf[error]
+  
+  @scala.inline
+  def expired: expired = "expired".asInstanceOf[expired]
+  
+  @scala.inline
+  def failure: failure = "failure".asInstanceOf[failure]
+  
+  @scala.inline
+  def fixed_amount: fixed_amount = "fixed_amount".asInstanceOf[fixed_amount]
+  
+  @scala.inline
+  def fraud: fraud = "fraud".asInstanceOf[fraud]
+  
+  @scala.inline
+  def fulfilled: fulfilled = "fulfilled".asInstanceOf[fulfilled]
+  
+  @scala.inline
+  def fulfillmentsSlashcreate: fulfillmentsSlashcreate = "fulfillments/create".asInstanceOf[fulfillmentsSlashcreate]
+  
+  @scala.inline
+  def fulfillmentsSlashupdate: fulfillmentsSlashupdate = "fulfillments/update".asInstanceOf[fulfillmentsSlashupdate]
+  
+  @scala.inline
+  def integer: integer = "integer".asInstanceOf[integer]
+  
+  @scala.inline
+  def inventory: inventory = "inventory".asInstanceOf[inventory]
+  
+  @scala.inline
+  def json: json = "json".asInstanceOf[json]
+  
+  @scala.inline
+  def line_item: line_item = "line_item".asInstanceOf[line_item]
+  
+  @scala.inline
+  def main: main = "main".asInstanceOf[main]
+  
+  @scala.inline
+  def moderate: moderate = "moderate".asInstanceOf[moderate]
+  
+  @scala.inline
+  def no: no = "no".asInstanceOf[no]
+  
+  @scala.inline
+  def online_store: online_store = "online_store".asInstanceOf[online_store]
+  
+  @scala.inline
+  def onload: onload = "onload".asInstanceOf[onload]
+  
+  @scala.inline
+  def open: open = "open".asInstanceOf[open]
+  
+  @scala.inline
+  def order_status: order_status = "order_status".asInstanceOf[order_status]
+  
+  @scala.inline
+  def order_transationsSlashcreate: order_transationsSlashcreate = "order_transations/create".asInstanceOf[order_transationsSlashcreate]
+  
+  @scala.inline
+  def ordersSlashcancelled: ordersSlashcancelled = "orders/cancelled".asInstanceOf[ordersSlashcancelled]
+  
+  @scala.inline
+  def ordersSlashcreate: ordersSlashcreate = "orders/create".asInstanceOf[ordersSlashcreate]
+  
+  @scala.inline
+  def ordersSlashdelete: ordersSlashdelete = "orders/delete".asInstanceOf[ordersSlashdelete]
+  
+  @scala.inline
+  def ordersSlashfulfilled: ordersSlashfulfilled = "orders/fulfilled".asInstanceOf[ordersSlashfulfilled]
+  
+  @scala.inline
+  def ordersSlashpaid: ordersSlashpaid = "orders/paid".asInstanceOf[ordersSlashpaid]
+  
+  @scala.inline
+  def ordersSlashpartially_fulfilled: ordersSlashpartially_fulfilled = "orders/partially_fulfilled".asInstanceOf[ordersSlashpartially_fulfilled]
+  
+  @scala.inline
+  def ordersSlashupdated: ordersSlashupdated = "orders/updated".asInstanceOf[ordersSlashupdated]
+  
+  @scala.inline
+  def other: other = "other".asInstanceOf[other]
+  
+  @scala.inline
+  def paid: paid = "paid".asInstanceOf[paid]
+  
+  @scala.inline
+  def partial: partial = "partial".asInstanceOf[partial]
+  
+  @scala.inline
+  def partially_paid: partially_paid = "partially_paid".asInstanceOf[partially_paid]
+  
+  @scala.inline
+  def partially_refunded: partially_refunded = "partially_refunded".asInstanceOf[partially_refunded]
+  
+  @scala.inline
+  def pending: pending = "pending".asInstanceOf[pending]
+  
+  @scala.inline
+  def `per-user`: `per-user` = "per-user".asInstanceOf[`per-user`]
+  
+  @scala.inline
+  def percentage: percentage = "percentage".asInstanceOf[percentage]
+  
+  @scala.inline
+  def prerequisite: prerequisite = "prerequisite".asInstanceOf[prerequisite]
+  
+  @scala.inline
+  def productsSlashcreate: productsSlashcreate = "products/create".asInstanceOf[productsSlashcreate]
+  
+  @scala.inline
+  def productsSlashdelete: productsSlashdelete = "products/delete".asInstanceOf[productsSlashdelete]
+  
+  @scala.inline
+  def productsSlashupdate: productsSlashupdate = "products/update".asInstanceOf[productsSlashupdate]
+  
+  @scala.inline
+  def published: published = "published".asInstanceOf[published]
+  
+  @scala.inline
+  def read_analytics: read_analytics = "read_analytics".asInstanceOf[read_analytics]
+  
+  @scala.inline
+  def read_content: read_content = "read_content".asInstanceOf[read_content]
+  
+  @scala.inline
+  def read_customers: read_customers = "read_customers".asInstanceOf[read_customers]
+  
+  @scala.inline
+  def read_fulfillments: read_fulfillments = "read_fulfillments".asInstanceOf[read_fulfillments]
+  
+  @scala.inline
+  def read_orders: read_orders = "read_orders".asInstanceOf[read_orders]
+  
+  @scala.inline
+  def read_products: read_products = "read_products".asInstanceOf[read_products]
+  
+  @scala.inline
+  def read_script_tags: read_script_tags = "read_script_tags".asInstanceOf[read_script_tags]
+  
+  @scala.inline
+  def read_shipping: read_shipping = "read_shipping".asInstanceOf[read_shipping]
+  
+  @scala.inline
+  def read_themes: read_themes = "read_themes".asInstanceOf[read_themes]
+  
+  @scala.inline
+  def read_users: read_users = "read_users".asInstanceOf[read_users]
+  
+  @scala.inline
+  def refund: refund = "refund".asInstanceOf[refund]
+  
+  @scala.inline
+  def refunded: refunded = "refunded".asInstanceOf[refunded]
+  
+  @scala.inline
+  def refundsSlashcreate: refundsSlashcreate = "refunds/create".asInstanceOf[refundsSlashcreate]
+  
+  @scala.inline
+  def sale: sale = "sale".asInstanceOf[sale]
+  
+  @scala.inline
+  def shipped: shipped = "shipped".asInstanceOf[shipped]
+  
+  @scala.inline
+  def shipping: shipping = "shipping".asInstanceOf[shipping]
+  
+  @scala.inline
+  def shipping_line: shipping_line = "shipping_line".asInstanceOf[shipping_line]
+  
+  @scala.inline
+  def shopSlashupdate: shopSlashupdate = "shop/update".asInstanceOf[shopSlashupdate]
+  
+  @scala.inline
+  def string: string = "string".asInstanceOf[string]
+  
+  @scala.inline
+  def success: success = "success".asInstanceOf[success]
+  
+  @scala.inline
+  def themesSlashpublish: themesSlashpublish = "themes/publish".asInstanceOf[themesSlashpublish]
+  
+  @scala.inline
+  def unpaid: unpaid = "unpaid".asInstanceOf[unpaid]
+  
+  @scala.inline
+  def unpublished: unpublished = "unpublished".asInstanceOf[unpublished]
+  
+  @scala.inline
+  def unshipped: unshipped = "unshipped".asInstanceOf[unshipped]
+  
+  @scala.inline
+  def void: void = "void".asInstanceOf[void]
+  
+  @scala.inline
+  def voided: voided = "voided".asInstanceOf[voided]
+  
+  @scala.inline
+  def write_content: write_content = "write_content".asInstanceOf[write_content]
+  
+  @scala.inline
+  def write_customers: write_customers = "write_customers".asInstanceOf[write_customers]
+  
+  @scala.inline
+  def write_fulfillments: write_fulfillments = "write_fulfillments".asInstanceOf[write_fulfillments]
+  
+  @scala.inline
+  def write_orders: write_orders = "write_orders".asInstanceOf[write_orders]
+  
+  @scala.inline
+  def write_products: write_products = "write_products".asInstanceOf[write_products]
+  
+  @scala.inline
+  def write_script_tags: write_script_tags = "write_script_tags".asInstanceOf[write_script_tags]
+  
+  @scala.inline
+  def write_shipping: write_shipping = "write_shipping".asInstanceOf[write_shipping]
+  
+  @scala.inline
+  def write_themes: write_themes = "write_themes".asInstanceOf[write_themes]
+  
+  @scala.inline
+  def write_users: write_users = "write_users".asInstanceOf[write_users]
+  
+  @scala.inline
+  def xml: xml = "xml".asInstanceOf[xml]
+  
+  @scala.inline
+  def yes: yes = "yes".asInstanceOf[yes]
+  
   @js.native
   sealed trait DELETE extends js.Object
   
@@ -382,246 +743,4 @@ object shopifyPrimeStrings {
   
   @js.native
   sealed trait yes extends _BlogCommentable
-  
-  @scala.inline
-  def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]
-  @scala.inline
-  def GET: GET = "GET".asInstanceOf[GET]
-  @scala.inline
-  def POST: POST = "POST".asInstanceOf[POST]
-  @scala.inline
-  def PUT: PUT = "PUT".asInstanceOf[PUT]
-  @scala.inline
-  def accepted: accepted = "accepted".asInstanceOf[accepted]
-  @scala.inline
-  def across: across = "across".asInstanceOf[across]
-  @scala.inline
-  def active: active = "active".asInstanceOf[active]
-  @scala.inline
-  def all: all = "all".asInstanceOf[all]
-  @scala.inline
-  def any: any = "any".asInstanceOf[any]
-  @scala.inline
-  def appSlashuninstalled: appSlashuninstalled = "app/uninstalled".asInstanceOf[appSlashuninstalled]
-  @scala.inline
-  def applies_to_resource: applies_to_resource = "applies_to_resource".asInstanceOf[applies_to_resource]
-  @scala.inline
-  def authorization: authorization = "authorization".asInstanceOf[authorization]
-  @scala.inline
-  def authorized: authorized = "authorized".asInstanceOf[authorized]
-  @scala.inline
-  def bypass: bypass = "bypass".asInstanceOf[bypass]
-  @scala.inline
-  def cancelled: cancelled = "cancelled".asInstanceOf[cancelled]
-  @scala.inline
-  def capture: capture = "capture".asInstanceOf[capture]
-  @scala.inline
-  def cartsSlashcreate: cartsSlashcreate = "carts/create".asInstanceOf[cartsSlashcreate]
-  @scala.inline
-  def cartsSlashupdate: cartsSlashupdate = "carts/update".asInstanceOf[cartsSlashupdate]
-  @scala.inline
-  def checkoutsSlashcreate: checkoutsSlashcreate = "checkouts/create".asInstanceOf[checkoutsSlashcreate]
-  @scala.inline
-  def checkoutsSlashdelete: checkoutsSlashdelete = "checkouts/delete".asInstanceOf[checkoutsSlashdelete]
-  @scala.inline
-  def checkoutsSlashupdate: checkoutsSlashupdate = "checkouts/update".asInstanceOf[checkoutsSlashupdate]
-  @scala.inline
-  def closed: closed = "closed".asInstanceOf[closed]
-  @scala.inline
-  def collectionsSlashcreate: collectionsSlashcreate = "collections/create".asInstanceOf[collectionsSlashcreate]
-  @scala.inline
-  def collectionsSlashdelete: collectionsSlashdelete = "collections/delete".asInstanceOf[collectionsSlashdelete]
-  @scala.inline
-  def collectionsSlashupdate: collectionsSlashupdate = "collections/update".asInstanceOf[collectionsSlashupdate]
-  @scala.inline
-  def custom_collection: custom_collection = "custom_collection".asInstanceOf[custom_collection]
-  @scala.inline
-  def customer: customer = "customer".asInstanceOf[customer]
-  @scala.inline
-  def customer_groupsSlashcreate: customer_groupsSlashcreate = "customer_groups/create".asInstanceOf[customer_groupsSlashcreate]
-  @scala.inline
-  def customer_groupsSlashdelete: customer_groupsSlashdelete = "customer_groups/delete".asInstanceOf[customer_groupsSlashdelete]
-  @scala.inline
-  def customer_groupsSlashupdate: customer_groupsSlashupdate = "customer_groups/update".asInstanceOf[customer_groupsSlashupdate]
-  @scala.inline
-  def customersSlashcreate: customersSlashcreate = "customers/create".asInstanceOf[customersSlashcreate]
-  @scala.inline
-  def customersSlashdelete: customersSlashdelete = "customers/delete".asInstanceOf[customersSlashdelete]
-  @scala.inline
-  def customersSlashdisable: customersSlashdisable = "customers/disable".asInstanceOf[customersSlashdisable]
-  @scala.inline
-  def customersSlashenable: customersSlashenable = "customers/enable".asInstanceOf[customersSlashenable]
-  @scala.inline
-  def customersSlashupdate: customersSlashupdate = "customers/update".asInstanceOf[customersSlashupdate]
-  @scala.inline
-  def declined: declined = "declined".asInstanceOf[declined]
-  @scala.inline
-  def decrement_ignoring_policy: decrement_ignoring_policy = "decrement_ignoring_policy".asInstanceOf[decrement_ignoring_policy]
-  @scala.inline
-  def decrement_obeying_policy: decrement_obeying_policy = "decrement_obeying_policy".asInstanceOf[decrement_obeying_policy]
-  @scala.inline
-  def demo: demo = "demo".asInstanceOf[demo]
-  @scala.inline
-  def disputesSlashcreate: disputesSlashcreate = "disputes/create".asInstanceOf[disputesSlashcreate]
-  @scala.inline
-  def disputesSlashupdate: disputesSlashupdate = "disputes/update".asInstanceOf[disputesSlashupdate]
-  @scala.inline
-  def each: each = "each".asInstanceOf[each]
-  @scala.inline
-  def entitled: entitled = "entitled".asInstanceOf[entitled]
-  @scala.inline
-  def error: error = "error".asInstanceOf[error]
-  @scala.inline
-  def expired: expired = "expired".asInstanceOf[expired]
-  @scala.inline
-  def failure: failure = "failure".asInstanceOf[failure]
-  @scala.inline
-  def fixed_amount: fixed_amount = "fixed_amount".asInstanceOf[fixed_amount]
-  @scala.inline
-  def fraud: fraud = "fraud".asInstanceOf[fraud]
-  @scala.inline
-  def fulfilled: fulfilled = "fulfilled".asInstanceOf[fulfilled]
-  @scala.inline
-  def fulfillmentsSlashcreate: fulfillmentsSlashcreate = "fulfillments/create".asInstanceOf[fulfillmentsSlashcreate]
-  @scala.inline
-  def fulfillmentsSlashupdate: fulfillmentsSlashupdate = "fulfillments/update".asInstanceOf[fulfillmentsSlashupdate]
-  @scala.inline
-  def integer: integer = "integer".asInstanceOf[integer]
-  @scala.inline
-  def inventory: inventory = "inventory".asInstanceOf[inventory]
-  @scala.inline
-  def json: json = "json".asInstanceOf[json]
-  @scala.inline
-  def line_item: line_item = "line_item".asInstanceOf[line_item]
-  @scala.inline
-  def main: main = "main".asInstanceOf[main]
-  @scala.inline
-  def moderate: moderate = "moderate".asInstanceOf[moderate]
-  @scala.inline
-  def no: no = "no".asInstanceOf[no]
-  @scala.inline
-  def online_store: online_store = "online_store".asInstanceOf[online_store]
-  @scala.inline
-  def onload: onload = "onload".asInstanceOf[onload]
-  @scala.inline
-  def open: open = "open".asInstanceOf[open]
-  @scala.inline
-  def order_status: order_status = "order_status".asInstanceOf[order_status]
-  @scala.inline
-  def order_transationsSlashcreate: order_transationsSlashcreate = "order_transations/create".asInstanceOf[order_transationsSlashcreate]
-  @scala.inline
-  def ordersSlashcancelled: ordersSlashcancelled = "orders/cancelled".asInstanceOf[ordersSlashcancelled]
-  @scala.inline
-  def ordersSlashcreate: ordersSlashcreate = "orders/create".asInstanceOf[ordersSlashcreate]
-  @scala.inline
-  def ordersSlashdelete: ordersSlashdelete = "orders/delete".asInstanceOf[ordersSlashdelete]
-  @scala.inline
-  def ordersSlashfulfilled: ordersSlashfulfilled = "orders/fulfilled".asInstanceOf[ordersSlashfulfilled]
-  @scala.inline
-  def ordersSlashpaid: ordersSlashpaid = "orders/paid".asInstanceOf[ordersSlashpaid]
-  @scala.inline
-  def ordersSlashpartially_fulfilled: ordersSlashpartially_fulfilled = "orders/partially_fulfilled".asInstanceOf[ordersSlashpartially_fulfilled]
-  @scala.inline
-  def ordersSlashupdated: ordersSlashupdated = "orders/updated".asInstanceOf[ordersSlashupdated]
-  @scala.inline
-  def other: other = "other".asInstanceOf[other]
-  @scala.inline
-  def paid: paid = "paid".asInstanceOf[paid]
-  @scala.inline
-  def partial: partial = "partial".asInstanceOf[partial]
-  @scala.inline
-  def partially_paid: partially_paid = "partially_paid".asInstanceOf[partially_paid]
-  @scala.inline
-  def partially_refunded: partially_refunded = "partially_refunded".asInstanceOf[partially_refunded]
-  @scala.inline
-  def pending: pending = "pending".asInstanceOf[pending]
-  @scala.inline
-  def `per-user`: `per-user` = "per-user".asInstanceOf[`per-user`]
-  @scala.inline
-  def percentage: percentage = "percentage".asInstanceOf[percentage]
-  @scala.inline
-  def prerequisite: prerequisite = "prerequisite".asInstanceOf[prerequisite]
-  @scala.inline
-  def productsSlashcreate: productsSlashcreate = "products/create".asInstanceOf[productsSlashcreate]
-  @scala.inline
-  def productsSlashdelete: productsSlashdelete = "products/delete".asInstanceOf[productsSlashdelete]
-  @scala.inline
-  def productsSlashupdate: productsSlashupdate = "products/update".asInstanceOf[productsSlashupdate]
-  @scala.inline
-  def published: published = "published".asInstanceOf[published]
-  @scala.inline
-  def read_analytics: read_analytics = "read_analytics".asInstanceOf[read_analytics]
-  @scala.inline
-  def read_content: read_content = "read_content".asInstanceOf[read_content]
-  @scala.inline
-  def read_customers: read_customers = "read_customers".asInstanceOf[read_customers]
-  @scala.inline
-  def read_fulfillments: read_fulfillments = "read_fulfillments".asInstanceOf[read_fulfillments]
-  @scala.inline
-  def read_orders: read_orders = "read_orders".asInstanceOf[read_orders]
-  @scala.inline
-  def read_products: read_products = "read_products".asInstanceOf[read_products]
-  @scala.inline
-  def read_script_tags: read_script_tags = "read_script_tags".asInstanceOf[read_script_tags]
-  @scala.inline
-  def read_shipping: read_shipping = "read_shipping".asInstanceOf[read_shipping]
-  @scala.inline
-  def read_themes: read_themes = "read_themes".asInstanceOf[read_themes]
-  @scala.inline
-  def read_users: read_users = "read_users".asInstanceOf[read_users]
-  @scala.inline
-  def refund: refund = "refund".asInstanceOf[refund]
-  @scala.inline
-  def refunded: refunded = "refunded".asInstanceOf[refunded]
-  @scala.inline
-  def refundsSlashcreate: refundsSlashcreate = "refunds/create".asInstanceOf[refundsSlashcreate]
-  @scala.inline
-  def sale: sale = "sale".asInstanceOf[sale]
-  @scala.inline
-  def shipped: shipped = "shipped".asInstanceOf[shipped]
-  @scala.inline
-  def shipping: shipping = "shipping".asInstanceOf[shipping]
-  @scala.inline
-  def shipping_line: shipping_line = "shipping_line".asInstanceOf[shipping_line]
-  @scala.inline
-  def shopSlashupdate: shopSlashupdate = "shop/update".asInstanceOf[shopSlashupdate]
-  @scala.inline
-  def string: string = "string".asInstanceOf[string]
-  @scala.inline
-  def success: success = "success".asInstanceOf[success]
-  @scala.inline
-  def themesSlashpublish: themesSlashpublish = "themes/publish".asInstanceOf[themesSlashpublish]
-  @scala.inline
-  def unpaid: unpaid = "unpaid".asInstanceOf[unpaid]
-  @scala.inline
-  def unpublished: unpublished = "unpublished".asInstanceOf[unpublished]
-  @scala.inline
-  def unshipped: unshipped = "unshipped".asInstanceOf[unshipped]
-  @scala.inline
-  def void: void = "void".asInstanceOf[void]
-  @scala.inline
-  def voided: voided = "voided".asInstanceOf[voided]
-  @scala.inline
-  def write_content: write_content = "write_content".asInstanceOf[write_content]
-  @scala.inline
-  def write_customers: write_customers = "write_customers".asInstanceOf[write_customers]
-  @scala.inline
-  def write_fulfillments: write_fulfillments = "write_fulfillments".asInstanceOf[write_fulfillments]
-  @scala.inline
-  def write_orders: write_orders = "write_orders".asInstanceOf[write_orders]
-  @scala.inline
-  def write_products: write_products = "write_products".asInstanceOf[write_products]
-  @scala.inline
-  def write_script_tags: write_script_tags = "write_script_tags".asInstanceOf[write_script_tags]
-  @scala.inline
-  def write_shipping: write_shipping = "write_shipping".asInstanceOf[write_shipping]
-  @scala.inline
-  def write_themes: write_themes = "write_themes".asInstanceOf[write_themes]
-  @scala.inline
-  def write_users: write_users = "write_users".asInstanceOf[write_users]
-  @scala.inline
-  def xml: xml = "xml".asInstanceOf[xml]
-  @scala.inline
-  def yes: yes = "yes".asInstanceOf[yes]
 }
-

@@ -6,7 +6,7 @@ import typingsSlinky.std.ArrayLike
 import typingsSlinky.std.Uint32ArrayConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Uint32Array")
 @js.native
@@ -19,8 +19,6 @@ class Uint32Array ()
   def this(buffer: ArrayBufferLike, byteOffset: Double) = this()
   def this(buffer: ArrayBufferLike, byteOffset: Double, length: Double) = this()
 }
-
 @JSGlobal("Uint32Array")
 @js.native
 object Uint32Array extends TopLevel[Uint32ArrayConstructor]
-

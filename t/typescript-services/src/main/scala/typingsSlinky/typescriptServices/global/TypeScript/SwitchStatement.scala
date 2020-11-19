@@ -2,7 +2,7 @@ package typingsSlinky.typescriptServices.global.TypeScript
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.SwitchStatement")
 @js.native
@@ -14,4 +14,3 @@ class SwitchStatement protected ()
     switchClauses: typingsSlinky.typescriptServices.TypeScript.ISyntaxList2
   ) = this()
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.avoscloudSdk.leanengineMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new AV AV.Query for the given AV.Object subclass.
@@ -66,12 +66,12 @@ class Query protected ()
   extends typingsSlinky.avoscloudSdk.mod.Query {
   def this(objectClass: js.Any) = this()
 }
-
 /* static members */
 @JSImport("leanengine", "Query")
 @js.native
 object Query extends js.Object {
+  
   def and(var_args: typingsSlinky.avoscloudSdk.mod.Query*): typingsSlinky.avoscloudSdk.mod.Query = js.native
+  
   def or(var_args: typingsSlinky.avoscloudSdk.mod.Query*): typingsSlinky.avoscloudSdk.mod.Query = js.native
 }
-

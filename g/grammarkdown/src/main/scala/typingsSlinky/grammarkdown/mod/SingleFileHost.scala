@@ -2,7 +2,7 @@ package typingsSlinky.grammarkdown.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown", "SingleFileHost")
 @js.native
@@ -17,4 +17,3 @@ class SingleFileHost protected ()
   ) = this()
   def this(content: String, file: String, hostFallback: typingsSlinky.grammarkdown.hostMod.Host) = this()
 }
-

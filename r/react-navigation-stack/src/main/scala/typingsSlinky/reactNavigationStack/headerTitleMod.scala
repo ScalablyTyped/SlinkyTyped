@@ -12,12 +12,14 @@ import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.key
 import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-navigation-stack/lib/typescript/src/vendor/views/Header/HeaderTitle", JSImport.Namespace)
 @js.native
 object headerTitleMod extends js.Object {
+  
   def default(hasTintColorStyleRest: Props): ReactElement = js.native
+  
   type Props = (Omit[
     typingsSlinky.react.mod.ComponentProps[
       ReactComponentClass[
@@ -27,4 +29,3 @@ object headerTitleMod extends js.Object {
     key
   ]) with Children
 }
-

@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.phaser.MatterJS.IEngineDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `Matter.Engine` module contains methods for creating and manipulating engines.
@@ -19,17 +19,18 @@ import scala.scalajs.js.annotation._
 @js.native
 class Engine ()
   extends typingsSlinky.phaser.MatterJS.Engine
-
 /* static members */
 @JSImport("matter", "Engine")
 @js.native
 object Engine extends js.Object {
+  
   /**
     * Clears the engine including the world, pairs and broadphase.
     * @method clear
     * @param {engine} engine
     */
   def clear(engine: typingsSlinky.phaser.MatterJS.Engine): Unit = js.native
+  
   /**
     * Creates a new engine. The options parameter is an object that specifies any properties you wish to override the defaults.
     * All properties have default values, and many are pre-calculated automatically based on other properties.
@@ -55,6 +56,7 @@ object Engine extends js.Object {
   def create(element: IEngineDefinition, options: IEngineDefinition): typingsSlinky.phaser.MatterJS.Engine = js.native
   def create(element: HTMLElement): typingsSlinky.phaser.MatterJS.Engine = js.native
   def create(element: HTMLElement, options: IEngineDefinition): typingsSlinky.phaser.MatterJS.Engine = js.native
+  
   /**
     * Merges two engines by keeping the configuration of `engineA` but replacing the world with the one from `engineB`.
     * @method merge
@@ -62,12 +64,14 @@ object Engine extends js.Object {
     * @param {engine} engineB
     */
   def merge(engineA: typingsSlinky.phaser.MatterJS.Engine, engineB: typingsSlinky.phaser.MatterJS.Engine): Unit = js.native
+  
   /**
     * An alias for `Runner.run`, see `Matter.Runner` for more information.
     * @method run
     * @param {engine} engine
     */
   def run(engine: typingsSlinky.phaser.MatterJS.Engine): Unit = js.native
+  
   /**
     * Moves the simulation forward in time by `delta` ms.
     * The `correction` argument is an optional `Number` that specifies the time correction factor to apply to the update.
@@ -88,4 +92,3 @@ object Engine extends js.Object {
   def update(engine: typingsSlinky.phaser.MatterJS.Engine, delta: Double): typingsSlinky.phaser.MatterJS.Engine = js.native
   def update(engine: typingsSlinky.phaser.MatterJS.Engine, delta: Double, correction: Double): typingsSlinky.phaser.MatterJS.Engine = js.native
 }
-

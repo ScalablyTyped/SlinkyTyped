@@ -5,11 +5,11 @@ import typingsSlinky.jestRuntime.mod.Context
 import typingsSlinky.jestTypes.configMod.ProjectConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jest/core/build/lib/create_context", JSImport.Namespace)
 @js.native
 object createContextMod extends js.Object {
+  
   def default(config: ProjectConfig, hasHasteFSModuleMap: HasteMapObject): Context = js.native
 }
-

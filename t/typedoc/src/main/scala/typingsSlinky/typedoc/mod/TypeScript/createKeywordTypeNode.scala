@@ -16,11 +16,12 @@ import typingsSlinky.typescript.mod.SyntaxKind.UnknownKeyword
 import typingsSlinky.typescript.mod.SyntaxKind.VoidKeyword
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createKeywordTypeNode")
 @js.native
 object createKeywordTypeNode extends js.Object {
+  
   def apply(kind: AnyKeyword): KeywordTypeNode = js.native
   def apply(kind: BigIntKeyword): KeywordTypeNode = js.native
   def apply(kind: BooleanKeyword): KeywordTypeNode = js.native
@@ -35,4 +36,3 @@ object createKeywordTypeNode extends js.Object {
   def apply(kind: UnknownKeyword): KeywordTypeNode = js.native
   def apply(kind: VoidKeyword): KeywordTypeNode = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.xrm.XrmEnum
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Constant Enum: Direction types for a process stage change event
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.Previous
 */
 trait StageChangeDirection extends js.Object
-
 object StageChangeDirection {
+  
   @scala.inline
   def Next: typingsSlinky.xrm.xrmStrings.Next = "Next".asInstanceOf[typingsSlinky.xrm.xrmStrings.Next]
+  
   @scala.inline
   def Previous: typingsSlinky.xrm.xrmStrings.Previous = "Previous".asInstanceOf[typingsSlinky.xrm.xrmStrings.Previous]
 }
-

@@ -2,9 +2,10 @@ package typingsSlinky.officeUiFabricReact
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object stackItemTypesMod {
+  
   type IStackItemComponent = typingsSlinky.uifabricFoundation.libIcomponentMod.IComponent[
     typingsSlinky.officeUiFabricReact.stackItemTypesMod.IStackItemProps, 
     typingsSlinky.officeUiFabricReact.stackItemTypesMod.IStackItemTokens, 
@@ -12,7 +13,9 @@ package object stackItemTypesMod {
     typingsSlinky.officeUiFabricReact.stackItemTypesMod.IStackItemProps, 
     js.Object
   ]
+  
   type IStackItemSlot = typingsSlinky.uifabricFoundation.libIslotsMod.ISlotProp[typingsSlinky.officeUiFabricReact.stackItemTypesMod.IStackItemProps, scala.Nothing]
+  
   type IStackItemStylesReturnType = typingsSlinky.std.ReturnType[
     typingsSlinky.std.Extract[
       typingsSlinky.uifabricFoundation.libIcomponentMod.IStylesFunctionOrObject[
@@ -23,6 +26,7 @@ package object stackItemTypesMod {
       js.Function
     ]
   ]
+  
   type IStackItemTokenReturnType = typingsSlinky.std.ReturnType[
     typingsSlinky.std.Extract[
       typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunctionOrObject[

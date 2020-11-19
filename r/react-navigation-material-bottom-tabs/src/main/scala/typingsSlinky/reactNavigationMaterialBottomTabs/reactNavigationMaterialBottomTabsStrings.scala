@@ -2,9 +2,46 @@ package typingsSlinky.reactNavigationMaterialBottomTabs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object reactNavigationMaterialBottomTabsStrings {
+  
+  @scala.inline
+  def getAccessibilityLabel: getAccessibilityLabel = "getAccessibilityLabel".asInstanceOf[getAccessibilityLabel]
+  
+  @scala.inline
+  def getBadge: getBadge = "getBadge".asInstanceOf[getBadge]
+  
+  @scala.inline
+  def getColor: getColor = "getColor".asInstanceOf[getColor]
+  
+  @scala.inline
+  def getLabelText: getLabelText = "getLabelText".asInstanceOf[getLabelText]
+  
+  @scala.inline
+  def getTestID: getTestID = "getTestID".asInstanceOf[getTestID]
+  
+  @scala.inline
+  def navigationState: navigationState = "navigationState".asInstanceOf[navigationState]
+  
+  @scala.inline
+  def onIndexChange: onIndexChange = "onIndexChange".asInstanceOf[onIndexChange]
+  
+  @scala.inline
+  def onTabPress: onTabPress = "onTabPress".asInstanceOf[onTabPress]
+  
+  @scala.inline
+  def refocus: refocus = "refocus".asInstanceOf[refocus]
+  
+  @scala.inline
+  def renderIcon: renderIcon = "renderIcon".asInstanceOf[renderIcon]
+  
+  @scala.inline
+  def renderLabel: renderLabel = "renderLabel".asInstanceOf[renderLabel]
+  
+  @scala.inline
+  def renderScene: renderScene = "renderScene".asInstanceOf[renderScene]
+  
   @js.native
   sealed trait getAccessibilityLabel extends js.Object
   
@@ -40,30 +77,4 @@ object reactNavigationMaterialBottomTabsStrings {
   
   @js.native
   sealed trait renderScene extends js.Object
-  
-  @scala.inline
-  def getAccessibilityLabel: getAccessibilityLabel = "getAccessibilityLabel".asInstanceOf[getAccessibilityLabel]
-  @scala.inline
-  def getBadge: getBadge = "getBadge".asInstanceOf[getBadge]
-  @scala.inline
-  def getColor: getColor = "getColor".asInstanceOf[getColor]
-  @scala.inline
-  def getLabelText: getLabelText = "getLabelText".asInstanceOf[getLabelText]
-  @scala.inline
-  def getTestID: getTestID = "getTestID".asInstanceOf[getTestID]
-  @scala.inline
-  def navigationState: navigationState = "navigationState".asInstanceOf[navigationState]
-  @scala.inline
-  def onIndexChange: onIndexChange = "onIndexChange".asInstanceOf[onIndexChange]
-  @scala.inline
-  def onTabPress: onTabPress = "onTabPress".asInstanceOf[onTabPress]
-  @scala.inline
-  def refocus: refocus = "refocus".asInstanceOf[refocus]
-  @scala.inline
-  def renderIcon: renderIcon = "renderIcon".asInstanceOf[renderIcon]
-  @scala.inline
-  def renderLabel: renderLabel = "renderLabel".asInstanceOf[renderLabel]
-  @scala.inline
-  def renderScene: renderScene = "renderScene".asInstanceOf[renderScene]
 }
-

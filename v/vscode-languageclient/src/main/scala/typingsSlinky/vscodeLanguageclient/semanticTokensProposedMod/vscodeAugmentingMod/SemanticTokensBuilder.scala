@@ -2,12 +2,13 @@ package typingsSlinky.vscodeLanguageclient.semanticTokensProposedMod.vscodeAugme
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode", "SemanticTokensBuilder")
 @js.native
 class SemanticTokensBuilder () extends js.Object {
+  
   def build(): js.typedarray.Uint32Array = js.native
+  
   def push(line: Double, char: Double, length: Double, tokenType: Double, tokenModifiers: Double): Unit = js.native
 }
-

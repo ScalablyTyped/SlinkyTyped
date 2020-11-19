@@ -2,11 +2,12 @@ package typingsSlinky.pkijs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pkijs/src/common", "getRandomValues")
 @js.native
 object getRandomValues extends js.Object {
+  
   /**
     * Initialize input Uint8Array by random values (with help from current "crypto engine")
     *
@@ -15,4 +16,3 @@ object getRandomValues extends js.Object {
     */
   def apply(view: js.typedarray.ArrayBufferView): js.typedarray.ArrayBufferView = js.native
 }
-

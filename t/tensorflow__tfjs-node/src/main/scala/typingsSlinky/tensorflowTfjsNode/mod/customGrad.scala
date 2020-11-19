@@ -4,11 +4,12 @@ import typingsSlinky.tensorflowTfjsCore.engineMod.CustomGradientFunc
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-node", "customGrad")
 @js.native
 object customGrad extends js.Object {
+  
   /**
     * Overrides the gradient computation of a function `f`.
     *
@@ -50,4 +51,3 @@ object customGrad extends js.Object {
   /** @doc {heading: 'Training', subheading: 'Gradients'} */
   def apply[T /* <: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] */](f: CustomGradientFunc[T]): js.Function1[/* repeated */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank], T] = js.native
 }
-

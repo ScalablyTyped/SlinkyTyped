@@ -3,27 +3,31 @@ package typingsSlinky.blueprintjsCore
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@blueprintjs/core/lib/esm/common/abstractPureComponent2", JSImport.Namespace)
 @js.native
 object abstractPureComponent2Mod extends js.Object {
+  
   @js.native
   abstract class AbstractPureComponent2[P, S, SS] () extends Component[P, S, SS] {
     def this(props: P) = this()
     def this(props: P, context: js.Any) = this()
     def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
-    var timeoutIds: js.Any = js.native
+    
     /**
       * Clear all known timeouts.
       */
     def clearTimeouts(): Unit = js.native
+    
     @JSName("componentDidUpdate")
     def componentDidUpdate_MAbstractPureComponent2(_prevProps: P, _prevState: S): Unit = js.native
     @JSName("componentDidUpdate")
     def componentDidUpdate_MAbstractPureComponent2(_prevProps: P, _prevState: S, _snapshot: SS): Unit = js.native
+    
     @JSName("componentWillUnmount")
     def componentWillUnmount_MAbstractPureComponent2(): Unit = js.native
+    
     /**
       * Set a timeout and remember its ID.
       * All stored timeouts will be cleared when component unmounts.
@@ -31,6 +35,9 @@ object abstractPureComponent2Mod extends js.Object {
       */
     def setTimeout(callback: js.Function0[Unit]): js.Function0[Unit] = js.native
     def setTimeout(callback: js.Function0[Unit], timeout: Double): js.Function0[Unit] = js.native
+    
+    var timeoutIds: js.Any = js.native
+    
     /**
       * Ensures that the props specified for a component are valid.
       * Implementations should check that props are valid and usually throw an Error if they are not.
@@ -42,6 +49,4 @@ object abstractPureComponent2Mod extends js.Object {
       */
     /* protected */ def validateProps(_props: P): Unit = js.native
   }
-  
 }
-

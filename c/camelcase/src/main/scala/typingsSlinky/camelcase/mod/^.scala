@@ -2,11 +2,12 @@ package typingsSlinky.camelcase.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("camelcase", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   Convert a dash/dot/underscore/space separated string to camelCase or PascalCase: `foo-bar` → `fooBar`.
   Correctly handles Unicode strings.
@@ -43,4 +44,3 @@ object ^ extends js.Object {
   def apply(input: js.Array[String]): String = js.native
   def apply(input: js.Array[String], options: Options): String = js.native
 }
-

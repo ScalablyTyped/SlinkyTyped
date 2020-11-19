@@ -2,7 +2,7 @@ package typingsSlinky.typescriptServices.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "PullSignatureSymbol")
 @js.native
@@ -11,16 +11,17 @@ class PullSignatureSymbol protected ()
   def this(kind: typingsSlinky.typescriptServices.TypeScript.PullElementKind) = this()
   def this(kind: typingsSlinky.typescriptServices.TypeScript.PullElementKind, _isDefinition: Boolean) = this()
 }
-
 /* static members */
 @JSImport("typescript-services", "PullSignatureSymbol")
 @js.native
 object PullSignatureSymbol extends js.Object {
+  
   def getSignatureTypeMemberName(
     candidateSignature: typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol,
     signatures: js.Array[typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol],
     scopeSymbol: typingsSlinky.typescriptServices.TypeScript.PullSymbol
   ): typingsSlinky.typescriptServices.TypeScript.MemberNameArray = js.native
+  
   def getSignaturesTypeNameEx(
     signatures: js.Array[typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol],
     prefix: String,
@@ -87,4 +88,3 @@ object PullSignatureSymbol extends js.Object {
     candidateSignature: typingsSlinky.typescriptServices.TypeScript.PullSignatureSymbol
   ): js.Array[typingsSlinky.typescriptServices.TypeScript.MemberName] = js.native
 }
-

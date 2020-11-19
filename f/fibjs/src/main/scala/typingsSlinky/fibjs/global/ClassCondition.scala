@@ -2,7 +2,7 @@ package typingsSlinky.fibjs.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Class_Condition")
 @js.native
@@ -24,4 +24,3 @@ class ClassCondition ()
     */
   def this(lock: typingsSlinky.fibjs.ClassLock) = this()
 }
-

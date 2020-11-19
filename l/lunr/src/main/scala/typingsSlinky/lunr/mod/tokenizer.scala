@@ -2,18 +2,12 @@ package typingsSlinky.lunr.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("lunr", "tokenizer")
 @js.native
 object tokenizer extends js.Object {
-  /**
-    * The separator used to split a string into tokens. Override this property to change the behaviour of
-    * `lunr.tokenizer` behaviour when tokenizing strings. By default this splits on whitespace and hyphens.
-    *
-    * @see lunr.tokenizer
-    */
-  var separator: js.RegExp = js.native
+  
   /**
     * A function for splitting a string into tokens ready to be inserted into
     * the search index. Uses `lunr.tokenizer.separator` to split strings, change
@@ -29,5 +23,12 @@ object tokenizer extends js.Object {
   def apply(obj: String): js.Array[Token] = js.native
   def apply(obj: js.Array[js.Object]): js.Array[Token] = js.native
   def apply(obj: js.Object): js.Array[Token] = js.native
+  
+  /**
+    * The separator used to split a string into tokens. Override this property to change the behaviour of
+    * `lunr.tokenizer` behaviour when tokenizing strings. By default this splits on whitespace and hyphens.
+    *
+    * @see lunr.tokenizer
+    */
+  var separator: js.RegExp = js.native
 }
-

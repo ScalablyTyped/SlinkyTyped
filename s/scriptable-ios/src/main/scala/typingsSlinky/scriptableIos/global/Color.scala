@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Stores color data including opacity._
@@ -26,85 +26,98 @@ class Color protected ()
     */
   def this(hex: String, alpha: Double) = this()
 }
-
 /* static members */
 @JSGlobal("Color")
 @js.native
 object Color extends js.Object {
+  
   /**
     * _Constructs a black color._
     * @see https://docs.scriptable.app/color/#black
     */
   def black(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a blue color._
     * @see https://docs.scriptable.app/color/#blue
     */
   def blue(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a brown color._
     * @see https://docs.scriptable.app/color/#brown
     */
   def brown(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a transparent color._
     * @see https://docs.scriptable.app/color/#clear
     */
   def clear(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a cyan color._
     * @see https://docs.scriptable.app/color/#cyan
     */
   def cyan(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a dark gray color._
     * @see https://docs.scriptable.app/color/#darkgray
     */
   def darkGray(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a gray color._
     * @see https://docs.scriptable.app/color/#gray
     */
   def gray(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a green color._
     * @see https://docs.scriptable.app/color/#green
     */
   def green(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a light gray color._
     * @see https://docs.scriptable.app/color/#lightgray
     */
   def lightGray(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a magenta color._
     * @see https://docs.scriptable.app/color/#magenta
     */
   def magenta(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a orange color._
     * @see https://docs.scriptable.app/color/#orange
     */
   def orange(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a purple color._
     * @see https://docs.scriptable.app/color/#purple
     */
   def purple(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a red color._
     * @see https://docs.scriptable.app/color/#red
     */
   def red(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a white color._
     * @see https://docs.scriptable.app/color/#white
     */
   def white(): typingsSlinky.scriptableIos.Color = js.native
+  
   /**
     * _Constructs a yellow color._
     * @see https://docs.scriptable.app/color/#yellow
     */
   def yellow(): typingsSlinky.scriptableIos.Color = js.native
 }
-

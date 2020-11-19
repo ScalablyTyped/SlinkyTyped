@@ -10,7 +10,7 @@ import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.SVGProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/Clock", "Clock")
 @js.native
@@ -26,7 +26,6 @@ class Clock protected ()
     context: js.Any
   ) = this()
 }
-
 @JSImport("grommet/es6/components/Clock", "Clock")
 @js.native
 object Clock extends TopLevel[
@@ -34,4 +33,3 @@ object Clock extends TopLevel[
         ClockProps with ((DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) | SVGProps[SVGSVGElement])
       ]
     ]
-

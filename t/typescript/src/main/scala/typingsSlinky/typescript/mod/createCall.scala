@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "createCall")
 @js.native
 object createCall extends js.Object {
+  
   def apply(expression: Expression): CallExpression = js.native
   def apply(
     expression: Expression,
@@ -16,4 +17,3 @@ object createCall extends js.Object {
   def apply(expression: Expression, typeArguments: js.Array[TypeNode]): CallExpression = js.native
   def apply(expression: Expression, typeArguments: js.Array[TypeNode], argumentsArray: js.Array[Expression]): CallExpression = js.native
 }
-

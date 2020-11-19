@@ -6,7 +6,7 @@ import typingsSlinky.avoscloudSdk.mod.Object.SaveOptions
 import typingsSlinky.avoscloudSdk.mod.Object.SetOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new model with defined attributes. A client id (cid) is
@@ -43,40 +43,70 @@ class Object_ () extends BaseObject {
   def this(attributes: js.Array[String], options: js.Any) = this()
   def this(className: js.UndefOr[scala.Nothing], options: js.Any) = this()
   def this(className: String, options: js.Any) = this()
-  var attributes: js.Any = js.native
-  var changed: Boolean = js.native
-  var cid: String = js.native
-  var className: String = js.native
-  var createdAt: js.Any = js.native
-  var id: js.Any = js.native
-  var updatedAt: js.Any = js.native
+  
   def add(attr: String, item: js.Any): Object = js.native
+  
   def addUnique(attr: String, item: js.Any): js.Any = js.native
+  
+  var attributes: js.Any = js.native
+  
   def change(options: js.Any): Object = js.native
+  
+  var changed: Boolean = js.native
+  
   def changedAttributes(diff: js.Any): Boolean = js.native
+  
+  var cid: String = js.native
+  
+  var className: String = js.native
+  
   def clear(options: js.Any): js.Any = js.native
+  
+  var createdAt: js.Any = js.native
+  
   def destroy[T](): Promise[T] = js.native
   def destroy[T](options: DestroyOptions): Promise[T] = js.native
+  
   def dirty(attr: String): Boolean = js.native
+  
   def dirtyKeys(): js.Array[String] = js.native
+  
   def escape(attr: String): String = js.native
+  
   def existed(): Boolean = js.native
+  
   def fetch[T](): Promise[T] = js.native
   def fetch[T](options: FetchOptions): Promise[T] = js.native
+  
   def get(attr: String): js.Any = js.native
+  
   def getACL(): ACL = js.native
+  
   def getObjectId(): String = js.native
+  
   def has(attr: String): Boolean = js.native
+  
   def hasChanged(attr: String): Boolean = js.native
+  
+  var id: js.Any = js.native
+  
   def increment(attr: String): js.Any = js.native
   def increment(attr: String, amount: Double): js.Any = js.native
+  
   def initialize(): Unit = js.native
+  
   def isValid(): Boolean = js.native
+  
   def op(attr: String): js.Any = js.native
+  
   def previous(attr: String): js.Any = js.native
+  
   def previousAttributes(): js.Any = js.native
+  
   def relation(attr: String): Relation = js.native
+  
   def remove(attr: String, item: js.Any): js.Any = js.native
+  
   def save[T](): Promise[T] = js.native
   def save[T](options: js.UndefOr[scala.Nothing], arg2: js.UndefOr[scala.Nothing], arg3: js.Any): Promise[T] = js.native
   def save[T](options: js.UndefOr[scala.Nothing], arg2: js.Any): Promise[T] = js.native
@@ -85,13 +115,18 @@ class Object_ () extends BaseObject {
   def save[T](options: SaveOptions, arg2: js.UndefOr[scala.Nothing], arg3: js.Any): Promise[T] = js.native
   def save[T](options: SaveOptions, arg2: js.Any): Promise[T] = js.native
   def save[T](options: SaveOptions, arg2: js.Any, arg3: js.Any): Promise[T] = js.native
+  
   def set(key: String, value: js.Any): Boolean = js.native
   def set(key: String, value: js.Any, options: SetOptions): Boolean = js.native
+  
   def setACL(acl: ACL): Boolean = js.native
   def setACL(acl: ACL, options: SuccessFailureOptions): Boolean = js.native
+  
   def unset(attr: String): js.Any = js.native
   def unset(attr: String, options: js.Any): js.Any = js.native
+  
+  var updatedAt: js.Any = js.native
+  
   def validate(attrs: js.Any): Boolean = js.native
   def validate(attrs: js.Any, options: SuccessFailureOptions): Boolean = js.native
 }
-

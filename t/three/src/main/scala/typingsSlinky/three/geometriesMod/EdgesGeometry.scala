@@ -4,7 +4,7 @@ import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/Geometries", "EdgesGeometry")
 @js.native
@@ -15,4 +15,3 @@ class EdgesGeometry protected ()
   def this(geometry: BufferGeometry, thresholdAngle: Double) = this()
   def this(geometry: Geometry, thresholdAngle: Double) = this()
 }
-

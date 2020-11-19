@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.anon.Partialcapacitynumberrand
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Particles/index", "GPUParticleSystem")
 @js.native
@@ -21,15 +21,16 @@ class GPUParticleSystem protected ()
   def this(name: String, options: Partialcapacitynumberrand, scene: Scene) = this()
   def this(name: String, options: Partialcapacitynumberrand, scene: Scene, isAnimationSheetEnabled: Boolean) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Particles/index", "GPUParticleSystem")
 @js.native
 object GPUParticleSystem extends js.Object {
+  
   /**
     * Gets a boolean indicating if the GPU particles can be rendered on current browser
     */
   def IsSupported: Boolean = js.native
+  
   /**
     * Parses a JSON object to create a GPU particle system.
     * @param parsedParticleSystem The JSON object to parse
@@ -41,4 +42,3 @@ object GPUParticleSystem extends js.Object {
   def Parse(parsedParticleSystem: js.Any, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.gpuParticleSystemMod.GPUParticleSystem = js.native
   def Parse(parsedParticleSystem: js.Any, scene: Scene, rootUrl: String, doNotStart: Boolean): typingsSlinky.babylonjs.gpuParticleSystemMod.GPUParticleSystem = js.native
 }
-

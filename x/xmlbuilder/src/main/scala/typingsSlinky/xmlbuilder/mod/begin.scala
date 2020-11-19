@@ -2,11 +2,12 @@ package typingsSlinky.xmlbuilder.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xmlbuilder", "begin")
 @js.native
 object begin extends js.Object {
+  
   /**
     * Creates a new XML document and returns the document node.
     * This function creates an empty document without the XML prolog or
@@ -33,4 +34,3 @@ object begin extends js.Object {
   def apply(options: OnDataCallback, onData: OnEndCallback): XMLDocumentCB = js.native
   def apply(options: OnDataCallback, onData: OnEndCallback, onEnd: OnEndCallback): XMLDocumentCB = js.native
 }
-

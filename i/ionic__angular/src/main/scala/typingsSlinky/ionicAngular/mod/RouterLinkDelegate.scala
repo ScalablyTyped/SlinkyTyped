@@ -6,7 +6,7 @@ import typingsSlinky.angularRouter.mod.Router
 import typingsSlinky.angularRouter.mod.RouterLink
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/angular", "RouterLinkDelegate")
 @js.native
@@ -26,4 +26,3 @@ class RouterLinkDelegate protected ()
     routerLink: RouterLink
   ) = this()
 }
-

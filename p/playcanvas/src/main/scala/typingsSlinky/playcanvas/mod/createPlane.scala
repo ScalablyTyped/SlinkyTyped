@@ -3,11 +3,12 @@ package typingsSlinky.playcanvas.mod
 import typingsSlinky.playcanvas.anon.HalfExtents
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("playcanvas", "createPlane")
 @js.native
 object createPlane extends js.Object {
+  
   /**
     * Creates a procedural plane-shaped mesh.
     *
@@ -28,4 +29,3 @@ object createPlane extends js.Object {
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice): typingsSlinky.playcanvas.pc.Mesh = js.native
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, opts: HalfExtents): typingsSlinky.playcanvas.pc.Mesh = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.openui5.global.sap.m
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Defines the keyboard handling behavior of the <code>sap.m.List</code> or <code>sap.m.Table</code>.
@@ -10,9 +10,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("sap.m.ListKeyboardMode")
 @js.native
 object ListKeyboardMode extends js.Object {
-  /* 0 */ val Edit: typingsSlinky.openui5.sap.m.ListKeyboardMode.Edit with Double = js.native
-  /* 1 */ val Navigation: typingsSlinky.openui5.sap.m.ListKeyboardMode.Navigation with Double = js.native
+  
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.openui5.sap.m.ListKeyboardMode with Double] = js.native
+  
+  /* 0 */ val Edit: typingsSlinky.openui5.sap.m.ListKeyboardMode.Edit with Double = js.native
+  
+  /* 1 */ val Navigation: typingsSlinky.openui5.sap.m.ListKeyboardMode.Navigation with Double = js.native
 }
-

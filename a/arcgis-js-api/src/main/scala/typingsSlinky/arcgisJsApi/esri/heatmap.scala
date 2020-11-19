@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This object contains a helper method for generating a [HeatmapRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-HeatmapRenderer.html) for a point [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html).
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait heatmap extends js.Object {
+  
   /**
     * Generates a [HeatmapRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-HeatmapRenderer.html) that may be applied directly to the layer used to call this method. The renderer represents points as a continuous surface using optimal colors for the indicated basemap.  This method should be called when at least some points are visible in the input view's extent. If no points are visible in the view, then the response will not return a useful visualization.  In most cases you will provide a `layer`, `basemap`, and optional `field` to generate this renderer. This is a scenario in which the statistics and the distribution of the data aren't well known and the user doesn't know what colors to use in the visualization.  The other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the statistics object to the `statistics` parameter to avoid making an extra call to the server.
     *
@@ -32,27 +33,30 @@ trait heatmap extends js.Object {
     */
   def createRenderer(params: heatmapCreateRendererParams): js.Promise[HeatmapRendererResult] = js.native
 }
-
 object heatmap {
+  
   @scala.inline
   def apply(createRenderer: heatmapCreateRendererParams => js.Promise[HeatmapRendererResult]): heatmap = {
     val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer))
     __obj.asInstanceOf[heatmap]
   }
+  
   @scala.inline
   implicit class heatmapOps[Self <: heatmap] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreateRenderer(value: heatmapCreateRendererParams => js.Promise[HeatmapRendererResult]): Self = this.set("createRenderer", js.Any.fromFunction1(value))
   }
-  
 }
-

@@ -2,11 +2,10 @@ package typingsSlinky.officeJsPreview.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait ChartSeriesDimension extends js.Object
-
 /**
   *
   * Represents the dimensions when getting values from chart series.
@@ -17,6 +16,7 @@ sealed trait ChartSeriesDimension extends js.Object
 @JSGlobal("Excel.ChartSeriesDimension")
 @js.native
 object ChartSeriesDimension extends js.Object {
+  
   /**
     * The chart series axis for the categories.
     *
@@ -44,6 +44,4 @@ object ChartSeriesDimension extends js.Object {
     */
   @js.native
   sealed trait yvalues extends ChartSeriesDimension
-  
 }
-

@@ -9,11 +9,37 @@ import typingsSlinky.reactNative.anon.DictoptionName
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
+  def cancelAnimationFrame(handle: Double): Unit = js.native
+  
+  def clearImmediate(handle: Double): Unit = js.native
+  
+  def clearInterval(handle: Double): Unit = js.native
+  
+  def clearTimeout(handle: Double): Unit = js.native
+  
+  def fetch(input: RequestInfo): js.Promise[typingsSlinky.reactNative.Response] = js.native
+  def fetch(input: RequestInfo, init: RequestInit): js.Promise[typingsSlinky.reactNative.Response] = js.native
+  
+  def fetchBundle(bundleId: Double, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  
+  def requestAnimationFrame(callback: js.Function1[/* time */ Double, Unit]): Double = js.native
+  
+  def setImmediate(handler: js.Function1[/* repeated */ js.Any, Unit]): Double = js.native
+  
+  def setInterval(handler: js.Any, timeout: js.UndefOr[scala.Nothing], args: js.Any*): Double = js.native
+  def setInterval(handler: js.Any, timeout: js.Any, args: js.Any*): Double = js.native
+  def setInterval(handler: js.Function1[/* repeated */ js.Any, Unit], timeout: Double): Double = js.native
+  
+  def setTimeout(handler: js.Any, timeout: js.UndefOr[scala.Nothing], args: js.Any*): Double = js.native
+  def setTimeout(handler: js.Any, timeout: js.Any, args: js.Any*): Double = js.native
+  def setTimeout(handler: js.Function1[/* repeated */ js.Any, Unit], timeout: Double): Double = js.native
+  
   @js.native
   /**
     * Initialize this controller.
@@ -37,10 +63,21 @@ object global extends js.Object {
     extends typingsSlinky.reactNative.Headers {
     def this(init: HeadersInit) = this()
   }
+  @js.native
+  object Headers
+    extends Instantiable0[typingsSlinky.reactNative.Headers]
+       with Instantiable1[/* init */ HeadersInit, typingsSlinky.reactNative.Headers]
   
   @js.native
   class MessageQueue ()
     extends typingsSlinky.reactNative.MessageQueue
+  /* static members */
+  @js.native
+  object MessageQueue extends js.Object {
+    
+    def spy(spyOrToggle: js.Function1[/* data */ SpyData, Unit]): Unit = js.native
+    def spy(spyOrToggle: Boolean): Unit = js.native
+  }
   
   @js.native
   class Request protected ()
@@ -50,12 +87,38 @@ object global extends js.Object {
     def this(input: String, init: RequestInit) = this()
     def this(input: typingsSlinky.reactNative.Request, init: RequestInit) = this()
   }
+  @js.native
+  object Request
+    extends Instantiable1[
+          (/* input */ typingsSlinky.reactNative.Request) | (/* input */ String), 
+          typingsSlinky.reactNative.Request
+        ]
+       with Instantiable2[
+          (/* input */ typingsSlinky.reactNative.Request) | (/* input */ String), 
+          /* init */ RequestInit, 
+          typingsSlinky.reactNative.Request
+        ]
   
   @js.native
   class Response ()
     extends typingsSlinky.reactNative.Response {
     def this(body: BodyInit) = this()
     def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
+  }
+  @js.native
+  object Response
+    extends Instantiable0[typingsSlinky.reactNative.Response]
+       with Instantiable1[/* body */ BodyInit, typingsSlinky.reactNative.Response]
+       with Instantiable2[
+          js.UndefOr[/* body */ BodyInit], 
+          /* init */ ResponseInit, 
+          typingsSlinky.reactNative.Response
+        ] {
+    
+    def error(): typingsSlinky.reactNative.Response = js.native
+    
+    def redirect(url: String): typingsSlinky.reactNative.Response = js.native
+    def redirect(url: String, status: Double): typingsSlinky.reactNative.Response = js.native
   }
   
   /**
@@ -68,6 +131,14 @@ object global extends js.Object {
     extends typingsSlinky.reactNative.URL {
     def this(url: String) = this()
     def this(url: String, base: String) = this()
+  }
+  /* static members */
+  @js.native
+  object URL extends js.Object {
+    
+    def createObjectURL(blob: Blob): typingsSlinky.reactNative.URL = js.native
+    
+    def revokeObjectURL(url: String): Unit = js.native
   }
   
   /**
@@ -93,75 +164,6 @@ object global extends js.Object {
     def this(uri: String, protocols: js.Array[String], options: DictoptionName) = this()
     def this(uri: String, protocols: Null, options: DictoptionName) = this()
   }
-  
-  @js.native
-  class XMLHttpRequest ()
-    extends typingsSlinky.reactNative.XMLHttpRequest
-  
-  @js.native
-  class XMLHttpRequestUpload ()
-    extends typingsSlinky.reactNative.XMLHttpRequestUpload
-  
-  def cancelAnimationFrame(handle: Double): Unit = js.native
-  def clearImmediate(handle: Double): Unit = js.native
-  def clearInterval(handle: Double): Unit = js.native
-  def clearTimeout(handle: Double): Unit = js.native
-  def fetch(input: RequestInfo): js.Promise[typingsSlinky.reactNative.Response] = js.native
-  def fetch(input: RequestInfo, init: RequestInit): js.Promise[typingsSlinky.reactNative.Response] = js.native
-  def fetchBundle(bundleId: Double, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
-  def requestAnimationFrame(callback: js.Function1[/* time */ Double, Unit]): Double = js.native
-  def setImmediate(handler: js.Function1[/* repeated */ js.Any, Unit]): Double = js.native
-  def setInterval(handler: js.Any, timeout: js.UndefOr[scala.Nothing], args: js.Any*): Double = js.native
-  def setInterval(handler: js.Any, timeout: js.Any, args: js.Any*): Double = js.native
-  def setInterval(handler: js.Function1[/* repeated */ js.Any, Unit], timeout: Double): Double = js.native
-  def setTimeout(handler: js.Any, timeout: js.UndefOr[scala.Nothing], args: js.Any*): Double = js.native
-  def setTimeout(handler: js.Any, timeout: js.Any, args: js.Any*): Double = js.native
-  def setTimeout(handler: js.Function1[/* repeated */ js.Any, Unit], timeout: Double): Double = js.native
-  @js.native
-  object Headers
-    extends Instantiable0[typingsSlinky.reactNative.Headers]
-       with Instantiable1[/* init */ HeadersInit, typingsSlinky.reactNative.Headers]
-  
-  /* static members */
-  @js.native
-  object MessageQueue extends js.Object {
-    def spy(spyOrToggle: js.Function1[/* data */ SpyData, Unit]): Unit = js.native
-    def spy(spyOrToggle: Boolean): Unit = js.native
-  }
-  
-  @js.native
-  object Request
-    extends Instantiable1[
-          (/* input */ typingsSlinky.reactNative.Request) | (/* input */ String), 
-          typingsSlinky.reactNative.Request
-        ]
-       with Instantiable2[
-          (/* input */ typingsSlinky.reactNative.Request) | (/* input */ String), 
-          /* init */ RequestInit, 
-          typingsSlinky.reactNative.Request
-        ]
-  
-  @js.native
-  object Response
-    extends Instantiable0[typingsSlinky.reactNative.Response]
-       with Instantiable1[/* body */ BodyInit, typingsSlinky.reactNative.Response]
-       with Instantiable2[
-          js.UndefOr[/* body */ BodyInit], 
-          /* init */ ResponseInit, 
-          typingsSlinky.reactNative.Response
-        ] {
-    def error(): typingsSlinky.reactNative.Response = js.native
-    def redirect(url: String): typingsSlinky.reactNative.Response = js.native
-    def redirect(url: String, status: Double): typingsSlinky.reactNative.Response = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object URL extends js.Object {
-    def createObjectURL(blob: Blob): typingsSlinky.reactNative.URL = js.native
-    def revokeObjectURL(url: String): Unit = js.native
-  }
-  
   @js.native
   object WebSocket
     extends Instantiable1[/* uri */ String, typingsSlinky.reactNative.WebSocket]
@@ -178,25 +180,38 @@ object global extends js.Object {
           /* options */ DictoptionName, 
           typingsSlinky.reactNative.WebSocket
         ] {
+    
     val CLOSED: Double = js.native
+    
     val CLOSING: Double = js.native
+    
     val CONNECTING: Double = js.native
+    
     val OPEN: Double = js.native
   }
   
   @js.native
+  class XMLHttpRequest ()
+    extends typingsSlinky.reactNative.XMLHttpRequest
+  @js.native
   object XMLHttpRequest
     extends Instantiable0[typingsSlinky.reactNative.XMLHttpRequest] {
+    
     val DONE: Double = js.native
+    
     val HEADERS_RECEIVED: Double = js.native
+    
     val LOADING: Double = js.native
+    
     val OPENED: Double = js.native
+    
     val UNSENT: Double = js.native
   }
   
   @js.native
+  class XMLHttpRequestUpload ()
+    extends typingsSlinky.reactNative.XMLHttpRequestUpload
+  @js.native
   object XMLHttpRequestUpload
     extends Instantiable0[typingsSlinky.reactNative.XMLHttpRequestUpload]
-  
 }
-

@@ -3,14 +3,16 @@ package typingsSlinky.d3Array.mod
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait HistogramGeneratorDate[Datum, Value /* <: js.UndefOr[js.Date] */]
   extends HistogramCommon[Datum, js.Date] {
+  
   def domain(): js.Function1[/* values */ ArrayLike[Value], js.Tuple2[js.Date, js.Date]] = js.native
   def domain(domainAccessor: js.Function1[/* values */ ArrayLike[Value], js.Tuple2[js.Date, js.Date]]): this.type = js.native
   def domain(domain: js.Tuple2[js.Date, js.Date]): this.type = js.native
+  
   def thresholds(): ThresholdDateArrayGenerator[Value] = js.native
   /**
     * Set a threshold accessor function, which returns the array of values to be used as
@@ -35,4 +37,3 @@ trait HistogramGeneratorDate[Datum, Value /* <: js.UndefOr[js.Date] */]
     */
   def thresholds(thresholds: ArrayLike[Value]): this.type = js.native
 }
-

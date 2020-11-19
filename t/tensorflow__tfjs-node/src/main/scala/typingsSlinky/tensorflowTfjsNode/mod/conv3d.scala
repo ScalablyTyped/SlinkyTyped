@@ -9,11 +9,12 @@ import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.same
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.valid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-node", "conv3d")
 @js.native
 object conv3d extends js.Object {
+  
   def apply[T /* <: Tensor4D | Tensor5D */](
     x: T | TensorLike,
     filter: Tensor5D | TensorLike,
@@ -23,4 +24,3 @@ object conv3d extends js.Object {
     dilations: js.UndefOr[(js.Tuple3[Double, Double, Double]) | Double]
   ): T = js.native
 }
-

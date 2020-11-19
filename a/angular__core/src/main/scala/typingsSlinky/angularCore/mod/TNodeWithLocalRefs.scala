@@ -2,7 +2,7 @@ package typingsSlinky.angularCore.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Type representing a set of TNodes that can have local refs (`#foo`) placed on them.
@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.angularCore.mod.TElementContainerNode
 */
 trait TNodeWithLocalRefs extends js.Object
-
 object TNodeWithLocalRefs {
+  
   @scala.inline
   def TContainerNode(
     child: Null,
@@ -34,6 +34,7 @@ object TNodeWithLocalRefs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TNodeWithLocalRefs]
   }
+  
   @scala.inline
   def ɵangularPackagesCoreCoreBf(
     classBindings: TStylingRange,
@@ -52,6 +53,7 @@ object TNodeWithLocalRefs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TNodeWithLocalRefs]
   }
+  
   @scala.inline
   def TElementContainerNode(
     classBindings: TStylingRange,
@@ -72,4 +74,3 @@ object TNodeWithLocalRefs {
     __obj.asInstanceOf[TNodeWithLocalRefs]
   }
 }
-

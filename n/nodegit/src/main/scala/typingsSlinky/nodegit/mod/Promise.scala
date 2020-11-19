@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.PromiseConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("nodegit", "Promise")
 @js.native
@@ -23,7 +23,6 @@ class Promise[T] protected ()
         Unit
       ]) = this()
 }
-
 @JSImport("nodegit", "Promise")
 @js.native
 object Promise
@@ -42,4 +41,3 @@ object Promise
         js.Promise[js.Object]
       ])
     ]
-

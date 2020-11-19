@@ -2,10 +2,11 @@ package typingsSlinky.imagesloaded.ImagesLoaded
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ImagesLoadedConstructor extends js.Object {
+  
   def apply(elem: ElementSelector): typingsSlinky.imagesloaded.ImagesLoaded.ImagesLoaded = js.native
   def apply(elem: ElementSelector, callback: ImagesLoadedCallback): typingsSlinky.imagesloaded.ImagesLoaded.ImagesLoaded = js.native
   /**
@@ -17,4 +18,3 @@ trait ImagesLoadedConstructor extends js.Object {
   def apply(elem: ElementSelector, options: ImagesLoadedOptions): typingsSlinky.imagesloaded.ImagesLoaded.ImagesLoaded = js.native
   def apply(elem: ElementSelector, options: ImagesLoadedOptions, callback: ImagesLoadedCallback): typingsSlinky.imagesloaded.ImagesLoaded.ImagesLoaded = js.native
 }
-

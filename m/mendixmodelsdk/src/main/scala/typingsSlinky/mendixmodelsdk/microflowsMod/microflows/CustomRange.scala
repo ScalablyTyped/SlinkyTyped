@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.CustomRange")
 @js.native
@@ -21,12 +21,12 @@ class CustomRange protected () extends Range {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FCustomRange: IModel = js.native
+  
   /**
     * The value of this property is conceptually of type microflowExpressions.MicroflowExpression.
     */
   def limitExpression: String = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
@@ -34,11 +34,17 @@ class CustomRange protected () extends Range {
     */
   def limitExpressionModel: Expression = js.native
   def limitExpressionModel_=(newValue: Expression): Unit = js.native
+  
   def limitExpression_=(newValue: String): Unit = js.native
+  
+  @JSName("model")
+  var model_FCustomRange: IModel = js.native
+  
   /**
     * The value of this property is conceptually of type microflowExpressions.MicroflowExpression.
     */
   def offsetExpression: String = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
@@ -46,32 +52,36 @@ class CustomRange protected () extends Range {
     */
   def offsetExpressionModel: Expression = js.native
   def offsetExpressionModel_=(newValue: Expression): Unit = js.native
+  
   def offsetExpression_=(newValue: String): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.CustomRange")
 @js.native
 object CustomRange extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new CustomRange instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): CustomRange = js.native
+  
   /**
     * Creates and returns a new CustomRange instance in the SDK and on the server.
     * The new CustomRange will be automatically stored in the 'range' property
     * of the parent DatabaseRetrieveSource element passed as argument.
     */
   def createInDatabaseRetrieveSourceUnderRange(container: DatabaseRetrieveSource): CustomRange = js.native
+  
   /**
     * Creates and returns a new CustomRange instance in the SDK and on the server.
     * The new CustomRange will be automatically stored in the 'range' property
     * of the parent ImportMappingCall element passed as argument.
     */
   def createInImportMappingCallUnderRange(container: ImportMappingCall): CustomRange = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

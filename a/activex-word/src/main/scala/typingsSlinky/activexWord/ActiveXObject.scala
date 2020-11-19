@@ -120,10 +120,11 @@ import typingsSlinky.activexWord.anon.SelSelection
 import typingsSlinky.activexWord.anon.SyncEventTypeMsoSyncEventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ActiveXObject extends js.Object {
+  
   def on(
     obj: Application,
     event: DocumentBeforeClose,
@@ -520,6 +521,7 @@ trait ActiveXObject extends js.Object {
     event: Startup,
     handler: js.ThisFunction1[/* this */ Application, /* parameter */ js.Object, Unit]
   ): Unit = js.native
+  
   @JSName("set")
   def set_ActiveWritingStyle(obj: Document, propertyName: ActiveWritingStyle, parameterTypes: js.Array[_], newValue: String): Unit = js.native
   @JSName("set")
@@ -537,4 +539,3 @@ trait ActiveXObject extends js.Object {
     newValue: String
   ): Unit = js.native
 }
-

@@ -6,9 +6,10 @@ import typingsSlinky.rcTable.expandedRowMod.ExpandedRowProps
 import typingsSlinky.rcTable.interfaceMod.CustomizeComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ExpandedRow {
+  
   @JSImport("rc-table/lib/Body/ExpandedRow", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -19,6 +20,7 @@ object ExpandedRow {
        with StBuildingComponent[tag.type, js.Object]
   
   def withProps[RecordType](p: ExpandedRowProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[RecordType](
     cellComponent: CustomizeComponent,
@@ -36,4 +38,3 @@ object ExpandedRow {
     new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[ExpandedRowProps[RecordType]]))
   }
 }
-

@@ -5,19 +5,17 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.anon.AnimatedBoolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
 - Dropped new (args : ...any): react-native.react-native.ScrollResponderMixin */ @JSImport("react-native", "ScrollView")
 @js.native
 class ScrollView ()
   extends Component[ScrollViewProps, js.Object, js.Any] {
-  /**
-    * @deprecated Use scrollTo instead
-    */
-  var scrollWithoutAnimationTo: js.UndefOr[js.Function2[/* y */ Double, /* x */ Double, Unit]] = js.native
+  
   // Undocumented
   def getInnerViewNode(): js.Any = js.native
+  
   /**
     * Returns a reference to the underlying scroll responder, which supports
     * operations like `scrollTo`. All ScrollView-like components should
@@ -25,7 +23,9 @@ class ScrollView ()
     * to the underlying scroll responder's methods.
     */
   def getScrollResponder(): ReactElement = js.native
+  
   def getScrollableNode(): js.Any = js.native
+  
   /**
     * Scrolls to a given x, y offset, either immediately or with a smooth animation.
     * Syntax:
@@ -48,6 +48,7 @@ class ScrollView ()
   def scrollTo(y: typingsSlinky.reactNative.anon.Animated, x: js.UndefOr[scala.Nothing], animated: Boolean): Unit = js.native
   def scrollTo(y: typingsSlinky.reactNative.anon.Animated, x: Double): Unit = js.native
   def scrollTo(y: typingsSlinky.reactNative.anon.Animated, x: Double, animated: Boolean): Unit = js.native
+  
   /**
     * A helper function that scrolls to the end of the scrollview;
     * If this is a vertical ScrollView, it scrolls to the bottom.
@@ -58,5 +59,9 @@ class ScrollView ()
     */
   def scrollToEnd(): Unit = js.native
   def scrollToEnd(options: AnimatedBoolean): Unit = js.native
+  
+  /**
+    * @deprecated Use scrollTo instead
+    */
+  var scrollWithoutAnimationTo: js.UndefOr[js.Function2[/* y */ Double, /* x */ Double, Unit]] = js.native
 }
-

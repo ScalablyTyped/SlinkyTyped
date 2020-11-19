@@ -3,7 +3,7 @@ package typingsSlinky.googlemaps.global.google.maps
 import typingsSlinky.googlemaps.google.maps.LatLngLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A LatLng is a point in geographical coordinates: latitude and longitude.
@@ -46,4 +46,3 @@ class LatLng protected ()
   def this(literal: LatLngLiteral, noWrap: Boolean) = this()
   def this(lat: Double, lng: Double, noWrap: Boolean) = this()
 }
-

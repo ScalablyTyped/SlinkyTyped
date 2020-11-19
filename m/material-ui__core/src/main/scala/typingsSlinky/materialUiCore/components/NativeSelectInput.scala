@@ -14,9 +14,10 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.ReactType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object NativeSelectInput {
+  
   @JSImport("@material-ui/core/NativeSelect/NativeSelectInput", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -25,29 +26,39 @@ object NativeSelectInput {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def IconComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def IconComponentComponentClass(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def IconComponent(value: ReactType[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def inputRef(value: /* ref */ HTMLSelectElement | Node => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ ReactElement) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    
     @scala.inline
     def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
+    
     @scala.inline
     def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def variant(value: standard | outlined | filled): this.type = set("variant", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: NativeSelectInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: NativeSelectInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

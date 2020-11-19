@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.ui.DropTargetAreaOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("kendo.ui.DropTargetArea")
 @js.native
@@ -13,4 +13,3 @@ class DropTargetArea protected ()
   def this(element: Element) = this()
   def this(element: Element, options: DropTargetAreaOptions) = this()
 }
-

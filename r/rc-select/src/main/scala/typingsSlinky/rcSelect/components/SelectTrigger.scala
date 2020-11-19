@@ -10,9 +10,10 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SelectTrigger {
+  
   @JSImport("rc-select/lib/SelectTrigger", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -21,19 +22,25 @@ object SelectTrigger {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, RefTriggerProps] {
+    
     @scala.inline
     def animation(value: String): this.type = set("animation", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def dropdownMatchSelectWidth(value: Boolean | Double): this.type = set("dropdownMatchSelectWidth", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def dropdownRender(value: /* menu */ ReactElement => ReactElement): this.type = set("dropdownRender", js.Any.fromFunction1(value))
+    
     @scala.inline
     def getPopupContainer(value: /* props */ js.Any => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SelectTriggerProps with RefAttributes[RefTriggerProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     containerWidth: Double,
@@ -52,4 +59,3 @@ object SelectTrigger {
     new Builder(js.Array(this.component, __props.asInstanceOf[SelectTriggerProps with RefAttributes[RefTriggerProps]]))
   }
 }
-

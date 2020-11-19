@@ -5,11 +5,12 @@ import typingsSlinky.samchon.invokeParameterMod.InvokeParameter
 import typingsSlinky.sxml.mod.XML
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("samchon/protocol/invoke/Invoke", JSImport.Namespace)
 @js.native
 object invokeMod extends js.Object {
+  
   @js.native
   /**
     * Default Constructor.
@@ -29,10 +30,7 @@ object invokeMod extends js.Object {
       * @param parameters
       */
     def this(listener: String, parameters: (Boolean | Double | String | XML | js.typedarray.Uint8Array)*) = this()
-    /**
-      * Listener, represent function's name.
-      */
-    var listener: js.Any = js.native
+    
     /**
       * Apply to a matched function.
       *
@@ -49,17 +47,22 @@ object invokeMod extends js.Object {
       */
     @JSName("apply")
     def apply(thisArg: js.Object, func: js.Function): Unit = js.native
+    
     /**
       * Get arguments for Function.apply().
       *
       * @return An array containing values of the contained parameters.
       */
     def getArguments(): js.Array[_] = js.native
+    
     /**
       * Get listener.
       */
     def getListener(): String = js.native
+    
+    /**
+      * Listener, represent function's name.
+      */
+    var listener: js.Any = js.native
   }
-  
 }
-

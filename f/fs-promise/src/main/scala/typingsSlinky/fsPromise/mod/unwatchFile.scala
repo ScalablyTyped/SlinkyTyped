@@ -3,11 +3,12 @@ package typingsSlinky.fsPromise.mod
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs-promise", "unwatchFile")
 @js.native
 object unwatchFile extends js.Object {
+  
   def apply(filename: PathLike): Unit = js.native
   def apply(
     filename: PathLike,
@@ -18,4 +19,3 @@ object unwatchFile extends js.Object {
     ]
   ): Unit = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.mod
 import org.scalajs.dom.raw.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "LoadFileError")
 @js.native
@@ -19,4 +19,3 @@ class LoadFileError protected ()
   def this(message: String, `object`: typingsSlinky.babylonjs.webRequestMod.WebRequest) = this()
   def this(message: String, `object`: File) = this()
 }
-

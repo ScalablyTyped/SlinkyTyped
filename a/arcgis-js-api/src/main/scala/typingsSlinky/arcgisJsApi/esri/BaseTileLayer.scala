@@ -6,34 +6,14 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`base-tile`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bing-maps`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BaseTileLayer
   extends Layer
      with ScaleRangeLayer
      with RefreshableLayer {
-  /**
-    * The spatial reference of the layer.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseTileLayer.html#spatialReference)
-    *
-    * @default {@link module:esri/geometry/SpatialReference#WebMercator SpatialReference.WebMercator}
-    */
-  var spatialReference: SpatialReference = js.native
-  /**
-    * The tiling scheme information for the layer.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseTileLayer.html#tileInfo)
-    */
-  var tileInfo: TileInfo = js.native
-  /**
-    * For [BaseTileLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseTileLayer.html) the type is `base-tile`.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseTileLayer.html#type)
-    */
-  @JSName("type")
-  val type_BaseTileLayer: `base-tile` | `bing-maps` = js.native
+  
   /**
     * Adds a promise to the layer's [loadable](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#loadable) chain. This is typically used in the [load()](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseTileLayer.html#load) method to ensure that all [loadable](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#loadable) resources required for the layer to function are loaded prior to this layer resolving and becoming [loaded](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseTileLayer.html#loaded).
     *
@@ -43,6 +23,7 @@ trait BaseTileLayer
     *
     */
   def addResolvingPromise(promiseToLoad: js.Promise[_]): js.Promise[_] = js.native
+  
   /**
     * This method fetches a tile for the given level, row and column present in the view. Override this method if the data or image returned from the server needs to be processed before it can be displayed.
     *
@@ -58,6 +39,7 @@ trait BaseTileLayer
     */
   def fetchTile(level: Double, row: Double, col: Double): js.Promise[HTMLImageElement | HTMLCanvasElement] = js.native
   def fetchTile(level: Double, row: Double, col: Double, options: BaseTileLayerFetchTileOptions): js.Promise[HTMLImageElement | HTMLCanvasElement] = js.native
+  
   /**
     * Returns the bounds of the tile as an array of four numbers that be readily converted to an [Extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html) object. The value for each item in the array is described in the following table:
     *
@@ -79,6 +61,7 @@ trait BaseTileLayer
     */
   def getTileBounds(level: Double, row: Double, column: Double): js.Array[Double] = js.native
   def getTileBounds(level: Double, row: Double, column: Double, out: js.Array[Double]): js.Array[Double] = js.native
+  
   /**
     * This method returns a URL to an image for a given level, row and column. Override this method to construct the URL for the image based on user interaction.
     *
@@ -90,5 +73,28 @@ trait BaseTileLayer
     *
     */
   def getTileUrl(level: Double, row: Double, col: Double): String = js.native
+  
+  /**
+    * The spatial reference of the layer.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseTileLayer.html#spatialReference)
+    *
+    * @default {@link module:esri/geometry/SpatialReference#WebMercator SpatialReference.WebMercator}
+    */
+  var spatialReference: SpatialReference = js.native
+  
+  /**
+    * The tiling scheme information for the layer.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseTileLayer.html#tileInfo)
+    */
+  var tileInfo: TileInfo = js.native
+  
+  /**
+    * For [BaseTileLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseTileLayer.html) the type is `base-tile`.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseTileLayer.html#type)
+    */
+  @JSName("type")
+  val type_BaseTileLayer: `base-tile` | `bing-maps` = js.native
 }
-

@@ -7,11 +7,12 @@ import typingsSlinky.typescript.mod.ParameterDeclaration
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateIndexSignature")
 @js.native
 object updateIndexSignature extends js.Object {
+  
   def apply(
     node: IndexSignatureDeclaration,
     decorators: js.UndefOr[scala.Nothing],
@@ -41,4 +42,3 @@ object updateIndexSignature extends js.Object {
     `type`: TypeNode
   ): IndexSignatureDeclaration = js.native
 }
-

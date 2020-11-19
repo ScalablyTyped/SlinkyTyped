@@ -7,11 +7,12 @@ import typingsSlinky.std.AsyncIterator
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server-express", "linkToSubscriber")
 @js.native
 object linkToSubscriber extends js.Object {
+  
   def apply(link: ApolloLink): js.Function1[
     /* hasDocumentVariablesContextInfo */ Context[_, _], 
     js.Promise[
@@ -19,4 +20,3 @@ object linkToSubscriber extends js.Object {
     ]
   ] = js.native
 }
-

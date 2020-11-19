@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientGlacierNode
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-glacier-node/types/DescribeJobExceptionsUnion", JSImport.Namespace)
 @js.native
 object describeJobExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientGlacierNode.typesResourceNotFoundExceptionMod.ResourceNotFoundException
     - typingsSlinky.awsSdkClientGlacierNode.typesInvalidParameterValueExceptionMod.InvalidParameterValueException
@@ -14,6 +15,4 @@ object describeJobExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientGlacierNode.typesServiceUnavailableExceptionMod.ServiceUnavailableException
   */
   trait DescribeJobExceptionsUnion extends js.Object
-  
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-sqs-node/commands/SendMessageBatchCommand", JSImport.Namespace)
 @js.native
 object sendMessageBatchCommandMod extends js.Object {
+  
   @js.native
   class SendMessageBatchCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object sendMessageBatchCommandMod extends js.Object {
           Readable
         ] {
     def this(input: SendMessageBatchInput) = this()
+    
     val middlewareStack: MiddlewareStack[SendMessageBatchInput, SendMessageBatchOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: SQSResolvedConfiguration
     ): Handler[SendMessageBatchInput, SendMessageBatchOutput] = js.native
   }
-  
 }
-

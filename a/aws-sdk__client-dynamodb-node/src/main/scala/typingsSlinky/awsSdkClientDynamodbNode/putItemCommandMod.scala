@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-dynamodb-node/commands/PutItemCommand", JSImport.Namespace)
 @js.native
 object putItemCommandMod extends js.Object {
+  
   @js.native
   class PutItemCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object putItemCommandMod extends js.Object {
           Readable
         ] {
     def this(input: PutItemInput) = this()
+    
     val middlewareStack: MiddlewareStack[PutItemInput, PutItemOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[PutItemInput, PutItemOutput] = js.native
   }
-  
 }
-

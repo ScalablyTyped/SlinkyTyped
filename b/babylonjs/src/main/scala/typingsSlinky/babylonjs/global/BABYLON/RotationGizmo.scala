@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.RotationGizmo")
 @js.native
@@ -15,16 +15,22 @@ import scala.scalajs.js.annotation._
 class RotationGizmo ()
   extends typingsSlinky.babylonjs.BABYLON.RotationGizmo {
   def this(gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer) = this()
+  def this(gizmoLayer: js.UndefOr[scala.Nothing], tessellation: Double) = this()
   def this(gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer, tessellation: Double) = this()
+  def this(
+    gizmoLayer: js.UndefOr[scala.Nothing],
+    tessellation: js.UndefOr[scala.Nothing],
+    useEulerRotation: Boolean
+  ) = this()
+  def this(gizmoLayer: js.UndefOr[scala.Nothing], tessellation: Double, useEulerRotation: Boolean) = this()
+  def this(
+    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
+    tessellation: js.UndefOr[scala.Nothing],
+    useEulerRotation: Boolean
+  ) = this()
   def this(
     gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
     tessellation: Double,
     useEulerRotation: Boolean
   ) = this()
-  /**
-    * Releases all held resources
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
 }
-

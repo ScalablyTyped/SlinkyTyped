@@ -4,11 +4,11 @@ import typingsSlinky.typescript.mod.Expression
 import typingsSlinky.typescript.mod.ParenthesizedExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateParen")
 @js.native
 object updateParen extends js.Object {
+  
   def apply(node: ParenthesizedExpression, expression: Expression): ParenthesizedExpression = js.native
 }
-

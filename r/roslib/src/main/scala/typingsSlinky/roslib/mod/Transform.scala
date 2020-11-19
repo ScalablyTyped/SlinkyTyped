@@ -3,7 +3,7 @@ package typingsSlinky.roslib.mod
 import typingsSlinky.roslib.anon.Rotation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("roslib", "Transform")
 @js.native
@@ -17,8 +17,9 @@ import scala.scalajs.js.annotation._
   */
 class Transform () extends js.Object {
   def this(options: Rotation) = this()
+  
   var rotation: Quaternion = js.native
+  
   // getters
   var translation: Vector3 = js.native
 }
-

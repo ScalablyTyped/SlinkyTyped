@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MarketplaceEntitlementService extends Service {
+  
   @JSName("config")
   var config_MarketplaceEntitlementService: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * GetEntitlements retrieves entitlement values for a given product. The results can be filtered based on customer identifier or product dimensions.
     */
@@ -26,4 +28,3 @@ trait MarketplaceEntitlementService extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ GetEntitlementsResult, Unit]
   ): Request[GetEntitlementsResult, AWSError] = js.native
 }
-

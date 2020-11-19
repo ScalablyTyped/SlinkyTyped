@@ -19,36 +19,51 @@ import typingsSlinky.gapiClientGames.gapiClientGamesStrings.games
 import typingsSlinky.gapiClientGames.gapiClientGamesStrings.v1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object gapi extends js.Object {
+    
     @js.native
     object client extends js.Object {
+      
       val achievementDefinitions: AchievementDefinitionsResource = js.native
+      
       val achievements: AchievementsResource = js.native
+      
       val applications: ApplicationsResource = js.native
+      
       val events: EventsResource = js.native
+      
       val leaderboards: LeaderboardsResource = js.native
-      val metagame: MetagameResource = js.native
-      val players: PlayersResource = js.native
-      val pushtokens: PushtokensResource = js.native
-      val questMilestones: QuestMilestonesResource = js.native
-      val quests: QuestsResource = js.native
-      val revisions: RevisionsResource = js.native
-      val rooms: RoomsResource = js.native
-      val scores: ScoresResource = js.native
-      val snapshots: SnapshotsResource = js.native
-      val turnBasedMatches: TurnBasedMatchesResource = js.native
+      
       /** Load Google Play Game Services API v1 */
       def load(name: games, version: v1): js.Thenable[Unit] = js.native
       def load(name: games, version: v1, callback: js.Function0[_]): Unit = js.native
+      
+      val metagame: MetagameResource = js.native
+      
+      val players: PlayersResource = js.native
+      
+      val pushtokens: PushtokensResource = js.native
+      
+      val questMilestones: QuestMilestonesResource = js.native
+      
+      val quests: QuestsResource = js.native
+      
+      val revisions: RevisionsResource = js.native
+      
+      val rooms: RoomsResource = js.native
+      
+      val scores: ScoresResource = js.native
+      
+      val snapshots: SnapshotsResource = js.native
+      
+      val turnBasedMatches: TurnBasedMatchesResource = js.native
     }
-    
   }
-  
 }
-

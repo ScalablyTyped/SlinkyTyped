@@ -1,9 +1,9 @@
 package typingsSlinky.babylonjs.indexMod
 
-import typingsSlinky.babylonjs.anon.UpdatableBoolean
+import typingsSlinky.babylonjs.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "PointsCloudSystem")
 @js.native
@@ -18,11 +18,5 @@ class PointsCloudSystem protected ()
     * * updatable (optional boolean, default true) : if the PCS must be updatable or immutable
     */
   def this(name: String, pointSize: Double, scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
-  def this(
-    name: String,
-    pointSize: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
-    options: UpdatableBoolean
-  ) = this()
+  def this(name: String, pointSize: Double, scene: typingsSlinky.babylonjs.sceneMod.Scene, options: `0`) = this()
 }
-

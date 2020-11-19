@@ -2,17 +2,17 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.StringTools")
 @js.native
 class StringTools ()
   extends typingsSlinky.babylonjs.BABYLON.StringTools
-
 /* static members */
 @JSGlobal("BABYLON.StringTools")
 @js.native
 object StringTools extends js.Object {
+  
   def Decode(buffer: js.typedarray.Uint16Array): String = js.native
   /**
     * Decodes a buffer into a string
@@ -20,6 +20,7 @@ object StringTools extends js.Object {
     * @returns The decoded string
     */
   def Decode(buffer: js.typedarray.Uint8Array): String = js.native
+  
   /**
     * Encode a buffer to a base64 string
     * @param buffer defines the buffer to encode
@@ -27,6 +28,7 @@ object StringTools extends js.Object {
     */
   def EncodeArrayBufferToBase64(buffer: js.typedarray.ArrayBuffer): String = js.native
   def EncodeArrayBufferToBase64(buffer: js.typedarray.ArrayBufferView): String = js.native
+  
   /**
     * Checks for a matching suffix at the end of a string (for ES5 and lower)
     * @param str Source string
@@ -34,6 +36,7 @@ object StringTools extends js.Object {
     * @returns Boolean indicating whether the suffix was found (true) or not (false)
     */
   def EndsWith(str: String, suffix: String): Boolean = js.native
+  
   /**
     * Checks for a matching suffix at the beginning of a string (for ES5 and lower)
     * @param str Source string
@@ -42,4 +45,3 @@ object StringTools extends js.Object {
     */
   def StartsWith(str: String, suffix: String): Boolean = js.native
 }
-

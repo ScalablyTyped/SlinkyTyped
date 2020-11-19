@@ -7,11 +7,14 @@ import typingsSlinky.sawtoothSdk.coreMod.PrivateKey
 import typingsSlinky.sawtoothSdk.coreMod.PublicKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/signing", JSImport.Namespace)
 @js.native
 object signingMod extends js.Object {
+  
+  def createContext(algorithmName: String): Context = js.native
+  
   @js.native
   class CryptoFactory protected () extends js.Object {
     /**
@@ -20,12 +23,15 @@ object signingMod extends js.Object {
       * @param context - a cryptographic context
       */
     def this(context: Context) = this()
+    
     /** A cryptographic context */
     var _context: Context = js.native
+    
     /**
       * Returns the context associated with this factory
       *
       */ def getContext(): Context = js.native
+    
     /**
       * Create a new signer for the given private key.
       *
@@ -43,14 +49,19 @@ object signingMod extends js.Object {
       * @param privateKey - private key
       */
     def this(content: Context, privateKey: PrivateKey) = this()
+    
     var _context: Context = js.native
+    
     var _privateKey: PrivateKey = js.native
+    
     var _publicKey: js.UndefOr[PublicKey] = js.native
+    
     /**
       * Return the public key for this Signer instance.
       *
       */
     def getPublicKey(): PublicKey = js.native
+    
     /**
       * Signs the given message.
       *
@@ -60,7 +71,5 @@ object signingMod extends js.Object {
     def sign(message: Buffer): String = js.native
   }
   
-  def createContext(algorithmName: String): Context = js.native
   type message = String | Buffer | TypedArray | js.typedarray.DataView
 }
-

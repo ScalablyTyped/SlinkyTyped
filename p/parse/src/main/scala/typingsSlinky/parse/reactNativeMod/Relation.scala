@@ -3,7 +3,7 @@ package typingsSlinky.parse.reactNativeMod
 import typingsSlinky.parse.mod.global.Parse.Attributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A class that is used to access all of the children of a many-to-many relationship.
@@ -17,4 +17,3 @@ class Relation[S /* <: typingsSlinky.parse.mod.global.Parse.Object[Attributes] *
   def this(parent: S, key: String) = this()
   def this(parent: js.UndefOr[scala.Nothing], key: String) = this()
 }
-

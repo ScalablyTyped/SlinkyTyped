@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.parse.mod.global.Parse.Attributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new parse Parse.Query for the given Parse.Object subclass.
@@ -71,14 +71,16 @@ class Query[T /* <: typingsSlinky.parse.mod.global.Parse.Object[Attributes] */] 
         T | typingsSlinky.parse.mod.global.Parse.Object[Attributes]
       ]) = this()
 }
-
 /* static members */
 @JSImport("parse/react-native", "Query")
 @js.native
 object Query extends js.Object {
+  
   def and[U /* <: typingsSlinky.parse.mod.global.Parse.Object[Attributes] */](args: typingsSlinky.parse.mod.global.Parse.Query[U]*): typingsSlinky.parse.mod.global.Parse.Query[U] = js.native
+  
   def fromJSON[U /* <: typingsSlinky.parse.mod.global.Parse.Object[Attributes] */](className: String, json: js.Any): typingsSlinky.parse.mod.global.Parse.Query[U] = js.native
+  
   def nor[U /* <: typingsSlinky.parse.mod.global.Parse.Object[Attributes] */](args: typingsSlinky.parse.mod.global.Parse.Query[U]*): typingsSlinky.parse.mod.global.Parse.Query[U] = js.native
+  
   def or[U /* <: typingsSlinky.parse.mod.global.Parse.Object[Attributes] */](var_args: typingsSlinky.parse.mod.global.Parse.Query[U]*): typingsSlinky.parse.mod.global.Parse.Query[U] = js.native
 }
-

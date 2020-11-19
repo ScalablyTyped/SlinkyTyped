@@ -3,7 +3,7 @@ package typingsSlinky.vexflow.mod.Flow
 import typingsSlinky.vexflow.anon.Positions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vexflow", "Flow.TabNote")
 @js.native
@@ -12,4 +12,3 @@ class TabNote protected ()
   def this(tab_struct: Positions) = this()
   def this(tab_struct: Positions, draw_stem: Boolean) = this()
 }
-

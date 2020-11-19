@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable4
 import typingsSlinky.ace.AceAjax.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new `Range` object with the given starting and ending row and column points.
@@ -23,6 +23,6 @@ object Range
       /* endColumn */ Double, 
       typingsSlinky.ace.AceAjax.Range
     ] {
+  
   def fromPoints(pos1: Position, pos2: Position): typingsSlinky.ace.AceAjax.Range = js.native
 }
-

@@ -11,7 +11,7 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.BottomBarItem
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.17.0: introduced
@@ -27,31 +27,34 @@ class CreateObjectClientAction protected () extends ClientAction {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FCreateObjectClientAction: IModel = js.native
+  
   def entityRef: EntityRef | Null = js.native
   def entityRef_=(newValue: EntityRef | Null): Unit = js.native
+  
+  @JSName("model")
+  var model_FCreateObjectClientAction: IModel = js.native
+  
   /**
     * In version 8.11.0: introduced
     */
   def numberOfPagesToClose: Double = js.native
   def numberOfPagesToClose_=(newValue: Double): Unit = js.native
+  
   def pageSettings: PageSettings = js.native
   def pageSettings_=(newValue: PageSettings): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.CreateObjectClientAction")
 @js.native
 object CreateObjectClientAction extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'action' property
@@ -61,6 +64,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInActionButtonUnderAction(container: ActionButton): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'action' property
@@ -70,6 +74,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInActionItemUnderAction(container: ActionItem): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'onChangeAction' property
@@ -79,6 +84,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInAssociationWidgetUnderOnChangeAction(container: AssociationWidget): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'onChangeAction' property
@@ -88,6 +94,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInAttributeWidgetUnderOnChangeAction(container: AttributeWidget): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'onEnterAction' property
@@ -97,6 +104,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInAttributeWidgetUnderOnEnterAction(container: AttributeWidget): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'onLeaveAction' property
@@ -106,6 +114,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInAttributeWidgetUnderOnLeaveAction(container: AttributeWidget): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'action' property
@@ -115,6 +124,7 @@ object CreateObjectClientAction extends js.Object {
     *  8.0.0 and higher
     */
   def createInBottomBarItemUnderAction(container: BottomBarItem): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'onClickAction' property
@@ -124,6 +134,7 @@ object CreateObjectClientAction extends js.Object {
     *  8.3.0 and higher
     */
   def createInDivContainerUnderOnClickAction(container: DivContainer): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'clickAction' property
@@ -133,6 +144,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.18.0 and higher
     */
   def createInDynamicImageViewerUnderClickAction(container: DynamicImageViewer): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'action' property
@@ -142,6 +154,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInGridActionButtonUnderAction(container: GridActionButton): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'clickAction' property
@@ -151,6 +164,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInListViewUnderClickAction(container: ListView): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'pullDownAction' property
@@ -160,6 +174,7 @@ object CreateObjectClientAction extends js.Object {
     *  8.0.0 and higher
     */
   def createInListViewUnderPullDownAction(container: ListView): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'action' property
@@ -169,6 +184,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInMenuItemUnderAction(container: MenuItem): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'onChangeAction' property
@@ -178,6 +194,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInReferenceSetSelectorUnderOnChangeAction(container: ReferenceSetSelector): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'clickAction' property
@@ -187,6 +204,7 @@ object CreateObjectClientAction extends js.Object {
     *  7.17.0 and higher
     */
   def createInStaticImageViewerUnderClickAction(container: StaticImageViewer): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'onEnterKeyPressAction' property
@@ -196,6 +214,7 @@ object CreateObjectClientAction extends js.Object {
     *  8.7.0 and higher
     */
   def createInTextBoxUnderOnEnterKeyPressAction(container: TextBox): CreateObjectClientAction = js.native
+  
   /**
     * Creates and returns a new CreateObjectClientAction instance in the SDK and on the server.
     * The new CreateObjectClientAction will be automatically stored in the 'action' property
@@ -205,5 +224,8 @@ object CreateObjectClientAction extends js.Object {
     *  7.19.0 and higher
     */
   def createInWidgetValueUnderAction(container: WidgetValue): CreateObjectClientAction = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -24,7 +24,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.VerticalFlow
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/report-pane relevant section in reference guide}
@@ -44,19 +44,18 @@ class ReportPane protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "reports.ReportPane")
 @js.native
 object ReportPane extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'footerWidget' property
@@ -66,6 +65,7 @@ object ReportPane extends js.Object {
     *  6.7.0 to 6.9.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -75,6 +75,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInDataViewUnderWidget(container: DataView): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -84,6 +85,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -93,6 +95,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'leftWidget' property
@@ -102,6 +105,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInHeaderUnderLeftWidget(container: Header): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'rightWidget' property
@@ -111,6 +115,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInHeaderUnderRightWidget(container: Header): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -120,6 +125,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -129,6 +135,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -138,6 +145,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInLayoutUnderWidget(container: Layout): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -147,6 +155,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -156,6 +165,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInListViewUnderWidget(container: ListView): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -165,6 +175,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'parameterWidget' property
@@ -174,6 +185,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'reportWidget' property
@@ -183,6 +195,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -192,6 +205,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -201,6 +215,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInSnippetUnderWidget(container: Snippet): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'firstWidget' property
@@ -210,6 +225,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'secondWidget' property
@@ -219,6 +235,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -228,6 +245,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInTabPageUnderWidget(container: TabPage): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -237,6 +255,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInTableCellUnderWidget(container: TableCell): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widget' property
@@ -246,6 +265,7 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
   /**
     * Creates and returns a new ReportPane instance in the SDK and on the server.
     * The new ReportPane will be automatically stored in the 'widgets' property
@@ -255,5 +275,8 @@ object ReportPane extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

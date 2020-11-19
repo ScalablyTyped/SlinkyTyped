@@ -5,11 +5,11 @@ import typingsSlinky.popmotionPose.typesMod.DomPopmotionConfig
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionPoser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("popmotion-pose", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def default(element: Element, config: DomPopmotionConfig): DomPopmotionPoser = js.native
 }
-

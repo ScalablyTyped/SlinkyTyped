@@ -9,11 +9,12 @@ import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/protocol-rest", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class RestParser[StreamType] protected ()
     extends typingsSlinky.awsSdkProtocolRest.restParserMod.RestParser[StreamType] {
@@ -36,6 +37,4 @@ object mod extends js.Object {
       utf8Decoder: Decoder
     ) = this()
   }
-  
 }
-

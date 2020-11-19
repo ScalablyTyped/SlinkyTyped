@@ -3,20 +3,21 @@ package typingsSlinky.rollup.mod
 import typingsSlinky.rollup.rollupBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.rollup.anon.Mappings
   - typingsSlinky.rollup.mod.ExistingDecodedSourceMap
 */
 trait DecodedSourceMapOrMissing extends js.Object
-
 object DecodedSourceMapOrMissing {
+  
   @scala.inline
   def Mappings(missing: `true`, plugin: String): DecodedSourceMapOrMissing = {
     val __obj = js.Dynamic.literal(missing = missing.asInstanceOf[js.Any], plugin = plugin.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecodedSourceMapOrMissing]
   }
+  
   @scala.inline
   def ExistingDecodedSourceMap(
     mappings: js.Array[js.Array[SourceMapSegment]],
@@ -28,4 +29,3 @@ object DecodedSourceMapOrMissing {
     __obj.asInstanceOf[DecodedSourceMapOrMissing]
   }
 }
-

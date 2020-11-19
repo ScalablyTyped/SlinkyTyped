@@ -2,22 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BaseLayerView2D extends LayerView {
-  /**
-    * The array of [Tile](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerView2D.html#Tile) objects computed to cover the MapView's visible area. This array is updated when the view is animating or the user is interacting with it. Then if tiles have been added or removed, [tilesChanged()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerView2D.html#tilesChanged) is called.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerView2D.html#tiles)
-    */
-  var tiles: js.Array[Tile] = js.native
-  /**
-    * References the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) this [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) belongs to.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerView2D.html#view)
-    */
-  var view: MapView = js.native
+  
   /**
     * Method called when after the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) is created and right before it's asked to draw the layer's content. Typically this method is implemented to start watching property changes on the layer for example.
     *
@@ -26,6 +15,7 @@ trait BaseLayerView2D extends LayerView {
     *
     */
   def attach(): Unit = js.native
+  
   /**
     * Method called after the layer is removed and the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) is about to be removed. Typically, this method is implemented to free resources like watchers.
     *
@@ -34,6 +24,7 @@ trait BaseLayerView2D extends LayerView {
     *
     */
   def detach(): Unit = js.native
+  
   /**
     * Method to implement that is responsible for providing objects hit at the specified screen coordinates. This method is called internally by the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) each time its [hitTest()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#hitTest) method is called.
     *
@@ -44,6 +35,7 @@ trait BaseLayerView2D extends LayerView {
     *
     */
   def hitTest(x: Double, y: Double): js.Promise[Graphic] = js.native
+  
   /**
     * The method to implement that is responsible of drawing the content of the layer. This method is called every time the MapView's state changes, or if [requestRender()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerView2D.html#requestRender) has been called.
     *
@@ -56,6 +48,7 @@ trait BaseLayerView2D extends LayerView {
     *
     */
   def render(renderParameters: BaseLayerView2DRenderRenderParameters): Unit = js.native
+  
   /**
     * The [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) can call this method to ask the MapView to schedule a new rendering frame.
     *
@@ -64,6 +57,14 @@ trait BaseLayerView2D extends LayerView {
     *
     */
   def requestRender(): Unit = js.native
+  
+  /**
+    * The array of [Tile](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerView2D.html#Tile) objects computed to cover the MapView's visible area. This array is updated when the view is animating or the user is interacting with it. Then if tiles have been added or removed, [tilesChanged()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerView2D.html#tilesChanged) is called.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerView2D.html#tiles)
+    */
+  var tiles: js.Array[Tile] = js.native
+  
   /**
     * Method to implement, which notifies of tiles being added or removed for the current view state. This function can be implemented to start and stop fetching new data, or allocate and dispose resources.
     *
@@ -74,5 +75,11 @@ trait BaseLayerView2D extends LayerView {
     *
     */
   def tilesChanged(added: js.Array[Tile], removed: js.Array[Tile]): Unit = js.native
+  
+  /**
+    * References the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) this [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) belongs to.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerView2D.html#view)
+    */
+  var view: MapView = js.native
 }
-

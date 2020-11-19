@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.rest.ODataKeyPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "domainmodels.HashedStringAttributeType")
 @js.native
@@ -23,19 +23,18 @@ class HashedStringAttributeType protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "domainmodels.HashedStringAttributeType")
 @js.native
 object HashedStringAttributeType extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new HashedStringAttributeType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.HashedStringAttributeType = js.native
+  
   /**
     * Creates and returns a new HashedStringAttributeType instance in the SDK and on the server.
     * The new HashedStringAttributeType will be automatically stored in the 'type' property
@@ -45,12 +44,14 @@ object HashedStringAttributeType extends js.Object {
     *  6.0.0 to 8.8.0
     */
   def createIn(container: typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.Attribute): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.HashedStringAttributeType = js.native
+  
   /**
     * Creates and returns a new HashedStringAttributeType instance in the SDK and on the server.
     * The new HashedStringAttributeType will be automatically stored in the 'type' property
     * of the parent Attribute element passed as argument.
     */
   def createInAttributeUnderType(container: typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.Attribute): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.HashedStringAttributeType = js.native
+  
   /**
     * Creates and returns a new HashedStringAttributeType instance in the SDK and on the server.
     * The new HashedStringAttributeType will be automatically stored in the 'type' property
@@ -60,6 +61,7 @@ object HashedStringAttributeType extends js.Object {
     *  8.9.0 and higher
     */
   def createInEntityKeyPartUnderType(container: typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.EntityKeyPart): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.HashedStringAttributeType = js.native
+  
   /**
     * Creates and returns a new HashedStringAttributeType instance in the SDK and on the server.
     * The new HashedStringAttributeType will be automatically stored in the 'type' property
@@ -69,5 +71,8 @@ object HashedStringAttributeType extends js.Object {
     *  8.9.0 and higher
     */
   def createInODataKeyPartUnderType(container: ODataKeyPart): typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.HashedStringAttributeType = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

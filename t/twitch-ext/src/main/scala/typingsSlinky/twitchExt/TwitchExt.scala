@@ -24,7 +24,7 @@ import typingsSlinky.twitchExt.twitchExtStrings.videoResolution
 import typingsSlinky.twitchExt.twitchExtStrings.volume
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Twitch extensions JavaScript Helper.
@@ -33,39 +33,32 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait TwitchExt extends js.Object {
+  
   /**
     * @see https://dev.twitch.tv/docs/extensions/reference/#twitch-extension-actions
     */
   var actions: TwitchExtActions = js.native
+  
   /**
     * @see https://dev.twitch.tv/docs/extensions/reference#helper-bits
     */
   var bits: TwitchExtBits = js.native
+  
   /**
     * @see https://dev.twitch.tv/docs/extensions/reference/#helper-configuration
     */
   var configuration: TwitchExtConfiguration = js.native
+  
   /**
     * This encodes the environment. For external users, this is always production.
     */
   var environment: production = js.native
+  
   /**
     * @see https://dev.twitch.tv/docs/extensions/reference/#twitch-extension-feature-flags
     */
   var features: TwitchExtFeatures = js.native
-  /**
-    * Helper methods for the Twitch Extension rig.
-    * @see https://github.com/twitchdev/developer-rig
-    */
-  var rig: TwitchExtRig = js.native
-  /**
-    * This encodes the Helper version in 1.1.1 (semantic versioning) format.
-    */
-  var version: String = js.native
-  /**
-    * @see https://dev.twitch.tv/docs/extensions/reference#helper-viewer
-    */
-  var viewer: TwitchExtViewer = js.native
+  
   /**
     * This function binds the callback to listen to the target topic.
     *
@@ -77,6 +70,7 @@ trait TwitchExt extends js.Object {
     target: String,
     callback: js.Function3[/* target */ String, /* contentType */ String, /* message */ String, Unit]
   ): Unit = js.native
+  
   /**
     * This function binds the callback to the initial values and changes to the authorization data.
     *
@@ -84,6 +78,7 @@ trait TwitchExt extends js.Object {
     * @see https://dev.twitch.tv/docs/extensions/reference/#onauthorized
     */
   def onAuthorized(authCallback: js.Function1[/* auth */ TwitchExtAuthorized, Unit]): Unit = js.native
+  
   /**
     * This function binds the callback to the initial values and changes to the context.
     *
@@ -99,6 +94,7 @@ trait TwitchExt extends js.Object {
       Unit
     ]
   ): Unit = js.native
+  
   /**
     * This function binds the callback to any internal error.
     *
@@ -106,6 +102,7 @@ trait TwitchExt extends js.Object {
     * @see https://dev.twitch.tv/docs/extensions/reference/#onerror
     */
   def onError(errorCallback: js.Function1[/* errorValue */ js.Any, Unit]): Unit = js.native
+  
   /**
     * This function allows an extension to adjust its visibility when the viewer highlights the extension by hovering
     * over the extension’s menu icon or open menu, in the video player. The function applies only to video-overlay and
@@ -115,6 +112,7 @@ trait TwitchExt extends js.Object {
     * @see https://dev.twitch.tv/docs/extensions/reference/#onhighlightchanged
     */
   def onHighlightChanged(callback: js.Function1[/* isHighlighted */ Boolean, Unit]): Unit = js.native
+  
   /**
     * This function registers a callback that gets called whenever an extension changes position in the player. This
     * occurs only for video-component extensions. This also is triggered as the extension loads.
@@ -123,6 +121,7 @@ trait TwitchExt extends js.Object {
     * @see https://dev.twitch.tv/docs/extensions/reference/#onpositionchanged
     */
   def onPositionChanged(callback: js.Function1[/* position */ X, Unit]): Unit = js.native
+  
   /**
     * This function registers a callback that gets called whenever an extension is hidden/re-shown. (This occurs only
     * for mobile or component extensions.) When an extension is not visible in the mobile app, it does not receive
@@ -135,6 +134,13 @@ trait TwitchExt extends js.Object {
   def onVisibilityChanged_false(callback: js.Function1[`false`, Unit]): Unit = js.native
   @JSName("onVisibilityChanged")
   def onVisibilityChanged_true(callback: js.Function2[`true`, /* context */ PartialTwitchExtContext, Unit]): Unit = js.native
+  
+  /**
+    * Helper methods for the Twitch Extension rig.
+    * @see https://github.com/twitchdev/developer-rig
+    */
+  var rig: TwitchExtRig = js.native
+  
   def send(target: String, contentType: String, message: String): Unit = js.native
   /**
     * This function can be called by the front end to send directly to PubSub.
@@ -145,6 +151,7 @@ trait TwitchExt extends js.Object {
     * @see https://dev.twitch.tv/docs/extensions/reference/#send
     */
   def send(target: String, contentType: String, message: js.Object): Unit = js.native
+  
   /**
     * This function unbinds the listen callback from the target.
     *
@@ -156,5 +163,14 @@ trait TwitchExt extends js.Object {
     target: String,
     callback: js.Function3[/* target */ String, /* contentType */ String, /* message */ String, Unit]
   ): Unit = js.native
+  
+  /**
+    * This encodes the Helper version in 1.1.1 (semantic versioning) format.
+    */
+  var version: String = js.native
+  
+  /**
+    * @see https://dev.twitch.tv/docs/extensions/reference#helper-viewer
+    */
+  var viewer: TwitchExtViewer = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.microsoftGraph.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.allowed
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.disallowed
 */
 trait WindowsHelloForBusinessPinUsage extends js.Object
-
 object WindowsHelloForBusinessPinUsage {
+  
   @scala.inline
   def allowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.allowed = "allowed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allowed]
+  
   @scala.inline
   def disallowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.disallowed = "disallowed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.disallowed]
+  
   @scala.inline
   def required: typingsSlinky.microsoftGraph.microsoftGraphStrings.required = "required".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.required]
 }
-

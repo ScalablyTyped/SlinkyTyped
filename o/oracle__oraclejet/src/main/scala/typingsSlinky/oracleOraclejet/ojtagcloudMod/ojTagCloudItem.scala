@@ -129,26 +129,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojTagCloudItem extends JetElement[ojTagCloudItemSettableProperties] {
-  var categories: js.Array[String] = js.native
-  var color: js.UndefOr[String] = js.native
-  var label: String = js.native
-  var onCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onUrlChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onValueChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var shortDesc: String = js.native
-  var svgClassName: String = js.native
-  var svgStyle: js.Object = js.native
-  var url: String = js.native
-  var value: Double | Null = js.native
+  
   def addEventListener(`type`: svgStyleChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: svgStyleChanged,
@@ -983,6 +968,11 @@ trait ojTagCloudItem extends JetElement[ojTagCloudItemSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var categories: js.Array[String] = js.native
+  
+  var color: js.UndefOr[String] = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_categories(property: categories): js.Array[String] = js.native
@@ -1000,7 +990,27 @@ trait ojTagCloudItem extends JetElement[ojTagCloudItemSettableProperties] {
   def getProperty_url(property: url): String = js.native
   @JSName("getProperty")
   def getProperty_value(property: value): Double | Null = js.native
+  
+  var label: String = js.native
+  
+  var onCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onUrlChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onValueChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def setProperties(properties: ojTagCloudItemSettablePropertiesLenient): Unit = js.native
+  
   def setProperty[T /* <: String */](property: T, value: JetSetPropertyType[T, ojTagCloudItemSettableProperties]): Unit = js.native
   @JSName("setProperty")
   def setProperty_categories(property: categories, value: js.Array[String]): Unit = js.native
@@ -1022,5 +1032,14 @@ trait ojTagCloudItem extends JetElement[ojTagCloudItemSettableProperties] {
   def setProperty_value(property: value): Unit = js.native
   @JSName("setProperty")
   def setProperty_value(property: value, value: Double): Unit = js.native
+  
+  var shortDesc: String = js.native
+  
+  var svgClassName: String = js.native
+  
+  var svgStyle: js.Object = js.native
+  
+  var url: String = js.native
+  
+  var value: Double | Null = js.native
 }
-

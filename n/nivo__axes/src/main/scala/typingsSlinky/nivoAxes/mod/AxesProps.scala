@@ -3,15 +3,15 @@ package typingsSlinky.nivoAxes.mod
 import typingsSlinky.nivoCore.mod.Dimensions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AxesProps
   extends Dimensions
      with AxisPositions
      with Scales
-
 object AxesProps {
+  
   @scala.inline
   def apply(
     bottom: AxisProps,
@@ -25,4 +25,3 @@ object AxesProps {
     __obj.asInstanceOf[AxesProps]
   }
 }
-

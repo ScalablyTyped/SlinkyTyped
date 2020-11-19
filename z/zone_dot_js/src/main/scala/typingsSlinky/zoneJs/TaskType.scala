@@ -2,7 +2,7 @@ package typingsSlinky.zoneJs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Task type: `microTask`, `macroTask`, `eventTask`.
@@ -13,13 +13,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.zoneJs.zoneJsStrings.eventTask
 */
 trait TaskType extends js.Object
-
 object TaskType {
+  
   @scala.inline
   def eventTask: typingsSlinky.zoneJs.zoneJsStrings.eventTask = "eventTask".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.eventTask]
+  
   @scala.inline
   def macroTask: typingsSlinky.zoneJs.zoneJsStrings.macroTask = "macroTask".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.macroTask]
+  
   @scala.inline
   def microTask: typingsSlinky.zoneJs.zoneJsStrings.microTask = "microTask".asInstanceOf[typingsSlinky.zoneJs.zoneJsStrings.microTask]
 }
-

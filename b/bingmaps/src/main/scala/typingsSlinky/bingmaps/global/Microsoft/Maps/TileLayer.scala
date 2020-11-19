@@ -3,7 +3,7 @@ package typingsSlinky.bingmaps.global.Microsoft.Maps
 import typingsSlinky.bingmaps.Microsoft.Maps.ITileLayerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Microsoft.Maps.TileLayer")
 @js.native
@@ -15,4 +15,3 @@ class TileLayer protected ()
     */
   def this(options: ITileLayerOptions) = this()
 }
-

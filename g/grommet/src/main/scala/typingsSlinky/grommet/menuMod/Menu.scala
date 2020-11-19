@@ -7,9 +7,8 @@ import typingsSlinky.grommet.grommetStrings.icon
 import typingsSlinky.grommet.utilsMod.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6/components/Menu", "Menu")
 @js.native
 object Menu extends TopLevel[ReactComponentClass[MenuProps with (Omit[ButtonType, icon])]]
-

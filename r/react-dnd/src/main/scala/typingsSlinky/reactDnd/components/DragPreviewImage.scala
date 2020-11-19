@@ -8,14 +8,16 @@ import typingsSlinky.reactDnd.dragPreviewImageMod.DragPreviewImageProps
 import typingsSlinky.reactDnd.optionsMod.DragPreviewOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DragPreviewImage {
+  
   @JSImport("react-dnd", "DragPreviewImage")
   @js.native
   object component extends js.Object
   
   def withProps(p: DragPreviewImageProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     connect: (/* elementOrNode */ ConnectableElement, /* options */ js.UndefOr[DragPreviewOptions]) => ReactElement | Null,
@@ -25,4 +27,3 @@ object DragPreviewImage {
     new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[DragPreviewImageProps]))
   }
 }
-

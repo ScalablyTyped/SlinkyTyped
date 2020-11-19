@@ -5,11 +5,12 @@ import typingsSlinky.xsdSchemaValidator.anon.File
 import typingsSlinky.xsdSchemaValidator.anon.Messages
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xsd-schema-validator", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def validateXML(
     xml: String,
     pathToXsd: String,
@@ -26,4 +27,3 @@ object mod extends js.Object {
     callback: js.Function2[/* err */ js.Error, /* result */ Messages, Unit]
   ): Unit = js.native
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMotionControlle
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandness
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "WebXRAbstractMotionController")
 @js.native
@@ -45,4 +45,3 @@ abstract class WebXRAbstractMotionController protected ()
     _doNotLoadControllerMesh: Boolean
   ) = this()
 }
-

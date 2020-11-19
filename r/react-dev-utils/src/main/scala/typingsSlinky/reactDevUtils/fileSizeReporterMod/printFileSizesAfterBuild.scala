@@ -2,11 +2,12 @@ package typingsSlinky.reactDevUtils.fileSizeReporterMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-dev-utils/FileSizeReporter", "printFileSizesAfterBuild")
 @js.native
 object printFileSizesAfterBuild extends js.Object {
+  
   def apply(
     webpackStats: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.Stats */ js.Any,
     previousFileSizes: OpaqueFileSizes,
@@ -33,4 +34,3 @@ object printFileSizesAfterBuild extends js.Object {
     maxChunkGzipSize: Double
   ): Unit = js.native
 }
-

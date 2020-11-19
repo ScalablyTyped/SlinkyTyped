@@ -7,7 +7,7 @@ import org.scalajs.dom.raw.BlobPropertyBag
 import typingsSlinky.std.BlobPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Blob")
 @js.native
@@ -17,7 +17,6 @@ class Blob ()
   def this(blobParts: js.UndefOr[scala.Nothing], options: BlobPropertyBag) = this()
   def this(blobParts: js.Array[BlobPart], options: BlobPropertyBag) = this()
 }
-
 @JSGlobal("Blob")
 @js.native
 object Blob
@@ -28,4 +27,3 @@ object Blob
       /* options */ BlobPropertyBag, 
       org.scalajs.dom.raw.Blob
     ]
-

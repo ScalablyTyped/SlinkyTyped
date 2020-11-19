@@ -2,7 +2,7 @@ package typingsSlinky.webcola.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("webcola", "Solver")
 @js.native
@@ -13,12 +13,12 @@ class Solver protected ()
     cs: js.Array[typingsSlinky.webcola.vpscMod.Constraint]
   ) = this()
 }
-
 /* static members */
 @JSImport("webcola", "Solver")
 @js.native
 object Solver extends js.Object {
+  
   var LAGRANGIAN_TOLERANCE: Double = js.native
+  
   var ZERO_UPPERBOUND: Double = js.native
 }
-

@@ -5,11 +5,11 @@ import typingsSlinky.history.mod.Pathname
 import typingsSlinky.history.mod.Search
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("redux-first-routing", "locationChange")
 @js.native
 object locationChange extends js.Object {
+  
   def apply[P /* <: Pathname */, S /* <: Search */, H /* <: Hash */](_underscore: typingsSlinky.reduxFirstRouting.anon.Pathname[P, S, H]): locationChangeAction[P, S, H] = js.native
 }
-

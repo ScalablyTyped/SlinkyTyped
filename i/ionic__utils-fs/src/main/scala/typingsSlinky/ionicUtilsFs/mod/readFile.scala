@@ -6,11 +6,12 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/utils-fs", "readFile")
 @js.native
 object readFile extends js.Object {
+  
   def apply(file: String): js.Promise[Buffer] = js.native
   def apply(file: String, callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]): Unit = js.native
   def apply(file: String, encoding: String): js.Promise[String] = js.native
@@ -72,4 +73,3 @@ object readFile extends js.Object {
     callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]
   ): Unit = js.native
 }
-

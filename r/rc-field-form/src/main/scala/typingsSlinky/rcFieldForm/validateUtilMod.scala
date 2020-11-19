@@ -8,11 +8,12 @@ import typingsSlinky.rcFieldForm.rcFieldFormStrings.parallel
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rc-field-form/es/utils/validateUtil", JSImport.Namespace)
 @js.native
 object validateUtilMod extends js.Object {
+  
   def validateRules(
     namePath: InternalNamePath,
     value: StoreValue,
@@ -46,4 +47,3 @@ object validateUtilMod extends js.Object {
     messageVariables: Record[String, String]
   ): js.Promise[js.Array[String]] = js.native
 }
-

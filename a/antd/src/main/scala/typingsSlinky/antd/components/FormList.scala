@@ -8,14 +8,16 @@ import typingsSlinky.antd.formListMod.FormListOperation
 import typingsSlinky.antd.formListMod.FormListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object FormList {
+  
   @JSImport("antd/lib/form/FormList", JSImport.Default)
   @js.native
   object component extends js.Object
   
   def withProps(p: FormListProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     children: (js.Array[FormListFieldData], FormListOperation) => ReactElement,
@@ -25,4 +27,3 @@ object FormList {
     new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[FormListProps]))
   }
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.stepfunctionsMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "StepFunctions")
 @js.native
@@ -14,4 +14,3 @@ class StepFunctions ()
   extends typingsSlinky.awsSdk.mod.StepFunctions {
   def this(options: ClientConfiguration) = this()
 }
-

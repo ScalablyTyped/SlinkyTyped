@@ -4,7 +4,7 @@ import typingsSlinky.electron.Electron.TouchBarSlider
 import typingsSlinky.electron.Electron.TouchBarSliderConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("electron", "remote.TouchBarSlider")
 @js.native
@@ -15,4 +15,3 @@ class TouchBarSliderCls protected () extends TouchBarSlider {
     */
   def this(options: TouchBarSliderConstructorOptions) = this()
 }
-

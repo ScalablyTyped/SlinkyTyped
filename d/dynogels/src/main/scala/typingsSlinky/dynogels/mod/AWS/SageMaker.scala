@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.sagemakerMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.SageMaker")
 @js.native
@@ -14,4 +14,3 @@ class SageMaker ()
   extends typingsSlinky.awsSdk.mod.SageMaker {
   def this(options: ClientConfiguration) = this()
 }
-

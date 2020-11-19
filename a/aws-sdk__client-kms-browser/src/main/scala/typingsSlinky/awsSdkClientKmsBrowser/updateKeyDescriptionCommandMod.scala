@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/commands/UpdateKeyDescriptionCommand", JSImport.Namespace)
 @js.native
 object updateKeyDescriptionCommandMod extends js.Object {
+  
   @js.native
   class UpdateKeyDescriptionCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object updateKeyDescriptionCommandMod extends js.Object {
           Blob
         ] {
     def this(input: UpdateKeyDescriptionInput) = this()
+    
     val middlewareStack: MiddlewareStack[UpdateKeyDescriptionInput, UpdateKeyDescriptionOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[UpdateKeyDescriptionInput, UpdateKeyDescriptionOutput] = js.native
   }
-  
 }
-

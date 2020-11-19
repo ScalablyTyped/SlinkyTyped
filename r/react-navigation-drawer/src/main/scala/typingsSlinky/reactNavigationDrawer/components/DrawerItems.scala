@@ -10,14 +10,16 @@ import typingsSlinky.reactNavigationDrawer.typesMod.DrawerNavigatorItemsProps
 import typingsSlinky.reactNavigationDrawer.typesMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DrawerItems {
+  
   @JSImport("react-navigation-drawer", "DrawerItems")
   @js.native
   object component extends js.Object
   
   def withProps(p: DrawerNavigatorItemsProps): SharedBuilder_DrawerNavigatorItemsProps644699346[typingsSlinky.reactNavigationDrawer.mod.DrawerItems] = new SharedBuilder_DrawerNavigatorItemsProps644699346[typingsSlinky.reactNavigationDrawer.mod.DrawerItems](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     drawerPosition: left | right,
@@ -31,4 +33,3 @@ object DrawerItems {
     new SharedBuilder_DrawerNavigatorItemsProps644699346[typingsSlinky.reactNavigationDrawer.mod.DrawerItems](js.Array(this.component, __props.asInstanceOf[DrawerNavigatorItemsProps]))
   }
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.babelTypes.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babel-types", "functionExpression")
 @js.native
 object functionExpression extends js.Object {
+  
   def apply(): FunctionExpression_ = js.native
   def apply(
     id: js.UndefOr[scala.Nothing],
@@ -150,4 +151,3 @@ object functionExpression extends js.Object {
   def apply(id: Identifier_, params: js.Array[LVal], body: BlockStatement_, generator: Boolean): FunctionExpression_ = js.native
   def apply(id: Identifier_, params: js.Array[LVal], body: BlockStatement_, generator: Boolean, async: Boolean): FunctionExpression_ = js.native
 }
-

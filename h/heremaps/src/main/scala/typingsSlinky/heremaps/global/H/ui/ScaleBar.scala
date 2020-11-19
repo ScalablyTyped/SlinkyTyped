@@ -3,7 +3,7 @@ package typingsSlinky.heremaps.global.H.ui
 import typingsSlinky.heremaps.H.ui.ScaleBar.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This class represents a UI element showing the current zoom scale.
@@ -18,4 +18,3 @@ class ScaleBar ()
   extends typingsSlinky.heremaps.H.ui.ScaleBar {
   def this(opt_options: Options) = this()
 }
-

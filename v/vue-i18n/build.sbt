@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "vue-i18n"
-version := "8.20.0-d04d8f"
+version := "8.20.0-4d6d74"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8",
-  "org.scalablytyped.slinky" %%% "vue" % "2.6.11-68de27")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
+  "org.scalablytyped.slinky" %%% "vue" % "2.6.11-398e0f")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

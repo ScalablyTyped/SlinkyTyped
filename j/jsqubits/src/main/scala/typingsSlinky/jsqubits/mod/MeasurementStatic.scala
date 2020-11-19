@@ -5,8 +5,7 @@ import typingsSlinky.jsqubits.mod.jsqubits.Measurement
 import typingsSlinky.jsqubits.mod.jsqubits.QState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MeasurementStatic extends Instantiable3[/* numBits */ Double, /* result */ Double, /* newState */ QState, Measurement]
-

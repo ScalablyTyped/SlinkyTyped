@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-xray-node/commands/DeleteSamplingRuleCommand", JSImport.Namespace)
 @js.native
 object deleteSamplingRuleCommandMod extends js.Object {
+  
   @js.native
   class DeleteSamplingRuleCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteSamplingRuleCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DeleteSamplingRuleInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteSamplingRuleInput, DeleteSamplingRuleOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: XRayResolvedConfiguration
     ): Handler[DeleteSamplingRuleInput, DeleteSamplingRuleOutput] = js.native
   }
-  
 }
-

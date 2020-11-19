@@ -3,12 +3,12 @@ package typingsSlinky.winrt.Windows.Media.Protection
 import typingsSlinky.winrt.Windows.Foundation.Collections.IPropertySet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MediaProtectionManager extends IMediaProtectionManager
-
 object MediaProtectionManager {
+  
   @scala.inline
   def apply(
     oncomponentloadfailed: js.Any,
@@ -20,4 +20,3 @@ object MediaProtectionManager {
     __obj.asInstanceOf[MediaProtectionManager]
   }
 }
-

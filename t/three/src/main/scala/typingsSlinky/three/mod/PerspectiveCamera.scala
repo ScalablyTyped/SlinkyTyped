@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "PerspectiveCamera")
 @js.native
@@ -35,4 +35,3 @@ class PerspectiveCamera ()
   def this(fov: Double, aspect: Double, near: js.UndefOr[scala.Nothing], far: Double) = this()
   def this(fov: Double, aspect: Double, near: Double, far: Double) = this()
 }
-

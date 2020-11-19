@@ -2,11 +2,12 @@ package typingsSlinky.canvasjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("canvasjs", "formatDate")
 @js.native
 object formatDate extends js.Object {
+  
   def apply(date: Double): Unit = js.native
   def apply(date: Double, formatString: js.UndefOr[scala.Nothing], culture: String): Unit = js.native
   def apply(date: Double, formatString: String): Unit = js.native
@@ -22,4 +23,3 @@ object formatDate extends js.Object {
   def apply(date: js.Date, formatString: String): Unit = js.native
   def apply(date: js.Date, formatString: String, culture: String): Unit = js.native
 }
-

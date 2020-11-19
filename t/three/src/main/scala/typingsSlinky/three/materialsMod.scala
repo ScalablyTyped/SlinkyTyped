@@ -18,11 +18,14 @@ import typingsSlinky.three.shadowMaterialMod.ShadowMaterialParameters
 import typingsSlinky.three.spriteMaterialMod.SpriteMaterialParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/materials/Materials", JSImport.Namespace)
 @js.native
 object materialsMod extends js.Object {
+  
+  var MaterialIdCount: Double = js.native
+  
   @js.native
   class LineBasicMaterial ()
     extends typingsSlinky.three.lineBasicMaterialMod.LineBasicMaterial {
@@ -128,7 +131,4 @@ object materialsMod extends js.Object {
     extends typingsSlinky.three.spriteMaterialMod.SpriteMaterial {
     def this(parameters: SpriteMaterialParameters) = this()
   }
-  
-  var MaterialIdCount: Double = js.native
 }
-

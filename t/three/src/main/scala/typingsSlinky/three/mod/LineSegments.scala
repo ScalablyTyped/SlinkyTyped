@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "LineSegments")
 @js.native
@@ -16,4 +16,3 @@ class LineSegments[TGeometry /* <: typingsSlinky.three.geometryMod.Geometry | ty
   def this(geometry: js.UndefOr[scala.Nothing], material: TMaterial, mode: Double) = this()
   def this(geometry: js.UndefOr[scala.Nothing], material: js.UndefOr[scala.Nothing], mode: Double) = this()
 }
-

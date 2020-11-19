@@ -5,13 +5,11 @@ import typingsSlinky.std.stdStrings.cut
 import typingsSlinky.std.stdStrings.paste
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DocumentAndElementEventHandlers extends js.Object {
-  var oncopy: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _]) | Null = js.native
-  var oncut: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _]) | Null = js.native
-  var onpaste: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _]) | Null = js.native
+  
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   def addEventListener(
@@ -70,6 +68,13 @@ trait DocumentAndElementEventHandlers extends js.Object {
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
+  
+  var oncopy: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _]) | Null = js.native
+  
+  var oncut: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _]) | Null = js.native
+  
+  var onpaste: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _]) | Null = js.native
+  
   def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   def removeEventListener(
@@ -129,4 +134,3 @@ trait DocumentAndElementEventHandlers extends js.Object {
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-

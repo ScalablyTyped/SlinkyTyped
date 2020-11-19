@@ -4,11 +4,11 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ComponentPropsWithRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native", "Animated.createAnimatedComponent")
 @js.native
 object createAnimatedComponent extends js.Object {
+  
   def apply[T /* <: ReactComponentClass[_] */](component: T): ReactComponentClass[ComponentProps[T] | AnimatedProps[ComponentPropsWithRef[T]]] = js.native
 }
-

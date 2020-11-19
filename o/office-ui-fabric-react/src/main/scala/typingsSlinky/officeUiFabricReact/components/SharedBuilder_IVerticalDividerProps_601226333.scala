@@ -10,21 +10,25 @@ import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObjec
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @scala.inline
 class SharedBuilder_IVerticalDividerProps_601226333 (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, scala.Nothing] {
+  
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def getClassNames(value: /* theme */ ITheme => IVerticalDividerClassNames): this.type = set("getClassNames", js.Any.fromFunction1(value))
+  
   @scala.inline
   def stylesFunction1(value: IVerticalDividerPropsStyles => DeepPartial[IVerticalDividerStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+  
   @scala.inline
   def styles(value: IStyleFunctionOrObject[IVerticalDividerPropsStyles, IVerticalDividerStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+  
   @scala.inline
   def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
 }
-

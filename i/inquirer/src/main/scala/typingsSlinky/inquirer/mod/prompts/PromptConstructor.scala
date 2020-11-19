@@ -5,7 +5,7 @@ import typingsSlinky.inquirer.mod.Answers
 import typingsSlinky.node.readlineMod.Interface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides the functionality to initialize new prompts.
@@ -25,4 +25,3 @@ trait PromptConstructor
   * The answers provided by the user.
   */
 Instantiable3[/* question */ js.Any, /* readLine */ Interface, /* answers */ Answers, PromptBase]
-

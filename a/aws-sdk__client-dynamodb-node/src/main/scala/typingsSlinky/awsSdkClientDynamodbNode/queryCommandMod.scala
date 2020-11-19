@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-dynamodb-node/commands/QueryCommand", JSImport.Namespace)
 @js.native
 object queryCommandMod extends js.Object {
+  
   @js.native
   class QueryCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object queryCommandMod extends js.Object {
           Readable
         ] {
     def this(input: QueryInput) = this()
+    
     val middlewareStack: MiddlewareStack[QueryInput, QueryOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[QueryInput, QueryOutput] = js.native
   }
-  
 }
-

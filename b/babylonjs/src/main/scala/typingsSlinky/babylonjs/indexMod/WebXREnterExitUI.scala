@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "WebXREnterExitUI")
 @js.native
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
   */
 class WebXREnterExitUI protected ()
   extends typingsSlinky.babylonjs.xRIndexMod.WebXREnterExitUI
-
 /* static members */
 @JSImport("babylonjs/index", "WebXREnterExitUI")
 @js.native
 object WebXREnterExitUI extends js.Object {
+  
   /**
     * Creates UI to allow the user to enter/exit XR mode
     * @param scene the scene to add the ui to
@@ -31,4 +31,3 @@ object WebXREnterExitUI extends js.Object {
     options: typingsSlinky.babylonjs.webXREnterExitUIMod.WebXREnterExitUIOptions
   ): js.Promise[typingsSlinky.babylonjs.webXREnterExitUIMod.WebXREnterExitUI] = js.native
 }
-

@@ -6,11 +6,12 @@ import typingsSlinky.ecmarkup.anon.LintingErrors
 import typingsSlinky.ecmarkup.anon.Source
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ecmarkup/lib/lint/collect-grammar-diagnostics", JSImport.Namespace)
 @js.native
 object collectGrammarDiagnosticsMod extends js.Object {
+  
   def collectGrammarDiagnostics(
     dom: js.Any,
     sourceText: String,
@@ -19,4 +20,3 @@ object collectGrammarDiagnosticsMod extends js.Object {
     earlyErrors: js.Array[Grammar]
   ): LintingErrors = js.native
 }
-

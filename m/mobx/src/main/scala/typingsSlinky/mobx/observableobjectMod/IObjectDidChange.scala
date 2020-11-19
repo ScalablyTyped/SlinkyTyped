@@ -6,7 +6,7 @@ import typingsSlinky.mobx.mobxStrings.update
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.mobx.anon.Type
@@ -14,8 +14,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.mobx.anon.NameObject
 */
 trait IObjectDidChange extends js.Object
-
 object IObjectDidChange {
+  
   @scala.inline
   def Type(name: PropertyKey, newValue: js.Any, `object`: js.Any, `type`: add): IObjectDidChange = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], newValue = newValue.asInstanceOf[js.Any])
@@ -23,6 +23,7 @@ object IObjectDidChange {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IObjectDidChange]
   }
+  
   @scala.inline
   def OldValue(name: PropertyKey, newValue: js.Any, `object`: js.Any, oldValue: js.Any, `type`: update): IObjectDidChange = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], newValue = newValue.asInstanceOf[js.Any], oldValue = oldValue.asInstanceOf[js.Any])
@@ -30,6 +31,7 @@ object IObjectDidChange {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IObjectDidChange]
   }
+  
   @scala.inline
   def NameObject(name: PropertyKey, `object`: js.Any, oldValue: js.Any, `type`: remove): IObjectDidChange = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], oldValue = oldValue.asInstanceOf[js.Any])
@@ -38,4 +40,3 @@ object IObjectDidChange {
     __obj.asInstanceOf[IObjectDidChange]
   }
 }
-

@@ -69,12 +69,11 @@ import typingsSlinky.semanticUiSearch.semanticUiSearchStrings.transition
 import typingsSlinky.semanticUiSearch.semanticUiSearchStrings.verbose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
-  @JSName("search")
-  var search_Original: Search = js.native
+  
   def search(): JQuery = js.native
   def search(behavior: setting, name: `type`, value: js.UndefOr[scala.Nothing]): String = js.native
   def search(behavior: setting, name: `type`, value: String): JQuery = js.native
@@ -166,6 +165,8 @@ trait JQuery extends js.Object {
   def search_JQuery(behavior: setting, name: templates, value: TemplatesSettings): JQuery = js.native
   @JSName("search")
   def search_MetadataSettings(behavior: setting, name: metadata, value: js.UndefOr[scala.Nothing]): MetadataSettings = js.native
+  @JSName("search")
+  var search_Original: Search = js.native
   @JSName("search")
   def search_RegExpSettings(behavior: setting, name: regExp, value: js.UndefOr[scala.Nothing]): RegExpSettings = js.native
   @JSName("search")
@@ -288,4 +289,3 @@ trait JQuery extends js.Object {
   @JSName("search")
   def search_writecache(behavior: `write cache`, query: String): JQuery = js.native
 }
-

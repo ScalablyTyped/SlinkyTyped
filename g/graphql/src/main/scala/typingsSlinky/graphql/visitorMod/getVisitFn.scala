@@ -3,11 +3,12 @@ package typingsSlinky.graphql.visitorMod
 import typingsSlinky.graphql.maybeMod.Maybe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/language/visitor", "getVisitFn")
 @js.native
 object getVisitFn extends js.Object {
+  
   def apply(
     visitor: Visitor[
       _, 
@@ -17,4 +18,3 @@ object getVisitFn extends js.Object {
     isLeaving: Boolean
   ): Maybe[VisitFn[_, _]] = js.native
 }
-

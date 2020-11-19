@@ -5,7 +5,7 @@ import typingsSlinky.navermaps.naver.maps.BoundsLiteral
 import typingsSlinky.navermaps.naver.maps.GroundOverlayOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("naver.maps.GroundOverlay")
 @js.native
@@ -16,4 +16,3 @@ class GroundOverlay protected ()
   def this(url: String, bounds: BoundsLiteral, options: GroundOverlayOptions) = this()
   def this(url: String, bounds: Bounds, options: GroundOverlayOptions) = this()
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A client-side projection engine for converting geometries from one [SpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html) to another. When projecting geometries the starting spatial reference must be specified on the input geometry. You can specify a specific geographic (datum) transformation for the [project](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-projection.html#project) operation, or accept the default transformation if one is needed.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait projection extends js.Object {
+  
   def getTransformation(inSpatialReference: SpatialReferenceProperties, outSpatialReference: SpatialReference): GeographicTransformation = js.native
   def getTransformation(inSpatialReference: SpatialReferenceProperties, outSpatialReference: SpatialReferenceProperties): GeographicTransformation = js.native
   def getTransformation(
@@ -44,6 +45,7 @@ trait projection extends js.Object {
     extent: Extent
   ): GeographicTransformation = js.native
   def getTransformation(inSpatialReference: SpatialReference, outSpatialReference: SpatialReference, extent: Extent): GeographicTransformation = js.native
+  
   def getTransformations(inSpatialReference: SpatialReferenceProperties, outSpatialReference: SpatialReference): js.Array[GeographicTransformation] = js.native
   def getTransformations(inSpatialReference: SpatialReferenceProperties, outSpatialReference: SpatialReferenceProperties): js.Array[GeographicTransformation] = js.native
   def getTransformations(
@@ -77,6 +79,7 @@ trait projection extends js.Object {
     extent: Extent
   ): js.Array[GeographicTransformation] = js.native
   def getTransformations(inSpatialReference: SpatialReference, outSpatialReference: SpatialReference, extent: Extent): js.Array[GeographicTransformation] = js.native
+  
   /**
     * Indicates if all dependencies of this module have been loaded.
     *
@@ -85,6 +88,7 @@ trait projection extends js.Object {
     *
     */
   def isLoaded(): Boolean = js.native
+  
   /**
     * Indicates if this module is supported in the browser. The browser must support [WebAssembly](https://caniuse.com/#feat=wasm).
     *
@@ -93,6 +97,7 @@ trait projection extends js.Object {
     *
     */
   def isSupported(): Boolean = js.native
+  
   /**
     * Loads this module's dependencies. This method must be called before [projecting](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-projection.html#project) geometries.
     *
@@ -101,6 +106,7 @@ trait projection extends js.Object {
     *
     */
   def load(): js.Promise[_] = js.native
+  
   def project(geometry: js.Array[Geometry_], outSpatialReference: SpatialReference): Geometry_ | js.Array[Geometry_] = js.native
   def project(geometry: js.Array[Geometry_], outSpatialReference: SpatialReferenceProperties): Geometry_ | js.Array[Geometry_] = js.native
   def project(
@@ -137,4 +143,3 @@ trait projection extends js.Object {
     geographicTransformation: GeographicTransformation
   ): Geometry_ | js.Array[Geometry_] = js.native
 }
-

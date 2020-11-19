@@ -9,9 +9,10 @@ import typingsSlinky.blueprintjsTable.contextMenuTargetWrapperMod.IContextMenuTa
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ContextMenuTargetWrapper {
+  
   @JSImport("@blueprintjs/table/lib/esm/common/contextMenuTargetWrapper", "ContextMenuTargetWrapper")
   @js.native
   object component extends js.Object
@@ -23,15 +24,16 @@ object ContextMenuTargetWrapper {
           tag.type, 
           typingsSlinky.blueprintjsTable.contextMenuTargetWrapperMod.ContextMenuTargetWrapper
         ] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IContextMenuTargetWrapper): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(renderContextMenu: SyntheticMouseEvent[HTMLElement] => ReactElement, style: CSSProperties): Builder = {
     val __props = js.Dynamic.literal(renderContextMenu = js.Any.fromFunction1(renderContextMenu), style = style.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[IContextMenuTargetWrapper]))
   }
 }
-

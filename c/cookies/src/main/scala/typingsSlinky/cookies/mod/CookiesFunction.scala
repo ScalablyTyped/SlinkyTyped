@@ -10,7 +10,7 @@ import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CookiesFunction
@@ -28,7 +28,7 @@ Instantiable3[
       Cookies
     ]
      with Instantiable2[/* request */ IncomingMessage, /* response */ ServerResponse, Cookies] {
-  var Cookie: Instantiable = js.native
+  
   def apply(request: IncomingMessage, response: ServerResponse): Cookies = js.native
   /**
     * "options" array of key strings is deprecated, provide using options {"keys": keygrip}
@@ -41,9 +41,12 @@ Instantiable3[
     */
   // tslint:disable-next-line:unified-signatures
   def apply(request: IncomingMessage, response: ServerResponse, options: Keygrip): Cookies = js.native
+  
+  var Cookie: Instantiable = js.native
+  
   def connect(keys: js.Array[String]): NextHandleFunction = js.native
   def connect(keys: Keygrip): NextHandleFunction = js.native
+  
   def express(keys: js.Array[String]): Handler = js.native
   def express(keys: Keygrip): Handler = js.native
 }
-

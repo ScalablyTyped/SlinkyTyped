@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("createjs.Bitmap")
 @js.native
@@ -17,4 +17,3 @@ class Bitmap protected ()
   def this(imageOrUrl: HTMLImageElement) = this()
   def this(imageOrUrl: HTMLVideoElement) = this()
 }
-

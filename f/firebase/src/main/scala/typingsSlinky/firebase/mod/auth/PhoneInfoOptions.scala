@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The information required to verify the ownership of a phone number. The
@@ -15,22 +15,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firebase.mod.auth.PhoneMultiFactorSignInInfoOptions
 */
 trait PhoneInfoOptions extends js.Object
-
 object PhoneInfoOptions {
+  
   @scala.inline
   def PhoneSingleFactorInfoOptions(phoneNumber: String): PhoneInfoOptions = {
     val __obj = js.Dynamic.literal(phoneNumber = phoneNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhoneInfoOptions]
   }
+  
   @scala.inline
   def PhoneMultiFactorEnrollInfoOptions(phoneNumber: String, session: MultiFactorSession): PhoneInfoOptions = {
     val __obj = js.Dynamic.literal(phoneNumber = phoneNumber.asInstanceOf[js.Any], session = session.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhoneInfoOptions]
   }
+  
   @scala.inline
   def PhoneMultiFactorSignInInfoOptions(session: MultiFactorSession): PhoneInfoOptions = {
     val __obj = js.Dynamic.literal(session = session.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhoneInfoOptions]
   }
 }
-

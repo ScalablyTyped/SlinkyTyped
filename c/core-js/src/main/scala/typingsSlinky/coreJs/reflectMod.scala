@@ -6,14 +6,17 @@ import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("core-js/es6/reflect", JSImport.Namespace)
 @js.native
 object reflectMod extends js.Object {
+  
   @JSName("apply")
   def apply(target: Function, thisArgument: js.Any, argumentsList: ArrayLike[_]): js.Any = js.native
+  
   def construct(target: Function, argumentsList: ArrayLike[_]): js.Any = js.native
+  
   /**
     * Define a unique metadata entry on the target.
     * @param metadataKey A key used to store and retrieve metadata.
@@ -39,7 +42,9 @@ object reflectMod extends js.Object {
   def defineMetadata(metadataKey: js.Any, metadataValue: js.Any, target: Object): Unit = js.native
   def defineMetadata(metadataKey: js.Any, metadataValue: js.Any, target: Object, targetKey: java.lang.String): Unit = js.native
   def defineMetadata(metadataKey: js.Any, metadataValue: js.Any, target: Object, targetKey: js.Symbol): Unit = js.native
+  
   def defineProperty(target: js.Any, propertyKey: PropertyKey, attributes: js.PropertyDescriptor): Boolean = js.native
+  
   /**
     * Deletes the metadata entry from the target object with the provided key.
     * @param metadataKey A key used to store and retrieve metadata.
@@ -60,10 +65,14 @@ object reflectMod extends js.Object {
   def deleteMetadata(metadataKey: js.Any, target: Object): Boolean = js.native
   def deleteMetadata(metadataKey: js.Any, target: Object, targetKey: java.lang.String): Boolean = js.native
   def deleteMetadata(metadataKey: js.Any, target: Object, targetKey: js.Symbol): Boolean = js.native
+  
   def deleteProperty(target: js.Any, propertyKey: PropertyKey): Boolean = js.native
+  
   def enumerate(target: js.Any): IterableIterator[_] = js.native
+  
   def get(target: js.Any, propertyKey: PropertyKey): js.Any = js.native
   def get(target: js.Any, propertyKey: PropertyKey, receiver: js.Any): js.Any = js.native
+  
   /**
     * Gets the metadata value for the provided metadata key on the target object or its prototype chain.
     * @param metadataKey A key used to store and retrieve metadata.
@@ -84,6 +93,7 @@ object reflectMod extends js.Object {
   def getMetadata(metadataKey: js.Any, target: Object): js.Any = js.native
   def getMetadata(metadataKey: js.Any, target: Object, targetKey: java.lang.String): js.Any = js.native
   def getMetadata(metadataKey: js.Any, target: Object, targetKey: js.Symbol): js.Any = js.native
+  
   /**
     * Gets the metadata keys defined on the target object or its prototype chain.
     * @param target The target object on which the metadata is defined.
@@ -103,6 +113,7 @@ object reflectMod extends js.Object {
   def getMetadataKeys(target: Object): Array[_] = js.native
   def getMetadataKeys(target: Object, targetKey: java.lang.String): Array[_] = js.native
   def getMetadataKeys(target: Object, targetKey: js.Symbol): Array[_] = js.native
+  
   /**
     * Gets the metadata value for the provided metadata key on the target object.
     * @param metadataKey A key used to store and retrieve metadata.
@@ -123,6 +134,7 @@ object reflectMod extends js.Object {
   def getOwnMetadata(metadataKey: js.Any, target: Object): js.Any = js.native
   def getOwnMetadata(metadataKey: js.Any, target: Object, targetKey: java.lang.String): js.Any = js.native
   def getOwnMetadata(metadataKey: js.Any, target: Object, targetKey: js.Symbol): js.Any = js.native
+  
   /**
     * Gets the unique metadata keys defined on the target object.
     * @param target The target object on which the metadata is defined.
@@ -142,10 +154,14 @@ object reflectMod extends js.Object {
   def getOwnMetadataKeys(target: Object): Array[_] = js.native
   def getOwnMetadataKeys(target: Object, targetKey: java.lang.String): Array[_] = js.native
   def getOwnMetadataKeys(target: Object, targetKey: js.Symbol): Array[_] = js.native
+  
   def getOwnPropertyDescriptor(target: js.Any, propertyKey: PropertyKey): js.PropertyDescriptor = js.native
+  
   def getPrototypeOf(target: js.Any): js.Any = js.native
+  
   def has(target: js.Any, propertyKey: java.lang.String): Boolean = js.native
   def has(target: js.Any, propertyKey: js.Symbol): Boolean = js.native
+  
   /**
     * Gets a value indicating whether the target object or its prototype chain has the provided metadata key defined.
     * @param metadataKey A key used to store and retrieve metadata.
@@ -166,6 +182,7 @@ object reflectMod extends js.Object {
   def hasMetadata(metadataKey: js.Any, target: Object): Boolean = js.native
   def hasMetadata(metadataKey: js.Any, target: Object, targetKey: java.lang.String): Boolean = js.native
   def hasMetadata(metadataKey: js.Any, target: Object, targetKey: js.Symbol): Boolean = js.native
+  
   /**
     * Gets a value indicating whether the target object has the provided metadata key defined.
     * @param metadataKey A key used to store and retrieve metadata.
@@ -187,7 +204,9 @@ object reflectMod extends js.Object {
   def hasOwnMetadata(metadataKey: js.Any, target: Object): Boolean = js.native
   def hasOwnMetadata(metadataKey: js.Any, target: Object, targetKey: java.lang.String): Boolean = js.native
   def hasOwnMetadata(metadataKey: js.Any, target: Object, targetKey: js.Symbol): Boolean = js.native
+  
   def isExtensible(target: js.Any): Boolean = js.native
+  
   /**
     * A default metadata decorator factory that can be used on a class, class member, or parameter.
     * @param metadataKey The key for the metadata entry.
@@ -232,10 +251,13 @@ object reflectMod extends js.Object {
     * ```
     */
   def metadata(metadataKey: js.Any, metadataValue: js.Any): FnCall = js.native
+  
   def ownKeys(target: js.Any): Array[PropertyKey] = js.native
+  
   def preventExtensions(target: js.Any): Boolean = js.native
+  
   def set(target: js.Any, propertyKey: PropertyKey, value: js.Any): Boolean = js.native
   def set(target: js.Any, propertyKey: PropertyKey, value: js.Any, receiver: js.Any): Boolean = js.native
+  
   def setPrototypeOf(target: js.Any, proto: js.Any): Boolean = js.native
 }
-

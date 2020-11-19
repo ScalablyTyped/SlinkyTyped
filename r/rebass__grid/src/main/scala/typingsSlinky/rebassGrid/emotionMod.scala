@@ -5,12 +5,13 @@ import typingsSlinky.rebassGrid.mod.BoxProps
 import typingsSlinky.rebassGrid.mod.FlexProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@rebass/grid/emotion", JSImport.Namespace)
 @js.native
 object emotionMod extends js.Object {
+  
   val Box: ReactComponentClass[BoxProps] = js.native
+  
   val Flex: ReactComponentClass[FlexProps] = js.native
 }
-

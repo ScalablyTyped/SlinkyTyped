@@ -9,9 +9,10 @@ import typingsSlinky.emojiMart.sharedPropsMod.EmojiProps
 import typingsSlinky.emojiMart.sharedPropsMod.I18n
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Category {
+  
   @JSImport("emoji-mart/dist-es/components", "Category")
   @js.native
   object component extends js.Object
@@ -20,19 +21,25 @@ object Category {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.emojiMart.componentsMod.Category] {
+    
     @scala.inline
     def emojisVarargs(value: (String | EmojiData)*): this.type = set("emojis", js.Array(value :_*))
+    
     @scala.inline
     def emojis(value: js.Array[String | EmojiData]): this.type = set("emojis", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def hasStickyPosition(value: Boolean): this.type = set("hasStickyPosition", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def recentVarargs(value: String*): this.type = set("recent", js.Array(value :_*))
+    
     @scala.inline
     def recent(value: js.Array[String]): this.type = set("recent", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     emojiProps: EmojiProps,
@@ -46,4 +53,3 @@ object Category {
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
-

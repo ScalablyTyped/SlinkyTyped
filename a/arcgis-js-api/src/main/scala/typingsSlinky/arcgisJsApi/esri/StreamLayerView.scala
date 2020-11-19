@@ -6,24 +6,27 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.connected
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disconnected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait StreamLayerView
   extends LayerView
      with Evented {
+  
   /**
     * The error that explains an unsuccessful attempt to connect to the stream service or an unexpected disconnection from the stream service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-StreamLayerView.html#connectionError)
     */
   val connectionError: Error = js.native
+  
   /**
     * The status of the Web Socket connection with the stream service. This property can be watched to see if the connection is lost unexpectedly.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-StreamLayerView.html#connectionStatus)
     */
   val connectionStatus: connected | disconnected = js.native
+  
   /**
     * The effect applied to the layer view. The effect allows for the selection of features via a [filter](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureEffect.html#filter), and an [includedEffect](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureEffect.html#includedEffect) and [excludedEffect](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureEffect.html#excludedEffect) are applied to those features that respectively pass or fail the filter requirements.
     * > **Known Limitations**  FeatureEffect is not supported in 3D [SceneViews](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
@@ -31,12 +34,14 @@ trait StreamLayerView
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-StreamLayerView.html#effect)
     */
   var effect: FeatureEffect = js.native
+  
   /**
     * The [attribute](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#where), [geometry](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#geometry), and [time extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-support-FeatureFilter.html#timeExtent) filter. Only the features that satisfy the filter are displayed on the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-StreamLayerView.html#filter)
     */
   var filter: FeatureFilter = js.native
+  
   /**
     * Highlights the given feature(s).
     *
@@ -49,8 +54,10 @@ trait StreamLayerView
   def highlight(target: js.Array[Double | Graphic]): Handle = js.native
   def highlight(target: Double): Handle = js.native
   def highlight(target: Graphic): Handle = js.native
+  
   @JSName("on")
   def on_datareceived(name: `data-received`, eventHandler: StreamLayerViewDataReceivedEventHandler): IHandle = js.native
+  
   /**
     * Executes a [Query](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html) against features available for drawing in the layer view and returns the [Extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html) of features that satisfy the query. If query parameters are not provided, the extent and count of all features available for drawing are returned.
     * > **Known Limitations**
@@ -74,6 +81,7 @@ trait StreamLayerView
   def queryExtent(query: QueryProperties): js.Promise[_] = js.native
   def queryExtent(query: QueryProperties, options: StreamLayerViewQueryExtentOptions): js.Promise[_] = js.native
   def queryExtent(query: Query, options: StreamLayerViewQueryExtentOptions): js.Promise[_] = js.native
+  
   /**
     * Executes a [Query](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html) against features available for drawing in the layer view and returns the number of features that satisfy the query. If query parameters are not provided, the count of all features available for drawing is returned.
     * > **Known Limitations**
@@ -97,6 +105,7 @@ trait StreamLayerView
   def queryFeatureCount(query: QueryProperties): js.Promise[Double] = js.native
   def queryFeatureCount(query: QueryProperties, options: StreamLayerViewQueryFeatureCountOptions): js.Promise[Double] = js.native
   def queryFeatureCount(query: Query, options: StreamLayerViewQueryFeatureCountOptions): js.Promise[Double] = js.native
+  
   /**
     * Executes a [Query](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html) against features available for drawing in the layer view and returns a [FeatureSet](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FeatureSet.html). If query parameters are not provided, all features available for drawing are returned.
     * > **Known Limitations**
@@ -120,6 +129,7 @@ trait StreamLayerView
   def queryFeatures(query: QueryProperties): js.Promise[FeatureSet] = js.native
   def queryFeatures(query: QueryProperties, options: StreamLayerViewQueryFeaturesOptions): js.Promise[FeatureSet] = js.native
   def queryFeatures(query: Query, options: StreamLayerViewQueryFeaturesOptions): js.Promise[FeatureSet] = js.native
+  
   /**
     * If a [trackIdField](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TimeInfo.html#trackIdField) is specified on the stream service, this method executes a [Query](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html) against features available for drawing in the layer view and returns a [FeatureSet](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FeatureSet.html) of the latest observations for each `trackId` that satisfy the query. Otherwise, an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) will be thrown when the method is called.
     * > **Known Limitations**
@@ -143,6 +153,7 @@ trait StreamLayerView
   def queryLatestObservations(query: QueryProperties): js.Promise[FeatureSet] = js.native
   def queryLatestObservations(query: QueryProperties, options: StreamLayerViewQueryLatestObservationsOptions): js.Promise[FeatureSet] = js.native
   def queryLatestObservations(query: Query, options: StreamLayerViewQueryLatestObservationsOptions): js.Promise[FeatureSet] = js.native
+  
   /**
     * Executes a [Query](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html) against features available for drawing in the layer view and returns array of the ObjectIDs of features that satisfy the input query. If query parameters are not provided, the ObjectIDs of all features available for drawing are returned.
     * > **Known Limitations**
@@ -167,4 +178,3 @@ trait StreamLayerView
   def queryObjectIds(query: QueryProperties, options: StreamLayerViewQueryObjectIdsOptions): js.Promise[js.Array[Double]] = js.native
   def queryObjectIds(query: Query, options: StreamLayerViewQueryObjectIdsOptions): js.Promise[js.Array[Double]] = js.native
 }
-

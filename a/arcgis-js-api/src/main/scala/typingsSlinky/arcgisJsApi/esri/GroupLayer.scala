@@ -6,15 +6,26 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.independent
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.inherited
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GroupLayer
   extends Layer
      with LayersMixin
      with PortalLayer {
+  
+  /**
+    * Loads all the externally loadable resources associated with the group layer. For the group layer this will load all the layers.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html#loadAll)
+    *
+    *
+    */
+  def loadAll(): js.Promise[GroupLayer] = js.native
+  
   @JSName("type")
   val type_GroupLayer: group = js.native
+  
   /**
     * Indicates how to manage the visibility of the children layers. Possible values are described in the table below.
     *
@@ -28,13 +39,4 @@ trait GroupLayer
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html#visibilityMode)
     */
   var visibilityMode: independent | inherited | exclusive = js.native
-  /**
-    * Loads all the externally loadable resources associated with the group layer. For the group layer this will load all the layers.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html#loadAll)
-    *
-    *
-    */
-  def loadAll(): js.Promise[GroupLayer] = js.native
 }
-

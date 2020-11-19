@@ -9,11 +9,12 @@ import typingsSlinky.graphql.schemaMod.GraphQLSchema
 import typingsSlinky.graphql.sourceMod.Source
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/graphql", "graphql")
 @js.native
 object graphql extends js.Object {
+  
   def apply(args: GraphQLArgs): js.Promise[ExecutionResult[StringDictionary[_], StringDictionary[_]]] = js.native
   def apply(
     schema: GraphQLSchema,
@@ -26,4 +27,3 @@ object graphql extends js.Object {
     typeResolver: js.UndefOr[Maybe[GraphQLTypeResolver[_, _]]]
   ): js.Promise[ExecutionResult[StringDictionary[_], StringDictionary[_]]] = js.native
 }
-

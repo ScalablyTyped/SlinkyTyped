@@ -5,18 +5,25 @@ import typingsSlinky.node.processMod.global.NodeJS.ReadStream
 import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Props extends js.Object {
+  
   val children: ReactElement = js.native
+  
   val exitOnCtrlC: Boolean = js.native
-  val stderr: WriteStream = js.native
-  val stdin: ReadStream = js.native
-  val stdout: WriteStream = js.native
+  
   def onExit(): Unit = js.native
   def onExit(error: js.Error): Unit = js.native
+  
+  val stderr: WriteStream = js.native
+  
+  val stdin: ReadStream = js.native
+  
+  val stdout: WriteStream = js.native
+  
   def writeToStderr(data: String): Unit = js.native
+  
   def writeToStdout(data: String): Unit = js.native
 }
-

@@ -8,10 +8,11 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.rotation
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.tilt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RotationVariable extends VisualVariable {
+  
   /**
     * Only applicable when working in a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Defines the axis the rotation visual variable should be applied to when rendering features with an [ObjectSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ObjectSymbol3DLayer.html).  If the symbol resource is aligned such that its forward facing side points in the direction of the y-axis (the y-axis always points North in WGS84 or WebMercator coordinates), its upwards facing side is pointing in the direction of the z-axis, and its right-hand side points in the direction of the x-axis (the x-axis always points East in WGS84 or WebMercator coordinates), then the following rotation axis will rotate the symbol as indicated by their name.
     *
@@ -27,6 +28,7 @@ trait RotationVariable extends VisualVariable {
     * @default heading
     */
   var axis: heading | tilt | roll = js.native
+  
   /**
     * Defines the origin and direction of rotation depending on how the angle of rotation was measured. See the table below for a list of possible values. This property only applies to rotations around the `heading` axis.
     *
@@ -41,6 +43,7 @@ trait RotationVariable extends VisualVariable {
     * @default geographic
     */
   var rotationType: geographic | arithmetic = js.native
+  
   /**
     * The visual variable type.
     *
@@ -49,4 +52,3 @@ trait RotationVariable extends VisualVariable {
   @JSName("type")
   val type_RotationVariable: rotation = js.native
 }
-

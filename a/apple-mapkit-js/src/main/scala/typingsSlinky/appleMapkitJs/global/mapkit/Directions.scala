@@ -4,7 +4,7 @@ import typingsSlinky.appleMapkitJs.anon.Automobile
 import typingsSlinky.appleMapkitJs.mapkit.DirectionsConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a directions object with options that you may provide.
@@ -21,14 +21,13 @@ class Directions ()
   extends typingsSlinky.appleMapkitJs.mapkit.Directions {
   def this(options: DirectionsConstructorOptions) = this()
 }
-
 /* static members */
 @JSGlobal("mapkit.Directions")
 @js.native
 object Directions extends js.Object {
+  
   /**
     * The modes of transportation.
     */
   val Transport: Automobile = js.native
 }
-

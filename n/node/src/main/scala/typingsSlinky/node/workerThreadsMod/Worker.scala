@@ -10,7 +10,7 @@ import typingsSlinky.node.streamMod.Writable
 import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("worker_threads", "Worker")
 @js.native
@@ -24,11 +24,7 @@ class Worker protected () extends EventEmitter {
   def this(filename: URL_) = this()
   def this(filename: String, options: WorkerOptions) = this()
   def this(filename: URL_, options: WorkerOptions) = this()
-  val resourceLimits: js.UndefOr[ResourceLimits] = js.native
-  val stderr: Readable = js.native
-  val stdin: Writable | Null = js.native
-  val stdout: Readable = js.native
-  val threadId: Double = js.native
+  
   @JSName("addListener")
   def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("addListener")
@@ -37,6 +33,7 @@ class Worker protected () extends EventEmitter {
   def addListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("emit")
   def emit_error(event: error, err: js.Error): Boolean = js.native
   @JSName("emit")
@@ -45,6 +42,7 @@ class Worker protected () extends EventEmitter {
   def emit_message(event: message, value: js.Any): Boolean = js.native
   @JSName("emit")
   def emit_online(event: online): Boolean = js.native
+  
   /**
     * Returns a readable stream for a V8 snapshot of the current state of the Worker.
     * See [`v8.getHeapSnapshot()`][] for more details.
@@ -54,6 +52,7 @@ class Worker protected () extends EventEmitter {
     * immediately with an [`ERR_WORKER_NOT_RUNNING`][] error
     */
   def getHeapSnapshot(): js.Promise[Readable] = js.native
+  
   @JSName("off")
   def off_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("off")
@@ -62,6 +61,7 @@ class Worker protected () extends EventEmitter {
   def off_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("off")
   def off_online(event: online, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("on")
   def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("on")
@@ -70,6 +70,7 @@ class Worker protected () extends EventEmitter {
   def on_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("on")
   def on_online(event: online, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("once")
   def once_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("once")
@@ -78,8 +79,10 @@ class Worker protected () extends EventEmitter {
   def once_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("once")
   def once_online(event: online, listener: js.Function0[Unit]): this.type = js.native
+  
   def postMessage(value: js.Any): Unit = js.native
   def postMessage(value: js.Any, transferList: js.Array[js.typedarray.ArrayBuffer | MessagePort]): Unit = js.native
+  
   @JSName("prependListener")
   def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
@@ -88,6 +91,7 @@ class Worker protected () extends EventEmitter {
   def prependListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("prependOnceListener")
   def prependOnceListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -96,7 +100,9 @@ class Worker protected () extends EventEmitter {
   def prependOnceListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
+  
   def ref(): Unit = js.native
+  
   @JSName("removeListener")
   def removeListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("removeListener")
@@ -105,11 +111,22 @@ class Worker protected () extends EventEmitter {
   def removeListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
+  
+  val resourceLimits: js.UndefOr[ResourceLimits] = js.native
+  
+  val stderr: Readable = js.native
+  
+  val stdin: Writable | Null = js.native
+  
+  val stdout: Readable = js.native
+  
   /**
     * Stop all JavaScript execution in the worker thread as soon as possible.
     * Returns a Promise for the exit code that is fulfilled when the `exit` event is emitted.
     */
   def terminate(): js.Promise[Double] = js.native
+  
+  val threadId: Double = js.native
+  
   def unref(): Unit = js.native
 }
-

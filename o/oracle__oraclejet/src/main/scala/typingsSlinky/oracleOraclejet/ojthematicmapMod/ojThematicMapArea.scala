@@ -135,30 +135,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojThematicMapArea extends JetElement[ojThematicMapAreaSettableProperties] {
-  var categories: js.Array[String] = js.native
-  var color: String = js.native
-  var label: String = js.native
-  var labelStyle: js.Object = js.native
-  var location: String = js.native
-  var onCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLocationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOpacityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectableChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var opacity: Double = js.native
-  var selectable: auto | off = js.native
-  var shortDesc: String = js.native
-  var svgClassName: String = js.native
-  var svgStyle: js.Object = js.native
+  
   def addEventListener(`type`: labelStyleChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: labelStyleChanged,
@@ -1005,6 +986,11 @@ trait ojThematicMapArea extends JetElement[ojThematicMapAreaSettableProperties] 
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var categories: js.Array[String] = js.native
+  
+  var color: String = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_categories(property: categories): js.Array[String] = js.native
@@ -1026,7 +1012,39 @@ trait ojThematicMapArea extends JetElement[ojThematicMapAreaSettableProperties] 
   def getProperty_svgClassName(property: svgClassName): String = js.native
   @JSName("getProperty")
   def getProperty_svgStyle(property: svgStyle): /* import warning: importer.ImportType#apply Failed type conversion: @oracle/oraclejet.@oracle/oraclejet/ojthematicmap.ojThematicMapArea['svgStyle'] */ js.Any = js.native
+  
+  var label: String = js.native
+  
+  var labelStyle: js.Object = js.native
+  
+  var location: String = js.native
+  
+  var onCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLocationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOpacityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectableChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSvgClassNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSvgStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var opacity: Double = js.native
+  
+  var selectable: auto | off = js.native
+  
   def setProperties(properties: ojThematicMapAreaSettablePropertiesLenient): Unit = js.native
+  
   def setProperty(property: selectable, value: auto): Unit = js.native
   def setProperty(property: selectable, value: off): Unit = js.native
   def setProperty[T /* <: String */](property: T, value: JetSetPropertyType[T, ojThematicMapAreaSettableProperties]): Unit = js.native
@@ -1048,5 +1066,10 @@ trait ojThematicMapArea extends JetElement[ojThematicMapAreaSettableProperties] 
   def setProperty_svgClassName(property: svgClassName, value: String): Unit = js.native
   @JSName("setProperty")
   def setProperty_svgStyle(property: svgStyle, value: js.Object): Unit = js.native
+  
+  var shortDesc: String = js.native
+  
+  var svgClassName: String = js.native
+  
+  var svgStyle: js.Object = js.native
 }
-

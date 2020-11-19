@@ -5,10 +5,11 @@ import typingsSlinky.lodash.mod.List
 import typingsSlinky.lodash.mod.NumericDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashSample extends LodashConvertible {
+  
   def apply[T](): js.UndefOr[T] = js.native
   def apply[T /* <: js.Object */](collection: T): js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
@@ -17,4 +18,3 @@ trait LodashSample extends LodashConvertible {
   def apply[T](collection: List[T]): js.UndefOr[T] = js.native
   def apply[T](collection: NumericDictionary[T]): js.UndefOr[T] = js.native
 }
-

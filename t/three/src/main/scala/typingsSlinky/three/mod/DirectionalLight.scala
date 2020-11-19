@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "DirectionalLight")
 @js.native
@@ -16,4 +16,3 @@ class DirectionalLight ()
   def this(color: Double, intensity: Double) = this()
   def this(color: typingsSlinky.three.colorMod.Color, intensity: Double) = this()
 }
-

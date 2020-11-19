@@ -2,7 +2,6 @@ package typingsSlinky.maxmind
 
 import typingsSlinky.maxmind.anon.FnCall
 import typingsSlinky.maxmind.anon.FnCallFilenameOptionsListener
-import typingsSlinky.maxmind.anon.FnCallPathOptions
 import typingsSlinky.maxmind.maxmindStrings.buffer
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
@@ -15,32 +14,21 @@ import typingsSlinky.node.fsMod.FSWatcher
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("maxmind/lib/fs", JSImport.Namespace)
 @js.native
 object fsMod extends js.Object {
+  
   @js.native
   object default extends js.Object {
+    
+    def existsSync(path: PathLike): Boolean = js.native
     @JSName("existsSync")
     var existsSync_Original: js.Function1[/* path */ PathLike, Boolean] = js.native
-    @JSName("readFileSync")
-    var readFileSync_Original: FnCallPathOptions = js.native
-    @JSName("readFile")
-    var readFile_Original: FnCall = js.native
-    @JSName("watch")
-    var watch_Original: FnCallFilenameOptionsListener = js.native
-    def existsSync(path: PathLike): Boolean = js.native
-    def readFile(path: Double): js.Promise[String | Buffer] = js.native
-    def readFile(path: Double, options: String): js.Promise[String | Buffer] = js.native
-    def readFile(path: Double, options: BaseEncodingOptionsflagst): js.Promise[String | Buffer] = js.native
-    def readFile(path: Double, options: EncodingBufferEncoding): js.Promise[String] = js.native
-    def readFile(path: Double, options: `3`): js.Promise[Buffer] = js.native
-    def readFile(path: PathLike): js.Promise[String | Buffer] = js.native
-    def readFile(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
-    def readFile(path: PathLike, options: BaseEncodingOptionsflagst): js.Promise[String | Buffer] = js.native
-    def readFile(path: PathLike, options: EncodingBufferEncoding): js.Promise[String] = js.native
-    def readFile(path: PathLike, options: `3`): js.Promise[Buffer] = js.native
+    
+    var readFile: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof fs.readFile.__promisify__ */ js.Any = js.native
+    
     def readFileSync(path: Double): String | Buffer = js.native
     def readFileSync(path: Double, options: BufferEncoding): String = js.native
     def readFileSync(path: Double, options: BaseEncodingOptionsflagst): String | Buffer = js.native
@@ -56,9 +44,12 @@ object fsMod extends js.Object {
     @JSName("readFileSync")
     def readFileSync_Buffer(path: PathLike): Buffer = js.native
     @JSName("readFileSync")
+    var readFileSync_Original: FnCall = js.native
+    @JSName("readFileSync")
     def readFileSync_Union(path: Double, options: BufferEncoding): String | Buffer = js.native
     @JSName("readFileSync")
     def readFileSync_Union(path: PathLike, options: BufferEncoding): String | Buffer = js.native
+    
     def watch(filename: PathLike): FSWatcher = js.native
     def watch(filename: PathLike, listener: js.Function2[/* event */ String, /* filename */ String, _]): FSWatcher = js.native
     def watch(
@@ -96,6 +87,8 @@ object fsMod extends js.Object {
       listener: js.Function2[/* event */ String, /* filename */ Buffer, Unit]
     ): FSWatcher = js.native
     @JSName("watch")
+    var watch_Original: FnCallFilenameOptionsListener = js.native
+    @JSName("watch")
     def watch_buffer(filename: PathLike, options: buffer): FSWatcher = js.native
     @JSName("watch")
     def watch_buffer(
@@ -104,6 +97,4 @@ object fsMod extends js.Object {
       listener: js.Function2[/* event */ String, /* filename */ Buffer, Unit]
     ): FSWatcher = js.native
   }
-  
 }
-

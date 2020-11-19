@@ -3,11 +3,12 @@ package typingsSlinky.luminoDatagrid.textrendererMod.TextRenderer.formatExponent
 import typingsSlinky.luminoDatagrid.textrendererMod.TextRenderer.FormatFunc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@lumino/datagrid/lib/textrenderer", "TextRenderer.formatExponential")
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Create a scientific notation format function.
     *
@@ -24,4 +25,3 @@ object ^ extends js.Object {
   def apply(): FormatFunc = js.native
   def apply(options: IOptions): FormatFunc = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Converts between texts and strings._
@@ -12,6 +12,16 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait DateFormatter extends js.Object {
+  
+  /**
+    * _Creates a date from a string._
+    *
+    * Uses the date formatters configuration to parse the string into a date. If the string cannot be parsed with the date foramtters configuration, the function will return null.
+    * @param str - The string to parse into a date.
+    * @see https://docs.scriptable.app/dateformatter/#-date
+    */
+  def date(str: String): String = js.native
+  
   /**
     * _Date format to be used by the formatter._
     *
@@ -79,6 +89,7 @@ trait DateFormatter extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#dateformat
     */
   var dateFormat: String = js.native
+  
   /**
     * _Locale to use when formatting._
     *
@@ -86,20 +97,14 @@ trait DateFormatter extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#locale
     */
   var locale: String = js.native
-  /**
-    * _Creates a date from a string._
-    *
-    * Uses the date formatters configuration to parse the string into a date. If the string cannot be parsed with the date foramtters configuration, the function will return null.
-    * @param str - The string to parse into a date.
-    * @see https://docs.scriptable.app/dateformatter/#-date
-    */
-  def date(str: String): String = js.native
+  
   /**
     * _Creates a string from a date._
     * @param date - The date to convert to a string.
     * @see https://docs.scriptable.app/dateformatter/#-string
     */
   def string(date: js.Date): String = js.native
+  
   /**
     * _Use a full style for the date._
     *
@@ -107,6 +112,7 @@ trait DateFormatter extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#-usefulldatestyle
     */
   def useFullDateStyle(): Unit = js.native
+  
   /**
     * _Use a full style for the time._
     *
@@ -114,6 +120,7 @@ trait DateFormatter extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#-usefulltimestyle
     */
   def useFullTimeStyle(): Unit = js.native
+  
   /**
     * _Use a long style for the date._
     *
@@ -121,6 +128,7 @@ trait DateFormatter extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#-uselongdatestyle
     */
   def useLongDateStyle(): Unit = js.native
+  
   /**
     * _Use a long style for the time._
     *
@@ -128,6 +136,7 @@ trait DateFormatter extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#-uselongtimestyle
     */
   def useLongTimeStyle(): Unit = js.native
+  
   /**
     * _Use a medium style for the date._
     *
@@ -135,6 +144,7 @@ trait DateFormatter extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#-usemediumdatestyle
     */
   def useMediumDateStyle(): Unit = js.native
+  
   /**
     * _Use a short style for the time._
     *
@@ -142,6 +152,7 @@ trait DateFormatter extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#-usemediumtimestyle
     */
   def useMediumTimeStyle(): Unit = js.native
+  
   /**
     * _Use no style for the date._
     *
@@ -149,6 +160,7 @@ trait DateFormatter extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#-usenodatestyle
     */
   def useNoDateStyle(): Unit = js.native
+  
   /**
     * _Use no style for the time._
     *
@@ -156,6 +168,7 @@ trait DateFormatter extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#-usenotimestyle
     */
   def useNoTimeStyle(): Unit = js.native
+  
   /**
     * _Use a short style for the date._
     *
@@ -163,6 +176,7 @@ trait DateFormatter extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#-useshortdatestyle
     */
   def useShortDateStyle(): Unit = js.native
+  
   /**
     * _Use a short style for the time._
     *
@@ -171,8 +185,8 @@ trait DateFormatter extends js.Object {
     */
   def useShortTimeStyle(): Unit = js.native
 }
-
 object DateFormatter {
+  
   @scala.inline
   def apply(
     date: String => String,
@@ -193,46 +207,62 @@ object DateFormatter {
     val __obj = js.Dynamic.literal(date = js.Any.fromFunction1(date), dateFormat = dateFormat.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], string = js.Any.fromFunction1(string), useFullDateStyle = js.Any.fromFunction0(useFullDateStyle), useFullTimeStyle = js.Any.fromFunction0(useFullTimeStyle), useLongDateStyle = js.Any.fromFunction0(useLongDateStyle), useLongTimeStyle = js.Any.fromFunction0(useLongTimeStyle), useMediumDateStyle = js.Any.fromFunction0(useMediumDateStyle), useMediumTimeStyle = js.Any.fromFunction0(useMediumTimeStyle), useNoDateStyle = js.Any.fromFunction0(useNoDateStyle), useNoTimeStyle = js.Any.fromFunction0(useNoTimeStyle), useShortDateStyle = js.Any.fromFunction0(useShortDateStyle), useShortTimeStyle = js.Any.fromFunction0(useShortTimeStyle))
     __obj.asInstanceOf[DateFormatter]
   }
+  
   @scala.inline
   implicit class DateFormatterOps[Self <: DateFormatter] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setDate(value: String => String): Self = this.set("date", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDateFormat(value: String): Self = this.set("dateFormat", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setString(value: js.Date => String): Self = this.set("string", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setUseFullDateStyle(value: () => Unit): Self = this.set("useFullDateStyle", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setUseFullTimeStyle(value: () => Unit): Self = this.set("useFullTimeStyle", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setUseLongDateStyle(value: () => Unit): Self = this.set("useLongDateStyle", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setUseLongTimeStyle(value: () => Unit): Self = this.set("useLongTimeStyle", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setUseMediumDateStyle(value: () => Unit): Self = this.set("useMediumDateStyle", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setUseMediumTimeStyle(value: () => Unit): Self = this.set("useMediumTimeStyle", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setUseNoDateStyle(value: () => Unit): Self = this.set("useNoDateStyle", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setUseNoTimeStyle(value: () => Unit): Self = this.set("useNoTimeStyle", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setUseShortDateStyle(value: () => Unit): Self = this.set("useShortDateStyle", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setUseShortTimeStyle(value: () => Unit): Self = this.set("useShortTimeStyle", js.Any.fromFunction0(value))
   }
-  
 }
-

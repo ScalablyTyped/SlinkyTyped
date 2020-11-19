@@ -7,10 +7,11 @@ import typingsSlinky.gapiClientCloudkms.anon.Bearertoken
 import typingsSlinky.gapiClientCloudkms.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CryptoKeyVersionsResource extends js.Object {
+  
   /**
     * Create a new CryptoKeyVersion in a CryptoKey.
     *
@@ -19,6 +20,7 @@ trait CryptoKeyVersionsResource extends js.Object {
     * ENABLED.
     */
   def create(request: Accesstoken): Request[CryptoKeyVersion] = js.native
+  
   /**
     * Schedule a CryptoKeyVersion for destruction.
     *
@@ -34,10 +36,13 @@ trait CryptoKeyVersionsResource extends js.Object {
     * RestoreCryptoKeyVersion may be called to reverse the process.
     */
   def destroy(request: Alt): Request[CryptoKeyVersion] = js.native
+  
   /** Returns metadata for a given CryptoKeyVersion. */
   def get(request: Alt): Request[CryptoKeyVersion] = js.native
+  
   /** Lists CryptoKeyVersions. */
   def list(request: Bearertoken): Request[ListCryptoKeyVersionsResponse] = js.native
+  
   /**
     * Update a CryptoKeyVersion's metadata.
     *
@@ -48,6 +53,7 @@ trait CryptoKeyVersionsResource extends js.Object {
     * move between other states.
     */
   def patch(request: Callback): Request[CryptoKeyVersion] = js.native
+  
   /**
     * Restore a CryptoKeyVersion in the
     * DESTROY_SCHEDULED,
@@ -59,8 +65,8 @@ trait CryptoKeyVersionsResource extends js.Object {
     */
   def restore(request: Alt): Request[CryptoKeyVersion] = js.native
 }
-
 object CryptoKeyVersionsResource {
+  
   @scala.inline
   def apply(
     create: Accesstoken => Request[CryptoKeyVersion],
@@ -73,30 +79,38 @@ object CryptoKeyVersionsResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), destroy = js.Any.fromFunction1(destroy), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), restore = js.Any.fromFunction1(restore))
     __obj.asInstanceOf[CryptoKeyVersionsResource]
   }
+  
   @scala.inline
   implicit class CryptoKeyVersionsResourceOps[Self <: CryptoKeyVersionsResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreate(value: Accesstoken => Request[CryptoKeyVersion]): Self = this.set("create", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDestroy(value: Alt => Request[CryptoKeyVersion]): Self = this.set("destroy", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGet(value: Alt => Request[CryptoKeyVersion]): Self = this.set("get", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setList(value: Bearertoken => Request[ListCryptoKeyVersionsResponse]): Self = this.set("list", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setPatch(value: Callback => Request[CryptoKeyVersion]): Self = this.set("patch", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setRestore(value: Alt => Request[CryptoKeyVersion]): Self = this.set("restore", js.Any.fromFunction1(value))
   }
-  
 }
-

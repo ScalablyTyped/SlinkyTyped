@@ -4,14 +4,14 @@ import typingsSlinky.builderUtil.archMod.Arch
 import typingsSlinky.node.httpMod.ClientRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("electron-publish", "HttpPublisher")
 @js.native
 abstract class HttpPublisher protected () extends Publisher {
   protected def this(context: PublishContext) = this()
   protected def this(context: PublishContext, useSafeArtifactName: Boolean) = this()
-  val useSafeArtifactName: js.Any = js.native
+  
   /* protected */ def doUpload(
     fileName: String,
     arch: Arch,
@@ -33,5 +33,6 @@ abstract class HttpPublisher protected () extends Publisher {
     ],
     file: String
   ): js.Promise[_] = js.native
+  
+  val useSafeArtifactName: js.Any = js.native
 }
-

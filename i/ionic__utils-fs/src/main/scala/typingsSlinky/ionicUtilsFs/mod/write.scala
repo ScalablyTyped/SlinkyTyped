@@ -5,11 +5,12 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/utils-fs", "write")
 @js.native
 object write extends js.Object {
+  
   def apply(fd: Double, buffer: Buffer): js.Promise[WriteResult] = js.native
   def apply(
     fd: Double,
@@ -70,4 +71,3 @@ object write extends js.Object {
     callback: js.Function3[/* err */ ErrnoException, /* written */ Double, /* str */ String, Unit]
   ): Unit = js.native
 }
-

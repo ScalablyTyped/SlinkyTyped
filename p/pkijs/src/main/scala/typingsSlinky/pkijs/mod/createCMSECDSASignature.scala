@@ -2,11 +2,12 @@ package typingsSlinky.pkijs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pkijs/src/common", "createCMSECDSASignature")
 @js.native
 object createCMSECDSASignature extends js.Object {
+  
   /**
     * Create CMS ECDSA signature from WebCrypto ECDSA signature
     *
@@ -15,4 +16,3 @@ object createCMSECDSASignature extends js.Object {
     */
   def apply(signatureBuffer: js.typedarray.ArrayBuffer): js.typedarray.ArrayBuffer = js.native
 }
-

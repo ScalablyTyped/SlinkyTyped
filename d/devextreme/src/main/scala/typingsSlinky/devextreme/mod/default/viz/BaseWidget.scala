@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.viz.BaseWidgetOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "viz.BaseWidget")
 @js.native
@@ -22,4 +22,3 @@ class BaseWidget protected ()
     options: BaseWidgetOptions[typingsSlinky.devextreme.mod.DevExpress.viz.BaseWidget]
   ) = this()
 }
-

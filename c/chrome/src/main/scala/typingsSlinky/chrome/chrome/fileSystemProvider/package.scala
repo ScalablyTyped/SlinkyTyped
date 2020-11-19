@@ -2,9 +2,10 @@ package typingsSlinky.chrome.chrome
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object fileSystemProvider {
+  
   type DirectoryPathRecursiveRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.DirectoryPathRecursiveRequestedEventOptions, 
@@ -13,6 +14,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type DirectoryPathRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.DirectoryPathRequestedEventOptions, 
@@ -25,6 +27,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type EntryPathRecursiveRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.EntryPathRecursiveRequestedEventOptions, 
@@ -33,6 +36,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type FilePathLengthRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.FilePathLengthRequestedEventOptions, 
@@ -41,6 +45,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type FilePathRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.FilePathRequestedEventOptions, 
@@ -49,6 +54,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type MetadataRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.MetadataRequestedEventOptions, 
@@ -60,6 +66,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type OpenFileRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.OpenFileRequestedEventOptions, 
@@ -68,6 +75,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type OpenedFileIoRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.OpenedFileIoRequestedEventOptions, 
@@ -76,6 +84,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type OpenedFileOffsetRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.OpenedFileOffsetRequestedEventOptions, 
@@ -84,6 +93,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type OpenedFileRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.OpenedFileRequestedEventOptions, 
@@ -92,6 +102,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type OperationRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.OperationRequestedEventOptions, 
@@ -100,6 +111,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type OptionlessRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* successCallback */ js.Function, 
@@ -107,6 +119,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type RequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.RequestedEventOptions, 
@@ -115,6 +128,7 @@ package object fileSystemProvider {
       scala.Unit
     ]
   ]
+  
   type SourceTargetPathRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.SourceTargetPathRequestedEventOptions, 

@@ -3,13 +3,14 @@ package typingsSlinky.heremaps.H.service
 import typingsSlinky.heremaps.H.service.PlacesService.EntryPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Places service implements a low level places RestApi access. Please refer to Restful API documentation for providing parameters and handling response objects.
   */
 @js.native
 trait PlacesService_ extends AbstractRestService {
+  
   /**
     * Function triggers places api 'around' entry point. Please refer to documentation for parameter specification and response handling.
     * @param aroundParams {H.service.ServiceParameters} - places api around entry point parameters please refer to places api documentation
@@ -22,6 +23,7 @@ trait PlacesService_ extends AbstractRestService {
     onResult: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): JsonpRequestHandle = js.native
+  
   /**
     * Function triggers places api 'categories' entry point. Please refer to documentation for parameter specification and response handling.
     * @param categoriesParams {H.service.ServiceParameters} - places api here entry point parameters please refer to places api documentation
@@ -34,6 +36,7 @@ trait PlacesService_ extends AbstractRestService {
     onResult: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): JsonpRequestHandle = js.native
+  
   /**
     * Function triggers places api 'explore' entry point. Please refer to documentation for parameter specification and response handling.
     * @param exploreParams {H.service.ServiceParameters} - places api explore entry point parameters please refer to places api documentation
@@ -46,6 +49,7 @@ trait PlacesService_ extends AbstractRestService {
     onResult: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): JsonpRequestHandle = js.native
+  
   /**
     * This method should be used to follow hyperlinks available in results returned by dicovery queries.
     * @param hyperlink {string}
@@ -65,6 +69,7 @@ trait PlacesService_ extends AbstractRestService {
     onError: js.Function1[/* error */ js.Error, Unit],
     opt_additionalParameters: js.Object
   ): JsonpRequestHandle = js.native
+  
   /**
     * Function triggers places api 'here' entry point. Please refer to documentation for parameter specification and response handling.
     * @param hereParams {H.service.ServiceParameters} - places api here entry point parameters please refer to places api documentation
@@ -77,6 +82,7 @@ trait PlacesService_ extends AbstractRestService {
     onResult: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): JsonpRequestHandle = js.native
+  
   /**
     * This is generic method to query places RestAPI.
     * @param entryPoint {H.service.PlacesService.EntryPoint} - can be one of available entry points H.service.PlacesService.EntryPoint i.e value of H.service.PlacesService.EntryPoint.SEARCH
@@ -92,6 +98,7 @@ trait PlacesService_ extends AbstractRestService {
     onResult: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): JsonpRequestHandle = js.native
+  
   /**
     * Function triggers places api 'search' entry point. Please refer to documentation for parameter specification and response handling.
     * @param searchParams {H.service.ServiceParameters} - places api search entry point parameters please refer to places api documentation
@@ -104,6 +111,7 @@ trait PlacesService_ extends AbstractRestService {
     onResult: js.Function1[/* result */ ServiceResult, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
   ): JsonpRequestHandle = js.native
+  
   /**
     * Function triggers places api 'suggestions' entry point. Please refer to documentation for parameter specification and response handling.
     * @param suggestParams {H.service.ServiceParameters} - places api suggest entry point parameters please refer to places api documentation
@@ -117,4 +125,3 @@ trait PlacesService_ extends AbstractRestService {
     onError: js.Function1[/* error */ js.Error, Unit]
   ): JsonpRequestHandle = js.native
 }
-

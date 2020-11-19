@@ -12,11 +12,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-s3-browser/commands/ListObjectsV2Command", JSImport.Namespace)
 @js.native
 object listObjectsV2CommandMod extends js.Object {
+  
   @js.native
   class ListObjectsV2Command protected () extends Command[
           InputTypesUnion, 
@@ -27,13 +28,14 @@ object listObjectsV2CommandMod extends js.Object {
           Blob
         ] {
     def this(input: ListObjectsV2Input) = this()
+    
     val middlewareStack: MiddlewareStack[ListObjectsV2Input, ListObjectsV2Output, Blob] = js.native
+    
     val model: OperationModel = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: S3ResolvedConfiguration
     ): Handler[ListObjectsV2Input, ListObjectsV2Output] = js.native
   }
-  
 }
-

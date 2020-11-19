@@ -15,18 +15,20 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.long
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ParameterValue
   extends Accessor
      with JSONSupport {
+  
   /**
     * Specifies the parameter's data type.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ParameterValue.html#dataType)
     */
   var dataType: boolean | `data-file` | date | double | `feature-record-set-layer` | field | `linear-unit` | long | `raster-data` | `raster-data-layer` | `record-set` | string | `multi-value` = js.native
+  
   /**
     * The value of the parameter. The data structure of this value depends on the `dataType`.
     *
@@ -52,4 +54,3 @@ trait ParameterValue
     */
   var value: js.Any = js.native
 }
-

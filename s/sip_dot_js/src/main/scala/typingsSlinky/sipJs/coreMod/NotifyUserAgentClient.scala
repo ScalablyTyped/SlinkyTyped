@@ -4,7 +4,7 @@ import typingsSlinky.sipJs.outgoingRequestMod.OutgoingRequestDelegate
 import typingsSlinky.sipJs.outgoingRequestMod.RequestOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js/lib/core", "NotifyUserAgentClient")
 @js.native
@@ -23,4 +23,3 @@ class NotifyUserAgentClient protected ()
     options: RequestOptions
   ) = this()
 }
-

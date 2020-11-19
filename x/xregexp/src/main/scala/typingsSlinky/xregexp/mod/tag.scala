@@ -3,11 +3,12 @@ package typingsSlinky.xregexp.mod
 import typingsSlinky.std.TemplateStringsArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xregexp", "tag")
 @js.native
 object tag extends js.Object {
+  
   /**
     * Provides tagged template literals that create regexes with XRegExp syntax and flags. The
     * provided pattern is handled as a raw string, so backslashes don't need to be escaped.
@@ -34,4 +35,3 @@ object tag extends js.Object {
   def apply(): js.Function2[/* literals */ TemplateStringsArray, /* repeated */ js.Any, js.RegExp] = js.native
   def apply(flags: String): js.Function2[/* literals */ TemplateStringsArray, /* repeated */ js.Any, js.RegExp] = js.native
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.BABYLON.PostProcessOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.HighlightsPostProcess")
 @js.native
@@ -43,7 +43,21 @@ class HighlightsPostProcess protected ()
     name: String,
     options: Double,
     camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.BABYLON.Engine
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
     samplingMode: Double,
+    engine: typingsSlinky.babylonjs.BABYLON.Engine
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
     engine: typingsSlinky.babylonjs.BABYLON.Engine
   ) = this()
   def this(
@@ -57,8 +71,56 @@ class HighlightsPostProcess protected ()
     name: String,
     options: Double,
     camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.BABYLON.Engine,
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
     samplingMode: Double,
     engine: typingsSlinky.babylonjs.BABYLON.Engine,
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.BABYLON.Engine,
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
     reusable: Boolean
   ) = this()
   def this(
@@ -68,6 +130,69 @@ class HighlightsPostProcess protected ()
     samplingMode: Double,
     engine: typingsSlinky.babylonjs.BABYLON.Engine,
     reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: js.UndefOr[scala.Nothing],
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean,
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.BABYLON.Engine,
+    reusable: js.UndefOr[scala.Nothing],
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.BABYLON.Engine,
+    reusable: Boolean,
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
+    reusable: js.UndefOr[scala.Nothing],
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean,
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: Double,
+    engine: typingsSlinky.babylonjs.BABYLON.Engine,
+    reusable: js.UndefOr[scala.Nothing],
+    textureType: Double
   ) = this()
   def this(
     name: String,
@@ -76,6 +201,69 @@ class HighlightsPostProcess protected ()
     samplingMode: Double,
     engine: typingsSlinky.babylonjs.BABYLON.Engine,
     reusable: Boolean,
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: js.UndefOr[scala.Nothing],
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean,
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.BABYLON.Engine,
+    reusable: js.UndefOr[scala.Nothing],
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.BABYLON.Engine,
+    reusable: Boolean,
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
+    reusable: js.UndefOr[scala.Nothing],
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean,
+    textureType: Double
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
+    samplingMode: Double,
+    engine: typingsSlinky.babylonjs.BABYLON.Engine,
+    reusable: js.UndefOr[scala.Nothing],
     textureType: Double
   ) = this()
   def this(
@@ -88,4 +276,3 @@ class HighlightsPostProcess protected ()
     textureType: Double
   ) = this()
 }
-

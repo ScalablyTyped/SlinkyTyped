@@ -2,11 +2,12 @@ package typingsSlinky.hapiAddress.mod.domain
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@hapi/address", "domain.isValid")
 @js.native
 object isValid extends js.Object {
+  
   /**
     * Analyzes a string to verify it is a valid domain name.
     * 
@@ -18,4 +19,3 @@ object isValid extends js.Object {
   def apply(domain: String): Boolean = js.native
   def apply(domain: String, options: Options): Boolean = js.native
 }
-

@@ -13,11 +13,12 @@ import typingsSlinky.reactToolbox.listListMod.ListProps
 import typingsSlinky.reactToolbox.listSubHeaderMod.ListSubHeaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-toolbox/components/list", JSImport.Namespace)
 @js.native
 object listMod extends js.Object {
+  
   @js.native
   class List ()
     extends Component[ListProps, js.Object, js.Any]
@@ -57,6 +58,4 @@ object listMod extends js.Object {
   @js.native
   class ListSubHeader ()
     extends Component[ListSubHeaderProps, js.Object, js.Any]
-  
 }
-

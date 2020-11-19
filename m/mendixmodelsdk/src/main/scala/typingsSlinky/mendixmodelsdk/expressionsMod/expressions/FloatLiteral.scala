@@ -36,7 +36,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.WidgetValidation
 import typingsSlinky.mendixmodelsdk.restMod.rest.ConsumedODataService
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -54,24 +54,25 @@ class FloatLiteral protected () extends LiteralExpression {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FFloatLiteral: IModel = js.native
+  
   def value: Double = js.native
   def value_=(newValue: Double): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/expressions", "expressions.FloatLiteral")
 @js.native
 object FloatLiteral extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'argumentModel' property
@@ -81,6 +82,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInAppServiceCallParameterMappingUnderArgumentModel(container: AppServiceCallParameterMapping): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'argumentModel' property
@@ -90,6 +92,7 @@ object FloatLiteral extends js.Object {
     *  7.21.0 and higher
     */
   def createInBasicCodeActionParameterValueUnderArgumentModel(container: BasicCodeActionParameterValue): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'argumentModel' property
@@ -99,6 +102,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 to 7.20.0
     */
   def createInBasicJavaActionParameterValueUnderArgumentModel(container: BasicJavaActionParameterValue): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'left' property
@@ -108,6 +112,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryExpressionUnderLeft(container: BinaryExpression): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'right' property
@@ -117,6 +122,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryExpressionUnderRight(container: BinaryExpression): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'expressionModel' property
@@ -126,6 +132,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryRequestHandlingUnderExpressionModel(container: BinaryRequestHandling): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'valueModel' property
@@ -135,6 +142,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInChangeListActionUnderValueModel(container: ChangeListAction): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'valueModel' property
@@ -144,6 +152,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInChangeVariableActionUnderValueModel(container: ChangeVariableAction): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'expressionModel' property
@@ -153,6 +162,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInConditionalSettingsUnderExpressionModel(container: ConditionalSettings): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'timeoutModel' property
@@ -162,6 +172,7 @@ object FloatLiteral extends js.Object {
     *  8.5.0 and higher
     */
   def createInConsumedODataServiceUnderTimeoutModel(container: ConsumedODataService): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'initialValueModel' property
@@ -171,6 +182,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInCreateVariableActionUnderInitialValueModel(container: CreateVariableAction): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'limitExpressionModel' property
@@ -180,6 +192,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInCustomRangeUnderLimitExpressionModel(container: CustomRange): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'offsetExpressionModel' property
@@ -189,6 +202,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInCustomRangeUnderOffsetExpressionModel(container: CustomRange): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'argumentModel' property
@@ -198,6 +212,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInDocumentTemplateParameterMappingUnderArgumentModel(container: DocumentTemplateParameterMapping): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'returnValueModel' property
@@ -207,6 +222,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInEndEventUnderReturnValueModel(container: EndEvent): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'expressionModel' property
@@ -216,6 +232,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInExpressionSplitConditionUnderExpressionModel(container: ExpressionSplitCondition): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'valueModel' property
@@ -225,6 +242,7 @@ object FloatLiteral extends js.Object {
     *  8.0.0 and higher
     */
   def createInFormDataPartUnderValueModel(container: FormDataPart): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'arguments' property
@@ -234,6 +252,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInFunctionCallExpressionUnderArguments(container: FunctionCallExpression): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'marginBottomInInchModel' property
@@ -243,6 +262,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginBottomInInchModel(container: GenerateDocumentAction): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'marginLeftInInchModel' property
@@ -252,6 +272,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginLeftInInchModel(container: GenerateDocumentAction): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'marginRightInInchModel' property
@@ -261,6 +282,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginRightInInchModel(container: GenerateDocumentAction): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'marginTopInInchModel' property
@@ -270,6 +292,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginTopInInchModel(container: GenerateDocumentAction): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'customLocationModel' property
@@ -279,6 +302,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderCustomLocationModel(container: HttpConfiguration): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'password' property
@@ -288,6 +312,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderPassword(container: HttpConfiguration): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'username' property
@@ -297,6 +322,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderUsername(container: HttpConfiguration): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'valueModel' property
@@ -306,6 +332,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpHeaderEntryUnderValueModel(container: HttpHeaderEntry): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'condition' property
@@ -315,6 +342,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderCondition(container: IfExpression): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'ifFalse' property
@@ -324,6 +352,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderIfFalse(container: IfExpression): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'ifTrue' property
@@ -333,6 +362,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderIfTrue(container: IfExpression): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'expressionModel' property
@@ -342,6 +372,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInInspectAttributeUnderExpressionModel(container: InspectAttribute): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'nodeModel' property
@@ -351,6 +382,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInLogMessageActionUnderNodeModel(container: LogMessageAction): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'valueModel' property
@@ -360,6 +392,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInMemberChangeUnderValueModel(container: MemberChange): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'argumentModel' property
@@ -369,6 +402,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInMicroflowCallParameterMappingUnderArgumentModel(container: MicroflowCallParameterMapping): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'argumentModel' property
@@ -378,6 +412,7 @@ object FloatLiteral extends js.Object {
     *  8.0.0 and higher
     */
   def createInNanoflowCallParameterMappingUnderArgumentModel(container: NanoflowCallParameterMapping): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'expression' property
@@ -387,6 +422,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInParenthesisExpressionUnderExpression(container: ParenthesisExpression): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'hostExpressionModel' property
@@ -396,6 +432,7 @@ object FloatLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderHostExpressionModel(container: ProxyConfiguration): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'passwordExpressionModel' property
@@ -405,6 +442,7 @@ object FloatLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderPasswordExpressionModel(container: ProxyConfiguration): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'portExpressionModel' property
@@ -414,6 +452,7 @@ object FloatLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderPortExpressionModel(container: ProxyConfiguration): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'useConfigurationExpressionModel' property
@@ -423,6 +462,7 @@ object FloatLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderUseConfigurationExpressionModel(container: ProxyConfiguration): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'usernameExpressionModel' property
@@ -432,6 +472,7 @@ object FloatLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderUsernameExpressionModel(container: ProxyConfiguration): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'timeOutModel' property
@@ -441,6 +482,7 @@ object FloatLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInRestCallActionUnderTimeOutModel(container: RestCallAction): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'argumentModel' property
@@ -450,6 +492,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInRuleCallParameterMappingUnderArgumentModel(container: RuleCallParameterMapping): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'expressionModel' property
@@ -459,6 +502,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInTemplateArgumentUnderExpressionModel(container: TemplateArgument): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'expression' property
@@ -468,6 +512,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInUnaryExpressionUnderExpression(container: UnaryExpression): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'timeOutModel' property
@@ -477,6 +522,7 @@ object FloatLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInWebServiceCallActionUnderTimeOutModel(container: WebServiceCallAction): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'argumentModel' property
@@ -486,6 +532,7 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInWebServiceOperationParameterMappingUnderArgumentModel(container: WebServiceOperationParameterMapping): FloatLiteral = js.native
+  
   /**
     * Creates and returns a new FloatLiteral instance in the SDK and on the server.
     * The new FloatLiteral will be automatically stored in the 'expressionModel' property
@@ -495,5 +542,8 @@ object FloatLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInWidgetValidationUnderExpressionModel(container: WidgetValidation): FloatLiteral = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

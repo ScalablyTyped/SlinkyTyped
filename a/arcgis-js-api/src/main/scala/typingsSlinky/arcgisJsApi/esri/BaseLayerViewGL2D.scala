@@ -3,28 +3,11 @@ package typingsSlinky.arcgisJsApi.esri
 import org.scalajs.dom.raw.WebGLRenderingContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BaseLayerViewGL2D extends LayerView {
-  /**
-    * The WebGL rendering context associated to this layer view.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#context)
-    */
-  var context: WebGLRenderingContext | js.Any = js.native
-  /**
-    * The array of module:esri/views/2d/layers/BaseLayerViewGL2D#Tile objects computed to cover the MapView's visible area. This array is updated when the view is animating or the user is interacting with it. Then if tiles have been added or removed, [tilesChanged()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#tilesChanged) is called.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#tiles)
-    */
-  var tiles: js.Array[BaseLayerViewGL2DTile] = js.native
-  /**
-    * References the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) this [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) belongs to.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#view)
-    */
-  var view: MapView = js.native
+  
   /**
     * Method called after the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) is created and right before it starts drawing the layer's content. Typically this method is implemented to start watching property changes on the layer and to initialize WebGL objects such as shaders.
     *
@@ -33,6 +16,7 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def attach(): Unit = js.native
+  
   /**
     * Bind the designated rendering output surface and restore the correct viewport.  This method can be used after the WebGL state has been altered by a call to `gl.bindFramebuffer()` to restore the framebuffer that contains the final, composited frame, i.e. the one that is guaranteed to be bound right before control is handed over to [render()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#render). Note that this *may or may not be the default framebuffer*; [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) can use various surfaces for frame compositing and there is no guarantee that when [render()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#render) is called, the bound framebuffer is the default one.  Together with the framebuffer, also a matching full-size viewport is restored.
     *
@@ -41,6 +25,14 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def bindRenderTarget(): Unit = js.native
+  
+  /**
+    * The WebGL rendering context associated to this layer view.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#context)
+    */
+  var context: WebGLRenderingContext | js.Any = js.native
+  
   /**
     * Method called after the layer is removed and the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) is about to be removed. Typically, this method is implemented to free resources like watchers and destroy WebGL objects such as shader programs.
     *
@@ -49,6 +41,7 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def detach(): Unit = js.native
+  
   /**
     * Get the designated rendering output surface and corresponding viewport configuration.  The returned object is the same render target that is restored by a call to [bindRenderTarget()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#bindRenderTarget).
     *
@@ -57,6 +50,7 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def getRenderTarget(): RenderTarget = js.native
+  
   /**
     * Method to implement that is responsible for providing objects hit at the specified screen coordinates. This method is called internally by the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) each time its [hitTest()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#hitTest) method is called.
     *
@@ -67,6 +61,7 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def hitTest(x: Double, y: Double): js.Promise[Graphic] = js.native
+  
   /**
     * The method to implement that is responsible of drawing the content of the layer. This method is called every time the MapView's state changes, or if [requestRender()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#requestRender) has been called.
     *
@@ -79,6 +74,7 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def render(renderParameters: BaseLayerViewGL2DRenderRenderParameters): Unit = js.native
+  
   /**
     * The [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) can call this method to ask the MapView to schedule a new rendering frame.
     *
@@ -87,6 +83,7 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def requestRender(): Unit = js.native
+  
   /**
     * Tessellate an [Extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html) into a rectangle.
     *
@@ -96,6 +93,7 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def tessellateExtent(extent: Extent): js.Promise[TessellatedMesh] = js.native
+  
   /**
     * Tessellate a [Multipoint](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Multipoint.html) into quads (markers).
     *
@@ -106,6 +104,7 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def tessellateMultipoint(multipoint: Multipoint, footprint: Rect): js.Promise[TessellatedMesh] = js.native
+  
   /**
     * Tessellate a [Point](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html) into a quad (marker).
     *
@@ -116,6 +115,7 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def tessellatePoint(point: Point, footprint: Rect): js.Promise[TessellatedMesh] = js.native
+  
   /**
     * Tessellate a [Polygon](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Polygon.html) into triangles.
     *
@@ -125,6 +125,7 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def tessellatePolygon(polygon: Polygon): js.Promise[TessellatedMesh] = js.native
+  
   /**
     * Tessellate a [Polyline](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Polyline.html) into triangles.
     *
@@ -135,6 +136,14 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def tessellatePolyline(polyline: Polyline, width: Double): js.Promise[TessellatedMesh] = js.native
+  
+  /**
+    * The array of module:esri/views/2d/layers/BaseLayerViewGL2D#Tile objects computed to cover the MapView's visible area. This array is updated when the view is animating or the user is interacting with it. Then if tiles have been added or removed, [tilesChanged()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#tilesChanged) is called.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#tiles)
+    */
+  var tiles: js.Array[BaseLayerViewGL2DTile] = js.native
+  
   /**
     * Method to implement, which notifies of tiles being added or removed for the current view state. This function can be implemented to start and stop fetching new data, or allocate and dispose resources.
     *
@@ -145,5 +154,11 @@ trait BaseLayerViewGL2D extends LayerView {
     *
     */
   def tilesChanged(added: js.Array[BaseLayerViewGL2DTile], removed: js.Array[BaseLayerViewGL2DTile]): Unit = js.native
+  
+  /**
+    * References the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) this [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) belongs to.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#view)
+    */
+  var view: MapView = js.native
 }
-

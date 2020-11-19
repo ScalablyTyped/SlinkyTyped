@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "DisplayPassPostProcess")
 @js.native
@@ -41,7 +41,21 @@ class DisplayPassPostProcess protected ()
     name: String,
     options: Double,
     camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.engineMod.Engine
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
     samplingMode: Double,
+    engine: typingsSlinky.babylonjs.engineMod.Engine
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
     engine: typingsSlinky.babylonjs.engineMod.Engine
   ) = this()
   def this(
@@ -55,8 +69,56 @@ class DisplayPassPostProcess protected ()
     name: String,
     options: Double,
     camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.engineMod.Engine,
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: Double,
+    camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
     samplingMode: Double,
     engine: typingsSlinky.babylonjs.engineMod.Engine,
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: js.UndefOr[scala.Nothing],
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
+    samplingMode: js.UndefOr[scala.Nothing],
+    engine: typingsSlinky.babylonjs.engineMod.Engine,
+    reusable: Boolean
+  ) = this()
+  def this(
+    name: String,
+    options: PostProcessOptions,
+    camera: Nullable[typingsSlinky.babylonjs.cameraMod.Camera],
+    samplingMode: Double,
+    engine: js.UndefOr[scala.Nothing],
     reusable: Boolean
   ) = this()
   def this(
@@ -68,4 +130,3 @@ class DisplayPassPostProcess protected ()
     reusable: Boolean
   ) = this()
 }
-

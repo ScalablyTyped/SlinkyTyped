@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.navigationMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -30,36 +30,41 @@ abstract class NavigationProfileBase protected ()
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsNavigationDocument: NavigationDocument = js.native
   @JSName("containerAsNavigationDocument")
   val containerAsNavigationDocument_FNavigationProfileBase: INavigationDocument = js.native
+  
   @JSName("model")
   var model_FNavigationProfileBase: IModel = js.native
-  /**
-    * In version 7.2.0: introduced
-    */
-  @JSName("name")
-  val name_FNavigationProfileBase: String = js.native
-  def containerAsNavigationDocument: NavigationDocument = js.native
+  
   /**
     * In version 7.2.0: introduced
     */
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native
   /**
+    * In version 7.2.0: introduced
+    */
+  @JSName("name")
+  val name_FNavigationProfileBase: String = js.native
+  
+  /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
     * In version 7.22.0: introduced
     */
   def offlineEntityConfigs: IList[OfflineEntityConfig] | Null = js.native
+  
   @JSName("qualifiedName")
   def qualifiedName_MNavigationProfileBase: String | Null = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/navigation", "navigation.NavigationProfileBase")
 @js.native
 object NavigationProfileBase extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

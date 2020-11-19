@@ -5,9 +5,25 @@ import typingsSlinky.graphqlBinding.distTypesMod.QueryOrMutation
 import typingsSlinky.graphqlBinding.typesMod.GeneratorType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object graphqlBindingStrings {
+  
+  @scala.inline
+  def javascript: javascript = "javascript".asInstanceOf[javascript]
+  
+  @scala.inline
+  def mutation: mutation = "mutation".asInstanceOf[mutation]
+  
+  @scala.inline
+  def query: query = "query".asInstanceOf[query]
+  
+  @scala.inline
+  def subscription: subscription = "subscription".asInstanceOf[subscription]
+  
+  @scala.inline
+  def typescript: typescript = "typescript".asInstanceOf[typescript]
+  
   @js.native
   sealed trait javascript extends GeneratorType
   
@@ -26,16 +42,4 @@ object graphqlBindingStrings {
   
   @js.native
   sealed trait typescript extends GeneratorType
-  
-  @scala.inline
-  def javascript: javascript = "javascript".asInstanceOf[javascript]
-  @scala.inline
-  def mutation: mutation = "mutation".asInstanceOf[mutation]
-  @scala.inline
-  def query: query = "query".asInstanceOf[query]
-  @scala.inline
-  def subscription: subscription = "subscription".asInstanceOf[subscription]
-  @scala.inline
-  def typescript: typescript = "typescript".asInstanceOf[typescript]
 }
-

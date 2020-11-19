@@ -6,9 +6,142 @@ import typingsSlinky.rdflib.typesMod.ContentType
 import typingsSlinky.rdflib.typesMod.TermType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object rdflibStrings {
+  
+  @scala.inline
+  def BlankNode: BlankNode = "BlankNode".asInstanceOf[BlankNode]
+  
+  @scala.inline
+  def CONNECT: CONNECT = "CONNECT".asInstanceOf[CONNECT]
+  
+  @scala.inline
+  def Collection: Collection = "Collection".asInstanceOf[Collection]
+  
+  @scala.inline
+  def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]
+  
+  @scala.inline
+  def DefaultGraph: DefaultGraph = "DefaultGraph".asInstanceOf[DefaultGraph]
+  
+  @scala.inline
+  def Empty: Empty = "Empty".asInstanceOf[Empty]
+  
+  @scala.inline
+  def FunctionalProperty: FunctionalProperty = "FunctionalProperty".asInstanceOf[FunctionalProperty]
+  
+  @scala.inline
+  def GET: GET = "GET".asInstanceOf[GET]
+  
+  @scala.inline
+  def Graph: Graph = "Graph".asInstanceOf[Graph]
+  
+  @scala.inline
+  def HEAD: HEAD = "HEAD".asInstanceOf[HEAD]
+  
+  @scala.inline
+  def InverseFunctionalProperty: InverseFunctionalProperty = "InverseFunctionalProperty".asInstanceOf[InverseFunctionalProperty]
+  
+  @scala.inline
+  def Literal: Literal = "Literal".asInstanceOf[Literal]
+  
+  @scala.inline
+  def NamedNode: NamedNode = "NamedNode".asInstanceOf[NamedNode]
+  
+  @scala.inline
+  def OPTIONS: OPTIONS = "OPTIONS".asInstanceOf[OPTIONS]
+  
+  @scala.inline
+  def PATCH: PATCH = "PATCH".asInstanceOf[PATCH]
+  
+  @scala.inline
+  def POST: POST = "POST".asInstanceOf[POST]
+  
+  @scala.inline
+  def PUT: PUT = "PUT".asInstanceOf[PUT]
+  
+  @scala.inline
+  def TRACE: TRACE = "TRACE".asInstanceOf[TRACE]
+  
+  @scala.inline
+  def Variable: Variable = "Variable".asInstanceOf[Variable]
+  
+  @scala.inline
+  def _Colon: _Colon = "_:".asInstanceOf[_Colon]
+  
+  @scala.inline
+  def _empty: _empty = "".asInstanceOf[_empty]
+  
+  @scala.inline
+  def applicationSlashldPlussignjson: applicationSlashldPlussignjson = "application/ld+json".asInstanceOf[applicationSlashldPlussignjson]
+  
+  @scala.inline
+  def `applicationSlashn-quads`: `applicationSlashn-quads` = "application/n-quads".asInstanceOf[`applicationSlashn-quads`]
+  
+  @scala.inline
+  def `applicationSlashn-triples`: `applicationSlashn-triples` = "application/n-triples".asInstanceOf[`applicationSlashn-triples`]
+  
+  @scala.inline
+  def applicationSlashn3: applicationSlashn3 = "application/n3".asInstanceOf[applicationSlashn3]
+  
+  @scala.inline
+  def applicationSlashnquads: applicationSlashnquads = "application/nquads".asInstanceOf[applicationSlashnquads]
+  
+  @scala.inline
+  def applicationSlashrdfPlussignxml: applicationSlashrdfPlussignxml = "application/rdf+xml".asInstanceOf[applicationSlashrdfPlussignxml]
+  
+  @scala.inline
+  def `applicationSlashsparql-update`: `applicationSlashsparql-update` = "application/sparql-update".asInstanceOf[`applicationSlashsparql-update`]
+  
+  @scala.inline
+  def `applicationSlashx-turtle`: `applicationSlashx-turtle` = "application/x-turtle".asInstanceOf[`applicationSlashx-turtle`]
+  
+  @scala.inline
+  def applicationSlashxhtmlPlussignxml: applicationSlashxhtmlPlussignxml = "application/xhtml+xml".asInstanceOf[applicationSlashxhtmlPlussignxml]
+  
+  @scala.inline
+  def delete_ : delete_ = "delete".asInstanceOf[delete_]
+  
+  @scala.inline
+  def done: done = "done".asInstanceOf[done]
+  
+  @scala.inline
+  def failed: failed = "failed".asInstanceOf[failed]
+  
+  @scala.inline
+  def include: include = "include".asInstanceOf[include]
+  
+  @scala.inline
+  def omit: omit = "omit".asInstanceOf[omit]
+  
+  @scala.inline
+  def parse_error: parse_error = "parse_error".asInstanceOf[parse_error]
+  
+  @scala.inline
+  def redirected: redirected = "redirected".asInstanceOf[redirected]
+  
+  @scala.inline
+  def sameAs: sameAs = "sameAs".asInstanceOf[sameAs]
+  
+  @scala.inline
+  def textSlashhtml: textSlashhtml = "text/html".asInstanceOf[textSlashhtml]
+  
+  @scala.inline
+  def textSlashn3: textSlashn3 = "text/n3".asInstanceOf[textSlashn3]
+  
+  @scala.inline
+  def textSlashturtle: textSlashturtle = "text/turtle".asInstanceOf[textSlashturtle]
+  
+  @scala.inline
+  def timeout: timeout = "timeout".asInstanceOf[timeout]
+  
+  @scala.inline
+  def `two-direction`: `two-direction` = "two-direction".asInstanceOf[`two-direction`]
+  
+  @scala.inline
+  def unsupported_protocol: unsupported_protocol = "unsupported_protocol".asInstanceOf[unsupported_protocol]
+  
   @js.native
   sealed trait BlankNode extends TermType
   
@@ -140,94 +273,4 @@ object rdflibStrings {
   
   @js.native
   sealed trait unsupported_protocol extends _StatusValues
-  
-  @scala.inline
-  def BlankNode: BlankNode = "BlankNode".asInstanceOf[BlankNode]
-  @scala.inline
-  def CONNECT: CONNECT = "CONNECT".asInstanceOf[CONNECT]
-  @scala.inline
-  def Collection: Collection = "Collection".asInstanceOf[Collection]
-  @scala.inline
-  def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]
-  @scala.inline
-  def DefaultGraph: DefaultGraph = "DefaultGraph".asInstanceOf[DefaultGraph]
-  @scala.inline
-  def Empty: Empty = "Empty".asInstanceOf[Empty]
-  @scala.inline
-  def FunctionalProperty: FunctionalProperty = "FunctionalProperty".asInstanceOf[FunctionalProperty]
-  @scala.inline
-  def GET: GET = "GET".asInstanceOf[GET]
-  @scala.inline
-  def Graph: Graph = "Graph".asInstanceOf[Graph]
-  @scala.inline
-  def HEAD: HEAD = "HEAD".asInstanceOf[HEAD]
-  @scala.inline
-  def InverseFunctionalProperty: InverseFunctionalProperty = "InverseFunctionalProperty".asInstanceOf[InverseFunctionalProperty]
-  @scala.inline
-  def Literal: Literal = "Literal".asInstanceOf[Literal]
-  @scala.inline
-  def NamedNode: NamedNode = "NamedNode".asInstanceOf[NamedNode]
-  @scala.inline
-  def OPTIONS: OPTIONS = "OPTIONS".asInstanceOf[OPTIONS]
-  @scala.inline
-  def PATCH: PATCH = "PATCH".asInstanceOf[PATCH]
-  @scala.inline
-  def POST: POST = "POST".asInstanceOf[POST]
-  @scala.inline
-  def PUT: PUT = "PUT".asInstanceOf[PUT]
-  @scala.inline
-  def TRACE: TRACE = "TRACE".asInstanceOf[TRACE]
-  @scala.inline
-  def Variable: Variable = "Variable".asInstanceOf[Variable]
-  @scala.inline
-  def _Colon: _Colon = "_:".asInstanceOf[_Colon]
-  @scala.inline
-  def _empty: _empty = "".asInstanceOf[_empty]
-  @scala.inline
-  def applicationSlashldPlussignjson: applicationSlashldPlussignjson = "application/ld+json".asInstanceOf[applicationSlashldPlussignjson]
-  @scala.inline
-  def `applicationSlashn-quads`: `applicationSlashn-quads` = "application/n-quads".asInstanceOf[`applicationSlashn-quads`]
-  @scala.inline
-  def `applicationSlashn-triples`: `applicationSlashn-triples` = "application/n-triples".asInstanceOf[`applicationSlashn-triples`]
-  @scala.inline
-  def applicationSlashn3: applicationSlashn3 = "application/n3".asInstanceOf[applicationSlashn3]
-  @scala.inline
-  def applicationSlashnquads: applicationSlashnquads = "application/nquads".asInstanceOf[applicationSlashnquads]
-  @scala.inline
-  def applicationSlashrdfPlussignxml: applicationSlashrdfPlussignxml = "application/rdf+xml".asInstanceOf[applicationSlashrdfPlussignxml]
-  @scala.inline
-  def `applicationSlashsparql-update`: `applicationSlashsparql-update` = "application/sparql-update".asInstanceOf[`applicationSlashsparql-update`]
-  @scala.inline
-  def `applicationSlashx-turtle`: `applicationSlashx-turtle` = "application/x-turtle".asInstanceOf[`applicationSlashx-turtle`]
-  @scala.inline
-  def applicationSlashxhtmlPlussignxml: applicationSlashxhtmlPlussignxml = "application/xhtml+xml".asInstanceOf[applicationSlashxhtmlPlussignxml]
-  @scala.inline
-  def delete_ : delete_ = "delete".asInstanceOf[delete_]
-  @scala.inline
-  def done: done = "done".asInstanceOf[done]
-  @scala.inline
-  def failed: failed = "failed".asInstanceOf[failed]
-  @scala.inline
-  def include: include = "include".asInstanceOf[include]
-  @scala.inline
-  def omit: omit = "omit".asInstanceOf[omit]
-  @scala.inline
-  def parse_error: parse_error = "parse_error".asInstanceOf[parse_error]
-  @scala.inline
-  def redirected: redirected = "redirected".asInstanceOf[redirected]
-  @scala.inline
-  def sameAs: sameAs = "sameAs".asInstanceOf[sameAs]
-  @scala.inline
-  def textSlashhtml: textSlashhtml = "text/html".asInstanceOf[textSlashhtml]
-  @scala.inline
-  def textSlashn3: textSlashn3 = "text/n3".asInstanceOf[textSlashn3]
-  @scala.inline
-  def textSlashturtle: textSlashturtle = "text/turtle".asInstanceOf[textSlashturtle]
-  @scala.inline
-  def timeout: timeout = "timeout".asInstanceOf[timeout]
-  @scala.inline
-  def `two-direction`: `two-direction` = "two-direction".asInstanceOf[`two-direction`]
-  @scala.inline
-  def unsupported_protocol: unsupported_protocol = "unsupported_protocol".asInstanceOf[unsupported_protocol]
 }
-

@@ -10,7 +10,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.form.submission.XSubmissio
 import typingsSlinky.activexLibreoffice.com_.sun.star.task.XInteractionHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** specifies a submission object, associated with an {@link XModel} */
 @js.native
@@ -18,8 +18,8 @@ trait XSubmission
   extends XPropertySet
      with XNamed
      with typingsSlinky.activexLibreoffice.com_.sun.star.form.submission.XSubmission
-
 object XSubmission {
+  
   @scala.inline
   def apply(
     Name: String,
@@ -45,4 +45,3 @@ object XSubmission {
     __obj.asInstanceOf[XSubmission]
   }
 }
-

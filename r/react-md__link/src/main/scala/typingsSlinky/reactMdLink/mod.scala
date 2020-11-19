@@ -8,11 +8,12 @@ import typingsSlinky.reactMdLink.linkMod.LinkWithComponentProps
 import typingsSlinky.reactMdLink.skipToMainContentMod.SkipToMainContentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/link", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * The `Link` component is used to render links within your app with a basic
     * styles applied and some additional "security" built-in if using the
@@ -27,6 +28,7 @@ object mod extends js.Object {
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 178 */ js.Any
     ]))
   ] = js.native
+  
   /**
     * This component allows you to create a screen-reader only/keyboard focusable
     * only link that allows a user to skip to the main content of the page. This is
@@ -36,4 +38,3 @@ object mod extends js.Object {
     */
   val SkipToMainContent: ForwardRefExoticComponent[SkipToMainContentProps with RefAttributes[HTMLAnchorElement]] = js.native
 }
-

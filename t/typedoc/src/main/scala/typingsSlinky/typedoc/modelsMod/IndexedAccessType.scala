@@ -2,7 +2,7 @@ package typingsSlinky.typedoc.modelsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc/dist/lib/models", "IndexedAccessType")
 @js.native
@@ -13,4 +13,3 @@ class IndexedAccessType protected ()
     indexType: typingsSlinky.typedoc.modelsTypesMod.Type
   ) = this()
 }
-

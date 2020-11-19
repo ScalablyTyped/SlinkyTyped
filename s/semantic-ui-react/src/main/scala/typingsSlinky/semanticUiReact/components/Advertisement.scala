@@ -30,9 +30,10 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.skyscraper
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.square
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Advertisement {
+  
   @JSImport("semantic-ui-react", "Advertisement")
   @js.native
   object component extends js.Object
@@ -41,21 +42,28 @@ object Advertisement {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def centered(value: Boolean): this.type = set("centered", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def test(value: Boolean | String | Double): this.type = set("test", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: AdvertisementProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     unit: (`medium rectangle`) | (`large rectangle`) | (`vertical rectangle`) | (`small rectangle`) | (`mobile banner`) | banner | (`vertical banner`) | (`top banner`) | (`half banner`) | button | (`square button`) | (`small button`) | skyscraper | (`wide skyscraper`) | leaderboard | (`large leaderboard`) | (`mobile leaderboard`) | billboard | panorama | netboard | (`half page`) | square | (`small square`)
@@ -64,4 +72,3 @@ object Advertisement {
     new Builder(js.Array(this.component, __props.asInstanceOf[AdvertisementProps]))
   }
 }
-

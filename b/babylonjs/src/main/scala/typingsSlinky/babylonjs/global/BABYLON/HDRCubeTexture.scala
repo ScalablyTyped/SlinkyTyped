@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.HDRCubeTexture")
 @js.native
@@ -35,18 +35,12 @@ class HDRCubeTexture protected ()
         ]
       ]
   ) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.HDRCubeTexture")
 @js.native
 object HDRCubeTexture extends js.Object {
-  var _facesMapping: js.Any = js.native
+  
   /**
     * Parses a JSON representation of an HDR Texture in order to create the texture
     * @param parsedTexture Define the JSON representation
@@ -55,5 +49,6 @@ object HDRCubeTexture extends js.Object {
     * @returns the newly created texture after parsing
     */
   def Parse(parsedTexture: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): Nullable[typingsSlinky.babylonjs.BABYLON.HDRCubeTexture] = js.native
+  
+  var _facesMapping: js.Any = js.native
 }
-

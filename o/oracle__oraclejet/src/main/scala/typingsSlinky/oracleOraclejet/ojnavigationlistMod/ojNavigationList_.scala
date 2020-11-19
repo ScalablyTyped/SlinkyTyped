@@ -53,44 +53,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.top
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojNavigationList_[K, D] extends baseComponent[ojNavigationListSettableProperties[K, D]] {
-  var as: String = js.native
-  var currentItem: K = js.native
-  var data: (DataProvider[K, D]) | Null = js.native
-  var display: all | icons = js.native
-  var drillMode: none | collapsible | sliding = js.native
-  var edge: top | start = js.native
-  var expanded: KeySet[K] = js.native
-  var hierarchyMenuThreshold: Double = js.native
-  var item: Selectable[K, D] = js.native
-  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onCurrentItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDrillModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onEdgeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onExpandedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHierarchyMenuThresholdChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeCurrentItem: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeExpand: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeSelect: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjExpand: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOverflowChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onRootLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var overflow: popup | hidden = js.native
-  var rootLabel: String | Null = js.native
-  var selection: K = js.native
-  @JSName("translations")
-  var translations_ojNavigationList_ : DefaultRootLabel = js.native
+  
   def addEventListener(`type`: displayChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: displayChanged,
@@ -246,7 +213,23 @@ trait ojNavigationList_[K, D] extends baseComponent[ojNavigationListSettableProp
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var as: String = js.native
+  
+  var currentItem: K = js.native
+  
+  var data: (DataProvider[K, D]) | Null = js.native
+  
+  var display: all | icons = js.native
+  
+  var drillMode: none | collapsible | sliding = js.native
+  
+  var edge: top | start = js.native
+  
+  var expanded: KeySet[K] = js.native
+  
   def getContextByNode(node: Element): NodeContext[K] | Null = js.native
+  
   @JSName("getProperty")
   def getProperty_as(property: as): String = js.native
   @JSName("getProperty")
@@ -271,7 +254,59 @@ trait ojNavigationList_[K, D] extends baseComponent[ojNavigationListSettableProp
   def getProperty_rootLabel(property: rootLabel): String | Null = js.native
   @JSName("getProperty")
   def getProperty_selection(property: selection): K = js.native
+  
+  var hierarchyMenuThreshold: Double = js.native
+  
+  var item: Selectable[K, D] = js.native
+  
+  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onCurrentItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDrillModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onEdgeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onExpandedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHierarchyMenuThresholdChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateEnd: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjAnimateStart: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeCurrentItem: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeExpand: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeSelect: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjExpand: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOverflowChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onRootLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var overflow: popup | hidden = js.native
+  
+  var rootLabel: String | Null = js.native
+  
+  var selection: K = js.native
+  
   def setProperties(properties: ojNavigationListSettablePropertiesLenient[K, D]): Unit = js.native
+  
   def setProperty(property: display, value: all): Unit = js.native
   def setProperty(property: display, value: icons): Unit = js.native
   def setProperty(property: drillMode, value: collapsible): Unit = js.native
@@ -303,5 +338,7 @@ trait ojNavigationList_[K, D] extends baseComponent[ojNavigationListSettableProp
   def setProperty_selection(property: selection, value: K): Unit = js.native
   @JSName("setProperty")
   def setProperty_translations(property: translations, value: DefaultRootLabel): Unit = js.native
+  
+  @JSName("translations")
+  var translations_ojNavigationList_ : DefaultRootLabel = js.native
 }
-

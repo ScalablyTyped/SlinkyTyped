@@ -5,10 +5,11 @@ import typingsSlinky.gapiClientClassroom.anon.GuardianId
 import typingsSlinky.gapiClientClassroom.anon.PageToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GuardiansResource extends js.Object {
+  
   /**
     * Deletes a guardian.
     *
@@ -31,6 +32,7 @@ trait GuardiansResource extends js.Object {
     */
   def delete(): Request[js.Object] = js.native
   def delete(request: GuardianId): Request[js.Object] = js.native
+  
   /**
     * Returns a specific guardian.
     *
@@ -50,6 +52,7 @@ trait GuardiansResource extends js.Object {
     */
   def get(): Request[Guardian] = js.native
   def get(request: GuardianId): Request[Guardian] = js.native
+  
   /**
     * Returns a list of guardians that the requesting user is permitted to
     * view, restricted to those that match the request.
@@ -75,4 +78,3 @@ trait GuardiansResource extends js.Object {
   def list(): Request[ListGuardiansResponse] = js.native
   def list(request: PageToken): Request[ListGuardiansResponse] = js.native
 }
-

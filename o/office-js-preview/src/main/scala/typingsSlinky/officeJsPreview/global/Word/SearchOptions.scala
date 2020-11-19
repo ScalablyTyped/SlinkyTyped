@@ -3,7 +3,7 @@ package typingsSlinky.officeJsPreview.global.Word
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientRequestContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -17,14 +17,13 @@ import scala.scalajs.js.annotation._
 @js.native
 class SearchOptions ()
   extends typingsSlinky.officeJsPreview.Word.SearchOptions
-
 /* static members */
 @JSGlobal("Word.SearchOptions")
 @js.native
 object SearchOptions extends js.Object {
+  
   /**
     * Create a new instance of Word.SearchOptions object
     */
   def newObject(context: ClientRequestContext): typingsSlinky.officeJsPreview.Word.SearchOptions = js.native
 }
-

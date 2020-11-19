@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Contacts
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Describes a piece of contact data. */
 @JSGlobal("Windows.ApplicationModel.Contacts.ContactField")
@@ -40,4 +40,3 @@ class ContactField protected ()
     category: typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.ContactFieldCategory
   ) = this()
 }
-

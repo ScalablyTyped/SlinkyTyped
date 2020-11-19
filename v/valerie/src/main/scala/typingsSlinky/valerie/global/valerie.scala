@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.valerie.Valerie.Static
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 //
 // root valerie namespace - static methods
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
 @JSGlobal("valerie")
 @js.native
 object valerie extends TopLevel[Static]
-

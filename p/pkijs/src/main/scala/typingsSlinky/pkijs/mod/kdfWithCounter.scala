@@ -3,11 +3,12 @@ package typingsSlinky.pkijs.mod
 import typingsSlinky.pkijs.anon.Counter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pkijs/src/common", "kdfWithCounter")
 @js.native
 object kdfWithCounter extends js.Object {
+  
   /**
     * ANS X9.63 Key Derivation Function having a "Counter" as a parameter
     *
@@ -23,4 +24,3 @@ object kdfWithCounter extends js.Object {
     SharedInfo: js.typedarray.ArrayBuffer
   ): js.Thenable[Counter] = js.native
 }
-

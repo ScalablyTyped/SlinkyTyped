@@ -2,7 +2,7 @@ package typingsSlinky.qlikEngineapi.EngineAPI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * One of:
@@ -23,13 +23,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CurrentSelections
 */
 trait ContextType extends js.Object
-
 object ContextType {
+  
   @scala.inline
   def Cleared: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.Cleared = "Cleared".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.Cleared]
+  
   @scala.inline
   def CurrentSelections: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CurrentSelections = "CurrentSelections".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CurrentSelections]
+  
   @scala.inline
   def LockedFieldsOnly: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.LockedFieldsOnly = "LockedFieldsOnly".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.LockedFieldsOnly]
 }
-

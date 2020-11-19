@@ -5,11 +5,11 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DraggableList[I, C, T /* <: ReactComponentClass[Partial[TemplateProps[I, C]]] */]
   extends Component[Props[I, C, T], js.Object, js.Any] {
+  
   def getItemInstance(key: String): T = js.native
 }
-

@@ -2,9 +2,10 @@ package typingsSlinky.uifabricMergeStyles
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object istyleMod {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.uifabricMergeStyles.istyleMod.IStyleBase
     - typingsSlinky.uifabricMergeStyles.istyleMod.IStyleBaseArray
@@ -12,6 +13,7 @@ package object istyleMod {
   type IStyle = js.UndefOr[
     typingsSlinky.uifabricMergeStyles.istyleMod._IStyle | java.lang.String | scala.Null
   ]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
     - java.lang.String

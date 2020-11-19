@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.ThisType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait WithAnimatedValue[T]
@@ -13,4 +13,3 @@ trait WithAnimatedValue[T]
 {[ K in keyof T ]:? react-native.react-native.Animated.WithAnimatedValue<T[K]>}
   */ typingsSlinky.reactNative.reactNativeStrings.WithAnimatedValue with TopLevel[T])
     ]
-

@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.global.Word
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -15,4 +15,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class CustomXmlPart ()
   extends typingsSlinky.officeJsPreview.Word.CustomXmlPart
-

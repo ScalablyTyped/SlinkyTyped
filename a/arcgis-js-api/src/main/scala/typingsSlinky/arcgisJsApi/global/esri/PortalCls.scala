@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.PortalProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Portal")
 @js.native
@@ -16,4 +16,3 @@ class PortalCls ()
   extends typingsSlinky.arcgisJsApi.esri.Portal {
   def this(properties: PortalProperties) = this()
 }
-

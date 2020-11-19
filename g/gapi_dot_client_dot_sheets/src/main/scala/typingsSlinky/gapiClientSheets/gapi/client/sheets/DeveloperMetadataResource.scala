@@ -5,10 +5,11 @@ import typingsSlinky.gapiClientSheets.anon.Alt
 import typingsSlinky.gapiClientSheets.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DeveloperMetadataResource extends js.Object {
+  
   /**
     * Returns the developer metadata with the specified ID.
     * The caller must specify the spreadsheet ID and the developer metadata's
@@ -16,6 +17,7 @@ trait DeveloperMetadataResource extends js.Object {
     */
   def get(): typingsSlinky.gapiClient.gapi.client.Request[DeveloperMetadata] = js.native
   def get(request: Accesstoken): typingsSlinky.gapiClient.gapi.client.Request[DeveloperMetadata] = js.native
+  
   /**
     * Returns all developer metadata matching the specified DataFilter.
     * If the provided DataFilter represents a DeveloperMetadataLookup object,
@@ -26,4 +28,3 @@ trait DeveloperMetadataResource extends js.Object {
   def search(request: Alt): typingsSlinky.gapiClient.gapi.client.Request[SearchDeveloperMetadataResponse] = js.native
   def search(request: Callback, body: SearchDeveloperMetadataRequest): typingsSlinky.gapiClient.gapi.client.Request[SearchDeveloperMetadataResponse] = js.native
 }
-

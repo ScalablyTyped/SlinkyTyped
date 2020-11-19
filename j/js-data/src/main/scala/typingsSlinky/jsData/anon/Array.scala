@@ -2,10 +2,11 @@ package typingsSlinky.jsData.anon
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Array extends js.Object {
+  
   /**
     * Validates the provided value against the schema using all of the validation keywords specific to instances of an
     * array.
@@ -24,6 +25,7 @@ trait Array extends js.Object {
     */
   def array(value: js.Any, schema: js.Any): js.Array[_] = js.native
   def array(value: js.Any, schema: js.Any, opts: js.Any): js.Array[_] = js.native
+  
   /**
     * Validates the provided value against the schema using all of the validation keywords specific to instances of an
     * integer.
@@ -39,6 +41,7 @@ trait Array extends js.Object {
     * @returns {(array|undefined)} Array of errors or `undefined` if valid.
     */
   def integer(value: js.Any, schema: js.Any, opts: js.Any): js.Array[_] = js.native
+  
   /**
     * Validates the provided value against the schema using all of the validation keywords specific to instances of an
     * number.
@@ -54,6 +57,7 @@ trait Array extends js.Object {
     * @returns {(array|undefined)} Array of errors or `undefined` if valid.
     */
   def number(value: js.Any, schema: js.Any, opts: js.Any): js.Array[_] = js.native
+  
   /**
     * Validates the provided value against the schema using all of the validation keywords specific to instances of a
     * number or integer.
@@ -71,6 +75,7 @@ trait Array extends js.Object {
     * @returns {(array|undefined)} Array of errors or `undefined` if valid.
     */
   def numeric(value: js.Any, schema: js.Any, opts: js.Any): js.Array[_] = js.native
+  
   /**
     * Validates the provided value against the schema using all of the validation keywords specific to instances of an
     * object.
@@ -88,6 +93,7 @@ trait Array extends js.Object {
     * @returns {(array|undefined)} Array of errors or `undefined` if valid.
     */
   def `object`(value: js.Any, schema: js.Any, opts: js.Any): js.Array[_] = js.native
+  
   /**
     * Validates the provided value against the schema using all of the validation keywords specific to instances of an
     * string.
@@ -107,4 +113,3 @@ trait Array extends js.Object {
   def string(value: js.Any, schema: js.Any): js.Array[_] = js.native
   def string(value: js.Any, schema: js.Any, opts: js.Any): js.Array[_] = js.native
 }
-

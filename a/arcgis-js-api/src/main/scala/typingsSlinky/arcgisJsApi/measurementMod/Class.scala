@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Measurement
 import typingsSlinky.arcgisJsApi.esri.MeasurementProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Measurement", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Measurement {
   def this(properties: MeasurementProperties) = this()
 }
-

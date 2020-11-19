@@ -2,10 +2,9 @@ package typingsSlinky.activexPowerpoint.global.PowerPoint
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("PowerPoint.TextFrame")
 @js.native
 class TextFrame protected ()
   extends typingsSlinky.activexPowerpoint.PowerPoint.TextFrame
-

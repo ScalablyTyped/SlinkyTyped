@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/commands/ReEncryptCommand", JSImport.Namespace)
 @js.native
 object reEncryptCommandMod extends js.Object {
+  
   @js.native
   class ReEncryptCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object reEncryptCommandMod extends js.Object {
           Blob
         ] {
     def this(input: ReEncryptInput) = this()
+    
     val middlewareStack: MiddlewareStack[ReEncryptInput, ReEncryptOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[ReEncryptInput, ReEncryptOutput] = js.native
   }
-  
 }
-

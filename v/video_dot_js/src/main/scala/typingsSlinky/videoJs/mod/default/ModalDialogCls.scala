@@ -3,7 +3,7 @@ package typingsSlinky.videoJs.mod.default
 import typingsSlinky.videoJs.mod.videojs.ModalDialogOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js", "ModalDialog")
 @js.native
@@ -21,4 +21,3 @@ class ModalDialogCls protected ()
   def this(player: typingsSlinky.videoJs.mod.videojs.Player) = this()
   def this(player: typingsSlinky.videoJs.mod.videojs.Player, options: ModalDialogOptions) = this()
 }
-

@@ -7,18 +7,19 @@ import typingsSlinky.storybookRouter.routerMod.MatchingData
 import typingsSlinky.storybookRouter.routerMod.QueryMatchProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Match {
+  
   @JSImport("@storybook/router", "Match")
   @js.native
   object component extends js.Object
   
   def withProps(p: QueryMatchProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(children: MatchingData => ReactElement, path: String, startsWith: Boolean): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children), path = path.asInstanceOf[js.Any], startsWith = startsWith.asInstanceOf[js.Any])
     new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[QueryMatchProps]))
   }
 }
-

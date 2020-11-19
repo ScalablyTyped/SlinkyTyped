@@ -3,17 +3,17 @@ package typingsSlinky.babylonjs.xRIndexMod
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/XR/index", "WebXRDefaultExperience")
 @js.native
 class WebXRDefaultExperience protected ()
   extends typingsSlinky.babylonjs.webXRDefaultExperienceMod.WebXRDefaultExperience
-
 /* static members */
 @JSImport("babylonjs/XR/index", "WebXRDefaultExperience")
 @js.native
 object WebXRDefaultExperience extends js.Object {
+  
   /**
     * Creates the default xr experience
     * @param scene scene
@@ -26,4 +26,3 @@ object WebXRDefaultExperience extends js.Object {
     options: typingsSlinky.babylonjs.webXRDefaultExperienceMod.WebXRDefaultExperienceOptions
   ): js.Promise[typingsSlinky.babylonjs.webXRDefaultExperienceMod.WebXRDefaultExperience] = js.native
 }
-

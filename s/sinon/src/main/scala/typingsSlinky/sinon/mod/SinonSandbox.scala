@@ -4,33 +4,19 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.sinon.anon.PartialSinonFakeTimersCon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SinonSandbox extends js.Object {
+  
   /**
     * A convenience reference for sinon.assert
     * Since sinon@2.0.0
     */
   var assert: SinonAssert = js.native
+  
   var clock: SinonFakeTimers = js.native
-  /**
-    * Works exactly like sinon.mock
-    */
-  @JSName("mock")
-  var mock_Original: SinonMockStatic = js.native
-  var requests: js.Array[SinonFakeXMLHttpRequest] = js.native
-  var server: SinonFakeServer = js.native
-  /**
-    * Works exactly like sinon.spy
-    */
-  @JSName("spy")
-  var spy_Original: SinonSpyStatic = js.native
-  /**
-    * Works exactly like sinon.stub.
-    */
-  @JSName("stub")
-  var stub_Original: SinonStubStatic = js.native
+  
   /**
     * Creates a new object with the given functions as the prototype and stubs all implemented functions.
     *
@@ -47,6 +33,7 @@ trait SinonSandbox extends js.Object {
   {[ K in keyof TType ]:? any}
     */ typingsSlinky.sinon.sinonStrings.SinonSandbox with TopLevel[js.Any]
   ): SinonStubbedInstance[TType] = js.native
+  
   /**
     * Works exactly like sinon.mock
     */
@@ -60,6 +47,12 @@ trait SinonSandbox extends js.Object {
     */
   def mock(obj: js.Any): SinonMock = js.native
   /**
+    * Works exactly like sinon.mock
+    */
+  @JSName("mock")
+  var mock_Original: SinonMockStatic = js.native
+  
+  /**
     * Replaces property on object with replacement argument. Attempts to replace an already replaced value cause an exception.
     * replacement can be any value, including spies, stubs and fakes.
     * This method only works on non-accessor properties, for replacing accessors, use sandbox.replaceGetter() and sandbox.replaceSetter().
@@ -69,6 +62,7 @@ trait SinonSandbox extends js.Object {
     prop: TKey,
     replacement: /* import warning: importer.ImportType#apply Failed type conversion: T[TKey] */ js.Any
   ): /* import warning: importer.ImportType#apply Failed type conversion: T[TKey] */ js.Any = js.native
+  
   /**
     * Replaces getter for property on object with replacement argument. Attempts to replace an already replaced getter cause an exception.
     * replacement must be a Function, and can be instances of spies, stubs and fakes.
@@ -85,6 +79,7 @@ trait SinonSandbox extends js.Object {
   ): js.Function0[
     /* import warning: importer.ImportType#apply Failed type conversion: T[TKey] */ js.Any
   ] = js.native
+  
   /**
     * Replaces setter for property on object with replacement argument. Attempts to replace an already replaced setter cause an exception.
     * replacement must be a Function, and can be instances of spies, stubs and fakes.
@@ -103,24 +98,33 @@ trait SinonSandbox extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: T[TKey] */ /* val */ js.Any, 
     Unit
   ] = js.native
+  
+  var requests: js.Array[SinonFakeXMLHttpRequest] = js.native
+  
   /**
     * Resets the internal state of all fakes created through sandbox.
     */
   def reset(): Unit = js.native
+  
   /**
     * Resets the behaviour of all stubs created through the sandbox.
     * Since sinon@2.0.0
     */
   def resetBehavior(): Unit = js.native
+  
   /**
     * Resets the history of all stubs created through the sandbox.
     * Since sinon@2.0.0
     */
   def resetHistory(): Unit = js.native
+  
   /**
     * Restores all fakes created through sandbox.
     */
   def restore(): Unit = js.native
+  
+  var server: SinonFakeServer = js.native
+  
   /**
     * Creates an anonymous function that records arguments, this value, exceptions and return values for all calls.
     */
@@ -148,6 +152,12 @@ trait SinonSandbox extends js.Object {
   def spy[T](obj: T, method: /* keyof T */ String): SinonSpy = js.native
   def spy[T](obj: T, method: /* keyof T */ String, types: js.Array[String]): SinonSpy = js.native
   /**
+    * Works exactly like sinon.spy
+    */
+  @JSName("spy")
+  var spy_Original: SinonSpyStatic = js.native
+  
+  /**
     * Creates an anonymous stub function
     */
   /**
@@ -174,10 +184,17 @@ trait SinonSandbox extends js.Object {
     */
   def stub[T](obj: T, method: /* keyof T */ String): SinonStub = js.native
   /**
+    * Works exactly like sinon.stub.
+    */
+  @JSName("stub")
+  var stub_Original: SinonStubStatic = js.native
+  
+  /**
     * Fakes XHR and binds a server object to the sandbox such that it too is restored when calling sandbox.restore().
     * Access requests through sandbox.requests and server through sandbox.server
     */
   def useFakeServer(): SinonFakeServer = js.native
+  
   /**
     * * No param : Causes Sinon to replace the global setTimeout, clearTimeout, setInterval, clearInterval, setImmediate, clearImmediate, process.hrtime, performance.now(when available)
     * and Date with a custom implementation which is bound to the returned clock object.
@@ -199,6 +216,7 @@ trait SinonSandbox extends js.Object {
   def useFakeTimers(config: Double): SinonFakeTimers = js.native
   def useFakeTimers(config: PartialSinonFakeTimersCon): SinonFakeTimers = js.native
   def useFakeTimers(config: js.Date): SinonFakeTimers = js.native
+  
   /**
     * Causes Sinon to replace the native XMLHttpRequest object in browsers that support it with a custom implementation which does not send actual requests.
     * In browsers that support ActiveXObject, this constructor is replaced, and fake objects are returned for XMLHTTP progIds.
@@ -206,19 +224,21 @@ trait SinonSandbox extends js.Object {
     * The native XMLHttpRequest object will be available at sinon.xhr.XMLHttpRequest
     */
   def useFakeXMLHttpRequest(): SinonFakeXMLHttpRequestStatic = js.native
+  
   /**
     * Causes all stubs created from the sandbox to return promises using a specific Promise library instead of the global one when using stub.rejects or stub.resolves.
     * Returns the stub to allow chaining.
     * Since sinon@2.0.0
     */
   def usingPromise(promiseLibrary: js.Any): SinonSandbox = js.native
+  
   /**
     * Verifies all mocks created through the sandbox.
     */
   def verify(): Unit = js.native
+  
   /**
     * Verifies all mocks and restores all fakes created through the sandbox.
     */
   def verifyAndRestore(): Unit = js.native
 }
-

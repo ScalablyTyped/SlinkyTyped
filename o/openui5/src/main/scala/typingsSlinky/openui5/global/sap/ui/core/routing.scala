@@ -2,11 +2,12 @@ package typingsSlinky.openui5.global.sap.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("sap.ui.core.routing")
 @js.native
 object routing extends js.Object {
+  
   @js.native
   class HashChanger ()
     extends typingsSlinky.openui5.sap.ui.core.routing.HashChanger
@@ -201,17 +202,20 @@ object routing extends js.Object {
     */
   @js.native
   object routing extends js.Object {
+    
     @js.native
     object HistoryDirection extends js.Object {
-      /* 0 */ val Backwards: typingsSlinky.openui5.sap.ui.core.routing.routing.HistoryDirection.Backwards with Double = js.native
-      /* 1 */ val Forwards: typingsSlinky.openui5.sap.ui.core.routing.routing.HistoryDirection.Forwards with Double = js.native
-      /* 2 */ val NewEntry: typingsSlinky.openui5.sap.ui.core.routing.routing.HistoryDirection.NewEntry with Double = js.native
-      /* 3 */ val Unknown: typingsSlinky.openui5.sap.ui.core.routing.routing.HistoryDirection.Unknown with Double = js.native
+      
       @JSBracketAccess
       def apply(value: Double): js.UndefOr[typingsSlinky.openui5.sap.ui.core.routing.routing.HistoryDirection with Double] = js.native
+      
+      /* 0 */ val Backwards: typingsSlinky.openui5.sap.ui.core.routing.routing.HistoryDirection.Backwards with Double = js.native
+      
+      /* 1 */ val Forwards: typingsSlinky.openui5.sap.ui.core.routing.routing.HistoryDirection.Forwards with Double = js.native
+      
+      /* 2 */ val NewEntry: typingsSlinky.openui5.sap.ui.core.routing.routing.HistoryDirection.NewEntry with Double = js.native
+      
+      /* 3 */ val Unknown: typingsSlinky.openui5.sap.ui.core.routing.routing.HistoryDirection.Unknown with Double = js.native
     }
-    
   }
-  
 }
-

@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "graphql-tools__merge"
-version := "6.0.15-a2af73"
+version := "6.0.15-e478eb"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "graphql" % "15.3.0-079e56",
-  "org.scalablytyped.slinky" %%% "graphql-tools__schema" % "6.0.15-44f697",
-  "org.scalablytyped.slinky" %%% "graphql-tools__utils" % "6.0.15-531dfc",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "graphql" % "15.3.0-09ebdf",
+  "org.scalablytyped.slinky" %%% "graphql-tools__schema" % "6.0.15-165fc7",
+  "org.scalablytyped.slinky" %%% "graphql-tools__utils" % "6.0.15-219b96",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

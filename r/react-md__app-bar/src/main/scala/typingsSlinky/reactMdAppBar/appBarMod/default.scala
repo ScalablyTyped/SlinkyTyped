@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This component is used to create a top-level app bar in your application that
@@ -20,4 +20,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/app-bar/types/AppBar", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[AppBarProps with RefAttributes[HTMLDivElement]]]
-

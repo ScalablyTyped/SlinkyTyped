@@ -2,9 +2,10 @@ package typingsSlinky.steamClient
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type SendMessage = js.Function3[
     /* header */ typingsSlinky.steamClient.anon.Msg, 
     /* body */ typingsSlinky.node.Buffer | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ByteBuffer */ js.Any), 

@@ -18,15 +18,19 @@ import typingsSlinky.tensorflowTfjsCore.typesMod.WeightsManifestConfig
 import typingsSlinky.tensorflowTfjsCore.typesMod.WeightsManifestEntry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "io")
 @js.native
 object io extends js.Object {
+  
   def browserFiles(files: js.Array[File]): IOHandler = js.native
+  
   def browserHTTPRequest(path: String): IOHandler = js.native
   def browserHTTPRequest(path: String, loadOptions: LoadOptions): IOHandler = js.native
+  
   def concatenateArrayBuffers(buffers: js.Array[js.typedarray.ArrayBuffer]): js.typedarray.ArrayBuffer = js.native
+  
   /**
     * Copy a model from one URL to another.
     *
@@ -76,11 +80,14 @@ object io extends js.Object {
     * }
     */
   def copyModel(sourceURL: String, destURL: String): js.Promise[ModelArtifactsInfo] = js.native
+  
   def decodeWeights(buffer: js.typedarray.ArrayBuffer, specs: js.Array[WeightsManifestEntry]): NamedTensorMap = js.native
+  
   def encodeWeights(tensors: js.Array[NamedTensor]): js.Promise[Data] = js.native
   def encodeWeights(tensors: js.Array[NamedTensor], group: WeightGroup): js.Promise[Data] = js.native
   def encodeWeights(tensors: NamedTensorMap): js.Promise[Data] = js.native
   def encodeWeights(tensors: NamedTensorMap, group: WeightGroup): js.Promise[Data] = js.native
+  
   def fromMemory(modelArtifacts: js.Object): IOHandler = js.native
   def fromMemory(
     modelArtifacts: js.Object,
@@ -153,16 +160,22 @@ object io extends js.Object {
     weightData: js.typedarray.ArrayBuffer,
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
+  
   def getLoadHandlers(url: String): js.Array[IOHandler] = js.native
   def getLoadHandlers(url: String, loadOptions: LoadOptions): js.Array[IOHandler] = js.native
   def getLoadHandlers(url: js.Array[String]): js.Array[IOHandler] = js.native
   def getLoadHandlers(url: js.Array[String], loadOptions: LoadOptions): js.Array[IOHandler] = js.native
+  
   def getModelArtifactsInfoForJSON(modelArtifacts: ModelArtifacts): ModelArtifactsInfo = js.native
+  
   def getSaveHandlers(url: String): js.Array[IOHandler] = js.native
   def getSaveHandlers(url: js.Array[String]): js.Array[IOHandler] = js.native
+  
   def http(path: String): IOHandler = js.native
   def http(path: String, loadOptions: LoadOptions): IOHandler = js.native
+  
   def isHTTPScheme(url: String): Boolean = js.native
+  
   /**
     * List all models stored in registered storage mediums.
     *
@@ -200,6 +213,7 @@ object io extends js.Object {
     * }
     */
   def listModels(): js.Promise[StringDictionary[ModelArtifactsInfo]] = js.native
+  
   def loadWeights(manifest: WeightsManifestConfig): js.Promise[NamedTensorMap] = js.native
   def loadWeights(
     manifest: WeightsManifestConfig,
@@ -232,6 +246,7 @@ object io extends js.Object {
     weightNames: js.Array[String],
     requestInit: RequestInit
   ): js.Promise[NamedTensorMap] = js.native
+  
   /**
     * Move a model from one URL to another.
     *
@@ -280,8 +295,11 @@ object io extends js.Object {
     * }
     */
   def moveModel(sourceURL: String, destURL: String): js.Promise[ModelArtifactsInfo] = js.native
+  
   def registerLoadRouter(loudRouter: IORouter): Unit = js.native
+  
   def registerSaveRouter(loudRouter: IORouter): Unit = js.native
+  
   /**
     * Remove a model specified by URL from a reigstered storage medium.
     *
@@ -317,6 +335,7 @@ object io extends js.Object {
     * }
     */
   def removeModel(url: String): js.Promise[ModelArtifactsInfo] = js.native
+  
   def weightsLoaderFactory(
     fetchWeightsFunction: js.Function1[/* fetchUrls */ js.Array[String], js.Promise[js.Array[js.typedarray.ArrayBuffer]]]
   ): js.Function3[
@@ -325,6 +344,6 @@ object io extends js.Object {
     /* weightNames */ js.UndefOr[js.Array[String]], 
     js.Promise[NamedTensorMap]
   ] = js.native
+  
   def withSaveHandler(saveHandler: js.Function1[/* artifacts */ ModelArtifacts, js.Promise[SaveResult]]): IOHandler = js.native
 }
-

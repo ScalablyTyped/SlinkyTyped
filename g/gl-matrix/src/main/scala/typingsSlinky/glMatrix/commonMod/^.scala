@@ -3,23 +3,29 @@ package typingsSlinky.glMatrix.commonMod
 import typingsSlinky.glMatrix.mod.glMatrix
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gl-matrix/src/gl-matrix/common", JSImport.Namespace)
 @js.native
 class ^ () extends glMatrix
-
 @JSImport("gl-matrix/src/gl-matrix/common", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   var ARRAY_TYPE: js.Any = js.native
+  
   var ENABLE_SIMD: Boolean = js.native
+  
   // Configuration constants
   var EPSILON: Double = js.native
+  
+  def RANDOM(): Double = js.native
+  
   // Compatibility detection
   var SIMD_AVAILABLE: Boolean = js.native
+  
   var USE_SIMD: Boolean = js.native
-  def RANDOM(): Double = js.native
+  
   /**
     * Tests whether or not the arguments have approximately the same value, within an absolute
     * or relative tolerance of glMatrix.EPSILON (an absolute tolerance is used for values less
@@ -30,12 +36,14 @@ object ^ extends js.Object {
     * @returns {boolean} True if the numbers are approximately equal, false otherwise.
     */
   def equals(a: Double, b: Double): Boolean = js.native
+  
   /**
     * Sets the type of array used when creating new vectors and matrices
     *
     * @param {any} type - Array type, such as Float32Array or Array
     */
   def setMatrixArrayType(`type`: js.Any): Unit = js.native
+  
   /**
     * Convert Degree To Radian
     *
@@ -43,4 +51,3 @@ object ^ extends js.Object {
     */
   def toRadian(a: Double): Double = js.native
 }
-

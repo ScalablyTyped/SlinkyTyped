@@ -3,7 +3,7 @@ package typingsSlinky.typescriptServices.global.TypeScript
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.TryStatementSyntax")
 @js.native
@@ -17,12 +17,12 @@ class TryStatementSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSGlobal("TypeScript.TryStatementSyntax")
 @js.native
 object TryStatementSyntax extends js.Object {
+  
   def create(tryKeyword: ISyntaxToken, block: typingsSlinky.typescriptServices.TypeScript.BlockSyntax): typingsSlinky.typescriptServices.TypeScript.TryStatementSyntax = js.native
+  
   def create1(): typingsSlinky.typescriptServices.TypeScript.TryStatementSyntax = js.native
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientKmsBrowser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/types/RevokeGrantExceptionsUnion", JSImport.Namespace)
 @js.native
 object revokeGrantExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientKmsBrowser.typesNotFoundExceptionMod.NotFoundException
     - typingsSlinky.awsSdkClientKmsBrowser.typesDependencyTimeoutExceptionMod.DependencyTimeoutException
@@ -16,6 +17,4 @@ object revokeGrantExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientKmsBrowser.typesKmsinvalidstateexceptionMod.KMSInvalidStateException
   */
   trait RevokeGrantExceptionsUnion extends js.Object
-  
 }
-

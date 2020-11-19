@@ -2,7 +2,7 @@ package typingsSlinky.fibjs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** module Or Internal Object */
 /**
@@ -11,16 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait ClassBuffer extends ClassObject {
-  /**
-    * class prop 
-    *
-    * 
-    * @brief 获取缓存对象的尺寸
-    * 
-    * @readonly
-    * @type Integer
-    */
-  var length: Double = js.native
+  
   /**
     * 
     * @brief 在缓存对象尾部写入一组二进制数据
@@ -41,6 +32,7 @@ trait ClassBuffer extends ClassObject {
     */
   def append(str: String): Unit = js.native
   def append(str: String, codec: String): Unit = js.native
+  
   /**
     * 
     * @brief 使用 base64 编码缓存对象内容
@@ -50,6 +42,7 @@ trait ClassBuffer extends ClassObject {
     * 
     */
   def base64(): String = js.native
+  
   /**
     * 
     * @brief 比较缓存区的内容
@@ -60,6 +53,7 @@ trait ClassBuffer extends ClassObject {
     * 
     */
   def compare(buf: ClassBuffer): Double = js.native
+  
   /**
     * 
     * @brief 从源缓存对象区域拷贝数据到目标缓存对象区域
@@ -95,6 +89,7 @@ trait ClassBuffer extends ClassObject {
   ): Double = js.native
   def copy(targetBuffer: ClassBuffer, targetStart: Double, sourceStart: Double): Double = js.native
   def copy(targetBuffer: ClassBuffer, targetStart: Double, sourceStart: Double, sourceEnd: Double): Double = js.native
+  
   /**
     * 
     * @brief 返回包含对象数据 [index, byte] 对的迭代器
@@ -118,6 +113,7 @@ trait ClassBuffer extends ClassObject {
     * 
     */
   def entries(): js.Iterable[_] = js.native
+  
   /**
     * 
     * @brief 比较当前对象与给定的对象是否相等
@@ -128,6 +124,7 @@ trait ClassBuffer extends ClassObject {
     * 
     */
   def equals(expected: ClassObject): Boolean = js.native
+  
   /**
     * 
     * @brief 为 Buffer 对象填充指定内容数据
@@ -173,6 +170,7 @@ trait ClassBuffer extends ClassObject {
   def fill(v: ClassBuffer, offset: js.UndefOr[scala.Nothing], end: Double): ClassBuffer = js.native
   def fill(v: ClassBuffer, offset: Double): ClassBuffer = js.native
   def fill(v: ClassBuffer, offset: Double, end: Double): ClassBuffer = js.native
+  
   /**
     * 
     * @brief 使用 16 进制编码缓存对象内容
@@ -182,6 +180,7 @@ trait ClassBuffer extends ClassObject {
     * 
     */
   def hex(): String = js.native
+  
   /**
     * 
     * @brief 返回某个指定数据在 Buffer 中首次出现的位置
@@ -218,6 +217,7 @@ trait ClassBuffer extends ClassObject {
     */
   def indexOf(v: ClassBuffer): Double = js.native
   def indexOf(v: ClassBuffer, offset: Double): Double = js.native
+  
   /**
     * 
     * @brief 把当前对象中的所有元素放入一个字符串
@@ -229,6 +229,7 @@ trait ClassBuffer extends ClassObject {
     */
   def join(): String = js.native
   def join(separator: String): String = js.native
+  
   /**
     * 
     * @brief 返回全部二进制数据的数组
@@ -238,6 +239,18 @@ trait ClassBuffer extends ClassObject {
     * 
     */
   def keys(): js.Iterable[_] = js.native
+  
+  /**
+    * class prop 
+    *
+    * 
+    * @brief 获取缓存对象的尺寸
+    * 
+    * @readonly
+    * @type Integer
+    */
+  var length: Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个双精度浮点数，以高字节序的存储方式
@@ -252,6 +265,7 @@ trait ClassBuffer extends ClassObject {
   def readDoubleBE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readDoubleBE(offset: Double): Double = js.native
   def readDoubleBE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个双精度浮点数，以低字节序的存储方式
@@ -266,6 +280,7 @@ trait ClassBuffer extends ClassObject {
   def readDoubleLE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readDoubleLE(offset: Double): Double = js.native
   def readDoubleLE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个浮点数，以高字节序的存储方式
@@ -280,6 +295,7 @@ trait ClassBuffer extends ClassObject {
   def readFloatBE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readFloatBE(offset: Double): Double = js.native
   def readFloatBE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个浮点数，以低字节序的存储方式
@@ -294,6 +310,7 @@ trait ClassBuffer extends ClassObject {
   def readFloatLE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readFloatLE(offset: Double): Double = js.native
   def readFloatLE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 16 位整型数值，以高字节序的存储方式
@@ -308,6 +325,7 @@ trait ClassBuffer extends ClassObject {
   def readInt16BE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readInt16BE(offset: Double): Double = js.native
   def readInt16BE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 16 位整型数值，以低字节序的存储方式
@@ -322,6 +340,7 @@ trait ClassBuffer extends ClassObject {
   def readInt16LE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readInt16LE(offset: Double): Double = js.native
   def readInt16LE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 32 位整型数值，以高字节序的存储方式
@@ -336,6 +355,7 @@ trait ClassBuffer extends ClassObject {
   def readInt32BE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readInt32BE(offset: Double): Double = js.native
   def readInt32BE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 32 位整型数值，以低字节序的存储方式
@@ -350,6 +370,7 @@ trait ClassBuffer extends ClassObject {
   def readInt32LE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readInt32LE(offset: Double): Double = js.native
   def readInt32LE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 64 位整型数值，以高字节序的存储方式
@@ -364,6 +385,7 @@ trait ClassBuffer extends ClassObject {
   def readInt64BE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): ClassInt64 = js.native
   def readInt64BE(offset: Double): ClassInt64 = js.native
   def readInt64BE(offset: Double, noAssert: Boolean): ClassInt64 = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 64 位整型数值，以低字节序的存储方式
@@ -378,6 +400,7 @@ trait ClassBuffer extends ClassObject {
   def readInt64LE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): ClassInt64 = js.native
   def readInt64LE(offset: Double): ClassInt64 = js.native
   def readInt64LE(offset: Double, noAssert: Boolean): ClassInt64 = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 8 位整型数值
@@ -392,6 +415,7 @@ trait ClassBuffer extends ClassObject {
   def readInt8(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readInt8(offset: Double): Double = js.native
   def readInt8(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个整型数值，最大支持 48 位，以高字节序的存储方式
@@ -406,6 +430,7 @@ trait ClassBuffer extends ClassObject {
   def readIntBE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readIntBE(offset: Double): Double = js.native
   def readIntBE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个整型数值，最大支持 48 位，以低字节序的存储方式
@@ -420,6 +445,7 @@ trait ClassBuffer extends ClassObject {
   def readIntLE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readIntLE(offset: Double): Double = js.native
   def readIntLE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 16 位无符号整型数值，以高字节序的存储方式
@@ -434,6 +460,7 @@ trait ClassBuffer extends ClassObject {
   def readUInt16BE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readUInt16BE(offset: Double): Double = js.native
   def readUInt16BE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 16 位无符号整型数值，以低字节序的存储方式
@@ -448,6 +475,7 @@ trait ClassBuffer extends ClassObject {
   def readUInt16LE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readUInt16LE(offset: Double): Double = js.native
   def readUInt16LE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 32 位无符号整型数值，以高字节序的存储方式
@@ -462,6 +490,7 @@ trait ClassBuffer extends ClassObject {
   def readUInt32BE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readUInt32BE(offset: Double): Double = js.native
   def readUInt32BE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 32 位无符号整型数值，以低字节序的存储方式
@@ -476,6 +505,7 @@ trait ClassBuffer extends ClassObject {
   def readUInt32LE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readUInt32LE(offset: Double): Double = js.native
   def readUInt32LE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个 8 位无符号整型数值
@@ -490,6 +520,7 @@ trait ClassBuffer extends ClassObject {
   def readUInt8(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readUInt8(offset: Double): Double = js.native
   def readUInt8(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个无符号整型数值，最大支持 48 位，以高字节序的存储方式
@@ -504,6 +535,7 @@ trait ClassBuffer extends ClassObject {
   def readUIntBE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readUIntBE(offset: Double): Double = js.native
   def readUIntBE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 从缓存对象读取一个无符号整型数值，最大支持 48 位，以低字节序的存储方式
@@ -518,6 +550,7 @@ trait ClassBuffer extends ClassObject {
   def readUIntLE(offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def readUIntLE(offset: Double): Double = js.native
   def readUIntLE(offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 修改缓存对象尺寸
@@ -527,6 +560,7 @@ trait ClassBuffer extends ClassObject {
     * 
     */
   def resize(sz: Double): Unit = js.native
+  
   /**
     * 
     * @brief 返回一个新缓存对象，包含当前对象数据的倒序
@@ -536,6 +570,7 @@ trait ClassBuffer extends ClassObject {
     * 
     */
   def reverse(): ClassBuffer = js.native
+  
   /**
     * 
     * @brief 返回一个新缓存对象，包含指定起始到缓存结尾的数据
@@ -558,6 +593,7 @@ trait ClassBuffer extends ClassObject {
     * 
     */
   def slice(start: Double, end: Double): ClassBuffer = js.native
+  
   /**
     * 
     * @brief 返回全部二进制数据的数组
@@ -567,6 +603,7 @@ trait ClassBuffer extends ClassObject {
     * 
     */
   def toArray(): js.Array[_] = js.native
+  
   /**
     * 
     * @brief 返回二进制数据的编码字符串
@@ -582,6 +619,7 @@ trait ClassBuffer extends ClassObject {
   def toString(codec: String, offset: js.UndefOr[scala.Nothing], end: Double): String = js.native
   def toString(codec: String, offset: Double): String = js.native
   def toString(codec: String, offset: Double, end: Double): String = js.native
+  
   /**
     * 
     * @brief 返回全部二进制数据的数组
@@ -591,6 +629,7 @@ trait ClassBuffer extends ClassObject {
     * 
     */
   def values(): js.Iterable[_] = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入指定字符串，字符串默认为utf-8，越界时只写入部分数据
@@ -614,6 +653,7 @@ trait ClassBuffer extends ClassObject {
   def write(str: String, offset: Double, length: js.UndefOr[scala.Nothing], codec: String): Double = js.native
   def write(str: String, offset: Double, length: Double): Double = js.native
   def write(str: String, offset: Double, length: Double, codec: String): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个双精度浮点数，以高字节序的存储方式
@@ -627,6 +667,7 @@ trait ClassBuffer extends ClassObject {
     */
   def writeDoubleBE(value: Double, offset: Double): Double = js.native
   def writeDoubleBE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个双精度浮点数，以低字节序的存储方式
@@ -640,6 +681,7 @@ trait ClassBuffer extends ClassObject {
     */
   def writeDoubleLE(value: Double, offset: Double): Double = js.native
   def writeDoubleLE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个浮点数，以高字节序的存储方式
@@ -653,6 +695,7 @@ trait ClassBuffer extends ClassObject {
     */
   def writeFloatBE(value: Double, offset: Double): Double = js.native
   def writeFloatBE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个浮点数，以低字节序的存储方式
@@ -666,6 +709,7 @@ trait ClassBuffer extends ClassObject {
     */
   def writeFloatLE(value: Double, offset: Double): Double = js.native
   def writeFloatLE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 16 位整型数值，以高字节序的存储方式
@@ -681,6 +725,7 @@ trait ClassBuffer extends ClassObject {
   def writeInt16BE(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeInt16BE(value: Double, offset: Double): Double = js.native
   def writeInt16BE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 16 位整型数值，以低字节序的存储方式
@@ -696,6 +741,7 @@ trait ClassBuffer extends ClassObject {
   def writeInt16LE(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeInt16LE(value: Double, offset: Double): Double = js.native
   def writeInt16LE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 32 位整型数值，以高字节序的存储方式
@@ -711,6 +757,7 @@ trait ClassBuffer extends ClassObject {
   def writeInt32BE(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeInt32BE(value: Double, offset: Double): Double = js.native
   def writeInt32BE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 32 位整型数值，以低字节序的存储方式
@@ -726,6 +773,7 @@ trait ClassBuffer extends ClassObject {
   def writeInt32LE(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeInt32LE(value: Double, offset: Double): Double = js.native
   def writeInt32LE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 64 位整型数值，以高字节序的存储方式
@@ -741,6 +789,7 @@ trait ClassBuffer extends ClassObject {
   def writeInt64BE(value: ClassInt64, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeInt64BE(value: ClassInt64, offset: Double): Double = js.native
   def writeInt64BE(value: ClassInt64, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 64 位整型数值，以低字节序的存储方式
@@ -756,6 +805,7 @@ trait ClassBuffer extends ClassObject {
   def writeInt64LE(value: ClassInt64, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeInt64LE(value: ClassInt64, offset: Double): Double = js.native
   def writeInt64LE(value: ClassInt64, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 8 位整型数值
@@ -771,6 +821,7 @@ trait ClassBuffer extends ClassObject {
   def writeInt8(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeInt8(value: Double, offset: Double): Double = js.native
   def writeInt8(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个整型数值，最大支持 48 位，以高字节序的存储方式
@@ -786,6 +837,7 @@ trait ClassBuffer extends ClassObject {
   def writeIntBE(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeIntBE(value: Double, offset: Double): Double = js.native
   def writeIntBE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个整型数值，最大支持 48 位，以低字节序的存储方式
@@ -801,6 +853,7 @@ trait ClassBuffer extends ClassObject {
   def writeIntLE(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeIntLE(value: Double, offset: Double): Double = js.native
   def writeIntLE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 16 位无符号整型数值，以高字节序的存储方式
@@ -816,6 +869,7 @@ trait ClassBuffer extends ClassObject {
   def writeUInt16BE(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeUInt16BE(value: Double, offset: Double): Double = js.native
   def writeUInt16BE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 16 位无符号整型数值，以低字节序的存储方式
@@ -831,6 +885,7 @@ trait ClassBuffer extends ClassObject {
   def writeUInt16LE(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeUInt16LE(value: Double, offset: Double): Double = js.native
   def writeUInt16LE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 32 位无符号整型数值，以高字节序的存储方式
@@ -846,6 +901,7 @@ trait ClassBuffer extends ClassObject {
   def writeUInt32BE(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeUInt32BE(value: Double, offset: Double): Double = js.native
   def writeUInt32BE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 32 位无符号整型数值，以低字节序的存储方式
@@ -861,6 +917,7 @@ trait ClassBuffer extends ClassObject {
   def writeUInt32LE(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeUInt32LE(value: Double, offset: Double): Double = js.native
   def writeUInt32LE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个 8 位无符号整型数值
@@ -876,6 +933,7 @@ trait ClassBuffer extends ClassObject {
   def writeUInt8(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeUInt8(value: Double, offset: Double): Double = js.native
   def writeUInt8(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个无符号整型数值，最大支持 48 位，以高字节序的存储方式
@@ -891,6 +949,7 @@ trait ClassBuffer extends ClassObject {
   def writeUIntBE(value: Double, offset: js.UndefOr[scala.Nothing], noAssert: Boolean): Double = js.native
   def writeUIntBE(value: Double, offset: Double): Double = js.native
   def writeUIntBE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
+  
   /**
     * 
     * @brief 向缓存对象写入一个无符号整型数值，最大支持 48 位，以低字节序的存储方式
@@ -907,4 +966,3 @@ trait ClassBuffer extends ClassObject {
   def writeUIntLE(value: Double, offset: Double): Double = js.native
   def writeUIntLE(value: Double, offset: Double, noAssert: Boolean): Double = js.native
 }
-

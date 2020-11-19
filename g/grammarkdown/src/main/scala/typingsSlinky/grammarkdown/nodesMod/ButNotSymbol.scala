@@ -4,7 +4,7 @@ import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.ButKeyword
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.NotKeyword
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown/dist/nodes", "ButNotSymbol")
 @js.native
@@ -38,11 +38,15 @@ class ButNotSymbol protected ()
     notKeyword: Token[NotKeyword],
     right: LexicalSymbol
   ) = this()
+  
   val butKeyword: js.UndefOr[Token[ButKeyword]] = js.native
+  
   val left: LexicalSymbol = js.native
+  
   val notKeyword: js.UndefOr[Token[NotKeyword]] = js.native
+  
   val right: js.UndefOr[LexicalSymbol] = js.native
+  
   def update(left: LexicalSymbol): ButNotSymbol = js.native
   def update(left: LexicalSymbol, right: LexicalSymbol): ButNotSymbol = js.native
 }
-

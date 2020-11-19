@@ -4,7 +4,7 @@ import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interfaces and instance classes for types from the Mendix sub meta model `DataSets`.
@@ -14,6 +14,6 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IDataSet extends IDocument {
+  
   val parameters: IList[IDataSetParameter] = js.native
 }
-

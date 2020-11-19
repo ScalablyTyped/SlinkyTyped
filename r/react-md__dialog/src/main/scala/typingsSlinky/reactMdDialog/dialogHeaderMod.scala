@@ -6,11 +6,12 @@ import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/dialog/types/DialogHeader", JSImport.Namespace)
 @js.native
 object dialogHeaderMod extends js.Object {
+  
   /**
     * This component doesn't do anything to complex. It really just applies custom
     * styles so that when the `DialogContent` component is used, the header will be
@@ -18,6 +19,6 @@ object dialogHeaderMod extends js.Object {
     * some minimal padding.
     */
   val default: ForwardRefExoticComponent[DialogHeaderProps with RefAttributes[HTMLDivElement]] = js.native
+  
   type DialogHeaderProps = HTMLAttributes[HTMLDivElement]
 }
-

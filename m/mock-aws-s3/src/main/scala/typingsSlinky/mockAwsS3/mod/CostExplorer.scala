@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.costexplorerMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "CostExplorer")
 @js.native
@@ -14,4 +14,3 @@ class CostExplorer ()
   extends typingsSlinky.awsSdk.mod.CostExplorer {
   def this(options: ClientConfiguration) = this()
 }
-

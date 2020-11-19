@@ -2,7 +2,7 @@ package typingsSlinky.multer.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * a function to control which files should be uploaded and which should be skipped
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait FileFilterCallback extends js.Object {
+  
   def apply(error: Null, acceptFile: Boolean): Unit = js.native
   def apply(error: js.Error): Unit = js.native
 }
-

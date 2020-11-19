@@ -7,7 +7,7 @@ import typingsSlinky.ol.tileStateMod.TileState
 import typingsSlinky.ol.tilecoordMod.TileCoord
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol", "ImageTile")
 @js.native
@@ -28,4 +28,3 @@ class ImageTile protected () extends default {
     opt_options: Options
   ) = this()
 }
-

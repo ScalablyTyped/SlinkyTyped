@@ -3,7 +3,7 @@ package typingsSlinky.mockAwsS3.mod
 import typingsSlinky.awsSdk.codestarMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mock-aws-s3", "CodeStar")
 @js.native
@@ -14,4 +14,3 @@ class CodeStar ()
   extends typingsSlinky.awsSdk.mod.CodeStar {
   def this(options: ClientConfiguration) = this()
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This object contains a helper method for generating a predominance visualization. Visualizing predominance involves coloring a [layer’s](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html) features based on which attribute among a set of competing numeric attributes wins or beats the others in total count. Common applications of this include visualizing election results, survey results, and demographic majorities.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait predominance extends js.Object {
+  
   /**
     * Generates a predominance renderer based on a set of competing numeric fields.  Visualizing predominance involves coloring a [layer’s](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html) features based on which attribute among a set of competing numeric attributes wins or beats the others in total count. Common applications of this include visualizing election results, survey results, and demographic majorities.  For example, suppose you have a layer of U.S. counties with fields containing the total sales of various crops: wheat, soybeans, corn, cotton, and vegetables. If a feature has the following values for each field:
     *
@@ -69,27 +70,30 @@ trait predominance extends js.Object {
     */
   def createRenderer(params: predominanceCreateRendererParams): js.Promise[predominanceRendererResult] = js.native
 }
-
 object predominance {
+  
   @scala.inline
   def apply(createRenderer: predominanceCreateRendererParams => js.Promise[predominanceRendererResult]): predominance = {
     val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer))
     __obj.asInstanceOf[predominance]
   }
+  
   @scala.inline
   implicit class predominanceOps[Self <: predominance] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreateRenderer(value: predominanceCreateRendererParams => js.Promise[predominanceRendererResult]): Self = this.set("createRenderer", js.Any.fromFunction1(value))
   }
-  
 }
-

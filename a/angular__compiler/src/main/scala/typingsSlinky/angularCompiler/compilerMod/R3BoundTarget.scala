@@ -13,7 +13,7 @@ import typingsSlinky.std.Map
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/compiler", "R3BoundTarget")
 @js.native
@@ -36,4 +36,3 @@ class R3BoundTarget[DirectiveT /* <: DirectiveMeta */] protected ()
     usedPipes: Set[String]
   ) = this()
 }
-

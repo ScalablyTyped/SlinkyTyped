@@ -12,15 +12,20 @@ import typingsSlinky.reactMdAppBar.appBarTitleMod.AppBarTitleProps
 import typingsSlinky.reactMdAppBar.useActionClassNameMod.AppBarActionClassNameProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/app-bar", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   val APP_BAR_OFFSET_CLASSNAME: /* "rmd-app-bar-offset" */ String = js.native
+  
   val APP_BAR_OFFSET_DENSE_CLASSNAME: /* "rmd-app-bar-offset--dense" */ String = js.native
+  
   val APP_BAR_OFFSET_PROMINENT_CLASSNAME: /* "rmd-app-bar-offset--prominent" */ String = js.native
+  
   val APP_BAR_OFFSET_PROMINENT_DENSE_CLASSNAME: /* "rmd-app-bar-offset--prominent-dense" */ String = js.native
+  
   /**
     * This component is used to create a top-level app bar in your application that
     * can be used to contain a navigation menu toggle button, the app's logo and/or
@@ -31,6 +36,7 @@ object mod extends js.Object {
     * these offsets as well.
     */
   val AppBar: ForwardRefExoticComponent[AppBarProps with RefAttributes[HTMLDivElement]] = js.native
+  
   /**
     * This component is really just a simple wrapper for the `Button` component
     * that adds a few additional styles to prevent the button from shrinking when
@@ -39,6 +45,7 @@ object mod extends js.Object {
     * provided.
     */
   val AppBarAction: ForwardRefExoticComponent[AppBarActionProps with RefAttributes[HTMLButtonElement]] = js.native
+  
   /**
     * This component is really just a simple wrapper for the `Button` component
     * that adds some additional styles for adding spacing before and after this
@@ -51,13 +58,14 @@ object mod extends js.Object {
     * temporary navigation element like a hamburger menu.
     */
   val AppBarNav: ForwardRefExoticComponent[AppBarNavProps with RefAttributes[HTMLButtonElement]] = js.native
+  
   /**
     * This component is used to create a title for your application. If your app is
     * not using the `AppBarNav` component, you can enable the `keyline` prop to
     * ensure that your title aligns with the keyline of your navigation element.
     */
   val AppBarTitle: ForwardRefExoticComponent[AppBarTitleProps with RefAttributes[HTMLHeadingElement]] = js.native
+  
   def useActionClassName(): String = js.native
   def useActionClassName(hasFirstLastInheritColorClassName: AppBarActionClassNameProps): String = js.native
 }
-

@@ -6,7 +6,7 @@ import typingsSlinky.pixiJs.anon.Chars
 import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * BitmapFont represents a typeface available for use with the BitmapText class. Use the `install`
@@ -28,11 +28,11 @@ class BitmapFont protected ()
     textures: StringDictionary[typingsSlinky.pixiJs.PIXI.Texture]
   ) = this()
 }
-
 /* static members */
 @JSImport("pixi.js", "BitmapFont")
 @js.native
 object BitmapFont extends js.Object {
+  
   /**
     * This character set includes all the letters in the alphabet (both lower- and upper- case).
     * @readonly
@@ -42,6 +42,7 @@ object BitmapFont extends js.Object {
     * BitmapFont.from("ExampleFont", style, { chars: BitmapFont.ALPHA })
     */
   val ALPHA: js.Array[js.Array[String]] = js.native
+  
   /**
     * This character set is the union of `BitmapFont.ALPHA` and `BitmapFont.NUMERIC`.
     * @readonly
@@ -49,6 +50,7 @@ object BitmapFont extends js.Object {
     * @member {string[][]}
     */
   val ALPHANUMERIC: js.Array[js.Array[String]] = js.native
+  
   /**
     * This character set consists of all the ASCII table.
     * @readonly
@@ -57,6 +59,7 @@ object BitmapFont extends js.Object {
     * @see http://www.asciitable.com/
     */
   val ASCII: js.Array[js.Array[String]] = js.native
+  
   /**
     * This character set includes all decimal digits (from 0 to 9).
     * @readonly
@@ -66,6 +69,7 @@ object BitmapFont extends js.Object {
     * BitmapFont.from("ExampleFont", style, { chars: BitmapFont.NUMERIC })
     */
   val NUMERIC: js.Array[js.Array[String]] = js.native
+  
   /**
     * Collection of available/installed fonts.
     *
@@ -74,6 +78,7 @@ object BitmapFont extends js.Object {
     * @member {Object.<string, PIXI.BitmapFont>}
     */
   val available: StringDictionary[typingsSlinky.pixiJs.PIXI.BitmapFont] = js.native
+  
   /**
     * Collection of default options when using `BitmapFont.from`.
     *
@@ -87,6 +92,7 @@ object BitmapFont extends js.Object {
     * @property {string|string[]|string[][]} chars=PIXI.BitmapFont.ALPHANUMERIC
     */
   val defaultOptions: IBitmapFontOptions = js.native
+  
   /**
     * Generates a bitmap-font for the given style and character set. This does not support
     * kernings yet.
@@ -119,6 +125,7 @@ object BitmapFont extends js.Object {
   def from(name: String, style: js.Any, options: Chars): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
   def from(name: String, style: typingsSlinky.pixiJs.PIXI.TextStyle): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
   def from(name: String, style: typingsSlinky.pixiJs.PIXI.TextStyle, options: Chars): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  
   def install(data: String, textures: js.Array[typingsSlinky.pixiJs.PIXI.Texture]): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
   def install(data: String, textures: StringDictionary[typingsSlinky.pixiJs.PIXI.Texture]): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
   def install(data: String, textures: typingsSlinky.pixiJs.PIXI.Texture): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
@@ -145,6 +152,7 @@ object BitmapFont extends js.Object {
     */
   def install(data: XMLDocument, textures: StringDictionary[typingsSlinky.pixiJs.PIXI.Texture]): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
   def install(data: XMLDocument, textures: typingsSlinky.pixiJs.PIXI.Texture): typingsSlinky.pixiJs.PIXI.BitmapFont = js.native
+  
   /**
     * Remove bitmap font by name.
     *
@@ -153,4 +161,3 @@ object BitmapFont extends js.Object {
     */
   def uninstall(name: String): Unit = js.native
 }
-

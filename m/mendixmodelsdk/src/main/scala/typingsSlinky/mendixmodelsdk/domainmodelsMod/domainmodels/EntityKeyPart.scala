@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 8.9.0: introduced
@@ -32,38 +32,42 @@ class EntityKeyPart protected ()
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsEntityKey: EntityKey = js.native
   @JSName("containerAsEntityKey")
   val containerAsEntityKey_FEntityKeyPart: IEntityKey = js.native
+  
   @JSName("model")
   var model_FEntityKeyPart: IModel = js.native
+  
+  def name: String = js.native
+  def name_=(newValue: String): Unit = js.native
   @JSName("name")
   val name_FEntityKeyPart: String = js.native
+  
+  @JSName("qualifiedName")
+  def qualifiedName_MEntityKeyPart: String | Null = js.native
+  
+  def `type`: AttributeType = js.native
+  def type_=(newValue: AttributeType): Unit = js.native
   /**
     * This property is required and cannot be set to null.
     */
   @JSName("type")
   val type_FEntityKeyPart: IAttributeType = js.native
-  def containerAsEntityKey: EntityKey = js.native
-  def name: String = js.native
-  def name_=(newValue: String): Unit = js.native
-  @JSName("qualifiedName")
-  def qualifiedName_MEntityKeyPart: String | Null = js.native
-  def `type`: AttributeType = js.native
-  def type_=(newValue: AttributeType): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.EntityKeyPart")
 @js.native
 object EntityKeyPart extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new EntityKeyPart instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): EntityKeyPart = js.native
+  
   /**
     * Creates and returns a new EntityKeyPart instance in the SDK and on the server.
     * The new EntityKeyPart will be automatically stored in the 'parts' property
@@ -73,5 +77,8 @@ object EntityKeyPart extends js.Object {
     *  8.9.0 and higher
     */
   def createIn(container: EntityKey): EntityKeyPart = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

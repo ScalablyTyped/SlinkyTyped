@@ -8,14 +8,11 @@ import typingsSlinky.tizenCommonWeb.tizenMod.ErrorCallback
 import typingsSlinky.tizenCommonWeb.tizenMod.SuccessCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FileHandle extends js.Object {
-  /**
-    * Path, as passed to `openFile`.
-    */
-  val path: Path = js.native
+  
   /**
     * Closes file handle.
     * Closes the given file stream. Closing file guarantees writing changes made to `FileHandle` to the storage device. Further operations on this file handle are not allowed.
@@ -24,6 +21,7 @@ trait FileHandle extends js.Object {
     * @throw WebAPIException IOError
     */
   def close(): Unit = js.native
+  
   /**
     * Closes file handle.
     * Closes the given file stream. Closing file guarantees writing changes made to `FileHandle` to the storage device. Further operations on this file handle are not allowed.
@@ -41,6 +39,7 @@ trait FileHandle extends js.Object {
   def closeNonBlocking(onsuccess: js.UndefOr[scala.Nothing], onerror: ErrorCallback): Unit = js.native
   def closeNonBlocking(onsuccess: SuccessCallback): Unit = js.native
   def closeNonBlocking(onsuccess: SuccessCallback, onerror: ErrorCallback): Unit = js.native
+  
   /**
     * Flushes data.
     * For file handles with permission to write, flush writes any changes made to file content to underlying buffer.
@@ -49,6 +48,7 @@ trait FileHandle extends js.Object {
     * @throw WebAPIException IOError
     */
   def flush(): Unit = js.native
+  
   /**
     * Flushes data.
     * For file handles with permission to write, flush writes any changes made to file content to underlying buffer.
@@ -68,6 +68,12 @@ trait FileHandle extends js.Object {
   def flushNonBlocking(onsuccess: js.UndefOr[scala.Nothing], onerror: ErrorCallback): Unit = js.native
   def flushNonBlocking(onsuccess: SuccessCallback): Unit = js.native
   def flushNonBlocking(onsuccess: SuccessCallback, onerror: ErrorCallback): Unit = js.native
+  
+  /**
+    * Path, as passed to `openFile`.
+    */
+  val path: Path = js.native
+  
   /**
     * Reads file content as `Blob`.
     * Sets file handle position indicator at the end of read data.
@@ -76,6 +82,7 @@ trait FileHandle extends js.Object {
     * @throw WebAPIException InvalidValuesError IOError
     */
   def readBlob(size: Double): Blob = js.native
+  
   /**
     * Reads file content as `Blob`.
     * Sets file handle position indicator at the end of read data.
@@ -98,6 +105,7 @@ trait FileHandle extends js.Object {
   def readBlobNonBlocking(onsuccess: ReadBlobSuccessCallback, onerror: js.UndefOr[scala.Nothing], size: Double): Unit = js.native
   def readBlobNonBlocking(onsuccess: ReadBlobSuccessCallback, onerror: ErrorCallback): Unit = js.native
   def readBlobNonBlocking(onsuccess: ReadBlobSuccessCallback, onerror: ErrorCallback, size: Double): Unit = js.native
+  
   /**
     * Reads file content as binary data.
     * Can be used in combination with [atob() or btoa()](https://dev.w3.org/html5/spec-LC/webappapis.html#atob) functions.
@@ -107,6 +115,7 @@ trait FileHandle extends js.Object {
     * @throw WebAPIException InvalidValuesError, IOError
     */
   def readData(size: Double): js.typedarray.Uint8Array = js.native
+  
   /**
     * Reads file content as binary data.
     * Can be used in combination with [atob() or btoa()](https://dev.w3.org/html5/spec-LC/webappapis.html#atob) functions.
@@ -130,6 +139,7 @@ trait FileHandle extends js.Object {
   def readDataNonBlocking(onsuccess: ReadDataSuccessCallback, onerror: js.UndefOr[scala.Nothing], size: Double): Unit = js.native
   def readDataNonBlocking(onsuccess: ReadDataSuccessCallback, onerror: ErrorCallback): Unit = js.native
   def readDataNonBlocking(onsuccess: ReadDataSuccessCallback, onerror: ErrorCallback, size: Double): Unit = js.native
+  
   /**
     * Reads file content as string.
     * Sets file handle position indicator at the end of read data.
@@ -146,6 +156,7 @@ trait FileHandle extends js.Object {
   def readString(count: js.UndefOr[scala.Nothing], inputEncoding: String): String = js.native
   def readString(count: Double): String = js.native
   def readString(count: Double, inputEncoding: String): String = js.native
+  
   /**
     * Reads file content as string.
     * Reads given number of characters.
@@ -210,6 +221,7 @@ trait FileHandle extends js.Object {
   ): Unit = js.native
   def readStringNonBlocking(onsuccess: ReadStringSuccessCallback, onerror: ErrorCallback, count: Double): Unit = js.native
   def readStringNonBlocking(onsuccess: ReadStringSuccessCallback, onerror: ErrorCallback, count: Double, inputEncoding: String): Unit = js.native
+  
   /**
     * Sets position indicator in file stream to ***offset***.
     * Note, that current position indicator value, can be obtained by calling ***seek(0, "CURRENT")***.
@@ -220,6 +232,7 @@ trait FileHandle extends js.Object {
     */
   def seek(offset: Double): Double = js.native
   def seek(offset: Double, whence: BaseSeekPosition): Double = js.native
+  
   /**
     * Sets position indicator in file stream to ***offset***.
     * Successful seek operation invokes `onsuccess` function, if specified. In case of failure `onerror` function is invoked, if specified.
@@ -302,18 +315,21 @@ trait FileHandle extends js.Object {
   def seekNonBlocking_END(offset: Double, onsuccess: SeekSuccessCallback, onerror: js.UndefOr[scala.Nothing], whence: END): Unit = js.native
   @JSName("seekNonBlocking")
   def seekNonBlocking_END(offset: Double, onsuccess: SeekSuccessCallback, onerror: ErrorCallback, whence: END): Unit = js.native
+  
   @JSName("seek")
   def seek_BEGIN(offset: Double, whence: BEGIN): Double = js.native
   @JSName("seek")
   def seek_CURRENT(offset: Double, whence: CURRENT): Double = js.native
   @JSName("seek")
   def seek_END(offset: Double, whence: END): Double = js.native
+  
   /**
     * Synchronizes data to storage device.
     * The sync function is intended to force a physical write of data from the buffer cache and to assure that after a system crash or other failure that all data up to the time of the sync() call is recorded on the disk.
     * @throw WebAPIException IOError
     */
   def sync(): Unit = js.native
+  
   /**
     * Synchronizes data to storage device.
     * The syncNonBlocking function is intended to force a physical write of data from the buffer cache and to assure that after a system crash or other failure that all data up to the time of the syncNonBlocking() execution is recorded on the disk.
@@ -331,6 +347,7 @@ trait FileHandle extends js.Object {
   def syncNonBlocking(onsuccess: js.UndefOr[scala.Nothing], onerror: ErrorCallback): Unit = js.native
   def syncNonBlocking(onsuccess: SuccessCallback): Unit = js.native
   def syncNonBlocking(onsuccess: SuccessCallback, onerror: ErrorCallback): Unit = js.native
+  
   /**
     * Writes `Blob` to file.
     * Sets file handle position indicator at the end of written data.
@@ -338,6 +355,7 @@ trait FileHandle extends js.Object {
     * @throw WebAPIException IOError, TypeMismatchError
     */
   def writeBlob(blob: Blob): Unit = js.native
+  
   /**
     * Writes `Blob` to file.
     * Sets file handle position indicator at the end of written data.
@@ -356,6 +374,7 @@ trait FileHandle extends js.Object {
   def writeBlobNonBlocking(blob: Blob, onsuccess: js.UndefOr[scala.Nothing], onerror: ErrorCallback): Unit = js.native
   def writeBlobNonBlocking(blob: Blob, onsuccess: SuccessCallback): Unit = js.native
   def writeBlobNonBlocking(blob: Blob, onsuccess: SuccessCallback, onerror: ErrorCallback): Unit = js.native
+  
   /**
     * Writes binary data to file.
     * Can be used in combination with [atob() or btoa()](https://dev.w3.org/html5/spec-LC/webappapis.html#atob) functions.
@@ -364,6 +383,7 @@ trait FileHandle extends js.Object {
     * @throw WebAPIException with error type IOError, TypeMismatchError
     */
   def writeData(data: js.typedarray.Uint8Array): Unit = js.native
+  
   /**
     * Writes binary data to file.
     * Can be used in combination with [atob() or btoa()](https://dev.w3.org/html5/spec-LC/webappapis.html#atob) functions.
@@ -383,6 +403,7 @@ trait FileHandle extends js.Object {
   def writeDataNonBlocking(data: js.typedarray.Uint8Array, onsuccess: js.UndefOr[scala.Nothing], onerror: ErrorCallback): Unit = js.native
   def writeDataNonBlocking(data: js.typedarray.Uint8Array, onsuccess: SuccessCallback): Unit = js.native
   def writeDataNonBlocking(data: js.typedarray.Uint8Array, onsuccess: SuccessCallback, onerror: ErrorCallback): Unit = js.native
+  
   /**
     * Writes ***inputString*** content to a file.
     * Sets file handle position indicator at the end of written data.
@@ -395,6 +416,7 @@ trait FileHandle extends js.Object {
     */
   def writeString(inputString: String): Double = js.native
   def writeString(inputString: String, outputEncoding: String): Double = js.native
+  
   /**
     * Writes ***inputString*** content to a file.
     * Sets file handle position indicator at the end of written data.
@@ -441,4 +463,3 @@ trait FileHandle extends js.Object {
     outputEncoding: String
   ): Unit = js.native
 }
-

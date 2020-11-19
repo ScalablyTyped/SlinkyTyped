@@ -2,7 +2,7 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ObjectLiteralExpression
@@ -11,7 +11,7 @@ trait ObjectLiteralExpression
      with DestructuringPattern
      with ObjectBindingOrAssignmentPattern
      with _BindingOrAssignmentElement {
+  
   @JSName("kind")
   var kind_ObjectLiteralExpression: typingsSlinky.typescript.mod.SyntaxKind.ObjectLiteralExpression = js.native
 }
-

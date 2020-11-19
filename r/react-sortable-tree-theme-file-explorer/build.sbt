@@ -1,21 +1,21 @@
 organization := "org.scalablytyped.slinky"
 name := "react-sortable-tree-theme-file-explorer"
-version := "0.0-dt-20200515Z-a84e46"
+version := "0.0-dt-20200515Z-2d5c84"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-c880b4",
-  "org.scalablytyped.slinky" %%% "dnd-core" % "11.1.3-e5902c",
-  "org.scalablytyped.slinky" %%% "hoist-non-react-statics" % "3.3-dt-20190402Z-a12366",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-9fd6d8",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-c528cd",
-  "org.scalablytyped.slinky" %%% "react-dnd" % "11.1.3-bd2a20",
-  "org.scalablytyped.slinky" %%% "react-sortable-tree" % "0.3-dt-20200717Z-fd8616",
-  "org.scalablytyped.slinky" %%% "react-virtualized" % "9.21-dt-20200515Z-862d34",
-  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-1ae70d",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-fce754",
+  "org.scalablytyped.slinky" %%% "dnd-core" % "11.1.3-daccc1",
+  "org.scalablytyped.slinky" %%% "hoist-non-react-statics" % "3.3-dt-20190402Z-d5bf4c",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ce652f",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a9854",
+  "org.scalablytyped.slinky" %%% "react-dnd" % "11.1.3-40b9fa",
+  "org.scalablytyped.slinky" %%% "react-sortable-tree" % "0.3-dt-20200717Z-53c9ee",
+  "org.scalablytyped.slinky" %%% "react-virtualized" % "9.21-dt-20200515Z-d21188",
+  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-13a419",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

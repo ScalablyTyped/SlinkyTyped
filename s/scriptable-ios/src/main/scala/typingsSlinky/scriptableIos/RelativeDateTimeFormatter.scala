@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Creates a textual representation of the amount of time between two dates._
@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait RelativeDateTimeFormatter extends js.Object {
+  
   /**
     * _Locale to use when formatting._
     *
@@ -19,6 +20,7 @@ trait RelativeDateTimeFormatter extends js.Object {
     * @see https://docs.scriptable.app/relativedatetimeformatter/#locale
     */
   var locale: String = js.native
+  
   /**
     * _Creates a localized string communicating the amount of time between two dates._
     *
@@ -29,6 +31,7 @@ trait RelativeDateTimeFormatter extends js.Object {
     * @see https://docs.scriptable.app/relativedatetimeformatter/#-string
     */
   def string(date: js.Date, referenceDate: js.Date): String = js.native
+  
   /**
     * _Prefers named dates and times._
     *
@@ -39,6 +42,7 @@ trait RelativeDateTimeFormatter extends js.Object {
     * @see https://docs.scriptable.app/relativedatetimeformatter/#-usenameddatetimestyle
     */
   def useNamedDateTimeStyle(): Unit = js.native
+  
   /**
     * _Prefers numeric dates and times._
     *
@@ -48,8 +52,8 @@ trait RelativeDateTimeFormatter extends js.Object {
     */
   def useNumericDateTimeStyle(): Unit = js.native
 }
-
 object RelativeDateTimeFormatter {
+  
   @scala.inline
   def apply(
     locale: String,
@@ -60,26 +64,32 @@ object RelativeDateTimeFormatter {
     val __obj = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], string = js.Any.fromFunction2(string), useNamedDateTimeStyle = js.Any.fromFunction0(useNamedDateTimeStyle), useNumericDateTimeStyle = js.Any.fromFunction0(useNumericDateTimeStyle))
     __obj.asInstanceOf[RelativeDateTimeFormatter]
   }
+  
   @scala.inline
   implicit class RelativeDateTimeFormatterOps[Self <: RelativeDateTimeFormatter] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setString(value: (js.Date, js.Date) => String): Self = this.set("string", js.Any.fromFunction2(value))
+    
     @scala.inline
     def setUseNamedDateTimeStyle(value: () => Unit): Self = this.set("useNamedDateTimeStyle", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setUseNumericDateTimeStyle(value: () => Unit): Self = this.set("useNumericDateTimeStyle", js.Any.fromFunction0(value))
   }
-  
 }
-

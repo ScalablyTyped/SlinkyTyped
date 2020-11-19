@@ -3,7 +3,7 @@ package typingsSlinky.baidumapWebSdk.global.BMap
 import typingsSlinky.baidumapWebSdk.BMap.LocalSearchOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BMap.LocalSearch")
 @js.native
@@ -16,4 +16,3 @@ class LocalSearch protected ()
   def this(location: typingsSlinky.baidumapWebSdk.BMap.Map, opts: LocalSearchOptions) = this()
   def this(location: typingsSlinky.baidumapWebSdk.BMap.Point, opts: LocalSearchOptions) = this()
 }
-

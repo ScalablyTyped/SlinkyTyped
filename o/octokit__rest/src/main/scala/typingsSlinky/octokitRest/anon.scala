@@ -542,21 +542,22 @@ import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.octokitTypes.routeMod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object anon extends js.Object {
+  
   @js.native
   trait Instantiable
     extends Instantiable1[/* args (repeated) */ js.Any, StringDictionary[js.Any]] {
+    
     var plugins: js.Array[_] = js.native
   }
   
   @js.native
   trait Paginate extends js.Object {
-    @JSName("paginate")
-    var paginate_Original: PaginateInterface = js.native
+    
     /**
       * Paginate a request using endpoint options
       *
@@ -4931,6 +4932,8 @@ object anon extends js.Object {
           MR
         ]
     ): js.Promise[MR] = js.native
+    @JSName("paginate")
+    var paginate_Original: PaginateInterface = js.native
     /**
       * Paginate a request using an unknown endpoint route string
       *
@@ -4943,10 +4946,12 @@ object anon extends js.Object {
   
   @js.native
   trait TypeofCore extends Instantiable0[Octokit] {
+    
     var VERSION: String = js.native
-    var plugins: js.Array[OctokitPlugin] = js.native
+    
     def defaults[S /* <: Constructor[_] */](defaults: js.Function): typingsSlinky.octokitCore.anon.Instantiable with S = js.native
     def defaults[S /* <: Constructor[_] */](defaults: OctokitOptions): typingsSlinky.octokitCore.anon.Instantiable with S = js.native
+    
     /**
       * Attach a plugin (or many) to your Octokit instance.
       *
@@ -4956,7 +4961,7 @@ object anon extends js.Object {
     def plugin[S /* <: Constructor[_] with Plugins */, T /* <: js.Array[OctokitPlugin] */](
       /* import warning: parser.TsParser#functionParam Dropping repeated marker of param newPlugins because its type T is not an array type */ newPlugins: T
     ): InstantiablePlugins with S with Constructor[UnionToIntersection[ReturnTypeOf[T]]] = js.native
+    
+    var plugins: js.Array[OctokitPlugin] = js.native
   }
-  
 }
-

@@ -17,13 +17,33 @@ import typingsSlinky.ionicCore.ionicCoreStrings.pwa
 import typingsSlinky.ionicCore.ionicCoreStrings.tablet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/core/dist/types/utils/platform", JSImport.Namespace)
 @js.native
 object platformMod extends js.Object {
+  
+  def getPlatforms(): js.Array[
+    ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
+  ] = js.native
+  def getPlatforms(win: js.Any): js.Array[
+    ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
+  ] = js.native
+  
+  val isPlatform: IsPlatformSignature = js.native
+  
+  def setupPlatforms(): js.Array[
+    ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
+  ] = js.native
+  def setupPlatforms(win: js.Any): js.Array[
+    ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
+  ] = js.native
+  
+  def testUserAgent(win: Window, expr: js.RegExp): Boolean = js.native
+  
   @js.native
   trait IsPlatformSignature extends js.Object {
+    
     def apply(plt: Platforms): Boolean = js.native
     def apply(win: Window, plt: Platforms): Boolean = js.native
   }
@@ -45,20 +65,4 @@ object platformMod extends js.Object {
     - typingsSlinky.ionicCore.ionicCoreStrings.hybrid
   */
   trait Platforms extends js.Object
-  
-  val isPlatform: IsPlatformSignature = js.native
-  def getPlatforms(): js.Array[
-    ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
-  ] = js.native
-  def getPlatforms(win: js.Any): js.Array[
-    ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
-  ] = js.native
-  def setupPlatforms(): js.Array[
-    ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
-  ] = js.native
-  def setupPlatforms(win: js.Any): js.Array[
-    ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
-  ] = js.native
-  def testUserAgent(win: Window, expr: js.RegExp): Boolean = js.native
 }
-

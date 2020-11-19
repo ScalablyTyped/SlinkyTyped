@@ -2,13 +2,18 @@ package typingsSlinky.qlik
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type CustomPropertyOptions = js.Array[typingsSlinky.qlik.mod.CustomPropertyOption] | js.Function0[js.Array[typingsSlinky.qlik.mod.CustomPropertyOption]]
+  
   type Global = js.Any
+  
   type NxCellRows = js.Array[typingsSlinky.qlik.mod.NxCell]
+  
   type NxMeasureInfo = typingsSlinky.qlik.mod.ColumnInfo
+  
   type Paint = js.ThisFunction10[
     /* this */ typingsSlinky.qlik.mod.ExtensionContext, 
     /* $element */ js.UndefOr[typingsSlinky.jquery.JQuery[org.scalajs.dom.raw.HTMLElement]], 
@@ -23,13 +28,17 @@ package object mod {
     /* qSelectionInfo */ js.UndefOr[typingsSlinky.qlik.mod.Selectionobject], 
     scala.Unit
   ]
+  
   type ShowFunction = js.Function3[
     /* layout */ typingsSlinky.qlik.mod.Layout, 
     /* cls */ js.Any, 
     /* obj */ js.Any, 
     scala.Boolean | (js.Function1[/* measure */ typingsSlinky.qlik.mod.NxMeasure, scala.Boolean])
   ]
+  
   type SupportFunction = js.Function1[/* layout */ typingsSlinky.qlik.mod.Layout, scala.Boolean]
+  
   type SupportItem = scala.Boolean | typingsSlinky.qlik.mod.SupportFunction
+  
   type VisualizationOptions = typingsSlinky.qlik.mod.VisualizationCommon
 }

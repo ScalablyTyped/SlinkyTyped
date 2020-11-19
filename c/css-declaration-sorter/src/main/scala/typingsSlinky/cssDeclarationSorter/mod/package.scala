@@ -2,13 +2,15 @@ package typingsSlinky.cssDeclarationSorter
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /**
     * Default, order in a simple alphabetical manner from a - z.
     */
   type Alphabetical = typingsSlinky.cssDeclarationSorter.cssDeclarationSorterStrings.alphabetical
+  
   /**
     * Order properties applying outside the box model, moving inward to intrinsic changes.
     * ```
@@ -20,7 +22,9 @@ package object mod {
     * ```
     */
   type ConcentricCSS = typingsSlinky.cssDeclarationSorter.cssDeclarationSorterStrings.`concentric-css`
+  
   type CssDeclarationSorter = typingsSlinky.postcss.mod.Plugin_[typingsSlinky.cssDeclarationSorter.mod.Options]
+  
   /**
     * Order from most important, flow affecting properties, to least important properties.
     * ```
@@ -32,6 +36,7 @@ package object mod {
     * ```
     */
   type SMACSS = typingsSlinky.cssDeclarationSorter.cssDeclarationSorterStrings.smacss
+  
   /**
     * This function receives two declaration names and is expected
     * to return -1, 0 or 1 depending on the wanted order.
@@ -41,5 +46,6 @@ package object mod {
     /* bProp */ java.lang.String, 
     typingsSlinky.cssDeclarationSorter.cssDeclarationSorterNumbers.`-1` | typingsSlinky.cssDeclarationSorter.cssDeclarationSorterNumbers.`0` | typingsSlinky.cssDeclarationSorter.cssDeclarationSorterNumbers.`1`
   ]
+  
   type SortOrder = typingsSlinky.cssDeclarationSorter.mod.Alphabetical | typingsSlinky.cssDeclarationSorter.mod.SMACSS | typingsSlinky.cssDeclarationSorter.mod.ConcentricCSS
 }

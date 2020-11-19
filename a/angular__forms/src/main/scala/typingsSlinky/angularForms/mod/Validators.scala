@@ -2,16 +2,16 @@ package typingsSlinky.angularForms.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/forms", "Validators")
 @js.native
 class Validators () extends js.Object
-
 /* static members */
 @JSImport("@angular/forms", "Validators")
 @js.native
 object Validators extends js.Object {
+  
   def compose(validators: js.Array[js.UndefOr[ValidatorFn | Null]]): ValidatorFn | Null = js.native
   /**
     * @description
@@ -25,6 +25,7 @@ object Validators extends js.Object {
     *
     */
   def compose(validators: Null): Null = js.native
+  
   /**
     * @description
     * Compose multiple async validators into a single function that returns the union
@@ -37,6 +38,7 @@ object Validators extends js.Object {
     *
     */
   def composeAsync(validators: js.Array[AsyncValidatorFn | Null]): AsyncValidatorFn | Null = js.native
+  
   /**
     * @description
     * Validator that requires the control's value pass an email validation test.
@@ -74,6 +76,7 @@ object Validators extends js.Object {
     *
     */
   def email(control: AbstractControl): ValidationErrors | Null = js.native
+  
   /**
     * @description
     * Validator that requires the control's value to be less than or equal to the provided number.
@@ -96,6 +99,7 @@ object Validators extends js.Object {
     *
     */
   def max(max: Double): ValidatorFn = js.native
+  
   /**
     * @description
     * Validator that requires the length of the control's value to be less than or equal
@@ -124,6 +128,7 @@ object Validators extends js.Object {
     *
     */
   def maxLength(maxLength: Double): ValidatorFn = js.native
+  
   /**
     * @description
     * Validator that requires the control's value to be greater than or equal to the provided number.
@@ -146,6 +151,7 @@ object Validators extends js.Object {
     *
     */
   def min(min: Double): ValidatorFn = js.native
+  
   /**
     * @description
     * Validator that requires the length of the control's value to be greater than or equal
@@ -177,6 +183,7 @@ object Validators extends js.Object {
     *
     */
   def minLength(minLength: Double): ValidatorFn = js.native
+  
   /**
     * @description
     * Validator that performs no operation.
@@ -185,6 +192,7 @@ object Validators extends js.Object {
     *
     */
   def nullValidator(control: AbstractControl): ValidationErrors | Null = js.native
+  
   /**
     * @description
     * Validator that requires the control's value to match a regex pattern. This validator is also
@@ -217,6 +225,7 @@ object Validators extends js.Object {
     */
   def pattern(pattern: String): ValidatorFn = js.native
   def pattern(pattern: js.RegExp): ValidatorFn = js.native
+  
   /**
     * @description
     * Validator that requires the control have a non-empty value.
@@ -238,6 +247,7 @@ object Validators extends js.Object {
     *
     */
   def required(control: AbstractControl): ValidationErrors | Null = js.native
+  
   /**
     * @description
     * Validator that requires the control's value be true. This validator is commonly
@@ -261,4 +271,3 @@ object Validators extends js.Object {
     */
   def requiredTrue(control: AbstractControl): ValidationErrors | Null = js.native
 }
-

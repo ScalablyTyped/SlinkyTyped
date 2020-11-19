@@ -6,18 +6,22 @@ import typingsSlinky.jsData.componentMod.default
 import typingsSlinky.jsData.mapperMod.MapperOpts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("js-data/dist/Container", JSImport.Namespace)
 @js.native
 object containerMod extends js.Object {
+  
+  val proxiedMapperMethods: js.Array[String] = js.native
+  
   @js.native
   class Container () extends default {
     def this(opts: js.Object) = this()
+    
     var _adapters: js.Any = js.native
+    
     var _mappers: StringDictionary[typingsSlinky.jsData.mapperMod.default] = js.native
-    var mapperClass: Instantiable1[/* opts */ js.UndefOr[MapperOpts], typingsSlinky.jsData.mapperMod.default] = js.native
-    var mapperDefaults: js.Any = js.native
+    
     /**
       * Register a new event listener on this Container.
       *
@@ -53,6 +57,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def _onMapperEvent(name: js.Any, args: js.Any*): Unit = js.native
+    
     /**
       * Return a container scoped to a particular mapper.
       *
@@ -79,6 +84,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def as(name: js.Any): js.Any = js.native
+    
     /**
       * Wrapper for {@link Mapper#count}.
       *
@@ -104,6 +110,7 @@ object containerMod extends js.Object {
       */
     def count(name: js.Any, query: js.Any): js.Promise[_] = js.native
     def count(name: js.Any, query: js.Any, opts: js.Any): js.Promise[_] = js.native
+    
     /**
       * Fired during {@link Container#create}. See
       * {@link Container~beforeCreateListener} for how to listen for this event.
@@ -184,6 +191,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def create(name: js.Any, props: js.Any, opts: js.Any): js.Promise[_] = js.native
+    
     /**
       * Fired during {@link Container#createMany}. See
       * {@link Container~beforeCreateManyListener} for how to listen for this event.
@@ -268,6 +276,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def createMany(name: js.Any, records: js.Any, opts: js.Any): js.Promise[_] = js.native
+    
     /**
       * Wrapper for {@link Mapper#createRecord}.
       *
@@ -293,6 +302,7 @@ object containerMod extends js.Object {
     def createRecord(name: js.Any, props: js.UndefOr[scala.Nothing], opts: js.Any): js.Any = js.native
     def createRecord(name: js.Any, props: js.Any): js.Any = js.native
     def createRecord(name: js.Any, props: js.Any, opts: js.Any): js.Any = js.native
+    
     /**
       * Create a new mapper and register it in this container.
       *
@@ -329,7 +339,9 @@ object containerMod extends js.Object {
     def defineMapper(name: js.Any, opts: MapperOpts): typingsSlinky.jsData.mapperMod.default = js.native
     def defineMapper(name: MapperOpts): typingsSlinky.jsData.mapperMod.default = js.native
     def defineMapper(name: MapperOpts, opts: MapperOpts): typingsSlinky.jsData.mapperMod.default = js.native
+    
     def defineResource(name: js.Any, opts: js.Any): typingsSlinky.jsData.mapperMod.default = js.native
+    
     /**
       * Fired during {@link Container#destroy}. See
       * {@link Container~beforeDestroyListener} for how to listen for this event.
@@ -407,6 +419,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def destroy(name: js.Any, id: js.Any, opts: js.Any): js.Promise[_] = js.native
+    
     /**
       * Fired during {@link Container#destroyAll}. See
       * {@link Container~beforeDestroyAllListener} for how to listen for this event.
@@ -484,6 +497,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def destroyAll(name: js.Any, query: js.Any, opts: js.Any): js.Promise[_] = js.native
+    
     /**
       * Fired during {@link Container#find}. See
       * {@link Container~beforeFindListener} for how to listen for this event.
@@ -560,6 +574,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def find(name: js.Any, id: js.Any, opts: js.Any): js.Promise[_] = js.native
+    
     /**
       * Fired during {@link Container#findAll}. See
       * {@link Container~beforeFindAllListener} for how to listen for this event.
@@ -637,6 +652,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def findAll(name: js.Any, query: js.Any, opts: js.Any): js.Promise[_] = js.native
+    
     /**
       * Return the registered adapter with the given name or the default adapter if
       * no name is provided.
@@ -648,6 +664,7 @@ object containerMod extends js.Object {
       */
     def getAdapter(): js.Any = js.native
     def getAdapter(name: js.Any): js.Any = js.native
+    
     /**
       * Return the name of a registered adapter based on the given name or options,
       * or the name of the default adapter if no name provided.
@@ -659,6 +676,7 @@ object containerMod extends js.Object {
       */
     def getAdapterName(): js.Any = js.native
     def getAdapterName(opts: js.Any): js.Any = js.native
+    
     /**
       * Return the registered adapters of this container.
       *
@@ -667,6 +685,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def getAdapters(): js.Any = js.native
+    
     /**
       * Return the mapper registered under the specified name.
       *
@@ -690,6 +709,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def getMapper(name: String): typingsSlinky.jsData.mapperMod.default = js.native
+    
     /**
       * Return the mapper registered under the specified name.
       * Doesn't throw error if mapper doesn't exist.
@@ -714,6 +734,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def getMapperByName(name: js.Any): typingsSlinky.jsData.mapperMod.default = js.native
+    
     /**
       * Wrapper for {@link Mapper#getSchema}.
       *
@@ -724,6 +745,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def getSchema(name: js.Any): typingsSlinky.jsData.schemaMod.default = js.native
+    
     /**
       * Wrapper for {@link Mapper#is}.
       *
@@ -745,6 +767,11 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def is(name: js.Any, record: js.Any): Boolean = js.native
+    
+    var mapperClass: Instantiable1[/* opts */ js.UndefOr[MapperOpts], typingsSlinky.jsData.mapperMod.default] = js.native
+    
+    var mapperDefaults: js.Any = js.native
+    
     /**
       * Register an adapter on this container under the given name. Adapters
       * registered on a container are shared by all mappers in the container.
@@ -766,6 +793,7 @@ object containerMod extends js.Object {
       */
     def registerAdapter(name: js.Any, adapter: js.Any): Unit = js.native
     def registerAdapter(name: js.Any, adapter: js.Any, opts: js.Any): Unit = js.native
+    
     /**
       * Wrapper for {@link Mapper#sum}.
       *
@@ -790,6 +818,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def sum(name: js.Any, field: js.Any, query: js.Any, opts: js.Any): js.Promise[_] = js.native
+    
     /**
       * Wrapper for {@link Mapper#toJSON}.
       *
@@ -833,6 +862,7 @@ object containerMod extends js.Object {
       */
     def toJSON(name: js.Any, records: js.Any): js.Any = js.native
     def toJSON(name: js.Any, records: js.Any, opts: js.Any): js.Any = js.native
+    
     /**
       * Fired during {@link Container#update}. See
       * {@link Container~beforeUpdateListener} for how to listen for this event.
@@ -916,6 +946,7 @@ object containerMod extends js.Object {
       * @tutorial ["http://www.js-data.io/v3.0/docs/saving-data","Saving data"]
       */
     def update(name: js.Any, id: js.Any, props: js.Any, opts: js.Any): js.Promise[_] = js.native
+    
     /**
       * Fired during {@link Container#updateAll}. See
       * {@link Container~beforeUpdateAllListener} for how to listen for this event.
@@ -998,6 +1029,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def updateAll(name: js.Any, props: js.Any, query: js.Any, opts: js.Any): js.Promise[_] = js.native
+    
     /**
       * Fired during {@link Container#updateMany}. See
       * {@link Container~beforeUpdateManyListener} for how to listen for this event.
@@ -1077,6 +1109,7 @@ object containerMod extends js.Object {
       * @since 3.0.0
       */
     def updateMany(name: js.Any, record: js.Any, opts: js.Any): js.Promise[_] = js.native
+    
     /**
       * Wrapper for {@link Mapper#validate}.
       *
@@ -1106,7 +1139,4 @@ object containerMod extends js.Object {
       */
     def validate(name: js.Any, record: js.Any, opts: js.Any): js.Array[_] = js.native
   }
-  
-  val proxiedMapperMethods: js.Array[String] = js.native
 }
-

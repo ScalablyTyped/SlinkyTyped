@@ -9,7 +9,7 @@ import typingsSlinky.googlemaps.googlemapsStrings.position_changed
 import typingsSlinky.googlemaps.googlemapsStrings.zindex_changed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An overlay that looks like a bubble and is often connected to a marker.
@@ -18,6 +18,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait InfoWindow extends MVCObject {
+  
   /**
     * @see {@link InfoWindowHandlerMap#closeclick closeclick} event
     * @see {@link InfoWindowHandlerMap#content_changed content_changed} event
@@ -35,6 +36,7 @@ trait InfoWindow extends MVCObject {
   def addListener_positionchanged(eventName: position_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
   @JSName("addListener")
   def addListener_zindexchanged(eventName: zindex_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
+  
   /**
     * Closes this {@link InfoWindow} by removing it from the DOM structure.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/info-window#InfoWindow.close Maps JavaScript API}
@@ -42,6 +44,7 @@ trait InfoWindow extends MVCObject {
     * @see {@link open}
     */
   def close(): Unit = js.native
+  
   /**
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/info-window#InfoWindow.getContent Maps JavaScript API}
     * @see {@link InfoWindowOptions#content}
@@ -49,6 +52,7 @@ trait InfoWindow extends MVCObject {
     * @see {@link setContent}
     */
   def getContent(): String | Node = js.native
+  
   /**
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/info-window#InfoWindow.getPosition Maps JavaScript API}
     * @see {@link InfoWindowOptions#position}
@@ -56,6 +60,7 @@ trait InfoWindow extends MVCObject {
     * @see {@link setPosition}
     */
   def getPosition(): LatLng = js.native
+  
   /**
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/info-window#InfoWindow.getZIndex Maps JavaScript API}
     * @see {@link InfoWindowOptions#zIndex}
@@ -63,6 +68,7 @@ trait InfoWindow extends MVCObject {
     * @see {@link setZIndex}
     */
   def getZIndex(): Double = js.native
+  
   // TODO: Strict `position` & `anchorPoint` in `anchor` argument
   /**
     * Opens this {@link InfoWindow} on the given map. Optionally, an {@link InfoWindow} can be associated with an
@@ -79,6 +85,7 @@ trait InfoWindow extends MVCObject {
   def open(map: Map[Element], anchor: MVCObject): Unit = js.native
   def open(map: StreetViewPanorama): Unit = js.native
   def open(map: StreetViewPanorama, anchor: MVCObject): Unit = js.native
+  
   /**
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/info-window#InfoWindow.setContent Maps JavaScript API}
     * @see {@link InfoWindowOptions#content}
@@ -87,10 +94,12 @@ trait InfoWindow extends MVCObject {
     */
   def setContent(content: String): Unit = js.native
   def setContent(content: Node): Unit = js.native
+  
   /**
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/info-window#InfoWindow.setOptions Maps JavaScript API}
     */
   def setOptions(options: InfoWindowOptions): Unit = js.native
+  
   /**
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/info-window#InfoWindow.setPosition Maps JavaScript API}
     * @see {@link InfoWindowOptions#position}
@@ -99,6 +108,7 @@ trait InfoWindow extends MVCObject {
     */
   def setPosition(position: LatLng): Unit = js.native
   def setPosition(position: LatLngLiteral): Unit = js.native
+  
   /**
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/info-window#InfoWindow.setZIndex Maps JavaScript API}
     * @see {@link InfoWindowOptions#zIndex}
@@ -107,4 +117,3 @@ trait InfoWindow extends MVCObject {
     */
   def setZIndex(zIndex: Double): Unit = js.native
 }
-

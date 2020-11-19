@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxSliderBaseOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxSliderBase")
 @js.native
@@ -22,4 +22,3 @@ class dxSliderBase protected ()
     options: dxSliderBaseOptions[typingsSlinky.devextreme.mod.DevExpress.ui.dxSliderBase]
   ) = this()
 }
-

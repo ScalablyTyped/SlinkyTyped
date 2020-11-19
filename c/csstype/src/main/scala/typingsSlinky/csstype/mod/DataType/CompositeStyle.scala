@@ -3,7 +3,7 @@ package typingsSlinky.csstype.mod.DataType
 import typingsSlinky.csstype.mod.Property._WebkitMaskComposite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.csstype.csstypeStrings.clear
@@ -19,29 +19,38 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.xor
 */
 trait CompositeStyle extends _WebkitMaskComposite
-
 object CompositeStyle {
+  
   @scala.inline
   def clear: typingsSlinky.csstype.csstypeStrings.clear = "clear".asInstanceOf[typingsSlinky.csstype.csstypeStrings.clear]
+  
   @scala.inline
   def copy: typingsSlinky.csstype.csstypeStrings.copy = "copy".asInstanceOf[typingsSlinky.csstype.csstypeStrings.copy]
+  
   @scala.inline
   def `destination-atop`: typingsSlinky.csstype.csstypeStrings.`destination-atop` = "destination-atop".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`destination-atop`]
+  
   @scala.inline
   def `destination-in`: typingsSlinky.csstype.csstypeStrings.`destination-in` = "destination-in".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`destination-in`]
+  
   @scala.inline
   def `destination-out`: typingsSlinky.csstype.csstypeStrings.`destination-out` = "destination-out".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`destination-out`]
+  
   @scala.inline
   def `destination-over`: typingsSlinky.csstype.csstypeStrings.`destination-over` = "destination-over".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`destination-over`]
+  
   @scala.inline
   def `source-atop`: typingsSlinky.csstype.csstypeStrings.`source-atop` = "source-atop".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`source-atop`]
+  
   @scala.inline
   def `source-in`: typingsSlinky.csstype.csstypeStrings.`source-in` = "source-in".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`source-in`]
+  
   @scala.inline
   def `source-out`: typingsSlinky.csstype.csstypeStrings.`source-out` = "source-out".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`source-out`]
+  
   @scala.inline
   def `source-over`: typingsSlinky.csstype.csstypeStrings.`source-over` = "source-over".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`source-over`]
+  
   @scala.inline
   def xor: typingsSlinky.csstype.csstypeStrings.xor = "xor".asInstanceOf[typingsSlinky.csstype.csstypeStrings.xor]
 }
-

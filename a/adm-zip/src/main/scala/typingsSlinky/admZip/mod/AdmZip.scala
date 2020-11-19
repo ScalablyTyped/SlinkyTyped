@@ -3,10 +3,11 @@ package typingsSlinky.admZip.mod
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AdmZip extends js.Object {
+  
   /**
     * Allows you to create a entry (file or directory) in the zip file.
     * If you want to create a directory the `entryName` must end in `"/"` and a `null`
@@ -21,6 +22,7 @@ trait AdmZip extends js.Object {
   def addFile(entryName: String, data: Buffer, comment: js.UndefOr[scala.Nothing], attr: Double): Unit = js.native
   def addFile(entryName: String, data: Buffer, comment: String): Unit = js.native
   def addFile(entryName: String, data: Buffer, comment: String, attr: Double): Unit = js.native
+  
   /**
     * Adds a file from the disk to the archive.
     * @param localPath Path to a file on disk.
@@ -32,6 +34,7 @@ trait AdmZip extends js.Object {
   def addLocalFile(localPath: String, zipPath: js.UndefOr[scala.Nothing], zipName: String): Unit = js.native
   def addLocalFile(localPath: String, zipPath: String): Unit = js.native
   def addLocalFile(localPath: String, zipPath: String, zipName: String): Unit = js.native
+  
   /**
     * Adds a local directory and all its nested files and directories to the
     * archive.
@@ -49,12 +52,14 @@ trait AdmZip extends js.Object {
   def addLocalFolder(localPath: String, zipPath: String): Unit = js.native
   def addLocalFolder(localPath: String, zipPath: String, filter: js.Function1[/* filename */ String, Boolean]): Unit = js.native
   def addLocalFolder(localPath: String, zipPath: String, filter: js.RegExp): Unit = js.native
+  
   /**
     * Adds a comment to the zip. The zip must be rewritten after
     * adding the comment.
     * @param comment Content of the comment.
     */
   def addZipComment(comment: String): Unit = js.native
+  
   /**
     * Adds a comment to a specified file or `IZipEntry`. The zip must be rewritten after
     * adding the comment.
@@ -64,6 +69,7 @@ trait AdmZip extends js.Object {
     */
   def addZipEntryComment(entry: String, comment: String): Unit = js.native
   def addZipEntryComment(entry: IZipEntry, comment: String): Unit = js.native
+  
   /**
     * Remove the entry from the file or the entry and all its nested directories
     * and files if the given entry is a directory.
@@ -71,6 +77,7 @@ trait AdmZip extends js.Object {
     */
   def deleteFile(entry: String): Unit = js.native
   def deleteFile(entry: IZipEntry): Unit = js.native
+  
   /**
     * Extracts the entire archive to the given location.
     * @param targetPath Target location.
@@ -79,6 +86,7 @@ trait AdmZip extends js.Object {
     */
   def extractAllTo(targetPath: String): Unit = js.native
   def extractAllTo(targetPath: String, overwrite: Boolean): Unit = js.native
+  
   /**
     * Extracts the entire archive to the given location.
     * @param targetPath Target location.
@@ -94,6 +102,7 @@ trait AdmZip extends js.Object {
   ): Unit = js.native
   def extractAllToAsync(targetPath: String, overwrite: Boolean): Unit = js.native
   def extractAllToAsync(targetPath: String, overwrite: Boolean, callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Extracts the given entry to the given `targetPath`.
     * If the entry is a directory inside the archive, the entire directory and
@@ -124,21 +133,25 @@ trait AdmZip extends js.Object {
   ): Boolean = js.native
   def extractEntryTo(entryPath: IZipEntry, targetPath: String, maintainEntryPath: Boolean): Boolean = js.native
   def extractEntryTo(entryPath: IZipEntry, targetPath: String, maintainEntryPath: Boolean, overwrite: Boolean): Boolean = js.native
+  
   /**
     * Returns an array of `IZipEntry` objects representing the files and folders
     * inside the archive.
     */
   def getEntries(): js.Array[IZipEntry] = js.native
+  
   /**
     * Returns a `IZipEntry` object representing the file or folder specified by `name`.
     * @param name Name of the file or folder to retrieve.
     * @return The entry corresponding to the `name`.
     */
   def getEntry(name: String): IZipEntry = js.native
+  
   /**
     * @return The zip comment.
     */
   def getZipComment(): String = js.native
+  
   /**
     * Returns the comment of the specified entry.
     * @param entry The full path of the entry or a `IZipEntry` object.
@@ -146,6 +159,7 @@ trait AdmZip extends js.Object {
     */
   def getZipEntryComment(entry: String): String = js.native
   def getZipEntryComment(entry: IZipEntry): String = js.native
+  
   /**
     * Extracts the given entry from the archive and returns the content as
     * plain text in the given encoding.
@@ -156,6 +170,7 @@ trait AdmZip extends js.Object {
   def readAsText(fileName: String, encoding: String): String = js.native
   def readAsText(fileName: IZipEntry): String = js.native
   def readAsText(fileName: IZipEntry, encoding: String): String = js.native
+  
   /**
     * Asynchronous `readAsText`.
     * @param entry The full path of the entry or a `IZipEntry` object.
@@ -166,6 +181,7 @@ trait AdmZip extends js.Object {
   def readAsTextAsync(fileName: String, callback: js.Function1[/* data */ String, _], encoding: String): Unit = js.native
   def readAsTextAsync(fileName: IZipEntry, callback: js.Function1[/* data */ String, _]): Unit = js.native
   def readAsTextAsync(fileName: IZipEntry, callback: js.Function1[/* data */ String, _], encoding: String): Unit = js.native
+  
   /**
     * Extracts the given entry from the archive and returns the content.
     * @param entry The full path of the entry or a `IZipEntry` object.
@@ -173,6 +189,7 @@ trait AdmZip extends js.Object {
     */
   def readFile(entry: String): Buffer | Null = js.native
   def readFile(entry: IZipEntry): Buffer | Null = js.native
+  
   /**
     * Asynchronous `readFile`.
     * @param entry The full path of the entry or a `IZipEntry` object.
@@ -180,6 +197,7 @@ trait AdmZip extends js.Object {
     */
   def readFileAsync(entry: String, callback: js.Function2[/* data */ Buffer | Null, /* err */ String, _]): Unit = js.native
   def readFileAsync(entry: IZipEntry, callback: js.Function2[/* data */ Buffer | Null, /* err */ String, _]): Unit = js.native
+  
   /**
     * Returns the content of the entire zip file.
     */
@@ -230,6 +248,7 @@ trait AdmZip extends js.Object {
     onItemStart: js.Function1[/* name */ String, Unit],
     onItemEnd: js.Function1[/* name */ String, Unit]
   ): Unit = js.native
+  
   /**
     * Updates the content of an existing entry inside the archive. The zip
     * must be rewritten after updating the content.
@@ -238,6 +257,7 @@ trait AdmZip extends js.Object {
     */
   def updateFile(entry: String, content: Buffer): Unit = js.native
   def updateFile(entry: IZipEntry, content: Buffer): Unit = js.native
+  
   /**
     * Writes the newly created zip file to disk at the specified location or
     * if a zip was opened and no `targetFileName` is provided, it will
@@ -251,4 +271,3 @@ trait AdmZip extends js.Object {
   def writeZip(targetFileName: String): Unit = js.native
   def writeZip(targetFileName: String, callback: js.Function1[/* error */ js.Error | Null, Unit]): Unit = js.native
 }
-

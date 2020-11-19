@@ -4,11 +4,12 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.reactToolbox.appBarAppBarMod.AppBarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-toolbox/components/app_bar", JSImport.Namespace)
 @js.native
 object appBarMod extends js.Object {
+  
   @js.native
   class AppBar ()
     extends Component[AppBarProps, js.Object, js.Any]
@@ -16,6 +17,4 @@ object appBarMod extends js.Object {
   @js.native
   class default ()
     extends Component[AppBarProps, js.Object, js.Any]
-  
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.firebase.mod.auth
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @webonly
@@ -22,10 +22,12 @@ class RecaptchaVerifierInstance protected () extends ApplicationVerifier {
   def this(container: js.Any, parameters: js.UndefOr[scala.Nothing], app: App) = this()
   def this(container: js.Any, parameters: js.Object, app: App) = this()
   def this(container: js.Any, parameters: Null, app: App) = this()
+  
   /**
     * Clears the reCAPTCHA widget from the page and destroys the current instance.
     */
   def clear(): Unit = js.native
+  
   /**
     * Renders the reCAPTCHA widget on the page.
     * @return A Promise that resolves with the
@@ -33,4 +35,3 @@ class RecaptchaVerifierInstance protected () extends ApplicationVerifier {
     */
   def render(): js.Promise[Double] = js.native
 }
-

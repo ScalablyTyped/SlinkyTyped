@@ -1,28 +1,36 @@
 package typingsSlinky.tstl
 
+import typingsSlinky.tstl.conditionVariableMod.ConditionVariable.Predicator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl/thread/ConditionVariable", JSImport.Namespace)
 @js.native
 object conditionVariableMod extends js.Object {
+  
   @js.native
   /**
     * Default Constructor.
     */
   class ConditionVariable () extends js.Object {
+    
     var _Wait: js.Any = js.native
+    
     var _Wait_until: js.Any = js.native
-    var resolvers_ : js.Any = js.native
+    
     /**
-      * Notify, wake all
+      * Notify, wake all up.
       */
     def notify_all(): js.Promise[Unit] = js.native
+    
     /**
-      * Notify, wake one.
+      * Notify, wake only one up.
       */
     def notify_one(): js.Promise[Unit] = js.native
+    
+    var resolvers_ : js.Any = js.native
+    
     /**
       * Wait until predicator returns true.
       *
@@ -36,6 +44,7 @@ object conditionVariableMod extends js.Object {
       * @param predicator A predicator function determines completion.
       */
     def wait(predicator: Predicator): js.Promise[Unit] = js.native
+    
     /**
       * Wait for timeout or until notified.
       *
@@ -62,6 +71,7 @@ object conditionVariableMod extends js.Object {
       * @return Returned value of the *predicator*.
       */
     def wait_for(ms: Double, predicator: Predicator): js.Promise[Boolean] = js.native
+    
     /**
       * Wait until notified or time expiration.
       *
@@ -88,7 +98,12 @@ object conditionVariableMod extends js.Object {
       */
     def wait_until(at: js.Date, predicator: Predicator): js.Promise[Boolean] = js.native
   }
-  
-  type Predicator = js.Function0[Boolean | js.Promise[Boolean]]
+  @js.native
+  object ConditionVariable extends js.Object {
+    
+    /**
+      * Type of predicator function who determines the completion.
+      */
+    type Predicator = js.Function0[Boolean | js.Promise[Boolean]]
+  }
 }
-

@@ -2,9 +2,10 @@ package typingsSlinky.natsHemera
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type ActHandler = js.ThisFunction2[
     /* this */ typingsSlinky.natsHemera.mod.Hemera[
       typingsSlinky.natsHemera.mod.ClientRequest, 
@@ -14,14 +15,20 @@ package object mod {
     /* response */ typingsSlinky.natsHemera.mod.ClientResult, 
     scala.Unit
   ]
+  
   type ClientResult = js.Any
+  
   type NoContext = scala.Null
+  
   type NodeCallback = js.Function2[
     /* error */ js.UndefOr[js.Error | scala.Null], 
     /* success */ js.UndefOr[js.Any], 
     scala.Unit
   ]
+  
   type Plugin = js.Function
+  
   type Request = scala.Null
+  
   type Response = scala.Null
 }

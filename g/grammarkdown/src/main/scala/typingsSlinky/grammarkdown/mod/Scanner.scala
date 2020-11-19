@@ -4,7 +4,7 @@ import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.prex.mod.CancellationToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown", "Scanner")
 @js.native
@@ -28,4 +28,3 @@ class Scanner protected ()
     cancelable: CancellationToken
   ) = this()
 }
-

@@ -5,17 +5,20 @@ import typingsSlinky.webdriver.WebDriver.ClientOptions
 import typingsSlinky.webdriver.WebDriver.DesiredCapabilities
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("WebdriverIO")
 @js.native
 object WebdriverIO extends js.Object {
+  
   @js.native
   trait Browser extends js.Object {
+    
     /**
       * execute any async action within your test spec
       */
     def call[T](callback: js.Function1[/* repeated */ js.Any, js.Promise[T]]): js.Promise[T] = js.native
+    
     /**
       * Inject a snippet of JavaScript into the page for execution in the context of the currently selected frame.
       * The executed script is assumed to be synchronous and the result of evaluating the script is returned to
@@ -23,6 +26,7 @@ object WebdriverIO extends js.Object {
       */
     def execute[T](script: String, arguments: js.Any*): js.Promise[T] = js.native
     def execute[T](script: js.Function1[/* repeated */ js.Any, T], arguments: js.Any*): js.Promise[T] = js.native
+    
     // there is no way to add callback as last parameter after `...args`.
     // https://github.com/Microsoft/TypeScript/issues/1360
     // executeAsync: <T>(script: string | ((...arguments: any[], callback: (result: T) => void) => void), ...arguments: any[]) => Promise<T>;
@@ -42,6 +46,7 @@ object WebdriverIO extends js.Object {
     extends ClientOptions
        with AsyncClient
        with Browser {
+    
     // original requested capabilities
     var requestedCapabilities: DesiredCapabilities = js.native
   }
@@ -51,4 +56,3 @@ object WebdriverIO extends js.Object {
     */
   type SevereServiceError = js.Error
 }
-

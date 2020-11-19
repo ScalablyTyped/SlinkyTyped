@@ -11,7 +11,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/file-manager relevant section in reference guide}
@@ -27,30 +27,34 @@ class FileManager protected () extends InputWidget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FFileManager: IModel = js.native
+  
   def allowedExtensions: String = js.native
   def allowedExtensions_=(newValue: String): Unit = js.native
+  
   def maxFileSize: Double = js.native
   def maxFileSize_=(newValue: Double): Unit = js.native
+  
+  @JSName("model")
+  var model_FFileManager: IModel = js.native
+  
   def showFileInBrowser: Boolean = js.native
   def showFileInBrowser_=(newValue: Boolean): Unit = js.native
+  
   def `type`: FileManagerType = js.native
   def type_=(newValue: FileManagerType): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.FileManager")
 @js.native
 object FileManager extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -60,6 +64,7 @@ object FileManager extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: BuildingBlock): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -69,6 +74,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: BuildingBlock): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'footerWidget' property
@@ -78,6 +84,7 @@ object FileManager extends js.Object {
     *  6.7.0 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'footerWidgets' property
@@ -87,6 +94,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: DataView): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -96,6 +104,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDataViewUnderWidget(container: DataView): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -105,6 +114,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: DataView): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -114,6 +124,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -123,6 +134,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: DivContainer): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -132,6 +144,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -141,6 +154,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: GroupBox): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'leftWidget' property
@@ -150,6 +164,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: Header): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'leftWidgets' property
@@ -159,6 +174,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: Header): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'rightWidget' property
@@ -168,6 +184,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: Header): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'rightWidgets' property
@@ -177,6 +194,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: Header): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -186,6 +204,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -195,6 +214,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: LayoutCallArgument): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -204,6 +224,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -213,6 +234,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: LayoutGridColumn): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -222,6 +244,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutUnderWidget(container: Layout): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -231,6 +254,7 @@ object FileManager extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: Layout): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -240,6 +264,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -249,6 +274,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: ListViewTemplate): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -258,6 +284,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewUnderWidget(container: ListView): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -267,6 +294,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: ListView): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -276,6 +304,7 @@ object FileManager extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: MasterDetailRegion): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -285,6 +314,7 @@ object FileManager extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'sidebarWidgets' property
@@ -294,6 +324,7 @@ object FileManager extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -303,6 +334,7 @@ object FileManager extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: NativeLayoutContent): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'headerWidget' property
@@ -312,6 +344,7 @@ object FileManager extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -321,6 +354,7 @@ object FileManager extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -330,6 +364,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -339,6 +374,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: NavigationListItem): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'parameterWidget' property
@@ -348,6 +384,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'reportWidget' property
@@ -357,6 +394,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -366,6 +404,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -375,6 +414,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: ScrollContainerRegion): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -384,6 +424,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSnippetUnderWidget(container: Snippet): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -393,6 +434,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: Snippet): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'firstWidget' property
@@ -402,6 +444,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'firstWidgets' property
@@ -411,6 +454,7 @@ object FileManager extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: SplitPane): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'secondWidget' property
@@ -420,6 +464,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'secondWidgets' property
@@ -429,6 +474,7 @@ object FileManager extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: SplitPane): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -438,6 +484,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTabPageUnderWidget(container: TabPage): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -447,6 +494,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: TabPage): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -456,6 +504,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTableCellUnderWidget(container: TableCell): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -465,6 +514,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: TableCell): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widget' property
@@ -474,6 +524,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -483,6 +534,7 @@ object FileManager extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: TemplateGridContents): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -492,6 +544,7 @@ object FileManager extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -501,6 +554,7 @@ object FileManager extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: WebLayoutContent): FileManager = js.native
+  
   /**
     * Creates and returns a new FileManager instance in the SDK and on the server.
     * The new FileManager will be automatically stored in the 'widgets' property
@@ -510,5 +564,8 @@ object FileManager extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): FileManager = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -7,14 +7,17 @@ import typingsSlinky.umijsRouteUtils.typesMod.MessageDescriptor
 import typingsSlinky.umijsRouteUtils.typesMod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@umijs/route-utils", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def getFlatMenus(): StringDictionary[MenuDataItem] = js.native
   def getFlatMenus(menuData: js.Array[MenuDataItem]): StringDictionary[MenuDataItem] = js.native
+  
   def getMatchMenu(pathname: String, menuData: js.Array[MenuDataItem]): js.Array[MenuDataItem] = js.native
+  
   /**
     * @param routes 路由配置
     * @param locale 是否使用国际化
@@ -59,4 +62,3 @@ object mod extends js.Object {
     ignoreFilter: Boolean
   ): Breadcrumb = js.native
 }
-

@@ -5,11 +5,12 @@ import typingsSlinky.enzyme.mod.EnzymeSelector
 import typingsSlinky.enzyme.mod.ReactWrapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("enzyme-async-helpers", "waitForElement")
 @js.native
 object waitForElement extends js.Object {
+  
   def apply(
     wrapper: ReactWrapper[js.Object, js.Object, ReactComponentClass[js.Object]],
     elementSelector: EnzymeSelector
@@ -20,4 +21,3 @@ object waitForElement extends js.Object {
     config: Config
   ): js.Promise[Unit] = js.native
 }
-

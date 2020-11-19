@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientKinesisBrowser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kinesis-browser/types/StartStreamEncryptionExceptionsUnion", JSImport.Namespace)
 @js.native
 object startStreamEncryptionExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientKinesisBrowser.typesInvalidArgumentExceptionMod.InvalidArgumentException
     - typingsSlinky.awsSdkClientKinesisBrowser.typesLimitExceededExceptionMod.LimitExceededException
@@ -20,6 +21,4 @@ object startStreamEncryptionExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientKinesisBrowser.typesKmsthrottlingexceptionMod.KMSThrottlingException
   */
   trait StartStreamEncryptionExceptionsUnion extends js.Object
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This object contains helper methods for generating data-driven visualizations with continuous size or class breaks based on a field value or expression from features in a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html). The methods in this module generate renderer or visual variable objects that may be applied directly to a supported layer. The renderers specify how features should be visualized based on data values and sizes optimized based on the indicated basemap.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait size extends js.Object {
+  
   /**
     * Generates a continuous size [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) representing the age of features based on one or more fields. The age of a feature is calculated based on a given `startTime` and `endTime`, one of which must be a date field in the input `layer`. This method generates an Arcade expression and calculates statistics on the output of the expression to accomplish this. The resulting renderer contains a continuous size visual variable that maps optimal sizes based on the indicated basemap to data values based on the resulting statistics of the expression.  You are required to provide a `layer`, `view`, `startTime`, and `endTime` to generate this renderer. Optionally, you can set a `unit` for the visualization. Other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the statistics object to the `statistics` parameter to avoid making an extra call to the server.
     *
@@ -44,6 +45,7 @@ trait size extends js.Object {
     *
     */
   def createAgeRenderer(params: sizeCreateAgeRendererParams): js.Promise[sizeAgeRendererResult] = js.native
+  
   /**
     * Generates a [ClassBreaksRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-ClassBreaksRenderer.html) that may be applied directly to the layer used to call this method. The resulting renderer defines the symbol size of each feature based on the value of the given `field` value. A default size scheme is determined based on the given `basemap`. Depending on the `classificationMethod`, class breaks (or data ranges) are generated based on the statistics of the data. Each feature is assigned a size based on the class break in which the value of the `field` falls.  In most cases you will provide a `layer`, `basemap`, `field`, and `classificationMethod` to generate this renderer. This is a scenario in which the statistics of the data aren't well known and the user doesn't know what sizes to use in the visualization. You can also use a `valueExpression` instead of a `field` to visualize features based on a value returned from a script executed at runtime.  The other options are provided for convenience for more involved custom visualization authoring applications.
     *
@@ -99,6 +101,7 @@ trait size extends js.Object {
     *
     */
   def createClassBreaksRenderer(params: sizeCreateClassBreaksRendererParams): js.Promise[sizeClassBreaksRendererResult] = js.native
+  
   /**
     * Generates a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) that may be applied directly to the layer used to call this method. The renderer contains a continuous size visual variable that maps marker sizes to specific stop values based on queried statistics from the indicated field or expression.  In most cases you will provide a `layer`, `basemap`, and `field` to generate this renderer. This is a scenario in which the statistics of the data aren't well known and the user doesn't know what sizes to use in the visualization. You can also use a `valueExpression` instead of a `field` to visualize features based on a value returned from a script executed at runtime.  The other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the statistics object to the `statistics` parameter to avoid making an extra call to the server.
     *
@@ -135,6 +138,7 @@ trait size extends js.Object {
     *
     */
   def createContinuousRenderer(params: sizeCreateContinuousRendererParams): js.Promise[sizeContinuousRendererResult] = js.native
+  
   /**
     * This method generates an array of size visual variables with default stops that are optimally chosen based on the statistics queried for the indicated field or expression and mapped to appropriate sizes.  There are two different ways this method may be called. The most common case is by providing a `layer`, `basemap`, and `field`. This is the scenario where the statistics of the data aren't well known and the user doesn't know what sizes to use. You can optionally use a `valueExpression` instead of a field to visualize features based on a numeric value returned from a script executed at runtime.  The other options are provided for convenience for more involved custom visualization authoring applications. For example, if you already generated statistics in another operation, you can pass the object in the `statistics` parameter to avoid making an extra call to the server. You can also provide a `sizeScheme` if you don't want one picked for you. In this case the `basemap` and `theme` options would be ignored.  The resulting array of visual variables will contain exactly one size visual variable unless the `axis` parameter is set to "height".
     *
@@ -163,8 +167,8 @@ trait size extends js.Object {
     */
   def createVisualVariables(params: sizeCreateVisualVariablesParams): js.Promise[sizeVisualVariableResult] = js.native
 }
-
 object size {
+  
   @scala.inline
   def apply(
     createAgeRenderer: sizeCreateAgeRendererParams => js.Promise[sizeAgeRendererResult],
@@ -175,26 +179,32 @@ object size {
     val __obj = js.Dynamic.literal(createAgeRenderer = js.Any.fromFunction1(createAgeRenderer), createClassBreaksRenderer = js.Any.fromFunction1(createClassBreaksRenderer), createContinuousRenderer = js.Any.fromFunction1(createContinuousRenderer), createVisualVariables = js.Any.fromFunction1(createVisualVariables))
     __obj.asInstanceOf[size]
   }
+  
   @scala.inline
   implicit class sizeOps[Self <: size] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreateAgeRenderer(value: sizeCreateAgeRendererParams => js.Promise[sizeAgeRendererResult]): Self = this.set("createAgeRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreateClassBreaksRenderer(value: sizeCreateClassBreaksRendererParams => js.Promise[sizeClassBreaksRendererResult]): Self = this.set("createClassBreaksRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreateContinuousRenderer(value: sizeCreateContinuousRendererParams => js.Promise[sizeContinuousRendererResult]): Self = this.set("createContinuousRenderer", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setCreateVisualVariables(value: sizeCreateVisualVariablesParams => js.Promise[sizeVisualVariableResult]): Self = this.set("createVisualVariables", js.Any.fromFunction1(value))
   }
-  
 }
-

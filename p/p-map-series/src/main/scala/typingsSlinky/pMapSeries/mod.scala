@@ -3,22 +3,12 @@ package typingsSlinky.pMapSeries
 import typingsSlinky.pMapSeries.anon.Call
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("p-map-series", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  // TODO: Remove this for the next major release, refactor the whole definition to:
-  // declare function pMapSeries<ValueType, MappedValueType>(
-  // 	input: Iterable<PromiseLike<ValueType> | ValueType>,
-  // 	mapper: (
-  // 		element: ValueType,
-  // 		index: number
-  // 	) => PromiseLike<MappedValueType> | MappedValueType
-  // ): Promise<MappedValueType[]>;
-  // export = pMapSeries;
-  @JSName("default")
-  var default_Original: Call = js.native
+  
   /**
   	Map over promises serially.
   	@param input - Mapped over serially in the `mapper` function.
@@ -65,6 +55,7 @@ object mod extends js.Object {
       js.Thenable[MappedValueType] | MappedValueType
     ]
   ): js.Promise[js.Array[MappedValueType]] = js.native
+  
   /**
   	Map over promises serially.
   	@param input - Mapped over serially in the `mapper` function.
@@ -120,5 +111,15 @@ object mod extends js.Object {
       js.Thenable[MappedValueType] | MappedValueType
     ]
   ): js.Promise[js.Array[MappedValueType]] = js.native
+  // TODO: Remove this for the next major release, refactor the whole definition to:
+  // declare function pMapSeries<ValueType, MappedValueType>(
+  // 	input: Iterable<PromiseLike<ValueType> | ValueType>,
+  // 	mapper: (
+  // 		element: ValueType,
+  // 		index: number
+  // 	) => PromiseLike<MappedValueType> | MappedValueType
+  // ): Promise<MappedValueType[]>;
+  // export = pMapSeries;
+  @JSName("default")
+  var default_Original: Call = js.native
 }
-

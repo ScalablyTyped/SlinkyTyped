@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.ContentProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Content")
 @js.native
@@ -16,4 +16,3 @@ class ContentCls ()
   extends typingsSlinky.arcgisJsApi.esri.Content_ {
   def this(properties: ContentProperties) = this()
 }
-

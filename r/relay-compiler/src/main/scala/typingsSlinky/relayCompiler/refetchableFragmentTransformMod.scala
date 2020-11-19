@@ -3,11 +3,12 @@ package typingsSlinky.relayCompiler
 import typingsSlinky.relayCompiler.compilerContextMod.CompilerContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("relay-compiler/lib/transforms/RefetchableFragmentTransform", JSImport.Namespace)
 @js.native
 object refetchableFragmentTransformMod extends js.Object {
+  
   /**
     * This transform synthesizes "refetch" queries for fragments that
     * are trivially refetchable. This is comprised of three main stages:
@@ -26,4 +27,3 @@ object refetchableFragmentTransformMod extends js.Object {
     */
   def transform(context: CompilerContext): CompilerContext = js.native
 }
-

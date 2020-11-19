@@ -3,11 +3,12 @@ package typingsSlinky.inversifyExpressUtils.mod
 import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("inversify-express-utils", "results")
 @js.native
 object results extends js.Object {
+  
   @js.native
   class BadRequestErrorMessageResult protected ()
     extends typingsSlinky.inversifyExpressUtils.resultsMod.BadRequestErrorMessageResult {
@@ -120,6 +121,4 @@ object results extends js.Object {
       apiController: typingsSlinky.inversifyExpressUtils.baseHttpControllerMod.BaseHttpController
     ) = this()
   }
-  
 }
-

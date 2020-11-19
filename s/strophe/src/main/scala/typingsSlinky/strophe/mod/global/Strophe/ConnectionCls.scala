@@ -2,7 +2,7 @@ package typingsSlinky.strophe.mod.global.Strophe
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Class: Strophe.Connection
   *  XMPP Connection manager.
@@ -80,4 +80,3 @@ class ConnectionCls protected ()
   def this(service: String) = this()
   def this(service: String, options: typingsSlinky.strophe.mod.Strophe.ConnectionOptions) = this()
 }
-

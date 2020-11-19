@@ -2,11 +2,12 @@ package typingsSlinky.cloneRegexp.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("clone-regexp", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   Clone and modify a [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) instance.
   @param regexp - Regex to clone.
@@ -29,4 +30,3 @@ object ^ extends js.Object {
   def apply(regexp: js.RegExp): js.RegExp = js.native
   def apply(regexp: js.RegExp, options: Options): js.RegExp = js.native
 }
-

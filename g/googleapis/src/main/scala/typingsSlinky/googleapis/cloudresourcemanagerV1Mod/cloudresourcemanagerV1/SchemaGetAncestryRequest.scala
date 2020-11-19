@@ -2,11 +2,10 @@ package typingsSlinky.googleapis.cloudresourcemanagerV1Mod.cloudresourcemanagerV
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The request sent to the GetAncestry method.
   */
 @js.native
 trait SchemaGetAncestryRequest extends js.Object
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.widgetsSearchProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.widgetsSearch")
 @js.native
@@ -16,4 +16,3 @@ class widgetsSearchCls ()
   extends typingsSlinky.arcgisJsApi.esri.widgetsSearch {
   def this(properties: widgetsSearchProperties) = this()
 }
-

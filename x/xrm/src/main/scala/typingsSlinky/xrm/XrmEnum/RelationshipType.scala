@@ -4,7 +4,7 @@ import typingsSlinky.xrm.xrmNumbers.`0`
 import typingsSlinky.xrm.xrmNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An enumeration for Relationship Type Metadata
@@ -14,11 +14,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmNumbers.`1`
 */
 trait RelationshipType extends js.Object
-
 object RelationshipType {
+  
   @scala.inline
   def ManyToMany: `1` = 1.asInstanceOf[`1`]
+  
   @scala.inline
   def OneToMany: `0` = 0.asInstanceOf[`0`]
 }
-

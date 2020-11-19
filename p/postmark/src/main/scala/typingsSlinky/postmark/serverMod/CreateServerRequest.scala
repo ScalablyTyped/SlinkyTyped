@@ -3,7 +3,7 @@ package typingsSlinky.postmark.serverMod
 import typingsSlinky.postmark.messageSupportingTypesMod.LinkTrackingOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("postmark/dist/client/models/server/Server", "CreateServerRequest")
 @js.native
@@ -26,4 +26,3 @@ class CreateServerRequest protected () extends UpdateServerRequest {
     EnableSmtpApiErrorHooks: js.UndefOr[Boolean]
   ) = this()
 }
-

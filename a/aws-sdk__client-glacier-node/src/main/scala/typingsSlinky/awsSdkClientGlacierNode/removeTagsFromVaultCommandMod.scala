@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-glacier-node/commands/RemoveTagsFromVaultCommand", JSImport.Namespace)
 @js.native
 object removeTagsFromVaultCommandMod extends js.Object {
+  
   @js.native
   class RemoveTagsFromVaultCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object removeTagsFromVaultCommandMod extends js.Object {
           Readable
         ] {
     def this(input: RemoveTagsFromVaultInput) = this()
+    
     val middlewareStack: MiddlewareStack[RemoveTagsFromVaultInput, RemoveTagsFromVaultOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[RemoveTagsFromVaultInput, RemoveTagsFromVaultOutput] = js.native
   }
-  
 }
-

@@ -3,10 +3,11 @@ package typingsSlinky.lodash.fpMod
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashForInRight extends LodashConvertible {
+  
   def apply[T](
     iteratee: js.Function1[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
@@ -23,4 +24,3 @@ trait LodashForInRight extends LodashConvertible {
   def apply[T](iteratee: __): LodashForInRight2x2[T] = js.native
   def apply[T](iteratee: __, `object`: T): LodashForInRight1x2[T] = js.native
 }
-

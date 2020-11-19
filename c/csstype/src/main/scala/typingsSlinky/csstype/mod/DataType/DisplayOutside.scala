@@ -3,7 +3,7 @@ package typingsSlinky.csstype.mod.DataType
 import typingsSlinky.csstype.mod.Property._Display
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.csstype.csstypeStrings.block
@@ -11,13 +11,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`run-in`
 */
 trait DisplayOutside extends _Display
-
 object DisplayOutside {
+  
   @scala.inline
   def block: typingsSlinky.csstype.csstypeStrings.block = "block".asInstanceOf[typingsSlinky.csstype.csstypeStrings.block]
+  
   @scala.inline
   def `inline`: typingsSlinky.csstype.csstypeStrings.`inline` = "inline".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`inline`]
+  
   @scala.inline
   def `run-in`: typingsSlinky.csstype.csstypeStrings.`run-in` = "run-in".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`run-in`]
 }
-

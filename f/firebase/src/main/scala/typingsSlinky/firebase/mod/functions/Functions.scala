@@ -2,11 +2,12 @@ package typingsSlinky.firebase.mod.functions
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "functions.Functions")
 @js.native
 class Functions protected () extends js.Object {
+  
   /**
     * Gets an `HttpsCallable` instance that refers to the function with the given
     * name.
@@ -17,6 +18,7 @@ class Functions protected () extends js.Object {
     */
   def httpsCallable(name: String): HttpsCallable = js.native
   def httpsCallable(name: String, options: HttpsCallableOptions): HttpsCallable = js.native
+  
   /**
     * Changes this instance to point to a Cloud Functions emulator running
     * locally. See https://firebase.google.com/docs/functions/local-emulator
@@ -26,4 +28,3 @@ class Functions protected () extends js.Object {
     */
   def useFunctionsEmulator(url: String): Unit = js.native
 }
-

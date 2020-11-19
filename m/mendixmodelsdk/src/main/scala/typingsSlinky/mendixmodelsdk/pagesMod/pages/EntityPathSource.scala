@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.EntityPathSource")
 @js.native
@@ -21,8 +21,7 @@ abstract class EntityPathSource protected () extends DataSource {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FEntityPathSource: IModel = js.native
+  
   /**
     * The value of this property is conceptually of type paths.LegacyEntityPath.
     *
@@ -30,18 +29,22 @@ abstract class EntityPathSource protected () extends DataSource {
     */
   def entityPath: String = js.native
   def entityPath_=(newValue: String): Unit = js.native
+  
   /**
     * In version 7.11.0: introduced
     */
   def entityRef: EntityRef | Null = js.native
   def entityRef_=(newValue: EntityRef | Null): Unit = js.native
+  
+  @JSName("model")
+  var model_FEntityPathSource: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.EntityPathSource")
 @js.native
 object EntityPathSource extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

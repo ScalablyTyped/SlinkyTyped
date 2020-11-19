@@ -120,14 +120,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojLabelValue extends JetElement[ojLabelValueSettableProperties] {
-  var labelEdge: start | top | inherit = js.native
-  var labelWidth: String = js.native
-  var onLabelEdgeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def addEventListener(`type`: labelEdgeChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: labelEdgeChanged,
@@ -914,13 +911,25 @@ trait ojLabelValue extends JetElement[ojLabelValueSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_labelEdge(property: labelEdge): start | top | inherit = js.native
   @JSName("getProperty")
   def getProperty_labelWidth(property: labelWidth): String = js.native
+  
+  var labelEdge: start | top | inherit = js.native
+  
+  var labelWidth: String = js.native
+  
+  var onLabelEdgeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelWidthChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def refresh(): Unit = js.native
+  
   def setProperties(properties: ojLabelValueSettablePropertiesLenient): Unit = js.native
+  
   def setProperty(property: labelEdge, value: inherit): Unit = js.native
   def setProperty(property: labelEdge, value: start): Unit = js.native
   def setProperty(property: labelEdge, value: top): Unit = js.native
@@ -928,4 +937,3 @@ trait ojLabelValue extends JetElement[ojLabelValueSettableProperties] {
   @JSName("setProperty")
   def setProperty_labelWidth(property: labelWidth, value: String): Unit = js.native
 }
-

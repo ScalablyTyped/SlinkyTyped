@@ -11,7 +11,7 @@ import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -32,6 +32,20 @@ abstract class MicroflowBase protected () extends Document {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
+  
+  @JSName("containerAsFolderBase")
+  def containerAsFolderBase_MMicroflowBase: FolderBase = js.native
+  
+  def flows: IList[Flow] = js.native
+  
+  def markAsUsed: Boolean = js.native
+  def markAsUsed_=(newValue: Boolean): Unit = js.native
+  
+  /**
+    * In version 7.9.0: introduced
+    */
+  def microflowReturnType: DataType = js.native
+  def microflowReturnType_=(newValue: DataType): Unit = js.native
   /**
     * This property is required and cannot be set to null.
     *
@@ -39,27 +53,13 @@ abstract class MicroflowBase protected () extends Document {
     */
   @JSName("microflowReturnType")
   val microflowReturnType_FMicroflowBase: IDataType = js.native
+  
   @JSName("model")
   var model_FMicroflowBase: IModel = js.native
-  /**
-    * The value of this property is conceptually of type dataTypes.LegacyDataType.
-    *
-    * In version 7.9.0: deleted
-    */
-  @JSName("returnType")
-  val returnType_FMicroflowBase: String | Null = js.native
-  @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MMicroflowBase: FolderBase = js.native
-  def flows: IList[Flow] = js.native
-  def markAsUsed: Boolean = js.native
-  def markAsUsed_=(newValue: Boolean): Unit = js.native
-  /**
-    * In version 7.9.0: introduced
-    */
-  def microflowReturnType: DataType = js.native
-  def microflowReturnType_=(newValue: DataType): Unit = js.native
+  
   def objectCollection: MicroflowObjectCollection = js.native
   def objectCollection_=(newValue: MicroflowObjectCollection): Unit = js.native
+  
   /**
     * The value of this property is conceptually of type dataTypes.LegacyDataType.
     *
@@ -67,13 +67,20 @@ abstract class MicroflowBase protected () extends Document {
     */
   def returnType: String = js.native
   def returnType_=(newValue: String): Unit = js.native
+  /**
+    * The value of this property is conceptually of type dataTypes.LegacyDataType.
+    *
+    * In version 7.9.0: deleted
+    */
+  @JSName("returnType")
+  val returnType_FMicroflowBase: String | Null = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.MicroflowBase")
 @js.native
 object MicroflowBase extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

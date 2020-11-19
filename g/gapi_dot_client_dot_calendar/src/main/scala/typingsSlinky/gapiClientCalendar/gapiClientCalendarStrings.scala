@@ -2,9 +2,34 @@ package typingsSlinky.gapiClientCalendar
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object gapiClientCalendarStrings {
+  
+  @scala.inline
+  def Channel: Channel = "Channel".asInstanceOf[Channel]
+  
+  @scala.inline
+  def Colors: Colors = "Colors".asInstanceOf[Colors]
+  
+  @scala.inline
+  def ConferenceParametersAddOnParameters: ConferenceParametersAddOnParameters = "ConferenceParametersAddOnParameters".asInstanceOf[ConferenceParametersAddOnParameters]
+  
+  @scala.inline
+  def Display: Display = "Display".asInstanceOf[Display]
+  
+  @scala.inline
+  def FreeBusyResponse: FreeBusyResponse = "FreeBusyResponse".asInstanceOf[FreeBusyResponse]
+  
+  @scala.inline
+  def Private: Private = "Private".asInstanceOf[Private]
+  
+  @scala.inline
+  def calendar: calendar = "calendar".asInstanceOf[calendar]
+  
+  @scala.inline
+  def v3: v3 = "v3".asInstanceOf[v3]
+  
   @js.native
   sealed trait Channel extends js.Object
   
@@ -28,22 +53,4 @@ object gapiClientCalendarStrings {
   
   @js.native
   sealed trait v3 extends js.Object
-  
-  @scala.inline
-  def Channel: Channel = "Channel".asInstanceOf[Channel]
-  @scala.inline
-  def Colors: Colors = "Colors".asInstanceOf[Colors]
-  @scala.inline
-  def ConferenceParametersAddOnParameters: ConferenceParametersAddOnParameters = "ConferenceParametersAddOnParameters".asInstanceOf[ConferenceParametersAddOnParameters]
-  @scala.inline
-  def Display: Display = "Display".asInstanceOf[Display]
-  @scala.inline
-  def FreeBusyResponse: FreeBusyResponse = "FreeBusyResponse".asInstanceOf[FreeBusyResponse]
-  @scala.inline
-  def Private: Private = "Private".asInstanceOf[Private]
-  @scala.inline
-  def calendar: calendar = "calendar".asInstanceOf[calendar]
-  @scala.inline
-  def v3: v3 = "v3".asInstanceOf[v3]
 }
-

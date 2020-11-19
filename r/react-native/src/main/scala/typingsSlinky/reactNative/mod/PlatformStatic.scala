@@ -4,12 +4,15 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.reactNative.anon.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PlatformStatic extends js.Object {
+  
   var Version: Double | String = js.native
+  
   var isTV: Boolean = js.native
+  
   def select[T](
     specifics: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ platform in react-native.react-native.PlatformOSType ]:? T}
@@ -23,4 +26,3 @@ trait PlatformStatic extends js.Object {
     specifics: typingsSlinky.reactNative.reactNativeStrings.PlatformStatic with TopLevel[js.Any] with Default[T]
   ): T = js.native
 }
-

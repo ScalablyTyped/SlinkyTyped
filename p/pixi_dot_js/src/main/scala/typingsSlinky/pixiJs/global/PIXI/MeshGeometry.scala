@@ -2,7 +2,7 @@ package typingsSlinky.pixiJs.global.PIXI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Standard 2D geometry used in PixiJS.
@@ -68,4 +68,3 @@ class MeshGeometry ()
     index: js.typedarray.Uint16Array
   ) = this()
 }
-

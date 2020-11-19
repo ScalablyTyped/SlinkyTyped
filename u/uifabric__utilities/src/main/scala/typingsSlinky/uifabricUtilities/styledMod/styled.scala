@@ -8,11 +8,12 @@ import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObjec
 import typingsSlinky.uifabricMergeStyles.istylesetMod.IStyleSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@uifabric/utilities/lib/styled", "styled")
 @js.native
 object styled extends js.Object {
+  
   def apply[TComponentProps /* <: IPropsWithStyles[TStyleProps, TStyleSet] */, TStyleProps, TStyleSet /* <: IStyleSet[TStyleSet] */](
     Component: ComponentClass[TComponentProps, js.Object],
     baseStyles: IStyleFunctionOrObject[TStyleProps, TStyleSet]
@@ -112,4 +113,3 @@ object styled extends js.Object {
     pure: Boolean
   ): ReactComponentClass[TComponentProps] = js.native
 }
-

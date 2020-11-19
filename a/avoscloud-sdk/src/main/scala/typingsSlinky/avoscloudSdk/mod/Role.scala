@@ -2,7 +2,7 @@ package typingsSlinky.avoscloudSdk.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents a Role on the AV server. Roles represent groupings of
@@ -21,10 +21,13 @@ import scala.scalajs.js.annotation._
 @js.native
 class Role protected () extends Object {
   def this(name: String, acl: ACL) = this()
+  
   def getName(): String = js.native
+  
   def getRoles(): Relation = js.native
+  
   def getUsers(): Relation = js.native
+  
   def setName(name: String): js.Any = js.native
   def setName(name: String, options: SuccessFailureOptions): js.Any = js.native
 }
-

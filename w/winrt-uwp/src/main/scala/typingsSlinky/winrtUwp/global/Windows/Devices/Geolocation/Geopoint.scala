@@ -3,7 +3,7 @@ package typingsSlinky.winrtUwp.global.Windows.Devices.Geolocation
 import typingsSlinky.winrtUwp.Windows.Devices.Geolocation.BasicGeoposition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Describes a geographic point. */
 @JSGlobal("Windows.Devices.Geolocation.Geopoint")
@@ -36,4 +36,3 @@ class Geopoint protected ()
     spatialReferenceId: Double
   ) = this()
 }
-

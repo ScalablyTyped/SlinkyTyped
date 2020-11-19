@@ -2,9 +2,10 @@ package typingsSlinky.ink
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object renderMod {
+  
   type RenderFunction = js.Function2[
     /* tree */ slinky.core.facade.ReactElement, 
     /* options */ js.UndefOr[

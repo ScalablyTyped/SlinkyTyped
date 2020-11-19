@@ -3,11 +3,12 @@ package typingsSlinky.highcharts.highmapsMod
 import typingsSlinky.highcharts.mod.Dictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts/highmaps", "error")
 @js.native
 object error extends js.Object {
+  
   def apply(code: String): Unit = js.native
   def apply(
     code: String,
@@ -55,4 +56,3 @@ object error extends js.Object {
     params: Dictionary[String]
   ): Unit = js.native
 }
-

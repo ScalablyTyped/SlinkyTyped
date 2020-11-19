@@ -36,7 +36,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.Widget
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interfaces and instance classes for types from the Mendix sub meta model `CustomWidgets`.
@@ -52,46 +52,52 @@ class CustomWidget protected () extends Widget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FCustomWidget: IModel = js.native
+  
   /**
     * In version 8.1.0: introduced
     */
   def conditionalEditabilitySettings: ConditionalEditabilitySettings | Null = js.native
   def conditionalEditabilitySettings_=(newValue: ConditionalEditabilitySettings | Null): Unit = js.native
+  
   /**
     * In version 8.1.0: introduced
     */
   def conditionalVisibilitySettings: ConditionalVisibilitySettings | Null = js.native
   def conditionalVisibilitySettings_=(newValue: ConditionalVisibilitySettings | Null): Unit = js.native
+  
   /**
     * In version 8.1.0: introduced
     */
   def editable: EditableEnum = js.native
   def editable_=(newValue: EditableEnum): Unit = js.native
+  
   /**
     * In version 8.1.0: introduced
     */
   def labelTemplate: ClientTemplate | Null = js.native
   def labelTemplate_=(newValue: ClientTemplate | Null): Unit = js.native
+  
+  @JSName("model")
+  var model_FCustomWidget: IModel = js.native
+  
   def `object`: WidgetObject | Null = js.native
   def object_=(newValue: WidgetObject | Null): Unit = js.native
+  
   def `type`: CustomWidgetType | Null = js.native
   def type_=(newValue: CustomWidgetType | Null): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/customwidgets", "customwidgets.CustomWidget")
 @js.native
 object CustomWidget extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -101,6 +107,7 @@ object CustomWidget extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: BuildingBlock): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -110,6 +117,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: BuildingBlock): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'footerWidget' property
@@ -119,6 +127,7 @@ object CustomWidget extends js.Object {
     *  6.7.0 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'footerWidgets' property
@@ -128,6 +137,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: DataView): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -137,6 +147,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDataViewUnderWidget(container: DataView): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -146,6 +157,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: DataView): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -155,6 +167,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -164,6 +177,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: DivContainer): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -173,6 +187,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -182,6 +197,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: GroupBox): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'leftWidget' property
@@ -191,6 +207,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: Header): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'leftWidgets' property
@@ -200,6 +217,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: Header): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'rightWidget' property
@@ -209,6 +227,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: Header): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'rightWidgets' property
@@ -218,6 +237,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: Header): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -227,6 +247,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -236,6 +257,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: LayoutCallArgument): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -245,6 +267,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -254,6 +277,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: LayoutGridColumn): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -263,6 +287,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutUnderWidget(container: Layout): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -272,6 +297,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: Layout): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -281,6 +307,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -290,6 +317,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: ListViewTemplate): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -299,6 +327,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewUnderWidget(container: ListView): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -308,6 +337,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: ListView): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -317,6 +347,7 @@ object CustomWidget extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: MasterDetailRegion): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -326,6 +357,7 @@ object CustomWidget extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'sidebarWidgets' property
@@ -335,6 +367,7 @@ object CustomWidget extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -344,6 +377,7 @@ object CustomWidget extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: NativeLayoutContent): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'headerWidget' property
@@ -353,6 +387,7 @@ object CustomWidget extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -362,6 +397,7 @@ object CustomWidget extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -371,6 +407,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -380,6 +417,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: NavigationListItem): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'parameterWidget' property
@@ -389,6 +427,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'reportWidget' property
@@ -398,6 +437,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -407,6 +447,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -416,6 +457,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: ScrollContainerRegion): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -425,6 +467,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSnippetUnderWidget(container: Snippet): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -434,6 +477,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: Snippet): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'firstWidget' property
@@ -443,6 +487,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'firstWidgets' property
@@ -452,6 +497,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: SplitPane): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'secondWidget' property
@@ -461,6 +507,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'secondWidgets' property
@@ -470,6 +517,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: SplitPane): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -479,6 +527,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTabPageUnderWidget(container: TabPage): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -488,6 +537,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: TabPage): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -497,6 +547,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTableCellUnderWidget(container: TableCell): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -506,6 +557,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: TableCell): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widget' property
@@ -515,6 +567,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -524,6 +577,7 @@ object CustomWidget extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: TemplateGridContents): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -533,6 +587,7 @@ object CustomWidget extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -542,6 +597,7 @@ object CustomWidget extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: WebLayoutContent): CustomWidget = js.native
+  
   /**
     * Creates and returns a new CustomWidget instance in the SDK and on the server.
     * The new CustomWidget will be automatically stored in the 'widgets' property
@@ -551,5 +607,8 @@ object CustomWidget extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): CustomWidget = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

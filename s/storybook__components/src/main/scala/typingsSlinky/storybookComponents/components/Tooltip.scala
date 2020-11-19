@@ -31,9 +31,10 @@ import typingsSlinky.storybookComponents.storybookComponentsStrings.warning
 import typingsSlinky.storybookComponents.tooltipMod.TooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tooltip {
+  
   @JSImport("@storybook/components/dist/tooltip/Tooltip", "Tooltip")
   @js.native
   object component extends js.Object
@@ -42,23 +43,29 @@ object Tooltip {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def arrowProps(value: js.Any): this.type = set("arrowProps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def arrowRef(value: js.Any): this.type = set("arrowRef", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def color(
       value: primary | secondary | tertiary | ancillary | orange | gold | green | seafoam | purple | ultraviolet | lightest | lighter | light | mediumlight | medium | mediumdark | dark | darker | darkest | border | positive | negative | warning | critical | defaultText | inverseText
     ): this.type = set("color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def hasChrome(value: Boolean): this.type = set("hasChrome", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def placement(value: String): this.type = set("placement", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def tooltipRef(value: js.Any): this.type = set("tooltipRef", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Tooltip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

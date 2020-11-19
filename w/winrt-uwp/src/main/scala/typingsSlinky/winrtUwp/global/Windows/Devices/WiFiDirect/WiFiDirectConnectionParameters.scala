@@ -3,7 +3,7 @@ package typingsSlinky.winrtUwp.global.Windows.Devices.WiFiDirect
 import typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DevicePairingKinds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Used by an app to specify the connection parameters for a Wi-Fi Direct connect/pairing operation. */
 @JSGlobal("Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters")
@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation._
 /** Creates a new WiFiDirectConnectionParameters object. */
 class WiFiDirectConnectionParameters ()
   extends typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters
-
 /* static members */
 @JSGlobal("Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters")
 @js.native
 object WiFiDirectConnectionParameters extends js.Object {
+  
   /**
     * Gets a list of the DevicePairingKinds supporting the given configuration method.
     * @param configurationMethod A value specifying a configuration method.
@@ -25,4 +25,3 @@ object WiFiDirectConnectionParameters extends js.Object {
     configurationMethod: typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod
   ): DevicePairingKinds = js.native
 }
-

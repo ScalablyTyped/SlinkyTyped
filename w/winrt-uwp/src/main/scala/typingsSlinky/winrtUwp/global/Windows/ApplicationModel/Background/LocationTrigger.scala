@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Background
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a location event that triggers a background task. This is used for Geofencing. */
 @JSGlobal("Windows.ApplicationModel.Background.LocationTrigger")
@@ -15,4 +15,3 @@ class LocationTrigger protected ()
     */
   def this(triggerType: typingsSlinky.winrtUwp.Windows.ApplicationModel.Background.LocationTriggerType) = this()
 }
-

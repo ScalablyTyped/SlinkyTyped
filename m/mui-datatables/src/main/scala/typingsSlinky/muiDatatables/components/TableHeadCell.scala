@@ -6,9 +6,10 @@ import typingsSlinky.muiDatatables.mod.MUIDataTableHeadCell
 import typingsSlinky.muiDatatables.mod.MUISortOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TableHeadCell {
+  
   @JSImport("mui-datatables", "TableHeadCell")
   @js.native
   object component extends js.Object
@@ -17,19 +18,22 @@ object TableHeadCell {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def sortOrder(value: MUISortOptions): this.type = set("sortOrder", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: MUIDataTableHeadCell): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(hint: String, options: js.Object, sort: Boolean, toggleSort: js.Any => js.Any): Builder = {
     val __props = js.Dynamic.literal(hint = hint.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], sort = sort.asInstanceOf[js.Any], toggleSort = js.Any.fromFunction1(toggleSort))
     new Builder(js.Array(this.component, __props.asInstanceOf[MUIDataTableHeadCell]))
   }
 }
-

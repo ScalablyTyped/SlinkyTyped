@@ -7,12 +7,12 @@ import typingsSlinky.vexflow.anon.Firstxpx
 import typingsSlinky.vexflow.anon.Lastindices
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TabSlide extends TabTie
-
 object TabSlide {
+  
   @scala.inline
   def apply(
     createHammeron: Firstindices => TabTie,
@@ -29,4 +29,3 @@ object TabSlide {
     __obj.asInstanceOf[TabSlide]
   }
 }
-

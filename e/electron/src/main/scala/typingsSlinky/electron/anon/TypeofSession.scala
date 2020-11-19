@@ -5,14 +5,16 @@ import typingsSlinky.electron.Electron.FromPartitionOptions
 import typingsSlinky.electron.Electron.Session_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofSession extends Instantiable0[Session_] {
+  
   /**
     * A `Session` object, the default session object of the app.
     */
   var defaultSession: Session_ = js.native
+  
   // Docs: http://electronjs.org/docs/api/session
   /**
     * A session instance from `partition` string. When there is an existing `Session`
@@ -31,4 +33,3 @@ trait TypeofSession extends Instantiable0[Session_] {
   def fromPartition(partition: String): Session_ = js.native
   def fromPartition(partition: String, options: FromPartitionOptions): Session_ = js.native
 }
-

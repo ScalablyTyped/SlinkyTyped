@@ -3,7 +3,7 @@ package typingsSlinky.semver.preloadMod
 import typingsSlinky.semver.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semver/preload", "Range")
 @js.native
@@ -16,4 +16,3 @@ class Range protected ()
   def this(range: typingsSlinky.semver.rangeMod.Range, optionsOrLoose: Boolean) = this()
   def this(range: typingsSlinky.semver.rangeMod.Range, optionsOrLoose: Options) = this()
 }
-

@@ -5,15 +5,11 @@ import typingsSlinky.tensorflowTfjsCore.typesMod.ModelArtifactsInfo
 import typingsSlinky.tensorflowTfjsCore.typesMod.ModelStoreManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/io/model_management", JSImport.Namespace)
 @js.native
 object modelManagementMod extends js.Object {
-  @js.native
-  class ModelStoreManagerRegistry protected () extends js.Object {
-    var managers: js.Any = js.native
-  }
   
   /**
     * Copy a model from one URL to another.
@@ -64,6 +60,7 @@ object modelManagementMod extends js.Object {
     * }
     */
   def copyModel(sourceURL: String, destURL: String): js.Promise[ModelArtifactsInfo] = js.native
+  
   /**
     * List all models stored in registered storage mediums.
     *
@@ -101,6 +98,7 @@ object modelManagementMod extends js.Object {
     * }
     */
   def listModels(): js.Promise[StringDictionary[ModelArtifactsInfo]] = js.native
+  
   /**
     * Move a model from one URL to another.
     *
@@ -149,6 +147,7 @@ object modelManagementMod extends js.Object {
     * }
     */
   def moveModel(sourceURL: String, destURL: String): js.Promise[ModelArtifactsInfo] = js.native
+  
   /**
     * Remove a model specified by URL from a reigstered storage medium.
     *
@@ -184,13 +183,24 @@ object modelManagementMod extends js.Object {
     * }
     */
   def removeModel(url: String): js.Promise[ModelArtifactsInfo] = js.native
+  
+  @js.native
+  class ModelStoreManagerRegistry protected () extends js.Object {
+    
+    var managers: js.Any = js.native
+  }
   /* static members */
   @js.native
   object ModelStoreManagerRegistry extends js.Object {
+    
     var getInstance: js.Any = js.native
-    var instance: js.Any = js.native
+    
     def getManager(scheme: String): ModelStoreManager = js.native
+    
     def getSchemes(): js.Array[String] = js.native
+    
+    var instance: js.Any = js.native
+    
     /**
       * Register a save-handler router.
       *
@@ -199,6 +209,4 @@ object modelManagementMod extends js.Object {
       */
     def registerManager(scheme: String, manager: ModelStoreManager): Unit = js.native
   }
-  
 }
-

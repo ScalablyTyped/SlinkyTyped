@@ -2,10 +2,11 @@ package typingsSlinky.gridstack
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Utils extends js.Object {
+  
   /**
     * Sorts array of nodes
     * @param nodes array to sort
@@ -17,4 +18,3 @@ trait Utils extends js.Object {
   def sort(nodes: js.Array[GridStackNode], dir: Double): Unit = js.native
   def sort(nodes: js.Array[GridStackNode], dir: Double, width: Double): Unit = js.native
 }
-

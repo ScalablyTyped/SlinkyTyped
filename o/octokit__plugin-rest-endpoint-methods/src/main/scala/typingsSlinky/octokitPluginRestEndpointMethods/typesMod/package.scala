@@ -2,10 +2,12 @@ package typingsSlinky.octokitPluginRestEndpointMethods
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object typesMod {
+  
   type Api = typingsSlinky.octokitPluginRestEndpointMethods.methodTypesMod.RestEndpointMethods
+  
   type EndpointsDefaultsAndDecorations = org.scalablytyped.runtime.StringDictionary[
     org.scalablytyped.runtime.StringDictionary[
       js.Tuple3[

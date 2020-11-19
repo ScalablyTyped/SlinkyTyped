@@ -3,11 +3,12 @@ package typingsSlinky.microsoftAjax.global
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("$get")
 @js.native
 object get extends js.Object {
+  
   /**
   * Provides a shortcut to the getElementById method of the HTMLElement class. This member is static and can be invoked without creating an instance of the class.
   * @see {@link http://msdn.microsoft.com/en-us/library/bb397717(v=vs.100).aspx}
@@ -21,4 +22,3 @@ object get extends js.Object {
   def apply(id: String): HTMLElement = js.native
   def apply(id: String, element: HTMLElement): HTMLElement = js.native
 }
-

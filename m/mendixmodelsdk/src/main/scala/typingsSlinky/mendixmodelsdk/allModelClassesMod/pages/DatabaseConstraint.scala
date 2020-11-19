@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.DatabaseConstraint")
 @js.native
@@ -22,19 +22,18 @@ class DatabaseConstraint protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "pages.DatabaseConstraint")
 @js.native
 object DatabaseConstraint extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new DatabaseConstraint instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.pagesMod.pages.DatabaseConstraint = js.native
+  
   /**
     * Creates and returns a new DatabaseConstraint instance in the SDK and on the server.
     * The new DatabaseConstraint will be automatically stored in the 'databaseConstraints' property
@@ -44,12 +43,14 @@ object DatabaseConstraint extends js.Object {
     *  6.0.0 to 6.0.1
     */
   def createIn(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DatabaseSourceBase): typingsSlinky.mendixmodelsdk.pagesMod.pages.DatabaseConstraint = js.native
+  
   /**
     * Creates and returns a new DatabaseConstraint instance in the SDK and on the server.
     * The new DatabaseConstraint will be automatically stored in the 'databaseConstraints' property
     * of the parent DatabaseSourceBase element passed as argument.
     */
   def createInDatabaseSourceBaseUnderDatabaseConstraints(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DatabaseSourceBase): typingsSlinky.mendixmodelsdk.pagesMod.pages.DatabaseConstraint = js.native
+  
   /**
     * Creates and returns a new DatabaseConstraint instance in the SDK and on the server.
     * The new DatabaseConstraint will be automatically stored in the 'databaseConstraints' property
@@ -59,5 +60,8 @@ object DatabaseConstraint extends js.Object {
     *  6.1.0 and higher
     */
   def createInSelectorDatabaseSourceUnderDatabaseConstraints(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SelectorDatabaseSource): typingsSlinky.mendixmodelsdk.pagesMod.pages.DatabaseConstraint = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

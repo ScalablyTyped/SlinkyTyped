@@ -6,14 +6,17 @@ import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.WorkspaceSymbolPar
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.WorkspaceSymbolRegistrationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageserver", "WorkspaceSymbolRequest")
 @js.native
 object WorkspaceSymbolRequest extends js.Object {
+  
   val method: workspaceSlashsymbol = js.native
+  
   /** @deprecated Use WorkspaceSymbolRequest.type */
   val resultType: typingsSlinky.vscodeJsonrpc.mod.ProgressType[js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.SymbolInformation]] = js.native
+  
   val `type`: ProtocolRequestType[
     WorkspaceSymbolParams, 
     js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.SymbolInformation] | Null, 
@@ -22,4 +25,3 @@ object WorkspaceSymbolRequest extends js.Object {
     WorkspaceSymbolRegistrationOptions
   ] = js.native
 }
-

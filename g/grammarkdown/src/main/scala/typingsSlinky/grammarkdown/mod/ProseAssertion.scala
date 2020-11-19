@@ -5,7 +5,7 @@ import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.CloseBracketToken
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.OpenBracketGreaterThanToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown", "ProseAssertion")
 @js.native
@@ -27,4 +27,3 @@ class ProseAssertion protected ()
     closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
   ) = this()
 }
-

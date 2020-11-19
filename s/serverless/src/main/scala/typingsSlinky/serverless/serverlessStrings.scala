@@ -3,9 +3,58 @@ package typingsSlinky.serverless
 import typingsSlinky.serverless.validateMod.HttpMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object serverlessStrings {
+  
+  @scala.inline
+  def Allow: Allow = "Allow".asInstanceOf[Allow]
+  
+  @scala.inline
+  def Deny: Deny = "Deny".asInstanceOf[Deny]
+  
+  @scala.inline
+  def any: any = "any".asInstanceOf[any]
+  
+  @scala.inline
+  def aws: aws = "aws".asInstanceOf[aws]
+  
+  @scala.inline
+  def cognito: cognito = "cognito".asInstanceOf[cognito]
+  
+  @scala.inline
+  def delete: delete = "delete".asInstanceOf[delete]
+  
+  @scala.inline
+  def edge: edge = "edge".asInstanceOf[edge]
+  
+  @scala.inline
+  def get: get = "get".asInstanceOf[get]
+  
+  @scala.inline
+  def head: head = "head".asInstanceOf[head]
+  
+  @scala.inline
+  def oidc: oidc = "oidc".asInstanceOf[oidc]
+  
+  @scala.inline
+  def options: options = "options".asInstanceOf[options]
+  
+  @scala.inline
+  def patch: patch = "patch".asInstanceOf[patch]
+  
+  @scala.inline
+  def post: post = "post".asInstanceOf[post]
+  
+  @scala.inline
+  def `private`: `private` = "private".asInstanceOf[`private`]
+  
+  @scala.inline
+  def put: put = "put".asInstanceOf[put]
+  
+  @scala.inline
+  def regional: regional = "regional".asInstanceOf[regional]
+  
   @js.native
   sealed trait Allow extends js.Object
   
@@ -53,38 +102,4 @@ object serverlessStrings {
   
   @js.native
   sealed trait regional extends js.Object
-  
-  @scala.inline
-  def Allow: Allow = "Allow".asInstanceOf[Allow]
-  @scala.inline
-  def Deny: Deny = "Deny".asInstanceOf[Deny]
-  @scala.inline
-  def any: any = "any".asInstanceOf[any]
-  @scala.inline
-  def aws: aws = "aws".asInstanceOf[aws]
-  @scala.inline
-  def cognito: cognito = "cognito".asInstanceOf[cognito]
-  @scala.inline
-  def delete: delete = "delete".asInstanceOf[delete]
-  @scala.inline
-  def edge: edge = "edge".asInstanceOf[edge]
-  @scala.inline
-  def get: get = "get".asInstanceOf[get]
-  @scala.inline
-  def head: head = "head".asInstanceOf[head]
-  @scala.inline
-  def oidc: oidc = "oidc".asInstanceOf[oidc]
-  @scala.inline
-  def options: options = "options".asInstanceOf[options]
-  @scala.inline
-  def patch: patch = "patch".asInstanceOf[patch]
-  @scala.inline
-  def post: post = "post".asInstanceOf[post]
-  @scala.inline
-  def `private`: `private` = "private".asInstanceOf[`private`]
-  @scala.inline
-  def put: put = "put".asInstanceOf[put]
-  @scala.inline
-  def regional: regional = "regional".asInstanceOf[regional]
 }
-

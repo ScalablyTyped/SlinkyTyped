@@ -7,9 +7,220 @@ import typingsSlinky.mongodb.mod.ReadConcernLevel
 import typingsSlinky.mongodb.mod.ReadPreferenceMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mongodbStrings {
+  
+  @scala.inline
+  def AcceptedFields: AcceptedFields = "AcceptedFields".asInstanceOf[AcceptedFields]
+  
+  @scala.inline
+  def DEFAULT: DEFAULT = "DEFAULT".asInstanceOf[DEFAULT]
+  
+  @scala.inline
+  def FilterQuery: FilterQuery = "FilterQuery".asInstanceOf[FilterQuery]
+  
+  @scala.inline
+  def GSSAPI: GSSAPI = "GSSAPI".asInstanceOf[GSSAPI]
+  
+  @scala.inline
+  def `MONGODB-CR`: `MONGODB-CR` = "MONGODB-CR".asInstanceOf[`MONGODB-CR`]
+  
+  @scala.inline
+  def `MONGODB-X509`: `MONGODB-X509` = "MONGODB-X509".asInstanceOf[`MONGODB-X509`]
+  
+  @scala.inline
+  def NotAcceptedFields: NotAcceptedFields = "NotAcceptedFields".asInstanceOf[NotAcceptedFields]
+  
+  @scala.inline
+  def ObjectQuerySelector: ObjectQuerySelector = "ObjectQuerySelector".asInstanceOf[ObjectQuerySelector]
+  
+  @scala.inline
+  def PLAIN: PLAIN = "PLAIN".asInstanceOf[PLAIN]
+  
+  @scala.inline
+  def PullAllOperator: PullAllOperator = "PullAllOperator".asInstanceOf[PullAllOperator]
+  
+  @scala.inline
+  def PullOperator: PullOperator = "PullOperator".asInstanceOf[PullOperator]
+  
+  @scala.inline
+  def PushOperator: PushOperator = "PushOperator".asInstanceOf[PushOperator]
+  
+  @scala.inline
+  def ReadonlyPartial: ReadonlyPartial = "ReadonlyPartial".asInstanceOf[ReadonlyPartial]
+  
+  @scala.inline
+  def `SCRAM-SHA-1`: `SCRAM-SHA-1` = "SCRAM-SHA-1".asInstanceOf[`SCRAM-SHA-1`]
+  
+  @scala.inline
+  def `SCRAM-SHA-256`: `SCRAM-SHA-256` = "SCRAM-SHA-256".asInstanceOf[`SCRAM-SHA-256`]
+  
+  @scala.inline
+  def SetFields: SetFields = "SetFields".asInstanceOf[SetFields]
+  
+  @scala.inline
+  def UpdateQuery: UpdateQuery = "UpdateQuery".asInstanceOf[UpdateQuery]
+  
+  @scala.inline
+  def _empty: _empty = "".asInstanceOf[_empty]
+  
+  @scala.inline
+  def _id: _id = "_id".asInstanceOf[_id]
+  
+  @scala.inline
+  def all: all = "all".asInstanceOf[all]
+  
+  @scala.inline
+  def array: array = "array".asInstanceOf[array]
+  
+  @scala.inline
+  def available: available = "available".asInstanceOf[available]
+  
+  @scala.inline
+  def binData: binData = "binData".asInstanceOf[binData]
+  
+  @scala.inline
+  def bool: bool = "bool".asInstanceOf[bool]
+  
+  @scala.inline
+  def date: date = "date".asInstanceOf[date]
+  
+  @scala.inline
+  def dbPointer: dbPointer = "dbPointer".asInstanceOf[dbPointer]
+  
+  @scala.inline
+  def decimal: decimal = "decimal".asInstanceOf[decimal]
+  
+  @scala.inline
+  def default_ : default_ = "default".asInstanceOf[default_]
+  
+  @scala.inline
+  def delete: delete = "delete".asInstanceOf[delete]
+  
+  @scala.inline
+  def double: double = "double".asInstanceOf[double]
+  
+  @scala.inline
+  def drop: drop = "drop".asInstanceOf[drop]
+  
+  @scala.inline
+  def dropDatabase: dropDatabase = "dropDatabase".asInstanceOf[dropDatabase]
+  
+  @scala.inline
+  def error: error = "error".asInstanceOf[error]
+  
+  @scala.inline
+  def insert: insert = "insert".asInstanceOf[insert]
+  
+  @scala.inline
+  def int: int = "int".asInstanceOf[int]
+  
+  @scala.inline
+  def invalidate: invalidate = "invalidate".asInstanceOf[invalidate]
+  
+  @scala.inline
+  def javascript: javascript = "javascript".asInstanceOf[javascript]
+  
+  @scala.inline
+  def javascriptWithScope: javascriptWithScope = "javascriptWithScope".asInstanceOf[javascriptWithScope]
+  
+  @scala.inline
+  def linearizable: linearizable = "linearizable".asInstanceOf[linearizable]
+  
+  @scala.inline
+  def local: local = "local".asInstanceOf[local]
+  
+  @scala.inline
+  def long: long = "long".asInstanceOf[long]
+  
+  @scala.inline
+  def majority: majority = "majority".asInstanceOf[majority]
+  
+  @scala.inline
+  def maxKey: maxKey = "maxKey".asInstanceOf[maxKey]
+  
+  @scala.inline
+  def minKey: minKey = "minKey".asInstanceOf[minKey]
+  
+  @scala.inline
+  def moderate: moderate = "moderate".asInstanceOf[moderate]
+  
+  @scala.inline
+  def nearest: nearest = "nearest".asInstanceOf[nearest]
+  
+  @scala.inline
+  def `null`: `null` = "null".asInstanceOf[`null`]
+  
+  @scala.inline
+  def number: number = "number".asInstanceOf[number]
+  
+  @scala.inline
+  def `object`: `object` = "object".asInstanceOf[`object`]
+  
+  @scala.inline
+  def objectId: objectId = "objectId".asInstanceOf[objectId]
+  
+  @scala.inline
+  def off: off = "off".asInstanceOf[off]
+  
+  @scala.inline
+  def primary: primary = "primary".asInstanceOf[primary]
+  
+  @scala.inline
+  def primaryPreferred: primaryPreferred = "primaryPreferred".asInstanceOf[primaryPreferred]
+  
+  @scala.inline
+  def regex: regex = "regex".asInstanceOf[regex]
+  
+  @scala.inline
+  def rename: rename = "rename".asInstanceOf[rename]
+  
+  @scala.inline
+  def replace: replace = "replace".asInstanceOf[replace]
+  
+  @scala.inline
+  def secondary: secondary = "secondary".asInstanceOf[secondary]
+  
+  @scala.inline
+  def secondaryPreferred: secondaryPreferred = "secondaryPreferred".asInstanceOf[secondaryPreferred]
+  
+  @scala.inline
+  def slow_only: slow_only = "slow_only".asInstanceOf[slow_only]
+  
+  @scala.inline
+  def snappy: snappy = "snappy".asInstanceOf[snappy]
+  
+  @scala.inline
+  def snapshot: snapshot = "snapshot".asInstanceOf[snapshot]
+  
+  @scala.inline
+  def strict: strict = "strict".asInstanceOf[strict]
+  
+  @scala.inline
+  def string: string = "string".asInstanceOf[string]
+  
+  @scala.inline
+  def symbol: symbol = "symbol".asInstanceOf[symbol]
+  
+  @scala.inline
+  def timestamp: timestamp = "timestamp".asInstanceOf[timestamp]
+  
+  @scala.inline
+  def undefined: undefined = "undefined".asInstanceOf[undefined]
+  
+  @scala.inline
+  def update: update = "update".asInstanceOf[update]
+  
+  @scala.inline
+  def updateLookup: updateLookup = "updateLookup".asInstanceOf[updateLookup]
+  
+  @scala.inline
+  def warn: warn = "warn".asInstanceOf[warn]
+  
+  @scala.inline
+  def zlib: zlib = "zlib".asInstanceOf[zlib]
+  
   @js.native
   sealed trait AcceptedFields extends js.Object
   
@@ -219,146 +430,4 @@ object mongodbStrings {
   
   @js.native
   sealed trait zlib extends js.Object
-  
-  @scala.inline
-  def AcceptedFields: AcceptedFields = "AcceptedFields".asInstanceOf[AcceptedFields]
-  @scala.inline
-  def DEFAULT: DEFAULT = "DEFAULT".asInstanceOf[DEFAULT]
-  @scala.inline
-  def FilterQuery: FilterQuery = "FilterQuery".asInstanceOf[FilterQuery]
-  @scala.inline
-  def GSSAPI: GSSAPI = "GSSAPI".asInstanceOf[GSSAPI]
-  @scala.inline
-  def `MONGODB-CR`: `MONGODB-CR` = "MONGODB-CR".asInstanceOf[`MONGODB-CR`]
-  @scala.inline
-  def `MONGODB-X509`: `MONGODB-X509` = "MONGODB-X509".asInstanceOf[`MONGODB-X509`]
-  @scala.inline
-  def NotAcceptedFields: NotAcceptedFields = "NotAcceptedFields".asInstanceOf[NotAcceptedFields]
-  @scala.inline
-  def ObjectQuerySelector: ObjectQuerySelector = "ObjectQuerySelector".asInstanceOf[ObjectQuerySelector]
-  @scala.inline
-  def PLAIN: PLAIN = "PLAIN".asInstanceOf[PLAIN]
-  @scala.inline
-  def PullAllOperator: PullAllOperator = "PullAllOperator".asInstanceOf[PullAllOperator]
-  @scala.inline
-  def PullOperator: PullOperator = "PullOperator".asInstanceOf[PullOperator]
-  @scala.inline
-  def PushOperator: PushOperator = "PushOperator".asInstanceOf[PushOperator]
-  @scala.inline
-  def ReadonlyPartial: ReadonlyPartial = "ReadonlyPartial".asInstanceOf[ReadonlyPartial]
-  @scala.inline
-  def `SCRAM-SHA-1`: `SCRAM-SHA-1` = "SCRAM-SHA-1".asInstanceOf[`SCRAM-SHA-1`]
-  @scala.inline
-  def `SCRAM-SHA-256`: `SCRAM-SHA-256` = "SCRAM-SHA-256".asInstanceOf[`SCRAM-SHA-256`]
-  @scala.inline
-  def SetFields: SetFields = "SetFields".asInstanceOf[SetFields]
-  @scala.inline
-  def UpdateQuery: UpdateQuery = "UpdateQuery".asInstanceOf[UpdateQuery]
-  @scala.inline
-  def _empty: _empty = "".asInstanceOf[_empty]
-  @scala.inline
-  def _id: _id = "_id".asInstanceOf[_id]
-  @scala.inline
-  def all: all = "all".asInstanceOf[all]
-  @scala.inline
-  def array: array = "array".asInstanceOf[array]
-  @scala.inline
-  def available: available = "available".asInstanceOf[available]
-  @scala.inline
-  def binData: binData = "binData".asInstanceOf[binData]
-  @scala.inline
-  def bool: bool = "bool".asInstanceOf[bool]
-  @scala.inline
-  def date: date = "date".asInstanceOf[date]
-  @scala.inline
-  def dbPointer: dbPointer = "dbPointer".asInstanceOf[dbPointer]
-  @scala.inline
-  def decimal: decimal = "decimal".asInstanceOf[decimal]
-  @scala.inline
-  def default_ : default_ = "default".asInstanceOf[default_]
-  @scala.inline
-  def delete: delete = "delete".asInstanceOf[delete]
-  @scala.inline
-  def double: double = "double".asInstanceOf[double]
-  @scala.inline
-  def drop: drop = "drop".asInstanceOf[drop]
-  @scala.inline
-  def dropDatabase: dropDatabase = "dropDatabase".asInstanceOf[dropDatabase]
-  @scala.inline
-  def error: error = "error".asInstanceOf[error]
-  @scala.inline
-  def insert: insert = "insert".asInstanceOf[insert]
-  @scala.inline
-  def int: int = "int".asInstanceOf[int]
-  @scala.inline
-  def invalidate: invalidate = "invalidate".asInstanceOf[invalidate]
-  @scala.inline
-  def javascript: javascript = "javascript".asInstanceOf[javascript]
-  @scala.inline
-  def javascriptWithScope: javascriptWithScope = "javascriptWithScope".asInstanceOf[javascriptWithScope]
-  @scala.inline
-  def linearizable: linearizable = "linearizable".asInstanceOf[linearizable]
-  @scala.inline
-  def local: local = "local".asInstanceOf[local]
-  @scala.inline
-  def long: long = "long".asInstanceOf[long]
-  @scala.inline
-  def majority: majority = "majority".asInstanceOf[majority]
-  @scala.inline
-  def maxKey: maxKey = "maxKey".asInstanceOf[maxKey]
-  @scala.inline
-  def minKey: minKey = "minKey".asInstanceOf[minKey]
-  @scala.inline
-  def moderate: moderate = "moderate".asInstanceOf[moderate]
-  @scala.inline
-  def nearest: nearest = "nearest".asInstanceOf[nearest]
-  @scala.inline
-  def `null`: `null` = "null".asInstanceOf[`null`]
-  @scala.inline
-  def number: number = "number".asInstanceOf[number]
-  @scala.inline
-  def `object`: `object` = "object".asInstanceOf[`object`]
-  @scala.inline
-  def objectId: objectId = "objectId".asInstanceOf[objectId]
-  @scala.inline
-  def off: off = "off".asInstanceOf[off]
-  @scala.inline
-  def primary: primary = "primary".asInstanceOf[primary]
-  @scala.inline
-  def primaryPreferred: primaryPreferred = "primaryPreferred".asInstanceOf[primaryPreferred]
-  @scala.inline
-  def regex: regex = "regex".asInstanceOf[regex]
-  @scala.inline
-  def rename: rename = "rename".asInstanceOf[rename]
-  @scala.inline
-  def replace: replace = "replace".asInstanceOf[replace]
-  @scala.inline
-  def secondary: secondary = "secondary".asInstanceOf[secondary]
-  @scala.inline
-  def secondaryPreferred: secondaryPreferred = "secondaryPreferred".asInstanceOf[secondaryPreferred]
-  @scala.inline
-  def slow_only: slow_only = "slow_only".asInstanceOf[slow_only]
-  @scala.inline
-  def snappy: snappy = "snappy".asInstanceOf[snappy]
-  @scala.inline
-  def snapshot: snapshot = "snapshot".asInstanceOf[snapshot]
-  @scala.inline
-  def strict: strict = "strict".asInstanceOf[strict]
-  @scala.inline
-  def string: string = "string".asInstanceOf[string]
-  @scala.inline
-  def symbol: symbol = "symbol".asInstanceOf[symbol]
-  @scala.inline
-  def timestamp: timestamp = "timestamp".asInstanceOf[timestamp]
-  @scala.inline
-  def undefined: undefined = "undefined".asInstanceOf[undefined]
-  @scala.inline
-  def update: update = "update".asInstanceOf[update]
-  @scala.inline
-  def updateLookup: updateLookup = "updateLookup".asInstanceOf[updateLookup]
-  @scala.inline
-  def warn: warn = "warn".asInstanceOf[warn]
-  @scala.inline
-  def zlib: zlib = "zlib".asInstanceOf[zlib]
 }
-

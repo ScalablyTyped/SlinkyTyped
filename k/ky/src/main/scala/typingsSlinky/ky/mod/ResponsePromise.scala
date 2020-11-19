@@ -5,14 +5,18 @@ import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.FormData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ResponsePromise
   extends js.Promise[Response] {
+  
   def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  
   def blob(): js.Promise[Blob] = js.native
+  
   def formData(): js.Promise[FormData] = js.native
+  
   // TODO: Use `json<T extends JSONValue>(): Promise<T>;` when it's fixed in TS.
   // See https://github.com/microsoft/TypeScript/issues/15300 and https://github.com/sindresorhus/ky/pull/80
   /**
@@ -32,6 +36,6 @@ trait ResponsePromise
   	```
   	*/
   def json[T](): js.Promise[T] = js.native
+  
   def text(): js.Promise[String] = js.native
 }
-

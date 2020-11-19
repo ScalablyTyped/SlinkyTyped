@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.0.2: deleted
@@ -24,22 +24,22 @@ class SyncButton protected () extends Button {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FSyncButton: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.SyncButton")
 @js.native
 object SyncButton extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'footerWidget' property
@@ -49,6 +49,7 @@ object SyncButton extends js.Object {
     *  6.7.0 to 7.0.1
     */
   def createInDataViewUnderFooterWidget(container: DataView): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -58,6 +59,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInDataViewUnderWidget(container: DataView): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -67,6 +69,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInDivContainerUnderWidget(container: DivContainer): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -76,6 +79,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInGroupBoxUnderWidget(container: GroupBox): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'leftWidget' property
@@ -85,6 +89,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInHeaderUnderLeftWidget(container: Header): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'rightWidget' property
@@ -94,6 +99,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInHeaderUnderRightWidget(container: Header): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -103,6 +109,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -112,6 +119,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -121,6 +129,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInLayoutUnderWidget(container: Layout): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -130,6 +139,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -139,6 +149,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInListViewUnderWidget(container: ListView): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -148,6 +159,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'parameterWidget' property
@@ -157,6 +169,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'reportWidget' property
@@ -166,6 +179,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -175,6 +189,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -184,6 +199,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInSnippetUnderWidget(container: Snippet): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'firstWidget' property
@@ -193,6 +209,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'secondWidget' property
@@ -202,6 +219,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -211,6 +229,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInTabPageUnderWidget(container: TabPage): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -220,6 +239,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInTableCellUnderWidget(container: TableCell): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widget' property
@@ -229,6 +249,7 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): SyncButton = js.native
+  
   /**
     * Creates and returns a new SyncButton instance in the SDK and on the server.
     * The new SyncButton will be automatically stored in the 'widgets' property
@@ -238,5 +259,8 @@ object SyncButton extends js.Object {
     *  6.0.0 to 7.0.1
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): SyncButton = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

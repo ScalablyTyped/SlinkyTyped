@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.symbolsMod
 import typingsSlinky.arcgisJsApi.esri.ExtrudeSymbol3DLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols", "ExtrudeSymbol3DLayer")
 @js.native
@@ -16,4 +16,3 @@ class ExtrudeSymbol3DLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.ExtrudeSymbol3DLayer {
   def this(properties: ExtrudeSymbol3DLayerProperties) = this()
 }
-

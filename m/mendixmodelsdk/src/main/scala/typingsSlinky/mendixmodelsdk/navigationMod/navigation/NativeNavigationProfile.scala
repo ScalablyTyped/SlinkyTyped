@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.navigationMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.IPage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.22.0: introduced
@@ -33,37 +33,43 @@ class NativeNavigationProfile protected () extends NavigationProfileBase {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FNativeNavigationProfile: IModel = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
     * In version 8.0.0: introduced
     */
   def bottomBarItems: IList[BottomBarItem] = js.native
+  
   @JSName("containerAsNavigationDocument")
   def containerAsNavigationDocument_MNativeNavigationProfile: NavigationDocument = js.native
+  
   def homePage: IPage | Null = js.native
+  
   def homePageQualifiedName: String | Null = js.native
+  
   def homePage_=(newValue: IPage | Null): Unit = js.native
+  
+  @JSName("model")
+  var model_FNativeNavigationProfile: IModel = js.native
+  
   /**
     * In version 8.0.0: introduced
     */
   def roleBasedNativeHomePages: IList[RoleBasedNativeHomePage] = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/navigation", "navigation.NativeNavigationProfile")
 @js.native
 object NativeNavigationProfile extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new NativeNavigationProfile instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): NativeNavigationProfile = js.native
+  
   /**
     * Creates and returns a new NativeNavigationProfile instance in the SDK and on the server.
     * The new NativeNavigationProfile will be automatically stored in the 'profiles' property
@@ -73,5 +79,8 @@ object NativeNavigationProfile extends js.Object {
     *  7.22.0 and higher
     */
   def createIn(container: NavigationDocument): NativeNavigationProfile = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

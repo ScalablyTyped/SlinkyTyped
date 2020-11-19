@@ -4,21 +4,22 @@ import typingsSlinky.reactQuery.anon.Config
 import typingsSlinky.reactQuery.anon.QueryFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-query", "usePaginatedQuery")
 @js.native
 object usePaginatedQuery extends js.Object {
-  def apply[TResult, TKey /* <: String */](queryKey: TKey, queryFn: QueryFunction[TResult, js.Array[TKey]]): PaginatedQueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */](queryKey: TKey, queryFn: QueryFunction[TResult, js.Array[TKey]], config: QueryOptions[TResult]): PaginatedQueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */](queryKey: js.UndefOr[scala.Nothing], queryFn: QueryFunction[TResult, js.Array[TKey]]): PaginatedQueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */](
+  
+  def apply[TResult, TKey /* <: AnyQueryKey */](queryKey: TKey, queryFn: QueryFunction[TResult, TKey]): PaginatedQueryResult[TResult] = js.native
+  def apply[TResult, TKey /* <: AnyQueryKey */](queryKey: TKey, queryFn: QueryFunction[TResult, TKey], config: QueryOptions[TResult]): PaginatedQueryResult[TResult] = js.native
+  def apply[TResult, TKey /* <: AnyQueryKey */](queryKey: js.UndefOr[scala.Nothing], queryFn: QueryFunction[TResult, TKey]): PaginatedQueryResult[TResult] = js.native
+  def apply[TResult, TKey /* <: AnyQueryKey */](
     queryKey: js.UndefOr[scala.Nothing],
-    queryFn: QueryFunction[TResult, js.Array[TKey]],
+    queryFn: QueryFunction[TResult, TKey],
     config: QueryOptions[TResult]
   ): PaginatedQueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */](queryKey: Null, queryFn: QueryFunction[TResult, js.Array[TKey]]): PaginatedQueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */](queryKey: Null, queryFn: QueryFunction[TResult, js.Array[TKey]], config: QueryOptions[TResult]): PaginatedQueryResult[TResult] = js.native
+  def apply[TResult, TKey /* <: AnyQueryKey */](queryKey: Null, queryFn: QueryFunction[TResult, TKey]): PaginatedQueryResult[TResult] = js.native
+  def apply[TResult, TKey /* <: AnyQueryKey */](queryKey: Null, queryFn: QueryFunction[TResult, TKey], config: QueryOptions[TResult]): PaginatedQueryResult[TResult] = js.native
   def apply[TResult, TKey /* <: AnyQueryKey */, TVariables /* <: AnyVariables */](hasQueryKeyVariablesQueryFnConfig: Config[TKey, TVariables, TResult]): PaginatedQueryResult[TResult] = js.native
   def apply[TResult, TSingleKey /* <: String */, TVariables /* <: AnyVariables */](hasQueryKeyVariablesQueryFnConfig: QueryFn[TSingleKey, TVariables, TResult]): PaginatedQueryResult[TResult] = js.native
   def apply[TResult, TKey /* <: String */, TVariables /* <: AnyVariables */](
@@ -55,4 +56,3 @@ object usePaginatedQuery extends js.Object {
     config: QueryOptions[TResult]
   ): PaginatedQueryResult[TResult] = js.native
 }
-

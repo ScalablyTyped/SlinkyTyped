@@ -8,11 +8,12 @@ import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
 import typingsSlinky.graphql.pathMod.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/execution/execute", "buildResolveInfo")
 @js.native
 object buildResolveInfo extends js.Object {
+  
   def apply(
     exeContext: ExecutionContext,
     fieldDef: GraphQLField[_, _, StringDictionary[_]],
@@ -21,4 +22,3 @@ object buildResolveInfo extends js.Object {
     path: Path
   ): GraphQLResolveInfo = js.native
 }
-

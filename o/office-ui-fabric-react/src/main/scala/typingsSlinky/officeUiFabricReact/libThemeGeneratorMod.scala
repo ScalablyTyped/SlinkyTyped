@@ -5,68 +5,102 @@ import typingsSlinky.officeUiFabricReact.ithemerulesMod.IThemeRules
 import typingsSlinky.officeUiFabricReact.ithemeslotruleMod.IThemeSlotRule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/ThemeGenerator", JSImport.Namespace)
 @js.native
 object libThemeGeneratorMod extends js.Object {
-  @js.native
-  class ThemeGenerator ()
-    extends typingsSlinky.officeUiFabricReact.themeGeneratorMod.ThemeGenerator
   
   def themeRulesStandardCreator(): IThemeRules = js.native
+  
   @js.native
   object BaseSlots extends js.Object {
-    /* 1 */ val backgroundColor: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.BaseSlots.backgroundColor with Double = js.native
-    /* 2 */ val foregroundColor: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.BaseSlots.foregroundColor with Double = js.native
-    /* 0 */ val primaryColor: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.BaseSlots.primaryColor with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.themeRulesStandardMod.BaseSlots with Double] = js.native
+    
+    /* 1 */ val backgroundColor: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.BaseSlots.backgroundColor with Double = js.native
+    
+    /* 2 */ val foregroundColor: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.BaseSlots.foregroundColor with Double = js.native
+    
+    /* 0 */ val primaryColor: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.BaseSlots.primaryColor with Double = js.native
   }
   
   @js.native
   object FabricSlots extends js.Object {
-    /* 20 */ val black: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.black with Double = js.native
-    /* 19 */ val neutralDark: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralDark with Double = js.native
-    /* 11 */ val neutralLight: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralLight with Double = js.native
-    /* 10 */ val neutralLighter: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralLighter with Double = js.native
-    /* 9 */ val neutralLighterAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralLighterAlt with Double = js.native
-    /* 18 */ val neutralPrimary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralPrimary with Double = js.native
-    /* 17 */ val neutralPrimaryAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralPrimaryAlt with Double = js.native
-    /* 13 */ val neutralQuaternary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralQuaternary with Double = js.native
-    /* 12 */ val neutralQuaternaryAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralQuaternaryAlt with Double = js.native
-    /* 16 */ val neutralSecondary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralSecondary with Double = js.native
-    /* 15 */ val neutralTertiary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralTertiary with Double = js.native
-    /* 14 */ val neutralTertiaryAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralTertiaryAlt with Double = js.native
-    /* 7 */ val themeDark: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeDark with Double = js.native
-    /* 6 */ val themeDarkAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeDarkAlt with Double = js.native
-    /* 8 */ val themeDarker: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeDarker with Double = js.native
-    /* 3 */ val themeLight: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeLight with Double = js.native
-    /* 2 */ val themeLighter: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeLighter with Double = js.native
-    /* 1 */ val themeLighterAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeLighterAlt with Double = js.native
-    /* 0 */ val themePrimary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themePrimary with Double = js.native
-    /* 5 */ val themeSecondary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeSecondary with Double = js.native
-    /* 4 */ val themeTertiary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeTertiary with Double = js.native
-    /* 21 */ val white: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.white with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots with Double] = js.native
+    
+    /* 20 */ val black: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.black with Double = js.native
+    
+    /* 19 */ val neutralDark: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralDark with Double = js.native
+    
+    /* 11 */ val neutralLight: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralLight with Double = js.native
+    
+    /* 10 */ val neutralLighter: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralLighter with Double = js.native
+    
+    /* 9 */ val neutralLighterAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralLighterAlt with Double = js.native
+    
+    /* 18 */ val neutralPrimary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralPrimary with Double = js.native
+    
+    /* 17 */ val neutralPrimaryAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralPrimaryAlt with Double = js.native
+    
+    /* 13 */ val neutralQuaternary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralQuaternary with Double = js.native
+    
+    /* 12 */ val neutralQuaternaryAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralQuaternaryAlt with Double = js.native
+    
+    /* 16 */ val neutralSecondary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralSecondary with Double = js.native
+    
+    /* 15 */ val neutralTertiary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralTertiary with Double = js.native
+    
+    /* 14 */ val neutralTertiaryAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.neutralTertiaryAlt with Double = js.native
+    
+    /* 7 */ val themeDark: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeDark with Double = js.native
+    
+    /* 6 */ val themeDarkAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeDarkAlt with Double = js.native
+    
+    /* 8 */ val themeDarker: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeDarker with Double = js.native
+    
+    /* 3 */ val themeLight: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeLight with Double = js.native
+    
+    /* 2 */ val themeLighter: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeLighter with Double = js.native
+    
+    /* 1 */ val themeLighterAlt: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeLighterAlt with Double = js.native
+    
+    /* 0 */ val themePrimary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themePrimary with Double = js.native
+    
+    /* 5 */ val themeSecondary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeSecondary with Double = js.native
+    
+    /* 4 */ val themeTertiary: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.themeTertiary with Double = js.native
+    
+    /* 21 */ val white: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.FabricSlots.white with Double = js.native
   }
   
   @js.native
   object SemanticColorSlots extends js.Object {
-    /* 0 */ val bodyBackground: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.SemanticColorSlots.bodyBackground with Double = js.native
-    /* 1 */ val bodyText: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.SemanticColorSlots.bodyText with Double = js.native
-    /* 2 */ val disabledBackground: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.SemanticColorSlots.disabledBackground with Double = js.native
-    /* 3 */ val disabledText: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.SemanticColorSlots.disabledText with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
         typingsSlinky.officeUiFabricReact.themeRulesStandardMod.SemanticColorSlots with Double
       ] = js.native
+    
+    /* 0 */ val bodyBackground: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.SemanticColorSlots.bodyBackground with Double = js.native
+    
+    /* 1 */ val bodyText: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.SemanticColorSlots.bodyText with Double = js.native
+    
+    /* 2 */ val disabledBackground: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.SemanticColorSlots.disabledBackground with Double = js.native
+    
+    /* 3 */ val disabledText: typingsSlinky.officeUiFabricReact.themeRulesStandardMod.SemanticColorSlots.disabledText with Double = js.native
   }
   
+  @js.native
+  class ThemeGenerator ()
+    extends typingsSlinky.officeUiFabricReact.themeGeneratorMod.ThemeGenerator
   /* static members */
   @js.native
   object ThemeGenerator extends js.Object {
+    
     /**
       * Makes the rest of the code that's used for the load theme blob in the exported codepens of
       * both the older sharepoint-specific theme designer and the new theme designer. Takes in
@@ -83,6 +117,7 @@ object libThemeGeneratorMod extends js.Object {
       * The first line is loadTheme instead of createTheme for the old sharepoint theme designer.
       */
     var _makeRemainingCode: js.Any = js.native
+    
     /**
       * Sets the given slot's color to the appropriate color, shading it if necessary.
       * Then, iterates through all other rules (that are this rule's dependents) to update them accordingly.
@@ -90,18 +125,21 @@ object libThemeGeneratorMod extends js.Object {
       * If false, the rule it's inheriting from changed, so updated using asShade.
       */
     var _setSlot: js.Any = js.native
+    
     /**
       * Gets code-formatted load theme blob that can be copy and pasted.
       * Only used for the old theme designer, where loadTheme usage is acceptable,
       * unlike in the new theme designer.
       */
     def getThemeAsCode(slotRules: IThemeRules): js.Any = js.native
+    
     /**
       * Gets code-formatted load theme blob, specifically for the new theme designer,
       * aka.ms/themedesigner. Shouldn't use loadTheme like the old theme designer since it's deprecated.
       * We want to use the theme object from createTheme and use the Customizations.applySettings API instead.
       */
     def getThemeAsCodeWithCreateTheme(slotRules: IThemeRules): js.Any = js.native
+    
     /**
       * Gets the JSON-formatted blob that describes the theme, usable with the REST request endpoints:
       * ```
@@ -112,6 +150,7 @@ object libThemeGeneratorMod extends js.Object {
       * ```
       */
     def getThemeAsJson(slotRules: IThemeRules): js.Any = js.native
+    
     /**
       * Gets the theme as a list of SASS variables that can be used in code
       * ```
@@ -121,6 +160,7 @@ object libThemeGeneratorMod extends js.Object {
       * ```
       */
     def getThemeAsSass(slotRules: IThemeRules): js.Any = js.native
+    
     /**
       * Gets the theme formatted for PowerShell scripts
       * ```
@@ -132,6 +172,7 @@ object libThemeGeneratorMod extends js.Object {
       * ```
       */
     def getThemeForPowerShell(slotRules: IThemeRules): js.Any = js.native
+    
     /**
       * Sets the color of each slot based on its rule. Slots that don't inherit must have a color already.
       * If this completes without error, then the theme is ready to use. (All slots will have a color.)
@@ -139,6 +180,7 @@ object libThemeGeneratorMod extends js.Object {
       * Does not override colors of rules where isCustomized is true (i.e. doesn't override existing customizations).
       */
     def insureSlots(slotRules: IThemeRules, isInverted: Boolean): Unit = js.native
+    
     /**
       * Sets an IThemeSlotRule to the given color and cascades it to the rest of the theme, updating other IThemeSlotRules
       * in the theme that inherit from that color.
@@ -224,6 +266,4 @@ object libThemeGeneratorMod extends js.Object {
       overwriteCustomColor: Boolean
     ): Unit = js.native
   }
-  
 }
-

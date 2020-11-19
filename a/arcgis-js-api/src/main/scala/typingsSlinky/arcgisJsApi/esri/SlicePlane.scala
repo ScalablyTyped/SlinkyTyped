@@ -3,12 +3,13 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.plane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SlicePlane
   extends Accessor
      with JSONSupport {
+  
   /**
     * The heading angle (in degrees) of the slice plane.
     *
@@ -17,6 +18,7 @@ trait SlicePlane
     * @default 0
     */
   var heading: Double = js.native
+  
   /**
     * The height of the slice plane. The unit is derived from the [SpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html) of the [position](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SlicePlane.html#position).
     *
@@ -25,12 +27,14 @@ trait SlicePlane
     * @default 10
     */
   var height: Double = js.native
+  
   /**
     * A point specifying the position of the center of the plane.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SlicePlane.html#position)
     */
   var position: Point = js.native
+  
   /**
     * The tilt angle (in degrees) of the slice plane.
     *
@@ -39,12 +43,14 @@ trait SlicePlane
     * @default 0
     */
   var tilt: Double = js.native
+  
   /**
     * The string value representing the type of the slice shape.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SlicePlane.html#type)
     */
   val `type`: plane = js.native
+  
   /**
     * The width of the slice plane. The unit is derived from the [SpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html) of the [position](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SlicePlane.html#position).
     *
@@ -54,4 +60,3 @@ trait SlicePlane
     */
   var width: Double = js.native
 }
-

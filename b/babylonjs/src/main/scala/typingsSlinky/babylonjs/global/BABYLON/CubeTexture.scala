@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.CubeTexture")
 @js.native
@@ -46,17 +46,12 @@ class CubeTexture protected ()
     lodScale: js.UndefOr[Double],
     lodOffset: js.UndefOr[Double]
   ) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.CubeTexture")
 @js.native
 object CubeTexture extends js.Object {
+  
   /**
     * Creates a cube texture from an array of image urls
     * @param files defines an array of image urls
@@ -66,6 +61,7 @@ object CubeTexture extends js.Object {
     */
   def CreateFromImages(files: js.Array[String], scene: typingsSlinky.babylonjs.BABYLON.Scene): typingsSlinky.babylonjs.BABYLON.CubeTexture = js.native
   def CreateFromImages(files: js.Array[String], scene: typingsSlinky.babylonjs.BABYLON.Scene, noMipmap: Boolean): typingsSlinky.babylonjs.BABYLON.CubeTexture = js.native
+  
   /**
     * Creates and return a texture created from prefilterd data by tools like IBL Baker or Lys.
     * @param url defines the url of the prefiltered texture
@@ -75,6 +71,12 @@ object CubeTexture extends js.Object {
     * @return the prefiltered texture
     */
   def CreateFromPrefilteredData(url: String, scene: typingsSlinky.babylonjs.BABYLON.Scene): typingsSlinky.babylonjs.BABYLON.CubeTexture = js.native
+  def CreateFromPrefilteredData(
+    url: String,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    forcedExtension: js.UndefOr[scala.Nothing],
+    createPolynomials: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.CubeTexture = js.native
   def CreateFromPrefilteredData(url: String, scene: typingsSlinky.babylonjs.BABYLON.Scene, forcedExtension: js.Any): typingsSlinky.babylonjs.BABYLON.CubeTexture = js.native
   def CreateFromPrefilteredData(
     url: String,
@@ -82,6 +84,7 @@ object CubeTexture extends js.Object {
     forcedExtension: js.Any,
     createPolynomials: Boolean
   ): typingsSlinky.babylonjs.BABYLON.CubeTexture = js.native
+  
   /**
     * Parses text to create a cube texture
     * @param parsedTexture define the serialized text to read from
@@ -91,4 +94,3 @@ object CubeTexture extends js.Object {
     */
   def Parse(parsedTexture: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): typingsSlinky.babylonjs.BABYLON.CubeTexture = js.native
 }
-

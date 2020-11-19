@@ -5,7 +5,7 @@ import typingsSlinky.babylonjs.typesMod.float
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "Vector3")
 @js.native
@@ -25,11 +25,63 @@ class Vector3 ()
     /**
     * Defines the first coordinates (on X axis)
     */
+  x: js.UndefOr[scala.Nothing],
+    /**
+    * Defines the second coordinates (on Y axis)
+    */
+  y: Double
+  ) = this()
+  def this(
+    /**
+    * Defines the first coordinates (on X axis)
+    */
   x: Double,
     /**
     * Defines the second coordinates (on Y axis)
     */
   y: Double
+  ) = this()
+  def this(
+    /**
+    * Defines the first coordinates (on X axis)
+    */
+  x: js.UndefOr[scala.Nothing],
+    /**
+    * Defines the second coordinates (on Y axis)
+    */
+  y: js.UndefOr[scala.Nothing],
+    /**
+    * Defines the third coordinates (on Z axis)
+    */
+  z: Double
+  ) = this()
+  def this(
+    /**
+    * Defines the first coordinates (on X axis)
+    */
+  x: js.UndefOr[scala.Nothing],
+    /**
+    * Defines the second coordinates (on Y axis)
+    */
+  y: Double,
+    /**
+    * Defines the third coordinates (on Z axis)
+    */
+  z: Double
+  ) = this()
+  def this(
+    /**
+    * Defines the first coordinates (on X axis)
+    */
+  x: Double,
+    /**
+    * Defines the second coordinates (on Y axis)
+    */
+  y: js.UndefOr[scala.Nothing],
+    /**
+    * Defines the third coordinates (on Z axis)
+    */
+  z: Double
   ) = this()
   def this(
     /**
@@ -46,18 +98,17 @@ class Vector3 ()
   z: Double
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Legacy/legacy", "Vector3")
 @js.native
 object Vector3 extends js.Object {
-  var _UpReadOnly: js.Any = js.native
-  var _ZeroReadOnly: js.Any = js.native
+  
   /**
     * Returns a new Vector3 set to (0.0, 0.0, -1.0)
     * @returns a new forward Vector3
     */
   def Backward(): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Returns a new Vector3 located for "amount" on the CatmullRom interpolation spline defined by the vectors "value1", "value2", "value3", "value4"
     * @param value1 defines the first control point
@@ -74,6 +125,7 @@ object Vector3 extends js.Object {
     value4: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     amount: Double
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Returns a new Vector3 located at the center between "value1" and "value2"
     * @param value1 defines the first operand
@@ -84,6 +136,7 @@ object Vector3 extends js.Object {
     value1: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     value2: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Checks if a given vector is inside a specific range
     * @param v defines the vector to test
@@ -95,6 +148,7 @@ object Vector3 extends js.Object {
     min: typingsSlinky.babylonjs.mathVectorMod.Vector3,
     max: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Returns a new Vector3 set with the coordinates of "value", if the vector "value" is in the cube defined by the vectors "min" and "max"
     * If a coordinate value of "value" is lower than one of the "min" coordinate, then this "value" coordinate is set with the "min" one
@@ -109,6 +163,7 @@ object Vector3 extends js.Object {
     min: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     max: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Sets the given vector "result" with the coordinates of "value", if the vector "value" is in the cube defined by the vectors "min" and "max"
     * If a coordinate value of "value" is lower than one of the "min" coordinate, then this "value" coordinate is set with the "min" one
@@ -124,6 +179,7 @@ object Vector3 extends js.Object {
     max: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Returns a new Vector3 as the cross product of the vectors "left" and "right"
     * The cross product is then orthogonal to both "left" and "right"
@@ -135,6 +191,7 @@ object Vector3 extends js.Object {
     left: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     right: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Sets the given vector "result" with the cross product of "left" and "right"
     * The cross product is then orthogonal to both "left" and "right"
@@ -147,6 +204,7 @@ object Vector3 extends js.Object {
     right: typingsSlinky.babylonjs.mathVectorMod.Vector3,
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Returns the distance between the vectors "value1" and "value2"
     * @param value1 defines the first operand
@@ -157,6 +215,7 @@ object Vector3 extends js.Object {
     value1: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     value2: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
   ): Double = js.native
+  
   /**
     * Returns the squared distance between the vectors "value1" and "value2"
     * @param value1 defines the first operand
@@ -167,6 +226,7 @@ object Vector3 extends js.Object {
     value1: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     value2: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
   ): Double = js.native
+  
   /**
     * Returns the dot product (float) between the vectors "left" and "right"
     * @param left defines the left operand
@@ -177,16 +237,19 @@ object Vector3 extends js.Object {
     left: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     right: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
   ): Double = js.native
+  
   /**
     * Returns a new Vector3 set to (0.0, -1.0, 0.0)
     * @returns a new down Vector3
     */
   def Down(): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Returns a new Vector3 set to (0.0, 0.0, 1.0)
     * @returns a new forward Vector3
     */
   def Forward(): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Returns a new Vector3 set from the index "offset" of the given array
     * @param array defines the source array
@@ -195,6 +258,7 @@ object Vector3 extends js.Object {
     */
   def FromArray(array: DeepImmutable[ArrayLike[Double]]): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Sets the given vector "result" with the element values from the index "offset" of the given array
     * @param array defines the source array
@@ -206,6 +270,7 @@ object Vector3 extends js.Object {
     offset: Double,
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Returns a new Vector3 set from the index "offset" of the given Float32Array
     * @param array defines the source array
@@ -215,6 +280,7 @@ object Vector3 extends js.Object {
     */
   def FromFloatArray(array: DeepImmutable[js.typedarray.Float32Array]): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
   def FromFloatArray(array: DeepImmutable[js.typedarray.Float32Array], offset: Double): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Sets the given vector "result" with the element values from the index "offset" of the given Float32Array
     * @param array defines the source array
@@ -227,6 +293,7 @@ object Vector3 extends js.Object {
     offset: Double,
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Sets the given vector "result" with the given floats.
     * @param x defines the x coordinate of the source
@@ -235,6 +302,7 @@ object Vector3 extends js.Object {
     * @param result defines the Vector3 where to store the result
     */
   def FromFloatsToRef(x: Double, y: Double, z: Double, result: typingsSlinky.babylonjs.mathVectorMod.Vector3): Unit = js.native
+  
   /**
     * Get angle between two vectors
     * @param vector0 angle between vector0 and vector1
@@ -247,6 +315,7 @@ object Vector3 extends js.Object {
     vector1: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     normal: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
   ): Double = js.native
+  
   /**
     * Get the clip factor between two vectors
     * @param vector0 defines the first operand
@@ -261,6 +330,7 @@ object Vector3 extends js.Object {
     axis: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     size: Double
   ): Double = js.native
+  
   /**
     * Returns a new Vector3 located for "amount" (float) on the Hermite interpolation spline defined by the vectors "value1", "tangent1", "value2", "tangent2"
     * @param value1 defines the first control point
@@ -277,11 +347,13 @@ object Vector3 extends js.Object {
     tangent2: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     amount: Double
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Returns a new Vector3 set to (-1.0, 0.0, 0.0)
     * @returns a new left Vector3
     */
   def Left(): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Returns a new Vector3 located for "amount" (float) on the linear interpolation between the vectors "start" and "end"
     * @param start defines the start value
@@ -294,6 +366,7 @@ object Vector3 extends js.Object {
     end: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     amount: Double
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Sets the given vector "result" with the result of the linear interpolation from the vector "start" for "amount" to the vector "end"
     * @param start defines the start value
@@ -307,6 +380,7 @@ object Vector3 extends js.Object {
     amount: Double,
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Gets the maximal coordinate values between two Vector3
     * @param left defines the first operand
@@ -317,6 +391,7 @@ object Vector3 extends js.Object {
     left: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     right: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Gets the minimal coordinate values between two Vector3
     * @param left defines the first operand
@@ -327,12 +402,14 @@ object Vector3 extends js.Object {
     left: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     right: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Returns a new Vector3 as the normalization of the given vector
     * @param vector defines the Vector3 to normalize
     * @returns the new Vector3
     */
   def Normalize(vector: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Sets the given vector "result" with the normalization of the given first vector
     * @param vector defines the Vector3 to normalize
@@ -342,11 +419,13 @@ object Vector3 extends js.Object {
     vector: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Returns a new Vector3 set to (1.0, 1.0, 1.0)
     * @returns a new unit Vector3
     */
   def One(): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Project a Vector3 onto screen space
     * @param vector defines the Vector3 to project
@@ -361,11 +440,13 @@ object Vector3 extends js.Object {
     transform: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     viewport: DeepImmutable[typingsSlinky.babylonjs.mathViewportMod.Viewport]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Returns a new Vector3 set to (1.0, 0.0, 0.0)
     * @returns a new right Vector3
     */
   def Right(): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Given three orthogonal normalized left-handed oriented Vector3 axis in space (target system),
     * RotationFromAxis() returns the rotation Euler angles (ex : rotation.x, rotation.y, rotation.z) to apply
@@ -381,6 +462,7 @@ object Vector3 extends js.Object {
     axis2: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     axis3: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * The same than RotationFromAxis but updates the given ref Vector3 parameter instead of returning a new Vector3
     * @param axis1 defines the first axis
@@ -394,6 +476,7 @@ object Vector3 extends js.Object {
     axis3: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     ref: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Returns a new Vector3 set with the result of the transformation by the given matrix of the given vector.
     * This method computes tranformed coordinates only, not transformed direction vectors (ie. it takes translation in account)
@@ -405,6 +488,7 @@ object Vector3 extends js.Object {
     vector: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     transformation: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Sets the given vector "result" coordinates with the result of the transformation by the given matrix of the given floats (x, y, z)
     * This method computes tranformed coordinates only, not transformed direction vectors
@@ -421,6 +505,7 @@ object Vector3 extends js.Object {
     transformation: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Sets the given vector "result" coordinates with the result of the transformation by the given matrix of the given vector
     * This method computes tranformed coordinates only, not transformed direction vectors (ie. it takes translation in account)
@@ -433,6 +518,7 @@ object Vector3 extends js.Object {
     transformation: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Returns a new Vector3 set with the result of the normal transformation by the given matrix of the given vector
     * This methods computes transformed normalized direction vectors only (ie. it does not apply translation)
@@ -444,6 +530,7 @@ object Vector3 extends js.Object {
     vector: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     transformation: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Sets the given vector "result" with the result of the normal transformation by the given matrix of the given floats (x, y, z)
     * This methods computes transformed normalized direction vectors only (ie. it does not apply translation)
@@ -460,6 +547,7 @@ object Vector3 extends js.Object {
     transformation: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Sets the given vector "result" with the result of the normal transformation by the given matrix of the given vector
     * This methods computes transformed normalized direction vectors only (ie. it does not apply translation)
@@ -472,6 +560,7 @@ object Vector3 extends js.Object {
     transformation: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Unproject from screen space to object space
     * @param source defines the screen space Vector3 to use
@@ -490,6 +579,7 @@ object Vector3 extends js.Object {
     view: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     projection: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Unproject from screen space to object space
     * @param sourceX defines the screen space x coordinate to use
@@ -513,6 +603,7 @@ object Vector3 extends js.Object {
     projection: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Unproject from screen space to object space
     * @param source defines the screen space Vector3 to use
@@ -529,6 +620,7 @@ object Vector3 extends js.Object {
     world: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     transform: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Unproject from screen space to object space
     * @param source defines the screen space Vector3 to use
@@ -548,29 +640,37 @@ object Vector3 extends js.Object {
     projection: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
   /**
     * Returns a new Vector3 set to (0.0, 1.0, 0.0)
     * @returns a new up Vector3
     */
   def Up(): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Gets a up Vector3 that must not be updated
     */
   def UpReadOnly: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3] = js.native
+  
   /**
     * Returns a new Vector3 set to (0.0, 0.0, 0.0)
     * @returns a new empty Vector3
     */
   def Zero(): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
   /**
     * Gets a zero Vector3 that must not be updated
     */
   def ZeroReadOnly: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3] = js.native
+  
   /** @hidden */
   def _UnprojectFromInvertedMatrixToRef(
     source: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
+  
+  var _UpReadOnly: js.Any = js.native
+  
+  var _ZeroReadOnly: js.Any = js.native
 }
-

@@ -13,13 +13,15 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/conv2d", JSImport.Namespace)
 @js.native
 object conv2dMod extends js.Object {
+  
   @js.native
   object conv2d extends js.Object {
+    
     def apply[T /* <: Tensor3D | Tensor4D */](
       x: T | TensorLike,
       filter: Tensor4D | TensorLike,
@@ -30,6 +32,4 @@ object conv2dMod extends js.Object {
       dimRoundingMode: js.UndefOr[floor | round | ceil]
     ): T = js.native
   }
-  
 }
-

@@ -8,9 +8,10 @@ import typingsSlinky.reactCartographer.reactCartographerStrings.google
 import typingsSlinky.reactCartographer.reactCartographerStrings.yahoo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Map {
+  
   @JSImport("react-cartographer", "Map")
   @js.native
   object component extends js.Object
@@ -19,21 +20,28 @@ object Map {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactCartographer.mod.Map] {
+    
     @scala.inline
     def addressLine1(value: String): this.type = set("addressLine1", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def city(value: String): this.type = set("city", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def country(value: String): this.type = set("country", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def latitude(value: Double): this.type = set("latitude", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def longitude(value: Double): this.type = set("longitude", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def state(value: String): this.type = set("state", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: MapProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     height: Double,
@@ -48,4 +56,3 @@ object Map {
     new Builder(js.Array(this.component, __props.asInstanceOf[MapProps]))
   }
 }
-

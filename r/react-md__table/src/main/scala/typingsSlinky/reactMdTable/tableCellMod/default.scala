@@ -5,7 +5,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a `<th>` or `<td>` cell with sensible styled defaults. You can create
@@ -20,4 +20,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/table/types/TableCell", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[TableCellProps with RefAttributes[TableCellElement]]]
-

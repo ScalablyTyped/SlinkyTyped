@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.angularCore.anon.Read
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ViewChildDecorator
@@ -18,6 +18,7 @@ trait ViewChildDecorator
       /* opts */ Read, 
       ViewChild
     ] {
+  
   def apply(selector: String): js.Any = js.native
   def apply(selector: String, opts: Read): js.Any = js.native
   def apply(selector: js.Function): js.Any = js.native
@@ -63,4 +64,3 @@ trait ViewChildDecorator
   def apply(selector: Type[_]): js.Any = js.native
   def apply(selector: Type[_], opts: Read): js.Any = js.native
 }
-

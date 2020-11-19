@@ -2,19 +2,12 @@ package typingsSlinky.pLocate.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("p-locate", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  // TODO: Remove this for the next major release, refactor the whole definition to:
-  // declare function pLocate<ValueType>(
-  // 	input: Iterable<PromiseLike<ValueType> | ValueType>,
-  // 	tester: (element: ValueType) => PromiseLike<boolean> | boolean,
-  // 	options?: pLocate.Options
-  // ): Promise<ValueType | undefined>;
-  // export = pLocate;
-  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof pLocate */ js.Any = js.native
+  
   /**
   	Get the first fulfilled promise that satisfies the provided testing function.
   	@param input - An iterable of promises/values to test.
@@ -45,5 +38,13 @@ object ^ extends js.Object {
     tester: js.Function1[/* element */ ValueType, js.Thenable[Boolean] | Boolean],
     options: Options
   ): js.Promise[js.UndefOr[ValueType]] = js.native
+  
+  // TODO: Remove this for the next major release, refactor the whole definition to:
+  // declare function pLocate<ValueType>(
+  // 	input: Iterable<PromiseLike<ValueType> | ValueType>,
+  // 	tester: (element: ValueType) => PromiseLike<boolean> | boolean,
+  // 	options?: pLocate.Options
+  // ): Promise<ValueType | undefined>;
+  // export = pLocate;
+  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof pLocate */ js.Any = js.native
 }
-

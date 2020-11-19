@@ -9,18 +9,20 @@ import typingsSlinky.node.nodeStrings.secureConnection
 import typingsSlinky.node.nodeStrings.tlsClientError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tls", "Server")
 @js.native
 class Server ()
   extends typingsSlinky.node.netMod.Server {
+  
   /**
     * The server.addContext() method adds a secure context that will be
     * used if the client request's SNI name matches the supplied hostname
     * (or wildcard).
     */
   def addContext(hostName: String, credentials: SecureContextOptions): Unit = js.native
+  
   @JSName("addListener")
   def addListener_OCSPRequest(
     event: OCSPRequest,
@@ -56,6 +58,7 @@ class Server ()
   def addListener_secureConnection(event: secureConnection, listener: js.Function1[/* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+  
   @JSName("emit")
   def emit_OCSPRequest(
     event: OCSPRequest,
@@ -82,10 +85,12 @@ class Server ()
   def emit_secureConnection(event: secureConnection, tlsSocket: TLSSocket): Boolean = js.native
   @JSName("emit")
   def emit_tlsClientError(event: tlsClientError, err: js.Error, tlsSocket: TLSSocket): Boolean = js.native
+  
   /**
     * Returns the session ticket keys.
     */
   def getTicketKeys(): Buffer = js.native
+  
   @JSName("on")
   def on_OCSPRequest(
     event: OCSPRequest,
@@ -121,6 +126,7 @@ class Server ()
   def on_secureConnection(event: secureConnection, listener: js.Function1[/* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   @JSName("on")
   def on_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+  
   @JSName("once")
   def once_OCSPRequest(
     event: OCSPRequest,
@@ -156,6 +162,7 @@ class Server ()
   def once_secureConnection(event: secureConnection, listener: js.Function1[/* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   @JSName("once")
   def once_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+  
   @JSName("prependListener")
   def prependListener_OCSPRequest(
     event: OCSPRequest,
@@ -191,6 +198,7 @@ class Server ()
   def prependListener_secureConnection(event: secureConnection, listener: js.Function1[/* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+  
   @JSName("prependOnceListener")
   def prependOnceListener_OCSPRequest(
     event: OCSPRequest,
@@ -226,6 +234,7 @@ class Server ()
   def prependOnceListener_secureConnection(event: secureConnection, listener: js.Function1[/* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+  
   /**
     *
     * The server.setSecureContext() method replaces the
@@ -233,6 +242,7 @@ class Server ()
     * server are not interrupted.
     */
   def setSecureContext(details: SecureContextOptions): Unit = js.native
+  
   /**
     * The server.setSecureContext() method replaces the secure context of
     * an existing server. Existing connections to the server are not
@@ -240,4 +250,3 @@ class Server ()
     */
   def setTicketKeys(keys: Buffer): Unit = js.native
 }
-

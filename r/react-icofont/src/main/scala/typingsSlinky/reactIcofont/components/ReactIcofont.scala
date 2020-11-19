@@ -21,9 +21,10 @@ import typingsSlinky.reactIcofont.reactIcofontStrings.h
 import typingsSlinky.reactIcofont.reactIcofontStrings.v
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactIcofont {
+  
   @JSImport("react-icofont", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -32,23 +33,28 @@ object ReactIcofont {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def flip(value: h | v): this.type = set("flip", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def rotate(value: `90` | `180` | `270`): this.type = set("rotate", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def size(value: `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` | `10`): this.type = set("size", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def spin(value: Boolean): this.type = set("spin", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IcofontProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(icon: String): Builder = {
     val __props = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[IcofontProps]))
   }
 }
-

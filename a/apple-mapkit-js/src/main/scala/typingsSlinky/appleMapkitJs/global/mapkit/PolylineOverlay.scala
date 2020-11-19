@@ -3,7 +3,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 import typingsSlinky.appleMapkitJs.mapkit.StylesOverlayOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An overlay made up of connected line segments that do not form a closed shape.
@@ -22,4 +22,3 @@ class PolylineOverlay protected ()
   def this(points: js.Array[typingsSlinky.appleMapkitJs.mapkit.Coordinate]) = this()
   def this(points: js.Array[typingsSlinky.appleMapkitJs.mapkit.Coordinate], options: StylesOverlayOptions) = this()
 }
-

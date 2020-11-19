@@ -4,7 +4,7 @@ import typingsSlinky.heremaps.H.geo.IPoint
 import typingsSlinky.heremaps.H.map.Circle.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A Polygon with a circular shape.
@@ -22,4 +22,3 @@ class Circle protected ()
   def this(center: IPoint, radius: Double) = this()
   def this(center: IPoint, radius: Double, opt_options: Options) = this()
 }
-

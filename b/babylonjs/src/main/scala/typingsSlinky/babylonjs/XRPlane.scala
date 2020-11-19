@@ -6,13 +6,16 @@ import typingsSlinky.babylonjs.babylonjsStrings.Vertical
 import typingsSlinky.std.DOMPointReadOnly
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait XRPlane extends XRAnchorCreator {
+  
   var lastChangedTime: Double = js.native
+  
   var orientation: Horizontal | Vertical = js.native
+  
   var planeSpace: EventTarget = js.native
+  
   var polygon: js.Array[DOMPointReadOnly] = js.native
 }
-

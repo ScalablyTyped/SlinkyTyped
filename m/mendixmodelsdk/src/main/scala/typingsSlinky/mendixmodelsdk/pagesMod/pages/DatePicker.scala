@@ -11,7 +11,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/date-picker relevant section in reference guide}
@@ -27,24 +27,25 @@ class DatePicker protected () extends AttributeWidgetWithPlaceholder {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FDatePicker: IModel = js.native
+  
   def formattingInfo: FormattingInfo = js.native
   def formattingInfo_=(newValue: FormattingInfo): Unit = js.native
+  
+  @JSName("model")
+  var model_FDatePicker: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.DatePicker")
 @js.native
 object DatePicker extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -54,6 +55,7 @@ object DatePicker extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: BuildingBlock): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -63,6 +65,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: BuildingBlock): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'footerWidget' property
@@ -72,6 +75,7 @@ object DatePicker extends js.Object {
     *  6.7.0 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'footerWidgets' property
@@ -81,6 +85,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: DataView): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -90,6 +95,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDataViewUnderWidget(container: DataView): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -99,6 +105,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: DataView): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -108,6 +115,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -117,6 +125,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: DivContainer): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -126,6 +135,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -135,6 +145,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: GroupBox): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'leftWidget' property
@@ -144,6 +155,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: Header): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'leftWidgets' property
@@ -153,6 +165,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: Header): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'rightWidget' property
@@ -162,6 +175,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: Header): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'rightWidgets' property
@@ -171,6 +185,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: Header): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -180,6 +195,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -189,6 +205,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: LayoutCallArgument): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -198,6 +215,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -207,6 +225,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: LayoutGridColumn): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -216,6 +235,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutUnderWidget(container: Layout): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -225,6 +245,7 @@ object DatePicker extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: Layout): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -234,6 +255,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -243,6 +265,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: ListViewTemplate): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -252,6 +275,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewUnderWidget(container: ListView): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -261,6 +285,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: ListView): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -270,6 +295,7 @@ object DatePicker extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: MasterDetailRegion): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -279,6 +305,7 @@ object DatePicker extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'sidebarWidgets' property
@@ -288,6 +315,7 @@ object DatePicker extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -297,6 +325,7 @@ object DatePicker extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: NativeLayoutContent): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'headerWidget' property
@@ -306,6 +335,7 @@ object DatePicker extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -315,6 +345,7 @@ object DatePicker extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -324,6 +355,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -333,6 +365,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: NavigationListItem): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'parameterWidget' property
@@ -342,6 +375,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'reportWidget' property
@@ -351,6 +385,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -360,6 +395,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -369,6 +405,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: ScrollContainerRegion): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -378,6 +415,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSnippetUnderWidget(container: Snippet): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -387,6 +425,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: Snippet): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'firstWidget' property
@@ -396,6 +435,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'firstWidgets' property
@@ -405,6 +445,7 @@ object DatePicker extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: SplitPane): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'secondWidget' property
@@ -414,6 +455,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'secondWidgets' property
@@ -423,6 +465,7 @@ object DatePicker extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: SplitPane): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -432,6 +475,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTabPageUnderWidget(container: TabPage): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -441,6 +485,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: TabPage): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -450,6 +495,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTableCellUnderWidget(container: TableCell): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -459,6 +505,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: TableCell): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widget' property
@@ -468,6 +515,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -477,6 +525,7 @@ object DatePicker extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: TemplateGridContents): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -486,6 +535,7 @@ object DatePicker extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -495,6 +545,7 @@ object DatePicker extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: WebLayoutContent): DatePicker = js.native
+  
   /**
     * Creates and returns a new DatePicker instance in the SDK and on the server.
     * The new DatePicker will be automatically stored in the 'widgets' property
@@ -504,5 +555,8 @@ object DatePicker extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): DatePicker = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

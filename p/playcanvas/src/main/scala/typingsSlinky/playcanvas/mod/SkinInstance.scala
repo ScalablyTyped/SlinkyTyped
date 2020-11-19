@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A skin instance is responsible for generating the matrix palette that is used to
@@ -17,4 +17,3 @@ class SkinInstance protected ()
   extends typingsSlinky.playcanvas.pc.SkinInstance {
   def this(skin: typingsSlinky.playcanvas.pc.Skin) = this()
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.autolinker.autolinkerMod.MentionServices
 import typingsSlinky.autolinker.matcherMatcherMod.Matcher
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("autolinker/dist/commonjs/matcher/mention-matcher", "MentionMatcher")
 @js.native
@@ -16,6 +16,7 @@ class MentionMatcher protected () extends Matcher {
     *   specified in an Object (map).
     */
   def this(cfg: MentionMatcherConfig) = this()
+  
   /**
     * Hash of regular expression to match username handles. Example match:
     *
@@ -25,6 +26,7 @@ class MentionMatcher protected () extends Matcher {
     * @property {Object} matcherRegexes
     */
   val matcherRegexes: StringDictionary[js.RegExp] = js.native
+  
   /**
     * The regular expression to use to check the character before a username match to
     * make sure we didn't accidentally match an email address.
@@ -35,6 +37,7 @@ class MentionMatcher protected () extends Matcher {
     * @property {RegExp} nonWordCharRegex
     */
   val nonWordCharRegex: js.RegExp = js.native
+  
   /**
     * @cfg {'twitter'/'instagram'/'soundcloud'} protected
     *
@@ -44,4 +47,3 @@ class MentionMatcher protected () extends Matcher {
     */
   var serviceName: MentionServices = js.native
 }
-

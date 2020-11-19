@@ -6,7 +6,7 @@ import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A single HTML File suitable for loading by the Loader.
@@ -197,4 +197,3 @@ class HTMLTextureFile protected ()
     xhrSettings: XHRSettingsObject
   ) = this()
 }
-

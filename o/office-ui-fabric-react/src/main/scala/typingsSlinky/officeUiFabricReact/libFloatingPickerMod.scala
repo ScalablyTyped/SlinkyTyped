@@ -10,11 +10,14 @@ import typingsSlinky.officeUiFabricReact.suggestionsStoreMod.SuggestionsStoreOpt
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/FloatingPicker", JSImport.Namespace)
 @js.native
 object libFloatingPickerMod extends js.Object {
+  
+  def createItem(name: String, isValid: Boolean): ISuggestionModel[IPersonaProps] = js.native
+  
   @js.native
   class BaseFloatingPeoplePicker ()
     extends typingsSlinky.officeUiFabricReact.baseFloatingPickerMod.BaseFloatingPicker[IPersonaProps, IPeopleFloatingPickerProps]
@@ -28,6 +31,27 @@ object libFloatingPickerMod extends js.Object {
   @js.native
   class FloatingPeoplePicker ()
     extends typingsSlinky.officeUiFabricReact.floatingPickerMod.FloatingPeoplePicker
+  /* static members */
+  @js.native
+  object FloatingPeoplePicker extends js.Object {
+    
+    var defaultProps: js.Any = js.native
+  }
+  
+  @js.native
+  object SuggestionItemType extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[
+        typingsSlinky.officeUiFabricReact.suggestionsControlMod.SuggestionItemType with Double
+      ] = js.native
+    
+    /* 2 */ val footer: typingsSlinky.officeUiFabricReact.suggestionsControlMod.SuggestionItemType.footer with Double = js.native
+    
+    /* 0 */ val header: typingsSlinky.officeUiFabricReact.suggestionsControlMod.SuggestionItemType.header with Double = js.native
+    
+    /* 1 */ val suggestion: typingsSlinky.officeUiFabricReact.suggestionsControlMod.SuggestionItemType.suggestion with Double = js.native
+  }
   
   @js.native
   class SuggestionsControl[T] protected ()
@@ -52,24 +76,4 @@ object libFloatingPickerMod extends js.Object {
     extends typingsSlinky.officeUiFabricReact.floatingPickerMod.SuggestionsStore[T] {
     def this(options: SuggestionsStoreOptions[T]) = this()
   }
-  
-  def createItem(name: String, isValid: Boolean): ISuggestionModel[IPersonaProps] = js.native
-  /* static members */
-  @js.native
-  object FloatingPeoplePicker extends js.Object {
-    var defaultProps: js.Any = js.native
-  }
-  
-  @js.native
-  object SuggestionItemType extends js.Object {
-    /* 2 */ val footer: typingsSlinky.officeUiFabricReact.suggestionsControlMod.SuggestionItemType.footer with Double = js.native
-    /* 0 */ val header: typingsSlinky.officeUiFabricReact.suggestionsControlMod.SuggestionItemType.header with Double = js.native
-    /* 1 */ val suggestion: typingsSlinky.officeUiFabricReact.suggestionsControlMod.SuggestionItemType.suggestion with Double = js.native
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[
-        typingsSlinky.officeUiFabricReact.suggestionsControlMod.SuggestionItemType with Double
-      ] = js.native
-  }
-  
 }
-

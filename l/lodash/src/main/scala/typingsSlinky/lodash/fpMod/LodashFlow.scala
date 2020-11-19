@@ -3,10 +3,11 @@ package typingsSlinky.lodash.fpMod
 import typingsSlinky.lodash.mod.Many
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashFlow extends LodashConvertible {
+  
   def apply(funcs: js.Array[Many[js.Function1[/* repeated */ _, _]]]): js.Function1[/* repeated */ js.Any, _] = js.native
   def apply[R1, R2](f1: js.Function0[R1], f2: js.Function1[/* a */ R1, R2]): js.Function0[R2] = js.native
   def apply[R1, R2, R3](f1: js.Function0[R1], f2: js.Function1[/* a */ R1, R2], f3: js.Function1[/* a */ R2, R3]): js.Function0[R3] = js.native
@@ -287,4 +288,3 @@ trait LodashFlow extends LodashConvertible {
     funcs: (Many[js.Function1[/* a */ _, _]])*
   ): js.Function5[/* a1 */ A1, /* a2 */ A2, /* a3 */ A3, /* a4 */ A4, /* repeated */ js.Any, _] = js.native
 }
-

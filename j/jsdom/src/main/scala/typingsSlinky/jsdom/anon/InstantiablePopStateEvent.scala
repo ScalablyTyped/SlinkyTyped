@@ -6,10 +6,9 @@ import org.scalajs.dom.raw.PopStateEvent
 import typingsSlinky.std.PopStateEventInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantiablePopStateEvent
   extends Instantiable1[/* type */ String, PopStateEvent]
      with Instantiable2[/* type */ String, /* eventInitDict */ PopStateEventInit, PopStateEvent]
-

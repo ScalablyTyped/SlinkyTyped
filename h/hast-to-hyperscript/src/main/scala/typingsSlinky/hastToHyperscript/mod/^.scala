@@ -4,11 +4,12 @@ import typingsSlinky.std.ReturnType
 import typingsSlinky.unist.mod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("hast-to-hyperscript", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Hast utility to transform a tree to something else through a hyperscript DSL.
     *
@@ -21,4 +22,3 @@ object ^ extends js.Object {
   def apply[H /* <: CreateElementLike */](h: H, tree: Node, options: Options): ReturnType[H] = js.native
   def apply[H /* <: CreateElementLike */](h: H, tree: Node, options: Prefix): ReturnType[H] = js.native
 }
-

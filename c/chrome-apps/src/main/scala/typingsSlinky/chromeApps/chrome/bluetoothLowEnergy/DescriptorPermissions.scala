@@ -4,7 +4,7 @@ import typingsSlinky.chromeApps.chromeAppsStrings.read_
 import typingsSlinky.chromeApps.chromeAppsStrings.write_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.chromeApps.chromeAppsStrings.read_
@@ -15,19 +15,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.chromeApps.chromeAppsStrings.encryptedAuthenticatedWrite
 */
 trait DescriptorPermissions extends js.Object
-
 object DescriptorPermissions {
+  
   @scala.inline
   def encryptedAuthenticatedRead: typingsSlinky.chromeApps.chromeAppsStrings.encryptedAuthenticatedRead = "encryptedAuthenticatedRead".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.encryptedAuthenticatedRead]
+  
   @scala.inline
   def encryptedAuthenticatedWrite: typingsSlinky.chromeApps.chromeAppsStrings.encryptedAuthenticatedWrite = "encryptedAuthenticatedWrite".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.encryptedAuthenticatedWrite]
+  
   @scala.inline
   def encryptedRead: typingsSlinky.chromeApps.chromeAppsStrings.encryptedRead = "encryptedRead".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.encryptedRead]
+  
   @scala.inline
   def encryptedWrite: typingsSlinky.chromeApps.chromeAppsStrings.encryptedWrite = "encryptedWrite".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.encryptedWrite]
+  
   @scala.inline
   def read: read_ = "read".asInstanceOf[read_]
+  
   @scala.inline
   def write: write_ = "write".asInstanceOf[write_]
 }
-

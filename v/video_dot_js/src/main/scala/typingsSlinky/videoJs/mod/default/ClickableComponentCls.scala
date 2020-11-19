@@ -3,7 +3,7 @@ package typingsSlinky.videoJs.mod.default
 import typingsSlinky.videoJs.mod.videojs.ComponentOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js", "ClickableComponent")
 @js.native
@@ -21,4 +21,3 @@ class ClickableComponentCls protected ()
   def this(player: typingsSlinky.videoJs.mod.videojs.Player) = this()
   def this(player: typingsSlinky.videoJs.mod.videojs.Player, options: ComponentOptions) = this()
 }
-

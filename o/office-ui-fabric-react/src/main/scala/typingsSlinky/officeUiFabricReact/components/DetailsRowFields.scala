@@ -9,9 +9,10 @@ import typingsSlinky.officeUiFabricReact.detailsRowFieldsTypesMod.IDetailsRowFie
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DetailsRowFields {
+  
   @JSImport("office-ui-fabric-react", "DetailsRowFields")
   @js.native
   object component extends js.Object
@@ -20,16 +21,21 @@ object DetailsRowFields {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def cellStyleProps(value: ICellStyleProps): this.type = set("cellStyleProps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def enableUpdateAnimations(value: Boolean): this.type = set("enableUpdateAnimations", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def getCellValueKey(
       value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => String
     ): this.type = set("getCellValueKey", js.Any.fromFunction3(value))
+    
     @scala.inline
     def onRenderItemColumn(
       value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => ReactElement
@@ -37,6 +43,7 @@ object DetailsRowFields {
   }
   
   def withProps(p: IDetailsRowFieldsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     columnStartIndex: Double,
@@ -49,4 +56,3 @@ object DetailsRowFields {
     new Builder(js.Array(this.component, __props.asInstanceOf[IDetailsRowFieldsProps]))
   }
 }
-

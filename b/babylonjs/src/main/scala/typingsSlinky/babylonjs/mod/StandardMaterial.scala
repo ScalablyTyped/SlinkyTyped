@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "StandardMaterial")
 @js.native
@@ -18,51 +18,59 @@ class StandardMaterial protected ()
     */
   def this(name: String, scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
 }
-
 /* static members */
 @JSImport("babylonjs", "StandardMaterial")
 @js.native
 object StandardMaterial extends js.Object {
+  
   /**
     * Are ambient textures enabled in the application.
     */
   def AmbientTextureEnabled: Boolean = js.native
-  def AmbientTextureEnabled(value: Boolean): js.Any = js.native
+  def AmbientTextureEnabled_=(value: Boolean): Unit = js.native
+  
   /**
     * Are bump textures enabled in the application.
     */
   def BumpTextureEnabled: Boolean = js.native
-  def BumpTextureEnabled(value: Boolean): js.Any = js.native
+  def BumpTextureEnabled_=(value: Boolean): Unit = js.native
+  
   /**
     * Are color grading textures enabled in the application.
     */
   def ColorGradingTextureEnabled: Boolean = js.native
-  def ColorGradingTextureEnabled(value: Boolean): js.Any = js.native
+  def ColorGradingTextureEnabled_=(value: Boolean): Unit = js.native
+  
   /**
     * Are diffuse textures enabled in the application.
     */
   def DiffuseTextureEnabled: Boolean = js.native
-  def DiffuseTextureEnabled(value: Boolean): js.Any = js.native
+  def DiffuseTextureEnabled_=(value: Boolean): Unit = js.native
+  
   /**
     * Are emissive textures enabled in the application.
     */
   def EmissiveTextureEnabled: Boolean = js.native
-  def EmissiveTextureEnabled(value: Boolean): js.Any = js.native
+  def EmissiveTextureEnabled_=(value: Boolean): Unit = js.native
+  
   /**
     * Are fresnels enabled in the application.
     */
   def FresnelEnabled: Boolean = js.native
-  def FresnelEnabled(value: Boolean): js.Any = js.native
+  def FresnelEnabled_=(value: Boolean): Unit = js.native
+  
   /**
     * Are lightmap textures enabled in the application.
     */
   def LightmapTextureEnabled: Boolean = js.native
-  def LightmapTextureEnabled(value: Boolean): js.Any = js.native
+  def LightmapTextureEnabled_=(value: Boolean): Unit = js.native
+  
   /**
     * Are opacity textures enabled in the application.
     */
   def OpacityTextureEnabled: Boolean = js.native
-  def OpacityTextureEnabled(value: Boolean): js.Any = js.native
+  def OpacityTextureEnabled_=(value: Boolean): Unit = js.native
+  
   /**
     * Creates a standard material from parsed material data
     * @param source defines the JSON representation of the material
@@ -71,20 +79,22 @@ object StandardMaterial extends js.Object {
     * @returns a new standard material
     */
   def Parse(source: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): typingsSlinky.babylonjs.standardMaterialMod.StandardMaterial = js.native
+  
   /**
     * Are reflection textures enabled in the application.
     */
   def ReflectionTextureEnabled: Boolean = js.native
-  def ReflectionTextureEnabled(value: Boolean): js.Any = js.native
+  def ReflectionTextureEnabled_=(value: Boolean): Unit = js.native
+  
   /**
     * Are refraction textures enabled in the application.
     */
   def RefractionTextureEnabled: Boolean = js.native
-  def RefractionTextureEnabled(value: Boolean): js.Any = js.native
+  def RefractionTextureEnabled_=(value: Boolean): Unit = js.native
+  
   /**
     * Are specular textures enabled in the application.
     */
   def SpecularTextureEnabled: Boolean = js.native
-  def SpecularTextureEnabled(value: Boolean): js.Any = js.native
+  def SpecularTextureEnabled_=(value: Boolean): Unit = js.native
 }
-

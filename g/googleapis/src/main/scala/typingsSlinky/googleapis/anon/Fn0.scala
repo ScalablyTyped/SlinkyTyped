@@ -6,13 +6,13 @@ import typingsSlinky.googleapis.googleapisStrings.v1
 import typingsSlinky.googleapis.googleapisStrings.v1beta
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Fn0 extends js.Object {
+  
   def apply(options: Options): Accesscontextmanager = js.native
   def apply(options: typingsSlinky.googleapis.v1betaMod.accesscontextmanagerV1beta.Options): typingsSlinky.googleapis.v1betaMod.accesscontextmanagerV1beta.Accesscontextmanager = js.native
   def apply(version: v1): Accesscontextmanager = js.native
   def apply(version: v1beta): typingsSlinky.googleapis.v1betaMod.accesscontextmanagerV1beta.Accesscontextmanager = js.native
 }
-

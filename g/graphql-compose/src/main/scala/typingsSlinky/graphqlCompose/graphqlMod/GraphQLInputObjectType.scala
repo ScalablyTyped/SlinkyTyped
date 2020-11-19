@@ -4,7 +4,7 @@ import typingsSlinky.graphql.anon.ReadonlyGraphQLInputObjec
 import typingsSlinky.graphqlCompose.inputTypeComposerMod._InputTypeComposeDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-compose/lib/graphql", "GraphQLInputObjectType")
 @js.native
@@ -13,4 +13,3 @@ class GraphQLInputObjectType protected ()
      with _InputTypeComposeDefinition {
   def this(config: ReadonlyGraphQLInputObjec) = this()
 }
-

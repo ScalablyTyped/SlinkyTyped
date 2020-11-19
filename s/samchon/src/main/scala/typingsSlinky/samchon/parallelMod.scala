@@ -7,11 +7,12 @@ import typingsSlinky.samchon.invokeMod.Invoke
 import typingsSlinky.samchon.iparallelserverMod.IParallelServer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("samchon/templates/parallel", JSImport.Namespace)
 @js.native
 object parallelMod extends js.Object {
+  
   @js.native
   class MediatorClient protected ()
     extends typingsSlinky.samchon.mediatorClientMod.MediatorClient {
@@ -197,6 +198,4 @@ object parallelMod extends js.Object {
     */
   abstract class ParallelSystemArrayMediator[System /* <: typingsSlinky.samchon.parallelSystemMod.ParallelSystem */] ()
     extends typingsSlinky.samchon.parallelSystemArrayMediatorMod.ParallelSystemArrayMediator[System]
-  
 }
-

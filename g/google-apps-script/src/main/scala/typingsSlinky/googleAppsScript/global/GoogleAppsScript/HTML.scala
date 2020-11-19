@@ -2,11 +2,12 @@ package typingsSlinky.googleAppsScript.global.GoogleAppsScript
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("GoogleAppsScript.HTML")
 @js.native
 object HTML extends js.Object {
+  
   /**
     * An enum representing the sandbox modes that can be used for client-side HtmlService
     * scripts. These values can be accessed from HtmlService.SandboxMode, and set by calling
@@ -34,11 +35,15 @@ object HTML extends js.Object {
     */
   @js.native
   object SandboxMode extends js.Object {
-    /* 0 */ val EMULATED: typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.SandboxMode.EMULATED with Double = js.native
-    /* 1 */ val IFRAME: typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.SandboxMode.IFRAME with Double = js.native
-    /* 2 */ val NATIVE: typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.SandboxMode.NATIVE with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.SandboxMode with Double] = js.native
+    
+    /* 0 */ val EMULATED: typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.SandboxMode.EMULATED with Double = js.native
+    
+    /* 1 */ val IFRAME: typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.SandboxMode.IFRAME with Double = js.native
+    
+    /* 2 */ val NATIVE: typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.SandboxMode.NATIVE with Double = js.native
   }
   
   /**
@@ -57,13 +62,14 @@ object HTML extends js.Object {
     */
   @js.native
   object XFrameOptionsMode extends js.Object {
-    /* 0 */ val ALLOWALL: typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.XFrameOptionsMode.ALLOWALL with Double = js.native
-    /* 1 */ val DEFAULT: typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.XFrameOptionsMode.DEFAULT with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[
         typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.XFrameOptionsMode with Double
       ] = js.native
+    
+    /* 0 */ val ALLOWALL: typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.XFrameOptionsMode.ALLOWALL with Double = js.native
+    
+    /* 1 */ val DEFAULT: typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.XFrameOptionsMode.DEFAULT with Double = js.native
   }
-  
 }
-

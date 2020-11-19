@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.configMod.ConfigurationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.TokenFileWebIdentityCredentials")
 @js.native
@@ -15,4 +15,3 @@ class TokenFileWebIdentityCredentials ()
   extends typingsSlinky.awsSdk.mod.TokenFileWebIdentityCredentials {
   def this(clientConfig: ConfigurationOptions) = this()
 }
-

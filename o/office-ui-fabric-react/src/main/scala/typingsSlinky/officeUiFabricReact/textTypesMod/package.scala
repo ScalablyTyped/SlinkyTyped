@@ -2,9 +2,10 @@ package typingsSlinky.officeUiFabricReact
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object textTypesMod {
+  
   type ITextComponent = typingsSlinky.uifabricFoundation.libIcomponentMod.IComponent[
     typingsSlinky.officeUiFabricReact.textTypesMod.ITextProps, 
     typingsSlinky.officeUiFabricReact.textTypesMod.ITextTokens, 
@@ -12,7 +13,9 @@ package object textTypesMod {
     typingsSlinky.officeUiFabricReact.textTypesMod.ITextProps, 
     js.Object
   ]
+  
   type ITextSlot = typingsSlinky.uifabricFoundation.libIslotsMod.ISlotProp[typingsSlinky.officeUiFabricReact.textTypesMod.ITextProps, java.lang.String]
+  
   type ITextStylesReturnType = typingsSlinky.std.ReturnType[
     typingsSlinky.std.Extract[
       typingsSlinky.uifabricFoundation.libIcomponentMod.IStylesFunctionOrObject[
@@ -23,6 +26,7 @@ package object textTypesMod {
       js.Function
     ]
   ]
+  
   type ITextTokenReturnType = typingsSlinky.std.ReturnType[
     typingsSlinky.std.Extract[
       typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunctionOrObject[

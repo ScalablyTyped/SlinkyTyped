@@ -3,7 +3,7 @@ package typingsSlinky.grammarkdown.mod
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.QuestionToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown", "Terminal")
 @js.native
@@ -16,4 +16,3 @@ class Terminal ()
   ) = this()
   def this(text: String, questionToken: typingsSlinky.grammarkdown.nodesMod.Token[QuestionToken]) = this()
 }
-

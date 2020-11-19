@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Image")
 @js.native
@@ -15,7 +15,6 @@ class Image ()
   def this(width: js.UndefOr[scala.Nothing], height: Double) = this()
   def this(width: Double, height: Double) = this()
 }
-
 @JSGlobal("Image")
 @js.native
 object Image
@@ -26,4 +25,3 @@ object Image
       /* height */ Double, 
       org.scalajs.dom.raw.HTMLImageElement
     ]
-

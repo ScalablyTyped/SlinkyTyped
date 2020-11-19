@@ -4,7 +4,7 @@ import typingsSlinky.electron.Electron.MenuItem
 import typingsSlinky.electron.Electron.MenuItemConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Electron.remote.MenuItem")
 @js.native
@@ -15,4 +15,3 @@ class MenuItemCls protected () extends MenuItem {
     */
   def this(options: MenuItemConstructorOptions) = this()
 }
-

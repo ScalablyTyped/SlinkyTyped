@@ -70,12 +70,11 @@ import typingsSlinky.semanticUiProgress.semanticUiProgressStrings.value
 import typingsSlinky.semanticUiProgress.semanticUiProgressStrings.verbose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQuery extends js.Object {
-  @JSName("progress")
-  var progress_Original: Progress = js.native
+  
   def progress(): JQuery = js.native
   def progress(behavior: setting, name: autoSuccess, value: js.UndefOr[scala.Nothing]): Boolean = js.native
   def progress(behavior: setting, name: autoSuccess, value: Boolean): JQuery = js.native
@@ -151,6 +150,8 @@ trait JQuery extends js.Object {
   def progress_ErrorSettings(behavior: setting, name: error, value: js.UndefOr[scala.Nothing]): ErrorSettings = js.native
   @JSName("progress")
   def progress_MetadataSettings(behavior: setting, name: metadata, value: js.UndefOr[scala.Nothing]): MetadataSettings = js.native
+  @JSName("progress")
+  var progress_Original: Progress = js.native
   @JSName("progress")
   def progress_RandomSettings(behavior: setting, name: random, value: js.UndefOr[scala.Nothing]): RandomSettings = js.native
   @JSName("progress")
@@ -311,4 +312,3 @@ trait JQuery extends js.Object {
   @JSName("progress")
   def progress_updateprogress(behavior: `update progress`, value: Double): JQuery = js.native
 }
-

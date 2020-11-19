@@ -8,9 +8,10 @@ import typingsSlinky.materialUi.materialUiStrings.right
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ToolbarGroup {
+  
   @JSImport("material-ui", "ToolbarGroup")
   @js.native
   object component extends js.Object
@@ -19,19 +20,24 @@ object ToolbarGroup {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.materialUi.mod.ToolbarGroup] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def firstChild(value: Boolean): this.type = set("firstChild", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def float(value: left | right): this.type = set("float", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def lastChild(value: Boolean): this.type = set("lastChild", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ToolbarGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: ToolbarGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

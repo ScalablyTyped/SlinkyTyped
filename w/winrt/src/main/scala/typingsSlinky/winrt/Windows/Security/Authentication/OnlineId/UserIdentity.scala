@@ -3,12 +3,12 @@ package typingsSlinky.winrt.Windows.Security.Authentication.OnlineId
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait UserIdentity extends IUserIdentity
-
 object UserIdentity {
+  
   @scala.inline
   def apply(
     firstName: String,
@@ -24,4 +24,3 @@ object UserIdentity {
     __obj.asInstanceOf[UserIdentity]
   }
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsTransactionsV3Transactio
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2TransactionDecisionValueSpec
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("actions-on-google", "TransactionDecision")
 @js.native
@@ -19,4 +19,3 @@ class TransactionDecision ()
   def this(options: GoogleActionsTransactionsV3TransactionDecisionValueSpec) = this()
   def this(options: GoogleActionsV2TransactionDecisionValueSpec) = this()
 }
-

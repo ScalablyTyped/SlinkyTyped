@@ -3,17 +3,17 @@ package typingsSlinky.nodegit.mod
 import typingsSlinky.nodegit.revertMod.RevertOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("nodegit", "Revert")
 @js.native
 class Revert ()
   extends typingsSlinky.nodegit.revertMod.Revert
-
 /* static members */
 @JSImport("nodegit", "Revert")
 @js.native
 object Revert extends js.Object {
+  
   /**
     * Reverts the given commit against the given "our" commit, producing an index that reflects the result of the revert.
     */
@@ -30,6 +30,7 @@ object Revert extends js.Object {
     mainline: Double,
     mergeOptions: typingsSlinky.nodegit.mergeOptionsMod.MergeOptions
   ): js.Promise[Index] = js.native
+  
   def revert(
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     commit: typingsSlinky.nodegit.commitMod.Commit
@@ -40,4 +41,3 @@ object Revert extends js.Object {
     givenOpts: RevertOptions
   ): js.Promise[Double] = js.native
 }
-

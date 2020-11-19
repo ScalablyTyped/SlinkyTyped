@@ -11,9 +11,10 @@ import typingsSlinky.storybookAddonActions.anon.PickDetailedHTMLPropsHTML
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Action {
+  
   @JSImport("@storybook/addon-actions/dist/components/ActionLogger/style", "Action")
   @js.native
   object component extends js.Object
@@ -23,6 +24,6 @@ object Action {
       (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with (Omit[PickDetailedHTMLPropsHTML, theme]) with `0`[Theme]
     ]
   ): SharedBuilder_PropsWithChildren526938709[HTMLDivElement] = new SharedBuilder_PropsWithChildren526938709[HTMLDivElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Action.type): SharedBuilder_PropsWithChildren526938709[HTMLDivElement] = new SharedBuilder_PropsWithChildren526938709[HTMLDivElement](js.Array(this.component, js.Dictionary.empty))()
 }
-

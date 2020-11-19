@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.ImageryLayer
 import typingsSlinky.arcgisJsApi.esri.ImageryLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/layers/ImageryLayer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends ImageryLayer {
   def this(properties: ImageryLayerProperties) = this()
 }
-

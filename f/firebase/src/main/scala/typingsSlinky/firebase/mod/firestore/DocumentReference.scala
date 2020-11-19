@@ -5,29 +5,12 @@ import typingsSlinky.firebase.anon.Next
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "firestore.DocumentReference")
 @js.native
 class DocumentReference[T] protected () extends js.Object {
-  /**
-    * The {@link firebase.firestore.Firestore} the document is in.
-    * This is useful for performing transactions, for example.
-    */
-  val firestore: Firestore = js.native
-  /**
-    * The document's identifier within its collection.
-    */
-  val id: String = js.native
-  /**
-    * The Collection this `DocumentReference` belongs to.
-    */
-  val parent: CollectionReference[T] = js.native
-  /**
-    * A string representing the path of the referenced document (relative
-    * to the root of the database).
-    */
-  val path: String = js.native
+  
   /**
     * Gets a `CollectionReference` instance that refers to the collection at
     * the specified path.
@@ -36,6 +19,7 @@ class DocumentReference[T] protected () extends js.Object {
     * @return The `CollectionReference` instance.
     */
   def collection(collectionPath: String): CollectionReference[DocumentData] = js.native
+  
   /**
     * Deletes the document referred to by this `DocumentReference`.
     *
@@ -44,6 +28,13 @@ class DocumentReference[T] protected () extends js.Object {
     * offline).
     */
   def delete(): js.Promise[Unit] = js.native
+  
+  /**
+    * The {@link firebase.firestore.Firestore} the document is in.
+    * This is useful for performing transactions, for example.
+    */
+  val firestore: Firestore = js.native
+  
   /**
     * Reads the document referred to by this `DocumentReference`.
     *
@@ -58,6 +49,12 @@ class DocumentReference[T] protected () extends js.Object {
     */
   def get(): js.Promise[DocumentSnapshot[T]] = js.native
   def get(options: GetOptions): js.Promise[DocumentSnapshot[T]] = js.native
+  
+  /**
+    * The document's identifier within its collection.
+    */
+  val id: String = js.native
+  
   /**
     * Returns true if this `DocumentReference` is equal to the provided one.
     *
@@ -65,6 +62,7 @@ class DocumentReference[T] protected () extends js.Object {
     * @return true if this `DocumentReference` is equal to the provided one.
     */
   def isEqual(other: DocumentReference[T]): Boolean = js.native
+  
   /**
     * Attaches a listener for DocumentSnapshot events. You may either pass
     * individual `onNext` and `onError` callbacks or pass a single observer
@@ -156,6 +154,18 @@ class DocumentReference[T] protected () extends js.Object {
     onError: js.Function1[/* error */ js.Error, Unit],
     onCompletion: js.Function0[Unit]
   ): js.Function0[Unit] = js.native
+  
+  /**
+    * The Collection this `DocumentReference` belongs to.
+    */
+  val parent: CollectionReference[T] = js.native
+  
+  /**
+    * A string representing the path of the referenced document (relative
+    * to the root of the database).
+    */
+  val path: String = js.native
+  
   /**
     * Writes to the document referred to by this `DocumentReference`. If the
     * document does not yet exist, it will be created. If you pass
@@ -177,6 +187,7 @@ class DocumentReference[T] protected () extends js.Object {
     * to the backend (Note that it won't resolve while you're offline).
     */
   def set(data: Partial[T], options: SetOptions): js.Promise[Unit] = js.native
+  
   /**
     * Updates fields in the document referred to by this `DocumentReference`.
     * The update will fail if applied to a document that does not exist.
@@ -203,6 +214,7 @@ class DocumentReference[T] protected () extends js.Object {
     */
   def update(field: String, value: js.Any, moreFieldsAndValues: js.Any*): js.Promise[Unit] = js.native
   def update(field: FieldPath, value: js.Any, moreFieldsAndValues: js.Any*): js.Promise[Unit] = js.native
+  
   /**
     * Applies a custom data converter to this DocumentReference, allowing you
     * to use your own custom model objects with Firestore. When you call
@@ -215,4 +227,3 @@ class DocumentReference[T] protected () extends js.Object {
     */
   def withConverter[U](converter: FirestoreDataConverter[U]): DocumentReference[U] = js.native
 }
-

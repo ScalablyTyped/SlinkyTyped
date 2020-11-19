@@ -5,7 +5,7 @@ import typingsSlinky.rcMentions.mentionsContextMod.MentionsContextProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * We only use Menu to display the candidate.
@@ -14,6 +14,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DropdownMenu
   extends Component[DropdownMenuProps, js.Object, js.Any] {
+  
   def renderDropdown(hasNotFoundContentActiveIndexSetActiveIndexSelectOptionOnFocusOnBlur: MentionsContextProps): ReactElement = js.native
 }
-

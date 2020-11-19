@@ -7,11 +7,12 @@ import typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType
 import typingsSlinky.relayRuntime.relayStoreTypesMod.Environment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-relay/lib/relay-experimental/preloadQuery", JSImport.Namespace)
 @js.native
 object preloadQueryMod extends js.Object {
+  
   @JSName("preloadQuery")
   def preloadQuery_variables[TQuery /* <: OperationType */, TEnvironmentProviderOptions](
     environment: Environment,
@@ -50,4 +51,3 @@ object preloadQueryMod extends js.Object {
     environmentProviderOptions: TEnvironmentProviderOptions
   ): PreloadedQuery[TQuery, TEnvironmentProviderOptions] = js.native
 }
-

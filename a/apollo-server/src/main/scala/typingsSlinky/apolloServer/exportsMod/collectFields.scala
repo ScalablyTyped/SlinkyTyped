@@ -7,11 +7,12 @@ import typingsSlinky.graphqlToolsUtils.interfacesMod.GraphQLExecutionContext
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server/dist/exports", "collectFields")
 @js.native
 object collectFields extends js.Object {
+  
   def apply(
     exeContext: GraphQLExecutionContext,
     runtimeType: GraphQLObjectType[_, _],
@@ -20,4 +21,3 @@ object collectFields extends js.Object {
     visitedFragmentNames: Record[String, Boolean]
   ): Record[String, js.Array[FieldNode]] = js.native
 }
-

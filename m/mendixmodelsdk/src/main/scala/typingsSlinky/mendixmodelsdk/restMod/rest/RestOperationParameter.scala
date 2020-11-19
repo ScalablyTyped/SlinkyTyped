@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflowParameter
 import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.11.0: removed experimental
@@ -27,10 +27,11 @@ class RestOperationParameter protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FRestOperationParameter: IModel = js.native
+  
   def containerAsPublishedRestService: PublishedRestService = js.native
+  
   def containerAsPublishedRestServiceOperation: PublishedRestServiceOperation = js.native
+  
   /**
     * The value of this property is conceptually of type dataTypes.LegacyDataType.
     *
@@ -38,40 +39,49 @@ class RestOperationParameter protected () extends Element {
     */
   def dataType: String = js.native
   def dataType_=(newValue: String): Unit = js.native
+  
   /**
     * In version 8.3.0: introduced
     */
   def description: String = js.native
   def description_=(newValue: String): Unit = js.native
+  
   /**
     * In version 7.17.0: introduced
     */
   def microflowParameter: IMicroflowParameter | Null = js.native
+  
   def microflowParameterQualifiedName: String | Null = js.native
+  
   def microflowParameter_=(newValue: IMicroflowParameter | Null): Unit = js.native
+  
+  @JSName("model")
+  var model_FRestOperationParameter: IModel = js.native
+  
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native
+  
   def parameterType: RestOperationParameterType = js.native
   def parameterType_=(newValue: RestOperationParameterType): Unit = js.native
+  
   /**
     * In version 7.17.0: introduced
     */
   def `type`: DataType = js.native
   def type_=(newValue: DataType): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/rest", "rest.RestOperationParameter")
 @js.native
 object RestOperationParameter extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new RestOperationParameter instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): RestOperationParameter = js.native
+  
   /**
     * Creates and returns a new RestOperationParameter instance in the SDK and on the server.
     * The new RestOperationParameter will be automatically stored in the 'parameters' property
@@ -81,6 +91,7 @@ object RestOperationParameter extends js.Object {
     *  7.17.0 and higher
     */
   def createInPublishedRestServiceOperationUnderParameters(container: PublishedRestServiceOperation): RestOperationParameter = js.native
+  
   /**
     * Creates and returns a new RestOperationParameter instance in the SDK and on the server.
     * The new RestOperationParameter will be automatically stored in the 'parameters' property
@@ -90,5 +101,8 @@ object RestOperationParameter extends js.Object {
     *  7.17.0 and higher
     */
   def createInPublishedRestServiceUnderParameters(container: PublishedRestService): RestOperationParameter = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.applepayjs.ApplePayJS
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A type that indicates how purchased items are to be shipped.
@@ -14,15 +14,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.applepayjs.applepayjsStrings.servicePickup
 */
 trait ApplePayShippingType extends js.Object
-
 object ApplePayShippingType {
+  
   @scala.inline
   def delivery: typingsSlinky.applepayjs.applepayjsStrings.delivery = "delivery".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.delivery]
+  
   @scala.inline
   def servicePickup: typingsSlinky.applepayjs.applepayjsStrings.servicePickup = "servicePickup".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.servicePickup]
+  
   @scala.inline
   def shipping: typingsSlinky.applepayjs.applepayjsStrings.shipping = "shipping".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.shipping]
+  
   @scala.inline
   def storePickup: typingsSlinky.applepayjs.applepayjsStrings.storePickup = "storePickup".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.storePickup]
 }
-

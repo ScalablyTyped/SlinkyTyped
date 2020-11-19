@@ -4,7 +4,7 @@ import typingsSlinky.jestHasteMap.mod.FS
 import typingsSlinky.jestSnapshot.mod.SnapshotResolver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * DependencyResolver is used to resolve the direct dependencies of a module or
@@ -19,4 +19,3 @@ class ^ protected () extends DependencyResolver {
     snapshotResolver: SnapshotResolver
   ) = this()
 }
-

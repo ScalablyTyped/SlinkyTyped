@@ -6,15 +6,15 @@ import typingsSlinky.sharepoint.sharepointStrings.loadeddata
 import typingsSlinky.std.GlobalEventHandlers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AttachEvent")
 @js.native
 object AttachEvent_loadeddata extends js.Object {
+  
   def apply(
     `type`: loadeddata,
     eventFunc: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     el: GlobalEventHandlers
   ): js.Any = js.native
 }
-

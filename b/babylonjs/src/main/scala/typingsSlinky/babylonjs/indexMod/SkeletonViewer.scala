@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "SkeletonViewer")
 @js.native
@@ -39,9 +39,19 @@ class SkeletonViewer protected ()
   mesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     /** defines a boolean indicating if bones matrices must be forced to update before rendering (true by default)  */
+  autoUpdateBonesMatrices: js.UndefOr[scala.Nothing],
+    /** defines the rendering group id to use with the viewer */
+  renderingGroupId: Double
+  ) = this()
+  def this(
+    /** defines the skeleton to render */
+  skeleton: typingsSlinky.babylonjs.skeletonMod.Skeleton,
+    /** defines the mesh attached to the skeleton */
+  mesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    /** defines a boolean indicating if bones matrices must be forced to update before rendering (true by default)  */
   autoUpdateBonesMatrices: Boolean,
     /** defines the rendering group id to use with the viewer */
   renderingGroupId: Double
   ) = this()
 }
-

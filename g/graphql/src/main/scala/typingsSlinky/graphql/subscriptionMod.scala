@@ -11,11 +11,12 @@ import typingsSlinky.std.AsyncIterable
 import typingsSlinky.std.AsyncIterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/subscription", JSImport.Namespace)
 @js.native
 object subscriptionMod extends js.Object {
+  
   def createSourceEventStream(schema: GraphQLSchema, document: DocumentNode): js.Promise[AsyncIterable[_] | (ExecutionResult[StringDictionary[_], StringDictionary[_]])] = js.native
   def createSourceEventStream(
     schema: GraphQLSchema,
@@ -189,6 +190,7 @@ object subscriptionMod extends js.Object {
     variableValues: StringDictionary[js.Any],
     operationName: Maybe[String]
   ): js.Promise[AsyncIterable[_] | (ExecutionResult[StringDictionary[_], StringDictionary[_]])] = js.native
+  
   def subscribe(args: SubscriptionArgs): js.Promise[
     (AsyncIterableIterator[ExecutionResult[StringDictionary[_], StringDictionary[_]]]) | (ExecutionResult[StringDictionary[_], StringDictionary[_]])
   ] = js.native
@@ -205,4 +207,3 @@ object subscriptionMod extends js.Object {
     (AsyncIterableIterator[ExecutionResult[StringDictionary[_], StringDictionary[_]]]) | (ExecutionResult[StringDictionary[_], StringDictionary[_]])
   ] = js.native
 }
-

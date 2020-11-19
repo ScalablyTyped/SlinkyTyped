@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.mod
 import typingsSlinky.playcanvas.anon.AutoResolve
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new render target. A color buffer or a depth buffer must be set.
@@ -48,4 +48,3 @@ class RenderTarget protected ()
   extends typingsSlinky.playcanvas.pc.RenderTarget {
   def this(options: AutoResolve) = this()
 }
-

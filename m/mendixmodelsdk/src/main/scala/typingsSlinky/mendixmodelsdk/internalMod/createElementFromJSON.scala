@@ -5,11 +5,12 @@ import typingsSlinky.mendixmodelsdk.transportInterfacesMod.IAbstractElementJson
 import typingsSlinky.mendixmodelsdk.utilsMod.utils.IMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/sdk/internal", "createElementFromJSON")
 @js.native
 object createElementFromJSON extends js.Object {
+  
   def apply(model: IAbstractModel, json: IAbstractElementJson): typingsSlinky.mendixmodelsdk.elementsMod.Element = js.native
   def apply(
     model: IAbstractModel,
@@ -17,4 +18,3 @@ object createElementFromJSON extends js.Object {
     idToStructureMap: IMap[typingsSlinky.mendixmodelsdk.structuresMod.Structure]
   ): typingsSlinky.mendixmodelsdk.elementsMod.Element = js.native
 }
-

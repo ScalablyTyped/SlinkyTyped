@@ -22,11 +22,12 @@ import typingsSlinky.ineum.ineumStrings.wrapEventHandlers
 import typingsSlinky.ineum.ineumStrings.wrapTimers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @JSName("ineum")
   def ineum_autoClearResourceTimings(command: autoClearResourceTimings, enable: Boolean): Unit = js.native
   @JSName("ineum")
@@ -101,4 +102,3 @@ object global extends js.Object {
   @JSName("ineum")
   def ineum_wrapTimers(command: wrapTimers, enable: Boolean): Unit = js.native
 }
-

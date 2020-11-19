@@ -32,7 +32,7 @@ import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedOperatio
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedParameter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/data-types relevant section in reference guide}
@@ -55,47 +55,65 @@ abstract class DataType protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsAppServiceAction: AppServiceAction = js.native
+  
+  def containerAsAppServiceActionParameter: AppServiceActionParameter = js.native
   @JSName("containerAsAppServiceActionParameter")
   val containerAsAppServiceActionParameter_FDataType: IAppServiceActionParameter = js.native
+  
   @JSName("containerAsAppServiceAction")
   val containerAsAppServiceAction_FDataType: IAppServiceAction = js.native
+  
+  def containerAsConstant: Constant = js.native
   @JSName("containerAsConstant")
   val containerAsConstant_FDataType: IConstant = js.native
+  
+  def containerAsCreateVariableAction: CreateVariableAction = js.native
+  
+  def containerAsDataSetColumn: DataSetColumn = js.native
+  
+  def containerAsDataSetParameter: DataSetParameter = js.native
   @JSName("containerAsDataSetParameter")
   val containerAsDataSetParameter_FDataType: IDataSetParameter = js.native
+  
+  def containerAsDocumentTemplateParameter: DocumentTemplateParameter = js.native
   @JSName("containerAsDocumentTemplateParameter")
   val containerAsDocumentTemplateParameter_FDataType: IDocumentTemplateParameter = js.native
+  
+  def containerAsImportMapping: ImportMapping = js.native
   @JSName("containerAsImportMapping")
   val containerAsImportMapping_FDataType: IImportMapping = js.native
+  
+  def containerAsMicroflowBase: MicroflowBase = js.native
   @JSName("containerAsMicroflowBase")
   val containerAsMicroflowBase_FDataType: IMicroflowBase = js.native
+  
+  def containerAsMicroflowParameterBase: MicroflowParameterBase = js.native
   @JSName("containerAsMicroflowParameterBase")
   val containerAsMicroflowParameterBase_FDataType: IMicroflowParameterBase = js.native
+  
+  def containerAsMicroflowParameterObject: MicroflowParameterObject = js.native
+  
+  def containerAsPublishedOperation: PublishedOperation = js.native
+  
+  def containerAsPublishedParameter: PublishedParameter = js.native
+  
+  def containerAsRestOperationParameter: RestOperationParameter = js.native
+  
+  def containerAsResultHandling: ResultHandling = js.native
+  
+  def containerAsValueMappingElement: ValueMappingElement = js.native
+  
   @JSName("model")
   var model_FDataType: IModel = js.native
-  def containerAsAppServiceAction: AppServiceAction = js.native
-  def containerAsAppServiceActionParameter: AppServiceActionParameter = js.native
-  def containerAsConstant: Constant = js.native
-  def containerAsCreateVariableAction: CreateVariableAction = js.native
-  def containerAsDataSetColumn: DataSetColumn = js.native
-  def containerAsDataSetParameter: DataSetParameter = js.native
-  def containerAsDocumentTemplateParameter: DocumentTemplateParameter = js.native
-  def containerAsImportMapping: ImportMapping = js.native
-  def containerAsMicroflowBase: MicroflowBase = js.native
-  def containerAsMicroflowParameterBase: MicroflowParameterBase = js.native
-  def containerAsMicroflowParameterObject: MicroflowParameterObject = js.native
-  def containerAsPublishedOperation: PublishedOperation = js.native
-  def containerAsPublishedParameter: PublishedParameter = js.native
-  def containerAsRestOperationParameter: RestOperationParameter = js.native
-  def containerAsResultHandling: ResultHandling = js.native
-  def containerAsValueMappingElement: ValueMappingElement = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/datatypes", "datatypes.DataType")
 @js.native
 object DataType extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

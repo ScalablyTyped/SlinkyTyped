@@ -9,9 +9,10 @@ import typingsSlinky.semanticUiReact.refFindNodeMod.default
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object RefFindNode {
+  
   @JSImport("semantic-ui-react/dist/commonjs/addons/Ref/RefFindNode", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -20,38 +21,50 @@ object RefFindNode {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def UNSAFE_componentWillMount(value: () => Unit): this.type = set("UNSAFE_componentWillMount", js.Any.fromFunction0(value))
+    
     @scala.inline
     def UNSAFE_componentWillReceiveProps(
       value: (typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode, /* nextContext */ js.Any) => Unit
     ): this.type = set("UNSAFE_componentWillReceiveProps", js.Any.fromFunction2(value))
+    
     @scala.inline
     def UNSAFE_componentWillUpdate(
       value: (typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode, js.Object, /* nextContext */ js.Any) => Unit
     ): this.type = set("UNSAFE_componentWillUpdate", js.Any.fromFunction3(value))
+    
     @scala.inline
     def componentDidCatch(value: (/* error */ js.Error, /* errorInfo */ ErrorInfo) => Unit): this.type = set("componentDidCatch", js.Any.fromFunction2(value))
+    
     @scala.inline
     def componentDidMount(value: () => Unit): this.type = set("componentDidMount", js.Any.fromFunction0(value))
+    
     @scala.inline
     def componentDidUpdate(
       value: (typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode, js.Object, /* snapshot */ js.UndefOr[js.Any]) => Unit
     ): this.type = set("componentDidUpdate", js.Any.fromFunction3(value))
+    
     @scala.inline
     def componentWillMount(value: () => Unit): this.type = set("componentWillMount", js.Any.fromFunction0(value))
+    
     @scala.inline
     def componentWillReceiveProps(
       value: (typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode, /* nextContext */ js.Any) => Unit
     ): this.type = set("componentWillReceiveProps", js.Any.fromFunction2(value))
+    
     @scala.inline
     def componentWillUnmount(value: () => Unit): this.type = set("componentWillUnmount", js.Any.fromFunction0(value))
+    
     @scala.inline
     def componentWillUpdate(
       value: (typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode, js.Object, /* nextContext */ js.Any) => Unit
     ): this.type = set("componentWillUpdate", js.Any.fromFunction3(value))
+    
     @scala.inline
     def getSnapshotBeforeUpdate(value: (typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode, js.Object) => js.Any | Null): this.type = set("getSnapshotBeforeUpdate", js.Any.fromFunction2(value))
+    
     @scala.inline
     def shouldComponentUpdate(
       value: (typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode, js.Object, /* nextContext */ js.Any) => Boolean
@@ -59,6 +72,7 @@ object RefFindNode {
   }
   
   def withProps(p: typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     context: js.Any,
@@ -78,4 +92,3 @@ object RefFindNode {
     new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.semanticUiReact.refFindNodeMod.RefFindNode]))
   }
 }
-

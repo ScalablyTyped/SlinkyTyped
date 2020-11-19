@@ -2,7 +2,7 @@ package typingsSlinky.antd.carouselMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.antd.antdStrings.top
@@ -11,15 +11,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.antd.antdStrings.right
 */
 trait DotPosition extends js.Object
-
 object DotPosition {
+  
   @scala.inline
   def bottom: typingsSlinky.antd.antdStrings.bottom = "bottom".asInstanceOf[typingsSlinky.antd.antdStrings.bottom]
+  
   @scala.inline
   def left: typingsSlinky.antd.antdStrings.left = "left".asInstanceOf[typingsSlinky.antd.antdStrings.left]
+  
   @scala.inline
   def right: typingsSlinky.antd.antdStrings.right = "right".asInstanceOf[typingsSlinky.antd.antdStrings.right]
+  
   @scala.inline
   def top: typingsSlinky.antd.antdStrings.top = "top".asInstanceOf[typingsSlinky.antd.antdStrings.top]
 }
-

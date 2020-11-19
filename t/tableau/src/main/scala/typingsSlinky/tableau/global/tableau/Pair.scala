@@ -2,7 +2,7 @@ package typingsSlinky.tableau.global.tableau
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("tableau.Pair")
 @js.native
@@ -14,4 +14,3 @@ class Pair protected ()
   def this(fieldName: String, value: Double) = this()
   def this(fieldName: String, value: js.Date) = this()
 }
-

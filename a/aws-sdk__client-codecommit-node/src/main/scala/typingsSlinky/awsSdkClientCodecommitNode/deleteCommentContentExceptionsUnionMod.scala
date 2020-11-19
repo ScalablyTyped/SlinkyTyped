@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientCodecommitNode
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/types/DeleteCommentContentExceptionsUnion", JSImport.Namespace)
 @js.native
 object deleteCommentContentExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientCodecommitNode.typesCommentDoesNotExistExceptionMod.CommentDoesNotExistException
     - typingsSlinky.awsSdkClientCodecommitNode.typesCommentIdRequiredExceptionMod.CommentIdRequiredException
@@ -14,6 +15,4 @@ object deleteCommentContentExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientCodecommitNode.typesCommentDeletedExceptionMod.CommentDeletedException
   */
   trait DeleteCommentContentExceptionsUnion extends js.Object
-  
 }
-

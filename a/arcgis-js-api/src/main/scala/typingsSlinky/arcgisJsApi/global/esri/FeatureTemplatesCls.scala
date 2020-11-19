@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.FeatureTemplatesProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.FeatureTemplates")
 @js.native
@@ -16,4 +16,3 @@ class FeatureTemplatesCls ()
   extends typingsSlinky.arcgisJsApi.esri.FeatureTemplates {
   def this(properties: FeatureTemplatesProperties) = this()
 }
-

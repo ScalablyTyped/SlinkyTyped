@@ -10,11 +10,12 @@ import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs-promise", "readdir")
 @js.native
 object readdir extends js.Object {
+  
   def apply(path: String): js.Promise[js.Array[String]] = js.native
   def apply(path: String, callback: js.Function2[/* err */ ErrnoException, /* files */ js.Array[String], Unit]): Unit = js.native
   def apply(path: Buffer): js.Promise[js.Array[String]] = js.native
@@ -75,4 +76,3 @@ object readdir extends js.Object {
     callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[String], Unit]
   ): Unit = js.native
 }
-

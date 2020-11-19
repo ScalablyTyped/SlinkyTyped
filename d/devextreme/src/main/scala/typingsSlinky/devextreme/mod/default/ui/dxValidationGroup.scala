@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.ui.dxValidationGroupOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "ui.dxValidationGroup")
 @js.native
@@ -16,4 +16,3 @@ class dxValidationGroup protected ()
   def this(element: JQuery, options: dxValidationGroupOptions) = this()
   def this(element: Element, options: dxValidationGroupOptions) = this()
 }
-

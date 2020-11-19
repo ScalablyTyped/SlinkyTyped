@@ -4,16 +4,20 @@ import typingsSlinky.parse.mod.global.Parse.Cloud.BeforeSaveRequest
 import typingsSlinky.parseMockdb.ParseMockDB.HookType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("parse-mockdb", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def cleanUp(): Unit = js.native
+  
   def mockDB(): Unit = js.native
+  
   def promiseResultSync[T](
     promise: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Parse.IPromise<T> */ js.Any
   ): T = js.native
+  
   def registerHook(
     className: String,
     hookType: HookType,
@@ -22,6 +26,6 @@ object mod extends js.Object {
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Parse.IPromise<any> */ _
     ]
   ): Unit = js.native
+  
   def unMockDB(): Unit = js.native
 }
-

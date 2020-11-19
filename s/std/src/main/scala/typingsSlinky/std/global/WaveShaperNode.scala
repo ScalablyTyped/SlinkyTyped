@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.std.WaveShaperOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("WaveShaperNode")
 @js.native
@@ -14,7 +14,6 @@ class WaveShaperNode protected ()
   def this(context: typingsSlinky.std.BaseAudioContext) = this()
   def this(context: typingsSlinky.std.BaseAudioContext, options: WaveShaperOptions) = this()
 }
-
 @JSGlobal("WaveShaperNode")
 @js.native
 object WaveShaperNode
@@ -27,4 +26,3 @@ object WaveShaperNode
       /* options */ WaveShaperOptions, 
       org.scalajs.dom.raw.WaveShaperNode
     ]
-

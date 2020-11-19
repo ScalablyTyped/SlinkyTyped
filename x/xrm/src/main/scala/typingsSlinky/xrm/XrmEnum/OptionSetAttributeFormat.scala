@@ -4,7 +4,7 @@ import typingsSlinky.xrm.xrmStrings.language
 import typingsSlinky.xrm.xrmStrings.timezone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Constant Enum: OptionSet attribute formats for Attributes.Attribute.getFormat(), used by {@link Attributes.OptionSetAttribute OptionSetAttribute}.
@@ -15,11 +15,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.timezone
 */
 trait OptionSetAttributeFormat extends js.Object
-
 object OptionSetAttributeFormat {
+  
   @scala.inline
   def Language: language = "language".asInstanceOf[language]
+  
   @scala.inline
   def TimeZone: timezone = "timezone".asInstanceOf[timezone]
 }
-

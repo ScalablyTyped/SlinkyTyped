@@ -2,11 +2,12 @@ package typingsSlinky.libsodiumWrappers.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("libsodium-wrappers", "crypto_kx_client_session_keys")
 @js.native
 object cryptoKxClientSessionKeys extends js.Object {
+  
   def apply(
     clientPublicKey: js.typedarray.Uint8Array,
     clientSecretKey: js.typedarray.Uint8Array,
@@ -25,4 +26,3 @@ object cryptoKxClientSessionKeys extends js.Object {
     outputFormat: Uint8ArrayOutputFormat
   ): CryptoKX = js.native
 }
-

@@ -3,12 +3,17 @@ package typingsSlinky.markdownIt.helpersMod
 import typingsSlinky.markdownIt.parseLinkDestinationMod.ParseResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Helpers extends js.Object {
+  
+  def parseLinkDestination(str: String, pos: Double, max: Double): ParseResult = js.native
   @JSName("parseLinkDestination")
   var parseLinkDestination_Original: js.Function3[/* str */ String, /* pos */ Double, /* max */ Double, ParseResult] = js.native
+  
+  def parseLinkLabel(state: typingsSlinky.markdownIt.stateInlineMod.^, start: Double): Double = js.native
+  def parseLinkLabel(state: typingsSlinky.markdownIt.stateInlineMod.^, start: Double, disableNested: Boolean): Double = js.native
   @JSName("parseLinkLabel")
   var parseLinkLabel_Original: js.Function3[
     /* state */ typingsSlinky.markdownIt.stateInlineMod.^, 
@@ -16,11 +21,8 @@ trait Helpers extends js.Object {
     /* disableNested */ js.UndefOr[Boolean], 
     Double
   ] = js.native
+  
+  def parseLinkTitle(str: String, pos: Double, max: Double): ParseResult = js.native
   @JSName("parseLinkTitle")
   var parseLinkTitle_Original: js.Function3[/* str */ String, /* pos */ Double, /* max */ Double, ParseResult] = js.native
-  def parseLinkDestination(str: String, pos: Double, max: Double): ParseResult = js.native
-  def parseLinkLabel(state: typingsSlinky.markdownIt.stateInlineMod.^, start: Double): Double = js.native
-  def parseLinkLabel(state: typingsSlinky.markdownIt.stateInlineMod.^, start: Double, disableNested: Boolean): Double = js.native
-  def parseLinkTitle(str: String, pos: Double, max: Double): ParseResult = js.native
 }
-

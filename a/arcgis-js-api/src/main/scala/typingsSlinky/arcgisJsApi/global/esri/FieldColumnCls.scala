@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.FieldColumn")
 @js.native
@@ -15,4 +15,3 @@ class FieldColumnCls ()
   extends typingsSlinky.arcgisJsApi.esri.FieldColumn {
   def this(properties: js.Any) = this()
 }
-

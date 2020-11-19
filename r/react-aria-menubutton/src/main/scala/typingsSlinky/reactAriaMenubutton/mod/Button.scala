@@ -4,10 +4,9 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-aria-menubutton", "Button")
 @js.native
 class Button ()
   extends Component[ButtonProps[HTMLElement], js.Object, js.Any]
-

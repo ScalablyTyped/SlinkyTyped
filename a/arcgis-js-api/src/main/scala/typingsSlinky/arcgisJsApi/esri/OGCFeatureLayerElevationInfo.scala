@@ -14,16 +14,18 @@ import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait OGCFeatureLayerElevationInfo extends Object {
+  
   /**
     * This object contains information about setting a custom z-value on the feature.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-OGCFeatureLayer.html#elevationInfo)
     */
   var featureExpressionInfo: js.UndefOr[OGCFeatureLayerElevationInfoFeatureExpressionInfo] = js.native
+  
   /**
     * Defines how the graphic is placed with respect to the terrain surface. See the table below for a list of possible values.
     *
@@ -38,12 +40,14 @@ trait OGCFeatureLayerElevationInfo extends Object {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-OGCFeatureLayer.html#elevationInfo)
     */
   var mode: `on-the-ground` | `relative-to-ground` | `absolute-height` | `relative-to-scene` = js.native
+  
   /**
     * An elevation offset, which is added to the vertical position of the graphic. If `unit` is not defined, the offset is in `meters`. When `mode = "on-the-ground"`, this property has no effect.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-OGCFeatureLayer.html#elevationInfo)
     */
   var offset: js.UndefOr[Double] = js.native
+  
   /**
     * The unit for `featureExpressionInfo` and `offset` values.
     *
@@ -51,8 +55,8 @@ trait OGCFeatureLayerElevationInfo extends Object {
     */
   var unit: js.UndefOr[feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards] = js.native
 }
-
 object OGCFeatureLayerElevationInfo {
+  
   @scala.inline
   def apply(
     constructor: js.Function,
@@ -63,32 +67,41 @@ object OGCFeatureLayerElevationInfo {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), mode = mode.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
     __obj.asInstanceOf[OGCFeatureLayerElevationInfo]
   }
+  
   @scala.inline
   implicit class OGCFeatureLayerElevationInfoOps[Self <: OGCFeatureLayerElevationInfo] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setMode(value: `on-the-ground` | `relative-to-ground` | `absolute-height` | `relative-to-scene`): Self = this.set("mode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setFeatureExpressionInfo(value: OGCFeatureLayerElevationInfoFeatureExpressionInfo): Self = this.set("featureExpressionInfo", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteFeatureExpressionInfo: Self = this.set("featureExpressionInfo", js.undefined)
+    
     @scala.inline
     def setOffset(value: Double): Self = this.set("offset", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteOffset: Self = this.set("offset", js.undefined)
+    
     @scala.inline
     def setUnit(value: feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards): Self = this.set("unit", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteUnit: Self = this.set("unit", js.undefined)
   }
-  
 }
-

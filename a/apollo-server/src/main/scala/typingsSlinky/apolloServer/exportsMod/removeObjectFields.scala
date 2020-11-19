@@ -6,11 +6,12 @@ import typingsSlinky.graphql.definitionMod.GraphQLFieldConfigMap
 import typingsSlinky.graphql.mod.GraphQLSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server/dist/exports", "removeObjectFields")
 @js.native
 object removeObjectFields extends js.Object {
+  
   def apply(
     schema: GraphQLSchema,
     typeName: String,
@@ -21,4 +22,3 @@ object removeObjectFields extends js.Object {
     ]
   ): js.Tuple2[GraphQLSchema, GraphQLFieldConfigMap[_, _]] = js.native
 }
-

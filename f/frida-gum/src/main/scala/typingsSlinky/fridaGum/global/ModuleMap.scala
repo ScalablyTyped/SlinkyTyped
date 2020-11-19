@@ -3,7 +3,7 @@ package typingsSlinky.fridaGum.global
 import typingsSlinky.fridaGum.ModuleMapFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ModuleMap")
 @js.native
@@ -23,4 +23,3 @@ class ModuleMap ()
   extends typingsSlinky.fridaGum.ModuleMap {
   def this(filter: ModuleMapFilter) = this()
 }
-

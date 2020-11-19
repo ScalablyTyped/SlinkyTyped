@@ -37,7 +37,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.WidgetValidation
 import typingsSlinky.mendixmodelsdk.restMod.rest.ConsumedODataService
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interfaces and instance classes for types from the Mendix sub meta model `Expressions`.
@@ -60,49 +60,84 @@ abstract class Expression protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsAppServiceCallParameterMapping: AppServiceCallParameterMapping = js.native
+  
+  def containerAsBasicCodeActionParameterValue: BasicCodeActionParameterValue = js.native
+  
+  def containerAsBasicJavaActionParameterValue: BasicJavaActionParameterValue = js.native
+  
+  def containerAsBinaryExpression: BinaryExpression = js.native
+  
+  def containerAsBinaryRequestHandling: BinaryRequestHandling = js.native
+  
+  def containerAsChangeListAction: ChangeListAction = js.native
+  
+  def containerAsChangeVariableAction: ChangeVariableAction = js.native
+  
+  def containerAsConditionalSettings: ConditionalSettings = js.native
+  
+  def containerAsConsumedODataService: ConsumedODataService = js.native
+  
+  def containerAsCreateVariableAction: CreateVariableAction = js.native
+  
+  def containerAsCustomRange: CustomRange = js.native
+  
+  def containerAsDocumentTemplateParameterMapping: DocumentTemplateParameterMapping = js.native
+  
+  def containerAsEndEvent: EndEvent = js.native
+  
+  def containerAsExpressionSplitCondition: ExpressionSplitCondition = js.native
+  
+  def containerAsFormDataPart: FormDataPart = js.native
+  
+  def containerAsFunctionCallExpression: FunctionCallExpression = js.native
+  
+  def containerAsGenerateDocumentAction: GenerateDocumentAction = js.native
+  
+  def containerAsHttpConfiguration: HttpConfiguration = js.native
+  
+  def containerAsHttpHeaderEntry: HttpHeaderEntry = js.native
+  
+  def containerAsIfExpression: IfExpression = js.native
+  
+  def containerAsInspectAttribute: InspectAttribute = js.native
+  
+  def containerAsLogMessageAction: LogMessageAction = js.native
+  
+  def containerAsMemberChange: MemberChange = js.native
+  
+  def containerAsMicroflowCallParameterMapping: MicroflowCallParameterMapping = js.native
+  
+  def containerAsNanoflowCallParameterMapping: NanoflowCallParameterMapping = js.native
+  
+  def containerAsParenthesisExpression: ParenthesisExpression = js.native
+  
+  def containerAsProxyConfiguration: ProxyConfiguration = js.native
+  
+  def containerAsRestCallAction: RestCallAction = js.native
+  
+  def containerAsRuleCallParameterMapping: RuleCallParameterMapping = js.native
+  
+  def containerAsTemplateArgument: TemplateArgument = js.native
+  
+  def containerAsUnaryExpression: UnaryExpression = js.native
+  
+  def containerAsWebServiceCallAction: WebServiceCallAction = js.native
+  
+  def containerAsWebServiceOperationParameterMapping: WebServiceOperationParameterMapping = js.native
+  
+  def containerAsWidgetValidation: WidgetValidation = js.native
+  
   @JSName("model")
   var model_FExpression: IModel = js.native
-  def containerAsAppServiceCallParameterMapping: AppServiceCallParameterMapping = js.native
-  def containerAsBasicCodeActionParameterValue: BasicCodeActionParameterValue = js.native
-  def containerAsBasicJavaActionParameterValue: BasicJavaActionParameterValue = js.native
-  def containerAsBinaryExpression: BinaryExpression = js.native
-  def containerAsBinaryRequestHandling: BinaryRequestHandling = js.native
-  def containerAsChangeListAction: ChangeListAction = js.native
-  def containerAsChangeVariableAction: ChangeVariableAction = js.native
-  def containerAsConditionalSettings: ConditionalSettings = js.native
-  def containerAsConsumedODataService: ConsumedODataService = js.native
-  def containerAsCreateVariableAction: CreateVariableAction = js.native
-  def containerAsCustomRange: CustomRange = js.native
-  def containerAsDocumentTemplateParameterMapping: DocumentTemplateParameterMapping = js.native
-  def containerAsEndEvent: EndEvent = js.native
-  def containerAsExpressionSplitCondition: ExpressionSplitCondition = js.native
-  def containerAsFormDataPart: FormDataPart = js.native
-  def containerAsFunctionCallExpression: FunctionCallExpression = js.native
-  def containerAsGenerateDocumentAction: GenerateDocumentAction = js.native
-  def containerAsHttpConfiguration: HttpConfiguration = js.native
-  def containerAsHttpHeaderEntry: HttpHeaderEntry = js.native
-  def containerAsIfExpression: IfExpression = js.native
-  def containerAsInspectAttribute: InspectAttribute = js.native
-  def containerAsLogMessageAction: LogMessageAction = js.native
-  def containerAsMemberChange: MemberChange = js.native
-  def containerAsMicroflowCallParameterMapping: MicroflowCallParameterMapping = js.native
-  def containerAsNanoflowCallParameterMapping: NanoflowCallParameterMapping = js.native
-  def containerAsParenthesisExpression: ParenthesisExpression = js.native
-  def containerAsProxyConfiguration: ProxyConfiguration = js.native
-  def containerAsRestCallAction: RestCallAction = js.native
-  def containerAsRuleCallParameterMapping: RuleCallParameterMapping = js.native
-  def containerAsTemplateArgument: TemplateArgument = js.native
-  def containerAsUnaryExpression: UnaryExpression = js.native
-  def containerAsWebServiceCallAction: WebServiceCallAction = js.native
-  def containerAsWebServiceOperationParameterMapping: WebServiceOperationParameterMapping = js.native
-  def containerAsWidgetValidation: WidgetValidation = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/expressions", "expressions.Expression")
 @js.native
 object Expression extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

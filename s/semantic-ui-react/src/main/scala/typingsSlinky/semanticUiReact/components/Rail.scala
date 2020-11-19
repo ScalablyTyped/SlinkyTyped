@@ -16,9 +16,10 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.very
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Rail {
+  
   @JSImport("semantic-ui-react", "Rail")
   @js.native
   object component extends js.Object
@@ -27,31 +28,40 @@ object Rail {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def attached(value: Boolean): this.type = set("attached", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def close(value: Boolean | very): this.type = set("close", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def dividing(value: Boolean): this.type = set("dividing", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def internal(value: Boolean): this.type = set("internal", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def size(value: mini | tiny | small | large | big | huge | massive): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: RailProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(position: SemanticFLOATS): Builder = {
     val __props = js.Dynamic.literal(position = position.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[RailProps]))
   }
 }
-

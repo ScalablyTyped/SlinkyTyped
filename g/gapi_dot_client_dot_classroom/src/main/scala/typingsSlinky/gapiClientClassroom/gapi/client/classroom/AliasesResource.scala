@@ -7,10 +7,11 @@ import typingsSlinky.gapiClientClassroom.anon.Alt
 import typingsSlinky.gapiClientClassroom.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AliasesResource extends js.Object {
+  
   /**
     * Creates an alias for a course.
     *
@@ -26,6 +27,7 @@ trait AliasesResource extends js.Object {
     */
   def create(request: Accesstoken): Request[CourseAlias] = js.native
   def create(request: Alt, body: CourseAlias): Request[CourseAlias] = js.native
+  
   /**
     * Deletes an alias of a course.
     *
@@ -40,6 +42,7 @@ trait AliasesResource extends js.Object {
     */
   def delete(): Request[js.Object] = js.native
   def delete(request: Alias): Request[js.Object] = js.native
+  
   /**
     * Returns a list of aliases for a course.
     *
@@ -52,4 +55,3 @@ trait AliasesResource extends js.Object {
   def list(): Request[ListCourseAliasesResponse] = js.native
   def list(request: Callback): Request[ListCourseAliasesResponse] = js.native
 }
-

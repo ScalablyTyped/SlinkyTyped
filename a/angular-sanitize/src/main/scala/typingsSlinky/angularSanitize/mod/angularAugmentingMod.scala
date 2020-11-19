@@ -6,23 +6,26 @@ import typingsSlinky.angularSanitize.anon.HtmlElements
 import typingsSlinky.angularSanitize.mod.angularAugmentingMod.sanitize.filter.ILinky
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
 @JSImport("angular", JSImport.Namespace)
 @js.native
 object angularAugmentingMod extends js.Object {
+  
   ///////////////////////////////////////////////////////////////////////////////
   // ngSanitize module (angular-sanitize.js)
   // see https://code.angularjs.org/1.7.0/docs/api/ngSanitize
   ///////////////////////////////////////////////////////////////////////////////
   @js.native
   object sanitize extends js.Object {
+    
     /**
       * Creates and configures $sanitize instance.
       */
     @js.native
     trait ISanitizeProvider extends js.Object {
+      
       /**
         * Extends the built-in list of valid attributes, i.e. attributes that are considered safe and are not stripped off during sanitization.
         *
@@ -31,6 +34,7 @@ object angularAugmentingMod extends js.Object {
         * @param attrs A list of valid attributes.
         */
       def addValidAttrs(attrs: js.Array[String]): ISanitizeProvider = js.native
+      
       /**
         * Extends the built-in lists of valid HTML/SVG elements, i.e. elements that are considered safe and are not stripped off during sanitization.
         *
@@ -44,6 +48,7 @@ object angularAugmentingMod extends js.Object {
         */
       def addValidElements(elements: js.Array[String]): ISanitizeProvider = js.native
       def addValidElements(elements: HtmlElements): ISanitizeProvider = js.native
+      
       def enableSvg(): Boolean | ISanitizeProvider = js.native
       def enableSvg(flag: Boolean): Boolean | ISanitizeProvider = js.native
       /**
@@ -60,6 +65,7 @@ object angularAugmentingMod extends js.Object {
     
     @js.native
     object filter extends js.Object {
+      
       /**
         * Finds links in text input and turns them into html links. Supports http/https/ftp/mailto and plain email address links.
         * @see https://code.angularjs.org/1.7.0/docs/api/ngSanitize/filter/linky
@@ -82,6 +88,7 @@ object angularAugmentingMod extends js.Object {
     // Extend angular $filter declarations to include filters from angular.sanitize module
     ///////////////////////////////////////////////////////////////////////////////
     type IFilterService = js.Function1[linky, ILinky]
+    
     /**
       * Sanitizes an html string by stripping all potentially dangerous tokens.
       *
@@ -96,6 +103,4 @@ object angularAugmentingMod extends js.Object {
       */
     type ISanitizeService = js.Function1[/* html */ String, String]
   }
-  
 }
-

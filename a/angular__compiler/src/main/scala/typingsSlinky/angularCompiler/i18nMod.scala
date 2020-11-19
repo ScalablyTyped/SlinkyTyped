@@ -9,11 +9,15 @@ import typingsSlinky.angularCompiler.srcUtilMod.Console
 import typingsSlinky.angularCompiler.staticSymbolResolverMod.StaticSymbolResolver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/i18n", JSImport.Namespace)
 @js.native
 object i18nMod extends js.Object {
+  
+  def computeMsgId(msg: String): String = js.native
+  def computeMsgId(msg: String, meaning: String): String = js.native
+  
   @js.native
   class Extractor protected ()
     extends typingsSlinky.angularCompiler.extractorMod.Extractor {
@@ -23,6 +27,13 @@ object i18nMod extends js.Object {
       messageBundle: typingsSlinky.angularCompiler.messageBundleMod.MessageBundle,
       metadataResolver: CompileMetadataResolver
     ) = this()
+  }
+  /* static members */
+  @js.native
+  object Extractor extends js.Object {
+    
+    def create(host: ExtractorHost): typingsSlinky.angularCompiler.anon.Extractor = js.native
+    def create(host: ExtractorHost, locale: String): typingsSlinky.angularCompiler.anon.Extractor = js.native
   }
   
   @js.native
@@ -149,15 +160,4 @@ object i18nMod extends js.Object {
   @js.native
   class Xtb ()
     extends typingsSlinky.angularCompiler.xtbMod.Xtb
-  
-  def computeMsgId(msg: String): String = js.native
-  def computeMsgId(msg: String, meaning: String): String = js.native
-  /* static members */
-  @js.native
-  object Extractor extends js.Object {
-    def create(host: ExtractorHost): typingsSlinky.angularCompiler.anon.Extractor = js.native
-    def create(host: ExtractorHost, locale: String): typingsSlinky.angularCompiler.anon.Extractor = js.native
-  }
-  
 }
-

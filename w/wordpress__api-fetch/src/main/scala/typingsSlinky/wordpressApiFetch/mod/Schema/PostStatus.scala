@@ -2,7 +2,7 @@ package typingsSlinky.wordpressApiFetch.mod.Schema
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.draft
@@ -12,17 +12,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.publish
 */
 trait PostStatus extends js.Object
-
 object PostStatus {
+  
   @scala.inline
   def draft: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.draft = "draft".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.draft]
+  
   @scala.inline
   def future: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.future = "future".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.future]
+  
   @scala.inline
   def pending: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.pending = "pending".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.pending]
+  
   @scala.inline
   def `private`: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.`private` = "private".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.`private`]
+  
   @scala.inline
   def publish: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.publish = "publish".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.publish]
 }
-

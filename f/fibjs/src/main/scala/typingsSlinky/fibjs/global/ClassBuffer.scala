@@ -3,7 +3,7 @@ package typingsSlinky.fibjs.global
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** module Or Internal Object */
 /**
@@ -80,11 +80,11 @@ class ClassBuffer ()
   def this(str: String) = this()
   def this(str: String, codec: String) = this()
 }
-
 /* static members */
 @JSGlobal("Class_Buffer")
 @js.native
 object ClassBuffer extends js.Object {
+  
   /**
     * 
     * @brief 分配一个指定长度的新缓存区。如果大小为0，将创建一个零长度的缓存区。
@@ -115,6 +115,7 @@ object ClassBuffer extends js.Object {
     */
   def alloc(size: Double, fill: typingsSlinky.fibjs.ClassBuffer): typingsSlinky.fibjs.ClassBuffer = js.native
   def alloc(size: Double, fill: typingsSlinky.fibjs.ClassBuffer, codec: String): typingsSlinky.fibjs.ClassBuffer = js.native
+  
   /**
     * 
     * @brief 分配一个指定长度的新缓存区。如果大小为0，将创建一个零长度的缓存区。
@@ -125,6 +126,7 @@ object ClassBuffer extends js.Object {
     * 
     */
   def allocUnsafe(size: Double): typingsSlinky.fibjs.ClassBuffer = js.native
+  
   /**
     * 
     * @brief 分配一个指定长度的新缓存区。如果大小为0，将创建一个零长度的缓存区。
@@ -135,6 +137,7 @@ object ClassBuffer extends js.Object {
     * 
     */
   def allocUnsafeSlow(size: Double): typingsSlinky.fibjs.ClassBuffer = js.native
+  
   /**
     * 
     * @brief 返回字符串的实际字节长度
@@ -183,6 +186,7 @@ object ClassBuffer extends js.Object {
   def byteLength(str: js.typedarray.ArrayBufferView): Double = js.native
   def byteLength(str: js.typedarray.ArrayBufferView, codec: String): Double = js.native
   def byteLength(str: js.typedarray.ArrayBuffer, codec: String): Double = js.native
+  
   /**
     * 
     * @brief 拼接多个缓存区中的数据
@@ -195,6 +199,7 @@ object ClassBuffer extends js.Object {
     */
   def concat(buflist: js.Array[_]): typingsSlinky.fibjs.ClassBuffer = js.native
   def concat(buflist: js.Array[_], cutLength: Double): typingsSlinky.fibjs.ClassBuffer = js.native
+  
   /**
     * 
     * @brief 通过其他 Buffer 创建 Buffer 对象
@@ -236,6 +241,7 @@ object ClassBuffer extends js.Object {
   def from(str: String, byteOffset: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   def from(str: String, byteOffset: Double, length: Double): typingsSlinky.fibjs.ClassBuffer = js.native
   def from(str: String, codec: String): typingsSlinky.fibjs.ClassBuffer = js.native
+  
   /**
     * 
     * @brief 检测给定的变量是否是 Buffer 对象
@@ -246,6 +252,7 @@ object ClassBuffer extends js.Object {
     * 
     */
   def isBuffer(v: js.Any): Boolean = js.native
+  
   /**
     * 
     * @brief 检测编码格式是否被支持
@@ -257,4 +264,3 @@ object ClassBuffer extends js.Object {
     */
   def isEncoding(codec: String): Boolean = js.native
 }
-

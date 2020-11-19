@@ -17,7 +17,7 @@ import typingsSlinky.iobroker.iobrokerStrings.user
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // Base type for Objects. Should not be used directly
 /* Rewritten from type alias, can be one of: 
@@ -28,32 +28,36 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.iobroker.mod.global.ioBroker.OtherObject
 */
 trait AnyObject extends js.Object
-
 object AnyObject {
+  
   @scala.inline
   def StateObject(_id: String, common: StateCommon, native: Record[String, ObjectField], `type`: state): AnyObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnyObject]
   }
+  
   @scala.inline
   def FolderObject(_id: String, common: OtherCommon, native: Record[String, ObjectField], `type`: folder): AnyObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnyObject]
   }
+  
   @scala.inline
   def DeviceObject(_id: String, common: DeviceCommon, native: Record[String, ObjectField], `type`: device): AnyObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnyObject]
   }
+  
   @scala.inline
   def ChannelObject(_id: String, common: ChannelCommon, native: Record[String, ObjectField], `type`: channel): AnyObject = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], common = common.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnyObject]
   }
+  
   @scala.inline
   def OtherObject(
     _id: String,
@@ -66,4 +70,3 @@ object AnyObject {
     __obj.asInstanceOf[AnyObject]
   }
 }
-

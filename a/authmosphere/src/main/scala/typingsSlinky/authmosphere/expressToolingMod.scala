@@ -7,13 +7,16 @@ import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("authmosphere/lib/src/express-tooling", JSImport.Namespace)
 @js.native
 object expressToolingMod extends js.Object {
+  
   val authenticationMiddleware: typingsSlinky.authmosphere.expressToolingMod.authenticationMiddleware = js.native
+  
   val requireScopesMiddleware: typingsSlinky.authmosphere.expressToolingMod.requireScopesMiddleware = js.native
+  
   /**
     * Returns a function (middleware) to extract and validate an access token from a request.
     * Furthermore, it attaches the scopes granted by the token to the request for further usage.
@@ -39,6 +42,7 @@ object expressToolingMod extends js.Object {
     /* options */ AuthenticationMiddlewareOptions, 
     RequestHandler[ParamsDictionary, js.Any, js.Any, Query]
   ]
+  
   /**
     * A factory that returns a middleware that compares scopes attached to `express.Request` object with a given list (`scopes` parameter).
     * If all required scopes are matched, the middleware calls `next`. Otherwise, it rejects the request with _403 FORBIDDEN_.
@@ -103,4 +107,3 @@ object expressToolingMod extends js.Object {
     RequestHandler[ParamsDictionary, js.Any, js.Any, Query]
   ]
 }
-

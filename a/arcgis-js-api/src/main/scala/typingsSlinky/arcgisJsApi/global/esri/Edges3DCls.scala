@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.Edges3DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Edges3D")
 @js.native
@@ -16,4 +16,3 @@ class Edges3DCls ()
   extends typingsSlinky.arcgisJsApi.esri.Edges3D {
   def this(properties: Edges3DProperties) = this()
 }
-

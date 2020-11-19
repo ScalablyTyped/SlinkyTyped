@@ -9,11 +9,12 @@ import typingsSlinky.wordpressCompose.wordpressComposeStrings.setState
 import typingsSlinky.wordpressCompose.wordpressComposeStrings.setTimeout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/compose", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   // tslint:disable:no-unnecessary-generics
   // prettier-ignore
   def createHigherOrderComponent[EP](
@@ -23,17 +24,25 @@ object mod extends js.Object {
     /* component */ ReactComponentClass[_], 
     ReactComponentClass[Omit[_, /* keyof EP */ String]]
   ] = js.native
+  
   def ifCondition[P](predicate: js.Function1[/* props */ P, Boolean]): js.Function1[/* component */ ReactComponentClass[P], ReactComponentClass[P]] = js.native
+  
   // prettier-ignore
   def pure[T /* <: ReactComponentClass[_] */](component: T): ReactComponentClass[_] = js.native
+  
   def useMediaQuery(query: String): Boolean = js.native
+  
   def useReducedMotion(): Boolean = js.native
+  
   // prettier-ignore
   def withGlobalEvents(eventMapper: kinkeyofWindowEventMapstr): js.Function1[/* component */ ReactComponentClass[_], ReactComponentClass[_]] = js.native
+  
   // prettier-ignore
   def withInstanceId[T /* <: ReactComponentClass[_] */](wrapped: T): ReactComponentClass[Omit[_, instanceId]] = js.native
+  
   // prettier-ignore
   def withSafeTimeout[T /* <: ReactComponentClass[_] */](component: T): ReactComponentClass[Omit[_, setTimeout]] = js.native
+  
   // prettier-ignore
   def withState[SP /* <: js.Object */](
     initialState: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
@@ -44,4 +53,3 @@ object mod extends js.Object {
     ReactComponentClass[Omit[_, (/* keyof SP */ String) | setState]]
   ] = js.native
 }
-

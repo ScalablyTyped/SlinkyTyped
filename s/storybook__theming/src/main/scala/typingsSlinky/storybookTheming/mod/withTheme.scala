@@ -6,11 +6,11 @@ import typingsSlinky.emotionTheming.helperMod.PropsOf
 import typingsSlinky.storybookTheming.storybookThemingStrings.theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/theming", "withTheme")
 @js.native
 object withTheme extends js.Object {
+  
   def apply[C /* <: ReactComponentClass[_] */](component: C): ReactComponentClass[AddOptionalTo[PropsOf[C], theme]] = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.jsrsasign.mod.KJUR.asn1
 import typingsSlinky.jsrsasign.anon.StringParamtypegenundefin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Time ASN.1 structure class
@@ -18,4 +18,3 @@ class Time ()
   extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.Time {
   def this(params: StringParamtypegenundefin) = this()
 }
-

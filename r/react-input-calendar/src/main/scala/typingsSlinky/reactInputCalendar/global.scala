@@ -7,20 +7,20 @@ import typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendarPro
 import typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendarState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @JSName("ReactInputCalendar")
   var ReactInputCalendar_ : Instantiable0[ReactComponentClass[ReactInputCalendarProps]] = js.native
+  
   @js.native
   object reactInputCalendar extends js.Object {
+    
     @js.native
     class ReactInputCalendar ()
       extends Component[ReactInputCalendarProps, ReactInputCalendarState, js.Any]
-    
   }
-  
 }
-

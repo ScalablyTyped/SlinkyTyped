@@ -2,11 +2,12 @@ package typingsSlinky.yadda.frenchMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Library
   extends typingsSlinky.yadda.englishMod.Library {
+  
   def alors(
     step: String,
     fn: js.Function1[
@@ -213,6 +214,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def etantdonnalors(
     step: String,
     fn: js.Function1[
@@ -419,6 +421,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def etantdonnalorss(
     step: String,
     fn: js.Function1[
@@ -625,6 +628,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def etantdonne(
     step: String,
     fn: js.Function1[
@@ -831,6 +835,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def lorsque(
     step: String,
     fn: js.Function1[
@@ -1037,6 +1042,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def quand(
     step: String,
     fn: js.Function1[
@@ -1243,6 +1249,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def soit(
     step: String,
     fn: js.Function1[
@@ -1450,4 +1457,3 @@ trait Library
     ]
   ): this.type = js.native
 }
-

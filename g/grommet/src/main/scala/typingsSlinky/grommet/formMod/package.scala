@@ -2,9 +2,10 @@ package typingsSlinky.grommet
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object formMod {
+  
   type TypedForm[T] = slinky.core.ReactComponentClass[
     typingsSlinky.grommet.formMod.FormProps[T] with (typingsSlinky.std.Omit[
       typingsSlinky.react.mod.DetailedHTMLProps[

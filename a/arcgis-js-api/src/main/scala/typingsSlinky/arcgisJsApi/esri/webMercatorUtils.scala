@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait webMercatorUtils extends js.Object {
+  
   def canProject(source: js.Any, target: js.Any): Boolean = js.native
   def canProject(source: js.Any, target: SpatialReference): Boolean = js.native
   def canProject(source: SpatialReference, target: js.Any): Boolean = js.native
@@ -19,6 +20,7 @@ trait webMercatorUtils extends js.Object {
     *
     */
   def canProject(source: SpatialReference, target: SpatialReference): Boolean = js.native
+  
   /**
     * Converts a geometry from geographic units (wkid: 4326) to Web Mercator units (wkid: 3857).
     *
@@ -28,6 +30,7 @@ trait webMercatorUtils extends js.Object {
     *
     */
   def geographicToWebMercator(geometry: Geometry_): Geometry_ = js.native
+  
   /**
     * Translates the given latitude and longitude (decimal degree) values to Web Mercator XY values.
     *
@@ -38,6 +41,7 @@ trait webMercatorUtils extends js.Object {
     *
     */
   def lngLatToXY(long: Double, lat: Double): js.Array[Double] = js.native
+  
   def project(geometry: Geometry_, spatialReference: js.Any): Geometry_ = js.native
   /**
     * Projects the geometry clientside (if possible). You should test the input geometry in [canProject()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-webMercatorUtils.html#canProject) prior to using this function. If the result of [canProject()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-webMercatorUtils.html#canProject) is `true`, then proceed to project. If [canProject()](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-webMercatorUtils.html#canProject) returns `false`, then `project()` won't return useful results. Use [GeometryService.project()](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-GeometryService.html#project) instead.
@@ -49,6 +53,7 @@ trait webMercatorUtils extends js.Object {
     *
     */
   def project(geometry: Geometry_, spatialReference: SpatialReference): Geometry_ = js.native
+  
   /**
     * Converts a geometry from Web Mercator units (wkid: 3857) to geographic units (wkid: 4326).
     *
@@ -58,6 +63,7 @@ trait webMercatorUtils extends js.Object {
     *
     */
   def webMercatorToGeographic(geometry: Geometry_): Geometry_ = js.native
+  
   /**
     * Translates the given Web Mercator coordinates to Longitude and Latitude values (decimal degrees). By default the returned longitude is normalized so that it is within -180 and +180.
     *
@@ -69,4 +75,3 @@ trait webMercatorUtils extends js.Object {
     */
   def xyToLngLat(x: Double, y: Double): js.Array[Double] = js.native
 }
-

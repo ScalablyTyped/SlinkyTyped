@@ -8,11 +8,12 @@ import typingsSlinky.three.constantsMod.Wrapping
 import typingsSlinky.three.textureMod.Texture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/textures/DepthTexture", JSImport.Namespace)
 @js.native
 object depthTextureMod extends js.Object {
+  
   @js.native
   class DepthTexture protected () extends Texture {
     def this(
@@ -26,9 +27,8 @@ object depthTextureMod extends js.Object {
       minFilter: js.UndefOr[TextureFilter],
       anisotropy: js.UndefOr[Double]
     ) = this()
+    
     @JSName("image")
     var image_DepthTexture: HeightWidth = js.native
   }
-  
 }
-

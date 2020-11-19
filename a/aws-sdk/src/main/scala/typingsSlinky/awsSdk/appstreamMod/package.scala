@@ -2,13 +2,18 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object appstreamMod {
+  
   type AccessEndpointList = js.Array[typingsSlinky.awsSdk.appstreamMod.AccessEndpoint]
+  
   type AccessEndpointType = typingsSlinky.awsSdk.awsSdkStrings.STREAMING | java.lang.String
+  
   type AccountName = java.lang.String
+  
   type AccountPassword = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CLIPBOARD_COPY_FROM_LOCAL_DEVICE
     - typingsSlinky.awsSdk.awsSdkStrings.CLIPBOARD_COPY_TO_LOCAL_DEVICE
@@ -18,10 +23,15 @@ package object appstreamMod {
     - java.lang.String
   */
   type Action = typingsSlinky.awsSdk.appstreamMod._Action | java.lang.String
+  
   type Applications = js.Array[typingsSlinky.awsSdk.appstreamMod.Application]
+  
   type AppstreamAgentVersion = java.lang.String
+  
   type Arn = java.lang.String
+  
   type ArnList = js.Array[typingsSlinky.awsSdk.appstreamMod.Arn]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.API
     - typingsSlinky.awsSdk.awsSdkStrings.SAML
@@ -29,22 +39,39 @@ package object appstreamMod {
     - java.lang.String
   */
   type AuthenticationType = typingsSlinky.awsSdk.appstreamMod._AuthenticationType | java.lang.String
+  
   type AwsAccountId = java.lang.String
+  
   type AwsAccountIdList = js.Array[typingsSlinky.awsSdk.appstreamMod.AwsAccountId]
+  
   type Boolean = scala.Boolean
+  
   type BooleanObject = scala.Boolean
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.appstreamMod.ClientApiVersions
+  
   type DescribeImagesMaxResults = scala.Double
+  
   type Description = java.lang.String
+  
   type DirectoryConfigList = js.Array[typingsSlinky.awsSdk.appstreamMod.DirectoryConfig]
+  
   type DirectoryName = java.lang.String
+  
   type DirectoryNameList = js.Array[typingsSlinky.awsSdk.appstreamMod.DirectoryName]
+  
   type DisplayName = java.lang.String
+  
   type Domain = java.lang.String
+  
   type DomainList = js.Array[typingsSlinky.awsSdk.appstreamMod.Domain]
+  
   type EmbedHostDomain = java.lang.String
+  
   type EmbedHostDomains = js.Array[typingsSlinky.awsSdk.appstreamMod.EmbedHostDomain]
+  
   type FeedbackURL = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.VPC_CONFIGURATION
     - typingsSlinky.awsSdk.awsSdkStrings.VPC_CONFIGURATION_SECURITY_GROUP_IDS
@@ -53,7 +80,9 @@ package object appstreamMod {
     - java.lang.String
   */
   type FleetAttribute = typingsSlinky.awsSdk.appstreamMod._FleetAttribute | java.lang.String
+  
   type FleetAttributes = js.Array[typingsSlinky.awsSdk.appstreamMod.FleetAttribute]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.IAM_SERVICE_ROLE_MISSING_ENI_DESCRIBE_ACTION
     - typingsSlinky.awsSdk.awsSdkStrings.IAM_SERVICE_ROLE_MISSING_ENI_CREATE_ACTION
@@ -86,8 +115,11 @@ package object appstreamMod {
     - java.lang.String
   */
   type FleetErrorCode = typingsSlinky.awsSdk.appstreamMod._FleetErrorCode | java.lang.String
+  
   type FleetErrors = js.Array[typingsSlinky.awsSdk.appstreamMod.FleetError]
+  
   type FleetList = js.Array[typingsSlinky.awsSdk.appstreamMod.Fleet]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.STARTING
     - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
@@ -96,13 +128,16 @@ package object appstreamMod {
     - java.lang.String
   */
   type FleetState = typingsSlinky.awsSdk.appstreamMod._FleetState | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ALWAYS_ON
     - typingsSlinky.awsSdk.awsSdkStrings.ON_DEMAND
     - java.lang.String
   */
   type FleetType = typingsSlinky.awsSdk.appstreamMod._FleetType | java.lang.String
+  
   type ImageBuilderList = js.Array[typingsSlinky.awsSdk.appstreamMod.ImageBuilder]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PENDING
     - typingsSlinky.awsSdk.awsSdkStrings.UPDATING_AGENT
@@ -116,13 +151,16 @@ package object appstreamMod {
     - java.lang.String
   */
   type ImageBuilderState = typingsSlinky.awsSdk.appstreamMod._ImageBuilderState | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.INTERNAL_ERROR
     - typingsSlinky.awsSdk.awsSdkStrings.IMAGE_UNAVAILABLE
     - java.lang.String
   */
   type ImageBuilderStateChangeReasonCode = typingsSlinky.awsSdk.appstreamMod._ImageBuilderStateChangeReasonCode | java.lang.String
+  
   type ImageList = js.Array[typingsSlinky.awsSdk.appstreamMod.Image]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PENDING
     - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE
@@ -132,6 +170,7 @@ package object appstreamMod {
     - java.lang.String
   */
   type ImageState = typingsSlinky.awsSdk.appstreamMod._ImageState | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.INTERNAL_ERROR
     - typingsSlinky.awsSdk.awsSdkStrings.IMAGE_BUILDER_NOT_AVAILABLE
@@ -139,26 +178,37 @@ package object appstreamMod {
     - java.lang.String
   */
   type ImageStateChangeReasonCode = typingsSlinky.awsSdk.appstreamMod._ImageStateChangeReasonCode | java.lang.String
+  
   type Integer = scala.Double
+  
   type LastReportGenerationExecutionErrors = js.Array[typingsSlinky.awsSdk.appstreamMod.LastReportGenerationExecutionError]
+  
   type Long = scala.Double
+  
   type MaxResults = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SUPPRESS
     - typingsSlinky.awsSdk.awsSdkStrings.RESEND
     - java.lang.String
   */
   type MessageAction = typingsSlinky.awsSdk.appstreamMod._MessageAction | java.lang.String
+  
   type Metadata = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.appstreamMod.String]
+  
   type Name = java.lang.String
+  
   type OrganizationalUnitDistinguishedName = java.lang.String
+  
   type OrganizationalUnitDistinguishedNamesList = js.Array[typingsSlinky.awsSdk.appstreamMod.OrganizationalUnitDistinguishedName]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
     - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
     - java.lang.String
   */
   type Permission = typingsSlinky.awsSdk.appstreamMod._Permission | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.WINDOWS
     - typingsSlinky.awsSdk.awsSdkStrings.WINDOWS_SERVER_2016
@@ -166,18 +216,26 @@ package object appstreamMod {
     - java.lang.String
   */
   type PlatformType = typingsSlinky.awsSdk.appstreamMod._PlatformType | java.lang.String
+  
   type RedirectURL = java.lang.String
+  
   type RegionName = java.lang.String
+  
   type ResourceErrors = js.Array[typingsSlinky.awsSdk.appstreamMod.ResourceError]
+  
   type ResourceIdentifier = java.lang.String
+  
   type SecurityGroupIdList = js.Array[typingsSlinky.awsSdk.appstreamMod.String]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CONNECTED
     - typingsSlinky.awsSdk.awsSdkStrings.NOT_CONNECTED
     - java.lang.String
   */
   type SessionConnectionState = typingsSlinky.awsSdk.appstreamMod._SessionConnectionState | java.lang.String
+  
   type SessionList = js.Array[typingsSlinky.awsSdk.appstreamMod.Session]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
     - typingsSlinky.awsSdk.awsSdkStrings.PENDING
@@ -185,8 +243,11 @@ package object appstreamMod {
     - java.lang.String
   */
   type SessionState = typingsSlinky.awsSdk.appstreamMod._SessionState | java.lang.String
+  
   type SettingsGroup = java.lang.String
+  
   type SharedImagePermissionsList = js.Array[typingsSlinky.awsSdk.appstreamMod.SharedImagePermissions]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.STORAGE_CONNECTORS
     - typingsSlinky.awsSdk.awsSdkStrings.STORAGE_CONNECTOR_HOMEFOLDERS
@@ -202,16 +263,22 @@ package object appstreamMod {
     - java.lang.String
   */
   type StackAttribute = typingsSlinky.awsSdk.appstreamMod._StackAttribute | java.lang.String
+  
   type StackAttributes = js.Array[typingsSlinky.awsSdk.appstreamMod.StackAttribute]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.STORAGE_CONNECTOR_ERROR
     - typingsSlinky.awsSdk.awsSdkStrings.INTERNAL_SERVICE_ERROR
     - java.lang.String
   */
   type StackErrorCode = typingsSlinky.awsSdk.appstreamMod._StackErrorCode | java.lang.String
+  
   type StackErrors = js.Array[typingsSlinky.awsSdk.appstreamMod.StackError]
+  
   type StackList = js.Array[typingsSlinky.awsSdk.appstreamMod.Stack]
+  
   type StorageConnectorList = js.Array[typingsSlinky.awsSdk.appstreamMod.StorageConnector]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.HOMEFOLDERS
     - typingsSlinky.awsSdk.awsSdkStrings.GOOGLE_DRIVE
@@ -219,15 +286,25 @@ package object appstreamMod {
     - java.lang.String
   */
   type StorageConnectorType = typingsSlinky.awsSdk.appstreamMod._StorageConnectorType | java.lang.String
+  
   type StreamingUrlUserId = java.lang.String
+  
   type String = java.lang.String
+  
   type StringList = js.Array[typingsSlinky.awsSdk.appstreamMod.String]
+  
   type SubnetIdList = js.Array[typingsSlinky.awsSdk.appstreamMod.String]
+  
   type TagKey = java.lang.String
+  
   type TagKeyList = js.Array[typingsSlinky.awsSdk.appstreamMod.TagKey]
+  
   type TagValue = java.lang.String
+  
   type Tags = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.appstreamMod.TagValue]
+  
   type Timestamp = js.Date
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.RESOURCE_NOT_FOUND
     - typingsSlinky.awsSdk.awsSdkStrings.ACCESS_DENIED
@@ -235,12 +312,19 @@ package object appstreamMod {
     - java.lang.String
   */
   type UsageReportExecutionErrorCode = typingsSlinky.awsSdk.appstreamMod._UsageReportExecutionErrorCode | java.lang.String
+  
   type UsageReportSchedule = typingsSlinky.awsSdk.awsSdkStrings.DAILY | java.lang.String
+  
   type UsageReportSubscriptionList = js.Array[typingsSlinky.awsSdk.appstreamMod.UsageReportSubscription]
+  
   type UserAttributeValue = java.lang.String
+  
   type UserId = java.lang.String
+  
   type UserList = js.Array[typingsSlinky.awsSdk.appstreamMod.User]
+  
   type UserSettingList = js.Array[typingsSlinky.awsSdk.appstreamMod.UserSetting]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.STACK_NOT_FOUND
     - typingsSlinky.awsSdk.awsSdkStrings.USER_NAME_NOT_FOUND
@@ -248,9 +332,13 @@ package object appstreamMod {
     - java.lang.String
   */
   type UserStackAssociationErrorCode = typingsSlinky.awsSdk.appstreamMod._UserStackAssociationErrorCode | java.lang.String
+  
   type UserStackAssociationErrorList = js.Array[typingsSlinky.awsSdk.appstreamMod.UserStackAssociationError]
+  
   type UserStackAssociationList = js.Array[typingsSlinky.awsSdk.appstreamMod.UserStackAssociation]
+  
   type Username = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PUBLIC
     - typingsSlinky.awsSdk.awsSdkStrings.PRIVATE
@@ -258,6 +346,7 @@ package object appstreamMod {
     - java.lang.String
   */
   type VisibilityType = typingsSlinky.awsSdk.appstreamMod._VisibilityType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2016-12-01`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

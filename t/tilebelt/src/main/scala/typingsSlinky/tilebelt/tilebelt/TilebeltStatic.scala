@@ -5,10 +5,11 @@ import typingsSlinky.geojson.mod.GeoJsonProperties
 import typingsSlinky.geojson.mod.Polygon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TilebeltStatic extends js.Object {
+  
   /**
     * Get the smallest tile to cover a bbox
     *
@@ -20,6 +21,7 @@ trait TilebeltStatic extends js.Object {
     * //=tile
     */
   def bboxToTile(bbox: js.Array[Double]): js.Array[Double] = js.native
+  
   /**
     * Get the 4 tiles one zoom level higher
     *
@@ -31,6 +33,7 @@ trait TilebeltStatic extends js.Object {
     * //=tiles
     */
   def getChildren(tile: js.Array[Double]): js.Array[js.Array[Double]] = js.native
+  
   /**
     * Get the tile one zoom level lower
     *
@@ -42,6 +45,7 @@ trait TilebeltStatic extends js.Object {
     * //=tile
     */
   def getParent(tile: js.Array[Double]): js.Array[Double] = js.native
+  
   /**
     * Get the 3 sibling tiles for a tile
     *
@@ -53,6 +57,7 @@ trait TilebeltStatic extends js.Object {
     * //=tiles
     */
   def getSiblings(tile: js.Array[Double]): js.Array[js.Array[Double]] = js.native
+  
   /**
     * Check to see if an array of tiles contains a tiles siblings
     *
@@ -71,6 +76,7 @@ trait TilebeltStatic extends js.Object {
     * //=boolean
     */
   def hasSiblings(tile: js.Array[Double], tiles: js.Array[js.Array[Double]]): Boolean = js.native
+  
   /**
     * Check to see if an array of tiles contains a particular tile
     *
@@ -89,6 +95,7 @@ trait TilebeltStatic extends js.Object {
     * //=boolean
     */
   def hasTile(tiles: js.Array[js.Array[Double]], tile: js.Array[Double]): Boolean = js.native
+  
   /**
     * Get the tile for a point at a specified zoom level
     *
@@ -102,6 +109,7 @@ trait TilebeltStatic extends js.Object {
     * //=tile
     */
   def pointToTile(lon: Double, lat: Double, z: Double): js.Array[Double] = js.native
+  
   /**
     * Get the precise fractional tile location for a point at a zoom level
     *
@@ -114,6 +122,7 @@ trait TilebeltStatic extends js.Object {
     * //=tile
     */
   def pointToTileFraction(lon: Double, lat: Double, z: Double): js.Array[Double] = js.native
+  
   /**
     * Get the tile for a quadkey
     *
@@ -125,6 +134,7 @@ trait TilebeltStatic extends js.Object {
     * //=tile
     */
   def quadkeyToTile(quadkey: String): js.Array[Double] = js.native
+  
   /**
     * Get the bbox of a tile
     *
@@ -136,6 +146,7 @@ trait TilebeltStatic extends js.Object {
     * //=bbox
     */
   def tileToBBOX(tile: js.Array[Double]): js.Array[Double] = js.native
+  
   /**
     * Get a geojson representation of a tile
     *
@@ -147,6 +158,7 @@ trait TilebeltStatic extends js.Object {
     * //=poly
     */
   def tileToGeoJSON(tile: js.Array[Double]): Feature[Polygon, GeoJsonProperties] = js.native
+  
   /**
     * Get the quadkey for a tile
     *
@@ -158,6 +170,7 @@ trait TilebeltStatic extends js.Object {
     * //=quadkey
     */
   def tileToQuadkey(tile: js.Array[Double]): String = js.native
+  
   /**
     * Check to see if two tiles are the same
     *
@@ -171,8 +184,8 @@ trait TilebeltStatic extends js.Object {
     */
   def tilesEqual(tile1: js.Array[Double], tile2: js.Array[Double]): Boolean = js.native
 }
-
 object TilebeltStatic {
+  
   @scala.inline
   def apply(
     bboxToTile: js.Array[Double] => js.Array[Double],
@@ -192,44 +205,59 @@ object TilebeltStatic {
     val __obj = js.Dynamic.literal(bboxToTile = js.Any.fromFunction1(bboxToTile), getChildren = js.Any.fromFunction1(getChildren), getParent = js.Any.fromFunction1(getParent), getSiblings = js.Any.fromFunction1(getSiblings), hasSiblings = js.Any.fromFunction2(hasSiblings), hasTile = js.Any.fromFunction2(hasTile), pointToTile = js.Any.fromFunction3(pointToTile), pointToTileFraction = js.Any.fromFunction3(pointToTileFraction), quadkeyToTile = js.Any.fromFunction1(quadkeyToTile), tileToBBOX = js.Any.fromFunction1(tileToBBOX), tileToGeoJSON = js.Any.fromFunction1(tileToGeoJSON), tileToQuadkey = js.Any.fromFunction1(tileToQuadkey), tilesEqual = js.Any.fromFunction2(tilesEqual))
     __obj.asInstanceOf[TilebeltStatic]
   }
+  
   @scala.inline
   implicit class TilebeltStaticOps[Self <: TilebeltStatic] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setBboxToTile(value: js.Array[Double] => js.Array[Double]): Self = this.set("bboxToTile", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGetChildren(value: js.Array[Double] => js.Array[js.Array[Double]]): Self = this.set("getChildren", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGetParent(value: js.Array[Double] => js.Array[Double]): Self = this.set("getParent", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGetSiblings(value: js.Array[Double] => js.Array[js.Array[Double]]): Self = this.set("getSiblings", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setHasSiblings(value: (js.Array[Double], js.Array[js.Array[Double]]) => Boolean): Self = this.set("hasSiblings", js.Any.fromFunction2(value))
+    
     @scala.inline
     def setHasTile(value: (js.Array[js.Array[Double]], js.Array[Double]) => Boolean): Self = this.set("hasTile", js.Any.fromFunction2(value))
+    
     @scala.inline
     def setPointToTile(value: (Double, Double, Double) => js.Array[Double]): Self = this.set("pointToTile", js.Any.fromFunction3(value))
+    
     @scala.inline
     def setPointToTileFraction(value: (Double, Double, Double) => js.Array[Double]): Self = this.set("pointToTileFraction", js.Any.fromFunction3(value))
+    
     @scala.inline
     def setQuadkeyToTile(value: String => js.Array[Double]): Self = this.set("quadkeyToTile", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setTileToBBOX(value: js.Array[Double] => js.Array[Double]): Self = this.set("tileToBBOX", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setTileToGeoJSON(value: js.Array[Double] => Feature[Polygon, GeoJsonProperties]): Self = this.set("tileToGeoJSON", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setTileToQuadkey(value: js.Array[Double] => String): Self = this.set("tileToQuadkey", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setTilesEqual(value: (js.Array[Double], js.Array[Double]) => Boolean): Self = this.set("tilesEqual", js.Any.fromFunction2(value))
   }
-  
 }
-

@@ -2,14 +2,16 @@ package typingsSlinky.reactMdUtils
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object useCloseOnOutsideClickMod {
+  
   type Contains = js.Function2[
     /* container */ typingsSlinky.reactMdUtils.containsElementMod.CheckableThing, 
     /* child */ typingsSlinky.reactMdUtils.containsElementMod.CheckableThing, 
     scala.Boolean
   ]
+  
   type OnOutsideClick[E /* <: org.scalajs.dom.raw.HTMLElement */] = js.Function3[
     /* element */ E | scala.Null, 
     /* target */ org.scalajs.dom.raw.HTMLElement | scala.Null, 

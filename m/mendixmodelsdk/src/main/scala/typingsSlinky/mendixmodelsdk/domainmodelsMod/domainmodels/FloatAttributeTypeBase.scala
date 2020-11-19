@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.rest.ODataKeyPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -29,21 +29,25 @@ abstract class FloatAttributeTypeBase protected () extends DecimalAttributeTypeB
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FFloatAttributeTypeBase: IModel = js.native
+  
   @JSName("containerAsAttribute")
   def containerAsAttribute_MFloatAttributeTypeBase: Attribute = js.native
+  
   @JSName("containerAsEntityKeyPart")
   def containerAsEntityKeyPart_MFloatAttributeTypeBase: EntityKeyPart = js.native
+  
   @JSName("containerAsODataKeyPart")
   def containerAsODataKeyPart_MFloatAttributeTypeBase: ODataKeyPart = js.native
+  
+  @JSName("model")
+  var model_FFloatAttributeTypeBase: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.FloatAttributeTypeBase")
 @js.native
 object FloatAttributeTypeBase extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

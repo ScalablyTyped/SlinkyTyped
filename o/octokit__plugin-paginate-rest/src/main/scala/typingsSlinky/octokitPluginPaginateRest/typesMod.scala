@@ -531,13 +531,15 @@ import typingsSlinky.std.Extract
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@octokit/plugin-paginate-rest/dist-types/types", JSImport.Namespace)
 @js.native
 object typesMod extends js.Object {
+  
   @js.native
   trait PaginateInterface extends js.Object {
+    
     /**
       * Paginate a request using an known endpoint route string
       *
@@ -4254,6 +4256,7 @@ object typesMod extends js.Object {
       route: R,
       parameters: RequestParameters | (/* import warning: importer.ImportType#apply Failed type conversion: @octokit/plugin-paginate-rest.@octokit/plugin-paginate-rest/dist-types/generated/paginating-endpoints.PaginatingEndpoints[R]['parameters'] */ js.Any)
     ): js.Promise[js.Array[T]] = js.native
+    
     def iterator[T](EndpointOptions: EndpointOptions): AsyncIterableIterator[OctokitResponse[PaginationResults[T]]] = js.native
     def iterator[R /* <: RequestInterface[js.Object] */](request: R): AsyncIterableIterator[NormalizeResponse[GetResponseTypeFromEndpointMethod[R]]] = js.native
     def iterator[T, R /* <: Route */](
@@ -5573,15 +5576,20 @@ object typesMod extends js.Object {
   }
   
   type GetResultsType[T] = /* import warning: importer.ImportType#apply Failed type conversion: T['data'][@octokit/plugin-paginate-rest.@octokit/plugin-paginate-rest/dist-types/types.KnownKeysMatching<T['data'], std.Array<any>>] */ js.Any
+  
   type KeysMatching[T, V] = /* import warning: importer.ImportType#apply Failed type conversion: {[ K in keyof T ]: T[K] extends V? K : never}[keyof T] */ js.Any
+  
   type KnownKeys[T] = Extract[js.Any, /* keyof T */ String]
+  
   type KnownKeysMatching[T, V] = KeysMatching[Pick[T, KnownKeys[T]], V]
+  
   type MapFunction[T, R] = js.Function2[
     /* response */ OctokitResponse[PaginationResults[T]], 
     /* done */ js.Function0[Unit], 
     js.Array[R]
   ]
+  
   type NormalizeResponse[T] = T with DataGetResultsType[T]
+  
   type PaginationResults[T] = js.Array[T]
 }
-

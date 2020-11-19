@@ -3,7 +3,7 @@ package typingsSlinky.jsrsasign.mod.KJUR.asn1.x509
 import typingsSlinky.jsrsasign.anon.Prvkeyobj
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * X.509 Certificate class to sign and generate hex encoded certificate
@@ -34,4 +34,3 @@ class Certificate ()
   extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509.Certificate {
   def this(params: Prvkeyobj) = this()
 }
-

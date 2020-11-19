@@ -9,11 +9,14 @@ import typingsSlinky.canvasGauges.CanvasGauges.LinearGaugeOptions
 import typingsSlinky.canvasGauges.CanvasGauges.RadialGaugeOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("canvas-gauges", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  val GenericOptions: typingsSlinky.canvasGauges.CanvasGauges.GenericOptions = js.native
+  
   @js.native
   class Animation ()
     extends typingsSlinky.canvasGauges.CanvasGauges.Animation {
@@ -71,17 +74,47 @@ object mod extends js.Object {
     def this(rule: AnimationRule, duration: Double, draw: js.UndefOr[scala.Nothing], end: EndEventCallback) = this()
     def this(rule: AnimationRule, duration: Double, draw: DrawEventCallback, end: EndEventCallback) = this()
   }
+  /* static members */
+  @js.native
+  object Animation extends js.Object {
+    
+    var rules: typingsSlinky.canvasGauges.CanvasGauges.rules = js.native
+  }
   
   @js.native
   abstract class BaseGauge protected ()
     extends typingsSlinky.canvasGauges.CanvasGauges.BaseGauge {
     def this(options: typingsSlinky.canvasGauges.CanvasGauges.GenericOptions) = this()
   }
+  /* static members */
+  @js.native
+  object BaseGauge extends js.Object {
+    
+    def ensureValue(value: Double): Double = js.native
+    
+    def fromElement(element: HTMLElement): js.Any = js.native
+    
+    def initialize(`type`: String, options: typingsSlinky.canvasGauges.CanvasGauges.GenericOptions): js.Any = js.native
+    
+    val version: Double = js.native
+  }
   
   @js.native
   class DomObserver protected ()
     extends typingsSlinky.canvasGauges.CanvasGauges.DomObserver {
     def this(options: typingsSlinky.canvasGauges.CanvasGauges.GenericOptions, element: String, `type`: String) = this()
+  }
+  /* static members */
+  @js.native
+  object DomObserver extends js.Object {
+    
+    def domReady(handler: js.Function): js.Any = js.native
+    
+    def parse(value: js.Any): js.Any = js.native
+    
+    def toAttributeName(str: String): String = js.native
+    
+    def toDashed(camelCase: String): String = js.native
   }
   
   @js.native
@@ -104,38 +137,12 @@ object mod extends js.Object {
     def this(element: HTMLCanvasElement, width: js.UndefOr[scala.Nothing], height: Double) = this()
     def this(element: HTMLCanvasElement, width: Double, height: Double) = this()
   }
-  
-  val GenericOptions: typingsSlinky.canvasGauges.CanvasGauges.GenericOptions = js.native
-  /* static members */
-  @js.native
-  object Animation extends js.Object {
-    var rules: typingsSlinky.canvasGauges.CanvasGauges.rules = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object BaseGauge extends js.Object {
-    val version: Double = js.native
-    def ensureValue(value: Double): Double = js.native
-    def fromElement(element: HTMLElement): js.Any = js.native
-    def initialize(`type`: String, options: typingsSlinky.canvasGauges.CanvasGauges.GenericOptions): js.Any = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object DomObserver extends js.Object {
-    def domReady(handler: js.Function): js.Any = js.native
-    def parse(value: js.Any): js.Any = js.native
-    def toAttributeName(str: String): String = js.native
-    def toDashed(camelCase: String): String = js.native
-  }
-  
   /* static members */
   @js.native
   object SmartCanvas extends js.Object {
+    
     var collection: js.Array[typingsSlinky.canvasGauges.CanvasGauges.SmartCanvas] = js.native
+    
     def redraw(): js.Any = js.native
   }
-  
 }
-

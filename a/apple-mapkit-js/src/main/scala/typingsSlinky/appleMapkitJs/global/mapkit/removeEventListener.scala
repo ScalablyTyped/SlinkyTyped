@@ -4,11 +4,12 @@ import typingsSlinky.appleMapkitJs.mapkit.InitializationEvent
 import typingsSlinky.appleMapkitJs.mapkit.InitializationEventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("mapkit.removeEventListener")
 @js.native
 object removeEventListener extends js.Object {
+  
   /**
     * Unsubscribes a listener function from an event type.
     *
@@ -26,4 +27,3 @@ object removeEventListener extends js.Object {
     thisObject: T
   ): Unit = js.native
 }
-

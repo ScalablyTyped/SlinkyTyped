@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser.types
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * One of
@@ -19,15 +19,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.controlled_by_this_extension
 */
 trait LevelOfControl extends js.Object
-
 object LevelOfControl {
+  
   @scala.inline
   def controllable_by_this_extension: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.controllable_by_this_extension = "controllable_by_this_extension".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.controllable_by_this_extension]
+  
   @scala.inline
   def controlled_by_other_extensions: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.controlled_by_other_extensions = "controlled_by_other_extensions".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.controlled_by_other_extensions]
+  
   @scala.inline
   def controlled_by_this_extension: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.controlled_by_this_extension = "controlled_by_this_extension".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.controlled_by_this_extension]
+  
   @scala.inline
   def not_controllable: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.not_controllable = "not_controllable".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.not_controllable]
 }
-

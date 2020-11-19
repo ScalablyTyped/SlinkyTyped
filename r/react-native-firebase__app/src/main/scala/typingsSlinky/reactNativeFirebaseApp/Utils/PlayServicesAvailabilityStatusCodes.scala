@@ -2,14 +2,14 @@ package typingsSlinky.reactNativeFirebaseApp.Utils
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait PlayServicesAvailabilityStatusCodes extends js.Object
-
 @JSGlobal("Utils.PlayServicesAvailabilityStatusCodes")
 @js.native
 object PlayServicesAvailabilityStatusCodes extends js.Object {
+  
   @js.native
   sealed trait API_UNAVAILABLE extends PlayServicesAvailabilityStatusCodes
   
@@ -72,6 +72,4 @@ object PlayServicesAvailabilityStatusCodes extends js.Object {
   
   @js.native
   sealed trait TIMEOUT extends PlayServicesAvailabilityStatusCodes
-  
 }
-

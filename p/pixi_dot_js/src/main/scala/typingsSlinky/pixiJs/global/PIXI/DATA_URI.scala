@@ -3,7 +3,7 @@ package typingsSlinky.pixiJs.global.PIXI
 import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Regexp for data URI.
@@ -18,4 +18,3 @@ import scala.scalajs.js.annotation._
 @js.native
 object DATA_URI
   extends TopLevel[js.RegExp | String]
-

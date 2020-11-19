@@ -2,15 +2,17 @@ package typingsSlinky.grommet
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object listMod {
+  
   /* Rewritten from type alias, can be one of: 
     - scala.Boolean
     - typingsSlinky.grommet.listMod.SideType
     - typingsSlinky.grommet.anon.Side
   */
   type BorderType = typingsSlinky.grommet.listMod._BorderType | scala.Boolean
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.grommet.grommetStrings.none
     - typingsSlinky.grommet.grommetStrings.xxsmall
@@ -22,11 +24,13 @@ package object listMod {
     - java.lang.String
   */
   type PadSizeType = typingsSlinky.grommet.listMod._PadSizeType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.grommet.listMod.PadSizeType
     - typingsSlinky.grommet.anon.Left
   */
   type PadType = typingsSlinky.grommet.listMod._PadType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.grommet.grommetStrings.xxsmall
     - typingsSlinky.grommet.grommetStrings.xsmall

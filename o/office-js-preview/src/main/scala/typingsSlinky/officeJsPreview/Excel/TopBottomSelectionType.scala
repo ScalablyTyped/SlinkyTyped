@@ -2,11 +2,10 @@ package typingsSlinky.officeJsPreview.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait TopBottomSelectionType extends js.Object
-
 /**
   *
   * A simple enum for Top/Bottom filters to select whether to filter by the top N or bottom N percent, number, or sum of values.
@@ -17,6 +16,7 @@ sealed trait TopBottomSelectionType extends js.Object
 @JSGlobal("Excel.TopBottomSelectionType")
 @js.native
 object TopBottomSelectionType extends js.Object {
+  
   /**
     * Filter the top/bottom N number of items as measured by the chosen value.
     *
@@ -37,6 +37,4 @@ object TopBottomSelectionType extends js.Object {
     */
   @js.native
   sealed trait sum extends TopBottomSelectionType
-  
 }
-

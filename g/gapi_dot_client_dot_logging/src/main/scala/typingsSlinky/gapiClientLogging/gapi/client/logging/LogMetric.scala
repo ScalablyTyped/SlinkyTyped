@@ -3,23 +3,27 @@ package typingsSlinky.gapiClientLogging.gapi.client.logging
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LogMetric extends js.Object {
+  
   /**
     * Optional. The bucket_options are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket boundaries used to
     * create a histogram of the extracted values.
     */
   var bucketOptions: js.UndefOr[BucketOptions] = js.native
+  
   /** Optional. A description of this metric, which is used in documentation. */
   var description: js.UndefOr[String] = js.native
+  
   /**
     * Required. An advanced logs filter which is used to match log entries. Example:
     * "resource.type=gae_app AND severity>=ERROR"
     * The maximum length of the filter is 20000 characters.
     */
   var filter: js.UndefOr[String] = js.native
+  
   /**
     * Optional. A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign as the label value.
     * Each label key specified in the LabelDescriptor must have an associated extractor expression in this map. The syntax of the extractor expression is the
@@ -29,6 +33,7 @@ trait LogMetric extends js.Object {
     * a project.
     */
   var labelExtractors: js.UndefOr[Record[String, String]] = js.native
+  
   /**
     * Optional. The metric descriptor associated with the logs-based metric. If unspecified, it uses a default metric descriptor with a DELTA metric kind,
     * INT64 value type, with no labels and a unit of "1". Such a metric counts the number of log entries matching the filter expression.The name, type, and
@@ -39,6 +44,7 @@ trait LogMetric extends js.Object {
     * New labels can be added in the metric_descriptor, but existing labels cannot be modified except for their description.
     */
   var metricDescriptor: js.UndefOr[MetricDescriptor] = js.native
+  
   /**
     * Required. The client-assigned metric identifier. Examples: "error_count", "nginx/requests".Metric identifiers are limited to 100 characters and can
     * include only the following characters: A-Z, a-z, 0-9, and the special characters _-.,+!&#42;',()%/. The forward-slash character (/) denotes a hierarchy of
@@ -47,6 +53,7 @@ trait LogMetric extends js.Object {
     * then the metric identifier must be URL-encoded. Example: "projects/my-project/metrics/nginx%2Frequests".
     */
   var name: js.UndefOr[String] = js.native
+  
   /**
     * Optional. A value_extractor is required when using a distribution logs-based metric to extract the values to record from a log entry. Two functions are
     * supported for value extraction: EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument are:  1. field: The name of the log entry field from which
@@ -57,60 +64,79 @@ trait LogMetric extends js.Object {
     * distribution.Example: REGEXP_EXTRACT(jsonPayload.request, ".&#42;quantity=(\d+).&#42;")
     */
   var valueExtractor: js.UndefOr[String] = js.native
+  
   /** Deprecated. The API version that created or updated this metric. The v2 format is used by default and cannot be changed. */
   var version: js.UndefOr[String] = js.native
 }
-
 object LogMetric {
+  
   @scala.inline
   def apply(): LogMetric = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[LogMetric]
   }
+  
   @scala.inline
   implicit class LogMetricOps[Self <: LogMetric] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setBucketOptions(value: BucketOptions): Self = this.set("bucketOptions", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteBucketOptions: Self = this.set("bucketOptions", js.undefined)
+    
     @scala.inline
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
+    
     @scala.inline
     def setFilter(value: String): Self = this.set("filter", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteFilter: Self = this.set("filter", js.undefined)
+    
     @scala.inline
     def setLabelExtractors(value: Record[String, String]): Self = this.set("labelExtractors", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteLabelExtractors: Self = this.set("labelExtractors", js.undefined)
+    
     @scala.inline
     def setMetricDescriptor(value: MetricDescriptor): Self = this.set("metricDescriptor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteMetricDescriptor: Self = this.set("metricDescriptor", js.undefined)
+    
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
     @scala.inline
     def setValueExtractor(value: String): Self = this.set("valueExtractor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteValueExtractor: Self = this.set("valueExtractor", js.undefined)
+    
     @scala.inline
     def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteVersion: Self = this.set("version", js.undefined)
   }
-  
 }
-

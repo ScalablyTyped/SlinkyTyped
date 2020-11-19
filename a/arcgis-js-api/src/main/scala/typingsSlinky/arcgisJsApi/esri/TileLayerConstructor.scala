@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TileLayerConstructor
@@ -15,6 +15,6 @@ trait TileLayerConstructor
   */
 Instantiable0[TileLayer]
      with Instantiable1[/* properties */ TileLayerProperties, TileLayer] {
+  
   def fromJSON(json: js.Any): TileLayer = js.native
 }
-

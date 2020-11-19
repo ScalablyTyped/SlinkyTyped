@@ -3,10 +3,11 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`simple-line`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LineSymbol extends Symbol {
+  
   /**
     * The symbol type.
     *
@@ -14,6 +15,7 @@ trait LineSymbol extends Symbol {
     */
   @JSName("type")
   var type_LineSymbol: `simple-line` = js.native
+  
   /**
     * The width of the symbol in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
     *
@@ -23,4 +25,3 @@ trait LineSymbol extends Symbol {
     */
   var width: Double = js.native
 }
-

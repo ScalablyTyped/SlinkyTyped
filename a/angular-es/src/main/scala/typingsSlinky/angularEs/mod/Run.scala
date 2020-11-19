@@ -2,11 +2,12 @@ package typingsSlinky.angularEs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("angular-es", "Run")
 @js.native
 object Run extends js.Object {
+  
   /**
     * Register run block
     *
@@ -14,4 +15,3 @@ object Run extends js.Object {
     */
   def apply(): ngESDecorator = js.native
 }
-

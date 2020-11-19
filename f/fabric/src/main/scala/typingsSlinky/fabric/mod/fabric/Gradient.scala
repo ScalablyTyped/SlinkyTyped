@@ -5,7 +5,7 @@ import typingsSlinky.fabric.anon.ColorStops
 import typingsSlinky.fabric.fabricImplMod.IGradientOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fabric", "fabric.Gradient")
 @js.native
@@ -30,11 +30,11 @@ class Gradient protected ()
     */
   def this(options: ColorStops) = this()
 }
-
 /* static members */
 @JSImport("fabric", "fabric.Gradient")
 @js.native
 object Gradient extends js.Object {
+  
   /**
     * Returns {@link fabric.Gradient} instance from its object representation
     * @static
@@ -44,6 +44,7 @@ object Gradient extends js.Object {
     */
   def forObject(obj: js.Any): typingsSlinky.fabric.fabricImplMod.Gradient = js.native
   def forObject(obj: js.Any, options: IGradientOptions): typingsSlinky.fabric.fabricImplMod.Gradient = js.native
+  
   /**
     * Returns {@link fabric.Gradient} instance from an SVG element
     * @static
@@ -56,4 +57,3 @@ object Gradient extends js.Object {
     */
   def fromElement(el: SVGGradientElement, instance: typingsSlinky.fabric.fabricImplMod.Object): typingsSlinky.fabric.fabricImplMod.Gradient = js.native
 }
-

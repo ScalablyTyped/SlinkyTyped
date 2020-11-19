@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.pricingMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "Pricing")
 @js.native
@@ -14,4 +14,3 @@ class Pricing ()
   extends typingsSlinky.awsSdk.allMod.Pricing {
   def this(options: ClientConfiguration) = this()
 }
-

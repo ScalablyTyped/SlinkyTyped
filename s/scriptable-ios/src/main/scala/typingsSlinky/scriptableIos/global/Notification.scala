@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Schedules and manages notifications._
@@ -16,11 +16,11 @@ import scala.scalajs.js.annotation._
   */
 class Notification ()
   extends typingsSlinky.scriptableIos.Notification
-
 /* static members */
 @JSGlobal("Notification")
 @js.native
 object Notification extends js.Object {
+  
   /**
     * _Delivered notifications displayed in the Notification Center._
     *
@@ -28,6 +28,7 @@ object Notification extends js.Object {
     * @see https://docs.scriptable.app/notification/#alldelivered
     */
   def allDelivered(): js.Promise[js.Array[typingsSlinky.scriptableIos.Notification]] = js.native
+  
   /**
     * _All pending notifications._
     *
@@ -35,6 +36,7 @@ object Notification extends js.Object {
     * @see https://docs.scriptable.app/notification/#allpending
     */
   def allPending(): js.Promise[js.Array[typingsSlinky.scriptableIos.Notification]] = js.native
+  
   /**
     * _Removes all delivered notifications._
     *
@@ -42,6 +44,7 @@ object Notification extends js.Object {
     * @see https://docs.scriptable.app/notification/#removealldelivered
     */
   def removeAllDelivered(): js.Promise[Unit] = js.native
+  
   /**
     * _Removes all pending notifications._
     *
@@ -51,6 +54,7 @@ object Notification extends js.Object {
     * @see https://docs.scriptable.app/notification/#removeallpending
     */
   def removeAllPending(): js.Promise[Unit] = js.native
+  
   /**
     * _Removes delivered notifications._
     *
@@ -59,6 +63,7 @@ object Notification extends js.Object {
     * @see https://docs.scriptable.app/notification/#removedelivered
     */
   def removeDelivered(identifiers: js.Array[String]): js.Promise[Unit] = js.native
+  
   /**
     * _Removes pending notifications._
     *
@@ -67,6 +72,7 @@ object Notification extends js.Object {
     * @see https://docs.scriptable.app/notification/#removepending
     */
   def removePending(identifiers: js.Array[String]): js.Promise[Unit] = js.native
+  
   /**
     * _Resets the current notification._
     *
@@ -78,4 +84,3 @@ object Notification extends js.Object {
     */
   def resetCurrent(): Unit = js.native
 }
-

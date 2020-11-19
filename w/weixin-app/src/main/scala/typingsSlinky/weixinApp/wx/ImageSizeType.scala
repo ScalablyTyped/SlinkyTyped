@@ -2,7 +2,7 @@ package typingsSlinky.weixinApp.wx
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // #endregion
 // #region 媒体API列表
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.weixinApp.weixinAppStrings.compressed
 */
 trait ImageSizeType extends js.Object
-
 object ImageSizeType {
+  
   @scala.inline
   def compressed: typingsSlinky.weixinApp.weixinAppStrings.compressed = "compressed".asInstanceOf[typingsSlinky.weixinApp.weixinAppStrings.compressed]
+  
   @scala.inline
   def original: typingsSlinky.weixinApp.weixinAppStrings.original = "original".asInstanceOf[typingsSlinky.weixinApp.weixinAppStrings.original]
 }
-

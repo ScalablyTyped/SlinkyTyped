@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Facebook auth provider.
@@ -42,17 +42,19 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.FacebookAuthProvider")
 @js.native
 class FacebookAuthProvider () extends FacebookAuthProviderInstance
-
 /* static members */
 @JSImport("firebase", "auth.FacebookAuthProvider")
 @js.native
 object FacebookAuthProvider extends js.Object {
+  
   /**
     * This corresponds to the sign-in method identifier as returned in
     * {@link firebase.auth.Auth.fetchSignInMethodsForEmail}.
     */
   var FACEBOOK_SIGN_IN_METHOD: String = js.native
+  
   var PROVIDER_ID: String = js.native
+  
   /**
     * @example
     * ```javascript
@@ -66,4 +68,3 @@ object FacebookAuthProvider extends js.Object {
     */
   def credential(token: String): OAuthCredential = js.native
 }
-

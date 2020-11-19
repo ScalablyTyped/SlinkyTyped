@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a `<table>` element with some default styles and a quick way to
@@ -24,4 +24,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/table/types/Table", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[TableProps with RefAttributes[HTMLTableElement]]]
-

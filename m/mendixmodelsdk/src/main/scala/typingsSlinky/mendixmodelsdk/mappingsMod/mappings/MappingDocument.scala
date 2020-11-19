@@ -13,7 +13,7 @@ import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.IImportedWebServi
 import typingsSlinky.mendixmodelsdk.xmlschemasMod.xmlschemas.IXmlSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/mapping-documents relevant section in reference guide}
@@ -37,47 +37,66 @@ abstract class MappingDocument protected () extends Document {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
-  @JSName("model")
-  var model_FMappingDocument: IModel = js.native
+  
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MMappingDocument: FolderBase = js.native
+  
   def importedWebService: IImportedWebService | Null = js.native
+  
   def importedWebServiceQualifiedName: String | Null = js.native
+  
   def importedWebService_=(newValue: IImportedWebService | Null): Unit = js.native
+  
   /**
     * In version 6.4.0: introduced
     */
   def jsonStructure: IJsonStructure | Null = js.native
+  
   def jsonStructureQualifiedName: String | Null = js.native
+  
   def jsonStructure_=(newValue: IJsonStructure | Null): Unit = js.native
+  
   /**
     * In version 7.6.0: introduced
     */
   def messageDefinition: IMessageDefinition | Null = js.native
+  
   def messageDefinitionQualifiedName: String | Null = js.native
+  
   def messageDefinition_=(newValue: IMessageDefinition | Null): Unit = js.native
+  
+  @JSName("model")
+  var model_FMappingDocument: IModel = js.native
+  
   def operationName: String = js.native
   def operationName_=(newValue: String): Unit = js.native
+  
   /**
     * In version 7.14.0: introduced
     */
   def publicName: String = js.native
   def publicName_=(newValue: String): Unit = js.native
+  
   def rootElementName: String = js.native
   def rootElementName_=(newValue: String): Unit = js.native
+  
   def rootMappingElements: IList[ObjectMappingElement] = js.native
+  
   def serviceName: String = js.native
   def serviceName_=(newValue: String): Unit = js.native
+  
   def xmlSchema: IXmlSchema | Null = js.native
+  
   def xmlSchemaQualifiedName: String | Null = js.native
+  
   def xmlSchema_=(newValue: IXmlSchema | Null): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/mappings", "mappings.MappingDocument")
 @js.native
 object MappingDocument extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

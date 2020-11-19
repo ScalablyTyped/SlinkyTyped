@@ -2,12 +2,12 @@ package typingsSlinky.stringStripHtml.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("string-strip-html", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   def apply(str: String): String = js.native
   def apply(str: String, originalOpts: Options): String = js.native
 }
-

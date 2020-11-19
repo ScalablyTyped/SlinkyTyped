@@ -2,7 +2,7 @@ package typingsSlinky.estree.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.estree.mod.ImportSpecifier
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.estree.mod.ExportSpecifier
 */
 trait ModuleSpecifier extends Node
-
 object ModuleSpecifier {
+  
   @scala.inline
   def ImportSpecifier(
     imported: Identifier,
@@ -23,18 +23,21 @@ object ModuleSpecifier {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleSpecifier]
   }
+  
   @scala.inline
   def ImportDefaultSpecifier(local: Identifier, `type`: typingsSlinky.estree.estreeStrings.ImportDefaultSpecifier): ModuleSpecifier = {
     val __obj = js.Dynamic.literal(local = local.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleSpecifier]
   }
+  
   @scala.inline
   def ImportNamespaceSpecifier(local: Identifier, `type`: typingsSlinky.estree.estreeStrings.ImportNamespaceSpecifier): ModuleSpecifier = {
     val __obj = js.Dynamic.literal(local = local.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleSpecifier]
   }
+  
   @scala.inline
   def ExportSpecifier(
     exported: Identifier,
@@ -46,4 +49,3 @@ object ModuleSpecifier {
     __obj.asInstanceOf[ModuleSpecifier]
   }
 }
-

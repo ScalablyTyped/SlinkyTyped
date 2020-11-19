@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.angularCore.anon.Descendants
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ContentChildrenDecorator
@@ -18,6 +18,7 @@ trait ContentChildrenDecorator
       /* opts */ Descendants, 
       Query
     ] {
+  
   def apply(selector: String): js.Any = js.native
   def apply(selector: String, opts: Descendants): js.Any = js.native
   def apply(selector: js.Function): js.Any = js.native
@@ -58,4 +59,3 @@ trait ContentChildrenDecorator
   def apply(selector: Type[_]): js.Any = js.native
   def apply(selector: Type[_], opts: Descendants): js.Any = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.parse.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A Parse.Schema object is for handling schema data from Parse.
@@ -25,11 +25,11 @@ class Schema protected ()
   extends typingsSlinky.parse.mod.global.Parse.Schema {
   def this(className: String) = this()
 }
-
 /* static members */
 @JSImport("parse", "Schema")
 @js.native
 object Schema extends js.Object {
+  
   /**
     * Static method to get all schemas
     *
@@ -38,4 +38,3 @@ object Schema extends js.Object {
     */
   def all(): js.Promise[js.Array[typingsSlinky.parse.mod.global.Parse.Schema]] = js.native
 }
-

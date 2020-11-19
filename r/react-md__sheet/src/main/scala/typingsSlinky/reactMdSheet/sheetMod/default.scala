@@ -6,7 +6,7 @@ import typingsSlinky.reactMdSheet.anon.SheetPropsPickSheetPropsh
 import typingsSlinky.reactMdSheet.anon.SheetPropsPickSheetPropshAbout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Sheet component is an extension of the `Dialog` except that it is fixed
@@ -18,4 +18,3 @@ import scala.scalajs.js.annotation._
 object default extends TopLevel[
       ForwardRefExoticComponent[SheetPropsPickSheetPropsh | SheetPropsPickSheetPropshAbout]
     ]
-

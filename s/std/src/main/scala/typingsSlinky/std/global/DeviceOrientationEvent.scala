@@ -6,7 +6,7 @@ import org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEventInit
 import typingsSlinky.std.PermissionState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("DeviceOrientationEvent")
 @js.native
@@ -15,7 +15,6 @@ class DeviceOrientationEvent protected ()
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: DeviceOrientationEventInit) = this()
 }
-
 @JSGlobal("DeviceOrientationEvent")
 @js.native
 object DeviceOrientationEvent
@@ -28,6 +27,6 @@ object DeviceOrientationEvent
       /* eventInitDict */ DeviceOrientationEventInit, 
       org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent
     ] {
+  
   def requestPermission(): js.Promise[PermissionState] = js.native
 }
-

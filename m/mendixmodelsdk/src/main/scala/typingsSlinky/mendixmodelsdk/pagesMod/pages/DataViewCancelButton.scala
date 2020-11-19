@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/data-view-cancel-button relevant section in reference guide}
@@ -25,22 +25,22 @@ class DataViewCancelButton protected () extends DataViewControlBarButton {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FDataViewCancelButton: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.DataViewCancelButton")
 @js.native
 object DataViewCancelButton extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new DataViewCancelButton instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): DataViewCancelButton = js.native
+  
   /**
     * Creates and returns a new DataViewCancelButton instance in the SDK and on the server.
     * The new DataViewCancelButton will be automatically stored in the 'items' property
@@ -50,5 +50,8 @@ object DataViewCancelButton extends js.Object {
     *  6.0.0 to 6.6.0
     */
   def createIn(container: ControlBar): DataViewCancelButton = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -4,18 +4,18 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   class MessageEvent protected ()
     extends typingsSlinky.eventsource.MessageEvent {
     def this(`type`: String) = this()
     def this(`type`: String, eventInitDict: MessageEventInit) = this()
   }
-  
   @js.native
   object MessageEvent
     extends Instantiable1[/* type */ String, typingsSlinky.eventsource.MessageEvent]
@@ -24,6 +24,4 @@ object global extends js.Object {
           /* eventInitDict */ MessageEventInit, 
           typingsSlinky.eventsource.MessageEvent
         ]
-  
 }
-

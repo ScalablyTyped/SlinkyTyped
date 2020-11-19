@@ -7,7 +7,7 @@ import typingsSlinky.videoJs.mod.videojs.ComponentOptions
 import typingsSlinky.videoJs.mod.videojs.Player
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantiableClickableComponent
@@ -22,4 +22,3 @@ trait InstantiableClickableComponent
   */
 Instantiable1[/* player */ Player, ClickableComponent]
      with Instantiable2[/* player */ Player, /* options */ ComponentOptions, ClickableComponent]
-

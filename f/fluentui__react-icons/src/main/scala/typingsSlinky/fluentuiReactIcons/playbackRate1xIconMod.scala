@@ -6,11 +6,11 @@ import typingsSlinky.fluentuiReactIcons.svgIconTypesMod.ISvgIconProps
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@fluentui/react-icons/lib/components/PlaybackRate1xIcon", JSImport.Namespace)
 @js.native
 object playbackRate1xIconMod extends js.Object {
+  
   val default: ReactComponentClass[HTMLAttributes[HTMLSpanElement] with ISvgIconProps] = js.native
 }
-

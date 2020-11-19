@@ -3,11 +3,12 @@ package typingsSlinky.fabric.mod.fabric
 import typingsSlinky.fabric.anon.CrossOrigin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fabric", "fabric.loadSVGFromURL")
 @js.native
 object loadSVGFromURL extends js.Object {
+  
   def apply(
     url: String,
     callback: js.Function2[
@@ -46,4 +47,3 @@ object loadSVGFromURL extends js.Object {
     options: CrossOrigin
   ): Unit = js.native
 }
-

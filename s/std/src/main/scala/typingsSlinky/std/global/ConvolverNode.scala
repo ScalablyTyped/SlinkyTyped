@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.std.ConvolverOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ConvolverNode")
 @js.native
@@ -14,7 +14,6 @@ class ConvolverNode protected ()
   def this(context: typingsSlinky.std.BaseAudioContext) = this()
   def this(context: typingsSlinky.std.BaseAudioContext, options: ConvolverOptions) = this()
 }
-
 @JSGlobal("ConvolverNode")
 @js.native
 object ConvolverNode
@@ -27,4 +26,3 @@ object ConvolverNode
       /* options */ ConvolverOptions, 
       org.scalajs.dom.raw.ConvolverNode
     ]
-

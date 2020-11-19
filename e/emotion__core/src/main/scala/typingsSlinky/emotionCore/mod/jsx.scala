@@ -20,11 +20,12 @@ import typingsSlinky.react.mod.ReactSVGElement
 import typingsSlinky.react.mod.SVGAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@emotion/core", "jsx")
 @js.native
 object jsx extends js.Object {
+  
   def apply(
     `type`: input,
     props: InputHTMLAttributes[HTMLInputElement] with ClassAttributes[HTMLInputElement],
@@ -76,4 +77,3 @@ object jsx extends js.Object {
   def apply[P /* <: js.Object */, T /* <: ReactComponentClass[P] */, C /* <: ReactComponentClass[P] */](`type`: ClassType[P, T, C], props: js.UndefOr[scala.Nothing], children: ReactElement*): CElement[P, T] = js.native
   def apply[P /* <: js.Object */, T /* <: ReactComponentClass[P] */, C /* <: ReactComponentClass[P] */](`type`: ClassType[P, T, C], props: Null, children: ReactElement*): CElement[P, T] = js.native
 }
-

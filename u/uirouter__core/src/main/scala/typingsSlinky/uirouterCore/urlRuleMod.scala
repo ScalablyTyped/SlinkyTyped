@@ -12,11 +12,12 @@ import typingsSlinky.uirouterCore.urlInterfaceMod.UrlRuleMatchFn
 import typingsSlinky.uirouterCore.urlMatcherMod.UrlMatcher
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@uirouter/core/lib/url/urlRule", JSImport.Namespace)
 @js.native
 object urlRuleMod extends js.Object {
+  
   @js.native
   class BaseUrlRule protected () extends UrlRule {
     def this(`match`: UrlRuleMatchFn) = this()
@@ -26,8 +27,9 @@ object urlRuleMod extends js.Object {
   @js.native
   class UrlRuleFactory protected () extends js.Object {
     def this(router: UIRouter) = this()
-    var router: UIRouter = js.native
+    
     def compile(str: String): UrlMatcher = js.native
+    
     def create(what: String): UrlRule = js.native
     def create(what: String, handler: String): UrlRule = js.native
     def create(what: String, handler: UrlRuleHandlerFn): UrlRule = js.native
@@ -46,6 +48,7 @@ object urlRuleMod extends js.Object {
     def create(what: UrlMatcher): UrlRule = js.native
     def create(what: UrlMatcher, handler: String): UrlRule = js.native
     def create(what: UrlMatcher, handler: UrlRuleHandlerFn): UrlRule = js.native
+    
     /**
       * A UrlRule which matches based on a regular expression
       *
@@ -80,6 +83,7 @@ object urlRuleMod extends js.Object {
       */
     def fromRegExp(regexp: js.RegExp, handler: String): RegExpRule = js.native
     def fromRegExp(regexp: js.RegExp, handler: UrlRuleHandlerFn): RegExpRule = js.native
+    
     def fromState(stateOrDecl: StateDeclaration, router: UIRouter): StateRule = js.native
     /**
       * A UrlRule which matches a state by its url
@@ -93,6 +97,7 @@ object urlRuleMod extends js.Object {
       * ```
       */
     def fromState(stateOrDecl: StateObject, router: UIRouter): StateRule = js.native
+    
     /**
       * A UrlRule which matches based on a UrlMatcher
       *
@@ -132,13 +137,13 @@ object urlRuleMod extends js.Object {
     def fromUrlMatcher(urlMatcher: UrlMatcher, handler: String): MatcherUrlRule = js.native
     def fromUrlMatcher(urlMatcher: UrlMatcher, handler: UrlRuleHandlerFn): MatcherUrlRule = js.native
     def fromUrlMatcher(urlMatcher: UrlMatcher, handler: UrlMatcher): MatcherUrlRule = js.native
+    
+    var router: UIRouter = js.native
   }
-  
   /* static members */
   @js.native
   object UrlRuleFactory extends js.Object {
+    
     def isUrlRule(obj: js.Any): Boolean = js.native
   }
-  
 }
-

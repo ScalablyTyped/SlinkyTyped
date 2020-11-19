@@ -9,11 +9,12 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Bones/index", JSImport.Namespace)
 @js.native
 object bonesIndexMod extends js.Object {
+  
   @js.native
   class Bone protected ()
     extends typingsSlinky.babylonjs.boneMod.Bone {
@@ -48,7 +49,7 @@ object bonesIndexMod extends js.Object {
       */
     name: String,
       skeleton: typingsSlinky.babylonjs.skeletonMod.Skeleton,
-      parentBone: Nullable[typingsSlinky.babylonjs.boneMod.Bone],
+      parentBone: js.UndefOr[Nullable[typingsSlinky.babylonjs.boneMod.Bone]],
       localMatrix: Nullable[Matrix]
     ) = this()
     def this(
@@ -57,8 +58,8 @@ object bonesIndexMod extends js.Object {
       */
     name: String,
       skeleton: typingsSlinky.babylonjs.skeletonMod.Skeleton,
-      parentBone: Nullable[typingsSlinky.babylonjs.boneMod.Bone],
-      localMatrix: Nullable[Matrix],
+      parentBone: js.UndefOr[Nullable[typingsSlinky.babylonjs.boneMod.Bone]],
+      localMatrix: js.UndefOr[Nullable[Matrix]],
       restPose: Nullable[Matrix]
     ) = this()
     def this(
@@ -67,9 +68,9 @@ object bonesIndexMod extends js.Object {
       */
     name: String,
       skeleton: typingsSlinky.babylonjs.skeletonMod.Skeleton,
-      parentBone: Nullable[typingsSlinky.babylonjs.boneMod.Bone],
-      localMatrix: Nullable[Matrix],
-      restPose: Nullable[Matrix],
+      parentBone: js.UndefOr[Nullable[typingsSlinky.babylonjs.boneMod.Bone]],
+      localMatrix: js.UndefOr[Nullable[Matrix]],
+      restPose: js.UndefOr[Nullable[Matrix]],
       baseMatrix: Nullable[Matrix]
     ) = this()
     def this(
@@ -78,12 +79,22 @@ object bonesIndexMod extends js.Object {
       */
     name: String,
       skeleton: typingsSlinky.babylonjs.skeletonMod.Skeleton,
-      parentBone: Nullable[typingsSlinky.babylonjs.boneMod.Bone],
-      localMatrix: Nullable[Matrix],
-      restPose: Nullable[Matrix],
-      baseMatrix: Nullable[Matrix],
+      parentBone: js.UndefOr[Nullable[typingsSlinky.babylonjs.boneMod.Bone]],
+      localMatrix: js.UndefOr[Nullable[Matrix]],
+      restPose: js.UndefOr[Nullable[Matrix]],
+      baseMatrix: js.UndefOr[Nullable[Matrix]],
       index: Nullable[Double]
     ) = this()
+  }
+  /* static members */
+  @js.native
+  object Bone extends js.Object {
+    
+    var _tmpMats: js.Any = js.native
+    
+    var _tmpQuat: js.Any = js.native
+    
+    var _tmpVecs: js.Any = js.native
   }
   
   @js.native
@@ -97,6 +108,16 @@ object bonesIndexMod extends js.Object {
       */
     def this(mesh: AbstractMesh, bone: typingsSlinky.babylonjs.boneMod.Bone) = this()
     def this(mesh: AbstractMesh, bone: typingsSlinky.babylonjs.boneMod.Bone, options: BendAxis) = this()
+  }
+  /* static members */
+  @js.native
+  object BoneIKController extends js.Object {
+    
+    var _tmpMats: js.Any = js.native
+    
+    var _tmpQuat: js.Any = js.native
+    
+    var _tmpVecs: js.Any = js.native
   }
   
   @js.native
@@ -129,6 +150,16 @@ object bonesIndexMod extends js.Object {
       options: AdjustPitch
     ) = this()
   }
+  /* static members */
+  @js.native
+  object BoneLookController extends js.Object {
+    
+    var _tmpMats: js.Any = js.native
+    
+    var _tmpQuat: js.Any = js.native
+    
+    var _tmpVecs: js.Any = js.native
+  }
   
   @js.native
   class Skeleton protected ()
@@ -147,34 +178,10 @@ object bonesIndexMod extends js.Object {
       scene: Scene
     ) = this()
   }
-  
-  /* static members */
-  @js.native
-  object Bone extends js.Object {
-    var _tmpMats: js.Any = js.native
-    var _tmpQuat: js.Any = js.native
-    var _tmpVecs: js.Any = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object BoneIKController extends js.Object {
-    var _tmpMats: js.Any = js.native
-    var _tmpQuat: js.Any = js.native
-    var _tmpVecs: js.Any = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object BoneLookController extends js.Object {
-    var _tmpMats: js.Any = js.native
-    var _tmpQuat: js.Any = js.native
-    var _tmpVecs: js.Any = js.native
-  }
-  
   /* static members */
   @js.native
   object Skeleton extends js.Object {
+    
     /**
       * Creates a new skeleton from serialized data
       * @param parsedSkeleton defines the serialized data
@@ -183,6 +190,4 @@ object bonesIndexMod extends js.Object {
       */
     def Parse(parsedSkeleton: js.Any, scene: Scene): typingsSlinky.babylonjs.skeletonMod.Skeleton = js.native
   }
-  
 }
-

@@ -20,11 +20,26 @@ import typingsSlinky.mobx.observablearrayMod.IArrayWillChange
 import typingsSlinky.mobx.observablearrayMod.IArrayWillSplice
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/sdk/internal/properties", JSImport.Namespace)
 @js.native
 object propertiesMod extends js.Object {
+  
+  def instantiateChildElement(parent: AbstractElement): Element | Null = js.native
+  def instantiateChildElement(parent: AbstractElement, value: IAbstractElementJson): Element | Null = js.native
+  
+  def isNamedElement(element: IStructure): /* is mendixmodelsdk.mendixmodelsdk/dist/sdk/internal/properties/LocalByNameReferenceProperty.INamedElement */ Boolean = js.native
+  
+  def sendListChangeDeltas[T, P](
+    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
+    change: IArrayWillChange[P]
+  ): Unit = js.native
+  def sendListChangeDeltas[T, P](
+    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
+    change: IArrayWillSplice[P]
+  ): Unit = js.native
+  
   @js.native
   abstract class AbstractProperty[T, P] protected ()
     extends typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[T, P] {
@@ -134,6 +149,35 @@ object propertiesMod extends js.Object {
     extends typingsSlinky.mendixmodelsdk.primitivePropertyMod.PrimitiveProperty[T]
   
   @js.native
+  object PrimitiveTypeEnum extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: scala.Double): js.UndefOr[
+        typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum with scala.Double
+      ] = js.native
+    
+    /* 9 */ val Blob: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Blob with scala.Double = js.native
+    
+    /* 2 */ val Boolean: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Boolean with scala.Double = js.native
+    
+    /* 8 */ val Color: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Color with scala.Double = js.native
+    
+    /* 4 */ val DateTime: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.DateTime with scala.Double = js.native
+    
+    /* 3 */ val Double: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Double with scala.Double = js.native
+    
+    /* 5 */ val Guid: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Guid with scala.Double = js.native
+    
+    /* 0 */ val Integer: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Integer with scala.Double = js.native
+    
+    /* 6 */ val Point: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Point with scala.Double = js.native
+    
+    /* 7 */ val Size: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Size with scala.Double = js.native
+    
+    /* 1 */ val String: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.String with scala.Double = js.native
+  }
+  
+  @js.native
   class StructuralChildListProperty[T /* <: IStructuralUnit | IModelUnit */] protected ()
     extends typingsSlinky.mendixmodelsdk.structuralMod.StructuralChildListProperty[T] {
     def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String, value: js.Array[T]) = this()
@@ -160,35 +204,4 @@ object propertiesMod extends js.Object {
       targetRefType: String
     ) = this()
   }
-  
-  def instantiateChildElement(parent: AbstractElement): Element | Null = js.native
-  def instantiateChildElement(parent: AbstractElement, value: IAbstractElementJson): Element | Null = js.native
-  def isNamedElement(element: IStructure): /* is mendixmodelsdk.mendixmodelsdk/dist/sdk/internal/properties/LocalByNameReferenceProperty.INamedElement */ Boolean = js.native
-  def sendListChangeDeltas[T, P](
-    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
-    change: IArrayWillChange[P]
-  ): Unit = js.native
-  def sendListChangeDeltas[T, P](
-    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
-    change: IArrayWillSplice[P]
-  ): Unit = js.native
-  @js.native
-  object PrimitiveTypeEnum extends js.Object {
-    /* 9 */ val Blob: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Blob with scala.Double = js.native
-    /* 2 */ val Boolean: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Boolean with scala.Double = js.native
-    /* 8 */ val Color: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Color with scala.Double = js.native
-    /* 4 */ val DateTime: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.DateTime with scala.Double = js.native
-    /* 3 */ val Double: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Double with scala.Double = js.native
-    /* 5 */ val Guid: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Guid with scala.Double = js.native
-    /* 0 */ val Integer: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Integer with scala.Double = js.native
-    /* 6 */ val Point: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Point with scala.Double = js.native
-    /* 7 */ val Size: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.Size with scala.Double = js.native
-    /* 1 */ val String: typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum.String with scala.Double = js.native
-    @JSBracketAccess
-    def apply(value: scala.Double): js.UndefOr[
-        typingsSlinky.mendixmodelsdk.primitiveTypeEnumMod.PrimitiveTypeEnum with scala.Double
-      ] = js.native
-  }
-  
 }
-

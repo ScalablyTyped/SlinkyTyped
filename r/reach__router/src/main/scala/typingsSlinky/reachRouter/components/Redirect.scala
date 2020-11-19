@@ -9,9 +9,10 @@ import typingsSlinky.reachRouter.mod.RouteComponentProps
 import typingsSlinky.reachRouter.mod.WindowLocation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Redirect {
+  
   @JSImport("@reach/router", "Redirect")
   @js.native
   object component extends js.Object
@@ -20,31 +21,40 @@ object Redirect {
   class Builder[TState] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reachRouter.mod.Redirect[TState]] {
+    
     @scala.inline
     def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def from(value: String): this.type = set("from", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def location(value: WindowLocation[LocationState]): this.type = set("location", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def navigate(value: NavigateFn): this.type = set("navigate", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def noThrow(value: Boolean): this.type = set("noThrow", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def path(value: String): this.type = set("path", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def replace(value: Boolean): this.type = set("replace", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def state(value: TState): this.type = set("state", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def uri(value: String): this.type = set("uri", value.asInstanceOf[js.Any])
   }
   
   def withProps[TState](p: RouteComponentProps[RedirectProps[TState]]): Builder[TState] = new Builder[TState](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[TState](to: String): Builder[TState] = {
     val __props = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
     new Builder[TState](js.Array(this.component, __props.asInstanceOf[RouteComponentProps[RedirectProps[TState]]]))
   }
 }
-

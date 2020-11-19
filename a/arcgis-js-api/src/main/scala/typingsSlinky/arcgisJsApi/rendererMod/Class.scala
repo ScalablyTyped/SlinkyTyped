@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Renderer
 import typingsSlinky.arcgisJsApi.esri.RendererProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/renderers/Renderer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Renderer {
   def this(properties: RendererProperties) = this()
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 import typingsSlinky.appleMapkitJs.mapkit.StylesOverlayOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A circular overlay with a configurable radius, centered on a specific
@@ -28,4 +28,3 @@ class CircleOverlay protected ()
     options: StylesOverlayOptions
   ) = this()
 }
-

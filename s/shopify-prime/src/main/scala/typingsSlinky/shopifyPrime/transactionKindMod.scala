@@ -2,11 +2,12 @@ package typingsSlinky.shopifyPrime
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("shopify-prime/dist/enums/transaction_kind", JSImport.Namespace)
 @js.native
 object transactionKindMod extends js.Object {
+  
   trait _TransactionKind extends js.Object
   
   /* Rewritten from type alias, can be one of: 
@@ -19,4 +20,3 @@ object transactionKindMod extends js.Object {
   */
   type TransactionKind = _TransactionKind | String
 }
-

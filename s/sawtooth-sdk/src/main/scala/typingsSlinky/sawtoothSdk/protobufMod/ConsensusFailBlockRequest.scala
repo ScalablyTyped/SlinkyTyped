@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockRequest")
 @js.native
@@ -16,20 +16,22 @@ import scala.scalajs.js.annotation._
   */
 class ConsensusFailBlockRequest () extends IConsensusFailBlockRequest {
   def this(properties: IConsensusFailBlockRequest) = this()
+  
   /** ConsensusFailBlockRequest blockId. */
   @JSName("blockId")
   var blockId_ConsensusFailBlockRequest: js.typedarray.Uint8Array = js.native
+  
   /**
     * Converts this ConsensusFailBlockRequest to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "ConsensusFailBlockRequest")
 @js.native
 object ConsensusFailBlockRequest extends js.Object {
+  
   /**
     * Creates a new ConsensusFailBlockRequest instance using the specified properties.
     * @param [properties] Properties to set
@@ -37,6 +39,7 @@ object ConsensusFailBlockRequest extends js.Object {
     */
   def create(): ConsensusFailBlockRequest = js.native
   def create(properties: IConsensusFailBlockRequest): ConsensusFailBlockRequest = js.native
+  
   /**
     * Decodes a ConsensusFailBlockRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -49,6 +52,7 @@ object ConsensusFailBlockRequest extends js.Object {
   def decode(reader: Reader, length: Double): ConsensusFailBlockRequest = js.native
   def decode(reader: js.typedarray.Uint8Array): ConsensusFailBlockRequest = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusFailBlockRequest = js.native
+  
   /**
     * Decodes a ConsensusFailBlockRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -58,6 +62,7 @@ object ConsensusFailBlockRequest extends js.Object {
     */
   def decodeDelimited(reader: Reader): ConsensusFailBlockRequest = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusFailBlockRequest = js.native
+  
   /**
     * Encodes the specified ConsensusFailBlockRequest message. Does not implicitly {@link ConsensusFailBlockRequest.verify|verify} messages.
     * @param message ConsensusFailBlockRequest message or plain object to encode
@@ -66,6 +71,7 @@ object ConsensusFailBlockRequest extends js.Object {
     */
   def encode(message: IConsensusFailBlockRequest): Writer = js.native
   def encode(message: IConsensusFailBlockRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ConsensusFailBlockRequest message, length delimited. Does not implicitly {@link ConsensusFailBlockRequest.verify|verify} messages.
     * @param message ConsensusFailBlockRequest message or plain object to encode
@@ -74,12 +80,14 @@ object ConsensusFailBlockRequest extends js.Object {
     */
   def encodeDelimited(message: IConsensusFailBlockRequest): Writer = js.native
   def encodeDelimited(message: IConsensusFailBlockRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ConsensusFailBlockRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ConsensusFailBlockRequest
     */
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusFailBlockRequest = js.native
+  
   /**
     * Creates a plain object from a ConsensusFailBlockRequest message. Also converts values to other types if specified.
     * @param message ConsensusFailBlockRequest
@@ -88,6 +96,7 @@ object ConsensusFailBlockRequest extends js.Object {
     */
   def toObject(message: ConsensusFailBlockRequest): StringDictionary[js.Any] = js.native
   def toObject(message: ConsensusFailBlockRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ConsensusFailBlockRequest message.
     * @param message Plain object to verify
@@ -95,4 +104,3 @@ object ConsensusFailBlockRequest extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

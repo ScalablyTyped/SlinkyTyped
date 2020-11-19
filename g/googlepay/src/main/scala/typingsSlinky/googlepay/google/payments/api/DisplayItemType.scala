@@ -2,7 +2,7 @@ package typingsSlinky.googlepay.google.payments.api
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Enum string of a display item.
@@ -32,17 +32,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.googlepay.googlepayStrings.SHIPPING_OPTION
 */
 trait DisplayItemType extends js.Object
-
 object DisplayItemType {
+  
   @scala.inline
   def DISCOUNT: typingsSlinky.googlepay.googlepayStrings.DISCOUNT = "DISCOUNT".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.DISCOUNT]
+  
   @scala.inline
   def LINE_ITEM: typingsSlinky.googlepay.googlepayStrings.LINE_ITEM = "LINE_ITEM".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.LINE_ITEM]
+  
   @scala.inline
   def SHIPPING_OPTION: typingsSlinky.googlepay.googlepayStrings.SHIPPING_OPTION = "SHIPPING_OPTION".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.SHIPPING_OPTION]
+  
   @scala.inline
   def SUBTOTAL: typingsSlinky.googlepay.googlepayStrings.SUBTOTAL = "SUBTOTAL".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.SUBTOTAL]
+  
   @scala.inline
   def TAX: typingsSlinky.googlepay.googlepayStrings.TAX = "TAX".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.TAX]
 }
-

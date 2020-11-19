@@ -7,7 +7,7 @@ import typingsSlinky.protobufjs.mod.Writer
 import typingsSlinky.sawtoothSdk.protobufMod.IConsensusNotifyBlockInvalid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockInvalid")
 @js.native
@@ -19,11 +19,11 @@ class ConsensusNotifyBlockInvalid ()
   extends typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockInvalid {
   def this(properties: IConsensusNotifyBlockInvalid) = this()
 }
-
 /* static members */
 @JSImport("sawtooth-sdk", "protobuf.ConsensusNotifyBlockInvalid")
 @js.native
 object ConsensusNotifyBlockInvalid extends js.Object {
+  
   /**
     * Creates a new ConsensusNotifyBlockInvalid instance using the specified properties.
     * @param [properties] Properties to set
@@ -31,6 +31,7 @@ object ConsensusNotifyBlockInvalid extends js.Object {
     */
   def create(): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockInvalid = js.native
   def create(properties: IConsensusNotifyBlockInvalid): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockInvalid = js.native
+  
   /**
     * Decodes a ConsensusNotifyBlockInvalid message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -43,6 +44,7 @@ object ConsensusNotifyBlockInvalid extends js.Object {
   def decode(reader: Reader, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockInvalid = js.native
   def decode(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockInvalid = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockInvalid = js.native
+  
   /**
     * Decodes a ConsensusNotifyBlockInvalid message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -52,6 +54,7 @@ object ConsensusNotifyBlockInvalid extends js.Object {
     */
   def decodeDelimited(reader: Reader): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockInvalid = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockInvalid = js.native
+  
   /**
     * Encodes the specified ConsensusNotifyBlockInvalid message. Does not implicitly {@link ConsensusNotifyBlockInvalid.verify|verify} messages.
     * @param message ConsensusNotifyBlockInvalid message or plain object to encode
@@ -60,6 +63,7 @@ object ConsensusNotifyBlockInvalid extends js.Object {
     */
   def encode(message: IConsensusNotifyBlockInvalid): Writer = js.native
   def encode(message: IConsensusNotifyBlockInvalid, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ConsensusNotifyBlockInvalid message, length delimited. Does not implicitly {@link ConsensusNotifyBlockInvalid.verify|verify} messages.
     * @param message ConsensusNotifyBlockInvalid message or plain object to encode
@@ -68,12 +72,14 @@ object ConsensusNotifyBlockInvalid extends js.Object {
     */
   def encodeDelimited(message: IConsensusNotifyBlockInvalid): Writer = js.native
   def encodeDelimited(message: IConsensusNotifyBlockInvalid, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ConsensusNotifyBlockInvalid message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ConsensusNotifyBlockInvalid
     */
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockInvalid = js.native
+  
   /**
     * Creates a plain object from a ConsensusNotifyBlockInvalid message. Also converts values to other types if specified.
     * @param message ConsensusNotifyBlockInvalid
@@ -85,6 +91,7 @@ object ConsensusNotifyBlockInvalid extends js.Object {
     message: typingsSlinky.sawtoothSdk.protobufMod.ConsensusNotifyBlockInvalid,
     options: IConversionOptions
   ): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ConsensusNotifyBlockInvalid message.
     * @param message Plain object to verify
@@ -92,4 +99,3 @@ object ConsensusNotifyBlockInvalid extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

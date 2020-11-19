@@ -2,11 +2,12 @@ package typingsSlinky.babelTypes.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babel-types", "jSXElement")
 @js.native
 object jSXElement extends js.Object {
+  
   def apply(): JSXElement_ = js.native
   def apply(
     openingElement: js.UndefOr[scala.Nothing],
@@ -80,4 +81,3 @@ object jSXElement extends js.Object {
     selfClosing: Boolean
   ): JSXElement_ = js.native
 }
-

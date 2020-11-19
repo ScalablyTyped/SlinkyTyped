@@ -3,11 +3,12 @@ package typingsSlinky.jake.mod.global
 import typingsSlinky.jake.mod.global.jake.TaskOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("rule")
 @js.native
 object rule extends js.Object {
+  
   /**
     * Creates Jake FileTask from regex patterns
     * @name name/pattern of the Task
@@ -91,4 +92,3 @@ object rule extends js.Object {
     opts: TaskOptions
   ): Unit = js.native
 }
-

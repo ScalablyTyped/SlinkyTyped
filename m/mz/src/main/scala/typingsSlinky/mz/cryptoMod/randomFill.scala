@@ -2,11 +2,12 @@ package typingsSlinky.mz.cryptoMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mz/crypto", "randomFill")
 @js.native
 object randomFill extends js.Object {
+  
   def apply(
     buffer: js.typedarray.DataView,
     callback: js.Function2[/* err */ js.Error | Null, /* buf */ js.typedarray.DataView, Unit]
@@ -158,4 +159,3 @@ object randomFill extends js.Object {
     callback: js.Function2[/* err */ js.Error | Null, /* buf */ js.typedarray.Uint8ClampedArray, Unit]
   ): Unit = js.native
 }
-

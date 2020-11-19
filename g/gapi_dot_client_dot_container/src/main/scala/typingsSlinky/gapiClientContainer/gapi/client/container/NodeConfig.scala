@@ -3,16 +3,18 @@ package typingsSlinky.gapiClientContainer.gapi.client.container
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait NodeConfig extends js.Object {
+  
   /**
     * A list of hardware accelerators to be attached to each node.
     * See https://cloud.google.com/compute/docs/gpus for more information about
     * support for GPUs.
     */
   var accelerators: js.UndefOr[js.Array[AcceleratorConfig]] = js.native
+  
   /**
     * Size of the disk attached to each node, specified in GB.
     * The smallest allowed disk size is 10GB.
@@ -20,11 +22,13 @@ trait NodeConfig extends js.Object {
     * If unspecified, the default disk size is 100GB.
     */
   var diskSizeGb: js.UndefOr[Double] = js.native
+  
   /**
     * The image type to use for this node. Note that for a given image type,
     * the latest version of it will be used.
     */
   var imageType: js.UndefOr[String] = js.native
+  
   /**
     * The map of Kubernetes labels (key/value pairs) to be applied to each node.
     * These will added in addition to any default label(s) that
@@ -36,6 +40,7 @@ trait NodeConfig extends js.Object {
     * https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
     */
   var labels: js.UndefOr[Record[String, String]] = js.native
+  
   /**
     * The number of local SSD disks to be attached to the node.
     *
@@ -45,6 +50,7 @@ trait NodeConfig extends js.Object {
     * for more information.
     */
   var localSsdCount: js.UndefOr[Double] = js.native
+  
   /**
     * The name of a Google Compute Engine [machine
     * type](/compute/docs/machine-types) (e.g.
@@ -54,6 +60,7 @@ trait NodeConfig extends js.Object {
     * `n1-standard-1`.
     */
   var machineType: js.UndefOr[String] = js.native
+  
   /**
     * The metadata key/value pairs assigned to instances in the cluster.
     *
@@ -70,6 +77,7 @@ trait NodeConfig extends js.Object {
     * The total size of all keys and values must be less than 512 KB.
     */
   var metadata: js.UndefOr[Record[String, String]] = js.native
+  
   /**
     * Minimum CPU platform to be used by this instance. The instance may be
     * scheduled on the specified or newer CPU platform. Applicable values are the
@@ -79,6 +87,7 @@ trait NodeConfig extends js.Object {
     * information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
     */
   var minCpuPlatform: js.UndefOr[String] = js.native
+  
   /**
     * The set of Google API scopes to be made available on all of the
     * node VMs under the "default" service account.
@@ -96,17 +105,20 @@ trait NodeConfig extends js.Object {
     * Monitoring are enabled, in which case their required scopes will be added.
     */
   var oauthScopes: js.UndefOr[js.Array[String]] = js.native
+  
   /**
     * Whether the nodes are created as preemptible VM instances. See:
     * https://cloud.google.com/compute/docs/instances/preemptible for more
     * information about preemptible VM instances.
     */
   var preemptible: js.UndefOr[Boolean] = js.native
+  
   /**
     * The Google Cloud Platform Service Account to be used by the node VMs. If
     * no Service Account is specified, the "default" service account is used.
     */
   var serviceAccount: js.UndefOr[String] = js.native
+  
   /**
     * The list of instance tags applied to all nodes. Tags are used to identify
     * valid sources or targets for network firewalls and are specified by
@@ -115,79 +127,108 @@ trait NodeConfig extends js.Object {
     */
   var tags: js.UndefOr[js.Array[String]] = js.native
 }
-
 object NodeConfig {
+  
   @scala.inline
   def apply(): NodeConfig = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[NodeConfig]
   }
+  
   @scala.inline
   implicit class NodeConfigOps[Self <: NodeConfig] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setAcceleratorsVarargs(value: AcceleratorConfig*): Self = this.set("accelerators", js.Array(value :_*))
+    
     @scala.inline
     def setAccelerators(value: js.Array[AcceleratorConfig]): Self = this.set("accelerators", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteAccelerators: Self = this.set("accelerators", js.undefined)
+    
     @scala.inline
     def setDiskSizeGb(value: Double): Self = this.set("diskSizeGb", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteDiskSizeGb: Self = this.set("diskSizeGb", js.undefined)
+    
     @scala.inline
     def setImageType(value: String): Self = this.set("imageType", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteImageType: Self = this.set("imageType", js.undefined)
+    
     @scala.inline
     def setLabels(value: Record[String, String]): Self = this.set("labels", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteLabels: Self = this.set("labels", js.undefined)
+    
     @scala.inline
     def setLocalSsdCount(value: Double): Self = this.set("localSsdCount", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteLocalSsdCount: Self = this.set("localSsdCount", js.undefined)
+    
     @scala.inline
     def setMachineType(value: String): Self = this.set("machineType", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteMachineType: Self = this.set("machineType", js.undefined)
+    
     @scala.inline
     def setMetadata(value: Record[String, String]): Self = this.set("metadata", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteMetadata: Self = this.set("metadata", js.undefined)
+    
     @scala.inline
     def setMinCpuPlatform(value: String): Self = this.set("minCpuPlatform", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteMinCpuPlatform: Self = this.set("minCpuPlatform", js.undefined)
+    
     @scala.inline
     def setOauthScopesVarargs(value: String*): Self = this.set("oauthScopes", js.Array(value :_*))
+    
     @scala.inline
     def setOauthScopes(value: js.Array[String]): Self = this.set("oauthScopes", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteOauthScopes: Self = this.set("oauthScopes", js.undefined)
+    
     @scala.inline
     def setPreemptible(value: Boolean): Self = this.set("preemptible", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deletePreemptible: Self = this.set("preemptible", js.undefined)
+    
     @scala.inline
     def setServiceAccount(value: String): Self = this.set("serviceAccount", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteServiceAccount: Self = this.set("serviceAccount", js.undefined)
+    
     @scala.inline
     def setTagsVarargs(value: String*): Self = this.set("tags", js.Array(value :_*))
+    
     @scala.inline
     def setTags(value: js.Array[String]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)
   }
-  
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.leaflet.mod.Layer
 import typingsSlinky.leaflet.mod.PathOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // TODO: VirtualGrid extends support
 /**
@@ -33,6 +33,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class FeatureLayer_ protected () extends Layer {
   def this(options: FeatureLayerOptions) = this()
+  
   /**
     * Adds a new feature to the feature layer. this also adds the feature to the map if creation is successful.
     *
@@ -47,10 +48,12 @@ class FeatureLayer_ protected () extends Layer {
   def addFeature(feature: js.Any, callback: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   def addFeature(feature: js.Any, callback: ResponseCallbackHandler): this.type = js.native
   def addFeature(feature: js.Any, callback: ResponseCallbackHandler, context: js.Any): this.type = js.native
+  
   /**
     * Authenticates this service with a new token and runs any pending requests that required a token.
     */
   def authenticate(token: String): this.type = js.native
+  
   /**
     * Remove the feature with the provided id from the feature layer. This will also remove the feature from
     * the map if it exists.
@@ -69,6 +72,7 @@ class FeatureLayer_ protected () extends Layer {
   def deleteFeature(id: Double, callback: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   def deleteFeature(id: Double, callback: ResponseCallbackHandler): this.type = js.native
   def deleteFeature(id: Double, callback: ResponseCallbackHandler, context: js.Any): this.type = js.native
+  
   /**
     * Removes an array of features with the provided ids from the feature layer. This will also remove the
     * features from the map if they exist.
@@ -83,11 +87,13 @@ class FeatureLayer_ protected () extends Layer {
   def deleteFeatures(ids: js.Array[Double | String], callback: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   def deleteFeatures(ids: js.Array[Double | String], callback: ResponseCallbackHandler): this.type = js.native
   def deleteFeatures(ids: js.Array[Double | String], callback: ResponseCallbackHandler, context: js.Any): this.type = js.native
+  
   /**
     * Calls the passed function against every feature that is currently being displayed.
     */
   def eachActiveFeature(fn: js.Function1[/* feature */ js.Any, Unit]): this.type = js.native
   def eachActiveFeature(fn: js.Function1[/* feature */ js.Any, Unit], context: js.Any): this.type = js.native
+  
   /**
     * Calls the passed function against every feature. The function will be passed the layer that represents
     * the feature.
@@ -96,52 +102,63 @@ class FeatureLayer_ protected () extends Layer {
     */
   def eachFeature(fn: js.Function1[/* feature */ js.Any, Unit]): this.type = js.native
   def eachFeature(fn: js.Function1[/* feature */ js.Any, Unit], context: js.Any): this.type = js.native
+  
   /**
     * Returns a new `L.esri.services.Find` object that can be used to find features. Your callback function
     * will be passed a GeoJSON FeatureCollection with the results or an error.
     */
   def find(): Find_ = js.native
+  
   /**
     * Given the id of a Feature return the layer on the map that represents it. This will usually be a Leaflet
     * vector layer like Polyline or Polygon, or a Leaflet Marker.
     */
   def getFeature(id: String): Layer = js.native
   def getFeature(id: Double): Layer = js.native
+  
   /**
     *     Returns the current time range as an array like [from, to]
     */
   def getTimeRange(): js.Array[js.Date] = js.native
+  
   /**
     * Returns the current where setting
     */
   def getWhere(): String = js.native
+  
   /**
     * Returns a new `L.esri.services.IdentifyFeatures` object that can be used to identify features on this
     * layer. Your callback function will be passed a GeoJSON FeatureCollection with the results or an error.
     */
   def identify(): IdentifyFeatures_ = js.native
+  
   /**
     * Requests metadata about this Feature Layer. Callback will be called with error and metadata.
     */
   def metadata(callback: CallbackHandler): this.type = js.native
   def metadata(callback: CallbackHandler, context: js.Any): this.type = js.native
+  
   /**
     * Returns a new `L.esri.Query` object that can be used to query this service.
     */
   def query(): Query_ = js.native
+  
   /**
     * Redraws a feature with the provided id from the feature layer.
     */
   def redraw(id: String): this.type = js.native
   def redraw(id: Double): this.type = js.native
+  
   /**
     * Redraws all features from the feature layer that exist on the map.
     */
   def refresh(): this.type = js.native
+  
   /**
     *     Given the ID of a feature, reset that feature to the original style.
     */
   def resetStyle(): this.type = js.native
+  
   def setFeatureStyle(id: String, style: StyleCallback): this.type = js.native
   /**
     * Changes the style on a specfic feature.
@@ -149,6 +166,7 @@ class FeatureLayer_ protected () extends Layer {
   def setFeatureStyle(id: String, style: PathOptions): this.type = js.native
   def setFeatureStyle(id: Double, style: StyleCallback): this.type = js.native
   def setFeatureStyle(id: Double, style: PathOptions): this.type = js.native
+  
   def setStyle(style: StyleCallback): this.type = js.native
   /**
     * Sets the given path options to each layer that has a setStyle method. Can also be a Function that will
@@ -158,6 +176,7 @@ class FeatureLayer_ protected () extends Layer {
     * `featureLayer.setStyle(function(feature){ return { weight: feature.properties.pixelWidth };})`
     */
   def setStyle(style: PathOptions): this.type = js.native
+  
   /**
     * Sets the current time filter applied to features. An optional callback is run upon completion if
     * timeFilterMode is set to 'server'. Also accepts function context as the last argument.
@@ -166,6 +185,7 @@ class FeatureLayer_ protected () extends Layer {
   def setTimeRange(from: js.Date, to: js.Date, callback: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   def setTimeRange(from: js.Date, to: js.Date, callback: FeatureCallbackHandler): this.type = js.native
   def setTimeRange(from: js.Date, to: js.Date, callback: FeatureCallbackHandler, context: js.Any): this.type = js.native
+  
   /**
     * Sets the new where option and refreshes the layer to reflect the new where filter. Accepts an optional
     * callback and function context.
@@ -174,6 +194,7 @@ class FeatureLayer_ protected () extends Layer {
   def setWhere(where: String, callback: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   def setWhere(where: String, callback: FeatureCallbackHandler): this.type = js.native
   def setWhere(where: String, callback: FeatureCallbackHandler, context: js.Any): this.type = js.native
+  
   /**
     * Update the provided feature on the Feature Layer. This also updates the feature on the map.
     *
@@ -189,4 +210,3 @@ class FeatureLayer_ protected () extends Layer {
   def updateFeature(feature: js.Any, callback: ResponseCallbackHandler): this.type = js.native
   def updateFeature(feature: js.Any, callback: ResponseCallbackHandler, context: js.Any): this.type = js.native
 }
-

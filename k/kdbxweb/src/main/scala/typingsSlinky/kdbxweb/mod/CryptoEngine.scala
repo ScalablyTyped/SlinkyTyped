@@ -4,14 +4,14 @@ import org.scalajs.dom.crypto.Crypto
 import org.scalajs.dom.crypto.SubtleCrypto
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("kdbxweb", "CryptoEngine")
 @js.native
 object CryptoEngine extends js.Object {
+  
   val NodeCrypto: Crypto | Null = js.native
-  val subtle: SubtleCrypto | Null = js.native
-  val webCrypto: Crypto | Null = js.native
+  
   def argon2(
     password: js.typedarray.ArrayBuffer,
     salt: js.typedarray.ArrayBuffer,
@@ -22,7 +22,9 @@ object CryptoEngine extends js.Object {
     `type`: Double,
     version: Double
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  
   def chacha20(data: js.typedarray.ArrayBuffer, key: js.typedarray.ArrayBuffer, iv: js.typedarray.ArrayBuffer): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  
   def configure(): Unit = js.native
   def configure(newSubtle: Null, newWebCrypto: Null, newNodeCrypto: Crypto): Unit = js.native
   def configure(newSubtle: Null, newWebCrypto: Crypto): Unit = js.native
@@ -31,10 +33,18 @@ object CryptoEngine extends js.Object {
   def configure(newSubtle: SubtleCrypto, newWebCrypto: Null, newNodeCrypto: Crypto): Unit = js.native
   def configure(newSubtle: SubtleCrypto, newWebCrypto: Crypto): Unit = js.native
   def configure(newSubtle: SubtleCrypto, newWebCrypto: Crypto, newNodeCrypto: Crypto): Unit = js.native
+  
   def createAesCbc(): js.Any = js.native
+  
   def hmacSha256(key: js.typedarray.ArrayBuffer, data: js.typedarray.ArrayBuffer): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  
   def random(len: Double): js.typedarray.Uint8Array = js.native
+  
   def sha256(data: js.typedarray.ArrayBuffer): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  
   def sha512(data: js.typedarray.ArrayBuffer): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  
+  val subtle: SubtleCrypto | Null = js.native
+  
+  val webCrypto: Crypto | Null = js.native
 }
-

@@ -5,7 +5,7 @@ import typingsSlinky.uirouterCore.transitionHookMod.GetResultHandler
 import typingsSlinky.uirouterCore.transitionInterfaceMod.PathType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@uirouter/angularjs", "core.TransitionEventType")
 @js.native
@@ -157,4 +157,3 @@ class TransitionEventType protected ()
     synchronous: Boolean
   ) = this()
 }
-

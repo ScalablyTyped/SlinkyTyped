@@ -2,9 +2,10 @@ package typingsSlinky.activexFaxcomexlib.FAXCOMEXLib
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object EventHelperTypes {
+  
   type FaxAccountInvokeArgNames = js.Tuple8[
     typingsSlinky.activexFaxcomexlib.activexFaxcomexlibStrings.dispidMember, 
     typingsSlinky.activexFaxcomexlib.activexFaxcomexlibStrings.riid, 
@@ -15,6 +16,7 @@ package object EventHelperTypes {
     typingsSlinky.activexFaxcomexlib.activexFaxcomexlibStrings.pexcepinfo, 
     typingsSlinky.activexFaxcomexlib.activexFaxcomexlibStrings.puArgErr
   ]
+  
   type FaxServerInvokeArgNames = js.Tuple8[
     typingsSlinky.activexFaxcomexlib.activexFaxcomexlibStrings.dispidMember, 
     typingsSlinky.activexFaxcomexlib.activexFaxcomexlibStrings.riid, 
@@ -25,6 +27,7 @@ package object EventHelperTypes {
     typingsSlinky.activexFaxcomexlib.activexFaxcomexlibStrings.pexcepinfo, 
     typingsSlinky.activexFaxcomexlib.activexFaxcomexlibStrings.puArgErr
   ]
+  
   type FaxServerOnDeviceStatusChangeArgNames = js.Tuple6[
     typingsSlinky.activexFaxcomexlib.activexFaxcomexlibStrings.pFaxServer, 
     typingsSlinky.activexFaxcomexlib.activexFaxcomexlibStrings.lDeviceId, 

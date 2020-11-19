@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SMS extends Service {
+  
   @JSName("config")
   var config_SMS: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Creates an application. An application consists of one or more server groups. Each server group contain one or more servers.
     */
@@ -25,6 +27,7 @@ trait SMS extends Service {
     params: CreateAppRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateAppResponse, Unit]
   ): Request[CreateAppResponse, AWSError] = js.native
+  
   /**
     * Creates a replication job. The replication job schedules periodic replication runs to replicate your server to AWS. Each replication run creates an Amazon Machine Image (AMI).
     */
@@ -38,6 +41,7 @@ trait SMS extends Service {
     params: CreateReplicationJobRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateReplicationJobResponse, Unit]
   ): Request[CreateReplicationJobResponse, AWSError] = js.native
+  
   /**
     * Deletes an existing application. Optionally deletes the launched stack associated with the application and all AWS SMS replication jobs for servers in the application.
     */
@@ -51,6 +55,7 @@ trait SMS extends Service {
     params: DeleteAppRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteAppResponse, Unit]
   ): Request[DeleteAppResponse, AWSError] = js.native
+  
   /**
     * Deletes existing launch configuration for an application.
     */
@@ -64,6 +69,7 @@ trait SMS extends Service {
     params: DeleteAppLaunchConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteAppLaunchConfigurationResponse, Unit]
   ): Request[DeleteAppLaunchConfigurationResponse, AWSError] = js.native
+  
   /**
     * Deletes existing replication configuration for an application.
     */
@@ -79,6 +85,7 @@ trait SMS extends Service {
     params: DeleteAppReplicationConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteAppReplicationConfigurationResponse, Unit]
   ): Request[DeleteAppReplicationConfigurationResponse, AWSError] = js.native
+  
   /**
     * Deletes the specified replication job. After you delete a replication job, there are no further replication runs. AWS deletes the contents of the Amazon S3 bucket used to store AWS SMS artifacts. The AMIs created by the replication runs are not deleted.
     */
@@ -92,6 +99,7 @@ trait SMS extends Service {
     params: DeleteReplicationJobRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteReplicationJobResponse, Unit]
   ): Request[DeleteReplicationJobResponse, AWSError] = js.native
+  
   /**
     * Deletes all servers from your server catalog.
     */
@@ -105,6 +113,7 @@ trait SMS extends Service {
     params: DeleteServerCatalogRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteServerCatalogResponse, Unit]
   ): Request[DeleteServerCatalogResponse, AWSError] = js.native
+  
   /**
     * Disassociates the specified connector from AWS SMS. After you disassociate a connector, it is no longer available to support replication jobs.
     */
@@ -118,6 +127,7 @@ trait SMS extends Service {
     params: DisassociateConnectorRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DisassociateConnectorResponse, Unit]
   ): Request[DisassociateConnectorResponse, AWSError] = js.native
+  
   /**
     * Generates a target change set for a currently launched stack and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
     */
@@ -131,6 +141,7 @@ trait SMS extends Service {
     params: GenerateChangeSetRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GenerateChangeSetResponse, Unit]
   ): Request[GenerateChangeSetResponse, AWSError] = js.native
+  
   /**
     * Generates an Amazon CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
     */
@@ -144,6 +155,7 @@ trait SMS extends Service {
     params: GenerateTemplateRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GenerateTemplateResponse, Unit]
   ): Request[GenerateTemplateResponse, AWSError] = js.native
+  
   /**
     * Retrieve information about an application.
     */
@@ -154,6 +166,7 @@ trait SMS extends Service {
     */
   def getApp(params: GetAppRequest): Request[GetAppResponse, AWSError] = js.native
   def getApp(params: GetAppRequest, callback: js.Function2[/* err */ AWSError, /* data */ GetAppResponse, Unit]): Request[GetAppResponse, AWSError] = js.native
+  
   /**
     * Retrieves the application launch configuration associated with an application.
     */
@@ -167,6 +180,7 @@ trait SMS extends Service {
     params: GetAppLaunchConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetAppLaunchConfigurationResponse, Unit]
   ): Request[GetAppLaunchConfigurationResponse, AWSError] = js.native
+  
   /**
     * Retrieves an application replication configuration associatd with an application.
     */
@@ -182,6 +196,7 @@ trait SMS extends Service {
     params: GetAppReplicationConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetAppReplicationConfigurationResponse, Unit]
   ): Request[GetAppReplicationConfigurationResponse, AWSError] = js.native
+  
   /**
     * Describes the connectors registered with the AWS SMS.
     */
@@ -195,6 +210,7 @@ trait SMS extends Service {
     params: GetConnectorsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetConnectorsResponse, Unit]
   ): Request[GetConnectorsResponse, AWSError] = js.native
+  
   /**
     * Describes the specified replication job or all of your replication jobs.
     */
@@ -208,6 +224,7 @@ trait SMS extends Service {
     params: GetReplicationJobsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetReplicationJobsResponse, Unit]
   ): Request[GetReplicationJobsResponse, AWSError] = js.native
+  
   /**
     * Describes the replication runs for the specified replication job.
     */
@@ -221,6 +238,7 @@ trait SMS extends Service {
     params: GetReplicationRunsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetReplicationRunsResponse, Unit]
   ): Request[GetReplicationRunsResponse, AWSError] = js.native
+  
   /**
     * Describes the servers in your server catalog. Before you can describe your servers, you must import them using ImportServerCatalog.
     */
@@ -234,6 +252,7 @@ trait SMS extends Service {
     params: GetServersRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetServersResponse, Unit]
   ): Request[GetServersResponse, AWSError] = js.native
+  
   /**
     * Gathers a complete list of on-premises servers. Connectors must be installed and monitoring all servers that you want to import. This call returns immediately, but might take additional time to retrieve all the servers.
     */
@@ -247,6 +266,7 @@ trait SMS extends Service {
     params: ImportServerCatalogRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ImportServerCatalogResponse, Unit]
   ): Request[ImportServerCatalogResponse, AWSError] = js.native
+  
   /**
     * Launches an application stack.
     */
@@ -260,6 +280,7 @@ trait SMS extends Service {
     params: LaunchAppRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ LaunchAppResponse, Unit]
   ): Request[LaunchAppResponse, AWSError] = js.native
+  
   /**
     * Returns a list of summaries for all applications.
     */
@@ -273,6 +294,7 @@ trait SMS extends Service {
     params: ListAppsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListAppsResponse, Unit]
   ): Request[ListAppsResponse, AWSError] = js.native
+  
   /**
     * Creates a launch configuration for an application.
     */
@@ -286,6 +308,7 @@ trait SMS extends Service {
     params: PutAppLaunchConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutAppLaunchConfigurationResponse, Unit]
   ): Request[PutAppLaunchConfigurationResponse, AWSError] = js.native
+  
   /**
     * Creates or updates a replication configuration for an application.
     */
@@ -301,6 +324,7 @@ trait SMS extends Service {
     params: PutAppReplicationConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutAppReplicationConfigurationResponse, Unit]
   ): Request[PutAppReplicationConfigurationResponse, AWSError] = js.native
+  
   /**
     * Starts replicating an application.
     */
@@ -314,6 +338,7 @@ trait SMS extends Service {
     params: StartAppReplicationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartAppReplicationResponse, Unit]
   ): Request[StartAppReplicationResponse, AWSError] = js.native
+  
   /**
     * Starts an on-demand replication run for the specified replication job. This replication run starts immediately. This replication run is in addition to the ones already scheduled. There is a limit on the number of on-demand replications runs you can request in a 24-hour period.
     */
@@ -327,6 +352,7 @@ trait SMS extends Service {
     params: StartOnDemandReplicationRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StartOnDemandReplicationRunResponse, Unit]
   ): Request[StartOnDemandReplicationRunResponse, AWSError] = js.native
+  
   /**
     * Stops replicating an application.
     */
@@ -340,6 +366,7 @@ trait SMS extends Service {
     params: StopAppReplicationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopAppReplicationResponse, Unit]
   ): Request[StopAppReplicationResponse, AWSError] = js.native
+  
   /**
     * Terminates the stack for an application.
     */
@@ -353,6 +380,7 @@ trait SMS extends Service {
     params: TerminateAppRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ TerminateAppResponse, Unit]
   ): Request[TerminateAppResponse, AWSError] = js.native
+  
   /**
     * Updates an application.
     */
@@ -366,6 +394,7 @@ trait SMS extends Service {
     params: UpdateAppRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateAppResponse, Unit]
   ): Request[UpdateAppResponse, AWSError] = js.native
+  
   /**
     * Updates the specified settings for the specified replication job.
     */
@@ -380,4 +409,3 @@ trait SMS extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateReplicationJobResponse, Unit]
   ): Request[UpdateReplicationJobResponse, AWSError] = js.native
 }
-

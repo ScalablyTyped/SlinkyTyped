@@ -7,9 +7,10 @@ import typingsSlinky.muiDatatables.mod.MUIDataTableBody
 import typingsSlinky.muiDatatables.mod.MUIDataTableColumnDef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TableBody {
+  
   @JSImport("mui-datatables", "TableBody")
   @js.native
   object component extends js.Object
@@ -18,23 +19,31 @@ object TableBody {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def filterListVarargs(value: js.Array[String]*): this.type = set("filterList", js.Array(value :_*))
+    
     @scala.inline
     def filterList(value: js.Array[js.Array[String]]): this.type = set("filterList", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onRowClick(value: (/* rowData */ js.Array[String], /* rowMeta */ RowIndex) => Unit): this.type = set("onRowClick", js.Any.fromFunction2(value))
+    
     @scala.inline
     def searchText(value: String): this.type = set("searchText", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def selectRowUpdate(value: /* args */ js.Any => _): this.type = set("selectRowUpdate", js.Any.fromFunction1(value))
+    
     @scala.inline
     def selectedRows(value: js.Object): this.type = set("selectedRows", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def toggleExpandRow(value: /* args */ js.Any => _): this.type = set("toggleExpandRow", js.Any.fromFunction1(value))
   }
   
   def withProps(p: MUIDataTableBody): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     classes: js.Object,
@@ -47,4 +56,3 @@ object TableBody {
     new Builder(js.Array(this.component, __props.asInstanceOf[MUIDataTableBody]))
   }
 }
-

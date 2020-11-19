@@ -6,15 +6,15 @@ import typingsSlinky.sharepoint.sharepointStrings.mouseleave
 import typingsSlinky.std.GlobalEventHandlers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AttachEvent")
 @js.native
 object AttachEvent_mouseleave extends js.Object {
+  
   def apply(
     `type`: mouseleave,
     eventFunc: js.ThisFunction1[/* this */ HTMLElement, /* ev */ MouseEvent, _],
     el: GlobalEventHandlers
   ): js.Any = js.native
 }
-

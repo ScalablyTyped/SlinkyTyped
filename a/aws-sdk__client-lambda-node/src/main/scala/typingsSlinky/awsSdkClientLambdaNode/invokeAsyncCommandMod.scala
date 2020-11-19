@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-lambda-node/commands/InvokeAsyncCommand", JSImport.Namespace)
 @js.native
 object invokeAsyncCommandMod extends js.Object {
+  
   @js.native
   class InvokeAsyncCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object invokeAsyncCommandMod extends js.Object {
           Readable
         ] {
     def this(input: InvokeAsyncInput[Readable]) = this()
+    
     val middlewareStack: MiddlewareStack[InvokeAsyncInput[Readable], InvokeAsyncOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[InvokeAsyncInput[Readable], InvokeAsyncOutput] = js.native
   }
-  
 }
-

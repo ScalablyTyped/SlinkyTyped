@@ -14,15 +14,11 @@ import typingsSlinky.octokitTypes.routeMod.Route
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait graphql extends js.Object {
-  /**
-    * Octokit endpoint API, see {@link https://github.com/octokit/endpoint.js|@octokit/endpoint}
-    */
-  @JSName("endpoint")
-  var endpoint_Original: EndpointInterface[js.Object] = js.native
+  
   /**
     * Sends a GraphQL query request based on endpoint options
     * The GraphQL query must be specified in `options`.
@@ -38,10 +34,12 @@ trait graphql extends js.Object {
     */
   def apply[ResponseData](query: Query): GraphQlResponse[ResponseData] = js.native
   def apply[ResponseData](query: Query, parameters: RequestParameters): GraphQlResponse[ResponseData] = js.native
+  
   /**
     * Returns a new `endpoint` with updated route and parameters
     */
   def defaults(newDefaults: RequestParameters): graphql = js.native
+  
   /**
     * Octokit endpoint API, see {@link https://github.com/octokit/endpoint.js|@octokit/endpoint}
     */
@@ -80,6 +78,11 @@ trait graphql extends js.Object {
     /* keyof @octokit/types.@octokit/types/dist-types/RequestOptions.RequestOptions */ method | url | headers | body | request
   ]) = js.native
   /**
+    * Octokit endpoint API, see {@link https://github.com/octokit/endpoint.js|@octokit/endpoint}
+    */
+  @JSName("endpoint")
+  var endpoint_Original: EndpointInterface[js.Object] = js.native
+  /**
     * Transforms a GitHub REST API endpoint into generic request options
     *
     * @param {object} endpoint Must set `url` unless it's set defaults. Plus URL, query or body parameters, as well as `headers`, `mediaType.{format|previews}`, `request`, or `baseUrl`.
@@ -93,4 +96,3 @@ trait graphql extends js.Object {
     /* keyof @octokit/types.@octokit/types/dist-types/RequestOptions.RequestOptions */ method | url | headers | body | request
   ]) = js.native
 }
-

@@ -9,48 +9,20 @@ import typingsSlinky.node.httpMod.RequestOptions
 import typingsSlinky.node.netMod.Socket
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("follow-redirects", "http")
 @js.native
 object http extends js.Object {
-  @js.native
-  class Agent ()
-    extends typingsSlinky.node.httpMod.Agent
-  
-  @js.native
-  class ClientRequest protected ()
-    extends typingsSlinky.node.httpMod.ClientRequest {
-    def this(url: String) = this()
-  }
-  
-  @js.native
-  class IncomingMessage protected ()
-    extends typingsSlinky.node.httpMod.IncomingMessage {
-    def this(socket: Socket) = this()
-  }
-  
-  @js.native
-  class OutgoingMessage ()
-    extends typingsSlinky.node.httpMod.OutgoingMessage
-  
-  @js.native
-  class Server ()
-    extends typingsSlinky.node.httpMod.Server
-  
-  @js.native
-  class ServerResponse protected ()
-    extends typingsSlinky.node.httpMod.ServerResponse {
-    def this(req: typingsSlinky.node.httpMod.IncomingMessage) = this()
-  }
   
   var METHODS: js.Array[String] = js.native
+  
   var STATUS_CODES: StringDictionary[js.UndefOr[String]] with NumberDictionary[js.UndefOr[String]] = js.native
+  
+  def createServer(): typingsSlinky.node.httpMod.Server = js.native
   @JSName("createServer")
   var createServer_Original: js.Function0[typingsSlinky.node.httpMod.Server] = js.native
-  var globalAgent: typingsSlinky.node.httpMod.Agent = js.native
-  var maxHeaderSize: Double = js.native
-  def createServer(): typingsSlinky.node.httpMod.Server = js.native
+  
   def get(options: RequestOptions with FollowOptions[RequestOptions]): RedirectableRequest[
     typingsSlinky.node.httpMod.ClientRequest, 
     typingsSlinky.node.httpMod.IncomingMessage
@@ -73,6 +45,11 @@ object http extends js.Object {
     typingsSlinky.node.httpMod.ClientRequest, 
     typingsSlinky.node.httpMod.IncomingMessage
   ] = js.native
+  
+  var globalAgent: typingsSlinky.node.httpMod.Agent = js.native
+  
+  var maxHeaderSize: Double = js.native
+  
   def request(options: RequestOptions with FollowOptions[RequestOptions]): RedirectableRequest[
     typingsSlinky.node.httpMod.ClientRequest, 
     typingsSlinky.node.httpMod.IncomingMessage
@@ -95,26 +72,51 @@ object http extends js.Object {
     typingsSlinky.node.httpMod.ClientRequest, 
     typingsSlinky.node.httpMod.IncomingMessage
   ] = js.native
+  
+  @js.native
+  class Agent ()
+    extends typingsSlinky.node.httpMod.Agent
   @js.native
   object Agent
     extends TopLevel[Instantiable0[typingsSlinky.node.httpMod.Agent]]
   
   @js.native
+  class ClientRequest protected ()
+    extends typingsSlinky.node.httpMod.ClientRequest {
+    def this(url: String) = this()
+  }
+  @js.native
   object ClientRequest
     extends TopLevel[Instantiable1[/* url */ String, typingsSlinky.node.httpMod.ClientRequest]]
   
+  @js.native
+  class IncomingMessage protected ()
+    extends typingsSlinky.node.httpMod.IncomingMessage {
+    def this(socket: Socket) = this()
+  }
   @js.native
   object IncomingMessage
     extends TopLevel[Instantiable1[/* socket */ Socket, typingsSlinky.node.httpMod.IncomingMessage]]
   
   @js.native
+  class OutgoingMessage ()
+    extends typingsSlinky.node.httpMod.OutgoingMessage
+  @js.native
   object OutgoingMessage
     extends TopLevel[Instantiable0[typingsSlinky.node.httpMod.OutgoingMessage]]
   
   @js.native
+  class Server ()
+    extends typingsSlinky.node.httpMod.Server
+  @js.native
   object Server
     extends TopLevel[Instantiable0[typingsSlinky.node.httpMod.Server]]
   
+  @js.native
+  class ServerResponse protected ()
+    extends typingsSlinky.node.httpMod.ServerResponse {
+    def this(req: typingsSlinky.node.httpMod.IncomingMessage) = this()
+  }
   @js.native
   object ServerResponse
     extends TopLevel[
@@ -123,6 +125,4 @@ object http extends js.Object {
             typingsSlinky.node.httpMod.ServerResponse
           ]
         ]
-  
 }
-

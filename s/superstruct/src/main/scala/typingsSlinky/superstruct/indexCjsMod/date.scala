@@ -2,11 +2,12 @@ package typingsSlinky.superstruct.indexCjsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("superstruct/lib/index.cjs", "date")
 @js.native
 object date extends js.Object {
+  
   /**
     * Validate that `Date` values.
     *
@@ -21,4 +22,3 @@ object date extends js.Object {
     */
   def apply(): Struct_[js.Date, _] = js.native
 }
-

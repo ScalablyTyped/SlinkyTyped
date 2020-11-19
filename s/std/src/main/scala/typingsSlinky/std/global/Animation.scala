@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Animation")
 @js.native
@@ -16,7 +16,6 @@ class Animation ()
   def this(effect: Null, timeline: typingsSlinky.std.AnimationTimeline) = this()
   def this(effect: typingsSlinky.std.AnimationEffect, timeline: typingsSlinky.std.AnimationTimeline) = this()
 }
-
 @JSGlobal("Animation")
 @js.native
 object Animation
@@ -27,4 +26,3 @@ object Animation
       /* timeline */ typingsSlinky.std.AnimationTimeline, 
       typingsSlinky.std.Animation
     ]
-

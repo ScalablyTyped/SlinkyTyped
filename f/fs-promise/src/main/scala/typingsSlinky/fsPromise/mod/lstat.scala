@@ -5,11 +5,12 @@ import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs-promise", "lstat")
 @js.native
 object lstat extends js.Object {
+  
   def apply(path: String): js.Promise[typingsSlinky.node.fsMod.Stats] = js.native
   def apply(
     path: String,
@@ -26,4 +27,3 @@ object lstat extends js.Object {
     callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ typingsSlinky.node.fsMod.Stats, Unit]
   ): Unit = js.native
 }
-

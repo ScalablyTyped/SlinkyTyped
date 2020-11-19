@@ -12,7 +12,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/tab-container relevant section in reference guide}
@@ -28,25 +28,27 @@ class TabContainer protected () extends ConditionallyVisibleWidget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FTabContainer: IModel = js.native
+  
   def defaultPage: TabPage | Null = js.native
   def defaultPage_=(newValue: TabPage | Null): Unit = js.native
+  
+  @JSName("model")
+  var model_FTabContainer: IModel = js.native
+  
   def tabPages: IList[TabPage] = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.TabContainer")
 @js.native
 object TabContainer extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -56,6 +58,7 @@ object TabContainer extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: BuildingBlock): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -65,6 +68,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: BuildingBlock): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'footerWidget' property
@@ -74,6 +78,7 @@ object TabContainer extends js.Object {
     *  6.7.0 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'footerWidgets' property
@@ -83,6 +88,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: DataView): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -92,6 +98,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDataViewUnderWidget(container: DataView): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -101,6 +108,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: DataView): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -110,6 +118,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -119,6 +128,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: DivContainer): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -128,6 +138,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -137,6 +148,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: GroupBox): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'leftWidget' property
@@ -146,6 +158,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: Header): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'leftWidgets' property
@@ -155,6 +168,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: Header): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'rightWidget' property
@@ -164,6 +178,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: Header): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'rightWidgets' property
@@ -173,6 +188,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: Header): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -182,6 +198,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -191,6 +208,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: LayoutCallArgument): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -200,6 +218,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -209,6 +228,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: LayoutGridColumn): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -218,6 +238,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutUnderWidget(container: Layout): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -227,6 +248,7 @@ object TabContainer extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: Layout): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -236,6 +258,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -245,6 +268,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: ListViewTemplate): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -254,6 +278,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewUnderWidget(container: ListView): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -263,6 +288,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: ListView): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -272,6 +298,7 @@ object TabContainer extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: MasterDetailRegion): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -281,6 +308,7 @@ object TabContainer extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'sidebarWidgets' property
@@ -290,6 +318,7 @@ object TabContainer extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -299,6 +328,7 @@ object TabContainer extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: NativeLayoutContent): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'headerWidget' property
@@ -308,6 +338,7 @@ object TabContainer extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -317,6 +348,7 @@ object TabContainer extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -326,6 +358,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -335,6 +368,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: NavigationListItem): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'parameterWidget' property
@@ -344,6 +378,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'reportWidget' property
@@ -353,6 +388,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -362,6 +398,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -371,6 +408,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: ScrollContainerRegion): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -380,6 +418,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSnippetUnderWidget(container: Snippet): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -389,6 +428,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: Snippet): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'firstWidget' property
@@ -398,6 +438,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'firstWidgets' property
@@ -407,6 +448,7 @@ object TabContainer extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: SplitPane): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'secondWidget' property
@@ -416,6 +458,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'secondWidgets' property
@@ -425,6 +468,7 @@ object TabContainer extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: SplitPane): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -434,6 +478,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTabPageUnderWidget(container: TabPage): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -443,6 +488,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: TabPage): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -452,6 +498,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTableCellUnderWidget(container: TableCell): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -461,6 +508,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: TableCell): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widget' property
@@ -470,6 +518,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -479,6 +528,7 @@ object TabContainer extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: TemplateGridContents): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -488,6 +538,7 @@ object TabContainer extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -497,6 +548,7 @@ object TabContainer extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: WebLayoutContent): TabContainer = js.native
+  
   /**
     * Creates and returns a new TabContainer instance in the SDK and on the server.
     * The new TabContainer will be automatically stored in the 'widgets' property
@@ -506,5 +558,8 @@ object TabContainer extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): TabContainer = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

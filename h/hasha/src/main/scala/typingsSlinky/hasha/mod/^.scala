@@ -6,11 +6,12 @@ import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.cryptoMod.Hash
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("hasha", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
   	Calculate the hash for a `string`, `Buffer`, or an array thereof.
   	@param input - Data you want to hash.
@@ -26,6 +27,7 @@ object ^ extends js.Object {
   	*/
   def apply(input: HashaInput): String = js.native
   def apply(input: HashaInput, options: Options[ToStringEncoding]): String = js.native
+  
   /**
   	Asynchronously calculate the hash for a `string`, `Buffer`, or an array thereof.
   	In Node.js 12 or later, the operation is executed using `worker_threads`. A thread is lazily spawned on the first operation and lives until the end of the program execution. It's unrefed, so it won't keep the process alive.
@@ -46,6 +48,7 @@ object ^ extends js.Object {
   def async(input: HashaInput, options: Options[ToStringEncoding]): js.Promise[String] = js.native
   @JSName("async")
   def async_buffer(input: HashaInput, options: Options[buffer]): js.Promise[Buffer] = js.native
+  
   /**
   	Calculate the hash for a file.
   	In Node.js 12 or later, the operation is executed using `worker_threads`. A thread is lazily spawned on the first operation and lives until the end of the program execution. It's unrefed, so it won't keep the process alive.
@@ -64,6 +67,7 @@ object ^ extends js.Object {
   	*/
   def fromFile(filePath: String): js.Promise[String | Null] = js.native
   def fromFile(filePath: String, options: Options[ToStringEncoding]): js.Promise[String | Null] = js.native
+  
   /**
   	Synchronously calculate the hash for a file.
   	@param filePath - Path to a file you want to hash.
@@ -73,8 +77,10 @@ object ^ extends js.Object {
   def fromFileSync(filePath: String, options: Options[ToStringEncoding]): String = js.native
   @JSName("fromFileSync")
   def fromFileSync_buffer(filePath: String, options: Options[buffer]): Buffer = js.native
+  
   @JSName("fromFile")
   def fromFile_buffer(filePath: String, options: Options[buffer]): js.Promise[Buffer | Null] = js.native
+  
   /**
   	Calculate the hash for a stream.
   	@param stream - A stream you want to hash.
@@ -84,6 +90,7 @@ object ^ extends js.Object {
   def fromStream(stream: ReadableStream, options: Options[ToStringEncoding]): js.Promise[String | Null] = js.native
   @JSName("fromStream")
   def fromStream_buffer(stream: ReadableStream, options: Options[buffer]): js.Promise[Buffer | Null] = js.native
+  
   /**
   	Create a [hash transform stream](https://nodejs.org/api/crypto.html#crypto_class_hash).
   	@returns The created hash transform stream.
@@ -97,4 +104,3 @@ object ^ extends js.Object {
   def stream(): Hash = js.native
   def stream(options: Options[HashaEncoding]): Hash = js.native
 }
-

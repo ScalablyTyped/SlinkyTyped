@@ -5,11 +5,12 @@ import typingsSlinky.typescript.mod.ImportTypeNode
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateImportTypeNode")
 @js.native
 object updateImportTypeNode extends js.Object {
+  
   def apply(node: ImportTypeNode, argument: TypeNode): ImportTypeNode = js.native
   def apply(
     node: ImportTypeNode,
@@ -48,4 +49,3 @@ object updateImportTypeNode extends js.Object {
     isTypeOf: Boolean
   ): ImportTypeNode = js.native
 }
-

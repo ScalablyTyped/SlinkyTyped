@@ -4,11 +4,11 @@ import typingsSlinky.googleMapReact.anon.Coords
 import typingsSlinky.googleMapReact.mod.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("google-map-react/utils", "tile2LatLng")
 @js.native
 object tile2LatLng extends js.Object {
+  
   def apply(point: Point, zoom: Double): Coords = js.native
 }
-

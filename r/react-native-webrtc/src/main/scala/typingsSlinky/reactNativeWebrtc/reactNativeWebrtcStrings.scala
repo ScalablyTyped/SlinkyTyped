@@ -6,9 +6,79 @@ import typingsSlinky.reactNativeWebrtc.mod.RTCIceGatheringState
 import typingsSlinky.reactNativeWebrtc.mod.RTCSignalingState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object reactNativeWebrtcStrings {
+  
+  @scala.inline
+  def all: all = "all".asInstanceOf[all]
+  
+  @scala.inline
+  def checking: checking = "checking".asInstanceOf[checking]
+  
+  @scala.inline
+  def closed: closed = "closed".asInstanceOf[closed]
+  
+  @scala.inline
+  def complete: complete = "complete".asInstanceOf[complete]
+  
+  @scala.inline
+  def completed: completed = "completed".asInstanceOf[completed]
+  
+  @scala.inline
+  def connected: connected = "connected".asInstanceOf[connected]
+  
+  @scala.inline
+  def contain: contain = "contain".asInstanceOf[contain]
+  
+  @scala.inline
+  def cover: cover = "cover".asInstanceOf[cover]
+  
+  @scala.inline
+  def disconnected: disconnected = "disconnected".asInstanceOf[disconnected]
+  
+  @scala.inline
+  def ended: ended = "ended".asInstanceOf[ended]
+  
+  @scala.inline
+  def environment: environment = "environment".asInstanceOf[environment]
+  
+  @scala.inline
+  def failed: failed = "failed".asInstanceOf[failed]
+  
+  @scala.inline
+  def gathering: gathering = "gathering".asInstanceOf[gathering]
+  
+  @scala.inline
+  def `have-local-offer`: `have-local-offer` = "have-local-offer".asInstanceOf[`have-local-offer`]
+  
+  @scala.inline
+  def `have-local-pranswer`: `have-local-pranswer` = "have-local-pranswer".asInstanceOf[`have-local-pranswer`]
+  
+  @scala.inline
+  def `have-remote-offer`: `have-remote-offer` = "have-remote-offer".asInstanceOf[`have-remote-offer`]
+  
+  @scala.inline
+  def `have-remote-pranswer`: `have-remote-pranswer` = "have-remote-pranswer".asInstanceOf[`have-remote-pranswer`]
+  
+  @scala.inline
+  def live: live = "live".asInstanceOf[live]
+  
+  @scala.inline
+  def `new`: `new` = "new".asInstanceOf[`new`]
+  
+  @scala.inline
+  def public: public = "public".asInstanceOf[public]
+  
+  @scala.inline
+  def relay: relay = "relay".asInstanceOf[relay]
+  
+  @scala.inline
+  def stable: stable = "stable".asInstanceOf[stable]
+  
+  @scala.inline
+  def user: user = "user".asInstanceOf[user]
+  
   @js.native
   sealed trait all extends js.Object
   
@@ -81,52 +151,4 @@ object reactNativeWebrtcStrings {
   
   @js.native
   sealed trait user extends js.Object
-  
-  @scala.inline
-  def all: all = "all".asInstanceOf[all]
-  @scala.inline
-  def checking: checking = "checking".asInstanceOf[checking]
-  @scala.inline
-  def closed: closed = "closed".asInstanceOf[closed]
-  @scala.inline
-  def complete: complete = "complete".asInstanceOf[complete]
-  @scala.inline
-  def completed: completed = "completed".asInstanceOf[completed]
-  @scala.inline
-  def connected: connected = "connected".asInstanceOf[connected]
-  @scala.inline
-  def contain: contain = "contain".asInstanceOf[contain]
-  @scala.inline
-  def cover: cover = "cover".asInstanceOf[cover]
-  @scala.inline
-  def disconnected: disconnected = "disconnected".asInstanceOf[disconnected]
-  @scala.inline
-  def ended: ended = "ended".asInstanceOf[ended]
-  @scala.inline
-  def environment: environment = "environment".asInstanceOf[environment]
-  @scala.inline
-  def failed: failed = "failed".asInstanceOf[failed]
-  @scala.inline
-  def gathering: gathering = "gathering".asInstanceOf[gathering]
-  @scala.inline
-  def `have-local-offer`: `have-local-offer` = "have-local-offer".asInstanceOf[`have-local-offer`]
-  @scala.inline
-  def `have-local-pranswer`: `have-local-pranswer` = "have-local-pranswer".asInstanceOf[`have-local-pranswer`]
-  @scala.inline
-  def `have-remote-offer`: `have-remote-offer` = "have-remote-offer".asInstanceOf[`have-remote-offer`]
-  @scala.inline
-  def `have-remote-pranswer`: `have-remote-pranswer` = "have-remote-pranswer".asInstanceOf[`have-remote-pranswer`]
-  @scala.inline
-  def live: live = "live".asInstanceOf[live]
-  @scala.inline
-  def `new`: `new` = "new".asInstanceOf[`new`]
-  @scala.inline
-  def public: public = "public".asInstanceOf[public]
-  @scala.inline
-  def relay: relay = "relay".asInstanceOf[relay]
-  @scala.inline
-  def stable: stable = "stable".asInstanceOf[stable]
-  @scala.inline
-  def user: user = "user".asInstanceOf[user]
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.d3Force.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ForceCollide_[NodeDatum /* <: SimulationNodeDatum */]
   extends Force[NodeDatum, js.Any] {
+  
   /**
     * Assign the array of nodes to this force. This method is called when a force is bound to a simulation via simulation.force
     * and when the simulation’s nodes change via simulation.nodes.
@@ -15,6 +16,7 @@ trait ForceCollide_[NodeDatum /* <: SimulationNodeDatum */]
     */
   @JSName("initialize")
   def initialize_MForceCollide_(nodes: js.Array[NodeDatum]): Unit = js.native
+  
   /**
     * Return the current iteration count which defaults to 1.
     */
@@ -28,6 +30,7 @@ trait ForceCollide_[NodeDatum /* <: SimulationNodeDatum */]
     * @param iterations Number of iterations.
     */
   def iterations(iterations: Double): this.type = js.native
+  
   /**
     * Returns the current radius accessor function.
     */
@@ -57,6 +60,7 @@ trait ForceCollide_[NodeDatum /* <: SimulationNodeDatum */]
     * @param radius A constant radius for each node.
     */
   def radius(radius: Double): this.type = js.native
+  
   /**
     * Return the current strength, which defaults to 0.7.
     */
@@ -74,4 +78,3 @@ trait ForceCollide_[NodeDatum /* <: SimulationNodeDatum */]
     */
   def strength(strength: Double): this.type = js.native
 }
-

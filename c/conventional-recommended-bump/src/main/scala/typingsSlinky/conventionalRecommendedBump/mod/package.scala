@@ -2,9 +2,10 @@ package typingsSlinky.conventionalRecommendedBump
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /**
     * `recommendation` is an `object` with a single property, `releaseType`.
     *
@@ -17,5 +18,6 @@ package object mod {
     /* recommendation */ typingsSlinky.conventionalRecommendedBump.mod.Callback.Recommendation, 
     scala.Unit
   ]
+  
   type Options = typingsSlinky.conventionalRecommendedBump.mod.Options_
 }

@@ -13,11 +13,12 @@ import typingsSlinky.reactNavigationDrawer.typesMod.NavigationDrawerProp
 import typingsSlinky.reactNavigationDrawer.typesMod.NavigationDrawerRouterConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-navigation-drawer/lib/typescript/src/navigators/createDrawerNavigator", JSImport.Namespace)
 @js.native
 object createDrawerNavigatorMod extends js.Object {
+  
   def default(
     routeConfigs: NavigationRouteConfigMap[
       NavigationDrawerOptions, 
@@ -39,4 +40,3 @@ object createDrawerNavigatorMod extends js.Object {
     ]
   ): NavigationNavigator[_, NavigationProp[NavigationState]] = js.native
 }
-

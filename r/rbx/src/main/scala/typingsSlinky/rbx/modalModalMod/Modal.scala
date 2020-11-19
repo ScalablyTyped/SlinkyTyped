@@ -30,23 +30,12 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx/components/modal/modal", "Modal")
 @js.native
 object Modal extends js.Object {
-  var Background: ForwardRefAsExoticComponent[ModalBackgroundProps, ReactElement] = js.native
-  var Card: NoneTAsComponentextendsElBody = js.native
-  var Close: ForwardRefAsExoticComponent[ModalCloseProps, ReactElement] = js.native
-  var Container: TypeofModalContainer = js.native
-  var Content: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-  var Context: typingsSlinky.react.mod.Context[ModalContextValue] = js.native
-  @JSName("$$typeof")
-  var DollarDollartypeof: js.Symbol = js.native
-  var Portal: TypeofModalPortal = js.native
-  var defaultProps: AsElementType with (Partial[PickModalContainerPropsac with (Pick[_, String | Double | js.Symbol])]) = js.native
-  var displayName: js.UndefOr[String] = js.native
-  var propTypes: Active = js.native
+  
   def apply[TAsComponent /* <: ReactElement */](
     props: `6`[TAsComponent] with PickModalContainerPropsac with (Pick[
       ComponentProps[TAsComponent], 
@@ -56,5 +45,27 @@ object Modal extends js.Object {
       ]
     ]) with (RefAttributes[TAsComponent | FromReactType[TAsComponent]])
   ): ReactElement | Null = js.native
+  
+  var Background: ForwardRefAsExoticComponent[ModalBackgroundProps, ReactElement] = js.native
+  
+  var Card: NoneTAsComponentextendsElBody = js.native
+  
+  var Close: ForwardRefAsExoticComponent[ModalCloseProps, ReactElement] = js.native
+  
+  var Container: TypeofModalContainer = js.native
+  
+  var Content: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
+  
+  var Context: typingsSlinky.react.mod.Context[ModalContextValue] = js.native
+  
+  @JSName("$$typeof")
+  var DollarDollartypeof: js.Symbol = js.native
+  
+  var Portal: TypeofModalPortal = js.native
+  
+  var defaultProps: AsElementType with (Partial[PickModalContainerPropsac with (Pick[_, String | Double | js.Symbol])]) = js.native
+  
+  var displayName: js.UndefOr[String] = js.native
+  
+  var propTypes: Active = js.native
 }
-

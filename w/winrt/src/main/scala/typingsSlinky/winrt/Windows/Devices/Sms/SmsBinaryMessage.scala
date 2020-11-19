@@ -2,12 +2,12 @@ package typingsSlinky.winrt.Windows.Devices.Sms
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SmsBinaryMessage extends ISmsBinaryMessage
-
 object SmsBinaryMessage {
+  
   @scala.inline
   def apply(
     format: SmsDataFormat,
@@ -20,4 +20,3 @@ object SmsBinaryMessage {
     __obj.asInstanceOf[SmsBinaryMessage]
   }
 }
-

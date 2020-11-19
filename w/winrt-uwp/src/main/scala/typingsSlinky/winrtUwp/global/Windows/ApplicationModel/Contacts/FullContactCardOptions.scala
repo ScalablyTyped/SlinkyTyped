@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Contacts
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Specifies the options for displaying the full contact card. */
 @JSGlobal("Windows.ApplicationModel.Contacts.FullContactCardOptions")
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
 /** Initializes a new instance of the FullContactCardOptions class. */
 class FullContactCardOptions ()
   extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.FullContactCardOptions
-

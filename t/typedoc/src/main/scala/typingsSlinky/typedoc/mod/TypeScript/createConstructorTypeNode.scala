@@ -6,11 +6,12 @@ import typingsSlinky.typescript.mod.TypeNode
 import typingsSlinky.typescript.mod.TypeParameterDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createConstructorTypeNode")
 @js.native
 object createConstructorTypeNode extends js.Object {
+  
   def apply(typeParameters: js.UndefOr[scala.Nothing], parameters: js.Array[ParameterDeclaration]): ConstructorTypeNode = js.native
   def apply(
     typeParameters: js.UndefOr[scala.Nothing],
@@ -24,4 +25,3 @@ object createConstructorTypeNode extends js.Object {
     `type`: TypeNode
   ): ConstructorTypeNode = js.native
 }
-

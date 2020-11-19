@@ -18,9 +18,10 @@ import typingsSlinky.rcPicker.uiUtilMod.KeyboardConfig
 import typingsSlinky.react.mod.MutableRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DatetimePanel {
+  
   @JSImport("rc-picker/es/panels/DatetimePanel", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -29,51 +30,73 @@ object DatetimePanel {
   class Builder[DateType] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def dateRender(value: (DateType, DateType) => ReactElement): this.type = set("dateRender", js.Any.fromFunction2(value))
+    
     @scala.inline
     def defaultPickerValue(value: DateType): this.type = set("defaultPickerValue", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def defaultValue(value: DateType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabledDate(value: DateType => Boolean): this.type = set("disabledDate", js.Any.fromFunction1(value))
+    
     @scala.inline
     def disabledTime(value: /* date */ DateType | Null => DisabledTimes): this.type = set("disabledTime", js.Any.fromFunction1(value))
+    
     @scala.inline
     def keyboardConfig(value: KeyboardConfig): this.type = set("keyboardConfig", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def nextIconReactElement(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def nextIcon(value: ReactElement): this.type = set("nextIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def panelName(value: String): this.type = set("panelName", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def prefixColumn(value: DateType => ReactElement): this.type = set("prefixColumn", js.Any.fromFunction1(value))
+    
     @scala.inline
     def prevIconReactElement(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def prevIcon(value: ReactElement): this.type = set("prevIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def rowClassName(value: DateType => String): this.type = set("rowClassName", js.Any.fromFunction1(value))
+    
     @scala.inline
     def showTime(value: Boolean | SharedTimeProps[DateType]): this.type = set("showTime", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def superNextIconReactElement(value: ReactElement): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def superNextIcon(value: ReactElement): this.type = set("superNextIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def superPrevIconReactElement(value: ReactElement): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def superPrevIcon(value: ReactElement): this.type = set("superPrevIcon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def value(value: NullableDateType[DateType]): this.type = set("value", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def valueNull: this.type = set("value", null)
   }
   
   def withProps[DateType](p: DatetimePanelProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[DateType](
     generateConfig: GenerateConfig[DateType],
@@ -89,4 +112,3 @@ object DatetimePanel {
     new Builder[DateType](js.Array(this.component, __props.asInstanceOf[DatetimePanelProps[DateType]]))
   }
 }
-

@@ -23,7 +23,7 @@ import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedOperatio
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedParameter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.9.0: introduced
@@ -45,38 +45,46 @@ class UnknownType protected () extends DataType {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FUnknownType: IModel = js.native
+  
   @JSName("containerAsAppServiceActionParameter")
   def containerAsAppServiceActionParameter_MUnknownType: AppServiceActionParameter = js.native
+  
   @JSName("containerAsAppServiceAction")
   def containerAsAppServiceAction_MUnknownType: AppServiceAction = js.native
+  
   @JSName("containerAsConstant")
   def containerAsConstant_MUnknownType: Constant = js.native
+  
   @JSName("containerAsDataSetParameter")
   def containerAsDataSetParameter_MUnknownType: DataSetParameter = js.native
+  
   @JSName("containerAsDocumentTemplateParameter")
   def containerAsDocumentTemplateParameter_MUnknownType: DocumentTemplateParameter = js.native
+  
   @JSName("containerAsImportMapping")
   def containerAsImportMapping_MUnknownType: ImportMapping = js.native
+  
   @JSName("containerAsMicroflowBase")
   def containerAsMicroflowBase_MUnknownType: MicroflowBase = js.native
+  
   @JSName("containerAsMicroflowParameterBase")
   def containerAsMicroflowParameterBase_MUnknownType: MicroflowParameterBase = js.native
+  
+  @JSName("model")
+  var model_FUnknownType: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/datatypes", "datatypes.UnknownType")
 @js.native
 object UnknownType extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'parameterType' property
@@ -86,6 +94,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInAppServiceActionParameterUnderParameterType(container: AppServiceActionParameter): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'actionReturnType' property
@@ -95,6 +104,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInAppServiceActionUnderActionReturnType(container: AppServiceAction): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'type' property
@@ -104,6 +114,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInConstantUnderType(container: Constant): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'variableType' property
@@ -113,6 +124,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInCreateVariableActionUnderVariableType(container: CreateVariableAction): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'columnType' property
@@ -122,6 +134,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInDataSetColumnUnderColumnType(container: DataSetColumn): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'parameterType' property
@@ -131,6 +144,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInDataSetParameterUnderParameterType(container: DataSetParameter): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'parameterType' property
@@ -140,6 +154,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInDocumentTemplateParameterUnderParameterType(container: DocumentTemplateParameter): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'parameterType' property
@@ -149,6 +164,7 @@ object UnknownType extends js.Object {
     *  7.16.0 and higher
     */
   def createInImportMappingUnderParameterType(container: ImportMapping): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'microflowReturnType' property
@@ -158,6 +174,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInMicroflowBaseUnderMicroflowReturnType(container: MicroflowBase): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'parameterType' property
@@ -167,6 +184,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInMicroflowParameterBaseUnderParameterType(container: MicroflowParameterBase): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'variableType' property
@@ -176,6 +194,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInMicroflowParameterObjectUnderVariableType(container: MicroflowParameterObject): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'operationReturnType' property
@@ -185,6 +204,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInPublishedOperationUnderOperationReturnType(container: PublishedOperation): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'parameterType' property
@@ -194,6 +214,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInPublishedParameterUnderParameterType(container: PublishedParameter): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'type' property
@@ -203,6 +224,7 @@ object UnknownType extends js.Object {
     *  7.17.0 and higher
     */
   def createInRestOperationParameterUnderType(container: RestOperationParameter): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'variableType' property
@@ -212,6 +234,7 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInResultHandlingUnderVariableType(container: ResultHandling): UnknownType = js.native
+  
   /**
     * Creates and returns a new UnknownType instance in the SDK and on the server.
     * The new UnknownType will be automatically stored in the 'type' property
@@ -221,5 +244,8 @@ object UnknownType extends js.Object {
     *  7.9.0 and higher
     */
   def createInValueMappingElementUnderType(container: ValueMappingElement): UnknownType = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

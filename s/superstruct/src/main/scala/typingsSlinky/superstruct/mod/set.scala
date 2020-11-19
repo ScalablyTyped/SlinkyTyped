@@ -4,11 +4,11 @@ import typingsSlinky.std.Set
 import typingsSlinky.superstruct.structMod.Struct
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("superstruct", "set")
 @js.native
 object set extends js.Object {
+  
   def apply[T](Element: Struct[T, _]): Struct[Set[T], _] = js.native
 }
-

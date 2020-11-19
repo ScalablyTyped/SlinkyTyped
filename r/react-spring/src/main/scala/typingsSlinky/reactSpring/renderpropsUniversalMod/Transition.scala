@@ -3,7 +3,7 @@ package typingsSlinky.reactSpring.renderpropsUniversalMod
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-spring/renderprops-universal", "Transition")
 @js.native
@@ -13,4 +13,3 @@ class Transition[TItem, TInit /* <: js.Object */, TFrom /* <: js.Object */, TEnt
       js.Object, 
       js.Any
     ]
-

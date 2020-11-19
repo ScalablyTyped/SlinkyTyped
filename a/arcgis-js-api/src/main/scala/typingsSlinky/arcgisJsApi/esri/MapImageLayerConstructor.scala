@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MapImageLayerConstructor
@@ -15,6 +15,6 @@ trait MapImageLayerConstructor
   */
 Instantiable0[MapImageLayer]
      with Instantiable1[/* properties */ MapImageLayerProperties, MapImageLayer] {
+  
   def fromJSON(json: js.Any): MapImageLayer = js.native
 }
-

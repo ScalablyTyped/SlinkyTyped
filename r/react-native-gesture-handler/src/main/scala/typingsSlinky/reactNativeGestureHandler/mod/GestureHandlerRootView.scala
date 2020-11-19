@@ -5,9 +5,8 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.reactNative.mod.ViewProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-gesture-handler", "GestureHandlerRootView")
 @js.native
 object GestureHandlerRootView extends TopLevel[ReactComponentClass[ViewProps]]
-

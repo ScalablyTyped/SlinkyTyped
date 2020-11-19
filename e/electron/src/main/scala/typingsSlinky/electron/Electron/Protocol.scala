@@ -4,10 +4,11 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Protocol extends js.Object {
+  
   // Docs: http://electronjs.org/docs/api/protocol
   /**
     * Intercepts `scheme` protocol and uses `handler` as the protocol's new handler
@@ -30,6 +31,7 @@ trait Protocol extends js.Object {
     ],
     completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * Intercepts `scheme` protocol and uses `handler` as the protocol's new handler
     * which sends a file as a response.
@@ -51,6 +53,7 @@ trait Protocol extends js.Object {
     ],
     completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * Intercepts `scheme` protocol and uses `handler` as the protocol's new handler
     * which sends a new HTTP request as a response.
@@ -72,6 +75,7 @@ trait Protocol extends js.Object {
     ],
     completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * Same as `protocol.registerStreamProtocol`, except that it replaces an existing
     * protocol handler.
@@ -93,6 +97,7 @@ trait Protocol extends js.Object {
     ],
     completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * Intercepts `scheme` protocol and uses `handler` as the protocol's new handler
     * which sends a `String` as a response.
@@ -114,11 +119,13 @@ trait Protocol extends js.Object {
     ],
     completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * fulfilled with a boolean that indicates whether there is already a handler for
     * `scheme`.
     */
   def isProtocolHandled(scheme: String): js.Promise[Boolean] = js.native
+  
   /**
     * Registers a protocol of `scheme` that will send a `Buffer` as a response.
     *
@@ -144,6 +151,7 @@ trait Protocol extends js.Object {
     ],
     completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * Registers a protocol of `scheme` that will send the file as a response. The
     * `handler` will be called with `handler(request, callback)` when a `request` is
@@ -182,6 +190,7 @@ trait Protocol extends js.Object {
     ],
     completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * Registers a protocol of `scheme` that will send an HTTP request as a response.
     *
@@ -211,6 +220,7 @@ trait Protocol extends js.Object {
     ],
     completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * **Note:** This method can only be used before the `ready` event of the `app`
     * module gets emitted and can be called only once.
@@ -251,6 +261,7 @@ trait Protocol extends js.Object {
   **after (>= v5.x)**
     */
   def registerSchemesAsPrivileged(customSchemes: js.Array[CustomScheme]): Unit = js.native
+  
   /**
     * Registers a protocol of `scheme` that will send a `Readable` as a response.
     *
@@ -280,6 +291,7 @@ trait Protocol extends js.Object {
     ],
     completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * Registers a protocol of `scheme` that will send a `String` as a response.
     *
@@ -304,15 +316,16 @@ trait Protocol extends js.Object {
     ],
     completion: js.Function1[/* error */ js.Error, Unit]
   ): Unit = js.native
+  
   /**
     * Remove the interceptor installed for `scheme` and restore its original handler.
     */
   def uninterceptProtocol(scheme: String): Unit = js.native
   def uninterceptProtocol(scheme: String, completion: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
+  
   /**
     * Unregisters the custom protocol of `scheme`.
     */
   def unregisterProtocol(scheme: String): Unit = js.native
   def unregisterProtocol(scheme: String, completion: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
 }
-

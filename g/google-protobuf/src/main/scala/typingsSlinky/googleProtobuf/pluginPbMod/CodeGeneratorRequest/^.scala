@@ -8,16 +8,21 @@ import typingsSlinky.googleProtobuf.mod.ExtensionFieldInfo
 import typingsSlinky.googleProtobuf.mod.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("google-protobuf/google/protobuf/compiler/plugin_pb", "CodeGeneratorRequest")
 @js.native
 object ^ extends js.Object {
-  var extensions: NumberDictionary[ExtensionFieldInfo[Message]] = js.native
-  var extensionsBinary: NumberDictionary[ExtensionFieldBinaryInfo[Message]] = js.native
+  
   def deserializeBinary(bytes: js.typedarray.Uint8Array): typingsSlinky.googleProtobuf.pluginPbMod.CodeGeneratorRequest = js.native
+  
   def deserializeBinaryFromReader(message: typingsSlinky.googleProtobuf.pluginPbMod.CodeGeneratorRequest, reader: BinaryReader): typingsSlinky.googleProtobuf.pluginPbMod.CodeGeneratorRequest = js.native
+  
+  var extensions: NumberDictionary[ExtensionFieldInfo[Message]] = js.native
+  
+  var extensionsBinary: NumberDictionary[ExtensionFieldBinaryInfo[Message]] = js.native
+  
   def serializeBinaryToWriter(message: typingsSlinky.googleProtobuf.pluginPbMod.CodeGeneratorRequest, writer: BinaryWriter): Unit = js.native
+  
   def toObject(includeInstance: Boolean, msg: typingsSlinky.googleProtobuf.pluginPbMod.CodeGeneratorRequest): AsObject = js.native
 }
-

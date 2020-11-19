@@ -98,76 +98,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.zooming
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.zoomingChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettableProperties[K1, K2, D1, D2]] {
-  var animationOnDataChange: auto | none = js.native
-  var animationOnDisplay: auto | none = js.native
-  var as: String = js.native
-  var dnd: Drop = js.native
-  var expanded: KeySet[K1] = js.native
-  var focusRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
-  var hiddenCategories: js.Array[String] = js.native
-  var highlightMatch: any | all = js.native
-  var highlightedCategories: js.Array[String] = js.native
-  var hoverBehavior: dim | none = js.native
-  var hoverRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
-  var linkData: (DataProvider[K2, D2]) | Null = js.native
-  var linkHighlightMode: linkAndNodes | link = js.native
-  var maxZoom: Double = js.native
-  var minZoom: Double = js.native
-  var nodeData: (DataProvider[K1, D1]) | Null = js.native
-  var nodeHighlightMode: nodeAndIncomingLinks | nodeAndOutgoingLinks | nodeAndLinks | node = js.native
-  var onAnimationOnDataChangeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onAnimationOnDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDndChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onExpandedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onFocusRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHiddenCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHighlightMatchChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHighlightedCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHoverBehaviorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onHoverRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLayoutChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLinkDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLinkHighlightModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onMaxZoomChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onMinZoomChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onNodeDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onNodeHighlightModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjBeforeExpand: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOjExpand: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOverviewChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onPanDirectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onPanningChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onPromotedLinkBehaviorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectionRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onStyleDefaultsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onTooltipChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onTouchResponseChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onZoomRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onZoomingChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var overview: Halign = js.native
-  var panDirection: x | y | auto = js.native
-  var panning: auto | none = js.native
-  var promotedLinkBehavior: none | full | `lazy` = js.native
-  var selection: js.Array[K1 | K2] = js.native
-  var selectionMode: single | multiple | none = js.native
-  var selectionRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
-  var styleDefaults: AnimationDuration = js.native
-  var tooltip: `5`[K1, K2, D1, D2] = js.native
-  var touchResponse: touchStart | auto = js.native
-  @JSName("translations")
-  var translations_ojDiagram_ : LabelClearSelection = js.native
-  var zoomRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
-  var zooming: auto | none = js.native
+  
   def addEventListener(
     `type`: animationOnDataChangeChanged,
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
@@ -448,12 +383,31 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var animationOnDataChange: auto | none = js.native
+  
+  var animationOnDisplay: auto | none = js.native
+  
+  var as: String = js.native
+  
+  var dnd: Drop = js.native
+  
+  var expanded: KeySet[K1] = js.native
+  
+  var focusRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
+  
   def getContextByNode(node: Element): js.Object | Null = js.native
+  
   def getLink(linkIndex: Double): js.Object | Null = js.native
+  
   def getLinkCount(): Double = js.native
+  
   def getNode(nodeIndex: Double): js.Object | Null = js.native
+  
   def getNodeCount(): Double = js.native
+  
   def getPromotedLink(startNodeIndex: Double, endNodeIndex: Double): js.Object | Null = js.native
+  
   @JSName("getProperty")
   def getProperty_animationOnDataChange(property: animationOnDataChange): auto | none = js.native
   @JSName("getProperty")
@@ -512,9 +466,119 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   def getProperty_zoomRenderer(property: zoomRenderer): (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
   @JSName("getProperty")
   def getProperty_zooming(property: zooming): auto | none = js.native
+  
+  var hiddenCategories: js.Array[String] = js.native
+  
+  var highlightMatch: any | all = js.native
+  
+  var highlightedCategories: js.Array[String] = js.native
+  
+  var hoverBehavior: dim | none = js.native
+  
+  var hoverRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
+  
   def layout(param0: DvtDiagramLayoutContext): Unit = js.native
+  
+  var linkData: (DataProvider[K2, D2]) | Null = js.native
+  
+  var linkHighlightMode: linkAndNodes | link = js.native
+  
+  var maxZoom: Double = js.native
+  
+  var minZoom: Double = js.native
+  
+  var nodeData: (DataProvider[K1, D1]) | Null = js.native
+  
+  var nodeHighlightMode: nodeAndIncomingLinks | nodeAndOutgoingLinks | nodeAndLinks | node = js.native
+  
+  var onAnimationOnDataChangeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onAnimationOnDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDndChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onExpandedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onFocusRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHiddenCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHighlightMatchChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHighlightedCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHoverBehaviorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onHoverRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLayoutChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLinkDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLinkHighlightModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onMaxZoomChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onMinZoomChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onNodeDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onNodeHighlightModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjBeforeExpand: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjCollapse: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOjExpand: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOverviewChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onPanDirectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onPanningChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onPromotedLinkBehaviorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectionRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onStyleDefaultsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onTooltipChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onTouchResponseChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onZoomRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onZoomingChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var overview: Halign = js.native
+  
+  var panDirection: x | y | auto = js.native
+  
+  var panning: auto | none = js.native
+  
+  var promotedLinkBehavior: none | full | `lazy` = js.native
+  
   def renderer(context: RendererContext[K1, D1]): InsertSVGElement = js.native
+  
+  var selection: js.Array[K1 | K2] = js.native
+  
+  var selectionMode: single | multiple | none = js.native
+  
+  var selectionRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
+  
   def setProperties(properties: ojDiagramSettablePropertiesLenient[K1, K2, D1, D2]): Unit = js.native
+  
   def setProperty(property: animationOnDataChange, value: auto): Unit = js.native
   def setProperty(property: animationOnDataChange, value: none): Unit = js.native
   def setProperty(property: animationOnDisplay, value: auto): Unit = js.native
@@ -604,5 +668,17 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
     property: zoomRenderer,
     value: js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]
   ): Unit = js.native
+  
+  var styleDefaults: AnimationDuration = js.native
+  
+  var tooltip: `5`[K1, K2, D1, D2] = js.native
+  
+  var touchResponse: touchStart | auto = js.native
+  
+  @JSName("translations")
+  var translations_ojDiagram_ : LabelClearSelection = js.native
+  
+  var zoomRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
+  
+  var zooming: auto | none = js.native
 }
-

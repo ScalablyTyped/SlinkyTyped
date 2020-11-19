@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents the resource of a font asset.
@@ -17,4 +17,3 @@ class Font protected ()
   extends typingsSlinky.playcanvas.pc.Font {
   def this(textures: js.Array[typingsSlinky.playcanvas.pc.Texture], data: js.Any) = this()
 }
-

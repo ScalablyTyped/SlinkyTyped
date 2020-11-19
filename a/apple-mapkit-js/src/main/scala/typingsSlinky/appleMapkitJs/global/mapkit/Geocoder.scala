@@ -3,7 +3,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 import typingsSlinky.appleMapkitJs.mapkit.GeocoderConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A geocoder that converts human-readable addresses to geographic coordinates
@@ -19,4 +19,3 @@ class Geocoder ()
   extends typingsSlinky.appleMapkitJs.mapkit.Geocoder {
   def this(options: GeocoderConstructorOptions) = this()
 }
-

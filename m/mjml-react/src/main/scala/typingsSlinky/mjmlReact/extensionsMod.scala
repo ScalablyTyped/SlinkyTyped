@@ -6,11 +6,12 @@ import typingsSlinky.mjmlReact.anon.Src
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mjml-react/extensions", JSImport.Namespace)
 @js.native
 object extensionsMod extends js.Object {
+  
   @js.native
   class MjmlComment ()
     extends Component[Children, js.Object, js.Any]
@@ -26,6 +27,4 @@ object extensionsMod extends js.Object {
   @js.native
   class MjmlYahooStyle ()
     extends Component[Children, js.Object, js.Any]
-  
 }
-

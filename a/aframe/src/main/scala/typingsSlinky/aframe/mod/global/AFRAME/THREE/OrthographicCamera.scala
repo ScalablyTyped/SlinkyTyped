@@ -2,7 +2,7 @@ package typingsSlinky.aframe.mod.global.AFRAME.THREE
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AFRAME.THREE.OrthographicCamera")
 @js.native
@@ -18,4 +18,3 @@ class OrthographicCamera protected ()
   	 */
   def this(left: Double, right: Double, top: Double, bottom: Double) = this()
 }
-

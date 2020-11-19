@@ -2,7 +2,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A rectangular area on a map defined by a center coordinate and a span,
@@ -25,4 +25,3 @@ class CoordinateRegion protected ()
     span: typingsSlinky.appleMapkitJs.mapkit.CoordinateSpan
   ) = this()
 }
-

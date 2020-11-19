@@ -10,11 +10,21 @@ import typingsSlinky.timezonecomplete.timesourceMod.TimeSource
 import typingsSlinky.timezonecomplete.timezoneMod.TimeZone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("timezonecomplete/dist/lib/datetime", JSImport.Namespace)
 @js.native
 object datetimeMod extends js.Object {
+  
+  def isDateTime(value: js.Any): /* is timezonecomplete.timezonecomplete/dist/lib/datetime.DateTime */ Boolean = js.native
+  
+  def now(): DateTime = js.native
+  def now(timeZone: TimeZone): DateTime = js.native
+  
+  def nowLocal(): DateTime = js.native
+  
+  def nowUtc(): DateTime = js.native
+  
   @js.native
   /**
     * Constructor. Creates current time in local timezone.
@@ -367,6 +377,7 @@ object datetimeMod extends js.Object {
       millisecond: Double,
       timeZone: TimeZone
     ) = this()
+    
     /**
       * Add an amount of time to the given time struct. Note: does not normalize.
       * Keeps lower unit fields the same where possible, clamps day to end-of-month if
@@ -375,29 +386,30 @@ object datetimeMod extends js.Object {
       * @throws Argument.Unit for invalid time unit
       */
     var _addToTimeStruct: js.Any = js.native
+    
     /**
       *
       * @param n
       * @throws nothing
       */
     var _unixTimeStampToExcel: js.Any = js.native
+    
     /**
       * UTC timestamp (lazily calculated, use getter for utcDate instead)
       */
     var _utcDate: js.Any = js.native
+    
     /**
       * Original time zone this instance was created for.
       * Can be undefined for unaware timestamps
       */
     var _zone: js.Any = js.native
+    
     /**
       * Local timestamp (lazily calculated)
       */
     var _zoneDate: js.Any = js.native
-    /**
-      * Allow not using instanceof
-      */
-    var kind: String = js.native
+    
     /**
       * Add an amount of time relative to UTC, as regularly as possible. Returns a new DateTime
       *
@@ -423,6 +435,7 @@ object datetimeMod extends js.Object {
       * @throws timezonecomplete.NotFound.Zone if the UTC time zone doesn't exist in the time zone database
       */
     def add(duration: Duration): DateTime = js.native
+    
     /**
       * Add an amount of time to the zone time, as regularly as possible. Returns a new DateTime
       *
@@ -460,6 +473,7 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def addLocal(duration: Duration): DateTime = js.native
+    
     /**
       * Convert this date to the given time zone (in-place).
       * @return this (for chaining)
@@ -467,11 +481,13 @@ object datetimeMod extends js.Object {
       */
     def convert(): DateTime = js.native
     def convert(zone: TimeZone): DateTime = js.native
+    
     /**
       * @return The day of the month 1-31
       * @throws nothing
       */
     def day(): Double = js.native
+    
     /**
       * Returns the day number within the year: Jan 1st has number 0,
       * Jan 2nd has number 1 etc.
@@ -480,17 +496,20 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def dayOfYear(): Double = js.native
+    
     /**
       * Time difference between two DateTimes
       * @return this - other
       * @throws nothing
       */
     def diff(other: DateTime): Duration = js.native
+    
     /**
       * @return True iff this and other represent the same moment in time in UTC
       * @throws nothing
       */
     def equals(other: DateTime): Boolean = js.native
+    
     /**
       * Return a string representation of the DateTime according to the
       * specified format. See LDML.md for supported formats.
@@ -502,76 +521,96 @@ object datetimeMod extends js.Object {
       */
     def format(formatString: String): String = js.native
     def format(formatString: String, locale: PartialLocale): String = js.native
+    
     /**
       * @return True iff this >= other
       * @throws nothing
       */
     def greaterEqual(other: DateTime): Boolean = js.native
+    
     /**
       * @return True iff this > other
       * @throws nothing
       */
     def greaterThan(other: DateTime): Boolean = js.native
+    
     /**
       * @return The hour 0-23
       * @throws nothing
       */
     def hour(): Double = js.native
+    
     /**
       * @return True iff this and other represent the same time and the same zone
       * @throws nothing
       */
     def identical(other: DateTime): Boolean = js.native
+    
+    /**
+      * Allow not using instanceof
+      */
+    var kind: String = js.native
+    
     /**
       * @return True iff (this <= other)
       * @throws nothing
       */
     def lessEqual(other: DateTime): Boolean = js.native
+    
     /**
       * @return True iff (this < other)
       * @throws nothing
       */
     def lessThan(other: DateTime): Boolean = js.native
+    
     /**
       * @return The maximum of this and other
       * @throws nothing
       */
     def max(other: DateTime): DateTime = js.native
+    
     /**
       * @return the milliseconds 0-999
       * @throws nothing
       */
     def millisecond(): Double = js.native
+    
     /**
       * @return The minimum of this and other
       * @throws nothing
       */
     def min(other: DateTime): DateTime = js.native
+    
     /**
       * @return the minutes 0-59
       * @throws nothing
       */
     def minute(): Double = js.native
+    
     /**
       * @return The month 1-12 (note this deviates from JavaScript Date)
       * @throws nothing
       */
     def month(): Double = js.native
+    
     /**
       * @return the offset including DST w.r.t. UTC in minutes. Returns 0 for unaware dates and for UTC dates.
       * @throws nothing
       */
     def offset(): Double = js.native
+    
     /**
       * @return the offset including DST w.r.t. UTC as a Duration.
       * @throws nothing
       */
     def offsetDuration(): Duration = js.native
+    
     /**
       * @return the seconds 0-59
       * @throws nothing
       */
     def second(): Double = js.native
+    
     /**
       * Returns the number of seconds that have passed on the current day
       * Does not consider leap seconds
@@ -580,29 +619,34 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def secondOfDay(): Double = js.native
+    
     /**
       * @return the standard offset WITHOUT DST w.r.t. UTC as a Duration.
       * @throws nothing
       */
     def standardOffsetDuration(): Duration = js.native
+    
     /**
       * Chops off the time part, yields the same date at 00:00:00.000
       * @return a new DateTime
       * @throws nothing
       */
     def startOfDay(): DateTime = js.native
+    
     /**
       * Returns the first day of the month at 00:00:00
       * @return a new DateTime
       * @throws nothing
       */
     def startOfMonth(): DateTime = js.native
+    
     /**
       * Returns the first day of the year at 00:00:00
       * @return a new DateTime
       * @throws nothing
       */
     def startOfYear(): DateTime = js.native
+    
     /**
       * Same as add(-1*amount, unit); Returns a new DateTime
       * @throws Argument.Amount if amount is not a finite number or if you're trying to add a non-integer amount of years or months
@@ -615,6 +659,7 @@ object datetimeMod extends js.Object {
       * @throws timezonecomplete.NotFound.Zone if the UTC time zone doesn't exist in the time zone database
       */
     def sub(duration: Duration): DateTime = js.native
+    
     /**
       * Same as addLocal(-1*amount, unit); Returns a new DateTime
       * @param amount
@@ -628,6 +673,7 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def subLocal(duration: Duration): DateTime = js.native
+    
     /**
       * Convert to JavaScript date with the zone time in the getX() methods.
       * Unless the timezone is local, the Date.getUTCX() methods will NOT be correct.
@@ -635,6 +681,7 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def toDate(): js.Date = js.native
+    
     /**
       * Create an Excel timestamp for this datetime converted to the given zone.
       * Does not work for dates < 1900
@@ -644,6 +691,7 @@ object datetimeMod extends js.Object {
       */
     def toExcel(): Double = js.native
     def toExcel(timeZone: TimeZone): Double = js.native
+    
     /**
       * Proper ISO 8601 format string with any IANA zone converted to ISO offset
       * E.g. "2014-01-01T23:15:33+01:00" for Europe/Amsterdam
@@ -651,6 +699,7 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def toIsoString(): String = js.native
+    
     /**
       * Create an Excel timestamp for this datetime converted to UTC
       * Does not work for dates < 1900
@@ -658,6 +707,7 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def toUtcExcel(): Double = js.native
+    
     /**
       * Convert to UTC and then return ISO string ending in 'Z'. This is equivalent to Date#toISOString()
       * e.g. "2014-01-01T23:15:33 Europe/Amsterdam" becomes "2014-01-01T22:15:33Z".
@@ -665,11 +715,13 @@ object datetimeMod extends js.Object {
       * @throws timezonecomplete.NotFound.Zone if the UTC time zone doesn't exist in the time zone database
       */
     def toUtcIsoString(): String = js.native
+    
     /**
       * Modified ISO 8601 format string in UTC without time zone info
       * @throws nothing
       */
     def toUtcString(): String = js.native
+    
     /**
       * Returns this date converted to the given time zone.
       * Unaware dates can only be converted to unaware dates (clone)
@@ -682,22 +734,26 @@ object datetimeMod extends js.Object {
       */
     def toZone(): DateTime = js.native
     def toZone(zone: TimeZone): DateTime = js.native
+    
     /**
       * @return Milliseconds since 1970-01-01T00:00:00.000Z
       * @throws nothing
       */
     def unixUtcMillis(): Double = js.native
+    
     /**
       * UTC timestamp (lazily calculated)
       * @throws nothing
       */
     /* private */ def utcDate: js.Any = js.native
     /* private */ def utcDate_=(value: js.Any): Unit = js.native
+    
     /**
       * @return The UTC day of the month 1-31
       * @throws nothing
       */
     def utcDay(): Double = js.native
+    
     /**
       * Returns the UTC day number within the year: Jan 1st has number 0,
       * Jan 2nd has number 1 etc.
@@ -706,31 +762,37 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def utcDayOfYear(): Double = js.native
+    
     /**
       * @return The UTC hour 0-23
       * @throws nothing
       */
     def utcHour(): Double = js.native
+    
     /**
       * @return The UTC milliseconds 0-999
       * @throws nothing
       */
     def utcMillisecond(): Double = js.native
+    
     /**
       * @return The UTC minutes 0-59
       * @throws nothing
       */
     def utcMinute(): Double = js.native
+    
     /**
       * @return The UTC month 1-12 (note this deviates from JavaScript Date)
       * @throws nothing
       */
     def utcMonth(): Double = js.native
+    
     /**
       * @return The UTC seconds 0-59
       * @throws nothing
       */
     def utcSecond(): Double = js.native
+    
     /**
       * Returns the number of seconds that have passed on the current day
       * Does not consider leap seconds
@@ -739,12 +801,14 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def utcSecondOfDay(): Double = js.native
+    
     /**
       * @return the UTC day-of-week (the enum values correspond to JavaScript
       * week day numbers)
       * @throws nothing
       */
     def utcWeekDay(): WeekDay = js.native
+    
     /**
       * The ISO 8601 UTC week number. Week 1 is the week
       * that has January 4th in it, and it starts on Monday.
@@ -754,6 +818,7 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def utcWeekNumber(): Double = js.native
+    
     /**
       * The week of this month. There is no official standard for this,
       * but we assume the same rules for the weekNumber (i.e.
@@ -763,17 +828,20 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def utcWeekOfMonth(): Double = js.native
+    
     /**
       * @return The full year e.g. 2014
       * @throws nothing
       */
     def utcYear(): Double = js.native
+    
     /**
       * @return the day-of-week (the enum values correspond to JavaScript
       * week day numbers)
       * @throws nothing
       */
     def weekDay(): WeekDay = js.native
+    
     /**
       * The ISO 8601 week number. Week 1 is the week
       * that has January 4th in it, and it starts on Monday.
@@ -783,6 +851,7 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def weekNumber(): Double = js.native
+    
     /**
       * The week of this month. There is no official standard for this,
       * but we assume the same rules for the weekNumber (i.e.
@@ -792,6 +861,7 @@ object datetimeMod extends js.Object {
       * @throws nothing
       */
     def weekOfMonth(): Double = js.native
+    
     /**
       * Returns a new DateTime which is the date+time reinterpreted as
       * in the new zone. So e.g. 08:00 America/Chicago can be set to 08:00 Europe/Brussels.
@@ -804,16 +874,19 @@ object datetimeMod extends js.Object {
       */
     def withZone(): DateTime = js.native
     def withZone(zone: TimeZone): DateTime = js.native
+    
     /**
       * @return The full year e.g. 2014
       * @throws nothing
       */
     def year(): Double = js.native
+    
     /**
       * @return The time zone that the date is in. May be undefined for unaware dates.
       * @throws nothing
       */
     def zone(): js.UndefOr[TimeZone] = js.native
+    
     /**
       * Zone name abbreviation at this time
       * @param dstDependent (default true) set to false for a DST-agnostic abbreviation
@@ -822,6 +895,7 @@ object datetimeMod extends js.Object {
       */
     def zoneAbbreviation(): String = js.native
     def zoneAbbreviation(dstDependent: Boolean): String = js.native
+    
     /**
       * Local timestamp (lazily calculated)
       * @throws nothing
@@ -829,26 +903,16 @@ object datetimeMod extends js.Object {
     /* private */ def zoneDate: js.Any = js.native
     /* private */ def zoneDate_=(value: js.Any): Unit = js.native
   }
-  
-  def isDateTime(value: js.Any): /* is timezonecomplete.timezonecomplete/dist/lib/datetime.DateTime */ Boolean = js.native
-  def now(): DateTime = js.native
-  def now(timeZone: TimeZone): DateTime = js.native
-  def nowLocal(): DateTime = js.native
-  def nowUtc(): DateTime = js.native
   /* static members */
   @js.native
   object DateTime extends js.Object {
+    
     /**
       * Split a combined ISO datetime and timezone into datetime and timezone
       * @throws nothing
       */
     var _splitDateFromTimeZone: js.Any = js.native
-    /**
-      * Actual time source in use. Setting this property allows to
-      * fake time in tests. DateTime.nowLocal() and DateTime.nowUtc()
-      * use this property for obtaining the current time.
-      */
-    var timeSource: TimeSource = js.native
+    
     /**
       * Check whether a given date exists in the given time zone.
       * E.g. 2015-02-29 returns false (not a leap year)
@@ -871,6 +935,7 @@ object datetimeMod extends js.Object {
       zone: js.UndefOr[TimeZone | Null],
       allowPre1970: js.UndefOr[Boolean]
     ): Boolean = js.native
+    
     /**
       * Create a DateTime from a Lotus 123 / Microsoft Excel date-time value
       * i.e. a double representing days since 1-1-1900 where 1900 is incorrectly seen as leap year
@@ -883,6 +948,7 @@ object datetimeMod extends js.Object {
       */
     def fromExcel(n: Double): DateTime = js.native
     def fromExcel(n: Double, timeZone: TimeZone): DateTime = js.native
+    
     /**
       * Current date+time in the given time zone
       * @param timeZone	The desired time zone (optional, defaults to UTC).
@@ -890,16 +956,19 @@ object datetimeMod extends js.Object {
       */
     def now(): DateTime = js.native
     def now(timeZone: TimeZone): DateTime = js.native
+    
     /**
       * Current date+time in local time
       * @throws nothing
       */
     def nowLocal(): DateTime = js.native
+    
     /**
       * Current date+time in UTC time
       * @throws timezonecomplete.NotFound.Zone if the UTC time zone doesn't exist in the time zone database
       */
     def nowUtc(): DateTime = js.native
+    
     /**
       * Parse a date in a given format
       * @param s the string to parse
@@ -936,7 +1005,12 @@ object datetimeMod extends js.Object {
     ): DateTime = js.native
     def parse(s: String, format: String, zone: TimeZone, locale: PartialLocale): DateTime = js.native
     def parse(s: String, format: String, zone: TimeZone, locale: PartialLocale, allowTrailing: Boolean): DateTime = js.native
+    
+    /**
+      * Actual time source in use. Setting this property allows to
+      * fake time in tests. DateTime.nowLocal() and DateTime.nowUtc()
+      * use this property for obtaining the current time.
+      */
+    var timeSource: TimeSource = js.native
   }
-  
 }
-

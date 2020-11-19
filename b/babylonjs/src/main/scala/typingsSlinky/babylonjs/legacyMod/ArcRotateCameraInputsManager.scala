@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interface representing an arc rotate camera inputs manager
@@ -17,4 +17,3 @@ class ArcRotateCameraInputsManager protected ()
     */
   def this(camera: typingsSlinky.babylonjs.arcRotateCameraMod.ArcRotateCamera) = this()
 }
-

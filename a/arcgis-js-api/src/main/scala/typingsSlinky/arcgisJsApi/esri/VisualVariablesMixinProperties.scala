@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait VisualVariablesMixinProperties extends js.Object {
+  
   /**
     * An array of [VisualVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-VisualVariable.html) objects. Each object must indicate the type of visual variable to apply (e.g. [ColorVisualVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-ColorVariable.html), [SizeVisualVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-SizeVariable.html), [OpacityVisualVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-OpacityVariable.html), [RotationVisualVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-RotationVariable.html)), the numeric field or expression from which to drive the visualization, and the visual values to map to the data. The following list identifies each visual variable type and provides a link to the specification table of each.
     *
@@ -61,31 +62,36 @@ trait VisualVariablesMixinProperties extends js.Object {
     */
   var visualVariables: js.UndefOr[js.Array[VisualVariableProperties]] = js.native
 }
-
 object VisualVariablesMixinProperties {
+  
   @scala.inline
   def apply(): VisualVariablesMixinProperties = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[VisualVariablesMixinProperties]
   }
+  
   @scala.inline
   implicit class VisualVariablesMixinPropertiesOps[Self <: VisualVariablesMixinProperties] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setVisualVariablesVarargs(value: VisualVariableProperties*): Self = this.set("visualVariables", js.Array(value :_*))
+    
     @scala.inline
     def setVisualVariables(value: js.Array[VisualVariableProperties]): Self = this.set("visualVariables", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteVisualVariables: Self = this.set("visualVariables", js.undefined)
   }
-  
 }
-

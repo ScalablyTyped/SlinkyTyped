@@ -4,7 +4,7 @@ import typingsSlinky.awsSdkClientGlacierNode.typesUploadArchiveInputMod.UploadAr
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-glacier-node", "UploadArchiveCommand")
 @js.native
@@ -12,4 +12,3 @@ class UploadArchiveCommand protected ()
   extends typingsSlinky.awsSdkClientGlacierNode.uploadArchiveCommandMod.UploadArchiveCommand {
   def this(input: UploadArchiveInput[Readable]) = this()
 }
-

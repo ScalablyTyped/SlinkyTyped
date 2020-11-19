@@ -4,14 +4,11 @@ import typingsSlinky.eggView.ContextView
 import typingsSlinky.eggView.RenderOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Context extends js.Object {
-  /**
-    * View instance that is created every request
-    */
-  var view: ContextView = js.native
+  
   /**
     * Render a file by view engine
     * @param {String} name - the file path based on root
@@ -23,6 +20,7 @@ trait Context extends js.Object {
   def render(name: String, locals: js.UndefOr[scala.Nothing], options: RenderOptions): js.Promise[String] = js.native
   def render(name: String, locals: js.Any): js.Promise[String] = js.native
   def render(name: String, locals: js.Any, options: RenderOptions): js.Promise[String] = js.native
+  
   /**
     * Render a template string by view engine
     * @param {String} tpl - template string
@@ -34,5 +32,9 @@ trait Context extends js.Object {
   def renderString(name: String, locals: js.UndefOr[scala.Nothing], options: RenderOptions): js.Promise[String] = js.native
   def renderString(name: String, locals: js.Any): js.Promise[String] = js.native
   def renderString(name: String, locals: js.Any, options: RenderOptions): js.Promise[String] = js.native
+  
+  /**
+    * View instance that is created every request
+    */
+  var view: ContextView = js.native
 }
-

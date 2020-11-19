@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Container for storing the name and url for scene files.
@@ -14,4 +14,3 @@ class SceneRegistry protected ()
   extends typingsSlinky.playcanvas.pc.SceneRegistry {
   def this(app: typingsSlinky.playcanvas.pc.Application) = this()
 }
-

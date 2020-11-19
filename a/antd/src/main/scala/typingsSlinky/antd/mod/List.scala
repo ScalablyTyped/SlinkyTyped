@@ -5,14 +5,15 @@ import typingsSlinky.antd.listItemMod.ListItemTypeProps
 import typingsSlinky.antd.listMod.ListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd", "List")
 @js.native
 object List extends js.Object {
-  var Item: ListItemTypeProps = js.native
+  
   def apply[T](
     hasPaginationPrefixClsBorderedSplitClassNameChildrenItemLayoutLoadMoreGridDataSourceSizeHeaderFooterLoadingRowKeyRenderItemLocaleRest: ListProps[T]
   ): ReactElement = js.native
+  
+  var Item: ListItemTypeProps = js.native
 }
-

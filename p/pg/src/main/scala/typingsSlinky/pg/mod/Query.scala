@@ -6,7 +6,7 @@ import typingsSlinky.pg.pgStrings.error
 import typingsSlinky.pg.pgStrings.row
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pg", "Query")
 @js.native
@@ -18,6 +18,7 @@ class Query[R /* <: QueryResultRow */, I /* <: js.Array[_] */] ()
   def this(queryTextOrConfig: js.UndefOr[scala.Nothing], values: I) = this()
   def this(queryTextOrConfig: String, values: I) = this()
   def this(queryTextOrConfig: QueryConfig[I], values: I) = this()
+  
   @JSName("on")
   def on_end(event: end, listener: js.Function1[/* result */ ResultBuilder[R], Unit]): this.type = js.native
   @JSName("on")
@@ -25,4 +26,3 @@ class Query[R /* <: QueryResultRow */, I /* <: js.Array[_] */] ()
   @JSName("on")
   def on_row(event: row, listener: js.Function2[/* row */ R, /* result */ js.UndefOr[ResultBuilder[R]], Unit]): this.type = js.native
 }
-

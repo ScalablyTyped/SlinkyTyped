@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-lambda-node/commands/AddPermissionCommand", JSImport.Namespace)
 @js.native
 object addPermissionCommandMod extends js.Object {
+  
   @js.native
   class AddPermissionCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object addPermissionCommandMod extends js.Object {
           Readable
         ] {
     def this(input: AddPermissionInput) = this()
+    
     val middlewareStack: MiddlewareStack[AddPermissionInput, AddPermissionOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[AddPermissionInput, AddPermissionOutput] = js.native
   }
-  
 }
-

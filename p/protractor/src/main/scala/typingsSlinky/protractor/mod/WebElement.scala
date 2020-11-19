@@ -3,7 +3,7 @@ package typingsSlinky.protractor.mod
 import typingsSlinky.seleniumWebdriver.mod.IWebElementId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("protractor", "WebElement")
 @js.native
@@ -17,11 +17,11 @@ class WebElement protected ()
     */
   def this(driver: typingsSlinky.seleniumWebdriver.mod.WebDriver, id: js.Promise[String]) = this()
 }
-
 /* static members */
 @JSImport("protractor", "WebElement")
 @js.native
 object WebElement extends js.Object {
+  
   /**
     * @param {string} id The raw ID.
     * @param {boolean=} opt_noLegacy Whether to exclude the legacy element key.
@@ -29,6 +29,7 @@ object WebElement extends js.Object {
     */
   def buildId(id: String): IWebElementId = js.native
   def buildId(id: String, opt_noLegacy: Boolean): IWebElementId = js.native
+  
   /**
     * Compares two WebElements for equality.
     *
@@ -41,6 +42,7 @@ object WebElement extends js.Object {
     a: typingsSlinky.seleniumWebdriver.mod.WebElement,
     b: typingsSlinky.seleniumWebdriver.mod.WebElement
   ): js.Promise[Boolean] = js.native
+  
   /**
     * Extracts the encoded WebElement ID from the object.
     *
@@ -49,10 +51,10 @@ object WebElement extends js.Object {
     * @throws {TypeError} if the object is not a valid encoded ID.
     */
   def extractId(obj: IWebElementId): String = js.native
+  
   /**
     * @param {?} obj the object to test.
     * @return {boolean} whether the object is a valid encoded WebElement ID.
     */
   def isId(obj: IWebElementId): Boolean = js.native
 }
-

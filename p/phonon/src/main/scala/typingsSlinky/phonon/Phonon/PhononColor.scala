@@ -2,7 +2,7 @@ package typingsSlinky.phonon.Phonon
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /*** Components ***/
 /* Rewritten from type alias, can be one of: 
@@ -10,11 +10,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.phonon.phononStrings.negative
 */
 trait PhononColor extends js.Object
-
 object PhononColor {
+  
   @scala.inline
   def negative: typingsSlinky.phonon.phononStrings.negative = "negative".asInstanceOf[typingsSlinky.phonon.phononStrings.negative]
+  
   @scala.inline
   def positive: typingsSlinky.phonon.phononStrings.positive = "positive".asInstanceOf[typingsSlinky.phonon.phononStrings.positive]
 }
-

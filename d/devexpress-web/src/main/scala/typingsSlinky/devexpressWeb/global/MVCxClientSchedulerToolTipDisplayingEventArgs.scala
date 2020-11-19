@@ -2,7 +2,7 @@ package typingsSlinky.devexpressWeb.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides data for the MVCxClientScheduler.ToolTipDisplaying event.
@@ -21,4 +21,3 @@ class MVCxClientSchedulerToolTipDisplayingEventArgs protected ()
     data: typingsSlinky.devexpressWeb.ASPxClientSchedulerToolTipData
   ) = this()
 }
-

@@ -22,34 +22,54 @@ import typingsSlinky.tizenCommonWeb.tvwindowMod.TVWindowManager
 import typingsSlinky.tizenCommonWeb.websettingMod.WebSettingManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Tizen extends js.Object {
+  
   var ApplicationControl: ApplicationControlConstructor = js.native
+  
   var ApplicationControlData: ApplicationControlDataConstructor = js.native
+  
   var AttributeFilter: AttributeFilterConstructor = js.native
+  
   var AttributeRangeFilter: AttributeRangeFilterConstructor = js.native
+  
   var Bundle: BundleConstructor = js.native
+  
   var CompositeFilter: CompositeFilterConstructor = js.native
+  
   var DownloadRequest: DownloadRequestConstructor = js.native
+  
   var SimpleCoordinates: SimpleCoordinatesConstructor = js.native
+  
   var SortMode: SortModeConstructor = js.native
+  
   @JSName("package")
   var _package: PackageManager = js.native
+  
   var application: ApplicationManager = js.native
+  
   var download: DownloadManager = js.native
+  
   var filesystem: FilesystemManager = js.native
+  
   var systeminfo: SystemInfoManager = js.native
+  
   var tvaudiocontrol: TVAudioControlManager = js.native
+  
   var tvdisplaycontrol: TVDisplayControlManager = js.native
+  
   var tvinfo: TVInfoManager = js.native
+  
   var tvinputdevice: TVInputDeviceManager = js.native
+  
   var tvwindow: TVWindowManager = js.native
+  
   var websetting: WebSettingManager = js.native
 }
-
 object Tizen {
+  
   @scala.inline
   def apply(
     ApplicationControl: ApplicationControlConstructor,
@@ -77,58 +97,80 @@ object Tizen {
     __obj.updateDynamic("package")(_package.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tizen]
   }
+  
   @scala.inline
   implicit class TizenOps[Self <: Tizen] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setApplicationControl(value: ApplicationControlConstructor): Self = this.set("ApplicationControl", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setApplicationControlData(value: ApplicationControlDataConstructor): Self = this.set("ApplicationControlData", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setAttributeFilter(value: AttributeFilterConstructor): Self = this.set("AttributeFilter", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setAttributeRangeFilter(value: AttributeRangeFilterConstructor): Self = this.set("AttributeRangeFilter", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setBundle(value: BundleConstructor): Self = this.set("Bundle", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setCompositeFilter(value: CompositeFilterConstructor): Self = this.set("CompositeFilter", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setDownloadRequest(value: DownloadRequestConstructor): Self = this.set("DownloadRequest", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setSimpleCoordinates(value: SimpleCoordinatesConstructor): Self = this.set("SimpleCoordinates", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setSortMode(value: SortModeConstructor): Self = this.set("SortMode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def set_package(value: PackageManager): Self = this.set("package", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setApplication(value: ApplicationManager): Self = this.set("application", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setDownload(value: DownloadManager): Self = this.set("download", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setFilesystem(value: FilesystemManager): Self = this.set("filesystem", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setSysteminfo(value: SystemInfoManager): Self = this.set("systeminfo", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTvaudiocontrol(value: TVAudioControlManager): Self = this.set("tvaudiocontrol", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTvdisplaycontrol(value: TVDisplayControlManager): Self = this.set("tvdisplaycontrol", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTvinfo(value: TVInfoManager): Self = this.set("tvinfo", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTvinputdevice(value: TVInputDeviceManager): Self = this.set("tvinputdevice", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTvwindow(value: TVWindowManager): Self = this.set("tvwindow", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setWebsetting(value: WebSettingManager): Self = this.set("websetting", value.asInstanceOf[js.Any])
   }
-  
 }
-

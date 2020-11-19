@@ -4,11 +4,12 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mui-datatables", "debounceSearchRender")
 @js.native
 object debounceSearchRender extends js.Object {
+  
   def apply(): js.UndefOr[
     js.Function4[
       /* searchText */ String, 
@@ -28,4 +29,3 @@ object debounceSearchRender extends js.Object {
     ]
   ] = js.native
 }
-

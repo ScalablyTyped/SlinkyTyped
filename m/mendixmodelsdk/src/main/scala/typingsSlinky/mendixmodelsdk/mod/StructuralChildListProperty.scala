@@ -5,7 +5,7 @@ import typingsSlinky.mendixmodelsdk.unitsMod.IModelUnit
 import typingsSlinky.mendixmodelsdk.unitsMod.IStructuralUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk", "StructuralChildListProperty")
 @js.native
@@ -25,4 +25,3 @@ class StructuralChildListProperty[T /* <: IStructuralUnit | IModelUnit */] prote
     targetRefType: String
   ) = this()
 }
-

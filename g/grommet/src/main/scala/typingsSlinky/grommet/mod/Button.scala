@@ -10,7 +10,7 @@ import typingsSlinky.react.mod.ButtonHTMLAttributes
 import typingsSlinky.react.mod.DetailedHTMLProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grommet/es6", "Button")
 @js.native
@@ -22,4 +22,3 @@ object Button extends TopLevel[
         ])
       ]
     ]
-

@@ -2,9 +2,10 @@ package typingsSlinky.nodeSpriteGenerator
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type LayoutFunc = js.Function3[
     /* images */ js.Array[typingsSlinky.nodeSpriteGenerator.mod.Image], 
     /* options */ typingsSlinky.nodeSpriteGenerator.mod.LayoutOption, 
@@ -15,6 +16,7 @@ package object mod {
     ], 
     scala.Unit
   ]
+  
   type StylesheetFunc = js.Function5[
     /* layout */ typingsSlinky.nodeSpriteGenerator.mod.Layout, 
     /* stylesheetPath */ java.lang.String, 

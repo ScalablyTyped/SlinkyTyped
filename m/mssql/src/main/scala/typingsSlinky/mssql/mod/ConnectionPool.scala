@@ -4,7 +4,7 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.TemplateStringsArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mssql", "ConnectionPool")
 @js.native
@@ -13,9 +13,7 @@ class ConnectionPool protected () extends EventEmitter {
   def this(connectionString: String) = this()
   def this(config: typingsSlinky.mssql.mod.config, callback: js.Function1[/* err */ js.UndefOr[js.Any], Unit]) = this()
   def this(connectionString: String, callback: js.Function1[/* err */ js.UndefOr[js.Any], Unit]) = this()
-  var connected: Boolean = js.native
-  var connecting: Boolean = js.native
-  var driver: String = js.native
+  
   def batch(batch: String): js.Promise[IResult[_]] = js.native
   def batch(
     batch: String,
@@ -26,10 +24,19 @@ class ConnectionPool protected () extends EventEmitter {
   def batch_Entity[Entity](batch: String): js.Promise[IResult[Entity]] = js.native
   @JSName("batch")
   def batch_Entity[Entity](strings: TemplateStringsArray, interpolations: js.Any*): js.Promise[IResult[Entity]] = js.native
+  
   def close(): js.Promise[Unit] = js.native
   def close(callback: js.Function1[/* err */ js.Any, Unit]): Unit = js.native
+  
   def connect(): js.Promise[ConnectionPool] = js.native
   def connect(callback: js.Function1[/* err */ js.Any, Unit]): Unit = js.native
+  
+  var connected: Boolean = js.native
+  
+  var connecting: Boolean = js.native
+  
+  var driver: String = js.native
+  
   def query(command: String): js.Promise[IResult[_]] = js.native
   def query(strings: TemplateStringsArray, interpolations: js.Any*): js.Promise[IResult[_]] = js.native
   def query[Entity](
@@ -40,7 +47,8 @@ class ConnectionPool protected () extends EventEmitter {
   def query_Entity[Entity](command: String): js.Promise[IResult[Entity]] = js.native
   @JSName("query")
   def query_Entity[Entity](strings: TemplateStringsArray, interpolations: js.Any*): js.Promise[IResult[Entity]] = js.native
+  
   def request(): Request = js.native
+  
   def transaction(): Transaction = js.native
 }
-

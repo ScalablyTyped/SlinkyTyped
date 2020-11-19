@@ -3,12 +3,12 @@ package typingsSlinky.winrt.Windows.Globalization.DateTimeFormatting
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DateTimeFormatter extends IDateTimeFormatter
-
 object DateTimeFormatter {
+  
   @scala.inline
   def apply(
     calendar: String,
@@ -33,4 +33,3 @@ object DateTimeFormatter {
     __obj.asInstanceOf[DateTimeFormatter]
   }
 }
-

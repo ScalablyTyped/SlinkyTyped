@@ -2,11 +2,12 @@ package typingsSlinky.extractStack
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("extract-stack", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
   	Extract the actual stack of an error.
   	It gracefully handles cases where the stack is undefined or empty and returns an empty string.
@@ -32,6 +33,7 @@ object mod extends js.Object {
   def apply(): String = js.native
   def apply(error: String): String = js.native
   def apply(error: js.Error): String = js.native
+  
   /**
   	Extract the actual stack of an error as an array of lines.
   	@param error - Either an `Error` or the `.stack` of an `Error`.
@@ -59,4 +61,3 @@ object mod extends js.Object {
   def lines(error: String): js.Array[String] = js.native
   def lines(error: js.Error): js.Array[String] = js.native
 }
-

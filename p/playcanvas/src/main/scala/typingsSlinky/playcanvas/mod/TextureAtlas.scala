@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A pc.TextureAtlas contains a number of frames from a texture. Each frame
@@ -32,4 +32,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class TextureAtlas ()
   extends typingsSlinky.playcanvas.pc.TextureAtlas
-

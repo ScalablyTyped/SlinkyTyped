@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.indexMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/index", "MeshExploder")
 @js.native
@@ -19,4 +19,3 @@ class MeshExploder protected ()
     centerMesh: typingsSlinky.babylonjs.meshMod.Mesh
   ) = this()
 }
-

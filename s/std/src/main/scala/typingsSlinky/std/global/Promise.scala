@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.PromiseConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Promise")
 @js.native
@@ -22,8 +22,6 @@ class Promise[T] protected ()
         Unit
       ]) = this()
 }
-
 @JSGlobal("Promise")
 @js.native
 object Promise extends TopLevel[PromiseConstructor]
-

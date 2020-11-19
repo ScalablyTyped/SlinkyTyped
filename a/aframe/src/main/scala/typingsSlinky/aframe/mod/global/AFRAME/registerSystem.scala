@@ -5,7 +5,7 @@ import typingsSlinky.aframe.mod.SystemConstructor
 import typingsSlinky.aframe.mod.SystemDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AFRAME.registerSystem")
 @js.native
@@ -17,4 +17,3 @@ object registerSystem
         SystemConstructor[js.Object]
       ]
     ]
-

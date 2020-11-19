@@ -2,15 +2,17 @@ package typingsSlinky.microsoftGraph.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ChatMessageAttachment extends js.Object {
+  
   /**
     * The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This
     * property and contentUrl are mutually exclusive.
     */
   var content: js.UndefOr[String] = js.native
+  
   /**
     * The media type of the content attachment. It can have the following values: reference: Attachment is a link to another
     * file. Populate the contentURL with the link to the object.file: Raw file attachment. Populate the contenturl field with
@@ -31,12 +33,16 @@ trait ChatMessageAttachment extends js.Object {
     * object.application/vnd.microsoft.com.card.signin: A user Sign In card. Set the content property to a SignInCard object.
     */
   var contentType: js.UndefOr[String] = js.native
+  
   // URL for the content of the attachment. Supported protocols: http, https, file and data.
   var contentUrl: js.UndefOr[String] = js.native
+  
   // Read-only. Unique id of the attachment.
   var id: js.UndefOr[String] = js.native
+  
   // Name of the attachment.
   var name: js.UndefOr[String] = js.native
+  
   /**
     * URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or
     * contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word
@@ -45,49 +51,63 @@ trait ChatMessageAttachment extends js.Object {
     */
   var thumbnailUrl: js.UndefOr[String] = js.native
 }
-
 object ChatMessageAttachment {
+  
   @scala.inline
   def apply(): ChatMessageAttachment = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ChatMessageAttachment]
   }
+  
   @scala.inline
   implicit class ChatMessageAttachmentOps[Self <: ChatMessageAttachment] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setContent(value: String): Self = this.set("content", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
+    
     @scala.inline
     def setContentType(value: String): Self = this.set("contentType", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteContentType: Self = this.set("contentType", js.undefined)
+    
     @scala.inline
     def setContentUrl(value: String): Self = this.set("contentUrl", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteContentUrl: Self = this.set("contentUrl", js.undefined)
+    
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
+    
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
     @scala.inline
     def setThumbnailUrl(value: String): Self = this.set("thumbnailUrl", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteThumbnailUrl: Self = this.set("thumbnailUrl", js.undefined)
   }
-  
 }
-

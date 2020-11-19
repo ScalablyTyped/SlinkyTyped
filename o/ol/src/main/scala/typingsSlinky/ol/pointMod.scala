@@ -4,11 +4,12 @@ import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.geometryLayoutMod.GeometryLayout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/geom/Point", JSImport.Namespace)
 @js.native
 object pointMod extends js.Object {
+  
   @js.native
   trait Point
     extends typingsSlinky.ol.simpleGeometryMod.default
@@ -18,6 +19,4 @@ object pointMod extends js.Object {
     def this(coordinates: Coordinate) = this()
     def this(coordinates: Coordinate, opt_layout: GeometryLayout) = this()
   }
-  
 }
-

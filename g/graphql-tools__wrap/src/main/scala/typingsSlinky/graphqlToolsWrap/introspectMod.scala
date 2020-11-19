@@ -6,14 +6,15 @@ import typingsSlinky.graphqlToolsDelegate.typesMod.SyncExecutor
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/introspect", JSImport.Namespace)
 @js.native
 object introspectMod extends js.Object {
+  
   def introspectSchema(executor: AsyncExecutor): js.Promise[GraphQLSchema] = js.native
   def introspectSchema(executor: AsyncExecutor, context: Record[String, _]): js.Promise[GraphQLSchema] = js.native
+  
   def introspectSchemaSync(executor: SyncExecutor): GraphQLSchema = js.native
   def introspectSchemaSync(executor: SyncExecutor, context: Record[String, _]): GraphQLSchema = js.native
 }
-

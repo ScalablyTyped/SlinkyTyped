@@ -6,10 +6,11 @@ import typingsSlinky.gapiClientGenomics.anon.Uploadprotocol
 import typingsSlinky.gapiClientGenomics.anon.VariantSetId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait VariantsetsResource extends js.Object {
+  
   /**
     * Creates a new variant set.
     *
@@ -22,6 +23,7 @@ trait VariantsetsResource extends js.Object {
     * assigned by the server.
     */
   def create(request: Accesstoken): Request[VariantSet] = js.native
+  
   /**
     * Deletes a variant set including all variants, call sets, and calls within.
     * This is not reversible.
@@ -31,6 +33,7 @@ trait VariantsetsResource extends js.Object {
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
   def delete(request: Uploadprotocol): Request[js.Object] = js.native
+  
   /**
     * Exports variant set data to an external destination.
     *
@@ -39,6 +42,7 @@ trait VariantsetsResource extends js.Object {
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
   def export(request: Uploadprotocol): Request[Operation] = js.native
+  
   /**
     * Gets a variant set by ID.
     *
@@ -47,6 +51,7 @@ trait VariantsetsResource extends js.Object {
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
   def get(request: Uploadprotocol): Request[VariantSet] = js.native
+  
   /**
     * Updates a variant set using patch semantics.
     *
@@ -55,6 +60,7 @@ trait VariantsetsResource extends js.Object {
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
   def patch(request: VariantSetId): Request[VariantSet] = js.native
+  
   /**
     * Returns a list of all variant sets matching search criteria.
     *
@@ -67,8 +73,8 @@ trait VariantsetsResource extends js.Object {
     */
   def search(request: Accesstoken): Request[SearchVariantSetsResponse] = js.native
 }
-
 object VariantsetsResource {
+  
   @scala.inline
   def apply(
     create: Accesstoken => Request[VariantSet],
@@ -81,30 +87,38 @@ object VariantsetsResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), export = js.Any.fromFunction1(export), get = js.Any.fromFunction1(get), patch = js.Any.fromFunction1(patch), search = js.Any.fromFunction1(search))
     __obj.asInstanceOf[VariantsetsResource]
   }
+  
   @scala.inline
   implicit class VariantsetsResourceOps[Self <: VariantsetsResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreate(value: Accesstoken => Request[VariantSet]): Self = this.set("create", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDelete(value: Uploadprotocol => Request[js.Object]): Self = this.set("delete", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setExport(value: Uploadprotocol => Request[Operation]): Self = this.set("export", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGet(value: Uploadprotocol => Request[VariantSet]): Self = this.set("get", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setPatch(value: VariantSetId => Request[VariantSet]): Self = this.set("patch", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setSearch(value: Accesstoken => Request[SearchVariantSetsResponse]): Self = this.set("search", js.Any.fromFunction1(value))
   }
-  
 }
-

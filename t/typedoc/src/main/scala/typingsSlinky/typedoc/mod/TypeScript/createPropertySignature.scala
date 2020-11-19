@@ -8,11 +8,12 @@ import typingsSlinky.typescript.mod.QuestionToken
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createPropertySignature")
 @js.native
 object createPropertySignature extends js.Object {
+  
   def apply(modifiers: js.UndefOr[scala.Nothing], name: String): PropertySignature = js.native
   def apply(
     modifiers: js.UndefOr[scala.Nothing],
@@ -167,4 +168,3 @@ object createPropertySignature extends js.Object {
     initializer: Expression
   ): PropertySignature = js.native
 }
-

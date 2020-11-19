@@ -3,7 +3,7 @@ package typingsSlinky.wechatMiniprogram.global.DB
 import typingsSlinky.wechatMiniprogram.IAPIParam
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A contract that all API provider must adhere to
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class APIBaseContract[PROMISE_RETURN, CALLBACK_RETURN, PARAM /* <: IAPIParam[_] */, CONTEXT] ()
   extends typingsSlinky.wechatMiniprogram.DB.APIBaseContract[PROMISE_RETURN, CALLBACK_RETURN, PARAM, CONTEXT]
-

@@ -3,10 +3,11 @@ package typingsSlinky.d3Shape.mod
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Line_[Datum] extends js.Object {
+  
   /**
     * Generates a line for the given array of data. Depending on this line generator’s associated curve,
     * the given input data may need to be sorted by x-value before being passed to the line generator.
@@ -17,6 +18,7 @@ trait Line_[Datum] extends js.Object {
     * @param data Array of data elements.
     */
   def apply(data: js.Array[Datum]): String | Null = js.native
+  
   /**
     * Returns the current rendering context, which defaults to null.
     */
@@ -37,6 +39,7 @@ trait Line_[Datum] extends js.Object {
     * @param context The rendering context.
     */
   def context(context: CanvasRenderingContext2D): this.type = js.native
+  
   /**
     * Returns the current curve factory, which defaults to curveLinear.
     */
@@ -54,6 +57,7 @@ trait Line_[Datum] extends js.Object {
     */
   @JSName("curve")
   def curve_C_UnionCurveFactoryCurveFactoryLineOnly_C[C /* <: CurveFactory | CurveFactoryLineOnly */](): C = js.native
+  
   /**
     * Returns the current defined accessor, which defaults to a function returning a constant boolean value of true.
     */
@@ -95,6 +99,7 @@ trait Line_[Datum] extends js.Object {
     * @param defined A boolean constant.
     */
   def defined(defined: Boolean): this.type = js.native
+  
   /**
     * Returns the current x-coordinate accessor function, which defaults to a function returning first element of a two-element array of numbers.
     */
@@ -117,6 +122,7 @@ trait Line_[Datum] extends js.Object {
     * @param x A constant x-coordinate value.
     */
   def x(x: Double): this.type = js.native
+  
   /**
     * Returns the current y-coordinate accessor function, which defaults to a function returning second element of a two-element array of numbers.
     */
@@ -140,4 +146,3 @@ trait Line_[Datum] extends js.Object {
     */
   def y(y: Double): this.type = js.native
 }
-

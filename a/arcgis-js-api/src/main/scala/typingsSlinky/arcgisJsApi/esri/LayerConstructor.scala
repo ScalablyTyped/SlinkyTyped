@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LayerConstructor
@@ -15,6 +15,7 @@ trait LayerConstructor
   */
 Instantiable0[Layer]
      with Instantiable1[/* properties */ LayerProperties, Layer] {
+  
   /**
     * Creates a new layer instance from an ArcGIS Server URL. Depending on the URL, the returned layer type may be a [FeatureLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html), [TileLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-TileLayer.html), [MapImageLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-MapImageLayer.html), [SceneLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-SceneLayer.html), [StreamLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-StreamLayer.html), [ElevationLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html) or [GroupLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html).  This is useful when you work with various ArcGIS Server URLs, but you don't necessarily know which layer type(s) they create. This method creates the appropriate layer type for you. In case of a feature service or a scene service, when the URL points to the service and the service has multiple layers, the returned promise will resolve to a [GroupLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html).
     *
@@ -26,6 +27,7 @@ Instantiable0[Layer]
     *
     */
   def fromArcGISServerUrl(params: LayerFromArcGISServerUrlParams): js.Promise[Layer] = js.native
+  
   /**
     * Creates a new layer instance of the appropriate layer class from an ArcGIS Online or ArcGIS Enterprise [portal item](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html). If the item points to a feature service with multiple layers, then a [GroupLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html) is created. If the item points to a service with a single layer, then it resolves to a layer of the same type of class as the service.  See also: [isLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#isLayer)
     *
@@ -37,4 +39,3 @@ Instantiable0[Layer]
     */
   def fromPortalItem(params: LayerFromPortalItemParams): js.Promise[Layer] = js.native
 }
-

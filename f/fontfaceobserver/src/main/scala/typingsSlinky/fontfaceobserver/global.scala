@@ -3,11 +3,12 @@ package typingsSlinky.fontfaceobserver
 import typingsSlinky.fontfaceobserver.FontFaceObserver.FontVariant
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   class FontFaceObserver protected ()
     extends typingsSlinky.fontfaceobserver.FontFaceObserver {
@@ -19,6 +20,4 @@ object global extends js.Object {
     def this(fontFamilyName: String) = this()
     def this(fontFamilyName: String, variant: FontVariant) = this()
   }
-  
 }
-

@@ -3,11 +3,11 @@ package typingsSlinky.meteor.serviceConfigurationMod
 import typingsSlinky.meteor.Mongo.Collection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("meteor/service-configuration", "ServiceConfiguration")
 @js.native
 object ServiceConfiguration extends js.Object {
+  
   var configurations: Collection[Configuration] = js.native
 }
-

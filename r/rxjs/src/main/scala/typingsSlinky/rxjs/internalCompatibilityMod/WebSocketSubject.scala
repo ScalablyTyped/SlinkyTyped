@@ -5,7 +5,7 @@ import typingsSlinky.rxjs.typesMod.Observer
 import typingsSlinky.rxjs.webSocketSubjectMod.WebSocketSubjectConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rxjs/internal-compatibility", "WebSocketSubject")
 @js.native
@@ -18,4 +18,3 @@ class WebSocketSubject[T] protected ()
   def this(urlConfigOrSource: Observable[T], destination: Observer[T]) = this()
   def this(urlConfigOrSource: WebSocketSubjectConfig[T], destination: Observer[T]) = this()
 }
-

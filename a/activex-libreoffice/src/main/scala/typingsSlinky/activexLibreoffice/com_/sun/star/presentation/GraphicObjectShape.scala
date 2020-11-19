@@ -45,7 +45,7 @@ import typingsSlinky.activexLibreoffice.com_.sun.star.util.Color
 import typingsSlinky.std.SafeArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This service is implemented by the graphic presentation shape.
@@ -57,8 +57,8 @@ import scala.scalajs.js.annotation._
 trait GraphicObjectShape
   extends typingsSlinky.activexLibreoffice.com_.sun.star.drawing.GraphicObjectShape
      with Shape
-
 object GraphicObjectShape {
+  
   @scala.inline
   def apply(
     AdjustBlue: Double,
@@ -314,4 +314,3 @@ object GraphicObjectShape {
     __obj.asInstanceOf[GraphicObjectShape]
   }
 }
-

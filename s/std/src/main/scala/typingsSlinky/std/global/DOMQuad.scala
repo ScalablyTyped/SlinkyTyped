@@ -10,7 +10,7 @@ import typingsSlinky.std.DOMQuadInit
 import typingsSlinky.std.DOMRectInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("DOMQuad")
 @js.native
@@ -37,7 +37,6 @@ class DOMQuad ()
   def this(p1: DOMPointInit, p2: DOMPointInit, p3: js.UndefOr[scala.Nothing], p4: DOMPointInit) = this()
   def this(p1: DOMPointInit, p2: DOMPointInit, p3: DOMPointInit, p4: DOMPointInit) = this()
 }
-
 @JSGlobal("DOMQuad")
 @js.native
 object DOMQuad
@@ -57,9 +56,10 @@ object DOMQuad
       /* p4 */ DOMPointInit, 
       typingsSlinky.std.DOMQuad
     ] {
+  
   def fromQuad(): typingsSlinky.std.DOMQuad = js.native
   def fromQuad(other: DOMQuadInit): typingsSlinky.std.DOMQuad = js.native
+  
   def fromRect(): typingsSlinky.std.DOMQuad = js.native
   def fromRect(other: DOMRectInit): typingsSlinky.std.DOMQuad = js.native
 }
-

@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls")
 @js.native
@@ -16,23 +16,26 @@ import scala.scalajs.js.annotation._
   */
 class ClientPagingControls () extends IClientPagingControls {
   def this(properties: IClientPagingControls) = this()
+  
   /** ClientPagingControls limit. */
   @JSName("limit")
   var limit_ClientPagingControls: Double = js.native
+  
   /** ClientPagingControls start. */
   @JSName("start")
   var start_ClientPagingControls: String = js.native
+  
   /**
     * Converts this ClientPagingControls to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "ClientPagingControls")
 @js.native
 object ClientPagingControls extends js.Object {
+  
   /**
     * Creates a new ClientPagingControls instance using the specified properties.
     * @param [properties] Properties to set
@@ -40,6 +43,7 @@ object ClientPagingControls extends js.Object {
     */
   def create(): ClientPagingControls = js.native
   def create(properties: IClientPagingControls): ClientPagingControls = js.native
+  
   /**
     * Decodes a ClientPagingControls message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -52,6 +56,7 @@ object ClientPagingControls extends js.Object {
   def decode(reader: Reader, length: Double): ClientPagingControls = js.native
   def decode(reader: js.typedarray.Uint8Array): ClientPagingControls = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ClientPagingControls = js.native
+  
   /**
     * Decodes a ClientPagingControls message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -61,6 +66,7 @@ object ClientPagingControls extends js.Object {
     */
   def decodeDelimited(reader: Reader): ClientPagingControls = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ClientPagingControls = js.native
+  
   /**
     * Encodes the specified ClientPagingControls message. Does not implicitly {@link ClientPagingControls.verify|verify} messages.
     * @param message ClientPagingControls message or plain object to encode
@@ -69,6 +75,7 @@ object ClientPagingControls extends js.Object {
     */
   def encode(message: IClientPagingControls): Writer = js.native
   def encode(message: IClientPagingControls, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ClientPagingControls message, length delimited. Does not implicitly {@link ClientPagingControls.verify|verify} messages.
     * @param message ClientPagingControls message or plain object to encode
@@ -77,12 +84,14 @@ object ClientPagingControls extends js.Object {
     */
   def encodeDelimited(message: IClientPagingControls): Writer = js.native
   def encodeDelimited(message: IClientPagingControls, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ClientPagingControls message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ClientPagingControls
     */
   def fromObject(`object`: StringDictionary[js.Any]): ClientPagingControls = js.native
+  
   /**
     * Creates a plain object from a ClientPagingControls message. Also converts values to other types if specified.
     * @param message ClientPagingControls
@@ -91,6 +100,7 @@ object ClientPagingControls extends js.Object {
     */
   def toObject(message: ClientPagingControls): StringDictionary[js.Any] = js.native
   def toObject(message: ClientPagingControls, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ClientPagingControls message.
     * @param message Plain object to verify
@@ -98,4 +108,3 @@ object ClientPagingControls extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.Range")
 @js.native
@@ -21,17 +21,20 @@ abstract class Range protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsDatabaseRetrieveSource: DatabaseRetrieveSource = js.native
+  
+  def containerAsImportMappingCall: ImportMappingCall = js.native
+  
   @JSName("model")
   var model_FRange: IModel = js.native
-  def containerAsDatabaseRetrieveSource: DatabaseRetrieveSource = js.native
-  def containerAsImportMappingCall: ImportMappingCall = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.Range")
 @js.native
 object Range extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

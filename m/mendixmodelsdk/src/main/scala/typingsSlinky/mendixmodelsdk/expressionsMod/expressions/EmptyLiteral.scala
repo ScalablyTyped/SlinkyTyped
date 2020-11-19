@@ -36,7 +36,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.WidgetValidation
 import typingsSlinky.mendixmodelsdk.restMod.rest.ConsumedODataService
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -54,22 +54,22 @@ class EmptyLiteral protected () extends LiteralExpression {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FEmptyLiteral: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/expressions", "expressions.EmptyLiteral")
 @js.native
 object EmptyLiteral extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'argumentModel' property
@@ -79,6 +79,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInAppServiceCallParameterMappingUnderArgumentModel(container: AppServiceCallParameterMapping): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'argumentModel' property
@@ -88,6 +89,7 @@ object EmptyLiteral extends js.Object {
     *  7.21.0 and higher
     */
   def createInBasicCodeActionParameterValueUnderArgumentModel(container: BasicCodeActionParameterValue): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'argumentModel' property
@@ -97,6 +99,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 to 7.20.0
     */
   def createInBasicJavaActionParameterValueUnderArgumentModel(container: BasicJavaActionParameterValue): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'left' property
@@ -106,6 +109,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryExpressionUnderLeft(container: BinaryExpression): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'right' property
@@ -115,6 +119,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryExpressionUnderRight(container: BinaryExpression): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'expressionModel' property
@@ -124,6 +129,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryRequestHandlingUnderExpressionModel(container: BinaryRequestHandling): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'valueModel' property
@@ -133,6 +139,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInChangeListActionUnderValueModel(container: ChangeListAction): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'valueModel' property
@@ -142,6 +149,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInChangeVariableActionUnderValueModel(container: ChangeVariableAction): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'expressionModel' property
@@ -151,6 +159,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInConditionalSettingsUnderExpressionModel(container: ConditionalSettings): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'timeoutModel' property
@@ -160,6 +169,7 @@ object EmptyLiteral extends js.Object {
     *  8.5.0 and higher
     */
   def createInConsumedODataServiceUnderTimeoutModel(container: ConsumedODataService): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'initialValueModel' property
@@ -169,6 +179,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInCreateVariableActionUnderInitialValueModel(container: CreateVariableAction): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'limitExpressionModel' property
@@ -178,6 +189,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInCustomRangeUnderLimitExpressionModel(container: CustomRange): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'offsetExpressionModel' property
@@ -187,6 +199,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInCustomRangeUnderOffsetExpressionModel(container: CustomRange): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'argumentModel' property
@@ -196,6 +209,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInDocumentTemplateParameterMappingUnderArgumentModel(container: DocumentTemplateParameterMapping): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'returnValueModel' property
@@ -205,6 +219,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInEndEventUnderReturnValueModel(container: EndEvent): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'expressionModel' property
@@ -214,6 +229,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInExpressionSplitConditionUnderExpressionModel(container: ExpressionSplitCondition): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'valueModel' property
@@ -223,6 +239,7 @@ object EmptyLiteral extends js.Object {
     *  8.0.0 and higher
     */
   def createInFormDataPartUnderValueModel(container: FormDataPart): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'arguments' property
@@ -232,6 +249,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInFunctionCallExpressionUnderArguments(container: FunctionCallExpression): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'marginBottomInInchModel' property
@@ -241,6 +259,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginBottomInInchModel(container: GenerateDocumentAction): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'marginLeftInInchModel' property
@@ -250,6 +269,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginLeftInInchModel(container: GenerateDocumentAction): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'marginRightInInchModel' property
@@ -259,6 +279,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginRightInInchModel(container: GenerateDocumentAction): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'marginTopInInchModel' property
@@ -268,6 +289,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginTopInInchModel(container: GenerateDocumentAction): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'customLocationModel' property
@@ -277,6 +299,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderCustomLocationModel(container: HttpConfiguration): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'password' property
@@ -286,6 +309,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderPassword(container: HttpConfiguration): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'username' property
@@ -295,6 +319,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderUsername(container: HttpConfiguration): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'valueModel' property
@@ -304,6 +329,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpHeaderEntryUnderValueModel(container: HttpHeaderEntry): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'condition' property
@@ -313,6 +339,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderCondition(container: IfExpression): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'ifFalse' property
@@ -322,6 +349,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderIfFalse(container: IfExpression): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'ifTrue' property
@@ -331,6 +359,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderIfTrue(container: IfExpression): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'expressionModel' property
@@ -340,6 +369,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInInspectAttributeUnderExpressionModel(container: InspectAttribute): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'nodeModel' property
@@ -349,6 +379,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInLogMessageActionUnderNodeModel(container: LogMessageAction): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'valueModel' property
@@ -358,6 +389,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInMemberChangeUnderValueModel(container: MemberChange): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'argumentModel' property
@@ -367,6 +399,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInMicroflowCallParameterMappingUnderArgumentModel(container: MicroflowCallParameterMapping): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'argumentModel' property
@@ -376,6 +409,7 @@ object EmptyLiteral extends js.Object {
     *  8.0.0 and higher
     */
   def createInNanoflowCallParameterMappingUnderArgumentModel(container: NanoflowCallParameterMapping): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'expression' property
@@ -385,6 +419,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInParenthesisExpressionUnderExpression(container: ParenthesisExpression): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'hostExpressionModel' property
@@ -394,6 +429,7 @@ object EmptyLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderHostExpressionModel(container: ProxyConfiguration): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'passwordExpressionModel' property
@@ -403,6 +439,7 @@ object EmptyLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderPasswordExpressionModel(container: ProxyConfiguration): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'portExpressionModel' property
@@ -412,6 +449,7 @@ object EmptyLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderPortExpressionModel(container: ProxyConfiguration): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'useConfigurationExpressionModel' property
@@ -421,6 +459,7 @@ object EmptyLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderUseConfigurationExpressionModel(container: ProxyConfiguration): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'usernameExpressionModel' property
@@ -430,6 +469,7 @@ object EmptyLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderUsernameExpressionModel(container: ProxyConfiguration): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'timeOutModel' property
@@ -439,6 +479,7 @@ object EmptyLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInRestCallActionUnderTimeOutModel(container: RestCallAction): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'argumentModel' property
@@ -448,6 +489,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInRuleCallParameterMappingUnderArgumentModel(container: RuleCallParameterMapping): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'expressionModel' property
@@ -457,6 +499,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInTemplateArgumentUnderExpressionModel(container: TemplateArgument): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'expression' property
@@ -466,6 +509,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInUnaryExpressionUnderExpression(container: UnaryExpression): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'timeOutModel' property
@@ -475,6 +519,7 @@ object EmptyLiteral extends js.Object {
     *  7.15.0 and higher
     */
   def createInWebServiceCallActionUnderTimeOutModel(container: WebServiceCallAction): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'argumentModel' property
@@ -484,6 +529,7 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInWebServiceOperationParameterMappingUnderArgumentModel(container: WebServiceOperationParameterMapping): EmptyLiteral = js.native
+  
   /**
     * Creates and returns a new EmptyLiteral instance in the SDK and on the server.
     * The new EmptyLiteral will be automatically stored in the 'expressionModel' property
@@ -493,5 +539,8 @@ object EmptyLiteral extends js.Object {
     *  7.9.0 and higher
     */
   def createInWidgetValidationUnderExpressionModel(container: WidgetValidation): EmptyLiteral = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

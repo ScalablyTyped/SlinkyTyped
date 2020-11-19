@@ -3,7 +3,7 @@ package typingsSlinky.devexpressWeb.global
 import typingsSlinky.jquery.JQueryDeferred
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Provides data for the ASPxClientReportDesigner.ReportTabClosing event.
@@ -19,4 +19,3 @@ class ASPxClientReportDesignerTabClosingEventArgs protected ()
     */
   def this(tab: typingsSlinky.devexpressWeb.ASPxDesignerNavigateTab, readyToClose: JQueryDeferred[_]) = this()
 }
-

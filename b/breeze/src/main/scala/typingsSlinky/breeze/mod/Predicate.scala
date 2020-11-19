@@ -4,7 +4,7 @@ import typingsSlinky.breeze.breeze.IRecursiveArray
 import typingsSlinky.breeze.breeze.PredicateMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("breeze", "Predicate")
 @js.native
@@ -34,17 +34,11 @@ class Predicate ()
     value: js.Any
   ) = this()
 }
-
 /* static members */
 @JSImport("breeze", "Predicate")
 @js.native
 object Predicate extends js.Object {
-  @JSName("and")
-  var and_Original: PredicateMethod = js.native
-  @JSName("create")
-  var create_Original: PredicateMethod = js.native
-  @JSName("or")
-  var or_Original: PredicateMethod = js.native
+  
   def and(predicates: typingsSlinky.breeze.breeze.Predicate*): typingsSlinky.breeze.breeze.Predicate = js.native
   def and(predicates: js.Array[typingsSlinky.breeze.breeze.Predicate]): typingsSlinky.breeze.breeze.Predicate = js.native
     // for any/all clauses
@@ -65,6 +59,9 @@ object Predicate extends js.Object {
     value: js.Any,
     valueIsLiteral: Boolean
   ): typingsSlinky.breeze.breeze.Predicate = js.native
+  @JSName("and")
+  var and_Original: PredicateMethod = js.native
+  
   def create(predicates: typingsSlinky.breeze.breeze.Predicate*): typingsSlinky.breeze.breeze.Predicate = js.native
   def create(predicates: js.Array[typingsSlinky.breeze.breeze.Predicate]): typingsSlinky.breeze.breeze.Predicate = js.native
     // for any/all clauses
@@ -85,8 +82,13 @@ object Predicate extends js.Object {
     value: js.Any,
     valueIsLiteral: Boolean
   ): typingsSlinky.breeze.breeze.Predicate = js.native
+  @JSName("create")
+  var create_Original: PredicateMethod = js.native
+  
   def isPredicate(o: js.Any): Boolean = js.native
+  
   def not(predicate: typingsSlinky.breeze.breeze.Predicate): typingsSlinky.breeze.breeze.Predicate = js.native
+  
   def or(predicates: typingsSlinky.breeze.breeze.Predicate*): typingsSlinky.breeze.breeze.Predicate = js.native
   def or(predicates: js.Array[typingsSlinky.breeze.breeze.Predicate]): typingsSlinky.breeze.breeze.Predicate = js.native
     // for any/all clauses
@@ -107,5 +109,6 @@ object Predicate extends js.Object {
     value: js.Any,
     valueIsLiteral: Boolean
   ): typingsSlinky.breeze.breeze.Predicate = js.native
+  @JSName("or")
+  var or_Original: PredicateMethod = js.native
 }
-

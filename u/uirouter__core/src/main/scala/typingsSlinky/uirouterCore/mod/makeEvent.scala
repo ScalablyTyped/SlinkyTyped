@@ -3,11 +3,12 @@ package typingsSlinky.uirouterCore.mod
 import typingsSlinky.uirouterCore.transitionInterfaceMod.IHookRegistry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@uirouter/core", "makeEvent")
 @js.native
 object makeEvent extends js.Object {
+  
   def apply(
     registry: IHookRegistry,
     transitionService: typingsSlinky.uirouterCore.transitionServiceMod.TransitionService,
@@ -19,4 +20,3 @@ object makeEvent extends js.Object {
     _
   ] = js.native
 }
-

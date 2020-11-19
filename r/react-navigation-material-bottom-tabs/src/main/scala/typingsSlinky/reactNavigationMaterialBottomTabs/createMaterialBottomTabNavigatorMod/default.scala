@@ -13,11 +13,12 @@ import typingsSlinky.reactNavigationMaterialBottomTabs.typesMod.NavigationMateri
 import typingsSlinky.reactNavigationMaterialBottomTabs.typesMod.NavigationTabProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-navigation-material-bottom-tabs/lib/typescript/src/navigators/createMaterialBottomTabNavigator", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   def apply(
     routes: NavigationRouteConfigMap[
       NavigationMaterialBottomTabOptions, 
@@ -39,4 +40,3 @@ object default extends js.Object {
     ]
   ): NavigationNavigator[_, NavigationProp[NavigationState]] = js.native
 }
-

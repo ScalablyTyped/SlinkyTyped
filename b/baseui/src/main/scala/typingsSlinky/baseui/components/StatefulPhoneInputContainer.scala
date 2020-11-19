@@ -12,9 +12,10 @@ import typingsSlinky.baseui.phoneInputMod.StatefulPhoneInputContainerProps
 import typingsSlinky.baseui.selectMod.OnChangeParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object StatefulPhoneInputContainer {
+  
   @JSImport("baseui/phone-input", "StatefulPhoneInputContainer")
   @js.native
   object component extends js.Object
@@ -23,23 +24,30 @@ object StatefulPhoneInputContainer {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.baseui.phoneInputMod.StatefulPhoneInputContainer] {
+    
     @scala.inline
     def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def initialState(value: State): this.type = set("initialState", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def mapIsoToLabel(value: /* iso */ String => String): this.type = set("mapIsoToLabel", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onCountryChange(value: /* event */ OnChangeParams => _): this.type = set("onCountryChange", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onTextChange(value: /* event */ SyntheticEvent[Event, HTMLInputElement] => _): this.type = set("onTextChange", js.Any.fromFunction1(value))
+    
     @scala.inline
     def overrides(value: PhoneInputOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def stateReducer(value: (/* type */ StateChange, /* nextState */ State, /* currentState */ State) => State): this.type = set("stateReducer", js.Any.fromFunction3(value))
   }
   
   def withProps(p: StatefulPhoneInputContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: StatefulPhoneInputContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

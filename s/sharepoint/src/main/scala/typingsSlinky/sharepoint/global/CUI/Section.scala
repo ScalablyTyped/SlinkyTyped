@@ -4,7 +4,7 @@ import typingsSlinky.sharepoint.CUI.Alignment
 import typingsSlinky.sharepoint.CUI.RowType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("CUI.Section")
 @js.native
@@ -16,4 +16,3 @@ class Section protected ()
     */
   def this(ribbon: typingsSlinky.sharepoint.CUI.Ribbon, id: String, `type`: RowType, alignment: Alignment) = this()
 }
-

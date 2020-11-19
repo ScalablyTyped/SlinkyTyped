@@ -6,17 +6,17 @@ import typingsSlinky.antd.libStepsMod.StepProps
 import typingsSlinky.antd.libStepsMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd", "Steps")
 @js.native
 class Steps () extends default
-
 /* static members */
 @JSImport("antd", "Steps")
 @js.native
 object Steps extends js.Object {
+  
   var Step: ReactComponentClass[StepProps] = js.native
+  
   var defaultProps: Current = js.native
 }
-

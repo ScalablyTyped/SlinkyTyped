@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.IconSymbol3DLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.IconSymbol3DLayer")
 @js.native
@@ -16,4 +16,3 @@ class IconSymbol3DLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.IconSymbol3DLayer {
   def this(properties: IconSymbol3DLayerProperties) = this()
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.pulumiCloud.mod
 import typingsSlinky.pulumiPulumi.resourceMod.ResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/cloud", "SharedVolume")
 @js.native
@@ -18,4 +18,3 @@ class SharedVolumeCls protected ()
   def this(name: String) = this()
   def this(name: String, opts: ResourceOptions) = this()
 }
-

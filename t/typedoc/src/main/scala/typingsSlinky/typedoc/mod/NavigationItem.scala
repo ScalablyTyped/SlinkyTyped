@@ -2,7 +2,7 @@ package typingsSlinky.typedoc.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "NavigationItem")
 @js.native
@@ -183,11 +183,11 @@ class NavigationItem ()
     reflection: typingsSlinky.typedoc.abstractMod.Reflection
   ) = this()
 }
-
 /* static members */
 @JSImport("typedoc", "NavigationItem")
 @js.native
 object NavigationItem extends js.Object {
+  
   def create(reflection: typingsSlinky.typedoc.abstractMod.Reflection): typingsSlinky.typedoc.navigationItemMod.NavigationItem = js.native
   def create(
     reflection: typingsSlinky.typedoc.abstractMod.Reflection,
@@ -204,4 +204,3 @@ object NavigationItem extends js.Object {
     useShortNames: Boolean
   ): typingsSlinky.typedoc.navigationItemMod.NavigationItem = js.native
 }
-

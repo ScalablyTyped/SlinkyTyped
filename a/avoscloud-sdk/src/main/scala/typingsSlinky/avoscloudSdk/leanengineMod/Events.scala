@@ -2,7 +2,7 @@ package typingsSlinky.avoscloudSdk.leanengineMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @class
@@ -30,21 +30,24 @@ import scala.scalajs.js.annotation._
 @js.native
 class Events ()
   extends typingsSlinky.avoscloudSdk.mod.Events
-
 /* static members */
 @JSImport("leanengine", "Events")
 @js.native
 object Events extends js.Object {
+  
   def bind(): typingsSlinky.avoscloudSdk.mod.Events = js.native
+  
   def off(events: js.Array[String]): typingsSlinky.avoscloudSdk.mod.Events = js.native
   def off(events: js.Array[String], callback: js.UndefOr[scala.Nothing], context: js.Any): typingsSlinky.avoscloudSdk.mod.Events = js.native
   def off(events: js.Array[String], callback: js.Function): typingsSlinky.avoscloudSdk.mod.Events = js.native
   def off(events: js.Array[String], callback: js.Function, context: js.Any): typingsSlinky.avoscloudSdk.mod.Events = js.native
+  
   def on(events: js.Array[String]): typingsSlinky.avoscloudSdk.mod.Events = js.native
   def on(events: js.Array[String], callback: js.UndefOr[scala.Nothing], context: js.Any): typingsSlinky.avoscloudSdk.mod.Events = js.native
   def on(events: js.Array[String], callback: js.Function): typingsSlinky.avoscloudSdk.mod.Events = js.native
   def on(events: js.Array[String], callback: js.Function, context: js.Any): typingsSlinky.avoscloudSdk.mod.Events = js.native
+  
   def trigger(events: js.Array[String]): typingsSlinky.avoscloudSdk.mod.Events = js.native
+  
   def unbind(): typingsSlinky.avoscloudSdk.mod.Events = js.native
 }
-

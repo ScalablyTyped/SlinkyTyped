@@ -6,11 +6,12 @@ import typingsSlinky.graphql.definitionMod.GraphQLInputType
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server/dist/exports", "updateArgument")
 @js.native
 object updateArgument extends js.Object {
+  
   def apply(
     argName: String,
     argType: GraphQLInputType,
@@ -20,4 +21,3 @@ object updateArgument extends js.Object {
     newArg: js.Any
   ): Unit = js.native
 }
-

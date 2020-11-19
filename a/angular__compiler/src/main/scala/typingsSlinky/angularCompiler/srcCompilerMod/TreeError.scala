@@ -2,7 +2,7 @@ package typingsSlinky.angularCompiler.srcCompilerMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.angularCompiler.srcParseUtilMod.ParseError because Already inherited
@@ -22,11 +22,11 @@ class TreeError protected ()
     msg: String
   ) = this()
 }
-
 /* static members */
 @JSImport("@angular/compiler/src/compiler", "TreeError")
 @js.native
 object TreeError extends js.Object {
+  
   def create(
     elementName: String,
     span: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
@@ -38,4 +38,3 @@ object TreeError extends js.Object {
     msg: String
   ): typingsSlinky.angularCompiler.mlParserParserMod.TreeError = js.native
 }
-

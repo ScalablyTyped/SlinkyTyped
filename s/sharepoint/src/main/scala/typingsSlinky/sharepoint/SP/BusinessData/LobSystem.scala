@@ -4,11 +4,12 @@ import typingsSlinky.sharepoint.SP.BusinessData.Collections.LobSystemInstanceCol
 import typingsSlinky.sharepoint.SP.ClientObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LobSystem extends ClientObject {
+  
   def getLobSystemInstances(): LobSystemInstanceCollection = js.native
+  
   def get_name(): String = js.native
 }
-

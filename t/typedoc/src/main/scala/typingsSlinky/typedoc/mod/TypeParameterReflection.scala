@@ -3,7 +3,7 @@ package typingsSlinky.typedoc.mod
 import typingsSlinky.typedoc.modelsTypesMod.TypeParameterType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeParameterReflection")
 @js.native
@@ -12,4 +12,3 @@ class TypeParameterReflection protected ()
   def this(`type`: TypeParameterType) = this()
   def this(`type`: TypeParameterType, parent: typingsSlinky.typedoc.abstractMod.Reflection) = this()
 }
-

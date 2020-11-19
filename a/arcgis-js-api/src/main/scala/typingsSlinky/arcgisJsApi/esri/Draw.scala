@@ -9,22 +9,18 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.polyline
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.rectangle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Draw extends Accessor {
+  
   /**
     * A reference to the active [draw action](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html). An instance of the draw action is created when [create()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-Draw.html#create) method is called.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-Draw.html#activeAction)
     */
   var activeAction: DrawAction = js.native
-  /**
-    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html). Set this to link the draw to a specific view.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-Draw.html#view)
-    */
-  var view: MapView = js.native
+  
   /**
     * Complete the current active drawing.
     *
@@ -33,6 +29,7 @@ trait Draw extends Accessor {
     *
     */
   def complete(): Unit = js.native
+  
   @JSName("create")
   def create_circle(drawAction: circle): DrawAction = js.native
   @JSName("create")
@@ -87,6 +84,7 @@ trait Draw extends Accessor {
   def create_rectangle(drawAction: rectangle): DrawAction = js.native
   @JSName("create")
   def create_rectangle(drawAction: rectangle, drawOptions: DrawCreateDrawOptions): DrawAction = js.native
+  
   /**
     * Resets the drawing by clearing the active action.
     *
@@ -95,5 +93,11 @@ trait Draw extends Accessor {
     *
     */
   def reset(): Unit = js.native
+  
+  /**
+    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html). Set this to link the draw to a specific view.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-Draw.html#view)
+    */
+  var view: MapView = js.native
 }
-

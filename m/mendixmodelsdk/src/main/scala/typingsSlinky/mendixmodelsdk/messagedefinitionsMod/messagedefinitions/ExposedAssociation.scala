@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.Element
 import typingsSlinky.mendixmodelsdk.messagedefinitionsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.6.0: introduced
@@ -26,25 +26,28 @@ class ExposedAssociation protected () extends ExposedEntityBase {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def association: IAssociationBase = js.native
+  
+  def associationQualifiedName: String = js.native
+  
+  def association_=(newValue: IAssociationBase): Unit = js.native
+  
   @JSName("model")
   var model_FExposedAssociation: IModel = js.native
-  def association: IAssociationBase = js.native
-  def associationQualifiedName: String = js.native
-  def association_=(newValue: IAssociationBase): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/messagedefinitions", "messagedefinitions.ExposedAssociation")
 @js.native
 object ExposedAssociation extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new ExposedAssociation instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): ExposedAssociation = js.native
+  
   /**
     * Creates and returns a new ExposedAssociation instance in the SDK and on the server.
     * The new ExposedAssociation will be automatically stored in the 'children' property
@@ -54,6 +57,7 @@ object ExposedAssociation extends js.Object {
     *  7.6.0 and higher
     */
   def createInElementUnderChildren(container: Element): ExposedAssociation = js.native
+  
   /**
     * Creates and returns a new ExposedAssociation instance in the SDK and on the server.
     * The new ExposedAssociation will be automatically stored in the 'elements' property
@@ -63,5 +67,8 @@ object ExposedAssociation extends js.Object {
     *  7.6.0 and higher
     */
   def createInJsonStructureUnderElements(container: JsonStructure): ExposedAssociation = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

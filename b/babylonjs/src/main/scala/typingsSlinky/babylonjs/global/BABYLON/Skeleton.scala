@@ -1,9 +1,8 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
-import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.Skeleton")
 @js.native
@@ -22,17 +21,12 @@ class Skeleton protected ()
   id: String,
     scene: typingsSlinky.babylonjs.BABYLON.Scene
   ) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-
 /* static members */
 @JSGlobal("BABYLON.Skeleton")
 @js.native
 object Skeleton extends js.Object {
+  
   /**
     * Creates a new skeleton from serialized data
     * @param parsedSkeleton defines the serialized data
@@ -41,4 +35,3 @@ object Skeleton extends js.Object {
     */
   def Parse(parsedSkeleton: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene): typingsSlinky.babylonjs.BABYLON.Skeleton = js.native
 }
-

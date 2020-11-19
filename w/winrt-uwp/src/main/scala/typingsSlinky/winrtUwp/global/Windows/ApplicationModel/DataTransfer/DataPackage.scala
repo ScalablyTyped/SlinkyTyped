@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.DataTransfer
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Contains the data that a user wants to exchange with another app. */
 @JSGlobal("Windows.ApplicationModel.DataTransfer.DataPackage")
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
 /** Constructor that creates a new DataPackage . */
 class DataPackage ()
   extends typingsSlinky.winrtUwp.Windows.ApplicationModel.DataTransfer.DataPackage
-

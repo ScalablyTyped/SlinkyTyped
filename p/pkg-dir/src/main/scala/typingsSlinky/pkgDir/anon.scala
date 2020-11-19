@@ -2,13 +2,15 @@ package typingsSlinky.pkgDir
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object anon extends js.Object {
+  
   @js.native
   trait Call extends js.Object {
+    
     /**
     	Find the root directory of a Node.js project or npm package.
     	@param cwd - Directory to start from. Default: `process.cwd()`.
@@ -34,6 +36,7 @@ object anon extends js.Object {
     	*/
     def apply(): js.Promise[js.UndefOr[String]] = js.native
     def apply(cwd: String): js.Promise[js.UndefOr[String]] = js.native
+    
     /**
     	Synchronously find the root directory of a Node.js project or npm package.
     	@param cwd - Directory to start from. Default: `process.cwd()`.
@@ -42,6 +45,4 @@ object anon extends js.Object {
     def sync(): js.UndefOr[String] = js.native
     def sync(cwd: String): js.UndefOr[String] = js.native
   }
-  
 }
-

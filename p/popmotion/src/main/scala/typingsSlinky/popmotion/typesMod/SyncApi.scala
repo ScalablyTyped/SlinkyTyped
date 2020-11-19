@@ -3,22 +3,25 @@ package typingsSlinky.popmotion.typesMod
 import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SyncApi extends js.Object {
+  
   var cancelSync: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in popmotion.popmotion/framesync/lib/types.StepId ]: (process : popmotion.popmotion/framesync/lib/types.Process): void}
     */ typingsSlinky.popmotion.popmotionStrings.SyncApi with TopLevel[js.Any] = js.native
+  
   var steps: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in popmotion.popmotion/framesync/lib/types.StepId ]: popmotion.popmotion/framesync/lib/types.Step}
     */ typingsSlinky.popmotion.popmotionStrings.SyncApi with TopLevel[js.Any] = js.native
+  
   var sync: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in popmotion.popmotion/framesync/lib/types.StepId ]: (process : popmotion.popmotion/framesync/lib/types.Process, keepAlive : boolean | undefined, immediate : boolean | undefined): popmotion.popmotion/framesync/lib/types.Process}
     */ typingsSlinky.popmotion.popmotionStrings.SyncApi with TopLevel[js.Any] = js.native
 }
-
 object SyncApi {
+  
   @scala.inline
   def apply(
     cancelSync: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
@@ -34,29 +37,36 @@ object SyncApi {
     val __obj = js.Dynamic.literal(cancelSync = cancelSync.asInstanceOf[js.Any], steps = steps.asInstanceOf[js.Any], sync = sync.asInstanceOf[js.Any])
     __obj.asInstanceOf[SyncApi]
   }
+  
   @scala.inline
   implicit class SyncApiOps[Self <: SyncApi] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCancelSync(
       value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
     {[ key in popmotion.popmotion/framesync/lib/types.StepId ]: (process : popmotion.popmotion/framesync/lib/types.Process): void}
       */ typingsSlinky.popmotion.popmotionStrings.SyncApi with TopLevel[js.Any]
     ): Self = this.set("cancelSync", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setSteps(
       value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
     {[ key in popmotion.popmotion/framesync/lib/types.StepId ]: popmotion.popmotion/framesync/lib/types.Step}
       */ typingsSlinky.popmotion.popmotionStrings.SyncApi with TopLevel[js.Any]
     ): Self = this.set("steps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setSync(
       value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
@@ -64,6 +74,4 @@ object SyncApi {
       */ typingsSlinky.popmotion.popmotionStrings.SyncApi with TopLevel[js.Any]
     ): Self = this.set("sync", value.asInstanceOf[js.Any])
   }
-  
 }
-

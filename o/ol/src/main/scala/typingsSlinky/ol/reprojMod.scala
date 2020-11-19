@@ -6,12 +6,14 @@ import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.projectionMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/reproj", JSImport.Namespace)
 @js.native
 object reprojMod extends js.Object {
+  
   def calculateSourceResolution(sourceProj: default, targetProj: default, targetCenter: Coordinate, targetResolution: Double): Double = js.native
+  
   def render(
     width: Double,
     height: Double,
@@ -38,4 +40,3 @@ object reprojMod extends js.Object {
     opt_renderEdges: Boolean
   ): HTMLCanvasElement = js.native
 }
-

@@ -4,11 +4,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/layers/normalization", "normalizeBatchInTraining")
 @js.native
 object normalizeBatchInTraining extends js.Object {
+  
   def apply(x: Tensor[Rank], gamma: Tensor[Rank], beta: Tensor[Rank], reductionAxes: js.Array[Double]): js.Tuple3[Tensor[Rank], Tensor[Rank], Tensor[Rank]] = js.native
   def apply(
     x: Tensor[Rank],
@@ -18,4 +19,3 @@ object normalizeBatchInTraining extends js.Object {
     epsilon: Double
   ): js.Tuple3[Tensor[Rank], Tensor[Rank], Tensor[Rank]] = js.native
 }
-

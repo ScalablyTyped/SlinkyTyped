@@ -49,11 +49,12 @@ import typingsSlinky.graphql.astMod.VariableNode
 import typingsSlinky.graphql.visitorMod.Visitor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql", "visit")
 @js.native
 object visit extends js.Object {
+  
   def apply(
     root: ASTNode,
     visitor: Visitor[
@@ -71,4 +72,3 @@ object visit extends js.Object {
   visitorKeys: VisitorKeyMapASTKindToNod
   ): js.Any = js.native
 }
-

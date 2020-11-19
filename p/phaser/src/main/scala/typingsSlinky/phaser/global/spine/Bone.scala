@@ -2,7 +2,7 @@ package typingsSlinky.phaser.global.spine
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("spine.Bone")
 @js.native
@@ -14,4 +14,3 @@ class Bone protected ()
     parent: typingsSlinky.phaser.spine.Bone
   ) = this()
 }
-

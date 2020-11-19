@@ -178,7 +178,7 @@ import typingsSlinky.std.stdStrings.view
 import typingsSlinky.std.stdStrings.wbr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element. */
 @js.native
@@ -189,52 +189,7 @@ trait Element
      with NonDocumentTypeChildNode
      with ParentNode
      with Slotable {
-  val attributes: org.scalajs.dom.raw.NamedNodeMap = js.native
-  /**
-    * Allows for manipulation of element's class content attribute as a set of whitespace-separated tokens through a DOMTokenList object.
-    */
-  val classList: org.scalajs.dom.raw.DOMTokenList = js.native
-  /**
-    * Returns the value of element's class content attribute. Can be set to change it.
-    */
-  var className: java.lang.String = js.native
-  val clientHeight: Double = js.native
-  val clientLeft: Double = js.native
-  val clientTop: Double = js.native
-  val clientWidth: Double = js.native
-  /**
-    * Returns the value of element's id content attribute. Can be set to change it.
-    */
-  var id: java.lang.String = js.native
-  /**
-    * Returns the local name.
-    */
-  val localName: java.lang.String = js.native
-  var onfullscreenchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onfullscreenerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var outerHTML: java.lang.String = js.native
-  @JSName("ownerDocument")
-  val ownerDocument_Element: org.scalajs.dom.raw.Document = js.native
-  /**
-    * Returns the namespace prefix.
-    */
-  val prefix: java.lang.String | Null = js.native
-  val scrollHeight: Double = js.native
-  var scrollLeft: Double = js.native
-  var scrollTop: Double = js.native
-  val scrollWidth: Double = js.native
-  /**
-    * Returns element's shadow root, if any, and if shadow root's mode is "open", and null otherwise.
-    */
-  val shadowRoot: ShadowRoot | Null = js.native
-  /**
-    * Returns the value of element's slot content attribute. Can be set to change it.
-    */
-  var slot: java.lang.String = js.native
-  /**
-    * Returns the HTML-uppercased qualified name.
-    */
-  val tagName: java.lang.String = js.native
+  
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
@@ -269,10 +224,32 @@ trait Element
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
+  
   /**
     * Creates a shadow root for element and returns it.
     */
   def attachShadow(init: ShadowRootInit): ShadowRoot = js.native
+  
+  val attributes: org.scalajs.dom.raw.NamedNodeMap = js.native
+  
+  /**
+    * Allows for manipulation of element's class content attribute as a set of whitespace-separated tokens through a DOMTokenList object.
+    */
+  val classList: org.scalajs.dom.raw.DOMTokenList = js.native
+  
+  /**
+    * Returns the value of element's class content attribute. Can be set to change it.
+    */
+  var className: java.lang.String = js.native
+  
+  val clientHeight: Double = js.native
+  
+  val clientLeft: Double = js.native
+  
+  val clientTop: Double = js.native
+  
+  val clientWidth: Double = js.native
+  
   def closest[E /* <: org.scalajs.dom.raw.Element */](selector: java.lang.String): E | Null = js.native
   /**
     * Returns the first (starting at element) inclusive ancestor that matches selectors, and null otherwise.
@@ -621,33 +598,44 @@ trait Element
   def closest_view(selector: view): org.scalajs.dom.raw.SVGViewElement | Null = js.native
   @JSName("closest")
   def closest_wbr(selector: wbr): org.scalajs.dom.raw.HTMLElement | Null = js.native
+  
   /**
     * Returns element's first attribute whose qualified name is qualifiedName, and null if there is no such attribute otherwise.
     */
   def getAttribute(qualifiedName: java.lang.String): java.lang.String | Null = js.native
+  
   /**
     * Returns element's attribute whose namespace is namespace and local name is localName, and null if there is no such attribute otherwise.
     */
   def getAttributeNS(namespace: java.lang.String, localName: java.lang.String): java.lang.String | Null = js.native
   def getAttributeNS(namespace: Null, localName: java.lang.String): java.lang.String | Null = js.native
+  
   /**
     * Returns the qualified names of all element's attributes. Can contain duplicates.
     */
   def getAttributeNames(): js.Array[java.lang.String] = js.native
+  
   def getAttributeNode(name: java.lang.String): org.scalajs.dom.raw.Attr | Null = js.native
+  
   def getAttributeNodeNS(namespaceURI: java.lang.String, localName: java.lang.String): org.scalajs.dom.raw.Attr | Null = js.native
+  
   def getBoundingClientRect(): DOMRect = js.native
+  
   def getClientRects(): DOMRectList = js.native
+  
   /**
     * Returns a HTMLCollection of the elements in the object on which the method was invoked (a document or an element) that have all the classes given by classNames. The classNames argument is interpreted as a space-separated list of classes.
     */
   def getElementsByClassName(classNames: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.Element] = js.native
+  
   def getElementsByTagName(qualifiedName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.Element] = js.native
+  
   def getElementsByTagNameNS(namespaceURI: java.lang.String, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.Element] = js.native
   @JSName("getElementsByTagNameNS")
   def getElementsByTagNameNS_httpwwww3org1999xhtml(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
   @JSName("getElementsByTagNameNS")
   def getElementsByTagNameNS_httpwwww3org2000svg(namespaceURI: httpColonSlashSlashwwwDotw3DotorgSlash2000Slashsvg, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.SVGElement] = js.native
+  
   @JSName("getElementsByTagName")
   def getElementsByTagName_a(qualifiedName: a): HTMLCollectionOf[org.scalajs.dom.raw.HTMLAnchorElement] = js.native
   @JSName("getElementsByTagName")
@@ -992,39 +980,77 @@ trait Element
   def getElementsByTagName_view(qualifiedName: view): HTMLCollectionOf[org.scalajs.dom.raw.SVGViewElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_wbr(qualifiedName: wbr): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
+  
   /**
     * Returns true if element has an attribute whose qualified name is qualifiedName, and false otherwise.
     */
   def hasAttribute(qualifiedName: java.lang.String): scala.Boolean = js.native
+  
   /**
     * Returns true if element has an attribute whose namespace is namespace and local name is localName.
     */
   def hasAttributeNS(namespace: java.lang.String, localName: java.lang.String): scala.Boolean = js.native
   def hasAttributeNS(namespace: Null, localName: java.lang.String): scala.Boolean = js.native
+  
   /**
     * Returns true if element has attributes, and false otherwise.
     */
   def hasAttributes(): scala.Boolean = js.native
+  
   def hasPointerCapture(pointerId: Double): scala.Boolean = js.native
+  
+  /**
+    * Returns the value of element's id content attribute. Can be set to change it.
+    */
+  var id: java.lang.String = js.native
+  
   def insertAdjacentElement(position: InsertPosition, insertedElement: org.scalajs.dom.raw.Element): org.scalajs.dom.raw.Element | Null = js.native
+  
   def insertAdjacentHTML(where: InsertPosition, html: java.lang.String): Unit = js.native
+  
   def insertAdjacentText(where: InsertPosition, text: java.lang.String): Unit = js.native
+  
+  /**
+    * Returns the local name.
+    */
+  val localName: java.lang.String = js.native
+  
   /**
     * Returns true if matching selectors against element's root yields element, and false otherwise.
     */
   def matches(selectors: java.lang.String): scala.Boolean = js.native
+  
   def msGetRegionContent(): js.Any = js.native
+  
+  var onfullscreenchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  var onfullscreenerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  var outerHTML: java.lang.String = js.native
+  
+  @JSName("ownerDocument")
+  val ownerDocument_Element: org.scalajs.dom.raw.Document = js.native
+  
+  /**
+    * Returns the namespace prefix.
+    */
+  val prefix: java.lang.String | Null = js.native
+  
   def releasePointerCapture(pointerId: Double): Unit = js.native
+  
   /**
     * Removes element's first attribute whose qualified name is qualifiedName.
     */
   def removeAttribute(qualifiedName: java.lang.String): Unit = js.native
+  
   /**
     * Removes element's attribute whose namespace is namespace and local name is localName.
     */
   def removeAttributeNS(namespace: java.lang.String, localName: java.lang.String): Unit = js.native
   def removeAttributeNS(namespace: Null, localName: java.lang.String): Unit = js.native
+  
   def removeAttributeNode(attr: org.scalajs.dom.raw.Attr): org.scalajs.dom.raw.Attr = js.native
+  
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
@@ -1059,6 +1085,7 @@ trait Element
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  
   /**
     * Displays element fullscreen and resolves promise when done.
     * 
@@ -1066,31 +1093,65 @@ trait Element
     */
   def requestFullscreen(): js.Promise[Unit] = js.native
   def requestFullscreen(options: FullscreenOptions): js.Promise[Unit] = js.native
+  
   def requestPointerLock(): Unit = js.native
+  
   def scroll(): Unit = js.native
   def scroll(options: ScrollToOptions): Unit = js.native
   def scroll(x: Double, y: Double): Unit = js.native
+  
   def scrollBy(): Unit = js.native
   def scrollBy(options: ScrollToOptions): Unit = js.native
   def scrollBy(x: Double, y: Double): Unit = js.native
+  
+  val scrollHeight: Double = js.native
+  
   def scrollIntoView(): Unit = js.native
   def scrollIntoView(arg: scala.Boolean): Unit = js.native
   def scrollIntoView(arg: ScrollIntoViewOptions): Unit = js.native
+  
+  var scrollLeft: Double = js.native
+  
   def scrollTo(): Unit = js.native
   def scrollTo(options: ScrollToOptions): Unit = js.native
   def scrollTo(x: Double, y: Double): Unit = js.native
+  
+  var scrollTop: Double = js.native
+  
+  val scrollWidth: Double = js.native
+  
   /**
     * Sets the value of element's first attribute whose qualified name is qualifiedName to value.
     */
   def setAttribute(qualifiedName: java.lang.String, value: java.lang.String): Unit = js.native
+  
   /**
     * Sets the value of element's attribute whose namespace is namespace and local name is localName to value.
     */
   def setAttributeNS(namespace: java.lang.String, qualifiedName: java.lang.String, value: java.lang.String): Unit = js.native
   def setAttributeNS(namespace: Null, qualifiedName: java.lang.String, value: java.lang.String): Unit = js.native
+  
   def setAttributeNode(attr: org.scalajs.dom.raw.Attr): org.scalajs.dom.raw.Attr | Null = js.native
+  
   def setAttributeNodeNS(attr: org.scalajs.dom.raw.Attr): org.scalajs.dom.raw.Attr | Null = js.native
+  
   def setPointerCapture(pointerId: Double): Unit = js.native
+  
+  /**
+    * Returns element's shadow root, if any, and if shadow root's mode is "open", and null otherwise.
+    */
+  val shadowRoot: ShadowRoot | Null = js.native
+  
+  /**
+    * Returns the value of element's slot content attribute. Can be set to change it.
+    */
+  var slot: java.lang.String = js.native
+  
+  /**
+    * Returns the HTML-uppercased qualified name.
+    */
+  val tagName: java.lang.String = js.native
+  
   /**
     * If force is not given, "toggles" qualifiedName, removing it if it is present and adding it if it is not present. If force is true, adds qualifiedName. If force is false, removes qualifiedName.
     * 
@@ -1098,6 +1159,6 @@ trait Element
     */
   def toggleAttribute(qualifiedName: java.lang.String): scala.Boolean = js.native
   def toggleAttribute(qualifiedName: java.lang.String, force: scala.Boolean): scala.Boolean = js.native
+  
   def webkitMatchesSelector(selectors: java.lang.String): scala.Boolean = js.native
 }
-

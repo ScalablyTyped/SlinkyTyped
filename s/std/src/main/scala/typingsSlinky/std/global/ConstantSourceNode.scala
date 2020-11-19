@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.std.ConstantSourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("ConstantSourceNode")
 @js.native
@@ -14,7 +14,6 @@ class ConstantSourceNode protected ()
   def this(context: typingsSlinky.std.BaseAudioContext) = this()
   def this(context: typingsSlinky.std.BaseAudioContext, options: ConstantSourceOptions) = this()
 }
-
 @JSGlobal("ConstantSourceNode")
 @js.native
 object ConstantSourceNode
@@ -27,4 +26,3 @@ object ConstantSourceNode
       /* options */ ConstantSourceOptions, 
       typingsSlinky.std.ConstantSourceNode
     ]
-

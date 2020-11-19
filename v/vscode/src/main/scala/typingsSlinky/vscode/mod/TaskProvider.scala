@@ -2,10 +2,11 @@ package typingsSlinky.vscode.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TaskProvider[T /* <: Task */] extends js.Object {
+  
   /**
     * Provides tasks.
     * @param token A cancellation token.
@@ -13,6 +14,7 @@ trait TaskProvider[T /* <: Task */] extends js.Object {
     */
   def provideTasks(): ProviderResult[js.Array[T]] = js.native
   def provideTasks(token: CancellationToken): ProviderResult[js.Array[T]] = js.native
+  
   /**
     * Resolves a task that has no [`execution`](#Task.execution) set. Tasks are
     * often created from information found in the `tasks.json`-file. Such tasks miss
@@ -29,4 +31,3 @@ trait TaskProvider[T /* <: Task */] extends js.Object {
   def resolveTask(task: T): ProviderResult[T] = js.native
   def resolveTask(task: T, token: CancellationToken): ProviderResult[T] = js.native
 }
-

@@ -3,15 +3,15 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.arcgisJsApi.esri.ImageSymbolTableElementInfo
   - typingsSlinky.arcgisJsApi.esri.SymbolTableElementInfo
 */
 trait SymbolTableElementType extends js.Object
-
 object SymbolTableElementType {
+  
   @scala.inline
   def ImageSymbolTableElementInfo(
     constructor: js.Function,
@@ -23,6 +23,7 @@ object SymbolTableElementType {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), opacity = opacity.asInstanceOf[js.Any], propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), src = src.asInstanceOf[js.Any])
     __obj.asInstanceOf[SymbolTableElementType]
   }
+  
   @scala.inline
   def SymbolTableElementInfo(
     constructor: js.Function,
@@ -35,4 +36,3 @@ object SymbolTableElementType {
     __obj.asInstanceOf[SymbolTableElementType]
   }
 }
-

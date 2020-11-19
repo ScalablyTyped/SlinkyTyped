@@ -2,7 +2,7 @@ package typingsSlinky.openlayers.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.openlayers.openlayersStrings.canvas
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.openlayers.openlayersStrings.webgl
 */
 trait RendererType extends js.Object
-
 object RendererType {
+  
   @scala.inline
   def canvas: typingsSlinky.openlayers.openlayersStrings.canvas = "canvas".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.canvas]
+  
   @scala.inline
   def dom: typingsSlinky.openlayers.openlayersStrings.dom = "dom".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.dom]
+  
   @scala.inline
   def webgl: typingsSlinky.openlayers.openlayersStrings.webgl = "webgl".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.webgl]
 }
-

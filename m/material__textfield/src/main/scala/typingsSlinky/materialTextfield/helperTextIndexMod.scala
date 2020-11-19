@@ -7,35 +7,38 @@ import typingsSlinky.materialTextfield.anon.PartialMDCTextFieldHelper
 import typingsSlinky.materialTextfield.helperTextAdapterMod.MDCTextFieldHelperTextAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@material/textfield/helper-text/index", JSImport.Namespace)
 @js.native
 object helperTextIndexMod extends js.Object {
+  
   @js.native
   class MDCTextFieldHelperText ()
     extends typingsSlinky.materialTextfield.helperTextComponentMod.MDCTextFieldHelperText
+  /* static members */
+  @js.native
+  object MDCTextFieldHelperText extends js.Object {
+    
+    def attachTo(root: Element): typingsSlinky.materialTextfield.helperTextComponentMod.MDCTextFieldHelperText = js.native
+  }
   
   @js.native
   class MDCTextFieldHelperTextFoundation ()
     extends typingsSlinky.materialTextfield.helperTextFoundationMod.MDCTextFieldHelperTextFoundation {
     def this(adapter: PartialMDCTextFieldHelper) = this()
   }
-  
-  /* static members */
-  @js.native
-  object MDCTextFieldHelperText extends js.Object {
-    def attachTo(root: Element): typingsSlinky.materialTextfield.helperTextComponentMod.MDCTextFieldHelperText = js.native
-  }
-  
   /* static members */
   @js.native
   object MDCTextFieldHelperTextFoundation extends js.Object {
+    
     def cssClasses: HELPERTEXTPERSISTENT = js.native
+    
     /**
       * See {@link MDCTextFieldHelperTextAdapter} for typing information on parameters and return types.
       */
     def defaultAdapter: MDCTextFieldHelperTextAdapter = js.native
+    
     def strings: ARIAHIDDEN = js.native
   }
   
@@ -63,17 +66,21 @@ object helperTextIndexMod extends js.Object {
     */
   @js.native
   object helperTextCssClasses extends js.Object {
+    
     var HELPER_TEXT_PERSISTENT: String = js.native
+    
     var HELPER_TEXT_VALIDATION_MSG: String = js.native
+    
     var ROOT: String = js.native
   }
   
   @js.native
   object helperTextStrings extends js.Object {
+    
     var ARIA_HIDDEN: String = js.native
+    
     var ROLE: String = js.native
+    
     var ROOT_SELECTOR: String = js.native
   }
-  
 }
-

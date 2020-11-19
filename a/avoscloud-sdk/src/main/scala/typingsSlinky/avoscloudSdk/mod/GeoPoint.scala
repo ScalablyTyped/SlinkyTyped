@@ -2,7 +2,7 @@ package typingsSlinky.avoscloudSdk.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new GeoPoint with any of the following forms:<br>
@@ -33,12 +33,17 @@ class GeoPoint () extends BaseObject {
   def this(arg1: js.Any) = this()
   def this(arg1: js.UndefOr[scala.Nothing], arg2: js.Any) = this()
   def this(arg1: js.Any, arg2: js.Any) = this()
-  var latitude: Double = js.native
-  var longitude: Double = js.native
+  
   def current(): GeoPoint = js.native
   def current(options: SuccessFailureOptions): GeoPoint = js.native
+  
   def kilometersTo(point: GeoPoint): Double = js.native
+  
+  var latitude: Double = js.native
+  
+  var longitude: Double = js.native
+  
   def milesTo(point: GeoPoint): Double = js.native
+  
   def radiansTo(point: GeoPoint): Double = js.native
 }
-

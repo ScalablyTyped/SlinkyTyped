@@ -4,26 +4,26 @@ import typingsSlinky.sinon.anon.Create
 import typingsSlinky.sinon.anon.PartialSinonSandboxConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SinonApi extends js.Object {
+  
   var FakeXMLHttpRequest: SinonFakeXMLHttpRequestStatic = js.native
+  
   var clock: Create = js.native
-  var defaultConfig: PartialSinonSandboxConfig = js.native
-  var expectation: SinonExpectationStatic = js.native
-  var fakeServer: SinonFakeServerStatic = js.native
-  var fakeServerWithClock: SinonFakeServerStatic = js.native
-  @JSName("fake")
-  var fake_Original: SinonFake = js.native
-  @JSName("match")
-  var match_Original: SinonMatch = js.native
+  
   /**
     * Creates a new sandbox object with spies, stubs, and mocks.
     * @param config
     */
   def createSandbox(): SinonSandbox = js.native
   def createSandbox(config: PartialSinonSandboxConfig): SinonSandbox = js.native
+  
+  var defaultConfig: PartialSinonSandboxConfig = js.native
+  
+  var expectation: SinonExpectationStatic = js.native
+  
   /**
     * Creates a basic fake, with no behavior
     */
@@ -33,6 +33,14 @@ trait SinonApi extends js.Object {
     * This is useful when complex behavior not covered by the sinon.fake.* methods is required or when wrapping an existing function or method.
     */
   def fake(fn: js.Function): SinonSpy = js.native
+  
+  var fakeServer: SinonFakeServerStatic = js.native
+  
+  var fakeServerWithClock: SinonFakeServerStatic = js.native
+  
+  @JSName("fake")
+  var fake_Original: SinonFake = js.native
+  
   /**
     * See custom matchers.
     */
@@ -55,6 +63,8 @@ trait SinonApi extends js.Object {
     * Requires the value to be == to the given number.
     */
   def `match`(value: Double): SinonMatcher = js.native
+  @JSName("match")
+  var match_Original: SinonMatch = js.native
+  
   def spyCall(args: js.Any*): SinonSpyCall = js.native
 }
-

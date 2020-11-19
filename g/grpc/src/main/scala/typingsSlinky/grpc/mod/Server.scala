@@ -2,7 +2,7 @@ package typingsSlinky.grpc.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grpc", "Server")
 @js.native
@@ -20,6 +20,7 @@ import scala.scalajs.js.annotation._
   */
 class Server () extends js.Object {
   def this(options: js.Object) = this()
+  
   /**
     * Add a proto service to the server, with a corresponding implementation
     * @deprecated Use `Server#addService` instead
@@ -28,6 +29,7 @@ class Server () extends js.Object {
     * for the provided service.
     */
   def addProtoService[ImplementationType](service: ServiceDefinition[ImplementationType], implementation: ImplementationType): Unit = js.native
+  
   /**
     * Add a service to the server, with a corresponding implementation.
     * @param service The service descriptor
@@ -35,6 +37,7 @@ class Server () extends js.Object {
     * for the provided service.
     */
   def addService[ImplementationType](service: ServiceDefinition[ImplementationType], implementation: ImplementationType): Unit = js.native
+  
   /**
     * Binds the server to the given port, with SSL disabled if creds is an
     * insecure credentials object
@@ -45,6 +48,7 @@ class Server () extends js.Object {
     * @return The bound port number or 0 if the operation failed.
     */
   def bind(port: String, creds: ServerCredentials): Double = js.native
+  
   /**
     * Binds the server to the given port, with SSL disabled if creds is an
     * insecure credentials object. Provides the result asynchronously.
@@ -60,6 +64,7 @@ class Server () extends js.Object {
     creds: ServerCredentials,
     callback: js.Function2[/* error */ js.Error | Null, /* port */ Double, Unit]
   ): Unit = js.native
+  
   /**
     * Forcibly shuts down the server. The server will stop receiving new calls
     * and cancel all pending calls. When it returns, the server has shut down.
@@ -67,6 +72,7 @@ class Server () extends js.Object {
     * any outstanding tryShutdown callbacks.
     */
   def forceShutdown(): Unit = js.native
+  
   /**
     * Registers a handler to handle the named method. Fails if there already is
     * a handler for the given method. Returns true on success
@@ -87,10 +93,12 @@ class Server () extends js.Object {
     deserialize: deserialize[RequestType],
     `type`: String
   ): Boolean = js.native
+  
   /**
     * Start the server and begin handling requests
     */
   def start(): Unit = js.native
+  
   /**
     * Gracefully shuts down the server. The server will stop receiving new calls,
     * and any pending calls will complete. The callback will be called when all
@@ -100,4 +108,3 @@ class Server () extends js.Object {
     */
   def tryShutdown(callback: js.Function0[Unit]): Unit = js.native
 }
-

@@ -15,9 +15,10 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object NodeList {
+  
   @JSImport("rc-tree/es/NodeList", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -26,27 +27,37 @@ object NodeList {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, NodeListRef] {
+    
     @scala.inline
     def checkable(value: Boolean): this.type = set("checkable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def focused(value: Boolean): this.type = set("focused", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[HTMLDivElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[HTMLDivElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onKeyDown(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    
     @scala.inline
     def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: NodeListProps with RefAttributes[NodeListRef]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     activeItem: FlattenNode,
@@ -75,4 +86,3 @@ object NodeList {
     new Builder(js.Array(this.component, __props.asInstanceOf[NodeListProps with RefAttributes[NodeListRef]]))
   }
 }
-

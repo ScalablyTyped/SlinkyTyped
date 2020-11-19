@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/commands/RetireGrantCommand", JSImport.Namespace)
 @js.native
 object retireGrantCommandMod extends js.Object {
+  
   @js.native
   class RetireGrantCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object retireGrantCommandMod extends js.Object {
           Blob
         ] {
     def this(input: RetireGrantInput) = this()
+    
     val middlewareStack: MiddlewareStack[RetireGrantInput, RetireGrantOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KMSResolvedConfiguration
     ): Handler[RetireGrantInput, RetireGrantOutput] = js.native
   }
-  
 }
-

@@ -8,11 +8,12 @@ import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.node.streamMod.Writable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("multipipe", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * Pass a variable number of streams and each will be piped to the next one.
     *
@@ -284,4 +285,3 @@ object mod extends js.Object {
   def apply(stream: Duplex, options: DuplexOptions): Duplex = js.native
   def apply(stream: Duplex, options: DuplexOptions, callback: js.Function1[/* err */ js.UndefOr[js.Error], _]): Duplex = js.native
 }
-

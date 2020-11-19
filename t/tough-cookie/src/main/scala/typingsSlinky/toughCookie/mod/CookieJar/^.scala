@@ -3,11 +3,12 @@ package typingsSlinky.toughCookie.mod.CookieJar
 import typingsSlinky.toughCookie.mod.Store
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tough-cookie", "CookieJar")
 @js.native
 object ^ extends js.Object {
+  
   def deserialize(serialized: String): js.Promise[typingsSlinky.toughCookie.mod.CookieJar] = js.native
   def deserialize(serialized: String, cb: js.Function2[/* err */ js.Error | Null, /* object */ this.type, Unit]): Unit = js.native
   def deserialize(serialized: String, store: Store): js.Promise[typingsSlinky.toughCookie.mod.CookieJar] = js.native
@@ -24,10 +25,11 @@ object ^ extends js.Object {
     store: Store,
     cb: js.Function2[/* err */ js.Error | Null, /* object */ this.type, Unit]
   ): Unit = js.native
+  
   def deserializeSync(serialized: String): typingsSlinky.toughCookie.mod.CookieJar = js.native
   def deserializeSync(serialized: String, store: Store): typingsSlinky.toughCookie.mod.CookieJar = js.native
   def deserializeSync(serialized: Serialized): typingsSlinky.toughCookie.mod.CookieJar = js.native
   def deserializeSync(serialized: Serialized, store: Store): typingsSlinky.toughCookie.mod.CookieJar = js.native
+  
   def fromJSON(string: String): typingsSlinky.toughCookie.mod.CookieJar = js.native
 }
-

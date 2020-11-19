@@ -2,11 +2,10 @@ package typingsSlinky.officeJsPreview.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait PivotFilterType extends js.Object
-
 /**
   *
   * A simple enum that represents a type of filter for a PivotField.
@@ -17,6 +16,7 @@ sealed trait PivotFilterType extends js.Object
 @JSGlobal("Excel.PivotFilterType")
 @js.native
 object PivotFilterType extends js.Object {
+  
   /**
     * Filters PivotItems with a date in place of a label.
     Note: A PivotField cannot simultaneously have a label filter and a date filter applied.
@@ -53,6 +53,4 @@ object PivotFilterType extends js.Object {
     */
   @js.native
   sealed trait value extends PivotFilterType
-  
 }
-

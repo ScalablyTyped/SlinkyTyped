@@ -3,11 +3,11 @@ package typingsSlinky.typedoc.schemaMod
 import typingsSlinky.typedoc.abstractMod.ReflectionKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait __ModelToObject[T] extends js.Object
-
 object __ModelToObject {
+  
   @scala.inline
   def ContainerReflection[T](
     flags: ReflectionFlags,
@@ -18,6 +18,7 @@ object __ModelToObject {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def SourceReference[T](
     character: ModelToObject[Double] | Double,
@@ -27,6 +28,7 @@ object __ModelToObject {
     val __obj = js.Dynamic.literal(character = character.asInstanceOf[js.Any], fileName = fileName.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def IntersectionType[T](
     `type`: ModelToObject[String] | String,
@@ -36,11 +38,13 @@ object __ModelToObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def CommentTag[T](tag: String, text: ModelToObject[String] | String): __ModelToObject[T] = {
     val __obj = js.Dynamic.literal(tag = tag.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def UnionType[T](
     `type`: ModelToObject[String] | String,
@@ -50,6 +54,7 @@ object __ModelToObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def ReferenceType[T](
     name: ModelToObject[String] | String,
@@ -59,22 +64,26 @@ object __ModelToObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def ReflectionPointer[T](id: ModelToObject[Double] | Double): __ModelToObject[T] = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def Comment[T](): __ModelToObject[T] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def InferredType[T](name: ModelToObject[String] | String, `type`: ModelToObject[String] | String): __ModelToObject[T] = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def IntrinsicType[T](
     name: ModelToObject[String] | String,
@@ -84,6 +93,7 @@ object __ModelToObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def IndexedAccessType[T](
     indexType: ModelToObject[typingsSlinky.typedoc.modelsTypesMod.Type] | typingsSlinky.typedoc.modelsTypesMod.Type,
@@ -94,12 +104,14 @@ object __ModelToObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def TupleType[T](`type`: (ModelToObject[/* "tuple" */ String]) | (/* "tuple" */ String)): __ModelToObject[T] = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def ReferenceReflection[T](
     flags: ReflectionFlags,
@@ -111,6 +123,7 @@ object __ModelToObject {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def ArrayType[T](
     elementType: ModelToObject[typingsSlinky.typedoc.modelsTypesMod.Type] | typingsSlinky.typedoc.modelsTypesMod.Type,
@@ -120,6 +133,7 @@ object __ModelToObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def ConditionalType[T](
     checkType: ModelToObject[typingsSlinky.typedoc.typesAbstractMod.Type] | typingsSlinky.typedoc.typesAbstractMod.Type,
@@ -132,6 +146,7 @@ object __ModelToObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def ParameterReflection[T](
     flags: ReflectionFlags,
@@ -142,12 +157,14 @@ object __ModelToObject {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def ReflectionType[T](`type`: (ModelToObject[/* "reflection" */ String]) | (/* "reflection" */ String)): __ModelToObject[T] = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def DeclarationReflection[T](
     flags: ReflectionFlags,
@@ -158,12 +175,14 @@ object __ModelToObject {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def TypeParameterType[T](name: ModelToObject[String] | String, `type`: ModelToObject[String] | String): __ModelToObject[T] = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def PredicateType[T](
     asserts: ModelToObject[Boolean] | Boolean,
@@ -174,6 +193,7 @@ object __ModelToObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def Reflection[T](
     flags: ReflectionFlags,
@@ -184,6 +204,7 @@ object __ModelToObject {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def UnknownType[T](
     name: ModelToObject[String] | String,
@@ -193,6 +214,7 @@ object __ModelToObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def SignatureReflection[T](
     flags: ReflectionFlags,
@@ -203,16 +225,19 @@ object __ModelToObject {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def ReflectionCategory[T](title: ModelToObject[String] | String): __ModelToObject[T] = {
     val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def Decorator[T](name: ModelToObject[String] | String): __ModelToObject[T] = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def StringLiteralType[T](
     `type`: (ModelToObject[/* "stringLiteral" */ String]) | (/* "stringLiteral" */ String),
@@ -222,6 +247,7 @@ object __ModelToObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def TypeOperatorType[T](
     operator: (ModelToObject[/* "keyof" */ String]) | (/* "keyof" */ String),
@@ -232,6 +258,7 @@ object __ModelToObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def TypeParameterReflection[T](
     flags: ReflectionFlags,
@@ -242,10 +269,10 @@ object __ModelToObject {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
+  
   @scala.inline
   def ReflectionGroup[T](kind: ModelToObject[ReflectionKind] | ReflectionKind, title: ModelToObject[String] | String): __ModelToObject[T] = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[__ModelToObject[T]]
   }
 }
-

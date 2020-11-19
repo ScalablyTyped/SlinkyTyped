@@ -5,7 +5,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.ParenthesizedExpression
 import typingsSlinky.babelTypes.babelTypesStrings.TypeCastExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.ExpressionStatement_
@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ParenthesizedExpression_
 */
 trait ExpressionWrapper extends js.Object
-
 object ExpressionWrapper {
+  
   @scala.inline
   def ExpressionStatement_(
     end: Double,
@@ -27,6 +27,7 @@ object ExpressionWrapper {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpressionWrapper]
   }
+  
   @scala.inline
   def TypeCastExpression_(
     end: Double,
@@ -40,6 +41,7 @@ object ExpressionWrapper {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpressionWrapper]
   }
+  
   @scala.inline
   def ParenthesizedExpression_(
     end: Double,
@@ -53,4 +55,3 @@ object ExpressionWrapper {
     __obj.asInstanceOf[ExpressionWrapper]
   }
 }
-

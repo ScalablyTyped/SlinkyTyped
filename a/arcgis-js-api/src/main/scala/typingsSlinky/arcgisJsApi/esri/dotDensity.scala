@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This object contains a helper method for generating a [dot density visualization](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html). The [createRenderer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#createRenderer) method uses the input basemap to determine the most appropriate dot color for each attribute. It also queries the layer for spatial statistics to determine an appropriate [dot value](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html#dotValue) for the given scale. The starting dot value isn't necessarily what will work best for your data. Rather, it is a suggestion that should give you a good starting point for authoring a dot density renderer.
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait dotDensity extends js.Object {
+  
   /**
     * Generates a [DotDensityRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html) based on one or more complementary numeric fields and/or Arcade expressions. This method will determine an appropriate [dotValue](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html#dotValue) for the data at the scale of the provided view.  For example, suppose you have a layer of U.S. counties with fields containing the total sales of various crops: wheat, soybeans, corn, cotton, and vegetables. If a feature has the following values for each field:
     *
@@ -41,27 +42,30 @@ trait dotDensity extends js.Object {
     */
   def createRenderer(params: dotDensityCreateRendererParams): js.Promise[RendererResult] = js.native
 }
-
 object dotDensity {
+  
   @scala.inline
   def apply(createRenderer: dotDensityCreateRendererParams => js.Promise[RendererResult]): dotDensity = {
     val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer))
     __obj.asInstanceOf[dotDensity]
   }
+  
   @scala.inline
   implicit class dotDensityOps[Self <: dotDensity] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreateRenderer(value: dotDensityCreateRendererParams => js.Promise[RendererResult]): Self = this.set("createRenderer", js.Any.fromFunction1(value))
   }
-  
 }
-

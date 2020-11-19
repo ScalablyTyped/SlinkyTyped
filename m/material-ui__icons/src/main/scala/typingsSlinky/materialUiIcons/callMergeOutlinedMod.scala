@@ -4,11 +4,11 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@material-ui/icons/CallMergeOutlined", JSImport.Namespace)
 @js.native
 object callMergeOutlinedMod extends js.Object {
+  
   val default: ReactComponentClass[SvgIconProps] = js.native
 }
-

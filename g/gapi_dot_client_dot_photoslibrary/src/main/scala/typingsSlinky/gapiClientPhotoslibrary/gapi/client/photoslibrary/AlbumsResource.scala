@@ -12,13 +12,15 @@ import typingsSlinky.gapiClientPhotoslibrary.anon.Oauthtoken
 import typingsSlinky.gapiClientPhotoslibrary.anon.PrettyPrint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AlbumsResource extends js.Object {
+  
   /** Adds an enrichment at a specified position in a defined album. */
   def addEnrichment(request: Accesstoken): Request[AddEnrichmentToAlbumResponse] = js.native
   def addEnrichment(request: AlbumId, body: AddEnrichmentToAlbumRequest): Request[AddEnrichmentToAlbumResponse] = js.native
+  
   def batchAddMediaItems(request: AlbumId, body: BatchAddMediaItemsToAlbumRequest): Request[js.Object] = js.native
   /**
     * Adds one or more media items in a user's Google Photos library to
@@ -38,6 +40,7 @@ trait AlbumsResource extends js.Object {
     * invalid media item or album is specified.
     */
   def batchAddMediaItems(request: Alt): Request[js.Object] = js.native
+  
   def batchRemoveMediaItems(request: AlbumId, body: BatchRemoveMediaItemsFromAlbumRequest): Request[js.Object] = js.native
   /**
     * Removes one or more media items from a specified album. The media items and
@@ -52,20 +55,24 @@ trait AlbumsResource extends js.Object {
     * specified.
     */
   def batchRemoveMediaItems(request: Callback): Request[js.Object] = js.native
+  
   /** Creates an album in a user's Google Photos library. */
   def create(request: Fields): Request[Album] = js.native
   def create(request: Key, body: CreateAlbumRequest): Request[Album] = js.native
+  
   /**
     * Returns the album based on the specified `albumId`.
     * The `albumId` must be the ID of an album owned by the user or a shared
     * album that the user has joined.
     */
   def get(request: AlbumId): Request[Album] = js.native
+  
   /**
     * Lists all albums shown to a user in the Albums tab of the Google
     * Photos app.
     */
   def list(request: ExcludeNonAppCreatedData): Request[ListAlbumsResponse] = js.native
+  
   def share(request: AlbumId, body: ShareAlbumRequest): Request[ShareAlbumResponse] = js.native
   /**
     * Marks an album as shared and accessible to other users. This action can
@@ -73,6 +80,7 @@ trait AlbumsResource extends js.Object {
     * API.
     */
   def share(request: Oauthtoken): Request[ShareAlbumResponse] = js.native
+  
   def unshare(request: AlbumId, body: UnshareAlbumRequest): Request[js.Object] = js.native
   /**
     * Marks a previously shared album as private. This means that the album is
@@ -84,4 +92,3 @@ trait AlbumsResource extends js.Object {
     */
   def unshare(request: PrettyPrint): Request[js.Object] = js.native
 }
-

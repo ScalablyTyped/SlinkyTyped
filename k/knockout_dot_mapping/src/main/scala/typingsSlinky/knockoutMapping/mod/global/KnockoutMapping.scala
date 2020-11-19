@@ -3,14 +3,16 @@ package typingsSlinky.knockoutMapping.mod.global
 import typingsSlinky.knockoutMapping.anon.Copy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait KnockoutMapping extends js.Object {
+  
   /**
     * Get the default mapping options
     */
   def defaultOptions(): KnockoutMappingStandardOptions = js.native
+  
   /**
     * Creates a view model object with observable properties for each of the properties on the source. 
     * If 'target' is supplied, instead, target's observable properties are updated.
@@ -47,6 +49,7 @@ trait KnockoutMapping extends js.Object {
     * @param target View model object previosly mapped to be updated.
     */
   def fromJS[T](source: js.Array[T], target: KnockoutReadonlyObservableArrayType[T]): KnockoutReadonlyObservableArrayType[T] = js.native
+  
   /**
     * Creates a view model object with observable properties for each of the properties on the source. 
     * If 'target' is supplied, instead, target's observable properties are updated.
@@ -63,6 +66,7 @@ trait KnockoutMapping extends js.Object {
     * @param target View model object previosly mapped to be updated.
     */
   def fromJSON(source: String, target: js.Any): js.Any = js.native
+  
   /**
     * Creates an observable array view model. Objects on the source array are also converted to observables. Primitive types and arrays are not. 
     * If 'target' is supplied, instead, target's observable properties are updated.
@@ -87,24 +91,29 @@ trait KnockoutMapping extends js.Object {
     */
   @JSName("fromJS")
   def fromJS_T_KnockoutObservableArrayType[T](source: js.Array[T], target: KnockoutObservableArrayType[T]): KnockoutObservableArrayType[T] = js.native
+  
   /**
     * Undocumented. Custom implementation of JavaScript's typeof.
     * @param x object to check type
     */
   def getType(x: js.Any): js.Any = js.native
+  
   /**
     * Checks if an object was created using KnockoutMapping
     * @param viewModel View model object to be checked.
     */
   def isMapped(viewModel: js.Any): Boolean = js.native
+  
   /**
     * Undocumented. Reset Mapping default options.
     */
   def resetDefaultOptions(): Unit = js.native
+  
   def toJS(viewModel: js.Any): js.Any = js.native
   def toJS(viewModel: js.Any, options: KnockoutMappingOptions[_]): js.Any = js.native
   def toJS[T](viewModel: KnockoutObservableType[T]): T = js.native
   def toJS[T](viewModel: KnockoutObservableType[T], options: KnockoutMappingOptions[T]): T = js.native
+  
   /**
     * Creates an unmapped object containing only the properties of the mapped object that were part of your original JS object. Stringify the result.
     * @param viewModel Object with observables to be converted.
@@ -112,6 +121,7 @@ trait KnockoutMapping extends js.Object {
     */
   def toJSON[T](viewModel: T): String = js.native
   def toJSON[T](viewModel: T, options: KnockoutMappingOptions[T]): String = js.native
+  
   @JSName("toJS")
   def toJS_T_Array[T](
     viewModel: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservableArray<T> */ js.Any
@@ -135,10 +145,10 @@ trait KnockoutMapping extends js.Object {
     viewModel: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<T> */ js.Any,
     options: KnockoutMappingOptions[T]
   ): T = js.native
+  
   /**
     * Undocumented.
     */
   def visitModel(rootObject: js.Any, callback: js.Function): js.Any = js.native
   def visitModel(rootObject: js.Any, callback: js.Function, options: Copy): js.Any = js.native
 }
-

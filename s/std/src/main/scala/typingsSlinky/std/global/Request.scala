@@ -6,7 +6,7 @@ import org.scalajs.dom.experimental.RequestInit
 import typingsSlinky.std.RequestInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Request")
 @js.native
@@ -15,7 +15,6 @@ class Request protected ()
   def this(input: RequestInfo) = this()
   def this(input: RequestInfo, init: RequestInit) = this()
 }
-
 @JSGlobal("Request")
 @js.native
 object Request
@@ -25,4 +24,3 @@ object Request
       /* init */ RequestInit, 
       org.scalajs.dom.experimental.Request
     ]
-

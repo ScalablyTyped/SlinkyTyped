@@ -66,33 +66,13 @@ import typingsSlinky.mapboxGl.mapboxGlStrings.zoomend
 import typingsSlinky.mapboxGl.mapboxGlStrings.zoomstart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mapbox-gl", "Map")
 @js.native
 class Map () extends Evented {
   def this(options: MapboxOptions) = this()
-  var boxZoom: BoxZoomHandler = js.native
-  var doubleClickZoom: DoubleClickZoomHandler = js.native
-  var dragPan: DragPanHandler = js.native
-  var dragRotate: DragRotateHandler = js.native
-  var keyboard: KeyboardHandler = js.native
-  var repaint: Boolean = js.native
-  var scrollZoom: ScrollZoomHandler = js.native
-  var showCollisionBoxes: Boolean = js.native
-  /**
-    * Gets and sets a Boolean indicating whether the map will visualize
-    * the padding offsets.
-    *
-    * @name showPadding
-    * @type {boolean}
-    * @instance
-    * @memberof Map
-    */
-  var showPadding: Boolean = js.native
-  var showTileBoundaries: Boolean = js.native
-  var touchPitch: TouchPitchHandler = js.native
-  var touchZoomRotate: TouchZoomRotateHandler = js.native
+  
   def addControl(control: Control): this.type = js.native
   def addControl(control: IControl): this.type = js.native
   @JSName("addControl")
@@ -111,6 +91,7 @@ class Map () extends Evented {
   def addControl_topright(control: Control, position: `top-right`): this.type = js.native
   @JSName("addControl")
   def addControl_topright(control: IControl, position: `top-right`): this.type = js.native
+  
   def addImage(name: String, image: Data): this.type = js.native
   def addImage(name: String, image: Data, options: PixelRatio): this.type = js.native
   def addImage(name: String, image: js.typedarray.ArrayBufferView): this.type = js.native
@@ -119,20 +100,35 @@ class Map () extends Evented {
   def addImage(name: String, image: HTMLImageElement, options: PixelRatio): this.type = js.native
   def addImage(name: String, image: ImageData): this.type = js.native
   def addImage(name: String, image: ImageData, options: PixelRatio): this.type = js.native
+  
   def addLayer(layer: CustomLayerInterface): this.type = js.native
   def addLayer(layer: CustomLayerInterface, before: String): this.type = js.native
   def addLayer(layer: Layer): this.type = js.native
   def addLayer(layer: Layer, before: String): this.type = js.native
+  
   def addSource(id: String, source: AnySourceData): this.type = js.native
+  
   def areTilesLoaded(): Boolean = js.native
+  
+  var boxZoom: BoxZoomHandler = js.native
+  
   def cameraForBounds(bounds: LngLatBoundsLike): js.UndefOr[CameraForBoundsResult] = js.native
   def cameraForBounds(bounds: LngLatBoundsLike, options: CameraForBoundsOptions): js.UndefOr[CameraForBoundsResult] = js.native
+  
+  var doubleClickZoom: DoubleClickZoomHandler = js.native
+  
+  var dragPan: DragPanHandler = js.native
+  
+  var dragRotate: DragRotateHandler = js.native
+  
   def easeTo(options: EaseToOptions): this.type = js.native
   def easeTo(options: EaseToOptions, eventData: EventData): this.type = js.native
+  
   def fitBounds(bounds: LngLatBoundsLike): this.type = js.native
   def fitBounds(bounds: LngLatBoundsLike, options: js.UndefOr[scala.Nothing], eventData: EventData): this.type = js.native
   def fitBounds(bounds: LngLatBoundsLike, options: FitBoundsOptions): this.type = js.native
   def fitBounds(bounds: LngLatBoundsLike, options: FitBoundsOptions, eventData: EventData): this.type = js.native
+  
   def fitScreenCoordinates(p0: PointLike, p1: PointLike, bearing: Double): this.type = js.native
   def fitScreenCoordinates(p0: PointLike, p1: PointLike, bearing: Double, options: AnimationOptions with CameraOptions): this.type = js.native
   def fitScreenCoordinates(
@@ -149,25 +145,43 @@ class Map () extends Evented {
     options: js.UndefOr[scala.Nothing],
     eventData: EventData
   ): this.type = js.native
+  
   def flyTo(options: FlyToOptions): this.type = js.native
   def flyTo(options: FlyToOptions, eventData: EventData): this.type = js.native
+  
   def getBearing(): Double = js.native
+  
   def getBounds(): LngLatBounds = js.native
+  
   def getCanvas(): HTMLCanvasElement = js.native
+  
   def getCanvasContainer(): HTMLElement = js.native
+  
   def getCenter(): LngLat = js.native
+  
   def getContainer(): HTMLElement = js.native
+  
   def getFeatureState(feature: FeatureIdentifier): StringDictionary[js.Any] = js.native
   def getFeatureState(feature: MapboxGeoJSONFeature): StringDictionary[js.Any] = js.native
+  
   def getFilter(layer: String): js.Array[_] = js.native
+  
   def getLayer(id: String): Layer = js.native
+  
   def getLayoutProperty(layer: String, name: String): js.Any = js.native
+  
   def getLight(): Light = js.native
+  
   def getMaxBounds(): LngLatBounds | Null = js.native
+  
   def getMaxPitch(): Double = js.native
+  
   def getMaxZoom(): Double = js.native
+  
   def getMinPitch(): Double = js.native
+  
   def getMinZoom(): Double = js.native
+  
   /**
     * Returns the current padding applied around the map viewport.
     *
@@ -175,26 +189,47 @@ class Map () extends Evented {
     * @returns The current padding around the map viewport.
     */
   def getPadding(): PaddingOptions = js.native
+  
   def getPaintProperty(layer: String, name: String): js.Any = js.native
+  
   def getPitch(): Double = js.native
+  
   def getRenderWorldCopies(): Boolean = js.native
+  
   def getSource(id: String): AnySourceImpl = js.native
+  
   def getStyle(): Style = js.native
+  
   def getZoom(): Double = js.native
+  
   def hasImage(name: String): Boolean = js.native
+  
   def isEasing(): Boolean = js.native
+  
   def isMoving(): Boolean = js.native
+  
   def isRotating(): Boolean = js.native
+  
   def isSourceLoaded(id: String): Boolean = js.native
+  
   def isStyleLoaded(): Boolean = js.native
+  
   def isZooming(): Boolean = js.native
+  
   def jumpTo(options: CameraOptions): this.type = js.native
   def jumpTo(options: CameraOptions, eventData: EventData): this.type = js.native
+  
+  var keyboard: KeyboardHandler = js.native
+  
   def listImages(): js.Array[String] = js.native
+  
   def loadImage(url: String, callback: js.Function): this.type = js.native
+  
   def loaded(): Boolean = js.native
+  
   def moveLayer(id: String): this.type = js.native
   def moveLayer(id: String, beforeId: String): this.type = js.native
+  
   def off(`type`: String, listener: js.Function1[/* ev */ js.Any, Unit]): this.type = js.native
   @JSName("off")
   def off_boxzoomcancel(`type`: boxzoomcancel, listener: js.Function1[/* ev */ MapBoxZoomEvent with EventData, Unit]): this.type = js.native
@@ -445,6 +480,7 @@ class Map () extends Evented {
       Unit
     ]
   ): this.type = js.native
+  
   def on(`type`: String, listener: js.Function1[/* ev */ js.Any, Unit]): this.type = js.native
   @JSName("on")
   def on_boxzoomcancel(`type`: boxzoomcancel, listener: js.Function1[/* ev */ MapBoxZoomEvent with EventData, Unit]): this.type = js.native
@@ -695,6 +731,7 @@ class Map () extends Evented {
       Unit
     ]
   ): this.type = js.native
+  
   def once(`type`: String, listener: js.Function1[/* ev */ js.Any, Unit]): this.type = js.native
   @JSName("once")
   def once_boxzoomcancel(`type`: boxzoomcancel, listener: js.Function1[/* ev */ MapBoxZoomEvent with EventData, Unit]): this.type = js.native
@@ -945,15 +982,19 @@ class Map () extends Evented {
       Unit
     ]
   ): this.type = js.native
+  
   def panBy(offset: PointLike): this.type = js.native
   def panBy(offset: PointLike, options: js.UndefOr[scala.Nothing], eventData: EventData): this.type = js.native
   def panBy(offset: PointLike, options: AnimationOptions): this.type = js.native
   def panBy(offset: PointLike, options: AnimationOptions, eventData: EventData): this.type = js.native
+  
   def panTo(lnglat: LngLatLike): this.type = js.native
   def panTo(lnglat: LngLatLike, options: js.UndefOr[scala.Nothing], eventdata: EventData): this.type = js.native
   def panTo(lnglat: LngLatLike, options: AnimationOptions): this.type = js.native
   def panTo(lnglat: LngLatLike, options: AnimationOptions, eventdata: EventData): this.type = js.native
+  
   def project(lnglat: LngLatLike): Point = js.native
+  
   /**
     * Returns an array of GeoJSON Feature objects representing visible features that satisfy the query parameters.
     *
@@ -981,6 +1022,7 @@ class Map () extends Evented {
   def queryRenderedFeatures(pointOrBox: js.Tuple2[PointLike, PointLike]): js.Array[MapboxGeoJSONFeature] = js.native
   def queryRenderedFeatures(pointOrBox: js.Tuple2[PointLike, PointLike], options: Filter): js.Array[MapboxGeoJSONFeature] = js.native
   def queryRenderedFeatures(pointOrBox: PointLike): js.Array[MapboxGeoJSONFeature] = js.native
+  
   /**
     * Returns an array of GeoJSON Feature objects representing features within the specified vector tile or GeoJSON source that satisfy the query parameters.
     *
@@ -993,49 +1035,75 @@ class Map () extends Evented {
     */
   def querySourceFeatures(sourceID: String): js.Array[MapboxGeoJSONFeature] = js.native
   def querySourceFeatures(sourceID: String, parameters: SourceLayer): js.Array[MapboxGeoJSONFeature] = js.native
+  
   def remove(): Unit = js.native
+  
   def removeControl(control: Control): this.type = js.native
   def removeControl(control: IControl): this.type = js.native
+  
   def removeFeatureState(target: FeatureIdentifier): Unit = js.native
   def removeFeatureState(target: FeatureIdentifier, key: String): Unit = js.native
   def removeFeatureState(target: MapboxGeoJSONFeature): Unit = js.native
   def removeFeatureState(target: MapboxGeoJSONFeature, key: String): Unit = js.native
+  
   def removeImage(name: String): this.type = js.native
+  
   def removeLayer(id: String): this.type = js.native
+  
   def removeSource(id: String): this.type = js.native
+  
+  var repaint: Boolean = js.native
+  
   def resetNorth(): this.type = js.native
   def resetNorth(options: js.UndefOr[scala.Nothing], eventData: EventData): this.type = js.native
   def resetNorth(options: AnimationOptions): this.type = js.native
   def resetNorth(options: AnimationOptions, eventData: EventData): this.type = js.native
+  
   def resize(): this.type = js.native
   def resize(eventData: EventData): this.type = js.native
+  
   def rotateTo(bearing: Double): this.type = js.native
   def rotateTo(bearing: Double, options: js.UndefOr[scala.Nothing], eventData: EventData): this.type = js.native
   def rotateTo(bearing: Double, options: AnimationOptions): this.type = js.native
   def rotateTo(bearing: Double, options: AnimationOptions, eventData: EventData): this.type = js.native
+  
+  var scrollZoom: ScrollZoomHandler = js.native
+  
   def setBearing(bearing: Double): this.type = js.native
   def setBearing(bearing: Double, eventData: EventData): this.type = js.native
+  
   def setCenter(center: LngLatLike): this.type = js.native
   def setCenter(center: LngLatLike, eventData: EventData): this.type = js.native
+  
   def setFeatureState(feature: FeatureIdentifier, state: StringDictionary[js.Any]): Unit = js.native
   def setFeatureState(feature: MapboxGeoJSONFeature, state: StringDictionary[js.Any]): Unit = js.native
+  
   def setFilter(layer: String): this.type = js.native
   def setFilter(layer: String, filter: js.Array[_]): this.type = js.native
   def setFilter(layer: String, filter: Boolean): this.type = js.native
+  
   def setLayerZoomRange(layerId: String, minzoom: Double, maxzoom: Double): this.type = js.native
+  
   def setLayoutProperty(layer: String, name: String, value: js.Any): this.type = js.native
+  
   def setLight(options: Light): this.type = js.native
   def setLight(options: Light, lightOptions: js.Any): this.type = js.native
+  
   def setMaxBounds(): this.type = js.native
   def setMaxBounds(lnglatbounds: LngLatBoundsLike): this.type = js.native
+  
   def setMaxPitch(): this.type = js.native
   def setMaxPitch(maxPitch: Double): this.type = js.native
+  
   def setMaxZoom(): this.type = js.native
   def setMaxZoom(maxZoom: Double): this.type = js.native
+  
   def setMinPitch(): this.type = js.native
   def setMinPitch(minPitch: Double): this.type = js.native
+  
   def setMinZoom(): this.type = js.native
   def setMinZoom(minZoom: Double): this.type = js.native
+  
   /**
     * Sets the padding in pixels around the viewport.
     *
@@ -1053,36 +1121,66 @@ class Map () extends Evented {
     */
   def setPadding(padding: PaddingOptions): this.type = js.native
   def setPadding(padding: PaddingOptions, eventData: EventData): this.type = js.native
+  
   def setPaintProperty(layer: String, name: String, value: js.Any): this.type = js.native
   def setPaintProperty(layer: String, name: String, value: js.Any, klass: String): this.type = js.native
+  
   def setPitch(pitch: Double): this.type = js.native
   def setPitch(pitch: Double, eventData: EventData): this.type = js.native
+  
   def setRenderWorldCopies(): this.type = js.native
   def setRenderWorldCopies(renderWorldCopies: Boolean): this.type = js.native
+  
   def setStyle(style: String): this.type = js.native
   def setStyle(style: String, options: Diff): this.type = js.native
   def setStyle(style: Style): this.type = js.native
   def setStyle(style: Style, options: Diff): this.type = js.native
+  
   def setZoom(zoom: Double): this.type = js.native
   def setZoom(zoom: Double, eventData: EventData): this.type = js.native
+  
+  var showCollisionBoxes: Boolean = js.native
+  
+  /**
+    * Gets and sets a Boolean indicating whether the map will visualize
+    * the padding offsets.
+    *
+    * @name showPadding
+    * @type {boolean}
+    * @instance
+    * @memberof Map
+    */
+  var showPadding: Boolean = js.native
+  
+  var showTileBoundaries: Boolean = js.native
+  
   def snapToNorth(): this.type = js.native
   def snapToNorth(options: js.UndefOr[scala.Nothing], eventData: EventData): this.type = js.native
   def snapToNorth(options: AnimationOptions): this.type = js.native
   def snapToNorth(options: AnimationOptions, eventData: EventData): this.type = js.native
+  
   def stop(): this.type = js.native
+  
+  var touchPitch: TouchPitchHandler = js.native
+  
+  var touchZoomRotate: TouchZoomRotateHandler = js.native
+  
   def triggerRepaint(): Unit = js.native
+  
   def unproject(point: PointLike): LngLat = js.native
+  
   def zoomIn(): this.type = js.native
   def zoomIn(options: js.UndefOr[scala.Nothing], eventData: EventData): this.type = js.native
   def zoomIn(options: AnimationOptions): this.type = js.native
   def zoomIn(options: AnimationOptions, eventData: EventData): this.type = js.native
+  
   def zoomOut(): this.type = js.native
   def zoomOut(options: js.UndefOr[scala.Nothing], eventData: EventData): this.type = js.native
   def zoomOut(options: AnimationOptions): this.type = js.native
   def zoomOut(options: AnimationOptions, eventData: EventData): this.type = js.native
+  
   def zoomTo(zoom: Double): this.type = js.native
   def zoomTo(zoom: Double, options: js.UndefOr[scala.Nothing], eventData: EventData): this.type = js.native
   def zoomTo(zoom: Double, options: AnimationOptions): this.type = js.native
   def zoomTo(zoom: Double, options: AnimationOptions, eventData: EventData): this.type = js.native
 }
-

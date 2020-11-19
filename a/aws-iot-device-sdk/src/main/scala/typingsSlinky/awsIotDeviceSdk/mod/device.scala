@@ -15,7 +15,7 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-iot-device-sdk", "device")
 @js.native
@@ -26,6 +26,7 @@ import scala.scalajs.js.annotation._
   */
 class device () extends EventEmitter {
   def this(options: DeviceOptions) = this()
+  
   /**
     * end - close connection
     *
@@ -37,6 +38,7 @@ class device () extends EventEmitter {
   def end(force: js.UndefOr[scala.Nothing], callback: js.Function): Client = js.native
   def end(force: Boolean): Client = js.native
   def end(force: Boolean, callback: js.Function): Client = js.native
+  
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -53,6 +55,7 @@ class device () extends EventEmitter {
   def on_offline(event: offline, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
   def on_reconnect(event: reconnect, listener: js.Function0[Unit]): this.type = js.native
+  
   def publish(topic: String, message: String): Client = js.native
   def publish(
     topic: String,
@@ -93,6 +96,7 @@ class device () extends EventEmitter {
     options: IClientPublishOptions,
     callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit]
   ): Client = js.native
+  
   /**
     * Subscribe to a topic or topics
     * @param topic to subscribe to or an Array of topics to subscribe to. It can also be an object.
@@ -107,6 +111,7 @@ class device () extends EventEmitter {
   def subscribe(topic: js.Array[String], options: js.UndefOr[scala.Nothing], callback: ClientSubscribeCallback): Client = js.native
   def subscribe(topic: js.Array[String], options: IClientSubscribeOptions): Client = js.native
   def subscribe(topic: js.Array[String], options: IClientSubscribeOptions, callback: ClientSubscribeCallback): Client = js.native
+  
   /**
     * Unsubscribe from a topic or topics
     *
@@ -117,6 +122,7 @@ class device () extends EventEmitter {
   def unsubscribe(topic: String, callback: PacketCallback): Client = js.native
   def unsubscribe(topic: js.Array[String]): Client = js.native
   def unsubscribe(topic: js.Array[String], callback: PacketCallback): Client = js.native
+  
   /**
     * Update the credentials set used to authenticate via WebSocket/SigV4.
     *
@@ -125,4 +131,3 @@ class device () extends EventEmitter {
     */
   def updateWebSocketCredentials(accessKeyId: String, secretKey: String, sessionToken: String, expiration: js.Date): Unit = js.native
 }
-

@@ -6,11 +6,12 @@ import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/ops", "movingAverage")
 @js.native
 object movingAverage extends js.Object {
+  
   def apply[T /* <: Tensor[Rank] */](v: T, x: T, decay: Double): T = js.native
   def apply[T /* <: Tensor[Rank] */](v: T, x: T, decay: Double, step: js.UndefOr[scala.Nothing], zeroDebias: Boolean): T = js.native
   def apply[T /* <: Tensor[Rank] */](v: T, x: T, decay: Double, step: Double): T = js.native
@@ -60,4 +61,3 @@ object movingAverage extends js.Object {
   def apply[T /* <: Tensor[Rank] */](v: TensorLike, x: TensorLike, decay: Scalar, step: Scalar): T = js.native
   def apply[T /* <: Tensor[Rank] */](v: TensorLike, x: TensorLike, decay: Scalar, step: Scalar, zeroDebias: Boolean): T = js.native
 }
-

@@ -5,13 +5,13 @@ import typingsSlinky.nodeZendesk.mod.Requests.Comments.RequestType
 import typingsSlinky.nodeZendesk.mod.ZendeskID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ResponseModel
   extends typingsSlinky.nodeZendesk.mod.Requests.Comments.ResponseModel
-
 object ResponseModel {
+  
   @scala.inline
   def apply(
     attachments: js.Array[Model],
@@ -31,4 +31,3 @@ object ResponseModel {
     __obj.asInstanceOf[ResponseModel]
   }
 }
-

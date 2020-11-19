@@ -2,9 +2,10 @@ package typingsSlinky.activexWord.Word
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object EventHelperTypes {
+  
   type ApplicationEPostageInsertExArgNames = js.Tuple11[
     typingsSlinky.activexWord.activexWordStrings.Doc, 
     typingsSlinky.activexWord.activexWordStrings.cpDeliveryAddrStart, 
@@ -18,6 +19,7 @@ package object EventHelperTypes {
     typingsSlinky.activexWord.activexWordStrings.fPrint, 
     typingsSlinky.activexWord.activexWordStrings.fCancel
   ]
+  
   type ApplicationInvokeArgNames = js.Tuple8[
     typingsSlinky.activexWord.activexWordStrings.dispidMember, 
     typingsSlinky.activexWord.activexWordStrings.riid, 

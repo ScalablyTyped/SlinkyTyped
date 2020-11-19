@@ -6,12 +6,14 @@ import typingsSlinky.graphql.definitionMod.GraphQLFieldConfigMap
 import typingsSlinky.graphql.mod.GraphQLSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/utils/fields", JSImport.Namespace)
 @js.native
 object fieldsMod extends js.Object {
+  
   def appendObjectFields(schema: GraphQLSchema, typeName: String, additionalFields: GraphQLFieldConfigMap[_, _]): GraphQLSchema = js.native
+  
   def modifyObjectFields(
     schema: GraphQLSchema,
     typeName: String,
@@ -22,6 +24,7 @@ object fieldsMod extends js.Object {
     ],
     newFields: GraphQLFieldConfigMap[_, _]
   ): js.Tuple2[GraphQLSchema, GraphQLFieldConfigMap[_, _]] = js.native
+  
   def removeObjectFields(
     schema: GraphQLSchema,
     typeName: String,
@@ -31,6 +34,7 @@ object fieldsMod extends js.Object {
       Boolean
     ]
   ): js.Tuple2[GraphQLSchema, GraphQLFieldConfigMap[_, _]] = js.native
+  
   def selectObjectFields(
     schema: GraphQLSchema,
     typeName: String,
@@ -41,4 +45,3 @@ object fieldsMod extends js.Object {
     ]
   ): GraphQLFieldConfigMap[_, _] = js.native
 }
-

@@ -7,13 +7,14 @@ import typingsSlinky.kendoUi.kendo.ui.ComboBox
 import typingsSlinky.kendoUi.kendo.ui.ComboBoxOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofComboBox
   extends Instantiable1[/* element */ Element, ComboBox]
      with Instantiable2[/* element */ Element, /* options */ ComboBoxOptions, ComboBox] {
-  var fn: ComboBox = js.native
+  
   def extend(proto: js.Object): ComboBox = js.native
+  
+  var fn: ComboBox = js.native
 }
-

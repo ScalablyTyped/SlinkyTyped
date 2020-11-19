@@ -2,7 +2,7 @@ package typingsSlinky.agGrid.iExcelCreatorMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.agGrid.agGridStrings.String
@@ -12,17 +12,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.agGrid.agGridStrings.Error
 */
 trait ExcelDataType extends js.Object
-
 object ExcelDataType {
+  
   @scala.inline
   def Boolean: typingsSlinky.agGrid.agGridStrings.Boolean = "Boolean".asInstanceOf[typingsSlinky.agGrid.agGridStrings.Boolean]
+  
   @scala.inline
   def DateTime: typingsSlinky.agGrid.agGridStrings.DateTime = "DateTime".asInstanceOf[typingsSlinky.agGrid.agGridStrings.DateTime]
+  
   @scala.inline
   def Error: typingsSlinky.agGrid.agGridStrings.Error = "Error".asInstanceOf[typingsSlinky.agGrid.agGridStrings.Error]
+  
   @scala.inline
   def Number: typingsSlinky.agGrid.agGridStrings.Number = "Number".asInstanceOf[typingsSlinky.agGrid.agGridStrings.Number]
+  
   @scala.inline
   def String: typingsSlinky.agGrid.agGridStrings.String = "String".asInstanceOf[typingsSlinky.agGrid.agGridStrings.String]
 }
-

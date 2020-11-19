@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.PageSettings
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.TextTemplate")
 @js.native
@@ -22,24 +22,25 @@ class TextTemplate protected () extends Template {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FTextTemplate: IModel = js.native
+  
   def text: Text = js.native
   def text_=(newValue: Text): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.TextTemplate")
 @js.native
 object TextTemplate extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new TextTemplate instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): TextTemplate = js.native
+  
   /**
     * Creates and returns a new TextTemplate instance in the SDK and on the server.
     * The new TextTemplate will be automatically stored in the 'titleOverride' property
@@ -49,17 +50,22 @@ object TextTemplate extends js.Object {
     *  8.12.0 and higher
     */
   def createInPageSettingsUnderTitleOverride(container: PageSettings): TextTemplate = js.native
+  
   /**
     * Creates and returns a new TextTemplate instance in the SDK and on the server.
     * The new TextTemplate will be automatically stored in the 'template' property
     * of the parent ShowMessageAction element passed as argument.
     */
   def createInShowMessageActionUnderTemplate(container: ShowMessageAction): TextTemplate = js.native
+  
   /**
     * Creates and returns a new TextTemplate instance in the SDK and on the server.
     * The new TextTemplate will be automatically stored in the 'feedbackTemplate' property
     * of the parent ValidationFeedbackAction element passed as argument.
     */
   def createInValidationFeedbackActionUnderFeedbackTemplate(container: ValidationFeedbackAction): TextTemplate = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

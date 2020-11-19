@@ -49,10 +49,11 @@ import typingsSlinky.firebase.firebaseStrings.view_search_results
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Analytics extends js.Object {
+  
   /**
     * The {@link firebase.app.App app} associated with the `Analytics` service
     * instance.
@@ -63,6 +64,7 @@ trait Analytics extends js.Object {
     * ```
     */
   var app: App = js.native
+  
   /**
     * Sends analytics event with given `eventParams`. This method
     * automatically associates this logged event with this Firebase web
@@ -375,25 +377,28 @@ trait Analytics extends js.Object {
   def logEvent_viewsearchresults(eventName: view_search_results, eventParams: Searchterm): Unit = js.native
   @JSName("logEvent")
   def logEvent_viewsearchresults(eventName: view_search_results, eventParams: Searchterm, options: AnalyticsCallOptions): Unit = js.native
+  
   /**
     * Sets whether analytics collection is enabled for this app on this device.
     * window['ga-disable-analyticsId'] = true;
     */
   def setAnalyticsCollectionEnabled(enabled: Boolean): Unit = js.native
+  
   /**
     * Use gtag 'config' command to set 'screen_name'.
     */
   def setCurrentScreen(screenName: String): Unit = js.native
   def setCurrentScreen(screenName: String, options: AnalyticsCallOptions): Unit = js.native
+  
   /**
     * Use gtag 'config' command to set 'user_id'.
     */
   def setUserId(id: String): Unit = js.native
   def setUserId(id: String, options: AnalyticsCallOptions): Unit = js.native
+  
   /**
     * Use gtag 'config' command to set all params specified.
     */
   def setUserProperties(properties: CustomParams): Unit = js.native
   def setUserProperties(properties: CustomParams, options: AnalyticsCallOptions): Unit = js.native
 }
-

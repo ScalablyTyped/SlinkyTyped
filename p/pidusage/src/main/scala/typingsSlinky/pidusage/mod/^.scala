@@ -3,11 +3,12 @@ package typingsSlinky.pidusage.mod
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pidusage", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   def apply(pid: String): js.Promise[Stat] = js.native
   def apply(pid: String, callback: js.Function2[/* err */ js.Error | Null, /* stats */ Stat, Unit]): Unit = js.native
   def apply(pid: String, options: StringDictionary[js.Any]): js.Promise[Stat] = js.native
@@ -36,4 +37,3 @@ object ^ extends js.Object {
     callback: js.Function2[/* err */ js.Error | Null, /* stats */ StringDictionary[Stat], Unit]
   ): Unit = js.native
 }
-

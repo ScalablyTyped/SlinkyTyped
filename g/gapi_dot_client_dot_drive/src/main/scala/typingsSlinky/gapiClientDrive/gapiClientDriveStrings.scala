@@ -2,9 +2,28 @@ package typingsSlinky.gapiClientDrive
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object gapiClientDriveStrings {
+  
+  @scala.inline
+  def About: About = "About".asInstanceOf[About]
+  
+  @scala.inline
+  def Channel: Channel = "Channel".asInstanceOf[Channel]
+  
+  @scala.inline
+  def File: File = "File".asInstanceOf[File]
+  
+  @scala.inline
+  def Revision: Revision = "Revision".asInstanceOf[Revision]
+  
+  @scala.inline
+  def drive: drive = "drive".asInstanceOf[drive]
+  
+  @scala.inline
+  def v3: v3 = "v3".asInstanceOf[v3]
+  
   @js.native
   sealed trait About extends js.Object
   
@@ -22,18 +41,4 @@ object gapiClientDriveStrings {
   
   @js.native
   sealed trait v3 extends js.Object
-  
-  @scala.inline
-  def About: About = "About".asInstanceOf[About]
-  @scala.inline
-  def Channel: Channel = "Channel".asInstanceOf[Channel]
-  @scala.inline
-  def File: File = "File".asInstanceOf[File]
-  @scala.inline
-  def Revision: Revision = "Revision".asInstanceOf[Revision]
-  @scala.inline
-  def drive: drive = "drive".asInstanceOf[drive]
-  @scala.inline
-  def v3: v3 = "v3".asInstanceOf[v3]
 }
-

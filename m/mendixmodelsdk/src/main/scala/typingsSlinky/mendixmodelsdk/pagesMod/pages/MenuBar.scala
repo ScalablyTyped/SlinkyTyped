@@ -11,7 +11,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/menu-bar relevant section in reference guide}
@@ -27,22 +27,22 @@ class MenuBar protected () extends MenuWidget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
   @JSName("model")
   var model_FMenuBar: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.MenuBar")
 @js.native
 object MenuBar extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -52,6 +52,7 @@ object MenuBar extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: BuildingBlock): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -61,6 +62,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: BuildingBlock): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'footerWidget' property
@@ -70,6 +72,7 @@ object MenuBar extends js.Object {
     *  6.7.0 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'footerWidgets' property
@@ -79,6 +82,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: DataView): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -88,6 +92,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDataViewUnderWidget(container: DataView): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -97,6 +102,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: DataView): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -106,6 +112,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -115,6 +122,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: DivContainer): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -124,6 +132,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -133,6 +142,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: GroupBox): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'leftWidget' property
@@ -142,6 +152,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: Header): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'leftWidgets' property
@@ -151,6 +162,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: Header): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'rightWidget' property
@@ -160,6 +172,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: Header): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'rightWidgets' property
@@ -169,6 +182,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: Header): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -178,6 +192,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -187,6 +202,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: LayoutCallArgument): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -196,6 +212,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -205,6 +222,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: LayoutGridColumn): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -214,6 +232,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutUnderWidget(container: Layout): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -223,6 +242,7 @@ object MenuBar extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: Layout): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -232,6 +252,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -241,6 +262,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: ListViewTemplate): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -250,6 +272,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewUnderWidget(container: ListView): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -259,6 +282,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: ListView): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -268,6 +292,7 @@ object MenuBar extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: MasterDetailRegion): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -277,6 +302,7 @@ object MenuBar extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'sidebarWidgets' property
@@ -286,6 +312,7 @@ object MenuBar extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -295,6 +322,7 @@ object MenuBar extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: NativeLayoutContent): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'headerWidget' property
@@ -304,6 +332,7 @@ object MenuBar extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -313,6 +342,7 @@ object MenuBar extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -322,6 +352,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -331,6 +362,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: NavigationListItem): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'parameterWidget' property
@@ -340,6 +372,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'reportWidget' property
@@ -349,6 +382,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -358,6 +392,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -367,6 +402,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: ScrollContainerRegion): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -376,6 +412,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSnippetUnderWidget(container: Snippet): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -385,6 +422,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: Snippet): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'firstWidget' property
@@ -394,6 +432,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'firstWidgets' property
@@ -403,6 +442,7 @@ object MenuBar extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: SplitPane): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'secondWidget' property
@@ -412,6 +452,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'secondWidgets' property
@@ -421,6 +462,7 @@ object MenuBar extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: SplitPane): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -430,6 +472,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTabPageUnderWidget(container: TabPage): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -439,6 +482,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: TabPage): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -448,6 +492,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTableCellUnderWidget(container: TableCell): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -457,6 +502,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: TableCell): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widget' property
@@ -466,6 +512,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -475,6 +522,7 @@ object MenuBar extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: TemplateGridContents): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -484,6 +532,7 @@ object MenuBar extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -493,6 +542,7 @@ object MenuBar extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: WebLayoutContent): MenuBar = js.native
+  
   /**
     * Creates and returns a new MenuBar instance in the SDK and on the server.
     * The new MenuBar will be automatically stored in the 'widgets' property
@@ -502,5 +552,8 @@ object MenuBar extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): MenuBar = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

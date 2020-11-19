@@ -8,11 +8,37 @@ import typingsSlinky.node.anon.ToPrimitive
 import typingsSlinky.node.anon.ValueOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
+  def clearImmediate(immediateId: Immediate): Unit = js.native
+  
+  def clearInterval(intervalId: Timeout): Unit = js.native
+  
+  def clearTimeout(timeoutId: Timeout): Unit = js.native
+  
+  @JSName("__dirname")
+  var dirname: java.lang.String = js.native
+  
+  // Same as module.exports
+  var exports: js.Any = js.native
+  
+  @JSName("__filename")
+  var filename: java.lang.String = js.native
+  
+  var global: Global = js.native
+  
+  var module: NodeModule = js.native
+  
+  def queueMicrotask(callback: js.Function0[Unit]): Unit = js.native
+  
+  var require: NodeRequire = js.native
+  
+  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
+  
   /**
     * Raw data is stored in instances of the Buffer class.
     * A Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap.  A Buffer cannot be resized.
@@ -69,28 +95,10 @@ object global extends js.Object {
     def this(str: java.lang.String) = this()
     def this(str: java.lang.String, encoding: BufferEncoding) = this()
   }
-  
-  @JSName("__dirname")
-  var dirname: java.lang.String = js.native
-  // Same as module.exports
-  var exports: js.Any = js.native
-  @JSName("__filename")
-  var filename: java.lang.String = js.native
-  var global: Global = js.native
-  var module: NodeModule = js.native
-  var require: NodeRequire = js.native
-  def clearImmediate(immediateId: Immediate): Unit = js.native
-  def clearInterval(intervalId: Timeout): Unit = js.native
-  def clearTimeout(timeoutId: Timeout): Unit = js.native
-  def queueMicrotask(callback: js.Function0[Unit]): Unit = js.native
-  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
   /* static members */
   @js.native
   object Buffer extends js.Object {
-    /**
-      * This is the number of bytes used to determine the size of pre-allocated, internal Buffer instances used for pooling. This value may be modified.
-      */
-    var poolSize: Double = js.native
+    
     /**
       * Allocates a new buffer of {size} octets.
       *
@@ -107,6 +115,7 @@ object global extends js.Object {
     def alloc(size: Double, fill: Double, encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
     def alloc(size: Double, fill: typingsSlinky.node.Buffer): typingsSlinky.node.Buffer = js.native
     def alloc(size: Double, fill: typingsSlinky.node.Buffer, encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
+    
     /**
       * Allocates a new buffer of {size} octets, leaving memory not initialized, so the contents
       * of the newly created Buffer are unknown and may contain sensitive data.
@@ -114,6 +123,7 @@ object global extends js.Object {
       * @param size count of octets to allocate
       */
     def allocUnsafe(size: Double): typingsSlinky.node.Buffer = js.native
+    
     /**
       * Allocates a new non-pooled buffer of {size} octets, leaving memory not initialized, so the contents
       * of the newly created Buffer are unknown and may contain sensitive data.
@@ -121,6 +131,7 @@ object global extends js.Object {
       * @param size count of octets to allocate
       */
     def allocUnsafeSlow(size: Double): typingsSlinky.node.Buffer = js.native
+    
     /**
       * Gives the actual byte length of a string. encoding defaults to 'utf8'.
       * This is not the same as String.prototype.length since that returns the number of characters in a string.
@@ -136,10 +147,12 @@ object global extends js.Object {
     def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
     def byteLength(string: js.typedarray.ArrayBuffer): Double = js.native
     def byteLength(string: js.typedarray.ArrayBuffer, encoding: BufferEncoding): Double = js.native
+    
     /**
       * The same as buf1.compare(buf2).
       */
     def compare(buf1: js.typedarray.Uint8Array, buf2: js.typedarray.Uint8Array): Double = js.native
+    
     /**
       * Returns a buffer which is the result of concatenating all the buffers in the list together.
       *
@@ -153,6 +166,7 @@ object global extends js.Object {
       */
     def concat(list: js.Array[js.typedarray.Uint8Array]): typingsSlinky.node.Buffer = js.native
     def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): typingsSlinky.node.Buffer = js.native
+    
     def from(arrayBuffer: SharedArrayBuffer): typingsSlinky.node.Buffer = js.native
     def from(arrayBuffer: SharedArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
     def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
@@ -195,12 +209,14 @@ object global extends js.Object {
       */
     def from(str: java.lang.String): typingsSlinky.node.Buffer = js.native
     def from(str: java.lang.String, encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
+    
     /**
       * Returns true if {obj} is a Buffer
       *
       * @param obj object to test.
       */
     def isBuffer(obj: js.Any): /* is node.Buffer */ Boolean = js.native
+    
     /**
       * Returns true if {encoding} is a valid encoding argument.
       * Valid string encodings in Node 0.12: 'ascii'|'utf8'|'utf16le'|'ucs2'(alias of 'utf16le')|'base64'|'binary'(deprecated)|'hex'
@@ -208,11 +224,17 @@ object global extends js.Object {
       * @param encoding string to test.
       */
     def isEncoding(encoding: java.lang.String): /* is node.BufferEncoding */ Boolean = js.native
+    
     /**
       * Creates a new Buffer using the passed {data}
       * @param values to create a new Buffer
       */
     def of(items: Double*): typingsSlinky.node.Buffer = js.native
+    
+    /**
+      * This is the number of bytes used to determine the size of pre-allocated, internal Buffer instances used for pooling. This value may be modified.
+      */
+    var poolSize: Double = js.native
   }
   
   /*----------------------------------------------*
@@ -228,21 +250,13 @@ object global extends js.Object {
   
   @js.native
   object setImmediate extends js.Object {
+    
     def apply(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Immediate = js.native
-    @JSName("__promisify__")
-    def promisify(): js.Promise[Unit] = js.native
-    @JSName("__promisify__")
-    def promisify[T](value: T): js.Promise[T] = js.native
   }
   
   @js.native
   object setTimeout extends js.Object {
+    
     def apply(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
-    @JSName("__promisify__")
-    def promisify(ms: Double): js.Promise[Unit] = js.native
-    @JSName("__promisify__")
-    def promisify[T](ms: Double, value: T): js.Promise[T] = js.native
   }
-  
 }
-

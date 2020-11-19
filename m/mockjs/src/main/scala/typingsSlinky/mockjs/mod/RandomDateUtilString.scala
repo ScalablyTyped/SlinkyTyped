@@ -2,7 +2,7 @@ package typingsSlinky.mockjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // Mockjs.Random - Date
 // see https://github.com/nuysoft/Mock/wiki/Date
@@ -16,21 +16,26 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.mockjs.mockjsStrings.second
 */
 trait RandomDateUtilString extends js.Object
-
 object RandomDateUtilString {
+  
   @scala.inline
   def day: typingsSlinky.mockjs.mockjsStrings.day = "day".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.day]
+  
   @scala.inline
   def hour: typingsSlinky.mockjs.mockjsStrings.hour = "hour".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.hour]
+  
   @scala.inline
   def minute: typingsSlinky.mockjs.mockjsStrings.minute = "minute".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.minute]
+  
   @scala.inline
   def month: typingsSlinky.mockjs.mockjsStrings.month = "month".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.month]
+  
   @scala.inline
   def second: typingsSlinky.mockjs.mockjsStrings.second = "second".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.second]
+  
   @scala.inline
   def week: typingsSlinky.mockjs.mockjsStrings.week = "week".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.week]
+  
   @scala.inline
   def year: typingsSlinky.mockjs.mockjsStrings.year = "year".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.year]
 }
-

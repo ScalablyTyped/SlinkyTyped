@@ -4,7 +4,7 @@ import typingsSlinky.highcharts.mod.AxisPlotBandsOptions
 import typingsSlinky.highcharts.mod.AxisPlotLinesOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts/highstock", "PlotLineOrBand")
 @js.native
@@ -17,4 +17,3 @@ class PlotLineOrBand protected ()
   def this(axis: typingsSlinky.highcharts.mod.Axis, options: AxisPlotBandsOptions) = this()
   def this(axis: typingsSlinky.highcharts.mod.Axis, options: AxisPlotLinesOptions) = this()
 }
-

@@ -2,9 +2,88 @@ package typingsSlinky.formatjsIntlGetcanonicallocales
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object formatjsIntlGetcanonicallocalesStrings {
+  
+  @scala.inline
+  def a: a = "a".asInstanceOf[a]
+  
+  @scala.inline
+  def b: b = "b".asInstanceOf[b]
+  
+  @scala.inline
+  def c: c = "c".asInstanceOf[c]
+  
+  @scala.inline
+  def d: d = "d".asInstanceOf[d]
+  
+  @scala.inline
+  def e: e = "e".asInstanceOf[e]
+  
+  @scala.inline
+  def f: f = "f".asInstanceOf[f]
+  
+  @scala.inline
+  def g: g = "g".asInstanceOf[g]
+  
+  @scala.inline
+  def h: h = "h".asInstanceOf[h]
+  
+  @scala.inline
+  def i: i = "i".asInstanceOf[i]
+  
+  @scala.inline
+  def j: j = "j".asInstanceOf[j]
+  
+  @scala.inline
+  def k: k = "k".asInstanceOf[k]
+  
+  @scala.inline
+  def l: l = "l".asInstanceOf[l]
+  
+  @scala.inline
+  def m: m = "m".asInstanceOf[m]
+  
+  @scala.inline
+  def n: n = "n".asInstanceOf[n]
+  
+  @scala.inline
+  def o: o = "o".asInstanceOf[o]
+  
+  @scala.inline
+  def p: p = "p".asInstanceOf[p]
+  
+  @scala.inline
+  def q: q = "q".asInstanceOf[q]
+  
+  @scala.inline
+  def r: r = "r".asInstanceOf[r]
+  
+  @scala.inline
+  def s: s = "s".asInstanceOf[s]
+  
+  @scala.inline
+  def t: t = "t".asInstanceOf[t]
+  
+  @scala.inline
+  def u: u = "u".asInstanceOf[u]
+  
+  @scala.inline
+  def v: v = "v".asInstanceOf[v]
+  
+  @scala.inline
+  def w: w = "w".asInstanceOf[w]
+  
+  @scala.inline
+  def x: x = "x".asInstanceOf[x]
+  
+  @scala.inline
+  def y: y = "y".asInstanceOf[y]
+  
+  @scala.inline
+  def z: z = "z".asInstanceOf[z]
+  
   @js.native
   sealed trait a extends js.Object
   
@@ -82,58 +161,4 @@ object formatjsIntlGetcanonicallocalesStrings {
   
   @js.native
   sealed trait z extends js.Object
-  
-  @scala.inline
-  def a: a = "a".asInstanceOf[a]
-  @scala.inline
-  def b: b = "b".asInstanceOf[b]
-  @scala.inline
-  def c: c = "c".asInstanceOf[c]
-  @scala.inline
-  def d: d = "d".asInstanceOf[d]
-  @scala.inline
-  def e: e = "e".asInstanceOf[e]
-  @scala.inline
-  def f: f = "f".asInstanceOf[f]
-  @scala.inline
-  def g: g = "g".asInstanceOf[g]
-  @scala.inline
-  def h: h = "h".asInstanceOf[h]
-  @scala.inline
-  def i: i = "i".asInstanceOf[i]
-  @scala.inline
-  def j: j = "j".asInstanceOf[j]
-  @scala.inline
-  def k: k = "k".asInstanceOf[k]
-  @scala.inline
-  def l: l = "l".asInstanceOf[l]
-  @scala.inline
-  def m: m = "m".asInstanceOf[m]
-  @scala.inline
-  def n: n = "n".asInstanceOf[n]
-  @scala.inline
-  def o: o = "o".asInstanceOf[o]
-  @scala.inline
-  def p: p = "p".asInstanceOf[p]
-  @scala.inline
-  def q: q = "q".asInstanceOf[q]
-  @scala.inline
-  def r: r = "r".asInstanceOf[r]
-  @scala.inline
-  def s: s = "s".asInstanceOf[s]
-  @scala.inline
-  def t: t = "t".asInstanceOf[t]
-  @scala.inline
-  def u: u = "u".asInstanceOf[u]
-  @scala.inline
-  def v: v = "v".asInstanceOf[v]
-  @scala.inline
-  def w: w = "w".asInstanceOf[w]
-  @scala.inline
-  def x: x = "x".asInstanceOf[x]
-  @scala.inline
-  def y: y = "y".asInstanceOf[y]
-  @scala.inline
-  def z: z = "z".asInstanceOf[z]
 }
-

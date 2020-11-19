@@ -2,17 +2,19 @@ package typingsSlinky.openpgp.mod.crypto
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "crypto.ocb")
 @js.native
 object ocb extends js.Object {
+  
   /**
     * Class to en/decrypt using OCB mode.
     * @param cipher The symmetric cipher algorithm to use e.g. 'aes128'
     * @param key The encryption key
     */
   def OCB(cipher: String, key: js.typedarray.Uint8Array): Unit = js.native
+  
   /**
     * Decrypt ciphertext input.
     * @param ciphertext The ciphertext input to be decrypted
@@ -25,6 +27,7 @@ object ocb extends js.Object {
     nonce: js.typedarray.Uint8Array,
     adata: js.typedarray.Uint8Array
   ): js.Promise[js.typedarray.Uint8Array] = js.native
+  
   /**
     * Encrypt plaintext input.
     * @param plaintext The cleartext input to be encrypted
@@ -38,4 +41,3 @@ object ocb extends js.Object {
     adata: js.typedarray.Uint8Array
   ): js.Promise[js.typedarray.Uint8Array] = js.native
 }
-

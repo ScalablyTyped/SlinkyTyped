@@ -3,7 +3,7 @@ package typingsSlinky.ndnJs.mod
 import typingsSlinky.ndnJs.nameMod.Name.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ndn-js", "Name")
 @js.native
@@ -13,11 +13,13 @@ class Name ()
   def this(name: String) = this()
   def this(name: typingsSlinky.ndnJs.nameMod.Name) = this()
 }
-
 /* static members */
 @JSImport("ndn-js", "Name")
 @js.native
 object Name extends js.Object {
+  
+  def fromEscapedString(uri: String): typingsSlinky.ndnJs.nameMod.Name = js.native
+  
   @js.native
   class Component ()
     extends typingsSlinky.ndnJs.nameMod.Name.Component {
@@ -62,24 +64,29 @@ object Name extends js.Object {
       otherTypeCode: Double
     ) = this()
   }
-  
-  def fromEscapedString(uri: String): typingsSlinky.ndnJs.nameMod.Name = js.native
   /* static members */
   @js.native
   object Component extends js.Object {
+    
     def fromImplicitSha256Digest(digest: typingsSlinky.ndnJs.blobMod.Blob): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
+    
     def fromNumber(number: Double): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
     def fromNumber(number: Double, `type`: js.UndefOr[scala.Nothing], otherTypeCode: Double): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
     def fromNumber(number: Double, `type`: typingsSlinky.ndnJs.nameMod.ComponentType): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
     def fromNumber(number: Double, `type`: typingsSlinky.ndnJs.nameMod.ComponentType, otherTypeCode: Double): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
+    
     def fromNumberWithMarker(number: Double, marker: Double): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
+    
     def fromParametersSha256Digest(digest: typingsSlinky.ndnJs.blobMod.Blob): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
+    
     def fromSegment(segment: Double): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
+    
     def fromSegmentOffset(segmentOffset: Double): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
+    
     def fromSequenceNumber(sequenceNumber: Double): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
+    
     def fromTimestamp(timestamp: Double): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
+    
     def fromVersion(version: Double): typingsSlinky.ndnJs.nameMod.Name.Component = js.native
   }
-  
 }
-

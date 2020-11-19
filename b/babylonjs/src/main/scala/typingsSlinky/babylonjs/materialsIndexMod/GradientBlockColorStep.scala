@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.materialsIndexMod
 import typingsSlinky.babylonjs.mathColorMod.Color3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/index", "GradientBlockColorStep")
 @js.native
@@ -25,4 +25,3 @@ class GradientBlockColorStep protected ()
   color: Color3
   ) = this()
 }
-

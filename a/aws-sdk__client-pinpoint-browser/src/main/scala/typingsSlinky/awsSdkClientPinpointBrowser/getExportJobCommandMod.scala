@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/GetExportJobCommand", JSImport.Namespace)
 @js.native
 object getExportJobCommandMod extends js.Object {
+  
   @js.native
   class GetExportJobCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getExportJobCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetExportJobInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetExportJobInput, GetExportJobOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[GetExportJobInput, GetExportJobOutput] = js.native
   }
-  
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.yadda.norwegianMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Library
   extends typingsSlinky.yadda.englishMod.Library {
+  
   def gitt(
     step: String,
     fn: js.Function1[
@@ -213,6 +214,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def når(
     step: String,
     fn: js.Function1[
@@ -419,6 +421,7 @@ trait Library
       Unit
     ]
   ): this.type = js.native
+  
   def så(
     step: String,
     fn: js.Function1[
@@ -626,4 +629,3 @@ trait Library
     ]
   ): this.type = js.native
 }
-

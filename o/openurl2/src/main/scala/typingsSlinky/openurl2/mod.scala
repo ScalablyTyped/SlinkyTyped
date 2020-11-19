@@ -3,11 +3,12 @@ package typingsSlinky.openurl2
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openurl2", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def mailto(recipients: js.Array[String], fields: StringDictionary[String]): Unit = js.native
   def mailto(
     recipients: js.Array[String],
@@ -22,7 +23,7 @@ object mod extends js.Object {
     recipientsSeparator: String,
     callback: js.Function1[/* err */ js.Error, Unit]
   ): Unit = js.native
+  
   def open(url: String): Unit = js.native
   def open(url: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
-

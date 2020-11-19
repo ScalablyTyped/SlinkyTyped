@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser.urlbar
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Possible types of results. `remote_tab`: A synced tab from another device. `search`: A search suggestion from a
@@ -17,17 +17,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url
 */
 trait ResultType extends js.Object
-
 object ResultType {
+  
   @scala.inline
   def remote_tab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.remote_tab = "remote_tab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.remote_tab]
+  
   @scala.inline
   def search: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.search = "search".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.search]
+  
   @scala.inline
   def tab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab = "tab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab]
+  
   @scala.inline
   def tip: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tip = "tip".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tip]
+  
   @scala.inline
   def url: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url = "url".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url]
 }
-

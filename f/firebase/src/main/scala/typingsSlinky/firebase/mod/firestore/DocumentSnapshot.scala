@@ -2,29 +2,12 @@ package typingsSlinky.firebase.mod.firestore
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "firestore.DocumentSnapshot")
 @js.native
 class DocumentSnapshot[T] protected () extends js.Object {
-  /**
-    * Property of the `DocumentSnapshot` that signals whether or not the data
-    * exists. True if the document exists.
-    */
-  val exists: Boolean = js.native
-  /**
-    * Property of the `DocumentSnapshot` that provides the document's ID.
-    */
-  val id: String = js.native
-  /**
-    *  Metadata about the `DocumentSnapshot`, including information about its
-    *  source and local modifications.
-    */
-  val metadata: SnapshotMetadata = js.native
-  /**
-    * The `DocumentReference` for the document included in the `DocumentSnapshot`.
-    */
-  val ref: DocumentReference[T] = js.native
+  
   /**
     * Retrieves all fields in the document as an Object. Returns 'undefined' if
     * the document doesn't exist.
@@ -41,6 +24,13 @@ class DocumentSnapshot[T] protected () extends js.Object {
     */
   def data(): js.UndefOr[T] = js.native
   def data(options: SnapshotOptions): js.UndefOr[T] = js.native
+  
+  /**
+    * Property of the `DocumentSnapshot` that signals whether or not the data
+    * exists. True if the document exists.
+    */
+  val exists: Boolean = js.native
+  
   /**
     * Retrieves the field specified by `fieldPath`. Returns `undefined` if the
     * document or field doesn't exist.
@@ -60,6 +50,12 @@ class DocumentSnapshot[T] protected () extends js.Object {
   def get(fieldPath: String, options: SnapshotOptions): js.Any = js.native
   def get(fieldPath: FieldPath): js.Any = js.native
   def get(fieldPath: FieldPath, options: SnapshotOptions): js.Any = js.native
+  
+  /**
+    * Property of the `DocumentSnapshot` that provides the document's ID.
+    */
+  val id: String = js.native
+  
   /**
     * Returns true if this `DocumentSnapshot` is equal to the provided one.
     *
@@ -67,5 +63,15 @@ class DocumentSnapshot[T] protected () extends js.Object {
     * @return true if this `DocumentSnapshot` is equal to the provided one.
     */
   def isEqual(other: DocumentSnapshot[T]): Boolean = js.native
+  
+  /**
+    *  Metadata about the `DocumentSnapshot`, including information about its
+    *  source and local modifications.
+    */
+  val metadata: SnapshotMetadata = js.native
+  
+  /**
+    * The `DocumentReference` for the document included in the `DocumentSnapshot`.
+    */
+  val ref: DocumentReference[T] = js.native
 }
-

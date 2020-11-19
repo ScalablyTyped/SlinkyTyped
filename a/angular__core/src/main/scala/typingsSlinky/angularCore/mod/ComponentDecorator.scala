@@ -3,7 +3,7 @@ package typingsSlinky.angularCore.mod
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ComponentDecorator
@@ -11,6 +11,7 @@ trait ComponentDecorator
   * See the `Component` decorator.
   */
 Instantiable1[/* obj */ Component, Component] {
+  
   /**
     * Decorator that marks a class as an Angular component and provides configuration
     * metadata that determines how the component should be processed,
@@ -150,4 +151,3 @@ Instantiable1[/* obj */ Component, Component] {
     */
   def apply(obj: Component): TypeDecorator = js.native
 }
-

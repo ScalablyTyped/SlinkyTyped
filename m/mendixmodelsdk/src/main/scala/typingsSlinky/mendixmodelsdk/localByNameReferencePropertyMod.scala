@@ -10,13 +10,17 @@ import typingsSlinky.mendixmodelsdk.utilsMod.utils.IMap
 import typingsSlinky.mobx.observablevalueMod.IObservableValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/sdk/internal/properties/LocalByNameReferenceProperty", JSImport.Namespace)
 @js.native
 object localByNameReferencePropertyMod extends js.Object {
+  
+  def isNamedElement(element: IStructure): /* is mendixmodelsdk.mendixmodelsdk/dist/sdk/internal/properties/LocalByNameReferenceProperty.INamedElement */ Boolean = js.native
+  
   @js.native
   trait INamedElement extends IElement {
+    
     var name: String = js.native
   }
   
@@ -36,8 +40,7 @@ object localByNameReferencePropertyMod extends js.Object {
       initialValue: Null,
       _targetType: String
     ) = this()
-    @JSName("parent")
-    var parent_LocalByNameReferenceProperty: AbstractElement = js.native
+    
     def deepCopyInto(clone: Structure): Unit = js.native
     def deepCopyInto(
       clone: Structure,
@@ -45,13 +48,17 @@ object localByNameReferencePropertyMod extends js.Object {
       unresolvedIdentifierFixers: js.Array[js.Function1[/* idMap */ IMap[Structure], Unit]]
     ): Unit = js.native
     def deepCopyInto(clone: Structure, idMap: IMap[Structure]): Unit = js.native
+    
     def localName(): String | Null = js.native
+    
+    @JSName("parent")
+    var parent_LocalByNameReferenceProperty: AbstractElement = js.native
+    
     def set(): Unit = js.native
     def set(newValue: T): Unit = js.native
+    
     def targetType: String = js.native
+    
     def updateWithRawValue(value: String): Unit = js.native
   }
-  
-  def isNamedElement(element: IStructure): /* is mendixmodelsdk.mendixmodelsdk/dist/sdk/internal/properties/LocalByNameReferenceProperty.INamedElement */ Boolean = js.native
 }
-

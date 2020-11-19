@@ -4,7 +4,7 @@ import typingsSlinky.stellarBase.mod.MemoType
 import typingsSlinky.stellarBase.xdrMod.default.TransactionEnvelope
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stellar-sdk", "Transaction")
 @js.native
@@ -13,4 +13,3 @@ class Transaction[TMemo /* <: typingsSlinky.stellarBase.mod.Memo[MemoType] */, T
   def this(envelope: String, networkPassphrase: String) = this()
   def this(envelope: TransactionEnvelope, networkPassphrase: String) = this()
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.DimensionalDefinition
 import typingsSlinky.arcgisJsApi.esri.DimensionalDefinitionProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/layers/support/DimensionalDefinition", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends DimensionalDefinition {
   def this(properties: DimensionalDefinitionProperties) = this()
 }
-

@@ -2,10 +2,11 @@ package typingsSlinky.gapiClientMl.gapi.client.ml
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GoogleCloudMlV1AutoScaling extends js.Object {
+  
   /**
     * Optional. The minimum number of nodes to allocate for this model. These
     * nodes are always up, starting from the time the model is deployed, so the
@@ -28,29 +29,33 @@ trait GoogleCloudMlV1AutoScaling extends js.Object {
     */
   var minNodes: js.UndefOr[Double] = js.native
 }
-
 object GoogleCloudMlV1AutoScaling {
+  
   @scala.inline
   def apply(): GoogleCloudMlV1AutoScaling = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[GoogleCloudMlV1AutoScaling]
   }
+  
   @scala.inline
   implicit class GoogleCloudMlV1AutoScalingOps[Self <: GoogleCloudMlV1AutoScaling] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setMinNodes(value: Double): Self = this.set("minNodes", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteMinNodes: Self = this.set("minNodes", js.undefined)
   }
-  
 }
-

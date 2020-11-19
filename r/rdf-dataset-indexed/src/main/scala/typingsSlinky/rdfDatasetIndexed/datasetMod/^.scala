@@ -7,7 +7,7 @@ import typingsSlinky.rdfJs.mod.DatasetFactory
 import typingsSlinky.rdfJs.mod.Quad
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // tslint:disable-next-line no-unnecessary-class
 @JSImport("rdf-dataset-indexed/dataset", JSImport.Namespace)
@@ -23,4 +23,3 @@ class ^[Q /* <: BaseQuad */, InQuad /* <: BaseQuad */] () extends js.Object {
     factory: (DataFactory[Quad, Quad]) with (DatasetFactory[Quad, Quad, Dataset[Quad, Quad]])
   ) = this()
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.googleAppsScript.global.GoogleAppsScript.Base
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An enum representing predetermined, localized dialog buttons returned by an alert or PromptResponse.getSelectedButton() to indicate
@@ -23,12 +23,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("GoogleAppsScript.Base.Button")
 @js.native
 object Button extends js.Object {
-  /* 2 */ val CANCEL: typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Button.CANCEL with Double = js.native
-  /* 0 */ val CLOSE: typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Button.CLOSE with Double = js.native
-  /* 4 */ val NO: typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Button.NO with Double = js.native
-  /* 1 */ val OK: typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Button.OK with Double = js.native
-  /* 3 */ val YES: typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Button.YES with Double = js.native
+  
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Button with Double] = js.native
+  
+  /* 2 */ val CANCEL: typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Button.CANCEL with Double = js.native
+  
+  /* 0 */ val CLOSE: typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Button.CLOSE with Double = js.native
+  
+  /* 4 */ val NO: typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Button.NO with Double = js.native
+  
+  /* 1 */ val OK: typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Button.OK with Double = js.native
+  
+  /* 3 */ val YES: typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Button.YES with Double = js.native
 }
-

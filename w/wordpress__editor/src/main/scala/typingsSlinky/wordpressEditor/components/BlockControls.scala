@@ -7,9 +7,10 @@ import typingsSlinky.wordpressBlockEditor.blockControlsMod.BlockControls.Props
 import typingsSlinky.wordpressComponents.toolbarMod.Toolbar.Control
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object BlockControls {
+  
   @JSImport("@wordpress/editor", "BlockControls")
   @js.native
   object component extends js.Object
@@ -18,22 +19,26 @@ object BlockControls {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def controlsVarargs(value: (js.Array[Control] | Control)*): this.type = set("controls", js.Array(value :_*))
+    
     @scala.inline
     def controls(value: js.Array[js.Array[Control] | Control]): this.type = set("controls", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: BlockControls.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
   object Slot {
+    
     @JSImport("@wordpress/editor", "BlockControls.Slot")
     @js.native
     object component extends js.Object
     
     def withProps(p: OmitPropsname): SharedBuilder_OmitPropsname_1930388973 = new SharedBuilder_OmitPropsname_1930388973(js.Array(this.component, p.asInstanceOf[js.Any]))
+    
     implicit def make(companion: Slot.type): SharedBuilder_OmitPropsname_1930388973 = new SharedBuilder_OmitPropsname_1930388973(js.Array(this.component, js.Dictionary.empty))()
   }
-  
 }
-

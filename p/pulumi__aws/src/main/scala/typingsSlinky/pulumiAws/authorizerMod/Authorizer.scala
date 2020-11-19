@@ -8,7 +8,7 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws/apigatewayv2/authorizer", "Authorizer")
 @js.native
@@ -22,48 +22,55 @@ class Authorizer protected () extends CustomResource {
     */
   def this(name: String, args: AuthorizerArgs) = this()
   def this(name: String, args: AuthorizerArgs, opts: CustomResourceOptions) = this()
+  
   /**
     * The API identifier.
     */
   val apiId: Output_[String] = js.native
+  
   /**
     * The required credentials as an IAM role for API Gateway to invoke the authorizer.
     * Supported only for `REQUEST` authorizers.
     */
   val authorizerCredentialsArn: Output_[js.UndefOr[String]] = js.native
+  
   /**
     * The authorizer type. Valid values: `JWT`, `REQUEST`.
     * For WebSocket APIs, specify `REQUEST` for a Lambda function using incoming request parameters.
     * For HTTP APIs, specify `JWT` to use JSON Web Tokens.
     */
   val authorizerType: Output_[String] = js.native
+  
   /**
     * The authorizer's Uniform Resource Identifier (URI).
     * For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invokeArn` attribute of the `aws.lambda.Function` resource.
     * Supported only for `REQUEST` authorizers.
     */
   val authorizerUri: Output_[js.UndefOr[String]] = js.native
+  
   /**
     * The identity sources for which authorization is requested.
     * For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
     * For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
     */
   val identitySources: Output_[js.Array[String]] = js.native
+  
   /**
     * The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
     * Supported only for HTTP APIs.
     */
   val jwtConfiguration: Output_[js.UndefOr[AuthorizerJwtConfiguration]] = js.native
+  
   /**
     * The name of the authorizer.
     */
   val name: Output_[String] = js.native
 }
-
 /* static members */
 @JSImport("@pulumi/aws/apigatewayv2/authorizer", "Authorizer")
 @js.native
 object Authorizer extends js.Object {
+  
   /**
     * Get an existing Authorizer resource's state with the given name, ID, and optional extra
     * properties used to qualify the lookup.
@@ -77,10 +84,10 @@ object Authorizer extends js.Object {
   def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): Authorizer = js.native
   def get(name: String, id: Input[ID], state: AuthorizerState): Authorizer = js.native
   def get(name: String, id: Input[ID], state: AuthorizerState, opts: CustomResourceOptions): Authorizer = js.native
+  
   /**
     * Returns true if the given object is an instance of Authorizer.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
   def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/apigatewayv2/authorizer.Authorizer */ Boolean = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.yandexMaps.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("yandex-maps", "Circle")
 @js.native
@@ -34,7 +34,8 @@ class Circle protected () extends GeoObject_ {
   def this(geometry: js.Object, properties: js.UndefOr[scala.Nothing], options: ICircleOptions) = this()
   def this(geometry: js.Object, properties: js.Object, options: ICircleOptions) = this()
   def this(geometry: js.Object, properties: IDataManager, options: ICircleOptions) = this()
+  
   var indices: js.typedarray.ArrayBuffer = js.native
+  
   var vertices: js.typedarray.ArrayBuffer = js.native
 }
-

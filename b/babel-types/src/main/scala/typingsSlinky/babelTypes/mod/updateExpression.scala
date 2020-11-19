@@ -4,11 +4,12 @@ import typingsSlinky.babelTypes.babelTypesStrings.PlussignPlussign
 import typingsSlinky.babelTypes.babelTypesStrings.`--`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babel-types", "updateExpression")
 @js.native
 object updateExpression extends js.Object {
+  
   def apply(): UpdateExpression_ = js.native
   def apply(operator: js.UndefOr[scala.Nothing], argument: js.UndefOr[scala.Nothing], prefix: Boolean): UpdateExpression_ = js.native
   def apply(operator: js.UndefOr[scala.Nothing], argument: Expression): UpdateExpression_ = js.native
@@ -22,4 +23,3 @@ object updateExpression extends js.Object {
   def apply(operator: `--`, argument: Expression): UpdateExpression_ = js.native
   def apply(operator: `--`, argument: Expression, prefix: Boolean): UpdateExpression_ = js.native
 }
-

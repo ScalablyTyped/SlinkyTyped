@@ -5,11 +5,12 @@ import typingsSlinky.graphql.definitionMod.GraphQLFieldResolver
 import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/schema/chainResolvers", JSImport.Namespace)
 @js.native
 object chainResolversMod extends js.Object {
+  
   def chainResolvers(resolvers: js.Array[GraphQLFieldResolver[_, _, StringDictionary[_]]]): js.Function4[
     /* root */ js.Any, 
     /* args */ StringDictionary[js.Any], 
@@ -18,4 +19,3 @@ object chainResolversMod extends js.Object {
     _
   ] = js.native
 }
-

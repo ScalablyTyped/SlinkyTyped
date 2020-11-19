@@ -62,161 +62,257 @@ import typingsSlinky.reactFoundation.xyGridMod.GridContainerProps
 import typingsSlinky.reactFoundation.xyGridMod.GridProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-foundation", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  val Accordion: ReactComponentClass[AccordianProps] = js.native
+  
+  val AccordionContent: ReactComponentClass[AccordianContentProps] = js.native
+  
+  val AccordionItem: ReactComponentClass[AccordianItemProps] = js.native
+  
+  val AccordionTitle: ReactComponentClass[AccordionTitleProps] = js.native
+  
+  val Badge: ReactComponentClass[BadgeProps] = js.native
+  
+  val Block: ReactComponentClass[BlockProps] = js.native
+  
+  val BreadcrumbItem: ReactComponentClass[BreadcrumbItemProps] = js.native
+  
+  val Breadcrumbs: ReactComponentClass[BreadcrumbsProps] = js.native
+  
+  val Button: ReactComponentClass[ButtonProps] = js.native
+  
+  val ButtonGroup: ReactComponentClass[ButtonGroupProps] = js.native
+  
+  val Callout: ReactComponentClass[CalloutProps] = js.native
+  
+  val Cell: ReactComponentClass[CellProps] = js.native
+  
+  val CloseButton: ReactComponentClass[CloseButtonProps] = js.native
+  
+  val Column: ReactComponentClass[ColumnProps] = js.native
+  
+  val FlexVideo: ReactComponentClass[FlexVideoProps] = js.native
+  
+  val Grid: ReactComponentClass[GridProps] = js.native
+  
+  val GridContainer: ReactComponentClass[GridContainerProps] = js.native
+  
+  val Icon: ReactComponentClass[IconProps] = js.native
+  
+  val Inline: ReactComponentClass[InlineProps] = js.native
+  
+  val Label: ReactComponentClass[LabelProps] = js.native
+  
+  val Link: ReactComponentClass[LinkProps] = js.native
+  
+  val MediaObject: ReactComponentClass[MediaObjectProps] = js.native
+  
+  val MediaObjectSection: ReactComponentClass[MediaObjectSectionProps] = js.native
+  
+  val Menu: ReactComponentClass[MenuProps] = js.native
+  
+  val MenuIcon: ReactComponentClass[MenuIconProps] = js.native
+  
+  val MenuItem: ReactComponentClass[MenuItemProps] = js.native
+  
+  def MenuText(props: MenuItemProps): ReactElement = js.native
+  
+  val NativeProgress: ReactComponentClass[NativeProgressProps] = js.native
+  
+  val Pagination: ReactComponentClass[PaginationProps] = js.native
+  
+  val PaginationEllipsis: ReactComponentClass[PaginationItemProps] = js.native
+  
+  val PaginationItem: ReactComponentClass[PaginationItemProps] = js.native
+  
+  val PaginationNext: ReactComponentClass[PaginationItemProps] = js.native
+  
+  val PaginationPrevious: ReactComponentClass[PaginationItemProps] = js.native
+  
+  val Progress: ReactComponentClass[typingsSlinky.reactFoundation.progressBarMod.PaginationProps] = js.native
+  
+  val ProgressMeter: ReactComponentClass[ProgressMeterProps] = js.native
+  
+  val ProgressMeterText: ReactComponentClass[ProgressMeterTextProps] = js.native
+  
+  val ProgressMeterWithText: ReactComponentClass[ProgressMeterWithTextProps] = js.native
+  
+  val Reveal: ReactComponentClass[typingsSlinky.reactFoundation.revealMod.PaginationProps] = js.native
+  
+  val Row: ReactComponentClass[RowProps] = js.native
+  
+  val SliderFill: ReactComponentClass[SliderFillProps] = js.native
+  
+  val SliderHandle: ReactComponentClass[SliderHandleProps] = js.native
+  
+  val Switch: ReactComponentClass[SwitchProps] = js.native
+  
+  val SwitchActive: ReactComponentClass[SwitchActiveProps] = js.native
+  
+  val SwitchInactive: ReactComponentClass[SwitchInactiveProps] = js.native
+  
+  val SwitchInput: ReactComponentClass[SwitchInputProps] = js.native
+  
+  val SwitchPaddle: ReactComponentClass[SwitchPaddleProps] = js.native
+  
+  val TabItem: ReactComponentClass[TabItemProps] = js.native
+  
+  val TabPanel: ReactComponentClass[TabPanelProps] = js.native
+  
+  val Tabs: ReactComponentClass[TabsProps] = js.native
+  
+  val TabsContent: ReactComponentClass[TabsContentProps] = js.native
+  
+  val Thumbnail: ReactComponentClass[ThumbnailProps] = js.native
+  
+  val ThumbnailLink: ReactComponentClass[ThumbnailProps] = js.native
+  
+  val TitleBar: ReactComponentClass[TitleBarProps] = js.native
+  
+  val TitleBarTitle: ReactComponentClass[TitleBarTitleProps] = js.native
+  
+  val TopBar: ReactComponentClass[TopBarProps] = js.native
+  
+  val TopBarLeft: ReactComponentClass[TopBarProps] = js.native
+  
+  val TopBarRight: ReactComponentClass[TopBarProps] = js.native
+  
+  val TopBarTitle: ReactComponentClass[TopBarProps] = js.native
+  
+  @js.native
+  object Alignments extends js.Object {
+    
+    var BOTTOM: VerticalAlignments = js.native
+    
+    var CENTER: MenuAlignments = js.native
+    
+    var JUSTIFY: HorizontalAlignments = js.native
+    
+    var MIDDLE: VerticalAlignments = js.native
+    
+    var RIGHT: MenuAlignments = js.native
+    
+    var SPACED: HorizontalAlignments = js.native
+    
+    var STRETCH: VerticalAlignments = js.native
+    
+    var TOP: VerticalAlignments = js.native
+  }
+  
+  @js.native
+  object Breakpoints extends js.Object {
+    
+    var LARGE: typingsSlinky.reactFoundation.enumsMod.Breakpoints = js.native
+    
+    var MEDIUM: typingsSlinky.reactFoundation.enumsMod.Breakpoints = js.native
+    
+    var SMALL: typingsSlinky.reactFoundation.enumsMod.Breakpoints = js.native
+    
+    var XLARGE: typingsSlinky.reactFoundation.enumsMod.Breakpoints = js.native
+    
+    var XXLARGE: typingsSlinky.reactFoundation.enumsMod.Breakpoints = js.native
+  }
+  
+  @js.native
+  object Colors extends js.Object {
+    
+    var ALERT: ProgressColors = js.native
+    
+    var INFO: BadgeColors = js.native
+    
+    var PRIMARY: ButtonColors = js.native
+    
+    var SECONDARY: ProgressColors = js.native
+    
+    var SUCCESS: ProgressColors = js.native
+    
+    var WARNING: ProgressColors = js.native
+  }
+  
+  @js.native
+  object ExtendedBreakpoints extends js.Object {
+    
+    var ALL: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
+    
+    var LARGE: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
+    
+    var MEDIUM: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
+    
+    var SMALL: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
+    
+    var XLARGE: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
+    
+    var XXLARGE: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
+  }
+  
+  @js.native
+  object FloatTypes extends js.Object {
+    
+    var CENTER: typingsSlinky.reactFoundation.enumsMod.FloatTypes = js.native
+    
+    var LEFT: typingsSlinky.reactFoundation.enumsMod.FloatTypes = js.native
+    
+    var RIGHT: typingsSlinky.reactFoundation.enumsMod.FloatTypes = js.native
+  }
+  
+  @js.native
+  object GutterTypes extends js.Object {
+    
+    var MARGIN: typingsSlinky.reactFoundation.enumsMod.GutterTypes = js.native
+    
+    var PADDING: typingsSlinky.reactFoundation.enumsMod.GutterTypes = js.native
+  }
+  
+  @js.native
+  object InputTypes extends js.Object {
+    
+    var CHECKBOX: SwitchInputTypes = js.native
+    
+    var RADIO: SwitchInputTypes = js.native
+  }
+  
   @js.native
   class ResponsiveNavigation ()
     extends typingsSlinky.reactFoundation.responsiveMod.ResponsiveNavigation
+  /* static members */
+  @js.native
+  object ResponsiveNavigation extends js.Object {
+    
+    var defaultProps: Breakpoint = js.native
+    
+    var propTypes: AlignX = js.native
+  }
+  
+  @js.native
+  object Sizes extends js.Object {
+    
+    var LARGE: ButtonSizes = js.native
+    
+    var SMALL: ButtonSizes = js.native
+    
+    var TINY: ButtonSizes = js.native
+  }
   
   @js.native
   class Slider ()
     extends typingsSlinky.reactFoundation.sliderMod.Slider
   
   @js.native
-  class TwoHandleSlider ()
-    extends typingsSlinky.reactFoundation.sliderMod.TwoHandleSlider
-  
-  val Accordion: ReactComponentClass[AccordianProps] = js.native
-  val AccordionContent: ReactComponentClass[AccordianContentProps] = js.native
-  val AccordionItem: ReactComponentClass[AccordianItemProps] = js.native
-  val AccordionTitle: ReactComponentClass[AccordionTitleProps] = js.native
-  val Badge: ReactComponentClass[BadgeProps] = js.native
-  val Block: ReactComponentClass[BlockProps] = js.native
-  val BreadcrumbItem: ReactComponentClass[BreadcrumbItemProps] = js.native
-  val Breadcrumbs: ReactComponentClass[BreadcrumbsProps] = js.native
-  val Button: ReactComponentClass[ButtonProps] = js.native
-  val ButtonGroup: ReactComponentClass[ButtonGroupProps] = js.native
-  val Callout: ReactComponentClass[CalloutProps] = js.native
-  val Cell: ReactComponentClass[CellProps] = js.native
-  val CloseButton: ReactComponentClass[CloseButtonProps] = js.native
-  val Column: ReactComponentClass[ColumnProps] = js.native
-  val FlexVideo: ReactComponentClass[FlexVideoProps] = js.native
-  val Grid: ReactComponentClass[GridProps] = js.native
-  val GridContainer: ReactComponentClass[GridContainerProps] = js.native
-  val Icon: ReactComponentClass[IconProps] = js.native
-  val Inline: ReactComponentClass[InlineProps] = js.native
-  val Label: ReactComponentClass[LabelProps] = js.native
-  val Link: ReactComponentClass[LinkProps] = js.native
-  val MediaObject: ReactComponentClass[MediaObjectProps] = js.native
-  val MediaObjectSection: ReactComponentClass[MediaObjectSectionProps] = js.native
-  val Menu: ReactComponentClass[MenuProps] = js.native
-  val MenuIcon: ReactComponentClass[MenuIconProps] = js.native
-  val MenuItem: ReactComponentClass[MenuItemProps] = js.native
-  val NativeProgress: ReactComponentClass[NativeProgressProps] = js.native
-  val Pagination: ReactComponentClass[PaginationProps] = js.native
-  val PaginationEllipsis: ReactComponentClass[PaginationItemProps] = js.native
-  val PaginationItem: ReactComponentClass[PaginationItemProps] = js.native
-  val PaginationNext: ReactComponentClass[PaginationItemProps] = js.native
-  val PaginationPrevious: ReactComponentClass[PaginationItemProps] = js.native
-  val Progress: ReactComponentClass[typingsSlinky.reactFoundation.progressBarMod.PaginationProps] = js.native
-  val ProgressMeter: ReactComponentClass[ProgressMeterProps] = js.native
-  val ProgressMeterText: ReactComponentClass[ProgressMeterTextProps] = js.native
-  val ProgressMeterWithText: ReactComponentClass[ProgressMeterWithTextProps] = js.native
-  val Reveal: ReactComponentClass[typingsSlinky.reactFoundation.revealMod.PaginationProps] = js.native
-  val Row: ReactComponentClass[RowProps] = js.native
-  val SliderFill: ReactComponentClass[SliderFillProps] = js.native
-  val SliderHandle: ReactComponentClass[SliderHandleProps] = js.native
-  val Switch: ReactComponentClass[SwitchProps] = js.native
-  val SwitchActive: ReactComponentClass[SwitchActiveProps] = js.native
-  val SwitchInactive: ReactComponentClass[SwitchInactiveProps] = js.native
-  val SwitchInput: ReactComponentClass[SwitchInputProps] = js.native
-  val SwitchPaddle: ReactComponentClass[SwitchPaddleProps] = js.native
-  val TabItem: ReactComponentClass[TabItemProps] = js.native
-  val TabPanel: ReactComponentClass[TabPanelProps] = js.native
-  val Tabs: ReactComponentClass[TabsProps] = js.native
-  val TabsContent: ReactComponentClass[TabsContentProps] = js.native
-  val Thumbnail: ReactComponentClass[ThumbnailProps] = js.native
-  val ThumbnailLink: ReactComponentClass[ThumbnailProps] = js.native
-  val TitleBar: ReactComponentClass[TitleBarProps] = js.native
-  val TitleBarTitle: ReactComponentClass[TitleBarTitleProps] = js.native
-  val TopBar: ReactComponentClass[TopBarProps] = js.native
-  val TopBarLeft: ReactComponentClass[TopBarProps] = js.native
-  val TopBarRight: ReactComponentClass[TopBarProps] = js.native
-  val TopBarTitle: ReactComponentClass[TopBarProps] = js.native
-  def MenuText(props: MenuItemProps): ReactElement = js.native
-  @js.native
-  object Alignments extends js.Object {
-    var BOTTOM: VerticalAlignments = js.native
-    var CENTER: MenuAlignments = js.native
-    var JUSTIFY: HorizontalAlignments = js.native
-    var MIDDLE: VerticalAlignments = js.native
-    var RIGHT: MenuAlignments = js.native
-    var SPACED: HorizontalAlignments = js.native
-    var STRETCH: VerticalAlignments = js.native
-    var TOP: VerticalAlignments = js.native
-  }
-  
-  @js.native
-  object Breakpoints extends js.Object {
-    var LARGE: typingsSlinky.reactFoundation.enumsMod.Breakpoints = js.native
-    var MEDIUM: typingsSlinky.reactFoundation.enumsMod.Breakpoints = js.native
-    var SMALL: typingsSlinky.reactFoundation.enumsMod.Breakpoints = js.native
-    var XLARGE: typingsSlinky.reactFoundation.enumsMod.Breakpoints = js.native
-    var XXLARGE: typingsSlinky.reactFoundation.enumsMod.Breakpoints = js.native
-  }
-  
-  @js.native
-  object Colors extends js.Object {
-    var ALERT: ProgressColors = js.native
-    var INFO: BadgeColors = js.native
-    var PRIMARY: ButtonColors = js.native
-    var SECONDARY: ProgressColors = js.native
-    var SUCCESS: ProgressColors = js.native
-    var WARNING: ProgressColors = js.native
-  }
-  
-  @js.native
-  object ExtendedBreakpoints extends js.Object {
-    var ALL: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
-    var LARGE: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
-    var MEDIUM: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
-    var SMALL: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
-    var XLARGE: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
-    var XXLARGE: typingsSlinky.reactFoundation.enumsMod.ExtendedBreakpoints = js.native
-  }
-  
-  @js.native
-  object FloatTypes extends js.Object {
-    var CENTER: typingsSlinky.reactFoundation.enumsMod.FloatTypes = js.native
-    var LEFT: typingsSlinky.reactFoundation.enumsMod.FloatTypes = js.native
-    var RIGHT: typingsSlinky.reactFoundation.enumsMod.FloatTypes = js.native
-  }
-  
-  @js.native
-  object GutterTypes extends js.Object {
-    var MARGIN: typingsSlinky.reactFoundation.enumsMod.GutterTypes = js.native
-    var PADDING: typingsSlinky.reactFoundation.enumsMod.GutterTypes = js.native
-  }
-  
-  @js.native
-  object InputTypes extends js.Object {
-    var CHECKBOX: SwitchInputTypes = js.native
-    var RADIO: SwitchInputTypes = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object ResponsiveNavigation extends js.Object {
-    var defaultProps: Breakpoint = js.native
-    var propTypes: AlignX = js.native
-  }
-  
-  @js.native
-  object Sizes extends js.Object {
-    var LARGE: ButtonSizes = js.native
-    var SMALL: ButtonSizes = js.native
-    var TINY: ButtonSizes = js.native
-  }
-  
-  @js.native
   object SpaceControls extends js.Object {
+    
     var AUTO: typingsSlinky.reactFoundation.enumsMod.SpaceControls = js.native
+    
     var GROW: typingsSlinky.reactFoundation.enumsMod.SpaceControls = js.native
+    
     var SHRINK: typingsSlinky.reactFoundation.enumsMod.SpaceControls = js.native
   }
   
+  @js.native
+  class TwoHandleSlider ()
+    extends typingsSlinky.reactFoundation.sliderMod.TwoHandleSlider
 }
-

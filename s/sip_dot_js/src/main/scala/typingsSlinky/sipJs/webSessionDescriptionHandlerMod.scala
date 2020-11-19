@@ -9,11 +9,25 @@ import typingsSlinky.sipJs.sessionDescriptionHandlerConfigurationMod.SessionDesc
 import typingsSlinky.sipJs.sessionDescriptionHandlerSessionDescriptionHandlerFactoryMod.SessionDescriptionHandlerFactory
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js/lib/platform/web/session-description-handler", JSImport.Namespace)
 @js.native
 object webSessionDescriptionHandlerMod extends js.Object {
+  
+  def defaultMediaStreamFactory(): MediaStreamFactory = js.native
+  
+  def defaultPeerConnectionConfiguration(): RTCConfiguration = js.native
+  
+  def defaultSessionDescriptionHandlerFactory(): SessionDescriptionHandlerFactory = js.native
+  def defaultSessionDescriptionHandlerFactory(
+    mediaStreamFactory: js.Function2[
+      /* constraints */ MediaStreamConstraints, 
+      /* sessionDescriptionHandler */ typingsSlinky.sipJs.sessionDescriptionHandlerSessionDescriptionHandlerMod.SessionDescriptionHandler, 
+      js.Promise[MediaStream]
+    ]
+  ): SessionDescriptionHandlerFactory = js.native
+  
   @js.native
   class SessionDescriptionHandler protected ()
     extends typingsSlinky.sipJs.sessionDescriptionHandlerSessionDescriptionHandlerMod.SessionDescriptionHandler {
@@ -30,23 +44,12 @@ object webSessionDescriptionHandlerMod extends js.Object {
       sessionDescriptionHandlerConfiguration: SessionDescriptionHandlerConfiguration
     ) = this()
   }
-  
-  def defaultMediaStreamFactory(): MediaStreamFactory = js.native
-  def defaultPeerConnectionConfiguration(): RTCConfiguration = js.native
-  def defaultSessionDescriptionHandlerFactory(): SessionDescriptionHandlerFactory = js.native
-  def defaultSessionDescriptionHandlerFactory(
-    mediaStreamFactory: js.Function2[
-      /* constraints */ MediaStreamConstraints, 
-      /* sessionDescriptionHandler */ typingsSlinky.sipJs.sessionDescriptionHandlerSessionDescriptionHandlerMod.SessionDescriptionHandler, 
-      js.Promise[MediaStream]
-    ]
-  ): SessionDescriptionHandlerFactory = js.native
   /* static members */
   @js.native
   object SessionDescriptionHandler extends js.Object {
+    
     var dispatchAddTrackEvent: js.Any = js.native
+    
     var dispatchRemoveTrackEvent: js.Any = js.native
   }
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * GitHub auth provider.
@@ -74,17 +74,19 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.GithubAuthProvider")
 @js.native
 class GithubAuthProvider () extends GithubAuthProviderInstance
-
 /* static members */
 @JSImport("firebase", "auth.GithubAuthProvider")
 @js.native
 object GithubAuthProvider extends js.Object {
+  
   /**
     * This corresponds to the sign-in method identifier as returned in
     * {@link firebase.auth.Auth.fetchSignInMethodsForEmail}.
     */
   var GITHUB_SIGN_IN_METHOD: String = js.native
+  
   var PROVIDER_ID: String = js.native
+  
   /**
     * @example
     * ```javascript
@@ -99,4 +101,3 @@ object GithubAuthProvider extends js.Object {
     */
   def credential(token: String): OAuthCredential = js.native
 }
-

@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Interfaces and instance classes for types from the Mendix sub meta model `Microflows`.
@@ -26,20 +26,24 @@ abstract class MicroflowObject protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsMicroflowObjectCollection: MicroflowObjectCollection = js.native
+  
   @JSName("model")
   var model_FMicroflowObject: IModel = js.native
-  def containerAsMicroflowObjectCollection: MicroflowObjectCollection = js.native
+  
   def relativeMiddlePoint: IPoint = js.native
   def relativeMiddlePoint_=(newValue: IPoint): Unit = js.native
+  
   def size: ISize = js.native
   def size_=(newValue: ISize): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.MicroflowObject")
 @js.native
 object MicroflowObject extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

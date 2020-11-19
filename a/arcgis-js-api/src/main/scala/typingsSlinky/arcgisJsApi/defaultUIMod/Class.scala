@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.DefaultUI
 import typingsSlinky.arcgisJsApi.esri.DefaultUIProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/views/ui/DefaultUI", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends DefaultUI {
   def this(properties: DefaultUIProperties) = this()
 }
-

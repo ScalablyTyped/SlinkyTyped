@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MultiaddrConstructor
@@ -21,16 +21,7 @@ trait MultiaddrConstructor
   */
 Instantiable0[Multiaddr]
      with Instantiable1[(/* addr */ Buffer) | (/* addr */ Multiaddr) | (/* addr */ String), Multiaddr] {
-  /**
-    * Object containing table, names and codes of all supported protocols.
-    * To get the protocol values from a Multiaddr, you can use
-    * [`.protos()`](#multiaddrprotos),
-    * [`.protoCodes()`](#multiaddrprotocodes) or
-    * [`.protoNames()`](#multiaddrprotonames)
-    *
-    */
-  @JSName("protocols")
-  var protocols_Original: Protocols = js.native
+  
   /**
     * Creates a [multiaddr](https://github.com/multiformats/multiaddr) from
     * a Buffer, String or another Multiaddr instance
@@ -45,6 +36,7 @@ Instantiable0[Multiaddr]
   def apply(addr: String): Multiaddr = js.native
   def apply(addr: Multiaddr): Multiaddr = js.native
   def apply(addr: Buffer): Multiaddr = js.native
+  
   /**
     * Creates a Multiaddr from a node-friendly address object
     *
@@ -53,15 +45,19 @@ Instantiable0[Multiaddr]
     * // <Multiaddr 047f000001060fa1 - /ip4/127.0.0.1/tcp/4001>
     */
   def fromNodeAddress(addr: NodeAddress, transport: String): Multiaddr = js.native
+  
   def fromStupidString(str: String): scala.Nothing = js.native
+  
   /**
     * Returns if something is a Multiaddr
     */
   def isMultiaddr(addr: js.Any): Boolean = js.native
+  
   /**
     * Returns if something is a Multiaddr that is a name
     */
   def isName(name: js.Any): Boolean = js.native
+  
   /**
     * Object containing table, names and codes of all supported protocols.
     * To get the protocol values from a Multiaddr, you can use
@@ -73,8 +69,18 @@ Instantiable0[Multiaddr]
   def protocols(proto: String): Protocol = js.native
   def protocols(proto: Double): Protocol = js.native
   /**
+    * Object containing table, names and codes of all supported protocols.
+    * To get the protocol values from a Multiaddr, you can use
+    * [`.protos()`](#multiaddrprotos),
+    * [`.protoCodes()`](#multiaddrprotocodes) or
+    * [`.protoNames()`](#multiaddrprotonames)
+    *
+    */
+  @JSName("protocols")
+  var protocols_Original: Protocols = js.native
+  
+  /**
     * Returns an array of multiaddrs, by resolving the multiaddr that is a name
     */
   def resolve(value: js.Any, cb: js.Function1[/* error */ js.Error, Unit]): js.Promise[Unit] = js.native
 }
-

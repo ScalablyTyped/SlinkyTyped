@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Store
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Used to provide the product name that is displayed to the user at time of purchase. */
 @JSGlobal("Windows.ApplicationModel.Store.ProductPurchaseDisplayProperties")
@@ -16,4 +16,3 @@ class ProductPurchaseDisplayProperties ()
     */
   def this(name: String) = this()
 }
-

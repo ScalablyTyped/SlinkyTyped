@@ -6,10 +6,9 @@ import typingsSlinky.uirouterCore.interfaceMod.UIRouterPlugin
 import typingsSlinky.uirouterCore.routerMod.UIRouter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantiableT[T /* <: UIRouterPlugin */]
   extends Instantiable1[/* router */ UIRouter, T]
      with Instantiable2[/* router */ UIRouter, /* options */ js.Any, T]
-

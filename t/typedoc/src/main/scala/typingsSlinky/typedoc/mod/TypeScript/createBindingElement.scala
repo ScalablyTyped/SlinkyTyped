@@ -7,11 +7,12 @@ import typingsSlinky.typescript.mod.Expression
 import typingsSlinky.typescript.mod.PropertyName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createBindingElement")
 @js.native
 object createBindingElement extends js.Object {
+  
   def apply(dotDotDotToken: js.UndefOr[scala.Nothing], propertyName: js.UndefOr[scala.Nothing], name: String): BindingElement = js.native
   def apply(
     dotDotDotToken: js.UndefOr[scala.Nothing],
@@ -86,4 +87,3 @@ object createBindingElement extends js.Object {
     initializer: Expression
   ): BindingElement = js.native
 }
-

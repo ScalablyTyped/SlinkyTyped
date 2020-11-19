@@ -2,7 +2,7 @@ package typingsSlinky.fridaGum
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.fridaGum.fridaGumStrings.readonly
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fridaGum.fridaGumStrings.create
 */
 trait SqliteOpenFlag extends js.Object
-
 object SqliteOpenFlag {
+  
   @scala.inline
   def create: typingsSlinky.fridaGum.fridaGumStrings.create = "create".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.create]
+  
   @scala.inline
   def readonly: typingsSlinky.fridaGum.fridaGumStrings.readonly = "readonly".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.readonly]
+  
   @scala.inline
   def readwrite: typingsSlinky.fridaGum.fridaGumStrings.readwrite = "readwrite".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.readwrite]
 }
-

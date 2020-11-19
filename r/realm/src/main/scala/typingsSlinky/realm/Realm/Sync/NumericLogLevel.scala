@@ -2,14 +2,14 @@ package typingsSlinky.realm.Realm.Sync
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait NumericLogLevel extends js.Object
-
 @JSGlobal("Realm.Sync.NumericLogLevel")
 @js.native
 object NumericLogLevel extends js.Object {
+  
   @js.native
   sealed trait All extends NumericLogLevel
   
@@ -36,6 +36,4 @@ object NumericLogLevel extends js.Object {
   
   @js.native
   sealed trait Warn extends NumericLogLevel
-  
 }
-

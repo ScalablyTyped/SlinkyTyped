@@ -8,9 +8,10 @@ import typingsSlinky.reactWindowInfiniteLoader.mod.InfiniteLoaderProps
 import typingsSlinky.reactWindowInfiniteLoader.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactWindowInfiniteLoader {
+  
   @JSImport("react-window-infinite-loader", JSImport.Namespace)
   @js.native
   object component extends js.Object
@@ -19,13 +20,16 @@ object ReactWindowInfiniteLoader {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, ^] {
+    
     @scala.inline
     def minimumBatchSize(value: Double): this.type = set("minimumBatchSize", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def threshold(value: Double): this.type = set("threshold", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: InfiniteLoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     children: OnItemsRendered => ReactElement,
@@ -37,4 +41,3 @@ object ReactWindowInfiniteLoader {
     new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteLoaderProps]))
   }
 }
-

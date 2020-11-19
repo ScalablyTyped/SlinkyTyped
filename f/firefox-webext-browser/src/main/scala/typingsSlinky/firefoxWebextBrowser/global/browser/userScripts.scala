@@ -6,7 +6,7 @@ import typingsSlinky.firefoxWebextBrowser.browser.userScripts.RegisteredUserScri
 import typingsSlinky.firefoxWebextBrowser.browser.userScripts.UserScriptOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Manifest keys: `user_scripts`, `user_scripts`
@@ -16,6 +16,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("browser.userScripts")
 @js.native
 object userScripts extends js.Object {
+  
   /* userScripts events */
   /**
     * Event called when a new userScript global has been created
@@ -23,6 +24,7 @@ object userScripts extends js.Object {
     * Allowed in: Content scripts only
     */
   val onBeforeScript: WebExtEvent[js.Function1[/* userScript */ DefineGlobals, Unit]] = js.native
+  
   /* userScripts functions */
   /**
     * Register a user script programmatically given its `userScripts.UserScriptOptions`, and resolves to a
@@ -30,4 +32,3 @@ object userScripts extends js.Object {
     */
   def register(userScriptOptions: UserScriptOptions): js.Promise[RegisteredUserScript] = js.native
 }
-

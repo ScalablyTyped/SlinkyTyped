@@ -6,7 +6,7 @@ import typingsSlinky.std.IntersectionObserverCallback
 import typingsSlinky.std.IntersectionObserverInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("IntersectionObserver")
 @js.native
@@ -15,7 +15,6 @@ class IntersectionObserver protected ()
   def this(callback: IntersectionObserverCallback) = this()
   def this(callback: IntersectionObserverCallback, options: IntersectionObserverInit) = this()
 }
-
 @JSGlobal("IntersectionObserver")
 @js.native
 object IntersectionObserver
@@ -28,4 +27,3 @@ object IntersectionObserver
       /* options */ IntersectionObserverInit, 
       typingsSlinky.std.IntersectionObserver
     ]
-

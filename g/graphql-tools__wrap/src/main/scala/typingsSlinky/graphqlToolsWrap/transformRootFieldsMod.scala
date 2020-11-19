@@ -9,17 +9,20 @@ import typingsSlinky.graphqlToolsWrap.typesMod.RootFieldTransformer
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/transforms/TransformRootFields", JSImport.Namespace)
 @js.native
 object transformRootFieldsMod extends js.Object {
+  
   @js.native
   trait TransformRootFields
     extends Transform[Record[String, js.Any]] {
+    
     val fieldNodeTransformer: js.Any = js.native
+    
     val rootFieldTransformer: js.Any = js.native
-    var transformer: js.Any = js.native
+    
     @JSName("transformRequest")
     def transformRequest_MTransformRootFields(originalRequest: Request): Request = js.native
     @JSName("transformRequest")
@@ -36,6 +39,7 @@ object transformRootFieldsMod extends js.Object {
       delegationContext: Record[String, _],
       transformationContext: Record[String, _]
     ): Request = js.native
+    
     @JSName("transformResult")
     def transformResult_MTransformRootFields(originalResult: ExecutionResult[Record[String, _]]): ExecutionResult[Record[String, _]] = js.native
     @JSName("transformResult")
@@ -52,8 +56,11 @@ object transformRootFieldsMod extends js.Object {
       delegationContext: Record[String, _],
       transformationContext: Record[String, _]
     ): ExecutionResult[Record[String, _]] = js.native
+    
     @JSName("transformSchema")
     def transformSchema_MTransformRootFields(originalSchema: GraphQLSchema): GraphQLSchema = js.native
+    
+    var transformer: js.Any = js.native
   }
   
   @js.native
@@ -61,6 +68,4 @@ object transformRootFieldsMod extends js.Object {
     def this(rootFieldTransformer: RootFieldTransformer) = this()
     def this(rootFieldTransformer: RootFieldTransformer, fieldNodeTransformer: FieldNodeTransformer) = this()
   }
-  
 }
-

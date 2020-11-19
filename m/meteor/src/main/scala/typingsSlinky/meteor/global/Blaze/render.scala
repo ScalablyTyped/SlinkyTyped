@@ -3,11 +3,12 @@ package typingsSlinky.meteor.global.Blaze
 import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Blaze.render")
 @js.native
 object render extends js.Object {
+  
   def apply(templateOrView: typingsSlinky.meteor.Blaze.Template, parentNode: Node): typingsSlinky.meteor.Blaze.View = js.native
   def apply(
     templateOrView: typingsSlinky.meteor.Blaze.Template,
@@ -37,4 +38,3 @@ object render extends js.Object {
     parentView: typingsSlinky.meteor.Blaze.View
   ): typingsSlinky.meteor.Blaze.View = js.native
 }
-

@@ -2,12 +2,12 @@ package typingsSlinky.canvaskitWasm.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SkImageFilter extends SkObject[SkImageFilter]
-
 object SkImageFilter {
+  
   @scala.inline
   def apply(
     delete: () => Unit,
@@ -19,4 +19,3 @@ object SkImageFilter {
     __obj.asInstanceOf[SkImageFilter]
   }
 }
-

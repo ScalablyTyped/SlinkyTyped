@@ -6,11 +6,12 @@ import typingsSlinky.reactMdList.listMod.ListElement
 import typingsSlinky.reactMdTree.typesMod.TreeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/tree/types/Tree", JSImport.Namespace)
 @js.native
 object treeMod extends js.Object {
+  
   /**
     * Creates an accessible tree widget that allows you to show hierarchical data
     * in a list presentation view. This component requires the selection and
@@ -20,4 +21,3 @@ object treeMod extends js.Object {
     */
   val default: ForwardRefExoticComponent[TreeProps[_] with RefAttributes[ListElement]] = js.native
 }
-

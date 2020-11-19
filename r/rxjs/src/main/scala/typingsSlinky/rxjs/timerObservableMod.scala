@@ -2,19 +2,20 @@ package typingsSlinky.rxjs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rxjs/observable/TimerObservable", JSImport.Namespace)
 @js.native
 object timerObservableMod extends js.Object {
+  
   /* import warning: RemoveDifficultInheritance.summarizeChanges 
   - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Observable<T> * / any */ @js.native
   class TimerObservable[T] ()
     extends typingsSlinky.rxjsCompat.timerObservableMod.TimerObservable[T]
-  
   /* static members */
   @js.native
   object TimerObservable extends js.Object {
+    
     def create(): js.Any = js.native
     def create(
       initialDelay: js.UndefOr[scala.Nothing],
@@ -79,6 +80,4 @@ object timerObservableMod extends js.Object {
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
   }
-  
 }
-

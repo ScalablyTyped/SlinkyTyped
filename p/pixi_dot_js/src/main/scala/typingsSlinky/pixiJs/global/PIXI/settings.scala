@@ -3,7 +3,7 @@ package typingsSlinky.pixiJs.global.PIXI
 import org.scalajs.dom.raw.HTMLCanvasElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * User's customizable globals for overriding the default PIXI settings, such
@@ -20,6 +20,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("PIXI.settings")
 @js.native
 object settings extends js.Object {
+  
   /**
     * Default anisotropic filtering level of textures.
     * Usually from 0 to 16
@@ -31,6 +32,7 @@ object settings extends js.Object {
     * @default 0
     */
   var ANISOTROPIC_LEVEL: Double = js.native
+  
   /**
     * Can we upload the same buffer in a single frame?
     *
@@ -40,6 +42,7 @@ object settings extends js.Object {
     * @type {boolean}
     */
   var CAN_UPLOAD_SAME_BUFFER: Boolean = js.native
+  
   /**
     * Enables bitmap creation before image load. This feature is experimental.
     *
@@ -50,6 +53,7 @@ object settings extends js.Object {
     * @default false
     */
   var CREATE_IMAGE_BITMAP: Boolean = js.native
+  
   /**
     * Should the `failIfMajorPerformanceCaveat` flag be enabled as a context option used in the `isWebGLSupported` function.
     * For most scenarios this should be left as true, as otherwise the user may have a poor experience.
@@ -62,6 +66,7 @@ object settings extends js.Object {
     * @default true
     */
   var FAIL_IF_MAJOR_PERFORMANCE_CAVEAT: Boolean = js.native
+  
   /**
     * Default filter resolution.
     *
@@ -72,6 +77,7 @@ object settings extends js.Object {
     * @default 1
     */
   var FILTER_RESOLUTION: Double = js.native
+  
   /**
     * Default Garbage Collection maximum check count.
     *
@@ -82,6 +88,7 @@ object settings extends js.Object {
     * @default 600
     */
   var GC_MAX_CHECK_COUNT: Double = js.native
+  
   /**
     * Default Garbage Collection max idle.
     *
@@ -92,6 +99,7 @@ object settings extends js.Object {
     * @default 3600
     */
   var GC_MAX_IDLE: Double = js.native
+  
   /**
     * Default Garbage Collection mode.
     *
@@ -102,6 +110,7 @@ object settings extends js.Object {
     * @default PIXI.GC_MODES.AUTO
     */
   var GC_MODE: typingsSlinky.pixiJs.PIXI.GC_MODES = js.native
+  
   /**
     * If set to true WebGL will attempt make textures mimpaped by default.
     * Mipmapping will only succeed if the base texture uploaded has power of two dimensions.
@@ -113,6 +122,7 @@ object settings extends js.Object {
     * @default PIXI.MIPMAP_MODES.POW2
     */
   var MIPMAP_TEXTURES: typingsSlinky.pixiJs.PIXI.MIPMAP_MODES = js.native
+  
   /**
     * Default specify float precision in fragment shader.
     * iOS is best set at highp due to https://github.com/pixijs/pixi.js/issues/3742
@@ -124,6 +134,7 @@ object settings extends js.Object {
     * @default PIXI.PRECISION.MEDIUM
     */
   var PRECISION_FRAGMENT: typingsSlinky.pixiJs.PIXI.PRECISION = js.native
+  
   /**
     * Default specify float precision in vertex shader.
     *
@@ -134,6 +145,7 @@ object settings extends js.Object {
     * @default PIXI.PRECISION.HIGH
     */
   var PRECISION_VERTEX: typingsSlinky.pixiJs.PIXI.PRECISION = js.native
+  
   /**
     * The maximum support for using WebGL. If a device does not
     * support WebGL version, for instance WebGL 2, it will still
@@ -151,6 +163,7 @@ object settings extends js.Object {
     * @default PIXI.ENV.WEBGL2
     */
   var PREFER_ENV: Double = js.native
+  
   /**
     * Default resolution / device pixel ratio of the renderer.
     *
@@ -161,6 +174,7 @@ object settings extends js.Object {
     * @default 1
     */
   var RESOLUTION: Double = js.native
+  
   /**
     * The prefix that denotes a URL is for a retina asset.
     *
@@ -172,6 +186,7 @@ object settings extends js.Object {
     * @example `@2x`
     */
   var RETINA_PREFIX: js.RegExp = js.native
+  
   /**
     * If true PixiJS will Math.floor() x/y values when rendering, stopping pixel interpolation.
     * Advantages can include sharper image quality (like text) and faster rendering on canvas.
@@ -184,6 +199,7 @@ object settings extends js.Object {
     * @default false
     */
   var ROUND_PIXELS: Boolean = js.native
+  
   /**
     * Default scale mode for textures.
     *
@@ -194,6 +210,7 @@ object settings extends js.Object {
     * @default PIXI.SCALE_MODES.LINEAR
     */
   var SCALE_MODE: typingsSlinky.pixiJs.PIXI.SCALE_MODES = js.native
+  
   /**
     * Sets the default value for the container property 'sortableChildren'.
     * If set to true, the container will sort its children by zIndex value
@@ -214,6 +231,7 @@ object settings extends js.Object {
     * @default false
     */
   var SORTABLE_CHILDREN: Boolean = js.native
+  
   /**
     * The default sprite batch size.
     *
@@ -226,6 +244,7 @@ object settings extends js.Object {
     * @default 4096
     */
   var SPRITE_BATCH_SIZE: Double = js.native
+  
   /**
     * The maximum textures that this device supports.
     *
@@ -236,6 +255,7 @@ object settings extends js.Object {
     * @default 32
     */
   var SPRITE_MAX_TEXTURES: Double = js.native
+  
   /**
     * If set to `true`, *only* Textures and BaseTexture objects stored
     * in the caches ({@link PIXI.utils.TextureCache TextureCache} and
@@ -253,6 +273,7 @@ object settings extends js.Object {
     * @default false
     */
   var STRICT_TEXTURE_CACHE: Boolean = js.native
+  
   /**
     * Target frames per millisecond.
     *
@@ -263,6 +284,7 @@ object settings extends js.Object {
     * @default 0.06
     */
   var TARGET_FPMS: Double = js.native
+  
   /**
     * Default number of uploads per frame using prepare plugin.
     *
@@ -273,6 +295,7 @@ object settings extends js.Object {
     * @default 4
     */
   var UPLOADS_PER_FRAME: Double = js.native
+  
   /**
     * Default wrap modes that are supported by pixi.
     *
@@ -283,6 +306,7 @@ object settings extends js.Object {
     * @default PIXI.WRAP_MODES.CLAMP
     */
   var WRAP_MODE: typingsSlinky.pixiJs.PIXI.WRAP_MODES = js.native
+  
   /**
     * The default render options if none are supplied to {@link PIXI.Renderer}
     * or {@link PIXI.CanvasRenderer}.
@@ -305,18 +329,27 @@ object settings extends js.Object {
     */
   @js.native
   object RENDER_OPTIONS extends js.Object {
+    
     var antialias: Boolean = js.native
+    
     var autoDensity: Boolean = js.native
+    
     var backgroundColor: Double = js.native
+    
     var clearBeforeRender: Boolean = js.native
+    
     var height: Double = js.native
+    
     var legacy: Boolean = js.native
+    
     var preserveDrawingBuffer: Boolean = js.native
+    
     var resolution: Double = js.native
+    
     var transparent: Boolean = js.native
+    
     var view: HTMLCanvasElement = js.native
+    
     var width: Double = js.native
   }
-  
 }
-

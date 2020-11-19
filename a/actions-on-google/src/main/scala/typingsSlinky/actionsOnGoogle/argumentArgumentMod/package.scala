@@ -2,9 +2,10 @@ package typingsSlinky.actionsOnGoogle
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object argumentArgumentMod {
+  
   /* Rewritten from type alias, can be one of: 
     - scala.Double
     - js.UndefOr[scala.Nothing]
@@ -18,9 +19,12 @@ package object argumentArgumentMod {
   type Argument = js.UndefOr[
     typingsSlinky.actionsOnGoogle.argumentArgumentMod._Argument | typingsSlinky.actionsOnGoogle.commonMod.ApiClientObjectMap[js.Any] | scala.Double | scala.Boolean | java.lang.String
   ]
+  
   type ArgumentsIndexable = org.scalablytyped.runtime.StringDictionary[typingsSlinky.actionsOnGoogle.argumentArgumentMod.Argument]
+  
   type ArgumentsRaw = /** @public */
   org.scalablytyped.runtime.StringDictionary[typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2Argument]
+  
   type ArgumentsStatus = /** @public */
   org.scalablytyped.runtime.StringDictionary[js.UndefOr[typingsSlinky.actionsOnGoogle.v2Mod.GoogleRpcStatus]]
 }

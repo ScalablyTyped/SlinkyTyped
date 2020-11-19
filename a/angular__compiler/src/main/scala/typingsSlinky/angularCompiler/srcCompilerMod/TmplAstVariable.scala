@@ -3,7 +3,7 @@ package typingsSlinky.angularCompiler.srcCompilerMod
 import typingsSlinky.angularCompiler.r3AstMod.Variable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/compiler", "TmplAstVariable")
 @js.native
@@ -20,4 +20,3 @@ class TmplAstVariable protected () extends Variable {
     valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
 }
-

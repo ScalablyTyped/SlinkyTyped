@@ -10,7 +10,7 @@ import typingsSlinky.openlayers.mod.olx.format.WriteOptions
 import typingsSlinky.openlayers.mod.proj.Projection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @classdesc
@@ -30,6 +30,7 @@ import scala.scalajs.js.annotation._
   */
 class EsriJSON () extends JSONFeature {
   def this(opt_options: EsriJSONOptions) = this()
+  
   def readFeature(source: String): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: String, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: GlobalObject): typingsSlinky.openlayers.mod.Feature = js.native
@@ -49,6 +50,7 @@ class EsriJSON () extends JSONFeature {
   def readFeature(source: Document, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: Node): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: Node, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
+  
   def readFeatures(source: String): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: String, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: GlobalObject): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
@@ -68,6 +70,7 @@ class EsriJSON () extends JSONFeature {
   def readFeatures(source: Document, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  
   def readGeometry(source: String): Geometry = js.native
   def readGeometry(source: String, opt_options: ReadOptions): Geometry = js.native
   def readGeometry(source: GlobalObject): Geometry = js.native
@@ -86,6 +89,7 @@ class EsriJSON () extends JSONFeature {
   def readGeometry(source: Document, opt_options: ReadOptions): Geometry = js.native
   def readGeometry(source: Node): Geometry = js.native
   def readGeometry(source: Node, opt_options: ReadOptions): Geometry = js.native
+  
   def readProjection(source: String): Projection = js.native
   def readProjection(source: GlobalObject): Projection = js.native
   /**
@@ -98,6 +102,7 @@ class EsriJSON () extends JSONFeature {
   def readProjection(source: js.typedarray.ArrayBuffer): Projection = js.native
   def readProjection(source: Document): Projection = js.native
   def readProjection(source: Node): Projection = js.native
+  
   /**
     * Encode a feature as a EsriJSON Feature string.
     *
@@ -108,6 +113,7 @@ class EsriJSON () extends JSONFeature {
     */
   def writeFeature(feature: typingsSlinky.openlayers.mod.Feature): String = js.native
   def writeFeature(feature: typingsSlinky.openlayers.mod.Feature, opt_options: WriteOptions): String = js.native
+  
   /**
     * Encode a feature as a esriJSON Feature object.
     *
@@ -118,6 +124,7 @@ class EsriJSON () extends JSONFeature {
     */
   def writeFeatureObject(feature: typingsSlinky.openlayers.mod.Feature): GlobalObject = js.native
   def writeFeatureObject(feature: typingsSlinky.openlayers.mod.Feature, opt_options: WriteOptions): GlobalObject = js.native
+  
   /**
     * Encode an array of features as EsriJSON.
     *
@@ -128,6 +135,7 @@ class EsriJSON () extends JSONFeature {
     */
   def writeFeatures(features: js.Array[typingsSlinky.openlayers.mod.Feature]): String = js.native
   def writeFeatures(features: js.Array[typingsSlinky.openlayers.mod.Feature], opt_options: WriteOptions): String = js.native
+  
   /**
     * Encode an array of features as a EsriJSON object.
     *
@@ -138,6 +146,7 @@ class EsriJSON () extends JSONFeature {
     */
   def writeFeaturesObject(features: js.Array[typingsSlinky.openlayers.mod.Feature]): GlobalObject = js.native
   def writeFeaturesObject(features: js.Array[typingsSlinky.openlayers.mod.Feature], opt_options: WriteOptions): GlobalObject = js.native
+  
   /**
     * Encode a geometry as a EsriJSON string.
     *
@@ -148,6 +157,7 @@ class EsriJSON () extends JSONFeature {
     */
   def writeGeometry(geometry: Geometry): String = js.native
   def writeGeometry(geometry: Geometry, opt_options: WriteOptions): String = js.native
+  
   /**
     * Encode a geometry as a EsriJSON object.
     *
@@ -159,4 +169,3 @@ class EsriJSON () extends JSONFeature {
   def writeGeometryObject(geometry: Geometry): EsriJSONGeometry = js.native
   def writeGeometryObject(geometry: Geometry, opt_options: WriteOptions): EsriJSONGeometry = js.native
 }
-

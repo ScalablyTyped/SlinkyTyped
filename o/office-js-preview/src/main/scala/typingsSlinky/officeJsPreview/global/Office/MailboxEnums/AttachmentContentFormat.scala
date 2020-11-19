@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.global.Office.MailboxEnums
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Specifies the formatting that applies to an attachment's content.
@@ -16,13 +16,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Office.MailboxEnums.AttachmentContentFormat")
 @js.native
 object AttachmentContentFormat extends js.Object {
-  /* "base64" */ val Base64: typingsSlinky.officeJsPreview.Office.MailboxEnums.AttachmentContentFormat.Base64 with String = js.native
-  /* "eml" */ val Eml: typingsSlinky.officeJsPreview.Office.MailboxEnums.AttachmentContentFormat.Eml with String = js.native
-  /* "iCalendar" */ val ICalendar: typingsSlinky.officeJsPreview.Office.MailboxEnums.AttachmentContentFormat.ICalendar with String = js.native
-  /* "url" */ val Url: typingsSlinky.officeJsPreview.Office.MailboxEnums.AttachmentContentFormat.Url with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[
     typingsSlinky.officeJsPreview.Office.MailboxEnums.AttachmentContentFormat with String
   ] = js.native
+  
+  /* "base64" */ val Base64: typingsSlinky.officeJsPreview.Office.MailboxEnums.AttachmentContentFormat.Base64 with String = js.native
+  
+  /* "eml" */ val Eml: typingsSlinky.officeJsPreview.Office.MailboxEnums.AttachmentContentFormat.Eml with String = js.native
+  
+  /* "iCalendar" */ val ICalendar: typingsSlinky.officeJsPreview.Office.MailboxEnums.AttachmentContentFormat.ICalendar with String = js.native
+  
+  /* "url" */ val Url: typingsSlinky.officeJsPreview.Office.MailboxEnums.AttachmentContentFormat.Url with String = js.native
 }
-

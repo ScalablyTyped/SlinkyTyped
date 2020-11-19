@@ -4,11 +4,11 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.animationInterfaceMod.Animation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/core/dist/types/components/loading/animations/ios.leave", JSImport.Namespace)
 @js.native
 object animationsIosLeaveMod extends js.Object {
+  
   def iosLeaveAnimation(baseEl: HTMLElement): Animation = js.native
 }
-

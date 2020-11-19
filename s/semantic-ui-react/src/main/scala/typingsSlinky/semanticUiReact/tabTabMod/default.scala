@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semantic-ui-react/dist/commonjs/modules/Tab/Tab", JSImport.Default)
 @js.native
@@ -13,8 +13,6 @@ class default protected ()
   def this(props: TabProps) = this()
   def this(props: TabProps, context: js.Any) = this()
 }
-
 @JSImport("semantic-ui-react/dist/commonjs/modules/Tab/Tab", JSImport.Default)
 @js.native
 object default extends TopLevel[TabComponent]
-

@@ -2,7 +2,7 @@ package typingsSlinky.direction.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.direction.directionStrings.ltr
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.direction.directionStrings.neutral
 */
 trait Direction extends js.Object
-
 object Direction {
+  
   @scala.inline
   def ltr: typingsSlinky.direction.directionStrings.ltr = "ltr".asInstanceOf[typingsSlinky.direction.directionStrings.ltr]
+  
   @scala.inline
   def neutral: typingsSlinky.direction.directionStrings.neutral = "neutral".asInstanceOf[typingsSlinky.direction.directionStrings.neutral]
+  
   @scala.inline
   def rtl: typingsSlinky.direction.directionStrings.rtl = "rtl".asInstanceOf[typingsSlinky.direction.directionStrings.rtl]
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create a new ScrollViewComponent.
@@ -33,4 +33,3 @@ class ScrollViewComponent protected ()
     entity: typingsSlinky.playcanvas.pc.Entity
   ) = this()
 }
-

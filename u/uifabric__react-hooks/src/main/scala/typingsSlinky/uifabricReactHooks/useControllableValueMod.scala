@@ -6,11 +6,12 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@uifabric/react-hooks/lib/useControllableValue", JSImport.Namespace)
 @js.native
 object useControllableValueMod extends js.Object {
+  
   def useControllableValue[TValue, TElement /* <: HTMLElement */](): js.Tuple2[js.UndefOr[TValue], js.Function1[/* newValue */ js.UndefOr[TValue], Unit]] = js.native
   def useControllableValue[TValue, TElement /* <: HTMLElement */](controlledValue: TValue): js.Tuple2[js.UndefOr[TValue], js.Function1[/* newValue */ js.UndefOr[TValue], Unit]] = js.native
   def useControllableValue[TValue, TElement /* <: HTMLElement */](controlledValue: TValue, defaultUncontrolledValue: TValue): js.Tuple2[js.UndefOr[TValue], js.Function1[/* newValue */ js.UndefOr[TValue], Unit]] = js.native
@@ -51,10 +52,10 @@ object useControllableValueMod extends js.Object {
       Unit
     ]
   ] = js.native
+  
   type ChangeCallback[TElement /* <: HTMLElement */, TValue] = js.Function2[
     /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
     /* newValue */ js.UndefOr[TValue], 
     Unit
   ]
 }
-

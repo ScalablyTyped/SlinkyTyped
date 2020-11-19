@@ -3,9 +3,19 @@ package typingsSlinky.mitm
 import typingsSlinky.mitm.mod.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mitmStrings {
+  
+  @scala.inline
+  def connect: connect = "connect".asInstanceOf[connect]
+  
+  @scala.inline
+  def connection: connection = "connection".asInstanceOf[connection]
+  
+  @scala.inline
+  def request: request = "request".asInstanceOf[request]
+  
   @js.native
   sealed trait connect extends Event
   
@@ -14,12 +24,4 @@ object mitmStrings {
   
   @js.native
   sealed trait request extends Event
-  
-  @scala.inline
-  def connect: connect = "connect".asInstanceOf[connect]
-  @scala.inline
-  def connection: connection = "connection".asInstanceOf[connection]
-  @scala.inline
-  def request: request = "request".asInstanceOf[request]
 }
-

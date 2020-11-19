@@ -6,9 +6,8 @@ import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import typingsSlinky.rbx.sectionSectionMod.SectionProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx", "Section")
 @js.native
 object Section extends TopLevel[ForwardRefAsExoticComponent[SectionProps, ReactElement]]
-

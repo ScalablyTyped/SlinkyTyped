@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.BaseTileLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.BaseTileLayer")
 @js.native
@@ -16,4 +16,3 @@ class BaseTileLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.BaseTileLayer {
   def this(properties: BaseTileLayerProperties) = this()
 }
-

@@ -3,21 +3,20 @@ package typingsSlinky.junk
 import typingsSlinky.junk.anon.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("junk", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   // TODO: Remove this for the next major release
   var default: Default = js.native
-  /**
-  	Regex used for matching junk files.
-  	*/
-  val regex: js.RegExp = js.native
+  
   /**
   	Returns `true` if `filename` matches a junk file.
   	*/
   def is(filename: String): Boolean = js.native
+  
   /**
   	Returns `true` if `filename` doesn't match a junk file.
   	@example
@@ -36,5 +35,9 @@ object mod extends js.Object {
   	```
   	*/
   def not(filename: String): Boolean = js.native
+  
+  /**
+  	Regex used for matching junk files.
+  	*/
+  val regex: js.RegExp = js.native
 }
-

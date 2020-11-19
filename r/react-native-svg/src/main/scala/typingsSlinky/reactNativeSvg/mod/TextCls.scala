@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeSvg.mod
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-svg", "Text")
 @js.native
@@ -12,4 +12,3 @@ class TextCls protected ()
   def this(props: TextProps) = this()
   def this(props: TextProps, context: js.Any) = this()
 }
-

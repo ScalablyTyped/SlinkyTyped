@@ -13,10 +13,11 @@ import typingsSlinky.dos2unix.dos2unixStrings.start
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Dos2UnixConverter extends EventEmitter {
+  
   @JSName("on")
   def on_convertend(event: convertDotend, cb: js.Function1[/* data */ FileData, Unit]): this.type = js.native
   @JSName("on")
@@ -37,7 +38,7 @@ trait Dos2UnixConverter extends EventEmitter {
   def on_processingstart(event: processingDotstart, cb: js.Function1[/* data */ FileData, Unit]): this.type = js.native
   @JSName("on")
   def on_start(event: start, cb: js.Function0[Unit]): this.type = js.native
+  
   def process(globPatterns: js.Array[String]): Unit = js.native
   def process(globPatterns: js.Array[String], options: Options): Unit = js.native
 }
-

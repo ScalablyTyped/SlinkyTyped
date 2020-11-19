@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.legacyMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Legacy/legacy", "CylinderDirectedParticleEmitter")
 @js.native
@@ -17,8 +17,75 @@ import scala.scalajs.js.annotation._
 class CylinderDirectedParticleEmitter ()
   extends typingsSlinky.babylonjs.indexMod.CylinderDirectedParticleEmitter {
   def this(radius: Double) = this()
+  def this(radius: js.UndefOr[scala.Nothing], height: Double) = this()
   def this(radius: Double, height: Double) = this()
+  def this(radius: js.UndefOr[scala.Nothing], height: js.UndefOr[scala.Nothing], radiusRange: Double) = this()
+  def this(radius: js.UndefOr[scala.Nothing], height: Double, radiusRange: Double) = this()
+  def this(radius: Double, height: js.UndefOr[scala.Nothing], radiusRange: Double) = this()
   def this(radius: Double, height: Double, radiusRange: Double) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: Double,
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: Double,
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: Double,
+    radiusRange: Double,
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: Double,
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: Double,
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: Double,
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: Double,
+    height: Double,
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
   def this(
     radius: Double,
     height: Double,
@@ -27,6 +94,201 @@ class CylinderDirectedParticleEmitter ()
     * The min limit of the emission direction.
     */
   direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: js.UndefOr[scala.Nothing],
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: Double,
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: js.UndefOr[scala.Nothing],
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: Double,
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: Double,
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: js.UndefOr[scala.Nothing],
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: Double,
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: Double,
+    radiusRange: Double,
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: js.UndefOr[scala.Nothing],
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: js.UndefOr[scala.Nothing],
+    height: Double,
+    radiusRange: Double,
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: Double,
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: js.UndefOr[scala.Nothing],
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: Double,
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: Double,
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: Double,
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: js.UndefOr[scala.Nothing],
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: Double,
+    height: js.UndefOr[scala.Nothing],
+    radiusRange: Double,
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: Double,
+    height: Double,
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: js.UndefOr[scala.Nothing],
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: Double,
+    height: Double,
+    radiusRange: js.UndefOr[scala.Nothing],
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
+  ) = this()
+  def this(
+    radius: Double,
+    height: Double,
+    radiusRange: Double,
+    /**
+    * The min limit of the emission direction.
+    */
+  direction1: js.UndefOr[scala.Nothing],
+    /**
+    * The max limit of the emission direction.
+    */
+  direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ) = this()
   def this(
     radius: Double,
@@ -42,4 +304,3 @@ class CylinderDirectedParticleEmitter ()
   direction2: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ) = this()
 }
-

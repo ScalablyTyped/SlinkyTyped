@@ -4,19 +4,23 @@ import typingsSlinky.reactNative.reactNativeStrings.photo
 import typingsSlinky.reactNative.reactNativeStrings.video
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CameraRollStatic extends js.Object {
+  
    //'Album','All','Event','Faces','Library','PhotoStream','SavedPhotos'
   var AssetTypeOptions: js.Array[CameraRollAssetType] = js.native
+  
   var GroupTypesOptions: js.Array[CameraRollGroupType] = js.native
+  
   /**
     * Invokes callback with photo identifier objects from the local camera roll of the device matching shape defined by getPhotosReturnChecker.
     *
     * @param params See getPhotosParamChecker.
     */
   def getPhotos(params: GetPhotosParamType): js.Promise[GetPhotosReturnType] = js.native
+  
    // "All", "Videos", "Photos"
   /**
     * Saves the image to the camera roll / gallery.
@@ -30,6 +34,7 @@ trait CameraRollStatic extends js.Object {
     * @deprecated use saveToCameraRoll instead
     */
   def saveImageWithTag(tag: String): js.Promise[String] = js.native
+  
   /**
     * Saves the photo or video to the camera roll / gallery.
     *
@@ -50,4 +55,3 @@ trait CameraRollStatic extends js.Object {
   @JSName("saveToCameraRoll")
   def saveToCameraRoll_video(tag: String, `type`: video): js.Promise[String] = js.native
 }
-

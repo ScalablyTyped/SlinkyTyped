@@ -11,7 +11,7 @@ import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.securityMod.security.IModuleRole
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/published-odata-services relevant section in reference guide}
@@ -35,69 +35,87 @@ class PublishedODataService protected () extends Document {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
-  @JSName("model")
-  var model_FPublishedODataService: IModel = js.native
+  
   def allowedModuleRoles: IList[IModuleRole] = js.native
+  
   def allowedModuleRolesQualifiedNames: js.Array[String] = js.native
+  
   /**
     * In version 8.0.0: introduced
     */
   def authenticationMicroflow: IMicroflow | Null = js.native
+  
   def authenticationMicroflowQualifiedName: String | Null = js.native
+  
   def authenticationMicroflow_=(newValue: IMicroflow | Null): Unit = js.native
+  
   /**
     * In version 8.0.0: introduced
     */
   def authenticationTypes: IList[RestAuthenticationType] = js.native
+  
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MPublishedODataService: FolderBase = js.native
+  
   /**
     * In version 8.4.0: introduced
     */
   def description: String = js.native
   def description_=(newValue: String): Unit = js.native
+  
+  @JSName("model")
+  var model_FPublishedODataService: IModel = js.native
+  
   def namespace: String = js.native
   def namespace_=(newValue: String): Unit = js.native
+  
   def path: String = js.native
   def path_=(newValue: String): Unit = js.native
+  
   /**
     * In version 7.19.0: introduced
     */
   def publishAssociations: Boolean = js.native
   def publishAssociations_=(newValue: Boolean): Unit = js.native
+  
   /**
     * In version 8.12.0: introduced
     */
   def replaceIllegalChars: Boolean = js.native
   def replaceIllegalChars_=(newValue: Boolean): Unit = js.native
+  
   def resources: IList[PublishedRestResource] = js.native
+  
   /**
     * In version 8.0.0: introduced
     */
   def serviceName: String = js.native
   def serviceName_=(newValue: String): Unit = js.native
+  
   /**
     * In version 8.4.0: introduced
     */
   def summary: String = js.native
   def summary_=(newValue: String): Unit = js.native
+  
   /**
     * In version 8.0.0: introduced
     */
   def version: String = js.native
   def version_=(newValue: String): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/rest", "rest.PublishedODataService")
 @js.native
 object PublishedODataService extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates a new PublishedODataService unit in the SDK and on the server.
     * Expects one argument, the projects.IFolderBase in which this unit is contained.
     */
   def createIn(container: IFolderBase): PublishedODataService = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

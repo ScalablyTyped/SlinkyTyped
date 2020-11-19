@@ -5,10 +5,11 @@ import typingsSlinky.reduxOrm.ormMod.IndexedModelClasses
 import typingsSlinky.std.Extract
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DatabaseCreator extends js.Object {
+  
   def apply[I /* <: IndexedModelClasses[
     _, 
     Extract[
@@ -22,4 +23,3 @@ trait DatabaseCreator extends js.Object {
     */ typingsSlinky.reduxOrm.reduxOrmStrings.DatabaseCreator with TopLevel[I]
   ] = js.native
 }
-

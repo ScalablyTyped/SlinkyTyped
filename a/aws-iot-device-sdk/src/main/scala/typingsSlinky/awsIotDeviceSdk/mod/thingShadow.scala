@@ -24,12 +24,13 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-iot-device-sdk", "thingShadow")
 @js.native
 class thingShadow () extends EventEmitter {
   def this(options: ThingShadowOptions) = this()
+  
   /**
     * Delete the Thing Shadow named thingName, which must have been previously
     * registered using awsIot.thingShadow#register(). The thingShadow class
@@ -47,6 +48,7 @@ class thingShadow () extends EventEmitter {
     */
   def delete(thingName: String): String | Null = js.native
   def delete(thingName: String, clientToken: String): String | Null = js.native
+  
   /**
     * end - close connection
     *
@@ -58,6 +60,7 @@ class thingShadow () extends EventEmitter {
   def end(force: js.UndefOr[scala.Nothing], callback: js.Function): Client = js.native
   def end(force: Boolean): Client = js.native
   def end(force: Boolean, callback: js.Function): Client = js.native
+  
   /**
     * Get the current state of the Thing Shadow named thingName, which must
     * have been previously registered using awsIot.thingShadow#register().
@@ -76,6 +79,7 @@ class thingShadow () extends EventEmitter {
     */
   def get(thingName: String): String | Null = js.native
   def get(thingName: String, clientToken: String): String | Null = js.native
+  
   /** Emitted when a different client"s update or delete operation is accepted on the shadow. */
   def on(
     event: foreignStateChange,
@@ -127,6 +131,7 @@ class thingShadow () extends EventEmitter {
   /** Emitted when an operation update|get|delete has timed out. */
   @JSName("on")
   def on_timeout(event: timeout, listener: js.Function2[/* thingName */ String, /* clientToken */ String, Unit]): this.type = js.native
+  
   def publish(topic: String, message: String): Client = js.native
   def publish(topic: String, message: String, options: js.UndefOr[scala.Nothing], callback: js.Function): Client = js.native
   def publish(topic: String, message: String, options: IClientPublishOptions): Client = js.native
@@ -147,6 +152,7 @@ class thingShadow () extends EventEmitter {
   def publish(topic: String, message: Buffer, options: js.UndefOr[scala.Nothing], callback: js.Function): Client = js.native
   def publish(topic: String, message: Buffer, options: IClientPublishOptions): Client = js.native
   def publish(topic: String, message: Buffer, options: IClientPublishOptions, callback: js.Function): Client = js.native
+  
   /**
     * Register interest in the Thing Shadow named thingName.
     *
@@ -171,6 +177,7 @@ class thingShadow () extends EventEmitter {
     options: RegisterOptions,
     callback: js.Function2[/* error */ js.Error, /* failedTopics */ js.Array[ISubscriptionGrant], Unit]
   ): Unit = js.native
+  
   /**
     * Subscribe to a topic or topics
     * @param topic to subscribe to or an Array of topics to subscribe to. It can also be an object.
@@ -185,6 +192,7 @@ class thingShadow () extends EventEmitter {
   def subscribe(topic: js.Array[String], options: js.UndefOr[scala.Nothing], callback: ClientSubscribeCallback): Client = js.native
   def subscribe(topic: js.Array[String], options: Qos): Client = js.native
   def subscribe(topic: js.Array[String], options: Qos, callback: ClientSubscribeCallback): Client = js.native
+  
   /**
     * Unregister interest in the Thing Shadow named thingName.
     *
@@ -192,6 +200,7 @@ class thingShadow () extends EventEmitter {
     * and no more events will be fired for thingName.
     */
   def unregister(thingName: String): Unit = js.native
+  
   /**
     * Unsubscribe from a topic or topics
     *
@@ -207,6 +216,7 @@ class thingShadow () extends EventEmitter {
   def unsubscribe(topic: js.Array[String], options: js.UndefOr[scala.Nothing], callback: ClientSubscribeCallback): Client = js.native
   def unsubscribe(topic: js.Array[String], options: IClientSubscribeOptions): Client = js.native
   def unsubscribe(topic: js.Array[String], options: IClientSubscribeOptions, callback: ClientSubscribeCallback): Client = js.native
+  
   /**
     * Update the Thing Shadow named thingName with the state specified in the
     * JavaScript object stateObject. thingName must have been previously
@@ -226,4 +236,3 @@ class thingShadow () extends EventEmitter {
     */
   def update(thingName: String, stateObject: js.Any): String | Null = js.native
 }
-

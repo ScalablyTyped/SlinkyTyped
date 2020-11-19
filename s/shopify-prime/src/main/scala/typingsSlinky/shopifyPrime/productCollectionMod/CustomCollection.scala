@@ -3,10 +3,11 @@ package typingsSlinky.shopifyPrime.productCollectionMod
 import typingsSlinky.shopifyPrime.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CustomCollection extends ProductCollection {
+  
   /**
     * Array of products in the collection
     *
@@ -15,6 +16,7 @@ trait CustomCollection extends ProductCollection {
     * id - Required when shifting the position of a product that was previously added to the collection
     */
   var collects: js.Array[Id] = js.native
+  
   /**
     * "key": "new"
     * "value": "newvalue"
@@ -30,42 +32,51 @@ trait CustomCollection extends ProductCollection {
     * - description (optional): Additional information about the metafield.
     */
   var metafield: js.UndefOr[String] = js.native
+  
   /**
     * States whether the custom collection is visible. Valid values are "true" for visible and "false" for hidden.
     */
   var published: js.UndefOr[Boolean] = js.native
 }
-
 object CustomCollection {
+  
   @scala.inline
   def apply(collects: js.Array[Id]): CustomCollection = {
     val __obj = js.Dynamic.literal(collects = collects.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomCollection]
   }
+  
   @scala.inline
   implicit class CustomCollectionOps[Self <: CustomCollection] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCollectsVarargs(value: Id*): Self = this.set("collects", js.Array(value :_*))
+    
     @scala.inline
     def setCollects(value: js.Array[Id]): Self = this.set("collects", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setMetafield(value: String): Self = this.set("metafield", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteMetafield: Self = this.set("metafield", js.undefined)
+    
     @scala.inline
     def setPublished(value: Boolean): Self = this.set("published", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deletePublished: Self = this.set("published", js.undefined)
   }
-  
 }
-

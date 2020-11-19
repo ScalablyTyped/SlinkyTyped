@@ -3,7 +3,7 @@ package typingsSlinky.graphql.definitionMod
 import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * List Modifier
@@ -25,12 +25,13 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait GraphQLList[T /* <: GraphQLType */] extends js.Object {
-  val ofType: T = js.native
+  
   def inspect(): String = js.native
+  
+  val ofType: T = js.native
+  
   def toJSON(): String = js.native
 }
-
 @JSImport("graphql/type/definition", "GraphQLList")
 @js.native
 object GraphQLList extends TopLevel[_GraphQLList[GraphQLType]]
-

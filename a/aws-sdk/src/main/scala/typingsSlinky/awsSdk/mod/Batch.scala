@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.batchMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "Batch")
 @js.native
@@ -14,4 +14,3 @@ class Batch ()
   extends typingsSlinky.awsSdk.allMod.Batch {
   def this(options: ClientConfiguration) = this()
 }
-

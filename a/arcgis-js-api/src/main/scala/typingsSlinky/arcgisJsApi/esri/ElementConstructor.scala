@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ElementConstructor
@@ -15,6 +15,6 @@ trait ElementConstructor
   */
 Instantiable0[Element]
      with Instantiable1[/* properties */ ElementProperties, Element] {
+  
   def fromJSON(json: js.Any): Element = js.native
 }
-

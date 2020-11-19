@@ -6,12 +6,14 @@ import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Backup extends Service {
+  
   @JSName("config")
   var config_Backup: ConfigBase with ClientConfiguration = js.native
+  
   /**
     * Backup plans are documents that contain information that AWS Backup uses to schedule tasks that create recovery points of resources. If you call CreateBackupPlan with a plan that already exists, an AlreadyExistsException is returned.
     */
@@ -25,6 +27,7 @@ trait Backup extends Service {
     params: CreateBackupPlanInput,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateBackupPlanOutput, Unit]
   ): Request[CreateBackupPlanOutput, AWSError] = js.native
+  
   /**
     * Creates a JSON document that specifies a set of resources to assign to a backup plan. Resources can be included by specifying patterns for a ListOfTags and selected Resources.  For example, consider the following patterns:    Resources: "arn:aws:ec2:region:account-id:volume/volume-id"     ConditionKey:"department"   ConditionValue:"finance"   ConditionType:"STRINGEQUALS"     ConditionKey:"importance"   ConditionValue:"critical"   ConditionType:"STRINGEQUALS"    Using these patterns would back up all Amazon Elastic Block Store (Amazon EBS) volumes that are tagged as "department=finance", "importance=critical", in addition to an EBS volume with the specified volume Id. Resources and conditions are additive in that all resources that match the pattern are selected. This shouldn't be confused with a logical AND, where all conditions must match. The matching patterns are logically 'put together using the OR operator. In other words, all patterns that match are selected for backup.
     */
@@ -38,6 +41,7 @@ trait Backup extends Service {
     params: CreateBackupSelectionInput,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateBackupSelectionOutput, Unit]
   ): Request[CreateBackupSelectionOutput, AWSError] = js.native
+  
   /**
     * Creates a logical container where backups are stored. A CreateBackupVault request includes a name, optionally one or more resource tags, an encryption key, and a request ID.  Sensitive data, such as passport numbers, should not be included the name of a backup vault. 
     */
@@ -51,6 +55,7 @@ trait Backup extends Service {
     params: CreateBackupVaultInput,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateBackupVaultOutput, Unit]
   ): Request[CreateBackupVaultOutput, AWSError] = js.native
+  
   /**
     * Deletes a backup plan. A backup plan can only be deleted after all associated selections of resources have been deleted. Deleting a backup plan deletes the current version of a backup plan. Previous versions, if any, will still exist.
     */
@@ -64,6 +69,7 @@ trait Backup extends Service {
     params: DeleteBackupPlanInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteBackupPlanOutput, Unit]
   ): Request[DeleteBackupPlanOutput, AWSError] = js.native
+  
   /**
     * Deletes the resource selection associated with a backup plan that is specified by the SelectionId.
     */
@@ -77,6 +83,7 @@ trait Backup extends Service {
     params: DeleteBackupSelectionInput,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Deletes the backup vault identified by its name. A vault can be deleted only if it is empty.
     */
@@ -90,6 +97,7 @@ trait Backup extends Service {
     params: DeleteBackupVaultInput,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Deletes the policy document that manages permissions on a backup vault.
     */
@@ -103,6 +111,7 @@ trait Backup extends Service {
     params: DeleteBackupVaultAccessPolicyInput,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Deletes event notifications for the specified backup vault.
     */
@@ -116,6 +125,7 @@ trait Backup extends Service {
     params: DeleteBackupVaultNotificationsInput,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Deletes the recovery point specified by a recovery point ID.
     */
@@ -129,6 +139,7 @@ trait Backup extends Service {
     params: DeleteRecoveryPointInput,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Returns metadata associated with creating a backup of a resource.
     */
@@ -142,6 +153,7 @@ trait Backup extends Service {
     params: DescribeBackupJobInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeBackupJobOutput, Unit]
   ): Request[DescribeBackupJobOutput, AWSError] = js.native
+  
   /**
     * Returns metadata about a backup vault specified by its name.
     */
@@ -155,6 +167,7 @@ trait Backup extends Service {
     params: DescribeBackupVaultInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeBackupVaultOutput, Unit]
   ): Request[DescribeBackupVaultOutput, AWSError] = js.native
+  
   /**
     * Returns metadata associated with creating a copy of a resource.
     */
@@ -168,6 +181,7 @@ trait Backup extends Service {
     params: DescribeCopyJobInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeCopyJobOutput, Unit]
   ): Request[DescribeCopyJobOutput, AWSError] = js.native
+  
   /**
     * Returns information about a saved resource, including the last time it was backed up, its Amazon Resource Name (ARN), and the AWS service type of the saved resource.
     */
@@ -181,6 +195,7 @@ trait Backup extends Service {
     params: DescribeProtectedResourceInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeProtectedResourceOutput, Unit]
   ): Request[DescribeProtectedResourceOutput, AWSError] = js.native
+  
   /**
     * Returns metadata associated with a recovery point, including ID, status, encryption, and lifecycle.
     */
@@ -194,6 +209,7 @@ trait Backup extends Service {
     params: DescribeRecoveryPointInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeRecoveryPointOutput, Unit]
   ): Request[DescribeRecoveryPointOutput, AWSError] = js.native
+  
   /**
     * Returns the current service opt-in settings for the Region. If the service has a value set to true, AWS Backup attempts to protect that service's resources in this Region, when included in an on-demand backup or scheduled backup plan. If the value is set to false for a service, AWS Backup does not attempt to protect that service's resources in this Region.
     */
@@ -207,6 +223,7 @@ trait Backup extends Service {
     params: DescribeRegionSettingsInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeRegionSettingsOutput, Unit]
   ): Request[DescribeRegionSettingsOutput, AWSError] = js.native
+  
   /**
     * Returns metadata associated with a restore job that is specified by a job ID.
     */
@@ -220,6 +237,7 @@ trait Backup extends Service {
     params: DescribeRestoreJobInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeRestoreJobOutput, Unit]
   ): Request[DescribeRestoreJobOutput, AWSError] = js.native
+  
   /**
     * Returns the backup plan that is specified by the plan ID as a backup template.
     */
@@ -233,6 +251,7 @@ trait Backup extends Service {
     params: ExportBackupPlanTemplateInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ExportBackupPlanTemplateOutput, Unit]
   ): Request[ExportBackupPlanTemplateOutput, AWSError] = js.native
+  
   /**
     * Returns the body of a backup plan in JSON format, in addition to plan metadata.
     */
@@ -246,6 +265,7 @@ trait Backup extends Service {
     params: GetBackupPlanInput,
     callback: js.Function2[/* err */ AWSError, /* data */ GetBackupPlanOutput, Unit]
   ): Request[GetBackupPlanOutput, AWSError] = js.native
+  
   /**
     * Returns a valid JSON document specifying a backup plan or an error.
     */
@@ -259,6 +279,7 @@ trait Backup extends Service {
     params: GetBackupPlanFromJSONInput,
     callback: js.Function2[/* err */ AWSError, /* data */ GetBackupPlanFromJSONOutput, Unit]
   ): Request[GetBackupPlanFromJSONOutput, AWSError] = js.native
+  
   /**
     * Returns the template specified by its templateId as a backup plan.
     */
@@ -272,6 +293,7 @@ trait Backup extends Service {
     params: GetBackupPlanFromTemplateInput,
     callback: js.Function2[/* err */ AWSError, /* data */ GetBackupPlanFromTemplateOutput, Unit]
   ): Request[GetBackupPlanFromTemplateOutput, AWSError] = js.native
+  
   /**
     * Returns selection metadata and a document in JSON format that specifies a list of resources that are associated with a backup plan.
     */
@@ -285,6 +307,7 @@ trait Backup extends Service {
     params: GetBackupSelectionInput,
     callback: js.Function2[/* err */ AWSError, /* data */ GetBackupSelectionOutput, Unit]
   ): Request[GetBackupSelectionOutput, AWSError] = js.native
+  
   /**
     * Returns the access policy document that is associated with the named backup vault.
     */
@@ -298,6 +321,7 @@ trait Backup extends Service {
     params: GetBackupVaultAccessPolicyInput,
     callback: js.Function2[/* err */ AWSError, /* data */ GetBackupVaultAccessPolicyOutput, Unit]
   ): Request[GetBackupVaultAccessPolicyOutput, AWSError] = js.native
+  
   /**
     * Returns event notifications for the specified backup vault.
     */
@@ -311,6 +335,7 @@ trait Backup extends Service {
     params: GetBackupVaultNotificationsInput,
     callback: js.Function2[/* err */ AWSError, /* data */ GetBackupVaultNotificationsOutput, Unit]
   ): Request[GetBackupVaultNotificationsOutput, AWSError] = js.native
+  
   /**
     * Returns a set of metadata key-value pairs that were used to create the backup.
     */
@@ -324,11 +349,13 @@ trait Backup extends Service {
     params: GetRecoveryPointRestoreMetadataInput,
     callback: js.Function2[/* err */ AWSError, /* data */ GetRecoveryPointRestoreMetadataOutput, Unit]
   ): Request[GetRecoveryPointRestoreMetadataOutput, AWSError] = js.native
+  
   /**
     * Returns the AWS resource types supported by AWS Backup.
     */
   def getSupportedResourceTypes(): Request[GetSupportedResourceTypesOutput, AWSError] = js.native
   def getSupportedResourceTypes(callback: js.Function2[/* err */ AWSError, /* data */ GetSupportedResourceTypesOutput, Unit]): Request[GetSupportedResourceTypesOutput, AWSError] = js.native
+  
   /**
     * Returns metadata about your backup jobs.
     */
@@ -342,6 +369,7 @@ trait Backup extends Service {
     params: ListBackupJobsInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListBackupJobsOutput, Unit]
   ): Request[ListBackupJobsOutput, AWSError] = js.native
+  
   /**
     * Returns metadata of your saved backup plan templates, including the template ID, name, and the creation and deletion dates.
     */
@@ -355,6 +383,7 @@ trait Backup extends Service {
     params: ListBackupPlanTemplatesInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListBackupPlanTemplatesOutput, Unit]
   ): Request[ListBackupPlanTemplatesOutput, AWSError] = js.native
+  
   /**
     * Returns version metadata of your backup plans, including Amazon Resource Names (ARNs), backup plan IDs, creation and deletion dates, plan names, and version IDs.
     */
@@ -368,6 +397,7 @@ trait Backup extends Service {
     params: ListBackupPlanVersionsInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListBackupPlanVersionsOutput, Unit]
   ): Request[ListBackupPlanVersionsOutput, AWSError] = js.native
+  
   /**
     * Returns metadata of your saved backup plans, including Amazon Resource Names (ARNs), plan IDs, creation and deletion dates, version IDs, plan names, and creator request IDs.
     */
@@ -381,6 +411,7 @@ trait Backup extends Service {
     params: ListBackupPlansInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListBackupPlansOutput, Unit]
   ): Request[ListBackupPlansOutput, AWSError] = js.native
+  
   /**
     * Returns an array containing metadata of the resources associated with the target backup plan.
     */
@@ -394,6 +425,7 @@ trait Backup extends Service {
     params: ListBackupSelectionsInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListBackupSelectionsOutput, Unit]
   ): Request[ListBackupSelectionsOutput, AWSError] = js.native
+  
   /**
     * Returns a list of recovery point storage containers along with information about them.
     */
@@ -407,6 +439,7 @@ trait Backup extends Service {
     params: ListBackupVaultsInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListBackupVaultsOutput, Unit]
   ): Request[ListBackupVaultsOutput, AWSError] = js.native
+  
   /**
     * Returns metadata about your copy jobs.
     */
@@ -420,6 +453,7 @@ trait Backup extends Service {
     params: ListCopyJobsInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListCopyJobsOutput, Unit]
   ): Request[ListCopyJobsOutput, AWSError] = js.native
+  
   /**
     * Returns an array of resources successfully backed up by AWS Backup, including the time the resource was saved, an Amazon Resource Name (ARN) of the resource, and a resource type.
     */
@@ -433,6 +467,7 @@ trait Backup extends Service {
     params: ListProtectedResourcesInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListProtectedResourcesOutput, Unit]
   ): Request[ListProtectedResourcesOutput, AWSError] = js.native
+  
   /**
     * Returns detailed information about the recovery points stored in a backup vault.
     */
@@ -446,6 +481,7 @@ trait Backup extends Service {
     params: ListRecoveryPointsByBackupVaultInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListRecoveryPointsByBackupVaultOutput, Unit]
   ): Request[ListRecoveryPointsByBackupVaultOutput, AWSError] = js.native
+  
   /**
     * Returns detailed information about recovery points of the type specified by a resource Amazon Resource Name (ARN).
     */
@@ -459,6 +495,7 @@ trait Backup extends Service {
     params: ListRecoveryPointsByResourceInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListRecoveryPointsByResourceOutput, Unit]
   ): Request[ListRecoveryPointsByResourceOutput, AWSError] = js.native
+  
   /**
     * Returns a list of jobs that AWS Backup initiated to restore a saved resource, including metadata about the recovery process.
     */
@@ -472,6 +509,7 @@ trait Backup extends Service {
     params: ListRestoreJobsInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListRestoreJobsOutput, Unit]
   ): Request[ListRestoreJobsOutput, AWSError] = js.native
+  
   /**
     * Returns a list of key-value pairs assigned to a target recovery point, backup plan, or backup vault.   ListTags are currently only supported with Amazon EFS backups. 
     */
@@ -482,6 +520,7 @@ trait Backup extends Service {
     */
   def listTags(params: ListTagsInput): Request[ListTagsOutput, AWSError] = js.native
   def listTags(params: ListTagsInput, callback: js.Function2[/* err */ AWSError, /* data */ ListTagsOutput, Unit]): Request[ListTagsOutput, AWSError] = js.native
+  
   /**
     * Sets a resource-based policy that is used to manage access permissions on the target backup vault. Requires a backup vault name and an access policy document in JSON format.
     */
@@ -495,6 +534,7 @@ trait Backup extends Service {
     params: PutBackupVaultAccessPolicyInput,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Turns on notifications on a backup vault for the specified topic and events.
     */
@@ -508,6 +548,7 @@ trait Backup extends Service {
     params: PutBackupVaultNotificationsInput,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
   /**
     * Starts a job to create a one-time backup of the specified resource.
     */
@@ -521,6 +562,7 @@ trait Backup extends Service {
     params: StartBackupJobInput,
     callback: js.Function2[/* err */ AWSError, /* data */ StartBackupJobOutput, Unit]
   ): Request[StartBackupJobOutput, AWSError] = js.native
+  
   /**
     * Starts a job to create a one-time copy of the specified resource.
     */
@@ -534,6 +576,7 @@ trait Backup extends Service {
     params: StartCopyJobInput,
     callback: js.Function2[/* err */ AWSError, /* data */ StartCopyJobOutput, Unit]
   ): Request[StartCopyJobOutput, AWSError] = js.native
+  
   /**
     * Recovers the saved resource identified by an Amazon Resource Name (ARN).  If the resource ARN is included in the request, then the last complete backup of that resource is recovered. If the ARN of a recovery point is supplied, then that recovery point is restored.
     */
@@ -547,6 +590,7 @@ trait Backup extends Service {
     params: StartRestoreJobInput,
     callback: js.Function2[/* err */ AWSError, /* data */ StartRestoreJobOutput, Unit]
   ): Request[StartRestoreJobOutput, AWSError] = js.native
+  
   /**
     * Attempts to cancel a job to create a one-time backup of a resource.
     */
@@ -557,6 +601,7 @@ trait Backup extends Service {
     */
   def stopBackupJob(params: StopBackupJobInput): Request[js.Object, AWSError] = js.native
   def stopBackupJob(params: StopBackupJobInput, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  
   /**
     * Assigns a set of key-value pairs to a recovery point, backup plan, or backup vault identified by an Amazon Resource Name (ARN).
     */
@@ -567,6 +612,7 @@ trait Backup extends Service {
     */
   def tagResource(params: TagResourceInput): Request[js.Object, AWSError] = js.native
   def tagResource(params: TagResourceInput, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  
   /**
     * Removes a set of key-value pairs from a recovery point, backup plan, or backup vault identified by an Amazon Resource Name (ARN)
     */
@@ -577,6 +623,7 @@ trait Backup extends Service {
     */
   def untagResource(params: UntagResourceInput): Request[js.Object, AWSError] = js.native
   def untagResource(params: UntagResourceInput, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  
   /**
     * Replaces the body of a saved backup plan identified by its backupPlanId with the input document in JSON format. The new version is uniquely identified by a VersionId.
     */
@@ -590,6 +637,7 @@ trait Backup extends Service {
     params: UpdateBackupPlanInput,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateBackupPlanOutput, Unit]
   ): Request[UpdateBackupPlanOutput, AWSError] = js.native
+  
   /**
     * Sets the transition lifecycle of a recovery point. The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup transitions and expires backups automatically according to the lifecycle that you define.  Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “expire after days” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold. 
     */
@@ -603,6 +651,7 @@ trait Backup extends Service {
     params: UpdateRecoveryPointLifecycleInput,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateRecoveryPointLifecycleOutput, Unit]
   ): Request[UpdateRecoveryPointLifecycleOutput, AWSError] = js.native
+  
   /**
     * Updates the current service opt-in settings for the Region. If the service has a value set to true, AWS Backup attempts to protect that service's resources in this Region, when included in an on-demand backup or scheduled backup plan. If the value is set to false for a service, AWS Backup does not attempt to protect that service's resources in this Region.
     */
@@ -617,4 +666,3 @@ trait Backup extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
 }
-

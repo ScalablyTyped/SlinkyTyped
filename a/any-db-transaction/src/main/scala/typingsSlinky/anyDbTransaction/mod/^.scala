@@ -3,11 +3,12 @@ package typingsSlinky.anyDbTransaction.mod
 import typingsSlinky.anyDb.mod.Queryable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("any-db-transaction", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Start a transaction
     */
@@ -57,4 +58,3 @@ object ^ extends js.Object {
     callback: js.Function2[/* error */ js.Error, /* transaction */ Transaction, Unit]
   ): Transaction = js.native
 }
-

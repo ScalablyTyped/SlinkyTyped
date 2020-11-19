@@ -9,10 +9,11 @@ import typingsSlinky.node.nodeStrings.stream
 import typingsSlinky.node.nodeStrings.timeout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Http2Server extends Server {
+  
   @JSName("addListener")
   def addListener_checkContinue(
     event: checkContinue,
@@ -39,6 +40,7 @@ trait Http2Server extends Server {
   ): this.type = js.native
   @JSName("addListener")
   def addListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("emit")
   def emit_checkContinue(event: checkContinue, request: Http2ServerRequest, response: Http2ServerResponse): Boolean = js.native
   @JSName("emit")
@@ -51,6 +53,7 @@ trait Http2Server extends Server {
   def emit_stream(event: stream, stream: ServerHttp2Stream, headers: IncomingHttpHeaders, flags: Double): Boolean = js.native
   @JSName("emit")
   def emit_timeout(event: timeout): Boolean = js.native
+  
   @JSName("on")
   def on_checkContinue(
     event: checkContinue,
@@ -77,6 +80,7 @@ trait Http2Server extends Server {
   ): this.type = js.native
   @JSName("on")
   def on_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("once")
   def once_checkContinue(
     event: checkContinue,
@@ -103,6 +107,7 @@ trait Http2Server extends Server {
   ): this.type = js.native
   @JSName("once")
   def once_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("prependListener")
   def prependListener_checkContinue(
     event: checkContinue,
@@ -129,6 +134,7 @@ trait Http2Server extends Server {
   ): this.type = js.native
   @JSName("prependListener")
   def prependListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("prependOnceListener")
   def prependOnceListener_checkContinue(
     event: checkContinue,
@@ -155,9 +161,9 @@ trait Http2Server extends Server {
   ): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  
   def setTimeout(): this.type = js.native
   def setTimeout(msec: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): this.type = js.native
   def setTimeout(msec: Double): this.type = js.native
   def setTimeout(msec: Double, callback: js.Function0[Unit]): this.type = js.native
 }
-

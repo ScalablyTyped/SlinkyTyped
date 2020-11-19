@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.restMod.rest.IODataKeyPart
 import typingsSlinky.mendixmodelsdk.restMod.rest.ODataKeyPart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -28,24 +28,28 @@ abstract class AttributeType protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsAttribute: Attribute = js.native
   @JSName("containerAsAttribute")
   val containerAsAttribute_FAttributeType: IAttribute = js.native
+  
+  def containerAsEntityKeyPart: EntityKeyPart = js.native
   @JSName("containerAsEntityKeyPart")
   val containerAsEntityKeyPart_FAttributeType: IEntityKeyPart = js.native
+  
+  def containerAsODataKeyPart: ODataKeyPart = js.native
   @JSName("containerAsODataKeyPart")
   val containerAsODataKeyPart_FAttributeType: IODataKeyPart = js.native
+  
   @JSName("model")
   var model_FAttributeType: IModel = js.native
-  def containerAsAttribute: Attribute = js.native
-  def containerAsEntityKeyPart: EntityKeyPart = js.native
-  def containerAsODataKeyPart: ODataKeyPart = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.AttributeType")
 @js.native
 object AttributeType extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

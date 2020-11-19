@@ -6,11 +6,12 @@ import typingsSlinky.devextreme.mod.DevExpress.fileManagement.ObjectFileSystemPr
 import typingsSlinky.devextreme.mod.DevExpress.fileManagement.RemoteFileSystemProviderOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "fileManagement")
 @js.native
 object fileManagement extends js.Object {
+  
   @js.native
   class CustomFileSystemProvider ()
     extends typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemProviderBase {
@@ -38,6 +39,4 @@ object fileManagement extends js.Object {
     extends typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemProviderBase {
     def this(options: RemoteFileSystemProviderOptions) = this()
   }
-  
 }
-

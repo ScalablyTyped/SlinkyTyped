@@ -5,14 +5,14 @@ import typingsSlinky.graphqlCompose.interfaceTypeComposerMod.InterfaceTypeCompos
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ObjectTypeComposer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-compose/lib/utils/toInputObjectType", "toInputObjectType")
 @js.native
 object toInputObjectType extends js.Object {
+  
   def apply[TContext](tc: InterfaceTypeComposer[_, TContext]): InputTypeComposer[TContext] = js.native
   def apply[TContext](tc: InterfaceTypeComposer[_, TContext], opts: ToInputObjectTypeOpts): InputTypeComposer[TContext] = js.native
   def apply[TContext](tc: ObjectTypeComposer[_, TContext]): InputTypeComposer[TContext] = js.native
   def apply[TContext](tc: ObjectTypeComposer[_, TContext], opts: ToInputObjectTypeOpts): InputTypeComposer[TContext] = js.native
 }
-

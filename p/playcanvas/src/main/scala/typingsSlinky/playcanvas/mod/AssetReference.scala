@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.mod
 import typingsSlinky.playcanvas.anon.Add
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An object that manages the case where an object holds a reference to an asset and needs to be notified when
@@ -57,4 +57,3 @@ class AssetReference protected ()
     scope: js.Any
   ) = this()
 }
-

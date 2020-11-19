@@ -6,9 +6,8 @@ import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import typingsSlinky.rbx.pageLoaderPageLoaderMod.PageLoaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx", "PageLoader")
 @js.native
 object PageLoader extends TopLevel[ForwardRefAsExoticComponent[PageLoaderProps, ReactElement]]
-

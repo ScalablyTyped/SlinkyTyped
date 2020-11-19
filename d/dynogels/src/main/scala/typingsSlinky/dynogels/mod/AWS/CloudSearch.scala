@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.cloudsearchMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.CloudSearch")
 @js.native
@@ -14,4 +14,3 @@ class CloudSearch ()
   extends typingsSlinky.awsSdk.mod.CloudSearch {
   def this(options: ClientConfiguration) = this()
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.testingLibraryVue.mod
 import typingsSlinky.vue.vueMod.Vue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@testing-library/vue", "render")
 @js.native
 object render extends js.Object {
+  
   def apply[V /* <: Vue */](
     TestComponent: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify VueClass<V> */ js.Any
   ): ComponentHarness = js.native
@@ -26,4 +27,3 @@ object render extends js.Object {
     configure: ConfigurationCallback[V]
   ): ComponentHarness = js.native
 }
-

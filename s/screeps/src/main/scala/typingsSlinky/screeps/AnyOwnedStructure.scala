@@ -2,7 +2,7 @@ package typingsSlinky.screeps
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A discriminated union on Structure.type of all owned structure types
@@ -27,4 +27,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.screeps.StructureTower
 */
 trait AnyOwnedStructure extends AnyStructure
-

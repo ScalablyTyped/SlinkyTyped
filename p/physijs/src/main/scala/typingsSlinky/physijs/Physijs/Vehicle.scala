@@ -1,26 +1,17 @@
 package typingsSlinky.physijs.Physijs
 
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
-import typingsSlinky.three.geometryMod.Geometry
+import typingsSlinky.three.mod.Geometry
 import typingsSlinky.three.mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Vehicle extends js.Object {
-  var mesh: typingsSlinky.three.mod.Mesh[
-    Geometry | BufferGeometry, 
-    typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material]
-  ] = js.native
-  var wheels: js.Array[
-    typingsSlinky.three.mod.Mesh[
-      Geometry | BufferGeometry, 
-      typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material]
-    ]
-  ] = js.native
+  
   def addWheel(
-    wheel_geometry: typingsSlinky.three.mod.Geometry,
+    wheel_geometry: Geometry,
     wheel_material: typingsSlinky.three.mod.Material,
     connection_point: Vector3,
     wheel_direction: Vector3,
@@ -30,7 +21,7 @@ trait Vehicle extends js.Object {
     is_front_wheel: Boolean
   ): Unit = js.native
   def addWheel(
-    wheel_geometry: typingsSlinky.three.mod.Geometry,
+    wheel_geometry: Geometry,
     wheel_material: typingsSlinky.three.mod.Material,
     connection_point: Vector3,
     wheel_direction: Vector3,
@@ -40,29 +31,43 @@ trait Vehicle extends js.Object {
     is_front_wheel: Boolean,
     tuning: VehicleTuning
   ): Unit = js.native
+  
   def applyEngineForce(amount: Double): Unit = js.native
   def applyEngineForce(
     amount: Double,
     wheel: typingsSlinky.three.mod.Mesh[
-      Geometry | BufferGeometry, 
+      typingsSlinky.three.geometryMod.Geometry | BufferGeometry, 
       typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material]
     ]
   ): Unit = js.native
+  
+  var mesh: typingsSlinky.three.mod.Mesh[
+    typingsSlinky.three.geometryMod.Geometry | BufferGeometry, 
+    typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material]
+  ] = js.native
+  
   def setBrake(amount: Double): Unit = js.native
   def setBrake(
     amount: Double,
     wheel: typingsSlinky.three.mod.Mesh[
-      Geometry | BufferGeometry, 
+      typingsSlinky.three.geometryMod.Geometry | BufferGeometry, 
       typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material]
     ]
   ): Unit = js.native
+  
   def setSteering(amount: Double): Unit = js.native
   def setSteering(
     amount: Double,
     wheel: typingsSlinky.three.mod.Mesh[
-      Geometry | BufferGeometry, 
+      typingsSlinky.three.geometryMod.Geometry | BufferGeometry, 
       typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material]
     ]
   ): Unit = js.native
+  
+  var wheels: js.Array[
+    typingsSlinky.three.mod.Mesh[
+      typingsSlinky.three.geometryMod.Geometry | BufferGeometry, 
+      typingsSlinky.three.materialMod.Material | js.Array[typingsSlinky.three.materialMod.Material]
+    ]
+  ] = js.native
 }
-

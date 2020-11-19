@@ -28,12 +28,13 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.string
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.xml
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Field
   extends Accessor
      with JSONSupport {
+  
   /**
     * The display name for the field.
     *
@@ -42,6 +43,7 @@ trait Field
     * @default null
     */
   var alias: String = js.native
+  
   /**
     * The default value set for the field.
     *
@@ -50,12 +52,14 @@ trait Field
     * @default undefined
     */
   var defaultValue: Double | String | js.Any = js.native
+  
   /**
     * Contains information describing the purpose of each field.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Field.html#description)
     */
   var description: String = js.native
+  
   /**
     * The domain associated with the field. Domains are used to constrain the values allowed in a field. There are two types of domains: [RangeDomain](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-RangeDomain.html) and [CodedValueDomain](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-CodedValueDomain.html).
     *
@@ -64,6 +68,7 @@ trait Field
     * @default null
     */
   var domain: Domain = js.native
+  
   /**
     * Indicates whether the field is editable.
     *
@@ -72,6 +77,7 @@ trait Field
     * @default true
     */
   var editable: Boolean = js.native
+  
   /**
     * The field length.
     *
@@ -80,6 +86,7 @@ trait Field
     * @default -1
     */
   var length: Double = js.native
+  
   /**
     * The name of the field.
     *
@@ -88,6 +95,7 @@ trait Field
     * @default null
     */
   var name: String = js.native
+  
   /**
     * Indicates if the field can accept `null` values. *Requires ArcGIS Server version 10.1 or greater.*
     *
@@ -96,6 +104,7 @@ trait Field
     * @default true
     */
   var nullable: Boolean = js.native
+  
   /**
     * The data type of the field.
     *
@@ -104,6 +113,7 @@ trait Field
     * @default null
     */
   var `type`: `small-integer` | integer | single | double | long | string | date | oid | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.geometry | blob | raster | guid | `global-id` | xml = js.native
+  
   /**
     * The types of values that can be assigned to a field. See the table below for a list of possible values.
     *
@@ -128,4 +138,3 @@ trait Field
     */
   var valueType: binary | coordinate | `count-or-amount` | `date-and-time` | description | `location-or-place-name` | measurement | `name-or-title` | none | `ordered-or-ranked` | `percentage-or-ratio` | `type-or-category` | `unique-identifier` = js.native
 }
-

@@ -4,11 +4,11 @@ import typingsSlinky.officeUiFabricReact.colorRectangleTypesMod.IColorRectangleS
 import typingsSlinky.officeUiFabricReact.colorRectangleTypesMod.IColorRectangleStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/ColorPicker/ColorRectangle/ColorRectangle.styles", JSImport.Namespace)
 @js.native
 object colorRectangleStylesMod extends js.Object {
+  
   def getStyles(props: IColorRectangleStyleProps): IColorRectangleStyles = js.native
 }
-

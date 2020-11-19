@@ -10,13 +10,15 @@ import typingsSlinky.awsSdk.s3Mod.PutObjectRequest
 import typingsSlinky.awsSdk.serviceMod.Service
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/lib/services/s3", JSImport.Namespace)
 @js.native
 object servicesS3Mod extends js.Object {
+  
   @js.native
   class S3Customizations () extends Service {
+    
     /**
       * Get the form fields and target URL for direct POST uploading.
       */
@@ -25,6 +27,7 @@ object servicesS3Mod extends js.Object {
       * Get the form fields and target URL for direct POST uploading.
       */
     def createPresignedPost(params: Params, callback: js.Function2[/* err */ js.Error, /* data */ PresignedPost, Unit]): Unit = js.native
+    
     /**
       * Get a pre-signed URL for a given operation name.
       */
@@ -37,10 +40,12 @@ object servicesS3Mod extends js.Object {
       params: js.Any,
       callback: js.Function2[/* err */ js.Error, /* url */ String, Unit]
     ): Unit = js.native
+    
     /**
       * Returns a 'thenable' promise that will be resolved with a pre-signed URL for a given operation name.
       */
     def getSignedUrlPromise(operation: String, params: js.Any): js.Promise[String] = js.native
+    
     /**
       * Uploads an arbitrarily sized buffer, blob, or stream, using intelligent
       * concurrent handling of parts if the payload is large enough. You can
@@ -62,12 +67,10 @@ object servicesS3Mod extends js.Object {
       callback: js.Function2[/* err */ js.Error, /* data */ SendData, Unit]
     ): ManagedUpload = js.native
   }
-  
   /* static members */
   @js.native
   object S3Customizations extends js.Object {
+    
     var ManagedUpload: TypeofManagedUpload = js.native
   }
-  
 }
-

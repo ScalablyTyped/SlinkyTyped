@@ -9,17 +9,22 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-xray-node/XRayClient", JSImport.Namespace)
 @js.native
 object xrayclientMod extends js.Object {
+  
   @js.native
   class XRayClient protected () extends js.Object {
     def this(configuration: XRayConfiguration) = this()
+    
     val config: XRayResolvedConfiguration = js.native
-    val middlewareStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable] = js.native
+    
     def destroy(): Unit = js.native
+    
+    val middlewareStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable] = js.native
+    
     /**
       * This will need to be revised when the command interface lands.
       */
@@ -45,6 +50,4 @@ object xrayclientMod extends js.Object {
       cb: js.Function2[/* err */ js.Any, /* data */ js.UndefOr[OutputType], Unit]
     ): Unit = js.native
   }
-  
 }
-

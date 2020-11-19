@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Phone number auth provider.
@@ -30,17 +30,19 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.PhoneAuthProvider")
 @js.native
 class PhoneAuthProvider () extends PhoneAuthProviderInstance
-
 /* static members */
 @JSImport("firebase", "auth.PhoneAuthProvider")
 @js.native
 object PhoneAuthProvider extends js.Object {
+  
   /**
     * This corresponds to the sign-in method identifier as returned in
     * {@link firebase.auth.Auth.fetchSignInMethodsForEmail}.
     */
   var PHONE_SIGN_IN_METHOD: String = js.native
+  
   var PROVIDER_ID: String = js.native
+  
   /**
     * Creates a phone auth credential, given the verification ID from
     * {@link firebase.auth.PhoneAuthProvider.verifyPhoneNumber} and the code
@@ -62,4 +64,3 @@ object PhoneAuthProvider extends js.Object {
     */
   def credential(verificationId: String, verificationCode: String): AuthCredential = js.native
 }
-

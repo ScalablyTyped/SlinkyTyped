@@ -2,9 +2,10 @@ package typingsSlinky.caniuseLite
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.caniuseLite.caniuseLiteStrings.ls
     - typingsSlinky.caniuseLite.caniuseLiteStrings.rec
@@ -16,8 +17,11 @@ package object mod {
     - java.lang.String
   */
   type FeatureStatus = typingsSlinky.caniuseLite.mod._FeatureStatus | java.lang.String
+  
   type PackedFeature = org.scalablytyped.runtime.StringDictionary[js.Any]
+  
   type PackedRegion = org.scalablytyped.runtime.StringDictionary[js.Any]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.caniuseLite.caniuseLiteStrings.n
     - typingsSlinky.caniuseLite.caniuseLiteStrings.p

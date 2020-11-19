@@ -2,11 +2,12 @@ package typingsSlinky.babylonjs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Engines/Processors/Expressions/index", JSImport.Namespace)
 @js.native
 object expressionsIndexMod extends js.Object {
+  
   @js.native
   class ShaderDefineAndOperator ()
     extends typingsSlinky.babylonjs.shaderDefineAndOperatorMod.ShaderDefineAndOperator
@@ -31,6 +32,4 @@ object expressionsIndexMod extends js.Object {
   @js.native
   class ShaderDefineOrOperator ()
     extends typingsSlinky.babylonjs.shaderDefineOrOperatorMod.ShaderDefineOrOperator
-  
 }
-

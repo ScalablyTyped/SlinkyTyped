@@ -3,15 +3,15 @@ package typingsSlinky.relayCompiler.iRMod
 import typingsSlinky.relayCompiler.schemaMod.InputTypeID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.relayCompiler.iRMod.LocalArgumentDefinition
   - typingsSlinky.relayCompiler.iRMod.RootArgumentDefinition
 */
 trait ArgumentDefinition extends js.Object
-
 object ArgumentDefinition {
+  
   @scala.inline
   def LocalArgumentDefinition(
     defaultValue: js.Any,
@@ -24,6 +24,7 @@ object ArgumentDefinition {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArgumentDefinition]
   }
+  
   @scala.inline
   def RootArgumentDefinition(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.RootArgumentDefinition,
@@ -36,4 +37,3 @@ object ArgumentDefinition {
     __obj.asInstanceOf[ArgumentDefinition]
   }
 }
-

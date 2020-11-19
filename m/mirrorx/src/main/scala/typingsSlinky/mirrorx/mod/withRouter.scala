@@ -7,11 +7,12 @@ import typingsSlinky.mirrorx.mirrorxStrings.location
 import typingsSlinky.mirrorx.mirrorxStrings.staticContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mirrorx", "withRouter")
 @js.native
 object withRouter extends js.Object {
+  
   def apply[P /* <: RouteComponentProps[_] */](component: ReactComponentClass[P]): ReactComponentClass[
     Omit[
       P, 
@@ -20,4 +21,3 @@ object withRouter extends js.Object {
   ] = js.native
   def apply[TFunction /* <: ReactComponentClass[_] */](target: TFunction): TFunction = js.native
 }
-

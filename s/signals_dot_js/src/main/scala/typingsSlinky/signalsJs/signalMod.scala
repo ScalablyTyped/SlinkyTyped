@@ -4,11 +4,12 @@ import typingsSlinky.signalsJs.islotMod.ISlot
 import typingsSlinky.signalsJs.onceSignalMod.OnceSignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("signals.js/lib/org/osflash/signals/Signal", JSImport.Namespace)
 @js.native
 object signalMod extends js.Object {
+  
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.signalsJs.ioncesignalMod.IOnceSignal because Already inherited
   - typingsSlinky.signalsJs.isignalMod.ISignal because var conflicts: numListeners, valueClasses. Inlined add */ @js.native
@@ -25,6 +26,7 @@ object signalMod extends js.Object {
       * but this constructor has logic to support super(valueClasses).
       */
     def this(valueClasses: js.Any*) = this()
+    
     /**
       * @inheritDoc
       * @throws flash.errors.IllegalOperationError <code>IllegalOperationError</code>: You cannot addOnce() then add() the same listener without removing the relationship first.
@@ -39,6 +41,4 @@ object signalMod extends js.Object {
       */
     def add(listener: js.Function): ISlot = js.native
   }
-  
 }
-

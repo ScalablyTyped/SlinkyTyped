@@ -7,13 +7,14 @@ import typingsSlinky.kendoUi.kendo.ui.TextBox
 import typingsSlinky.kendoUi.kendo.ui.TextBoxOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofTextBox
   extends Instantiable1[/* element */ Element, TextBox]
      with Instantiable2[/* element */ Element, /* options */ TextBoxOptions, TextBox] {
-  var fn: TextBox = js.native
+  
   def extend(proto: js.Object): TextBox = js.native
+  
+  var fn: TextBox = js.native
 }
-

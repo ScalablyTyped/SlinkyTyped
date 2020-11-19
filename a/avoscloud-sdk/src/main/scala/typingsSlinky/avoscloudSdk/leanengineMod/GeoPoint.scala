@@ -2,7 +2,7 @@ package typingsSlinky.avoscloudSdk.leanengineMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new GeoPoint with any of the following forms:<br>
@@ -35,4 +35,3 @@ class GeoPoint ()
   def this(arg1: js.UndefOr[scala.Nothing], arg2: js.Any) = this()
   def this(arg1: js.Any, arg2: js.Any) = this()
 }
-

@@ -11,9 +11,10 @@ import typingsSlinky.blueprintjsTable.renderModeMod.RenderMode.NONE
 import typingsSlinky.blueprintjsTable.tableBodyCellsMod.ITableBodyCellsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TableBodyCells {
+  
   @JSImport("@blueprintjs/table/lib/esm/tableBodyCells", "TableBodyCells")
   @js.native
   object component extends js.Object
@@ -22,17 +23,22 @@ object TableBodyCells {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.tableBodyCellsMod.TableBodyCells] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def focusedCell(value: IFocusedCellCoordinates): this.type = set("focusedCell", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onCompleteRender(value: () => Unit): this.type = set("onCompleteRender", js.Any.fromFunction0(value))
+    
     @scala.inline
     def renderMode(value: BATCH | NONE): this.type = set("renderMode", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ITableBodyCellsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     cellRenderer: (/* rowIndex */ Double, /* columnIndex */ Double) => ReactElement,
@@ -48,4 +54,3 @@ object TableBodyCells {
     new Builder(js.Array(this.component, __props.asInstanceOf[ITableBodyCellsProps]))
   }
 }
-

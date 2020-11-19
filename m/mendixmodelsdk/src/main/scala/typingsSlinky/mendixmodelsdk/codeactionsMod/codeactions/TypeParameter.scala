@@ -9,7 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.21.0: introduced
@@ -32,30 +32,35 @@ class TypeParameter protected ()
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
+  
+  def containerAsCodeAction: CodeAction = js.native
   @JSName("containerAsCodeAction")
   val containerAsCodeAction_FTypeParameter: ICodeAction = js.native
+  
   @JSName("model")
   var model_FTypeParameter: IModel = js.native
-  @JSName("name")
-  val name_FTypeParameter: String = js.native
-  def containerAsCodeAction: CodeAction = js.native
+  
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native
+  @JSName("name")
+  val name_FTypeParameter: String = js.native
+  
   @JSName("qualifiedName")
   def qualifiedName_MTypeParameter: String | Null = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/codeactions", "codeactions.TypeParameter")
 @js.native
 object TypeParameter extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new TypeParameter instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): TypeParameter = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -5,11 +5,12 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.reactNativeElements.anon.bottomnumberundefinedleft
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-elements", "withBadge")
 @js.native
 object withBadge extends js.Object {
+  
   def apply(): js.Function1[
     /* WrappedComponent */ ReactComponentClass[js.Object], 
     ReactComponentClass[js.Object]
@@ -55,4 +56,3 @@ object withBadge extends js.Object {
     ReactComponentClass[js.Object]
   ] = js.native
 }
-

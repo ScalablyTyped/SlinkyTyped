@@ -11,16 +11,18 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.square
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.x
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LineSymbolMarkerProperties extends js.Object {
+  
   /**
     * The color of the marker. If not specified, the marker will match the color of the line.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-LineSymbolMarker.html#color)
     */
   var color: js.UndefOr[Color_ | js.Array[Double] | String] = js.native
+  
   /**
     * The placement of the marker(s) on the line. Possible values are listed in the table below.
     *
@@ -36,6 +38,7 @@ trait LineSymbolMarkerProperties extends js.Object {
     * @default "begin-end"
     */
   var placement: js.UndefOr[begin | end | `begin-end`] = js.native
+  
   /**
     * The marker style. Possible values are listed in the table below.
     *
@@ -55,39 +58,48 @@ trait LineSymbolMarkerProperties extends js.Object {
     */
   var style: js.UndefOr[arrow | circle | square | diamond | cross | x] = js.native
 }
-
 object LineSymbolMarkerProperties {
+  
   @scala.inline
   def apply(): LineSymbolMarkerProperties = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[LineSymbolMarkerProperties]
   }
+  
   @scala.inline
   implicit class LineSymbolMarkerPropertiesOps[Self <: LineSymbolMarkerProperties] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setColorVarargs(value: Double*): Self = this.set("color", js.Array(value :_*))
+    
     @scala.inline
     def setColor(value: Color_ | js.Array[Double] | String): Self = this.set("color", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
+    
     @scala.inline
     def setPlacement(value: begin | end | `begin-end`): Self = this.set("placement", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deletePlacement: Self = this.set("placement", js.undefined)
+    
     @scala.inline
     def setStyle(value: arrow | circle | square | diamond | cross | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.x): Self = this.set("style", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
   }
-  
 }
-

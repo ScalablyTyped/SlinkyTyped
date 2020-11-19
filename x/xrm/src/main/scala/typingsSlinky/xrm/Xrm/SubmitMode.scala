@@ -2,7 +2,7 @@ package typingsSlinky.xrm.Xrm
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Submit Mode for {@link Attributes.Attribute.setSubmitMode} Attributes.Attribute.setSubmitMode().
@@ -14,13 +14,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.never
 */
 trait SubmitMode extends js.Object
-
 object SubmitMode {
+  
   @scala.inline
   def always: typingsSlinky.xrm.xrmStrings.always = "always".asInstanceOf[typingsSlinky.xrm.xrmStrings.always]
+  
   @scala.inline
   def dirty: typingsSlinky.xrm.xrmStrings.dirty = "dirty".asInstanceOf[typingsSlinky.xrm.xrmStrings.dirty]
+  
   @scala.inline
   def never: typingsSlinky.xrm.xrmStrings.never = "never".asInstanceOf[typingsSlinky.xrm.xrmStrings.never]
 }
-

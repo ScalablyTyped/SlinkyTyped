@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.graphql.definitionMod.GraphQLFieldResolver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-server", "MockList")
 @js.native
@@ -21,4 +21,3 @@ class MockList protected ()
   def this(length: js.Array[Double], mockFunction: GraphQLFieldResolver[_, _, StringDictionary[_]]) = this()
   def this(length: Double, mockFunction: GraphQLFieldResolver[_, _, StringDictionary[_]]) = this()
 }
-

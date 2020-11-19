@@ -3,7 +3,7 @@ package typingsSlinky.polygon.mod
 import typingsSlinky.polygon.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create a new polygon:
@@ -28,4 +28,3 @@ import scala.scalajs.js.annotation._
 class ^ protected () extends Polygon {
   def this(points: js.Array[js.Array[Double] | X | typingsSlinky.vec2.mod.^ ]) = this()
 }
-

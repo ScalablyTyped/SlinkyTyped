@@ -8,9 +8,10 @@ import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.Locale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Header {
+  
   @JSImport("antd/lib/calendar/Header", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -19,11 +20,13 @@ object Header {
   class Builder[DateType] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def validRange(value: js.Tuple2[DateType, DateType]): this.type = set("validRange", value.asInstanceOf[js.Any])
   }
   
   def withProps[DateType](p: CalendarHeaderProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[DateType](
     fullscreen: Boolean,
@@ -39,4 +42,3 @@ object Header {
     new Builder[DateType](js.Array(this.component, __props.asInstanceOf[CalendarHeaderProps[DateType]]))
   }
 }
-

@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LineSymbol3DConstructor
@@ -15,6 +15,6 @@ trait LineSymbol3DConstructor
   */
 Instantiable0[LineSymbol3D]
      with Instantiable1[/* properties */ LineSymbol3DProperties, LineSymbol3D] {
+  
   def fromJSON(json: js.Any): LineSymbol3D = js.native
 }
-

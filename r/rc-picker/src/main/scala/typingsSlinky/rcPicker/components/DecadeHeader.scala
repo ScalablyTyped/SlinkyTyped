@@ -6,9 +6,10 @@ import typingsSlinky.rcPicker.decadeHeaderMod.YearHeaderProps
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DecadeHeader {
+  
   @JSImport("rc-picker/es/panels/DecadePanel/DecadeHeader", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -19,6 +20,7 @@ object DecadeHeader {
        with StBuildingComponent[tag.type, js.Object]
   
   def withProps[DateType](p: YearHeaderProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply[DateType](
     generateConfig: GenerateConfig[DateType],
@@ -31,4 +33,3 @@ object DecadeHeader {
     new Builder[DateType](js.Array(this.component, __props.asInstanceOf[YearHeaderProps[DateType]]))
   }
 }
-

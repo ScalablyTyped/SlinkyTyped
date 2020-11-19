@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.FullscreenProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Fullscreen")
 @js.native
@@ -16,4 +16,3 @@ class FullscreenCls ()
   extends typingsSlinky.arcgisJsApi.esri.Fullscreen {
   def this(properties: FullscreenProperties) = this()
 }
-

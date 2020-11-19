@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Print
 import typingsSlinky.arcgisJsApi.esri.PrintProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Print", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Print {
   def this(properties: PrintProperties) = this()
 }
-

@@ -6,7 +6,7 @@ import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.passportOauth2.mod.OAuth2Strategy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("passport-google-oauth20", "Strategy")
 @js.native
@@ -33,4 +33,3 @@ class Strategy protected () extends OAuth2Strategy {
       ]
   ) = this()
 }
-

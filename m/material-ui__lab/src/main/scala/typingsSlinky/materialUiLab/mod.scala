@@ -31,11 +31,22 @@ import typingsSlinky.materialUiLab.usePaginationMod.UsePaginationProps
 import typingsSlinky.materialUiLab.usePaginationMod.UsePaginationResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@material-ui/lab", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  def Alert(props: AlertProps): ReactElement = js.native
+  
+  def AlertTitle(props: AlertTitleProps): ReactElement = js.native
+  
+  def Autocomplete[T, Multiple /* <: js.UndefOr[Boolean] */, DisableClearable /* <: js.UndefOr[Boolean] */, FreeSolo /* <: js.UndefOr[Boolean] */](props: AutocompleteProps[T, Multiple, DisableClearable, FreeSolo]): ReactElement = js.native
+  
+  def AvatarGroup(props: AvatarGroupProps): ReactElement = js.native
+  
+  def Pagination(props: PaginationProps): ReactElement = js.native
+  
   /**
     *
     * Demos:
@@ -47,6 +58,9 @@ object mod extends js.Object {
     * - [PaginationItem API](https://material-ui.com/api/pagination-item/)
     */
   val PaginationItem: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OverridableComponent<PaginationItemTypeMap> */ js.Any = js.native
+  
+  def Rating(props: RatingProps): ReactElement = js.native
+  
   /**
     *
     * Demos:
@@ -58,6 +72,15 @@ object mod extends js.Object {
     * - [Skeleton API](https://material-ui.com/api/skeleton/)
     */
   val Skeleton: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OverridableComponent<SkeletonTypeMap> */ js.Any = js.native
+  
+  def SpeedDial(props: SpeedDialProps): ReactElement = js.native
+  
+  def SpeedDialAction(props: SpeedDialActionProps): ReactElement = js.native
+  
+  def SpeedDialIcon(props: SpeedDialIconProps): ReactElement = js.native
+  
+  def TabContext(props: TabContextProps): ReactElement = js.native
+  
   /**
     *
     * Demos:
@@ -70,6 +93,23 @@ object mod extends js.Object {
     * - inherits [Tabs API](https://material-ui.com/api/tabs/)
     */
   val TabList: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OverridableComponent<TabListTypeMap> */ js.Any = js.native
+  
+  def TabPanel(props: TabPanelProps): ReactElement = js.native
+  
+  def Timeline(props: TimelineProps): ReactElement = js.native
+  
+  def TimelineConnector(props: TimelineConnectorProps): ReactElement = js.native
+  
+  def TimelineContent(props: TimelineContentProps): ReactElement = js.native
+  
+  def TimelineDot(props: TimelineDotProps): ReactElement = js.native
+  
+  def TimelineItem(props: TimelineItemProps): ReactElement = js.native
+  
+  def TimelineOppositeContent(props: TimelineOppositeContentProps): ReactElement = js.native
+  
+  def TimelineSeparator(props: TimelineSeparatorProps): ReactElement = js.native
+  
   /**
     *
     * Demos:
@@ -82,33 +122,23 @@ object mod extends js.Object {
     * - inherits [ButtonBase API](https://material-ui.com/api/button-base/)
     */
   val ToggleButton: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ExtendButtonBase<ToggleButtonTypeMap> */ js.Any = js.native
-  def Alert(props: AlertProps): ReactElement = js.native
-  def AlertTitle(props: AlertTitleProps): ReactElement = js.native
-  def Autocomplete[T, Multiple /* <: js.UndefOr[Boolean] */, DisableClearable /* <: js.UndefOr[Boolean] */, FreeSolo /* <: js.UndefOr[Boolean] */](props: AutocompleteProps[T, Multiple, DisableClearable, FreeSolo]): ReactElement = js.native
-  def AvatarGroup(props: AvatarGroupProps): ReactElement = js.native
-  def Pagination(props: PaginationProps): ReactElement = js.native
-  def Rating(props: RatingProps): ReactElement = js.native
-  def SpeedDial(props: SpeedDialProps): ReactElement = js.native
-  def SpeedDialAction(props: SpeedDialActionProps): ReactElement = js.native
-  def SpeedDialIcon(props: SpeedDialIconProps): ReactElement = js.native
-  def TabContext(props: TabContextProps): ReactElement = js.native
-  def TabPanel(props: TabPanelProps): ReactElement = js.native
-  def Timeline(props: TimelineProps): ReactElement = js.native
-  def TimelineConnector(props: TimelineConnectorProps): ReactElement = js.native
-  def TimelineContent(props: TimelineContentProps): ReactElement = js.native
-  def TimelineDot(props: TimelineDotProps): ReactElement = js.native
-  def TimelineItem(props: TimelineItemProps): ReactElement = js.native
-  def TimelineOppositeContent(props: TimelineOppositeContentProps): ReactElement = js.native
-  def TimelineSeparator(props: TimelineSeparatorProps): ReactElement = js.native
+  
   def ToggleButtonGroup(props: ToggleButtonGroupProps): ReactElement = js.native
+  
   def TreeItem(props: TreeItemProps): ReactElement = js.native
+  
   def TreeView(props: TreeViewProps): ReactElement = js.native
+  
   def createFilterOptions[T](): js.Function2[/* options */ js.Array[T], /* state */ FilterOptionsState[T], js.Array[T]] = js.native
   def createFilterOptions[T](config: CreateFilterOptionsConfig[T]): js.Function2[/* options */ js.Array[T], /* state */ FilterOptionsState[T], js.Array[T]] = js.native
+  
   def getPanelId(context: TabContextValue, tabValue: String): String = js.native
+  
   def getTabId(context: TabContextValue, tabValue: String): String = js.native
+  
   def useAutocomplete[T, Multiple /* <: js.UndefOr[Boolean] */, DisableClearable /* <: js.UndefOr[Boolean] */, FreeSolo /* <: js.UndefOr[Boolean] */](props: UseAutocompleteProps[T, Multiple, DisableClearable, FreeSolo]): AnchorEl[T, Multiple, DisableClearable, FreeSolo] = js.native
+  
   def usePagination(props: UsePaginationProps): UsePaginationResult = js.native
+  
   def useTabContext(): TabContextValue | Null = js.native
 }
-

@@ -10,10 +10,11 @@ import typingsSlinky.gapiClientClassroom.anon.Key
 import typingsSlinky.gapiClientClassroom.anon.Oauthtoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AnnouncementsResource extends js.Object {
+  
   def create(request: Alt, body: Announcement): Request[Announcement] = js.native
   /**
     * Creates an announcement.
@@ -29,6 +30,7 @@ trait AnnouncementsResource extends js.Object {
     * &#42; AttachmentNotVisible
     */
   def create(request: CourseId): Request[Announcement] = js.native
+  
   /**
     * Deletes an announcement.
     *
@@ -47,6 +49,7 @@ trait AnnouncementsResource extends js.Object {
     */
   def delete(): Request[js.Object] = js.native
   def delete(request: Fields): Request[js.Object] = js.native
+  
   /**
     * Returns an announcement.
     *
@@ -59,6 +62,7 @@ trait AnnouncementsResource extends js.Object {
     */
   def get(): Request[Announcement] = js.native
   def get(request: Fields): Request[Announcement] = js.native
+  
   /**
     * Returns a list of announcements that the requester is permitted to view.
     *
@@ -74,6 +78,7 @@ trait AnnouncementsResource extends js.Object {
     */
   def list(): Request[ListAnnouncementsResponse] = js.native
   def list(request: AnnouncementStates): Request[ListAnnouncementsResponse] = js.native
+  
   def modifyAssignees(request: Fields, body: ModifyAnnouncementAssigneesRequest): Request[Announcement] = js.native
   /**
     * Modifies assignee mode and options of an announcement.
@@ -89,6 +94,7 @@ trait AnnouncementsResource extends js.Object {
     * &#42; `NOT_FOUND` if the requested course or course work does not exist.
     */
   def modifyAssignees(request: Id): Request[Announcement] = js.native
+  
   /**
     * Updates one or more fields of an announcement.
     *
@@ -104,4 +110,3 @@ trait AnnouncementsResource extends js.Object {
   def patch(request: Key): Request[Announcement] = js.native
   def patch(request: Oauthtoken, body: Announcement): Request[Announcement] = js.native
 }
-

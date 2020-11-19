@@ -6,11 +6,12 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.useItEventListener.useItEventListenerStrings.fullscreenchange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@use-it/event-listener", JSImport.Default)
 @js.native
 object default_fullscreenchange extends js.Object {
+  
   /**
     * A custom React Hook that provides a declarative useEventListener.
     */
@@ -38,4 +39,3 @@ object default_fullscreenchange extends js.Object {
     options: Options
   ): Unit = js.native
 }
-

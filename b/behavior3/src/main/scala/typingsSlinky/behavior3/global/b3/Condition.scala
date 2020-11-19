@@ -3,7 +3,7 @@ package typingsSlinky.behavior3.global.b3
 import typingsSlinky.behavior3.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Condition is the base class for all condition nodes. Thus, if you want to
@@ -19,4 +19,3 @@ class Condition ()
   extends typingsSlinky.behavior3.b3.BaseNode {
   def this(hasNameTitleProperties: Name) = this()
 }
-

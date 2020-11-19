@@ -7,11 +7,12 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws", "xray")
 @js.native
 object xray extends js.Object {
+  
   @js.native
   class SamplingRule protected ()
     extends typingsSlinky.pulumiAws.xrayMod.SamplingRule {
@@ -25,10 +26,10 @@ object xray extends js.Object {
     def this(name: String, args: SamplingRuleArgs) = this()
     def this(name: String, args: SamplingRuleArgs, opts: CustomResourceOptions) = this()
   }
-  
   /* static members */
   @js.native
   object SamplingRule extends js.Object {
+    
     /**
       * Get an existing SamplingRule resource's state with the given name, ID, and optional extra
       * properties used to qualify the lookup.
@@ -42,12 +43,11 @@ object xray extends js.Object {
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.samplingRuleMod.SamplingRule = js.native
     def get(name: String, id: Input[ID], state: SamplingRuleState): typingsSlinky.pulumiAws.samplingRuleMod.SamplingRule = js.native
     def get(name: String, id: Input[ID], state: SamplingRuleState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.samplingRuleMod.SamplingRule = js.native
+    
     /**
       * Returns true if the given object is an instance of SamplingRule.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/xray/samplingRule.SamplingRule */ Boolean = js.native
   }
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.ckeditor.global.CKEDITOR
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("CKEDITOR.styleCommand")
 @js.native
@@ -11,4 +11,3 @@ class styleCommand protected ()
   def this(style: typingsSlinky.ckeditor.CKEDITOR.style) = this()
   def this(style: typingsSlinky.ckeditor.CKEDITOR.style, ext: js.Any) = this()
 }
-

@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/pages relevant section in reference guide}
@@ -32,21 +32,25 @@ abstract class FormBase protected () extends Document {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
-  @JSName("model")
-  var model_FFormBase: IModel = js.native
+  
   def canvasHeight: Double = js.native
   def canvasHeight_=(newValue: Double): Unit = js.native
+  
   def canvasWidth: Double = js.native
   def canvasWidth_=(newValue: Double): Unit = js.native
+  
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MFormBase: FolderBase = js.native
+  
+  @JSName("model")
+  var model_FFormBase: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.FormBase")
 @js.native
 object FormBase extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

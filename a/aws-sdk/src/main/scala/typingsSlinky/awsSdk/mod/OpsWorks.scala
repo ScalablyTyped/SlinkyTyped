@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.opsworksMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "OpsWorks")
 @js.native
@@ -14,4 +14,3 @@ class OpsWorks ()
   extends typingsSlinky.awsSdk.allMod.OpsWorks {
   def this(options: ClientConfiguration) = this()
 }
-

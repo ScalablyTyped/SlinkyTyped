@@ -7,27 +7,11 @@ import typingsSlinky.std.stdStrings.message
 import typingsSlinky.std.stdStrings.open
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RTCDataChannel extends EventTarget {
-  var binaryType: java.lang.String = js.native
-  val bufferedAmount: Double = js.native
-  var bufferedAmountLowThreshold: Double = js.native
-  val id: Double | Null = js.native
-  val label: java.lang.String = js.native
-  val maxPacketLifeTime: Double | Null = js.native
-  val maxRetransmits: Double | Null = js.native
-  val negotiated: scala.Boolean = js.native
-  var onbufferedamountlow: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onclose: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _]) | Null = js.native
-  var onmessage: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
-  var onopen: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  val ordered: scala.Boolean = js.native
-  val priority: RTCPriorityType = js.native
-  val protocol: java.lang.String = js.native
-  val readyState: org.scalajs.dom.experimental.webrtc.RTCDataChannelState = js.native
+  
   @JSName("addEventListener")
   def addEventListener_bufferedamountlow(
     `type`: bufferedamountlow,
@@ -110,7 +94,43 @@ trait RTCDataChannel extends EventTarget {
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
+  
+  var binaryType: java.lang.String = js.native
+  
+  val bufferedAmount: Double = js.native
+  
+  var bufferedAmountLowThreshold: Double = js.native
+  
   def close(): Unit = js.native
+  
+  val id: Double | Null = js.native
+  
+  val label: java.lang.String = js.native
+  
+  val maxPacketLifeTime: Double | Null = js.native
+  
+  val maxRetransmits: Double | Null = js.native
+  
+  val negotiated: scala.Boolean = js.native
+  
+  var onbufferedamountlow: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  var onclose: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _]) | Null = js.native
+  
+  var onmessage: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
+  
+  var onopen: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  
+  val ordered: scala.Boolean = js.native
+  
+  val priority: RTCPriorityType = js.native
+  
+  val protocol: java.lang.String = js.native
+  
+  val readyState: org.scalajs.dom.experimental.webrtc.RTCDataChannelState = js.native
+  
   @JSName("removeEventListener")
   def removeEventListener_bufferedamountlow(
     `type`: bufferedamountlow,
@@ -193,9 +213,9 @@ trait RTCDataChannel extends EventTarget {
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  
   def send(data: java.lang.String): Unit = js.native
   def send(data: js.typedarray.ArrayBuffer): Unit = js.native
   def send(data: js.typedarray.ArrayBufferView): Unit = js.native
   def send(data: org.scalajs.dom.raw.Blob): Unit = js.native
 }
-

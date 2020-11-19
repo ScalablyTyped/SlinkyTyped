@@ -5,13 +5,15 @@ import typingsSlinky.std.ArrayLike
 import typingsSlinky.streamMock.ireadablemockMod.IReadableMock
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stream-mock/lib/readable/ObjectReadableMock", JSImport.Namespace)
 @js.native
 object objectReadableMockMod extends js.Object {
+  
   @js.native
   trait ObjectReadableMock extends IReadableMock {
+    
     def _read(): Unit = js.native
   }
   
@@ -22,6 +24,4 @@ object objectReadableMockMod extends js.Object {
     def this(source: ArrayLike[_], options: ReadableOptions) = this()
     def this(source: js.Iterable[_], options: ReadableOptions) = this()
   }
-  
 }
-

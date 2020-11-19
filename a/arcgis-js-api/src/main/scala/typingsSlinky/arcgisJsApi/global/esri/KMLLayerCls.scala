@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.KMLLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.KMLLayer")
 @js.native
@@ -16,4 +16,3 @@ class KMLLayerCls ()
   extends typingsSlinky.arcgisJsApi.esri.KMLLayer {
   def this(properties: KMLLayerProperties) = this()
 }
-

@@ -2,18 +2,18 @@ package typingsSlinky.tryghostContentApi.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.tryghostContentApi.tryghostContentApiStrings.public
   - typingsSlinky.tryghostContentApi.tryghostContentApiStrings.internal
 */
 trait TagVisibility extends js.Object
-
 object TagVisibility {
+  
   @scala.inline
   def internal: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.internal = "internal".asInstanceOf[typingsSlinky.tryghostContentApi.tryghostContentApiStrings.internal]
+  
   @scala.inline
   def public: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.public = "public".asInstanceOf[typingsSlinky.tryghostContentApi.tryghostContentApiStrings.public]
 }
-

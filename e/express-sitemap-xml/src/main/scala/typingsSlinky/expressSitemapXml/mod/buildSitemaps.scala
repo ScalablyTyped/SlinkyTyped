@@ -2,11 +2,12 @@ package typingsSlinky.expressSitemapXml.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("express-sitemap-xml", "buildSitemaps")
 @js.native
 object buildSitemaps extends js.Object {
+  
   /**
     *
     * Create an object where the keys are sitemap URLs to be served by the server
@@ -14,4 +15,3 @@ object buildSitemaps extends js.Object {
     */
   def apply(urls: js.Array[SitemapLeaf], base: String): js.Promise[Sitemap] = js.native
 }
-

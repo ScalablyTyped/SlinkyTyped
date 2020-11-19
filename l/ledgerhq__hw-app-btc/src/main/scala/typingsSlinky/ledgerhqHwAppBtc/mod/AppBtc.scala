@@ -6,21 +6,29 @@ import typingsSlinky.ledgerhqHwAppBtc.anon.R
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AppBtc extends js.Object {
+  
   def createPaymentTransactionNew(arg: CreateTransactionArg): js.Promise[String] = js.native
+  
   def getTrustedInput(indexLookup: Double, transaction: Transaction): js.Promise[String] = js.native
   def getTrustedInput(indexLookup: Double, transaction: Transaction, additionals: js.Array[String]): js.Promise[String] = js.native
+  
   def getTrustedInputBIP143(indexLookup: Double, transaction: Transaction): String = js.native
   def getTrustedInputBIP143(indexLookup: Double, transaction: Transaction, additionals: js.Array[String]): String = js.native
+  
   def getWalletPublicKey(path: String): js.Promise[BitcoinAddress] = js.native
   def getWalletPublicKey(path: String, opts: Boolean): js.Promise[BitcoinAddress] = js.native
   def getWalletPublicKey(path: String, opts: Format): js.Promise[BitcoinAddress] = js.native
+  
   def serializeTransactionOutputs(t: Transaction): Buffer = js.native
+  
   def signMessageNew(path: String, messageHex: String): js.Promise[R] = js.native
+  
   def signP2SHTransaction(arg: SignP2SHTransactionArg): js.Promise[js.Array[String]] = js.native
+  
   def splitTransaction(transactionHex: String): Transaction = js.native
   def splitTransaction(
     transactionHex: String,
@@ -101,4 +109,3 @@ trait AppBtc extends js.Object {
     additionals: js.Array[String]
   ): Transaction = js.native
 }
-

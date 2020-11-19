@@ -3,7 +3,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 import typingsSlinky.appleMapkitJs.mapkit.PaddingConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The values that define content padding within the map view frame.
@@ -46,4 +46,3 @@ class Padding ()
   def this(top: Double, right: Double, bottom: js.UndefOr[scala.Nothing], left: Double) = this()
   def this(top: Double, right: Double, bottom: Double, left: Double) = this()
 }
-

@@ -2,11 +2,12 @@ package typingsSlinky.bloomfilter
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("bloomfilter", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class BloomFilter protected () extends js.Object {
     def this(m: js.Array[Double], k: Double) = this()
@@ -19,18 +20,19 @@ object mod extends js.Object {
       */
     def this(m: Double, k: Double) = this()
     def this(m: js.typedarray.Int32Array, k: Double) = this()
-    var buckets: js.typedarray.Int32Array = js.native
+    
     /**
       * Add a value to a bloom filter
       * @param value
       */
     def add(value: js.Any): Unit = js.native
+    
+    var buckets: js.typedarray.Int32Array = js.native
+    
     /**
       * Test whether a value exists in a bloom filter. (False positives are
       * possible, false negatives are not.)
       */
     def test(value: js.Any): Boolean = js.native
   }
-  
 }
-

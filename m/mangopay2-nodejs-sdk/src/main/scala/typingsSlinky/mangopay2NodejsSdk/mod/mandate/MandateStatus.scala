@@ -2,7 +2,7 @@ package typingsSlinky.mangopay2NodejsSdk.mod.mandate
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * - "CREATED" - the mandate has been created
@@ -18,15 +18,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.FAILED
 */
 trait MandateStatus extends js.Object
-
 object MandateStatus {
+  
   @scala.inline
   def ACTIVE: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ACTIVE = "ACTIVE".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ACTIVE]
+  
   @scala.inline
   def CREATED: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CREATED = "CREATED".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CREATED]
+  
   @scala.inline
   def FAILED: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.FAILED = "FAILED".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.FAILED]
+  
   @scala.inline
   def SUBMITTED: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.SUBMITTED = "SUBMITTED".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.SUBMITTED]
 }
-

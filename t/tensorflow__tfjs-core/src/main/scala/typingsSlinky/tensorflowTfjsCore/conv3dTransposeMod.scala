@@ -7,13 +7,15 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/conv3d_transpose", JSImport.Namespace)
 @js.native
 object conv3dTransposeMod extends js.Object {
+  
   @js.native
   object conv3dTranspose extends js.Object {
+    
     def apply[T /* <: Tensor4D | Tensor5D */](
       x: T,
       filter: TensorLike,
@@ -239,6 +241,4 @@ object conv3dTransposeMod extends js.Object {
       pad: valid_
     ): T = js.native
   }
-  
 }
-

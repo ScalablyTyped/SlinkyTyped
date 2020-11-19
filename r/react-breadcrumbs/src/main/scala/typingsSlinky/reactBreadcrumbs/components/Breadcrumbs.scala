@@ -8,9 +8,10 @@ import typingsSlinky.reactBreadcrumbs.mod.BreadcrumbsProps
 import typingsSlinky.reactBreadcrumbs.mod.Crumbs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Breadcrumbs {
+  
   @JSImport("react-breadcrumbs", "Breadcrumbs")
   @js.native
   object component extends js.Object
@@ -19,25 +20,33 @@ object Breadcrumbs {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactBreadcrumbs.mod.Breadcrumbs] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def separatorReactElement(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def separator(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setCrumbs(value: /* crumbs */ Crumbs => ReactElement): this.type = set("setCrumbs", js.Any.fromFunction1(value))
+    
     @scala.inline
     def wrapperFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("wrapper", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def wrapperComponentClass(value: ReactComponentClass[js.Object]): this.type = set("wrapper", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def wrapper(value: ReactComponentClass[js.Object]): this.type = set("wrapper", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: BreadcrumbsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Breadcrumbs.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

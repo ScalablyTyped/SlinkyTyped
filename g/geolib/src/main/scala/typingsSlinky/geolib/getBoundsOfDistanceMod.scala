@@ -4,11 +4,11 @@ import typingsSlinky.geolib.anon.Latitude
 import typingsSlinky.geolib.typesMod.GeolibInputCoordinates
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("geolib/es/getBoundsOfDistance", JSImport.Namespace)
 @js.native
 object getBoundsOfDistanceMod extends js.Object {
+  
   def default(point: GeolibInputCoordinates, distance: Double): js.Array[Latitude] = js.native
 }
-

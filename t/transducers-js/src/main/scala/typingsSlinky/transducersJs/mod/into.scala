@@ -3,11 +3,12 @@ package typingsSlinky.transducersJs.mod
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("transducers-js", "into")
 @js.native
 object into extends js.Object {
+  
   def apply[TInput](empty: String, xf: Transducer[js.Tuple2[String, TInput], String], coll: StringDictionary[TInput]): String = js.native
   def apply[TInput](empty: String, xf: Transducer[TInput, String], coll: js.Iterable[TInput]): String = js.native
   def apply[TInput, TOutput](
@@ -27,4 +28,3 @@ object into extends js.Object {
     coll: js.Iterable[TInput]
   ): StringDictionary[TOutput] = js.native
 }
-

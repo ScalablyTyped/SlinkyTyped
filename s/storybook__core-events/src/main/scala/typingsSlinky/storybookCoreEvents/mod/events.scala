@@ -2,14 +2,14 @@ package typingsSlinky.storybookCoreEvents.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait events extends js.Object
-
 @JSImport("@storybook/core-events", "events")
 @js.native
 object events extends js.Object {
+  
   @js.native
   sealed trait CHANNEL_CREATED extends events
   
@@ -78,6 +78,4 @@ object events extends js.Object {
   
   @js.native
   sealed trait STORY_UNCHANGED extends events
-  
 }
-

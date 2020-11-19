@@ -21,7 +21,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.script
 import typingsSlinky.babelTypes.babelTypesStrings.set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.BlockStatement_
@@ -39,8 +39,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ClassMethod_
 */
 trait BlockParent extends js.Object
-
 object BlockParent {
+  
   @scala.inline
   def ForInStatement_(
     body: Statement,
@@ -55,6 +55,7 @@ object BlockParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def Program_(
     body: js.Array[Statement | ModuleDeclaration],
@@ -68,6 +69,7 @@ object BlockParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def ObjectMethod_(
     async: Boolean,
@@ -89,6 +91,7 @@ object BlockParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def ClassMethod_(
     async: Boolean,
@@ -110,6 +113,7 @@ object BlockParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def SwitchStatement_(
     cases: js.Array[SwitchCase_],
@@ -123,6 +127,7 @@ object BlockParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def FunctionExpression_(
     async: Boolean,
@@ -139,12 +144,14 @@ object BlockParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def BlockStatement_(body: js.Array[Statement], end: Double, loc: SourceLocation, start: Double, `type`: BlockStatement): BlockParent = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def WhileStatement_(
     body: Statement,
@@ -158,6 +165,7 @@ object BlockParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def ForOfStatement_(
     body: Statement,
@@ -172,6 +180,7 @@ object BlockParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def ArrowFunctionExpression_(
     async: Boolean,
@@ -189,6 +198,7 @@ object BlockParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def FunctionDeclaration_(
     async: Boolean,
@@ -205,6 +215,7 @@ object BlockParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def DoWhileStatement_(
     body: Statement,
@@ -218,6 +229,7 @@ object BlockParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }
+  
   @scala.inline
   def ForStatement_(
     body: Statement,
@@ -234,4 +246,3 @@ object BlockParent {
     __obj.asInstanceOf[BlockParent]
   }
 }
-

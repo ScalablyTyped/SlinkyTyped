@@ -6,32 +6,31 @@ import typingsSlinky.babylonjs.BABYLON.IOfflineProvider
 import typingsSlinky.babylonjs.BABYLON.ProcessingOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.ShaderProcessor")
 @js.native
 class ShaderProcessor ()
   extends typingsSlinky.babylonjs.BABYLON.ShaderProcessor
-
 /* static members */
 @JSGlobal("BABYLON.ShaderProcessor")
 @js.native
 object ShaderProcessor extends js.Object {
-  var _BuildExpression: js.Any = js.native
-  var _BuildSubExpression: js.Any = js.native
-  var _EvaluatePreProcessors: js.Any = js.native
-  var _ExtractOperation: js.Any = js.native
-  var _MoveCursor: js.Any = js.native
-  var _MoveCursorWithinIf: js.Any = js.native
-  var _PreparePreProcessors: js.Any = js.native
-  var _ProcessIncludes: js.Any = js.native
-  var _ProcessPrecision: js.Any = js.native
-  var _ProcessShaderConversion: js.Any = js.native
+  
   def Process(
     sourceCode: String,
     options: ProcessingOptions,
     callback: js.Function1[/* migratedCode */ String, Unit]
   ): Unit = js.native
+  
+  var _BuildExpression: js.Any = js.native
+  
+  var _BuildSubExpression: js.Any = js.native
+  
+  var _EvaluatePreProcessors: js.Any = js.native
+  
+  var _ExtractOperation: js.Any = js.native
+  
   /**
     * Loads a file from a url
     * @param url url to load
@@ -58,6 +57,102 @@ object ShaderProcessor extends js.Object {
       /* responseURL */ js.UndefOr[String], 
       Unit
     ],
+    onProgress: js.UndefOr[scala.Nothing],
+    offlineProvider: js.UndefOr[scala.Nothing],
+    useArrayBuffer: js.UndefOr[scala.Nothing],
+    onError: js.Function2[
+      /* request */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.WebRequest], 
+      /* exception */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.LoadFileError], 
+      Unit
+    ]
+  ): IFileRequest = js.native
+  def _FileToolsLoadFile(
+    url: String,
+    onSuccess: js.Function2[
+      /* data */ String | js.typedarray.ArrayBuffer, 
+      /* responseURL */ js.UndefOr[String], 
+      Unit
+    ],
+    onProgress: js.UndefOr[scala.Nothing],
+    offlineProvider: js.UndefOr[scala.Nothing],
+    useArrayBuffer: Boolean
+  ): IFileRequest = js.native
+  def _FileToolsLoadFile(
+    url: String,
+    onSuccess: js.Function2[
+      /* data */ String | js.typedarray.ArrayBuffer, 
+      /* responseURL */ js.UndefOr[String], 
+      Unit
+    ],
+    onProgress: js.UndefOr[scala.Nothing],
+    offlineProvider: js.UndefOr[scala.Nothing],
+    useArrayBuffer: Boolean,
+    onError: js.Function2[
+      /* request */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.WebRequest], 
+      /* exception */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.LoadFileError], 
+      Unit
+    ]
+  ): IFileRequest = js.native
+  def _FileToolsLoadFile(
+    url: String,
+    onSuccess: js.Function2[
+      /* data */ String | js.typedarray.ArrayBuffer, 
+      /* responseURL */ js.UndefOr[String], 
+      Unit
+    ],
+    onProgress: js.UndefOr[scala.Nothing],
+    offlineProvider: IOfflineProvider
+  ): IFileRequest = js.native
+  def _FileToolsLoadFile(
+    url: String,
+    onSuccess: js.Function2[
+      /* data */ String | js.typedarray.ArrayBuffer, 
+      /* responseURL */ js.UndefOr[String], 
+      Unit
+    ],
+    onProgress: js.UndefOr[scala.Nothing],
+    offlineProvider: IOfflineProvider,
+    useArrayBuffer: js.UndefOr[scala.Nothing],
+    onError: js.Function2[
+      /* request */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.WebRequest], 
+      /* exception */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.LoadFileError], 
+      Unit
+    ]
+  ): IFileRequest = js.native
+  def _FileToolsLoadFile(
+    url: String,
+    onSuccess: js.Function2[
+      /* data */ String | js.typedarray.ArrayBuffer, 
+      /* responseURL */ js.UndefOr[String], 
+      Unit
+    ],
+    onProgress: js.UndefOr[scala.Nothing],
+    offlineProvider: IOfflineProvider,
+    useArrayBuffer: Boolean
+  ): IFileRequest = js.native
+  def _FileToolsLoadFile(
+    url: String,
+    onSuccess: js.Function2[
+      /* data */ String | js.typedarray.ArrayBuffer, 
+      /* responseURL */ js.UndefOr[String], 
+      Unit
+    ],
+    onProgress: js.UndefOr[scala.Nothing],
+    offlineProvider: IOfflineProvider,
+    useArrayBuffer: Boolean,
+    onError: js.Function2[
+      /* request */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.WebRequest], 
+      /* exception */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.LoadFileError], 
+      Unit
+    ]
+  ): IFileRequest = js.native
+  def _FileToolsLoadFile(
+    url: String,
+    onSuccess: js.Function2[
+      /* data */ String | js.typedarray.ArrayBuffer, 
+      /* responseURL */ js.UndefOr[String], 
+      Unit
+    ],
     onProgress: js.Function1[/* ev */ ProgressEvent, Unit]
   ): IFileRequest = js.native
   def _FileToolsLoadFile(
@@ -68,7 +163,66 @@ object ShaderProcessor extends js.Object {
       Unit
     ],
     onProgress: js.Function1[/* ev */ ProgressEvent, Unit],
+    offlineProvider: js.UndefOr[scala.Nothing],
+    useArrayBuffer: js.UndefOr[scala.Nothing],
+    onError: js.Function2[
+      /* request */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.WebRequest], 
+      /* exception */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.LoadFileError], 
+      Unit
+    ]
+  ): IFileRequest = js.native
+  def _FileToolsLoadFile(
+    url: String,
+    onSuccess: js.Function2[
+      /* data */ String | js.typedarray.ArrayBuffer, 
+      /* responseURL */ js.UndefOr[String], 
+      Unit
+    ],
+    onProgress: js.Function1[/* ev */ ProgressEvent, Unit],
+    offlineProvider: js.UndefOr[scala.Nothing],
+    useArrayBuffer: Boolean
+  ): IFileRequest = js.native
+  def _FileToolsLoadFile(
+    url: String,
+    onSuccess: js.Function2[
+      /* data */ String | js.typedarray.ArrayBuffer, 
+      /* responseURL */ js.UndefOr[String], 
+      Unit
+    ],
+    onProgress: js.Function1[/* ev */ ProgressEvent, Unit],
+    offlineProvider: js.UndefOr[scala.Nothing],
+    useArrayBuffer: Boolean,
+    onError: js.Function2[
+      /* request */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.WebRequest], 
+      /* exception */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.LoadFileError], 
+      Unit
+    ]
+  ): IFileRequest = js.native
+  def _FileToolsLoadFile(
+    url: String,
+    onSuccess: js.Function2[
+      /* data */ String | js.typedarray.ArrayBuffer, 
+      /* responseURL */ js.UndefOr[String], 
+      Unit
+    ],
+    onProgress: js.Function1[/* ev */ ProgressEvent, Unit],
     offlineProvider: IOfflineProvider
+  ): IFileRequest = js.native
+  def _FileToolsLoadFile(
+    url: String,
+    onSuccess: js.Function2[
+      /* data */ String | js.typedarray.ArrayBuffer, 
+      /* responseURL */ js.UndefOr[String], 
+      Unit
+    ],
+    onProgress: js.Function1[/* ev */ ProgressEvent, Unit],
+    offlineProvider: IOfflineProvider,
+    useArrayBuffer: js.UndefOr[scala.Nothing],
+    onError: js.Function2[
+      /* request */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.WebRequest], 
+      /* exception */ js.UndefOr[typingsSlinky.babylonjs.BABYLON.LoadFileError], 
+      Unit
+    ]
   ): IFileRequest = js.native
   def _FileToolsLoadFile(
     url: String,
@@ -97,5 +251,16 @@ object ShaderProcessor extends js.Object {
       Unit
     ]
   ): IFileRequest = js.native
+  
+  var _MoveCursor: js.Any = js.native
+  
+  var _MoveCursorWithinIf: js.Any = js.native
+  
+  var _PreparePreProcessors: js.Any = js.native
+  
+  var _ProcessIncludes: js.Any = js.native
+  
+  var _ProcessPrecision: js.Any = js.native
+  
+  var _ProcessShaderConversion: js.Any = js.native
 }
-

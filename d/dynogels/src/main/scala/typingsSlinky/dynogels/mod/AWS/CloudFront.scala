@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.cloudfrontMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.CloudFront")
 @js.native
@@ -14,10 +14,10 @@ class CloudFront ()
   extends typingsSlinky.awsSdk.mod.CloudFront {
   def this(options: ClientConfiguration) = this()
 }
-
 @JSImport("dynogels", "AWS.CloudFront")
 @js.native
 object CloudFront extends js.Object {
+  
   @js.native
   class Signer protected ()
     extends typingsSlinky.awsSdk.mod.CloudFront.Signer {
@@ -29,6 +29,4 @@ object CloudFront extends js.Object {
       */
     def this(keyPairId: String, privateKey: String) = this()
   }
-  
 }
-

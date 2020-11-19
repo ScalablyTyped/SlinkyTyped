@@ -2,7 +2,7 @@ package typingsSlinky.hostedGitInfo.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("hosted-git-info", JSImport.Namespace)
 @js.native
@@ -76,4 +76,3 @@ class ^ protected () extends GitHost {
     opts: FillOptions
   ) = this()
 }
-

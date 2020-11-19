@@ -4,7 +4,7 @@ import typingsSlinky.firebase.anon.PartialObserverUploadTask
 import typingsSlinky.firebase.mod.Unsubscribe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents the process of uploading an object. Allows you to monitor and
@@ -12,19 +12,18 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait UploadTask extends js.Object {
-  /**
-    * A snapshot of the current task state.
-    */
-  var snapshot: UploadTaskSnapshot = js.native
+  
   /**
     * Cancels a running task. Has no effect on a complete or failed task.
     * @return True if the cancel had an effect.
     */
   def cancel(): Boolean = js.native
+  
   /**
     * Equivalent to calling `then(null, onRejected)`.
     */
   def `catch`(onRejected: js.Function1[/* a */ js.Error, _]): js.Promise[_] = js.native
+  
   /**
     * Listens for events on this task.
     *
@@ -205,16 +204,24 @@ trait UploadTask extends js.Object {
     complete: Unsubscribe
   ): js.Function = js.native
   def on(event: TaskEvent, nextOrObserver: PartialObserverUploadTask, error: Null, complete: Unsubscribe): js.Function = js.native
+  
   /**
     * Pauses a running task. Has no effect on a paused or failed task.
     * @return True if the pause had an effect.
     */
   def pause(): Boolean = js.native
+  
   /**
     * Resumes a paused task. Has no effect on a running or failed task.
     * @return True if the resume had an effect.
     */
   def resume(): Boolean = js.native
+  
+  /**
+    * A snapshot of the current task state.
+    */
+  var snapshot: UploadTaskSnapshot = js.native
+  
   /**
     * This object behaves like a Promise, and resolves with its snapshot data when
     * the upload completes.
@@ -231,4 +238,3 @@ trait UploadTask extends js.Object {
   ): js.Promise[_] = js.native
   def `then`(onFulfilled: Null, onRejected: js.Function1[/* a */ js.Error, _]): js.Promise[_] = js.native
 }
-

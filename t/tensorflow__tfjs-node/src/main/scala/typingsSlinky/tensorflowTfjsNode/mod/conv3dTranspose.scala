@@ -10,11 +10,12 @@ import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.same
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.valid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-node", "conv3dTranspose")
 @js.native
 object conv3dTranspose extends js.Object {
+  
   def apply(
     x: Tensor[R4 | R5],
     filter: TensorLike,
@@ -240,4 +241,3 @@ object conv3dTranspose extends js.Object {
     pad: valid
   ): T = js.native
 }
-

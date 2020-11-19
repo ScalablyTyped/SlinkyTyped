@@ -4,11 +4,11 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.expo.withExpoRootTypesMod.InitialProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("expo/build/launch/registerRootComponent.web", JSImport.Namespace)
 @js.native
 object registerRootComponentWebMod extends js.Object {
+  
   def default[P /* <: InitialProps */](component: ReactComponentClass[P]): Unit = js.native
 }
-

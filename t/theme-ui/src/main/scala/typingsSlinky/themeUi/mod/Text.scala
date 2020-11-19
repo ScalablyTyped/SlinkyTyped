@@ -6,9 +6,8 @@ import typingsSlinky.themeUiComponents.mod.BoxProps
 import typingsSlinky.themeUiComponents.mod.ForwardRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("theme-ui", "Text")
 @js.native
 object Text extends TopLevel[ForwardRef[HTMLDivElement, BoxProps]]
-

@@ -4,45 +4,25 @@ import typingsSlinky.dwt.dynamsoftEnumMod.DynamsoftEnums.EnumDWTImageType
 import typingsSlinky.dwt.dynamsoftEnumMod.DynamsoftEnums.EnumDWTLanguage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dwt/WebTwain.Util", JSImport.Namespace)
 @js.native
 object webTwainUtilMod extends js.Object {
+  
   @js.native
   trait WebTwainUtil extends js.Object {
+    
     /**
       * Return the error code.
       */
     val ErrorCode: Double = js.native
+    
     /**
       * Return the error string.
       */
     val ErrorString: String = js.native
-    /**
-      * Return or set the log level for debugging.
-      */
-    var LogLevel: Double = js.native
-    /**
-      * Manufacturer in the identity string of the Dynamic Web TWAIN library.
-      */
-    val Manufacturer: String = js.native
-    /**
-      * ProductFamily in the identity string of the Dynamic Web TWAIN library.
-      */
-    val ProductFamily: String = js.native
-    /**
-      * Return or set the ProductKey.
-      */
-    var ProductKey: String = js.native
-    /**
-      * ProductName in the identity string of the Dynamic Web TWAIN library.
-      */
-    val ProductName: String = js.native
-    /**
-      * VersionInfo in the identity string of the Dynamic Web TWAIN library.
-      */
-    val VersionInfo: String = js.native
+    
     def GenerateURLForUploadData(
       indices: js.Array[Double],
       `type`: Double,
@@ -75,25 +55,56 @@ object webTwainUtilMod extends js.Object {
         ],
       failureCallback: js.Function2[/* errorCode */ Double, /* errorString */ String, Unit]
     ): Unit = js.native
+    
+    /**
+      * Return or set the log level for debugging.
+      */
+    var LogLevel: Double = js.native
+    
+    /**
+      * Manufacturer in the identity string of the Dynamic Web TWAIN library.
+      */
+    val Manufacturer: String = js.native
+    
+    /**
+      * ProductFamily in the identity string of the Dynamic Web TWAIN library.
+      */
+    val ProductFamily: String = js.native
+    
+    /**
+      * Return or set the ProductKey.
+      */
+    var ProductKey: String = js.native
+    
+    /**
+      * ProductName in the identity string of the Dynamic Web TWAIN library.
+      */
+    val ProductName: String = js.native
+    
     /**
       * Specify an event listener for the specified built-in event.
       * @param name Specify the event
       * @param callback The event listener
       */
     def RegisterEvent(name: String, callback: js.Function1[/* repeated */ js.Any, Unit]): Boolean = js.native
+    
     def SetLanguage(language: Double): Boolean = js.native
     /**
       * Set the language for the authorization dialogs.
       * @param language Specify the language.
       */
     def SetLanguage(language: EnumDWTLanguage): Boolean = js.native
+    
     /**
       * Remove an event listener from the specified built-in event.
       * @param name Specify the event
       * @param callback The event listener
       */
     def UnregisterEvent(name: String, callback: js.Function0[Unit]): Boolean = js.native
+    
+    /**
+      * VersionInfo in the identity string of the Dynamic Web TWAIN library.
+      */
+    val VersionInfo: String = js.native
   }
-  
 }
-

@@ -352,18 +352,25 @@ import typingsSlinky.storybookComponents.storybookComponentsStrings.webview
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/components/dist/form/input/input", "Textarea")
 @js.native
 object Textarea extends js.Object {
-  var __emotion_styles: js.Any = js.native
-  var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
-  var defaultProps: js.UndefOr[PartialPickTextareaPropsc] = js.native
-  var displayName: js.UndefOr[String] = js.native
-  var propTypes: js.UndefOr[WeakValidationMapPickText] = js.native
+  
   def apply(props: PropsWithChildrenPickText): ReactElement | Null = js.native
   def apply(props: PropsWithChildrenPickText, context: js.Any): ReactElement | Null = js.native
+  
+  var __emotion_styles: js.Any = js.native
+  
+  var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
+  
+  var defaultProps: js.UndefOr[PartialPickTextareaPropsc] = js.native
+  
+  var displayName: js.UndefOr[String] = js.native
+  
+  var propTypes: js.UndefOr[WeakValidationMapPickText] = js.native
+  
   def withComponent[Tag /* <: ReactComponentClass[_] */](tag: Tag): StyledComponent[PropsOf[Tag], TextareaProps, Theme] = js.native
   /**
     * @desc this method is type-unsafe
@@ -1011,4 +1018,3 @@ object Textarea extends js.Object {
     Theme
   ] = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.netflixNerror.mod.VError
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /*
   * Represents a collection of errors for the purpose of consumers that generally
@@ -15,6 +15,6 @@ import scala.scalajs.js.annotation._
 class MultiError protected ()
   extends typingsSlinky.netflixNerror.mod.VError {
   def this(errors: js.Array[js.Error]) = this()
+  
   def errors(): js.Array[js.Error] = js.native
 }
-

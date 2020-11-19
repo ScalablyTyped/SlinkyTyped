@@ -1,13 +1,12 @@
 package typingsSlinky.esfxInternalHashcode.mod
 
-import typingsSlinky.std.BigInt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@esfx/internal-hashcode", "hashBigInt")
 @js.native
 object hashBigInt extends js.Object {
-  def apply(x: BigInt): Double = js.native
+  
+  def apply(x: js.BigInt): Double = js.native
 }
-

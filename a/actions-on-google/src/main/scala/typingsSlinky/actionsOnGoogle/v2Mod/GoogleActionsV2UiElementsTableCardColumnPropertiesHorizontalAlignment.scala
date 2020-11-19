@@ -2,7 +2,7 @@ package typingsSlinky.actionsOnGoogle.v2Mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LEADING
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TRAILING
 */
 trait GoogleActionsV2UiElementsTableCardColumnPropertiesHorizontalAlignment extends js.Object
-
 object GoogleActionsV2UiElementsTableCardColumnPropertiesHorizontalAlignment {
+  
   @scala.inline
   def CENTER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CENTER = "CENTER".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CENTER]
+  
   @scala.inline
   def LEADING: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LEADING = "LEADING".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LEADING]
+  
   @scala.inline
   def TRAILING: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TRAILING = "TRAILING".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TRAILING]
 }
-

@@ -7,11 +7,12 @@ import typingsSlinky.rx.Rx.Observer
 import typingsSlinky.rx.Rx.Subject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rx", "DOM.fromWebSocket")
 @js.native
 object fromWebSocket extends js.Object {
+  
   // Web Sockets
   def apply(url: String, protocol: String): Subject[MessageEvent] = js.native
   def apply(
@@ -28,4 +29,3 @@ object fromWebSocket extends js.Object {
     closingObserver: Observer[CloseEvent]
   ): Subject[MessageEvent] = js.native
 }
-

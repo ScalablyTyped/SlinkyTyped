@@ -2,16 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FindTask extends Task {
-  /**
-    * Specify the geodatabase version to search. Requires ArcGIS Server service 10.1 or greater.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-FindTask.html#gdbVersion)
-    */
-  var gdbVersion: String = js.native
+  
   /**
     * Sends a request to the ArcGIS REST map service resource to perform a search based on the input [params](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html).
     *
@@ -25,5 +20,11 @@ trait FindTask extends Task {
   def execute(params: FindParametersProperties): js.Promise[_] = js.native
   def execute(params: FindParametersProperties, requestOptions: js.Any): js.Promise[_] = js.native
   def execute(params: FindParameters, requestOptions: js.Any): js.Promise[_] = js.native
+  
+  /**
+    * Specify the geodatabase version to search. Requires ArcGIS Server service 10.1 or greater.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-FindTask.html#gdbVersion)
+    */
+  var gdbVersion: String = js.native
 }
-

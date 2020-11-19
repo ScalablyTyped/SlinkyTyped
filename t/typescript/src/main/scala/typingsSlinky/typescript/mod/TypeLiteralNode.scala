@@ -3,7 +3,7 @@ package typingsSlinky.typescript.mod
 import typingsSlinky.typescript.mod.SyntaxKind.TypeLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typescript.mod.TextRange because Already inherited
@@ -12,9 +12,11 @@ import scala.scalajs.js.annotation._
 trait TypeLiteralNode
   extends TypeNode
      with ObjectTypeDeclaration {
+  
   var _declarationBrand: js.Any = js.native
+  
   @JSName("kind")
   var kind_TypeLiteralNode: TypeLiteral = js.native
+  
   var members: NodeArray[TypeElement] = js.native
 }
-

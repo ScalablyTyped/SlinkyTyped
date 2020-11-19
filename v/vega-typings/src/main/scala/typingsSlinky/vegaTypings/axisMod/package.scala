@@ -2,15 +2,17 @@ package typingsSlinky.vegaTypings
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object axisMod {
+  
   /* Rewritten from type alias, can be one of: 
     - scala.Boolean
     - typingsSlinky.vegaTypings.vegaTypingsStrings.parity
     - typingsSlinky.vegaTypings.vegaTypingsStrings.greedy
   */
   type LabelOverlap = typingsSlinky.vegaTypings.axisMod._LabelOverlap | scala.Boolean
+  
   /* Rewritten from type alias, can be one of: 
     - scala.Double
     - typingsSlinky.vegaTypings.scaleMod.TimeInterval

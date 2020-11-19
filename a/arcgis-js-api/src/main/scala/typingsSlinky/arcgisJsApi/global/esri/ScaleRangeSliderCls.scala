@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.ScaleRangeSliderProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.ScaleRangeSlider")
 @js.native
@@ -16,4 +16,3 @@ class ScaleRangeSliderCls ()
   extends typingsSlinky.arcgisJsApi.esri.ScaleRangeSlider {
   def this(properties: ScaleRangeSliderProperties) = this()
 }
-

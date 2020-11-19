@@ -4,11 +4,12 @@ import typingsSlinky.libsodiumWrappers.mod.StringOutputFormat
 import typingsSlinky.libsodiumWrappers.mod.Uint8ArrayOutputFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("libsodium-wrappers-sumo", "crypto_box_open_detached")
 @js.native
 object cryptoBoxOpenDetached extends js.Object {
+  
   def apply(
     ciphertext: String,
     mac: js.typedarray.Uint8Array,
@@ -56,4 +57,3 @@ object cryptoBoxOpenDetached extends js.Object {
     outputFormat: Uint8ArrayOutputFormat
   ): js.typedarray.Uint8Array = js.native
 }
-

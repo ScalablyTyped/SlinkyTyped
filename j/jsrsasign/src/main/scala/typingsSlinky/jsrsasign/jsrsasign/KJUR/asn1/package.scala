@@ -2,22 +2,27 @@ package typingsSlinky.jsrsasign.jsrsasign.KJUR
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object asn1 {
+  
   type DERBoolean = typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object
+  
   /**
     * class for ASN.1 DER IA5String
     * @param params associative array of parameters (ex. {'str': 'aaa'})
     */
   type DERIA5String = typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERAbstractString
+  
   /** class for ASN.1 DER Null */
   type DERNull = typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object
+  
   /**
     * class for ASN.1 DER NumericString
     * @param params associative array of parameters (ex. {'str': 'aaa'})
     */
   type DERNumericString = typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERAbstractString
+  
   /**
     * class for ASN.1 DER OctetString
     * @param params associative array of parameters (ex. {'str': 'aaa'})
@@ -52,11 +57,13 @@ package object asn1 {
     * //   }
     */
   type DEROctetString = typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERAbstractString
+  
   /**
     * class for ASN.1 DER PrintableString
     * @param params associative array of parameters (ex. {'str': 'aaa'})
     */
   type DERPrintableString = typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERAbstractString
+  
   /**
     * class for ASN.1 DER Set
     *
@@ -71,11 +78,13 @@ package object asn1 {
     * NOTE2: sortflag is supported since 1.0.5.
     */
   type DERSet = typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERAbstractStructured
+  
   /**
     * class for ASN.1 DER TeletexString
     * @param params associative array of parameters (ex. {'str': 'aaa'})
     */
   type DERTeletexString = typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERAbstractString
+  
   /**
     * class for ASN.1 DER UTF8String
     * @param params associative array of parameters (ex. {'str': 'aaa'})

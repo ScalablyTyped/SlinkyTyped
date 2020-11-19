@@ -7,9 +7,8 @@ import typingsSlinky.blueprintjsCore.htmlMod.IElementRefProps
 import typingsSlinky.react.mod.HTMLProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@blueprintjs/core/lib/esm/components", "Blockquote")
 @js.native
 object Blockquote extends TopLevel[ReactComponentClass[HTMLProps[HTMLElement] with IElementRefProps[HTMLElement]]]
-

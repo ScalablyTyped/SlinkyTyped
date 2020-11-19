@@ -4,7 +4,7 @@ import typingsSlinky.typescriptServices.TypeScript.IExpressionSyntax
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "ParenthesizedArrowFunctionExpressionSyntax")
 @js.native
@@ -18,15 +18,15 @@ class ParenthesizedArrowFunctionExpressionSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSImport("typescript-services", "ParenthesizedArrowFunctionExpressionSyntax")
 @js.native
 object ParenthesizedArrowFunctionExpressionSyntax extends js.Object {
+  
   def create(
     callSignature: typingsSlinky.typescriptServices.TypeScript.CallSignatureSyntax,
     equalsGreaterThanToken: ISyntaxToken
   ): typingsSlinky.typescriptServices.TypeScript.ParenthesizedArrowFunctionExpressionSyntax = js.native
+  
   def create1(): typingsSlinky.typescriptServices.TypeScript.ParenthesizedArrowFunctionExpressionSyntax = js.native
 }
-

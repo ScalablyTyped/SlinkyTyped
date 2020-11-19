@@ -10,7 +10,7 @@ import typingsSlinky.officeJsPreview.officeJsPreviewStrings.NotBetween
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.NotEqualTo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -20,6 +20,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait DateTimeDataValidation extends js.Object {
+  
   /**
     *
     * Specifies the right-hand operand when the operator property is set to a binary operator such as GreaterThan (the left-hand operand is the value the user tries to enter in the cell). With the ternary operators Between and NotBetween, specifies the lower bound operand.
@@ -29,6 +30,7 @@ trait DateTimeDataValidation extends js.Object {
     * [Api set: ExcelApi 1.8]
     */
   var formula1: String | js.Date | Range = js.native
+  
   /**
     *
     * With the ternary operators Between and NotBetween, specifies the upper bound operand. Is not used with the binary operators, such as GreaterThan.
@@ -38,6 +40,7 @@ trait DateTimeDataValidation extends js.Object {
     * [Api set: ExcelApi 1.8]
     */
   var formula2: js.UndefOr[String | js.Date | Range] = js.native
+  
   /**
     *
     * The operator to use for validating the data.
@@ -46,8 +49,8 @@ trait DateTimeDataValidation extends js.Object {
     */
   var operator: DataValidationOperator | Between | NotBetween | EqualTo | NotEqualTo | GreaterThan | LessThan | GreaterThanOrEqualTo | LessThanOrEqualTo = js.native
 }
-
 object DateTimeDataValidation {
+  
   @scala.inline
   def apply(
     formula1: String | js.Date | Range,
@@ -56,32 +59,40 @@ object DateTimeDataValidation {
     val __obj = js.Dynamic.literal(formula1 = formula1.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateTimeDataValidation]
   }
+  
   @scala.inline
   implicit class DateTimeDataValidationOps[Self <: DateTimeDataValidation] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setFormula1Date(value: js.Date): Self = this.set("formula1", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setFormula1(value: String | js.Date | Range): Self = this.set("formula1", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setOperator(
       value: DataValidationOperator | Between | NotBetween | EqualTo | NotEqualTo | GreaterThan | LessThan | GreaterThanOrEqualTo | LessThanOrEqualTo
     ): Self = this.set("operator", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setFormula2Date(value: js.Date): Self = this.set("formula2", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setFormula2(value: String | js.Date | Range): Self = this.set("formula2", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteFormula2: Self = this.set("formula2", js.undefined)
   }
-  
 }
-

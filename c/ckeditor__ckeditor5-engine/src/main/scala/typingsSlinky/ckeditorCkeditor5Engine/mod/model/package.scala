@@ -2,9 +2,10 @@ package typingsSlinky.ckeditorCkeditor5Engine.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object model {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.ckeditorCkeditor5Engine.mod.model.Node
     - typingsSlinky.ckeditorCkeditor5Engine.mod.model.TextProxy
@@ -14,6 +15,7 @@ package object model {
     - typingsSlinky.std.Iterable[js.Any]
   */
   type NodeSet = typingsSlinky.ckeditorCkeditor5Engine.mod.model._NodeSet | js.Iterable[js.Any] | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.ckeditorCkeditor5Engine.mod.model.Node
     - typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position

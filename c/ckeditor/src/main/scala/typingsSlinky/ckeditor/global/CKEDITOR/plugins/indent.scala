@@ -5,11 +5,14 @@ import typingsSlinky.ckeditor.CKEDITOR.command
 import typingsSlinky.ckeditor.CKEDITOR.editor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("CKEDITOR.plugins.indent")
 @js.native
 object indent extends js.Object {
+  
+  def registerCommands(editor: editor, commands: StringDictionary[command]): Unit = js.native
+  
   @js.native
   class genericDefinition ()
     extends typingsSlinky.ckeditor.CKEDITOR.plugins.indent.genericDefinition
@@ -17,7 +20,4 @@ object indent extends js.Object {
   @js.native
   class specificDefinition ()
     extends typingsSlinky.ckeditor.CKEDITOR.plugins.indent.specificDefinition
-  
-  def registerCommands(editor: editor, commands: StringDictionary[command]): Unit = js.native
 }
-

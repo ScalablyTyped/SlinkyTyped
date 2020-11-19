@@ -2,11 +2,14 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object opsworksMod {
+  
   type AgentVersions = js.Array[typingsSlinky.awsSdk.opsworksMod.AgentVersion]
+  
   type AppAttributes = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.opsworksMod.String]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DocumentRoot
     - typingsSlinky.awsSdk.awsSdkStrings.RailsEnv
@@ -15,6 +18,7 @@ package object opsworksMod {
     - java.lang.String
   */
   type AppAttributesKeys = typingsSlinky.awsSdk.opsworksMod._AppAttributesKeys | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`aws-flow-ruby`
     - typingsSlinky.awsSdk.awsSdkStrings.java_
@@ -26,22 +30,29 @@ package object opsworksMod {
     - java.lang.String
   */
   type AppType = typingsSlinky.awsSdk.opsworksMod._AppType | java.lang.String
+  
   type Apps = js.Array[typingsSlinky.awsSdk.opsworksMod.App]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.x86_64_
     - typingsSlinky.awsSdk.awsSdkStrings.i386
     - java.lang.String
   */
   type Architecture = typingsSlinky.awsSdk.opsworksMod._Architecture | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.load
     - typingsSlinky.awsSdk.awsSdkStrings.timer
     - java.lang.String
   */
   type AutoScalingType = typingsSlinky.awsSdk.opsworksMod._AutoScalingType | java.lang.String
+  
   type BlockDeviceMappings = js.Array[typingsSlinky.awsSdk.opsworksMod.BlockDeviceMapping]
+  
   type Boolean = scala.Boolean
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.opsworksMod.ClientApiVersions
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ascii
     - typingsSlinky.awsSdk.awsSdkStrings.big5
@@ -138,24 +149,33 @@ package object opsworksMod {
     - java.lang.String
   */
   type CloudWatchLogsEncoding = typingsSlinky.awsSdk.opsworksMod._CloudWatchLogsEncoding | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.start_of_file
     - typingsSlinky.awsSdk.awsSdkStrings.end_of_file
     - java.lang.String
   */
   type CloudWatchLogsInitialPosition = typingsSlinky.awsSdk.opsworksMod._CloudWatchLogsInitialPosition | java.lang.String
+  
   type CloudWatchLogsLogStreams = js.Array[typingsSlinky.awsSdk.opsworksMod.CloudWatchLogsLogStream]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.LOCAL
     - typingsSlinky.awsSdk.awsSdkStrings.UTC
     - java.lang.String
   */
   type CloudWatchLogsTimeZone = typingsSlinky.awsSdk.opsworksMod._CloudWatchLogsTimeZone | java.lang.String
+  
   type Commands = js.Array[typingsSlinky.awsSdk.opsworksMod.Command]
+  
   type DailyAutoScalingSchedule = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.opsworksMod.Switch]
+  
   type DataSources = js.Array[typingsSlinky.awsSdk.opsworksMod.DataSource]
+  
   type DateTime = java.lang.String
+  
   type DeploymentCommandArgs = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.opsworksMod.Strings]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.install_dependencies
     - typingsSlinky.awsSdk.awsSdkStrings.update_dependencies
@@ -172,16 +192,27 @@ package object opsworksMod {
     - java.lang.String
   */
   type DeploymentCommandName = typingsSlinky.awsSdk.opsworksMod._DeploymentCommandName | java.lang.String
+  
   type Deployments = js.Array[typingsSlinky.awsSdk.opsworksMod.Deployment]
+  
   type Double = scala.Double
+  
   type EcsClusters = js.Array[typingsSlinky.awsSdk.opsworksMod.EcsCluster]
+  
   type ElasticIps = js.Array[typingsSlinky.awsSdk.opsworksMod.ElasticIp]
+  
   type ElasticLoadBalancers = js.Array[typingsSlinky.awsSdk.opsworksMod.ElasticLoadBalancer]
+  
   type EnvironmentVariables = js.Array[typingsSlinky.awsSdk.opsworksMod.EnvironmentVariable]
+  
   type Hour = java.lang.String
+  
   type Instances = js.Array[typingsSlinky.awsSdk.opsworksMod.Instance]
+  
   type Integer = scala.Double
+  
   type LayerAttributes = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.opsworksMod.String]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EcsClusterArn
     - typingsSlinky.awsSdk.awsSdkStrings.EnableHaproxyStats
@@ -211,6 +242,7 @@ package object opsworksMod {
     - java.lang.String
   */
   type LayerAttributesKeys = typingsSlinky.awsSdk.opsworksMod._LayerAttributesKeys | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`aws-flow-ruby`
     - typingsSlinky.awsSdk.awsSdkStrings.`ecs-cluster`
@@ -227,25 +259,40 @@ package object opsworksMod {
     - java.lang.String
   */
   type LayerType = typingsSlinky.awsSdk.opsworksMod._LayerType | java.lang.String
+  
   type Layers = js.Array[typingsSlinky.awsSdk.opsworksMod.Layer]
+  
   type LoadBasedAutoScalingConfigurations = js.Array[typingsSlinky.awsSdk.opsworksMod.LoadBasedAutoScalingConfiguration]
+  
   type MaxResults = scala.Double
+  
   type Minute = scala.Double
+  
   type NextToken = java.lang.String
+  
   type OperatingSystemConfigurationManagers = js.Array[typingsSlinky.awsSdk.opsworksMod.OperatingSystemConfigurationManager]
+  
   type OperatingSystems = js.Array[typingsSlinky.awsSdk.opsworksMod.OperatingSystem]
+  
   type Parameters = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.opsworksMod.String]
+  
   type Permissions = js.Array[typingsSlinky.awsSdk.opsworksMod.Permission]
+  
   type RaidArrays = js.Array[typingsSlinky.awsSdk.opsworksMod.RaidArray]
+  
   type RdsDbInstances = js.Array[typingsSlinky.awsSdk.opsworksMod.RdsDbInstance]
+  
   type ResourceArn = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ebs_
     - typingsSlinky.awsSdk.awsSdkStrings.`instance-store`
     - java.lang.String
   */
   type RootDeviceType = typingsSlinky.awsSdk.opsworksMod._RootDeviceType | java.lang.String
+  
   type ServiceErrors = js.Array[typingsSlinky.awsSdk.opsworksMod.ServiceError]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.git_
     - typingsSlinky.awsSdk.awsSdkStrings.svn
@@ -254,26 +301,42 @@ package object opsworksMod {
     - java.lang.String
   */
   type SourceType = typingsSlinky.awsSdk.opsworksMod._SourceType | java.lang.String
+  
   type StackAttributes = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.opsworksMod.String]
+  
   type StackAttributesKeys = typingsSlinky.awsSdk.awsSdkStrings.Color_ | java.lang.String
+  
   type Stacks = js.Array[typingsSlinky.awsSdk.opsworksMod.Stack]
+  
   type String = java.lang.String
+  
   type Strings = js.Array[typingsSlinky.awsSdk.opsworksMod.String]
+  
   type Switch = java.lang.String
+  
   type TagKey = java.lang.String
+  
   type TagKeys = js.Array[typingsSlinky.awsSdk.opsworksMod.TagKey]
+  
   type TagValue = java.lang.String
+  
   type Tags = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.opsworksMod.TagValue]
+  
   type TimeBasedAutoScalingConfigurations = js.Array[typingsSlinky.awsSdk.opsworksMod.TimeBasedAutoScalingConfiguration]
+  
   type UserProfiles = js.Array[typingsSlinky.awsSdk.opsworksMod.UserProfile]
+  
   type ValidForInMinutes = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.paravirtual
     - typingsSlinky.awsSdk.awsSdkStrings.hvm
     - java.lang.String
   */
   type VirtualizationType = typingsSlinky.awsSdk.opsworksMod._VirtualizationType | java.lang.String
+  
   type VolumeConfigurations = js.Array[typingsSlinky.awsSdk.opsworksMod.VolumeConfiguration]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.gp2
     - typingsSlinky.awsSdk.awsSdkStrings.io1
@@ -281,7 +344,9 @@ package object opsworksMod {
     - java.lang.String
   */
   type VolumeType = typingsSlinky.awsSdk.opsworksMod._VolumeType | java.lang.String
+  
   type Volumes = js.Array[typingsSlinky.awsSdk.opsworksMod.Volume]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2013-02-18`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

@@ -2,11 +2,24 @@ package typingsSlinky.jsData.componentMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Component
   extends typingsSlinky.jsData.settableMod.default {
+  
+  /**
+    * Log the provided values at the "debug" level. Debug-level logs are only
+    * logged if {@link Component#debug} is `true`.
+    *
+    * `.dbg(...)` is shorthand for `.log('debug', ...)`.
+    *
+    * @method Component#dbg
+    * @param {...*} [args] Values to log.
+    * @since 3.0.0
+    */
+  def dbg(args: js.Any*): Unit = js.native
+  
   /**
     * Whether to enable debug-level logs for this component. Anything that
     * extends `Component` inherits this option and the corresponding logging
@@ -29,17 +42,7 @@ trait Component
     * @type {boolean}
     */
   var debug: Boolean = js.native
-  /**
-    * Log the provided values at the "debug" level. Debug-level logs are only
-    * logged if {@link Component#debug} is `true`.
-    *
-    * `.dbg(...)` is shorthand for `.log('debug', ...)`.
-    *
-    * @method Component#dbg
-    * @param {...*} [args] Values to log.
-    * @since 3.0.0
-    */
-  def dbg(args: js.Any*): Unit = js.native
+  
   /**
     * Trigger an event on this Component.
     *
@@ -66,6 +69,7 @@ trait Component
     * @since 3.0.0
     */
   def emit(event: String, args: js.Any*): Unit = js.native
+  
   /**
     * Log the provided values. By default sends values to `console[level]`.
     * Debug-level logs are only logged if {@link Component#debug} is `true`.
@@ -78,6 +82,7 @@ trait Component
     * @since 3.0.0
     */
   def log(args: js.Any*): Unit = js.native
+  
   /**
     * Remove an event listener from this Component. If no listener is provided,
     * then all listeners for the specified event will be removed. If no event is
@@ -104,6 +109,7 @@ trait Component
   def off(event: String, listener: js.UndefOr[scala.Nothing], thisArg: js.Any): Unit = js.native
   def off(event: String, listener: js.Function): Unit = js.native
   def off(event: String, listener: js.Function, thisArg: js.Any): Unit = js.native
+  
   /**
     * Register a new event listener on this Component.
     *
@@ -140,4 +146,3 @@ trait Component
   def on(name: String, listener: js.Function): Unit = js.native
   def on(name: String, listener: js.Function, ctx: js.Any): Unit = js.native
 }
-

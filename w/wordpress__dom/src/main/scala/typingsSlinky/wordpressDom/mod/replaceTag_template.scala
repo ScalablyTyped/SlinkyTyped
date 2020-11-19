@@ -5,11 +5,11 @@ import typingsSlinky.std.HTMLTemplateElement
 import typingsSlinky.wordpressDom.wordpressDomStrings.template
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/dom", "replaceTag")
 @js.native
 object replaceTag_template extends js.Object {
+  
   def apply(node: Node, tagName: template): HTMLTemplateElement = js.native
 }
-

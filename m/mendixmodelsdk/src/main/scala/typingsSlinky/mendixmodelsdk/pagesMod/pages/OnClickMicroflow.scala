@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.18.0: deleted
@@ -23,24 +23,25 @@ class OnClickMicroflow protected () extends OnClickBehavior {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FOnClickMicroflow: IModel = js.native
+  
   def microflowSettings: MicroflowSettings = js.native
   def microflowSettings_=(newValue: MicroflowSettings): Unit = js.native
+  
+  @JSName("model")
+  var model_FOnClickMicroflow: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.OnClickMicroflow")
 @js.native
 object OnClickMicroflow extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new OnClickMicroflow instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): OnClickMicroflow = js.native
+  
   /**
     * Creates and returns a new OnClickMicroflow instance in the SDK and on the server.
     * The new OnClickMicroflow will be automatically stored in the 'onClickBehavior' property
@@ -50,5 +51,8 @@ object OnClickMicroflow extends js.Object {
     *  6.0.0 to 7.17.0
     */
   def createIn(container: DynamicImageViewer): OnClickMicroflow = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

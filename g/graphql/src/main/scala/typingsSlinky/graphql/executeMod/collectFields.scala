@@ -6,11 +6,12 @@ import typingsSlinky.graphql.astMod.SelectionSetNode
 import typingsSlinky.graphql.definitionMod.GraphQLObjectType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/execution/execute", "collectFields")
 @js.native
 object collectFields extends js.Object {
+  
   def apply(
     exeContext: ExecutionContext,
     runtimeType: GraphQLObjectType[_, _],
@@ -19,4 +20,3 @@ object collectFields extends js.Object {
     visitedFragmentNames: StringDictionary[Boolean]
   ): StringDictionary[js.Array[FieldNode]] = js.native
 }
-

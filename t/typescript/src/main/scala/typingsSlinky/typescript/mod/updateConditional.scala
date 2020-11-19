@@ -2,11 +2,12 @@ package typingsSlinky.typescript.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript", "updateConditional")
 @js.native
 object updateConditional extends js.Object {
+  
   def apply(
     node: ConditionalExpression,
     condition: Expression,
@@ -16,4 +17,3 @@ object updateConditional extends js.Object {
     whenFalse: Expression
   ): ConditionalExpression = js.native
 }
-

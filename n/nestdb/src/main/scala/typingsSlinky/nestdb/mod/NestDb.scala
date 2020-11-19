@@ -5,24 +5,27 @@ import typingsSlinky.nestdb.nestdbStrings.compactionDotdone
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait NestDb[G] extends EventEmitter {
-  var persistence: Persistence = js.native
+  
   @JSName("addListener")
   def addListener_compactiondone(event: compactionDotdone, listener: js.Function0[Unit]): this.type = js.native
+  
   /**
     * Add one or several document(s) to all indexes
     */
   def addToIndexes[T /* <: G */](doc: T): Unit = js.native
   def addToIndexes[T /* <: G */](doc: js.Array[T]): Unit = js.native
+  
   def count(query: js.Any): CursorCount = js.native
   /**
     * Count all documents matching the query
     * @param query MongoDB-style query
     */
   def count(query: js.Any, callback: js.Function2[/* err */ js.Error, /* n */ Double, Unit]): Unit = js.native
+  
   /**
     * Ensure an index is kept for this field. Same parameters as lib/indexes
     * For now this function is synchronous, we need to test how much time it takes
@@ -31,6 +34,7 @@ trait NestDb[G] extends EventEmitter {
     */
   def ensureIndex(options: EnsureIndexOptions): Unit = js.native
   def ensureIndex(options: EnsureIndexOptions, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   def find[T /* <: G */](query: js.Any): Cursor[T] = js.native
   /**
     * Find all documents matching the query
@@ -50,6 +54,7 @@ trait NestDb[G] extends EventEmitter {
     projection: T,
     callback: js.Function2[/* err */ js.Error, /* documents */ js.Array[T], Unit]
   ): Unit = js.native
+  
   /**
     * Find one document matching the query
     * @param query MongoDB-style query
@@ -61,10 +66,12 @@ trait NestDb[G] extends EventEmitter {
     * @param projection MongoDB-style projection
     */
   def findOne[T /* <: G */](query: js.Any, projection: T, callback: js.Function2[/* err */ js.Error, /* document */ T, Unit]): Unit = js.native
+  
   /**
     * Get an array of all the data in the database
     */
   def getAllData(): js.Array[_] = js.native
+  
   /**
     * Return the list of candidates for a given query
     * Crude implementation for now, we return the candidates given by the first usable index if any
@@ -75,6 +82,7 @@ trait NestDb[G] extends EventEmitter {
     * TODO: needs to be moved to the Cursor module
     */
   def getCandidates(query: js.Any): Unit = js.native
+  
   /**
     * Insert one or more new documents
     * @param cb Optional callback, signature: err, insertedDoc
@@ -83,27 +91,39 @@ trait NestDb[G] extends EventEmitter {
   def insert[T /* <: G */](newDoc: T, cb: js.Function2[/* err */ js.Error, /* document */ T, Unit]): Unit = js.native
   def insert[T /* <: G */](newDocs: js.Array[T]): Unit = js.native
   def insert[T /* <: G */](newDocs: js.Array[T], cb: js.Function2[/* err */ js.Error, /* documents */ js.Array[T], Unit]): Unit = js.native
+  
   @JSName("listenerCount")
   def listenerCount_compactiondone(`type`: compactionDotdone): Double = js.native
+  
   @JSName("listeners")
   def listeners_compactiondone(event: compactionDotdone): js.Array[js.Function0[Unit]] = js.native
+  
   /**
     * Load the database from the datafile, and trigger the execution of buffered commands if any
     */
   def load(): Unit = js.native
   def load(cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   @JSName("off")
   def off_compactiondone(event: compactionDotdone, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("on")
   def on_compactiondone(event: compactionDotdone, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("once")
   def once_compactiondone(event: compactionDotdone, listener: js.Function0[Unit]): this.type = js.native
+  
+  var persistence: Persistence = js.native
+  
   @JSName("prependListener")
   def prependListener_compactiondone(event: compactionDotdone, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("prependOnceListener")
   def prependOnceListener_compactiondone(event: compactionDotdone, listener: js.Function0[Unit]): this.type = js.native
+  
   @JSName("rawListeners")
   def rawListeners_compactiondone(event: compactionDotdone): js.Array[js.Function0[Unit]] = js.native
+  
   def remove(query: js.Any): Unit = js.native
   def remove(query: js.Any, cb: js.Function2[/* err */ js.Error, /* n */ Double, Unit]): Unit = js.native
   /**
@@ -117,23 +137,28 @@ trait NestDb[G] extends EventEmitter {
     */
   def remove(query: js.Any, options: RemoveOptions): Unit = js.native
   def remove(query: js.Any, options: RemoveOptions, cb: js.Function2[/* err */ js.Error, /* n */ Double, Unit]): Unit = js.native
+  
   /**
     * Remove one or several document(s) from all indexes
     */
   def removeFromIndexes[T /* <: G */](doc: T): Unit = js.native
   def removeFromIndexes[T /* <: G */](doc: js.Array[T]): Unit = js.native
+  
   /**
     * Remove an index
     * @param cb Optional callback, signature: err
     */
   def removeIndex(fieldName: String): Unit = js.native
   def removeIndex(fieldName: String, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   @JSName("removeListener")
   def removeListener_compactiondone(event: compactionDotdone, listener: js.Function0[Unit]): this.type = js.native
+  
   /**
     * Reset all currently defined indexes
     */
   def resetIndexes(newData: js.Any): Unit = js.native
+  
   /**
     * Update all docs matching query v1.7.4 and prior signature.
     * For now, very naive implementation (recalculating the whole database)
@@ -184,6 +209,7 @@ trait NestDb[G] extends EventEmitter {
       Unit
     ]
   ): Unit = js.native
+  
   /**
     * Update one or several documents in all indexes
     * To update multiple documents, oldDoc must be an array of { oldDoc, newDoc } pairs
@@ -191,6 +217,7 @@ trait NestDb[G] extends EventEmitter {
     */
   def updateIndexes[T /* <: G */](oldDoc: T, newDoc: T): Unit = js.native
   def updateIndexes[T /* <: G */](updates: js.Array[NewDoc[T, G]]): Unit = js.native
+  
   /**
     * Update all docs matching query v1.8 signature.
     * For now, very naive implementation (recalculating the whole database)
@@ -209,4 +236,3 @@ trait NestDb[G] extends EventEmitter {
   @JSName("update")
   def update_T_G[T /* <: G */](query: js.Any, updateQuery: js.Any, options: UpdateOptions): Unit = js.native
 }
-

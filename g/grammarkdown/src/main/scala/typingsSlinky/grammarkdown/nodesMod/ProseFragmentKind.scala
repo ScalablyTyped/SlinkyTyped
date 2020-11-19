@@ -2,7 +2,7 @@ package typingsSlinky.grammarkdown.nodesMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* keyof grammarkdown.grammarkdown/dist/nodes.ProseFragmentTypes */ /* Rewritten from type alias, can be one of: 
   - typingsSlinky.grammarkdown.grammarkdownStrings.`52`
@@ -11,4 +11,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.grammarkdown.grammarkdownStrings.`51`
 */
 trait ProseFragmentKind extends js.Object
-

@@ -6,12 +6,12 @@ import typingsSlinky.typescript.mod.ParameterDeclaration
 import typingsSlinky.typescript.mod.Statement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createImmediatelyInvokedFunctionExpression")
 @js.native
 object createImmediatelyInvokedFunctionExpression extends js.Object {
+  
   def apply(statements: js.Array[Statement]): CallExpression = js.native
   def apply(statements: js.Array[Statement], param: ParameterDeclaration, paramValue: Expression): CallExpression = js.native
 }
-

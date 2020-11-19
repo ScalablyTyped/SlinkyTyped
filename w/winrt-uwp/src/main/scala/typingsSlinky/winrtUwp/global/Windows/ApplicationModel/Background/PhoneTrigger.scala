@@ -3,7 +3,7 @@ package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Background
 import typingsSlinky.winrtUwp.Windows.ApplicationModel.Calls.Background.PhoneTriggerType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a phone event that triggers a background task. */
 @JSGlobal("Windows.ApplicationModel.Background.PhoneTrigger")
@@ -17,4 +17,3 @@ class PhoneTrigger protected ()
     */
   def this(`type`: PhoneTriggerType, oneShot: Boolean) = this()
 }
-

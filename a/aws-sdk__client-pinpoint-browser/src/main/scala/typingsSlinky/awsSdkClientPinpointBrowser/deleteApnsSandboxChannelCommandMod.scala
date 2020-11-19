@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteApnsSandboxChannelCommand", JSImport.Namespace)
 @js.native
 object deleteApnsSandboxChannelCommandMod extends js.Object {
+  
   @js.native
   class DeleteApnsSandboxChannelCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteApnsSandboxChannelCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteApnsSandboxChannelInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteApnsSandboxChannelInput, DeleteApnsSandboxChannelOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[DeleteApnsSandboxChannelInput, DeleteApnsSandboxChannelOutput] = js.native
   }
-  
 }
-

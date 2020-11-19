@@ -2,7 +2,7 @@ package typingsSlinky.shopifyPrime.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("shopify-prime", "ApplicationCredits")
 @js.native
@@ -10,4 +10,3 @@ class ApplicationCredits protected ()
   extends typingsSlinky.shopifyPrime.servicesMod.ApplicationCredits {
   def this(shopDomain: String, accessToken: String) = this()
 }
-

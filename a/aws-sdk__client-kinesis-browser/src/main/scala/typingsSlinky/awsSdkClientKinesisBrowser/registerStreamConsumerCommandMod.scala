@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kinesis-browser/commands/RegisterStreamConsumerCommand", JSImport.Namespace)
 @js.native
 object registerStreamConsumerCommandMod extends js.Object {
+  
   @js.native
   class RegisterStreamConsumerCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object registerStreamConsumerCommandMod extends js.Object {
           Blob
         ] {
     def this(input: RegisterStreamConsumerInput) = this()
+    
     val middlewareStack: MiddlewareStack[RegisterStreamConsumerInput, RegisterStreamConsumerOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KinesisResolvedConfiguration
     ): Handler[RegisterStreamConsumerInput, RegisterStreamConsumerOutput] = js.native
   }
-  
 }
-

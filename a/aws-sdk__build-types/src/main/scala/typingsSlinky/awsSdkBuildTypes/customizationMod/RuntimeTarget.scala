@@ -2,7 +2,7 @@ package typingsSlinky.awsSdkBuildTypes.customizationMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.node
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.universal
 */
 trait RuntimeTarget extends js.Object
-
 object RuntimeTarget {
+  
   @scala.inline
   def browser: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.browser = "browser".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.browser]
+  
   @scala.inline
   def node: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.node = "node".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.node]
+  
   @scala.inline
   def universal: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.universal = "universal".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.universal]
 }
-

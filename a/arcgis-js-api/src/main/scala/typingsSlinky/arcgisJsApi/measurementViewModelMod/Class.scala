@@ -4,11 +4,10 @@ import typingsSlinky.arcgisJsApi.esri.MeasurementViewModel
 import typingsSlinky.arcgisJsApi.esri.MeasurementViewModelProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Measurement/MeasurementViewModel", JSImport.Namespace)
 @js.native
 class Class () extends MeasurementViewModel {
   def this(properties: MeasurementViewModelProperties) = this()
 }
-

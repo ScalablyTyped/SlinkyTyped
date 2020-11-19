@@ -5,7 +5,7 @@ import typingsSlinky.nivoAnnotations.nivoAnnotationsStrings.dot
 import typingsSlinky.nivoAnnotations.nivoAnnotationsStrings.rect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.nivoAnnotations.mod.CircleAnnotationProps
@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.nivoAnnotations.mod.RectAnnotationProps
 */
 trait AnnotationProps extends js.Object
-
 object AnnotationProps {
+  
   @scala.inline
   def CircleAnnotationProps(
     containerHeight: Double,
@@ -30,6 +30,7 @@ object AnnotationProps {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotationProps]
   }
+  
   @scala.inline
   def DotAnnotationProps(
     containerHeight: Double,
@@ -44,6 +45,7 @@ object AnnotationProps {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotationProps]
   }
+  
   @scala.inline
   def RectAnnotationProps(
     containerHeight: Double,
@@ -61,4 +63,3 @@ object AnnotationProps {
     __obj.asInstanceOf[AnnotationProps]
   }
 }
-

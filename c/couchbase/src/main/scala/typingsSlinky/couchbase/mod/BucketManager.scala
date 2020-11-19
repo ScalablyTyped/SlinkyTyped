@@ -2,13 +2,14 @@ package typingsSlinky.couchbase.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A class for performing management operations against a bucket. This class should not be instantiated directly, but instead through the use of the Bucket#manager method instead.
   */
 @js.native
 trait BucketManager extends js.Object {
+  
   /**
     * Builds any indexes that were previously created with the deferred attribute.
     * @param callback The callback function.
@@ -16,6 +17,7 @@ trait BucketManager extends js.Object {
   def buildDeferredIndexes(
     callback: js.Function2[/* err */ CouchbaseError | Null, /* deferredIndexes */ js.Array[String], Unit]
   ): Unit = js.native
+  
   /**
     * Creates a non-primary GSI index with an optional name.
     * @param indexName The name of the index.
@@ -41,6 +43,7 @@ trait BucketManager extends js.Object {
     options: CreateIndexOptions,
     callback: js.Function1[/* err */ CouchbaseError | Null, Unit]
   ): Unit = js.native
+  
   /**
     * Creates a primary GSI index with an optional name.
     * @param options
@@ -53,6 +56,7 @@ trait BucketManager extends js.Object {
     * @param callback The callback function.
     */
   def createPrimaryIndex(options: CreateIndexOptions, callback: js.Function1[/* err */ CouchbaseError | Null, Unit]): Unit = js.native
+  
   /**
     * Drops a specific GSI index by name.
     * @param indexName The name of the index.
@@ -71,6 +75,7 @@ trait BucketManager extends js.Object {
     options: DropIndexOptions,
     callback: js.Function1[/* err */ CouchbaseError | Null, Unit]
   ): Unit = js.native
+  
   /**
     * Drops a primary GSI index.
     * @param options
@@ -83,22 +88,26 @@ trait BucketManager extends js.Object {
     * @param callback The callback function.
     */
   def dropPrimaryIndex(options: DropPrimaryIndexOptions, callback: js.Function1[/* err */ CouchbaseError | Null, Unit]): Unit = js.native
+  
   /**
     * Flushes the cluster, deleting all data stored within this bucket. Note that this method requires the Flush permission to be enabled on the bucket from the management console before it will work.
     * @param callback The callback function.
     */
   def flush(callback: js.Function): Unit = js.native
+  
   /**
     * Retrieves a specific design document from this bucket.
     * @param name
     * @param callback The callback function.
     */
   def getDesignDocument(name: String, callback: js.Function): Unit = js.native
+  
   /**
     * Retrieves a list of all design documents registered to a bucket.
     * @param callback The callback function.
     */
   def getDesignDocuments(callback: js.Function): Unit = js.native
+  
   /**
     * Retrieves a list of the indexes currently configured on the cluster.
     * @param callback The callback function.
@@ -106,6 +115,7 @@ trait BucketManager extends js.Object {
   def getIndexes(
     callback: js.Function2[/* err */ CouchbaseError | Null, /* indexes */ js.Array[IndexInfo] | Null, Unit]
   ): Unit = js.native
+  
   /**
     * Registers a design document to this bucket, failing if it already exists.
     * @param name
@@ -114,6 +124,7 @@ trait BucketManager extends js.Object {
     * @returns {}
     */
   def insertDesignDocument(name: String, data: js.Any, callback: js.Function): Unit = js.native
+  
   /**
     * Unregisters a design document from this bucket.
     * @param name
@@ -121,6 +132,7 @@ trait BucketManager extends js.Object {
     * @returns {}
     */
   def removeDesignDocument(name: String, callback: js.Function): Unit = js.native
+  
   /**
     * Registers a design document to this bucket, overwriting any existing design document that was previously registered.
     * @param name
@@ -129,6 +141,7 @@ trait BucketManager extends js.Object {
     * @returns {}
     */
   def upsertDesignDocument(name: String, data: js.Any, callback: js.Function): Unit = js.native
+  
   /**
     * Watches a list of indexes, waiting for them to become available for use.
     * @param watchList List of indexes to watch.
@@ -147,4 +160,3 @@ trait BucketManager extends js.Object {
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
 }
-

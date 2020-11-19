@@ -4,24 +4,20 @@ import typingsSlinky.jsData.anon.Fields
 import typingsSlinky.jsData.anon.First
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Query
   extends typingsSlinky.jsData.componentMod.default {
-  var collection: js.UndefOr[js.Any] = js.native
-  /**
-    * The current data result of this query.
-    *
-    * @name Query#data
-    * @since 3.0.0
-    * @type {Array}
-    */
-  var data: js.Any = js.native
+  
   def _applyWhereFromArray(where: js.Any): js.Any = js.native
+  
   def _applyWhereFromObject(where: js.Any): Fields = js.native
+  
   def _testArrayGroup(keep: js.Any, first: js.Any, groups: js.Any, item: js.Any): First = js.native
+  
   def _testObjectGroup(keep: js.Any, first: js.Any, group: js.Any, item: js.Any): First = js.native
+  
   /**
     * Find all entities between two boundaries.
     *
@@ -90,6 +86,9 @@ trait Query
   def between(leftKeys: js.Any, rightKeys: js.UndefOr[scala.Nothing], opts: js.Any): this.type = js.native
   def between(leftKeys: js.Any, rightKeys: js.Any): this.type = js.native
   def between(leftKeys: js.Any, rightKeys: js.Any, opts: js.Any): this.type = js.native
+  
+  var collection: js.UndefOr[js.Any] = js.native
+  
   /**
     * The comparison function used by the {@link Query} class.
     *
@@ -103,6 +102,16 @@ trait Query
     * @since 3.0.0
     */
   def compare(orderBy: js.Any, index: js.Any, a: js.Any, b: js.Any, compare: js.Any): js.Any = js.native
+  
+  /**
+    * The current data result of this query.
+    *
+    * @name Query#data
+    * @since 3.0.0
+    * @type {Array}
+    */
+  var data: js.Any = js.native
+  
   /**
     * Predicate evaluation function used by the {@link Query} class.
     *
@@ -114,6 +123,7 @@ trait Query
     * @since 3.0.0
     */
   def evaluate(value: js.Any, op: js.Any, predicate: js.Any): js.Any = js.native
+  
   /**
     * Find the record or records that match the provided query or are accepted by
     * the provided filter function.
@@ -172,6 +182,7 @@ trait Query
   def filter(query: js.UndefOr[scala.Nothing], thisArg: js.Function): Query = js.native
   def filter(query: QueryDefinition): Query = js.native
   def filter(query: QueryDefinition, thisArg: js.Function): Query = js.native
+  
   /**
     * Iterate over all entities.
     *
@@ -183,6 +194,7 @@ trait Query
     */
   def forEach(forEachFn: js.Function): this.type = js.native
   def forEach(forEachFn: js.Function, thisArg: js.Any): this.type = js.native
+  
   /**
     * Find the entity or entities that match the provided key.
     *
@@ -216,6 +228,7 @@ trait Query
   def get(keyList: js.UndefOr[scala.Nothing], opts: js.Any): this.type = js.native
   def get(keyList: js.Array[_]): this.type = js.native
   def get(keyList: js.Array[_], opts: js.Any): this.type = js.native
+  
   /**
     * Find the entity or entities that match the provided keyLists.
     *
@@ -239,6 +252,7 @@ trait Query
   def getAll(keyList: js.UndefOr[scala.Nothing], opts: js.Any): js.Any = js.native
   def getAll(keyList: js.Array[js.Any]): js.Any = js.native
   def getAll(keyList: js.Array[js.Any], opts: js.Any): js.Any = js.native
+  
   /**
     * Return the current data result of this query.
     *
@@ -247,6 +261,7 @@ trait Query
     * @since 3.0.0
     */
   def getData(): js.Any = js.native
+  
   /**
     * Implementation used by the `like` operator. Takes a pattern and flags and
     * returns a `RegExp` instance that can test strings.
@@ -258,6 +273,7 @@ trait Query
     * @since 3.0.0
     */
   def like(pattern: js.Any, flags: js.Any): js.RegExp = js.native
+  
   /**
     * Limit the result.
     *
@@ -281,6 +297,7 @@ trait Query
     * @since 3.0.0
     */
   def limit(num: js.Any): this.type = js.native
+  
   /**
     * Apply a mapping function to the result data.
     *
@@ -315,6 +332,7 @@ trait Query
     */
   def map(mapFn: js.Any): this.type = js.native
   def map(mapFn: js.Any, thisArg: js.Any): this.type = js.native
+  
   /**
     * Return the result of calling the specified function on each item in this
     * collection's main index.
@@ -329,6 +347,7 @@ trait Query
     * @since 3.0.0
     */
   def mapCall(funcName: js.Any, args: js.Any*): this.type = js.native
+  
   /**
     * Complete the execution of the query and return the resulting data.
     *
@@ -337,6 +356,7 @@ trait Query
     * @since 3.0.0
     */
   def run(): js.Any = js.native
+  
   /**
     * Skip a number of results.
     *
@@ -365,4 +385,3 @@ trait Query
     */
   def skip(num: js.Any): this.type = js.native
 }
-

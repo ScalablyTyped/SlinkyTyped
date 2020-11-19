@@ -11,7 +11,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/navigation-tree relevant section in reference guide}
@@ -29,19 +29,18 @@ class NavigationTree protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk", "pages.NavigationTree")
 @js.native
 object NavigationTree extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -51,6 +50,7 @@ object NavigationTree extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.BuildingBlock): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -60,6 +60,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.BuildingBlock): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'footerWidget' property
@@ -69,6 +70,7 @@ object NavigationTree extends js.Object {
     *  6.7.0 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'footerWidgets' property
@@ -78,6 +80,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -87,6 +90,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDataViewUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -96,6 +100,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DataView): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -105,6 +110,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DivContainer): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -114,6 +120,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.DivContainer): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -123,6 +130,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.GroupBox): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -132,6 +140,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.GroupBox): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'leftWidget' property
@@ -141,6 +150,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'leftWidgets' property
@@ -150,6 +160,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'rightWidget' property
@@ -159,6 +170,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'rightWidgets' property
@@ -168,6 +180,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Header): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -177,6 +190,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutCallArgument): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -186,6 +200,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutCallArgument): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -195,6 +210,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutGridColumn): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -204,6 +220,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutGridColumn): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -213,6 +230,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Layout): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -222,6 +240,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Layout): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -231,6 +250,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListViewTemplate): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -240,6 +260,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListViewTemplate): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -249,6 +270,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListView): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -258,6 +280,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ListView): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -267,6 +290,7 @@ object NavigationTree extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.MasterDetailRegion): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -276,6 +300,7 @@ object NavigationTree extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'sidebarWidgets' property
@@ -285,6 +310,7 @@ object NavigationTree extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NativeLayoutContent): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -294,6 +320,7 @@ object NavigationTree extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NativeLayoutContent): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'headerWidget' property
@@ -303,6 +330,7 @@ object NavigationTree extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -312,6 +340,7 @@ object NavigationTree extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -321,6 +350,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationListItem): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -330,6 +360,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationListItem): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'parameterWidget' property
@@ -339,6 +370,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: ReportPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'reportWidget' property
@@ -348,6 +380,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: ReportPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -357,6 +390,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollContainerRegion): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -366,6 +400,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.ScrollContainerRegion): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -375,6 +410,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSnippetUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Snippet): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -384,6 +420,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.Snippet): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'firstWidget' property
@@ -393,6 +430,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'firstWidgets' property
@@ -402,6 +440,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'secondWidget' property
@@ -411,6 +450,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'secondWidgets' property
@@ -420,6 +460,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.SplitPane): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -429,6 +470,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTabPageUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TabPage): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -438,6 +480,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TabPage): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -447,6 +490,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTableCellUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TableCell): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -456,6 +500,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TableCell): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widget' property
@@ -465,6 +510,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -474,6 +520,7 @@ object NavigationTree extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -483,6 +530,7 @@ object NavigationTree extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.VerticalFlow): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -492,6 +540,7 @@ object NavigationTree extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.WebLayoutContent): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
   /**
     * Creates and returns a new NavigationTree instance in the SDK and on the server.
     * The new NavigationTree will be automatically stored in the 'widgets' property
@@ -501,5 +550,8 @@ object NavigationTree extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): typingsSlinky.mendixmodelsdk.pagesMod.pages.NavigationTree = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

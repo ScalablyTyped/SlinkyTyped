@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.RouteTaskProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.RouteTask")
 @js.native
@@ -16,4 +16,3 @@ class RouteTaskCls ()
   extends typingsSlinky.arcgisJsApi.esri.RouteTask {
   def this(properties: RouteTaskProperties) = this()
 }
-

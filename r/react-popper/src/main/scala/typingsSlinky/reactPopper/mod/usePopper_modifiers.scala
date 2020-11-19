@@ -9,11 +9,12 @@ import typingsSlinky.std.Omit
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-popper", "usePopper")
 @js.native
 object usePopper_modifiers extends js.Object {
+  
   def apply[Modifiers](
     referenceElement: js.UndefOr[scala.Nothing],
     popperElement: js.UndefOr[scala.Nothing],
@@ -135,4 +136,3 @@ object usePopper_modifiers extends js.Object {
     ]) with CreatePopper[Modifiers]
   ): Attributes = js.native
 }
-

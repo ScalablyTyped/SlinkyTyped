@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.reactSpinners.interfacesMod.LoaderHeightWidthProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-spinners", "BarLoader")
 @js.native
@@ -15,8 +15,6 @@ class BarLoader protected ()
   def this(props: LoaderHeightWidthProps) = this()
   def this(props: LoaderHeightWidthProps, context: js.Any) = this()
 }
-
 @JSImport("react-spinners", "BarLoader")
 @js.native
 object BarLoader extends TopLevel[ReactComponentClass[LoaderHeightWidthProps]]
-

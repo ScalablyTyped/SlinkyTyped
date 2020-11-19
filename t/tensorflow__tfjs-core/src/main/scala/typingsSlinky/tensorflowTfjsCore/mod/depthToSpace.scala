@@ -7,7 +7,7 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCHW
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NHWC
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core", "depthToSpace")
 @js.native
@@ -20,4 +20,3 @@ object depthToSpace
         Tensor4D
       ]
     ]
-

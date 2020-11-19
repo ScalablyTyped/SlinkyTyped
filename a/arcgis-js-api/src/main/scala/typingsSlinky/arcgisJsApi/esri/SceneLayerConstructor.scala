@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SceneLayerConstructor
@@ -15,6 +15,6 @@ trait SceneLayerConstructor
   */
 Instantiable0[SceneLayer]
      with Instantiable1[/* properties */ SceneLayerProperties, SceneLayer] {
+  
   def fromJSON(json: js.Any): SceneLayer = js.native
 }
-

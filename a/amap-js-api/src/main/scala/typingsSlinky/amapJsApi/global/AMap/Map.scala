@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.amapJsApi.AMap.Map.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AMap.Map")
 @js.native
@@ -20,4 +20,3 @@ class Map protected ()
   def this(container: String, opts: Options) = this()
   def this(container: HTMLElement, opts: Options) = this()
 }
-

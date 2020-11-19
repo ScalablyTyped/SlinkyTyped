@@ -4,11 +4,14 @@ import typingsSlinky.ionic.ailmentsBaseMod.AilmentDeps
 import typingsSlinky.ionic.definitionsMod.IAilment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ionic/lib/doctor", JSImport.Namespace)
 @js.native
 object libDoctorMod extends js.Object {
+  
+  def formatAilmentMessage(ailment: IAilment): js.Promise[String] = js.native
+  
   @js.native
   abstract class Ailment protected ()
     extends typingsSlinky.ionic.ailmentsMod.Ailment {
@@ -54,7 +57,4 @@ object libDoctorMod extends js.Object {
   @js.native
   class ViewportFitNotSet ()
     extends typingsSlinky.ionic.ailmentsMod.ViewportFitNotSet
-  
-  def formatAilmentMessage(ailment: IAilment): js.Promise[String] = js.native
 }
-

@@ -2,10 +2,12 @@ package typingsSlinky.electronPackager
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type ArchOption = typingsSlinky.electronPackager.mod.TargetArch | typingsSlinky.electronPackager.electronPackagerStrings.all
+  
   /**
     * A function that is called on the completion of a packaging stage.
     *
@@ -54,12 +56,14 @@ package object mod {
     /* callback */ js.Function0[scala.Unit], 
     scala.Unit
   ]
+  
   /**
     * A predicate function that, given an absolute file `path`, returns `true` if the file should be
     * ignored, or `false` if the file should be kept. *This does not use any of the default ignored
     * files/directories listed for the [[ignore]] option.*
     */
   type IgnoreFunction = js.Function1[/* path */ java.lang.String, scala.Boolean]
+  
   /**
     * See the documentation for [`electron-notarize`](https://npm.im/electron-notarize#method-notarizeopts-promisevoid)
     * for details.
@@ -68,7 +72,10 @@ package object mod {
     typingsSlinky.electronNotarize.mod.NotarizeOptions, 
     typingsSlinky.electronPackager.electronPackagerStrings.appBundleId | typingsSlinky.electronPackager.electronPackagerStrings.appPath
   ]
+  
   type PlatformOption = typingsSlinky.electronPackager.mod.TargetPlatform | typingsSlinky.electronPackager.electronPackagerStrings.all
+  
   type TargetArch = typingsSlinky.electronPackager.mod.OfficialArch | java.lang.String
+  
   type TargetPlatform = typingsSlinky.electronPackager.mod.OfficialPlatform | java.lang.String
 }

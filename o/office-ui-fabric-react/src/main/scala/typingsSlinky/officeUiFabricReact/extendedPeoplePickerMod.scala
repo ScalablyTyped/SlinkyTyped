@@ -7,11 +7,12 @@ import typingsSlinky.officeUiFabricReact.pickerItemTypesMod.IPickerItemProps
 import typingsSlinky.officeUiFabricReact.selectedPeopleListMod.IExtendedPersonaProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/components/ExtendedPicker/PeoplePicker/ExtendedPeoplePicker", JSImport.Namespace)
 @js.native
 object extendedPeoplePickerMod extends js.Object {
+  
   @js.native
   class BaseExtendedPeoplePicker () extends BaseExtendedPicker[IPersonaProps, IExtendedPeoplePickerProps]
   
@@ -19,6 +20,6 @@ object extendedPeoplePickerMod extends js.Object {
   class ExtendedPeoplePicker () extends BaseExtendedPicker[IPersonaProps, IExtendedPeoplePickerProps]
   
   type IExtendedPeoplePickerProps = IBaseExtendedPickerProps[IPersonaProps]
+  
   type IPeoplePickerItemProps = IPickerItemProps[IExtendedPersonaProps]
 }
-

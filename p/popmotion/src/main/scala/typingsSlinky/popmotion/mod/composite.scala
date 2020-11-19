@@ -5,11 +5,11 @@ import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
 import typingsSlinky.popmotion.compositeMod.ActionMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("popmotion", "composite")
 @js.native
 object composite extends js.Object {
+  
   def apply(actions: ActionMap): Action[ColdSubscription] = js.native
 }
-

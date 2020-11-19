@@ -8,7 +8,7 @@ import typingsSlinky.graphqlToolsWrap.graphqlToolsWrapStrings.Subscription
 import typingsSlinky.graphqlToolsWrap.renameRootFieldsMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/transforms", "RenameRootFields")
 @js.native
@@ -20,4 +20,3 @@ class RenameRootFields protected () extends default {
         String
       ]) = this()
 }
-

@@ -14,13 +14,15 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/conv2d_backprop_filter", JSImport.Namespace)
 @js.native
 object conv2dBackpropFilterMod extends js.Object {
+  
   @js.native
   object conv2DBackpropFilter extends js.Object {
+    
     def apply(
       x: Tensor[R3 | R4],
       dy: Tensor[R3 | R4],
@@ -31,6 +33,4 @@ object conv2dBackpropFilterMod extends js.Object {
       dimRoundingMode: js.UndefOr[ceil | floor | round]
     ): Tensor4D = js.native
   }
-  
 }
-

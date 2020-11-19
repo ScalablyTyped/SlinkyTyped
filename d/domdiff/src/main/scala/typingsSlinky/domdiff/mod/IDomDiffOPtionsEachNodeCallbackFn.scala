@@ -7,10 +7,11 @@ import typingsSlinky.domdiff.domdiffNumbers.`0`
 import typingsSlinky.domdiff.domdiffNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IDomDiffOPtionsEachNodeCallbackFn extends js.Object {
+  
   @JSName("node")
   def node_0[T](generic: T, info: `-0`): Node = js.native
   @JSName("node")
@@ -29,4 +30,3 @@ trait IDomDiffOPtionsEachNodeCallbackFn extends js.Object {
   @JSName("node")
   def node_1[T](generic: T, info: `1`): Node = js.native
 }
-

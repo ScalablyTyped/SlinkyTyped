@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.ace.AceAjax.IEditSession
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AceAjax.Editor")
 @js.native
@@ -24,4 +24,3 @@ Instantiable1[
       /* session */ IEditSession, 
       typingsSlinky.ace.AceAjax.Editor
     ]
-

@@ -6,9 +6,70 @@ import typingsSlinky.muiDatatables.mod.Responsive
 import typingsSlinky.muiDatatables.mod.SelectableRows
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object muiDatatablesStrings {
+  
+  @scala.inline
+  def above: above = "above".asInstanceOf[above]
+  
+  @scala.inline
+  def asc: asc = "asc".asInstanceOf[asc]
+  
+  @scala.inline
+  def checkbox: checkbox = "checkbox".asInstanceOf[checkbox]
+  
+  @scala.inline
+  def chip: chip = "chip".asInstanceOf[chip]
+  
+  @scala.inline
+  def custom: custom = "custom".asInstanceOf[custom]
+  
+  @scala.inline
+  def desc: desc = "desc".asInstanceOf[desc]
+  
+  @scala.inline
+  def dropdown: dropdown = "dropdown".asInstanceOf[dropdown]
+  
+  @scala.inline
+  def excluded: excluded = "excluded".asInstanceOf[excluded]
+  
+  @scala.inline
+  def `false`: `false` = "false".asInstanceOf[`false`]
+  
+  @scala.inline
+  def multiple: multiple = "multiple".asInstanceOf[multiple]
+  
+  @scala.inline
+  def multiselect: multiselect = "multiselect".asInstanceOf[multiselect]
+  
+  @scala.inline
+  def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def replace: replace = "replace".asInstanceOf[replace]
+  
+  @scala.inline
+  def reset: reset = "reset".asInstanceOf[reset]
+  
+  @scala.inline
+  def simple: simple = "simple".asInstanceOf[simple]
+  
+  @scala.inline
+  def single: single = "single".asInstanceOf[single]
+  
+  @scala.inline
+  def standard: standard = "standard".asInstanceOf[standard]
+  
+  @scala.inline
+  def textField: textField = "textField".asInstanceOf[textField]
+  
+  @scala.inline
+  def `true`: `true` = "true".asInstanceOf[`true`]
+  
+  @scala.inline
+  def vertical: vertical = "vertical".asInstanceOf[vertical]
+  
   @js.native
   sealed trait above extends js.Object
   
@@ -68,46 +129,4 @@ object muiDatatablesStrings {
   
   @js.native
   sealed trait vertical extends Responsive
-  
-  @scala.inline
-  def above: above = "above".asInstanceOf[above]
-  @scala.inline
-  def asc: asc = "asc".asInstanceOf[asc]
-  @scala.inline
-  def checkbox: checkbox = "checkbox".asInstanceOf[checkbox]
-  @scala.inline
-  def chip: chip = "chip".asInstanceOf[chip]
-  @scala.inline
-  def custom: custom = "custom".asInstanceOf[custom]
-  @scala.inline
-  def desc: desc = "desc".asInstanceOf[desc]
-  @scala.inline
-  def dropdown: dropdown = "dropdown".asInstanceOf[dropdown]
-  @scala.inline
-  def excluded: excluded = "excluded".asInstanceOf[excluded]
-  @scala.inline
-  def `false`: `false` = "false".asInstanceOf[`false`]
-  @scala.inline
-  def multiple: multiple = "multiple".asInstanceOf[multiple]
-  @scala.inline
-  def multiselect: multiselect = "multiselect".asInstanceOf[multiselect]
-  @scala.inline
-  def none: none = "none".asInstanceOf[none]
-  @scala.inline
-  def replace: replace = "replace".asInstanceOf[replace]
-  @scala.inline
-  def reset: reset = "reset".asInstanceOf[reset]
-  @scala.inline
-  def simple: simple = "simple".asInstanceOf[simple]
-  @scala.inline
-  def single: single = "single".asInstanceOf[single]
-  @scala.inline
-  def standard: standard = "standard".asInstanceOf[standard]
-  @scala.inline
-  def textField: textField = "textField".asInstanceOf[textField]
-  @scala.inline
-  def `true`: `true` = "true".asInstanceOf[`true`]
-  @scala.inline
-  def vertical: vertical = "vertical".asInstanceOf[vertical]
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.antd.inputInputMod
 import typingsSlinky.antd.sizeContextMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd/lib/input/Input", "getInputClassName")
 @js.native
 object getInputClassName extends js.Object {
+  
   def apply(prefixCls: String, bordered: Boolean): String = js.native
   def apply(
     prefixCls: String,
@@ -26,4 +27,3 @@ object getInputClassName extends js.Object {
   ): String = js.native
   def apply(prefixCls: String, bordered: Boolean, size: SizeType): String = js.native
 }
-

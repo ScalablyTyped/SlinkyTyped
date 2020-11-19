@@ -3,11 +3,12 @@ package typingsSlinky.reactQuery.mod
 import typingsSlinky.reactQuery.reactQueryBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-query", "useQuery")
 @js.native
 object useQuery_false extends js.Object {
+  
   def apply[TResult, TSingleKey /* <: String */](
     queryKey: js.Function0[js.UndefOr[TSingleKey | `false` | Null]],
     queryFn: QueryFunction[TResult, js.Array[TSingleKey]]
@@ -23,27 +24,26 @@ object useQuery_false extends js.Object {
     queryFn: QueryFunction[TResult, js.Array[TSingleKey]],
     config: QueryOptions[TResult]
   ): QueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */, TVariables /* <: AnyVariables */](
+  def apply[TResult, TKey /* <: AnyQueryKey */, TVariables /* <: AnyVariables */](
     queryKey: js.Function0[js.UndefOr[TKey | `false` | Null]],
     variables: TVariables,
-    queryFn: QueryFunctionWithVariables[TResult, js.Array[TKey], TVariables]
+    queryFn: QueryFunctionWithVariables[TResult, TKey, TVariables]
   ): QueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */, TVariables /* <: AnyVariables */](
+  def apply[TResult, TKey /* <: AnyQueryKey */, TVariables /* <: AnyVariables */](
     queryKey: js.Function0[js.UndefOr[TKey | `false` | Null]],
     variables: TVariables,
-    queryFn: QueryFunctionWithVariables[TResult, js.Array[TKey], TVariables],
+    queryFn: QueryFunctionWithVariables[TResult, TKey, TVariables],
     config: QueryOptions[TResult]
   ): QueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */, TVariables /* <: AnyVariables */](
+  def apply[TResult, TKey /* <: AnyQueryKey */, TVariables /* <: AnyVariables */](
     queryKey: `false`,
     variables: TVariables,
-    queryFn: QueryFunctionWithVariables[TResult, js.Array[TKey], TVariables]
+    queryFn: QueryFunctionWithVariables[TResult, TKey, TVariables]
   ): QueryResult[TResult] = js.native
-  def apply[TResult, TKey /* <: String */, TVariables /* <: AnyVariables */](
+  def apply[TResult, TKey /* <: AnyQueryKey */, TVariables /* <: AnyVariables */](
     queryKey: `false`,
     variables: TVariables,
-    queryFn: QueryFunctionWithVariables[TResult, js.Array[TKey], TVariables],
+    queryFn: QueryFunctionWithVariables[TResult, TKey, TVariables],
     config: QueryOptions[TResult]
   ): QueryResult[TResult] = js.native
 }
-

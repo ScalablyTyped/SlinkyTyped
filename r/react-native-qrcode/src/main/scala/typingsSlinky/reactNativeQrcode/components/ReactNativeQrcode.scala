@@ -6,9 +6,10 @@ import typingsSlinky.reactNativeQrcode.mod.QRCodeProperties
 import typingsSlinky.reactNativeQrcode.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ReactNativeQrcode {
+  
   @JSImport("react-native-qrcode", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -17,17 +18,21 @@ object ReactNativeQrcode {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def bgColor(value: String): this.type = set("bgColor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def fgColor(value: String): this.type = set("fgColor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: QRCodeProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: ReactNativeQrcode.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

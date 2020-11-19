@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.mod
 import typingsSlinky.awsSdk.rekognitionMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk", "Rekognition")
 @js.native
@@ -14,4 +14,3 @@ class Rekognition ()
   extends typingsSlinky.awsSdk.allMod.Rekognition {
   def this(options: ClientConfiguration) = this()
 }
-

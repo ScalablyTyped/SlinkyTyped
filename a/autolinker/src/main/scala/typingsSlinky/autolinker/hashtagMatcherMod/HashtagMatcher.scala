@@ -4,7 +4,7 @@ import typingsSlinky.autolinker.autolinkerMod.HashtagServices
 import typingsSlinky.autolinker.matcherMatcherMod.Matcher
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("autolinker/dist/commonjs/matcher/hashtag-matcher", "HashtagMatcher")
 @js.native
@@ -15,6 +15,7 @@ class HashtagMatcher protected () extends Matcher {
     *   specified in an Object (map).
     */
   def this(cfg: HashtagMatcherConfig) = this()
+  
   /**
     * The regular expression to match Hashtags. Example match:
     *
@@ -24,6 +25,7 @@ class HashtagMatcher protected () extends Matcher {
     * @property {RegExp} matcherRegex
     */
   var matcherRegex: js.RegExp = js.native
+  
   /**
     * The regular expression to use to check the character before a username match to
     * make sure we didn't accidentally match an email address.
@@ -34,6 +36,7 @@ class HashtagMatcher protected () extends Matcher {
     * @property {RegExp} nonWordCharRegex
     */
   var nonWordCharRegex: js.RegExp = js.native
+  
   /**
     * @cfg {String} serviceName
     *
@@ -42,4 +45,3 @@ class HashtagMatcher protected () extends Matcher {
     */
   val serviceName: HashtagServices = js.native
 }
-

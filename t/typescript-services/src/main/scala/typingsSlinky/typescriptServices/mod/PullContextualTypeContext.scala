@@ -2,7 +2,7 @@ package typingsSlinky.typescriptServices.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "PullContextualTypeContext")
 @js.native
@@ -15,4 +15,3 @@ class PullContextualTypeContext protected ()
     typeArgumentInferenceContext: typingsSlinky.typescriptServices.TypeScript.TypeArgumentInferenceContext
   ) = this()
 }
-

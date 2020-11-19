@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Context for drawing images._
@@ -12,30 +12,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait DrawContext extends js.Object {
-  /**
-    * _Determines whether the context is opaque._
-    *
-    * When enabled your image will be rendered opaque. Default is true.
-    * @see https://docs.scriptable.app/drawcontext/#opaque
-    */
-  var opaque: Boolean = js.native
-  /**
-    * _Enable to respect the scale of the screen._
-    *
-    * Devices have a screen scale that is used to convert between the logical coordinate space and the device coordinate space. For example, retina screens have a screen scale of 2 or 3
-    * meaning that one point in the logical coordinate space is represented by four or nine pixels. Respecting the screen scale will multiply the specified size of the canvas by the
-    * screen scale. For example a canvas of size 200 by 200 will be 600 by 600 when the image is rendered on a retina screen with a screen scale of 3. When respecting the screen scale is
-    * disabled, you may experience that your images looks blurry because essentially the size you have specified will be stretched when rendered on the screen. Default is false.
-    * @see https://docs.scriptable.app/drawcontext/#respectscreenscale
-    */
-  var respectScreenScale: Boolean = js.native
-  /**
-    * _Size of canvas._
-    *
-    * Specifies the size of the canvas on which you are drawing. The image returned by getImage() will have this exact size, except if respectScreenScale is true.
-    * @see https://docs.scriptable.app/drawcontext/#size
-    */
-  var size: Size = js.native
+  
   /**
     * _Adds a path to the context._
     *
@@ -45,6 +22,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-addpath
     */
   def addPath(path: Path): Unit = js.native
+  
   /**
     * _Draws an image at the specified point._
     *
@@ -54,6 +32,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-drawimageatpoint
     */
   def drawImageAtPoint(image: Image, point: Point): Unit = js.native
+  
   /**
     * _Draws an image in the specified rect._
     *
@@ -63,6 +42,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-drawimageinrect
     */
   def drawImageInRect(image: Image, rect: Rect): Unit = js.native
+  
   /**
     * _Draws text at a position._
     *
@@ -72,6 +52,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-drawtext
     */
   def drawText(text: String, pos: Point): Unit = js.native
+  
   /**
     * _Draws text in a rectangle._
     *
@@ -82,6 +63,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-drawtextinrect
     */
   def drawTextInRect(text: String, rect: Rect): Unit = js.native
+  
   /**
     * _Fills a rectangle._
     *
@@ -90,6 +72,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-fill
     */
   def fill(rect: Rect): Unit = js.native
+  
   /**
     * _Fills an ellipse._
     *
@@ -98,6 +81,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-fillellipse
     */
   def fillEllipse(rect: Rect): Unit = js.native
+  
   /**
     * _Fills the path that was added the latest._
     *
@@ -105,6 +89,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-fillpath
     */
   def fillPath(): Unit = js.native
+  
   /**
     * _Fills a rectangle._
     *
@@ -113,6 +98,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-fillrect
     */
   def fillRect(rect: Rect): Unit = js.native
+  
   /**
     * _Retrieves the image._
     *
@@ -120,6 +106,26 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-getimage
     */
   def getImage(): Image = js.native
+  
+  /**
+    * _Determines whether the context is opaque._
+    *
+    * When enabled your image will be rendered opaque. Default is true.
+    * @see https://docs.scriptable.app/drawcontext/#opaque
+    */
+  var opaque: Boolean = js.native
+  
+  /**
+    * _Enable to respect the scale of the screen._
+    *
+    * Devices have a screen scale that is used to convert between the logical coordinate space and the device coordinate space. For example, retina screens have a screen scale of 2 or 3
+    * meaning that one point in the logical coordinate space is represented by four or nine pixels. Respecting the screen scale will multiply the specified size of the canvas by the
+    * screen scale. For example a canvas of size 200 by 200 will be 600 by 600 when the image is rendered on a retina screen with a screen scale of 3. When respecting the screen scale is
+    * disabled, you may experience that your images looks blurry because essentially the size you have specified will be stretched when rendered on the screen. Default is false.
+    * @see https://docs.scriptable.app/drawcontext/#respectscreenscale
+    */
+  var respectScreenScale: Boolean = js.native
+  
   /**
     * _Sets the fill color._
     *
@@ -129,6 +135,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-setfillcolor
     */
   def setFillColor(color: Color): Unit = js.native
+  
   /**
     * _Sets the font size used when drawing text._
     *
@@ -137,6 +144,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-setfontsize
     */
   def setFontSize(size: Double): Unit = js.native
+  
   /**
     * _Sets the line width for stroking._
     *
@@ -145,6 +153,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-setlinewidth
     */
   def setLineWidth(width: Double): Unit = js.native
+  
   /**
     * _Sets the stroke color._
     *
@@ -154,6 +163,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-setstrokecolor
     */
   def setStrokeColor(color: Color): Unit = js.native
+  
   /**
     * _Specifies that texts should be center aligned._
     *
@@ -161,6 +171,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-settextalignedcenter
     */
   def setTextAlignedCenter(): Unit = js.native
+  
   /**
     * _Specifies that texts should be left aligned._
     *
@@ -168,6 +179,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-settextalignedleft
     */
   def setTextAlignedLeft(): Unit = js.native
+  
   /**
     * _Specifies that texts should be right aligned._
     *
@@ -175,6 +187,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-settextalignedright
     */
   def setTextAlignedRight(): Unit = js.native
+  
   /**
     * _Sets the text color used when drawing text._
     *
@@ -183,6 +196,15 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-settextcolor
     */
   def setTextColor(color: Color): Unit = js.native
+  
+  /**
+    * _Size of canvas._
+    *
+    * Specifies the size of the canvas on which you are drawing. The image returned by getImage() will have this exact size, except if respectScreenScale is true.
+    * @see https://docs.scriptable.app/drawcontext/#size
+    */
+  var size: Size = js.native
+  
   /**
     * _Strokes a rectangle._
     *
@@ -191,6 +213,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-stroke
     */
   def stroke(rect: Rect): Unit = js.native
+  
   /**
     * _Strokes a rectangle._
     *
@@ -199,6 +222,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-strokeellipse
     */
   def strokeEllipse(rect: Rect): Unit = js.native
+  
   /**
     * _Strokes the path that was added the latest._
     *
@@ -206,6 +230,7 @@ trait DrawContext extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-strokepath
     */
   def strokePath(): Unit = js.native
+  
   /**
     * _Strokes a rectangle._
     *
@@ -215,8 +240,8 @@ trait DrawContext extends js.Object {
     */
   def strokeRect(rect: Rect): Unit = js.native
 }
-
 object DrawContext {
+  
   @scala.inline
   def apply(
     addPath: Path => Unit,
@@ -248,68 +273,95 @@ object DrawContext {
     val __obj = js.Dynamic.literal(addPath = js.Any.fromFunction1(addPath), drawImageAtPoint = js.Any.fromFunction2(drawImageAtPoint), drawImageInRect = js.Any.fromFunction2(drawImageInRect), drawText = js.Any.fromFunction2(drawText), drawTextInRect = js.Any.fromFunction2(drawTextInRect), fill = js.Any.fromFunction1(fill), fillEllipse = js.Any.fromFunction1(fillEllipse), fillPath = js.Any.fromFunction0(fillPath), fillRect = js.Any.fromFunction1(fillRect), getImage = js.Any.fromFunction0(getImage), opaque = opaque.asInstanceOf[js.Any], respectScreenScale = respectScreenScale.asInstanceOf[js.Any], setFillColor = js.Any.fromFunction1(setFillColor), setFontSize = js.Any.fromFunction1(setFontSize), setLineWidth = js.Any.fromFunction1(setLineWidth), setStrokeColor = js.Any.fromFunction1(setStrokeColor), setTextAlignedCenter = js.Any.fromFunction0(setTextAlignedCenter), setTextAlignedLeft = js.Any.fromFunction0(setTextAlignedLeft), setTextAlignedRight = js.Any.fromFunction0(setTextAlignedRight), setTextColor = js.Any.fromFunction1(setTextColor), size = size.asInstanceOf[js.Any], stroke = js.Any.fromFunction1(stroke), strokeEllipse = js.Any.fromFunction1(strokeEllipse), strokePath = js.Any.fromFunction0(strokePath), strokeRect = js.Any.fromFunction1(strokeRect))
     __obj.asInstanceOf[DrawContext]
   }
+  
   @scala.inline
   implicit class DrawContextOps[Self <: DrawContext] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setAddPath(value: Path => Unit): Self = this.set("addPath", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDrawImageAtPoint(value: (Image, Point) => Unit): Self = this.set("drawImageAtPoint", js.Any.fromFunction2(value))
+    
     @scala.inline
     def setDrawImageInRect(value: (Image, Rect) => Unit): Self = this.set("drawImageInRect", js.Any.fromFunction2(value))
+    
     @scala.inline
     def setDrawText(value: (String, Point) => Unit): Self = this.set("drawText", js.Any.fromFunction2(value))
+    
     @scala.inline
     def setDrawTextInRect(value: (String, Rect) => Unit): Self = this.set("drawTextInRect", js.Any.fromFunction2(value))
+    
     @scala.inline
     def setFill(value: Rect => Unit): Self = this.set("fill", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setFillEllipse(value: Rect => Unit): Self = this.set("fillEllipse", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setFillPath(value: () => Unit): Self = this.set("fillPath", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setFillRect(value: Rect => Unit): Self = this.set("fillRect", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGetImage(value: () => Image): Self = this.set("getImage", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setOpaque(value: Boolean): Self = this.set("opaque", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setRespectScreenScale(value: Boolean): Self = this.set("respectScreenScale", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setSetFillColor(value: Color => Unit): Self = this.set("setFillColor", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setSetFontSize(value: Double => Unit): Self = this.set("setFontSize", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setSetLineWidth(value: Double => Unit): Self = this.set("setLineWidth", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setSetStrokeColor(value: Color => Unit): Self = this.set("setStrokeColor", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setSetTextAlignedCenter(value: () => Unit): Self = this.set("setTextAlignedCenter", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setSetTextAlignedLeft(value: () => Unit): Self = this.set("setTextAlignedLeft", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setSetTextAlignedRight(value: () => Unit): Self = this.set("setTextAlignedRight", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setSetTextColor(value: Color => Unit): Self = this.set("setTextColor", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setSize(value: Size): Self = this.set("size", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setStroke(value: Rect => Unit): Self = this.set("stroke", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setStrokeEllipse(value: Rect => Unit): Self = this.set("strokeEllipse", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setStrokePath(value: () => Unit): Self = this.set("strokePath", js.Any.fromFunction0(value))
+    
     @scala.inline
     def setStrokeRect(value: Rect => Unit): Self = this.set("strokeRect", js.Any.fromFunction1(value))
   }
-  
 }
-

@@ -2,25 +2,27 @@ package typingsSlinky.nodegit.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("nodegit", "Tree")
 @js.native
 class Tree ()
   extends typingsSlinky.nodegit.treeMod.Tree
-
 /* static members */
 @JSImport("nodegit", "Tree")
 @js.native
 object Tree extends js.Object {
+  
   def entryCmp(
     tree1: typingsSlinky.nodegit.treeEntryMod.TreeEntry,
     tree2: typingsSlinky.nodegit.treeEntryMod.TreeEntry
   ): Double = js.native
+  
   def entryDup(
     dest: typingsSlinky.nodegit.treeEntryMod.TreeEntry,
     source: typingsSlinky.nodegit.treeEntryMod.TreeEntry
   ): Double = js.native
+  
   /**
     * Retrieves the tree pointed to by the oid
     */
@@ -38,10 +40,10 @@ object Tree extends js.Object {
     id: typingsSlinky.nodegit.treeMod.Tree,
     callback: js.Function
   ): js.Promise[typingsSlinky.nodegit.treeMod.Tree] = js.native
+  
   def lookupPrefix(
     repo: typingsSlinky.nodegit.repositoryMod.Repository,
     id: typingsSlinky.nodegit.oidMod.Oid,
     len: Double
   ): js.Promise[typingsSlinky.nodegit.treeMod.Tree] = js.native
 }
-

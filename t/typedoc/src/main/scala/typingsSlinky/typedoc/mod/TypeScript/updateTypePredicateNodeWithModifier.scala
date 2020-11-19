@@ -7,11 +7,12 @@ import typingsSlinky.typescript.mod.TypeNode
 import typingsSlinky.typescript.mod.TypePredicateNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateTypePredicateNodeWithModifier")
 @js.native
 object updateTypePredicateNodeWithModifier extends js.Object {
+  
   def apply(node: TypePredicateNode, assertsModifier: js.UndefOr[scala.Nothing], parameterName: Identifier): TypePredicateNode = js.native
   def apply(
     node: TypePredicateNode,
@@ -41,4 +42,3 @@ object updateTypePredicateNodeWithModifier extends js.Object {
     `type`: TypeNode
   ): TypePredicateNode = js.native
 }
-

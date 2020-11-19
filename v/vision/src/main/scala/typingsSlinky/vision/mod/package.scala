@@ -2,9 +2,10 @@ package typingsSlinky.vision
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /**
     * Options passed to module when compiling template.
     * Cast your options to this interface or extend it with:
@@ -15,7 +16,9 @@ package object mod {
     *      }
     */
   type CompileOptions = js.Object
+  
   type EngineConfigurationObject = js.Object
+  
   /**
     * Renders a template
     * @param template - the template filename and path, relative to the views manager templates path (path or relativeTo).
@@ -28,14 +31,18 @@ package object mod {
     /* options */ js.UndefOr[typingsSlinky.vision.mod.ServerViewsConfiguration], 
     js.Promise[java.lang.String]
   ]
+  
   type RuntimeOptions = js.Object
+  
   type ServerViewCompile = typingsSlinky.vision.mod.ServerViewCompileSync | typingsSlinky.vision.mod.ServerViewCompileAsync
+  
   type ServerViewCompileAsync = js.Function3[
     /* template */ java.lang.String, 
     /* options */ js.Any, 
     /* next */ typingsSlinky.vision.mod.ServerViewCompileNext, 
     scala.Unit
   ]
+  
   type ServerViewCompileNext = js.Function2[
     /* err */ js.Error | scala.Null, 
     /* compiled */ js.Function3[
@@ -50,6 +57,7 @@ package object mod {
     ], 
     scala.Unit
   ]
+  
   /**
     * The rendering function. The required function signature depends on the compileMode settings (see below).
     *

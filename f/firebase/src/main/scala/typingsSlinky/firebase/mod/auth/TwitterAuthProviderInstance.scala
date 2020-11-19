@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @hidden
@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.TwitterAuthProvider_Instance")
 @js.native
 class TwitterAuthProviderInstance () extends AuthProvider {
+  
   /**
     * Sets the OAuth custom parameters to pass in a Twitter OAuth request for popup
     * and redirect sign-in operations.
@@ -22,4 +23,3 @@ class TwitterAuthProviderInstance () extends AuthProvider {
     */
   def setCustomParameters(customOAuthParameters: js.Object): AuthProvider = js.native
 }
-

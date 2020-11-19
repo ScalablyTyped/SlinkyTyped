@@ -3,11 +3,11 @@ package typingsSlinky.stampit.mod
 import typingsSlinky.std.PropertyDescriptorMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("stampit", "staticPropertyDescriptors")
 @js.native
 object staticPropertyDescriptors extends js.Object {
+  
   def apply[Obj](descriptors: PropertyDescriptorMap*): StampType[Obj] = js.native
 }
-

@@ -6,16 +6,21 @@ import typingsSlinky.kefir.mod.Stream_
 import typingsSlinky.kefir.mod.ValueOfAnObservable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCallObssObssPCombinator extends js.Object {
-  def apply[T /* <: js.Tuple3[
+  
+  def apply[T /* <: js.Tuple7[
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
     typingsSlinky.kefir.mod.Observable[_, _], 
     typingsSlinky.kefir.mod.Observable[_, _], 
     typingsSlinky.kefir.mod.Observable[_, _]
   ] */](obss: T): Stream_[
-    js.Tuple3[
+    js.Tuple7[
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
       ], 
@@ -24,6 +29,18 @@ trait FnCallObssObssPCombinator extends js.Object {
       ], 
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[2] */ js.Any
+      ], 
+      ValueOfAnObservable[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[3] */ js.Any
+      ], 
+      ValueOfAnObservable[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[4] */ js.Any
+      ], 
+      ValueOfAnObservable[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[5] */ js.Any
+      ], 
+      ValueOfAnObservable[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[6] */ js.Any
       ]
     ], 
     _
@@ -55,4 +72,3 @@ trait FnCallObssObssPCombinator extends js.Object {
     combinator: js.Function1[/* repeated */ T, U]
   ): Stream_[U, S] = js.native
 }
-

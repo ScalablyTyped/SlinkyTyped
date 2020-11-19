@@ -2,17 +2,16 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** @name dxChartSeriesTypes.FullStackedSplineAreaSeries.point */
 @js.native
 trait dxChartSeriesTypesFullStackedSplineAreaSeriesPoint extends dxChartSeriesTypesCommonSeriesPoint
-
 object dxChartSeriesTypesFullStackedSplineAreaSeriesPoint {
+  
   @scala.inline
   def apply(): dxChartSeriesTypesFullStackedSplineAreaSeriesPoint = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[dxChartSeriesTypesFullStackedSplineAreaSeriesPoint]
   }
 }
-

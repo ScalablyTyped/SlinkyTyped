@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Zoom
 import typingsSlinky.arcgisJsApi.esri.ZoomProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Zoom", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Zoom {
   def this(properties: ZoomProperties) = this()
 }
-

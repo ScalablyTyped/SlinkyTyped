@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.BasemapToggle
 import typingsSlinky.arcgisJsApi.esri.BasemapToggleProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/BasemapToggle", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends BasemapToggle {
   def this(properties: BasemapToggleProperties) = this()
 }
-

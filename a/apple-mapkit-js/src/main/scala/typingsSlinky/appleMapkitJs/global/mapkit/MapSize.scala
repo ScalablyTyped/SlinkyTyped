@@ -2,7 +2,7 @@ package typingsSlinky.appleMapkitJs.global.mapkit
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A pair of values in map units that define the width and height of a
@@ -22,4 +22,3 @@ class MapSize protected ()
     */
   def this(width: Double, height: Double) = this()
 }
-

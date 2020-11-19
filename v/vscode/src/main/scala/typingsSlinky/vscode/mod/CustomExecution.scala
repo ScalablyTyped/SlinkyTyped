@@ -3,7 +3,7 @@ package typingsSlinky.vscode.mod
 import typingsSlinky.vscode.Thenable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode", "CustomExecution")
 @js.native
@@ -19,4 +19,3 @@ class CustomExecution protected () extends js.Object {
     */
   def this(callback: js.Function0[Thenable[Pseudoterminal]]) = this()
 }
-

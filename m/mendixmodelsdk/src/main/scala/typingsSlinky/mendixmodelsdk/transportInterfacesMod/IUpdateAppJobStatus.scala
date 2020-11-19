@@ -5,7 +5,7 @@ import typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.started_
 import typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.updating_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.updating_
@@ -16,19 +16,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.failed_
 */
 trait IUpdateAppJobStatus extends js.Object
-
 object IUpdateAppJobStatus {
+  
   @scala.inline
   def consistencyerrors: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.consistencyerrors = "consistencyerrors".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.consistencyerrors]
+  
   @scala.inline
   def failed: failed_ = "failed".asInstanceOf[failed_]
+  
   @scala.inline
   def provisioning: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.provisioning = "provisioning".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.provisioning]
+  
   @scala.inline
   def resuming: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.resuming = "resuming".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.resuming]
+  
   @scala.inline
   def started: started_ = "started".asInstanceOf[started_]
+  
   @scala.inline
   def updating: updating_ = "updating".asInstanceOf[updating_]
 }
-

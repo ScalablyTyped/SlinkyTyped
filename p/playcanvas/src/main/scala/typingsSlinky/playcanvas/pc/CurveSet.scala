@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates a new curve set.
@@ -11,10 +11,19 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait CurveSet extends js.Object {
+  
+  /**
+    * Return a specific curve in the curve set.
+    * @param index - The index of the curve to return.
+    * @returns The curve at the specified index.
+    */
+  def get(index: Double): Curve = js.native
+  
   /**
     * The number of curves in the curve set.
     */
   val length: Double = js.native
+  
   /**
     * The interpolation scheme applied to all curves in the curve set. Can be:
     *
@@ -26,12 +35,7 @@ trait CurveSet extends js.Object {
     * Defaults to {@link pc.CURVE_SMOOTHSTEP}.
     */
   var `type`: Double = js.native
-  /**
-    * Return a specific curve in the curve set.
-    * @param index - The index of the curve to return.
-    * @returns The curve at the specified index.
-    */
-  def get(index: Double): Curve = js.native
+  
   /**
     * Returns the interpolated value of all curves in the curve
     * set at the specified time.
@@ -44,4 +48,3 @@ trait CurveSet extends js.Object {
   def value(time: Double): js.Array[Double] = js.native
   def value(time: Double, result: js.Array[Double]): js.Array[Double] = js.native
 }
-

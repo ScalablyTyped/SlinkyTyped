@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.LayerSearchSourceProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.LayerSearchSource")
 @js.native
@@ -16,4 +16,3 @@ class LayerSearchSourceCls ()
   extends typingsSlinky.arcgisJsApi.esri.LayerSearchSource {
   def this(properties: LayerSearchSourceProperties) = this()
 }
-

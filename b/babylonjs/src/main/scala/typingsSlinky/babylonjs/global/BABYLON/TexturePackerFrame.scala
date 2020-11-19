@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.TexturePackerFrame")
 @js.native
@@ -20,20 +20,4 @@ class TexturePackerFrame protected ()
     scale: typingsSlinky.babylonjs.BABYLON.Vector2,
     offset: typingsSlinky.babylonjs.BABYLON.Vector2
   ) = this()
-  /**
-    * The frame ID
-    */
-  /* CompleteClass */
-  override var id: Double = js.native
-  /**
-    * The Frames offset
-    */
-  /* CompleteClass */
-  override var offset: typingsSlinky.babylonjs.BABYLON.Vector2 = js.native
-  /**
-    * The frames Scale
-    */
-  /* CompleteClass */
-  override var scale: typingsSlinky.babylonjs.BABYLON.Vector2 = js.native
 }
-

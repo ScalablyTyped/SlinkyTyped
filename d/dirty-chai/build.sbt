@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "dirty-chai"
-version := "2.0-dt-20200226Z-5a7220"
+version := "2.0-dt-20200226Z-33e349"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "chai" % "4.2-dt-20200723Z-945def",
-  "org.scalablytyped.slinky" %%% "chai-as-promised" % "7.1.0-dt-20200706Z-085a26",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "chai" % "4.2-dt-20200723Z-5677c5",
+  "org.scalablytyped.slinky" %%% "chai-as-promised" % "7.1.0-dt-20200706Z-3f6b06",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

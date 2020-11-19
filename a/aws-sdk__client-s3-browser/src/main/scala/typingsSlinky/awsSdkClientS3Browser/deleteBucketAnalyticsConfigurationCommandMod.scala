@@ -12,11 +12,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-s3-browser/commands/DeleteBucketAnalyticsConfigurationCommand", JSImport.Namespace)
 @js.native
 object deleteBucketAnalyticsConfigurationCommandMod extends js.Object {
+  
   @js.native
   class DeleteBucketAnalyticsConfigurationCommand protected () extends Command[
           InputTypesUnion, 
@@ -27,17 +28,18 @@ object deleteBucketAnalyticsConfigurationCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteBucketAnalyticsConfigurationInput) = this()
+    
     val middlewareStack: MiddlewareStack[
         DeleteBucketAnalyticsConfigurationInput, 
         DeleteBucketAnalyticsConfigurationOutput, 
         Blob
       ] = js.native
+    
     val model: OperationModel = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: S3ResolvedConfiguration
     ): Handler[DeleteBucketAnalyticsConfigurationInput, DeleteBucketAnalyticsConfigurationOutput] = js.native
   }
-  
 }
-

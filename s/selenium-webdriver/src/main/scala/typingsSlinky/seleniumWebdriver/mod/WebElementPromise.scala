@@ -3,7 +3,7 @@ package typingsSlinky.seleniumWebdriver.mod
 import typingsSlinky.std.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("selenium-webdriver", "WebElementPromise")
 @js.native
@@ -18,4 +18,3 @@ class WebElementPromise protected ()
     */
   def this(driver: WebDriver, el: js.Promise[WebElement]) = this()
 }
-

@@ -7,7 +7,7 @@ import typingsSlinky.avoscloudSdk.mod.UseMasterKeyOption
 import typingsSlinky.avoscloudSdk.mod.WaitOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CreateOptions
@@ -16,12 +16,11 @@ trait CreateOptions
      with WaitOption
      with SilentOption
      with UseMasterKeyOption
-
 object CreateOptions {
+  
   @scala.inline
   def apply(): CreateOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CreateOptions]
   }
 }
-

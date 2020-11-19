@@ -3,10 +3,11 @@ package typingsSlinky.d3Selection.mod
 import typingsSlinky.d3Selection.d3SelectionStrings.important
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, PDatum] extends js.Object {
+  
   /**
     * Appends a new element of this type (tag name) as the last child of each selected element,
     * or before the next following sibling in the update selection if this is an enter selection.
@@ -60,6 +61,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * an element to be appended. (The function typically creates a new element, but it may instead return an existing element.)
     */
   def append[ChildElement /* <: BaseType */](`type`: ValueFn[GElement, Datum, ChildElement]): Selection_[ChildElement, Datum, PElement, PDatum] = js.native
+  
   // Modifying -------------------------------
   /**
     * Return the current value of the specified attribute for the first (non-null) element in the selection.
@@ -94,6 +96,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * the current index (i), and the current group (nodes), with this as the current DOM element (nodes[i]).  A null value will clear the attribute.
     */
   def attr(name: String, value: ValueFn[GElement, Datum, String | Double | Boolean | Null]): this.type = js.native
+  
   /**
     * Invoke the specified function exactly once, passing in this selection along with any optional arguments.
     * Returns this selection.
@@ -109,6 +112,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     ],
     args: js.Any*
   ): this.type = js.native
+  
   /**
     * Returns true if and only if the first (non-null) selected element has the specified classes.
     * This is generally useful only if you know the selection contains exactly one element.
@@ -137,7 +141,9 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * The function’s return value is then used to assign or unassign classes on each element.
     */
   def classed(names: String, value: ValueFn[GElement, Datum, Boolean]): this.type = js.native
+  
   def clone(deep: Boolean): Selection_[GElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * Returns the array of data for the selected elements.
     */
@@ -212,6 +218,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     data: ValueFn[PElement, PDatum, js.Array[NewDatum]],
     key: ValueFn[GElement | PElement, Datum | NewDatum, KeyType]
   ): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
+  
   // Data Join ---------------------------------
   /**
     * Returns the bound datum for the first (non-null) element in the selection.
@@ -245,6 +252,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * A null value will delete the bound data.
     */
   def datum[NewDatum](value: ValueFn[GElement, Datum, NewDatum]): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
+  
   /**
     * Dispatches a custom event of the specified type to each selected element, in order.
     * An optional parameters map may be specified to set additional properties of the event.
@@ -255,6 +263,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
   def dispatch(`type`: String): this.type = js.native
   def dispatch(`type`: String, parameters: CustomEventParameters): this.type = js.native
   def dispatch(`type`: String, parameters: ValueFn[GElement, Datum, CustomEventParameters]): this.type = js.native
+  
   // Control Flow ----------------------
   /**
     * Invoke the specified function for each selected element, passing in the current datum (d),
@@ -265,15 +274,18 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     *             being passed the current datum (d), the current index (i), and the current group (nodes), with this of the current DOM element (nodes[i]).
     */
   def each(func: ValueFn[GElement, Datum, Unit]): this.type = js.native
+  
   /**
     * Return true if this selection contains no (non-null) elements.
     */
   def empty(): Boolean = js.native
+  
   /**
     * Return the enter selection: placeholder nodes for each datum that had no corresponding DOM element
     * in the selection. (The enter selection is empty for selections not returned by selection.data.)
     */
   def enter(): Selection_[EnterElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * Returns the exit selection: existing DOM elements in the selection for which no new datum was found.
     * (The exit selection is empty for selections not returned by selection.data.)
@@ -283,6 +295,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * follow-up steps, e.g. to set styles as part of an exit transition before removing them.
     */
   def exit[OldDatum](): Selection_[GElement, OldDatum, PElement, PDatum] = js.native
+  
   /**
     * Filters the selection, returning a new selection that contains only the elements for
     * which the specified filter is true.
@@ -332,6 +345,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     */
   @JSName("filter")
   def filter_FilteredElement_BaseType[FilteredElement /* <: BaseType */](selector: ValueFn[GElement, Datum, Boolean]): Selection_[FilteredElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * Returns a string representation of the inner HTML for the first (non-null) element in the selection.
     * This is generally useful only if you know the selection contains exactly one element.
@@ -357,6 +371,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * The function’s return value is then used to set each element’s inner HTML. A null value will clear the content.
     */
   def html(value: ValueFn[GElement, Datum, String | Null]): this.type = js.native
+  
   /**
     * Inserts a new element of the specified type (tag name) before the first element matching the specified
     * before selector for each selected element. For example, a before selector :first-child will prepend nodes before the first child.
@@ -422,6 +437,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
   def insert[ChildElement /* <: BaseType */](`type`: ValueFn[GElement, Datum, ChildElement]): Selection_[ChildElement, Datum, PElement, PDatum] = js.native
   def insert[ChildElement /* <: BaseType */](`type`: ValueFn[GElement, Datum, ChildElement], before: String): Selection_[ChildElement, Datum, PElement, PDatum] = js.native
   def insert[ChildElement /* <: BaseType */](`type`: ValueFn[GElement, Datum, ChildElement], before: ValueFn[GElement, Datum, BaseType]): Selection_[ChildElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * Appends, removes and reorders elements as necessary to match the data that was previously bound by `selection.data`, returning the merged enter and update selection.
     * This method is a convenient alternative to the more explicit `selection.enter`, `selection.exit`, `selection.append` and `selection.remove`.
@@ -537,10 +553,12 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     ],
     exit: js.Function1[/* elem */ Selection_[GElement, OldDatum, PElement, PDatum], Unit]
   ): Selection_[ChildElement | GElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * Re-insert each selected element, in order, as the first child of its parent.
     */
   def lower(): this.type = js.native
+  
   /**
     * Returns a new selection merging this selection with the specified other selection.
     * The returned selection has the same number of groups and the same parents as this selection.
@@ -559,14 +577,17 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * @param other Selection to be merged.
     */
   def merge(other: Selection_[GElement, Datum, PElement, PDatum]): Selection_[GElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * Return the first (non-null) element in this selection. If the selection is empty, returns null.
     */
   def node(): GElement | Null = js.native
+  
   /**
     * Return an array of all (non-null) elements in this selection.
     */
   def nodes(): js.Array[GElement] = js.native
+  
   // Event Handling -------------------
   /**
     * Return the currently-assigned listener for the specified event typename on the first (non-null) selected element,
@@ -612,11 +633,13 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     */
   def on(typenames: String, listener: ValueFn[GElement, Datum, Unit]): this.type = js.native
   def on(typenames: String, listener: ValueFn[GElement, Datum, Unit], capture: Boolean): this.type = js.native
+  
   /**
     * Re-insert elements into the document such that the document order of each group matches the selection order.
     * This is equivalent to calling selection.sort if the data is already sorted, but much faster.
     */
   def order(): this.type = js.native
+  
   /**
     * Return the current value of the specified property for the first (non-null) element in the selection.
     * This is generally useful only if you know that the selection contains exactly one element.
@@ -673,15 +696,18 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * @param value A callback that returns the value to store
     */
   def property[T](name: Local_[T], value: ValueFn[GElement, Datum, T]): this.type = js.native
+  
   /**
     * Re-insert each selected element, in order, as the last child of its parent.
     */
   def raise(): this.type = js.native
+  
   /**
     * Removes the selected elements from the document.
     * Returns this selection (the removed elements) which are now detached from the DOM.
     */
   def remove(): this.type = js.native
+  
   // Sub-selection -------------------------
   /**
     * For each selected element, select the first descendant element that matches the specified selector string.
@@ -719,6 +745,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * It must return an element, or null if there is no matching element.
     */
   def select[DescElement /* <: BaseType */](selector: ValueFn[GElement, Datum, DescElement]): Selection_[DescElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * Create an empty sub-selection. Selection.selectAll does affect grouping: The elements in the returned
     * selection are grouped by their corresponding parent node in this selection, the group at the current index will be empty.
@@ -764,10 +791,12 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * (or a pseudo-array, such as a NodeList), or the empty array if there are no matching elements.
     */
   def selectAll[DescElement /* <: BaseType */, OldDatum](selector: ValueFn[GElement, Datum, js.Array[DescElement] | ArrayLike[DescElement]]): Selection_[DescElement, OldDatum, GElement, Datum] = js.native
+  
   /**
     * Returns the total number of elements in this selection.
     */
   def size(): Double = js.native
+  
   /**
     * Return a new selection that contains a copy of each group in this selection sorted according
     * to the compare function. After sorting, re-inserts elements to match the resulting order (per selection.order).
@@ -782,6 +811,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     */
   def sort(): this.type = js.native
   def sort(comparator: js.Function2[/* a */ Datum, /* b */ Datum, Double]): this.type = js.native
+  
   /**
     * Returns the current value of the specified style property for the first (non-null) element in the selection.
     * The current value is defined as the element’s inline value, if present, and otherwise its computed value.
@@ -830,6 +860,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     value: ValueFn[GElement, Datum, String | Double | Boolean | Null],
     priority: important
   ): this.type = js.native
+  
   /**
     * Returns the text content for the first (non-null) element in the selection.
     * This is generally useful only if you know the selection contains exactly one element.
@@ -858,4 +889,3 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     */
   def text(value: ValueFn[GElement, Datum, String | Double | Boolean | Null]): this.type = js.native
 }
-

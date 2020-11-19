@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "OrthographicCamera")
 @js.native
@@ -28,4 +28,3 @@ class OrthographicCamera protected ()
   ) = this()
   def this(left: Double, right: Double, top: Double, bottom: Double, near: Double, far: Double) = this()
 }
-

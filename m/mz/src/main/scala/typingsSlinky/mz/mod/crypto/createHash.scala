@@ -3,12 +3,12 @@ package typingsSlinky.mz.mod.crypto
 import typingsSlinky.node.cryptoMod.HashOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mz", "crypto.createHash")
 @js.native
 object createHash extends js.Object {
+  
   def apply(algorithm: String): typingsSlinky.node.cryptoMod.Hash = js.native
   def apply(algorithm: String, options: HashOptions): typingsSlinky.node.cryptoMod.Hash = js.native
 }
-

@@ -3,24 +3,23 @@ package typingsSlinky.ecol
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
 import typingsSlinky.tstl.arrayContainerMod.ArrayContainer
 import typingsSlinky.tstl.arrayIteratorMod.ArrayIterator
 import typingsSlinky.tstl.arrayReverseIteratorMod.ArrayReverseIterator
+import typingsSlinky.tstl.icontainerMod.IContainer
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
-import typingsSlinky.tstl.mod.base.Container
 import typingsSlinky.tstl.vectorMod.Vector
 import typingsSlinky.tstl.vectorMod.Vector.Iterator
 import typingsSlinky.tstl.vectorMod.Vector.ReverseIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ecol/lib/linear/VectorCollection", JSImport.Namespace)
 @js.native
 object vectorCollectionMod extends js.Object {
+  
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.tstl.isizeMod.ISize because Already inherited
   - typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer because Already inherited
@@ -29,25 +28,21 @@ object vectorCollectionMod extends js.Object {
   - typingsSlinky.std.Iterable because Already inherited
   - typingsSlinky.tstl.ibidirectionalcontainerMod.IBidirectionalContainer because Already inherited
   - typingsSlinky.tstl.icontainerMod.IContainer because Already inherited
-  - typingsSlinky.tstl.containerContainerMod.Container because Already inherited
   - typingsSlinky.ecol.icollectionMod.ICollection because var conflicts: iterator, iterator_IContainer_. Inlined refresh, refresh, refresh */ @js.native
   class ArrayCollection[T] ()
     extends Vector[T]
        with IEventDispatcher[T, Vector[T], Iterator[T], ReverseIterator[T]] {
+    
     /**
       * @hidden
       */
     var _Notify_erase: js.Any = js.native
+    
     /**
       * @hidden
       */
     var _Notify_insert: js.Any = js.native
-    /**
-      * @hidden
-      */
-    var dispatcher_ : js.Any = js.native
-    /* CompleteClass */
-    override def addEventListener(`type`: Type, listener: Listener[T, Vector[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
+    
     /**
       * Range Assigner.
       *
@@ -57,36 +52,19 @@ object vectorCollectionMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[T, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
-    /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, Vector[T], Iterator[T], ReverseIterator[T], T] = js.native
+    
     /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
-    /* CompleteClass */
-    override def dispatchEvent(event: CollectionEvent[T, Vector[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
+    
     /**
-      * Test whether container is empty.
+      * @hidden
       */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def empty(): Boolean = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, Vector[T], Iterator[T], ReverseIterator[T], T] = js.native
+    var dispatcher_ : js.Any = js.native
+    
     /**
       * Erase elements in range.
       *
@@ -106,6 +84,7 @@ object vectorCollectionMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def erase(pos: Iterator[T]): Iterator[T] = js.native
+    
     /**
       * @inheritDoc
       */
@@ -116,32 +95,7 @@ object vectorCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def front(`val`: T): Unit = js.native
-    /* CompleteClass */
-    override def hasEventListener(`type`: Type): Boolean = js.native
-    /**
-      * Insert items at the end.
-      *
-      * @param items Items to insert.
-      * @return Number of elements in the container after insertion.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def push(items: T*): Double = js.native
-    /**
-      * Insert an element at the end.
-      *
-      * @param val Value to insert.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def push_back(`val`: T): Unit = js.native
-    /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
-      */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseIterator[T] = js.native
+    
     /**
       * @inheritdoc
       */
@@ -154,21 +108,7 @@ object vectorCollectionMod extends js.Object {
       * @inheritdoc
       */
     def refresh(it: Iterator[T]): Unit = js.native
-    /* CompleteClass */
-    override def removeEventListener(`type`: Type, listener: Listener[T, Vector[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
-    /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def rend(): ReverseIterator[T] = js.native
-    /**
-      * Number of elements in the container.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def size(): Double = js.native
+    
     /**
       * Swap elements.
       *
@@ -177,6 +117,7 @@ object vectorCollectionMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def swap(obj: Vector[T]): Unit = js.native
+    
     /**
       * Native function for `JSON.stringify()`.
       *
@@ -186,26 +127,39 @@ object vectorCollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def toJSON(): js.Array[T] = js.native
   }
-  
   @js.native
   object ArrayCollection extends js.Object {
+    
     val Event: Instantiable3[
         /* type */ String, 
         /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ /* first */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ /* last */ js.Any, 
         CollectionEvent[
           js.Object, 
-          Container[
+          IContainer[
             /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ], 
-          js.Iterator[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any], 
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify std.base.ReverseIterator<T, SourceT, IteratorT, ReverseT> */ js.Any
+          typingsSlinky.tstl.icontainerMod.IContainer.Iterator[
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
+          ], 
+          typingsSlinky.tstl.icontainerMod.IContainer.ReverseIterator[
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
+          ]
         ]
       ] = js.native
+    
     val Iterator: Instantiable0[
         ArrayIterator[
           js.Object, 
@@ -225,6 +179,7 @@ object vectorCollectionMod extends js.Object {
           ]
         ]
       ] = js.native
+    
     val ReverseIterator: Instantiable0[
         ArrayReverseIterator[
           js.Object, 
@@ -244,27 +199,29 @@ object vectorCollectionMod extends js.Object {
           ]
         ]
       ] = js.native
+    
     type Event[T] = CollectionEvent[
         T, 
         Vector[T], 
         typingsSlinky.tstl.vectorMod.Vector.Iterator[T], 
         typingsSlinky.tstl.vectorMod.Vector.ReverseIterator[T]
       ]
+    
     /**
       * Iterator of {@link Vector}
       */
     type Iterator[T] = ArrayIterator[T, Vector[T]]
+    
     type Listener[T] = typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener[
         T, 
         Vector[T], 
         typingsSlinky.tstl.vectorMod.Vector.Iterator[T], 
         typingsSlinky.tstl.vectorMod.Vector.ReverseIterator[T]
       ]
+    
     /**
       * Reverse iterator of {@link Vector}
       */
     type ReverseIterator[T] = ArrayReverseIterator[T, Vector[T]]
   }
-  
 }
-

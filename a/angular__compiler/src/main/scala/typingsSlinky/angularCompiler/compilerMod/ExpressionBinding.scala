@@ -3,7 +3,7 @@ package typingsSlinky.angularCompiler.compilerMod
 import typingsSlinky.angularCompiler.astMod.TemplateBindingIdentifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/compiler", "ExpressionBinding")
 @js.native
@@ -29,4 +29,3 @@ class ExpressionBinding protected ()
     value: typingsSlinky.angularCompiler.astMod.ASTWithSource
   ) = this()
 }
-

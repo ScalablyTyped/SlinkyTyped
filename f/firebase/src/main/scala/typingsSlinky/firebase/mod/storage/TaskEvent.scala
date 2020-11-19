@@ -2,11 +2,12 @@ package typingsSlinky.firebase.mod.storage
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "storage.TaskEvent")
 @js.native
 object TaskEvent extends js.Object {
+  
   /**
     * For this event,
     * <ul>
@@ -22,4 +23,3 @@ object TaskEvent extends js.Object {
     */
   var STATE_CHANGED: TaskEvent = js.native
 }
-

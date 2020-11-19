@@ -12,9 +12,250 @@ import typingsSlinky.firebase.mod.remoteConfig.LogLevel
 import typingsSlinky.firebase.mod.remoteConfig.ValueSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object firebaseStrings {
+  
+  @scala.inline
+  def EqualssignEqualssign: EqualssignEqualssign = "==".asInstanceOf[EqualssignEqualssign]
+  
+  @scala.inline
+  def Greaterthansign: Greaterthansign = ">".asInstanceOf[Greaterthansign]
+  
+  @scala.inline
+  def GreaterthansignEqualssign: GreaterthansignEqualssign = ">=".asInstanceOf[GreaterthansignEqualssign]
+  
+  @scala.inline
+  def Lessthansign: Lessthansign = "<".asInstanceOf[Lessthansign]
+  
+  @scala.inline
+  def LessthansignEqualssign: LessthansignEqualssign = "<=".asInstanceOf[LessthansignEqualssign]
+  
+  @scala.inline
+  def aborted: aborted = "aborted".asInstanceOf[aborted]
+  
+  @scala.inline
+  def add_payment_info: add_payment_info = "add_payment_info".asInstanceOf[add_payment_info]
+  
+  @scala.inline
+  def add_shipping_info: add_shipping_info = "add_shipping_info".asInstanceOf[add_shipping_info]
+  
+  @scala.inline
+  def add_to_cart: add_to_cart = "add_to_cart".asInstanceOf[add_to_cart]
+  
+  @scala.inline
+  def add_to_wishlist: add_to_wishlist = "add_to_wishlist".asInstanceOf[add_to_wishlist]
+  
+  @scala.inline
+  def added: added = "added".asInstanceOf[added]
+  
+  @scala.inline
+  def `already-exists`: `already-exists` = "already-exists".asInstanceOf[`already-exists`]
+  
+  @scala.inline
+  def `array-contains`: `array-contains` = "array-contains".asInstanceOf[`array-contains`]
+  
+  @scala.inline
+  def `array-contains-any`: `array-contains-any` = "array-contains-any".asInstanceOf[`array-contains-any`]
+  
+  @scala.inline
+  def asc: asc = "asc".asInstanceOf[asc]
+  
+  @scala.inline
+  def begin_checkout: begin_checkout = "begin_checkout".asInstanceOf[begin_checkout]
+  
+  @scala.inline
+  def cache: cache = "cache".asInstanceOf[cache]
+  
+  @scala.inline
+  def cancelled: cancelled = "cancelled".asInstanceOf[cancelled]
+  
+  @scala.inline
+  def checkout_progress: checkout_progress = "checkout_progress".asInstanceOf[checkout_progress]
+  
+  @scala.inline
+  def child_added: child_added = "child_added".asInstanceOf[child_added]
+  
+  @scala.inline
+  def child_changed: child_changed = "child_changed".asInstanceOf[child_changed]
+  
+  @scala.inline
+  def child_moved: child_moved = "child_moved".asInstanceOf[child_moved]
+  
+  @scala.inline
+  def child_removed: child_removed = "child_removed".asInstanceOf[child_removed]
+  
+  @scala.inline
+  def `data-loss`: `data-loss` = "data-loss".asInstanceOf[`data-loss`]
+  
+  @scala.inline
+  def `deadline-exceeded`: `deadline-exceeded` = "deadline-exceeded".asInstanceOf[`deadline-exceeded`]
+  
+  @scala.inline
+  def debug: debug = "debug".asInstanceOf[debug]
+  
+  @scala.inline
+  def default: default = "default".asInstanceOf[default]
+  
+  @scala.inline
+  def desc: desc = "desc".asInstanceOf[desc]
+  
+  @scala.inline
+  def error: error = "error".asInstanceOf[error]
+  
+  @scala.inline
+  def estimate: estimate = "estimate".asInstanceOf[estimate]
+  
+  @scala.inline
+  def exception: exception = "exception".asInstanceOf[exception]
+  
+  @scala.inline
+  def `failed-precondition`: `failed-precondition` = "failed-precondition".asInstanceOf[`failed-precondition`]
+  
+  @scala.inline
+  def failure: failure = "failure".asInstanceOf[failure]
+  
+  @scala.inline
+  def generate_lead: generate_lead = "generate_lead".asInstanceOf[generate_lead]
+  
+  @scala.inline
+  def in: in = "in".asInstanceOf[in]
+  
+  @scala.inline
+  def info: info = "info".asInstanceOf[info]
+  
+  @scala.inline
+  def internal: internal = "internal".asInstanceOf[internal]
+  
+  @scala.inline
+  def `invalid-argument`: `invalid-argument` = "invalid-argument".asInstanceOf[`invalid-argument`]
+  
+  @scala.inline
+  def login: login = "login".asInstanceOf[login]
+  
+  @scala.inline
+  def modified: modified = "modified".asInstanceOf[modified]
+  
+  @scala.inline
+  def `no-fetch-yet`: `no-fetch-yet` = "no-fetch-yet".asInstanceOf[`no-fetch-yet`]
+  
+  @scala.inline
+  def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def `not-found`: `not-found` = "not-found".asInstanceOf[`not-found`]
+  
+  @scala.inline
+  def ok: ok = "ok".asInstanceOf[ok]
+  
+  @scala.inline
+  def `out-of-range`: `out-of-range` = "out-of-range".asInstanceOf[`out-of-range`]
+  
+  @scala.inline
+  def page_view: page_view = "page_view".asInstanceOf[page_view]
+  
+  @scala.inline
+  def `permission-denied`: `permission-denied` = "permission-denied".asInstanceOf[`permission-denied`]
+  
+  @scala.inline
+  def previous: previous = "previous".asInstanceOf[previous]
+  
+  @scala.inline
+  def purchase: purchase = "purchase".asInstanceOf[purchase]
+  
+  @scala.inline
+  def refund: refund = "refund".asInstanceOf[refund]
+  
+  @scala.inline
+  def remote: remote = "remote".asInstanceOf[remote]
+  
+  @scala.inline
+  def remove_from_cart: remove_from_cart = "remove_from_cart".asInstanceOf[remove_from_cart]
+  
+  @scala.inline
+  def removed: removed = "removed".asInstanceOf[removed]
+  
+  @scala.inline
+  def `resource-exhausted`: `resource-exhausted` = "resource-exhausted".asInstanceOf[`resource-exhausted`]
+  
+  @scala.inline
+  def screen_view: screen_view = "screen_view".asInstanceOf[screen_view]
+  
+  @scala.inline
+  def search: search = "search".asInstanceOf[search]
+  
+  @scala.inline
+  def select_content: select_content = "select_content".asInstanceOf[select_content]
+  
+  @scala.inline
+  def select_item: select_item = "select_item".asInstanceOf[select_item]
+  
+  @scala.inline
+  def select_promotion: select_promotion = "select_promotion".asInstanceOf[select_promotion]
+  
+  @scala.inline
+  def server: server = "server".asInstanceOf[server]
+  
+  @scala.inline
+  def set_checkout_option: set_checkout_option = "set_checkout_option".asInstanceOf[set_checkout_option]
+  
+  @scala.inline
+  def share: share = "share".asInstanceOf[share]
+  
+  @scala.inline
+  def sign_up: sign_up = "sign_up".asInstanceOf[sign_up]
+  
+  @scala.inline
+  def silent: silent = "silent".asInstanceOf[silent]
+  
+  @scala.inline
+  def static: static = "static".asInstanceOf[static]
+  
+  @scala.inline
+  def success: success = "success".asInstanceOf[success]
+  
+  @scala.inline
+  def throttle: throttle = "throttle".asInstanceOf[throttle]
+  
+  @scala.inline
+  def timing_complete: timing_complete = "timing_complete".asInstanceOf[timing_complete]
+  
+  @scala.inline
+  def unauthenticated: unauthenticated = "unauthenticated".asInstanceOf[unauthenticated]
+  
+  @scala.inline
+  def unavailable: unavailable = "unavailable".asInstanceOf[unavailable]
+  
+  @scala.inline
+  def unimplemented: unimplemented = "unimplemented".asInstanceOf[unimplemented]
+  
+  @scala.inline
+  def unknown: unknown = "unknown".asInstanceOf[unknown]
+  
+  @scala.inline
+  def value: value = "value".asInstanceOf[value]
+  
+  @scala.inline
+  def verbose: verbose = "verbose".asInstanceOf[verbose]
+  
+  @scala.inline
+  def view_cart: view_cart = "view_cart".asInstanceOf[view_cart]
+  
+  @scala.inline
+  def view_item: view_item = "view_item".asInstanceOf[view_item]
+  
+  @scala.inline
+  def view_item_list: view_item_list = "view_item_list".asInstanceOf[view_item_list]
+  
+  @scala.inline
+  def view_promotion: view_promotion = "view_promotion".asInstanceOf[view_promotion]
+  
+  @scala.inline
+  def view_search_results: view_search_results = "view_search_results".asInstanceOf[view_search_results]
+  
+  @scala.inline
+  def warn: warn = "warn".asInstanceOf[warn]
+  
   @js.native
   sealed trait EqualssignEqualssign extends WhereFilterOp
   
@@ -298,166 +539,4 @@ object firebaseStrings {
   @js.native
   sealed trait warn
     extends typingsSlinky.firebase.mod.LogLevel
-  
-  @scala.inline
-  def EqualssignEqualssign: EqualssignEqualssign = "==".asInstanceOf[EqualssignEqualssign]
-  @scala.inline
-  def Greaterthansign: Greaterthansign = ">".asInstanceOf[Greaterthansign]
-  @scala.inline
-  def GreaterthansignEqualssign: GreaterthansignEqualssign = ">=".asInstanceOf[GreaterthansignEqualssign]
-  @scala.inline
-  def Lessthansign: Lessthansign = "<".asInstanceOf[Lessthansign]
-  @scala.inline
-  def LessthansignEqualssign: LessthansignEqualssign = "<=".asInstanceOf[LessthansignEqualssign]
-  @scala.inline
-  def aborted: aborted = "aborted".asInstanceOf[aborted]
-  @scala.inline
-  def add_payment_info: add_payment_info = "add_payment_info".asInstanceOf[add_payment_info]
-  @scala.inline
-  def add_shipping_info: add_shipping_info = "add_shipping_info".asInstanceOf[add_shipping_info]
-  @scala.inline
-  def add_to_cart: add_to_cart = "add_to_cart".asInstanceOf[add_to_cart]
-  @scala.inline
-  def add_to_wishlist: add_to_wishlist = "add_to_wishlist".asInstanceOf[add_to_wishlist]
-  @scala.inline
-  def added: added = "added".asInstanceOf[added]
-  @scala.inline
-  def `already-exists`: `already-exists` = "already-exists".asInstanceOf[`already-exists`]
-  @scala.inline
-  def `array-contains`: `array-contains` = "array-contains".asInstanceOf[`array-contains`]
-  @scala.inline
-  def `array-contains-any`: `array-contains-any` = "array-contains-any".asInstanceOf[`array-contains-any`]
-  @scala.inline
-  def asc: asc = "asc".asInstanceOf[asc]
-  @scala.inline
-  def begin_checkout: begin_checkout = "begin_checkout".asInstanceOf[begin_checkout]
-  @scala.inline
-  def cache: cache = "cache".asInstanceOf[cache]
-  @scala.inline
-  def cancelled: cancelled = "cancelled".asInstanceOf[cancelled]
-  @scala.inline
-  def checkout_progress: checkout_progress = "checkout_progress".asInstanceOf[checkout_progress]
-  @scala.inline
-  def child_added: child_added = "child_added".asInstanceOf[child_added]
-  @scala.inline
-  def child_changed: child_changed = "child_changed".asInstanceOf[child_changed]
-  @scala.inline
-  def child_moved: child_moved = "child_moved".asInstanceOf[child_moved]
-  @scala.inline
-  def child_removed: child_removed = "child_removed".asInstanceOf[child_removed]
-  @scala.inline
-  def `data-loss`: `data-loss` = "data-loss".asInstanceOf[`data-loss`]
-  @scala.inline
-  def `deadline-exceeded`: `deadline-exceeded` = "deadline-exceeded".asInstanceOf[`deadline-exceeded`]
-  @scala.inline
-  def debug: debug = "debug".asInstanceOf[debug]
-  @scala.inline
-  def default: default = "default".asInstanceOf[default]
-  @scala.inline
-  def desc: desc = "desc".asInstanceOf[desc]
-  @scala.inline
-  def error: error = "error".asInstanceOf[error]
-  @scala.inline
-  def estimate: estimate = "estimate".asInstanceOf[estimate]
-  @scala.inline
-  def exception: exception = "exception".asInstanceOf[exception]
-  @scala.inline
-  def `failed-precondition`: `failed-precondition` = "failed-precondition".asInstanceOf[`failed-precondition`]
-  @scala.inline
-  def failure: failure = "failure".asInstanceOf[failure]
-  @scala.inline
-  def generate_lead: generate_lead = "generate_lead".asInstanceOf[generate_lead]
-  @scala.inline
-  def in: in = "in".asInstanceOf[in]
-  @scala.inline
-  def info: info = "info".asInstanceOf[info]
-  @scala.inline
-  def internal: internal = "internal".asInstanceOf[internal]
-  @scala.inline
-  def `invalid-argument`: `invalid-argument` = "invalid-argument".asInstanceOf[`invalid-argument`]
-  @scala.inline
-  def login: login = "login".asInstanceOf[login]
-  @scala.inline
-  def modified: modified = "modified".asInstanceOf[modified]
-  @scala.inline
-  def `no-fetch-yet`: `no-fetch-yet` = "no-fetch-yet".asInstanceOf[`no-fetch-yet`]
-  @scala.inline
-  def none: none = "none".asInstanceOf[none]
-  @scala.inline
-  def `not-found`: `not-found` = "not-found".asInstanceOf[`not-found`]
-  @scala.inline
-  def ok: ok = "ok".asInstanceOf[ok]
-  @scala.inline
-  def `out-of-range`: `out-of-range` = "out-of-range".asInstanceOf[`out-of-range`]
-  @scala.inline
-  def page_view: page_view = "page_view".asInstanceOf[page_view]
-  @scala.inline
-  def `permission-denied`: `permission-denied` = "permission-denied".asInstanceOf[`permission-denied`]
-  @scala.inline
-  def previous: previous = "previous".asInstanceOf[previous]
-  @scala.inline
-  def purchase: purchase = "purchase".asInstanceOf[purchase]
-  @scala.inline
-  def refund: refund = "refund".asInstanceOf[refund]
-  @scala.inline
-  def remote: remote = "remote".asInstanceOf[remote]
-  @scala.inline
-  def remove_from_cart: remove_from_cart = "remove_from_cart".asInstanceOf[remove_from_cart]
-  @scala.inline
-  def removed: removed = "removed".asInstanceOf[removed]
-  @scala.inline
-  def `resource-exhausted`: `resource-exhausted` = "resource-exhausted".asInstanceOf[`resource-exhausted`]
-  @scala.inline
-  def screen_view: screen_view = "screen_view".asInstanceOf[screen_view]
-  @scala.inline
-  def search: search = "search".asInstanceOf[search]
-  @scala.inline
-  def select_content: select_content = "select_content".asInstanceOf[select_content]
-  @scala.inline
-  def select_item: select_item = "select_item".asInstanceOf[select_item]
-  @scala.inline
-  def select_promotion: select_promotion = "select_promotion".asInstanceOf[select_promotion]
-  @scala.inline
-  def server: server = "server".asInstanceOf[server]
-  @scala.inline
-  def set_checkout_option: set_checkout_option = "set_checkout_option".asInstanceOf[set_checkout_option]
-  @scala.inline
-  def share: share = "share".asInstanceOf[share]
-  @scala.inline
-  def sign_up: sign_up = "sign_up".asInstanceOf[sign_up]
-  @scala.inline
-  def silent: silent = "silent".asInstanceOf[silent]
-  @scala.inline
-  def static: static = "static".asInstanceOf[static]
-  @scala.inline
-  def success: success = "success".asInstanceOf[success]
-  @scala.inline
-  def throttle: throttle = "throttle".asInstanceOf[throttle]
-  @scala.inline
-  def timing_complete: timing_complete = "timing_complete".asInstanceOf[timing_complete]
-  @scala.inline
-  def unauthenticated: unauthenticated = "unauthenticated".asInstanceOf[unauthenticated]
-  @scala.inline
-  def unavailable: unavailable = "unavailable".asInstanceOf[unavailable]
-  @scala.inline
-  def unimplemented: unimplemented = "unimplemented".asInstanceOf[unimplemented]
-  @scala.inline
-  def unknown: unknown = "unknown".asInstanceOf[unknown]
-  @scala.inline
-  def value: value = "value".asInstanceOf[value]
-  @scala.inline
-  def verbose: verbose = "verbose".asInstanceOf[verbose]
-  @scala.inline
-  def view_cart: view_cart = "view_cart".asInstanceOf[view_cart]
-  @scala.inline
-  def view_item: view_item = "view_item".asInstanceOf[view_item]
-  @scala.inline
-  def view_item_list: view_item_list = "view_item_list".asInstanceOf[view_item_list]
-  @scala.inline
-  def view_promotion: view_promotion = "view_promotion".asInstanceOf[view_promotion]
-  @scala.inline
-  def view_search_results: view_search_results = "view_search_results".asInstanceOf[view_search_results]
-  @scala.inline
-  def warn: warn = "warn".asInstanceOf[warn]
 }
-

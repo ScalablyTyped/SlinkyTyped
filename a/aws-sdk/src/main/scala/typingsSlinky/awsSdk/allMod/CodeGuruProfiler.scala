@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.codeguruprofilerMod.ClientConfiguration
 import typingsSlinky.awsSdk.codeguruprofilerMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/clients/all", "CodeGuruProfiler")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 class CodeGuruProfiler () extends ^ {
   def this(options: ClientConfiguration) = this()
 }
-

@@ -1,10 +1,9 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
 import typingsSlinky.babylonjs.BABYLON.IMultiRenderTargetOptions
-import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.MultiRenderTarget")
 @js.native
@@ -30,10 +29,4 @@ class MultiRenderTarget protected ()
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     options: IMultiRenderTargetOptions
   ) = this()
-  /**
-    * Array of animations
-    */
-  /* CompleteClass */
-  override var animations: Nullable[js.Array[typingsSlinky.babylonjs.BABYLON.Animation]] = js.native
 }
-

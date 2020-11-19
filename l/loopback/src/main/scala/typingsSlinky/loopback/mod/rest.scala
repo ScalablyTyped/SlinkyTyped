@@ -5,11 +5,12 @@ import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("loopback", "rest")
 @js.native
 object rest extends js.Object {
+  
   /**
     * Expose models over REST
     * For example:
@@ -21,4 +22,3 @@ object rest extends js.Object {
     */
   def apply(): RequestHandler[ParamsDictionary, _, _, Query] = js.native
 }
-

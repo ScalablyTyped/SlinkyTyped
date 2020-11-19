@@ -17,7 +17,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.scale
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.arcgisJsApi.esri.MoveEventInfo
@@ -28,8 +28,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.arcgisJsApi.esri.VertexRemoveEventInfo
 */
 trait UpdateToolEventInfo extends js.Object
-
 object UpdateToolEventInfo {
+  
   @scala.inline
   def VertexRemoveEventInfo(
     constructor: js.Function,
@@ -43,6 +43,7 @@ object UpdateToolEventInfo {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateToolEventInfo]
   }
+  
   @scala.inline
   def ReshapeEventInfo(
     constructor: js.Function,
@@ -54,6 +55,7 @@ object UpdateToolEventInfo {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateToolEventInfo]
   }
+  
   @scala.inline
   def MoveEventInfo(
     constructor: js.Function,
@@ -68,6 +70,7 @@ object UpdateToolEventInfo {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateToolEventInfo]
   }
+  
   @scala.inline
   def VertexAddEventInfo(
     added: js.Array[Graphic],
@@ -81,6 +84,7 @@ object UpdateToolEventInfo {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateToolEventInfo]
   }
+  
   @scala.inline
   def RotateEventInfo(
     angle: Double,
@@ -93,6 +97,7 @@ object UpdateToolEventInfo {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateToolEventInfo]
   }
+  
   @scala.inline
   def ScaleEventInfo(
     constructor: js.Function,
@@ -107,4 +112,3 @@ object UpdateToolEventInfo {
     __obj.asInstanceOf[UpdateToolEventInfo]
   }
 }
-

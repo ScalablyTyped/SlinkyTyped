@@ -5,7 +5,7 @@ import typingsSlinky.screeps.Id
 import typingsSlinky.screeps.StructureNukerConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("StructureNuker")
 @js.native
@@ -13,8 +13,6 @@ class StructureNuker protected ()
   extends typingsSlinky.screeps.StructureNuker {
   def this(id: Id[typingsSlinky.screeps.StructureNuker]) = this()
 }
-
 @JSGlobal("StructureNuker")
 @js.native
 object StructureNuker extends TopLevel[StructureNukerConstructor]
-

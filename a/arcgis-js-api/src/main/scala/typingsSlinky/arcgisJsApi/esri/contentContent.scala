@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.arcgisJsApi.esri.TextContent
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.arcgisJsApi.esri.CustomContent
 */
 trait contentContent extends js.Object
-

@@ -2,7 +2,7 @@ package typingsSlinky.phaser.global.Phaser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This class represents one single Leaderboard that belongs to a Facebook Instant Game.
@@ -21,4 +21,3 @@ class FacebookInstantGamesLeaderboard protected ()
     */
   def this(plugin: typingsSlinky.phaser.Phaser.FacebookInstantGamesPlugin, data: js.Any) = this()
 }
-

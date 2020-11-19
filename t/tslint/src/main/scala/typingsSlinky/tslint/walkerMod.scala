@@ -5,11 +5,12 @@ import typingsSlinky.typescript.mod.Program
 import typingsSlinky.typescript.mod.SourceFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tslint/lib/language/walker", JSImport.Namespace)
 @js.native
 object walkerMod extends js.Object {
+  
   @js.native
   abstract class AbstractWalker[T] ()
     extends typingsSlinky.tslint.walkerWalkerMod.AbstractWalker[T]
@@ -47,6 +48,4 @@ object walkerMod extends js.Object {
     extends typingsSlinky.tslint.walkContextMod.WalkContext[T] {
     def this(sourceFile: SourceFile, ruleName: String, options: T) = this()
   }
-  
 }
-

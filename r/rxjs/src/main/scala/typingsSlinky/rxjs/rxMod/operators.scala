@@ -16,17 +16,22 @@ import typingsSlinky.rxjs.typesMod.SubscribableOrPromise
 import typingsSlinky.rxjs.typesMod.UnaryFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rxjs/internal/Rx", "operators")
 @js.native
 object operators extends js.Object {
+  
   def audit[T](durationSelector: js.Function1[/* value */ T, SubscribableOrPromise[_]]): MonoTypeOperatorFunction[T] = js.native
+  
   def auditTime[T](duration: Double): MonoTypeOperatorFunction[T] = js.native
   def auditTime[T](duration: Double, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
+  
   def buffer[T](closingNotifier: typingsSlinky.rxjs.internalObservableMod.Observable[_]): OperatorFunction[T, js.Array[T]] = js.native
+  
   def bufferCount[T](bufferSize: Double): OperatorFunction[T, js.Array[T]] = js.native
   def bufferCount[T](bufferSize: Double, startBufferEvery: Double): OperatorFunction[T, js.Array[T]] = js.native
+  
   def bufferTime[T](bufferTimeSpan: Double): OperatorFunction[T, js.Array[T]] = js.native
   def bufferTime[T](bufferTimeSpan: Double, bufferCreationInterval: js.UndefOr[scala.Nothing], maxBufferSize: Double): OperatorFunction[T, js.Array[T]] = js.native
   def bufferTime[T](
@@ -58,11 +63,14 @@ object operators extends js.Object {
   ): OperatorFunction[T, js.Array[T]] = js.native
   def bufferTime[T](bufferTimeSpan: Double, bufferCreationInterval: Null, scheduler: SchedulerLike): OperatorFunction[T, js.Array[T]] = js.native
   def bufferTime[T](bufferTimeSpan: Double, scheduler: SchedulerLike): OperatorFunction[T, js.Array[T]] = js.native
+  
   def bufferToggle[T, O](
     openings: SubscribableOrPromise[O],
     closingSelector: js.Function1[/* value */ O, SubscribableOrPromise[_]]
   ): OperatorFunction[T, js.Array[T]] = js.native
+  
   def bufferWhen[T](closingSelector: js.Function0[typingsSlinky.rxjs.internalObservableMod.Observable[_]]): OperatorFunction[T, js.Array[T]] = js.native
+  
   def catchError[T, O /* <: ObservableInput[_] */](
     selector: js.Function2[
       /* err */ js.Any, 
@@ -70,10 +78,12 @@ object operators extends js.Object {
       O
     ]
   ): OperatorFunction[T, T | ObservedValueOf[O]] = js.native
+  
   def combineAll[T](): OperatorFunction[_, js.Array[T]] = js.native
   def combineAll[R](project: js.Function1[/* repeated */ js.Any, R]): OperatorFunction[_, R] = js.native
   @JSName("combineAll")
   def combineAll_TR[T, R](project: js.Function1[/* repeated */ T, R]): OperatorFunction[ObservableInput[T], R] = js.native
+  
   def combineLatest[T, R](array: js.Array[ObservableInput[T]]): OperatorFunction[T, js.Array[T]] = js.native
   def combineLatest[T, R](observables: (ObservableInput[T] | (js.Function1[/* repeated */ T, R]))*): OperatorFunction[T, R] = js.native
   def combineLatest[T, R](project: js.Function1[/* v1 */ T, R]): OperatorFunction[T, R] = js.native
@@ -119,6 +129,7 @@ object operators extends js.Object {
     v6: ObservableInput[T6],
     project: js.Function6[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, /* v6 */ T6, R]
   ): OperatorFunction[T, R] = js.native
+  
   def concat[T](): MonoTypeOperatorFunction[T] = js.native
   def concat[T](observables: (ObservableInput[T] | SchedulerLike)*): MonoTypeOperatorFunction[T] = js.native
   def concat[T](scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
@@ -156,9 +167,11 @@ object operators extends js.Object {
     v6: ObservableInput[T6],
     scheduler: SchedulerLike
   ): OperatorFunction[T, T | T2 | T3 | T4 | T5 | T6] = js.native
+  
   def concatAll[T](): OperatorFunction[ObservableInput[T], T] = js.native
   @JSName("concatAll")
   def concatAll_R[R](): OperatorFunction[_, R] = js.native
+  
   def concatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def concatMap[T, O /* <: ObservableInput[_] */](
     project: js.Function2[/* value */ T, /* index */ Double, O],
@@ -174,6 +187,7 @@ object operators extends js.Object {
       R
     ]
   ): OperatorFunction[T, R] = js.native
+  
   def concatMapTo[T, O /* <: ObservableInput[_] */](observable: O): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def concatMapTo[T, O /* <: ObservableInput[_] */](observable: O, resultSelector: js.UndefOr[scala.Nothing]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def concatMapTo[T, R, O /* <: ObservableInput[_] */](
@@ -186,8 +200,10 @@ object operators extends js.Object {
       R
     ]
   ): OperatorFunction[T, R] = js.native
+  
   @JSName("concat")
   def concat_TR_OperatorFunction[T, R](observables: (ObservableInput[_] | SchedulerLike)*): OperatorFunction[T, R] = js.native
+  
   def count[T](): OperatorFunction[T, Double] = js.native
   def count[T](
     predicate: js.Function3[
@@ -197,19 +213,24 @@ object operators extends js.Object {
       Boolean
     ]
   ): OperatorFunction[T, Double] = js.native
+  
   def debounce[T](durationSelector: js.Function1[/* value */ T, SubscribableOrPromise[_]]): MonoTypeOperatorFunction[T] = js.native
+  
   def debounceTime[T](dueTime: Double): MonoTypeOperatorFunction[T] = js.native
   def debounceTime[T](dueTime: Double, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
+  
   def defaultIfEmpty[T](): MonoTypeOperatorFunction[T] = js.native
   def defaultIfEmpty[T](defaultValue: T): MonoTypeOperatorFunction[T] = js.native
   @JSName("defaultIfEmpty")
   def defaultIfEmpty_TR_OperatorFunction[T, R](): OperatorFunction[T, T | R] = js.native
   @JSName("defaultIfEmpty")
   def defaultIfEmpty_TR_OperatorFunction[T, R](defaultValue: R): OperatorFunction[T, T | R] = js.native
+  
   def delay[T](delay: Double): MonoTypeOperatorFunction[T] = js.native
   def delay[T](delay: Double, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def delay[T](delay: js.Date): MonoTypeOperatorFunction[T] = js.native
   def delay[T](delay: js.Date, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
+  
   def delayWhen[T](
     delayDurationSelector: js.Function2[
       /* value */ T, 
@@ -225,7 +246,9 @@ object operators extends js.Object {
     ],
     subscriptionDelay: typingsSlinky.rxjs.internalObservableMod.Observable[_]
   ): MonoTypeOperatorFunction[T] = js.native
+  
   def dematerialize[T](): OperatorFunction[typingsSlinky.rxjs.notificationMod.Notification[T], T] = js.native
+  
   def distinct[T, K](): MonoTypeOperatorFunction[T] = js.native
   def distinct[T, K](
     keySelector: js.UndefOr[scala.Nothing],
@@ -236,9 +259,11 @@ object operators extends js.Object {
     keySelector: js.Function1[/* value */ T, K],
     flushes: typingsSlinky.rxjs.internalObservableMod.Observable[_]
   ): MonoTypeOperatorFunction[T] = js.native
+  
   def distinctUntilChanged[T](): MonoTypeOperatorFunction[T] = js.native
   def distinctUntilChanged[T](compare: js.Function2[/* x */ T, /* y */ T, Boolean]): MonoTypeOperatorFunction[T] = js.native
   def distinctUntilChanged[T, K](compare: js.Function2[/* x */ K, /* y */ K, Boolean], keySelector: js.Function1[/* x */ T, K]): MonoTypeOperatorFunction[T] = js.native
+  
   def distinctUntilKeyChanged[T](key: /* keyof T */ String): MonoTypeOperatorFunction[T] = js.native
   def distinctUntilKeyChanged[T, K /* <: /* keyof T */ String */](
     key: K,
@@ -248,8 +273,10 @@ object operators extends js.Object {
       Boolean
     ]
   ): MonoTypeOperatorFunction[T] = js.native
+  
   def elementAt[T](index: Double): MonoTypeOperatorFunction[T] = js.native
   def elementAt[T](index: Double, defaultValue: T): MonoTypeOperatorFunction[T] = js.native
+  
   def every[T](
     predicate: js.Function3[
       /* value */ T, 
@@ -267,7 +294,9 @@ object operators extends js.Object {
     ],
     thisArg: js.Any
   ): OperatorFunction[T, Boolean] = js.native
+  
   def exhaust[T](): OperatorFunction[ObservableInput[T], T] = js.native
+  
   def exhaustMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def exhaustMap[T, O /* <: ObservableInput[_] */](
     project: js.Function2[/* value */ T, /* index */ Double, O],
@@ -283,8 +312,10 @@ object operators extends js.Object {
       R
     ]
   ): OperatorFunction[T, R] = js.native
+  
   @JSName("exhaust")
   def exhaust_R[R](): OperatorFunction[_, R] = js.native
+  
   def expand[T](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]]): MonoTypeOperatorFunction[T] = js.native
   def expand[T](
     project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]],
@@ -313,13 +344,16 @@ object operators extends js.Object {
     concurrent: Double,
     scheduler: SchedulerLike
   ): OperatorFunction[T, R] = js.native
+  
   def filter[T](predicate: js.Function2[/* value */ T, /* index */ Double, Boolean]): MonoTypeOperatorFunction[T] = js.native
   def filter[T](predicate: js.Function2[/* value */ T, /* index */ Double, Boolean], thisArg: js.Any): MonoTypeOperatorFunction[T] = js.native
   @JSName("filter")
   def filter_TS_T_OperatorFunction[T, S /* <: T */](predicate: js.Function2[/* value */ T, /* index */ Double, /* is S */ Boolean]): OperatorFunction[T, S] = js.native
   @JSName("filter")
   def filter_TS_T_OperatorFunction[T, S /* <: T */](predicate: js.Function2[/* value */ T, /* index */ Double, /* is S */ Boolean], thisArg: js.Any): OperatorFunction[T, S] = js.native
+  
   def finalize[T](callback: js.Function0[Unit]): MonoTypeOperatorFunction[T] = js.native
+  
   def find[T](
     predicate: js.Function3[
       /* value */ T, 
@@ -337,6 +371,7 @@ object operators extends js.Object {
     ],
     thisArg: js.Any
   ): OperatorFunction[T, js.UndefOr[T]] = js.native
+  
   def findIndex[T](
     predicate: js.Function3[
       /* value */ T, 
@@ -354,6 +389,7 @@ object operators extends js.Object {
     ],
     thisArg: js.Any
   ): OperatorFunction[T, Double] = js.native
+  
   @JSName("find")
   def find_TS_T[T, S /* <: T */](
     predicate: js.Function3[
@@ -373,28 +409,10 @@ object operators extends js.Object {
     ],
     thisArg: js.Any
   ): OperatorFunction[T, js.UndefOr[S]] = js.native
+  
   def first[T, D](): OperatorFunction[T, T | D] = js.native
   def first[T, D](predicate: js.UndefOr[scala.Nothing], defaultValue: D): OperatorFunction[T, T | D] = js.native
-  def first[T, S /* <: T */](
-    predicate: js.Function3[
-      /* value */ T, 
-      /* index */ Double, 
-      /* source */ typingsSlinky.rxjs.internalObservableMod.Observable[T], 
-      /* is S */ Boolean
-    ]
-  ): OperatorFunction[T, S] = js.native
-  def first[T, S /* <: T */](
-    predicate: js.Function3[
-      /* value */ T, 
-      /* index */ Double, 
-      /* source */ typingsSlinky.rxjs.internalObservableMod.Observable[T], 
-      /* is S */ Boolean
-    ],
-    defaultValue: S
-  ): OperatorFunction[T, S] = js.native
-  def first[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
-  @JSName("first")
-  def first_TD[T, D](
+  def first[T, D](
     predicate: js.Function3[
       /* value */ T, 
       /* index */ Double, 
@@ -402,8 +420,7 @@ object operators extends js.Object {
       Boolean
     ]
   ): OperatorFunction[T, T | D] = js.native
-  @JSName("first")
-  def first_TD[T, D](
+  def first[T, D](
     predicate: js.Function3[
       /* value */ T, 
       /* index */ Double, 
@@ -412,6 +429,27 @@ object operators extends js.Object {
     ],
     defaultValue: D
   ): OperatorFunction[T, T | D] = js.native
+  def first[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
+  @JSName("first")
+  def first_TS_T[T, S /* <: T */](
+    predicate: js.Function3[
+      /* value */ T, 
+      /* index */ Double, 
+      /* source */ typingsSlinky.rxjs.internalObservableMod.Observable[T], 
+      /* is S */ Boolean
+    ]
+  ): OperatorFunction[T, S] = js.native
+  @JSName("first")
+  def first_TS_T[T, S /* <: T */](
+    predicate: js.Function3[
+      /* value */ T, 
+      /* index */ Double, 
+      /* source */ typingsSlinky.rxjs.internalObservableMod.Observable[T], 
+      /* is S */ Boolean
+    ],
+    defaultValue: S
+  ): OperatorFunction[T, S] = js.native
+  
   def flatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def flatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O], concurrent: Double): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def flatMap[T, O /* <: ObservableInput[_] */](
@@ -440,6 +478,7 @@ object operators extends js.Object {
     ],
     concurrent: Double
   ): OperatorFunction[T, R] = js.native
+  
   def groupBy[T, K](keySelector: js.Function1[/* value */ T, K]): OperatorFunction[T, GroupedObservable[K, T]] = js.native
   def groupBy[T, K](
     keySelector: js.Function1[/* value */ T, K],
@@ -498,30 +537,14 @@ object operators extends js.Object {
   ): OperatorFunction[T, GroupedObservable[K, R]] = js.native
   @JSName("groupBy")
   def groupBy_TKR[T, K, R](keySelector: js.Function1[/* value */ T, K]): OperatorFunction[T, GroupedObservable[K, R]] = js.native
+  
   def ignoreElements(): OperatorFunction[_, scala.Nothing] = js.native
+  
   def isEmpty[T](): OperatorFunction[T, Boolean] = js.native
+  
   def last[T, D](): OperatorFunction[T, T | D] = js.native
   def last[T, D](predicate: js.UndefOr[scala.Nothing], defaultValue: D): OperatorFunction[T, T | D] = js.native
-  def last[T, S /* <: T */](
-    predicate: js.Function3[
-      /* value */ T, 
-      /* index */ Double, 
-      /* source */ typingsSlinky.rxjs.internalObservableMod.Observable[T], 
-      /* is S */ Boolean
-    ]
-  ): OperatorFunction[T, S] = js.native
-  def last[T, S /* <: T */](
-    predicate: js.Function3[
-      /* value */ T, 
-      /* index */ Double, 
-      /* source */ typingsSlinky.rxjs.internalObservableMod.Observable[T], 
-      /* is S */ Boolean
-    ],
-    defaultValue: S
-  ): OperatorFunction[T, S] = js.native
-  def last[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
-  @JSName("last")
-  def last_TD[T, D](
+  def last[T, D](
     predicate: js.Function3[
       /* value */ T, 
       /* index */ Double, 
@@ -529,8 +552,7 @@ object operators extends js.Object {
       Boolean
     ]
   ): OperatorFunction[T, T | D] = js.native
-  @JSName("last")
-  def last_TD[T, D](
+  def last[T, D](
     predicate: js.Function3[
       /* value */ T, 
       /* index */ Double, 
@@ -539,12 +561,37 @@ object operators extends js.Object {
     ],
     defaultValue: D
   ): OperatorFunction[T, T | D] = js.native
+  def last[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
+  @JSName("last")
+  def last_TS_T[T, S /* <: T */](
+    predicate: js.Function3[
+      /* value */ T, 
+      /* index */ Double, 
+      /* source */ typingsSlinky.rxjs.internalObservableMod.Observable[T], 
+      /* is S */ Boolean
+    ]
+  ): OperatorFunction[T, S] = js.native
+  @JSName("last")
+  def last_TS_T[T, S /* <: T */](
+    predicate: js.Function3[
+      /* value */ T, 
+      /* index */ Double, 
+      /* source */ typingsSlinky.rxjs.internalObservableMod.Observable[T], 
+      /* is S */ Boolean
+    ],
+    defaultValue: S
+  ): OperatorFunction[T, S] = js.native
+  
   def map[T, R](project: js.Function2[/* value */ T, /* index */ Double, R]): OperatorFunction[T, R] = js.native
   def map[T, R](project: js.Function2[/* value */ T, /* index */ Double, R], thisArg: js.Any): OperatorFunction[T, R] = js.native
+  
   def mapTo[T, R](value: R): OperatorFunction[T, R] = js.native
+  
   def materialize[T](): OperatorFunction[T, typingsSlinky.rxjs.notificationMod.Notification[T]] = js.native
+  
   def max[T](): MonoTypeOperatorFunction[T] = js.native
   def max[T](comparer: js.Function2[/* x */ T, /* y */ T, Double]): MonoTypeOperatorFunction[T] = js.native
+  
   def merge[T](): MonoTypeOperatorFunction[T] = js.native
   def merge[T](concurrent: js.UndefOr[scala.Nothing], scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def merge[T](concurrent: Double): MonoTypeOperatorFunction[T] = js.native
@@ -637,8 +684,10 @@ object operators extends js.Object {
     concurrent: Double,
     scheduler: SchedulerLike
   ): OperatorFunction[T, T | T2 | T3 | T4 | T5 | T6] = js.native
+  
   def mergeAll[T](): OperatorFunction[ObservableInput[T], T] = js.native
   def mergeAll[T](concurrent: Double): OperatorFunction[ObservableInput[T], T] = js.native
+  
   def mergeMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def mergeMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O], concurrent: Double): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def mergeMap[T, O /* <: ObservableInput[_] */](
@@ -667,6 +716,7 @@ object operators extends js.Object {
     ],
     concurrent: Double
   ): OperatorFunction[T, R] = js.native
+  
   def mergeMapTo[T, O /* <: ObservableInput[_] */](innerObservable: O): OperatorFunction[_, ObservedValueOf[O]] = js.native
   def mergeMapTo[T, O /* <: ObservableInput[_] */](innerObservable: O, concurrent: Double): OperatorFunction[_, ObservedValueOf[O]] = js.native
   def mergeMapTo[T, R, O /* <: ObservableInput[_] */](
@@ -690,6 +740,7 @@ object operators extends js.Object {
     ],
     concurrent: Double
   ): OperatorFunction[T, R] = js.native
+  
   def mergeScan[T, R](
     accumulator: js.Function3[/* acc */ R, /* value */ T, /* index */ Double, ObservableInput[R]],
     seed: R
@@ -699,6 +750,7 @@ object operators extends js.Object {
     seed: R,
     concurrent: Double
   ): OperatorFunction[T, R] = js.native
+  
   @JSName("merge")
   def merge_TR_OperatorFunction[T, R](observables: (ObservableInput[_] | SchedulerLike | Double)*): OperatorFunction[T, R] = js.native
   @JSName("merge")
@@ -729,8 +781,10 @@ object operators extends js.Object {
   ): OperatorFunction[T, T | T2 | T3 | T4 | T5 | T6] = js.native
   @JSName("merge")
   def merge_TT2_OperatorFunction[T, T2](v2: ObservableInput[T2], scheduler: SchedulerLike): OperatorFunction[T, T | T2] = js.native
+  
   def min[T](): MonoTypeOperatorFunction[T] = js.native
   def min[T](comparer: js.Function2[/* x */ T, /* y */ T, Double]): MonoTypeOperatorFunction[T] = js.native
+  
   def multicast[T](
     subjectFactory: js.ThisFunction0[
       /* this */ typingsSlinky.rxjs.internalObservableMod.Observable[T], 
@@ -758,8 +812,10 @@ object operators extends js.Object {
     typingsSlinky.rxjs.internalObservableMod.Observable[T], 
     typingsSlinky.rxjs.connectableObservableMod.ConnectableObservable[ObservedValueOf[O]]
   ] = js.native
+  
   def observeOn[T](scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def observeOn[T](scheduler: SchedulerLike, delay: Double): MonoTypeOperatorFunction[T] = js.native
+  
   def onErrorResumeNext[T](): OperatorFunction[T, T] = js.native
   def onErrorResumeNext[T, R](array: js.Array[ObservableInput[_]]): OperatorFunction[T, T | R] = js.native
   def onErrorResumeNext[T, R](observables: ObservableInput[_]*): OperatorFunction[T, T | R] = js.native
@@ -782,7 +838,9 @@ object operators extends js.Object {
     v5: ObservableInput[T6],
     v6: ObservableInput[T7]
   ): OperatorFunction[T, T | T2 | T3 | T4 | T5 | T6 | T7] = js.native
+  
   def pairwise[T](): OperatorFunction[T, js.Tuple2[T, T]] = js.native
+  
   def partition[T](predicate: js.Function2[/* value */ T, /* index */ Double, Boolean]): UnaryFunction[
     typingsSlinky.rxjs.internalObservableMod.Observable[T], 
     js.Tuple2[
@@ -797,6 +855,7 @@ object operators extends js.Object {
       typingsSlinky.rxjs.internalObservableMod.Observable[T]
     ]
   ] = js.native
+  
   def pluck[T, K1 /* <: /* keyof T */ String */](k1: K1): OperatorFunction[
     T, 
     /* import warning: importer.ImportType#apply Failed type conversion: T[K1] */ js.Any
@@ -822,19 +881,23 @@ object operators extends js.Object {
     T, 
     /* import warning: importer.ImportType#apply Failed type conversion: T[K1][K2][K3][K4][K5][K6] */ js.Any
   ] = js.native
+  
   def publish[T](): UnaryFunction[
     typingsSlinky.rxjs.internalObservableMod.Observable[T], 
     typingsSlinky.rxjs.connectableObservableMod.ConnectableObservable[T]
   ] = js.native
   def publish[T](selector: MonoTypeOperatorFunction[T]): MonoTypeOperatorFunction[T] = js.native
+  
   def publishBehavior[T](value: T): UnaryFunction[
     typingsSlinky.rxjs.internalObservableMod.Observable[T], 
     typingsSlinky.rxjs.connectableObservableMod.ConnectableObservable[T]
   ] = js.native
+  
   def publishLast[T](): UnaryFunction[
     typingsSlinky.rxjs.internalObservableMod.Observable[T], 
     typingsSlinky.rxjs.connectableObservableMod.ConnectableObservable[T]
   ] = js.native
+  
   def publishReplay[T](): MonoTypeOperatorFunction[T] = js.native
   def publishReplay[T](
     bufferSize: js.UndefOr[scala.Nothing],
@@ -923,8 +986,10 @@ object operators extends js.Object {
   def publishReplay_TO_ObservableInputWildcard_OperatorFunction[T, O /* <: ObservableInput[_] */](bufferSize: Double): OperatorFunction[T, ObservedValueOf[O]] = js.native
   @JSName("publishReplay")
   def publishReplay_TO_ObservableInputWildcard_OperatorFunction[T, O /* <: ObservableInput[_] */](bufferSize: Double, windowTime: Double): OperatorFunction[T, ObservedValueOf[O]] = js.native
+  
   @JSName("publish")
   def publish_TO_ObservableInputWildcard_OperatorFunction[T, O /* <: ObservableInput[_] */](selector: js.Function1[/* shared */ typingsSlinky.rxjs.internalObservableMod.Observable[T], O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
+  
   def race[T](
     observables: (typingsSlinky.rxjs.internalObservableMod.Observable[T] | js.Array[typingsSlinky.rxjs.internalObservableMod.Observable[T]])*
   ): MonoTypeOperatorFunction[T] = js.native
@@ -935,44 +1000,56 @@ object operators extends js.Object {
   ): OperatorFunction[T, R] = js.native
   @JSName("race")
   def race_TR_OperatorFunction[T, R](observables: js.Array[typingsSlinky.rxjs.internalObservableMod.Observable[T]]): OperatorFunction[T, R] = js.native
+  
   def reduce[T](accumulator: js.Function3[/* acc */ T, /* value */ T, /* index */ Double, T]): MonoTypeOperatorFunction[T] = js.native
   def reduce[T](accumulator: js.Function3[/* acc */ T, /* value */ T, /* index */ Double, T], seed: T): MonoTypeOperatorFunction[T] = js.native
   @JSName("reduce")
   def reduce_TR_OperatorFunction[T, R](accumulator: js.Function3[/* acc */ R, /* value */ T, /* index */ Double, R]): OperatorFunction[T, R] = js.native
   @JSName("reduce")
   def reduce_TR_OperatorFunction[T, R](accumulator: js.Function3[/* acc */ R, /* value */ T, /* index */ Double, R], seed: R): OperatorFunction[T, R] = js.native
+  
   def refCount[T](): MonoTypeOperatorFunction[T] = js.native
+  
   def repeat[T](): MonoTypeOperatorFunction[T] = js.native
   def repeat[T](count: Double): MonoTypeOperatorFunction[T] = js.native
+  
   def repeatWhen[T](
     notifier: js.Function1[
       /* notifications */ typingsSlinky.rxjs.internalObservableMod.Observable[_], 
       typingsSlinky.rxjs.internalObservableMod.Observable[_]
     ]
   ): MonoTypeOperatorFunction[T] = js.native
+  
   def retry[T](): MonoTypeOperatorFunction[T] = js.native
   def retry[T](count: Double): MonoTypeOperatorFunction[T] = js.native
+  
   def retryWhen[T](
     notifier: js.Function1[
       /* errors */ typingsSlinky.rxjs.internalObservableMod.Observable[_], 
       typingsSlinky.rxjs.internalObservableMod.Observable[_]
     ]
   ): MonoTypeOperatorFunction[T] = js.native
+  
   def sample[T](notifier: typingsSlinky.rxjs.internalObservableMod.Observable[_]): MonoTypeOperatorFunction[T] = js.native
+  
   def sampleTime[T](period: Double): MonoTypeOperatorFunction[T] = js.native
   def sampleTime[T](period: Double, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
+  
   def scan[T](accumulator: js.Function3[/* acc */ T, /* value */ T, /* index */ Double, T]): MonoTypeOperatorFunction[T] = js.native
   def scan[T](accumulator: js.Function3[/* acc */ T, /* value */ T, /* index */ Double, T], seed: T): MonoTypeOperatorFunction[T] = js.native
   @JSName("scan")
   def scan_TR_OperatorFunction[T, R](accumulator: js.Function3[/* acc */ R, /* value */ T, /* index */ Double, R]): OperatorFunction[T, R] = js.native
   @JSName("scan")
   def scan_TR_OperatorFunction[T, R](accumulator: js.Function3[/* acc */ R, /* value */ T, /* index */ Double, R], seed: R): OperatorFunction[T, R] = js.native
+  
   def sequenceEqual[T](compareTo: typingsSlinky.rxjs.internalObservableMod.Observable[T]): OperatorFunction[T, Boolean] = js.native
   def sequenceEqual[T](
     compareTo: typingsSlinky.rxjs.internalObservableMod.Observable[T],
     comparator: js.Function2[/* a */ T, /* b */ T, Boolean]
   ): OperatorFunction[T, Boolean] = js.native
+  
   def share[T](): MonoTypeOperatorFunction[T] = js.native
+  
   def shareReplay[T](): MonoTypeOperatorFunction[T] = js.native
   def shareReplay[T](
     bufferSize: js.UndefOr[scala.Nothing],
@@ -986,6 +1063,7 @@ object operators extends js.Object {
   def shareReplay[T](bufferSize: Double, windowTime: Double): MonoTypeOperatorFunction[T] = js.native
   def shareReplay[T](bufferSize: Double, windowTime: Double, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def shareReplay[T](config: ShareReplayConfig): MonoTypeOperatorFunction[T] = js.native
+  
   def single[T](): MonoTypeOperatorFunction[T] = js.native
   def single[T](
     predicate: js.Function3[
@@ -995,10 +1073,15 @@ object operators extends js.Object {
       Boolean
     ]
   ): MonoTypeOperatorFunction[T] = js.native
+  
   def skip[T](count: Double): MonoTypeOperatorFunction[T] = js.native
+  
   def skipLast[T](count: Double): MonoTypeOperatorFunction[T] = js.native
+  
   def skipUntil[T](notifier: typingsSlinky.rxjs.internalObservableMod.Observable[_]): MonoTypeOperatorFunction[T] = js.native
+  
   def skipWhile[T](predicate: js.Function2[/* value */ T, /* index */ Double, Boolean]): MonoTypeOperatorFunction[T] = js.native
+  
   def startWith[T](scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def startWith[T, D](array: (D | SchedulerLike)*): OperatorFunction[T, T | D] = js.native
   def startWith[T, D](v1: D): OperatorFunction[T, T | D] = js.native
@@ -1013,11 +1096,14 @@ object operators extends js.Object {
   def startWith[T, D, E, F, G, H](v1: D, v2: E, v3: F, v4: G, v5: H, scheduler: SchedulerLike): OperatorFunction[T, T | D | E | F | G | H] = js.native
   def startWith[T, D, E, F, G, H, I](v1: D, v2: E, v3: F, v4: G, v5: H, v6: I): OperatorFunction[T, T | D | E | F | G | H | I] = js.native
   def startWith[T, D, E, F, G, H, I](v1: D, v2: E, v3: F, v4: G, v5: H, v6: I, scheduler: SchedulerLike): OperatorFunction[T, T | D | E | F | G | H | I] = js.native
+  
   def subscribeOn[T](scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def subscribeOn[T](scheduler: SchedulerLike, delay: Double): MonoTypeOperatorFunction[T] = js.native
+  
   def switchAll[T](): OperatorFunction[ObservableInput[T], T] = js.native
   @JSName("switchAll")
   def switchAll_R[R](): OperatorFunction[_, R] = js.native
+  
   def switchMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def switchMap[T, O /* <: ObservableInput[_] */](
     project: js.Function2[/* value */ T, /* index */ Double, O],
@@ -1033,6 +1119,7 @@ object operators extends js.Object {
       R
     ]
   ): OperatorFunction[T, R] = js.native
+  
   def switchMapTo[R](observable: ObservableInput[R]): OperatorFunction[_, R] = js.native
   def switchMapTo[T, R](observable: ObservableInput[R], resultSelector: js.UndefOr[scala.Nothing]): OperatorFunction[T, R] = js.native
   def switchMapTo[T, I, R](
@@ -1045,15 +1132,20 @@ object operators extends js.Object {
       R
     ]
   ): OperatorFunction[T, R] = js.native
+  
   def take[T](count: Double): MonoTypeOperatorFunction[T] = js.native
+  
   def takeLast[T](count: Double): MonoTypeOperatorFunction[T] = js.native
+  
   def takeUntil[T](notifier: typingsSlinky.rxjs.internalObservableMod.Observable[_]): MonoTypeOperatorFunction[T] = js.native
+  
   def takeWhile[T](predicate: js.Function2[/* value */ T, /* index */ Double, Boolean]): MonoTypeOperatorFunction[T] = js.native
   def takeWhile[T](predicate: js.Function2[/* value */ T, /* index */ Double, Boolean], inclusive: Boolean): MonoTypeOperatorFunction[T] = js.native
   @JSName("takeWhile")
   def takeWhile_TS_T_OperatorFunction[T, S /* <: T */](predicate: js.Function2[/* value */ T, /* index */ Double, /* is S */ Boolean]): OperatorFunction[T, S] = js.native
   @JSName("takeWhile")
   def takeWhile_false[T, S /* <: T */](predicate: js.Function2[/* value */ T, /* index */ Double, /* is S */ Boolean], inclusive: `false`): OperatorFunction[T, S] = js.native
+  
   def tap[T](): MonoTypeOperatorFunction[T] = js.native
   def tap[T](next: js.UndefOr[scala.Nothing], error: js.UndefOr[scala.Nothing], complete: js.Function0[Unit]): MonoTypeOperatorFunction[T] = js.native
   def tap[T](next: js.UndefOr[scala.Nothing], error: js.Function1[/* e */ /* error */ js.Any, Unit]): MonoTypeOperatorFunction[T] = js.native
@@ -1081,28 +1173,38 @@ object operators extends js.Object {
   def tap[T](next: Null, error: js.Function1[/* error */ js.Any, Unit], complete: js.Function0[Unit]): MonoTypeOperatorFunction[T] = js.native
   def tap[T](next: Null, error: Null, complete: js.Function0[Unit]): MonoTypeOperatorFunction[T] = js.native
   def tap[T](observer: PartialObserver[T]): MonoTypeOperatorFunction[T] = js.native
+  
   def throttle[T](durationSelector: js.Function1[/* value */ T, SubscribableOrPromise[_]]): MonoTypeOperatorFunction[T] = js.native
   def throttle[T](durationSelector: js.Function1[/* value */ T, SubscribableOrPromise[_]], config: ThrottleConfig): MonoTypeOperatorFunction[T] = js.native
+  
   def throttleTime[T](duration: Double): MonoTypeOperatorFunction[T] = js.native
   def throttleTime[T](duration: Double, scheduler: js.UndefOr[scala.Nothing], config: ThrottleConfig): MonoTypeOperatorFunction[T] = js.native
   def throttleTime[T](duration: Double, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def throttleTime[T](duration: Double, scheduler: SchedulerLike, config: ThrottleConfig): MonoTypeOperatorFunction[T] = js.native
+  
   def timeInterval[T](): OperatorFunction[T, TimeInterval_[T]] = js.native
   def timeInterval[T](scheduler: SchedulerLike): OperatorFunction[T, TimeInterval_[T]] = js.native
+  
   def timeout[T](due: Double): MonoTypeOperatorFunction[T] = js.native
   def timeout[T](due: Double, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def timeout[T](due: js.Date): MonoTypeOperatorFunction[T] = js.native
   def timeout[T](due: js.Date, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
+  
   def timeoutWith[T, R](due: Double, withObservable: ObservableInput[R]): OperatorFunction[T, T | R] = js.native
   def timeoutWith[T, R](due: Double, withObservable: ObservableInput[R], scheduler: SchedulerLike): OperatorFunction[T, T | R] = js.native
   def timeoutWith[T, R](due: js.Date, withObservable: ObservableInput[R]): OperatorFunction[T, T | R] = js.native
   def timeoutWith[T, R](due: js.Date, withObservable: ObservableInput[R], scheduler: SchedulerLike): OperatorFunction[T, T | R] = js.native
+  
   def timestamp[T](): OperatorFunction[T, Timestamp_[T]] = js.native
   def timestamp[T](scheduler: SchedulerLike): OperatorFunction[T, Timestamp_[T]] = js.native
+  
   def toArray[T](): OperatorFunction[T, js.Array[T]] = js.native
+  
   def window[T](windowBoundaries: typingsSlinky.rxjs.internalObservableMod.Observable[_]): OperatorFunction[T, typingsSlinky.rxjs.internalObservableMod.Observable[T]] = js.native
+  
   def windowCount[T](windowSize: Double): OperatorFunction[T, typingsSlinky.rxjs.internalObservableMod.Observable[T]] = js.native
   def windowCount[T](windowSize: Double, startWindowEvery: Double): OperatorFunction[T, typingsSlinky.rxjs.internalObservableMod.Observable[T]] = js.native
+  
   def windowTime[T](windowTimeSpan: Double): OperatorFunction[T, typingsSlinky.rxjs.internalObservableMod.Observable[T]] = js.native
   def windowTime[T](windowTimeSpan: Double, scheduler: SchedulerLike): OperatorFunction[T, typingsSlinky.rxjs.internalObservableMod.Observable[T]] = js.native
   def windowTime[T](windowTimeSpan: Double, windowCreationInterval: Double): OperatorFunction[T, typingsSlinky.rxjs.internalObservableMod.Observable[T]] = js.native
@@ -1114,11 +1216,14 @@ object operators extends js.Object {
     scheduler: SchedulerLike
   ): OperatorFunction[T, typingsSlinky.rxjs.internalObservableMod.Observable[T]] = js.native
   def windowTime[T](windowTimeSpan: Double, windowCreationInterval: Double, scheduler: SchedulerLike): OperatorFunction[T, typingsSlinky.rxjs.internalObservableMod.Observable[T]] = js.native
+  
   def windowToggle[T, O](
     openings: typingsSlinky.rxjs.internalObservableMod.Observable[O],
     closingSelector: js.Function1[/* openValue */ O, typingsSlinky.rxjs.internalObservableMod.Observable[_]]
   ): OperatorFunction[T, typingsSlinky.rxjs.internalObservableMod.Observable[T]] = js.native
+  
   def windowWhen[T](closingSelector: js.Function0[typingsSlinky.rxjs.internalObservableMod.Observable[_]]): OperatorFunction[T, typingsSlinky.rxjs.internalObservableMod.Observable[T]] = js.native
+  
   def withLatestFrom[T, R](array: js.Array[ObservableInput[_]]): OperatorFunction[T, R] = js.native
   def withLatestFrom[T, R](array: js.Array[ObservableInput[_]], project: js.Function1[/* repeated */ js.Any, R]): OperatorFunction[T, R] = js.native
   def withLatestFrom[T, R](observables: (ObservableInput[_] | (js.Function1[/* repeated */ js.Any, R]))*): OperatorFunction[T, R] = js.native
@@ -1189,6 +1294,7 @@ object operators extends js.Object {
       R
     ]
   ): OperatorFunction[T, R] = js.native
+  
   def zip[T, R](array: js.Array[ObservableInput[T]]): OperatorFunction[T, R] = js.native
   def zip[T, R](observables: (ObservableInput[T] | (js.Function1[/* repeated */ T, R]))*): OperatorFunction[T, R] = js.native
   def zip[T, R](project: js.Function1[/* v1 */ T, R]): OperatorFunction[T, R] = js.native
@@ -1234,9 +1340,9 @@ object operators extends js.Object {
     v6: ObservableInput[T6],
     project: js.Function6[/* v1 */ T, /* v2 */ T2, /* v3 */ T3, /* v4 */ T4, /* v5 */ T5, /* v6 */ T6, R]
   ): OperatorFunction[T, R] = js.native
+  
   def zipAll[T](): OperatorFunction[_, js.Array[T]] = js.native
   def zipAll[R](project: js.Function1[/* repeated */ js.Any, R]): OperatorFunction[_, R] = js.native
   @JSName("zipAll")
   def zipAll_TR[T, R](project: js.Function1[/* repeated */ T, R]): OperatorFunction[ObservableInput[T], R] = js.native
 }
-

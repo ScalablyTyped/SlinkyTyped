@@ -2,11 +2,12 @@ package typingsSlinky.xregexp.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xregexp", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   //#region constructor
   /**
     * Creates an extended regular expression object for matching text with a pattern. Differs from a
@@ -49,4 +50,3 @@ object ^ extends js.Object {
   def apply(pattern: js.RegExp): js.RegExp = js.native
   def apply(pattern: js.RegExp, flags: js.UndefOr[String]): js.RegExp = js.native
 }
-

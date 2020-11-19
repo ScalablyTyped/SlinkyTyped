@@ -7,7 +7,7 @@ import typingsSlinky.miniprogramWxs.Array
 import typingsSlinky.miniprogramWxs.Intl.CollatorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Intl.Collator")
 @js.native
@@ -22,15 +22,16 @@ object Collator
       /* options */ CollatorOptions, 
       typingsSlinky.miniprogramWxs.Intl.Collator
     ] {
+  
   def apply(): typingsSlinky.miniprogramWxs.Intl.Collator = js.native
   def apply(locales: js.UndefOr[scala.Nothing], options: CollatorOptions): typingsSlinky.miniprogramWxs.Intl.Collator = js.native
   def apply(locales: String): typingsSlinky.miniprogramWxs.Intl.Collator = js.native
   def apply(locales: String, options: CollatorOptions): typingsSlinky.miniprogramWxs.Intl.Collator = js.native
   def apply(locales: Array[String]): typingsSlinky.miniprogramWxs.Intl.Collator = js.native
   def apply(locales: Array[String], options: CollatorOptions): typingsSlinky.miniprogramWxs.Intl.Collator = js.native
+  
   def supportedLocalesOf(locales: String): Array[String] = js.native
   def supportedLocalesOf(locales: String, options: CollatorOptions): Array[String] = js.native
   def supportedLocalesOf(locales: Array[String]): Array[String] = js.native
   def supportedLocalesOf(locales: Array[String], options: CollatorOptions): Array[String] = js.native
 }
-

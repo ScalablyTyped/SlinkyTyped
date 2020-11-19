@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientKmsBrowser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-browser/types/RetireGrantExceptionsUnion", JSImport.Namespace)
 @js.native
 object retireGrantExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientKmsBrowser.typesInvalidArnExceptionMod.InvalidArnException
     - typingsSlinky.awsSdkClientKmsBrowser.typesInvalidGrantTokenExceptionMod.InvalidGrantTokenException
@@ -17,6 +18,4 @@ object retireGrantExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientKmsBrowser.typesKmsinvalidstateexceptionMod.KMSInvalidStateException
   */
   trait RetireGrantExceptionsUnion extends js.Object
-  
 }
-

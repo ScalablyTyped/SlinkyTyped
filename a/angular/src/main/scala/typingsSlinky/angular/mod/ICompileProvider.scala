@@ -4,12 +4,14 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.angular.JQLite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ICompileProvider extends IServiceProvider {
+  
   def aHrefSanitizationWhitelist(): js.RegExp = js.native
   def aHrefSanitizationWhitelist(regexp: js.RegExp): ICompileProvider = js.native
+  
   /**
     * It indicates to the compiler whether or not directives on comments should be compiled.
     * It results in a compilation performance gain since the compiler doesn't have to check comments when looking for directives.
@@ -18,8 +20,10 @@ trait ICompileProvider extends IServiceProvider {
     */
   def commentDirectivesEnabled(): Boolean = js.native
   def commentDirectivesEnabled(enabled: Boolean): ICompileProvider = js.native
+  
   def component(name: String, options: IComponentOptions): ICompileProvider = js.native
   def component(`object`: StringDictionary[IComponentOptions]): ICompileProvider = js.native
+  
   /**
     * It indicates to the compiler whether or not directives on element classes should be compiled.
     * It results in a compilation performance gain since the compiler doesn't have to check element classes when looking for directives.
@@ -28,8 +32,10 @@ trait ICompileProvider extends IServiceProvider {
     */
   def cssClassDirectivesEnabled(): Boolean = js.native
   def cssClassDirectivesEnabled(enabled: Boolean): ICompileProvider = js.native
+  
   def debugInfoEnabled(): Boolean = js.native
   def debugInfoEnabled(enabled: Boolean): ICompileProvider = js.native
+  
   def directive[TScope /* <: IScope */, TElement /* <: JQLite */, TAttributes /* <: IAttributes */, TController /* <: IDirectiveController */](
     name: String,
     directiveFactory: Injectable[IDirectiveFactory[TScope, TElement, TAttributes, TController]]
@@ -37,8 +43,10 @@ trait ICompileProvider extends IServiceProvider {
   def directive[TScope /* <: IScope */, TElement /* <: JQLite */, TAttributes /* <: IAttributes */, TController /* <: IDirectiveController */](
     `object`: StringDictionary[Injectable[IDirectiveFactory[TScope, TElement, TAttributes, TController]]]
   ): ICompileProvider = js.native
+  
   def imgSrcSanitizationWhitelist(): js.RegExp = js.native
   def imgSrcSanitizationWhitelist(regexp: js.RegExp): ICompileProvider = js.native
+  
   /**
     * Sets the number of times $onChanges hooks can trigger new changes before giving up and assuming that the model is unstable.
     * Increasing the TTL could have performance implications, so you should not change it without proper justification.
@@ -47,6 +55,7 @@ trait ICompileProvider extends IServiceProvider {
     */
   def onChangesTtl(): Double = js.native
   def onChangesTtl(limit: Double): ICompileProvider = js.native
+  
   /**
     * Call this method to enable/disable whether directive controllers are assigned bindings before calling the controller's constructor.
     * If enabled (true), the compiler assigns the value of each of the bindings to the properties of the controller object before the constructor of this object is called.
@@ -56,6 +65,7 @@ trait ICompileProvider extends IServiceProvider {
     */
   def preAssignBindingsEnabled(): Boolean = js.native
   def preAssignBindingsEnabled(enabled: Boolean): ICompileProvider = js.native
+  
   /**
     * Call this method to enable/disable strict component bindings check.
     * If enabled, the compiler will enforce that for all bindings of a
@@ -67,4 +77,3 @@ trait ICompileProvider extends IServiceProvider {
   def strictComponentBindingsEnabled(): Boolean = js.native
   def strictComponentBindingsEnabled(enabled: Boolean): ICompileProvider = js.native
 }
-

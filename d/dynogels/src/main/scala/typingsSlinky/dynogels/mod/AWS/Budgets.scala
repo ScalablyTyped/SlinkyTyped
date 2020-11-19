@@ -5,7 +5,7 @@ import typingsSlinky.awsSdk.budgetsMod.ClientConfiguration
 import typingsSlinky.std.Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.Budgets")
 @js.native
@@ -15,4 +15,3 @@ import scala.scalajs.js.annotation._
 class Budgets () extends Array[Budget] {
   def this(options: ClientConfiguration) = this()
 }
-

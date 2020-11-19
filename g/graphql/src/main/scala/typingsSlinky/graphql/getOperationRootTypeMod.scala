@@ -6,12 +6,12 @@ import typingsSlinky.graphql.definitionMod.GraphQLObjectType
 import typingsSlinky.graphql.schemaMod.GraphQLSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/utilities/getOperationRootType", JSImport.Namespace)
 @js.native
 object getOperationRootTypeMod extends js.Object {
+  
   def getOperationRootType(schema: GraphQLSchema, operation: OperationDefinitionNode): GraphQLObjectType[_, _] = js.native
   def getOperationRootType(schema: GraphQLSchema, operation: OperationTypeDefinitionNode): GraphQLObjectType[_, _] = js.native
 }
-

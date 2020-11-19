@@ -2,7 +2,7 @@ package typingsSlinky.googlemaps.global.google.maps
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("google.maps.Size")
 @js.native
@@ -13,4 +13,3 @@ class Size protected ()
   def this(width: Double, height: Double, widthUnit: js.UndefOr[scala.Nothing], heightUnit: String) = this()
   def this(width: Double, height: Double, widthUnit: String, heightUnit: String) = this()
 }
-

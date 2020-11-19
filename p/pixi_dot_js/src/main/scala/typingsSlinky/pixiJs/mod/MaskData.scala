@@ -2,7 +2,7 @@ package typingsSlinky.pixiJs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Component for masked elements
@@ -18,4 +18,3 @@ class MaskData ()
   extends typingsSlinky.pixiJs.PIXI.MaskData {
   def this(maskObject: typingsSlinky.pixiJs.PIXI.DisplayObject) = this()
 }
-

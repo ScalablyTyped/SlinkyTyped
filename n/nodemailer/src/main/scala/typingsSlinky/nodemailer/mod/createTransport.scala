@@ -4,11 +4,12 @@ import typingsSlinky.nodemailer.mailerMod.^
 import typingsSlinky.nodemailer.smtpTransportMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("nodemailer", "createTransport")
 @js.native
 object createTransport extends js.Object {
+  
   def apply(): ^ = js.native
   def apply(transport: js.UndefOr[scala.Nothing], defaults: Options): ^ = js.native
   def apply(transport: String): ^ = js.native
@@ -72,4 +73,3 @@ object createTransport extends js.Object {
     defaults: typingsSlinky.nodemailer.streamTransportMod.Options
   ): ^ = js.native
 }
-

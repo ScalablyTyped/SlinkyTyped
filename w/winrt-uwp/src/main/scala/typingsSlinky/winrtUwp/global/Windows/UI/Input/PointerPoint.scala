@@ -4,18 +4,18 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtUwp.Windows.UI.Input.IPointerPointTransform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides basic properties for the input pointer associated with a single mouse, pen/stylus, or touch contact. */
 @JSGlobal("Windows.UI.Input.PointerPoint")
 @js.native
 abstract class PointerPoint ()
   extends typingsSlinky.winrtUwp.Windows.UI.Input.PointerPoint
-
 /* static members */
 @JSGlobal("Windows.UI.Input.PointerPoint")
 @js.native
 object PointerPoint extends js.Object {
+  
   /**
     * Retrieves position and state information for the specified pointer.
     * @param pointerId The ID of the pointer.
@@ -29,6 +29,7 @@ object PointerPoint extends js.Object {
     * @return The pointer property values.
     */
   def getCurrentPoint(pointerId: Double, transform: IPointerPointTransform): typingsSlinky.winrtUwp.Windows.UI.Input.PointerPoint = js.native
+  
   /**
     * Retrieves position and state information for the specified pointer, from the last pointer event up to and including the current pointer event.
     * @param pointerId The ID of the pointer.
@@ -43,4 +44,3 @@ object PointerPoint extends js.Object {
     */
   def getIntermediatePoints(pointerId: Double, transform: IPointerPointTransform): IVector[typingsSlinky.winrtUwp.Windows.UI.Input.PointerPoint] = js.native
 }
-

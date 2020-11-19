@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.Office
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents the categories on an item.
@@ -23,6 +23,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Categories extends js.Object {
+  
   /**
     * Adds categories to an item. Each category must be in the categories master list on that mailbox and so must have a unique name
     * but multiple categories can use the same color.
@@ -78,6 +79,7 @@ trait Categories extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
+  
   /**
     * Gets an item's categories.
     *
@@ -113,6 +115,7 @@ trait Categories extends js.Object {
     options: AsyncContextOptions,
     callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[CategoryDetails]], Unit]
   ): Unit = js.native
+  
   /**
     * Removes categories from an item.
     *
@@ -159,4 +162,3 @@ trait Categories extends js.Object {
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
 }
-

@@ -53,77 +53,11 @@ import typingsSlinky.std.ArrayLike
 import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait JQueryStatic extends js.Object {
-  @JSName("Animation")
-  var Animation_Original: AnimationStatic = js.native
-  @JSName("Callbacks")
-  var Callbacks_Original: CallbacksStatic = js.native
-  @JSName("Deferred")
-  var Deferred_Original: DeferredStatic = js.native
-  @JSName("Event")
-  var Event_Original: EventStatic = js.native
-  @JSName("Tween")
-  var Tween_Original: TweenStatic = js.native
-  /**
-    * @see \`{@link https://api.jquery.com/jquery.ajax/#jQuery-ajax1 }\`
-    * @deprecated ​ Deprecated. Use \`{@link ajaxSetup }\`.
-    */
-  var ajaxSettings: AjaxSettings[_] = js.native
-  /**
-    * Hook directly into jQuery to override how particular CSS properties are retrieved or set, normalize CSS property naming, or create custom properties.
-    * @see \`{@link https://api.jquery.com/jQuery.cssHooks/ }\`
-    * @since 1.4.3
-    */
-  var cssHooks: CSSHooks = js.native
-  /**
-    * An object containing all CSS properties that may be used without a unit. The .css() method uses this object to see if it may append px to unitless values.
-    * @see \`{@link https://api.jquery.com/jQuery.cssNumber/ }\`
-    * @since 1.4.3
-    */
-  var cssNumber: PlainObject[Boolean] = js.native
-  var easing: Easings = js.native
-  /**
-    * @see \`{@link https://learn.jquery.com/events/event-extensions/ }\`
-    */
-  var event: EventExtensions = js.native
-  var expr: Selectors = js.native
-  // Set to HTMLElement to minimize breaks but should probably be Element.
-  val fn: JQuery[HTMLElement] = js.native
-  var fx: Effects = js.native
-  /**
-    * A Promise-like object (or "thenable") that resolves when the document is ready.
-    * @see \`{@link https://api.jquery.com/jQuery.ready/ }\`
-    * @since 1.8
-    * @example ​ ````Listen for document ready using jQuery.when.
-  ```javascript
-  $.when( $.ready ).then(function() {
-    // Document is ready.
-  });
-  ```
-    * @example ​ ````Typical usage involving another promise, using jQuery.when.
-  ```javascript
-  $.when(
-    $.getJSON( "ajax/test.json" ),
-    $.ready
-  ).done(function( data ) {
-    // Document is ready.
-    // Value of test.json is passed as `data`.
-  });
-  ```
-    */
-  var ready: Thenable[JQueryStatic] = js.native
-  /**
-    * A collection of properties that represent the presence of different browser features or bugs. Intended for jQuery's internal use; specific properties may be removed when they are no longer needed internally to improve page startup performance. For your own project's feature-detection needs, we strongly recommend the use of an external library such as Modernizr instead of dependency on properties in jQuery.support.
-    * @see \`{@link https://api.jquery.com/jQuery.support/ }\`
-    * @since 1.3
-    * @deprecated ​ Deprecated since 1.9. See \`{@link https://api.jquery.com/jQuery.support/ }\`.
-    */
-  var support: PlainObject[_] = js.native
-  var timers: js.Array[TickFunction[_]] = js.native
-  var valHooks: ValHooks = js.native
+  
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param element A DOM element to wrap in a jQuery object.
@@ -166,15 +100,58 @@ trait JQueryStatic extends js.Object {
     */
   // tslint:disable-next-line:no-unnecessary-generics unified-signatures
   def apply[TElement](callback: js.ThisFunction1[/* this */ Document, /* $ */ this.type, Unit]): JQuery[TElement] = js.native
-  def apply[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery[T] = js.native
-  def apply[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param object A plain object to wrap in a jQuery object.
+    * @param element_elementArray _&#x40;param_ `element_elementArray`
+    * <br>
+    * * `element` — A DOM element to wrap in a jQuery object. <br>
+    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
+    * @example ​ ````Set the background color of the page to black.
+  ```javascript
+  $( document.body ).css( "background", "black" );
+  ```
+    * @example ​ ````Hide all the input elements within a form.
+  ```javascript
+  $( myForm.elements ).hide();
+  ```
     */
-  def apply[T /* <: PlainObject[_] */](`object`: T): JQuery[T] = js.native
+  def apply[T /* <: Element */](element_elementArray: T): JQuery[T] = js.native
+  def apply[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery[T] = js.native
+  /**
+    * Creates DOM elements on the fly from the provided string of raw HTML.
+    * @param html _&#x40;param_ `html`
+    * <br>
+    * * `html (ownerDocument)` — A string of HTML to create on the fly. Note that this parses HTML, not XML. <br>
+    * * `html (attributes)` — A string defining a single, standalone, HTML element (e.g. &lt;div/&gt; or &lt;div&gt;&lt;/div&gt;).
+    * @param ownerDocument_attributes _&#x40;param_ `ownerDocument_attributes`
+    * <br>
+    * * `ownerDocument` — A document in which the new elements will be created. <br>
+    * * `attributes` — An object of attributes, events, and methods to call on the newly-created element.
+    * @see \`{@link https://api.jquery.com/jQuery/ }\`
+    * @since 1.0
+    * @since 1.4
+    * @example ​ ````Create a div element (and all of its contents) dynamically and append it to the body element. Internally, an element is created and its innerHTML property set to the given markup.
+  ```javascript
+  $( "<div><p>Hello</p></div>" ).appendTo( "body" )
+  ```
+    * @example ​ ````Create some DOM elements.
+  ```javascript
+  $( "<div/>", {
+    "class": "test",
+    text: "Click me!",
+    click: function() {
+    $( this ).toggleClass( "test" );
+    }
+  })
+    .appendTo( "body" );
+  ```
+    */
+  // tslint:disable-next-line:no-unnecessary-generics
+  def apply[TElement /* <: HTMLElement */](html: htmlString): JQuery[TElement] = js.native
+  def apply[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
+  def apply[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document): JQuery[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param selection An existing jQuery object to clone.
@@ -182,56 +159,23 @@ trait JQueryStatic extends js.Object {
     * @since 1.0
     */
   def apply[T](selection: JQuery[T]): JQuery[T] = js.native
-  /**
-    * Accepts a string containing a CSS selector which is then used to match a set of elements.
-    * @param selector A string containing a selector expression
-    * @param context A DOM Element, Document, Selector or jQuery to use as context
-    * @see \`{@link https://api.jquery.com/jQuery/ }\`
-    * @since 1.0
-    * @example ​ ````Find all p elements that are children of a div element and apply a border to them.
-  ```html
-  <!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>jQuery demo</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  </head>
-  <body>
-  ​
-  <p>one</p>
-  <div><p>two</p></div>
-  <p>three</p>
-  ​
-  <script>
-  $( "div > p" ).css( "border", "1px solid gray" );
-  </script>
-  </body>
-  </html>
-  ```
-    * @example ​ ````Find all inputs of type radio within the first form in the document.
-  ```javascript
-  $( "input:radio", document.forms[ 0 ] );
-  ```
-    * @example ​ ````Find all div elements within an XML document from an Ajax response.
-  ```javascript
-  $( "div", xml.responseXML );
-  ```
-  ​
-    */
-  // tslint:disable-next-line:no-unnecessary-generics
-  def apply[TElement /* <: Element */](selector: Selector): JQuery[TElement] = js.native
   def apply[TElement /* <: Element */](selector: Selector, context: JQuery[HTMLElement]): JQuery[TElement] = js.native
   def apply[TElement /* <: Element */](selector: Selector, context: Selector): JQuery[TElement] = js.native
-  def apply[TElement /* <: Element */](selector: Selector, context: Document): JQuery[TElement] = js.native
   def apply[TElement /* <: Element */](selector: Selector, context: Element): JQuery[TElement] = js.native
+  
   /**
     * @see \`{@link https://gist.github.com/gnarf/54829d408993526fe475#animation-factory }\`
     * @since 1.8
     */
   def Animation[TElement](element: TElement, props: PlainObject[_], opts: EffectsOptions[TElement]): typingsSlinky.jquery.JQuery.Animation[TElement] = js.native
+  @JSName("Animation")
+  var Animation_Original: AnimationStatic = js.native
+  
   def Callbacks[T /* <: js.Function */](): typingsSlinky.jquery.JQuery.Callbacks[T] = js.native
   def Callbacks[T /* <: js.Function */](flags: String): typingsSlinky.jquery.JQuery.Callbacks[T] = js.native
+  @JSName("Callbacks")
+  var Callbacks_Original: CallbacksStatic = js.native
+  
   /**
     * A factory function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.
     * @param beforeStart A function that is called just before the constructor returns.
@@ -246,6 +190,9 @@ trait JQueryStatic extends js.Object {
       Unit
     ]
   ): typingsSlinky.jquery.JQuery.Deferred[TR, TJ, TN] = js.native
+  @JSName("Deferred")
+  var Deferred_Original: DeferredStatic = js.native
+  
   /**
     * The jQuery.Event constructor is exposed and can be used when calling trigger. The new operator is optional.
     *
@@ -271,6 +218,9 @@ trait JQueryStatic extends js.Object {
     */
   def Event[T /* <: js.Object */](event: String): typingsSlinky.jquery.JQuery.Event with T = js.native
   def Event[T /* <: js.Object */](event: String, properties: T): typingsSlinky.jquery.JQuery.Event with T = js.native
+  @JSName("Event")
+  var Event_Original: EventStatic = js.native
+  
   /**
     * @see \`{@link https://gist.github.com/gnarf/54829d408993526fe475#tweens }\`
     * @since 1.8
@@ -293,6 +243,9 @@ trait JQueryStatic extends js.Object {
     easing: String,
     unit: String
   ): typingsSlinky.jquery.JQuery.Tween[TElement] = js.native
+  @JSName("Tween")
+  var Tween_Original: TweenStatic = js.native
+  
   /**
     * Perform an asynchronous HTTP (Ajax) request.
     * @param settings A set of key/value pairs that configure the Ajax request. All settings are optional. A default can
@@ -371,6 +324,7 @@ trait JQueryStatic extends js.Object {
     */
   def ajax(url: String): jqXHR[_] = js.native
   def ajax(url: String, settings: AjaxSettings[_]): jqXHR[_] = js.native
+  
   /**
     * Handle custom Ajax options or modify existing options before each request is sent and before they are processed by $.ajax().
     * @param dataTypes An optional string containing one or more space-separated dataTypes
@@ -401,6 +355,13 @@ trait JQueryStatic extends js.Object {
       String | Unit
     ]
   ): Unit = js.native
+  
+  /**
+    * @see \`{@link https://api.jquery.com/jquery.ajax/#jQuery-ajax1 }\`
+    * @deprecated ​ Deprecated. Use \`{@link ajaxSetup }\`.
+    */
+  var ajaxSettings: AjaxSettings[_] = js.native
+  
   /**
     * Set default values for future Ajax requests. Its use is not recommended.
     * @param options A set of key/value pairs that configure the default Ajax request. All options are optional.
@@ -417,6 +378,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def ajaxSetup(options: AjaxSettings[_]): AjaxSettings[_] = js.native
+  
   /**
     * Creates an object that handles the actual transmission of Ajax data.
     * @param dataType A string identifying the data type to use
@@ -433,11 +395,14 @@ trait JQueryStatic extends js.Object {
       Transport | Unit
     ]
   ): Unit = js.native
+  
   /**
     * @deprecated ​ Deprecated since 3.3. Internal. See \`{@link https://github.com/jquery/jquery/issues/3384 }\`.
     */
   def camelCase(value: String): String = js.native
+  
   def cleanData(elems: ArrayLike[Element | Document | Window | PlainObject[_]]): Unit = js.native
+  
   /**
     * Check to see if a DOM element is a descendant of another DOM element.
     * @param container The DOM element that may contain the other element.
@@ -451,7 +416,23 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def contains(container: Element, contained: Element): Boolean = js.native
+  
   def css(elem: Element, name: String): js.Any = js.native
+  
+  /**
+    * Hook directly into jQuery to override how particular CSS properties are retrieved or set, normalize CSS property naming, or create custom properties.
+    * @see \`{@link https://api.jquery.com/jQuery.cssHooks/ }\`
+    * @since 1.4.3
+    */
+  var cssHooks: CSSHooks = js.native
+  
+  /**
+    * An object containing all CSS properties that may be used without a unit. The .css() method uses this object to see if it may append px to unitless values.
+    * @see \`{@link https://api.jquery.com/jQuery.cssNumber/ }\`
+    * @since 1.4.3
+    */
+  var cssNumber: PlainObject[Boolean] = js.native
+  
   def data(element: PlainObject[_]): js.Any = js.native
   def data(element: PlainObject[_], key: String): js.Any = js.native
   def data(element: PlainObject[_], key: String, value: String): String = js.native
@@ -618,6 +599,7 @@ trait JQueryStatic extends js.Object {
   def data_Null(element: Element, key: String): Null = js.native
   @JSName("data")
   def data_Null(element: Window, key: String): Null = js.native
+  
   /**
     * Execute the next function on the queue for the matched element.
     * @param element A DOM element from which to remove and execute a queued function.
@@ -671,6 +653,7 @@ trait JQueryStatic extends js.Object {
     */
   def dequeue(element: Element): Unit = js.native
   def dequeue(element: Element, queueName: String): Unit = js.native
+  
   /**
     * A generic iterator function, which can be used to seamlessly iterate over both objects and arrays. Arrays and array-like objects with a length property (such as a function's arguments object) are iterated by numeric index, from 0 to length-1. Other objects are iterated via their named properties.
     * @param array The array to iterate over.
@@ -798,6 +781,9 @@ trait JQueryStatic extends js.Object {
       _
     ]
   ): T = js.native
+  
+  var easing: Easings = js.native
+  
   /**
     * Takes a string and throws an exception containing it.
     * @param message The message to send out.
@@ -809,6 +795,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def error(message: String): js.Any = js.native
+  
   /**
     * Escapes any character that has a special meaning in a CSS selector.
     * @param selector A string containing a selector expression to escape.
@@ -824,6 +811,14 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def escapeSelector(selector: Selector): Selector = js.native
+  
+  /**
+    * @see \`{@link https://learn.jquery.com/events/event-extensions/ }\`
+    */
+  var event: EventExtensions = js.native
+  
+  var expr: Selectors = js.native
+  
   /**
     * Merge the contents of two or more objects together into the first object.
     * @param target An object that will receive the new properties if additional objects are passed in or that will
@@ -1685,6 +1680,12 @@ trait JQueryStatic extends js.Object {
     */
   @JSName("extend")
   def extend_true[T, U, V, W, X, Y, Z](deep: `true`, target: T, object1: U, object2: V, object3: W, object4: X, object5: Y, object6: Z): T with U with V with W with X with Y with Z = js.native
+  
+  // Set to HTMLElement to minimize breaks but should probably be Element.
+  val fn: JQuery[HTMLElement] = js.native
+  
+  var fx: Effects = js.native
+  
   /**
     * Load data from the server using a HTTP GET request.
     * @param url_settings _&#x40;param_ `url_settings`
@@ -1775,6 +1776,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def get(url: String, success: DoneCallback[_, jqXHR[_]], dataType: String): jqXHR[_] = js.native
+  
   /**
     * Load JSON-encoded data from the server using a GET HTTP request.
     * @param url A string containing the URL to which the request is sent.
@@ -1858,6 +1860,7 @@ trait JQueryStatic extends js.Object {
   def getJSON(url: String, success_data: String): jqXHR[_] = js.native
   def getJSON(url: String, success_data: PlainObject[_]): jqXHR[_] = js.native
   def getJSON(url: String, success_data: DoneCallback[_, jqXHR[_]]): jqXHR[_] = js.native
+  
   /**
     * Load a JavaScript file from the server using a GET HTTP request, then execute it.
     * @see \`{@link https://api.jquery.com/jQuery.getScript/ }\`
@@ -1940,6 +1943,7 @@ trait JQueryStatic extends js.Object {
     */
   def getScript(url: String): jqXHR[js.UndefOr[String]] = js.native
   def getScript(url: String, success: DoneCallback[js.UndefOr[String], jqXHR[js.UndefOr[String]]]): jqXHR[js.UndefOr[String]] = js.native
+  
   /**
     * Execute some JavaScript code globally.
     * @param code The JavaScript code to execute.
@@ -1955,6 +1959,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def globalEval(code: String): Unit = js.native
+  
   /**
     * Finds the elements of an array which satisfy a filter function. The original array is not affected.
     * @param array The array-like object to search through.
@@ -2034,6 +2039,7 @@ trait JQueryStatic extends js.Object {
     funсtion: js.Function2[/* elementOfArray */ T, /* indexInArray */ Double, Boolean],
     invert: Boolean
   ): js.Array[T] = js.native
+  
   def hasData(element: PlainObject[_]): Boolean = js.native
   def hasData(element: Document): Boolean = js.native
   /**
@@ -2077,6 +2083,7 @@ trait JQueryStatic extends js.Object {
     */
   def hasData(element: Element): Boolean = js.native
   def hasData(element: Window): Boolean = js.native
+  
   /**
     * Holds or releases the execution of jQuery's ready event.
     * @param hold Indicates whether the ready hold is being requested or released
@@ -2096,6 +2103,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def holdReady(hold: Boolean): Unit = js.native
+  
   /**
     * Modify and filter HTML strings passed through jQuery manipulation methods.
     * @param html The HTML string on which to operate.
@@ -2104,6 +2112,7 @@ trait JQueryStatic extends js.Object {
     * @since 2.2
     */
   def htmlPrefilter(html: htmlString): htmlString = js.native
+  
   /**
     * Search for a specified value within an array and return its index (or -1 if not found).
     * @param value The value to search for.
@@ -2150,6 +2159,7 @@ trait JQueryStatic extends js.Object {
     */
   def inArray[T](value: T, array: js.Array[T]): Double = js.native
   def inArray[T](value: T, array: js.Array[T], fromIndex: Double): Double = js.native
+  
   /**
     * Determine whether the argument is an array.
     * @param obj Object to test whether or not it is an array.
@@ -2178,6 +2188,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def isArray(obj: js.Any): /* is std.Array<any> */ Boolean = js.native
+  
   /**
     * Check to see if an object is empty (contains no enumerable properties).
     * @param obj The object that will be checked to see if it's empty.
@@ -2190,6 +2201,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def isEmptyObject(obj: js.Any): Boolean = js.native
+  
   /**
     * Determine if the argument passed is a JavaScript function object.
     * @param obj Object to test whether or not it is a function.
@@ -2249,6 +2261,7 @@ trait JQueryStatic extends js.Object {
     */
   // tslint:disable-next-line:ban-types
   def isFunction(obj: js.Any): /* is std.Function */ Boolean = js.native
+  
   /**
     * Determines whether its argument represents a JavaScript number.
     * @param value The value to be tested.
@@ -2280,6 +2293,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def isNumeric(value: js.Any): Boolean = js.native
+  
   /**
     * Check to see if an object is a plain object (created using "{}" or "new Object").
     * @param obj The object that will be checked to see if it's a plain object.
@@ -2292,6 +2306,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def isPlainObject(obj: js.Any): Boolean = js.native
+  
   /**
     * Determine whether the argument is a window.
     * @param obj Object to test whether or not it is a window.
@@ -2324,6 +2339,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def isWindow(obj: js.Any): /* is std.Window */ Boolean = js.native
+  
   /**
     * Check to see if a DOM node is within an XML document (or is an XML document).
     * @param node The DOM node that will be checked to see if it's in an XML document.
@@ -2336,6 +2352,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def isXMLDoc(node: Node): Boolean = js.native
+  
   /**
     * Convert an array-like object into a true JavaScript array.
     * @param obj Any object to turn into a native Array.
@@ -2382,6 +2399,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def makeArray[T](obj: ArrayLike[T]): js.Array[T] = js.native
+  
   /**
     * Translate all items in an array or object to new array of items.
     * @param array The Array to translate.
@@ -2515,6 +2533,7 @@ trait JQueryStatic extends js.Object {
       js.UndefOr[TypeOrArray[TReturn] | Null]
     ]
   ): js.Array[TReturn] = js.native
+  
   /**
     * Merge the contents of two arrays together into the first array.
     * @param first The first array-like object to merge, the elements of second added.
@@ -2537,6 +2556,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def merge[T, U](first: ArrayLike[T], second: ArrayLike[U]): js.Array[T | U] = js.native
+  
   /**
     * Relinquish jQuery's control of the $ variable.
     * @param removeAll A Boolean indicating whether to remove all jQuery variables from the global scope (including jQuery itself).
@@ -2613,6 +2633,7 @@ trait JQueryStatic extends js.Object {
     */
   def noConflict(): this.type = js.native
   def noConflict(removeAll: Boolean): this.type = js.native
+  
   /**
     * @deprecated ​ Deprecated since 3.2.
     *
@@ -2621,12 +2642,14 @@ trait JQueryStatic extends js.Object {
     * **Solution**: Replace calls such as `jQuery.nodeName( elem, "div" )` with a test such as `elem.nodeName.toLowerCase() === "div"`.
     */
   def nodeName(elem: Node, name: String): Boolean = js.native
+  
   /**
     * An empty function.
     * @see \`{@link https://api.jquery.com/jQuery.noop/ }\`
     * @since 1.4
     */
   def noop(): js.UndefOr[scala.Nothing] = js.native
+  
   /**
     * Return a number representing the current time.
     * @see \`{@link https://api.jquery.com/jQuery.now/ }\`
@@ -2634,6 +2657,7 @@ trait JQueryStatic extends js.Object {
     * @deprecated ​ Deprecated since 3.3. Use \`{@link DateConstructor.now Date.now}\`.
     */
   def now(): Double = js.native
+  
   /**
     * Create a serialized representation of an array, a plain object, or a jQuery object suitable for use in a URL query string or Ajax request. In case a jQuery object is passed, it should contain input elements with name/value properties.
     * @param obj An array, a plain object, or a jQuery object to serialize.
@@ -2709,6 +2733,7 @@ trait JQueryStatic extends js.Object {
   def param(obj: PlainObject[_]): String = js.native
   def param(obj: PlainObject[_], traditional: Boolean): String = js.native
   def param(obj: JQuery[HTMLElement], traditional: Boolean): String = js.native
+  
   /**
     * Parses a string into an array of DOM nodes.
     * @param data HTML string to be parsed
@@ -2772,6 +2797,7 @@ trait JQueryStatic extends js.Object {
     * @since 1.8
     */
   def parseHTML(data: String, context: Document, keepScripts: Boolean): js.Array[typingsSlinky.jquery.JQuery.Node] = js.native
+  
   /**
     * Takes a well-formed JSON string and returns the resulting JavaScript value.
     * @param json The JSON string to parse.
@@ -2789,6 +2815,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def parseJSON(json: String): js.Any = js.native
+  
   /**
     * Parses a string into an XML document.
     * @param data a well-formed XML string to be parsed
@@ -2829,6 +2856,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def parseXML(data: String): XMLDocument = js.native
+  
   /**
     * Load data from the server using a HTTP POST request.
     * @param url_settings _&#x40;param_ `url_settings`
@@ -2966,6 +2994,7 @@ trait JQueryStatic extends js.Object {
     * @since 1.0
     */
   def post(url: String, success: DoneCallback[_, jqXHR[_]], dataType: String): jqXHR[_] = js.native
+  
   // #endregion
   // #endregion
   // region (context, name)
@@ -14906,6 +14935,7 @@ trait JQueryStatic extends js.Object {
     /* repeated */ js.Any, 
     TReturn
   ] = js.native
+  
   // #endregion
   // #endregion
   /**
@@ -15087,6 +15117,30 @@ trait JQueryStatic extends js.Object {
   def queue[T /* <: Element */](element: T, queueName: js.UndefOr[scala.Nothing], newQueue: TypeOrArray[QueueFunction[T]]): Queue[T] = js.native
   def queue[T /* <: Element */](element: T, queueName: String): Queue[T] = js.native
   def queue[T /* <: Element */](element: T, queueName: String, newQueue: TypeOrArray[QueueFunction[T]]): Queue[T] = js.native
+  
+  /**
+    * A Promise-like object (or "thenable") that resolves when the document is ready.
+    * @see \`{@link https://api.jquery.com/jQuery.ready/ }\`
+    * @since 1.8
+    * @example ​ ````Listen for document ready using jQuery.when.
+  ```javascript
+  $.when( $.ready ).then(function() {
+    // Document is ready.
+  });
+  ```
+    * @example ​ ````Typical usage involving another promise, using jQuery.when.
+  ```javascript
+  $.when(
+    $.getJSON( "ajax/test.json" ),
+    $.ready
+  ).done(function( data ) {
+    // Document is ready.
+    // Value of test.json is passed as `data`.
+  });
+  ```
+    */
+  var ready: Thenable[JQueryStatic] = js.native
+  
   /**
     * Handles errors thrown synchronously in functions wrapped in jQuery().
     * @param error An error thrown in the function wrapped in jQuery().
@@ -15100,6 +15154,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def readyException(error: js.Error): js.Any = js.native
+  
   def removeData(element: PlainObject[_]): Unit = js.native
   def removeData(element: PlainObject[_], name: String): Unit = js.native
   def removeData(element: Document): Unit = js.native
@@ -15154,6 +15209,7 @@ trait JQueryStatic extends js.Object {
   def removeData(element: Element, name: String): Unit = js.native
   def removeData(element: Window): Unit = js.native
   def removeData(element: Window, name: String): Unit = js.native
+  
   /**
     * Creates an object containing a set of properties ready to be used in the definition of custom animations.
     * @param duration_complete_settings _&#x40;param_ `duration_complete_settings`
@@ -15190,6 +15246,17 @@ trait JQueryStatic extends js.Object {
     * @since 1.1
     */
   def speed[TElement /* <: Element */](duration: Duration, easing: String, complete: js.ThisFunction0[/* this */ TElement, Unit]): EffectsOptions[TElement] = js.native
+  
+  /**
+    * A collection of properties that represent the presence of different browser features or bugs. Intended for jQuery's internal use; specific properties may be removed when they are no longer needed internally to improve page startup performance. For your own project's feature-detection needs, we strongly recommend the use of an external library such as Modernizr instead of dependency on properties in jQuery.support.
+    * @see \`{@link https://api.jquery.com/jQuery.support/ }\`
+    * @since 1.3
+    * @deprecated ​ Deprecated since 1.9. See \`{@link https://api.jquery.com/jQuery.support/ }\`.
+    */
+  var support: PlainObject[_] = js.native
+  
+  var timers: js.Array[TickFunction[_]] = js.native
+  
   /**
     * Remove the whitespace from the beginning and end of a string.
     * @param str The string to trim.
@@ -15228,6 +15295,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def trim(str: String): String = js.native
+  
   /**
     * Determine the internal JavaScript [[Class]] of an object.
     * @param obj Object to get the internal JavaScript [[Class]] of.
@@ -15256,6 +15324,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def `type`(obj: js.Any): array | boolean | date | error | function | `null` | number | `object` | regexp | string | symbol | undefined = js.native
+  
   /**
     * Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers.
     * @param array The Array of DOM elements.
@@ -15307,6 +15376,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def unique[T /* <: Element */](array: js.Array[T]): js.Array[T] = js.native
+  
   /**
     * Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers.
     * @param array The Array of DOM elements.
@@ -15354,6 +15424,9 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def uniqueSort[T /* <: Element */](array: js.Array[T]): js.Array[T] = js.native
+  
+  var valHooks: ValHooks = js.native
+  
   /**
     * Provides a way to execute callback functions based on zero or more Thenable objects, usually Deferred objects that represent asynchronous events.
     * @param deferreds Zero or more Thenable objects.
@@ -15529,4 +15602,3 @@ trait JQueryStatic extends js.Object {
     deferredT: (Promise2[TR1, TJ1, _, TR2, TJ2, _]) | (Promise3[TR1, TJ1, _, TR2, TJ2, _, TR3, TJ3, _])
   ): Promise3[TR1, TJ1, scala.Nothing, TR2, TJ2, scala.Nothing, TR3, TJ3, scala.Nothing] = js.native
 }
-

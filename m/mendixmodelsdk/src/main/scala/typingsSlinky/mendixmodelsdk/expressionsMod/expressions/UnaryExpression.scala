@@ -36,7 +36,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.WidgetValidation
 import typingsSlinky.mendixmodelsdk.restMod.rest.ConsumedODataService
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -54,29 +54,31 @@ class UnaryExpression protected () extends Expression {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FUnaryExpression: IModel = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
   def expression: Expression = js.native
   def expression_=(newValue: Expression): Unit = js.native
+  
+  @JSName("model")
+  var model_FUnaryExpression: IModel = js.native
+  
   def operator: UnaryOperator = js.native
   def operator_=(newValue: UnaryOperator): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/expressions", "expressions.UnaryExpression")
 @js.native
 object UnaryExpression extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'argumentModel' property
@@ -86,6 +88,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInAppServiceCallParameterMappingUnderArgumentModel(container: AppServiceCallParameterMapping): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'argumentModel' property
@@ -95,6 +98,7 @@ object UnaryExpression extends js.Object {
     *  7.21.0 and higher
     */
   def createInBasicCodeActionParameterValueUnderArgumentModel(container: BasicCodeActionParameterValue): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'argumentModel' property
@@ -104,6 +108,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 to 7.20.0
     */
   def createInBasicJavaActionParameterValueUnderArgumentModel(container: BasicJavaActionParameterValue): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'left' property
@@ -113,6 +118,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryExpressionUnderLeft(container: BinaryExpression): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'right' property
@@ -122,6 +128,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryExpressionUnderRight(container: BinaryExpression): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'expressionModel' property
@@ -131,6 +138,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInBinaryRequestHandlingUnderExpressionModel(container: BinaryRequestHandling): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'valueModel' property
@@ -140,6 +148,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInChangeListActionUnderValueModel(container: ChangeListAction): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'valueModel' property
@@ -149,6 +158,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInChangeVariableActionUnderValueModel(container: ChangeVariableAction): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'expressionModel' property
@@ -158,6 +168,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInConditionalSettingsUnderExpressionModel(container: ConditionalSettings): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'timeoutModel' property
@@ -167,6 +178,7 @@ object UnaryExpression extends js.Object {
     *  8.5.0 and higher
     */
   def createInConsumedODataServiceUnderTimeoutModel(container: ConsumedODataService): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'initialValueModel' property
@@ -176,6 +188,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInCreateVariableActionUnderInitialValueModel(container: CreateVariableAction): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'limitExpressionModel' property
@@ -185,6 +198,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInCustomRangeUnderLimitExpressionModel(container: CustomRange): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'offsetExpressionModel' property
@@ -194,6 +208,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInCustomRangeUnderOffsetExpressionModel(container: CustomRange): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'argumentModel' property
@@ -203,6 +218,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInDocumentTemplateParameterMappingUnderArgumentModel(container: DocumentTemplateParameterMapping): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'returnValueModel' property
@@ -212,6 +228,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInEndEventUnderReturnValueModel(container: EndEvent): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'expressionModel' property
@@ -221,6 +238,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInExpressionSplitConditionUnderExpressionModel(container: ExpressionSplitCondition): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'valueModel' property
@@ -230,6 +248,7 @@ object UnaryExpression extends js.Object {
     *  8.0.0 and higher
     */
   def createInFormDataPartUnderValueModel(container: FormDataPart): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'arguments' property
@@ -239,6 +258,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInFunctionCallExpressionUnderArguments(container: FunctionCallExpression): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'marginBottomInInchModel' property
@@ -248,6 +268,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginBottomInInchModel(container: GenerateDocumentAction): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'marginLeftInInchModel' property
@@ -257,6 +278,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginLeftInInchModel(container: GenerateDocumentAction): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'marginRightInInchModel' property
@@ -266,6 +288,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginRightInInchModel(container: GenerateDocumentAction): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'marginTopInInchModel' property
@@ -275,6 +298,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInGenerateDocumentActionUnderMarginTopInInchModel(container: GenerateDocumentAction): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'customLocationModel' property
@@ -284,6 +308,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderCustomLocationModel(container: HttpConfiguration): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'password' property
@@ -293,6 +318,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderPassword(container: HttpConfiguration): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'username' property
@@ -302,6 +328,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpConfigurationUnderUsername(container: HttpConfiguration): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'valueModel' property
@@ -311,6 +338,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInHttpHeaderEntryUnderValueModel(container: HttpHeaderEntry): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'condition' property
@@ -320,6 +348,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderCondition(container: IfExpression): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'ifFalse' property
@@ -329,6 +358,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderIfFalse(container: IfExpression): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'ifTrue' property
@@ -338,6 +368,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInIfExpressionUnderIfTrue(container: IfExpression): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'expressionModel' property
@@ -347,6 +378,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInInspectAttributeUnderExpressionModel(container: InspectAttribute): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'nodeModel' property
@@ -356,6 +388,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInLogMessageActionUnderNodeModel(container: LogMessageAction): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'valueModel' property
@@ -365,6 +398,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInMemberChangeUnderValueModel(container: MemberChange): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'argumentModel' property
@@ -374,6 +408,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInMicroflowCallParameterMappingUnderArgumentModel(container: MicroflowCallParameterMapping): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'argumentModel' property
@@ -383,6 +418,7 @@ object UnaryExpression extends js.Object {
     *  8.0.0 and higher
     */
   def createInNanoflowCallParameterMappingUnderArgumentModel(container: NanoflowCallParameterMapping): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'expression' property
@@ -392,6 +428,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInParenthesisExpressionUnderExpression(container: ParenthesisExpression): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'hostExpressionModel' property
@@ -401,6 +438,7 @@ object UnaryExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderHostExpressionModel(container: ProxyConfiguration): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'passwordExpressionModel' property
@@ -410,6 +448,7 @@ object UnaryExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderPasswordExpressionModel(container: ProxyConfiguration): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'portExpressionModel' property
@@ -419,6 +458,7 @@ object UnaryExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderPortExpressionModel(container: ProxyConfiguration): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'useConfigurationExpressionModel' property
@@ -428,6 +468,7 @@ object UnaryExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderUseConfigurationExpressionModel(container: ProxyConfiguration): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'usernameExpressionModel' property
@@ -437,6 +478,7 @@ object UnaryExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInProxyConfigurationUnderUsernameExpressionModel(container: ProxyConfiguration): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'timeOutModel' property
@@ -446,6 +488,7 @@ object UnaryExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInRestCallActionUnderTimeOutModel(container: RestCallAction): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'argumentModel' property
@@ -455,6 +498,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInRuleCallParameterMappingUnderArgumentModel(container: RuleCallParameterMapping): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'expressionModel' property
@@ -464,6 +508,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInTemplateArgumentUnderExpressionModel(container: TemplateArgument): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'expression' property
@@ -473,6 +518,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInUnaryExpressionUnderExpression(container: UnaryExpression): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'timeOutModel' property
@@ -482,6 +528,7 @@ object UnaryExpression extends js.Object {
     *  7.15.0 and higher
     */
   def createInWebServiceCallActionUnderTimeOutModel(container: WebServiceCallAction): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'argumentModel' property
@@ -491,6 +538,7 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInWebServiceOperationParameterMappingUnderArgumentModel(container: WebServiceOperationParameterMapping): UnaryExpression = js.native
+  
   /**
     * Creates and returns a new UnaryExpression instance in the SDK and on the server.
     * The new UnaryExpression will be automatically stored in the 'expressionModel' property
@@ -500,5 +548,8 @@ object UnaryExpression extends js.Object {
     *  7.9.0 and higher
     */
   def createInWidgetValidationUnderExpressionModel(container: WidgetValidation): UnaryExpression = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

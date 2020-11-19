@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.NavigationToggle
 import typingsSlinky.arcgisJsApi.esri.NavigationToggleProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/NavigationToggle", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends NavigationToggle {
   def this(properties: NavigationToggleProperties) = this()
 }
-

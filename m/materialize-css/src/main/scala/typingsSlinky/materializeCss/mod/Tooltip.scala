@@ -4,21 +4,22 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.materializeCss.anon.PartialTooltipOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("materialize-css", "Tooltip")
 @js.native
 class Tooltip ()
   extends typingsSlinky.materializeCss.M.Tooltip
-
 /* static members */
 @JSImport("materialize-css", "Tooltip")
 @js.native
 object Tooltip extends js.Object {
+  
   /**
     * Get Instance
     */
   def getInstance(elem: Element): typingsSlinky.materializeCss.M.Tooltip = js.native
+  
   /**
     * Init Tooltips
     */
@@ -35,4 +36,3 @@ object Tooltip extends js.Object {
   def init(els: Element): typingsSlinky.materializeCss.M.Tooltip = js.native
   def init(els: Element, options: PartialTooltipOptions): typingsSlinky.materializeCss.M.Tooltip = js.native
 }
-

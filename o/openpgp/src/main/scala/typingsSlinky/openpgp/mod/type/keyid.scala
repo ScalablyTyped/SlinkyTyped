@@ -2,7 +2,7 @@ package typingsSlinky.openpgp.mod.`type`
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Implementation of type key id
@@ -15,20 +15,21 @@ import scala.scalajs.js.annotation._
 @JSImport("openpgp", "type.keyid")
 @js.native
 object keyid extends js.Object {
+  
   @js.native
   class Keyid () extends js.Object {
+    
     /**
       * Checks equality of Key ID's
       * @param keyid
       * @param matchWildcard Indicates whether to check if either keyid is a wildcard
       */
     def equals(keyid: Keyid, matchWildcard: Boolean): Unit = js.native
+    
     /**
       * Parsing method for a key id
       * @param input Input to read the key id from
       */
     def read(input: js.typedarray.Uint8Array): Unit = js.native
   }
-  
 }
-

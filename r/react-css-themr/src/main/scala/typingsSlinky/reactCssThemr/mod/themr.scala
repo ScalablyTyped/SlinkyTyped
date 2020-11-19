@@ -5,11 +5,12 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.reactCssThemr.anon.MapThemrProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-css-themr", "themr")
 @js.native
 object themr extends js.Object {
+  
   def apply(identifier: String): js.Function1[
     /* component */ (Instantiable2[
       /* props */ js.UndefOr[js.Any], 
@@ -107,4 +108,3 @@ object themr extends js.Object {
     ThemedComponentClass[js.Any with MapThemrProps[_], _]
   ] = js.native
 }
-

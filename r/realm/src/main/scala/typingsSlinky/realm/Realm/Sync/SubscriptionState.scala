@@ -2,14 +2,14 @@ package typingsSlinky.realm.Realm.Sync
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait SubscriptionState extends js.Object
-
 @JSGlobal("Realm.Sync.SubscriptionState")
 @js.native
 object SubscriptionState extends js.Object {
+  
   @js.native
   sealed trait Complete extends SubscriptionState
   
@@ -24,6 +24,4 @@ object SubscriptionState extends js.Object {
   
   @js.native
   sealed trait Pending extends SubscriptionState
-  
 }
-

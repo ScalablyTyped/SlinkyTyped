@@ -6,9 +6,8 @@ import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import typingsSlinky.rbx.tileMod.TileProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rbx", "Tile")
 @js.native
 object Tile extends TopLevel[ForwardRefAsExoticComponent[TileProps, ReactElement]]
-

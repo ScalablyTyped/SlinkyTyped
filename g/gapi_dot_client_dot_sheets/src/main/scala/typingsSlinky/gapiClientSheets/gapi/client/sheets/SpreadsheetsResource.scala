@@ -8,13 +8,11 @@ import typingsSlinky.gapiClientSheets.anon.Uploadprotocol
 import typingsSlinky.gapiClientSheets.anon.Xgafv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SpreadsheetsResource extends js.Object {
-  var developerMetadata: DeveloperMetadataResource = js.native
-  var sheets: SheetsResource = js.native
-  var values: ValuesResource = js.native
+  
   def batchUpdate(request: Callback, body: BatchUpdateSpreadsheetRequest): typingsSlinky.gapiClient.gapi.client.Request[BatchUpdateSpreadsheetResponse] = js.native
   /**
     * Applies one or more updates to the spreadsheet.
@@ -38,9 +36,13 @@ trait SpreadsheetsResource extends js.Object {
     * should reflect your changes.
     */
   def batchUpdate(request: Uploadprotocol): typingsSlinky.gapiClient.gapi.client.Request[BatchUpdateSpreadsheetResponse] = js.native
+  
   def create(request: AccesstokenAlt, body: Spreadsheet): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
   /** Creates a spreadsheet, returning the newly created spreadsheet. */
   def create(request: Xgafv): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
+  
+  var developerMetadata: DeveloperMetadataResource = js.native
+  
   /**
     * Returns the spreadsheet at the given ID.
     * The caller must specify the spreadsheet ID.
@@ -66,6 +68,7 @@ trait SpreadsheetsResource extends js.Object {
     */
   def get(): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
   def get(request: IncludeGridData): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
+  
   /**
     * Returns the spreadsheet at the given ID.
     * The caller must specify the spreadsheet ID.
@@ -92,5 +95,8 @@ trait SpreadsheetsResource extends js.Object {
     */
   def getByDataFilter(request: AltCallback): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
   def getByDataFilter(request: Callback, body: GetSpreadsheetByDataFilterRequest): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
+  
+  var sheets: SheetsResource = js.native
+  
+  var values: ValuesResource = js.native
 }
-

@@ -2,17 +2,16 @@ package typingsSlinky.graphqlTools.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-tools", "SchemaVisitor")
 @js.native
 abstract class SchemaVisitor ()
   extends typingsSlinky.graphqlToolsUtils.mod.SchemaVisitor
-
 /* static members */
 @JSImport("graphql-tools", "SchemaVisitor")
 @js.native
 object SchemaVisitor extends js.Object {
+  
   def implementsVisitorMethod(methodName: String): Boolean = js.native
 }
-

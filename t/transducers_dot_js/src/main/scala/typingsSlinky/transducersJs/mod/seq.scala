@@ -4,11 +4,12 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("transducers.js", "seq")
 @js.native
 object seq extends js.Object {
+  
   def apply[TInput, TOutput](coll: js.Array[TInput], xf: Transducer[TInput, TOutput]): js.Array[TOutput] = js.native
   def apply[TInput, TOutput](
     coll: StringDictionary[TInput],
@@ -16,4 +17,3 @@ object seq extends js.Object {
   ): StringDictionary[TOutput] = js.native
   def apply[TInput, TOutput](coll: js.Iterable[TInput], xf: Transducer[TInput, TOutput]): IterableIterator[TOutput] = js.native
 }
-

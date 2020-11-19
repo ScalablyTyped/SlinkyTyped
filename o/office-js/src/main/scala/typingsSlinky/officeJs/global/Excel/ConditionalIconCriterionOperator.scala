@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.global.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,10 +13,13 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.ConditionalIconCriterionOperator")
 @js.native
 object ConditionalIconCriterionOperator extends js.Object {
-  /* "GreaterThan" */ val greaterThan: typingsSlinky.officeJs.Excel.ConditionalIconCriterionOperator.greaterThan with String = js.native
-  /* "GreaterThanOrEqual" */ val greaterThanOrEqual: typingsSlinky.officeJs.Excel.ConditionalIconCriterionOperator.greaterThanOrEqual with String = js.native
-  /* "Invalid" */ val invalid: typingsSlinky.officeJs.Excel.ConditionalIconCriterionOperator.invalid with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Excel.ConditionalIconCriterionOperator with String] = js.native
+  
+  /* "GreaterThan" */ val greaterThan: typingsSlinky.officeJs.Excel.ConditionalIconCriterionOperator.greaterThan with String = js.native
+  
+  /* "GreaterThanOrEqual" */ val greaterThanOrEqual: typingsSlinky.officeJs.Excel.ConditionalIconCriterionOperator.greaterThanOrEqual with String = js.native
+  
+  /* "Invalid" */ val invalid: typingsSlinky.officeJs.Excel.ConditionalIconCriterionOperator.invalid with String = js.native
 }
-

@@ -2,23 +2,27 @@ package typingsSlinky.vscodeLanguageclient.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode-languageclient", "CodeActionKind")
 @js.native
 object CodeActionKind extends js.Object {
+  
   /**
     * Empty kind.
     */
   val Empty: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
+  
   /**
     * Base kind for quickfix actions: 'quickfix'
     */
   val QuickFix: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
+  
   /**
     * Base kind for refactoring actions: 'refactor'
     */
   val Refactor: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
+  
   /**
     * Base kind for refactoring extraction actions: 'refactor.extract'
     *
@@ -31,6 +35,7 @@ object CodeActionKind extends js.Object {
     * - ...
     */
   val RefactorExtract: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
+  
   /**
     * Base kind for refactoring inline actions: 'refactor.inline'
     *
@@ -42,6 +47,7 @@ object CodeActionKind extends js.Object {
     * - ...
     */
   val RefactorInline: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
+  
   /**
     * Base kind for refactoring rewrite actions: 'refactor.rewrite'
     *
@@ -55,12 +61,14 @@ object CodeActionKind extends js.Object {
     * - ...
     */
   val RefactorRewrite: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
+  
   /**
     * Base kind for source actions: `source`
     *
     * Source code actions apply to the entire file.
     */
   val Source: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
+  
   /**
     * Base kind for auto-fix source actions: `source.fixAll`.
     *
@@ -70,9 +78,9 @@ object CodeActionKind extends js.Object {
     * @since 3.15.0
     */
   val SourceFixAll: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
+  
   /**
     * Base kind for an organize imports source action: `source.organizeImports`
     */
   val SourceOrganizeImports: typingsSlinky.vscodeLanguageserverTypes.mod.CodeActionKind = js.native
 }
-

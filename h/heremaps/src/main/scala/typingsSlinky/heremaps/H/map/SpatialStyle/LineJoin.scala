@@ -2,7 +2,7 @@ package typingsSlinky.heremaps.H.map.SpatialStyle
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The type of corner created, when two lines meet, one of 'round', 'bevel' or 'miter'.
@@ -13,13 +13,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.heremaps.heremapsStrings.miter
 */
 trait LineJoin extends js.Object
-
 object LineJoin {
+  
   @scala.inline
   def bevel: typingsSlinky.heremaps.heremapsStrings.bevel = "bevel".asInstanceOf[typingsSlinky.heremaps.heremapsStrings.bevel]
+  
   @scala.inline
   def miter: typingsSlinky.heremaps.heremapsStrings.miter = "miter".asInstanceOf[typingsSlinky.heremaps.heremapsStrings.miter]
+  
   @scala.inline
   def round: typingsSlinky.heremaps.heremapsStrings.round = "round".asInstanceOf[typingsSlinky.heremaps.heremapsStrings.round]
 }
-

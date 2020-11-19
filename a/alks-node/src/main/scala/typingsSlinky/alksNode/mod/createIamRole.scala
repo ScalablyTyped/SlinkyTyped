@@ -2,11 +2,12 @@ package typingsSlinky.alksNode.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("alks-node", "createIamRole")
 @js.native
 object createIamRole extends js.Object {
+  
   def apply(
     account: Account,
     auth: Auth,
@@ -17,4 +18,3 @@ object createIamRole extends js.Object {
     callback: js.Function2[/* err */ js.Error, /* body */ js.Any, Unit]
   ): Unit = js.native
 }
-

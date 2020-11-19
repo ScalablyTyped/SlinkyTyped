@@ -8,11 +8,12 @@ import typingsSlinky.googleCloudStorage.hmacKeyMod.HmacKeyOptions
 import typingsSlinky.googleCloudStorage.storageMod.StorageOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@google-cloud/storage", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * Create a Bucket object to interact with a Cloud Storage bucket.
     *
@@ -222,10 +223,10 @@ object mod extends js.Object {
     extends typingsSlinky.googleCloudStorage.storageMod.Storage {
     def this(options: StorageOptions) = this()
   }
-  
   /* static members */
   @js.native
   object Storage extends js.Object {
+    
     /**
       * {@link Bucket} class.
       *
@@ -239,6 +240,7 @@ object mod extends js.Object {
         /* options */ js.UndefOr[BucketOptions], 
         typingsSlinky.googleCloudStorage.bucketMod.Bucket
       ] = js.native
+    
     /**
       * {@link Channel} class.
       *
@@ -252,6 +254,7 @@ object mod extends js.Object {
         /* resourceId */ String, 
         typingsSlinky.googleCloudStorage.channelMod.Channel
       ] = js.native
+    
     /**
       * {@link File} class.
       *
@@ -265,6 +268,7 @@ object mod extends js.Object {
         /* options */ js.UndefOr[FileOptions], 
         typingsSlinky.googleCloudStorage.fileMod.File
       ] = js.native
+    
     /**
       * {@link HmacKey} class.
       *
@@ -278,6 +282,7 @@ object mod extends js.Object {
         /* options */ js.UndefOr[HmacKeyOptions], 
         typingsSlinky.googleCloudStorage.hmacKeyMod.HmacKey
       ] = js.native
+    
     /**
       * Cloud Storage uses access control lists (ACLs) to manage object and
       * bucket access. ACLs are the mechanism you use to share objects with other
@@ -335,8 +340,7 @@ object mod extends js.Object {
       * });
       */
     var acl: OWNERROLE = js.native
+    
     var sanitizeEndpoint: js.Any = js.native
   }
-  
 }
-

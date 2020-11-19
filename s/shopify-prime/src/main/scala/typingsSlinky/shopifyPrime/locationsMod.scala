@@ -5,18 +5,21 @@ import typingsSlinky.shopifyPrime.locationMod.Location
 import typingsSlinky.shopifyPrime.optionsBaseMod.FieldOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("shopify-prime/dist/services/locations", JSImport.Namespace)
 @js.native
 object locationsMod extends js.Object {
+  
   @js.native
   class Locations protected () extends BaseService {
     def this(shopDomain: String, accessToken: String) = this()
+    
     /**
       * Counts the amount of locations.
       */
     def count(): js.Promise[Double] = js.native
+    
     /**
       * Gets a location with the given id.
       * @param id Id of the location being retrieved.
@@ -24,10 +27,12 @@ object locationsMod extends js.Object {
       */
     def get(id: Double): js.Promise[Location] = js.native
     def get(id: Double, options: FieldOptions): js.Promise[Location] = js.native
+    
     /**
       * Lists all the inventory levels on a location.
       */
     def inventoryLevels(locationId: Double): js.Promise[Location] = js.native
+    
     /**
       * Lists up to 250 locations.
       * @param options Options for filtering the results.
@@ -40,6 +45,4 @@ object locationsMod extends js.Object {
   class default protected () extends Locations {
     def this(shopDomain: String, accessToken: String) = this()
   }
-  
 }
-

@@ -20,10 +20,11 @@ import typingsSlinky.typpy.typpyStrings.string
 import typingsSlinky.typpy.typpyStrings.undefined
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CompareFn extends js.Object {
+  
   def apply(): `true` = js.native
   def apply(input: js.UndefOr[scala.Nothing], compareTo: undefined): `true` = js.native
   def apply(input: String, compareTo: StringConstructor): `true` = js.native
@@ -46,4 +47,3 @@ trait CompareFn extends js.Object {
   def apply(input: js.RegExp, compareTo: RegExpConstructor): `true` = js.native
   def apply(input: js.RegExp, compareTo: regexp): `true` = js.native
 }
-

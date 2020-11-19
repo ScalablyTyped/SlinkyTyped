@@ -4,10 +4,11 @@ import typingsSlinky.angular.mod.IScope
 import typingsSlinky.angular.mod.global.Function
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ILockerService extends js.Object {
+  
   /**
     * Add an item to storage if it doesn't already exist
     *
@@ -15,11 +16,13 @@ trait ILockerService extends js.Object {
     * @param  {Mixed}  value  The value to add
     */
   def add(key: String, value: js.Any): Boolean = js.native
+  
   /**
     * Return all items in storage within the current namespace/driver
     *
     */
   def all(): js.Any = js.native
+  
   /**
     * Bind a storage key to a $scope property
     *
@@ -29,24 +32,29 @@ trait ILockerService extends js.Object {
     */
   def bind(scope: IScope, property: String): ILockerService = js.native
   def bind(scope: IScope, property: String, defaultPropertyValue: js.Any): ILockerService = js.native
+  
   /**
     * Remove all items set within the current namespace/driver
     */
   def clean(): ILockerService = js.native
+  
   /**
     * Get the total number of items within the current namespace
     */
   def count(): Double = js.native
+  
   /**
     * Set the storage driver on a new instance to enable overriding defaults
     *
     * @param  {String}  driver  The driver to switch to
     */
   def driver(localStorageType: String): ILockerService = js.native
+  
   /**
     * Empty the current storage driver completely. careful now.
     */
   def empty(): ILockerService = js.native
+  
   /**
     * Remove specified item(s) from storage
     *
@@ -60,6 +68,7 @@ trait ILockerService extends js.Object {
     *
     */
   def forget(keys: js.Array[String]): ILockerService = js.native
+  
   /**
     * Retrieve the specified item from storage
     *
@@ -70,32 +79,38 @@ trait ILockerService extends js.Object {
   def get(key: String, defaultValue: js.Any): js.Any = js.native
   def get(key: js.Array[String]): js.Any = js.native
   def get(key: js.Array[String], defaultValue: js.Any): js.Any = js.native
+  
   /**
     * Get the currently set namespace
     */
   def getNamespace(): String = js.native
+  
   /**
     * Determine whether the item exists in storage
     *
     * @param  {String|Function}  key  -  The key to remove
     */
   def has(key: String): Boolean = js.native
+  
   /**
     * Get a new instance of Locker
     *
     * @param  {Object}  options  The config options to instantiate with
     */
   def instance(lockerSettings: ILockerSettings): ILockerService = js.native
+  
   /**
     * Get the storage keys as an array
     */
   def keys(): js.Array[String] = js.native
+  
   /**
     * Set the namespace on a new instance to enable overriding defaults
     *
     * @param  {String}  namespace  The namespace to switch to
     */
   def namespace(name: String): ILockerService = js.native
+  
   /**
     * Retrieve the specified item from storage and then remove it
     *
@@ -106,6 +121,7 @@ trait ILockerService extends js.Object {
   def pull(key: String, defaultValue: js.Any): js.Any = js.native
   def pull(key: js.Array[String]): js.Any = js.native
   def pull(key: js.Array[String], defaultValue: js.Any): js.Any = js.native
+  
   /**
     * Add a new item to storage (even if it already exists)
     *
@@ -133,6 +149,7 @@ trait ILockerService extends js.Object {
     * @param  {Mixed}  putFunction    The default to pass to function if doesn't already exist
     */
   def put(putFunction: Function): ILockerService | Boolean = js.native
+  
   /**
     * Check browser support
     *
@@ -141,6 +158,7 @@ trait ILockerService extends js.Object {
     * @param  {String}  driver  The driver to check support with
     */
   def supported(driver: String): Boolean = js.native
+  
   /**
     * Unbind a storage key from a $scope property
     *
@@ -149,4 +167,3 @@ trait ILockerService extends js.Object {
     */
   def unbind(scope: IScope, property: String): ILockerService = js.native
 }
-

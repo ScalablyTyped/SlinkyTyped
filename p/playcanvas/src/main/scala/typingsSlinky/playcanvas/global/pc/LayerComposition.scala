@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create a new layer composition.
@@ -18,4 +18,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class LayerComposition ()
   extends typingsSlinky.playcanvas.pc.LayerComposition
-

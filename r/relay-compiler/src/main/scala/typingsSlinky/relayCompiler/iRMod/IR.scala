@@ -11,7 +11,7 @@ import typingsSlinky.relayCompiler.schemaMod.TypeID
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.relayCompiler.iRMod.Argument
@@ -39,8 +39,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.relayCompiler.iRMod.Variable
 */
 trait IR extends js.Object
-
 object IR {
+  
   @scala.inline
   def ObjectValue(
     fields: js.Array[ObjectFieldValue],
@@ -50,6 +50,7 @@ object IR {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def Fragment(
     argumentDefinitions: js.Array[ArgumentDefinition],
@@ -64,6 +65,7 @@ object IR {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def ScalarField(
     alias: String,
@@ -78,6 +80,7 @@ object IR {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def InlineFragment(
     directives: js.Array[Directive],
@@ -89,6 +92,7 @@ object IR {
     val __obj = js.Dynamic.literal(directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any], typeCondition = typeCondition.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def ListValue(
     items: js.Array[ArgumentValue],
@@ -98,6 +102,7 @@ object IR {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def Argument(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.Argument,
@@ -108,6 +113,7 @@ object IR {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def RootArgumentDefinition(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.RootArgumentDefinition,
@@ -119,6 +125,7 @@ object IR {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def Request(
     fragment: Fragment,
@@ -130,6 +137,7 @@ object IR {
     val __obj = js.Dynamic.literal(fragment = fragment.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def InlineDataFragmentSpread(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.InlineDataFragmentSpread,
@@ -140,6 +148,7 @@ object IR {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def FragmentSpread(
     args: js.Array[Argument],
@@ -151,6 +160,7 @@ object IR {
     val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def SplitOperation(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.SplitOperation,
@@ -164,6 +174,7 @@ object IR {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def Directive(
     args: js.Array[Argument],
@@ -174,6 +185,7 @@ object IR {
     val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def ClientExtension(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.ClientExtension,
@@ -183,6 +195,7 @@ object IR {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def ModuleImport(
     documentName: String,
@@ -196,6 +209,7 @@ object IR {
     val __obj = js.Dynamic.literal(documentName = documentName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], module = module.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def LocalArgumentDefinition(
     defaultValue: js.Any,
@@ -208,6 +222,7 @@ object IR {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def Defer(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.Defer,
@@ -218,6 +233,7 @@ object IR {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def Root(
     argumentDefinitions: js.Array[LocalArgumentDefinition],
@@ -233,6 +249,7 @@ object IR {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def Stream(
     initialCount: ArgumentValue,
@@ -244,6 +261,7 @@ object IR {
     val __obj = js.Dynamic.literal(initialCount = initialCount.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def ObjectFieldValue(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.ObjectFieldValue,
@@ -254,11 +272,13 @@ object IR {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def Literal(kind: typingsSlinky.relayCompiler.relayCompilerStrings.Literal, loc: Location, value: js.Any): IR = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def LinkedField(
     alias: String,
@@ -275,6 +295,7 @@ object IR {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def Variable(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.Variable,
@@ -284,6 +305,7 @@ object IR {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], variableName = variableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IR]
   }
+  
   @scala.inline
   def Condition(
     condition: Literal | Variable,
@@ -296,4 +318,3 @@ object IR {
     __obj.asInstanceOf[IR]
   }
 }
-

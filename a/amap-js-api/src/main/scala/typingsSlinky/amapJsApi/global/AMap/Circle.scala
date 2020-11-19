@@ -3,7 +3,7 @@ package typingsSlinky.amapJsApi.global.AMap
 import typingsSlinky.amapJsApi.AMap.Circle.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AMap.Circle")
 @js.native
@@ -15,4 +15,3 @@ class Circle[ExtraData] ()
   extends typingsSlinky.amapJsApi.AMap.Circle[ExtraData] {
   def this(options: Options[ExtraData]) = this()
 }
-

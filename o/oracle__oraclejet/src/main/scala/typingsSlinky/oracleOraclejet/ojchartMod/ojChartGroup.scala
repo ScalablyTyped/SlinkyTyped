@@ -124,18 +124,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojChartGroup extends JetElement[ojChartGroupSettableProperties] {
-  var drilling: js.UndefOr[on | off | inherit] = js.native
-  var labelStyle: js.UndefOr[js.Object] = js.native
-  var name: js.UndefOr[String] = js.native
-  var onDrillingChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var shortDesc: js.UndefOr[String] = js.native
+  
   def addEventListener(`type`: drillingChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: drillingChanged,
@@ -938,6 +931,9 @@ trait ojChartGroup extends JetElement[ojChartGroupSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var drilling: js.UndefOr[on | off | inherit] = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_drilling(property: drilling): js.UndefOr[on | off | inherit] = js.native
@@ -947,7 +943,21 @@ trait ojChartGroup extends JetElement[ojChartGroupSettableProperties] {
   def getProperty_name(property: name): js.UndefOr[String] = js.native
   @JSName("getProperty")
   def getProperty_shortDesc(property: shortDesc): js.UndefOr[String] = js.native
+  
+  var labelStyle: js.UndefOr[js.Object] = js.native
+  
+  var name: js.UndefOr[String] = js.native
+  
+  var onDrillingChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onNameChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def setProperties(properties: ojChartGroupSettablePropertiesLenient): Unit = js.native
+  
   def setProperty(property: drilling, value: inherit): Unit = js.native
   def setProperty(property: drilling, value: off): Unit = js.native
   def setProperty(property: drilling, value: on): Unit = js.native
@@ -966,5 +976,6 @@ trait ojChartGroup extends JetElement[ojChartGroupSettableProperties] {
   def setProperty_shortDesc(property: shortDesc): Unit = js.native
   @JSName("setProperty")
   def setProperty_shortDesc(property: shortDesc, value: String): Unit = js.native
+  
+  var shortDesc: js.UndefOr[String] = js.native
 }
-

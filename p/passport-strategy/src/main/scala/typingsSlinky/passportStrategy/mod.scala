@@ -2,14 +2,16 @@ package typingsSlinky.passportStrategy
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("passport-strategy", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class Strategy ()
     extends typingsSlinky.passport.mod.Strategy {
+    
     /**
       * Internal error while performing authentication.
       *
@@ -21,6 +23,7 @@ object mod extends js.Object {
       * @api public
       */
     def error(err: js.Error): Unit = js.native
+    
     /**
       * Fail authentication, with optional `challenge` and `status`, defaulting
       * to 401.
@@ -33,6 +36,7 @@ object mod extends js.Object {
       */
     def fail(challenge: js.Any, status: Double): Unit = js.native
     def fail(status: Double): Unit = js.native
+    
     /**
       * Pass without making a success or fail decision.
       *
@@ -43,6 +47,7 @@ object mod extends js.Object {
       * @api public
       */
     def pass(): Unit = js.native
+    
     /**
       * Redirect to `url` with optional `status`, defaulting to 302.
       *
@@ -55,6 +60,7 @@ object mod extends js.Object {
       */
     def redirect(url: String): Unit = js.native
     def redirect(url: String, status: Double): Unit = js.native
+    
     //
     // Augmented strategy functions.
     // These are available only from the 'authenticate' function.
@@ -77,6 +83,4 @@ object mod extends js.Object {
     def success(user: js.Any): Unit = js.native
     def success(user: js.Any, info: js.Any): Unit = js.native
   }
-  
 }
-

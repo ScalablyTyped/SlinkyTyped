@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "LensFlareSystem")
 @js.native
@@ -26,11 +26,11 @@ class LensFlareSystem protected ()
     scene: typingsSlinky.babylonjs.sceneMod.Scene
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs", "LensFlareSystem")
 @js.native
 object LensFlareSystem extends js.Object {
+  
   /**
     * Parse a lens flare system from a JSON repressentation
     * @param parsedLensFlareSystem Define the JSON to parse
@@ -39,7 +39,7 @@ object LensFlareSystem extends js.Object {
     * @returns the parsed system
     */
   def Parse(parsedLensFlareSystem: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): typingsSlinky.babylonjs.lensFlareSystemMod.LensFlareSystem = js.native
+  
   /** @hidden */
   def _SceneComponentInitialization(scene: typingsSlinky.babylonjs.sceneMod.Scene): Unit = js.native
 }
-

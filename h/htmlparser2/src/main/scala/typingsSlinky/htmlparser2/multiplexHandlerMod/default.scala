@@ -16,7 +16,7 @@ import typingsSlinky.htmlparser2.htmlparser2Strings.onreset
 import typingsSlinky.htmlparser2.htmlparser2Strings.ontext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("htmlparser2/lib/MultiplexHandler", JSImport.Default)
 @js.native
@@ -27,4 +27,3 @@ class default protected () extends MultiplexHandler {
         Unit
       ]) = this()
 }
-

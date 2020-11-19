@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.NavigationToggleViewModelProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.NavigationToggleViewModel")
 @js.native
@@ -16,4 +16,3 @@ class NavigationToggleViewModelCls ()
   extends typingsSlinky.arcgisJsApi.esri.NavigationToggleViewModel {
   def this(properties: NavigationToggleViewModelProperties) = this()
 }
-

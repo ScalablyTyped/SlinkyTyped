@@ -2,19 +2,30 @@ package typingsSlinky.yandexMaps
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type IChildOnMap = typingsSlinky.yandexMaps.mod.IChild[typingsSlinky.yandexMaps.mod.IControlParent]
+  
   type IControl = typingsSlinky.yandexMaps.mod.IChildOnMap
+  
   type ICopyrightsAccessor = typingsSlinky.yandexMaps.mod.ICopyrightsProvider
+  
   type IDomEventEmitter = typingsSlinky.yandexMaps.mod.IEventEmitter
+  
   type IExpandableControlLayout = typingsSlinky.yandexMaps.mod.ILayout
+  
   type IGeometryEditorRootModel = typingsSlinky.yandexMaps.mod.IGeometryEditorModel
+  
   type IHintManager[T] = typingsSlinky.yandexMaps.mod.IPopupManager[T]
+  
   type IMultiRouteReferencePoint = java.lang.String | js.Array[scala.Double] | typingsSlinky.yandexMaps.mod.geometry.Point
+  
   type ISearchControlLayout = typingsSlinky.yandexMaps.mod.IExpandableControlLayout
+  
   type ISelectableControlLayout = typingsSlinky.yandexMaps.mod.ILayout
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.yandexMaps.yandexMapsStrings.defaultNumbersignopaque
     - typingsSlinky.yandexMaps.yandexMapsStrings.defaultNumbersigngeoObject
@@ -24,6 +35,7 @@ package object mod {
     - java.lang.String
   */
   type InteractivityModelKey = typingsSlinky.yandexMaps.mod._InteractivityModelKey | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.yandexMaps.yandexMapsStrings.defaultNumbersignplacemark
     - typingsSlinky.yandexMaps.yandexMapsStrings.defaultNumbersignpin
@@ -58,5 +70,6 @@ package object mod {
       java.lang.String | typingsSlinky.yandexMaps.mod.IClassConstructor[typingsSlinky.yandexMaps.mod.IOverlay]
     ]
   ]) | java.lang.String
+  
   type PresetKey = java.lang.String
 }

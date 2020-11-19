@@ -51,11 +51,11 @@ import typingsSlinky.semanticUiTransition.semanticUiTransitionStrings.useFailSaf
 import typingsSlinky.semanticUiTransition.semanticUiTransitionStrings.verbose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Transition_ extends js.Object {
-  var settings: TransitionSettings = js.native
+  
   def apply(): JQuery = js.native
   /**
     * Clears all queued animations
@@ -189,5 +189,6 @@ trait Transition_ extends js.Object {
   def apply(behavior: toggle): JQuery = js.native
   def apply(settings: TransitionSettings): JQuery = js.native
   def apply(transition: String): JQuery = js.native
+  
+  var settings: TransitionSettings = js.native
 }
-

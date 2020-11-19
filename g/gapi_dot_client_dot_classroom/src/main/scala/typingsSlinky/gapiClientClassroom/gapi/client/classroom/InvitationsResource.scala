@@ -7,11 +7,12 @@ import typingsSlinky.gapiClientClassroom.anon.PageSize
 import typingsSlinky.gapiClientClassroom.anon.ResourceUploadType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // tslint:disable-next-line:interface-name
 @js.native
 trait InvitationsResource extends js.Object {
+  
   /**
     * Accepts an invitation, removing it and adding the invited user to the
     * teachers or students (as appropriate) of the specified course. Only the
@@ -30,6 +31,7 @@ trait InvitationsResource extends js.Object {
     */
   def accept(): Request[js.Object] = js.native
   def accept(request: IdKey): Request[js.Object] = js.native
+  
   def create(request: KeyOauthtoken, body: Invitation): Request[Invitation] = js.native
   /**
     * Creates an invitation. Only one invitation for a user and course may exist
@@ -46,6 +48,7 @@ trait InvitationsResource extends js.Object {
     * already exists.
     */
   def create(request: ResourceUploadType): Request[Invitation] = js.native
+  
   /**
     * Deletes an invitation.
     *
@@ -57,6 +60,7 @@ trait InvitationsResource extends js.Object {
     */
   def delete(): Request[js.Object] = js.native
   def delete(request: IdKey): Request[js.Object] = js.native
+  
   /**
     * Returns an invitation.
     *
@@ -68,6 +72,7 @@ trait InvitationsResource extends js.Object {
     */
   def get(): Request[Invitation] = js.native
   def get(request: IdKey): Request[Invitation] = js.native
+  
   /**
     * Returns a list of invitations that the requesting user is permitted to
     * view, restricted to those that match the list request.
@@ -82,4 +87,3 @@ trait InvitationsResource extends js.Object {
   def list(): Request[ListInvitationsResponse] = js.native
   def list(request: PageSize): Request[ListInvitationsResponse] = js.native
 }
-

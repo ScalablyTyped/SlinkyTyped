@@ -5,7 +5,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.reactMdTree.anon.PickTreeGroupPropshiddenc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `TreeGroup` component is used to render a tree item's nested items
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/tree/types/TreeGroup", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[PickTreeGroupPropshiddenc]]
-

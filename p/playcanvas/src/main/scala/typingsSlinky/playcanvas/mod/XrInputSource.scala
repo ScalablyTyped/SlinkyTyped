@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents XR input source, which is any input mechanism which allows the user to perform targeted actions in the same virtual space as the viewer. Example XR input sources include, but are not limited to, handheld controllers, optically tracked hands, and gaze-based input methods that operate on the viewer's pose.
@@ -34,4 +34,3 @@ class XrInputSource protected ()
   extends typingsSlinky.playcanvas.pc.XrInputSource {
   def this(manager: typingsSlinky.playcanvas.pc.XrManager, xrInputSource: js.Any) = this()
 }
-

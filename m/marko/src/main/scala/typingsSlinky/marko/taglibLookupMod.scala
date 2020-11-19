@@ -1,19 +1,23 @@
 package typingsSlinky.marko
 
-import typingsSlinky.marko.taglibLookupTaglibLookupMod.default
+import typingsSlinky.marko.taglibMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("marko/src/compiler/taglib-lookup", JSImport.Namespace)
 @js.native
 object taglibLookupMod extends js.Object {
-  @js.native
-  class TaglibLookup () extends default
   
-  val registeredTaglibs: js.Array[typingsSlinky.marko.taglibMod.default] = js.native
   def buildLookup(dirname: String): TaglibLookup = js.native
+  
   def clearCache(): Unit = js.native
-  def registerTaglib(taglib: typingsSlinky.marko.taglibMod.default): Unit = js.native
+  
+  def registerTaglib(taglib: default): Unit = js.native
+  
+  val registeredTaglibs: js.Array[default] = js.native
+  
+  @js.native
+  class TaglibLookup ()
+    extends typingsSlinky.marko.taglibLookupTaglibLookupMod.default
 }
-

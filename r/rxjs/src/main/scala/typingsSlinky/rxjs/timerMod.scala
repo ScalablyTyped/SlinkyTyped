@@ -4,11 +4,12 @@ import typingsSlinky.rxjs.internalObservableMod.Observable
 import typingsSlinky.rxjs.typesMod.SchedulerLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rxjs/internal/observable/timer", JSImport.Namespace)
 @js.native
 object timerMod extends js.Object {
+  
   def timer(): Observable[Double] = js.native
   def timer(
     dueTime: js.UndefOr[scala.Nothing],
@@ -32,4 +33,3 @@ object timerMod extends js.Object {
   def timer(dueTime: js.Date, periodOrScheduler: SchedulerLike): Observable[Double] = js.native
   def timer(dueTime: js.Date, periodOrScheduler: SchedulerLike, scheduler: SchedulerLike): Observable[Double] = js.native
 }
-

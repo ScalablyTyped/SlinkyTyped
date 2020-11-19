@@ -2,7 +2,7 @@ package typingsSlinky.babelTypes.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.TSAnyKeyword
@@ -34,8 +34,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.TSVoidKeyword
 */
 trait TSType extends js.Object
-
 object TSType {
+  
   @scala.inline
   def TSUndefinedKeyword(
     end: Double,
@@ -47,6 +47,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSTypeReference(
     end: Double,
@@ -59,6 +60,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSNullKeyword(
     end: Double,
@@ -70,6 +72,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSIndexedAccessType(
     end: Double,
@@ -83,6 +86,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSVoidKeyword(
     end: Double,
@@ -94,6 +98,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSExpressionWithTypeArguments(
     end: Double,
@@ -106,6 +111,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSIntersectionType(
     end: Double,
@@ -118,6 +124,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSArrayType(
     elementType: TSType,
@@ -130,6 +137,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSNeverKeyword(
     end: Double,
@@ -141,6 +149,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSObjectKeyword(
     end: Double,
@@ -152,6 +161,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSConstructorType(
     end: Double,
@@ -163,6 +173,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSFunctionType(
     end: Double,
@@ -174,6 +185,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSUnionType(
     end: Double,
@@ -186,6 +198,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSStringKeyword(
     end: Double,
@@ -197,6 +210,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSAnyKeyword(
     end: Double,
@@ -208,6 +222,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSThisType(
     end: Double,
@@ -219,6 +234,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSParenthesizedType(
     end: Double,
@@ -231,6 +247,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSBooleanKeyword(
     end: Double,
@@ -242,6 +259,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSTypeOperator(
     end: Double,
@@ -254,6 +272,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSTypePredicate(
     end: Double,
@@ -267,6 +286,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSNumberKeyword(
     end: Double,
@@ -278,6 +298,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSSymbolKeyword(
     end: Double,
@@ -289,6 +310,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSLiteralType(
     end: Double,
@@ -301,6 +323,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSTypeQuery(
     end: Double,
@@ -313,6 +336,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSTupleType(
     elementTypes: js.Array[TSType],
@@ -325,6 +349,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSTypeLiteral(
     end: Double,
@@ -337,6 +362,7 @@ object TSType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSType]
   }
+  
   @scala.inline
   def TSMappedType(
     end: Double,
@@ -350,4 +376,3 @@ object TSType {
     __obj.asInstanceOf[TSType]
   }
 }
-

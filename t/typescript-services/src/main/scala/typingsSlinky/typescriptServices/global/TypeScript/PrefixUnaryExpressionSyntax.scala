@@ -4,7 +4,7 @@ import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import typingsSlinky.typescriptServices.TypeScript.IUnaryExpressionSyntax
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.PrefixUnaryExpressionSyntax")
 @js.native
@@ -17,4 +17,3 @@ class PrefixUnaryExpressionSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-

@@ -2,20 +2,18 @@ package typingsSlinky.babylonjs.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IInternalTextureLoader extends js.Object {
-  /**
-    * Defines wether the loader supports cascade loading the different faces.
-    */
-  var supportCascades: Boolean = js.native
+  
   /**
     * This returns if the loader support the current file information.
     * @param extension defines the file extension of the file being loaded
     * @returns true if the loader can load the specified file
     */
   def canLoad(extension: String): Boolean = js.native
+  
   def loadCubeData(
     data: js.Array[js.typedarray.ArrayBufferView],
     texture: InternalTexture,
@@ -42,6 +40,7 @@ trait IInternalTextureLoader extends js.Object {
       js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
     ]
   ): Unit = js.native
+  
   /**
     * Uploads the 2D texture data to the WebGL texture. It has already been bound once in the callback.
     * @param data contains the texture data
@@ -61,5 +60,9 @@ trait IInternalTextureLoader extends js.Object {
       Unit
     ]
   ): Unit = js.native
+  
+  /**
+    * Defines wether the loader supports cascade loading the different faces.
+    */
+  var supportCascades: Boolean = js.native
 }
-

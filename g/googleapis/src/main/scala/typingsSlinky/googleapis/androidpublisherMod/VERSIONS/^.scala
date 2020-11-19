@@ -6,31 +6,34 @@ import typingsSlinky.googleapisCommon.apiMod.GlobalOptions
 import typingsSlinky.googleapisCommon.apiMod.GoogleConfigurable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("googleapis/build/src/apis/androidpublisher", "VERSIONS")
 @js.native
 object ^ extends js.Object {
+  
   var v1: Instantiable2[
     /* options */ GlobalOptions, 
     /* google */ js.UndefOr[GoogleConfigurable], 
     Androidpublisher
   ] = js.native
+  
   @JSName("v1.1")
   var v1Dot1: Instantiable2[
     /* options */ GlobalOptions, 
     /* google */ js.UndefOr[GoogleConfigurable], 
     typingsSlinky.googleapis.v11Mod.androidpublisherV11.Androidpublisher
   ] = js.native
+  
   var v2: Instantiable2[
     /* options */ GlobalOptions, 
     /* google */ js.UndefOr[GoogleConfigurable], 
     typingsSlinky.googleapis.v2Mod.androidpublisherV2.Androidpublisher
   ] = js.native
+  
   var v3: Instantiable2[
     /* options */ GlobalOptions, 
     /* google */ js.UndefOr[GoogleConfigurable], 
     typingsSlinky.googleapis.androidpublisherV3Mod.androidpublisherV3.Androidpublisher
   ] = js.native
 }
-

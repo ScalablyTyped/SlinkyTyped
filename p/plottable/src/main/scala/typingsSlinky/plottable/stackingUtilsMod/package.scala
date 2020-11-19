@@ -2,9 +2,10 @@ package typingsSlinky.plottable
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object stackingUtilsMod {
+  
   type GenericStackingResult[D] = typingsSlinky.plottable.utilsMod.Map[
     typingsSlinky.plottable.datasetMod.Dataset, 
     typingsSlinky.plottable.utilsMod.Map[
@@ -12,6 +13,8 @@ package object stackingUtilsMod {
       typingsSlinky.plottable.stackingUtilsMod.GenericStackedDatum[D]
     ]
   ]
+  
   type StackedDatum = typingsSlinky.plottable.stackingUtilsMod.GenericStackedDatum[java.lang.String]
+  
   type StackingResult = typingsSlinky.plottable.stackingUtilsMod.GenericStackingResult[java.lang.String]
 }

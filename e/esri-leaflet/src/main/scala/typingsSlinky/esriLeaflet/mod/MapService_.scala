@@ -3,7 +3,7 @@ package typingsSlinky.esriLeaflet.mod
 import typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.MapServiceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * `L.esri.MapService` is an abstraction for interacting with Map Services running on ArcGIS Online and ArcGIS
@@ -15,4 +15,3 @@ class MapService_ protected ()
   extends typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.MapService_ {
   def this(options: MapServiceOptions) = this()
 }
-

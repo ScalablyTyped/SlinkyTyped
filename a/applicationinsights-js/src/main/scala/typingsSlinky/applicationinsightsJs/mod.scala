@@ -5,22 +5,22 @@ import typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.IAppIns
 import typingsSlinky.applicationinsightsJs.Microsoft.ApplicationInsights.UtilHelpers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("applicationinsights-js", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  @js.native
-  class Util () extends UtilHelpers
   
   val AppInsights: IAppInsights = js.native
+  
+  @js.native
+  class Util () extends UtilHelpers
   @js.native
   object Util extends Instantiable0[UtilHelpers] {
+    
     /**
       * Generate a random ID string
       */
     def newId(): String = js.native
   }
-  
 }
-

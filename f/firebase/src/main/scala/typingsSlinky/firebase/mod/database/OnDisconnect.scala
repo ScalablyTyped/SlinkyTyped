@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.database
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `onDisconnect` class allows you to write or clear data when your client
@@ -27,6 +27,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait OnDisconnect extends js.Object {
+  
   /**
     * Cancels all previously queued `onDisconnect()` set or update events for this
     * location and all children.
@@ -52,6 +53,7 @@ trait OnDisconnect extends js.Object {
     */
   def cancel(): js.Promise[_] = js.native
   def cancel(onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
+  
   /**
     * Ensures the data at this location is deleted when the client is disconnected
     * (due to closing the browser, navigating to a new page, or network issues).
@@ -65,6 +67,7 @@ trait OnDisconnect extends js.Object {
     */
   def remove(): js.Promise[_] = js.native
   def remove(onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
+  
   /**
     * Ensures the data at this location is set to the specified value when the
     * client is disconnected (due to closing the browser, navigating to a new page,
@@ -98,6 +101,7 @@ trait OnDisconnect extends js.Object {
     */
   def set(value: js.Any): js.Promise[_] = js.native
   def set(value: js.Any, onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
+  
   /**
     * Ensures the data at this location is set to the specified value and priority
     * when the client is disconnected (due to closing the browser, navigating to a
@@ -109,6 +113,7 @@ trait OnDisconnect extends js.Object {
   def setWithPriority(value: js.Any, priority: Double): js.Promise[_] = js.native
   def setWithPriority(value: js.Any, priority: Double, onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
   def setWithPriority(value: js.Any, priority: Null, onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
+  
   /**
     * Writes multiple values at this location when the client is disconnected (due
     * to closing the browser, navigating to a new page, or network issues).
@@ -149,4 +154,3 @@ trait OnDisconnect extends js.Object {
   def update(values: js.Object): js.Promise[_] = js.native
   def update(values: js.Object, onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native
 }
-

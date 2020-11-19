@@ -7,11 +7,12 @@ import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.ol.olMod.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ol/render/canvas", "drawImageOrLabel")
 @js.native
 object drawImageOrLabel extends js.Object {
+  
   def apply(
     context: CanvasRenderingContext2D,
     transform: Null,
@@ -117,4 +118,3 @@ object drawImageOrLabel extends js.Object {
     scale: Double
   ): Unit = js.native
 }
-

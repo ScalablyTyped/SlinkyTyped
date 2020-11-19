@@ -8,11 +8,12 @@ import typingsSlinky.graphql.maybeMod.Maybe
 import typingsSlinky.std.AsyncIterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-compose", "graphql.createSourceEventStream")
 @js.native
 object createSourceEventStream extends js.Object {
+  
   def apply(schema: typingsSlinky.graphql.schemaMod.GraphQLSchema, document: DocumentNode): js.Promise[AsyncIterable[_] | (ExecutionResult[StringDictionary[_], StringDictionary[_]])] = js.native
   def apply(
     schema: typingsSlinky.graphql.schemaMod.GraphQLSchema,
@@ -192,4 +193,3 @@ object createSourceEventStream extends js.Object {
     operationName: Maybe[String]
   ): js.Promise[AsyncIterable[_] | (ExecutionResult[StringDictionary[_], StringDictionary[_]])] = js.native
 }
-

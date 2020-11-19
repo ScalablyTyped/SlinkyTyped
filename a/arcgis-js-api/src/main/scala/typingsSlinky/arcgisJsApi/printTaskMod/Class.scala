@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.PrintTask
 import typingsSlinky.arcgisJsApi.esri.PrintTaskProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/tasks/PrintTask", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends PrintTask {
   def this(properties: PrintTaskProperties) = this()
 }
-

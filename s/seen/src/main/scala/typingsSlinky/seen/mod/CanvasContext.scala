@@ -3,14 +3,14 @@ package typingsSlinky.seen.mod
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("seen", "CanvasContext")
 @js.native
 object CanvasContext extends js.Object {
+  
   def apply(elementOrId: String): CanvasRenderContext = js.native
   def apply(elementOrId: String, scene: Scene): CanvasRenderContext = js.native
   def apply(elementOrId: HTMLElement): CanvasRenderContext = js.native
   def apply(elementOrId: HTMLElement, scene: Scene): CanvasRenderContext = js.native
 }
-

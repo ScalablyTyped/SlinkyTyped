@@ -2,10 +2,11 @@ package typingsSlinky.ecol.collectionEventMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object CollectionEvent {
-  type Listener[T, SourceT /* <: typingsSlinky.tstl.mod.base.Container[T, SourceT, IteratorT, ReverseT, T] */, IteratorT /* <: js.Iterator[T] */, ReverseT /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify std.base.ReverseIterator<T, SourceT, IteratorT, ReverseT> */ js.Any */] = js.Function1[
+  
+  type Listener[T, SourceT /* <: typingsSlinky.tstl.icontainerMod.IContainer[T, SourceT, IteratorT, ReverseT, T] */, IteratorT /* <: typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, SourceT, IteratorT, ReverseT, T] */, ReverseT /* <: typingsSlinky.tstl.icontainerMod.IContainer.ReverseIterator[T, SourceT, IteratorT, ReverseT, T] */] = js.Function1[
     /* event */ typingsSlinky.ecol.collectionEventMod.CollectionEvent[T, SourceT, IteratorT, ReverseT], 
     scala.Unit
   ]

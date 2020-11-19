@@ -11,11 +11,16 @@ import typingsSlinky.unimodulesReactNativeAdapter.eventEmitterMod.NativeModule
 import typingsSlinky.unimodulesReactNativeAdapter.nativeModulesProxyTypesMod.ProxyNativeModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@unimodules/core/build/AdapterProxy", JSImport.Namespace)
 @js.native
 object adapterProxyMod extends js.Object {
+  
+  val SyntheticPlatformEmitter: typingsSlinky.unimodulesReactNativeAdapter.syntheticPlatformEmitterMod.SyntheticPlatformEmitter = js.native
+  
+  def requireNativeViewManager[P](viewName: String): ReactComponentClass[P] = js.native
+  
   @js.native
   class CodedError protected ()
     extends typingsSlinky.unimodulesReactNativeAdapter.mod.CodedError {
@@ -29,20 +34,17 @@ object adapterProxyMod extends js.Object {
   }
   
   @js.native
-  class UnavailabilityError protected ()
-    extends typingsSlinky.unimodulesReactNativeAdapter.mod.UnavailabilityError {
-    def this(moduleName: String, propertyName: String) = this()
-  }
-  
-  val SyntheticPlatformEmitter: typingsSlinky.unimodulesReactNativeAdapter.syntheticPlatformEmitterMod.SyntheticPlatformEmitter = js.native
-  def requireNativeViewManager[P](viewName: String): ReactComponentClass[P] = js.native
-  @js.native
   object NativeModulesProxy extends /* moduleName */ StringDictionary[ProxyNativeModule]
   
   @js.native
   object Platform extends js.Object {
+    
     var OS: ios | android | windows | macos | web = js.native
   }
   
+  @js.native
+  class UnavailabilityError protected ()
+    extends typingsSlinky.unimodulesReactNativeAdapter.mod.UnavailabilityError {
+    def this(moduleName: String, propertyName: String) = this()
+  }
 }
-

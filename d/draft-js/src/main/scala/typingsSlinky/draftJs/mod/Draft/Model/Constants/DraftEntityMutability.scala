@@ -2,7 +2,7 @@ package typingsSlinky.draftJs.mod.Draft.Model.Constants
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Possible "mutability" options for an entity. This refers to the behavior
@@ -36,13 +36,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.draftJs.draftJsStrings.SEGMENTED
 */
 trait DraftEntityMutability extends js.Object
-
 object DraftEntityMutability {
+  
   @scala.inline
   def IMMUTABLE: typingsSlinky.draftJs.draftJsStrings.IMMUTABLE = "IMMUTABLE".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.IMMUTABLE]
+  
   @scala.inline
   def MUTABLE: typingsSlinky.draftJs.draftJsStrings.MUTABLE = "MUTABLE".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.MUTABLE]
+  
   @scala.inline
   def SEGMENTED: typingsSlinky.draftJs.draftJsStrings.SEGMENTED = "SEGMENTED".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.SEGMENTED]
 }
-

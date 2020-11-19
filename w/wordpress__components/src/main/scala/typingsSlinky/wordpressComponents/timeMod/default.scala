@@ -5,9 +5,8 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.wordpressComponents.timeMod.TimePicker.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/components/date-time/time", JSImport.Default)
 @js.native
 object default extends TopLevel[ReactComponentClass[Props]]
-

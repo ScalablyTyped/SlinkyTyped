@@ -31,7 +31,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.WebLayoutContent
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * See: {@link https://docs.mendix.com/refguide7/report-date-parameter relevant section in reference guide}
@@ -49,19 +49,18 @@ class ReportDateRangeSelector protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "reports.ReportDateRangeSelector")
 @js.native
 object ReportDateRangeSelector extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -71,6 +70,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.7.0 to 7.14.0
     */
   def createInBuildingBlockUnderWidget(container: BuildingBlock): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -80,6 +80,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInBuildingBlockUnderWidgets(container: BuildingBlock): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'footerWidget' property
@@ -89,6 +90,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.7.0 to 7.14.0
     */
   def createInDataViewUnderFooterWidget(container: DataView): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'footerWidgets' property
@@ -98,6 +100,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderFooterWidgets(container: DataView): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -107,6 +110,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDataViewUnderWidget(container: DataView): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -116,6 +120,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInDataViewUnderWidgets(container: DataView): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -125,6 +130,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInDivContainerUnderWidget(container: DivContainer): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -134,6 +140,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInDivContainerUnderWidgets(container: DivContainer): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -143,6 +150,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInGroupBoxUnderWidget(container: GroupBox): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -152,6 +160,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInGroupBoxUnderWidgets(container: GroupBox): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'leftWidget' property
@@ -161,6 +170,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderLeftWidget(container: Header): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'leftWidgets' property
@@ -170,6 +180,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderLeftWidgets(container: Header): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'rightWidget' property
@@ -179,6 +190,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInHeaderUnderRightWidget(container: Header): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'rightWidgets' property
@@ -188,6 +200,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInHeaderUnderRightWidgets(container: Header): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -197,6 +210,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutCallArgumentUnderWidget(container: LayoutCallArgument): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -206,6 +220,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutCallArgumentUnderWidgets(container: LayoutCallArgument): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -215,6 +230,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutGridColumnUnderWidget(container: LayoutGridColumn): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -224,6 +240,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInLayoutGridColumnUnderWidgets(container: LayoutGridColumn): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -233,6 +250,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInLayoutUnderWidget(container: Layout): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -242,6 +260,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInLayoutUnderWidgets(container: Layout): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -251,6 +270,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewTemplateUnderWidget(container: ListViewTemplate): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -260,6 +280,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewTemplateUnderWidgets(container: ListViewTemplate): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -269,6 +290,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInListViewUnderWidget(container: ListView): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -278,6 +300,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInListViewUnderWidgets(container: ListView): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -287,6 +310,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.1.0 to 7.14.0
     */
   def createInMasterDetailRegionUnderWidget(container: MasterDetailRegion): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -296,6 +320,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.23.0 to 7.23.0
     */
   def createInNativeLayoutCallArgumentUnderWidgets(container: NativeLayoutCallArgument): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'sidebarWidgets' property
@@ -305,6 +330,7 @@ object ReportDateRangeSelector extends js.Object {
     *  8.5.0 and higher
     */
   def createInNativeLayoutContentUnderSidebarWidgets(container: NativeLayoutContent): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -314,6 +340,7 @@ object ReportDateRangeSelector extends js.Object {
     *  8.0.0 and higher
     */
   def createInNativeLayoutContentUnderWidgets(container: NativeLayoutContent): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'headerWidget' property
@@ -323,6 +350,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.22.0 to 7.23.0
     */
   def createInNativeLayoutUnderHeaderWidget(container: NativeLayout): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -332,6 +360,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.21.0 to 7.23.0
     */
   def createInNativeLayoutUnderWidgets(container: NativeLayout): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -341,6 +370,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInNavigationListItemUnderWidget(container: NavigationListItem): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -350,6 +380,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInNavigationListItemUnderWidgets(container: NavigationListItem): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'parameterWidget' property
@@ -359,6 +390,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderParameterWidget(container: typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'reportWidget' property
@@ -368,6 +400,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 6.9.0
     */
   def createInReportPaneUnderReportWidget(container: typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -377,6 +410,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInScrollContainerRegionUnderWidget(container: ScrollContainerRegion): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -386,6 +420,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInScrollContainerRegionUnderWidgets(container: ScrollContainerRegion): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -395,6 +430,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSnippetUnderWidget(container: Snippet): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -404,6 +440,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInSnippetUnderWidgets(container: Snippet): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'firstWidget' property
@@ -413,6 +450,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderFirstWidget(container: SplitPane): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'firstWidgets' property
@@ -422,6 +460,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderFirstWidgets(container: SplitPane): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'secondWidget' property
@@ -431,6 +470,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInSplitPaneUnderSecondWidget(container: SplitPane): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'secondWidgets' property
@@ -440,6 +480,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 to 7.23.0
     */
   def createInSplitPaneUnderSecondWidgets(container: SplitPane): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -449,6 +490,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTabPageUnderWidget(container: TabPage): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -458,6 +500,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInTabPageUnderWidgets(container: TabPage): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -467,6 +510,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTableCellUnderWidget(container: TableCell): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -476,6 +520,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInTableCellUnderWidgets(container: TableCell): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widget' property
@@ -485,6 +530,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInTemplateGridContentsUnderWidget(container: TemplateGridContents): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -494,6 +540,7 @@ object ReportDateRangeSelector extends js.Object {
     *  7.15.0 and higher
     */
   def createInTemplateGridContentsUnderWidgets(container: TemplateGridContents): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -503,6 +550,7 @@ object ReportDateRangeSelector extends js.Object {
     *  6.0.0 to 7.14.0
     */
   def createInVerticalFlowUnderWidgets(container: VerticalFlow): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -512,6 +560,7 @@ object ReportDateRangeSelector extends js.Object {
     *  8.0.0 and higher
     */
   def createInWebLayoutContentUnderWidgets(container: WebLayoutContent): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
   /**
     * Creates and returns a new ReportDateRangeSelector instance in the SDK and on the server.
     * The new ReportDateRangeSelector will be automatically stored in the 'widgets' property
@@ -521,5 +570,8 @@ object ReportDateRangeSelector extends js.Object {
     *  8.2.0 and higher
     */
   def createInWidgetValueUnderWidgets(container: WidgetValue): typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

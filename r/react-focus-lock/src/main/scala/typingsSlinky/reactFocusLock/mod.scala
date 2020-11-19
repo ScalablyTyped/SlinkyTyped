@@ -10,11 +10,17 @@ import typingsSlinky.reactFocusLock.interfacesMod.ReactFocusLockProps
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-focus-lock", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  /**
+    * Traps Focus inside a Lock
+    */
+  val default: ReactComponentClass[ReactFocusLockProps[ReactElement, Record[String, js.Any]]] = js.native
+  
   @js.native
   class AutoFocusInside ()
     extends Component[AutoFocusProps, js.Object, js.Any]
@@ -30,10 +36,4 @@ object mod extends js.Object {
   @js.native
   class MoveFocusInside ()
     extends Component[AutoFocusProps, js.Object, js.Any]
-  
-  /**
-    * Traps Focus inside a Lock
-    */
-  val default: ReactComponentClass[ReactFocusLockProps[ReactElement, Record[String, js.Any]]] = js.native
 }
-

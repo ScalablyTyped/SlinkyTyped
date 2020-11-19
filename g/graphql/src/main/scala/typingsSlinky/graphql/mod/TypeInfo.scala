@@ -4,7 +4,7 @@ import typingsSlinky.graphql.definitionMod.GraphQLType
 import typingsSlinky.graphql.typeInfoMod.getFieldDef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql", "TypeInfo")
 @js.native
@@ -39,4 +39,3 @@ class TypeInfo protected ()
   initialType: GraphQLType
   ) = this()
 }
-

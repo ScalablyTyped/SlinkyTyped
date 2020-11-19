@@ -4,16 +4,18 @@ import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DirectionsLastRouteMessages extends Object {
+  
   /**
     * A descriptive message of the returned mesage.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html#lastRoute)
     */
   var description: String = js.native
+  
   /**
     * Number indicating the message type returned from the service. This number correlates to one of the possible values listed below.
     *
@@ -33,8 +35,8 @@ trait DirectionsLastRouteMessages extends Object {
     */
   var `type`: Double = js.native
 }
-
 object DirectionsLastRouteMessages {
+  
   @scala.inline
   def apply(
     constructor: js.Function,
@@ -47,22 +49,26 @@ object DirectionsLastRouteMessages {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectionsLastRouteMessages]
   }
+  
   @scala.inline
   implicit class DirectionsLastRouteMessagesOps[Self <: DirectionsLastRouteMessages] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setType(value: Double): Self = this.set("type", value.asInstanceOf[js.Any])
   }
-  
 }
-

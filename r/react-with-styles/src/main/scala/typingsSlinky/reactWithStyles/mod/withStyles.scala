@@ -5,11 +5,12 @@ import typingsSlinky.reactWithStyles.reactWithStylesStrings.styles
 import typingsSlinky.reactWithStyles.reactWithStylesStrings.theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-with-styles", "withStyles")
 @js.native
 object withStyles extends js.Object {
+  
   def apply[T](): js.Function1[
     /* component */ ReactComponentClass[_], 
     ReactComponentClass[
@@ -56,4 +57,3 @@ object withStyles extends js.Object {
     ]
   ] = js.native
 }
-

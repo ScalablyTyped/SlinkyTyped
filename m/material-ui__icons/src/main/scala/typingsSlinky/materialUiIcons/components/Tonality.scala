@@ -4,14 +4,15 @@ import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Tonality {
+  
   @JSImport("@material-ui/icons", "Tonality")
   @js.native
   object component extends js.Object
   
   def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps144760471[SVGSVGElement] = new SharedBuilder_SvgIconProps144760471[SVGSVGElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: Tonality.type): SharedBuilder_SvgIconProps144760471[SVGSVGElement] = new SharedBuilder_SvgIconProps144760471[SVGSVGElement](js.Array(this.component, js.Dictionary.empty))()
 }
-

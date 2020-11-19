@@ -8,13 +8,15 @@ import typingsSlinky.reactNativeNavigation.storeMod.Store
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-native-navigation/lib/dist/components/ComponentWrapper", JSImport.Namespace)
 @js.native
 object componentWrapperMod extends js.Object {
+  
   @js.native
   class ComponentWrapper () extends js.Object {
+    
     def wrap(
       componentName: String,
       OriginalComponentGenerator: ComponentProvider,
@@ -145,14 +147,14 @@ object componentWrapperMod extends js.Object {
       ReduxProvider: js.Any,
       reduxStore: js.Any
     ): ReactComponentClass[_] = js.native
+    
     def wrapWithRedux(WrappedComponent: ReactComponentClass[_], ReduxProvider: js.Any, reduxStore: js.Any): ReactComponentClass[_] = js.native
   }
   
   @js.native
   trait IWrappedComponent
     extends Component[js.Object, js.Object, js.Any] {
+    
     def setProps(newProps: Record[String, _]): Unit = js.native
   }
-  
 }
-

@@ -3,11 +3,12 @@ package typingsSlinky.semver.mod
 import typingsSlinky.semver.rangeMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semver", "gtr")
 @js.native
 object gtr extends js.Object {
+  
   /**
     * Return true if version is greater than all the versions possible in the range.
     */
@@ -24,4 +25,3 @@ object gtr extends js.Object {
   def apply(version: typingsSlinky.semver.semverMod.^, range: ^, optionsOrLoose: Boolean): Boolean = js.native
   def apply(version: typingsSlinky.semver.semverMod.^, range: ^, optionsOrLoose: Options): Boolean = js.native
 }
-

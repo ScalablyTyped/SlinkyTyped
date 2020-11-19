@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMinimalMotionCo
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandness
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "WebXRHTCViveMotionController")
 @js.native
@@ -22,18 +22,18 @@ class WebXRHTCViveMotionController protected ()
     handness: MotionControllerHandness
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs", "WebXRHTCViveMotionController")
 @js.native
 object WebXRHTCViveMotionController extends js.Object {
+  
   /**
     * The base url used to load the left and right controller models
     */
   var MODEL_BASE_URL: String = js.native
+  
   /**
     * File name for the controller model.
     */
   var MODEL_FILENAME: String = js.native
 }
-

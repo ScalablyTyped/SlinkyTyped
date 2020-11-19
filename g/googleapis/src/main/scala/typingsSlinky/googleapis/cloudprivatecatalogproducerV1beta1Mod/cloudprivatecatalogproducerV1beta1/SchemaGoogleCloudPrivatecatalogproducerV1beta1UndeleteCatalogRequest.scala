@@ -2,8 +2,7 @@ package typingsSlinky.googleapis.cloudprivatecatalogproducerV1beta1Mod.cloudpriv
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SchemaGoogleCloudPrivatecatalogproducerV1beta1UndeleteCatalogRequest extends js.Object
-

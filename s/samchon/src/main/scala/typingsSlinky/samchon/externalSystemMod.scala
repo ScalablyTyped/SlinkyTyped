@@ -1,26 +1,22 @@
 package typingsSlinky.samchon
 
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.samchon.entityCollectionMod.EntityDequeCollection
 import typingsSlinky.samchon.externalSystemArrayMod.ExternalSystemArray
 import typingsSlinky.samchon.externalSystemRoleMod.ExternalSystemRole
 import typingsSlinky.samchon.iclientdriverMod.IClientDriver
 import typingsSlinky.samchon.icommunicatorMod.ICommunicator
-import typingsSlinky.samchon.invokeMod.Invoke
 import typingsSlinky.samchon.iprotocolMod.IProtocol
 import typingsSlinky.tstl.dequeMod.Deque
 import typingsSlinky.tstl.dequeMod.Deque.Iterator
-import typingsSlinky.tstl.dequeMod.Deque.ReverseIterator
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("samchon/templates/external/ExternalSystem", JSImport.Namespace)
 @js.native
 object externalSystemMod extends js.Object {
+  
   @js.native
   abstract class ExternalSystem protected ()
     extends EntityDequeCollection[ExternalSystemRole]
@@ -38,40 +34,12 @@ object externalSystemMod extends js.Object {
       * @param communicator Communicator with the remote, external system.
       */
     def this(systemArray: ExternalSystemArray[ExternalSystem], communicator: IClientDriver) = this()
+    
     /**
       * @hidden
       */
     var _Handle_close: js.Any = js.native
-    /**
-      * @hidden
-      */
-    /**
-      * @hidden
-      */
-    var communicator: ICommunicator = js.native
-    /**
-      * @hidden
-      */
-    var communicator_ : js.Any = js.native
-    /**
-      * The name represents external system have connected.
-      */
-    var name: String = js.native
-    /**
-      * @hidden
-      */
-    var system_array_ : js.Any = js.native
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def addEventListener(
-      `type`: Type,
-      listener: Listener[
-          ExternalSystemRole, 
-          Deque[ExternalSystemRole], 
-          Iterator[ExternalSystemRole], 
-          ReverseIterator[ExternalSystemRole]
-        ]
-    ): Unit = js.native
+    
     /**
       * Range Assigner.
       *
@@ -80,29 +48,31 @@ object externalSystemMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[ExternalSystemRole, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
-    /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[
-        ExternalSystemRole, 
-        Deque[ExternalSystemRole], 
-        Iterator[ExternalSystemRole], 
-        ReverseIterator[ExternalSystemRole], 
-        ExternalSystemRole
-      ] = js.native
+    
     /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
+    
     /**
       * Close connection.
       */
     def close(): Unit = js.native
+    
+    /**
+      * @hidden
+      */
+    /**
+      * @hidden
+      */
+    var communicator: ICommunicator = js.native
+    
+    /**
+      * @hidden
+      */
+    var communicator_ : js.Any = js.native
+    
     /**
       * Default Destructor.
       *
@@ -131,36 +101,7 @@ object externalSystemMod extends js.Object {
       * ```
       */
     /* protected */ def destructor(): Unit = js.native
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def dispatchEvent(
-      event: CollectionEvent[
-          ExternalSystemRole, 
-          Deque[ExternalSystemRole], 
-          Iterator[ExternalSystemRole], 
-          ReverseIterator[ExternalSystemRole]
-        ]
-    ): Unit = js.native
-    /**
-      * Test whether container is empty.
-      */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def empty(): Boolean = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[
-        ExternalSystemRole, 
-        Deque[ExternalSystemRole], 
-        Iterator[ExternalSystemRole], 
-        ReverseIterator[ExternalSystemRole], 
-        ExternalSystemRole
-      ] = js.native
+    
     /**
       * Erase elements in range.
       *
@@ -178,6 +119,7 @@ object externalSystemMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def erase(pos: Iterator[ExternalSystemRole]): Iterator[ExternalSystemRole] = js.native
+    
     /**
       * @inheritDoc
       */
@@ -192,10 +134,12 @@ object externalSystemMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def front(`val`: ExternalSystemRole): Unit = js.native
+    
     /**
       * Get {@link name}.
       */
     def getName(): String = js.native
+    
     /**
       * Get parent {@link ExternalSystemArray} object.
       */
@@ -205,81 +149,12 @@ object externalSystemMod extends js.Object {
       */
     @JSName("getSystemArray")
     def getSystemArray_SystemArray_ExternalSystemArrayExternalSystem_SystemArray[SystemArray /* <: ExternalSystemArray[ExternalSystem] */](): SystemArray = js.native
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def hasEventListener(`type`: Type): Boolean = js.native
+    
     /**
-      * Insert items at the end.
-      *
-      * @param items Items to insert.
-      * @return Number of elements in the container after insertion.
+      * The name represents external system have connected.
       */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def push(items: ExternalSystemRole*): Double = js.native
-    /**
-      * Insert an element at the end.
-      *
-      * @param val Value to insert.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def push_back(`val`: ExternalSystemRole): Unit = js.native
-    /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseIterator[ExternalSystemRole] = js.native
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def removeEventListener(
-      `type`: Type,
-      listener: Listener[
-          ExternalSystemRole, 
-          Deque[ExternalSystemRole], 
-          Iterator[ExternalSystemRole], 
-          ReverseIterator[ExternalSystemRole]
-        ]
-    ): Unit = js.native
-    /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def rend(): ReverseIterator[ExternalSystemRole] = js.native
-    /**
-      * Sending message.
-      *
-      * Sends message to related system or shifts the responsibility to chain.
-      *
-      * @param invoke Invoke message to send
-      */
-    /* CompleteClass */
-    override def replyData(invoke: Invoke): Unit = js.native
-    /**
-      * Handling replied message.
-      *
-      * Handles replied message or shifts the responsibility to chain.
-      *
-      * @param invoke An {@link Invoke} message has received.
-      */
-    /* CompleteClass */
-    override def sendData(invoke: Invoke): Unit = js.native
-    /**
-      * Number of elements in the container.
-      */
-    /* InferMemberOverrides */
-    /* InferMemberOverrides */
-    override def size(): Double = js.native
+    var name: String = js.native
+    
     /**
       * Swap elements.
       *
@@ -287,6 +162,12 @@ object externalSystemMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def swap(obj: Deque[ExternalSystemRole]): Unit = js.native
+    
+    /**
+      * @hidden
+      */
+    var system_array_ : js.Any = js.native
+    
     /**
       * Native function for `JSON.stringify()`.
       *
@@ -295,6 +176,4 @@ object externalSystemMod extends js.Object {
     /* InferMemberOverrides */
     override def toJSON(): js.Array[ExternalSystemRole] = js.native
   }
-  
 }
-

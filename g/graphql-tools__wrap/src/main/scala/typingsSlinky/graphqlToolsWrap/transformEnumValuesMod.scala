@@ -11,19 +11,23 @@ import typingsSlinky.graphqlToolsWrap.typesMod.LeafValueTransformer
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/transforms/TransformEnumValues", JSImport.Namespace)
 @js.native
 object transformEnumValuesMod extends js.Object {
+  
   @js.native
   trait TransformEnumValues extends Transform[MapLeafValuesTransformationContext] {
+    
     val enumValueTransformer: js.Any = js.native
+    
     var mapping: js.Any = js.native
+    
     var reverseMapping: js.Any = js.native
+    
     var transformEnumValue: js.Any = js.native
-    var transformedSchema: js.Any = js.native
-    val transformer: js.Any = js.native
+    
     @JSName("transformRequest")
     def transformRequest_MTransformEnumValues(originalRequest: Request): Request = js.native
     @JSName("transformRequest")
@@ -40,6 +44,7 @@ object transformEnumValuesMod extends js.Object {
       delegationContext: Record[String, _],
       transformationContext: MapLeafValuesTransformationContext
     ): Request = js.native
+    
     @JSName("transformResult")
     def transformResult_MTransformEnumValues(originalResult: ExecutionResult[StringDictionary[_], StringDictionary[_]]): js.Any = js.native
     @JSName("transformResult")
@@ -59,8 +64,13 @@ object transformEnumValuesMod extends js.Object {
       delegationContext: Record[String, _],
       transformationContext: MapLeafValuesTransformationContext
     ): js.Any = js.native
+    
     @JSName("transformSchema")
     def transformSchema_MTransformEnumValues(originalSchema: GraphQLSchema): GraphQLSchema = js.native
+    
+    var transformedSchema: js.Any = js.native
+    
+    val transformer: js.Any = js.native
   }
   
   @js.native
@@ -78,6 +88,4 @@ object transformEnumValuesMod extends js.Object {
       outputValueTransformer: LeafValueTransformer
     ) = this()
   }
-  
 }
-

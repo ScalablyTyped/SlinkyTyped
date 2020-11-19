@@ -12,10 +12,20 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.redo
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.undo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PolylineDrawAction extends DrawAction {
+  
+  /**
+    * Completes drawing the polyline geometry and fires the [draw-complete](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolylineDrawAction.html#event-draw-complete) event. Call this method if the drawing logic needs to be completed other than by double-clicking or pressing the "C" key.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolylineDrawAction.html#complete)
+    *
+    *
+    */
+  def complete(): Unit = js.native
+  
   /**
     * The drawing mode. It is only relevant when the action is first created. Its value cannot be changed during the action lifecycle.  **Possible Values**
     *
@@ -31,20 +41,7 @@ trait PolylineDrawAction extends DrawAction {
     * @default hybrid
     */
   var mode: hybrid | freehand | click = js.native
-  /**
-    * Two-dimensional array of numbers representing the coordinates of each vertex comprising the geometry being drawn.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolylineDrawAction.html#vertices)
-    */
-  val vertices: js.Array[js.Array[Double]] = js.native
-  /**
-    * Completes drawing the polyline geometry and fires the [draw-complete](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolylineDrawAction.html#event-draw-complete) event. Call this method if the drawing logic needs to be completed other than by double-clicking or pressing the "C" key.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolylineDrawAction.html#complete)
-    *
-    *
-    */
-  def complete(): Unit = js.native
+  
   @JSName("on")
   def on_cursorupdate(name: `cursor-update`, eventHandler: PolylineDrawActionCursorUpdateEventHandler): IHandle = js.native
   @JSName("on")
@@ -57,5 +54,11 @@ trait PolylineDrawAction extends DrawAction {
   def on_vertexadd(name: `vertex-add`, eventHandler: PolylineDrawActionVertexAddEventHandler): IHandle = js.native
   @JSName("on")
   def on_vertexremove(name: `vertex-remove`, eventHandler: PolylineDrawActionVertexRemoveEventHandler): IHandle = js.native
+  
+  /**
+    * Two-dimensional array of numbers representing the coordinates of each vertex comprising the geometry being drawn.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolylineDrawAction.html#vertices)
+    */
+  val vertices: js.Array[js.Array[Double]] = js.native
 }
-

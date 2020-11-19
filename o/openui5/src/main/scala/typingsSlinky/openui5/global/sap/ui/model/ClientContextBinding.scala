@@ -2,7 +2,7 @@ package typingsSlinky.openui5.global.sap.ui.model
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("sap.ui.model.ClientContextBinding")
 @js.native
@@ -23,4 +23,3 @@ abstract class ClientContextBinding protected ()
     mParameters: js.Any
   ) = this()
 }
-

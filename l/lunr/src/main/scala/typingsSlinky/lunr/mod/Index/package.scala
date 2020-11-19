@@ -2,9 +2,10 @@ package typingsSlinky.lunr.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object Index {
+  
   /**
     * A query builder callback provides a query object to be used to express
     * the query to perform on the index.
@@ -16,6 +17,7 @@ package object Index {
     /* query */ typingsSlinky.lunr.mod.Query, 
     scala.Unit
   ]
+  
   /**
     * Although lunr provides the ability to create queries using lunr.Query, it also provides a simple
     * query language which itself is parsed into an instance of lunr.Query.

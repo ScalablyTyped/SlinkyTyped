@@ -3,10 +3,11 @@ package typingsSlinky.d3Chord.mod
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RibbonGenerator[This, RibbonDatum, RibbonSubgroupDatum] extends js.Object {
+  
   /**
     * Generates a ribbon for the given arguments.
     *
@@ -19,6 +20,7 @@ trait RibbonGenerator[This, RibbonDatum, RibbonSubgroupDatum] extends js.Object 
     * @param d The datum representing the chord for which the ribbon is to be generated.
     */
   def apply(d: RibbonDatum, args: js.Any*): String | Null = js.native
+  
   /**
     * Returns the current rendering context, which defaults to null.
     */
@@ -39,6 +41,7 @@ trait RibbonGenerator[This, RibbonDatum, RibbonSubgroupDatum] extends js.Object 
     * @param context The rendering context.
     */
   def context(context: CanvasRenderingContext2D): this.type = js.native
+  
   /**
     * Returns the current end angle accessor, which defaults to a function returning the "endAngle" property (assumed to be a number in radians) of the source or
     * target object returned by the source or target accessor, respectively.
@@ -61,6 +64,7 @@ trait RibbonGenerator[This, RibbonDatum, RibbonSubgroupDatum] extends js.Object 
     * @param angle A fixed numeric value for the end angle in radians.
     */
   def endAngle(angle: Double): this.type = js.native
+  
   /**
     * Returns the current radius accessor, which defaults to a function returning the "radius" property (assumed to be a number) of the source or
     * target object returned by the source or target accessor, respectively.
@@ -83,6 +87,7 @@ trait RibbonGenerator[This, RibbonDatum, RibbonSubgroupDatum] extends js.Object 
     * @param radius A fixed numeric value for the radius.
     */
   def radius(radius: Double): this.type = js.native
+  
   /**
     * Returns the current source accessor, which defaults to a function returning the "source" property of the first argument passed into the accessor.
     */
@@ -96,6 +101,7 @@ trait RibbonGenerator[This, RibbonDatum, RibbonSubgroupDatum] extends js.Object 
   def source(
     source: js.ThisFunction2[/* this */ This, /* d */ RibbonDatum, /* repeated */ js.Any, RibbonSubgroupDatum]
   ): this.type = js.native
+  
   /**
     * Returns the current start angle accessor, which defaults to a function returning the "startAngle" property (assumed to be a number in radians) of the source or
     * target object returned by the source or target accessor, respectively.
@@ -118,6 +124,7 @@ trait RibbonGenerator[This, RibbonDatum, RibbonSubgroupDatum] extends js.Object 
     * @param angle A fixed numeric value for the start angle in radians.
     */
   def startAngle(angle: Double): this.type = js.native
+  
   /**
     * Returns the current target accessor, which defaults to a function returning the "target" property of the first argument passed into the accessor.
     */
@@ -132,4 +139,3 @@ trait RibbonGenerator[This, RibbonDatum, RibbonSubgroupDatum] extends js.Object 
     target: js.ThisFunction2[/* this */ This, /* d */ RibbonDatum, /* repeated */ js.Any, RibbonSubgroupDatum]
   ): this.type = js.native
 }
-

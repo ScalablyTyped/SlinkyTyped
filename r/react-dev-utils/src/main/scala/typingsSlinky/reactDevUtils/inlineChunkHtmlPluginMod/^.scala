@@ -3,7 +3,7 @@ package typingsSlinky.reactDevUtils.inlineChunkHtmlPluginMod
 import typingsSlinky.reactDevUtils.anon.TypeofHtmlWebpackPlugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This Webpack plugin inlines script chunks into `index.html`.
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 class ^ protected () extends js.Object {
   def this(htmlWebpackPlugin: TypeofHtmlWebpackPlugin, tests: js.Array[js.RegExp]) = this()
 }
-

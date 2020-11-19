@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-dynamodb-node/commands/DescribeEndpointsCommand", JSImport.Namespace)
 @js.native
 object describeEndpointsCommandMod extends js.Object {
+  
   @js.native
   class DescribeEndpointsCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object describeEndpointsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DescribeEndpointsInput) = this()
+    
     val middlewareStack: MiddlewareStack[DescribeEndpointsInput, DescribeEndpointsOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[DescribeEndpointsInput, DescribeEndpointsOutput] = js.native
   }
-  
 }
-

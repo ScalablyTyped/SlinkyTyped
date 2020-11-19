@@ -2,7 +2,7 @@ package typingsSlinky.xrm.Xrm.Attributes
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Requirement Level for {@link Attributes.Attribute.getRequiredLevel Attributes.Attribute.getRequiredLevel()} and
@@ -15,13 +15,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.required
 */
 trait RequirementLevel extends js.Object
-
 object RequirementLevel {
+  
   @scala.inline
   def none: typingsSlinky.xrm.xrmStrings.none = "none".asInstanceOf[typingsSlinky.xrm.xrmStrings.none]
+  
   @scala.inline
   def recommended: typingsSlinky.xrm.xrmStrings.recommended = "recommended".asInstanceOf[typingsSlinky.xrm.xrmStrings.recommended]
+  
   @scala.inline
   def required: typingsSlinky.xrm.xrmStrings.required = "required".asInstanceOf[typingsSlinky.xrm.xrmStrings.required]
 }
-

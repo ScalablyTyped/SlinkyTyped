@@ -8,10 +8,11 @@ import typingsSlinky.std.stdStrings.UIEvents
 import typingsSlinky.std.stdStrings.`VRDisplayEvent `
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DocumentEvent extends js.Object {
+  
   def createEvent(eventInterface: java.lang.String): org.scalajs.dom.raw.Event = js.native
   @JSName("createEvent")
   def createEvent_AnimationEvent(eventInterface: typingsSlinky.std.stdStrings.AnimationEvent): org.scalajs.dom.raw.AnimationEvent = js.native
@@ -168,4 +169,3 @@ trait DocumentEvent extends js.Object {
   @JSName("createEvent")
   def createEvent_WheelEvent(eventInterface: typingsSlinky.std.stdStrings.WheelEvent): org.scalajs.dom.raw.WheelEvent = js.native
 }
-

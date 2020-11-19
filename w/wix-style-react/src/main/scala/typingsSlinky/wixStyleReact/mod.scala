@@ -8,11 +8,14 @@ import typingsSlinky.wixStyleReact.loaderMod.LoaderProps
 import typingsSlinky.wixStyleReact.textMod.TextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("wix-style-react", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  val Text: ReactComponentClass[TextProps] = js.native
+  
   @js.native
   class Button ()
     extends Component[ButtonProps, js.Object, js.Any]
@@ -24,7 +27,4 @@ object mod extends js.Object {
   @js.native
   class WixComponent[T /* <: WixComponentProps */] ()
     extends Component[T, js.Object, js.Any]
-  
-  val Text: ReactComponentClass[TextProps] = js.native
 }
-

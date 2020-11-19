@@ -6,7 +6,7 @@ import org.scalajs.dom.raw.Document
 import typingsSlinky.aceBuilds.mod.Ace.SyntaxMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ace-builds", "EditSession")
 @js.native
@@ -17,7 +17,6 @@ class EditSession protected ()
   def this(text: String, mode: SyntaxMode) = this()
   def this(text: Document, mode: SyntaxMode) = this()
 }
-
 @JSImport("ace-builds", "EditSession")
 @js.native
 object EditSession
@@ -30,4 +29,3 @@ object EditSession
       /* mode */ SyntaxMode, 
       typingsSlinky.aceBuilds.mod.Ace.EditSession
     ]
-

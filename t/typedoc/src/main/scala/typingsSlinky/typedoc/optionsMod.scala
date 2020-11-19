@@ -47,31 +47,11 @@ import typingsSlinky.typedoc.typedocStrings.tsconfig
 import typingsSlinky.typedoc.typedocStrings.version
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc/dist/lib/utils/options", JSImport.Namespace)
 @js.native
 object optionsMod extends js.Object {
-  @js.native
-  class ArgumentsReader protected ()
-    extends typingsSlinky.typedoc.readersMod.ArgumentsReader {
-    def this(priority: Double) = this()
-    def this(priority: Double, args: js.Array[String]) = this()
-  }
-  
-  @js.native
-  class Options protected ()
-    extends typingsSlinky.typedoc.optionsOptionsMod.Options {
-    def this(logger: Logger) = this()
-  }
-  
-  @js.native
-  class TSConfigReader ()
-    extends typingsSlinky.typedoc.tsconfigMod.TSConfigReader
-  
-  @js.native
-  class TypeDocReader ()
-    extends typingsSlinky.typedoc.typedocMod.TypeDocReader
   
   def BindOption(name: NeverIfInternal[String]): js.Function2[
     /* target */ Application | typingsSlinky.typedoc.anon.Options, 
@@ -312,41 +292,77 @@ object optionsMod extends js.Object {
     /* key */ PropertyKey, 
     Unit
   ] = js.native
+  
+  @js.native
+  class ArgumentsReader protected ()
+    extends typingsSlinky.typedoc.readersMod.ArgumentsReader {
+    def this(priority: Double) = this()
+    def this(priority: Double, args: js.Array[String]) = this()
+  }
+  
+  @js.native
+  class Options protected ()
+    extends typingsSlinky.typedoc.optionsOptionsMod.Options {
+    def this(logger: Logger) = this()
+  }
+  
   @js.native
   object ParameterHint extends js.Object {
-    /* 1 */ val Directory: typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint.Directory with Double = js.native
-    /* 0 */ val File: typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint.File with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint with Double] = js.native
+    
+    /* 1 */ val Directory: typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint.Directory with Double = js.native
+    
+    /* 0 */ val File: typingsSlinky.typedoc.optionsDeclarationMod.ParameterHint.File with Double = js.native
   }
   
   @js.native
   object ParameterScope extends js.Object {
-    /* 0 */ val TypeDoc: typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope.TypeDoc with Double = js.native
-    /* 1 */ val TypeScript: typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope.TypeScript with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope with Double] = js.native
+    
+    /* 0 */ val TypeDoc: typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope.TypeDoc with Double = js.native
+    
+    /* 1 */ val TypeScript: typingsSlinky.typedoc.optionsDeclarationMod.ParameterScope.TypeScript with Double = js.native
   }
   
   @js.native
   object ParameterType extends js.Object {
-    /* 5 */ val Array: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Array with Double = js.native
-    /* 2 */ val Boolean: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Boolean with Double = js.native
-    /* 3 */ val Map: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Map with Double = js.native
-    /* 4 */ val Mixed: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Mixed with Double = js.native
-    /* 1 */ val Number: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Number with Double = js.native
-    /* 0 */ val String: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.String with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.ParameterType with Double] = js.native
+    
+    /* 5 */ val Array: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Array with Double = js.native
+    
+    /* 2 */ val Boolean: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Boolean with Double = js.native
+    
+    /* 3 */ val Map: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Map with Double = js.native
+    
+    /* 4 */ val Mixed: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Mixed with Double = js.native
+    
+    /* 1 */ val Number: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.Number with Double = js.native
+    
+    /* 0 */ val String: typingsSlinky.typedoc.optionsDeclarationMod.ParameterType.String with Double = js.native
   }
   
   @js.native
   object SourceFileMode extends js.Object {
-    /* 0 */ val File: typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode.File with Double = js.native
-    /* 1 */ val Modules: typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode.Modules with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode with Double] = js.native
+    
+    /* 0 */ val File: typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode.File with Double = js.native
+    
+    /* 1 */ val Modules: typingsSlinky.typedoc.optionsDeclarationMod.SourceFileMode.Modules with Double = js.native
   }
   
+  @js.native
+  class TSConfigReader ()
+    extends typingsSlinky.typedoc.tsconfigMod.TSConfigReader
+  
+  @js.native
+  class TypeDocReader ()
+    extends typingsSlinky.typedoc.typedocMod.TypeDocReader
 }
-

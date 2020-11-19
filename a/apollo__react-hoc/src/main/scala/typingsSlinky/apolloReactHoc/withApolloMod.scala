@@ -9,11 +9,12 @@ import typingsSlinky.apolloReactHoc.typesMod.WithApolloClient
 import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@apollo/react-hoc/lib/withApollo", JSImport.Namespace)
 @js.native
 object withApolloMod extends js.Object {
+  
   @JSName("withApollo")
   def withApollo_client[TProps, TResult](WrappedComponent: ReactComponentClass[WithApolloClient[Omit[TProps, client]]]): ReactComponentClass[Omit[TProps, client]] = js.native
   @JSName("withApollo")
@@ -22,4 +23,3 @@ object withApolloMod extends js.Object {
     operationOptions: OperationOption[TProps, TResult, OperationVariables, ChildProps[TProps, TResult, OperationVariables]]
   ): ReactComponentClass[Omit[TProps, client]] = js.native
 }
-

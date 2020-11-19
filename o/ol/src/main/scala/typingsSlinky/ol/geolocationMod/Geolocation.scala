@@ -17,21 +17,32 @@ import typingsSlinky.ol.olStrings.changeColontrackingOptions
 import typingsSlinky.ol.projMod.ProjectionLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Geolocation
   extends typingsSlinky.ol.objectMod.default {
+  
   def getAccuracy(): Double = js.native
+  
   def getAccuracyGeometry(): typingsSlinky.ol.polygonMod.default = js.native
+  
   def getAltitude(): Double = js.native
+  
   def getAltitudeAccuracy(): Double = js.native
+  
   def getHeading(): Double = js.native
+  
   def getPosition(): Coordinate = js.native
+  
   def getProjection(): typingsSlinky.ol.projectionMod.default = js.native
+  
   def getSpeed(): Double = js.native
+  
   def getTracking(): Boolean = js.native
+  
   def getTrackingOptions(): PositionOptions = js.native
+  
   @JSName("on")
   def on_changeaccuracy(`type`: changeColonaccuracy, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
@@ -52,6 +63,7 @@ trait Geolocation
   def on_changetracking(`type`: changeColontracking, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("on")
   def on_changetrackingOptions(`type`: changeColontrackingOptions, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  
   @JSName("once")
   def once_changeaccuracy(`type`: changeColonaccuracy, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
@@ -72,9 +84,13 @@ trait Geolocation
   def once_changetracking(`type`: changeColontracking, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   @JSName("once")
   def once_changetrackingOptions(`type`: changeColontrackingOptions, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
+  
   def setProjection(projection: ProjectionLike): Unit = js.native
+  
   def setTracking(tracking: Boolean): Unit = js.native
+  
   def setTrackingOptions(options: PositionOptions): Unit = js.native
+  
   @JSName("un")
   def un_changeaccuracy(`type`: changeColonaccuracy, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   @JSName("un")
@@ -96,4 +112,3 @@ trait Geolocation
   @JSName("un")
   def un_changetrackingOptions(`type`: changeColontrackingOptions, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
 }
-

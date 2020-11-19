@@ -2,7 +2,7 @@ package typingsSlinky.styledSystem.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FlexboxProps[ThemeType /* <: Theme[TLengthStyledSystem] */]
@@ -25,12 +25,11 @@ trait FlexboxProps[ThemeType /* <: Theme[TLengthStyledSystem] */]
      with JustifySelfProps[ThemeType]
      with AlignSelfProps[ThemeType]
      with OrderProps[ThemeType]
-
 object FlexboxProps {
+  
   @scala.inline
-  def apply[/* <: typingsSlinky.styledSystem.mod.Theme[typingsSlinky.styledSystem.mod.TLengthStyledSystem] */ ThemeType](): FlexboxProps[ThemeType] = {
+  def apply[ThemeType /* <: Theme[TLengthStyledSystem] */](): FlexboxProps[ThemeType] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[FlexboxProps[ThemeType]]
   }
 }
-

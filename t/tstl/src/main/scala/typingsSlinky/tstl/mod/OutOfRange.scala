@@ -2,12 +2,12 @@ package typingsSlinky.tstl.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "OutOfRange")
 @js.native
 class OutOfRange protected ()
-  extends typingsSlinky.tstl.exceptionMod.OutOfRange {
+  extends typingsSlinky.tstl.tstlModuleMod.OutOfRange {
   /**
     * Initializer Constructor.
     *
@@ -15,4 +15,3 @@ class OutOfRange protected ()
     */
   def this(message: String) = this()
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-glacier-node/commands/ListPartsCommand", JSImport.Namespace)
 @js.native
 object listPartsCommandMod extends js.Object {
+  
   @js.native
   class ListPartsCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object listPartsCommandMod extends js.Object {
           Readable
         ] {
     def this(input: ListPartsInput) = this()
+    
     val middlewareStack: MiddlewareStack[ListPartsInput, ListPartsOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[ListPartsInput, ListPartsOutput] = js.native
   }
-  
 }
-

@@ -32,7 +32,7 @@ import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RepositoryNameRequiredException
@@ -65,11 +65,12 @@ trait RepositoryNameRequiredException
      with UpdateDefaultBranchExceptionsUnion
      with UpdateRepositoryDescriptionExceptionsUnion
      with UpdateRepositoryNameExceptionsUnion {
+  
   @JSName("name")
   var name_RepositoryNameRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryNameRequiredException = js.native
 }
-
 object RepositoryNameRequiredException {
+  
   @scala.inline
   def apply(
     $metadata: ResponseMetadata,
@@ -80,22 +81,25 @@ object RepositoryNameRequiredException {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[RepositoryNameRequiredException]
   }
+  
   @scala.inline
   implicit class RepositoryNameRequiredExceptionOps[Self <: RepositoryNameRequiredException] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setName(
       value: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryNameRequiredException
     ): Self = this.set("name", value.asInstanceOf[js.Any])
   }
-  
 }
-

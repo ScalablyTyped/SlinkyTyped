@@ -13,9 +13,10 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.iconIconMod.IconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object AccordionTitle {
+  
   @JSImport("semantic-ui-react", "AccordionTitle")
   @js.native
   object component extends js.Object
@@ -24,31 +25,41 @@ object AccordionTitle {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.AccordionTitle] {
+    
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def iconFunction3(
       value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("icon", js.Any.fromFunction3(value))
+    
     @scala.inline
     def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def index(value: Double | String): this.type = set("index", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ AccordionTitleProps) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
   }
   
   def withProps(p: AccordionTitleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: AccordionTitle.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

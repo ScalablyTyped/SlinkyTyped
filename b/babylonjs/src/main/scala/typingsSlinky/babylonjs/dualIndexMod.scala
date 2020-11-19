@@ -2,11 +2,12 @@ package typingsSlinky.babylonjs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/Node/Blocks/Dual/index", JSImport.Namespace)
 @js.native
 object dualIndexMod extends js.Object {
+  
   @js.native
   class FogBlock protected ()
     extends typingsSlinky.babylonjs.fogBlockMod.FogBlock {
@@ -46,6 +47,4 @@ object dualIndexMod extends js.Object {
       */
     def this(name: String) = this()
   }
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.titanium.global.Titanium
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * IOStream is the interface that all stream types implement.
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class IOStream ()
   extends typingsSlinky.titanium.Titanium.IOStream
-

@@ -7,15 +7,16 @@ import typingsSlinky.graphqlToolsUtils.interfacesMod.Transform
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/wrap/transforms/WrapType", JSImport.Namespace)
 @js.native
 object wrapTypeMod extends js.Object {
+  
   @js.native
   trait WrapType
     extends Transform[Record[String, js.Any]] {
-    val transformer: js.Any = js.native
+    
     @JSName("transformRequest")
     def transformRequest_MWrapType(originalRequest: Request): Request = js.native
     @JSName("transformRequest")
@@ -32,6 +33,7 @@ object wrapTypeMod extends js.Object {
       delegationContext: Record[String, _],
       transformationContext: Record[String, _]
     ): Request = js.native
+    
     @JSName("transformResult")
     def transformResult_MWrapType(originalResult: ExecutionResult[Record[String, _]]): ExecutionResult[Record[String, _]] = js.native
     @JSName("transformResult")
@@ -48,14 +50,15 @@ object wrapTypeMod extends js.Object {
       delegationContext: Record[String, _],
       transformationContext: Record[String, _]
     ): ExecutionResult[Record[String, _]] = js.native
+    
     @JSName("transformSchema")
     def transformSchema_MWrapType(schema: GraphQLSchema): GraphQLSchema = js.native
+    
+    val transformer: js.Any = js.native
   }
   
   @js.native
   class default protected () extends WrapType {
     def this(outerTypeName: String, innerTypeName: String, fieldName: String) = this()
   }
-  
 }
-

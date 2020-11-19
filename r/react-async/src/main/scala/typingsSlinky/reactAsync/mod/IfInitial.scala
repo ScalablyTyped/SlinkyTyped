@@ -5,7 +5,7 @@ import typingsSlinky.reactAsync.anon.Persist
 import typingsSlinky.reactAsync.anon.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Renders only when no promise has started or completed yet.
@@ -17,7 +17,8 @@ import scala.scalajs.js.annotation._
 @JSImport("react-async", "IfInitial")
 @js.native
 object IfInitial extends js.Object {
-  var propTypes: Persist = js.native
+  
   def apply[T /* <: js.Object */](hasChildrenPersistState: State[T]): ReactElement = js.native
+  
+  var propTypes: Persist = js.native
 }
-

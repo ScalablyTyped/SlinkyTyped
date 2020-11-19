@@ -3,7 +3,7 @@ package typingsSlinky.typescriptServices.mod
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "ExternalModuleReferenceSyntax")
 @js.native
@@ -17,11 +17,10 @@ class ExternalModuleReferenceSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSImport("typescript-services", "ExternalModuleReferenceSyntax")
 @js.native
 object ExternalModuleReferenceSyntax extends js.Object {
+  
   def create1(stringLiteral: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.ExternalModuleReferenceSyntax = js.native
 }
-

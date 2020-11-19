@@ -117,14 +117,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojGanttRow extends JetElement[ojGanttRowSettableProperties] {
-  var label: String = js.native
-  var labelStyle: js.Object = js.native
-  var onLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def addEventListener(`type`: labelStyleChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: labelStyleChanged,
@@ -911,16 +908,26 @@ trait ojGanttRow extends JetElement[ojGanttRowSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_label(property: label): String = js.native
   @JSName("getProperty")
   def getProperty_labelStyle(property: labelStyle): /* import warning: importer.ImportType#apply Failed type conversion: @oracle/oraclejet.@oracle/oraclejet/ojgantt.ojGanttRow['labelStyle'] */ js.Any = js.native
+  
+  var label: String = js.native
+  
+  var labelStyle: js.Object = js.native
+  
+  var onLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
   def setProperties(properties: ojGanttRowSettablePropertiesLenient): Unit = js.native
+  
   def setProperty[T /* <: String */](property: T, value: JetSetPropertyType[T, ojGanttRowSettableProperties]): Unit = js.native
   @JSName("setProperty")
   def setProperty_label(property: label, value: String): Unit = js.native
   @JSName("setProperty")
   def setProperty_labelStyle(property: labelStyle, value: js.Object): Unit = js.native
 }
-

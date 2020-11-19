@@ -393,137 +393,186 @@ import typingsSlinky.storybookComponents.withTooltipMod.WithTooltipPureProps
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/components", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  @js.native
-  class IFrame ()
-    extends typingsSlinky.storybookComponents.iframeMod.IFrame
-  
-  @js.native
-  class TabsState protected ()
-    extends typingsSlinky.storybookComponents.tabsMod.TabsState {
-    def this(props: TabsStateProps) = this()
-  }
   
   val ActionBar: ReactComponentClass[ActionBarProps] = js.native
+  
+  def AddonPanel(hasActiveChildren: AddonPanelProps): ReactElement = js.native
+  
   val Badge: ReactComponentClass[BadgeProps] = js.native
+  
   val Bar: StyledComponent[js.Any, Pick[js.Any, String | Double | js.Symbol], Theme] = js.native
+  
   val ColorItem: ReactComponentClass[ColorProps] = js.native
+  
   val ColorPalette: ReactComponentClass[js.Object] = js.native
+  
   val Description: ReactComponentClass[DescriptionProps] = js.native
+  
   val DocsContent: StyledComponent[
     DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], 
     PickDetailedHTMLPropsHTML, 
     Theme
   ] = js.native
+  
   val DocsPageWrapper: ReactComponentClass[js.Object] = js.native
+  
   val DocsWrapper: StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], js.Object, Theme] = js.native
+  
   val DocumentWrapper: StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], js.Object, Theme] = js.native
+  
   val FlexBar: ReactComponentClass[FlexBarProps] = js.native
+  
   val IconButton: StyledComponent[
     DetailedHTMLProps[ButtonHTMLAttributes[HTMLButtonElement], HTMLButtonElement], 
     IconButtonProps, 
     Theme
   ] = js.native
+  
   val IconGallery: ReactComponentClass[js.Object] = js.native
+  
   val IconItem: ReactComponentClass[IconItemProps] = js.native
+  
   val Icons: ReactComponentClass[IconsProps] = js.native
+  
   val Link: ReactComponentClass[LinkProps with AProps] = js.native
+  
   val Placeholder: ReactComponentClass[js.Object] = js.native
+  
   /**
     * A preview component for showing one or more component `Story`
     * items. The preview also shows the source for the component
     * as a drop-down.
     */
   val Preview: ReactComponentClass[PreviewProps] = js.native
+  
   /**
     * Display the props for a component as a props table. Each row is a collection of
     * PropDefs, usually derived from docgen info for the component.
     */
   val PropsTable: ReactComponentClass[PropsTableProps] = js.native
+  
   val ScrollArea: ReactComponentClass[ScrollAreaProps] = js.native
+  
   val Separator: StyledComponent[
     DetailedHTMLProps[HTMLAttributes[HTMLSpanElement], HTMLSpanElement], 
     SeparatorProps, 
     Theme
   ] = js.native
+  
   /**
     * Syntax-highlighted source code for a component (or anything!)
     */
   val Source: ReactComponentClass[SourceProps] = js.native
+  
   val Spaced: ReactComponentClass[SpacedProps] = js.native
+  
   /**
     * A story element, either renderend inline or in an iframe,
     * with configurable height.
     */
   val Story: ReactComponentClass[StoryProps] = js.native
+  
   val StorybookIcon: ReactComponentClass[js.Object] = js.native
+  
   val StorybookLogo: ReactComponentClass[StorybookLogoProps] = js.native
+  
   val Subtitle: StyledComponent[
     DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement], 
     js.Object, 
     Theme
   ] = js.native
+  
   val SyntaxHighlighter: ReactComponentClass[Props] = js.native
+  
   val TabBar: StyledComponent[
     DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], 
     PickDetailedHTMLPropsHTML, 
     Theme
   ] = js.native
+  
   val TabButton: StyledComponent[
     DetailedHTMLProps[ButtonHTMLAttributes[HTMLButtonElement], HTMLButtonElement], 
     TabButtonProps, 
     Theme
   ] = js.native
+  
   val TabWrapper: ReactComponentClass[TabWrapperProps] = js.native
+  
   val Table: StyledComponent[
     DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement], 
     js.Object, 
     Theme
   ] = js.native
+  
   val Tabs: ReactComponentClass[TabsProps] = js.native
+  
   val Title: StyledComponent[
     DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement], 
     js.Object, 
     Theme
   ] = js.native
+  
   val TooltipLinkList: ReactComponentClass[TooltipLinkListProps] = js.native
+  
   val TooltipMessage: ReactComponentClass[TooltipMessageProps] = js.native
+  
   val TooltipNote: ReactComponentClass[TooltipNoteProps] = js.native
+  
   val Typeset: ReactComponentClass[TypesetProps] = js.native
+  
   val WithTooltipPure: ReactComponentClass[WithTooltipPureProps] = js.native
-  def AddonPanel(hasActiveChildren: AddonPanelProps): ReactElement = js.native
+  
   def interleaveSeparators(list: js.Array[_]): js.Any = js.native
+  
   @js.native
   object Button extends js.Object {
-    @JSName("$$typeof")
-    val DollarDollartypeof: js.Symbol = js.native
-    var defaultProps: js.UndefOr[IsLink | PartialButtonPropsRefAttr] = js.native
-    var displayName: js.UndefOr[String] = js.native
-    var propTypes: js.UndefOr[WeakValidationMapButtonPr] = js.native
+    
     /**
       * **NOTE**: Exotic components are not callable.
       */
     def apply(props: ButtonProps with RefAttributes[_]): ReactElement | Null = js.native
+    
+    @JSName("$$typeof")
+    val DollarDollartypeof: js.Symbol = js.native
+    
+    var defaultProps: js.UndefOr[IsLink | PartialButtonPropsRefAttr] = js.native
+    
+    var displayName: js.UndefOr[String] = js.native
+    
+    var propTypes: js.UndefOr[WeakValidationMapButtonPr] = js.native
   }
   
   @js.native
   object Form extends js.Object {
-    var Button: ReactComponentClass[_] = js.native
-    var Field: ReactComponentClass[FieldProps] = js.native
-    var Input: StyledComponentPickPickHT = js.native
-    var Select: StyledComponentPickSelect = js.native
-    var Textarea: StyledComponentPickPickTe = js.native
-    var __emotion_styles: js.Any = js.native
-    var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
-    var defaultProps: js.UndefOr[PartialDetailedHTMLPropsF] = js.native
-    var displayName: js.UndefOr[String] = js.native
-    var propTypes: js.UndefOr[WeakValidationMapDetailed] = js.native
+    
     def apply(props: PropsWithChildrenDetailed): ReactElement | Null = js.native
     def apply(props: PropsWithChildrenDetailed, context: js.Any): ReactElement | Null = js.native
+    
+    var Button: ReactComponentClass[_] = js.native
+    
+    var Field: ReactComponentClass[FieldProps] = js.native
+    
+    var Input: StyledComponentPickPickHT = js.native
+    
+    var Select: StyledComponentPickSelect = js.native
+    
+    var Textarea: StyledComponentPickPickTe = js.native
+    
+    var __emotion_styles: js.Any = js.native
+    
+    var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
+    
+    var defaultProps: js.UndefOr[PartialDetailedHTMLPropsF] = js.native
+    
+    var displayName: js.UndefOr[String] = js.native
+    
+    var propTypes: js.UndefOr[WeakValidationMapDetailed] = js.native
+    
     def withComponent[Tag /* <: ReactComponentClass[_] */](tag: Tag): StyledComponent[PropsOf[Tag], PickDetailedHTMLPropsForm, Theme] = js.native
     /**
       * @desc this method is type-unsafe
@@ -1349,33 +1398,49 @@ object mod extends js.Object {
   }
   
   @js.native
+  class IFrame ()
+    extends typingsSlinky.storybookComponents.iframeMod.IFrame
+  
+  @js.native
   object PropsTableError extends js.Object {
-    /* "No component found" */ val NO_COMPONENT: typingsSlinky.storybookComponents.propsTableMod.PropsTableError.NO_COMPONENT with String = js.native
-    /* "Props unsupported. See Props documentation for your framework." */ val PROPS_UNSUPPORTED: typingsSlinky.storybookComponents.propsTableMod.PropsTableError.PROPS_UNSUPPORTED with String = js.native
+    
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.storybookComponents.propsTableMod.PropsTableError with String] = js.native
+    
+    /* "No component found" */ val NO_COMPONENT: typingsSlinky.storybookComponents.propsTableMod.PropsTableError.NO_COMPONENT with String = js.native
+    
+    /* "Props unsupported. See Props documentation for your framework." */ val PROPS_UNSUPPORTED: typingsSlinky.storybookComponents.propsTableMod.PropsTableError.PROPS_UNSUPPORTED with String = js.native
   }
   
   @js.native
   object SourceError extends js.Object {
-    /* "There\\u2019s no story here." */ val NO_STORY: typingsSlinky.storybookComponents.sourceMod.SourceError.NO_STORY with String = js.native
-    /* "Oh no! The source is not available." */ val SOURCE_UNAVAILABLE: typingsSlinky.storybookComponents.sourceMod.SourceError.SOURCE_UNAVAILABLE with String = js.native
+    
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.storybookComponents.sourceMod.SourceError with String] = js.native
+    
+    /* "There\\u2019s no story here." */ val NO_STORY: typingsSlinky.storybookComponents.sourceMod.SourceError.NO_STORY with String = js.native
+    
+    /* "Oh no! The source is not available." */ val SOURCE_UNAVAILABLE: typingsSlinky.storybookComponents.sourceMod.SourceError.SOURCE_UNAVAILABLE with String = js.native
   }
   
   @js.native
   object StoryError extends js.Object {
-    /* "No component or story to display" */ val NO_STORY: typingsSlinky.storybookComponents.storyMod.StoryError.NO_STORY with String = js.native
+    
     @JSBracketAccess
     def apply(value: String): js.UndefOr[typingsSlinky.storybookComponents.storyMod.StoryError with String] = js.native
+    
+    /* "No component or story to display" */ val NO_STORY: typingsSlinky.storybookComponents.storyMod.StoryError.NO_STORY with String = js.native
   }
   
+  @js.native
+  class TabsState protected ()
+    extends typingsSlinky.storybookComponents.tabsMod.TabsState {
+    def this(props: TabsStateProps) = this()
+  }
   /* static members */
   @js.native
   object TabsState extends js.Object {
+    
     var defaultProps: TabsStateProps = js.native
   }
-  
 }
-

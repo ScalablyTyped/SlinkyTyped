@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _The current module._
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("module")
 @js.native
 object module extends js.Object {
+  
   /**
     * _Exported functions and modules._
     *
@@ -36,6 +37,7 @@ object module extends js.Object {
     * @see https://docs.scriptable.app/module/#exports
     */
   var exports: js.Any = js.native
+  
   /**
     * _Path to file containing the module._
     *
@@ -44,4 +46,3 @@ object module extends js.Object {
     */
   var filename: String = js.native
 }
-

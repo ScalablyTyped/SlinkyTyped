@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/strided_slice", JSImport.Namespace)
 @js.native
 object stridedSliceMod extends js.Object {
+  
   val stridedSlice: js.Function9[
     /* x */ Tensor[Rank] | TensorLike, 
     /* begin */ js.Array[Double], 
@@ -23,4 +24,3 @@ object stridedSliceMod extends js.Object {
     Tensor[Rank]
   ] = js.native
 }
-

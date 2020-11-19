@@ -139,28 +139,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojDiagramNode extends JetElement[ojDiagramNodeSettableProperties] {
-  var categories: js.UndefOr[js.Array[String]] = js.native
-  var descendantsConnectivity: js.UndefOr[connected | disjoint | unknown] = js.native
-  var icon: js.UndefOr[Opacity] = js.native
-  var label: js.UndefOr[String] = js.native
-  var labelStyle: js.UndefOr[js.Object | Null] = js.native
-  var onCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onDescendantsConnectivityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onIconChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onLabelStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOverviewChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onSelectableChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onShowDisclosureChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var overview: js.UndefOr[`6`] = js.native
-  var selectable: js.UndefOr[auto | off] = js.native
-  var shortDesc: js.UndefOr[String] = js.native
-  var showDisclosure: js.UndefOr[on | off] = js.native
+  
   def addEventListener(
     `type`: descendantsConnectivityChanged,
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
@@ -1002,6 +985,11 @@ trait ojDiagramNode extends JetElement[ojDiagramNodeSettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var categories: js.UndefOr[js.Array[String]] = js.native
+  
+  var descendantsConnectivity: js.UndefOr[connected | disjoint | unknown] = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_categories(property: categories): js.UndefOr[js.Array[String]] = js.native
@@ -1021,7 +1009,37 @@ trait ojDiagramNode extends JetElement[ojDiagramNodeSettableProperties] {
   def getProperty_shortDesc(property: shortDesc): js.UndefOr[String] = js.native
   @JSName("getProperty")
   def getProperty_showDisclosure(property: showDisclosure): js.UndefOr[on | off] = js.native
+  
+  var icon: js.UndefOr[Opacity] = js.native
+  
+  var label: js.UndefOr[String] = js.native
+  
+  var labelStyle: js.UndefOr[js.Object | Null] = js.native
+  
+  var onCategoriesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onDescendantsConnectivityChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onIconChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onLabelStyleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOverviewChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onSelectableChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onShortDescChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onShowDisclosureChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var overview: js.UndefOr[`6`] = js.native
+  
+  var selectable: js.UndefOr[auto | off] = js.native
+  
   def setProperties(properties: ojDiagramNodeSettablePropertiesLenient): Unit = js.native
+  
   def setProperty(property: descendantsConnectivity, value: connected): Unit = js.native
   def setProperty(property: descendantsConnectivity, value: disjoint): Unit = js.native
   def setProperty(property: descendantsConnectivity, value: unknown): Unit = js.native
@@ -1060,5 +1078,8 @@ trait ojDiagramNode extends JetElement[ojDiagramNodeSettableProperties] {
   def setProperty_shortDesc(property: shortDesc, value: String): Unit = js.native
   @JSName("setProperty")
   def setProperty_showDisclosure(property: showDisclosure): Unit = js.native
+  
+  var shortDesc: js.UndefOr[String] = js.native
+  
+  var showDisclosure: js.UndefOr[on | off] = js.native
 }
-

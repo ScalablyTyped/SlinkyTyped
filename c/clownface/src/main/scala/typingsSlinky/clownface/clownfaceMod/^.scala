@@ -11,7 +11,7 @@ import typingsSlinky.rdfJs.mod.Quad
 import typingsSlinky.rdfJs.mod.Term
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // tslint:disable-next-line no-unnecessary-class
 @JSImport("clownface/lib/Clownface", JSImport.Namespace)
@@ -22,4 +22,3 @@ class ^[T /* <: AnyContext */, D /* <: DatasetCore[Quad, Quad] */] protected () 
   def this(options: ClownfaceInitWithValue[D]) = this()
   def this(options: ClownfaceInitWithValues[D]) = this()
 }
-

@@ -6,13 +6,13 @@ import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.SymbolicTensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/layers/merge", "concatenate")
 @js.native
 object concatenate extends js.Object {
+  
   def apply(): Layer | SymbolicTensor | Tensor[Rank] = js.native
   def apply(config: js.Array[SymbolicTensor | Tensor[Rank]]): Layer | SymbolicTensor | Tensor[Rank] = js.native
   def apply(config: ConcatenateLayerArgs): Layer | SymbolicTensor | Tensor[Rank] = js.native
 }
-

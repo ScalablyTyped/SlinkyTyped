@@ -5,11 +5,12 @@ import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/TorusKnotGeometry", JSImport.Namespace)
 @js.native
 object torusKnotGeometryMod extends js.Object {
+  
   @js.native
   class TorusKnotBufferGeometry protected () extends BufferGeometry {
     def this(
@@ -20,6 +21,7 @@ object torusKnotGeometryMod extends js.Object {
       p: js.UndefOr[Double],
       q: js.UndefOr[Double]
     ) = this()
+    
     var parameters: P = js.native
   }
   
@@ -33,8 +35,7 @@ object torusKnotGeometryMod extends js.Object {
       p: js.UndefOr[Double],
       q: js.UndefOr[Double]
     ) = this()
+    
     var parameters: P = js.native
   }
-  
 }
-

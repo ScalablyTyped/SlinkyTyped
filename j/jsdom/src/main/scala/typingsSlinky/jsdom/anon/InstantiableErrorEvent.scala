@@ -6,10 +6,9 @@ import org.scalajs.dom.raw.ErrorEvent
 import typingsSlinky.std.ErrorEventInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantiableErrorEvent
   extends Instantiable1[/* type */ String, ErrorEvent]
      with Instantiable2[/* type */ String, /* eventInitDict */ ErrorEventInit, ErrorEvent]
-

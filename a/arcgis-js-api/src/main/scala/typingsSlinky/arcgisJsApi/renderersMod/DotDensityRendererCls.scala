@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.renderersMod
 import typingsSlinky.arcgisJsApi.esri.DotDensityRendererProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/renderers", "DotDensityRenderer")
 @js.native
@@ -16,4 +16,3 @@ class DotDensityRendererCls ()
   extends typingsSlinky.arcgisJsApi.esri.DotDensityRenderer {
   def this(properties: DotDensityRendererProperties) = this()
 }
-

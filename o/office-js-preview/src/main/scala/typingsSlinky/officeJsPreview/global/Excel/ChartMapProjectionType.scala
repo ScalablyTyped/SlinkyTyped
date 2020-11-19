@@ -2,7 +2,7 @@ package typingsSlinky.officeJsPreview.global.Excel
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,12 +13,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Excel.ChartMapProjectionType")
 @js.native
 object ChartMapProjectionType extends js.Object {
-  /* "Albers" */ val albers: typingsSlinky.officeJsPreview.Excel.ChartMapProjectionType.albers with String = js.native
-  /* "Automatic" */ val automatic: typingsSlinky.officeJsPreview.Excel.ChartMapProjectionType.automatic with String = js.native
-  /* "Mercator" */ val mercator: typingsSlinky.officeJsPreview.Excel.ChartMapProjectionType.mercator with String = js.native
-  /* "Miller" */ val miller: typingsSlinky.officeJsPreview.Excel.ChartMapProjectionType.miller with String = js.native
-  /* "Robinson" */ val robinson: typingsSlinky.officeJsPreview.Excel.ChartMapProjectionType.robinson with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJsPreview.Excel.ChartMapProjectionType with String] = js.native
+  
+  /* "Albers" */ val albers: typingsSlinky.officeJsPreview.Excel.ChartMapProjectionType.albers with String = js.native
+  
+  /* "Automatic" */ val automatic: typingsSlinky.officeJsPreview.Excel.ChartMapProjectionType.automatic with String = js.native
+  
+  /* "Mercator" */ val mercator: typingsSlinky.officeJsPreview.Excel.ChartMapProjectionType.mercator with String = js.native
+  
+  /* "Miller" */ val miller: typingsSlinky.officeJsPreview.Excel.ChartMapProjectionType.miller with String = js.native
+  
+  /* "Robinson" */ val robinson: typingsSlinky.officeJsPreview.Excel.ChartMapProjectionType.robinson with String = js.native
 }
-

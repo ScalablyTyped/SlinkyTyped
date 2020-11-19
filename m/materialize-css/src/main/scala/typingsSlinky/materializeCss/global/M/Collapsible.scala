@@ -4,21 +4,22 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.materializeCss.anon.PartialCollapsibleOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("M.Collapsible")
 @js.native
 class Collapsible ()
   extends typingsSlinky.materializeCss.M.Collapsible
-
 /* static members */
 @JSGlobal("M.Collapsible")
 @js.native
 object Collapsible extends js.Object {
+  
   /**
     * Get Instance
     */
   def getInstance(elem: Element): typingsSlinky.materializeCss.M.Collapsible = js.native
+  
   /**
     * Init Collapsibles
     */
@@ -35,4 +36,3 @@ object Collapsible extends js.Object {
   def init(els: Element): typingsSlinky.materializeCss.M.Collapsible = js.native
   def init(els: Element, options: PartialCollapsibleOptions): typingsSlinky.materializeCss.M.Collapsible = js.native
 }
-

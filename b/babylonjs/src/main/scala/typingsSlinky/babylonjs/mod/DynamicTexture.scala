@@ -2,12 +2,14 @@ package typingsSlinky.babylonjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "DynamicTexture")
 @js.native
 class DynamicTexture protected ()
   extends typingsSlinky.babylonjs.legacyMod.DynamicTexture {
+  def this(name: String, options: js.Any, scene: js.UndefOr[scala.Nothing], generateMipMaps: Boolean) = this()
+  def this(name: String, options: js.Any, scene: Null, generateMipMaps: Boolean) = this()
   /**
     * Creates a DynamicTexture
     * @param name defines the name of the texture
@@ -20,23 +22,70 @@ class DynamicTexture protected ()
   def this(
     name: String,
     options: js.Any,
-    scene: js.UndefOr[Null | typingsSlinky.babylonjs.sceneMod.Scene],
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
     generateMipMaps: Boolean
   ) = this()
   def this(
     name: String,
     options: js.Any,
-    scene: js.UndefOr[Null | typingsSlinky.babylonjs.sceneMod.Scene],
+    scene: js.UndefOr[scala.Nothing],
+    generateMipMaps: Boolean,
+    samplingMode: Double
+  ) = this()
+  def this(name: String, options: js.Any, scene: Null, generateMipMaps: Boolean, samplingMode: Double) = this()
+  def this(
+    name: String,
+    options: js.Any,
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
     generateMipMaps: Boolean,
     samplingMode: Double
   ) = this()
   def this(
     name: String,
     options: js.Any,
-    scene: js.UndefOr[Null | typingsSlinky.babylonjs.sceneMod.Scene],
+    scene: js.UndefOr[scala.Nothing],
+    generateMipMaps: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    format: Double
+  ) = this()
+  def this(
+    name: String,
+    options: js.Any,
+    scene: js.UndefOr[scala.Nothing],
+    generateMipMaps: Boolean,
+    samplingMode: Double,
+    format: Double
+  ) = this()
+  def this(
+    name: String,
+    options: js.Any,
+    scene: Null,
+    generateMipMaps: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    format: Double
+  ) = this()
+  def this(
+    name: String,
+    options: js.Any,
+    scene: Null,
+    generateMipMaps: Boolean,
+    samplingMode: Double,
+    format: Double
+  ) = this()
+  def this(
+    name: String,
+    options: js.Any,
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    generateMipMaps: Boolean,
+    samplingMode: js.UndefOr[scala.Nothing],
+    format: Double
+  ) = this()
+  def this(
+    name: String,
+    options: js.Any,
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
     generateMipMaps: Boolean,
     samplingMode: Double,
     format: Double
   ) = this()
 }
-

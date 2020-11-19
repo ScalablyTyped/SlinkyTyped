@@ -4,11 +4,11 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@material-ui/icons/AssignmentReturnOutlined", JSImport.Namespace)
 @js.native
 object assignmentReturnOutlinedMod extends js.Object {
+  
   val default: ReactComponentClass[SvgIconProps] = js.native
 }
-

@@ -4,11 +4,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-node", "ones")
 @js.native
 object ones extends js.Object {
+  
   /**
     * Creates a `tf.Tensor` with all elements set to 1.
     *
@@ -29,4 +30,3 @@ object ones extends js.Object {
     dtype: DataType
   ): Tensor[R] = js.native
 }
-

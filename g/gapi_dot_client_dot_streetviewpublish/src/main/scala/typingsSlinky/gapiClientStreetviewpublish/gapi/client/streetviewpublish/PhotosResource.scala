@@ -6,10 +6,11 @@ import typingsSlinky.gapiClientStreetviewpublish.anon.Fields
 import typingsSlinky.gapiClientStreetviewpublish.anon.Filter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PhotosResource extends js.Object {
+  
   /**
     * Deletes a list of Photos and their
     * metadata.
@@ -29,6 +30,7 @@ trait PhotosResource extends js.Object {
     * for specific failures that can occur per photo.
     */
   def batchDelete(request: Accesstoken): Request[BatchDeletePhotosResponse] = js.native
+  
   /**
     * Gets the metadata of the specified
     * Photo batch.
@@ -48,6 +50,7 @@ trait PhotosResource extends js.Object {
     * for specific failures that can occur per photo.
     */
   def batchGet(request: Fields): Request[BatchGetPhotosResponse] = js.native
+  
   /**
     * Updates the metadata of Photos, such
     * as pose, place association, connections, etc. Changing the pixels of photos
@@ -78,14 +81,15 @@ trait PhotosResource extends js.Object {
     * filled as well. Otherwise, the request will fail.</aside>
     */
   def batchUpdate(request: Accesstoken): Request[BatchUpdatePhotosResponse] = js.native
+  
   /**
     * Lists all the Photos that belong to
     * the user.
     */
   def list(request: Filter): Request[ListPhotosResponse] = js.native
 }
-
 object PhotosResource {
+  
   @scala.inline
   def apply(
     batchDelete: Accesstoken => Request[BatchDeletePhotosResponse],
@@ -96,26 +100,32 @@ object PhotosResource {
     val __obj = js.Dynamic.literal(batchDelete = js.Any.fromFunction1(batchDelete), batchGet = js.Any.fromFunction1(batchGet), batchUpdate = js.Any.fromFunction1(batchUpdate), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[PhotosResource]
   }
+  
   @scala.inline
   implicit class PhotosResourceOps[Self <: PhotosResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setBatchDelete(value: Accesstoken => Request[BatchDeletePhotosResponse]): Self = this.set("batchDelete", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setBatchGet(value: Fields => Request[BatchGetPhotosResponse]): Self = this.set("batchGet", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setBatchUpdate(value: Accesstoken => Request[BatchUpdatePhotosResponse]): Self = this.set("batchUpdate", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setList(value: Filter => Request[ListPhotosResponse]): Self = this.set("list", js.Any.fromFunction1(value))
   }
-  
 }
-

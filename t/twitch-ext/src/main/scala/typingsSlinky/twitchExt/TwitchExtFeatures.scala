@@ -5,13 +5,14 @@ import typingsSlinky.twitchExt.twitchExtStrings.isChatEnabled
 import typingsSlinky.twitchExt.twitchExtStrings.isSubscriptionStatusAvailable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @see TwitchExt.features
   */
 @js.native
 trait TwitchExtFeatures extends TwitchExtFeatureFlags {
+  
   /**
     * This function enables you to receive real-time updates to changes of the features object.
     * If this callback is invoked, you should re-check the Twitch.ext.features object for a change
@@ -26,8 +27,8 @@ trait TwitchExtFeatures extends TwitchExtFeatureFlags {
     ]
   ): Unit = js.native
 }
-
 object TwitchExtFeatures {
+  
   @scala.inline
   def apply(
     isBitsEnabled: Boolean,
@@ -41,17 +42,22 @@ object TwitchExtFeatures {
     val __obj = js.Dynamic.literal(isBitsEnabled = isBitsEnabled.asInstanceOf[js.Any], isChatEnabled = isChatEnabled.asInstanceOf[js.Any], isSubscriptionStatusAvailable = isSubscriptionStatusAvailable.asInstanceOf[js.Any], onChanged = js.Any.fromFunction1(onChanged))
     __obj.asInstanceOf[TwitchExtFeatures]
   }
+  
   @scala.inline
   implicit class TwitchExtFeaturesOps[Self <: TwitchExtFeatures] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setOnChanged(
       value: js.Function1[
@@ -60,6 +66,4 @@ object TwitchExtFeatures {
         ] => Unit
     ): Self = this.set("onChanged", js.Any.fromFunction1(value))
   }
-  
 }
-

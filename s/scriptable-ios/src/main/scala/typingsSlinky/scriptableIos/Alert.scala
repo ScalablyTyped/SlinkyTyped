@@ -2,20 +2,11 @@ package typingsSlinky.scriptableIos
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Alert extends js.Object {
-  /**
-    * _Detailed message displayed in the alert._
-    * @see https://docs.scriptable.app/alert/#message
-    */
-  var message: String = js.native
-  /**
-    * _Title displayed in the alert. Usually a short string._
-    * @see https://docs.scriptable.app/alert/#title
-    */
-  var title: String = js.native
+  
   /**
     * _Adds an action to the alert._
     *
@@ -25,6 +16,7 @@ trait Alert extends js.Object {
     * @see https://docs.scriptable.app/alert/#-addaction
     */
   def addAction(title: String): Unit = js.native
+  
   /**
     * _Adds a cancel action to the alert._
     *
@@ -33,6 +25,7 @@ trait Alert extends js.Object {
     * @see https://docs.scriptable.app/alert/#-addcancelaction
     */
   def addCancelAction(title: String): Unit = js.native
+  
   /**
     * _Adds a destructive action to the alert._
     *
@@ -41,6 +34,7 @@ trait Alert extends js.Object {
     * @see https://docs.scriptable.app/alert/#-adddestructiveaction
     */
   def addDestructiveAction(title: String): Unit = js.native
+  
   /**
     * _Adds a secure text field prompting for user input._
     *
@@ -54,6 +48,7 @@ trait Alert extends js.Object {
   def addSecureTextField(placeholder: js.UndefOr[scala.Nothing], text: String): Unit = js.native
   def addSecureTextField(placeholder: String): Unit = js.native
   def addSecureTextField(placeholder: String, text: String): Unit = js.native
+  
   /**
     * _Adds a text field prompting for user input._
     *
@@ -69,6 +64,13 @@ trait Alert extends js.Object {
   def addTextField(placeholder: js.UndefOr[scala.Nothing], text: String): Unit = js.native
   def addTextField(placeholder: String): Unit = js.native
   def addTextField(placeholder: String, text: String): Unit = js.native
+  
+  /**
+    * _Detailed message displayed in the alert._
+    * @see https://docs.scriptable.app/alert/#message
+    */
+  var message: String = js.native
+  
   /**
     * _Presents the alert modally._
     *
@@ -76,16 +78,19 @@ trait Alert extends js.Object {
     * @see https://docs.scriptable.app/alert/#-present
     */
   def present(): js.Promise[Double] = js.native
+  
   /**
     * _Presents the alert modally._
     * @see https://docs.scriptable.app/alert/#-presentalert
     */
   def presentAlert(): js.Promise[Double] = js.native
+  
   /**
     * _Presents the alert as a sheet._
     * @see https://docs.scriptable.app/alert/#-presentsheet
     */
   def presentSheet(): js.Promise[Double] = js.native
+  
   /**
     * _Retrieves value of a text field._
     *
@@ -95,5 +100,10 @@ trait Alert extends js.Object {
     * @see https://docs.scriptable.app/alert/#-textfieldvalue
     */
   def textFieldValue(index: Double): String = js.native
+  
+  /**
+    * _Title displayed in the alert. Usually a short string._
+    * @see https://docs.scriptable.app/alert/#title
+    */
+  var title: String = js.native
 }
-

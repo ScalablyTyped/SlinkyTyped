@@ -3,12 +3,12 @@ package typingsSlinky.winrt.Windows.UI.WebUI
 import typingsSlinky.winrt.Windows.ApplicationModel.ISuspendingOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SuspendingOperation extends ISuspendingOperation
-
 object SuspendingOperation {
+  
   @scala.inline
   def apply(
     deadline: js.Date,
@@ -18,4 +18,3 @@ object SuspendingOperation {
     __obj.asInstanceOf[SuspendingOperation]
   }
 }
-

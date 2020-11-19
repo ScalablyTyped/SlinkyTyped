@@ -7,11 +7,12 @@ import typingsSlinky.typescript.mod.ModuleDeclaration
 import typingsSlinky.typescript.mod.ModuleName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateModuleDeclaration")
 @js.native
 object updateModuleDeclaration extends js.Object {
+  
   def apply(
     node: ModuleDeclaration,
     decorators: js.UndefOr[scala.Nothing],
@@ -65,4 +66,3 @@ object updateModuleDeclaration extends js.Object {
     body: ModuleBody
   ): ModuleDeclaration = js.native
 }
-

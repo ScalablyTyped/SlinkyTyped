@@ -2,11 +2,12 @@ package typingsSlinky.mz.mod.crypto
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mz", "crypto.randomFillSync")
 @js.native
 object randomFillSync extends js.Object {
+  
   def apply(buffer: js.typedarray.DataView): js.typedarray.DataView = js.native
   def apply(buffer: js.typedarray.DataView, offset: js.UndefOr[scala.Nothing], size: Double): js.typedarray.DataView = js.native
   def apply(buffer: js.typedarray.DataView, offset: Double): js.typedarray.DataView = js.native
@@ -48,4 +49,3 @@ object randomFillSync extends js.Object {
   def apply(buffer: js.typedarray.Uint8ClampedArray, offset: Double): js.typedarray.Uint8ClampedArray = js.native
   def apply(buffer: js.typedarray.Uint8ClampedArray, offset: Double, size: Double): js.typedarray.Uint8ClampedArray = js.native
 }
-

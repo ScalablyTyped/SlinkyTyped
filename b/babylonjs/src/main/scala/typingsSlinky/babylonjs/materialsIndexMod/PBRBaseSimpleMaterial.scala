@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.materialsIndexMod
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/index", "PBRBaseSimpleMaterial")
 @js.native
@@ -17,4 +17,3 @@ abstract class PBRBaseSimpleMaterial protected ()
     */
   def this(name: String, scene: Scene) = this()
 }
-

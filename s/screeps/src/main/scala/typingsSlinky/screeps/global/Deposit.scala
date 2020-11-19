@@ -5,7 +5,7 @@ import typingsSlinky.screeps.DepositConstructor
 import typingsSlinky.screeps.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Deposit")
 @js.native
@@ -13,8 +13,6 @@ class Deposit protected ()
   extends typingsSlinky.screeps.Deposit {
   def this(id: Id[typingsSlinky.screeps.Deposit]) = this()
 }
-
 @JSGlobal("Deposit")
 @js.native
 object Deposit extends TopLevel[DepositConstructor]
-

@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.wafMod.ClientConfiguration
 import typingsSlinky.awsSdk.wafMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/clients/browser_default", "WAF")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 class WAF () extends ^ {
   def this(options: ClientConfiguration) = this()
 }
-

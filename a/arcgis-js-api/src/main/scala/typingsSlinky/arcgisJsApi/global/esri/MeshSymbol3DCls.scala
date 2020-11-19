@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.MeshSymbol3DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.MeshSymbol3D")
 @js.native
@@ -16,4 +16,3 @@ class MeshSymbol3DCls ()
   extends typingsSlinky.arcgisJsApi.esri.MeshSymbol3D {
   def this(properties: MeshSymbol3DProperties) = this()
 }
-

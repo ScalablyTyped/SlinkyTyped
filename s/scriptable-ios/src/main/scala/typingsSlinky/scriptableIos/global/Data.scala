@@ -2,7 +2,7 @@ package typingsSlinky.scriptableIos.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * _Raw data representation._
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class Data ()
   extends typingsSlinky.scriptableIos.Data
-
 /* static members */
 @JSGlobal("Data")
 @js.native
 object Data extends js.Object {
+  
   /**
     * _Creates data from base 64 encoded string._
     *
@@ -25,6 +25,7 @@ object Data extends js.Object {
     * @see https://docs.scriptable.app/data/#frombase64string
     */
   def fromBase64String(base64String: String): typingsSlinky.scriptableIos.Data = js.native
+  
   /**
     * _Reads data from file path._
     *
@@ -33,18 +34,21 @@ object Data extends js.Object {
     * @see https://docs.scriptable.app/data/#fromfile
     */
   def fromFile(filePath: String): typingsSlinky.scriptableIos.Data = js.native
+  
   /**
     * _Creates data from JPEG image._
     * @param image - JPEG image to convert to data.
     * @see https://docs.scriptable.app/data/#fromjpeg
     */
   def fromJPEG(image: typingsSlinky.scriptableIos.Image): typingsSlinky.scriptableIos.Data = js.native
+  
   /**
     * _Creates data from PNG image._
     * @param image - PNG image to convert to data.
     * @see https://docs.scriptable.app/data/#frompng
     */
   def fromPNG(image: typingsSlinky.scriptableIos.Image): typingsSlinky.scriptableIos.Data = js.native
+  
   /**
     * _Creates data from string._
     *
@@ -54,4 +58,3 @@ object Data extends js.Object {
     */
   def fromString(string: String): typingsSlinky.scriptableIos.Data = js.native
 }
-

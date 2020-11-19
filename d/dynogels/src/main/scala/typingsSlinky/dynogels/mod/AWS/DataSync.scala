@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.datasyncMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.DataSync")
 @js.native
@@ -14,4 +14,3 @@ class DataSync ()
   extends typingsSlinky.awsSdk.mod.DataSync {
   def this(options: ClientConfiguration) = this()
 }
-

@@ -20,113 +20,13 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.undo
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.update
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SketchViewModel
   extends Accessor
      with Evented {
-  /**
-    * When creating new graphics (for example after [create()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#create) has been called), this property reflects the create tool being used. When updating graphics (for example after [update()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#update) has been called), this property reflects the update tool being used. If no create or update operation is in progress, this is `null`.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#activeTool)
-    */
-  val activeTool: point | multipoint | polyline | polygon | circle | rectangle | move | transform | reshape = js.native
-  /**
-    * The graphic that is being created.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#createGraphic)
-    */
-  val createGraphic: Graphic = js.native
-  /**
-    * Default create options set for the Sketch widget.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#defaultCreateOptions)
-    */
-  var defaultCreateOptions: SketchViewModelDefaultCreateOptions = js.native
-  /**
-    * Default update options set for the SketchViewModel. Update options set on this property will be overridden by options passed to the [update()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#update) method.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#defaultUpdateOptions)
-    */
-  var defaultUpdateOptions: SketchViewModelDefaultUpdateOptions = js.native
-  /**
-    * The [GraphicsLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GraphicsLayer.html) associated with the SketchViewModel. The SketchViewModel adds new [graphics](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html) to this layer or can only update graphics stored in this layer.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#layer)
-    */
-  var layer: GraphicsLayer = js.native
-  /**
-    * A  [SimpleMarkerSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleMarkerSymbol.html) or [PointSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PointSymbol3D.html) used for representing the point geometry that is being drawn. [SimpleMarkerSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleMarkerSymbol.html) may also be used to symbolize point features in a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). However, it is recommended you use [PointSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PointSymbol3D.html) instead.  The default value is the following:
-    * ```js
-    * {
-    *   type: "simple-marker",
-    *   style: "circle",
-    *   size: 6,
-    *   color: [255, 255, 255],
-    *   outline: {
-    *    color: [50, 50, 50],
-    *     width: 1
-    *   }
-    * }
-    * ```
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#pointSymbol)
-    */
-  var pointSymbol: SimpleMarkerSymbol | PointSymbol3D = js.native
-  /**
-    * A  [SimpleFillSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleFillSymbol.html) or [PolygonSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PolygonSymbol3D.html) used for representing the polygon geometry that is being drawn. [SimpleFillSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleFillSymbol.html) may also be used to symbolize point features in a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). However, it is recommended you use [PolygonSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PolygonSymbol3D.html) instead.  The default value is the following:
-    * ```js
-    * {
-    *   type: "simple-fill",
-    *   color: [150, 150, 150, 0.2],
-    *   outline: {
-    *    color: [50, 50, 50],
-    *     width: 2
-    *   }
-    * }
-    * ```
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#polygonSymbol)
-    */
-  var polygonSymbol: SimpleFillSymbol | PolygonSymbol3D = js.native
-  /**
-    * A  [SimpleLineSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleLineSymbol.html) or [LineSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-LineSymbol3D.html) used for representing the polyline geometry that is being drawn. [SimpleLineSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleLineSymbol.html) may also be used to symbolize polyline features in a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). However, it is recommended you use [LineSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-LineSymbol3D.html) instead.  The default value is the following:
-    * ```js
-    * {
-    *   type: "simple-line",
-    *   color: [130, 130, 130],
-    *   width: 2
-    * }
-    * ```
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#polylineSymbol)
-    */
-  var polylineSymbol: SimpleLineSymbol | LineSymbol3D = js.native
-  /**
-    * The sketch view model's state.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#state)
-    */
-  val state: ready | disabled | active = js.native
-  /**
-    * An array of graphics that are being updated by the SketchViewModel.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#updateGraphics)
-    */
-  val updateGraphics: Collection[Graphic] = js.native
-  /**
-    * Indicates if a graphic can be selected to be updated. If `false`, graphics cannot selected to be updated. Set this property to `false` to add a custom [hitTest](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#hitTest) logic for [updating](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#update) graphics.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#updateOnGraphicClick)
-    */
-  var updateOnGraphicClick: Boolean = js.native
-  /**
-    * The view in which geometries will be sketched by the user.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#view)
-    */
-  var view: MapView | SceneView = js.native
+  
   /**
     * Draws rectangle/circle graphc from given segment vertices.
     *
@@ -137,6 +37,14 @@ trait SketchViewModel
     *
     */
   def _drawSegmentGraphic(vertices: Unit, modifiers: Unit): Unit = js.native
+  
+  /**
+    * When creating new graphics (for example after [create()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#create) has been called), this property reflects the create tool being used. When updating graphics (for example after [update()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#update) has been called), this property reflects the update tool being used. If no create or update operation is in progress, this is `null`.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#activeTool)
+    */
+  val activeTool: point | multipoint | polyline | polygon | circle | rectangle | move | transform | reshape = js.native
+  
   /**
     * Cancels the active operation and fires the [create](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#event-create) or [update](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#event-update) event If called in the middle of a create operation, `cancel()` discards the partially created graphic.
     *
@@ -145,6 +53,7 @@ trait SketchViewModel
     *
     */
   def cancel(): Unit = js.native
+  
   /**
     * Completes the active operation and fires the [create](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#event-create) or [update](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#event-update) event and changes the event's state to `complete`. If called in the middle of a create operation, `complete()` finishes the active create operation and keeps the valid geometry.
     *
@@ -153,6 +62,14 @@ trait SketchViewModel
     *
     */
   def complete(): Unit = js.native
+  
+  /**
+    * The graphic that is being created.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#createGraphic)
+    */
+  val createGraphic: Graphic = js.native
+  
   @JSName("create")
   def create_circle(tool: circle): Unit = js.native
   @JSName("create")
@@ -196,6 +113,21 @@ trait SketchViewModel
   def create_rectangle(tool: rectangle): Unit = js.native
   @JSName("create")
   def create_rectangle(tool: rectangle, createOptions: SketchViewModelCreateCreateOptions): Unit = js.native
+  
+  /**
+    * Default create options set for the Sketch widget.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#defaultCreateOptions)
+    */
+  var defaultCreateOptions: SketchViewModelDefaultCreateOptions = js.native
+  
+  /**
+    * Default update options set for the SketchViewModel. Update options set on this property will be overridden by options passed to the [update()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#update) method.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#defaultUpdateOptions)
+    */
+  var defaultUpdateOptions: SketchViewModelDefaultUpdateOptions = js.native
+  
   /**
     * Deletes the selected graphics used in the update workflow. Calling this method will fire the [delete](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#event-delete) event.
     *
@@ -204,6 +136,14 @@ trait SketchViewModel
     *
     */
   def delete(): Unit = js.native
+  
+  /**
+    * The [GraphicsLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GraphicsLayer.html) associated with the SketchViewModel. The SketchViewModel adds new [graphics](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html) to this layer or can only update graphics stored in this layer.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#layer)
+    */
+  var layer: GraphicsLayer = js.native
+  
   @JSName("on")
   def on_create(name: create, eventHandler: SketchViewModelCreateEventHandler): IHandle = js.native
   @JSName("on")
@@ -214,6 +154,57 @@ trait SketchViewModel
   def on_undo(name: undo, eventHandler: SketchViewModelUndoEventHandler): IHandle = js.native
   @JSName("on")
   def on_update(name: update, eventHandler: SketchViewModelUpdateEventHandler): IHandle = js.native
+  
+  /**
+    * A  [SimpleMarkerSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleMarkerSymbol.html) or [PointSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PointSymbol3D.html) used for representing the point geometry that is being drawn. [SimpleMarkerSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleMarkerSymbol.html) may also be used to symbolize point features in a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). However, it is recommended you use [PointSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PointSymbol3D.html) instead.  The default value is the following:
+    * ```js
+    * {
+    *   type: "simple-marker",
+    *   style: "circle",
+    *   size: 6,
+    *   color: [255, 255, 255],
+    *   outline: {
+    *    color: [50, 50, 50],
+    *     width: 1
+    *   }
+    * }
+    * ```
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#pointSymbol)
+    */
+  var pointSymbol: SimpleMarkerSymbol | PointSymbol3D = js.native
+  
+  /**
+    * A  [SimpleFillSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleFillSymbol.html) or [PolygonSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PolygonSymbol3D.html) used for representing the polygon geometry that is being drawn. [SimpleFillSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleFillSymbol.html) may also be used to symbolize point features in a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). However, it is recommended you use [PolygonSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PolygonSymbol3D.html) instead.  The default value is the following:
+    * ```js
+    * {
+    *   type: "simple-fill",
+    *   color: [150, 150, 150, 0.2],
+    *   outline: {
+    *    color: [50, 50, 50],
+    *     width: 2
+    *   }
+    * }
+    * ```
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#polygonSymbol)
+    */
+  var polygonSymbol: SimpleFillSymbol | PolygonSymbol3D = js.native
+  
+  /**
+    * A  [SimpleLineSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleLineSymbol.html) or [LineSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-LineSymbol3D.html) used for representing the polyline geometry that is being drawn. [SimpleLineSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleLineSymbol.html) may also be used to symbolize polyline features in a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). However, it is recommended you use [LineSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-LineSymbol3D.html) instead.  The default value is the following:
+    * ```js
+    * {
+    *   type: "simple-line",
+    *   color: [130, 130, 130],
+    *   width: 2
+    * }
+    * ```
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#polylineSymbol)
+    */
+  var polylineSymbol: SimpleLineSymbol | LineSymbol3D = js.native
+  
   /**
     * Incrementally redo actions recorded in the stack. Calling this method will fire the [redo](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#event-redo) event.
     *
@@ -222,6 +213,14 @@ trait SketchViewModel
     *
     */
   def redo(): Unit = js.native
+  
+  /**
+    * The sketch view model's state.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#state)
+    */
+  val state: ready | disabled | active = js.native
+  
   /**
     * Incrementally undo actions recorded in the stack. Calling this method will fire the [undo](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#event-undo) event.
     *
@@ -230,6 +229,7 @@ trait SketchViewModel
     *
     */
   def undo(): Unit = js.native
+  
   def update(graphics: js.Array[Graphic]): js.Promise[Unit] = js.native
   def update(graphics: js.Array[Graphic], updateOptions: SketchViewModelUpdateUpdateOptions): js.Promise[Unit] = js.native
   /**
@@ -257,5 +257,25 @@ trait SketchViewModel
     */
   def update(graphics: Graphic): js.Promise[Unit] = js.native
   def update(graphics: Graphic, updateOptions: SketchViewModelUpdateUpdateOptions): js.Promise[Unit] = js.native
+  
+  /**
+    * An array of graphics that are being updated by the SketchViewModel.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#updateGraphics)
+    */
+  val updateGraphics: Collection[Graphic] = js.native
+  
+  /**
+    * Indicates if a graphic can be selected to be updated. If `false`, graphics cannot selected to be updated. Set this property to `false` to add a custom [hitTest](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#hitTest) logic for [updating](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#update) graphics.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#updateOnGraphicClick)
+    */
+  var updateOnGraphicClick: Boolean = js.native
+  
+  /**
+    * The view in which geometries will be sketched by the user.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#view)
+    */
+  var view: MapView | SceneView = js.native
 }
-

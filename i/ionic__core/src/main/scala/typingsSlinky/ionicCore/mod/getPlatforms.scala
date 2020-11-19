@@ -16,11 +16,12 @@ import typingsSlinky.ionicCore.ionicCoreStrings.pwa
 import typingsSlinky.ionicCore.ionicCoreStrings.tablet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ionic/core", "getPlatforms")
 @js.native
 object getPlatforms extends js.Object {
+  
   def apply(): js.Array[
     ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
   ] = js.native
@@ -28,4 +29,3 @@ object getPlatforms extends js.Object {
     ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
   ] = js.native
 }
-

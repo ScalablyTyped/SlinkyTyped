@@ -5,14 +5,16 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* augmented module */
 @JSImport("babylonjs/Engines/engine", JSImport.Namespace)
 @js.native
 object babylonjsEnginesEngineAugmentingMod extends js.Object {
+  
   @js.native
   trait Engine extends js.Object {
+    
     /**
       * Creates a new raw cube texture
       * @param data defines the array of data to use to create each face
@@ -35,6 +37,7 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       samplingMode: Double,
       compression: Nullable[String]
     ): InternalTexture = js.native
+    
     /**
       * Creates a new raw cube texture from a specified url
       * @param url defines the url where the data is located
@@ -111,6 +114,7 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       samplingMode: Double,
       invertY: Boolean
     ): InternalTexture = js.native
+    
     /**
       * Creates a raw texture
       * @param data defines the data to store in the texture
@@ -135,6 +139,7 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       compression: Nullable[String],
       `type`: Double
     ): InternalTexture = js.native
+    
     /**
       * Creates a new raw 2D array texture
       * @param data defines the data used to create the texture
@@ -161,6 +166,7 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       compression: Nullable[String],
       textureType: Double
     ): InternalTexture = js.native
+    
     /**
       * Creates a new raw 3D texture
       * @param data defines the data used to create the texture
@@ -187,6 +193,7 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       compression: Nullable[String],
       textureType: Double
     ): InternalTexture = js.native
+    
     /**
       * Update a raw cube texture
       * @param texture defines the texture to udpdate
@@ -238,6 +245,7 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       compression: Nullable[String],
       level: Double
     ): Unit = js.native
+    
     /**
       * Update a raw texture
       * @param texture defines the texture to update
@@ -268,6 +276,7 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       compression: Nullable[String],
       `type`: Double
     ): Unit = js.native
+    
     /**
       * Update a raw 2D array texture
       * @param texture defines the texture to update
@@ -298,6 +307,7 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       compression: Nullable[String],
       textureType: Double
     ): Unit = js.native
+    
     /**
       * Update a raw 3D texture
       * @param texture defines the texture to update
@@ -329,6 +339,4 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       textureType: Double
     ): Unit = js.native
   }
-  
 }
-

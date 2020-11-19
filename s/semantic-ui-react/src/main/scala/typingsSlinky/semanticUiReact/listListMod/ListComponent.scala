@@ -10,15 +10,20 @@ import typingsSlinky.semanticUiReact.listItemMod.ListItemProps
 import typingsSlinky.semanticUiReact.listListListMod.ListListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ListComponent extends FunctionComponent[ListProps] {
+  
   var Content: ReactComponentClass[ListContentProps] = js.native
+  
   var Description: ReactComponentClass[ListDescriptionProps] = js.native
+  
   var Header: ReactComponentClass[ListHeaderProps] = js.native
+  
   var Icon: ReactComponentClass[ListIconProps] = js.native
+  
   var Item: ReactComponentClass[ListItemProps] = js.native
+  
   var List: ReactComponentClass[ListListProps] = js.native
 }
-

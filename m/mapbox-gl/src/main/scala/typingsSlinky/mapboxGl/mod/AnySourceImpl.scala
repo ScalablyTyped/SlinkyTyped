@@ -2,7 +2,7 @@ package typingsSlinky.mapboxGl.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.mapboxGl.mod.GeoJSONSource
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.mapboxGl.mod.RasterDemSource
 */
 trait AnySourceImpl extends js.Object
-

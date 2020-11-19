@@ -1,25 +1,26 @@
 package typingsSlinky.maxmind.anon
 
 import typingsSlinky.node.Buffer
+import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.anon.BaseEncodingOptionsflagst
 import typingsSlinky.node.anon.EncodingBufferEncoding
 import typingsSlinky.node.anon.`3`
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCall extends js.Object {
-  def apply(path: Double): js.Promise[String | Buffer] = js.native
-  def apply(path: Double, options: String): js.Promise[String | Buffer] = js.native
-  def apply(path: Double, options: BaseEncodingOptionsflagst): js.Promise[String | Buffer] = js.native
-  def apply(path: Double, options: EncodingBufferEncoding): js.Promise[String] = js.native
-  def apply(path: Double, options: `3`): js.Promise[Buffer] = js.native
-  def apply(path: PathLike): js.Promise[String | Buffer] = js.native
-  def apply(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
-  def apply(path: PathLike, options: BaseEncodingOptionsflagst): js.Promise[String | Buffer] = js.native
-  def apply(path: PathLike, options: EncodingBufferEncoding): js.Promise[String] = js.native
-  def apply(path: PathLike, options: `3`): js.Promise[Buffer] = js.native
+  
+  def apply(path: Double): String | Buffer = js.native
+  def apply(path: Double, options: BufferEncoding): String = js.native
+  def apply(path: Double, options: BaseEncodingOptionsflagst): String | Buffer = js.native
+  def apply(path: Double, options: EncodingBufferEncoding): String = js.native
+  def apply(path: Double, options: `3`): Buffer = js.native
+  def apply(path: PathLike): String | Buffer = js.native
+  def apply(path: PathLike, options: BufferEncoding): String = js.native
+  def apply(path: PathLike, options: BaseEncodingOptionsflagst): String | Buffer = js.native
+  def apply(path: PathLike, options: EncodingBufferEncoding): String = js.native
+  def apply(path: PathLike, options: `3`): Buffer = js.native
 }
-

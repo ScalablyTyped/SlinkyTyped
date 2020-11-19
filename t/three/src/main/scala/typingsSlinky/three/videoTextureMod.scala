@@ -10,11 +10,12 @@ import typingsSlinky.three.textureMod.Texture
 import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/textures/VideoTexture", JSImport.Namespace)
 @js.native
 object videoTextureMod extends js.Object {
+  
   @js.native
   class VideoTexture protected () extends Texture {
     def this(
@@ -28,8 +29,7 @@ object videoTextureMod extends js.Object {
       `type`: js.UndefOr[TextureDataType],
       anisotropy: js.UndefOr[Double]
     ) = this()
+    
     val isVideoTexture: `true` = js.native
   }
-  
 }
-

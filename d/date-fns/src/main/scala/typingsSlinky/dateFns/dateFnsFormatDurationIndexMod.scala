@@ -3,16 +3,16 @@ package typingsSlinky.dateFns
 import typingsSlinky.dateFns.anon.Delimiter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("date-fns/formatDuration/index", JSImport.Namespace)
 @js.native
 object dateFnsFormatDurationIndexMod extends js.Object {
+  
   @js.native
   object default extends js.Object {
+    
     def apply(duration: typingsSlinky.dateFns.mod.Duration): String = js.native
     def apply(duration: typingsSlinky.dateFns.mod.Duration, options: Delimiter): String = js.native
   }
-  
 }
-

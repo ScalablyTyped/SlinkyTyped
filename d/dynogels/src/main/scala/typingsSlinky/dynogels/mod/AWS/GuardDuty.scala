@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.guarddutyMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.GuardDuty")
 @js.native
@@ -14,4 +14,3 @@ class GuardDuty ()
   extends typingsSlinky.awsSdk.mod.GuardDuty {
   def this(options: ClientConfiguration) = this()
 }
-

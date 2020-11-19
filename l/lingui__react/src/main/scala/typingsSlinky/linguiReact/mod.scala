@@ -19,17 +19,32 @@ import typingsSlinky.std.Intl.NumberFormatOptions
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@lingui/react", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  def i18nMark(id: String): String = js.native
+  
+  def withI18n(): js.Function1[
+    /* WrappedComponent */ ComponentConstructor[_], 
+    ReactComponentClass[Pick[_, Exclude[/* keyof any */ String, i18n | i18nHash]]]
+  ] = js.native
+  def withI18n(options: withI18nOptions): js.Function1[
+    /* WrappedComponent */ ComponentConstructor[_], 
+    ReactComponentClass[Pick[_, Exclude[/* keyof any */ String, i18n | i18nHash]]]
+  ] = js.native
+  
   @js.native
   class DateFormat protected ()
     extends Component[FormatPropsWithoutI18n[js.Date, DateTimeFormatOptions], js.Object, js.Any] {
     def this(props: FormatPropsWithoutI18n[js.Date, DateTimeFormatOptions]) = this()
     def this(props: FormatPropsWithoutI18n[js.Date, DateTimeFormatOptions], context: js.Any) = this()
   }
+  @js.native
+  object DateFormat
+    extends TopLevel[ReactComponentClass[FormatPropsWithoutI18n[js.Date, DateTimeFormatOptions]]]
   
   @js.native
   class I18n ()
@@ -45,6 +60,8 @@ object mod extends js.Object {
     def this(props: FormatPropsWithoutI18n[Double, NumberFormatOptions]) = this()
     def this(props: FormatPropsWithoutI18n[Double, NumberFormatOptions], context: js.Any) = this()
   }
+  @js.native
+  object NumberFormat extends TopLevel[ReactComponentClass[FormatPropsWithoutI18n[Double, NumberFormatOptions]]]
   
   @js.native
   class Plural ()
@@ -61,22 +78,4 @@ object mod extends js.Object {
   @js.native
   class Trans ()
     extends Component[TransPropsWithoutI18n, js.Object, js.Any]
-  
-  def i18nMark(id: String): String = js.native
-  def withI18n(): js.Function1[
-    /* WrappedComponent */ ComponentConstructor[_], 
-    ReactComponentClass[Pick[_, Exclude[/* keyof any */ String, i18n | i18nHash]]]
-  ] = js.native
-  def withI18n(options: withI18nOptions): js.Function1[
-    /* WrappedComponent */ ComponentConstructor[_], 
-    ReactComponentClass[Pick[_, Exclude[/* keyof any */ String, i18n | i18nHash]]]
-  ] = js.native
-  @js.native
-  object DateFormat
-    extends TopLevel[ReactComponentClass[FormatPropsWithoutI18n[js.Date, DateTimeFormatOptions]]]
-  
-  @js.native
-  object NumberFormat extends TopLevel[ReactComponentClass[FormatPropsWithoutI18n[Double, NumberFormatOptions]]]
-  
 }
-

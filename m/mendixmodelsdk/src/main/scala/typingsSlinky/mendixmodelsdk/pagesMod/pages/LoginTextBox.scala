@@ -8,7 +8,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.0.2: introduced
@@ -24,21 +24,26 @@ abstract class LoginTextBox protected () extends Widget {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FLoginTextBox: IModel = js.native
+  
   def label: Text | Null = js.native
+  
   def labelWidth: Double = js.native
   def labelWidth_=(newValue: Double): Unit = js.native
+  
   def label_=(newValue: Text | Null): Unit = js.native
+  
+  @JSName("model")
+  var model_FLoginTextBox: IModel = js.native
+  
   def placeholder: Text = js.native
   def placeholder_=(newValue: Text): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.LoginTextBox")
 @js.native
 object LoginTextBox extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

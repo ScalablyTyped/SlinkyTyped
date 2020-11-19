@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.reactWidgets.dropdownListMod.DropdownListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-widgets", "DropdownList")
 @js.native
@@ -15,8 +15,6 @@ class ^ protected ()
   def this(props: DropdownListProps) = this()
   def this(props: DropdownListProps, context: js.Any) = this()
 }
-
 @JSImport("react-widgets", "DropdownList")
 @js.native
 object ^ extends TopLevel[ReactComponentClass[DropdownListProps]]
-

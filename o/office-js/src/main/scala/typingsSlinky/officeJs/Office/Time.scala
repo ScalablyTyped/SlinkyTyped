@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.Office
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `Time` object is returned as the start or end property of an appointment in compose mode.
@@ -17,6 +17,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Time extends js.Object {
+  
   /**
     * Gets the start or end time of an appointment.
     *
@@ -55,6 +56,7 @@ trait Time extends js.Object {
     *                  of type `Office.AsyncResult`. The `value` property of the result is a `Date` object.
     */
   def getAsync(options: AsyncContextOptions, callback: js.Function1[/* asyncResult */ AsyncResult[js.Date], Unit]): Unit = js.native
+  
   /**
     * Sets the start or end time of an appointment.
     *
@@ -95,4 +97,3 @@ trait Time extends js.Object {
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
 }
-

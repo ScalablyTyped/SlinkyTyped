@@ -2,7 +2,7 @@ package typingsSlinky.osrm.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.osrm.osrmStrings.full
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.osrm.osrmStrings.`false`
 */
 trait OverviewTypes extends js.Object
-
 object OverviewTypes {
+  
   @scala.inline
   def `false`: typingsSlinky.osrm.osrmStrings.`false` = "false".asInstanceOf[typingsSlinky.osrm.osrmStrings.`false`]
+  
   @scala.inline
   def full: typingsSlinky.osrm.osrmStrings.full = "full".asInstanceOf[typingsSlinky.osrm.osrmStrings.full]
+  
   @scala.inline
   def simplified: typingsSlinky.osrm.osrmStrings.simplified = "simplified".asInstanceOf[typingsSlinky.osrm.osrmStrings.simplified]
 }
-

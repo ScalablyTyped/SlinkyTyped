@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.FeatureReductionClusterProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.FeatureReductionCluster")
 @js.native
@@ -16,4 +16,3 @@ class FeatureReductionClusterCls ()
   extends typingsSlinky.arcgisJsApi.esri.FeatureReductionCluster {
   def this(properties: FeatureReductionClusterProperties) = this()
 }
-

@@ -1,11 +1,7 @@
 package typingsSlinky.samchon
 
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.ecol.hashMapCollectionMod.HashMapCollection
 import typingsSlinky.samchon.clientMod.Client
-import typingsSlinky.samchon.invokeMod.Invoke
 import typingsSlinky.samchon.iprotocolMod.IProtocol
 import typingsSlinky.samchon.serviceServerMod.Server
 import typingsSlinky.samchon.webClientDriverMod.WebClientDriver
@@ -20,11 +16,12 @@ import typingsSlinky.tstl.pairMod.Pair
 import typingsSlinky.tstl.tstlBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("samchon/templates/service/User", JSImport.Namespace)
 @js.native
 object userMod extends js.Object {
+  
   @js.native
   abstract class User protected ()
     extends HashMapCollection[Double, Client]
@@ -35,58 +32,40 @@ object userMod extends js.Object {
       * @param server The parent {@link Server} object.
       */
     def this(server: Server) = this()
-    /**
-      * @hidden
-      */
-    var _Handle_erase_client: js.Any = js.native
-    /**
-      * @hidden
-      */
-    var account_id_ : js.Any = js.native
-    /**
-      * @hidden
-      */
-    var authority_ : js.Any = js.native
-    /**
-      * @hidden
-      */
-    var sequence_ : js.Any = js.native
-    /**
-      * @hidden
-      */
-    var server_ : js.Any = js.native
-    /**
-      * @hidden
-      */
-    var session_id_ : js.Any = js.native
+    
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     /* protected */ override def _Erase_by_key(key: Double): Double = js.native
+    
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     /* protected */ override def _Erase_by_range(first: Iterator[Double, Client]): Iterator[Double, Client] = js.native
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     /* protected */ override def _Erase_by_range(first: Iterator[Double, Client], last: Iterator[Double, Client]): Iterator[Double, Client] = js.native
+    
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     /* protected */ override def _Handle_erase(first: Iterator[Double, Client], last: Iterator[Double, Client]): Unit = js.native
+    
+    /**
+      * @hidden
+      */
+    var _Handle_erase_client: js.Any = js.native
+    
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     /* protected */ override def _Handle_insert(first: Iterator[Double, Client], last: Iterator[Double, Client]): Unit = js.native
+    
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     /* protected */ override def _Insert_by_range[InputIterator /* <: IForwardIterator[IPair[Double, Client], InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
-    /* InferMemberOverrides */
-    override def addEventListener(
-      `type`: Type,
-      listener: Listener[
-          Entry[Double, Client], 
-          HashMap[Double, Client], 
-          Iterator[Double, Client], 
-          ReverseIterator[Double, Client]
-        ]
-    ): Unit = js.native
+    
+    /**
+      * @hidden
+      */
+    var account_id_ : js.Any = js.native
+    
     /**
       * Range Assigner.
       *
@@ -95,24 +74,18 @@ object userMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[IPair[Double, Client], InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
+    
     /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
+      * @hidden
       */
-    /* InferMemberOverrides */
-    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[
-        Entry[Double, Client], 
-        HashMap[Double, Client], 
-        Iterator[Double, Client], 
-        ReverseIterator[Double, Client], 
-        IPair[Double, Client]
-      ] = js.native
+    var authority_ : js.Any = js.native
+    
     /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
+    
     /**
       * @inheritDoc
       */
@@ -125,6 +98,7 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def count(key: Double): Double = js.native
+    
     /**
       * Factory method creating a {@link Client} object.
       *
@@ -132,6 +106,7 @@ object userMod extends js.Object {
       * @return A newly created {@link Client} object.
       */
     /* protected */ def createClient(driver: WebClientDriver): Client = js.native
+    
     /**
       * Default Destructor.
       *
@@ -160,15 +135,7 @@ object userMod extends js.Object {
       * ```
       */
     /* protected */ def destructor(): Unit = js.native
-    /* InferMemberOverrides */
-    override def dispatchEvent(
-      event: CollectionEvent[
-          Entry[Double, Client], 
-          HashMap[Double, Client], 
-          Iterator[Double, Client], 
-          ReverseIterator[Double, Client]
-        ]
-    ): Unit = js.native
+    
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def emplace(key: Double, `val`: Client): InsertRet[
@@ -179,28 +146,11 @@ object userMod extends js.Object {
         Iterator[Double, Client], 
         ReverseIterator[Double, Client]
       ] = js.native
+    
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def emplace_hint(hint: Iterator[Double, Client], key: Double, `val`: Client): Iterator[Double, Client] = js.native
-    /**
-      * Test whether container is empty.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def empty(): Boolean = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[
-        Entry[Double, Client], 
-        HashMap[Double, Client], 
-        Iterator[Double, Client], 
-        ReverseIterator[Double, Client], 
-        IPair[Double, Client]
-      ] = js.native
+    
     /**
       * Erase elements in range.
       *
@@ -225,6 +175,7 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     @JSName("erase")
     override def erase_IteratorT(it: Iterator[Double, Client]): Iterator[Double, Client] = js.native
+    
     /**
       * Extract an element by key.
       *
@@ -242,6 +193,7 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     @JSName("extract")
     override def extract_Iterator(pos: Iterator[Double, Client]): Iterator[Double, Client] = js.native
+    
     /**
       * @inheritDoc
       */
@@ -254,6 +206,7 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def find(key: Double): Iterator[Double, Client] = js.native
+    
     /**
       * Get a value.
       *
@@ -262,24 +215,28 @@ object userMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def get(key: Double): Client = js.native
+    
     /**
       * Get account id.
       *
       * @return Account ID.
       */
     def getAccountID(): String = js.native
+    
     /**
       * Get authority.
       *
       * @return Authority
       */
     def getAuthority(): Double = js.native
+    
     /**
       * Get parent {@lin Server} object.
       *
       * @return Parent {@link Server} object.
       */
     def getServer(): Server = js.native
+    
     /**
       * @inheritDoc
       */
@@ -292,8 +249,7 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def has(key: Double): Boolean = js.native
-    /* InferMemberOverrides */
-    override def hasEventListener(`type`: Type): Boolean = js.native
+    
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def insert(hint: Iterator[Double, Client], pair: IPair[Double, Client]): Iterator[Double, Client] = js.native
@@ -310,6 +266,7 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def insert[InputIterator /* <: IForwardIterator[IPair[Double, Client], InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
+    
     /**
       * Insert or assign an element with hint.
       *
@@ -329,6 +286,7 @@ object userMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def insert_or_assign(key: Double, value: Client): Pair[Iterator[Double, Client], Boolean] = js.native
+    
     /**
       * Log-out.
       *
@@ -340,6 +298,7 @@ object userMod extends js.Object {
       * with the ordinary {@link getAccountID account id} more.
       */
     def logout(): Unit = js.native
+    
     /**
       * Merge two containers.
       *
@@ -348,56 +307,22 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def merge(source: HashMap[Double, Client]): Unit = js.native
+    
     /**
-      * Insert items at the end.
-      *
-      * @param items Items to insert.
-      * @return Number of elements in the container after insertion.
+      * @hidden
       */
-    /* InferMemberOverrides */
-    override def push(items: (IPair[Double, Client])*): Double = js.native
+    var sequence_ : js.Any = js.native
+    
     /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
+      * @hidden
       */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseIterator[Double, Client] = js.native
-    /* InferMemberOverrides */
-    override def removeEventListener(
-      `type`: Type,
-      listener: Listener[
-          Entry[Double, Client], 
-          HashMap[Double, Client], 
-          Iterator[Double, Client], 
-          ReverseIterator[Double, Client]
-        ]
-    ): Unit = js.native
+    var server_ : js.Any = js.native
+    
     /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
+      * @hidden
       */
-    /* InferMemberOverrides */
-    override def rend(): ReverseIterator[Double, Client] = js.native
-    /**
-      * Sending message.
-      *
-      * Sends message to related system or shifts the responsibility to chain.
-      *
-      * @param invoke Invoke message to send
-      */
-    /* CompleteClass */
-    override def replyData(invoke: Invoke): Unit = js.native
-    /**
-      * Handling replied message.
-      *
-      * Handles replied message or shifts the responsibility to chain.
-      *
-      * @param invoke An {@link Invoke} message has received.
-      */
-    /* CompleteClass */
-    override def sendData(invoke: Invoke): Unit = js.native
+    var session_id_ : js.Any = js.native
+    
     /**
       * Set a value with key.
       *
@@ -406,6 +331,7 @@ object userMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def set(key: Double, `val`: Client): Unit = js.native
+    
     /**
       * Set *account id* and *authority*.
       *
@@ -425,11 +351,7 @@ object userMod extends js.Object {
       * @param authority To be authority.
       */
     def setAccount(id: String, authority: Double): Unit = js.native
-    /**
-      * Number of elements in the container.
-      */
-    /* InferMemberOverrides */
-    override def size(): Double = js.native
+    
     /**
       * Swap elements.
       *
@@ -437,6 +359,7 @@ object userMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def swap(obj: HashMap[Double, Client]): Unit = js.native
+    
     /**
       * Native function for `JSON.stringify()`.
       *
@@ -445,6 +368,4 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     override def toJSON(): js.Array[Entry[Double, Client]] = js.native
   }
-  
 }
-

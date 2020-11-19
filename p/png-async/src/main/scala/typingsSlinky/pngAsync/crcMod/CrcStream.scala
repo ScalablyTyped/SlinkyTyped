@@ -3,12 +3,14 @@ package typingsSlinky.pngAsync.crcMod
 import typingsSlinky.node.streamMod.Writable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CrcStream extends Writable {
+  
   var _crc: js.Any = js.native
-  val crc32: Double = js.native
+  
   def _write(data: js.Any, encoding: js.Any, cb: js.Any): Unit = js.native
+  
+  val crc32: Double = js.native
 }
-

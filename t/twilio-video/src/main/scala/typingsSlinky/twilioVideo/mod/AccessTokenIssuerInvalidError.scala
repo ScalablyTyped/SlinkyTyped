@@ -4,14 +4,15 @@ import typingsSlinky.twilioVideo.twilioVideoNumbers.`20103`
 import typingsSlinky.twilioVideo.twilioVideoStrings.`Invalid Access Token issuerSlashsubject`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("twilio-video", "AccessTokenIssuerInvalidError")
 @js.native
 class AccessTokenIssuerInvalidError () extends TwilioError {
+  
   @JSName("code")
   var code_AccessTokenIssuerInvalidError: `20103` = js.native
+  
   @JSName("message")
   var message_AccessTokenIssuerInvalidError: `Invalid Access Token issuerSlashsubject` = js.native
 }
-

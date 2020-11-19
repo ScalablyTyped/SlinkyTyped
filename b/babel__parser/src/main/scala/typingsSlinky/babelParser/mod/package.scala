@@ -2,9 +2,10 @@ package typingsSlinky.babelParser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.babelParser.babelParserStrings.asyncGenerators
     - typingsSlinky.babelParser.babelParserStrings.bigInt
@@ -43,6 +44,7 @@ package object mod {
     - typingsSlinky.babelParser.mod.ParserPluginWithOptions
   */
   type ParserPlugin = typingsSlinky.babelParser.mod._ParserPlugin | typingsSlinky.babelParser.mod.ParserPluginWithOptions
+  
   type ParserPluginWithOptions = js.Tuple2[
     typingsSlinky.babelParser.babelParserStrings.decorators | typingsSlinky.babelParser.babelParserStrings.pipelineOperator | typingsSlinky.babelParser.babelParserStrings.flow, 
     typingsSlinky.babelParser.mod.DecoratorsPluginOptions | typingsSlinky.babelParser.mod.FlowPluginOptions | typingsSlinky.babelParser.mod.PipelineOperatorPluginOptions

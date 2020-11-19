@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.subMeshMod.SubMesh
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Culling/Octrees/index", "Octree")
 @js.native
@@ -36,23 +36,33 @@ class Octree[T] protected ()
         /* block */ typingsSlinky.babylonjs.octreeBlockMod.OctreeBlock[T], 
         Unit
       ],
+    maxBlockCapacity: js.UndefOr[scala.Nothing],
+    /** Defines the maximum depth (sub-levels) for your octree. Default value is 2, which means 8 8 8 = 512 blocks :) (This parameter takes precedence over capacity.) */
+  maxDepth: Double
+  ) = this()
+  def this(
+    creationFunc: js.Function2[
+        /* entry */ T, 
+        /* block */ typingsSlinky.babylonjs.octreeBlockMod.OctreeBlock[T], 
+        Unit
+      ],
     maxBlockCapacity: Double,
     /** Defines the maximum depth (sub-levels) for your octree. Default value is 2, which means 8 8 8 = 512 blocks :) (This parameter takes precedence over capacity.) */
   maxDepth: Double
   ) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Culling/Octrees/index", "Octree")
 @js.native
 object Octree extends js.Object {
+  
   /**
     * Adds a mesh into the octree block if it intersects the block
     */
   def CreationFuncForMeshes(entry: AbstractMesh, block: typingsSlinky.babylonjs.octreeBlockMod.OctreeBlock[AbstractMesh]): Unit = js.native
+  
   /**
     * Adds a submesh into the octree block if it intersects the block
     */
   def CreationFuncForSubMeshes(entry: SubMesh, block: typingsSlinky.babylonjs.octreeBlockMod.OctreeBlock[SubMesh]): Unit = js.native
 }
-

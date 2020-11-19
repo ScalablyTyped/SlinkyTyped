@@ -2,7 +2,7 @@ package typingsSlinky.avoscloudSdk.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A Promise is returned by async methods as a hook to provide callbacks to be
@@ -22,10 +22,10 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IPromise[T] extends js.Object {
+  
   def `then`[U](resolvedCallback: js.Function1[/* value */ T, IPromise[U] | U]): IPromise[T] = js.native
   def `then`[U](
     resolvedCallback: js.Function1[/* value */ T, IPromise[U] | U],
     rejectedCallback: js.Function1[/* reason */ js.Any, IPromise[U] | U]
   ): IPromise[T] = js.native
 }
-

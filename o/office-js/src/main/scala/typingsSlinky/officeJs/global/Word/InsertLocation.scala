@@ -2,7 +2,7 @@ package typingsSlinky.officeJs.global.Word
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   *
@@ -13,12 +13,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Word.InsertLocation")
 @js.native
 object InsertLocation extends js.Object {
-  /* "After" */ val after: typingsSlinky.officeJs.Word.InsertLocation.after with String = js.native
-  /* "Before" */ val before: typingsSlinky.officeJs.Word.InsertLocation.before with String = js.native
-  /* "End" */ val end: typingsSlinky.officeJs.Word.InsertLocation.end with String = js.native
-  /* "Replace" */ val replace: typingsSlinky.officeJs.Word.InsertLocation.replace with String = js.native
-  /* "Start" */ val start: typingsSlinky.officeJs.Word.InsertLocation.start with String = js.native
+  
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJs.Word.InsertLocation with String] = js.native
+  
+  /* "After" */ val after: typingsSlinky.officeJs.Word.InsertLocation.after with String = js.native
+  
+  /* "Before" */ val before: typingsSlinky.officeJs.Word.InsertLocation.before with String = js.native
+  
+  /* "End" */ val end: typingsSlinky.officeJs.Word.InsertLocation.end with String = js.native
+  
+  /* "Replace" */ val replace: typingsSlinky.officeJs.Word.InsertLocation.replace with String = js.native
+  
+  /* "Start" */ val start: typingsSlinky.officeJs.Word.InsertLocation.start with String = js.native
 }
-

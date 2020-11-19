@@ -2,7 +2,7 @@ package typingsSlinky.devexpressWeb.global
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A command to search for a specific text and replace all matches in the document with the specified string.
@@ -11,4 +11,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class ReplaceAllCommand ()
   extends typingsSlinky.devexpressWeb.ReplaceAllCommand
-

@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.projectsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -25,24 +25,28 @@ class ProjectConversion protected () extends ModelUnit {
     isPartial: Boolean,
     container: IProject
   ) = this()
+  
+  def containerAsProject: Project = js.native
   @JSName("containerAsProject")
   val containerAsProject_FProjectConversion: IProject = js.native
+  
+  def markers: IList[OneTimeConversionMarker] = js.native
+  
   @JSName("model")
   var model_FProjectConversion: IModel = js.native
-  def containerAsProject: Project = js.native
-  def markers: IList[OneTimeConversionMarker] = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/projects", "projects.ProjectConversion")
 @js.native
 object ProjectConversion extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates a new ProjectConversion unit in the SDK and on the server.
     * Expects one argument, the IProject in which this unit is contained.
     */
   def createIn(container: IProject): ProjectConversion = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

@@ -4,21 +4,22 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.materializeCss.anon.PartialMaterialboxOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("materialize-css", "Materialbox")
 @js.native
 class Materialbox ()
   extends typingsSlinky.materializeCss.M.Materialbox
-
 /* static members */
 @JSImport("materialize-css", "Materialbox")
 @js.native
 object Materialbox extends js.Object {
+  
   /**
     * Get Instance
     */
   def getInstance(elem: Element): typingsSlinky.materializeCss.M.Materialbox = js.native
+  
   /**
     * Init Materialboxes
     */
@@ -35,4 +36,3 @@ object Materialbox extends js.Object {
   def init(els: Element): typingsSlinky.materializeCss.M.Materialbox = js.native
   def init(els: Element, options: PartialMaterialboxOptions): typingsSlinky.materializeCss.M.Materialbox = js.native
 }
-

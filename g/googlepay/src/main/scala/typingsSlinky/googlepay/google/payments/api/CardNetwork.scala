@@ -2,7 +2,7 @@ package typingsSlinky.googlepay.google.payments.api
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Card network enum string.
@@ -84,27 +84,35 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.googlepay.googlepayStrings.VISA
 */
 trait CardNetwork extends js.Object
-
 object CardNetwork {
+  
   @scala.inline
   def AMEX: typingsSlinky.googlepay.googlepayStrings.AMEX = "AMEX".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.AMEX]
+  
   @scala.inline
   def DISCOVER: typingsSlinky.googlepay.googlepayStrings.DISCOVER = "DISCOVER".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.DISCOVER]
+  
   @scala.inline
   def ELECTRON: typingsSlinky.googlepay.googlepayStrings.ELECTRON = "ELECTRON".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.ELECTRON]
+  
   @scala.inline
   def ELO: typingsSlinky.googlepay.googlepayStrings.ELO = "ELO".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.ELO]
+  
   @scala.inline
   def ELO_DEBIT: typingsSlinky.googlepay.googlepayStrings.ELO_DEBIT = "ELO_DEBIT".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.ELO_DEBIT]
+  
   @scala.inline
   def INTERAC: typingsSlinky.googlepay.googlepayStrings.INTERAC = "INTERAC".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.INTERAC]
+  
   @scala.inline
   def JCB: typingsSlinky.googlepay.googlepayStrings.JCB = "JCB".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.JCB]
+  
   @scala.inline
   def MAESTRO: typingsSlinky.googlepay.googlepayStrings.MAESTRO = "MAESTRO".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.MAESTRO]
+  
   @scala.inline
   def MASTERCARD: typingsSlinky.googlepay.googlepayStrings.MASTERCARD = "MASTERCARD".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.MASTERCARD]
+  
   @scala.inline
   def VISA: typingsSlinky.googlepay.googlepayStrings.VISA = "VISA".asInstanceOf[typingsSlinky.googlepay.googlepayStrings.VISA]
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.jsonSchemaRefParser.mod
 import typingsSlinky.jsonSchema.mod.JSONSchema4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This is the default export of JSON Schema $Ref Parser. You can creates instances of this class using new $RefParser(), or you can just call its static methods.
@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait RefParser extends js.Object {
+  
   /**
     * The $refs property is a `$Refs` object, which lets you access all of the externally-referenced files in the schema, as well as easily get and set specific values in the schema using JSON pointers.
     *
@@ -21,12 +22,7 @@ trait RefParser extends js.Object {
     */
   @JSName("$refs")
   var $refs: Refs = js.native
-  /**
-    * The `schema` property is the parsed/bundled/dereferenced JSON Schema object. This is the same value that is passed to the callback function (or Promise) when calling the parse, bundle, or dereference methods.
-    *
-    * See https://github.com/BigstickCarpet/json-schema-ref-parser/blob/master/docs/ref-parser.md#schema
-    */
-  var schema: JSONSchema4 = js.native
+  
   /**
     * Bundles all referenced files/URLs into a single schema that only has internal `$ref` pointers. This lets you split-up your schema however you want while you're building it, but easily combine all those files together when it's time to package or distribute the schema to other people. The resulting schema size will be small, since it will still contain internal JSON references rather than being fully-dereferenced.
     *
@@ -62,6 +58,7 @@ trait RefParser extends js.Object {
     options: Options,
     callback: js.Function2[/* err */ js.Error | Null, /* schema */ JSONSchema4 | Null, _]
   ): js.Promise[JSONSchema4] = js.native
+  
   def dereference(path: String): js.Promise[JSONSchema4] = js.native
   def dereference(
     path: String,
@@ -125,6 +122,7 @@ trait RefParser extends js.Object {
     options: Options,
     callback: js.Function2[/* err */ js.Error | Null, /* schema */ JSONSchema4 | Null, _]
   ): js.Promise[JSONSchema4] = js.native
+  
   /**
     * *This method is used internally by other methods, such as `bundle` and `dereference`. You probably won't need to call this method yourself.*
     *
@@ -160,6 +158,7 @@ trait RefParser extends js.Object {
     options: Options,
     callback: js.Function2[/* err */ js.Error | Null, /* schema */ JSONSchema4 | Null, _]
   ): js.Promise[JSONSchema4] = js.native
+  
   /**
     * *This method is used internally by other methods, such as `bundle` and `dereference`. You probably won't need to call this method yourself.*
     *
@@ -195,5 +194,11 @@ trait RefParser extends js.Object {
     options: Options,
     callback: js.Function2[/* err */ js.Error | Null, /* $refs */ Refs | Null, _]
   ): js.Promise[Refs] = js.native
+  
+  /**
+    * The `schema` property is the parsed/bundled/dereferenced JSON Schema object. This is the same value that is passed to the callback function (or Promise) when calling the parse, bundle, or dereference methods.
+    *
+    * See https://github.com/BigstickCarpet/json-schema-ref-parser/blob/master/docs/ref-parser.md#schema
+    */
+  var schema: JSONSchema4 = js.native
 }
-

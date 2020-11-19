@@ -3,7 +3,7 @@ package typingsSlinky.googlemaps.global.google.maps
 import typingsSlinky.googlemaps.google.maps.LatLngLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A LatLngBounds instance represents a rectangle in geographical coordinates,
@@ -26,4 +26,3 @@ class LatLngBounds ()
   def this(sw: typingsSlinky.googlemaps.google.maps.LatLng, ne: typingsSlinky.googlemaps.google.maps.LatLng) = this()
   def this(sw: typingsSlinky.googlemaps.google.maps.LatLng, ne: LatLngLiteral) = this()
 }
-

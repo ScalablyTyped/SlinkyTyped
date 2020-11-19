@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/GetRepositoryTriggersCommand", JSImport.Namespace)
 @js.native
 object getRepositoryTriggersCommandMod extends js.Object {
+  
   @js.native
   class GetRepositoryTriggersCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getRepositoryTriggersCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetRepositoryTriggersInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetRepositoryTriggersInput, GetRepositoryTriggersOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[GetRepositoryTriggersInput, GetRepositoryTriggersOutput] = js.native
   }
-  
 }
-

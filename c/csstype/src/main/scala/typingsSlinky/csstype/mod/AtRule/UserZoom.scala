@@ -2,7 +2,7 @@ package typingsSlinky.csstype.mod.AtRule
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.csstype.csstypeStrings.`-ms-zoom`
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.zoom
 */
 trait UserZoom extends js.Object
-
 object UserZoom {
+  
   @scala.inline
   def `-ms-zoom`: typingsSlinky.csstype.csstypeStrings.`-ms-zoom` = "-ms-zoom".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-ms-zoom`]
+  
   @scala.inline
   def fixed: typingsSlinky.csstype.csstypeStrings.fixed = "fixed".asInstanceOf[typingsSlinky.csstype.csstypeStrings.fixed]
+  
   @scala.inline
   def zoom: typingsSlinky.csstype.csstypeStrings.zoom = "zoom".asInstanceOf[typingsSlinky.csstype.csstypeStrings.zoom]
 }
-

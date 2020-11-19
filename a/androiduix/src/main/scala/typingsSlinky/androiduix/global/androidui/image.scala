@@ -4,11 +4,12 @@ import typingsSlinky.androiduix.android.graphics.Paint
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("androidui.image")
 @js.native
 object image extends js.Object {
+  
   @js.native
   class ChangeImageSizeDrawable protected ()
     extends typingsSlinky.androiduix.androidui.image.ChangeImageSizeDrawable {
@@ -32,6 +33,20 @@ object image extends js.Object {
     ) = this()
     def this(src: typingsSlinky.androiduix.androidui.image.NetImage, paint: Paint, overrideImageRatio: Double) = this()
   }
+  @js.native
+  object NetDrawable extends js.Object {
+    
+    @js.native
+    object TileMode extends js.Object {
+      
+      @JSBracketAccess
+      def apply(value: Double): js.UndefOr[typingsSlinky.androiduix.androidui.image.NetDrawable.TileMode with Double] = js.native
+      
+      /* 0 */ val DEFAULT: typingsSlinky.androiduix.androidui.image.NetDrawable.TileMode.DEFAULT with Double = js.native
+      
+      /* 1 */ val REPEAT: typingsSlinky.androiduix.androidui.image.NetDrawable.TileMode.REPEAT with Double = js.native
+    }
+  }
   
   @js.native
   class NetImage protected ()
@@ -43,24 +58,10 @@ object image extends js.Object {
   @js.native
   class NinePatchDrawable ()
     extends typingsSlinky.androiduix.androidui.image.NinePatchDrawable
-  
-  @js.native
-  object NetDrawable extends js.Object {
-    @js.native
-    object TileMode extends js.Object {
-      /* 0 */ val DEFAULT: typingsSlinky.androiduix.androidui.image.NetDrawable.TileMode.DEFAULT with Double = js.native
-      /* 1 */ val REPEAT: typingsSlinky.androiduix.androidui.image.NetDrawable.TileMode.REPEAT with Double = js.native
-      @JSBracketAccess
-      def apply(value: Double): js.UndefOr[typingsSlinky.androiduix.androidui.image.NetDrawable.TileMode with Double] = js.native
-    }
-    
-  }
-  
   /* static members */
   @js.native
   object NinePatchDrawable extends js.Object {
+    
     var GlobalBorderInfoCache: js.Any = js.native
   }
-  
 }
-

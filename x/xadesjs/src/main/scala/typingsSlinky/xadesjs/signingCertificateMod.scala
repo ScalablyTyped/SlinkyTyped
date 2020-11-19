@@ -5,15 +5,19 @@ import typingsSlinky.xmlCore.mod.XmlObject
 import typingsSlinky.xmldsigjs.mod.X509IssuerSerial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("xadesjs/build/types/xml/signing_certificate", JSImport.Namespace)
 @js.native
 object signingCertificateMod extends js.Object {
+  
   @js.native
   class Cert () extends XmlObject {
+    
     var CertDigest: DigestAlgAndValueType = js.native
+    
     var IssuerSerial: X509IssuerSerial = js.native
+    
     var Uri: String = js.native
   }
   
@@ -22,7 +26,9 @@ object signingCertificateMod extends js.Object {
   
   @js.native
   class DigestAlgAndValueType () extends XmlObject {
+    
     var DigestMethod: typingsSlinky.xmldsigjs.mod.DigestMethod = js.native
+    
     var DigestValue: js.typedarray.Uint8Array = js.native
   }
   
@@ -32,6 +38,4 @@ object signingCertificateMod extends js.Object {
   
   @js.native
   class SigningCertificate () extends XmlCollection[Cert]
-  
 }
-

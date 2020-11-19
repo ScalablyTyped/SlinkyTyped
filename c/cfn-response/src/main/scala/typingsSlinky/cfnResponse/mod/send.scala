@@ -4,11 +4,12 @@ import typingsSlinky.awsLambda.cloudformationCustomResourceMod.CloudFormationCus
 import typingsSlinky.awsLambda.handlerMod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("cfn-response", "send")
 @js.native
 object send extends js.Object {
+  
   def apply(event: CloudFormationCustomResourceEvent, context: Context, responseStatus: ResponseStatus): js.Promise[Unit] = js.native
   def apply(
     event: CloudFormationCustomResourceEvent,
@@ -63,4 +64,3 @@ object send extends js.Object {
     noEcho: Boolean
   ): js.Promise[Unit] = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "CustomProceduralTexture")
 @js.native
@@ -33,8 +33,15 @@ class CustomProceduralTexture protected ()
     texturePath: String,
     size: Double,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    fallbackTexture: js.UndefOr[scala.Nothing],
+    generateMipMaps: Boolean
+  ) = this()
+  def this(
+    name: String,
+    texturePath: String,
+    size: Double,
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
     fallbackTexture: typingsSlinky.babylonjs.textureMod.Texture,
     generateMipMaps: Boolean
   ) = this()
 }
-

@@ -26,11 +26,20 @@ import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@pulumi/aws/redshift", JSImport.Namespace)
 @js.native
 object redshiftMod extends js.Object {
+  
+  def getCluster(args: GetClusterArgs): js.Promise[GetClusterResult] = js.native
+  def getCluster(args: GetClusterArgs, opts: InvokeOptions): js.Promise[GetClusterResult] = js.native
+  
+  def getServiceAccount(): js.Promise[GetServiceAccountResult] = js.native
+  def getServiceAccount(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetServiceAccountResult] = js.native
+  def getServiceAccount(args: GetServiceAccountArgs): js.Promise[GetServiceAccountResult] = js.native
+  def getServiceAccount(args: GetServiceAccountArgs, opts: InvokeOptions): js.Promise[GetServiceAccountResult] = js.native
+  
   @js.native
   class Cluster protected ()
     extends typingsSlinky.pulumiAws.redshiftClusterMod.Cluster {
@@ -43,6 +52,30 @@ object redshiftMod extends js.Object {
       */
     def this(name: String, args: ClusterArgs) = this()
     def this(name: String, args: ClusterArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object Cluster extends js.Object {
+    
+    /**
+      * Get an existing Cluster resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.redshiftClusterMod.Cluster = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftClusterMod.Cluster = js.native
+    def get(name: String, id: Input[ID], state: ClusterState): typingsSlinky.pulumiAws.redshiftClusterMod.Cluster = js.native
+    def get(name: String, id: Input[ID], state: ClusterState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftClusterMod.Cluster = js.native
+    
+    /**
+      * Returns true if the given object is an instance of Cluster.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/cluster.Cluster */ Boolean = js.native
   }
   
   @js.native
@@ -58,6 +91,30 @@ object redshiftMod extends js.Object {
     def this(name: String, args: EventSubscriptionArgs) = this()
     def this(name: String, args: EventSubscriptionArgs, opts: CustomResourceOptions) = this()
   }
+  /* static members */
+  @js.native
+  object EventSubscription extends js.Object {
+    
+    /**
+      * Get an existing EventSubscription resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.redshiftEventSubscriptionMod.EventSubscription = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftEventSubscriptionMod.EventSubscription = js.native
+    def get(name: String, id: Input[ID], state: EventSubscriptionState): typingsSlinky.pulumiAws.redshiftEventSubscriptionMod.EventSubscription = js.native
+    def get(name: String, id: Input[ID], state: EventSubscriptionState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftEventSubscriptionMod.EventSubscription = js.native
+    
+    /**
+      * Returns true if the given object is an instance of EventSubscription.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/eventSubscription.EventSubscription */ Boolean = js.native
+  }
   
   @js.native
   class ParameterGroup protected ()
@@ -71,6 +128,30 @@ object redshiftMod extends js.Object {
       */
     def this(name: String, args: ParameterGroupArgs) = this()
     def this(name: String, args: ParameterGroupArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object ParameterGroup extends js.Object {
+    
+    /**
+      * Get an existing ParameterGroup resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.redshiftParameterGroupMod.ParameterGroup = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftParameterGroupMod.ParameterGroup = js.native
+    def get(name: String, id: Input[ID], state: ParameterGroupState): typingsSlinky.pulumiAws.redshiftParameterGroupMod.ParameterGroup = js.native
+    def get(name: String, id: Input[ID], state: ParameterGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftParameterGroupMod.ParameterGroup = js.native
+    
+    /**
+      * Returns true if the given object is an instance of ParameterGroup.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/parameterGroup.ParameterGroup */ Boolean = js.native
   }
   
   @js.native
@@ -86,6 +167,30 @@ object redshiftMod extends js.Object {
     def this(name: String, args: SecurityGroupArgs) = this()
     def this(name: String, args: SecurityGroupArgs, opts: CustomResourceOptions) = this()
   }
+  /* static members */
+  @js.native
+  object SecurityGroup extends js.Object {
+    
+    /**
+      * Get an existing SecurityGroup resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.redshiftSecurityGroupMod.SecurityGroup = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftSecurityGroupMod.SecurityGroup = js.native
+    def get(name: String, id: Input[ID], state: SecurityGroupState): typingsSlinky.pulumiAws.redshiftSecurityGroupMod.SecurityGroup = js.native
+    def get(name: String, id: Input[ID], state: SecurityGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftSecurityGroupMod.SecurityGroup = js.native
+    
+    /**
+      * Returns true if the given object is an instance of SecurityGroup.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/securityGroup.SecurityGroup */ Boolean = js.native
+  }
   
   @js.native
   class SnapshotCopyGrant protected ()
@@ -99,6 +204,30 @@ object redshiftMod extends js.Object {
       */
     def this(name: String, args: SnapshotCopyGrantArgs) = this()
     def this(name: String, args: SnapshotCopyGrantArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object SnapshotCopyGrant extends js.Object {
+    
+    /**
+      * Get an existing SnapshotCopyGrant resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.snapshotCopyGrantMod.SnapshotCopyGrant = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotCopyGrantMod.SnapshotCopyGrant = js.native
+    def get(name: String, id: Input[ID], state: SnapshotCopyGrantState): typingsSlinky.pulumiAws.snapshotCopyGrantMod.SnapshotCopyGrant = js.native
+    def get(name: String, id: Input[ID], state: SnapshotCopyGrantState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotCopyGrantMod.SnapshotCopyGrant = js.native
+    
+    /**
+      * Returns true if the given object is an instance of SnapshotCopyGrant.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/snapshotCopyGrant.SnapshotCopyGrant */ Boolean = js.native
   }
   
   @js.native
@@ -114,6 +243,30 @@ object redshiftMod extends js.Object {
     def this(name: String, args: SnapshotScheduleArgs) = this()
     def this(name: String, args: SnapshotScheduleArgs, opts: CustomResourceOptions) = this()
   }
+  /* static members */
+  @js.native
+  object SnapshotSchedule extends js.Object {
+    
+    /**
+      * Get an existing SnapshotSchedule resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.snapshotScheduleMod.SnapshotSchedule = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotScheduleMod.SnapshotSchedule = js.native
+    def get(name: String, id: Input[ID], state: SnapshotScheduleState): typingsSlinky.pulumiAws.snapshotScheduleMod.SnapshotSchedule = js.native
+    def get(name: String, id: Input[ID], state: SnapshotScheduleState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotScheduleMod.SnapshotSchedule = js.native
+    
+    /**
+      * Returns true if the given object is an instance of SnapshotSchedule.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/snapshotSchedule.SnapshotSchedule */ Boolean = js.native
+  }
   
   @js.native
   class SnapshotScheduleAssociation protected ()
@@ -127,6 +280,30 @@ object redshiftMod extends js.Object {
       */
     def this(name: String, args: SnapshotScheduleAssociationArgs) = this()
     def this(name: String, args: SnapshotScheduleAssociationArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object SnapshotScheduleAssociation extends js.Object {
+    
+    /**
+      * Get an existing SnapshotScheduleAssociation resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.snapshotScheduleAssociationMod.SnapshotScheduleAssociation = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotScheduleAssociationMod.SnapshotScheduleAssociation = js.native
+    def get(name: String, id: Input[ID], state: SnapshotScheduleAssociationState): typingsSlinky.pulumiAws.snapshotScheduleAssociationMod.SnapshotScheduleAssociation = js.native
+    def get(name: String, id: Input[ID], state: SnapshotScheduleAssociationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotScheduleAssociationMod.SnapshotScheduleAssociation = js.native
+    
+    /**
+      * Returns true if the given object is an instance of SnapshotScheduleAssociation.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/snapshotScheduleAssociation.SnapshotScheduleAssociation */ Boolean = js.native
   }
   
   @js.native
@@ -142,177 +319,10 @@ object redshiftMod extends js.Object {
     def this(name: String, args: SubnetGroupArgs) = this()
     def this(name: String, args: SubnetGroupArgs, opts: CustomResourceOptions) = this()
   }
-  
-  def getCluster(args: GetClusterArgs): js.Promise[GetClusterResult] = js.native
-  def getCluster(args: GetClusterArgs, opts: InvokeOptions): js.Promise[GetClusterResult] = js.native
-  def getServiceAccount(): js.Promise[GetServiceAccountResult] = js.native
-  def getServiceAccount(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetServiceAccountResult] = js.native
-  def getServiceAccount(args: GetServiceAccountArgs): js.Promise[GetServiceAccountResult] = js.native
-  def getServiceAccount(args: GetServiceAccountArgs, opts: InvokeOptions): js.Promise[GetServiceAccountResult] = js.native
-  /* static members */
-  @js.native
-  object Cluster extends js.Object {
-    /**
-      * Get an existing Cluster resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.redshiftClusterMod.Cluster = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftClusterMod.Cluster = js.native
-    def get(name: String, id: Input[ID], state: ClusterState): typingsSlinky.pulumiAws.redshiftClusterMod.Cluster = js.native
-    def get(name: String, id: Input[ID], state: ClusterState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftClusterMod.Cluster = js.native
-    /**
-      * Returns true if the given object is an instance of Cluster.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/cluster.Cluster */ Boolean = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object EventSubscription extends js.Object {
-    /**
-      * Get an existing EventSubscription resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.redshiftEventSubscriptionMod.EventSubscription = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftEventSubscriptionMod.EventSubscription = js.native
-    def get(name: String, id: Input[ID], state: EventSubscriptionState): typingsSlinky.pulumiAws.redshiftEventSubscriptionMod.EventSubscription = js.native
-    def get(name: String, id: Input[ID], state: EventSubscriptionState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftEventSubscriptionMod.EventSubscription = js.native
-    /**
-      * Returns true if the given object is an instance of EventSubscription.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/eventSubscription.EventSubscription */ Boolean = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object ParameterGroup extends js.Object {
-    /**
-      * Get an existing ParameterGroup resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.redshiftParameterGroupMod.ParameterGroup = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftParameterGroupMod.ParameterGroup = js.native
-    def get(name: String, id: Input[ID], state: ParameterGroupState): typingsSlinky.pulumiAws.redshiftParameterGroupMod.ParameterGroup = js.native
-    def get(name: String, id: Input[ID], state: ParameterGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftParameterGroupMod.ParameterGroup = js.native
-    /**
-      * Returns true if the given object is an instance of ParameterGroup.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/parameterGroup.ParameterGroup */ Boolean = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object SecurityGroup extends js.Object {
-    /**
-      * Get an existing SecurityGroup resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.redshiftSecurityGroupMod.SecurityGroup = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftSecurityGroupMod.SecurityGroup = js.native
-    def get(name: String, id: Input[ID], state: SecurityGroupState): typingsSlinky.pulumiAws.redshiftSecurityGroupMod.SecurityGroup = js.native
-    def get(name: String, id: Input[ID], state: SecurityGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftSecurityGroupMod.SecurityGroup = js.native
-    /**
-      * Returns true if the given object is an instance of SecurityGroup.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/securityGroup.SecurityGroup */ Boolean = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object SnapshotCopyGrant extends js.Object {
-    /**
-      * Get an existing SnapshotCopyGrant resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.snapshotCopyGrantMod.SnapshotCopyGrant = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotCopyGrantMod.SnapshotCopyGrant = js.native
-    def get(name: String, id: Input[ID], state: SnapshotCopyGrantState): typingsSlinky.pulumiAws.snapshotCopyGrantMod.SnapshotCopyGrant = js.native
-    def get(name: String, id: Input[ID], state: SnapshotCopyGrantState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotCopyGrantMod.SnapshotCopyGrant = js.native
-    /**
-      * Returns true if the given object is an instance of SnapshotCopyGrant.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/snapshotCopyGrant.SnapshotCopyGrant */ Boolean = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object SnapshotSchedule extends js.Object {
-    /**
-      * Get an existing SnapshotSchedule resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.snapshotScheduleMod.SnapshotSchedule = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotScheduleMod.SnapshotSchedule = js.native
-    def get(name: String, id: Input[ID], state: SnapshotScheduleState): typingsSlinky.pulumiAws.snapshotScheduleMod.SnapshotSchedule = js.native
-    def get(name: String, id: Input[ID], state: SnapshotScheduleState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotScheduleMod.SnapshotSchedule = js.native
-    /**
-      * Returns true if the given object is an instance of SnapshotSchedule.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/snapshotSchedule.SnapshotSchedule */ Boolean = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object SnapshotScheduleAssociation extends js.Object {
-    /**
-      * Get an existing SnapshotScheduleAssociation resource's state with the given name, ID, and optional extra
-      * properties used to qualify the lookup.
-      *
-      * @param name The _unique_ name of the resulting resource.
-      * @param id The _unique_ provider ID of the resource to lookup.
-      * @param state Any extra arguments used during the lookup.
-      * @param opts Optional settings to control the behavior of the CustomResource.
-      */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.snapshotScheduleAssociationMod.SnapshotScheduleAssociation = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotScheduleAssociationMod.SnapshotScheduleAssociation = js.native
-    def get(name: String, id: Input[ID], state: SnapshotScheduleAssociationState): typingsSlinky.pulumiAws.snapshotScheduleAssociationMod.SnapshotScheduleAssociation = js.native
-    def get(name: String, id: Input[ID], state: SnapshotScheduleAssociationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.snapshotScheduleAssociationMod.SnapshotScheduleAssociation = js.native
-    /**
-      * Returns true if the given object is an instance of SnapshotScheduleAssociation.  This is designed to work even
-      * when multiple copies of the Pulumi SDK have been loaded into the same process.
-      */
-    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/snapshotScheduleAssociation.SnapshotScheduleAssociation */ Boolean = js.native
-  }
-  
   /* static members */
   @js.native
   object SubnetGroup extends js.Object {
+    
     /**
       * Get an existing SubnetGroup resource's state with the given name, ID, and optional extra
       * properties used to qualify the lookup.
@@ -326,12 +336,11 @@ object redshiftMod extends js.Object {
     def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftSubnetGroupMod.SubnetGroup = js.native
     def get(name: String, id: Input[ID], state: SubnetGroupState): typingsSlinky.pulumiAws.redshiftSubnetGroupMod.SubnetGroup = js.native
     def get(name: String, id: Input[ID], state: SubnetGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.redshiftSubnetGroupMod.SubnetGroup = js.native
+    
     /**
       * Returns true if the given object is an instance of SubnetGroup.  This is designed to work even
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/redshift/subnetGroup.SubnetGroup */ Boolean = js.native
   }
-  
 }
-

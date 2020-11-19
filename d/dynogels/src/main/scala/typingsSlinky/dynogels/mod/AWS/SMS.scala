@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.smsMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.SMS")
 @js.native
@@ -14,4 +14,3 @@ class SMS ()
   extends typingsSlinky.awsSdk.mod.SMS {
   def this(options: ClientConfiguration) = this()
 }
-

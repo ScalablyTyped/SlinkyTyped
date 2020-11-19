@@ -2,11 +2,12 @@ package typingsSlinky.mapbox.mod.global.L.mapbox
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("L.mapbox")
 @js.native
 object ^ extends js.Object {
+  
   //////////////////////////////////////////////////////////////////////
   ///////////////////////////// MAP OBJECT /////////////////////////////
   //////////////////////////////////////////////////////////////////////
@@ -14,4 +15,3 @@ object ^ extends js.Object {
   //////////////////////////////////////////////////////////////////////
   var accessToken: String = js.native
 }
-

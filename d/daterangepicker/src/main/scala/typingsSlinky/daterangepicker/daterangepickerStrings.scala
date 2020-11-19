@@ -2,9 +2,31 @@ package typingsSlinky.daterangepicker
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object daterangepickerStrings {
+  
+  @scala.inline
+  def auto: auto = "auto".asInstanceOf[auto]
+  
+  @scala.inline
+  def center: center = "center".asInstanceOf[center]
+  
+  @scala.inline
+  def daterangepicker: daterangepicker = "daterangepicker".asInstanceOf[daterangepicker]
+  
+  @scala.inline
+  def down: down = "down".asInstanceOf[down]
+  
+  @scala.inline
+  def left: left = "left".asInstanceOf[left]
+  
+  @scala.inline
+  def right: right = "right".asInstanceOf[right]
+  
+  @scala.inline
+  def up: up = "up".asInstanceOf[up]
+  
   @js.native
   sealed trait auto extends js.Object
   
@@ -25,20 +47,4 @@ object daterangepickerStrings {
   
   @js.native
   sealed trait up extends js.Object
-  
-  @scala.inline
-  def auto: auto = "auto".asInstanceOf[auto]
-  @scala.inline
-  def center: center = "center".asInstanceOf[center]
-  @scala.inline
-  def daterangepicker: daterangepicker = "daterangepicker".asInstanceOf[daterangepicker]
-  @scala.inline
-  def down: down = "down".asInstanceOf[down]
-  @scala.inline
-  def left: left = "left".asInstanceOf[left]
-  @scala.inline
-  def right: right = "right".asInstanceOf[right]
-  @scala.inline
-  def up: up = "up".asInstanceOf[up]
 }
-

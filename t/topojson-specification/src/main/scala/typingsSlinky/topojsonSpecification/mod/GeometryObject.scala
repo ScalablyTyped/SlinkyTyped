@@ -2,7 +2,7 @@ package typingsSlinky.topojsonSpecification.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.topojsonSpecification.mod.Point[P]
@@ -15,10 +15,10 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.topojsonSpecification.mod.NullObject
 */
 trait GeometryObject[P /* <: Properties */] extends js.Object
-
 object GeometryObject {
+  
   @scala.inline
-  def Polygon[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
+  def Polygon[P /* <: Properties */](
     arcs: js.Array[ArcIndexes],
     `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.Polygon
   ): GeometryObject[P] = {
@@ -26,8 +26,9 @@ object GeometryObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
+  
   @scala.inline
-  def MultiPoint[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
+  def MultiPoint[P /* <: Properties */](
     coordinates: js.Array[Positions],
     `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiPoint
   ): GeometryObject[P] = {
@@ -35,14 +36,16 @@ object GeometryObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
+  
   @scala.inline
-  def NullObject[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](`type`: Null): GeometryObject[P] = {
+  def NullObject[P /* <: Properties */](`type`: Null): GeometryObject[P] = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
+  
   @scala.inline
-  def Point[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
+  def Point[P /* <: Properties */](
     coordinates: Positions,
     `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.Point
   ): GeometryObject[P] = {
@@ -50,8 +53,9 @@ object GeometryObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
+  
   @scala.inline
-  def MultiLineString[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
+  def MultiLineString[P /* <: Properties */](
     arcs: js.Array[ArcIndexes],
     `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiLineString
   ): GeometryObject[P] = {
@@ -59,8 +63,9 @@ object GeometryObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
+  
   @scala.inline
-  def MultiPolygon[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
+  def MultiPolygon[P /* <: Properties */](
     arcs: js.Array[js.Array[ArcIndexes]],
     `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiPolygon
   ): GeometryObject[P] = {
@@ -68,8 +73,9 @@ object GeometryObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
+  
   @scala.inline
-  def LineString[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
+  def LineString[P /* <: Properties */](
     arcs: ArcIndexes,
     `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.LineString
   ): GeometryObject[P] = {
@@ -77,8 +83,9 @@ object GeometryObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeometryObject[P]]
   }
+  
   @scala.inline
-  def GeometryCollection[/* <: typingsSlinky.topojsonSpecification.mod.Properties */ P](
+  def GeometryCollection[P /* <: Properties */](
     geometries: js.Array[GeometryObject[P]],
     `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.GeometryCollection
   ): GeometryObject[P] = {
@@ -87,4 +94,3 @@ object GeometryObject {
     __obj.asInstanceOf[GeometryObject[P]]
   }
 }
-

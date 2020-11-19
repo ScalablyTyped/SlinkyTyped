@@ -3,13 +3,15 @@ package typingsSlinky.customFunctionsRuntime
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object CustomFunctions extends js.Object {
+    
     /**
       * Associates the JavaScript function to the name given by the "id" property in the metadata JSON file.
       */
@@ -19,6 +21,4 @@ object global extends js.Object {
       */
     def associate(mappings: StringDictionary[js.Function]): Unit = js.native
   }
-  
 }
-

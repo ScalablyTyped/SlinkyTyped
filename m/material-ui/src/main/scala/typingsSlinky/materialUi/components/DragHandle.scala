@@ -4,14 +4,15 @@ import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import typingsSlinky.materialUi.dragHandleMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DragHandle {
+  
   @JSImport("material-ui/svg-icons/editor/drag-handle", JSImport.Default)
   @js.native
   object component extends js.Object
   
   def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1073724525[default] = new SharedBuilder_SvgIconProps_1073724525[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: DragHandle.type): SharedBuilder_SvgIconProps_1073724525[default] = new SharedBuilder_SvgIconProps_1073724525[default](js.Array(this.component, js.Dictionary.empty))()
 }
-

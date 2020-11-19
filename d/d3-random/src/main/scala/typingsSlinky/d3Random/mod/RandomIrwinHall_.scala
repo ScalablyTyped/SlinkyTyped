@@ -2,10 +2,11 @@ package typingsSlinky.d3Random.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RandomIrwinHall_ extends RandomNumberGenerationSource {
+  
   /**
     * Returns a function for generating random numbers with an Irwin–Hall distribution with n independent variables.
     *
@@ -13,4 +14,3 @@ trait RandomIrwinHall_ extends RandomNumberGenerationSource {
     */
   def apply(n: Double): js.Function0[Double] = js.native
 }
-

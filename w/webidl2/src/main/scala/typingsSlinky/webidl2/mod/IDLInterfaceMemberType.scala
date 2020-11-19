@@ -14,7 +14,7 @@ import typingsSlinky.webidl2.webidl2Strings.static
 import typingsSlinky.webidl2.webidl2Strings.stringifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.webidl2.mod.OperationMemberType
@@ -24,8 +24,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.webidl2.mod.DeclarationMemberType
 */
 trait IDLInterfaceMemberType extends js.Object
-
 object IDLInterfaceMemberType {
+  
   @scala.inline
   def ConstructorMemberType(
     arguments: js.Array[Argument],
@@ -37,6 +37,7 @@ object IDLInterfaceMemberType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLInterfaceMemberType]
   }
+  
   @scala.inline
   def AttributeMemberType(
     extAttrs: js.Array[ExtendedAttribute],
@@ -52,6 +53,7 @@ object IDLInterfaceMemberType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLInterfaceMemberType]
   }
+  
   @scala.inline
   def DeclarationMemberType(
     arguments: js.Array[Argument],
@@ -65,6 +67,7 @@ object IDLInterfaceMemberType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLInterfaceMemberType]
   }
+  
   @scala.inline
   def ConstantMemberType(
     extAttrs: js.Array[ExtendedAttribute],
@@ -79,6 +82,7 @@ object IDLInterfaceMemberType {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDLInterfaceMemberType]
   }
+  
   @scala.inline
   def OperationMemberType(
     arguments: js.Array[Argument],
@@ -92,4 +96,3 @@ object IDLInterfaceMemberType {
     __obj.asInstanceOf[IDLInterfaceMemberType]
   }
 }
-

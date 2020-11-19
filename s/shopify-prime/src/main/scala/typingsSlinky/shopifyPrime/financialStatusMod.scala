@@ -2,11 +2,12 @@ package typingsSlinky.shopifyPrime
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("shopify-prime/dist/enums/financial_status", JSImport.Namespace)
 @js.native
 object financialStatusMod extends js.Object {
+  
   trait _FinancialStatus extends js.Object
   
   /* Rewritten from type alias, can be one of: 
@@ -23,4 +24,3 @@ object financialStatusMod extends js.Object {
   */
   type FinancialStatus = _FinancialStatus | String
 }
-

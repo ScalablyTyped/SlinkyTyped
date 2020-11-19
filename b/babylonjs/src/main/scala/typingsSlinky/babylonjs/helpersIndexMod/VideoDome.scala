@@ -5,7 +5,7 @@ import typingsSlinky.babylonjs.anon.AutoPlay
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Helpers/index", "VideoDome")
 @js.native
@@ -21,22 +21,23 @@ class VideoDome protected ()
   def this(name: String, urlsOrVideo: js.Array[String], options: AutoPlay, scene: Scene) = this()
   def this(name: String, urlsOrVideo: HTMLVideoElement, options: AutoPlay, scene: Scene) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Helpers/index", "VideoDome")
 @js.native
 object VideoDome extends js.Object {
+  
   /**
     * Define the video source as a Monoscopic panoramic 360 video.
     */
   val MODE_MONOSCOPIC: Double = js.native
+  
   /**
     * Define the video source as a Stereoscopic Side by Side panoramic 360 video.
     */
   val MODE_SIDEBYSIDE: Double = js.native
+  
   /**
     * Define the video source as a Stereoscopic TopBottom/OverUnder panoramic 360 video.
     */
   val MODE_TOPBOTTOM: Double = js.native
 }
-

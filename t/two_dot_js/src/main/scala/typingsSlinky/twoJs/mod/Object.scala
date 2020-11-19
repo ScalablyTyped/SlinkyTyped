@@ -2,7 +2,7 @@ package typingsSlinky.twoJs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.twoJs.mod.Path
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.twoJs.mod.Text
 */
 trait Object extends js.Object
-

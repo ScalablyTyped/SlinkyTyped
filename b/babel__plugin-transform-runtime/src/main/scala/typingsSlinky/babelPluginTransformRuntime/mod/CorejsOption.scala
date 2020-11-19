@@ -2,7 +2,7 @@ package typingsSlinky.babelPluginTransformRuntime.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelPluginTransformRuntime.mod.CorejsVersion
@@ -10,4 +10,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelPluginTransformRuntime.babelPluginTransformRuntimeBooleans.`false`
 */
 trait CorejsOption extends js.Object
-

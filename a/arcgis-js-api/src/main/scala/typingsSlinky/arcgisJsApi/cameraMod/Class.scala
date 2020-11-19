@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Camera
 import typingsSlinky.arcgisJsApi.esri.CameraProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/Camera", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Camera {
   def this(properties: CameraProperties) = this()
 }
-

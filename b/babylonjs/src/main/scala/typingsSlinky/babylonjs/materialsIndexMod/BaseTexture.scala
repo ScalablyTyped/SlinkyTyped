@@ -4,7 +4,7 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/index", "BaseTexture")
 @js.native
@@ -19,16 +19,17 @@ class BaseTexture protected ()
     */
   def this(scene: Nullable[Scene]) = this()
 }
-
 /* static members */
 @JSImport("babylonjs/Materials/index", "BaseTexture")
 @js.native
 object BaseTexture extends js.Object {
+  
   /**
     * Default anisotropic filtering level for the application.
     * It is set to 4 as a good tradeoff between perf and quality.
     */
   var DEFAULT_ANISOTROPIC_FILTERING_LEVEL: Double = js.native
+  
   /**
     * Helper function to be called back once a list of texture contains only ready textures.
     * @param textures Define the list of textures to wait for
@@ -39,4 +40,3 @@ object BaseTexture extends js.Object {
     callback: js.Function0[Unit]
   ): Unit = js.native
 }
-

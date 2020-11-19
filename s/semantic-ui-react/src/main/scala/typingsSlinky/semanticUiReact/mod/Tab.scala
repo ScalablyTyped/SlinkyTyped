@@ -6,7 +6,7 @@ import typingsSlinky.semanticUiReact.tabTabMod.TabComponent
 import typingsSlinky.semanticUiReact.tabTabMod.TabProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semantic-ui-react", "Tab")
 @js.native
@@ -15,8 +15,6 @@ class Tab protected ()
   def this(props: TabProps) = this()
   def this(props: TabProps, context: js.Any) = this()
 }
-
 @JSImport("semantic-ui-react", "Tab")
 @js.native
 object Tab extends TopLevel[TabComponent]
-

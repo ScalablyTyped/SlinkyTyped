@@ -2,7 +2,7 @@ package typingsSlinky.reactNative
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactNative.reactNativeStrings._empty
@@ -13,19 +13,23 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactNative.reactNativeStrings.text
 */
 trait XMLHttpRequestResponseType extends js.Object
-
 object XMLHttpRequestResponseType {
+  
   @scala.inline
   def _empty: typingsSlinky.reactNative.reactNativeStrings._empty = "".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings._empty]
+  
   @scala.inline
   def arraybuffer: typingsSlinky.reactNative.reactNativeStrings.arraybuffer = "arraybuffer".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.arraybuffer]
+  
   @scala.inline
   def blob: typingsSlinky.reactNative.reactNativeStrings.blob = "blob".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.blob]
+  
   @scala.inline
   def document: typingsSlinky.reactNative.reactNativeStrings.document = "document".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.document]
+  
   @scala.inline
   def json: typingsSlinky.reactNative.reactNativeStrings.json = "json".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.json]
+  
   @scala.inline
   def text: typingsSlinky.reactNative.reactNativeStrings.text = "text".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.text]
 }
-

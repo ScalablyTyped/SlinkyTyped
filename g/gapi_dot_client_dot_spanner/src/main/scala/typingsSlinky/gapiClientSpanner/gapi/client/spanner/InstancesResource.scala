@@ -7,12 +7,11 @@ import typingsSlinky.gapiClientSpanner.anon.Key
 import typingsSlinky.gapiClientSpanner.anon.Oauthtoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstancesResource extends js.Object {
-  var databases: DatabasesResource = js.native
-  var operations: OperationsResource = js.native
+  
   /**
     * Creates an instance and begins preparing it to begin serving. The
     * returned long-running operation
@@ -50,6 +49,9 @@ trait InstancesResource extends js.Object {
     * Instance, if successful.
     */
   def create(request: Key): Request[Operation] = js.native
+  
+  var databases: DatabasesResource = js.native
+  
   /**
     * Deletes an instance.
     *
@@ -64,8 +66,10 @@ trait InstancesResource extends js.Object {
     * is permanently deleted.
     */
   def delete(request: Accesstoken): Request[js.Object] = js.native
+  
   /** Gets information about a particular instance. */
   def get(request: Accesstoken): Request[Instance] = js.native
+  
   /**
     * Gets the access control policy for an instance resource. Returns an empty
     * policy if an instance exists but does not have a policy set.
@@ -74,8 +78,12 @@ trait InstancesResource extends js.Object {
     * resource.
     */
   def getIamPolicy(request: Oauthtoken): Request[Policy] = js.native
+  
   /** Lists all instances in the given project. */
   def list(request: Filter): Request[ListInstancesResponse] = js.native
+  
+  var operations: OperationsResource = js.native
+  
   /**
     * Updates an instance, and begins allocating or releasing resources
     * as requested. The returned long-running
@@ -119,6 +127,7 @@ trait InstancesResource extends js.Object {
     * resource name.
     */
   def patch(request: Accesstoken): Request[Operation] = js.native
+  
   /**
     * Sets the access control policy on an instance resource. Replaces any
     * existing policy.
@@ -127,6 +136,7 @@ trait InstancesResource extends js.Object {
     * resource.
     */
   def setIamPolicy(request: Oauthtoken): Request[Policy] = js.native
+  
   /**
     * Returns permissions that the caller has on the specified instance resource.
     *
@@ -137,8 +147,8 @@ trait InstancesResource extends js.Object {
     */
   def testIamPermissions(request: Oauthtoken): Request[TestIamPermissionsResponse] = js.native
 }
-
 object InstancesResource {
+  
   @scala.inline
   def apply(
     create: Key => Request[Operation],
@@ -155,38 +165,50 @@ object InstancesResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), databases = databases.asInstanceOf[js.Any], delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), getIamPolicy = js.Any.fromFunction1(getIamPolicy), list = js.Any.fromFunction1(list), operations = operations.asInstanceOf[js.Any], patch = js.Any.fromFunction1(patch), setIamPolicy = js.Any.fromFunction1(setIamPolicy), testIamPermissions = js.Any.fromFunction1(testIamPermissions))
     __obj.asInstanceOf[InstancesResource]
   }
+  
   @scala.inline
   implicit class InstancesResourceOps[Self <: InstancesResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreate(value: Key => Request[Operation]): Self = this.set("create", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDatabases(value: DatabasesResource): Self = this.set("databases", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setDelete(value: Accesstoken => Request[js.Object]): Self = this.set("delete", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGet(value: Accesstoken => Request[Instance]): Self = this.set("get", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGetIamPolicy(value: Oauthtoken => Request[Policy]): Self = this.set("getIamPolicy", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setList(value: Filter => Request[ListInstancesResponse]): Self = this.set("list", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setOperations(value: OperationsResource): Self = this.set("operations", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setPatch(value: Accesstoken => Request[Operation]): Self = this.set("patch", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setSetIamPolicy(value: Oauthtoken => Request[Policy]): Self = this.set("setIamPolicy", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setTestIamPermissions(value: Oauthtoken => Request[TestIamPermissionsResponse]): Self = this.set("testIamPermissions", js.Any.fromFunction1(value))
   }
-  
 }
-

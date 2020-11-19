@@ -2,7 +2,7 @@ package typingsSlinky.pixiJs.global.PIXI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This is a WebGL state, and is is passed The WebGL StateManager.
@@ -17,4 +17,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class State ()
   extends typingsSlinky.pixiJs.PIXI.State
-

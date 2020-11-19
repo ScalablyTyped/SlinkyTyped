@@ -2,14 +2,16 @@ package typingsSlinky.activexLibreoffice.com_.sun.star.awt
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object grid {
+  
   /**
     * If you do not want to implement the {@link XGridColumnModel} yourself, use this service.
     * @since OOo 3.3
     */
   type DefaultGridColumnModel = typingsSlinky.activexLibreoffice.com_.sun.star.awt.grid.XGridColumnModel
+  
   /**
     * If you do not want to implement the {@link XGridDataModel} yourself, use this service.
     *
@@ -19,16 +21,19 @@ package object grid {
     * @since OOo 3.3
     */
   type DefaultGridDataModel = typingsSlinky.activexLibreoffice.com_.sun.star.awt.grid.XMutableGridDataModel
+  
   /**
     * Represents a column as used by the {@link DefaultGridColumnModel}
     * @since OOo 3.3
     */
   type GridColumn = typingsSlinky.activexLibreoffice.com_.sun.star.awt.grid.XGridColumn
+  
   /**
     * Exception is thrown to indicate that set data is invalid, e.g. type of data is unknown or data count doesn't match with column count.
     * @since OOo 3.3
     */
   type GridInvalidDataException = typingsSlinky.activexLibreoffice.com_.sun.star.uno.RuntimeException
+  
   /**
     * Exception is thrown when data or column model isn't set.
     * @since OOo 3.3

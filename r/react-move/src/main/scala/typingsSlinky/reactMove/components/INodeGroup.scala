@@ -5,14 +5,16 @@ import typingsSlinky.reactMove.mod.HashMap
 import typingsSlinky.reactMove.nodeGroupMod.INodeGroupProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object INodeGroup {
+  
   @JSImport("react-move/NodeGroup", "INodeGroup")
   @js.native
   object component extends js.Object
   
   def withProps(p: INodeGroupProps): SharedBuilder_INodeGroupProps1345005892[typingsSlinky.reactMove.nodeGroupMod.INodeGroup] = new SharedBuilder_INodeGroupProps1345005892[typingsSlinky.reactMove.nodeGroupMod.INodeGroup](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     children: js.Array[_] => ReactElement,
@@ -24,4 +26,3 @@ object INodeGroup {
     new SharedBuilder_INodeGroupProps1345005892[typingsSlinky.reactMove.nodeGroupMod.INodeGroup](js.Array(this.component, __props.asInstanceOf[INodeGroupProps]))
   }
 }
-

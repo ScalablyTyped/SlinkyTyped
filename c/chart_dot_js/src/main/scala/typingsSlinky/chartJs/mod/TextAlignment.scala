@@ -2,7 +2,7 @@ package typingsSlinky.chartJs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.chartJs.chartJsStrings.left
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.chartJs.chartJsStrings.right
 */
 trait TextAlignment extends js.Object
-
 object TextAlignment {
+  
   @scala.inline
   def center: typingsSlinky.chartJs.chartJsStrings.center = "center".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.center]
+  
   @scala.inline
   def left: typingsSlinky.chartJs.chartJsStrings.left = "left".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.left]
+  
   @scala.inline
   def right: typingsSlinky.chartJs.chartJsStrings.right = "right".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.right]
 }
-

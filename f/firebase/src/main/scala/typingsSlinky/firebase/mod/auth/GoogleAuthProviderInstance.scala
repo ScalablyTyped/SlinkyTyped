@@ -2,7 +2,7 @@ package typingsSlinky.firebase.mod.auth
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @hidden
@@ -10,11 +10,13 @@ import scala.scalajs.js.annotation._
 @JSImport("firebase", "auth.GoogleAuthProvider_Instance")
 @js.native
 class GoogleAuthProviderInstance () extends AuthProvider {
+  
   /**
     * @param scope Google OAuth scope.
     * @return The provider instance itself.
     */
   def addScope(scope: String): AuthProvider = js.native
+  
   /**
     * Sets the OAuth custom parameters to pass in a Google OAuth request for popup
     * and redirect sign-in operations.
@@ -31,4 +33,3 @@ class GoogleAuthProviderInstance () extends AuthProvider {
     */
   def setCustomParameters(customOAuthParameters: js.Object): AuthProvider = js.native
 }
-

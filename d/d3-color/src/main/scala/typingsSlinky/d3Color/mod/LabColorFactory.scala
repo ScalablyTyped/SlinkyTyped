@@ -2,11 +2,12 @@ package typingsSlinky.d3Color.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LabColorFactory
   extends js.Function {
+  
   def apply(color: ColorCommonInstance): LabColor = js.native
   /**
     * Converts the provided color instance and returns a Lab color.
@@ -35,4 +36,3 @@ trait LabColorFactory
   def apply(l: Double, a: Double, b: Double): LabColor = js.native
   def apply(l: Double, a: Double, b: Double, opacity: Double): LabColor = js.native
 }
-

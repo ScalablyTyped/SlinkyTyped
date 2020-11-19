@@ -8,11 +8,12 @@ import typingsSlinky.react.mod.DOMElement
 import typingsSlinky.react.mod.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-dom", "unstable_renderSubtreeIntoContainer")
 @js.native
 object unstableRenderSubtreeIntoContainer extends js.Object {
+  
   def apply[T /* <: Element */](
     parentComponent: ReactComponentClass[_],
     element: DOMElement[DOMAttributes[T], T],
@@ -39,4 +40,3 @@ object unstableRenderSubtreeIntoContainer extends js.Object {
     callback: js.Function1[/* component */ T, _]
   ): T = js.native
 }
-

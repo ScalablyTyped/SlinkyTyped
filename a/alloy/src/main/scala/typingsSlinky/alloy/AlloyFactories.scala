@@ -5,10 +5,11 @@ import typingsSlinky.backbone.mod.Model
 import typingsSlinky.backbone.mod.ModelSetOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AlloyFactories extends js.Object {
+  
   /**
     * Factory method for instantiating a Backbone collection of model objects.
     *
@@ -19,6 +20,7 @@ trait AlloyFactories extends js.Object {
     */
   def createCollection(name: String): Collection[Model[_, ModelSetOptions]] = js.native
   def createCollection(name: String, args: js.Any): Collection[Model[_, ModelSetOptions]] = js.native
+  
   /**
     * Factory method for instantiating a controller.
     *
@@ -29,6 +31,7 @@ trait AlloyFactories extends js.Object {
     */
   def createController(name: String): AlloyController = js.native
   def createController(name: String, args: js.Any): AlloyController = js.native
+  
   /**
     * Factory method for instantiating a Backbone Model object.
     *
@@ -39,6 +42,7 @@ trait AlloyFactories extends js.Object {
     */
   def createModel(name: String): Model[_, ModelSetOptions] = js.native
   def createModel(name: String, args: js.Any): Model[_, ModelSetOptions] = js.native
+  
   /**
     * Factory method for instantiating a widget controller.
     *
@@ -54,4 +58,3 @@ trait AlloyFactories extends js.Object {
   def createWidget(id: String, name: String): AlloyController = js.native
   def createWidget(id: String, name: String, args: js.Any): AlloyController = js.native
 }
-

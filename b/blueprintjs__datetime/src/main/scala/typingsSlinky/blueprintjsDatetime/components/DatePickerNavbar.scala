@@ -8,9 +8,10 @@ import typingsSlinky.reactDayPicker.classNamesMod.ClassNames
 import typingsSlinky.reactDayPicker.localeUtilsMod.LocaleUtils
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DatePickerNavbar {
+  
   @JSImport("@blueprintjs/datetime/lib/esm/datePickerNavbar", "DatePickerNavbar")
   @js.native
   object component extends js.Object
@@ -19,15 +20,19 @@ object DatePickerNavbar {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.datePickerNavbarMod.DatePickerNavbar] {
+    
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def hideLeftNavButton(value: Boolean): this.type = set("hideLeftNavButton", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def hideRightNavButton(value: Boolean): this.type = set("hideRightNavButton", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IDatePickerNavbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     className: String,
@@ -49,4 +54,3 @@ object DatePickerNavbar {
     new Builder(js.Array(this.component, __props.asInstanceOf[IDatePickerNavbarProps]))
   }
 }
-

@@ -5,11 +5,12 @@ import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeListOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fitvids", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * The module exports a single function.
     * Just call it, and it'll wrap video embeds from Youtube, Vimeo, and Kickstarter in a responsive container.
@@ -29,4 +30,3 @@ object ^ extends js.Object {
   def apply(parentSelector: NodeListOf[Element with Node]): Unit = js.native
   def apply(parentSelector: NodeListOf[Element with Node], options: Options): Unit = js.native
 }
-

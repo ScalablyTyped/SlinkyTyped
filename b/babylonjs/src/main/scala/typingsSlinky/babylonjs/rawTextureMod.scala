@@ -4,11 +4,12 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.textureMod.Texture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/Textures/rawTexture", JSImport.Namespace)
 @js.native
 object rawTextureMod extends js.Object {
+  
   @js.native
   class RawTexture protected () extends Texture {
     /**
@@ -56,8 +57,59 @@ object rawTextureMod extends js.Object {
       */
     format: Double,
       scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean
+    ) = this()
+    def this(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      /**
+      * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+      */
+    format: Double,
+      scene: Scene,
       generateMipMaps: Boolean,
       invertY: Boolean
+    ) = this()
+    def this(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      /**
+      * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+      */
+    format: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
+    ) = this()
+    def this(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      /**
+      * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+      */
+    format: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: Double
+    ) = this()
+    def this(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      /**
+      * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+      */
+    format: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
     ) = this()
     def this(
       data: js.typedarray.ArrayBufferView,
@@ -81,26 +133,127 @@ object rawTextureMod extends js.Object {
       */
     format: Double,
       scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ) = this()
+    def this(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      /**
+      * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+      */
+    format: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double,
+      `type`: Double
+    ) = this()
+    def this(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      /**
+      * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+      */
+    format: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ) = this()
+    def this(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      /**
+      * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+      */
+    format: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: Double,
+      `type`: Double
+    ) = this()
+    def this(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      /**
+      * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+      */
+    format: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ) = this()
+    def this(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      /**
+      * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+      */
+    format: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double,
+      `type`: Double
+    ) = this()
+    def this(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      /**
+      * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+      */
+    format: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: Boolean,
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ) = this()
+    def this(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      /**
+      * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
+      */
+    format: Double,
+      scene: Scene,
       generateMipMaps: Boolean,
       invertY: Boolean,
       samplingMode: Double,
       `type`: Double
     ) = this()
+    
     var _engine: js.Any = js.native
+    
     /**
       * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
       */
     var format: Double = js.native
+    
     /**
       * Updates the texture underlying data.
       * @param data Define the new data of the texture
       */
     def update(data: js.typedarray.ArrayBufferView): Unit = js.native
   }
-  
   /* static members */
   @js.native
   object RawTexture extends js.Object {
+    
     /**
       * Creates an alpha texture from some data.
       * @param data Define the texture data
@@ -118,7 +271,42 @@ object rawTextureMod extends js.Object {
       width: Double,
       height: Double,
       scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateAlphaTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean
+    ): RawTexture = js.native
+    def CreateAlphaTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateAlphaTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
       generateMipMaps: Boolean
+    ): RawTexture = js.native
+    def CreateAlphaTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
     ): RawTexture = js.native
     def CreateAlphaTexture(
       data: js.typedarray.ArrayBufferView,
@@ -137,6 +325,7 @@ object rawTextureMod extends js.Object {
       invertY: Boolean,
       samplingMode: Double
     ): RawTexture = js.native
+    
     /**
       * Creates a luminance alpha texture from some data.
       * @param data Define the texture data
@@ -154,7 +343,42 @@ object rawTextureMod extends js.Object {
       width: Double,
       height: Double,
       scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateLuminanceAlphaTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean
+    ): RawTexture = js.native
+    def CreateLuminanceAlphaTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateLuminanceAlphaTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
       generateMipMaps: Boolean
+    ): RawTexture = js.native
+    def CreateLuminanceAlphaTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
     ): RawTexture = js.native
     def CreateLuminanceAlphaTexture(
       data: js.typedarray.ArrayBufferView,
@@ -173,6 +397,7 @@ object rawTextureMod extends js.Object {
       invertY: Boolean,
       samplingMode: Double
     ): RawTexture = js.native
+    
     /**
       * Creates a luminance texture from some data.
       * @param data Define the texture data
@@ -190,7 +415,42 @@ object rawTextureMod extends js.Object {
       width: Double,
       height: Double,
       scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateLuminanceTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean
+    ): RawTexture = js.native
+    def CreateLuminanceTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateLuminanceTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
       generateMipMaps: Boolean
+    ): RawTexture = js.native
+    def CreateLuminanceTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
     ): RawTexture = js.native
     def CreateLuminanceTexture(
       data: js.typedarray.ArrayBufferView,
@@ -209,6 +469,7 @@ object rawTextureMod extends js.Object {
       invertY: Boolean,
       samplingMode: Double
     ): RawTexture = js.native
+    
     /**
       * Creates a RGBA texture from some data.
       * @param data Define the texture data
@@ -227,6 +488,72 @@ object rawTextureMod extends js.Object {
       width: Double,
       height: Double,
       scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBATexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateRGBATexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double,
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBATexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean
+    ): RawTexture = js.native
+    def CreateRGBATexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBATexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateRGBATexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: Double,
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBATexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
       generateMipMaps: Boolean
     ): RawTexture = js.native
     def CreateRGBATexture(
@@ -235,7 +562,46 @@ object rawTextureMod extends js.Object {
       height: Double,
       scene: Scene,
       generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBATexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateRGBATexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double,
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBATexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
       invertY: Boolean
+    ): RawTexture = js.native
+    def CreateRGBATexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: Boolean,
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
     ): RawTexture = js.native
     def CreateRGBATexture(
       data: js.typedarray.ArrayBufferView,
@@ -256,6 +622,7 @@ object rawTextureMod extends js.Object {
       samplingMode: Double,
       `type`: Double
     ): RawTexture = js.native
+    
     /**
       * Creates a RGB texture from some data.
       * @param data Define the texture data
@@ -274,6 +641,72 @@ object rawTextureMod extends js.Object {
       width: Double,
       height: Double,
       scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateRGBTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double,
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean
+    ): RawTexture = js.native
+    def CreateRGBTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateRGBTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: Double,
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
       generateMipMaps: Boolean
     ): RawTexture = js.native
     def CreateRGBTexture(
@@ -282,7 +715,46 @@ object rawTextureMod extends js.Object {
       height: Double,
       scene: Scene,
       generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateRGBTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double,
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRGBTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
       invertY: Boolean
+    ): RawTexture = js.native
+    def CreateRGBTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: Boolean,
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
     ): RawTexture = js.native
     def CreateRGBTexture(
       data: js.typedarray.ArrayBufferView,
@@ -303,6 +775,7 @@ object rawTextureMod extends js.Object {
       samplingMode: Double,
       `type`: Double
     ): RawTexture = js.native
+    
     /**
       * Creates a R texture from some data.
       * @param data Define the texture data
@@ -321,6 +794,72 @@ object rawTextureMod extends js.Object {
       width: Double,
       height: Double,
       scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateRTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double,
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean
+    ): RawTexture = js.native
+    def CreateRTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateRTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      invertY: Boolean,
+      samplingMode: Double,
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
       generateMipMaps: Boolean
     ): RawTexture = js.native
     def CreateRTexture(
@@ -329,7 +868,46 @@ object rawTextureMod extends js.Object {
       height: Double,
       scene: Scene,
       generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double
+    ): RawTexture = js.native
+    def CreateRTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: js.UndefOr[scala.Nothing],
+      samplingMode: Double,
+      `type`: Double
+    ): RawTexture = js.native
+    def CreateRTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
       invertY: Boolean
+    ): RawTexture = js.native
+    def CreateRTexture(
+      data: js.typedarray.ArrayBufferView,
+      width: Double,
+      height: Double,
+      scene: Scene,
+      generateMipMaps: Boolean,
+      invertY: Boolean,
+      samplingMode: js.UndefOr[scala.Nothing],
+      `type`: Double
     ): RawTexture = js.native
     def CreateRTexture(
       data: js.typedarray.ArrayBufferView,
@@ -351,6 +929,4 @@ object rawTextureMod extends js.Object {
       `type`: Double
     ): RawTexture = js.native
   }
-  
 }
-

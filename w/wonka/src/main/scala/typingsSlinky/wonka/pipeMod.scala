@@ -3,26 +3,27 @@ package typingsSlinky.wonka
 import typingsSlinky.wonka.wonkaTypesGenMod.sourceT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("wonka/dist/types/src/helpers/pipe", JSImport.Namespace)
 @js.native
 object pipeMod extends js.Object {
-  def pipe[T, A](source: sourceT[T], op1: UnaryFn[sourceT[T], sourceT[A]]): sourceT[A] = js.native
+  
+  def pipe[T, R](source: sourceT[T], consumer: UnaryFn[sourceT[T], R]): R = js.native
   def pipe[T, A, B](source: sourceT[T], op1: UnaryFn[sourceT[T], sourceT[A]], op2: UnaryFn[sourceT[A], sourceT[B]]): sourceT[B] = js.native
-  def pipe[T, A, B, R](
+  def pipe[T, A, B, C](
     source: sourceT[T],
     op1: UnaryFn[sourceT[T], sourceT[A]],
     op2: UnaryFn[sourceT[A], sourceT[B]],
-    consumer: UnaryFn[sourceT[B], R]
-  ): R = js.native
-  def pipe[T, A, B, C, R](
+    op3: UnaryFn[sourceT[B], sourceT[C]]
+  ): sourceT[C] = js.native
+  def pipe[T, A, B, C, D](
     source: sourceT[T],
     op1: UnaryFn[sourceT[T], sourceT[A]],
     op2: UnaryFn[sourceT[A], sourceT[B]],
     op3: UnaryFn[sourceT[B], sourceT[C]],
-    consumer: UnaryFn[sourceT[C], R]
-  ): R = js.native
+    op4: UnaryFn[sourceT[C], sourceT[D]]
+  ): sourceT[D] = js.native
   def pipe[T, A, B, C, D, E](
     source: sourceT[T],
     op1: UnaryFn[sourceT[T], sourceT[A]],
@@ -31,15 +32,15 @@ object pipeMod extends js.Object {
     op4: UnaryFn[sourceT[C], sourceT[D]],
     op5: UnaryFn[sourceT[D], sourceT[E]]
   ): sourceT[E] = js.native
-  def pipe[T, A, B, C, D, E, F](
+  def pipe[T, A, B, C, D, E, R](
     source: sourceT[T],
     op1: UnaryFn[sourceT[T], sourceT[A]],
     op2: UnaryFn[sourceT[A], sourceT[B]],
     op3: UnaryFn[sourceT[B], sourceT[C]],
     op4: UnaryFn[sourceT[C], sourceT[D]],
     op5: UnaryFn[sourceT[D], sourceT[E]],
-    op6: UnaryFn[sourceT[E], sourceT[F]]
-  ): sourceT[F] = js.native
+    consumer: UnaryFn[sourceT[E], R]
+  ): R = js.native
   def pipe[T, A, B, C, D, E, F, G](
     source: sourceT[T],
     op1: UnaryFn[sourceT[T], sourceT[A]],
@@ -97,15 +98,15 @@ object pipeMod extends js.Object {
     consumer: UnaryFn[sourceT[F], R]
   ): R = js.native
   @JSName("pipe")
-  def pipe_TABCDER_R[T, A, B, C, D, E, R](
+  def pipe_TABCDEF_sourceT[T, A, B, C, D, E, F](
     source: sourceT[T],
     op1: UnaryFn[sourceT[T], sourceT[A]],
     op2: UnaryFn[sourceT[A], sourceT[B]],
     op3: UnaryFn[sourceT[B], sourceT[C]],
     op4: UnaryFn[sourceT[C], sourceT[D]],
     op5: UnaryFn[sourceT[D], sourceT[E]],
-    consumer: UnaryFn[sourceT[E], R]
-  ): R = js.native
+    op6: UnaryFn[sourceT[E], sourceT[F]]
+  ): sourceT[F] = js.native
   @JSName("pipe")
   def pipe_TABCDR_R[T, A, B, C, D, R](
     source: sourceT[T],
@@ -116,24 +117,24 @@ object pipeMod extends js.Object {
     consumer: UnaryFn[sourceT[D], R]
   ): R = js.native
   @JSName("pipe")
-  def pipe_TABCD_sourceT[T, A, B, C, D](
+  def pipe_TABCR_R[T, A, B, C, R](
     source: sourceT[T],
     op1: UnaryFn[sourceT[T], sourceT[A]],
     op2: UnaryFn[sourceT[A], sourceT[B]],
     op3: UnaryFn[sourceT[B], sourceT[C]],
-    op4: UnaryFn[sourceT[C], sourceT[D]]
-  ): sourceT[D] = js.native
+    consumer: UnaryFn[sourceT[C], R]
+  ): R = js.native
   @JSName("pipe")
-  def pipe_TABC_sourceT[T, A, B, C](
+  def pipe_TABR_R[T, A, B, R](
     source: sourceT[T],
     op1: UnaryFn[sourceT[T], sourceT[A]],
     op2: UnaryFn[sourceT[A], sourceT[B]],
-    op3: UnaryFn[sourceT[B], sourceT[C]]
-  ): sourceT[C] = js.native
+    consumer: UnaryFn[sourceT[B], R]
+  ): R = js.native
   @JSName("pipe")
   def pipe_TAR_R[T, A, R](source: sourceT[T], op1: UnaryFn[sourceT[T], sourceT[A]], consumer: UnaryFn[sourceT[A], R]): R = js.native
   @JSName("pipe")
-  def pipe_TR_R[T, R](source: sourceT[T], consumer: UnaryFn[sourceT[T], R]): R = js.native
+  def pipe_TA_sourceT[T, A](source: sourceT[T], op1: UnaryFn[sourceT[T], sourceT[A]]): sourceT[A] = js.native
+  
   type UnaryFn[T, R] = js.Function1[/* source */ T, R]
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.gridMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.cathoQuantum.cathoQuantumStrings.xsmall
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.cathoQuantum.cathoQuantumStrings.xlarge
 */
 trait BreakpointsType extends js.Object
-

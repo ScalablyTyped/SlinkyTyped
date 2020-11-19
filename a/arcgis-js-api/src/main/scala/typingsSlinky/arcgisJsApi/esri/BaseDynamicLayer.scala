@@ -5,15 +5,14 @@ import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`base-dynamic`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BaseDynamicLayer
   extends Layer
      with ScaleRangeLayer
      with RefreshableLayer {
-  @JSName("type")
-  val type_BaseDynamicLayer: `base-dynamic` = js.native
+  
   /**
     * Adds a promise to the layer's [loadable](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#loadable) chain. This is typically used in the [load()](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseDynamicLayer.html#load) method to ensure that all [loadable](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#loadable) resources required for the layer to function are loaded prior to this layer resolving and becoming [loaded](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseDynamicLayer.html#loaded).
     *
@@ -23,6 +22,7 @@ trait BaseDynamicLayer
     *
     */
   def addResolvingPromise(promiseToLoad: js.Promise[_]): js.Promise[_] = js.native
+  
   /**
     * This method fetches the image for the specified extent and size. Override this method if the data returned from the server needs to be processed before it can be displayed. For example, if the server returns binary data, override this method to convert the binary data to an image.
     *
@@ -37,6 +37,7 @@ trait BaseDynamicLayer
     */
   def fetchImage(extent: Extent, width: Double, height: Double): js.Promise[HTMLImageElement | HTMLCanvasElement] = js.native
   def fetchImage(extent: Extent, width: Double, height: Double, options: BaseDynamicLayerFetchImageOptions): js.Promise[HTMLImageElement | HTMLCanvasElement] = js.native
+  
   /**
     * This method returns a URL to an image for a given extent, width, and height. Override this method to construct the URL for the image based on user interaction.
     *
@@ -48,5 +49,7 @@ trait BaseDynamicLayer
     *
     */
   def getImageUrl(extent: Extent, width: Double, height: Double): js.Promise[String] | String = js.native
+  
+  @JSName("type")
+  val type_BaseDynamicLayer: `base-dynamic` = js.native
 }
-

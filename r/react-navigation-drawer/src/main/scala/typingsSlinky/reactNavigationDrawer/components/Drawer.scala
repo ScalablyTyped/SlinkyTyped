@@ -20,9 +20,10 @@ import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.right
 import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.slide
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Drawer {
+  
   @JSImport("react-navigation-drawer/lib/typescript/src/views/Drawer", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -31,21 +32,28 @@ object Drawer {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def drawerStyle(value: ViewStyle): this.type = set("drawerStyle", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def gestureHandlerProps(value: ComponentProps[Instantiable0[PanGestureHandler]]): this.type = set("gestureHandlerProps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onGestureRef(value: /* ref */ PanGestureHandler | Null => Unit): this.type = set("onGestureRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def overlayStyle(value: ViewStyle): this.type = set("overlayStyle", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def sceneContainerStyle(value: ViewStyle): this.type = set("sceneContainerStyle", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def swipeDistanceThreshold(value: Double): this.type = set("swipeDistanceThreshold", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     drawerPosition: left | right,
@@ -66,4 +74,3 @@ object Drawer {
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
-

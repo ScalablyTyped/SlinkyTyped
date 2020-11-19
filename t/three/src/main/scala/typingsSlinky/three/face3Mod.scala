@@ -4,11 +4,12 @@ import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.vector3Mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/core/Face3", JSImport.Namespace)
 @js.native
 object face3Mod extends js.Object {
+  
   @js.native
   class Face3 protected () extends js.Object {
     /**
@@ -93,40 +94,47 @@ object face3Mod extends js.Object {
       vertexColors: js.Array[Color],
       materialIndex: Double
     ) = this()
+    
     /**
     	 * Vertex A index.
     	 */
     var a: Double = js.native
+    
     /**
     	 * Vertex B index.
     	 */
     var b: Double = js.native
+    
     /**
     	 * Vertex C index.
     	 */
     var c: Double = js.native
+    
     /**
     	 * Face color.
     	 */
     var color: Color = js.native
+    
+    def copy(source: Face3): this.type = js.native
+    
     /**
     	 * Material index (points to {@link Geometry.materials}).
     	 */
     var materialIndex: Double = js.native
+    
     /**
     	 * Face normal.
     	 */
     var normal: Vector3 = js.native
+    
     /**
     	 * Array of 3 vertex colors.
     	 */
     var vertexColors: js.Array[Color] = js.native
+    
     /**
     	 * Array of 3 vertex normals.
     	 */
     var vertexNormals: js.Array[Vector3] = js.native
-    def copy(source: Face3): this.type = js.native
   }
-  
 }
-

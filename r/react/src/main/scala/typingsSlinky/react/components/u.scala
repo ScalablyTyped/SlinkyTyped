@@ -5,11 +5,13 @@ import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object u {
+  
   val component: String = "u"
+  
   def withProps(p: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): SharedBuilder_DetailedHTMLProps1276931637[HTMLElement] = new SharedBuilder_DetailedHTMLProps1276931637[HTMLElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: u.type): SharedBuilder_DetailedHTMLProps1276931637[HTMLElement] = new SharedBuilder_DetailedHTMLProps1276931637[HTMLElement](js.Array(this.component, js.Dictionary.empty))()
 }
-

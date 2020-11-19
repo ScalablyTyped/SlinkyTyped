@@ -2,11 +2,12 @@ package typingsSlinky.validator
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("validator/lib/isCurrency", JSImport.Namespace)
 @js.native
 object isCurrencyMod extends js.Object {
+  
   /**
     * Check if the string is a valid currency amount.
     *
@@ -14,6 +15,6 @@ object isCurrencyMod extends js.Object {
     */
   def default(str: String): Boolean = js.native
   def default(str: String, options: typingsSlinky.validator.mod.validator.IsCurrencyOptions): Boolean = js.native
+  
   type IsCurrencyOptions = typingsSlinky.validator.mod.validator.IsCurrencyOptions
 }
-

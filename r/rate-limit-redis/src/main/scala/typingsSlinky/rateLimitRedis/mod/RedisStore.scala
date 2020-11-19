@@ -4,12 +4,12 @@ import typingsSlinky.expressRateLimit.mod.Store
 import typingsSlinky.expressRateLimit.mod.StoreIncrementCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RedisStore extends Store
-
 object RedisStore {
+  
   @scala.inline
   def apply(
     decrement: String => Unit,
@@ -21,4 +21,3 @@ object RedisStore {
     __obj.asInstanceOf[RedisStore]
   }
 }
-

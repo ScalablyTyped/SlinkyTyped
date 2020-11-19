@@ -5,18 +5,19 @@ import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reachRouter.mod.ServerLocationProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ServerLocation {
+  
   @JSImport("@reach/router", "ServerLocation")
   @js.native
   object component extends js.Object
   
   def withProps(p: ServerLocationProps): Default[tag.type, typingsSlinky.reachRouter.mod.ServerLocation] = new Default[tag.type, typingsSlinky.reachRouter.mod.ServerLocation](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(url: String): Default[tag.type, typingsSlinky.reachRouter.mod.ServerLocation] = {
     val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
     new Default[tag.type, typingsSlinky.reachRouter.mod.ServerLocation](js.Array(this.component, __props.asInstanceOf[ServerLocationProps]))
   }
 }
-

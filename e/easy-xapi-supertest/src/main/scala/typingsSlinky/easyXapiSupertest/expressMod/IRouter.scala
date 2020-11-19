@@ -2,31 +2,11 @@ package typingsSlinky.easyXapiSupertest.expressMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IRouter[T] extends RequestHandler {
-  /**
-    * Special-cased "all" method, applying the given route `path`,
-    * middleware, and callback to _every_ HTTP method.
-    *
-    * @param path
-    * @param fn
-    */
-  @JSName("all")
-  var all_Original: IRouterMatcher[T] = js.native
-  @JSName("delete")
-  var delete_Original: IRouterMatcher[T] = js.native
-  @JSName("get")
-  var get_Original: IRouterMatcher[T] = js.native
-  @JSName("options")
-  var options_Original: IRouterMatcher[T] = js.native
-  @JSName("patch")
-  var patch_Original: IRouterMatcher[T] = js.native
-  @JSName("post")
-  var post_Original: IRouterMatcher[T] = js.native
-  @JSName("put")
-  var put_Original: IRouterMatcher[T] = js.native
+  
   /**
     * Special-cased "all" method, applying the given route `path`,
     * middleware, and callback to _every_ HTTP method.
@@ -43,12 +23,31 @@ trait IRouter[T] extends RequestHandler {
     * @param fn
     */
   def all(name: js.RegExp, handlers: RequestHandler*): T = js.native
+  /**
+    * Special-cased "all" method, applying the given route `path`,
+    * middleware, and callback to _every_ HTTP method.
+    *
+    * @param path
+    * @param fn
+    */
+  @JSName("all")
+  var all_Original: IRouterMatcher[T] = js.native
+  
   def delete(name: String, handlers: RequestHandler*): T = js.native
   def delete(name: js.RegExp, handlers: RequestHandler*): T = js.native
+  @JSName("delete")
+  var delete_Original: IRouterMatcher[T] = js.native
+  
   def get(name: String, handlers: RequestHandler*): T = js.native
   def get(name: js.RegExp, handlers: RequestHandler*): T = js.native
+  @JSName("get")
+  var get_Original: IRouterMatcher[T] = js.native
+  
   def options(name: String, handlers: RequestHandler*): T = js.native
   def options(name: js.RegExp, handlers: RequestHandler*): T = js.native
+  @JSName("options")
+  var options_Original: IRouterMatcher[T] = js.native
+  
   // Alternatively, you can pass only a callback, in which case you have the opportunity to alter the app.param() API
   def param(callback: js.Function2[/* name */ String, /* matcher */ js.RegExp, RequestParamHandler]): T = js.native
   /**
@@ -83,16 +82,26 @@ trait IRouter[T] extends RequestHandler {
   def param(name: String, handler: RequestParamHandler): T = js.native
   def param(name: String, mapper: js.Function1[/* param */ js.Any, _]): T = js.native
   def param(name: String, matcher: js.RegExp): T = js.native
+  
   def patch(name: String, handlers: RequestHandler*): T = js.native
   def patch(name: js.RegExp, handlers: RequestHandler*): T = js.native
+  @JSName("patch")
+  var patch_Original: IRouterMatcher[T] = js.native
+  
   def post(name: String, handlers: RequestHandler*): T = js.native
   def post(name: js.RegExp, handlers: RequestHandler*): T = js.native
+  @JSName("post")
+  var post_Original: IRouterMatcher[T] = js.native
+  
   def put(name: String, handlers: RequestHandler*): T = js.native
   def put(name: js.RegExp, handlers: RequestHandler*): T = js.native
+  @JSName("put")
+  var put_Original: IRouterMatcher[T] = js.native
+  
   def route(path: String): IRoute = js.native
+  
   def use(handler: RequestHandler*): T = js.native
   def use(handler: ErrorRequestHandler): T = js.native
   def use(path: String, handler: RequestHandler*): T = js.native
   def use(path: String, handler: ErrorRequestHandler): T = js.native
 }
-

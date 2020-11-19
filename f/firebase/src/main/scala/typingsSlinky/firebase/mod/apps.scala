@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A (read-only) array of all initialized apps.
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
 @js.native
 object apps
   extends TopLevel[js.Array[App]]
-

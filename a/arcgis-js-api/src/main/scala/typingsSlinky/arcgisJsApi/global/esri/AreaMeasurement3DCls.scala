@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.AreaMeasurement3DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.AreaMeasurement3D")
 @js.native
@@ -16,4 +16,3 @@ class AreaMeasurement3DCls ()
   extends typingsSlinky.arcgisJsApi.esri.AreaMeasurement3D {
   def this(properties: AreaMeasurement3DProperties) = this()
 }
-

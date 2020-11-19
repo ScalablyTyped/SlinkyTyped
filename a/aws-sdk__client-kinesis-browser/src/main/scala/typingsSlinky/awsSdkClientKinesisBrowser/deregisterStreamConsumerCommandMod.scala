@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kinesis-browser/commands/DeregisterStreamConsumerCommand", JSImport.Namespace)
 @js.native
 object deregisterStreamConsumerCommandMod extends js.Object {
+  
   @js.native
   class DeregisterStreamConsumerCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deregisterStreamConsumerCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeregisterStreamConsumerInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeregisterStreamConsumerInput, DeregisterStreamConsumerOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: KinesisResolvedConfiguration
     ): Handler[DeregisterStreamConsumerInput, DeregisterStreamConsumerOutput] = js.native
   }
-  
 }
-

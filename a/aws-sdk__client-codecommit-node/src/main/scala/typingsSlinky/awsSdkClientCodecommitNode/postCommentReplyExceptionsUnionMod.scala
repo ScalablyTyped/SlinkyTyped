@@ -2,11 +2,12 @@ package typingsSlinky.awsSdkClientCodecommitNode
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/types/PostCommentReplyExceptionsUnion", JSImport.Namespace)
 @js.native
 object postCommentReplyExceptionsUnionMod extends js.Object {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdkClientCodecommitNode.typesClientRequestTokenRequiredExceptionMod.ClientRequestTokenRequiredException
     - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidClientRequestTokenExceptionMod.InvalidClientRequestTokenException
@@ -18,6 +19,4 @@ object postCommentReplyExceptionsUnionMod extends js.Object {
     - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommentIdExceptionMod.InvalidCommentIdException
   */
   trait PostCommentReplyExceptionsUnion extends js.Object
-  
 }
-

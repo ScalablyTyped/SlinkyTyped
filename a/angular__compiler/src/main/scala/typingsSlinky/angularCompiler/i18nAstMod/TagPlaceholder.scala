@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/src/i18n/i18n_ast", "TagPlaceholder")
 @js.native
@@ -18,11 +18,16 @@ class TagPlaceholder protected () extends Node {
     isVoid: Boolean,
     sourceSpan: ParseSourceSpan
   ) = this()
+  
   var attrs: StringDictionary[String] = js.native
+  
   var children: js.Array[Node] = js.native
+  
   var closeName: String = js.native
+  
   var isVoid: Boolean = js.native
+  
   var startName: String = js.native
+  
   var tag: String = js.native
 }
-

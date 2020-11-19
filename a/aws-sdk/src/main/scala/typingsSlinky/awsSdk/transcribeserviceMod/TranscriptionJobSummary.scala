@@ -2,102 +2,131 @@ package typingsSlinky.awsSdk.transcribeserviceMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TranscriptionJobSummary extends js.Object {
+  
   /**
     * A timestamp that shows when the job was completed.
     */
   var CompletionTime: js.UndefOr[js.Date] = js.native
+  
   /**
     * The content redaction settings of the transcription job.
     */
   var ContentRedaction: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.ContentRedaction] = js.native
+  
   /**
     * A timestamp that shows when the job was created.
     */
   var CreationTime: js.UndefOr[js.Date] = js.native
+  
   /**
     * If the TranscriptionJobStatus field is FAILED, a description of the error.
     */
   var FailureReason: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.FailureReason] = js.native
+  
   /**
     * The language code for the input speech.
     */
   var LanguageCode: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.LanguageCode] = js.native
+  
   /**
     * Indicates the location of the output of the transcription job. If the value is CUSTOMER_BUCKET then the location is the S3 bucket specified in the outputBucketName field when the transcription job was started with the StartTranscriptionJob operation. If the value is SERVICE_BUCKET then the output is stored by Amazon Transcribe and can be retrieved using the URI in the GetTranscriptionJob response's TranscriptFileUri field.
     */
   var OutputLocationType: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.OutputLocationType] = js.native
+  
   /**
     * A timestamp that shows when the job started processing.
     */
   var StartTime: js.UndefOr[js.Date] = js.native
+  
   /**
     * The name of the transcription job.
     */
   var TranscriptionJobName: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.TranscriptionJobName] = js.native
+  
   /**
     * The status of the transcription job. When the status is COMPLETED, use the GetTranscriptionJob operation to get the results of the transcription.
     */
   var TranscriptionJobStatus: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.TranscriptionJobStatus] = js.native
 }
-
 object TranscriptionJobSummary {
+  
   @scala.inline
   def apply(): TranscriptionJobSummary = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[TranscriptionJobSummary]
   }
+  
   @scala.inline
   implicit class TranscriptionJobSummaryOps[Self <: TranscriptionJobSummary] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCompletionTime(value: js.Date): Self = this.set("CompletionTime", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteCompletionTime: Self = this.set("CompletionTime", js.undefined)
+    
     @scala.inline
     def setContentRedaction(value: ContentRedaction): Self = this.set("ContentRedaction", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteContentRedaction: Self = this.set("ContentRedaction", js.undefined)
+    
     @scala.inline
     def setCreationTime(value: js.Date): Self = this.set("CreationTime", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteCreationTime: Self = this.set("CreationTime", js.undefined)
+    
     @scala.inline
     def setFailureReason(value: FailureReason): Self = this.set("FailureReason", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteFailureReason: Self = this.set("FailureReason", js.undefined)
+    
     @scala.inline
     def setLanguageCode(value: LanguageCode): Self = this.set("LanguageCode", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteLanguageCode: Self = this.set("LanguageCode", js.undefined)
+    
     @scala.inline
     def setOutputLocationType(value: OutputLocationType): Self = this.set("OutputLocationType", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteOutputLocationType: Self = this.set("OutputLocationType", js.undefined)
+    
     @scala.inline
     def setStartTime(value: js.Date): Self = this.set("StartTime", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteStartTime: Self = this.set("StartTime", js.undefined)
+    
     @scala.inline
     def setTranscriptionJobName(value: TranscriptionJobName): Self = this.set("TranscriptionJobName", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteTranscriptionJobName: Self = this.set("TranscriptionJobName", js.undefined)
+    
     @scala.inline
     def setTranscriptionJobStatus(value: TranscriptionJobStatus): Self = this.set("TranscriptionJobStatus", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteTranscriptionJobStatus: Self = this.set("TranscriptionJobStatus", js.undefined)
   }
-  
 }
-

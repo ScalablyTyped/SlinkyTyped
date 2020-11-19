@@ -3,7 +3,7 @@ package typingsSlinky.fridaGum.global
 import typingsSlinky.fridaGum.NativePointerValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Relocates machine code for mips.
@@ -23,4 +23,3 @@ class MipsRelocator protected ()
     */
   def this(inputCode: NativePointerValue, output: typingsSlinky.fridaGum.MipsWriter) = this()
 }
-

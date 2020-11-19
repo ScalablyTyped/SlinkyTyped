@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-glacier-node/commands/CompleteVaultLockCommand", JSImport.Namespace)
 @js.native
 object completeVaultLockCommandMod extends js.Object {
+  
   @js.native
   class CompleteVaultLockCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object completeVaultLockCommandMod extends js.Object {
           Readable
         ] {
     def this(input: CompleteVaultLockInput) = this()
+    
     val middlewareStack: MiddlewareStack[CompleteVaultLockInput, CompleteVaultLockOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[CompleteVaultLockInput, CompleteVaultLockOutput] = js.native
   }
-  
 }
-

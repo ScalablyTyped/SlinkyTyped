@@ -34,11 +34,12 @@ import typingsSlinky.relayRuntime.relayStoreTypesMod.Environment
 import typingsSlinky.relayRuntime.requestSubscriptionMod.GraphQLSubscriptionConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-relay/lib/hooks", JSImport.Namespace)
 @js.native
 object libHooksMod extends js.Object {
+  
   def EntryPointContainer[TPreloadedQueries /* <: js.Object */, TPreloadedNestedEntryPoints /* <: js.Object */, TRuntimeProps /* <: js.Object */, TExtraProps, TEntryPointComponent /* <: ReactComponentClass[
     EntryPointProps[TPreloadedQueries, TPreloadedNestedEntryPoints, TRuntimeProps, TExtraProps]
   ] */](
@@ -50,6 +51,7 @@ object libHooksMod extends js.Object {
       TExtraProps
     ]
   ): ClassicElement[ReactElement] = js.native
+  
   def LazyLoadEntryPointContainer[TEntryPointParams /* <: js.Object */, TPreloadedQueries /* <: js.Object */, TPreloadedEntryPoints /* <: js.Object */, TRuntimeProps /* <: js.Object */, TExtraProps](
     hasEntryPointEntryPointParamsPropsEnvironmentProvider: EntryPointContainerProps[
       // tslint:disable-next-line no-unnecessary-generics
@@ -64,7 +66,9 @@ object libHooksMod extends js.Object {
   TExtraProps
     ]
   ): ReactElement = js.native
+  
   def RelayEnvironmentProvider(props: Props): ReactElement = js.native
+  
   @JSName("fetchQuery")
   def fetchQuery_variables[TQuery /* <: OperationType */](
     environment: Environment,
@@ -82,7 +86,9 @@ object libHooksMod extends js.Object {
   ): Observable[
     /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any
   ] = js.native
+  
   def graphql(strings: js.Any): GraphQLTaggedNode = js.native
+  
   @JSName("preloadQuery")
   def preloadQuery_variables[TQuery /* <: OperationType */, TEnvironmentProviderOptions](
     environment: Environment,
@@ -120,6 +126,7 @@ object libHooksMod extends js.Object {
     options: PreloadOptions,
     environmentProviderOptions: TEnvironmentProviderOptions
   ): PreloadedQuery[TQuery, TEnvironmentProviderOptions] = js.native
+  
   def prepareEntryPoint[TEntryPointParams /* <: js.Object */, TPreloadedQueries /* <: js.Object */, TPreloadedEntryPoints /* <: js.Object */, TRuntimeProps /* <: js.Object */, TExtraProps, TEntryPointComponent /* <: ReactComponentClass[
     EntryPointProps[
       // tslint:disable-next-line no-unnecessary-generics
@@ -138,6 +145,7 @@ object libHooksMod extends js.Object {
   entryPoint: TEntryPoint,
     entryPointParams: TEntryPointParams
   ): PreloadedEntryPoint[TEntryPointComponent] = js.native
+  
   def useBlockingPaginationFragment[TQuery /* <: OperationType */, TKey /* <: KeyType */](fragmentInput: GraphQLTaggedNode): // tslint:disable-next-line no-unnecessary-generics
   ReturnType[TQuery, TKey | Null, Call[KeyReturnType[TKey]] | Null] = js.native
   def useBlockingPaginationFragment[TQuery /* <: OperationType */, TKey /* <: KeyType */](fragmentInput: GraphQLTaggedNode, parentFragmentRef: TKey): // tslint:disable-next-line no-unnecessary-generics
@@ -146,6 +154,7 @@ object libHooksMod extends js.Object {
   ReturnType[TQuery, TKey | Null, Call[KeyReturnType[TKey]] | Null] = js.native
   def useBlockingPaginationFragment[TQuery /* <: OperationType */, TKey /* <: KeyType */](fragmentInput: GraphQLTaggedNode, parentFragmentRef: Null, componentDisplayName: String): // tslint:disable-next-line no-unnecessary-generics
   ReturnType[TQuery, TKey | Null, Call[KeyReturnType[TKey]] | Null] = js.native
+  
   def useFragment[TKey /* <: ArrayKeyType */](fragmentInput: GraphQLTaggedNode): js.Array[typingsSlinky.reactRelay.useFragmentMod.Call[ArrayKeyReturnType[TKey]]] | Null = js.native
   def useFragment[TKey /* <: ArrayKeyType */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): js.Array[typingsSlinky.reactRelay.useFragmentMod.Call[ArrayKeyReturnType[TKey]]] | Null = js.native
   @JSName("useFragment")
@@ -156,6 +165,7 @@ object libHooksMod extends js.Object {
   def useFragment_TKey_KeyType[TKey /* <: typingsSlinky.reactRelay.useFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): typingsSlinky.reactRelay.useFragmentMod.Call[typingsSlinky.reactRelay.useFragmentMod.KeyReturnType[TKey]] | Null = js.native
   @JSName("useFragment")
   def useFragment_TKey_KeyType_Call[TKey /* <: typingsSlinky.reactRelay.useFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): typingsSlinky.reactRelay.useFragmentMod.Call[typingsSlinky.reactRelay.useFragmentMod.KeyReturnType[TKey]] = js.native
+  
   @JSName("useLazyLoadQuery")
   def useLazyLoadQuery_variables[TQuery /* <: OperationType */](
     gqlQuery: GraphQLTaggedNode,
@@ -167,11 +177,13 @@ object libHooksMod extends js.Object {
     variables: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any,
     options: FetchKey
   ): /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any = js.native
+  
   def useMutation[TMutation /* <: MutationParameters */](mutation: GraphQLTaggedNode): js.Tuple2[js.Function1[/* config */ UseMutationConfig[TMutation], Disposable], Boolean] = js.native
   def useMutation[TMutation /* <: MutationParameters */](
     mutation: GraphQLTaggedNode,
     commitMutationFn: js.Function2[/* environment */ Environment, /* config */ MutationConfig[TMutation], Disposable]
   ): js.Tuple2[js.Function1[/* config */ UseMutationConfig[TMutation], Disposable], Boolean] = js.native
+  
   def usePaginationFragment[TQuery /* <: OperationType */, TKey /* <: typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode): // tslint:disable-next-line no-unnecessary-generics
   typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.ReturnType[
     TQuery, 
@@ -184,7 +196,9 @@ object libHooksMod extends js.Object {
     TKey | Null, 
     typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.Call[typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.KeyReturnType[TKey]] | Null
   ] = js.native
+  
   def usePreloadedQuery[TQuery /* <: OperationType */](gqlQuery: GraphQLTaggedNode, preloadedQuery: PreloadedQuery[TQuery, EnvironmentProviderOptions]): /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any = js.native
+  
   def useRefetchableFragment[TQuery /* <: OperationType */, TKey /* <: typingsSlinky.reactRelay.useRefetchableFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode): // tslint:disable-next-line:no-unnecessary-generics
   typingsSlinky.reactRelay.useRefetchableFragmentMod.ReturnType[
     TQuery, 
@@ -197,7 +211,9 @@ object libHooksMod extends js.Object {
     TKey, 
     typingsSlinky.reactRelay.useRefetchableFragmentMod.Call[typingsSlinky.reactRelay.useRefetchableFragmentMod.KeyReturnType[TKey]] | Null
   ] = js.native
+  
   def useRelayEnvironment(): typingsSlinky.relayRuntime.mod.Environment = js.native
+  
   def useSubscription[TSubscriptionPayload /* <: OperationType */](
     // The actual subtype of OperationType is required to allow for type inferrence inside GraphQLSubscriptionConfig.
   // tslint:disable-next-line:no-unnecessary-generics
@@ -210,4 +226,3 @@ object libHooksMod extends js.Object {
     requestSubscriptionFn: FnCall
   ): Unit = js.native
 }
-

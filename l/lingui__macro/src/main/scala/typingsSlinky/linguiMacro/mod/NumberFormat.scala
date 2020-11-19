@@ -7,7 +7,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.std.Intl.NumberFormatOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@lingui/macro", "NumberFormat")
 @js.native
@@ -16,8 +16,6 @@ class NumberFormat protected ()
   def this(props: FormatPropsWithoutI18n[Double, NumberFormatOptions]) = this()
   def this(props: FormatPropsWithoutI18n[Double, NumberFormatOptions], context: js.Any) = this()
 }
-
 @JSImport("@lingui/macro", "NumberFormat")
 @js.native
 object NumberFormat extends TopLevel[ReactComponentClass[FormatPropsWithoutI18n[Double, NumberFormatOptions]]]
-

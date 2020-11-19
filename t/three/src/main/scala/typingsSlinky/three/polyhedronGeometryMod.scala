@@ -6,11 +6,12 @@ import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.sphereMod.Sphere
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three/src/geometries/PolyhedronGeometry", JSImport.Namespace)
 @js.native
 object polyhedronGeometryMod extends js.Object {
+  
   @js.native
   class PolyhedronBufferGeometry protected () extends BufferGeometry {
     def this(vertices: js.Array[Double], indices: js.Array[Double]) = this()
@@ -22,6 +23,7 @@ object polyhedronGeometryMod extends js.Object {
       detail: Double
     ) = this()
     def this(vertices: js.Array[Double], indices: js.Array[Double], radius: Double, detail: Double) = this()
+    
     var parameters: Indices = js.native
   }
   
@@ -36,10 +38,10 @@ object polyhedronGeometryMod extends js.Object {
       detail: Double
     ) = this()
     def this(vertices: js.Array[Double], indices: js.Array[Double], radius: Double, detail: Double) = this()
+    
     @JSName("boundingSphere")
     var boundingSphere_PolyhedronGeometry: Sphere = js.native
+    
     var parameters: Indices = js.native
   }
-  
 }
-

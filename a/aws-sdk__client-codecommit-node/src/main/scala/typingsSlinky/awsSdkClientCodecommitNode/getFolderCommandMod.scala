@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-codecommit-node/commands/GetFolderCommand", JSImport.Namespace)
 @js.native
 object getFolderCommandMod extends js.Object {
+  
   @js.native
   class GetFolderCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getFolderCommandMod extends js.Object {
           Readable
         ] {
     def this(input: GetFolderInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetFolderInput, GetFolderOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: CodeCommitResolvedConfiguration
     ): Handler[GetFolderInput, GetFolderOutput] = js.native
   }
-  
 }
-

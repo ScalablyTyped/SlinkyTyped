@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.MeshMaterialMetallicRoughnessProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.MeshMaterialMetallicRoughness")
 @js.native
@@ -16,4 +16,3 @@ class MeshMaterialMetallicRoughnessCls ()
   extends typingsSlinky.arcgisJsApi.esri.MeshMaterialMetallicRoughness {
   def this(properties: MeshMaterialMetallicRoughnessProperties) = this()
 }
-

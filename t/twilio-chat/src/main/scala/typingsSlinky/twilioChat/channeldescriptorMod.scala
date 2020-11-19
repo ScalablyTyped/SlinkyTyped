@@ -7,11 +7,12 @@ import typingsSlinky.twilioChat.channelMod.Channel.Type
 import typingsSlinky.twilioChat.mod.Client
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("twilio-chat/lib/channeldescriptor", JSImport.Namespace)
 @js.native
 object channeldescriptorMod extends js.Object {
+  
   /**
     * Contains channel information.
     * Unlike {@link Channel}, this information won't be updated in realtime.
@@ -39,29 +40,45 @@ object channeldescriptorMod extends js.Object {
       * @private
       */
     def this(client: Client, descriptor: js.Any) = this()
+    
     val attributes: js.Any = js.native
+    
     val channel: String = js.native
+    
     var client: Client = js.native
+    
     val createdBy: String = js.native
+    
     val dateCreated: js.Date = js.native
+    
     val dateUpdated: js.Date = js.native
+    
     var descriptor: js.Any = js.native
+    
     val friendlyName: String = js.native
-    val isPrivate: Boolean = js.native
-    val lastConsumedMessageIndex: Double = js.native
-    val membersCount: Double = js.native
-    val messagesCount: Double = js.native
-    val notificationLevel: NotificationLevel = js.native
-    val sid: String = js.native
-    val status: Status = js.native
-    val `type`: Type = js.native
-    val uniqueName: String = js.native
+    
     /**
       * Get channel object from descriptor.
       * @returns {Promise<Channel>}
       */
     def getChannel(): js.Promise[Channel] = js.native
+    
+    val isPrivate: Boolean = js.native
+    
+    val lastConsumedMessageIndex: Double = js.native
+    
+    val membersCount: Double = js.native
+    
+    val messagesCount: Double = js.native
+    
+    val notificationLevel: NotificationLevel = js.native
+    
+    val sid: String = js.native
+    
+    val status: Status = js.native
+    
+    val `type`: Type = js.native
+    
+    val uniqueName: String = js.native
   }
-  
 }
-

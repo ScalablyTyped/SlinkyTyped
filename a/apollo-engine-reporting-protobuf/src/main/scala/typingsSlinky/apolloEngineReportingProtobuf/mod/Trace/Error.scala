@@ -7,7 +7,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents an Error. */
 @JSImport("apollo-engine-reporting-protobuf", "Trace.Error")
@@ -20,11 +20,11 @@ class Error ()
   extends typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Error {
   def this(properties: IError) = this()
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf", "Trace.Error")
 @js.native
 object Error extends js.Object {
+  
   /**
     * Creates a new Error instance using the specified properties.
     * @param [properties] Properties to set
@@ -32,6 +32,7 @@ object Error extends js.Object {
     */
   def create(): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Error = js.native
   def create(properties: IError): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Error = js.native
+  
   /**
     * Decodes an Error message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -44,6 +45,7 @@ object Error extends js.Object {
   def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Error = js.native
   def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Error = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Error = js.native
+  
   /**
     * Decodes an Error message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -53,6 +55,7 @@ object Error extends js.Object {
     */
   def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Error = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Error = js.native
+  
   /**
     * Encodes the specified Error message. Does not implicitly {@link Trace.Error.verify|verify} messages.
     * @param message Error message or plain object to encode
@@ -61,6 +64,7 @@ object Error extends js.Object {
     */
   def encode(message: IError): Writer = js.native
   def encode(message: IError, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified Error message, length delimited. Does not implicitly {@link Trace.Error.verify|verify} messages.
     * @param message Error message or plain object to encode
@@ -69,12 +73,14 @@ object Error extends js.Object {
     */
   def encodeDelimited(message: IError): Writer = js.native
   def encodeDelimited(message: IError, writer: Writer): Writer = js.native
+  
   /**
     * Creates an Error message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns Error
     */
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Error = js.native
+  
   /**
     * Creates a plain object from an Error message. Also converts values to other types if specified.
     * @param message Error
@@ -86,6 +92,7 @@ object Error extends js.Object {
     message: typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Error,
     options: IConversionOptions
   ): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies an Error message.
     * @param message Plain object to verify
@@ -93,4 +100,3 @@ object Error extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

@@ -7,7 +7,7 @@ import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.consoleMod.global.Console_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ConsoleConstructor
@@ -22,4 +22,3 @@ trait ConsoleConstructor
       /* ignoreErrors */ Boolean, 
       Console_
     ]
-

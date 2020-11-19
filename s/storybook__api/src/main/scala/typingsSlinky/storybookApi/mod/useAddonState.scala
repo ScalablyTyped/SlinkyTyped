@@ -3,11 +3,12 @@ package typingsSlinky.storybookApi.mod
 import typingsSlinky.storybookApi.storeMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/api", "useAddonState")
 @js.native
 object useAddonState extends js.Object {
+  
   def apply[S](addonId: String): js.Tuple2[
     S, 
     js.Function2[
@@ -25,4 +26,3 @@ object useAddonState extends js.Object {
     ]
   ] = js.native
 }
-

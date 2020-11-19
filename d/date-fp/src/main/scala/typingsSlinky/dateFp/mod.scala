@@ -14,11 +14,12 @@ import typingsSlinky.dateFp.dateFpStrings.year
 import typingsSlinky.dateFp.dateFpStrings.years
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("date-fp", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @JSName("add")
   def add_days(unit: days, value: Double, date: js.Date): js.Date = js.native
   @JSName("add")
@@ -33,7 +34,9 @@ object mod extends js.Object {
   def add_seconds(unit: seconds, value: Double, date: js.Date): js.Date = js.native
   @JSName("add")
   def add_years(unit: years, value: Double, date: js.Date): js.Date = js.native
+  
   def clone(date: js.Date): js.Date = js.native
+  
   @JSName("convertTo")
   def convertTo_days(unit: days, date: js.Date): Double = js.native
   @JSName("convertTo")
@@ -44,6 +47,7 @@ object mod extends js.Object {
   def convertTo_minutes(unit: minutes, date: js.Date): Double = js.native
   @JSName("convertTo")
   def convertTo_seconds(unit: seconds, date: js.Date): Double = js.native
+  
   @JSName("diff")
   def diff_days(unit: days, a: js.Date, b: js.Date): Double = js.native
   @JSName("diff")
@@ -58,9 +62,13 @@ object mod extends js.Object {
   def diff_seconds(unit: seconds, a: js.Date, b: js.Date): Double = js.native
   @JSName("diff")
   def diff_years(unit: years, a: js.Date, b: js.Date): Double = js.native
+  
   def equals(a: js.Date, b: js.Date): Boolean = js.native
+  
   def format(format: String, date: js.Date): String = js.native
+  
   def fromTime(time: Double): js.Date = js.native
+  
   @JSName("get")
   def get_date(property: date, date: js.Date): Double = js.native
   @JSName("get")
@@ -79,12 +87,19 @@ object mod extends js.Object {
   def get_week(property: week, date: js.Date): Double = js.native
   @JSName("get")
   def get_year(property: year, date: js.Date): Double = js.native
+  
   def isLeapYear(date: js.Date): Boolean = js.native
+  
   def isValid(date: js.Date): Boolean = js.native
+  
   def max(dates: js.Array[js.Date]): js.Date = js.native
+  
   def min(dates: js.Array[js.Date]): js.Date = js.native
+  
   def of(dateParts: js.Array[Double]): js.Date = js.native
+  
   def parse(format: String, date: String): js.Date = js.native
+  
   @JSName("set")
   def set_date(property: date, value: Double, date: js.Date): js.Date = js.native
   @JSName("set")
@@ -101,6 +116,7 @@ object mod extends js.Object {
   def set_week(property: week, value: Double, date: js.Date): js.Date = js.native
   @JSName("set")
   def set_year(property: year, value: Double, date: js.Date): js.Date = js.native
+  
   @JSName("sub")
   def sub_days(unit: days, value: Double, date: js.Date): js.Date = js.native
   @JSName("sub")
@@ -115,6 +131,6 @@ object mod extends js.Object {
   def sub_seconds(unit: seconds, value: Double, date: js.Date): js.Date = js.native
   @JSName("sub")
   def sub_years(unit: years, value: Double, date: js.Date): js.Date = js.native
+  
   def unixTime(date: js.Date): Double = js.native
 }
-

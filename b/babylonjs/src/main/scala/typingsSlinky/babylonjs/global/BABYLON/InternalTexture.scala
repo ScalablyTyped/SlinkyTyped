@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("BABYLON.InternalTexture")
 @js.native
@@ -25,11 +25,11 @@ class InternalTexture protected ()
     delayAllocation: Boolean
   ) = this()
 }
-
 /* static members */
 @JSGlobal("BABYLON.InternalTexture")
 @js.native
 object InternalTexture extends js.Object {
+  
   /** @hidden */
   def _UpdateRGBDAsync(
     internalTexture: typingsSlinky.babylonjs.BABYLON.InternalTexture,
@@ -39,4 +39,3 @@ object InternalTexture extends js.Object {
     lodOffset: Double
   ): js.Promise[Unit] = js.native
 }
-

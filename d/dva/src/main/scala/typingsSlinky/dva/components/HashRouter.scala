@@ -8,9 +8,10 @@ import typingsSlinky.reactRouterDom.reactRouterDomStrings.noslash
 import typingsSlinky.reactRouterDom.reactRouterDomStrings.slash
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object HashRouter {
+  
   @JSImport("dva/router", "HashRouter")
   @js.native
   object component extends js.Object
@@ -19,15 +20,18 @@ object HashRouter {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.dva.routerMod.HashRouter] {
+    
     @scala.inline
     def basename(value: String): this.type = set("basename", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def getUserConfirmation(value: (/* message */ String, /* callback */ js.Function1[/* ok */ Boolean, Unit]) => Unit): this.type = set("getUserConfirmation", js.Any.fromFunction2(value))
+    
     @scala.inline
     def hashType(value: slash | noslash | hashbang): this.type = set("hashType", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: HashRouterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: HashRouter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

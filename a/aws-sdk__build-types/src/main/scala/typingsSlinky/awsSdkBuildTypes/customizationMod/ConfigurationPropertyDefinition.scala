@@ -4,21 +4,22 @@ import typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.forked
 import typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.unified
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.awsSdkBuildTypes.customizationMod.UnifiedConfigurationPropertyDefinition
   - typingsSlinky.awsSdkBuildTypes.customizationMod.EnvironmentForkedConfigurationPropertyDefinition
 */
 trait ConfigurationPropertyDefinition extends js.Object
-
 object ConfigurationPropertyDefinition {
+  
   @scala.inline
   def UnifiedConfigurationPropertyDefinition(documentation: String, inputType: String, required: Boolean, `type`: unified): ConfigurationPropertyDefinition = {
     val __obj = js.Dynamic.literal(documentation = documentation.asInstanceOf[js.Any], inputType = inputType.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationPropertyDefinition]
   }
+  
   @scala.inline
   def EnvironmentForkedConfigurationPropertyDefinition(
     browser: ConfigurationPropertyDefinitionRuntimeAttributes with AdditionalDocumentation,
@@ -33,4 +34,3 @@ object ConfigurationPropertyDefinition {
     __obj.asInstanceOf[ConfigurationPropertyDefinition]
   }
 }
-

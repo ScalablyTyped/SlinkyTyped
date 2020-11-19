@@ -2,7 +2,7 @@ package typingsSlinky.hapiFormula.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@hapi/formula", "Parser")
 @js.native
@@ -15,6 +15,7 @@ class Parser[T /* <: String | Double */] protected () extends js.Object {
     */
   def this(formula: String) = this()
   def this(formula: String, options: Options) = this()
+  
   /**
     * Evaluate the formula.
     * 
@@ -25,4 +26,3 @@ class Parser[T /* <: String | Double */] protected () extends js.Object {
   def evaluate(): T = js.native
   def evaluate(context: js.Any): T = js.native
 }
-

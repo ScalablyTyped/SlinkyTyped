@@ -3,11 +3,12 @@ package typingsSlinky.playcanvas.global.pc
 import typingsSlinky.playcanvas.anon.BlendIndices
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("pc.createMesh")
 @js.native
 object createMesh extends js.Object {
+  
   /**
     * Creates a new mesh object from the supplied vertex information and topology.
     * @example
@@ -40,4 +41,3 @@ object createMesh extends js.Object {
     opts: BlendIndices
   ): typingsSlinky.playcanvas.pc.Mesh = js.native
 }
-

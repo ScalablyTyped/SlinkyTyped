@@ -2,10 +2,11 @@ package typingsSlinky.vscode.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CodeActionProvider extends js.Object {
+  
   /**
     * Provide commands for the given document and range.
     *
@@ -20,4 +21,3 @@ trait CodeActionProvider extends js.Object {
   def provideCodeActions(document: TextDocument, range: Range, context: CodeActionContext, token: CancellationToken): ProviderResult[js.Array[Command | CodeAction]] = js.native
   def provideCodeActions(document: TextDocument, range: Selection, context: CodeActionContext, token: CancellationToken): ProviderResult[js.Array[Command | CodeAction]] = js.native
 }
-

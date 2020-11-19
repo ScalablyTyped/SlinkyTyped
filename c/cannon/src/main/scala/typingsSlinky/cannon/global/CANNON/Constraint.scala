@@ -3,7 +3,7 @@ package typingsSlinky.cannon.global.CANNON
 import typingsSlinky.cannon.CANNON.IConstraintOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("CANNON.Constraint")
 @js.native
@@ -16,4 +16,3 @@ class Constraint protected ()
     options: IConstraintOptions
   ) = this()
 }
-

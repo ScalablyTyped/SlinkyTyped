@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/DeleteEventStreamCommand", JSImport.Namespace)
 @js.native
 object deleteEventStreamCommandMod extends js.Object {
+  
   @js.native
   class DeleteEventStreamCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object deleteEventStreamCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteEventStreamInput) = this()
+    
     val middlewareStack: MiddlewareStack[DeleteEventStreamInput, DeleteEventStreamOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[DeleteEventStreamInput, DeleteEventStreamOutput] = js.native
   }
-  
 }
-

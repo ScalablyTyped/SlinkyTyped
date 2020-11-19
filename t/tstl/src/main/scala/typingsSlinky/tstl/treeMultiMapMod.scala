@@ -12,11 +12,12 @@ import typingsSlinky.tstl.treeMultiMapMod.TreeMultiMap.ReverseIterator
 import typingsSlinky.tstl.tstlBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl/container/TreeMultiMap", JSImport.Namespace)
 @js.native
 object treeMultiMapMod extends js.Object {
+  
   @js.native
   /**
     * Default Constructor.
@@ -55,11 +56,12 @@ object treeMultiMapMod extends js.Object {
       last: IForwardIterator[IPair[Key, T], IForwardIterator[IPair[Key, T], _]],
       comp: Comparator[Key, Key]
     ) = this()
+    
     var tree_ : js.Any = js.native
   }
-  
   @js.native
   object TreeMultiMap extends js.Object {
+    
     val Iterator: Instantiable0[
         typingsSlinky.tstl.mapElementListMod.MapElementList.Iterator[
           js.Object, 
@@ -80,6 +82,7 @@ object treeMultiMapMod extends js.Object {
           ]
         ]
       ] = js.native
+    
     val ReverseIterator: Instantiable0[
         typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator[
           js.Object, 
@@ -100,15 +103,15 @@ object treeMultiMapMod extends js.Object {
           ]
         ]
       ] = js.native
+    
     /**
       * Iterator of {@link TreeMultiMap}
       */
     type Iterator[Key, T] = typingsSlinky.tstl.mapElementListMod.MapElementList.Iterator[Key, T, `false`, TreeMultiMap[Key, T]]
+    
     /**
       * Iterator of {@link TreeMultiMap}
       */
     type ReverseIterator[Key, T] = typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator[Key, T, `false`, TreeMultiMap[Key, T]]
   }
-  
 }
-

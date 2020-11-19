@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.global.pc
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Creates new PostEffect.
@@ -18,4 +18,3 @@ class PostEffect protected ()
   extends typingsSlinky.playcanvas.pc.PostEffect {
   def this(graphicsDevice: typingsSlinky.playcanvas.pc.GraphicsDevice) = this()
 }
-

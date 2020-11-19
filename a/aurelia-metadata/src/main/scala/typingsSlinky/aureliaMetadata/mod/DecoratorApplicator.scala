@@ -2,10 +2,11 @@ package typingsSlinky.aureliaMetadata.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DecoratorApplicator extends js.Object {
+  
   /**
     * Applies the decorators to the target.
     * @param target The target.
@@ -17,4 +18,3 @@ trait DecoratorApplicator extends js.Object {
   def on(target: js.Any, key: String): js.Any = js.native
   def on(target: js.Any, key: String, descriptor: js.PropertyDescriptor): js.Any = js.native
 }
-

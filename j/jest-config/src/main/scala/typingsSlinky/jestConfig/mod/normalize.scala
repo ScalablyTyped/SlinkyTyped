@@ -6,11 +6,12 @@ import typingsSlinky.jestTypes.configMod.InitialOptions
 import typingsSlinky.jestTypes.configMod.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("jest-config", "normalize")
 @js.native
 object normalize extends js.Object {
+  
   def apply(initialOptions: InitialOptions, argv: Argv): HasDeprecationWarnings = js.native
   def apply(
     initialOptions: InitialOptions,
@@ -22,4 +23,3 @@ object normalize extends js.Object {
   def apply(initialOptions: InitialOptions, argv: Argv, configPath: Path): HasDeprecationWarnings = js.native
   def apply(initialOptions: InitialOptions, argv: Argv, configPath: Path, projectIndex: Double): HasDeprecationWarnings = js.native
 }
-

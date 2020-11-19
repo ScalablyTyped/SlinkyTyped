@@ -4,11 +4,12 @@ import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeListOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("array-foreach", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def apply[T](
     arr: js.Array[T],
     callbackfn: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], Unit]
@@ -34,4 +35,3 @@ object mod extends js.Object {
     thisArg: U
   ): Unit = js.native
 }
-

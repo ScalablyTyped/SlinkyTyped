@@ -12,11 +12,11 @@ import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ClientRequest extends EventEmitter {
-  var chunkedEncoding: Boolean = js.native
+  
   /**
     * Cancels an ongoing HTTP transaction. If the request has already emitted the
     * `close` event, the abort operation will have no effect. Otherwise an ongoing
@@ -24,6 +24,7 @@ trait ClientRequest extends EventEmitter {
     * response object,it will emit the `aborted` event.
     */
   def abort(): Unit = js.native
+  
   @JSName("addListener")
   def addListener_abort(event: abort, listener: js.Function): this.type = js.native
   @JSName("addListener")
@@ -54,6 +55,9 @@ trait ClientRequest extends EventEmitter {
   ): this.type = js.native
   @JSName("addListener")
   def addListener_response(event: response, listener: js.Function1[/* response */ IncomingMessage, Unit]): this.type = js.native
+  
+  var chunkedEncoding: Boolean = js.native
+  
   /**
     * Sends the last chunk of the request data. Subsequent write or end operations
     * will not be allowed. The `finish` event is emitted just after the end operation.
@@ -74,15 +78,18 @@ trait ClientRequest extends EventEmitter {
   def end(chunk: Buffer, encoding: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
   def end(chunk: Buffer, encoding: String): Unit = js.native
   def end(chunk: Buffer, encoding: String, callback: js.Function0[Unit]): Unit = js.native
+  
   /**
     * Continues any pending redirection. Can only be called during a `'redirect'`
     * event.
     */
   def followRedirect(): Unit = js.native
+  
   /**
     * The value of a previously set extra header name.
     */
   def getHeader(name: String): String = js.native
+  
   /**
     * * `active` Boolean - Whether the request is currently active. If this is false
     * no other properties will be set
@@ -95,6 +102,7 @@ trait ClientRequest extends EventEmitter {
     * of a file upload or other data transfer.
     */
   def getUploadProgress(): UploadProgress = js.native
+  
   // Docs: http://electronjs.org/docs/api/client-request
   /**
     * Emitted when the `request` is aborted. The `abort` event will not be fired if
@@ -161,6 +169,7 @@ trait ClientRequest extends EventEmitter {
   ): this.type = js.native
   @JSName("on")
   def on_response(event: response, listener: js.Function1[/* response */ IncomingMessage, Unit]): this.type = js.native
+  
   @JSName("once")
   def once_abort(event: abort, listener: js.Function): this.type = js.native
   @JSName("once")
@@ -191,11 +200,13 @@ trait ClientRequest extends EventEmitter {
   ): this.type = js.native
   @JSName("once")
   def once_response(event: response, listener: js.Function1[/* response */ IncomingMessage, Unit]): this.type = js.native
+  
   /**
     * Removes a previously set extra header name. This method can be called only
     * before first write. Trying to call it after the first write will throw an error.
     */
   def removeHeader(name: String): Unit = js.native
+  
   @JSName("removeListener")
   def removeListener_abort(event: abort, listener: js.Function): this.type = js.native
   @JSName("removeListener")
@@ -226,6 +237,7 @@ trait ClientRequest extends EventEmitter {
   ): this.type = js.native
   @JSName("removeListener")
   def removeListener_response(event: response, listener: js.Function1[/* response */ IncomingMessage, Unit]): this.type = js.native
+  
   /**
     * Adds an extra HTTP header. The header name will be issued as-is without
     * lowercasing. It can be called only before first write. Calling this method after
@@ -233,6 +245,7 @@ trait ClientRequest extends EventEmitter {
     * `toString()` method will be called to obtain the final value.
     */
   def setHeader(name: String, value: String): Unit = js.native
+  
   /**
     * `callback` is essentially a dummy function introduced in the purpose of keeping
     * similarity with the Node.js API. It is called asynchronously in the next tick
@@ -253,4 +266,3 @@ trait ClientRequest extends EventEmitter {
   def write(chunk: Buffer, encoding: String): Unit = js.native
   def write(chunk: Buffer, encoding: String, callback: js.Function0[Unit]): Unit = js.native
 }
-

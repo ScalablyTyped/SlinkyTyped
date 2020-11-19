@@ -5,10 +5,11 @@ import typingsSlinky.typescript.mod.NodeArray
 import typingsSlinky.typescript.mod.Visitor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCall extends js.Object {
+  
   def apply[T /* <: Node */](nodes: js.UndefOr[scala.Nothing], visitor: Visitor): NodeArray[T] = js.native
   def apply[T /* <: Node */](
     nodes: js.UndefOr[scala.Nothing],
@@ -79,4 +80,3 @@ trait FnCall extends js.Object {
     count: Double
   ): NodeArray[T] = js.native
 }
-

@@ -8,11 +8,11 @@ import typingsSlinky.gapiClientCloudtasks.anon.Filter
 import typingsSlinky.gapiClientCloudtasks.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait QueuesResource extends js.Object {
-  var tasks: TasksResource = js.native
+  
   /**
     * Creates a queue.
     *
@@ -23,6 +23,7 @@ trait QueuesResource extends js.Object {
     * [whitelist access to this method](https://goo.gl/Fe5mUy).
     */
   def create(request: Alt): Request[Queue] = js.native
+  
   /**
     * Deletes a queue.
     *
@@ -38,8 +39,10 @@ trait QueuesResource extends js.Object {
     * [whitelist access to this method](https://goo.gl/Fe5mUy).
     */
   def delete(request: Accesstoken): Request[js.Object] = js.native
+  
   /** Gets a queue. */
   def get(request: Accesstoken): Request[Queue] = js.native
+  
   /**
     * Gets the access control policy for a Queue.
     * Returns an empty policy if the resource exists and does not have a policy
@@ -51,12 +54,14 @@ trait QueuesResource extends js.Object {
     * &#42; `cloudtasks.queues.getIamPolicy`
     */
   def getIamPolicy(request: Fields): Request[Policy] = js.native
+  
   /**
     * Lists queues.
     *
     * Queues are returned in lexicographical order.
     */
   def list(request: Filter): Request[ListQueuesResponse] = js.native
+  
   /**
     * Updates a queue.
     *
@@ -70,6 +75,7 @@ trait QueuesResource extends js.Object {
     * [whitelist access to this method](https://goo.gl/Fe5mUy).
     */
   def patch(request: Key): Request[Queue] = js.native
+  
   /**
     * Pauses the queue.
     *
@@ -87,6 +93,7 @@ trait QueuesResource extends js.Object {
     * [whitelist access to this method](https://goo.gl/Fe5mUy).
     */
   def pause(request: Accesstoken): Request[Queue] = js.native
+  
   /**
     * Purges a queue by deleting all of its tasks.
     *
@@ -96,6 +103,7 @@ trait QueuesResource extends js.Object {
     * might be dispatched before the purge takes effect. A purge is irreversible.
     */
   def purge(request: Accesstoken): Request[Queue] = js.native
+  
   /**
     * Resume a queue.
     *
@@ -116,6 +124,7 @@ trait QueuesResource extends js.Object {
     * [Managing Cloud Tasks Scaling Risks](/cloud-tasks/pdfs/managing-cloud-tasks-scaling-risks-2017-06-05.pdf).
     */
   def resume(request: Accesstoken): Request[Queue] = js.native
+  
   /**
     * Sets the access control policy for a Queue. Replaces any existing
     * policy.
@@ -126,6 +135,9 @@ trait QueuesResource extends js.Object {
     * &#42; `cloudtasks.queues.setIamPolicy`
     */
   def setIamPolicy(request: Fields): Request[Policy] = js.native
+  
+  var tasks: TasksResource = js.native
+  
   /**
     * Returns permissions that a caller has on a Queue.
     * If the resource does not exist, this will return an empty set of
@@ -137,8 +149,8 @@ trait QueuesResource extends js.Object {
     */
   def testIamPermissions(request: Fields): Request[TestIamPermissionsResponse] = js.native
 }
-
 object QueuesResource {
+  
   @scala.inline
   def apply(
     create: Alt => Request[Queue],
@@ -157,42 +169,56 @@ object QueuesResource {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), getIamPolicy = js.Any.fromFunction1(getIamPolicy), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), pause = js.Any.fromFunction1(pause), purge = js.Any.fromFunction1(purge), resume = js.Any.fromFunction1(resume), setIamPolicy = js.Any.fromFunction1(setIamPolicy), tasks = tasks.asInstanceOf[js.Any], testIamPermissions = js.Any.fromFunction1(testIamPermissions))
     __obj.asInstanceOf[QueuesResource]
   }
+  
   @scala.inline
   implicit class QueuesResourceOps[Self <: QueuesResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCreate(value: Alt => Request[Queue]): Self = this.set("create", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDelete(value: Accesstoken => Request[js.Object]): Self = this.set("delete", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGet(value: Accesstoken => Request[Queue]): Self = this.set("get", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setGetIamPolicy(value: Fields => Request[Policy]): Self = this.set("getIamPolicy", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setList(value: Filter => Request[ListQueuesResponse]): Self = this.set("list", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setPatch(value: Key => Request[Queue]): Self = this.set("patch", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setPause(value: Accesstoken => Request[Queue]): Self = this.set("pause", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setPurge(value: Accesstoken => Request[Queue]): Self = this.set("purge", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setResume(value: Accesstoken => Request[Queue]): Self = this.set("resume", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setSetIamPolicy(value: Fields => Request[Policy]): Self = this.set("setIamPolicy", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setTasks(value: TasksResource): Self = this.set("tasks", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def setTestIamPermissions(value: Fields => Request[TestIamPermissionsResponse]): Self = this.set("testIamPermissions", js.Any.fromFunction1(value))
   }
-  
 }
-

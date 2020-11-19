@@ -5,10 +5,11 @@ import typingsSlinky.gapiClientRuntimeconfig.anon.Accesstoken
 import typingsSlinky.gapiClientRuntimeconfig.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait OperationsResource extends js.Object {
+  
   /**
     * Starts asynchronous cancellation on a long-running operation.  The server
     * makes a best effort to cancel the operation, but success is not
@@ -22,6 +23,7 @@ trait OperationsResource extends js.Object {
     * corresponding to `Code.CANCELLED`.
     */
   def cancel(request: Accesstoken): Request[js.Object] = js.native
+  
   /**
     * Deletes a long-running operation. This method indicates that the client is
     * no longer interested in the operation result. It does not cancel the
@@ -29,6 +31,7 @@ trait OperationsResource extends js.Object {
     * `google.rpc.Code.UNIMPLEMENTED`.
     */
   def delete(request: Accesstoken): Request[js.Object] = js.native
+  
   /**
     * Lists operations that match the specified filter in the request. If the
     * server doesn't support this method, it returns `UNIMPLEMENTED`.
@@ -43,8 +46,8 @@ trait OperationsResource extends js.Object {
     */
   def list(request: Alt): Request[ListOperationsResponse] = js.native
 }
-
 object OperationsResource {
+  
   @scala.inline
   def apply(
     cancel: Accesstoken => Request[js.Object],
@@ -54,24 +57,29 @@ object OperationsResource {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction1(cancel), delete = js.Any.fromFunction1(delete), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[OperationsResource]
   }
+  
   @scala.inline
   implicit class OperationsResourceOps[Self <: OperationsResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setCancel(value: Accesstoken => Request[js.Object]): Self = this.set("cancel", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setDelete(value: Accesstoken => Request[js.Object]): Self = this.set("delete", js.Any.fromFunction1(value))
+    
     @scala.inline
     def setList(value: Alt => Request[ListOperationsResponse]): Self = this.set("list", js.Any.fromFunction1(value))
   }
-  
 }
-

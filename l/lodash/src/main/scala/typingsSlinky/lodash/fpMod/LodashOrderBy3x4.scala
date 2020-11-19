@@ -8,10 +8,11 @@ import typingsSlinky.lodash.mod.ValueIteratee
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LodashOrderBy3x4[T] extends js.Object {
+  
   def apply(
     iteratees: Many[
       js.Function1[
@@ -35,4 +36,3 @@ trait LodashOrderBy3x4[T] extends js.Object {
   ] = js.native
   def apply(iteratees: __, orders: Many[Boolean | asc | desc]): LodashOrderBy3x6[T] = js.native
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.videoJs.mod.default
 import org.scalajs.dom.raw.HTMLTrackElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js", "HTMLTrackElementList")
 @js.native
@@ -17,4 +17,3 @@ class HTMLTrackElementListCls ()
   extends typingsSlinky.videoJs.mod.videojs.HTMLTrackElementList {
   def this(tracks: js.Array[HTMLTrackElement]) = this()
 }
-

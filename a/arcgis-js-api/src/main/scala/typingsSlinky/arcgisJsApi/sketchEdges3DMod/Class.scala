@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.SketchEdges3D
 import typingsSlinky.arcgisJsApi.esri.SketchEdges3DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols/edges/SketchEdges3D", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends SketchEdges3D {
   def this(properties: SketchEdges3DProperties) = this()
 }
-

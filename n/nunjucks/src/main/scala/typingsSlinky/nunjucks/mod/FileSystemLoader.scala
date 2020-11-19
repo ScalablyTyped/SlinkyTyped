@@ -2,7 +2,7 @@ package typingsSlinky.nunjucks.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.nunjucks.mod.ILoader because var conflicts: extend. Inlined async, getSource, getSource */ @JSImport("nunjucks", "FileSystemLoader")
@@ -13,9 +13,11 @@ class FileSystemLoader () extends Loader {
   def this(searchPaths: js.UndefOr[scala.Nothing], opts: FileSystemLoaderOptions) = this()
   def this(searchPaths: String, opts: FileSystemLoaderOptions) = this()
   def this(searchPaths: js.Array[String], opts: FileSystemLoaderOptions) = this()
+  
   var async: js.UndefOr[Boolean] = js.native
+  
   def getSource(name: String): LoaderSource = js.native
   def getSource(name: String, callback: Callback[js.Error, LoaderSource]): Unit = js.native
+  
   def init(searchPaths: js.Array[String], opts: js.Any): Unit = js.native
 }
-

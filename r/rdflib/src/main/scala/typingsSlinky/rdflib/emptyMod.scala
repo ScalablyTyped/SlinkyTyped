@@ -7,11 +7,12 @@ import typingsSlinky.rdflib.typesMod._FromValueReturns
 import typingsSlinky.rdflib.typesMod._ObjectType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rdflib/lib/empty", JSImport.Namespace)
 @js.native
 object emptyMod extends js.Object {
+  
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.rdflib.typesMod._ValueType because Already inherited
   - typingsSlinky.rdflib.tfTypesMod.Term because var conflicts: termType, value. Inlined  */ @js.native
@@ -21,6 +22,7 @@ object emptyMod extends js.Object {
        with _Comparable
        with _FromValueReturns[js.Any]
        with _TFIDFactoryTypes {
+    
     @JSName("termType")
     var termType_Empty: typingsSlinky.rdflib.rdflibStrings.Empty = js.native
   }
@@ -29,6 +31,4 @@ object emptyMod extends js.Object {
   class default ()
     extends Empty
        with _ObjectType
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Connection")
 @js.native
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
   */
 class ConnectionCls ()
   extends typingsSlinky.arcgisJsApi.esri.Connection
-

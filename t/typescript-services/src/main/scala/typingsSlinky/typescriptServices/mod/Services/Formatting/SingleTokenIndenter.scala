@@ -5,7 +5,7 @@ import typingsSlinky.typescriptServices.TypeScript.Services.Formatting.ITextSnap
 import typingsSlinky.typescriptServices.TypeScript.SourceUnitSyntax
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "Services.Formatting.SingleTokenIndenter")
 @js.native
@@ -19,11 +19,11 @@ class SingleTokenIndenter protected ()
     options: FormattingOptions
   ) = this()
 }
-
 /* static members */
 @JSImport("typescript-services", "Services.Formatting.SingleTokenIndenter")
 @js.native
 object SingleTokenIndenter extends js.Object {
+  
   def getIndentationAmount(
     position: Double,
     sourceUnit: SourceUnitSyntax,
@@ -31,4 +31,3 @@ object SingleTokenIndenter extends js.Object {
     options: FormattingOptions
   ): Double = js.native
 }
-

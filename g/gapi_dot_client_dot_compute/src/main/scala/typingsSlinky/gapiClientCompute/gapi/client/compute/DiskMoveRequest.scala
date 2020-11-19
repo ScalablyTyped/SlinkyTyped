@@ -2,10 +2,11 @@ package typingsSlinky.gapiClientCompute.gapi.client.compute
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait DiskMoveRequest extends js.Object {
+  
   /**
     * The URL of the destination zone to move the disk. This can be a full or partial URL. For example, the following are all valid URLs to a zone:
     * - https://www.googleapis.com/compute/v1/projects/project/zones/zone
@@ -13,6 +14,7 @@ trait DiskMoveRequest extends js.Object {
     * - zones/zone
     */
   var destinationZone: js.UndefOr[String] = js.native
+  
   /**
     * The URL of the target disk to move. This can be a full or partial URL. For example, the following are all valid URLs to a disk:
     * - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk
@@ -21,33 +23,39 @@ trait DiskMoveRequest extends js.Object {
     */
   var targetDisk: js.UndefOr[String] = js.native
 }
-
 object DiskMoveRequest {
+  
   @scala.inline
   def apply(): DiskMoveRequest = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[DiskMoveRequest]
   }
+  
   @scala.inline
   implicit class DiskMoveRequestOps[Self <: DiskMoveRequest] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setDestinationZone(value: String): Self = this.set("destinationZone", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteDestinationZone: Self = this.set("destinationZone", js.undefined)
+    
     @scala.inline
     def setTargetDisk(value: String): Self = this.set("targetDisk", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteTargetDisk: Self = this.set("targetDisk", js.undefined)
   }
-  
 }
-

@@ -5,11 +5,12 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike3D
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs", "tensor3d")
 @js.native
 object tensor3d extends js.Object {
+  
   /**
     * Creates rank-3 `tf.Tensor` with the provided values, shape and dtype.
     *
@@ -37,4 +38,3 @@ object tensor3d extends js.Object {
   def apply(values: TensorLike3D, shape: js.Tuple3[Double, Double, Double]): Tensor3D = js.native
   def apply(values: TensorLike3D, shape: js.Tuple3[Double, Double, Double], dtype: DataType): Tensor3D = js.native
 }
-

@@ -4,15 +4,15 @@ import typingsSlinky.glMatrix.mod.mat2
 import typingsSlinky.glMatrix.mod.vec2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gl-matrix/src/gl-matrix/mat2", JSImport.Namespace)
 @js.native
 class ^ () extends mat2
-
 @JSImport("gl-matrix/src/gl-matrix/mat2", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Returns L, D and U matrices (Lower triangular, Diagonal and Upper triangular) by factorizing the input matrix
     * @param L the lower triangular matrix
@@ -21,6 +21,7 @@ object ^ extends js.Object {
     * @param a the input matrix to factorize
     */
   def LDU(L: mat2, D: mat2, U: mat2, a: mat2): mat2 = js.native
+  
   /**
     * Adds two mat2's
     *
@@ -30,6 +31,7 @@ object ^ extends js.Object {
     * @returns {mat2} out
     */
   def add(out: mat2, a: mat2, b: mat2): mat2 = js.native
+  
   /**
     * Calculates the adjugate of a mat2
     *
@@ -38,6 +40,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def adjoint(out: mat2, a: mat2): mat2 = js.native
+  
   /**
     * Creates a new mat2 initialized with values from an existing matrix
     *
@@ -45,6 +48,7 @@ object ^ extends js.Object {
     * @returns a new 2x2 matrix
     */
   def clone(a: mat2): mat2 = js.native
+  
   /**
     * Copy the values from one mat2 to another
     *
@@ -53,12 +57,14 @@ object ^ extends js.Object {
     * @returns out
     */
   def copy(out: mat2, a: mat2): mat2 = js.native
+  
   /**
     * Creates a new identity mat2
     *
     * @returns a new 2x2 matrix
     */
   def create(): mat2 = js.native
+  
   /**
     * Calculates the determinant of a mat2
     *
@@ -66,6 +72,7 @@ object ^ extends js.Object {
     * @returns determinant of a
     */
   def determinant(a: mat2): Double = js.native
+  
   /**
     * Returns whether or not the matrices have approximately the same elements in the same position.
     *
@@ -74,6 +81,7 @@ object ^ extends js.Object {
     * @returns {boolean} True if the matrices are equal, false otherwise.
     */
   def equals(a: mat2, b: mat2): Boolean = js.native
+  
   /**
     * Returns whether or not the matrices have exactly the same elements in the same position (when compared with ===)
     *
@@ -82,6 +90,7 @@ object ^ extends js.Object {
     * @returns {boolean} True if the matrices are equal, false otherwise.
     */
   def exactEquals(a: mat2, b: mat2): Boolean = js.native
+  
   /**
     * Returns Frobenius norm of a mat2
     *
@@ -89,6 +98,7 @@ object ^ extends js.Object {
     * @returns Frobenius norm
     */
   def frob(a: mat2): Double = js.native
+  
   /**
     * Creates a matrix from a given angle
     * This is equivalent to (but much faster than):
@@ -101,6 +111,7 @@ object ^ extends js.Object {
     * @returns {mat2} out
     */
   def fromRotation(out: mat2, rad: Double): mat2 = js.native
+  
   def fromScaling(out: mat2, v: js.Array[Double]): mat2 = js.native
   /**
     * Creates a matrix from a vector scaling
@@ -114,6 +125,7 @@ object ^ extends js.Object {
     * @returns {mat2} out
     */
   def fromScaling(out: mat2, v: vec2): mat2 = js.native
+  
   /**
     * Create a new mat2 with the given values
     *
@@ -124,6 +136,7 @@ object ^ extends js.Object {
     * @returns {mat2} out A new 2x2 matrix
     */
   def fromValues(m00: Double, m01: Double, m10: Double, m11: Double): mat2 = js.native
+  
   /**
     * Set a mat2 to the identity matrix
     *
@@ -131,6 +144,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def identity(out: mat2): mat2 = js.native
+  
   /**
     * Inverts a mat2
     *
@@ -139,6 +153,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def invert(out: mat2, a: mat2): mat2 | Null = js.native
+  
   /**
     * Multiplies two mat2's
     *
@@ -148,6 +163,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def mul(out: mat2, a: mat2, b: mat2): mat2 = js.native
+  
   /**
     * Multiplies two mat2's
     *
@@ -157,6 +173,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def multiply(out: mat2, a: mat2, b: mat2): mat2 = js.native
+  
   /**
     * Multiply each element of the matrix by a scalar.
     *
@@ -166,6 +183,7 @@ object ^ extends js.Object {
     * @returns {mat2} out
     */
   def multiplyScalar(out: mat2, a: mat2, b: Double): mat2 = js.native
+  
   /**
     * Adds two mat2's after multiplying each element of the second operand by a scalar value.
     *
@@ -176,6 +194,7 @@ object ^ extends js.Object {
     * @returns {mat2} out
     */
   def multiplyScalarAndAdd(out: mat2, a: mat2, b: mat2, scale: Double): mat2 = js.native
+  
   /**
     * Rotates a mat2 by the given angle
     *
@@ -185,6 +204,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def rotate(out: mat2, a: mat2, rad: Double): mat2 = js.native
+  
   def scale(out: mat2, a: mat2, v: js.Array[Double]): mat2 = js.native
   /**
     * Scales the mat2 by the dimensions in the given vec2
@@ -195,6 +215,7 @@ object ^ extends js.Object {
     * @returns out
     **/
   def scale(out: mat2, a: mat2, v: vec2): mat2 = js.native
+  
   /**
     * Set the components of a mat2 to the given values
     *
@@ -206,6 +227,7 @@ object ^ extends js.Object {
     * @returns {mat2} out
     */
   def set(out: mat2, m00: Double, m01: Double, m10: Double, m11: Double): mat2 = js.native
+  
   /**
     * Returns a string representation of a mat2
     *
@@ -213,6 +235,7 @@ object ^ extends js.Object {
     * @returns string representation of the matrix
     */
   def str(a: mat2): String = js.native
+  
   /**
     * Subtracts matrix b from matrix a
     *
@@ -222,6 +245,7 @@ object ^ extends js.Object {
     * @returns {mat2} out
     */
   def sub(out: mat2, a: mat2, b: mat2): mat2 = js.native
+  
   /**
     * Subtracts matrix b from matrix a
     *
@@ -231,6 +255,7 @@ object ^ extends js.Object {
     * @returns {mat2} out
     */
   def subtract(out: mat2, a: mat2, b: mat2): mat2 = js.native
+  
   /**
     * Transpose the values of a mat2
     *
@@ -240,4 +265,3 @@ object ^ extends js.Object {
     */
   def transpose(out: mat2, a: mat2): mat2 = js.native
 }
-

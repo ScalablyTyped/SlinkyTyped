@@ -2,7 +2,7 @@ package typingsSlinky.xrm.XrmEnum
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Constant Enum: Client States for {@link ClientContext.getClientState clientContext.getClientState()}.
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xrm.xrmStrings.Offline
 */
 trait ClientState extends js.Object
-
 object ClientState {
+  
   @scala.inline
   def Offline: typingsSlinky.xrm.xrmStrings.Offline = "Offline".asInstanceOf[typingsSlinky.xrm.xrmStrings.Offline]
+  
   @scala.inline
   def Online: typingsSlinky.xrm.xrmStrings.Online = "Online".asInstanceOf[typingsSlinky.xrm.xrmStrings.Online]
 }
-

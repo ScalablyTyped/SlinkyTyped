@@ -18,9 +18,10 @@ import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.ReactType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SelectInput {
+  
   @JSImport("@material-ui/core/Select/SelectInput", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -29,49 +30,69 @@ object SelectInput {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def IconComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def IconComponentComponentClass(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def IconComponent(value: ReactType[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def MenuProps(value: PartialMenuProps): this.type = set("MenuProps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def SelectDisplayProps(value: HTMLAttributes[HTMLDivElement]): this.type = set("SelectDisplayProps", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def inputRef(value: /* ref */ HTMLSelectElement | Value => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[_] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ ReactElement) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    
     @scala.inline
     def onClose(value: /* event */ ChangeEvent[js.Object] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[_] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    
     @scala.inline
     def onOpen(value: /* event */ ChangeEvent[js.Object] => Unit): this.type = set("onOpen", js.Any.fromFunction1(value))
+    
     @scala.inline
     def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def renderValue(
       value: /* value */ String | Double | Boolean | (js.Array[String | Double | Boolean]) => ReactElement
     ): this.type = set("renderValue", js.Any.fromFunction1(value))
+    
     @scala.inline
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def variant(value: standard | outlined | filled): this.type = set("variant", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SelectInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     autoWidth: Boolean,
@@ -83,4 +104,3 @@ object SelectInput {
     new Builder(js.Array(this.component, __props.asInstanceOf[SelectInputProps]))
   }
 }
-

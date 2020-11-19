@@ -2,7 +2,7 @@ package typingsSlinky.postmanCollection.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.postmanCollection.mod.PropertyBaseDefinition because Already inherited
@@ -11,8 +11,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class Event protected () extends Property[EventDefinition] {
   def this(definition: EventDefinition) = this()
+  
   var listen: js.UndefOr[String] = js.native
+  
   var script: js.Array[String] | Script | ScriptDefinition | String = js.native
+  
   def update(definition: EventDefinition): Unit = js.native
 }
-

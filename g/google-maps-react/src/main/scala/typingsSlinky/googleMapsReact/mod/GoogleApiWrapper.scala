@@ -3,11 +3,12 @@ package typingsSlinky.googleMapsReact.mod
 import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("google-maps-react", "GoogleApiWrapper")
 @js.native
 object GoogleApiWrapper extends js.Object {
+  
   def apply(opts: GoogleApiOptionsFunc): js.Function1[
     /* ctor */ ReactComponentClass[IProvidedProps], 
     ReactComponentClass[Omit[IProvidedProps, IProvidedProps]]
@@ -17,4 +18,3 @@ object GoogleApiWrapper extends js.Object {
     ReactComponentClass[Omit[IProvidedProps, IProvidedProps]]
   ] = js.native
 }
-

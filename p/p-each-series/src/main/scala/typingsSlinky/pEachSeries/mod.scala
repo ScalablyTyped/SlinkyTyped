@@ -3,19 +3,12 @@ package typingsSlinky.pEachSeries
 import typingsSlinky.pEachSeries.anon.Call
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("p-each-series", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  // TODO: Remove this for the next major release, refactor the whole definition to:
-  // declare function pEachSeries<ValueType>(
-  // 	input: Iterable<PromiseLike<ValueType> | ValueType>,
-  // 	iterator: (element: ValueType, index: number) => unknown
-  // ): Promise<ValueType[]>;
-  // export = pEachSeries;
-  @JSName("default")
-  var default_Original: Call = js.native
+  
   /**
   	Iterate over promises serially.
   	@param input - Iterated over serially in the `iterator` function.
@@ -40,6 +33,7 @@ object mod extends js.Object {
     input: js.Iterable[js.Thenable[ValueType] | ValueType],
     iterator: js.Function2[/* element */ ValueType, /* index */ Double, _]
   ): js.Promise[js.Array[ValueType]] = js.native
+  
   /**
   	Iterate over promises serially.
   	@param input - Iterated over serially in the `iterator` function.
@@ -70,5 +64,12 @@ object mod extends js.Object {
     input: js.Iterable[js.Thenable[ValueType] | ValueType],
     iterator: js.Function2[/* element */ ValueType, /* index */ Double, _]
   ): js.Promise[js.Array[ValueType]] = js.native
+  // TODO: Remove this for the next major release, refactor the whole definition to:
+  // declare function pEachSeries<ValueType>(
+  // 	input: Iterable<PromiseLike<ValueType> | ValueType>,
+  // 	iterator: (element: ValueType, index: number) => unknown
+  // ): Promise<ValueType[]>;
+  // export = pEachSeries;
+  @JSName("default")
+  var default_Original: Call = js.native
 }
-

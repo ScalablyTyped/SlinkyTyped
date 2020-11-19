@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser.extension
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* extension types */
 /** The type of extension view. */
@@ -12,13 +12,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sidebar
 */
 trait ViewType extends js.Object
-
 object ViewType {
+  
   @scala.inline
   def popup: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.popup = "popup".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.popup]
+  
   @scala.inline
   def sidebar: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sidebar = "sidebar".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sidebar]
+  
   @scala.inline
   def tab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab = "tab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab]
 }
-

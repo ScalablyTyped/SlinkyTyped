@@ -4,11 +4,12 @@ import typingsSlinky.estree.mod.Node
 import typingsSlinky.estree.mod.Program
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tern", "findPropRefs")
 @js.native
 object findPropRefs extends js.Object {
+  
   def apply(
     ast: Program,
     scope: typingsSlinky.tern.inferMod.Scope,
@@ -17,4 +18,3 @@ object findPropRefs extends js.Object {
     f: js.Function1[/* Node */ Node, Unit]
   ): Unit = js.native
 }
-

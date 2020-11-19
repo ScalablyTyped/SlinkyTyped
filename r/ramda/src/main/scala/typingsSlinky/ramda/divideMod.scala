@@ -3,14 +3,14 @@ package typingsSlinky.ramda
 import typingsSlinky.ramda.toolsMod.Placeholder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ramda/src/divide", JSImport.Namespace)
 @js.native
 object divideMod extends js.Object {
+  
   def default(__ : Placeholder): js.Function2[/* b */ Double, /* a */ Double, Double] = js.native
   def default(__ : Placeholder, b: Double): js.Function1[/* a */ Double, Double] = js.native
   def default(a: Double): js.Function1[/* b */ Double, Double] = js.native
   def default(a: Double, b: Double): Double = js.native
 }
-

@@ -6,7 +6,7 @@ import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sawtooth-sdk/protobuf", "ConsensusIgnoreBlockRequest")
 @js.native
@@ -16,20 +16,22 @@ import scala.scalajs.js.annotation._
   */
 class ConsensusIgnoreBlockRequest () extends IConsensusIgnoreBlockRequest {
   def this(properties: IConsensusIgnoreBlockRequest) = this()
+  
   /** ConsensusIgnoreBlockRequest blockId. */
   @JSName("blockId")
   var blockId_ConsensusIgnoreBlockRequest: js.typedarray.Uint8Array = js.native
+  
   /**
     * Converts this ConsensusIgnoreBlockRequest to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
 }
-
 /* static members */
 @JSImport("sawtooth-sdk/protobuf", "ConsensusIgnoreBlockRequest")
 @js.native
 object ConsensusIgnoreBlockRequest extends js.Object {
+  
   /**
     * Creates a new ConsensusIgnoreBlockRequest instance using the specified properties.
     * @param [properties] Properties to set
@@ -37,6 +39,7 @@ object ConsensusIgnoreBlockRequest extends js.Object {
     */
   def create(): ConsensusIgnoreBlockRequest = js.native
   def create(properties: IConsensusIgnoreBlockRequest): ConsensusIgnoreBlockRequest = js.native
+  
   /**
     * Decodes a ConsensusIgnoreBlockRequest message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -49,6 +52,7 @@ object ConsensusIgnoreBlockRequest extends js.Object {
   def decode(reader: Reader, length: Double): ConsensusIgnoreBlockRequest = js.native
   def decode(reader: js.typedarray.Uint8Array): ConsensusIgnoreBlockRequest = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ConsensusIgnoreBlockRequest = js.native
+  
   /**
     * Decodes a ConsensusIgnoreBlockRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -58,6 +62,7 @@ object ConsensusIgnoreBlockRequest extends js.Object {
     */
   def decodeDelimited(reader: Reader): ConsensusIgnoreBlockRequest = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ConsensusIgnoreBlockRequest = js.native
+  
   /**
     * Encodes the specified ConsensusIgnoreBlockRequest message. Does not implicitly {@link ConsensusIgnoreBlockRequest.verify|verify} messages.
     * @param message ConsensusIgnoreBlockRequest message or plain object to encode
@@ -66,6 +71,7 @@ object ConsensusIgnoreBlockRequest extends js.Object {
     */
   def encode(message: IConsensusIgnoreBlockRequest): Writer = js.native
   def encode(message: IConsensusIgnoreBlockRequest, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ConsensusIgnoreBlockRequest message, length delimited. Does not implicitly {@link ConsensusIgnoreBlockRequest.verify|verify} messages.
     * @param message ConsensusIgnoreBlockRequest message or plain object to encode
@@ -74,12 +80,14 @@ object ConsensusIgnoreBlockRequest extends js.Object {
     */
   def encodeDelimited(message: IConsensusIgnoreBlockRequest): Writer = js.native
   def encodeDelimited(message: IConsensusIgnoreBlockRequest, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ConsensusIgnoreBlockRequest message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ConsensusIgnoreBlockRequest
     */
   def fromObject(`object`: StringDictionary[js.Any]): ConsensusIgnoreBlockRequest = js.native
+  
   /**
     * Creates a plain object from a ConsensusIgnoreBlockRequest message. Also converts values to other types if specified.
     * @param message ConsensusIgnoreBlockRequest
@@ -88,6 +96,7 @@ object ConsensusIgnoreBlockRequest extends js.Object {
     */
   def toObject(message: ConsensusIgnoreBlockRequest): StringDictionary[js.Any] = js.native
   def toObject(message: ConsensusIgnoreBlockRequest, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ConsensusIgnoreBlockRequest message.
     * @param message Plain object to verify
@@ -95,4 +104,3 @@ object ConsensusIgnoreBlockRequest extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

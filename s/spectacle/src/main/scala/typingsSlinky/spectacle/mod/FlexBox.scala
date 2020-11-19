@@ -6,7 +6,7 @@ import typingsSlinky.styledSystem.mod.FlexProps
 import typingsSlinky.styledSystem.mod.RequiredTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("spectacle", "FlexBox")
 @js.native
@@ -19,4 +19,3 @@ object FlexBox
         ])
       ]
     ]
-

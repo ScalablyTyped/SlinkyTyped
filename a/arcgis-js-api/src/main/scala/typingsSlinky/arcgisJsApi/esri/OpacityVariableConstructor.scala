@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait OpacityVariableConstructor
@@ -15,6 +15,6 @@ trait OpacityVariableConstructor
   */
 Instantiable0[OpacityVariable]
      with Instantiable1[/* properties */ OpacityVariableProperties, OpacityVariable] {
+  
   def fromJSON(json: js.Any): OpacityVariable = js.native
 }
-

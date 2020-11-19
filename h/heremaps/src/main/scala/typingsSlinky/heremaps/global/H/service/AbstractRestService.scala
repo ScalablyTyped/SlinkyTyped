@@ -3,7 +3,7 @@ package typingsSlinky.heremaps.global.H.service
 import typingsSlinky.heremaps.H.service.AbstractRestService.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Abstract rest service class
@@ -18,4 +18,3 @@ class AbstractRestService ()
   extends typingsSlinky.heremaps.H.service.AbstractRestService {
   def this(opt_options: Options) = this()
 }
-

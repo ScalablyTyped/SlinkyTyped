@@ -4,13 +4,15 @@ import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object anon extends js.Object {
+  
   @js.native
   trait Typeoflutimes extends js.Object {
+    
     /**
       * Asynchronously change file timestamps of the file referenced by the supplied path.
       * If path refers to a symbolic link, then the link is not dereferenced: instead, the timestamps
@@ -82,6 +84,7 @@ object anon extends js.Object {
       mtime: js.Date,
       callback: js.Function1[/* err */ ErrnoException | Null, Unit]
     ): Unit = js.native
+    
     /**
       * Asynchronously change file timestamps of the file referenced by the supplied path.
       * If path refers to a symbolic link, then the link is not dereferenced: instead, the timestamps
@@ -100,6 +103,4 @@ object anon extends js.Object {
     def __promisify__(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
     def __promisify__(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
   }
-  
 }
-

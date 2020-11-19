@@ -7,7 +7,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Represents a Location. */
 @JSImport("apollo-engine-reporting-protobuf", "Trace.Location")
@@ -20,11 +20,11 @@ class Location ()
   extends typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Location {
   def this(properties: ILocation) = this()
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf", "Trace.Location")
 @js.native
 object Location extends js.Object {
+  
   /**
     * Creates a new Location instance using the specified properties.
     * @param [properties] Properties to set
@@ -32,6 +32,7 @@ object Location extends js.Object {
     */
   def create(): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Location = js.native
   def create(properties: ILocation): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Location = js.native
+  
   /**
     * Decodes a Location message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -44,6 +45,7 @@ object Location extends js.Object {
   def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Location = js.native
   def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Location = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Location = js.native
+  
   /**
     * Decodes a Location message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -53,6 +55,7 @@ object Location extends js.Object {
     */
   def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Location = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Location = js.native
+  
   /**
     * Encodes the specified Location message. Does not implicitly {@link Trace.Location.verify|verify} messages.
     * @param message Location message or plain object to encode
@@ -61,6 +64,7 @@ object Location extends js.Object {
     */
   def encode(message: ILocation): Writer = js.native
   def encode(message: ILocation, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified Location message, length delimited. Does not implicitly {@link Trace.Location.verify|verify} messages.
     * @param message Location message or plain object to encode
@@ -69,12 +73,14 @@ object Location extends js.Object {
     */
   def encodeDelimited(message: ILocation): Writer = js.native
   def encodeDelimited(message: ILocation, writer: Writer): Writer = js.native
+  
   /**
     * Creates a Location message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns Location
     */
   def fromObject(`object`: StringDictionary[js.Any]): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Location = js.native
+  
   /**
     * Creates a plain object from a Location message. Also converts values to other types if specified.
     * @param message Location
@@ -86,6 +92,7 @@ object Location extends js.Object {
     message: typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Location,
     options: IConversionOptions
   ): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a Location message.
     * @param message Plain object to verify
@@ -93,4 +100,3 @@ object Location extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

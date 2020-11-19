@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("office-ui-fabric-react/lib/index.bundle", "Fabric")
 @js.native
@@ -16,4 +16,3 @@ object Fabric
         IFabricProps with RefAttributes[typingsSlinky.officeUiFabricReact.fabricBaseMod.FabricBase]
       ]
     ]
-

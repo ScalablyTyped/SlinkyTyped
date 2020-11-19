@@ -2,10 +2,11 @@ package typingsSlinky.rethinkdb.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Operation[T] extends js.Object {
+  
   def run(conn: Connection): js.Promise[T] = js.native
   def run(conn: Connection, cb: js.Function2[/* err */ js.Error, /* result */ T, Unit]): Unit = js.native
   def run(conn: Connection, opts: OperationOptions): js.Promise[T] = js.native
@@ -20,4 +21,3 @@ trait Operation[T] extends js.Object {
     cb: js.Function2[/* err */ js.Error, /* result */ T, Unit]
   ): Unit = js.native
 }
-

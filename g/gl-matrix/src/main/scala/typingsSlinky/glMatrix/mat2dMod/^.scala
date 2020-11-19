@@ -4,15 +4,15 @@ import typingsSlinky.glMatrix.mod.mat2d
 import typingsSlinky.glMatrix.mod.vec2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gl-matrix/src/gl-matrix/mat2d", JSImport.Namespace)
 @js.native
 class ^ () extends mat2d
-
 @JSImport("gl-matrix/src/gl-matrix/mat2d", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Adds two mat2d's
     *
@@ -22,6 +22,7 @@ object ^ extends js.Object {
     * @returns {mat2d} out
     */
   def add(out: mat2d, a: mat2d, b: mat2d): mat2d = js.native
+  
   /**
     * Creates a new mat2d initialized with values from an existing matrix
     *
@@ -29,6 +30,7 @@ object ^ extends js.Object {
     * @returns a new 2x3 matrix
     */
   def clone(a: mat2d): mat2d = js.native
+  
   /**
     * Copy the values from one mat2d to another
     *
@@ -37,12 +39,14 @@ object ^ extends js.Object {
     * @returns out
     */
   def copy(out: mat2d, a: mat2d): mat2d = js.native
+  
   /**
     * Creates a new identity mat2d
     *
     * @returns a new 2x3 matrix
     */
   def create(): mat2d = js.native
+  
   /**
     * Calculates the determinant of a mat2d
     *
@@ -50,6 +54,7 @@ object ^ extends js.Object {
     * @returns determinant of a
     */
   def determinant(a: mat2d): Double = js.native
+  
   /**
     * Returns whether or not the matrices have approximately the same elements in the same position.
     *
@@ -58,6 +63,7 @@ object ^ extends js.Object {
     * @returns {boolean} True if the matrices are equal, false otherwise.
     */
   def equals(a: mat2d, b: mat2d): Boolean = js.native
+  
   /**
     * Returns whether or not the matrices have exactly the same elements in the same position (when compared with ===)
     *
@@ -66,6 +72,7 @@ object ^ extends js.Object {
     * @returns {boolean} True if the matrices are equal, false otherwise.
     */
   def exactEquals(a: mat2d, b: mat2d): Boolean = js.native
+  
   /**
     * Returns Frobenius norm of a mat2d
     *
@@ -73,6 +80,7 @@ object ^ extends js.Object {
     * @returns Frobenius norm
     */
   def frob(a: mat2d): Double = js.native
+  
   /**
     * Creates a matrix from a given angle
     * This is equivalent to (but much faster than):
@@ -85,6 +93,7 @@ object ^ extends js.Object {
     * @returns {mat2d} out
     */
   def fromRotation(out: mat2d, rad: Double): mat2d = js.native
+  
   def fromScaling(out: mat2d, v: js.Array[Double]): mat2d = js.native
   /**
     * Creates a matrix from a vector scaling
@@ -98,6 +107,7 @@ object ^ extends js.Object {
     * @returns {mat2d} out
     */
   def fromScaling(out: mat2d, v: vec2): mat2d = js.native
+  
   def fromTranslation(out: mat2d, v: js.Array[Double]): mat2d = js.native
   /**
     * Creates a matrix from a vector translation
@@ -111,6 +121,7 @@ object ^ extends js.Object {
     * @returns {mat2d} out
     */
   def fromTranslation(out: mat2d, v: vec2): mat2d = js.native
+  
   /**
     * Create a new mat2d with the given values
     *
@@ -123,6 +134,7 @@ object ^ extends js.Object {
     * @returns {mat2d} A new mat2d
     */
   def fromValues(a: Double, b: Double, c: Double, d: Double, tx: Double, ty: Double): mat2d = js.native
+  
   /**
     * Set a mat2d to the identity matrix
     *
@@ -130,6 +142,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def identity(out: mat2d): mat2d = js.native
+  
   /**
     * Inverts a mat2d
     *
@@ -138,6 +151,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def invert(out: mat2d, a: mat2d): mat2d | Null = js.native
+  
   /**
     * Multiplies two mat2d's
     *
@@ -147,6 +161,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def mul(out: mat2d, a: mat2d, b: mat2d): mat2d = js.native
+  
   /**
     * Multiplies two mat2d's
     *
@@ -156,6 +171,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def multiply(out: mat2d, a: mat2d, b: mat2d): mat2d = js.native
+  
   /**
     * Multiply each element of the matrix by a scalar.
     *
@@ -165,6 +181,7 @@ object ^ extends js.Object {
     * @returns {mat2d} out
     */
   def multiplyScalar(out: mat2d, a: mat2d, b: Double): mat2d = js.native
+  
   /**
     * Adds two mat2d's after multiplying each element of the second operand by a scalar value.
     *
@@ -175,6 +192,7 @@ object ^ extends js.Object {
     * @returns {mat2d} out
     */
   def multiplyScalarAndAdd(out: mat2d, a: mat2d, b: mat2d, scale: Double): mat2d = js.native
+  
   /**
     * Rotates a mat2d by the given angle
     *
@@ -184,6 +202,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def rotate(out: mat2d, a: mat2d, rad: Double): mat2d = js.native
+  
   def scale(out: mat2d, a: mat2d, v: js.Array[Double]): mat2d = js.native
   /**
     * Scales the mat2d by the dimensions in the given vec2
@@ -194,6 +213,7 @@ object ^ extends js.Object {
     * @returns out
     **/
   def scale(out: mat2d, a: mat2d, v: vec2): mat2d = js.native
+  
   /**
     * Set the components of a mat2d to the given values
     *
@@ -207,6 +227,7 @@ object ^ extends js.Object {
     * @returns {mat2d} out
     */
   def set(out: mat2d, a: Double, b: Double, c: Double, d: Double, tx: Double, ty: Double): mat2d = js.native
+  
   /**
     * Returns a string representation of a mat2d
     *
@@ -214,6 +235,7 @@ object ^ extends js.Object {
     * @returns string representation of the matrix
     */
   def str(a: mat2d): String = js.native
+  
   /**
     * Subtracts matrix b from matrix a
     *
@@ -223,6 +245,7 @@ object ^ extends js.Object {
     * @returns {mat2d} out
     */
   def sub(out: mat2d, a: mat2d, b: mat2d): mat2d = js.native
+  
   /**
     * Subtracts matrix b from matrix a
     *
@@ -232,6 +255,7 @@ object ^ extends js.Object {
     * @returns {mat2d} out
     */
   def subtract(out: mat2d, a: mat2d, b: mat2d): mat2d = js.native
+  
   def translate(out: mat2d, a: mat2d, v: js.Array[Double]): mat2d = js.native
   /**
     * Translates the mat2d by the dimensions in the given vec2
@@ -243,4 +267,3 @@ object ^ extends js.Object {
     **/
   def translate(out: mat2d, a: mat2d, v: vec2): mat2d = js.native
 }
-

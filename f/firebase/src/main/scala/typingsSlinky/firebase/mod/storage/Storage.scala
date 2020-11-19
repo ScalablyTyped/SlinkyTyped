@@ -3,7 +3,7 @@ package typingsSlinky.firebase.mod.storage
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The Firebase Storage service interface.
@@ -19,6 +19,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Storage extends js.Object {
+  
   /**
     * The {@link firebase.app.App app} associated with the `Storage` service
     * instance.
@@ -29,15 +30,18 @@ trait Storage extends js.Object {
     * ```
     */
   var app: App = js.native
+  
   /**
     * The maximum time to retry operations other than uploads or downloads in
     * milliseconds.
     */
   var maxOperationRetryTime: Double = js.native
+  
   /**
     * The maximum time to retry uploads in milliseconds.
     */
   var maxUploadRetryTime: Double = js.native
+  
   /**
     * Returns a reference for the given path in the default bucket.
     * @param path A relative path to initialize the reference with,
@@ -47,6 +51,7 @@ trait Storage extends js.Object {
     */
   def ref(): Reference = js.native
   def ref(path: String): Reference = js.native
+  
   /**
     * Returns a reference for the given absolute URL.
     * @param url A URL in the form: <br />
@@ -56,15 +61,16 @@ trait Storage extends js.Object {
     * @return A reference for the given URL.
     */
   def refFromURL(url: String): Reference = js.native
+  
   /**
     * @param time The new maximum operation retry time in milliseconds.
     * @see {@link firebase.storage.Storage.prototype.maxOperationRetryTime}
     */
   def setMaxOperationRetryTime(time: Double): js.Any = js.native
+  
   /**
     * @param time The new maximum upload retry time in milliseconds.
     * @see {@link firebase.storage.Storage.prototype.maxUploadRetryTime}
     */
   def setMaxUploadRetryTime(time: Double): js.Any = js.native
 }
-

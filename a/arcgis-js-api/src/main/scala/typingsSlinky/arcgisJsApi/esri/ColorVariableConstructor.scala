@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ColorVariableConstructor
@@ -15,6 +15,6 @@ trait ColorVariableConstructor
   */
 Instantiable0[ColorVariable]
      with Instantiable1[/* properties */ ColorVariableProperties, ColorVariable] {
+  
   def fromJSON(json: js.Any): ColorVariable = js.native
 }
-

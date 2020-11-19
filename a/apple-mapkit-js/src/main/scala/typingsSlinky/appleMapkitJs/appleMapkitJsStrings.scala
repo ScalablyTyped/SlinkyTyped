@@ -5,9 +5,79 @@ import typingsSlinky.appleMapkitJs.mapkit.InitializationEventType
 import typingsSlinky.appleMapkitJs.mapkit.OverlayEventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object appleMapkitJsStrings {
+  
+  @scala.inline
+  def Initialized: Initialized = "Initialized".asInstanceOf[Initialized]
+  
+  @scala.inline
+  def Refreshed: Refreshed = "Refreshed".asInstanceOf[Refreshed]
+  
+  @scala.inline
+  def `Too Many Requests`: `Too Many Requests` = ("Too Many Requests").asInstanceOf[`Too Many Requests`]
+  
+  @scala.inline
+  def Unauthorized: Unauthorized = "Unauthorized".asInstanceOf[Unauthorized]
+  
+  @scala.inline
+  def `configuration-change`: `configuration-change` = "configuration-change".asInstanceOf[`configuration-change`]
+  
+  @scala.inline
+  def deselect: deselect = "deselect".asInstanceOf[deselect]
+  
+  @scala.inline
+  def `double-tap`: `double-tap` = "double-tap".asInstanceOf[`double-tap`]
+  
+  @scala.inline
+  def `drag-end`: `drag-end` = "drag-end".asInstanceOf[`drag-end`]
+  
+  @scala.inline
+  def `drag-start`: `drag-start` = "drag-start".asInstanceOf[`drag-start`]
+  
+  @scala.inline
+  def dragging: dragging = "dragging".asInstanceOf[dragging]
+  
+  @scala.inline
+  def error: error = "error".asInstanceOf[error]
+  
+  @scala.inline
+  def `long-press`: `long-press` = "long-press".asInstanceOf[`long-press`]
+  
+  @scala.inline
+  def `map-type-change`: `map-type-change` = "map-type-change".asInstanceOf[`map-type-change`]
+  
+  @scala.inline
+  def `region-change-end`: `region-change-end` = "region-change-end".asInstanceOf[`region-change-end`]
+  
+  @scala.inline
+  def `region-change-start`: `region-change-start` = "region-change-start".asInstanceOf[`region-change-start`]
+  
+  @scala.inline
+  def `scroll-end`: `scroll-end` = "scroll-end".asInstanceOf[`scroll-end`]
+  
+  @scala.inline
+  def `scroll-start`: `scroll-start` = "scroll-start".asInstanceOf[`scroll-start`]
+  
+  @scala.inline
+  def select: select = "select".asInstanceOf[select]
+  
+  @scala.inline
+  def `single-tap`: `single-tap` = "single-tap".asInstanceOf[`single-tap`]
+  
+  @scala.inline
+  def `user-location-change`: `user-location-change` = "user-location-change".asInstanceOf[`user-location-change`]
+  
+  @scala.inline
+  def `user-location-error`: `user-location-error` = "user-location-error".asInstanceOf[`user-location-error`]
+  
+  @scala.inline
+  def `zoom-end`: `zoom-end` = "zoom-end".asInstanceOf[`zoom-end`]
+  
+  @scala.inline
+  def `zoom-start`: `zoom-start` = "zoom-start".asInstanceOf[`zoom-start`]
+  
   @js.native
   sealed trait Initialized extends js.Object
   
@@ -80,52 +150,4 @@ object appleMapkitJsStrings {
   
   @js.native
   sealed trait `zoom-start` extends js.Object
-  
-  @scala.inline
-  def Initialized: Initialized = "Initialized".asInstanceOf[Initialized]
-  @scala.inline
-  def Refreshed: Refreshed = "Refreshed".asInstanceOf[Refreshed]
-  @scala.inline
-  def `Too Many Requests`: `Too Many Requests` = ("Too Many Requests").asInstanceOf[`Too Many Requests`]
-  @scala.inline
-  def Unauthorized: Unauthorized = "Unauthorized".asInstanceOf[Unauthorized]
-  @scala.inline
-  def `configuration-change`: `configuration-change` = "configuration-change".asInstanceOf[`configuration-change`]
-  @scala.inline
-  def deselect: deselect = "deselect".asInstanceOf[deselect]
-  @scala.inline
-  def `double-tap`: `double-tap` = "double-tap".asInstanceOf[`double-tap`]
-  @scala.inline
-  def `drag-end`: `drag-end` = "drag-end".asInstanceOf[`drag-end`]
-  @scala.inline
-  def `drag-start`: `drag-start` = "drag-start".asInstanceOf[`drag-start`]
-  @scala.inline
-  def dragging: dragging = "dragging".asInstanceOf[dragging]
-  @scala.inline
-  def error: error = "error".asInstanceOf[error]
-  @scala.inline
-  def `long-press`: `long-press` = "long-press".asInstanceOf[`long-press`]
-  @scala.inline
-  def `map-type-change`: `map-type-change` = "map-type-change".asInstanceOf[`map-type-change`]
-  @scala.inline
-  def `region-change-end`: `region-change-end` = "region-change-end".asInstanceOf[`region-change-end`]
-  @scala.inline
-  def `region-change-start`: `region-change-start` = "region-change-start".asInstanceOf[`region-change-start`]
-  @scala.inline
-  def `scroll-end`: `scroll-end` = "scroll-end".asInstanceOf[`scroll-end`]
-  @scala.inline
-  def `scroll-start`: `scroll-start` = "scroll-start".asInstanceOf[`scroll-start`]
-  @scala.inline
-  def select: select = "select".asInstanceOf[select]
-  @scala.inline
-  def `single-tap`: `single-tap` = "single-tap".asInstanceOf[`single-tap`]
-  @scala.inline
-  def `user-location-change`: `user-location-change` = "user-location-change".asInstanceOf[`user-location-change`]
-  @scala.inline
-  def `user-location-error`: `user-location-error` = "user-location-error".asInstanceOf[`user-location-error`]
-  @scala.inline
-  def `zoom-end`: `zoom-end` = "zoom-end".asInstanceOf[`zoom-end`]
-  @scala.inline
-  def `zoom-start`: `zoom-start` = "zoom-start".asInstanceOf[`zoom-start`]
 }
-

@@ -5,15 +5,13 @@ import typingsSlinky.dotObject.DotObject.Dot
 import typingsSlinky.dotObject.DotObject.DotConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dot-object", JSImport.Namespace)
 @js.native
 class ^ protected () extends Dot {
   def this(separator: String) = this()
 }
-
 @JSImport("dot-object", JSImport.Namespace)
 @js.native
 object ^ extends TopLevel[DotConstructor]
-

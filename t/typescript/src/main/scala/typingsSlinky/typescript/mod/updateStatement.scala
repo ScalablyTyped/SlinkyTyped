@@ -3,7 +3,7 @@ package typingsSlinky.typescript.mod
 import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** @deprecated Use `updateExpressionStatement` instead.  */
 @JSImport("typescript", "updateStatement")
@@ -12,4 +12,3 @@ object updateStatement
   extends TopLevel[
       js.Function2[/* node */ ExpressionStatement, /* expression */ Expression, ExpressionStatement]
     ]
-

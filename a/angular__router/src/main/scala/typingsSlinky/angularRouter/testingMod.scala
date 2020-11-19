@@ -14,20 +14,11 @@ import typingsSlinky.angularRouter.mod.UrlHandlingStrategy
 import typingsSlinky.angularRouter.mod.UrlSerializer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/router/testing", JSImport.Namespace)
 @js.native
 object testingMod extends js.Object {
-  @js.native
-  class RouterTestingModule ()
-    extends typingsSlinky.angularRouter.testingTestingMod.RouterTestingModule
-  
-  @js.native
-  class SpyNgModuleFactoryLoader protected ()
-    extends typingsSlinky.angularRouter.testingTestingMod.SpyNgModuleFactoryLoader {
-    def this(compiler: Compiler) = this()
-  }
   
   def setupTestingRouter(
     urlSerializer: UrlSerializer,
@@ -80,12 +71,21 @@ object testingMod extends js.Object {
     routes: js.Array[js.Array[Route]],
     urlHandlingStrategy: UrlHandlingStrategy
   ): Router = js.native
+  
+  @js.native
+  class RouterTestingModule ()
+    extends typingsSlinky.angularRouter.testingTestingMod.RouterTestingModule
   /* static members */
   @js.native
   object RouterTestingModule extends js.Object {
+    
     def withRoutes(routes: Routes): ModuleWithProviders[typingsSlinky.angularRouter.testingTestingMod.RouterTestingModule] = js.native
     def withRoutes(routes: Routes, config: ExtraOptions): ModuleWithProviders[typingsSlinky.angularRouter.testingTestingMod.RouterTestingModule] = js.native
   }
   
+  @js.native
+  class SpyNgModuleFactoryLoader protected ()
+    extends typingsSlinky.angularRouter.testingTestingMod.SpyNgModuleFactoryLoader {
+    def this(compiler: Compiler) = this()
+  }
 }
-

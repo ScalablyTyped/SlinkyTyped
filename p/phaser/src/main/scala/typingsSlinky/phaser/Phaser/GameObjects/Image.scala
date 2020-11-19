@@ -16,7 +16,7 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * An Image Game Object.
@@ -43,4 +43,3 @@ trait Image
      with Tint
      with Transform
      with Visible
-

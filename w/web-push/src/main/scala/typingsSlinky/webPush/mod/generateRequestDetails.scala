@@ -4,11 +4,12 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.webPush.anon.RequestDetailsbodynull
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("web-push", "generateRequestDetails")
 @js.native
 object generateRequestDetails extends js.Object {
+  
   def apply(subscription: PushSubscription): RequestDetails = js.native
   def apply(subscription: PushSubscription, payload: js.UndefOr[scala.Nothing], options: RequestOptions): RequestDetails = js.native
   def apply(subscription: PushSubscription, payload: String): RequestDetails = js.native
@@ -17,4 +18,3 @@ object generateRequestDetails extends js.Object {
   def apply(subscription: PushSubscription, payload: Buffer): RequestDetails = js.native
   def apply(subscription: PushSubscription, payload: Buffer, options: RequestOptions): RequestDetails = js.native
 }
-

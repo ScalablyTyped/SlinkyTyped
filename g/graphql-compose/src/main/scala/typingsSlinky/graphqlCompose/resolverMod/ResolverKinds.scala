@@ -5,7 +5,7 @@ import typingsSlinky.graphqlCompose.graphqlComposeStrings.query_
 import typingsSlinky.graphqlCompose.graphqlComposeStrings.subscription_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.graphqlCompose.graphqlComposeStrings.query_
@@ -13,13 +13,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.graphqlCompose.graphqlComposeStrings.subscription_
 */
 trait ResolverKinds extends js.Object
-
 object ResolverKinds {
+  
   @scala.inline
   def mutation: mutation_ = "mutation".asInstanceOf[mutation_]
+  
   @scala.inline
   def query: query_ = "query".asInstanceOf[query_]
+  
   @scala.inline
   def subscription: subscription_ = "subscription".asInstanceOf[subscription_]
 }
-

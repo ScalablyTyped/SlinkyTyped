@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "QuadraticBezierCurve")
 @js.native
@@ -14,4 +14,3 @@ class QuadraticBezierCurve protected ()
     v2: typingsSlinky.three.vector2Mod.Vector2
   ) = this()
 }
-

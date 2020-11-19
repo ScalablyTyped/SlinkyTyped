@@ -3,7 +3,7 @@ package typingsSlinky.playcanvas.global.pc
 import typingsSlinky.playcanvas.pc.ResourceHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Resource handler used for loading cubemap {@link pc.Texture} resources.
@@ -20,4 +20,3 @@ class CubemapHandler protected () extends ResourceHandler {
     loader: typingsSlinky.playcanvas.pc.ResourceLoader
   ) = this()
 }
-

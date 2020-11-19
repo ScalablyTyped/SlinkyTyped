@@ -3,11 +3,12 @@ package typingsSlinky.firebase.mod.performance
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "performance")
 @js.native
 object ^ extends js.Object {
+  
   /**
     * Gets the {@link firebase.performance.Performance `Performance`} service.
     *
@@ -31,4 +32,3 @@ object ^ extends js.Object {
   def apply(): Performance = js.native
   def apply(app: App): Performance = js.native
 }
-

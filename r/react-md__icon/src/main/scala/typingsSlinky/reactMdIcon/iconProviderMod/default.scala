@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `IconProvider` component is used to override all the default icons within
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/icon/types/IconProvider", JSImport.Default)
 @js.native
 object default extends TopLevel[ReactComponentClass[IconProviderProps]]
-

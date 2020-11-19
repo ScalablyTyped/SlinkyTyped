@@ -9,11 +9,12 @@ import typingsSlinky.backbonePaginator.mod.PageableCollection
 import typingsSlinky.backbonePaginator.mod.PageableInitialOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object anon extends js.Object {
+  
   @js.native
   trait TypeofPageableCollection
     extends Instantiable0[PageableCollection[Model[js.Any, ModelSetOptions]]]
@@ -28,8 +29,7 @@ object anon extends js.Object {
           /* options */ PageableInitialOptions, 
           PageableCollection[Model[js.Any, ModelSetOptions]]
         ] {
+    
     def noConflict(): /* import warning: importer.ImportType#apply Failed type conversion: typeof PageableCollection */ js.Any = js.native
   }
-  
 }
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.LabelClassProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.LabelClass")
 @js.native
@@ -16,4 +16,3 @@ class LabelClassCls ()
   extends typingsSlinky.arcgisJsApi.esri.LabelClass {
   def this(properties: LabelClassProperties) = this()
 }
-

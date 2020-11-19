@@ -6,11 +6,12 @@ import typingsSlinky.antDesignReactNative.modalPropsTypeMod.CallbackOrActions
 import typingsSlinky.reactNative.mod.TextStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ant-design/react-native/lib/modal/prompt", JSImport.Namespace)
 @js.native
 object promptMod extends js.Object {
+  
   def default(title: ReactElement, message: ReactElement, callbackOrActions: CallbackOrActions[TextStyle]): js.UndefOr[Double] = js.native
   def default(
     title: ReactElement,
@@ -137,4 +138,3 @@ object promptMod extends js.Object {
     onBackHandler: CallbackOnBackHandler
   ): js.UndefOr[Double] = js.native
 }
-

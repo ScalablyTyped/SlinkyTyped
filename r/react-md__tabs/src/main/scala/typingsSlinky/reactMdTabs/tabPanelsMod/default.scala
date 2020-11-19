@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * This component allows you to control the visibility of the `TabPanel`
@@ -18,4 +18,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/tabs/types/TabPanels", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[TabPanelsProps with RefAttributes[HTMLDivElement]]]
-

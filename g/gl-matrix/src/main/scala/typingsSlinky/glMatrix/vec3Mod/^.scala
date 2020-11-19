@@ -6,15 +6,15 @@ import typingsSlinky.glMatrix.mod.quat
 import typingsSlinky.glMatrix.mod.vec3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gl-matrix/src/gl-matrix/vec3", JSImport.Namespace)
 @js.native
 class ^ () extends vec3
-
 @JSImport("gl-matrix/src/gl-matrix/vec3", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
+  
   def add(out: vec3, a: js.Array[Double], b: js.Array[Double]): vec3 = js.native
   def add(out: vec3, a: js.Array[Double], b: vec3): vec3 = js.native
   def add(out: vec3, a: vec3, b: js.Array[Double]): vec3 = js.native
@@ -27,6 +27,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def add(out: vec3, a: vec3, b: vec3): vec3 = js.native
+  
   def angle(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def angle(a: js.Array[Double], b: vec3): Double = js.native
   def angle(a: vec3, b: js.Array[Double]): Double = js.native
@@ -37,6 +38,7 @@ object ^ extends js.Object {
     * @returns The angle in radians
     */
   def angle(a: vec3, b: vec3): Double = js.native
+  
   def bezier(
     out: vec3,
     a: js.Array[Double],
@@ -71,6 +73,7 @@ object ^ extends js.Object {
     * @returns {vec3} out
     */
   def bezier(out: vec3, a: vec3, b: vec3, c: vec3, d: vec3, t: Double): vec3 = js.native
+  
   def ceil(out: vec3, a: js.Array[Double]): vec3 = js.native
   /**
     * Math.ceil the components of a vec3
@@ -80,6 +83,7 @@ object ^ extends js.Object {
     * @returns {vec3} out
     */
   def ceil(out: vec3, a: vec3): vec3 = js.native
+  
   def clone(a: js.Array[Double]): vec3 = js.native
   /**
     * Creates a new vec3 initialized with values from an existing vector
@@ -88,6 +92,7 @@ object ^ extends js.Object {
     * @returns a new 3D vector
     */
   def clone(a: vec3): vec3 = js.native
+  
   def copy(out: vec3, a: js.Array[Double]): vec3 = js.native
   /**
     * Copy the values from one vec3 to another
@@ -97,12 +102,14 @@ object ^ extends js.Object {
     * @returns out
     */
   def copy(out: vec3, a: vec3): vec3 = js.native
+  
   /**
     * Creates a new, empty vec3
     *
     * @returns a new 3D vector
     */
   def create(): vec3 = js.native
+  
   def cross(out: vec3, a: js.Array[Double], b: js.Array[Double]): vec3 = js.native
   def cross(out: vec3, a: js.Array[Double], b: vec3): vec3 = js.native
   def cross(out: vec3, a: vec3, b: js.Array[Double]): vec3 = js.native
@@ -115,6 +122,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def cross(out: vec3, a: vec3, b: vec3): vec3 = js.native
+  
   def dist(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def dist(a: js.Array[Double], b: vec3): Double = js.native
   def dist(a: vec3, b: js.Array[Double]): Double = js.native
@@ -126,6 +134,7 @@ object ^ extends js.Object {
     * @returns distance between a and b
     */
   def dist(a: vec3, b: vec3): Double = js.native
+  
   def distance(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def distance(a: js.Array[Double], b: vec3): Double = js.native
   def distance(a: vec3, b: js.Array[Double]): Double = js.native
@@ -137,6 +146,7 @@ object ^ extends js.Object {
     * @returns distance between a and b
     */
   def distance(a: vec3, b: vec3): Double = js.native
+  
   def div(out: vec3, a: js.Array[Double], b: js.Array[Double]): vec3 = js.native
   def div(out: vec3, a: js.Array[Double], b: vec3): vec3 = js.native
   def div(out: vec3, a: vec3, b: js.Array[Double]): vec3 = js.native
@@ -149,6 +159,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def div(out: vec3, a: vec3, b: vec3): vec3 = js.native
+  
   def divide(out: vec3, a: js.Array[Double], b: js.Array[Double]): vec3 = js.native
   def divide(out: vec3, a: js.Array[Double], b: vec3): vec3 = js.native
   def divide(out: vec3, a: vec3, b: js.Array[Double]): vec3 = js.native
@@ -161,6 +172,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def divide(out: vec3, a: vec3, b: vec3): vec3 = js.native
+  
   def dot(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def dot(a: js.Array[Double], b: vec3): Double = js.native
   def dot(a: vec3, b: js.Array[Double]): Double = js.native
@@ -172,6 +184,7 @@ object ^ extends js.Object {
     * @returns dot product of a and b
     */
   def dot(a: vec3, b: vec3): Double = js.native
+  
   def equals(a: js.Array[Double], b: js.Array[Double]): Boolean = js.native
   def equals(a: js.Array[Double], b: vec3): Boolean = js.native
   def equals(a: vec3, b: js.Array[Double]): Boolean = js.native
@@ -183,6 +196,7 @@ object ^ extends js.Object {
     * @returns {boolean} True if the vectors are equal, false otherwise.
     */
   def equals(a: vec3, b: vec3): Boolean = js.native
+  
   def exactEquals(a: js.Array[Double], b: js.Array[Double]): Boolean = js.native
   def exactEquals(a: js.Array[Double], b: vec3): Boolean = js.native
   def exactEquals(a: vec3, b: js.Array[Double]): Boolean = js.native
@@ -194,6 +208,7 @@ object ^ extends js.Object {
     * @returns {boolean} True if the vectors are equal, false otherwise.
     */
   def exactEquals(a: vec3, b: vec3): Boolean = js.native
+  
   def floor(out: vec3, a: js.Array[Double]): vec3 = js.native
   /**
     * Math.floor the components of a vec3
@@ -203,6 +218,7 @@ object ^ extends js.Object {
     * @returns {vec3} out
     */
   def floor(out: vec3, a: vec3): vec3 = js.native
+  
   /**
     * Perform some operation over an array of vec3s.
     *
@@ -246,6 +262,7 @@ object ^ extends js.Object {
     ],
     arg: js.Any
   ): js.typedarray.Float32Array = js.native
+  
   /**
     * Creates a new vec3 initialized with the given values
     *
@@ -255,6 +272,7 @@ object ^ extends js.Object {
     * @returns a new 3D vector
     */
   def fromValues(x: Double, y: Double, z: Double): vec3 = js.native
+  
   def hermite(
     out: vec3,
     a: js.Array[Double],
@@ -289,6 +307,7 @@ object ^ extends js.Object {
     * @returns {vec3} out
     */
   def hermite(out: vec3, a: vec3, b: vec3, c: vec3, d: vec3, t: Double): vec3 = js.native
+  
   def inverse(out: vec3, a: js.Array[Double]): vec3 = js.native
   /**
     * Returns the inverse of the components of a vec3
@@ -298,6 +317,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def inverse(out: vec3, a: vec3): vec3 = js.native
+  
   def len(a: js.Array[Double]): Double = js.native
   /**
     * Calculates the length of a vec3
@@ -306,6 +326,7 @@ object ^ extends js.Object {
     * @returns length of a
     */
   def len(a: vec3): Double = js.native
+  
   def length(a: js.Array[Double]): Double = js.native
   /**
     * Calculates the length of a vec3
@@ -314,6 +335,7 @@ object ^ extends js.Object {
     * @returns length of a
     */
   def length(a: vec3): Double = js.native
+  
   def lerp(out: vec3, a: js.Array[Double], b: js.Array[Double], t: Double): vec3 = js.native
   def lerp(out: vec3, a: js.Array[Double], b: vec3, t: Double): vec3 = js.native
   def lerp(out: vec3, a: vec3, b: js.Array[Double], t: Double): vec3 = js.native
@@ -327,6 +349,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def lerp(out: vec3, a: vec3, b: vec3, t: Double): vec3 = js.native
+  
   def max(out: vec3, a: js.Array[Double], b: js.Array[Double]): vec3 = js.native
   def max(out: vec3, a: js.Array[Double], b: vec3): vec3 = js.native
   def max(out: vec3, a: vec3, b: js.Array[Double]): vec3 = js.native
@@ -339,6 +362,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def max(out: vec3, a: vec3, b: vec3): vec3 = js.native
+  
   def min(out: vec3, a: js.Array[Double], b: js.Array[Double]): vec3 = js.native
   def min(out: vec3, a: js.Array[Double], b: vec3): vec3 = js.native
   def min(out: vec3, a: vec3, b: js.Array[Double]): vec3 = js.native
@@ -351,6 +375,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def min(out: vec3, a: vec3, b: vec3): vec3 = js.native
+  
   def mul(out: vec3, a: js.Array[Double], b: js.Array[Double]): vec3 = js.native
   def mul(out: vec3, a: js.Array[Double], b: vec3): vec3 = js.native
   def mul(out: vec3, a: vec3, b: js.Array[Double]): vec3 = js.native
@@ -363,6 +388,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def mul(out: vec3, a: vec3, b: vec3): vec3 = js.native
+  
   def multiply(out: vec3, a: js.Array[Double], b: js.Array[Double]): vec3 = js.native
   def multiply(out: vec3, a: js.Array[Double], b: vec3): vec3 = js.native
   def multiply(out: vec3, a: vec3, b: js.Array[Double]): vec3 = js.native
@@ -375,6 +401,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def multiply(out: vec3, a: vec3, b: vec3): vec3 = js.native
+  
   def negate(out: vec3, a: js.Array[Double]): vec3 = js.native
   /**
     * Negates the components of a vec3
@@ -384,6 +411,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def negate(out: vec3, a: vec3): vec3 = js.native
+  
   def normalize(out: vec3, a: js.Array[Double]): vec3 = js.native
   /**
     * Normalize a vec3
@@ -393,6 +421,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def normalize(out: vec3, a: vec3): vec3 = js.native
+  
   /**
     * Generates a random unit vector
     *
@@ -408,6 +437,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def random(out: vec3, scale: Double): vec3 = js.native
+  
   def rotateX(out: vec3, a: js.Array[Double], b: js.Array[Double], c: Double): vec3 = js.native
   def rotateX(out: vec3, a: js.Array[Double], b: vec3, c: Double): vec3 = js.native
   def rotateX(out: vec3, a: vec3, b: js.Array[Double], c: Double): vec3 = js.native
@@ -420,6 +450,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def rotateX(out: vec3, a: vec3, b: vec3, c: Double): vec3 = js.native
+  
   def rotateY(out: vec3, a: js.Array[Double], b: js.Array[Double], c: Double): vec3 = js.native
   def rotateY(out: vec3, a: js.Array[Double], b: vec3, c: Double): vec3 = js.native
   def rotateY(out: vec3, a: vec3, b: js.Array[Double], c: Double): vec3 = js.native
@@ -432,6 +463,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def rotateY(out: vec3, a: vec3, b: vec3, c: Double): vec3 = js.native
+  
   def rotateZ(out: vec3, a: js.Array[Double], b: js.Array[Double], c: Double): vec3 = js.native
   def rotateZ(out: vec3, a: js.Array[Double], b: vec3, c: Double): vec3 = js.native
   def rotateZ(out: vec3, a: vec3, b: js.Array[Double], c: Double): vec3 = js.native
@@ -444,6 +476,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def rotateZ(out: vec3, a: vec3, b: vec3, c: Double): vec3 = js.native
+  
   def round(out: vec3, a: js.Array[Double]): vec3 = js.native
   /**
     * Math.round the components of a vec3
@@ -453,6 +486,7 @@ object ^ extends js.Object {
     * @returns {vec3} out
     */
   def round(out: vec3, a: vec3): vec3 = js.native
+  
   def scale(out: vec3, a: js.Array[Double], b: Double): vec3 = js.native
   /**
     * Scales a vec3 by a scalar number
@@ -463,6 +497,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def scale(out: vec3, a: vec3, b: Double): vec3 = js.native
+  
   def scaleAndAdd(out: vec3, a: js.Array[Double], b: js.Array[Double], scale: Double): vec3 = js.native
   def scaleAndAdd(out: vec3, a: js.Array[Double], b: vec3, scale: Double): vec3 = js.native
   def scaleAndAdd(out: vec3, a: vec3, b: js.Array[Double], scale: Double): vec3 = js.native
@@ -476,6 +511,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def scaleAndAdd(out: vec3, a: vec3, b: vec3, scale: Double): vec3 = js.native
+  
   /**
     * Set the components of a vec3 to the given values
     *
@@ -486,6 +522,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def set(out: vec3, x: Double, y: Double, z: Double): vec3 = js.native
+  
   def sqrDist(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def sqrDist(a: js.Array[Double], b: vec3): Double = js.native
   def sqrDist(a: vec3, b: js.Array[Double]): Double = js.native
@@ -497,6 +534,7 @@ object ^ extends js.Object {
     * @returns squared distance between a and b
     */
   def sqrDist(a: vec3, b: vec3): Double = js.native
+  
   def sqrLen(a: js.Array[Double]): Double = js.native
   /**
     * Calculates the squared length of a vec3
@@ -505,6 +543,7 @@ object ^ extends js.Object {
     * @returns squared length of a
     */
   def sqrLen(a: vec3): Double = js.native
+  
   def squaredDistance(a: js.Array[Double], b: js.Array[Double]): Double = js.native
   def squaredDistance(a: js.Array[Double], b: vec3): Double = js.native
   def squaredDistance(a: vec3, b: js.Array[Double]): Double = js.native
@@ -516,6 +555,7 @@ object ^ extends js.Object {
     * @returns squared distance between a and b
     */
   def squaredDistance(a: vec3, b: vec3): Double = js.native
+  
   def squaredLength(a: js.Array[Double]): Double = js.native
   /**
     * Calculates the squared length of a vec3
@@ -524,6 +564,7 @@ object ^ extends js.Object {
     * @returns squared length of a
     */
   def squaredLength(a: vec3): Double = js.native
+  
   def str(a: js.Array[Double]): String = js.native
   /**
     * Returns a string representation of a vector
@@ -532,6 +573,7 @@ object ^ extends js.Object {
     * @returns string representation of the vector
     */
   def str(a: vec3): String = js.native
+  
   def sub(out: vec3, a: js.Array[Double], b: js.Array[Double]): vec3 = js.native
   def sub(out: vec3, a: js.Array[Double], b: vec3): vec3 = js.native
   def sub(out: vec3, a: vec3, b: js.Array[Double]): vec3 = js.native
@@ -544,6 +586,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def sub(out: vec3, a: vec3, b: vec3): vec3 = js.native
+  
   def subtract(out: vec3, a: js.Array[Double], b: js.Array[Double]): vec3 = js.native
   def subtract(out: vec3, a: js.Array[Double], b: vec3): vec3 = js.native
   def subtract(out: vec3, a: vec3, b: js.Array[Double]): vec3 = js.native
@@ -556,6 +599,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def subtract(out: vec3, a: vec3, b: vec3): vec3 = js.native
+  
   def transformMat3(out: vec3, a: js.Array[Double], m: mat3): vec3 = js.native
   /**
     * Transforms the vec3 with a mat3.
@@ -566,6 +610,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def transformMat3(out: vec3, a: vec3, m: mat3): vec3 = js.native
+  
   def transformMat4(out: vec3, a: js.Array[Double], m: mat4): vec3 = js.native
   /**
     * Transforms the vec3 with a mat4.
@@ -577,6 +622,7 @@ object ^ extends js.Object {
     * @returns out
     */
   def transformMat4(out: vec3, a: vec3, m: mat4): vec3 = js.native
+  
   def transformQuat(out: vec3, a: js.Array[Double], q: quat): vec3 = js.native
   /**
     * Transforms the vec3 with a quat
@@ -588,4 +634,3 @@ object ^ extends js.Object {
     */
   def transformQuat(out: vec3, a: vec3, q: quat): vec3 = js.native
 }
-

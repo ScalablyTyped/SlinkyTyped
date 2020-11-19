@@ -5,11 +5,12 @@ import typingsSlinky.graphql.visitorMod.VisitFn
 import typingsSlinky.graphql.visitorMod.Visitor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-compose", "graphql.getVisitFn")
 @js.native
 object getVisitFn extends js.Object {
+  
   def apply(
     visitor: Visitor[
       _, 
@@ -19,4 +20,3 @@ object getVisitFn extends js.Object {
     isLeaving: Boolean
   ): Maybe[VisitFn[_, _]] = js.native
 }
-

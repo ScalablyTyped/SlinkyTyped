@@ -6,7 +6,7 @@ import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "ReportHeader")
 @js.native
@@ -16,38 +16,46 @@ import scala.scalajs.js.annotation._
   */
 class ReportHeader () extends IReportHeader {
   def this(properties: IReportHeader) = this()
+  
   /** ReportHeader agentVersion. */
   @JSName("agentVersion")
   var agentVersion_ReportHeader: String = js.native
+  
   /** ReportHeader executableSchemaId. */
   @JSName("executableSchemaId")
   var executableSchemaId_ReportHeader: String = js.native
+  
   /** ReportHeader hostname. */
   @JSName("hostname")
   var hostname_ReportHeader: String = js.native
+  
   /** ReportHeader runtimeVersion. */
   @JSName("runtimeVersion")
   var runtimeVersion_ReportHeader: String = js.native
+  
   /** ReportHeader schemaTag. */
   @JSName("schemaTag")
   var schemaTag_ReportHeader: String = js.native
+  
   /** ReportHeader serviceVersion. */
   @JSName("serviceVersion")
   var serviceVersion_ReportHeader: String = js.native
-  /** ReportHeader uname. */
-  @JSName("uname")
-  var uname_ReportHeader: String = js.native
+  
   /**
     * Converts this ReportHeader to JSON.
     * @returns JSON object
     */
   def toJSON(): StringDictionary[js.Any] = js.native
+  
+  /** ReportHeader uname. */
+  @JSName("uname")
+  var uname_ReportHeader: String = js.native
 }
-
 /* static members */
 @JSImport("apollo-engine-reporting-protobuf/dist/protobuf", "ReportHeader")
 @js.native
 object ReportHeader extends js.Object {
+  
   /**
     * Creates a new ReportHeader instance using the specified properties.
     * @param [properties] Properties to set
@@ -55,6 +63,7 @@ object ReportHeader extends js.Object {
     */
   def create(): ReportHeader = js.native
   def create(properties: IReportHeader): ReportHeader = js.native
+  
   /**
     * Decodes a ReportHeader message from the specified reader or buffer.
     * @param reader Reader or buffer to decode from
@@ -67,6 +76,7 @@ object ReportHeader extends js.Object {
   def decode(reader: Reader, length: Double): ReportHeader = js.native
   def decode(reader: js.typedarray.Uint8Array): ReportHeader = js.native
   def decode(reader: js.typedarray.Uint8Array, length: Double): ReportHeader = js.native
+  
   /**
     * Decodes a ReportHeader message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -76,6 +86,7 @@ object ReportHeader extends js.Object {
     */
   def decodeDelimited(reader: Reader): ReportHeader = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): ReportHeader = js.native
+  
   /**
     * Encodes the specified ReportHeader message. Does not implicitly {@link ReportHeader.verify|verify} messages.
     * @param message ReportHeader message or plain object to encode
@@ -84,6 +95,7 @@ object ReportHeader extends js.Object {
     */
   def encode(message: IReportHeader): Writer = js.native
   def encode(message: IReportHeader, writer: Writer): Writer = js.native
+  
   /**
     * Encodes the specified ReportHeader message, length delimited. Does not implicitly {@link ReportHeader.verify|verify} messages.
     * @param message ReportHeader message or plain object to encode
@@ -92,12 +104,14 @@ object ReportHeader extends js.Object {
     */
   def encodeDelimited(message: IReportHeader): Writer = js.native
   def encodeDelimited(message: IReportHeader, writer: Writer): Writer = js.native
+  
   /**
     * Creates a ReportHeader message from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns ReportHeader
     */
   def fromObject(`object`: StringDictionary[js.Any]): ReportHeader = js.native
+  
   /**
     * Creates a plain object from a ReportHeader message. Also converts values to other types if specified.
     * @param message ReportHeader
@@ -106,6 +120,7 @@ object ReportHeader extends js.Object {
     */
   def toObject(message: ReportHeader): StringDictionary[js.Any] = js.native
   def toObject(message: ReportHeader, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  
   /**
     * Verifies a ReportHeader message.
     * @param message Plain object to verify
@@ -113,4 +128,3 @@ object ReportHeader extends js.Object {
     */
   def verify(message: StringDictionary[js.Any]): String | Null = js.native
 }
-

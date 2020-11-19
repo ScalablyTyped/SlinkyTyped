@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.opsworksMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.OpsWorks")
 @js.native
@@ -14,4 +14,3 @@ class OpsWorks ()
   extends typingsSlinky.awsSdk.mod.OpsWorks {
   def this(options: ClientConfiguration) = this()
 }
-

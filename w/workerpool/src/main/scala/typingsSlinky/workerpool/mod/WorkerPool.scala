@@ -5,10 +5,11 @@ import typingsSlinky.std.Parameters
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait WorkerPool extends js.Object {
+  
   /**
     * Execute a function on a worker with given arguments.
     * @param method When method is a string, a method with this name must exist at the worker
@@ -22,6 +23,7 @@ trait WorkerPool extends js.Object {
   def exec[T /* <: js.Function1[/* repeated */ js.Any, _] */](method: T, params: Parameters[T]): Promise[ReturnType[T], js.Error] = js.native
   def exec[T /* <: js.Function1[/* repeated */ js.Any, _] */](method: String): Promise[ReturnType[T], js.Error] = js.native
   def exec[T /* <: js.Function1[/* repeated */ js.Any, _] */](method: String, params: Parameters[T]): Promise[ReturnType[T], js.Error] = js.native
+  
   /**
     * Create a proxy for the worker pool.
     * The proxy contains a proxy for all methods available on the worker.
@@ -29,8 +31,10 @@ trait WorkerPool extends js.Object {
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def proxy[T /* <: StringDictionary[js.Function1[/* repeated */ js.Any, _]] */](): Promise[Proxy[T], js.Error] = js.native
+  
   /** Retrieve statistics on workers, and active and pending tasks. */
   def stats(): WorkerPoolStats = js.native
+  
   /**
     * If parameter force is false (default), workers will finish the tasks they are working on before terminating themselves.
     * When force is true, all workers are terminated immediately without finishing running tasks.
@@ -41,4 +45,3 @@ trait WorkerPool extends js.Object {
   def terminate(force: Boolean): Promise[js.Array[_], js.Error] = js.native
   def terminate(force: Boolean, timeout: Double): Promise[js.Array[_], js.Error] = js.native
 }
-

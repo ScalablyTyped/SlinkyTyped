@@ -4,15 +4,14 @@ import typingsSlinky.std.stdStrings.message
 import typingsSlinky.std.stdStrings.messageerror
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This Web Workers API interface represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker() constructor and specifying a script to be run in the worker thread. */
 @js.native
 trait Worker
   extends EventTarget
      with AbstractWorker {
-  var onmessage: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
-  var onmessageerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
+  
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -57,12 +56,18 @@ trait Worker
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
+  
+  var onmessage: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
+  
+  var onmessageerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
+  
   def postMessage(message: js.Any): Unit = js.native
   def postMessage(message: js.Any, options: PostMessageOptions): Unit = js.native
   /**
     * Clones message and transmits it to worker's global environment. transfer can be passed as a list of objects that are to be transferred rather than cloned.
     */
   def postMessage(message: js.Any, transfer: js.Array[Transferable]): Unit = js.native
+  
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -107,9 +112,9 @@ trait Worker
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
+  
   /**
     * Aborts worker's associated global environment.
     */
   def terminate(): Unit = js.native
 }
-

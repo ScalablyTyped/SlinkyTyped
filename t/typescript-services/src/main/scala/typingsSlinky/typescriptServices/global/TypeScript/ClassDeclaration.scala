@@ -2,7 +2,7 @@ package typingsSlinky.typescriptServices.global.TypeScript
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.ClassDeclaration")
 @js.native
@@ -17,4 +17,3 @@ class ClassDeclaration protected ()
     closeBraceToken: typingsSlinky.typescriptServices.TypeScript.ASTSpan
   ) = this()
 }
-

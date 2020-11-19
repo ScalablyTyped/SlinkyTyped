@@ -6,7 +6,7 @@ import typingsSlinky.semanticUiReact.cardCardMod.CardComponent
 import typingsSlinky.semanticUiReact.cardCardMod.CardProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("semantic-ui-react", "Card")
 @js.native
@@ -15,8 +15,6 @@ class Card protected ()
   def this(props: CardProps) = this()
   def this(props: CardProps, context: js.Any) = this()
 }
-
 @JSImport("semantic-ui-react", "Card")
 @js.native
 object Card extends TopLevel[CardComponent]
-

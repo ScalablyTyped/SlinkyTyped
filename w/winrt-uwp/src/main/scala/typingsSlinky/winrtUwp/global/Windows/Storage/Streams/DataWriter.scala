@@ -3,7 +3,7 @@ package typingsSlinky.winrtUwp.global.Windows.Storage.Streams
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IOutputStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Writes data to an output stream. */
 @JSGlobal("Windows.Storage.Streams.DataWriter")
@@ -17,4 +17,3 @@ class DataWriter ()
     */
   def this(outputStream: IOutputStream) = this()
 }
-

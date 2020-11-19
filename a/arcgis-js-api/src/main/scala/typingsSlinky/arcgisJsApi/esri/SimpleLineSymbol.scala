@@ -19,7 +19,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.solid
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.square
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.arcgisJsApi.esri.Symbol2D3D because Already inherited
@@ -28,6 +28,7 @@ trait SimpleLineSymbol
   extends Symbol2D
      with LineSymbol
      with typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D {
+  
   /**
     * Specifies the cap style. The cap is the end node of a polyline, or the end of a line segment that does not connect with another segment of the same polyline.  See the table below for possible values.
     *
@@ -45,6 +46,7 @@ trait SimpleLineSymbol
     * @default round
     */
   var cap: butt | round | square = js.native
+  
   /**
     * Specifies the join style. A `join` refers to the joint of a polyline, or the end of a line segment that connects to another segment of the same polyline. See the table below for possible values.
     *
@@ -60,6 +62,7 @@ trait SimpleLineSymbol
     * @default round
     */
   var join: miter | round | bevel = js.native
+  
   /**
     * Specifies the color, style, and placement of a symbol marker on the line.
     * > **Known Limitations**
@@ -68,6 +71,7 @@ trait SimpleLineSymbol
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleLineSymbol.html#marker)
     */
   var marker: LineSymbolMarker = js.native
+  
   /**
     * Maximum allowed ratio of the width of a miter join to the line width. Miter joins can get very wide at sharp line angles; this can be visually unpleasant or interfere with cartography. In the example below, the width of the miter join is about 3.6 times the width of the line.  ![SimpleLineSymbol.miterLimit](https://developers.arcgis.com/javascript/assets/img/apiref/symbols/sls-miter-limit.png)  A miter limit of `X` means that a miter join can be at most `X` times as wide as the line itself. Beyond that threshold, it is replaced with a bevel join. Referring to the previous example, setting the miter limit to 3.6 or greater has no effect on the generated visuals; setting the miter limit to 3.5 or smaller causes the replacement with a bevel join.  ![Enforcing miterLimit](https://developers.arcgis.com/javascript/assets/img/apiref/symbols/sls-miter-limit-enforcement.png)
     * > **Known Limitations**  This property is currently not supported in 3D [SceneViews](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
@@ -77,6 +81,7 @@ trait SimpleLineSymbol
     * @default 2
     */
   var miterLimit: Double = js.native
+  
   /**
     * Specifies the line style. Possible values are listed in the table below:
     *
@@ -103,4 +108,3 @@ trait SimpleLineSymbol
     */
   var style: dash | `dash-dot` | dot | `long-dash` | `long-dash-dot` | `long-dash-dot-dot` | none | `short-dash` | `short-dash-dot` | `short-dash-dot-dot` | `short-dot` | solid = js.native
 }
-

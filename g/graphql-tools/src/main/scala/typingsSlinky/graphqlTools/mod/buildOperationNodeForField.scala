@@ -4,11 +4,11 @@ import typingsSlinky.graphql.astMod.OperationDefinitionNode
 import typingsSlinky.graphqlToolsUtils.anon.ArgNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-tools", "buildOperationNodeForField")
 @js.native
 object buildOperationNodeForField extends js.Object {
+  
   def apply(hasSchemaKindFieldModelsIgnoreDepthLimitCircularReferenceDepthArgNamesSelectedFields: ArgNames): OperationDefinitionNode = js.native
 }
-

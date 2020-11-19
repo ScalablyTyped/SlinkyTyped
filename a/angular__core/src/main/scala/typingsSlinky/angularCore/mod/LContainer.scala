@@ -3,7 +3,7 @@ package typingsSlinky.angularCore.mod
 import typingsSlinky.std.Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The state associated with a container.
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LContainer
   extends Array[js.Any]
-

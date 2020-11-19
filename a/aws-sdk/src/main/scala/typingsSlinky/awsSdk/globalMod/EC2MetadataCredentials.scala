@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.globalMod
 import typingsSlinky.awsSdk.ec2MetadataCredentialsMod.EC2MetadataCredentialsOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/global", "EC2MetadataCredentials")
 @js.native
@@ -15,4 +15,3 @@ class EC2MetadataCredentials ()
   extends typingsSlinky.awsSdk.coreMod.EC2MetadataCredentials {
   def this(options: EC2MetadataCredentialsOptions) = this()
 }
-

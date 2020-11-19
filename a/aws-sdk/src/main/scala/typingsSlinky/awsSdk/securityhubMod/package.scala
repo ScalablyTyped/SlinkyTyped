@@ -2,44 +2,75 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object securityhubMod {
+  
   type AccountDetailsList = js.Array[typingsSlinky.awsSdk.securityhubMod.AccountDetails]
+  
   type AccountId = java.lang.String
+  
   type AccountIdList = js.Array[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   type ActionTargetList = js.Array[typingsSlinky.awsSdk.securityhubMod.ActionTarget]
+  
   type ArnList = js.Array[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   type AvailabilityZones = js.Array[typingsSlinky.awsSdk.securityhubMod.AvailabilityZone]
+  
   type AwsCloudFrontDistributionOriginItemList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsCloudFrontDistributionOriginItem]
+  
   type AwsEc2NetworkInterfaceSecurityGroupList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsEc2NetworkInterfaceSecurityGroup]
+  
   type AwsEc2SecurityGroupIpPermissionList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsEc2SecurityGroupIpPermission]
+  
   type AwsEc2SecurityGroupIpRangeList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsEc2SecurityGroupIpRange]
+  
   type AwsEc2SecurityGroupIpv6RangeList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsEc2SecurityGroupIpv6Range]
+  
   type AwsEc2SecurityGroupPrefixListIdList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsEc2SecurityGroupPrefixListId]
+  
   type AwsEc2SecurityGroupUserIdGroupPairList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsEc2SecurityGroupUserIdGroupPair]
+  
   type AwsEc2VolumeAttachmentList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsEc2VolumeAttachment]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Active_
     - typingsSlinky.awsSdk.awsSdkStrings.Inactive_
     - java.lang.String
   */
   type AwsIamAccessKeyStatus = typingsSlinky.awsSdk.securityhubMod._AwsIamAccessKeyStatus | java.lang.String
+  
   type AwsIamRoleAssumeRolePolicyDocument = java.lang.String
+  
   type AwsLambdaFunctionLayerList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsLambdaFunctionLayer]
+  
   type AwsLambdaLayerVersionNumber = scala.Double
+  
   type AwsRdsDbInstanceAssociatedRoles = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbInstanceAssociatedRole]
+  
   type AwsRdsDbInstanceVpcSecurityGroups = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbInstanceVpcSecurityGroup]
+  
   type AwsS3BucketServerSideEncryptionRules = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsS3BucketServerSideEncryptionRule]
+  
   type AwsSecurityFindingIdentifierList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsSecurityFindingIdentifier]
+  
   type AwsSecurityFindingList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsSecurityFinding]
+  
   type AwsSnsTopicSubscriptionList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsSnsTopicSubscription]
+  
   type AwsWafWebAclRuleList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsWafWebAclRule]
+  
   type BatchUpdateFindingsUnprocessedFindingsList = js.Array[typingsSlinky.awsSdk.securityhubMod.BatchUpdateFindingsUnprocessedFinding]
+  
   type Boolean = scala.Boolean
+  
   type CategoryList = js.Array[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   type CidrBlockAssociationList = js.Array[typingsSlinky.awsSdk.securityhubMod.CidrBlockAssociation]
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.securityhubMod.ClientApiVersions
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PASSED
     - typingsSlinky.awsSdk.awsSdkStrings.WARNING
@@ -48,33 +79,51 @@ package object securityhubMod {
     - java.lang.String
   */
   type ComplianceStatus = typingsSlinky.awsSdk.securityhubMod._ComplianceStatus | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
     - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
     - java.lang.String
   */
   type ControlStatus = typingsSlinky.awsSdk.securityhubMod._ControlStatus | java.lang.String
+  
   type CvssList = js.Array[typingsSlinky.awsSdk.securityhubMod.Cvss]
+  
   type DateFilterList = js.Array[typingsSlinky.awsSdk.securityhubMod.DateFilter]
+  
   type DateRangeUnit = typingsSlinky.awsSdk.awsSdkStrings.DAYS | java.lang.String
+  
   type Double = scala.Double
+  
   type FieldMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   type ImportFindingsErrorList = js.Array[typingsSlinky.awsSdk.securityhubMod.ImportFindingsError]
+  
   type InsightList = js.Array[typingsSlinky.awsSdk.securityhubMod.Insight]
+  
   type InsightResultValueList = js.Array[typingsSlinky.awsSdk.securityhubMod.InsightResultValue]
+  
   type Integer = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SEND_FINDINGS_TO_SECURITY_HUB
     - typingsSlinky.awsSdk.awsSdkStrings.RECEIVE_FINDINGS_FROM_SECURITY_HUB
     - java.lang.String
   */
   type IntegrationType = typingsSlinky.awsSdk.securityhubMod._IntegrationType | java.lang.String
+  
   type IntegrationTypeList = js.Array[typingsSlinky.awsSdk.securityhubMod.IntegrationType]
+  
   type InvitationList = js.Array[typingsSlinky.awsSdk.securityhubMod.Invitation]
+  
   type IpFilterList = js.Array[typingsSlinky.awsSdk.securityhubMod.IpFilter]
+  
   type Ipv6CidrBlockAssociationList = js.Array[typingsSlinky.awsSdk.securityhubMod.Ipv6CidrBlockAssociation]
+  
   type KeywordFilterList = js.Array[typingsSlinky.awsSdk.securityhubMod.KeywordFilter]
+  
   type MalwareList = js.Array[typingsSlinky.awsSdk.securityhubMod.Malware]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.OBSERVED
     - typingsSlinky.awsSdk.awsSdkStrings.REMOVAL_FAILED
@@ -82,6 +131,7 @@ package object securityhubMod {
     - java.lang.String
   */
   type MalwareState = typingsSlinky.awsSdk.securityhubMod._MalwareState | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ADWARE
     - typingsSlinky.awsSdk.awsSdkStrings.BLENDED_THREAT
@@ -101,21 +151,32 @@ package object securityhubMod {
     - java.lang.String
   */
   type MalwareType = typingsSlinky.awsSdk.securityhubMod._MalwareType | java.lang.String
+  
   type MapFilterComparison = typingsSlinky.awsSdk.awsSdkStrings.EQUALS | java.lang.String
+  
   type MapFilterList = js.Array[typingsSlinky.awsSdk.securityhubMod.MapFilter]
+  
   type MaxResults = scala.Double
+  
   type MemberList = js.Array[typingsSlinky.awsSdk.securityhubMod.Member]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.IN
     - typingsSlinky.awsSdk.awsSdkStrings.OUT
     - java.lang.String
   */
   type NetworkDirection = typingsSlinky.awsSdk.securityhubMod._NetworkDirection | java.lang.String
+  
   type NetworkPathList = js.Array[typingsSlinky.awsSdk.securityhubMod.NetworkPathComponent]
+  
   type NextToken = java.lang.String
+  
   type NonEmptyString = java.lang.String
+  
   type NonEmptyStringList = js.Array[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   type NumberFilterList = js.Array[typingsSlinky.awsSdk.securityhubMod.NumberFilter]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.aws_
     - typingsSlinky.awsSdk.awsSdkStrings.`aws-cn`
@@ -123,22 +184,34 @@ package object securityhubMod {
     - java.lang.String
   */
   type Partition = typingsSlinky.awsSdk.securityhubMod._Partition | java.lang.String
+  
   type PortRangeList = js.Array[typingsSlinky.awsSdk.securityhubMod.PortRange]
+  
   type ProductSubscriptionArnList = js.Array[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   type ProductsList = js.Array[typingsSlinky.awsSdk.securityhubMod.Product]
+  
   type RatioScale = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
     - typingsSlinky.awsSdk.awsSdkStrings.ARCHIVED
     - java.lang.String
   */
   type RecordState = typingsSlinky.awsSdk.securityhubMod._RecordState | java.lang.String
+  
   type RelatedFindingList = js.Array[typingsSlinky.awsSdk.securityhubMod.RelatedFinding]
+  
   type RelatedRequirementsList = js.Array[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   type ResourceArn = java.lang.String
+  
   type ResourceList = js.Array[typingsSlinky.awsSdk.securityhubMod.Resource]
+  
   type ResultList = js.Array[typingsSlinky.awsSdk.securityhubMod.Result]
+  
   type SecurityGroups = js.Array[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.INFORMATIONAL
     - typingsSlinky.awsSdk.awsSdkStrings.LOW
@@ -148,6 +221,7 @@ package object securityhubMod {
     - java.lang.String
   */
   type SeverityLabel = typingsSlinky.awsSdk.securityhubMod._SeverityLabel | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.LOW
     - typingsSlinky.awsSdk.awsSdkStrings.MEDIUM
@@ -156,17 +230,24 @@ package object securityhubMod {
     - java.lang.String
   */
   type SeverityRating = typingsSlinky.awsSdk.securityhubMod._SeverityRating | java.lang.String
+  
   type SoftwarePackageList = js.Array[typingsSlinky.awsSdk.securityhubMod.SoftwarePackage]
+  
   type SortCriteria = js.Array[typingsSlinky.awsSdk.securityhubMod.SortCriterion]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.asc_
     - typingsSlinky.awsSdk.awsSdkStrings.desc_
     - java.lang.String
   */
   type SortOrder = typingsSlinky.awsSdk.securityhubMod._SortOrder | java.lang.String
+  
   type Standards = js.Array[typingsSlinky.awsSdk.securityhubMod.Standard]
+  
   type StandardsControls = js.Array[typingsSlinky.awsSdk.securityhubMod.StandardsControl]
+  
   type StandardsInputParameterMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PENDING
     - typingsSlinky.awsSdk.awsSdkStrings.READY
@@ -176,22 +257,34 @@ package object securityhubMod {
     - java.lang.String
   */
   type StandardsStatus = typingsSlinky.awsSdk.securityhubMod._StandardsStatus | java.lang.String
+  
   type StandardsSubscriptionArns = js.Array[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   type StandardsSubscriptionRequests = js.Array[typingsSlinky.awsSdk.securityhubMod.StandardsSubscriptionRequest]
+  
   type StandardsSubscriptions = js.Array[typingsSlinky.awsSdk.securityhubMod.StandardsSubscription]
+  
   type StatusReasonsList = js.Array[typingsSlinky.awsSdk.securityhubMod.StatusReason]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EQUALS
     - typingsSlinky.awsSdk.awsSdkStrings.PREFIX
     - java.lang.String
   */
   type StringFilterComparison = typingsSlinky.awsSdk.securityhubMod._StringFilterComparison | java.lang.String
+  
   type StringFilterList = js.Array[typingsSlinky.awsSdk.securityhubMod.StringFilter]
+  
   type StringList = js.Array[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   type TagKey = java.lang.String
+  
   type TagKeyList = js.Array[typingsSlinky.awsSdk.securityhubMod.TagKey]
+  
   type TagMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.securityhubMod.TagValue]
+  
   type TagValue = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.BACKDOOR
     - typingsSlinky.awsSdk.awsSdkStrings.CARD_STEALER
@@ -202,7 +295,9 @@ package object securityhubMod {
     - java.lang.String
   */
   type ThreatIntelIndicatorCategory = typingsSlinky.awsSdk.securityhubMod._ThreatIntelIndicatorCategory | java.lang.String
+  
   type ThreatIntelIndicatorList = js.Array[typingsSlinky.awsSdk.securityhubMod.ThreatIntelIndicator]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DOMAIN
     - typingsSlinky.awsSdk.awsSdkStrings.EMAIL_ADDRESS
@@ -218,8 +313,11 @@ package object securityhubMod {
     - java.lang.String
   */
   type ThreatIntelIndicatorType = typingsSlinky.awsSdk.securityhubMod._ThreatIntelIndicatorType | java.lang.String
+  
   type Timestamp = js.Date
+  
   type TypeList = js.Array[typingsSlinky.awsSdk.securityhubMod.NonEmptyString]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.UNKNOWN
     - typingsSlinky.awsSdk.awsSdkStrings.TRUE_POSITIVE
@@ -228,8 +326,11 @@ package object securityhubMod {
     - java.lang.String
   */
   type VerificationState = typingsSlinky.awsSdk.securityhubMod._VerificationState | java.lang.String
+  
   type VulnerabilityList = js.Array[typingsSlinky.awsSdk.securityhubMod.Vulnerability]
+  
   type WafExcludedRuleList = js.Array[typingsSlinky.awsSdk.securityhubMod.WafExcludedRule]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NEW
     - typingsSlinky.awsSdk.awsSdkStrings.ASSIGNED
@@ -239,6 +340,7 @@ package object securityhubMod {
     - java.lang.String
   */
   type WorkflowState = typingsSlinky.awsSdk.securityhubMod._WorkflowState | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NEW
     - typingsSlinky.awsSdk.awsSdkStrings.NOTIFIED
@@ -247,6 +349,7 @@ package object securityhubMod {
     - java.lang.String
   */
   type WorkflowStatus = typingsSlinky.awsSdk.securityhubMod._WorkflowStatus | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2018-10-26`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

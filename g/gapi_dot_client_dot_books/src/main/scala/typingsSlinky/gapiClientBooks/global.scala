@@ -16,33 +16,45 @@ import typingsSlinky.gapiClientBooks.gapiClientBooksStrings.books
 import typingsSlinky.gapiClientBooks.gapiClientBooksStrings.v1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobalScope
 @js.native
 object global extends js.Object {
+  
   @js.native
   object gapi extends js.Object {
+    
     @js.native
     object client extends js.Object {
+      
       val bookshelves: BookshelvesResource = js.native
+      
       val cloudloading: CloudloadingResource = js.native
+      
       val dictionary: DictionaryResource = js.native
+      
       val layers: LayersResource = js.native
-      val myconfig: MyconfigResource = js.native
-      val mylibrary: MylibraryResource = js.native
-      val notification: NotificationResource = js.native
-      val onboarding: OnboardingResource = js.native
-      val personalizedstream: PersonalizedstreamResource = js.native
-      val promooffer: PromoofferResource = js.native
-      val series: SeriesResource = js.native
-      val volumes: VolumesResource = js.native
+      
       /** Load Books API v1 */
       def load(name: books, version: v1): js.Thenable[Unit] = js.native
       def load(name: books, version: v1, callback: js.Function0[_]): Unit = js.native
+      
+      val myconfig: MyconfigResource = js.native
+      
+      val mylibrary: MylibraryResource = js.native
+      
+      val notification: NotificationResource = js.native
+      
+      val onboarding: OnboardingResource = js.native
+      
+      val personalizedstream: PersonalizedstreamResource = js.native
+      
+      val promooffer: PromoofferResource = js.native
+      
+      val series: SeriesResource = js.native
+      
+      val volumes: VolumesResource = js.native
     }
-    
   }
-  
 }
-

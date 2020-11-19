@@ -14,7 +14,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.script
 import typingsSlinky.babelTypes.babelTypesStrings.set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.FunctionDeclaration_
@@ -25,8 +25,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ClassMethod_
 */
 trait FunctionParent extends js.Object
-
 object FunctionParent {
+  
   @scala.inline
   def Program_(
     body: js.Array[Statement | ModuleDeclaration],
@@ -40,6 +40,7 @@ object FunctionParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionParent]
   }
+  
   @scala.inline
   def ObjectMethod_(
     async: Boolean,
@@ -61,6 +62,7 @@ object FunctionParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionParent]
   }
+  
   @scala.inline
   def ClassMethod_(
     async: Boolean,
@@ -82,6 +84,7 @@ object FunctionParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionParent]
   }
+  
   @scala.inline
   def FunctionExpression_(
     async: Boolean,
@@ -98,6 +101,7 @@ object FunctionParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionParent]
   }
+  
   @scala.inline
   def ArrowFunctionExpression_(
     async: Boolean,
@@ -115,6 +119,7 @@ object FunctionParent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionParent]
   }
+  
   @scala.inline
   def FunctionDeclaration_(
     async: Boolean,
@@ -132,4 +137,3 @@ object FunctionParent {
     __obj.asInstanceOf[FunctionParent]
   }
 }
-

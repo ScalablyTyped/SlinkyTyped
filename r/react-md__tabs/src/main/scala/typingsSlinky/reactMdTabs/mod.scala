@@ -14,16 +14,18 @@ import typingsSlinky.reactMdTabs.tabsManagerMod.InitializedTabsManagerContext
 import typingsSlinky.reactMdTabs.tabsManagerMod.TabsManagerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/tabs", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * The `Tab` is a low-level component that just renders an accessible tab widget
     * along with some general styles and an optional icon.
     */
   val Tab: ForwardRefExoticComponent[TabProps with RefAttributes[HTMLButtonElement]] = js.native
+  
   /**
     * This component renders an accessible tab panel with enter and exit
     * animations.  This probably should only be used internally as it relies on the
@@ -31,6 +33,7 @@ object mod extends js.Object {
     * `react-transition-group` to work as expected.
     */
   val TabPanel: ForwardRefExoticComponent[TabPanelProps with RefAttributes[HTMLDivElement]] = js.native
+  
   /**
     * This component allows you to control the visibility of the `TabPanel`
     * components and animating the next and current panels as needed. This works by
@@ -39,7 +42,9 @@ object mod extends js.Object {
     * `TabPanel` and should not be conditional.
     */
   val TabPanels: ForwardRefExoticComponent[TabPanelsProps with RefAttributes[HTMLDivElement]] = js.native
+  
   val Tabs: ForwardRefExoticComponent[PickTabsListPropshiddenco] = js.native
+  
   /**
     * The `TabsList` component is the container for all the individual `Tab`s that
     * should be rendered. This handles adding an active indicator underneath the
@@ -51,9 +56,10 @@ object mod extends js.Object {
     * implementation is desired.
     */
   val TabsList: ForwardRefExoticComponent[TabsListProps with RefAttributes[HTMLDivElement]] = js.native
+  
   def TabsManager(
     hasTabsIdDefaultActiveIndexActiveIndexOnActiveIndexChangeTabsStackedIconAfterChildren: TabsManagerProps
   ): ReactElement = js.native
+  
   def useTabs(): InitializedTabsManagerContext = js.native
 }
-

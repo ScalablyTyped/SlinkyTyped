@@ -2,13 +2,18 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object marketplacecommerceanalyticsMod {
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.marketplacecommerceanalyticsMod.ClientApiVersions
+  
   type CustomerDefinedValues = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.marketplacecommerceanalyticsMod.OptionalValue]
+  
   type DataSetPublicationDate = js.Date
+  
   type DataSetRequestId = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.customer_subscriber_hourly_monthly_subscriptions
     - typingsSlinky.awsSdk.awsSdkStrings.customer_subscriber_annual_subscriptions
@@ -38,19 +43,28 @@ package object marketplacecommerceanalyticsMod {
     - java.lang.String
   */
   type DataSetType = typingsSlinky.awsSdk.marketplacecommerceanalyticsMod._DataSetType | java.lang.String
+  
   type DestinationS3BucketName = java.lang.String
+  
   type DestinationS3Prefix = java.lang.String
+  
   type FromDate = js.Date
+  
   type OptionalKey = java.lang.String
+  
   type OptionalValue = java.lang.String
+  
   type RoleNameArn = java.lang.String
+  
   type SnsTopicArn = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.customer_support_contacts_data
     - typingsSlinky.awsSdk.awsSdkStrings.test_customer_support_contacts_data
     - java.lang.String
   */
   type SupportDataSetType = typingsSlinky.awsSdk.marketplacecommerceanalyticsMod._SupportDataSetType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2015-07-01`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact.spinnerTypesMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.top
@@ -11,15 +11,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.left
 */
 trait SpinnerLabelPosition extends js.Object
-
 object SpinnerLabelPosition {
+  
   @scala.inline
   def bottom: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.bottom = "bottom".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.bottom]
+  
   @scala.inline
   def left: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.left = "left".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.left]
+  
   @scala.inline
   def right: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.right = "right".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.right]
+  
   @scala.inline
   def top: typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.top = "top".asInstanceOf[typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.top]
 }
-

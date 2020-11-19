@@ -6,7 +6,7 @@ import typingsSlinky.ace.AceAjax.IEditSession
 import typingsSlinky.ace.AceAjax.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AceAjax.PlaceHolder")
 @js.native
@@ -35,4 +35,3 @@ Instantiable6[
       /* positions */ js.Array[Position], 
       typingsSlinky.ace.AceAjax.PlaceHolder
     ]
-

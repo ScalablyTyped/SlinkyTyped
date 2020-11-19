@@ -3,7 +3,7 @@ package typingsSlinky.ink.staticMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * `<Static>` component permanently renders its output above everything else.
@@ -20,7 +20,8 @@ import scala.scalajs.js.annotation._
 @JSImport("ink/build/components/Static", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var displayName: String = js.native
+  
   def apply[T](props: Props[T]): ReactElement = js.native
+  
+  var displayName: String = js.native
 }
-

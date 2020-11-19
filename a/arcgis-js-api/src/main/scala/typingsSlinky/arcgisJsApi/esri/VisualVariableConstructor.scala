@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait VisualVariableConstructor
@@ -15,6 +15,6 @@ trait VisualVariableConstructor
   */
 Instantiable0[VisualVariable]
      with Instantiable1[/* properties */ VisualVariableProperties, VisualVariable] {
+  
   def fromJSON(json: js.Any): VisualVariable = js.native
 }
-

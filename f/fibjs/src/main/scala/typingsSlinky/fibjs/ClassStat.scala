@@ -2,7 +2,7 @@ package typingsSlinky.fibjs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** module Or Internal Object */
 /**
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait ClassStat extends ClassObject {
+  
   /**
     * class prop 
     *
@@ -21,6 +22,7 @@ trait ClassStat extends ClassObject {
     * @type Date
     */
   var atime: js.Date = js.native
+  
   /**
     * class prop 
     *
@@ -31,6 +33,7 @@ trait ClassStat extends ClassObject {
     * @type Date
     */
   var ctime: js.Date = js.native
+  
   /**
     * class prop 
     *
@@ -41,6 +44,97 @@ trait ClassStat extends ClassObject {
     * @type Integer
     */
   var gid: Double = js.native
+  
+  /**
+    * 
+    * @brief 查询文件是否是目录
+    * @return 为 true 则是目录
+    * 
+    * 
+    * 
+    */
+  def isDirectory(): Boolean = js.native
+  
+  /**
+    * 
+    * @brief 查询文件是否有执行权限
+    * @return 为 true 则有执行权限
+    * 
+    * 
+    * 
+    */
+  def isExecutable(): Boolean = js.native
+  
+  /**
+    * 
+    * @brief 查询文件是否是文件
+    * @return 为 true 则是文件
+    * 
+    * 
+    * 
+    */
+  def isFile(): Boolean = js.native
+  
+  /**
+    * 
+    * @brief 查询文件是否隐藏
+    * @return 为 true 则隐藏
+    * 
+    * 
+    * 
+    */
+  def isHidden(): Boolean = js.native
+  
+  /**
+    * 
+    * @brief 查询文件是否是内存文件
+    * @return 为 true 则是内存文件
+    * 
+    * 
+    * 
+    */
+  def isMemory(): Boolean = js.native
+  
+  /**
+    * 
+    * @brief 查询文件是否有读权限
+    * @return 为 true 则有读权限
+    * 
+    * 
+    * 
+    */
+  def isReadable(): Boolean = js.native
+  
+  /**
+    * 
+    * @brief 查询文件是否是 Socket
+    * @return 为 true 则是 Socket
+    * 
+    * 
+    * 
+    */
+  def isSocket(): Boolean = js.native
+  
+  /**
+    * 
+    * @brief 查询文件是否是符号链接
+    * @return 为 true 则是符号链接
+    * 
+    * 
+    * 
+    */
+  def isSymbolicLink(): Boolean = js.native
+  
+  /**
+    * 
+    * @brief 查询文件是否有写入权限
+    * @return 为 true 则有写入权限
+    * 
+    * 
+    * 
+    */
+  def isWritable(): Boolean = js.native
+  
   /**
     * class prop 
     *
@@ -51,6 +145,7 @@ trait ClassStat extends ClassObject {
     * @type Integer
     */
   var mode: Double = js.native
+  
   /**
     * class prop 
     *
@@ -61,6 +156,7 @@ trait ClassStat extends ClassObject {
     * @type Date
     */
   var mtime: js.Date = js.native
+  
   /**
     * class prop 
     *
@@ -71,6 +167,7 @@ trait ClassStat extends ClassObject {
     * @type String
     */
   var name: String = js.native
+  
   /**
     * class prop 
     *
@@ -81,6 +178,7 @@ trait ClassStat extends ClassObject {
     * @type Long
     */
   var size: Double = js.native
+  
   /**
     * class prop 
     *
@@ -91,86 +189,4 @@ trait ClassStat extends ClassObject {
     * @type Integer
     */
   var uid: Double = js.native
-  /**
-    * 
-    * @brief 查询文件是否是目录
-    * @return 为 true 则是目录
-    * 
-    * 
-    * 
-    */
-  def isDirectory(): Boolean = js.native
-  /**
-    * 
-    * @brief 查询文件是否有执行权限
-    * @return 为 true 则有执行权限
-    * 
-    * 
-    * 
-    */
-  def isExecutable(): Boolean = js.native
-  /**
-    * 
-    * @brief 查询文件是否是文件
-    * @return 为 true 则是文件
-    * 
-    * 
-    * 
-    */
-  def isFile(): Boolean = js.native
-  /**
-    * 
-    * @brief 查询文件是否隐藏
-    * @return 为 true 则隐藏
-    * 
-    * 
-    * 
-    */
-  def isHidden(): Boolean = js.native
-  /**
-    * 
-    * @brief 查询文件是否是内存文件
-    * @return 为 true 则是内存文件
-    * 
-    * 
-    * 
-    */
-  def isMemory(): Boolean = js.native
-  /**
-    * 
-    * @brief 查询文件是否有读权限
-    * @return 为 true 则有读权限
-    * 
-    * 
-    * 
-    */
-  def isReadable(): Boolean = js.native
-  /**
-    * 
-    * @brief 查询文件是否是 Socket
-    * @return 为 true 则是 Socket
-    * 
-    * 
-    * 
-    */
-  def isSocket(): Boolean = js.native
-  /**
-    * 
-    * @brief 查询文件是否是符号链接
-    * @return 为 true 则是符号链接
-    * 
-    * 
-    * 
-    */
-  def isSymbolicLink(): Boolean = js.native
-  /**
-    * 
-    * @brief 查询文件是否有写入权限
-    * @return 为 true 则有写入权限
-    * 
-    * 
-    * 
-    */
-  def isWritable(): Boolean = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.paper.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("paper", "Curve")
 @js.native
@@ -13,4 +13,3 @@ class Curve protected ()
     */
   def this(segment1: typingsSlinky.paper.paper.Segment, segment2: typingsSlinky.paper.paper.Segment) = this()
 }
-

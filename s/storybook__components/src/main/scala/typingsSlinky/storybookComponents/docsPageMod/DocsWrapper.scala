@@ -8,7 +8,7 @@ import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@storybook/components/dist/blocks/DocsPage", "DocsWrapper")
 @js.native
@@ -16,4 +16,3 @@ object DocsWrapper
   extends TopLevel[
       StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], js.Object, Theme]
     ]
-

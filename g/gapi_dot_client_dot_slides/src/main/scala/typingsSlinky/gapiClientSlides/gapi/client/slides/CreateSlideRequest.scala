@@ -2,16 +2,18 @@ package typingsSlinky.gapiClientSlides.gapi.client.slides
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CreateSlideRequest extends js.Object {
+  
   /**
     * The optional zero-based index indicating where to insert the slides.
     *
     * If you don't specify an index, the new slide is created at the end.
     */
   var insertionIndex: js.UndefOr[Double] = js.native
+  
   /**
     * A user-supplied object ID.
     *
@@ -25,12 +27,14 @@ trait CreateSlideRequest extends js.Object {
     * If you don't specify an ID, a unique one is generated.
     */
   var objectId: js.UndefOr[String] = js.native
+  
   /**
     * An optional list of object ID mappings from the placeholder(s) on the layout to the placeholder(s)
     * that will be created on the new slide from that specified layout. Can only
     * be used when `slide_layout_reference` is specified.
     */
   var placeholderIdMappings: js.UndefOr[js.Array[LayoutPlaceholderIdMapping]] = js.native
+  
   /**
     * Layout reference of the slide to be inserted, based on the &#42;current
     * master&#42;, which is one of the following:
@@ -47,43 +51,54 @@ trait CreateSlideRequest extends js.Object {
     */
   var slideLayoutReference: js.UndefOr[LayoutReference] = js.native
 }
-
 object CreateSlideRequest {
+  
   @scala.inline
   def apply(): CreateSlideRequest = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CreateSlideRequest]
   }
+  
   @scala.inline
   implicit class CreateSlideRequestOps[Self <: CreateSlideRequest] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setInsertionIndex(value: Double): Self = this.set("insertionIndex", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteInsertionIndex: Self = this.set("insertionIndex", js.undefined)
+    
     @scala.inline
     def setObjectId(value: String): Self = this.set("objectId", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteObjectId: Self = this.set("objectId", js.undefined)
+    
     @scala.inline
     def setPlaceholderIdMappingsVarargs(value: LayoutPlaceholderIdMapping*): Self = this.set("placeholderIdMappings", js.Array(value :_*))
+    
     @scala.inline
     def setPlaceholderIdMappings(value: js.Array[LayoutPlaceholderIdMapping]): Self = this.set("placeholderIdMappings", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deletePlaceholderIdMappings: Self = this.set("placeholderIdMappings", js.undefined)
+    
     @scala.inline
     def setSlideLayoutReference(value: LayoutReference): Self = this.set("slideLayoutReference", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def deleteSlideLayoutReference: Self = this.set("slideLayoutReference", js.undefined)
   }
-  
 }
-

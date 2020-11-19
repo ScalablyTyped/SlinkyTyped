@@ -5,15 +5,15 @@ import typingsSlinky.activexLibreoffice.`type`
 import typingsSlinky.activexLibreoffice.com_.sun.star.beans.NamedValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** @since LibreOffice 4.0 */
 @js.native
 trait XNSSInitializer
   extends XDigestContextSupplier
      with XCipherContextSupplier
-
 object XNSSInitializer {
+  
   @scala.inline
   def apply(
     acquire: () => Unit,
@@ -26,4 +26,3 @@ object XNSSInitializer {
     __obj.asInstanceOf[XNSSInitializer]
   }
 }
-

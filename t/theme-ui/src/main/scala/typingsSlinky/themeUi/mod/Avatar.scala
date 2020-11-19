@@ -6,9 +6,8 @@ import typingsSlinky.themeUiComponents.mod.AvatarProps
 import typingsSlinky.themeUiComponents.mod.ForwardRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("theme-ui", "Avatar")
 @js.native
 object Avatar extends TopLevel[ForwardRef[HTMLImageElement, AvatarProps]]
-

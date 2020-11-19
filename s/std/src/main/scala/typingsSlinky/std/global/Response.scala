@@ -7,7 +7,7 @@ import org.scalajs.dom.experimental.ResponseInit
 import typingsSlinky.std.BodyInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Response")
 @js.native
@@ -17,7 +17,6 @@ class Response ()
   def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
   def this(body: Null, init: ResponseInit) = this()
 }
-
 @JSGlobal("Response")
 @js.native
 object Response
@@ -28,8 +27,9 @@ object Response
       /* init */ ResponseInit, 
       org.scalajs.dom.experimental.Response
     ] {
+  
   def error(): org.scalajs.dom.experimental.Response = js.native
+  
   def redirect(url: java.lang.String): org.scalajs.dom.experimental.Response = js.native
   def redirect(url: java.lang.String, status: Double): org.scalajs.dom.experimental.Response = js.native
 }
-

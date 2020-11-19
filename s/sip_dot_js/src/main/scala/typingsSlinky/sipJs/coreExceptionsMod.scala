@@ -2,11 +2,12 @@ package typingsSlinky.sipJs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sip.js/lib/core/exceptions", JSImport.Namespace)
 @js.native
 object coreExceptionsMod extends js.Object {
+  
   @js.native
   abstract class Exception protected ()
     extends typingsSlinky.sipJs.exceptionMod.Exception {
@@ -24,6 +25,4 @@ object coreExceptionsMod extends js.Object {
     extends typingsSlinky.sipJs.transportErrorMod.TransportError {
     def this(message: String) = this()
   }
-  
 }
-

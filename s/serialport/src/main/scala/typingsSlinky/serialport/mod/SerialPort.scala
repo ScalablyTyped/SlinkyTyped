@@ -11,28 +11,40 @@ import typingsSlinky.serialport.serialportStrings.utf16le
 import typingsSlinky.serialport.serialportStrings.utf8
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SerialPort extends Duplex {
+  
   val baudRate: Double = js.native
+  
   val binding: BaseBinding = js.native
-  val isOpen: Boolean = js.native
-  val path: String = js.native
+  
   def close(): Unit = js.native
   def close(callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  
   def drain(): Unit = js.native
   def drain(callback: ErrorCallback): Unit = js.native
+  
   def flush(): Unit = js.native
   def flush(callback: ErrorCallback): Unit = js.native
+  
   def get(): Unit = js.native
   def get(callback: ModemBitsCallback): Unit = js.native
+  
+  val isOpen: Boolean = js.native
+  
   def open(): Unit = js.native
   def open(callback: ErrorCallback): Unit = js.native
+  
+  val path: String = js.native
+  
   def set(options: SetOptions): Unit = js.native
   def set(options: SetOptions, callback: ErrorCallback): Unit = js.native
+  
   def update(options: UpdateOptions): Unit = js.native
   def update(options: UpdateOptions, callback: ErrorCallback): Unit = js.native
+  
   def write(
     buffer: String,
     encoding: js.UndefOr[scala.Nothing],
@@ -232,4 +244,3 @@ trait SerialPort extends Duplex {
     callback: js.Function2[/* error */ js.UndefOr[js.Error | Null], /* bytesWritten */ Double, Unit]
   ): Boolean = js.native
 }
-

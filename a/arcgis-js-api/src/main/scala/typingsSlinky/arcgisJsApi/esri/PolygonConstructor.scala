@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PolygonConstructor
@@ -15,6 +15,7 @@ trait PolygonConstructor
   */
 Instantiable0[Polygon]
      with Instantiable1[/* properties */ PolygonProperties, Polygon] {
+  
   /**
     * Converts the given Extent to a Polygon instance. This is useful for scenarios in which you would like to display an area of interest, which is typically defined by an Extent or bounding box, as a polygon with a fill symbol in the view. Some geoprocessing tools require input geometries to be of a Polygon type and not an Extent.
     *
@@ -24,6 +25,6 @@ Instantiable0[Polygon]
     *
     */
   def fromExtent(extent: Extent): Polygon = js.native
+  
   def fromJSON(json: js.Any): Polygon = js.native
 }
-

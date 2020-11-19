@@ -2,9 +2,19 @@ package typingsSlinky.eslintPluginReact
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object eslintPluginReactStrings {
+  
+  @scala.inline
+  def TypeDeclarationBuilders: TypeDeclarationBuilders = "TypeDeclarationBuilders".asInstanceOf[TypeDeclarationBuilders]
+  
+  @scala.inline
+  def shape: shape = "shape".asInstanceOf[shape]
+  
+  @scala.inline
+  def union: union = "union".asInstanceOf[union]
+  
   @js.native
   sealed trait TypeDeclarationBuilders extends js.Object
   
@@ -13,12 +23,4 @@ object eslintPluginReactStrings {
   
   @js.native
   sealed trait union extends js.Object
-  
-  @scala.inline
-  def TypeDeclarationBuilders: TypeDeclarationBuilders = "TypeDeclarationBuilders".asInstanceOf[TypeDeclarationBuilders]
-  @scala.inline
-  def shape: shape = "shape".asInstanceOf[shape]
-  @scala.inline
-  def union: union = "union".asInstanceOf[union]
 }
-

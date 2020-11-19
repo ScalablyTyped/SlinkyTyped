@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.std.WorkerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("Worker")
 @js.native
@@ -16,7 +16,6 @@ class Worker protected ()
   def this(stringUrl: java.lang.String, options: WorkerOptions) = this()
   def this(stringUrl: org.scalajs.dom.experimental.URL, options: WorkerOptions) = this()
 }
-
 @JSGlobal("Worker")
 @js.native
 object Worker
@@ -29,4 +28,3 @@ object Worker
       /* options */ WorkerOptions, 
       org.scalajs.dom.raw.Worker
     ]
-

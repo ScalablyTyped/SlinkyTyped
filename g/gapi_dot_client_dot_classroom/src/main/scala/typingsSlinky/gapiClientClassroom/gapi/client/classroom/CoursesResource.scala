@@ -10,16 +10,17 @@ import typingsSlinky.gapiClientClassroom.anon.PrettyPrintQuotaUser
 import typingsSlinky.gapiClientClassroom.anon.QuotaUserResource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CoursesResource extends js.Object {
+  
   var aliases: AliasesResource = js.native
+  
   var announcements: AnnouncementsResource = js.native
+  
   var courseWork: CourseWorkResource = js.native
-  var students: StudentsResource = js.native
-  var teachers: TeachersResource = js.native
-  var topics: TopicsResource = js.native
+  
   /**
     * Creates a course.
     *
@@ -39,6 +40,7 @@ trait CoursesResource extends js.Object {
     */
   def create(request: CallbackFields): Request[Course] = js.native
   def create(request: KeyOauthtoken, body: Course): Request[Course] = js.native
+  
   /**
     * Deletes a course.
     *
@@ -50,6 +52,7 @@ trait CoursesResource extends js.Object {
     */
   def delete(): Request[js.Object] = js.native
   def delete(request: IdKey): Request[js.Object] = js.native
+  
   /**
     * Returns a course.
     *
@@ -61,6 +64,7 @@ trait CoursesResource extends js.Object {
     */
   def get(): Request[Course] = js.native
   def get(request: IdKey): Request[Course] = js.native
+  
   /**
     * Returns a list of courses that the requesting user is permitted to view,
     * restricted to those that match the request. Returned courses are ordered by
@@ -74,6 +78,7 @@ trait CoursesResource extends js.Object {
     */
   def list(): Request[ListCoursesResponse] = js.native
   def list(request: CourseStates): Request[ListCoursesResponse] = js.native
+  
   /**
     * Updates one or more fields in a course.
     *
@@ -89,6 +94,13 @@ trait CoursesResource extends js.Object {
     */
   def patch(request: OauthtokenPrettyPrint): Request[Course] = js.native
   def patch(request: PrettyPrintQuotaUser, body: Course): Request[Course] = js.native
+  
+  var students: StudentsResource = js.native
+  
+  var teachers: TeachersResource = js.native
+  
+  var topics: TopicsResource = js.native
+  
   def update(request: IdKey, body: Course): Request[Course] = js.native
   /**
     * Updates a course.
@@ -103,4 +115,3 @@ trait CoursesResource extends js.Object {
     */
   def update(request: QuotaUserResource): Request[Course] = js.native
 }
-

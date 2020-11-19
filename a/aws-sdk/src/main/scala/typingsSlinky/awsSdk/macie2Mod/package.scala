@@ -2,20 +2,27 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object macie2Mod {
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
     - typingsSlinky.awsSdk.awsSdkStrings.DISABLING_IN_PROGRESS
     - java.lang.String
   */
   type AdminStatus = typingsSlinky.awsSdk.macie2Mod._AdminStatus | java.lang.String
+  
   type BucketCriteria = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.macie2Mod.BucketCriteriaAdditionalProperties]
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.macie2Mod.ClientApiVersions
+  
   type Criterion = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.macie2Mod.CriterionAdditionalProperties]
+  
   type Currency = typingsSlinky.awsSdk.awsSdkStrings.USD | java.lang.String
+  
   type CustomDetections = js.Array[typingsSlinky.awsSdk.macie2Mod.CustomDetection]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SUNDAY
     - typingsSlinky.awsSdk.awsSdkStrings.MONDAY
@@ -27,13 +34,16 @@ package object macie2Mod {
     - java.lang.String
   */
   type DayOfWeek = typingsSlinky.awsSdk.macie2Mod._DayOfWeek | java.lang.String
+  
   type DefaultDetections = js.Array[typingsSlinky.awsSdk.macie2Mod.DefaultDetection]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PUBLIC
     - typingsSlinky.awsSdk.awsSdkStrings.NOT_PUBLIC
     - java.lang.String
   */
   type EffectivePermission = typingsSlinky.awsSdk.macie2Mod._EffectivePermission | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NONE
     - typingsSlinky.awsSdk.awsSdkStrings.AES256
@@ -42,19 +52,23 @@ package object macie2Mod {
     - java.lang.String
   */
   type EncryptionType = typingsSlinky.awsSdk.macie2Mod._EncryptionType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ClientError
     - typingsSlinky.awsSdk.awsSdkStrings.InternalError
     - java.lang.String
   */
   type ErrorCode = typingsSlinky.awsSdk.macie2Mod._ErrorCode | java.lang.String
+  
   type FindingActionType = typingsSlinky.awsSdk.awsSdkStrings.AWS_API_CALL | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CLASSIFICATION
     - typingsSlinky.awsSdk.awsSdkStrings.POLICY
     - java.lang.String
   */
   type FindingCategory = typingsSlinky.awsSdk.macie2Mod._FindingCategory | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.FIFTEEN_MINUTES
     - typingsSlinky.awsSdk.awsSdkStrings.ONE_HOUR
@@ -62,12 +76,14 @@ package object macie2Mod {
     - java.lang.String
   */
   type FindingPublishingFrequency = typingsSlinky.awsSdk.macie2Mod._FindingPublishingFrequency | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.groupKey
     - typingsSlinky.awsSdk.awsSdkStrings.count__
     - java.lang.String
   */
   type FindingStatisticsSortAttributeName = typingsSlinky.awsSdk.macie2Mod._FindingStatisticsSortAttributeName | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SensitiveDataColonS3ObjectSlashMultiple
     - typingsSlinky.awsSdk.awsSdkStrings.SensitiveDataColonS3ObjectSlashFinancial
@@ -82,12 +98,14 @@ package object macie2Mod {
     - java.lang.String
   */
   type FindingType = typingsSlinky.awsSdk.macie2Mod._FindingType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ARCHIVE
     - typingsSlinky.awsSdk.awsSdkStrings.NOOP
     - java.lang.String
   */
   type FindingsFilterAction = typingsSlinky.awsSdk.macie2Mod._FindingsFilterAction | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.resourcesAffectedDots3BucketDotname
     - typingsSlinky.awsSdk.awsSdkStrings.type__
@@ -96,6 +114,7 @@ package object macie2Mod {
     - java.lang.String
   */
   type GroupBy = typingsSlinky.awsSdk.macie2Mod._GroupBy | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EQ
     - typingsSlinky.awsSdk.awsSdkStrings.GT
@@ -107,6 +126,7 @@ package object macie2Mod {
     - java.lang.String
   */
   type JobComparator = typingsSlinky.awsSdk.macie2Mod._JobComparator | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
     - typingsSlinky.awsSdk.awsSdkStrings.PAUSED
@@ -116,13 +136,16 @@ package object macie2Mod {
     - java.lang.String
   */
   type JobStatus = typingsSlinky.awsSdk.macie2Mod._JobStatus | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ONE_TIME
     - typingsSlinky.awsSdk.awsSdkStrings.SCHEDULED
     - java.lang.String
   */
   type JobType = typingsSlinky.awsSdk.macie2Mod._JobType | java.lang.String
+  
   type KeyValuePairList = js.Array[typingsSlinky.awsSdk.macie2Mod.KeyValuePair]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.jobType
     - typingsSlinky.awsSdk.awsSdkStrings.jobStatus_
@@ -131,6 +154,7 @@ package object macie2Mod {
     - java.lang.String
   */
   type ListJobsFilterKey = typingsSlinky.awsSdk.macie2Mod._ListJobsFilterKey | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.createdAt_
     - typingsSlinky.awsSdk.awsSdkStrings.jobStatus_
@@ -139,19 +163,23 @@ package object macie2Mod {
     - java.lang.String
   */
   type ListJobsSortAttributeName = typingsSlinky.awsSdk.macie2Mod._ListJobsSortAttributeName | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PAUSED
     - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
     - java.lang.String
   */
   type MacieStatus = typingsSlinky.awsSdk.macie2Mod._MacieStatus | java.lang.String
+  
   type MaxResults = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ASC
     - typingsSlinky.awsSdk.awsSdkStrings.DESC
     - java.lang.String
   */
   type OrderBy = typingsSlinky.awsSdk.macie2Mod._OrderBy | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Enabled_
     - typingsSlinky.awsSdk.awsSdkStrings.Paused_
@@ -166,6 +194,7 @@ package object macie2Mod {
     - java.lang.String
   */
   type RelationshipStatus = typingsSlinky.awsSdk.macie2Mod._RelationshipStatus | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.BUCKET_CREATION_DATE
     - typingsSlinky.awsSdk.awsSdkStrings.OBJECT_EXTENSION
@@ -175,7 +204,9 @@ package object macie2Mod {
     - java.lang.String
   */
   type ScopeFilterKey = typingsSlinky.awsSdk.macie2Mod._ScopeFilterKey | java.lang.String
+  
   type SensitiveData = js.Array[typingsSlinky.awsSdk.macie2Mod.SensitiveDataItem]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.FINANCIAL_INFORMATION
     - typingsSlinky.awsSdk.awsSdkStrings.PERSONAL_INFORMATION
@@ -184,6 +215,7 @@ package object macie2Mod {
     - java.lang.String
   */
   type SensitiveDataItemCategory = typingsSlinky.awsSdk.macie2Mod._SensitiveDataItemCategory | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Low_
     - typingsSlinky.awsSdk.awsSdkStrings.Medium_
@@ -191,6 +223,7 @@ package object macie2Mod {
     - java.lang.String
   */
   type SeverityDescription = typingsSlinky.awsSdk.macie2Mod._SeverityDescription | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EXTERNAL
     - typingsSlinky.awsSdk.awsSdkStrings.INTERNAL
@@ -198,6 +231,7 @@ package object macie2Mod {
     - java.lang.String
   */
   type SharedAccess = typingsSlinky.awsSdk.macie2Mod._SharedAccess | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.STANDARD
     - typingsSlinky.awsSdk.awsSdkStrings.REDUCED_REDUNDANCY
@@ -209,9 +243,13 @@ package object macie2Mod {
     - java.lang.String
   */
   type StorageClass = typingsSlinky.awsSdk.macie2Mod._StorageClass | java.lang.String
+  
   type TagMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.macie2Mod.string]
+  
   type TagTarget = typingsSlinky.awsSdk.awsSdkStrings.S3_OBJECT | java.lang.String
+  
   type Unit = typingsSlinky.awsSdk.awsSdkStrings.TERABYTES | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.GT
     - typingsSlinky.awsSdk.awsSdkStrings.GTE
@@ -223,6 +261,7 @@ package object macie2Mod {
     - java.lang.String
   */
   type UsageStatisticsFilterComparator = typingsSlinky.awsSdk.macie2Mod._UsageStatisticsFilterComparator | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.accountId_
     - typingsSlinky.awsSdk.awsSdkStrings.serviceLimit
@@ -231,6 +270,7 @@ package object macie2Mod {
     - java.lang.String
   */
   type UsageStatisticsFilterKey = typingsSlinky.awsSdk.macie2Mod._UsageStatisticsFilterKey | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.accountId_
     - typingsSlinky.awsSdk.awsSdkStrings.total_
@@ -239,12 +279,14 @@ package object macie2Mod {
     - java.lang.String
   */
   type UsageStatisticsSortKey = typingsSlinky.awsSdk.macie2Mod._UsageStatisticsSortKey | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DATA_INVENTORY_EVALUATION
     - typingsSlinky.awsSdk.awsSdkStrings.SENSITIVE_DATA_DISCOVERY
     - java.lang.String
   */
   type UsageType = typingsSlinky.awsSdk.macie2Mod._UsageType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AssumedRole
     - typingsSlinky.awsSdk.awsSdkStrings.IAMUser
@@ -255,38 +297,67 @@ package object macie2Mod {
     - java.lang.String
   */
   type UserIdentityType = typingsSlinky.awsSdk.macie2Mod._UserIdentityType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2020-01-01`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_
     - java.lang.String
   */
   type apiVersion = typingsSlinky.awsSdk.macie2Mod._apiVersion | java.lang.String
+  
   type boolean = scala.Boolean
+  
   type double = scala.Double
+  
   type integer = scala.Double
+  
   type listOfAdminAccount = js.Array[typingsSlinky.awsSdk.macie2Mod.AdminAccount]
+  
   type listOfBatchGetCustomDataIdentifierSummary = js.Array[typingsSlinky.awsSdk.macie2Mod.BatchGetCustomDataIdentifierSummary]
+  
   type listOfBucketMetadata = js.Array[typingsSlinky.awsSdk.macie2Mod.BucketMetadata]
+  
   type listOfCustomDataIdentifierSummary = js.Array[typingsSlinky.awsSdk.macie2Mod.CustomDataIdentifierSummary]
+  
   type listOfFinding = js.Array[typingsSlinky.awsSdk.macie2Mod.Finding]
+  
   type listOfFindingType = js.Array[typingsSlinky.awsSdk.macie2Mod.FindingType]
+  
   type listOfFindingsFilterListItem = js.Array[typingsSlinky.awsSdk.macie2Mod.FindingsFilterListItem]
+  
   type listOfGroupCount = js.Array[typingsSlinky.awsSdk.macie2Mod.GroupCount]
+  
   type listOfInvitation = js.Array[typingsSlinky.awsSdk.macie2Mod.Invitation]
+  
   type listOfJobScopeTerm = js.Array[typingsSlinky.awsSdk.macie2Mod.JobScopeTerm]
+  
   type listOfJobSummary = js.Array[typingsSlinky.awsSdk.macie2Mod.JobSummary]
+  
   type listOfKeyValuePair = js.Array[typingsSlinky.awsSdk.macie2Mod.KeyValuePair]
+  
   type listOfListJobsFilterTerm = js.Array[typingsSlinky.awsSdk.macie2Mod.ListJobsFilterTerm]
+  
   type listOfMember = js.Array[typingsSlinky.awsSdk.macie2Mod.Member]
+  
   type listOfS3BucketDefinitionForJob = js.Array[typingsSlinky.awsSdk.macie2Mod.S3BucketDefinitionForJob]
+  
   type listOfString = js.Array[typingsSlinky.awsSdk.macie2Mod.string]
+  
   type listOfTagValuePair = js.Array[typingsSlinky.awsSdk.macie2Mod.TagValuePair]
+  
   type listOfUnprocessedAccount = js.Array[typingsSlinky.awsSdk.macie2Mod.UnprocessedAccount]
+  
   type listOfUsageByAccount = js.Array[typingsSlinky.awsSdk.macie2Mod.UsageByAccount]
+  
   type listOfUsageRecord = js.Array[typingsSlinky.awsSdk.macie2Mod.UsageRecord]
+  
   type listOfUsageStatisticsFilter = js.Array[typingsSlinky.awsSdk.macie2Mod.UsageStatisticsFilter]
+  
   type listOfUsageTotal = js.Array[typingsSlinky.awsSdk.macie2Mod.UsageTotal]
+  
   type long = scala.Double
+  
   type string = java.lang.String
+  
   type timestampIso8601 = js.Date
 }

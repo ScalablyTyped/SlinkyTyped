@@ -6,12 +6,13 @@ import typingsSlinky.wordpressEditPost.anon.OmitPropsname
 import typingsSlinky.wordpressEditPost.pluginDocumentSettingPanelMod.PluginDocumentSettingPanel.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@wordpress/edit-post", "PluginDocumentSettingPanel")
 @js.native
 object PluginDocumentSettingPanel extends js.Object {
-  var Slot: ReactComponentClass[OmitPropsname] = js.native
+  
   def apply(props: Props): ReactElement = js.native
+  
+  var Slot: ReactComponentClass[OmitPropsname] = js.native
 }
-

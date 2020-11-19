@@ -5,7 +5,7 @@ import typingsSlinky.devextreme.mod.DevExpress.viz.dxFunnelOptions
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("devextreme", "viz.dxFunnel")
 @js.native
@@ -16,4 +16,3 @@ class dxFunnel protected ()
   def this(element: JQuery, options: dxFunnelOptions) = this()
   def this(element: Element, options: dxFunnelOptions) = this()
 }
-

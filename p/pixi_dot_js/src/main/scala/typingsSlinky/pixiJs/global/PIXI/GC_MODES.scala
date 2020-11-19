@@ -2,7 +2,7 @@ package typingsSlinky.pixiJs.global.PIXI
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The gc modes that are supported by pixi.
@@ -26,9 +26,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("PIXI.GC_MODES")
 @js.native
 object GC_MODES extends js.Object {
-  /* 0 */ val AUTO: typingsSlinky.pixiJs.PIXI.GC_MODES.AUTO with Double = js.native
-  /* 1 */ val MANUAL: typingsSlinky.pixiJs.PIXI.GC_MODES.MANUAL with Double = js.native
+  
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[typingsSlinky.pixiJs.PIXI.GC_MODES with Double] = js.native
+  
+  /* 0 */ val AUTO: typingsSlinky.pixiJs.PIXI.GC_MODES.AUTO with Double = js.native
+  
+  /* 1 */ val MANUAL: typingsSlinky.pixiJs.PIXI.GC_MODES.MANUAL with Double = js.native
 }
-

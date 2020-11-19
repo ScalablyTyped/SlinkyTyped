@@ -5,11 +5,12 @@ import typingsSlinky.node.httpMod.IncomingHttpHeaders
 import typingsSlinky.node.httpMod.IncomingMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("charset", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   /**
     * guess data charset from req.headers, xml, html content-type meta tag
     *
@@ -44,4 +45,3 @@ object mod extends js.Object {
   def apply(obj: IncomingMessage, data: Buffer): String | Null = js.native
   def apply(obj: IncomingMessage, data: Buffer, peekSize: Double): String | Null = js.native
 }
-

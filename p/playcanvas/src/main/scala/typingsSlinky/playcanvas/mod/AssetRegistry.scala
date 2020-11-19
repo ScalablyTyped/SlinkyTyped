@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Create an instance of an AssetRegistry.
@@ -16,4 +16,3 @@ class AssetRegistry protected ()
   extends typingsSlinky.playcanvas.pc.AssetRegistry {
   def this(loader: typingsSlinky.playcanvas.pc.ResourceLoader) = this()
 }
-

@@ -7,16 +7,19 @@ import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.PaddingMode
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-layers/dist/layers/pooling", "Pooling3D")
 @js.native
 abstract class Pooling3D protected () extends Layer {
   def this(args: Pooling3DLayerArgs) = this()
+  
   val dataFormat: DataFormat = js.native
+  
   val padding: PaddingMode = js.native
+  
   val poolSize: js.Tuple3[Double, Double, Double] = js.native
-  val strides: js.Tuple3[Double, Double, Double] = js.native
+  
   /* protected */ def poolingFunction(
     inputs: Tensor[Rank],
     poolSize: js.Tuple3[Double, Double, Double],
@@ -24,5 +27,6 @@ abstract class Pooling3D protected () extends Layer {
     padding: PaddingMode,
     dataFormat: DataFormat
   ): Tensor[Rank] = js.native
+  
+  val strides: js.Tuple3[Double, Double, Double] = js.native
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Locate
 import typingsSlinky.arcgisJsApi.esri.LocateProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Locate", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Locate {
   def this(properties: LocateProperties) = this()
 }
-

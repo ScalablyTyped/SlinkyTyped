@@ -3,7 +3,7 @@ package typingsSlinky.luminoWidgets.mod
 import typingsSlinky.luminoWidgets.tabpanelMod.TabPanel.IOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@lumino/widgets", "TabPanel")
 @js.native
@@ -16,4 +16,3 @@ class TabPanel ()
   extends typingsSlinky.luminoWidgets.tabpanelMod.TabPanel {
   def this(options: IOptions) = this()
 }
-

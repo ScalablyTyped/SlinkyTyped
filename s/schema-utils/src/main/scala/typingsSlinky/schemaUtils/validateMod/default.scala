@@ -2,11 +2,12 @@ package typingsSlinky.schemaUtils.validateMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("schema-utils/declarations/validate", JSImport.Default)
 @js.native
 object default extends js.Object {
+  
   /**
     * @param {Schema} schema
     * @param {Array<object> | object} options
@@ -18,4 +19,3 @@ object default extends js.Object {
   def apply(schema: Schema, options: js.Object): Unit = js.native
   def apply(schema: Schema, options: js.Object, configuration: ValidationErrorConfiguration): Unit = js.native
 }
-

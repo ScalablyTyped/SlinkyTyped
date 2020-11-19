@@ -2,7 +2,7 @@ package typingsSlinky.stellarSdk.serverApiMod.ServerApi
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.stellarSdk.serverApiMod.ServerApi.CreateAccountOperationRecord
@@ -20,4 +20,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.stellarSdk.serverApiMod.ServerApi.PathPaymentStrictSendOperationRecord
 */
 trait OperationRecord extends js.Object
-

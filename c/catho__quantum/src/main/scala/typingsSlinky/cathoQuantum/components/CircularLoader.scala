@@ -14,9 +14,10 @@ import typingsSlinky.cathoQuantum.circularLoaderMod.CircularLoaderProps
 import typingsSlinky.cathoQuantum.circularLoaderMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CircularLoader {
+  
   @JSImport("@catho/quantum/CircularLoader", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -25,15 +26,18 @@ object CircularLoader {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def size(value: medium | large | xlarge | xxlarge | xxxlarge): this.type = set("size", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def skin(value: primary | secondary): this.type = set("skin", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def theme(value: Gutter): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: CircularLoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   implicit def make(companion: CircularLoader.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
-

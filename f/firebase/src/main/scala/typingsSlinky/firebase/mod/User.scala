@@ -15,44 +15,14 @@ import typingsSlinky.firebase.mod.auth.UserCredential
 import typingsSlinky.firebase.mod.auth.UserMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A user account.
   */
 @js.native
 trait User extends UserInfo {
-  var emailVerified: Boolean = js.native
-  var isAnonymous: Boolean = js.native
-  var metadata: UserMetadata = js.native
-  /**
-    * The {@link firebase.User.MultiFactor} object corresponding to the current user.
-    * This is used to access all multi-factor properties and operations related to the
-    * current user.
-    */
-  var multiFactor: MultiFactorUser = js.native
-  var providerData: js.Array[UserInfo | Null] = js.native
-  var refreshToken: String = js.native
-  /**
-    * The current user's tenant ID. This is a read-only property, which indicates
-    * the tenant ID used to sign in the current user. This is null if the user is
-    * signed in from the parent project.
-    *
-    * @example
-    * ```javascript
-    * // Set the tenant ID on Auth instance.
-    * firebase.auth().tenantId = ‘TENANT_PROJECT_ID’;
-    *
-    * // All future sign-in request now include tenant ID.
-    * firebase.auth().signInWithEmailAndPassword(email, password)
-    *   .then(function(result) {
-    *     // result.user.tenantId should be ‘TENANT_PROJECT_ID’.
-    *   }).catch(function(error) {
-    *     // Handle error.
-    *   });
-    * ```
-    */
-  var tenantId: String | Null = js.native
+  
   /**
     * Deletes and signs out the user.
     *
@@ -70,6 +40,9 @@ trait User extends UserInfo {
     * </dl>
     */
   def delete(): js.Promise[Unit] = js.native
+  
+  var emailVerified: Boolean = js.native
+  
   /**
     * Returns a JSON Web Token (JWT) used to identify the user to a Firebase
     * service.
@@ -82,8 +55,12 @@ trait User extends UserInfo {
     */
   def getIdToken(): js.Promise[String] = js.native
   def getIdToken(forceRefresh: Boolean): js.Promise[String] = js.native
+  
   def getIdTokenResult(): js.Promise[IdTokenResult] = js.native
   def getIdTokenResult(forceRefresh: Boolean): js.Promise[IdTokenResult] = js.native
+  
+  var isAnonymous: Boolean = js.native
+  
   /**
     * Links the user account with the given credentials and returns any available
     * additional user information, such as user name.
@@ -149,6 +126,7 @@ trait User extends UserInfo {
     * @param credential The auth credential.
     */
   def linkAndRetrieveDataWithCredential(credential: AuthCredential): js.Promise[UserCredential] = js.native
+  
   /**
     * Links the user account with the given credentials.
     *
@@ -210,6 +188,7 @@ trait User extends UserInfo {
     * @param credential The auth credential.
     */
   def linkWithCredential(credential: AuthCredential): js.Promise[UserCredential] = js.native
+  
   /**
     * Links the user account with the given phone number.
     *
@@ -251,6 +230,7 @@ trait User extends UserInfo {
     * @param applicationVerifier
     */
   def linkWithPhoneNumber(phoneNumber: String, applicationVerifier: ApplicationVerifier): js.Promise[ConfirmationResult] = js.native
+  
   /**
     * Links the authenticated provider to the user account using a pop-up based
     * OAuth flow.
@@ -340,6 +320,7 @@ trait User extends UserInfo {
     *     firebase.auth.EmailAuthProvider} will throw an error.
     */
   def linkWithPopup(provider: AuthProvider): js.Promise[UserCredential] = js.native
+  
   /**
     * Links the authenticated provider to the user account using a full-page
     * redirect flow.
@@ -369,6 +350,18 @@ trait User extends UserInfo {
     *     firebase.auth.EmailAuthProvider} will throw an error.
     */
   def linkWithRedirect(provider: AuthProvider): js.Promise[Unit] = js.native
+  
+  var metadata: UserMetadata = js.native
+  
+  /**
+    * The {@link firebase.User.MultiFactor} object corresponding to the current user.
+    * This is used to access all multi-factor properties and operations related to the
+    * current user.
+    */
+  var multiFactor: MultiFactorUser = js.native
+  
+  var providerData: js.Array[UserInfo | Null] = js.native
+  
   /**
     * Re-authenticates a user using a fresh credential, and returns any available
     * additional user information, such as user name. Use before operations
@@ -411,6 +404,7 @@ trait User extends UserInfo {
     * @param credential
     */
   def reauthenticateAndRetrieveDataWithCredential(credential: AuthCredential): js.Promise[UserCredential] = js.native
+  
   /**
     * Re-authenticates a user using a fresh credential. Use before operations
     * such as {@link firebase.User.updatePassword} that require tokens from recent
@@ -448,6 +442,7 @@ trait User extends UserInfo {
     * @param credential
     */
   def reauthenticateWithCredential(credential: AuthCredential): js.Promise[UserCredential] = js.native
+  
   /**
     * Re-authenticates a user using a fresh credential. Use before operations
     * such as {@link firebase.User.updatePassword} that require tokens from recent
@@ -476,6 +471,7 @@ trait User extends UserInfo {
     * @param applicationVerifier
     */
   def reauthenticateWithPhoneNumber(phoneNumber: String, applicationVerifier: ApplicationVerifier): js.Promise[ConfirmationResult] = js.native
+  
   /**
     * Reauthenticates the current user with the specified provider using a pop-up
     * based OAuth flow.
@@ -541,6 +537,7 @@ trait User extends UserInfo {
     *     firebase.auth.EmailAuthProvider} will throw an error.
     */
   def reauthenticateWithPopup(provider: AuthProvider): js.Promise[UserCredential] = js.native
+  
   /**
     * Reauthenticates the current user with the specified OAuth provider using a
     * full-page redirect flow.
@@ -570,11 +567,15 @@ trait User extends UserInfo {
     *     firebase.auth.EmailAuthProvider} will throw an error.
     */
   def reauthenticateWithRedirect(provider: AuthProvider): js.Promise[Unit] = js.native
+  
+  var refreshToken: String = js.native
+  
   /**
     * Refreshes the current user, if signed in.
     *
     */
   def reload(): js.Promise[Unit] = js.native
+  
   /**
     * Sends a verification email to a user.
     *
@@ -636,12 +637,35 @@ trait User extends UserInfo {
     */
   def sendEmailVerification(): js.Promise[Unit] = js.native
   def sendEmailVerification(actionCodeSettings: ActionCodeSettings): js.Promise[Unit] = js.native
+  
+  /**
+    * The current user's tenant ID. This is a read-only property, which indicates
+    * the tenant ID used to sign in the current user. This is null if the user is
+    * signed in from the parent project.
+    *
+    * @example
+    * ```javascript
+    * // Set the tenant ID on Auth instance.
+    * firebase.auth().tenantId = ‘TENANT_PROJECT_ID’;
+    *
+    * // All future sign-in request now include tenant ID.
+    * firebase.auth().signInWithEmailAndPassword(email, password)
+    *   .then(function(result) {
+    *     // result.user.tenantId should be ‘TENANT_PROJECT_ID’.
+    *   }).catch(function(error) {
+    *     // Handle error.
+    *   });
+    * ```
+    */
+  var tenantId: String | Null = js.native
+  
   /**
     * Returns a JSON-serializable representation of this object.
     *
     * @return A JSON-serializable representation of this object.
     */
   def toJSON(): js.Object = js.native
+  
   /**
     * Unlinks a provider from a user account.
     *
@@ -655,6 +679,7 @@ trait User extends UserInfo {
     * @param providerId
     */
   def unlink(providerId: String): js.Promise[User] = js.native
+  
   /**
     * Updates the user's email address.
     *
@@ -682,6 +707,7 @@ trait User extends UserInfo {
     * @param newEmail The new email address.
     */
   def updateEmail(newEmail: String): js.Promise[Unit] = js.native
+  
   /**
     * Updates the user's password.
     *
@@ -703,6 +729,7 @@ trait User extends UserInfo {
     * @param newPassword
     */
   def updatePassword(newPassword: String): js.Promise[Unit] = js.native
+  
   /**
     * Updates the user's phone number.
     *
@@ -717,6 +744,7 @@ trait User extends UserInfo {
     * @param phoneCredential
     */
   def updatePhoneNumber(phoneCredential: AuthCredential): js.Promise[Unit] = js.native
+  
   /**
     * Updates a user's profile data.
     *
@@ -754,6 +782,7 @@ trait User extends UserInfo {
     *     displayName and photoURL to update.
     */
   def updateProfile(profile: DisplayName): js.Promise[Unit] = js.native
+  
   /**
     * Sends a verification email to a new email address. The user's email will be
     * updated to the new one after being verified.
@@ -819,20 +848,17 @@ trait User extends UserInfo {
   def verifyBeforeUpdateEmail(newEmail: String): js.Promise[Unit] = js.native
   def verifyBeforeUpdateEmail(newEmail: String, actionCodeSettings: ActionCodeSettings): js.Promise[Unit] = js.native
 }
-
 @JSImport("firebase", "User")
 @js.native
 object User extends js.Object {
+  
   /**
     * This is the interface that defines the multi-factor related properties and
     * operations pertaining to a {@link firebase.User}.
     */
   @js.native
   trait MultiFactorUser extends js.Object {
-    /**
-      * Returns a list of the user's enrolled second factors.
-      */
-    var enrolledFactors: js.Array[MultiFactorInfo] = js.native
+    
     /**
       * Enrolls a second factor as identified by the
       * {@link firebase.auth.MultiFactorAssertion} for the current user.
@@ -905,6 +931,12 @@ object User extends js.Object {
       */
     def enroll(assertion: MultiFactorAssertion): js.Promise[Unit] = js.native
     def enroll(assertion: MultiFactorAssertion, displayName: String): js.Promise[Unit] = js.native
+    
+    /**
+      * Returns a list of the user's enrolled second factors.
+      */
+    var enrolledFactors: js.Array[MultiFactorInfo] = js.native
+    
     /**
       * Returns the session identifier for a second factor enrollment operation.
       * This is used to identify the current user trying to enroll a second factor.
@@ -918,6 +950,7 @@ object User extends js.Object {
       * </dl>
       */
     def getSession(): js.Promise[MultiFactorSession] = js.native
+    
     def unenroll(option: String): js.Promise[Unit] = js.native
     /**
       * Unenrolls the specified second factor. To specify the factor to remove, pass
@@ -957,6 +990,4 @@ object User extends js.Object {
       */
     def unenroll(option: MultiFactorInfo): js.Promise[Unit] = js.native
   }
-  
 }
-

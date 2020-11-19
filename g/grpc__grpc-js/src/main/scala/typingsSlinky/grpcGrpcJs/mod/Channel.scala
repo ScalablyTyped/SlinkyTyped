@@ -4,7 +4,7 @@ import typingsSlinky.grpcGrpcJs.channelMod.ChannelImplementation
 import typingsSlinky.grpcGrpcJs.channelOptionsMod.ChannelOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@grpc/grpc-js", "Channel")
 @js.native
@@ -15,4 +15,3 @@ class Channel protected () extends ChannelImplementation {
     options: ChannelOptions
   ) = this()
 }
-

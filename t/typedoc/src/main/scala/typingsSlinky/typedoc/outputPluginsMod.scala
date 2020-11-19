@@ -7,11 +7,12 @@ import typingsSlinky.typedoc.navigationItemMod.NavigationItem
 import typingsSlinky.typedoc.reflectionsMod.Reflection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc/dist/lib/output/plugins", JSImport.Namespace)
 @js.native
 object outputPluginsMod extends js.Object {
+  
   @js.native
   class AssetsPlugin ()
     extends typingsSlinky.typedoc.assetsPluginMod.AssetsPlugin
@@ -31,6 +32,12 @@ object outputPluginsMod extends js.Object {
   @js.native
   class MarkedLinksPlugin ()
     extends typingsSlinky.typedoc.markedLinksPluginMod.MarkedLinksPlugin
+  /* static members */
+  @js.native
+  object MarkedLinksPlugin extends js.Object {
+    
+    def splitLinkText(text: String): Caption = js.native
+  }
   
   @js.native
   class MarkedPlugin ()
@@ -43,27 +50,22 @@ object outputPluginsMod extends js.Object {
   @js.native
   class PrettyPrintPlugin ()
     extends typingsSlinky.typedoc.prettyPrintPluginMod.PrettyPrintPlugin
+  /* static members */
+  @js.native
+  object PrettyPrintPlugin extends js.Object {
+    
+    var IGNORED_TAGS: Area = js.native
+    
+    var PRE_TAGS: Code = js.native
+  }
   
   @js.native
   class TocPlugin ()
     extends typingsSlinky.typedoc.tocPluginMod.TocPlugin
-  
-  /* static members */
-  @js.native
-  object MarkedLinksPlugin extends js.Object {
-    def splitLinkText(text: String): Caption = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object PrettyPrintPlugin extends js.Object {
-    var IGNORED_TAGS: Area = js.native
-    var PRE_TAGS: Code = js.native
-  }
-  
   /* static members */
   @js.native
   object TocPlugin extends js.Object {
+    
     def buildToc(model: Reflection, trail: js.Array[Reflection], parent: NavigationItem): Unit = js.native
     def buildToc(
       model: Reflection,
@@ -72,6 +74,4 @@ object outputPluginsMod extends js.Object {
       restriction: js.Array[String]
     ): Unit = js.native
   }
-  
 }
-

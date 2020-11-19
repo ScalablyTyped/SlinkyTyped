@@ -10,13 +10,16 @@ import typingsSlinky.graphql.validationContextMod.SDLValidationRule
 import typingsSlinky.graphql.validationContextMod.ValidationRule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql/validation/validate", JSImport.Namespace)
 @js.native
 object validationValidateMod extends js.Object {
+  
   def assertValidSDL(documentAST: DocumentNode): Unit = js.native
+  
   def assertValidSDLExtension(documentAST: DocumentNode, schema: GraphQLSchema): Unit = js.native
+  
   def validate(schema: GraphQLSchema, documentAST: DocumentNode): js.Array[GraphQLError] = js.native
   def validate(
     schema: GraphQLSchema,
@@ -59,6 +62,7 @@ object validationValidateMod extends js.Object {
     typeInfo: TypeInfo,
     options: MaxErrors
   ): js.Array[GraphQLError] = js.native
+  
   def validateSDL(documentAST: DocumentNode): js.Array[GraphQLError] = js.native
   def validateSDL(
     documentAST: DocumentNode,
@@ -67,4 +71,3 @@ object validationValidateMod extends js.Object {
   ): js.Array[GraphQLError] = js.native
   def validateSDL(documentAST: DocumentNode, schemaToExtend: Maybe[GraphQLSchema]): js.Array[GraphQLError] = js.native
 }
-

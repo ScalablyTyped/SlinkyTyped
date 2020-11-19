@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-glacier-node/commands/DescribeJobCommand", JSImport.Namespace)
 @js.native
 object describeJobCommandMod extends js.Object {
+  
   @js.native
   class DescribeJobCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object describeJobCommandMod extends js.Object {
           Readable
         ] {
     def this(input: DescribeJobInput) = this()
+    
     val middlewareStack: MiddlewareStack[DescribeJobInput, DescribeJobOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: GlacierResolvedConfiguration
     ): Handler[DescribeJobInput, DescribeJobOutput] = js.native
   }
-  
 }
-

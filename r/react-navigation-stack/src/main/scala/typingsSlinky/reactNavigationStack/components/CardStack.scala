@@ -13,9 +13,10 @@ import typingsSlinky.reactNavigationStack.vendorTypesMod.StackDescriptorMap
 import typingsSlinky.reactNavigationStack.vendorTypesMod.StackHeaderMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CardStack {
+  
   @JSImport("react-navigation-stack/lib/typescript/src/vendor/views/Stack/CardStack", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -24,15 +25,19 @@ object CardStack {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
     @scala.inline
     def onPageChangeCancel(value: () => Unit): this.type = set("onPageChangeCancel", js.Any.fromFunction0(value))
+    
     @scala.inline
     def onPageChangeConfirm(value: () => Unit): this.type = set("onPageChangeConfirm", js.Any.fromFunction0(value))
+    
     @scala.inline
     def onPageChangeStart(value: () => Unit): this.type = set("onPageChangeStart", js.Any.fromFunction0(value))
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     closingRouteKeys: js.Array[String],
@@ -56,4 +61,3 @@ object CardStack {
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
-

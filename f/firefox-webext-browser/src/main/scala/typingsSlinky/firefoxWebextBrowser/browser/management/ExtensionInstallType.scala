@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser.management
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * How the extension was installed. One of
@@ -18,15 +18,17 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.other
 */
 trait ExtensionInstallType extends js.Object
-
 object ExtensionInstallType {
+  
   @scala.inline
   def development: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.development = "development".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.development]
+  
   @scala.inline
   def normal: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal = "normal".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal]
+  
   @scala.inline
   def other: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.other = "other".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.other]
+  
   @scala.inline
   def sideload: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sideload = "sideload".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sideload]
 }
-

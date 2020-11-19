@@ -11,7 +11,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.NumericLiteral
 import typingsSlinky.babelTypes.babelTypesStrings.StringLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.FunctionDeclaration_
@@ -25,8 +25,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ClassExpression_
 */
 trait Pureish extends js.Object
-
 object Pureish {
+  
   @scala.inline
   def ClassExpression_(
     body: ClassBody_,
@@ -41,24 +41,28 @@ object Pureish {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pureish]
   }
+  
   @scala.inline
   def NullLiteral_(end: Double, loc: SourceLocation, start: Double, `type`: NullLiteral): Pureish = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pureish]
   }
+  
   @scala.inline
   def StringLiteral_(end: Double, loc: SourceLocation, start: Double, `type`: StringLiteral, value: String): Pureish = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pureish]
   }
+  
   @scala.inline
   def BooleanLiteral_(end: Double, loc: SourceLocation, start: Double, `type`: BooleanLiteral, value: Boolean): Pureish = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pureish]
   }
+  
   @scala.inline
   def FunctionExpression_(
     async: Boolean,
@@ -75,12 +79,14 @@ object Pureish {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pureish]
   }
+  
   @scala.inline
   def NumericLiteral_(end: Double, loc: SourceLocation, start: Double, `type`: NumericLiteral, value: Double): Pureish = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pureish]
   }
+  
   @scala.inline
   def ArrowFunctionExpression_(
     async: Boolean,
@@ -98,6 +104,7 @@ object Pureish {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pureish]
   }
+  
   @scala.inline
   def ClassDeclaration_(
     body: ClassBody_,
@@ -112,6 +119,7 @@ object Pureish {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pureish]
   }
+  
   @scala.inline
   def FunctionDeclaration_(
     async: Boolean,
@@ -129,4 +137,3 @@ object Pureish {
     __obj.asInstanceOf[Pureish]
   }
 }
-

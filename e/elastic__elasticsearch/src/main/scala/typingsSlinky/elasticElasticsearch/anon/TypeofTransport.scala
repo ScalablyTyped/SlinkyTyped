@@ -5,10 +5,10 @@ import typingsSlinky.elasticElasticsearch.transportMod.TransportOptions
 import typingsSlinky.elasticElasticsearch.transportMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofTransport extends Instantiable1[/* opts */ TransportOptions, default] {
+  
   var sniffReasons: DEFAULT = js.native
 }
-

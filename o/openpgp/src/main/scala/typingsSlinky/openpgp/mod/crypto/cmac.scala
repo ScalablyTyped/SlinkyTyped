@@ -2,11 +2,12 @@ package typingsSlinky.openpgp.mod.crypto
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("openpgp", "crypto.cmac")
 @js.native
 object cmac extends js.Object {
+  
   /**
     * This implementation of CMAC is based on the description of OMAC in
     * http://web.cs.ucdavis.edu/~rogaway/papers/eax.pdf. As per that
@@ -19,6 +20,7 @@ object cmac extends js.Object {
     * [15], which slightly simplifies implementations.
     */
   val blockLength: js.Any = js.native
+  
   /**
     * xor `padding` into the end of `data`. This function implements "the
     * operation xor→ [which] xors the shorter string into the end of longer
@@ -29,4 +31,3 @@ object cmac extends js.Object {
     */
   def rightXorMut(data: js.typedarray.Uint8Array, padding: js.typedarray.Uint8Array): Unit = js.native
 }
-

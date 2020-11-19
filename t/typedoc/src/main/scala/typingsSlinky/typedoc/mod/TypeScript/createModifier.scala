@@ -14,11 +14,11 @@ import typingsSlinky.typescript.mod.SyntaxKind.StaticKeyword
 import typingsSlinky.typescript.mod.Token
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.createModifier")
 @js.native
 object createModifier extends js.Object {
+  
   def apply[T /* <: AbstractKeyword | AsyncKeyword | ConstKeyword | DeclareKeyword | DefaultKeyword | ExportKeyword | PublicKeyword | PrivateKeyword | ProtectedKeyword | ReadonlyKeyword | StaticKeyword */](kind: T): Token[T] = js.native
 }
-

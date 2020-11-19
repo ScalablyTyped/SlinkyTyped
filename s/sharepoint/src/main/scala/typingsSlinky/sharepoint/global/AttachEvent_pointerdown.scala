@@ -6,15 +6,15 @@ import typingsSlinky.sharepoint.sharepointStrings.pointerdown
 import typingsSlinky.std.GlobalEventHandlers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("AttachEvent")
 @js.native
 object AttachEvent_pointerdown extends js.Object {
+  
   def apply(
     `type`: pointerdown,
     eventFunc: js.ThisFunction1[/* this */ HTMLElement, /* ev */ PointerEvent, _],
     el: GlobalEventHandlers
   ): js.Any = js.native
 }
-

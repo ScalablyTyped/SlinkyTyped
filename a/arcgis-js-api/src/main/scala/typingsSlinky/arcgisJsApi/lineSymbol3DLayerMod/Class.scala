@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.LineSymbol3DLayer
 import typingsSlinky.arcgisJsApi.esri.LineSymbol3DLayerProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/symbols/LineSymbol3DLayer", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends LineSymbol3DLayer {
   def this(properties: LineSymbol3DLayerProperties) = this()
 }
-

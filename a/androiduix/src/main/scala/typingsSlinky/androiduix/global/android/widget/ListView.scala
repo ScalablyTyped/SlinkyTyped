@@ -5,7 +5,7 @@ import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("android.widget.ListView")
 @js.native
@@ -16,11 +16,17 @@ class ListView protected ()
   def this(context: Context, bindElement: js.UndefOr[scala.Nothing], defStyle: Map[String, String]) = this()
   def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
 }
-
 /* static members */
 @JSGlobal("android.widget.ListView")
 @js.native
 object ListView extends js.Object {
+  
+  var MAX_SCROLL_FACTOR: js.Any = js.native
+  
+  var MIN_SCROLL_PREVIEW_PIXELS: js.Any = js.native
+  
+  var NO_POSITION: Double = js.native
+  
   @js.native
   class ArrowScrollFocusResult ()
     extends typingsSlinky.androiduix.android.widget.ListView.ArrowScrollFocusResult
@@ -36,9 +42,4 @@ object ListView extends js.Object {
     extends typingsSlinky.androiduix.android.widget.ListView.FocusSelector {
     def this(arg: typingsSlinky.androiduix.android.widget.ListView) = this()
   }
-  
-  var MAX_SCROLL_FACTOR: js.Any = js.native
-  var MIN_SCROLL_PREVIEW_PIXELS: js.Any = js.native
-  var NO_POSITION: Double = js.native
 }
-

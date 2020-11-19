@@ -2,11 +2,12 @@ package typingsSlinky.d3.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("d3", "shuffle")
 @js.native
 object shuffle extends js.Object {
+  
   def apply(array: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
   def apply(array: js.typedarray.Float32Array, lo: js.UndefOr[scala.Nothing], hi: Double): js.typedarray.Float32Array = js.native
   def apply(array: js.typedarray.Float32Array, lo: Double): js.typedarray.Float32Array = js.native
@@ -48,4 +49,3 @@ object shuffle extends js.Object {
   def apply[T](array: js.Array[T], lo: Double): js.Array[T] = js.native
   def apply[T](array: js.Array[T], lo: Double, hi: Double): js.Array[T] = js.native
 }
-

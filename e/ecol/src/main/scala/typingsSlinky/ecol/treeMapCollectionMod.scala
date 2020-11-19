@@ -3,16 +3,14 @@ package typingsSlinky.ecol
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
 import typingsSlinky.tstl.anon.Iteratoranyanyanyany
 import typingsSlinky.tstl.entryMod.Entry
+import typingsSlinky.tstl.icontainerMod.IContainer
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.ipairMod.IPair
 import typingsSlinky.tstl.mapContainerMod.MapContainer
 import typingsSlinky.tstl.mapContainerMod.MapContainer.InsertRet
-import typingsSlinky.tstl.mod.base.Container
 import typingsSlinky.tstl.pairMod.Pair
 import typingsSlinky.tstl.treeMapMod.TreeMap
 import typingsSlinky.tstl.treeMapMod.TreeMap.Iterator
@@ -20,11 +18,12 @@ import typingsSlinky.tstl.treeMapMod.TreeMap.ReverseIterator
 import typingsSlinky.tstl.tstlBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ecol/lib/maps/TreeMapCollection", JSImport.Namespace)
 @js.native
 object treeMapCollectionMod extends js.Object {
+  
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.tstl.isizeMod.ISize because Already inherited
   - typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer because Already inherited
@@ -33,32 +32,28 @@ object treeMapCollectionMod extends js.Object {
   - typingsSlinky.std.Iterable because Already inherited
   - typingsSlinky.tstl.ibidirectionalcontainerMod.IBidirectionalContainer because Already inherited
   - typingsSlinky.tstl.icontainerMod.IContainer because Already inherited
-  - typingsSlinky.tstl.containerContainerMod.Container because Inheritance from two classes. Inlined begin, empty, end, push, rbegin, rend, size
-  - typingsSlinky.ecol.icollectionMod.ICollection because Inheritance from two classes. Inlined refresh, refresh, refresh */ @js.native
+  - typingsSlinky.ecol.icollectionMod.ICollection because var conflicts: iterator, iterator_IContainer_. Inlined refresh, refresh, refresh */ @js.native
   class TreeMapCollection[Key, T] ()
     extends TreeMap[Key, T]
        with IEventDispatcher[Entry[Key, T], TreeMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T]] {
-    /**
-      * @hidden
-      */
-    var dispatcher_ : js.Any = js.native
+    
     /* InferMemberOverrides */
     /* protected */ override def _Erase_by_key(key: Key): Double = js.native
+    
     /* InferMemberOverrides */
     /* protected */ override def _Erase_by_range(first: Iterator[Key, T]): Iterator[Key, T] = js.native
     /* InferMemberOverrides */
     /* protected */ override def _Erase_by_range(first: Iterator[Key, T], last: Iterator[Key, T]): Iterator[Key, T] = js.native
+    
     /* InferMemberOverrides */
     /* protected */ override def _Handle_erase(first: Iterator[Key, T], last: Iterator[Key, T]): Unit = js.native
+    
     /* InferMemberOverrides */
     /* protected */ override def _Handle_insert(first: Iterator[Key, T], last: Iterator[Key, T]): Unit = js.native
+    
     /* InferMemberOverrides */
     /* protected */ override def _Insert_by_range[InputIterator /* <: IForwardIterator[IPair[Key, T], InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
-    /* CompleteClass */
-    override def addEventListener(
-      `type`: Type,
-      listener: Listener[Entry[Key, T], TreeMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T]]
-    ): Unit = js.native
+    
     /**
       * Range Assigner.
       *
@@ -67,18 +62,13 @@ object treeMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[IPair[Key, T], InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
-    /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* InferMemberOverrides */
-    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[Entry[Key, T], TreeMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T], IPair[Key, T]] = js.native
+    
     /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
+    
     /**
       * @inheritDoc
       */
@@ -90,25 +80,18 @@ object treeMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def count(key: Key): Double = js.native
-    /* CompleteClass */
-    override def dispatchEvent(event: CollectionEvent[Entry[Key, T], TreeMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T]]): Unit = js.native
+    
+    /**
+      * @hidden
+      */
+    var dispatcher_ : js.Any = js.native
+    
     /* InferMemberOverrides */
     override def emplace(key: Key, `val`: T): InsertRet[Key, T, `true`, TreeMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T]] = js.native
+    
     /* InferMemberOverrides */
     override def emplace_hint(hint: Iterator[Key, T], key: Key, `val`: T): Iterator[Key, T] = js.native
-    /**
-      * Test whether container is empty.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def empty(): Boolean = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[Entry[Key, T], TreeMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T], IPair[Key, T]] = js.native
+    
     /**
       * Erase elements in range.
       *
@@ -132,6 +115,7 @@ object treeMapCollectionMod extends js.Object {
     /* InferMemberOverrides */
     @JSName("erase")
     override def erase_IteratorT(it: Iterator[Key, T]): Iterator[Key, T] = js.native
+    
     /**
       * Extract an element by key.
       *
@@ -149,6 +133,7 @@ object treeMapCollectionMod extends js.Object {
     /* InferMemberOverrides */
     @JSName("extract")
     override def extract_Iterator(pos: Iterator[Key, T]): Iterator[Key, T] = js.native
+    
     /**
       * @inheritDoc
       */
@@ -160,6 +145,7 @@ object treeMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def find(key: Key): Iterator[Key, T] = js.native
+    
     /**
       * Get a value.
       *
@@ -168,6 +154,7 @@ object treeMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def get(key: Key): T = js.native
+    
     /**
       * @inheritDoc
       */
@@ -179,14 +166,14 @@ object treeMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def has(key: Key): Boolean = js.native
-    /* CompleteClass */
-    override def hasEventListener(`type`: Type): Boolean = js.native
+    
     /* InferMemberOverrides */
     override def insert(hint: Iterator[Key, T], pair: IPair[Key, T]): Iterator[Key, T] = js.native
     /* InferMemberOverrides */
     override def insert(pair: IPair[Key, T]): InsertRet[Key, T, `true`, TreeMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T]] = js.native
     /* InferMemberOverrides */
     override def insert[InputIterator /* <: IForwardIterator[IPair[Key, T], InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
+    
     /**
       * Insert or assign an element with hint.
       *
@@ -206,6 +193,7 @@ object treeMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def insert_or_assign(key: Key, value: T): Pair[Iterator[Key, T], Boolean] = js.native
+    
     /**
       * Merge two containers.
       *
@@ -213,23 +201,7 @@ object treeMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def merge(source: TreeMap[Key, T]): Unit = js.native
-    /**
-      * Insert items at the end.
-      *
-      * @param items Items to insert.
-      * @return Number of elements in the container after insertion.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def push(items: (IPair[Key, T])*): Double = js.native
-    /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseIterator[Key, T] = js.native
+    
     /**
       * @inheritDoc
       */
@@ -242,19 +214,7 @@ object treeMapCollectionMod extends js.Object {
       * @inheritDoc
       */
     def refresh(it: Iterator[Key, T]): Unit = js.native
-    /* CompleteClass */
-    override def removeEventListener(
-      `type`: Type,
-      listener: Listener[Entry[Key, T], TreeMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T]]
-    ): Unit = js.native
-    /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def rend(): ReverseIterator[Key, T] = js.native
+    
     /**
       * Set a value with key.
       *
@@ -263,11 +223,7 @@ object treeMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def set(key: Key, `val`: T): Unit = js.native
-    /**
-      * Number of elements in the container.
-      */
-    /* InferMemberOverrides */
-    override def size(): Double = js.native
+    
     /**
       * Swap elements.
       *
@@ -275,6 +231,7 @@ object treeMapCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def swap(obj: TreeMap[Key, T]): Unit = js.native
+    
     /**
       * Native function for `JSON.stringify()`.
       *
@@ -283,26 +240,39 @@ object treeMapCollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def toJSON(): js.Array[Entry[Key, T]] = js.native
   }
-  
   @js.native
   object TreeMapCollection extends js.Object {
+    
     val Event: Instantiable3[
         /* type */ String, 
         /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ /* first */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ /* last */ js.Any, 
         CollectionEvent[
           js.Object, 
-          Container[
+          IContainer[
             /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
           ], 
-          js.Iterator[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any], 
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify std.base.ReverseIterator<T, SourceT, IteratorT, ReverseT> */ js.Any
+          typingsSlinky.tstl.icontainerMod.IContainer.Iterator[
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
+          ], 
+          typingsSlinky.tstl.icontainerMod.IContainer.ReverseIterator[
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
+            /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
+          ]
         ]
       ] = js.native
+    
     val Iterator: Instantiable0[
         typingsSlinky.tstl.mapElementListMod.MapElementList.Iterator[
           js.Object, 
@@ -323,6 +293,7 @@ object treeMapCollectionMod extends js.Object {
           ]
         ]
       ] = js.native
+    
     val ReverseIterator: Instantiable0[
         typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator[
           js.Object, 
@@ -343,27 +314,29 @@ object treeMapCollectionMod extends js.Object {
           ]
         ]
       ] = js.native
+    
     type Event[Key, T] = CollectionEvent[
         Entry[Key, T], 
         TreeMap[Key, T], 
         typingsSlinky.tstl.treeMapMod.TreeMap.Iterator[Key, T], 
         typingsSlinky.tstl.treeMapMod.TreeMap.ReverseIterator[Key, T]
       ]
+    
     /**
       * Iterator of {@link TreeMap}
       */
     type Iterator[Key, T] = typingsSlinky.tstl.mapElementListMod.MapElementList.Iterator[Key, T, typingsSlinky.ecol.ecolBooleans.`true`, TreeMap[Key, T]]
+    
     type Listener[Key, T] = typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener[
         Entry[Key, T], 
         TreeMap[Key, T], 
         typingsSlinky.tstl.treeMapMod.TreeMap.Iterator[Key, T], 
         typingsSlinky.tstl.treeMapMod.TreeMap.ReverseIterator[Key, T]
       ]
+    
     /**
       * Reverse iterator of {@link TreeMap}
       */
     type ReverseIterator[Key, T] = typingsSlinky.tstl.mapElementListMod.MapElementList.ReverseIterator[Key, T, typingsSlinky.ecol.ecolBooleans.`true`, TreeMap[Key, T]]
   }
-  
 }
-

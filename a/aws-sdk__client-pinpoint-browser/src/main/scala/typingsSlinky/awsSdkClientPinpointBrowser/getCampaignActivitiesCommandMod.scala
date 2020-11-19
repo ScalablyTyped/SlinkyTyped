@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/GetCampaignActivitiesCommand", JSImport.Namespace)
 @js.native
 object getCampaignActivitiesCommandMod extends js.Object {
+  
   @js.native
   class GetCampaignActivitiesCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getCampaignActivitiesCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetCampaignActivitiesInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetCampaignActivitiesInput, GetCampaignActivitiesOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[GetCampaignActivitiesInput, GetCampaignActivitiesOutput] = js.native
   }
-  
 }
-

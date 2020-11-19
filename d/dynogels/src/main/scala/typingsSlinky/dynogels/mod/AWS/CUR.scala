@@ -3,7 +3,7 @@ package typingsSlinky.dynogels.mod.AWS
 import typingsSlinky.awsSdk.curMod.ClientConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("dynogels", "AWS.CUR")
 @js.native
@@ -14,4 +14,3 @@ class CUR ()
   extends typingsSlinky.awsSdk.mod.CUR {
   def this(options: ClientConfiguration) = this()
 }
-

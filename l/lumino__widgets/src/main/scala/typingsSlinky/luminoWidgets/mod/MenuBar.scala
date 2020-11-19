@@ -3,7 +3,7 @@ package typingsSlinky.luminoWidgets.mod
 import typingsSlinky.luminoWidgets.menubarMod.MenuBar.IOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@lumino/widgets", "MenuBar")
 @js.native
@@ -16,10 +16,15 @@ class MenuBar ()
   extends typingsSlinky.luminoWidgets.menubarMod.MenuBar {
   def this(options: IOptions) = this()
 }
-
 @JSImport("@lumino/widgets", "MenuBar")
 @js.native
 object MenuBar extends js.Object {
+  
+  /**
+    * The default `Renderer` instance.
+    */
+  val defaultRenderer: typingsSlinky.luminoWidgets.menubarMod.MenuBar.Renderer = js.native
+  
   /**
     * The default implementation of `IRenderer`.
     *
@@ -32,10 +37,4 @@ object MenuBar extends js.Object {
     */
   class Renderer ()
     extends typingsSlinky.luminoWidgets.menubarMod.MenuBar.Renderer
-  
-  /**
-    * The default `Renderer` instance.
-    */
-  val defaultRenderer: typingsSlinky.luminoWidgets.menubarMod.MenuBar.Renderer = js.native
 }
-

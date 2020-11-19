@@ -8,13 +8,15 @@ import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-core/dist/ops/conv3d_backprop_filter", JSImport.Namespace)
 @js.native
 object conv3dBackpropFilterMod extends js.Object {
+  
   @js.native
   object conv3DBackpropFilter extends js.Object {
+    
     def apply(
       x: Tensor[R4 | R5],
       dy: Tensor[R4 | R5],
@@ -44,6 +46,4 @@ object conv3dBackpropFilterMod extends js.Object {
       pad: valid_
     ): Tensor5D = js.native
   }
-  
 }
-

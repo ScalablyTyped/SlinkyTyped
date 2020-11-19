@@ -6,7 +6,7 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `Checkbox` component is just a wrapper for the `InputToggle` that
@@ -15,4 +15,3 @@ import scala.scalajs.js.annotation._
 @JSImport("@react-md/form/types/toggle/Checkbox", JSImport.Default)
 @js.native
 object default extends TopLevel[ForwardRefExoticComponent[CheckboxProps with RefAttributes[HTMLInputElement]]]
-

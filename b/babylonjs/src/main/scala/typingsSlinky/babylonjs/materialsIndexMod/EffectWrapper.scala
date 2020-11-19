@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.materialsIndexMod
 import typingsSlinky.babylonjs.effectRendererMod.EffectWrapperCreationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Materials/index", "EffectWrapper")
 @js.native
@@ -15,4 +15,3 @@ class EffectWrapper protected ()
     */
   def this(creationOptions: EffectWrapperCreationOptions) = this()
 }
-

@@ -3,15 +3,19 @@ package typingsSlinky.jsData
 import typingsSlinky.jsData.anon.Added
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("js-data/dist/utils", JSImport.Namespace)
 @js.native
 object distUtilsMod extends js.Object {
+  
   def safeSetLink(record: js.Any, field: js.Any, value: js.Any): Unit = js.native
+  
   def safeSetProp(record: js.Any, field: js.Any, value: js.Any): Unit = js.native
+  
   @js.native
   object default extends js.Object {
+    
     /**
       * Recursively iterates over relations found in `opts.with`.
       *
@@ -24,6 +28,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def _forRelation(opts: js.Any, `def`: js.Any, fn: js.Any, thisArg: js.Any): Unit = js.native
+    
     /**
       * Find the index of a relation in the given list
       *
@@ -34,6 +39,7 @@ object distUtilsMod extends js.Object {
       * @returns {number}
       */
     def _getIndex(list: js.Any, relation: js.Any): Double = js.native
+    
     /**
       * Shallow copy properties that meet the following criteria from `src` to
       * `dest`:
@@ -50,6 +56,7 @@ object distUtilsMod extends js.Object {
       */
     @JSName("_")
     def _underscore(dest: js.Any, src: js.Any): Unit = js.native
+    
     /**
       * Define hidden (non-enumerable), writable properties on `target` from the
       * provided `props`.
@@ -71,6 +78,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def addHiddenPropsToTarget(target: js.Any, props: js.Any): Unit = js.native
+    
     /**
       * Return whether the two objects are deeply different.
       *
@@ -92,6 +100,7 @@ object distUtilsMod extends js.Object {
       */
     def areDifferent(newObject: js.Any, oldObject: js.Any): Boolean = js.native
     def areDifferent(newObject: js.Any, oldObject: js.Any, opts: js.Any): Boolean = js.native
+    
     /**
       * Deep copy a value.
       *
@@ -274,6 +283,7 @@ object distUtilsMod extends js.Object {
     ): js.Any = js.native
     def copy(from: js.Any, to: js.Any, stackFrom: js.Any, stackTo: js.Any, blacklist: js.Any): js.Any = js.native
     def copy(from: js.Any, to: js.Any, stackFrom: js.Any, stackTo: js.Any, blacklist: js.Any, plain: js.Any): js.Any = js.native
+    
     /**
       * Check whether the two provided objects are deeply equal.
       *
@@ -310,6 +320,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def deepEqual(a: js.Any, b: js.Any): Boolean = js.native
+    
     /**
       * Recursively shallow fill in own enumerable properties from `source` to
       * `dest`.
@@ -330,6 +341,7 @@ object distUtilsMod extends js.Object {
       */
     def deepFillIn(dest: js.Any): js.Any = js.native
     def deepFillIn(dest: js.Any, source: js.Any): js.Any = js.native
+    
     /**
       * Recursively shallow copy enumerable properties from `source` to `dest`.
       *
@@ -349,6 +361,7 @@ object distUtilsMod extends js.Object {
       */
     def deepMixIn(dest: js.Any): js.Any = js.native
     def deepMixIn(dest: js.Any, source: js.Any): js.Any = js.native
+    
     /**
       * Return a diff of the base object to the comparison object.
       *
@@ -373,6 +386,7 @@ object distUtilsMod extends js.Object {
       */
     def diffObjects(newObject: js.Any, oldObject: js.Any): Added = js.native
     def diffObjects(newObject: js.Any, oldObject: js.Any, opts: js.Any): Added = js.native
+    
     /**
       * Return whether the two values are equal according to the `==` operator.
       *
@@ -389,6 +403,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def equal(a: js.Any, b: js.Any): Boolean = js.native
+    
     /**
       * Produce a factory function for making Error objects with the provided
       * metadata. Used throughout the various js-data components.
@@ -407,6 +422,7 @@ object distUtilsMod extends js.Object {
       */
     def err(domain: js.Any): js.Function2[/* code */ js.Any, /* repeated */ js.Any, js.Error] = js.native
     def err(domain: js.Any, target: js.Any): js.Function2[/* code */ js.Any, /* repeated */ js.Any, js.Error] = js.native
+    
     /**
       * Add eventing capabilities into the target object.
       *
@@ -429,6 +445,7 @@ object distUtilsMod extends js.Object {
     def eventify(target: js.Any, getter: js.UndefOr[scala.Nothing], setter: js.Any): Unit = js.native
     def eventify(target: js.Any, getter: js.Any): Unit = js.native
     def eventify(target: js.Any, getter: js.Any, setter: js.Any): Unit = js.native
+    
     /**
       * Shallow copy own enumerable properties from `src` to `dest` that are on
       * `src` but are missing from `dest.
@@ -448,6 +465,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def fillIn(dest: js.Any, src: js.Any): Unit = js.native
+    
     /**
       * Find the last index of an item in an array according to the given checker function.
       *
@@ -471,6 +489,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def findIndex(array: js.Any, fn: js.Any): Double = js.native
+    
     /**
       * Recursively iterate over a {@link Mapper}'s relations according to
       * `opts.with`.
@@ -484,6 +503,7 @@ object distUtilsMod extends js.Object {
       */
     def forEachRelation(mapper: js.Any, opts: js.Any, fn: js.Any): Unit = js.native
     def forEachRelation(mapper: js.Any, opts: js.Any, fn: js.Any, thisArg: js.Any): Unit = js.native
+    
     /**
       * Iterate over an object's own enumerable properties.
       *
@@ -504,6 +524,7 @@ object distUtilsMod extends js.Object {
       */
     def forOwn(obj: js.Any, fn: js.Any): Unit = js.native
     def forOwn(obj: js.Any, fn: js.Any, thisArg: js.Any): Unit = js.native
+    
     /**
       * Proxy for `JSON.parse`.
       *
@@ -520,6 +541,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def fromJson(json: js.Any): js.Any = js.native
+    
     /**
       * Retrieve the specified property from the given object. Supports retrieving
       * nested properties.
@@ -538,6 +560,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def get(`object`: js.Any, prop: js.Any): js.Any = js.native
+    
     /**
       * Gets default locale for the js-data context.
       *
@@ -551,6 +574,7 @@ object distUtilsMod extends js.Object {
       * @since 4.0.0
       */
     def getDefaultLocale(): String = js.native
+    
     /**
       * Return the superclass for the given instance or subclass. If an instance is
       * provided, then finds the parent class of the instance's constructor.
@@ -580,6 +604,7 @@ object distUtilsMod extends js.Object {
       */
     def getSuper(instance: js.Any): js.Any = js.native
     def getSuper(instance: js.Any, isCtor: js.Any): js.Any = js.native
+    
     /**
       * Return the intersection of two arrays.
       *
@@ -598,6 +623,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def intersection(array1: js.Any, array2: js.Any): js.Array[_] = js.native
+    
     /**
       * Proxy for `Array.isArray`.
       *
@@ -614,6 +640,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isArray(arg: js.Any): /* is std.Array<any> */ Boolean = js.native
+    
     /**
       * Return whether `prop` is matched by any string or regular expression in
       * `blacklist`.
@@ -633,6 +660,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isBlacklisted(prop: js.Any, blacklist: js.Any): Boolean = js.native
+    
     /**
       * Return whether the provided value is a boolean.
       *
@@ -649,6 +677,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isBoolean(value: js.Any): Boolean = js.native
+    
     /**
       * Return whether the provided value is a date.
       *
@@ -665,6 +694,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isDate(value: js.Any): Boolean = js.native
+    
     /**
       * Return whether the provided value is a function.
       *
@@ -681,6 +711,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isFunction(value: js.Any): Boolean = js.native
+    
     /**
       * Return whether the provided value is an integer.
       *
@@ -699,6 +730,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isInteger(value: js.Any): Boolean = js.native
+    
     /**
       * Return whether the provided value is `null`.
       *
@@ -715,6 +747,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isNull(value: js.Any): Boolean = js.native
+    
     /**
       * Return whether the provided value is a number.
       *
@@ -733,6 +766,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isNumber(value: js.Any): Boolean = js.native
+    
     /**
       * Return whether the provided value is an object.
       *
@@ -749,6 +783,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isObject(value: js.Any): Boolean = js.native
+    
     /**
       * Return whether the provided value is a regular expression.
       *
@@ -767,6 +802,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isRegExp(value: js.Any): Boolean = js.native
+    
     /**
       * Return whether the provided value is a string or a number.
       *
@@ -784,6 +820,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isSorN(value: js.Any): Boolean = js.native
+    
     /**
       * Return whether the provided value is a string.
       *
@@ -800,6 +837,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isString(value: js.Any): Boolean = js.native
+    
     /**
       * Return whether the provided value is a `undefined`.
       *
@@ -818,6 +856,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def isUndefined(value: js.Any): Boolean = js.native
+    
     /**
       * Mix in logging capabilities to the target.
       *
@@ -839,6 +878,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def logify(target: js.Any): Unit = js.native
+    
     /**
       * Adds the given record to the provided array only if it's not already in the
       * array.
@@ -864,6 +904,7 @@ object distUtilsMod extends js.Object {
     def noDupeAdd(array: js.Any, record: js.UndefOr[scala.Nothing], fn: js.Any): Unit = js.native
     def noDupeAdd(array: js.Any, record: js.Any): Unit = js.native
     def noDupeAdd(array: js.Any, record: js.Any, fn: js.Any): Unit = js.native
+    
     /**
       * Return a shallow copy of the provided object, minus the properties
       * specified in `keys`.
@@ -882,6 +923,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def omit(props: js.Any, keys: js.Any): js.Object = js.native
+    
     /**
       * Return a shallow copy of the provided object, but only include the
       * properties specified in `keys`.
@@ -900,6 +942,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def pick(props: js.Any, keys: js.Any): js.Any = js.native
+    
     /**
       * Return a plain copy of the given value.
       *
@@ -916,6 +959,7 @@ object distUtilsMod extends js.Object {
       * @since 3.0.0
       */
     def plainCopy(value: js.Any): js.Any = js.native
+    
     /**
       * Shortcut for `utils.Promise.reject(value)`.
       *
@@ -933,6 +977,7 @@ object distUtilsMod extends js.Object {
       * @returns {Promise} Promise reject with `value`.
       */
     def reject(value: js.Any): js.Promise[scala.Nothing] = js.native
+    
     /**
       * Remove the last item found in array according to the given checker function.
       *
@@ -949,6 +994,7 @@ object distUtilsMod extends js.Object {
       */
     def remove(array: js.Any): Unit = js.native
     def remove(array: js.Any, fn: js.Any): Unit = js.native
+    
     /**
       * Shortcut for `utils.Promise.resolve(value)`.
       *
@@ -966,6 +1012,7 @@ object distUtilsMod extends js.Object {
       */
     def resolve(): js.Promise[_] = js.native
     def resolve(value: js.Any): js.Promise[_] = js.native
+    
     /**
       * Set the value at the provided key or path.
       *
@@ -1009,6 +1056,7 @@ object distUtilsMod extends js.Object {
     def set(`object`: js.Any, path: js.Any, value: js.UndefOr[scala.Nothing], opts: js.Any): Unit = js.native
     def set(`object`: js.Any, path: js.Any, value: js.Any): Unit = js.native
     def set(`object`: js.Any, path: js.Any, value: js.Any, opts: js.Any): Unit = js.native
+    
     /**
       * Proxy for `JSON.stringify`.
       *
@@ -1045,6 +1093,7 @@ object distUtilsMod extends js.Object {
       replacer: js.ThisFunction2[/* this */ js.Any, /* key */ String, /* value */ js.Any, _],
       space: Double
     ): String = js.native
+    
     /**
       * Unset the value at the provided key or path.
       *
@@ -1074,6 +1123,4 @@ object distUtilsMod extends js.Object {
       */
     def unset(`object`: js.Any, path: String): Unit = js.native
   }
-  
 }
-

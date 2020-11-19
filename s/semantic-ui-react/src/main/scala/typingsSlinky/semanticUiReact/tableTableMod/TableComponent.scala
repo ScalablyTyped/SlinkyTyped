@@ -10,15 +10,20 @@ import typingsSlinky.semanticUiReact.tableHeaderMod.TableHeaderProps
 import typingsSlinky.semanticUiReact.tableRowMod.TableRowProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TableComponent extends FunctionComponent[TableProps] {
+  
   var Body: ReactComponentClass[TableBodyProps] = js.native
+  
   var Cell: ReactComponentClass[TableCellProps] = js.native
+  
   var Footer: ReactComponentClass[TableFooterProps] = js.native
+  
   var Header: ReactComponentClass[TableHeaderProps] = js.native
+  
   var HeaderCell: ReactComponentClass[TableHeaderCellProps] = js.native
+  
   var Row: ReactComponentClass[TableRowProps] = js.native
 }
-

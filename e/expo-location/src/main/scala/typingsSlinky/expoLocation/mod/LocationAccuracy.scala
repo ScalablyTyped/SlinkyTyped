@@ -2,14 +2,14 @@ package typingsSlinky.expoLocation.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 sealed trait LocationAccuracy extends js.Object
-
 @JSImport("expo-location", "LocationAccuracy")
 @js.native
 object LocationAccuracy extends js.Object {
+  
   @js.native
   sealed trait Balanced extends LocationAccuracy
   
@@ -27,6 +27,4 @@ object LocationAccuracy extends js.Object {
   
   @js.native
   sealed trait Lowest extends LocationAccuracy
-  
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.cytoscape.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * These are normal browser events that you can bind to via Cytoscape.js.
@@ -21,25 +21,32 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.cytoscape.cytoscapeStrings.touchend
 */
 trait UserInputDeviceEventName extends js.Object
-
 object UserInputDeviceEventName {
+  
   @scala.inline
   def click: typingsSlinky.cytoscape.cytoscapeStrings.click = "click".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.click]
+  
   @scala.inline
   def mousedown: typingsSlinky.cytoscape.cytoscapeStrings.mousedown = "mousedown".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.mousedown]
+  
   @scala.inline
   def mousemove: typingsSlinky.cytoscape.cytoscapeStrings.mousemove = "mousemove".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.mousemove]
+  
   @scala.inline
   def mouseout: typingsSlinky.cytoscape.cytoscapeStrings.mouseout = "mouseout".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.mouseout]
+  
   @scala.inline
   def mouseover: typingsSlinky.cytoscape.cytoscapeStrings.mouseover = "mouseover".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.mouseover]
+  
   @scala.inline
   def mouseup: typingsSlinky.cytoscape.cytoscapeStrings.mouseup = "mouseup".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.mouseup]
+  
   @scala.inline
   def touchend: typingsSlinky.cytoscape.cytoscapeStrings.touchend = "touchend".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.touchend]
+  
   @scala.inline
   def touchmove: typingsSlinky.cytoscape.cytoscapeStrings.touchmove = "touchmove".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.touchmove]
+  
   @scala.inline
   def touchstart: typingsSlinky.cytoscape.cytoscapeStrings.touchstart = "touchstart".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.touchstart]
 }
-

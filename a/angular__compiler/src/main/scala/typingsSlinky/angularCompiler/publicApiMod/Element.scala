@@ -4,7 +4,7 @@ import typingsSlinky.angularCompiler.i18nAstMod.I18nMeta
 import typingsSlinky.angularCompiler.mlParserAstMod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/public_api", "Element")
 @js.native
@@ -129,4 +129,3 @@ class Element protected ()
     i18n: I18nMeta
   ) = this()
 }
-

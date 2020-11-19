@@ -7,7 +7,7 @@ import typingsSlinky.firefoxWebextBrowser.browser.telemetry.EventData
 import typingsSlinky.firefoxWebextBrowser.browser.telemetry.ScalarData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Use the `browser.telemetry` API to send telemetry data to the Mozilla Telemetry service. Restricted to Mozilla
@@ -20,8 +20,10 @@ import scala.scalajs.js.annotation._
 @JSGlobal("browser.telemetry")
 @js.native
 object telemetry extends js.Object {
+  
   /** Checks if Telemetry upload is enabled. */
   def canUpload(): js.Promise[_] = js.native
+  
   /**
     * Adds the value to the given keyed scalar.
     * @param name The scalar name
@@ -29,6 +31,7 @@ object telemetry extends js.Object {
     * @param value The numeric value to add to the scalar. Only unsigned integers supported.
     */
   def keyedScalarAdd(name: String, key: String, value: Double): js.Promise[_] = js.native
+  
   /**
     * Sets the keyed scalar to the given value. Throws if the value type doesn't match the scalar type.
     * @param name The scalar name.
@@ -39,6 +42,7 @@ object telemetry extends js.Object {
   def keyedScalarSet(name: String, key: String, value: StringDictionary[js.Any]): js.Promise[_] = js.native
   def keyedScalarSet(name: String, key: String, value: Boolean): js.Promise[_] = js.native
   def keyedScalarSet(name: String, key: String, value: Double): js.Promise[_] = js.native
+  
   /**
     * Sets the keyed scalar to the maximum of the current and the passed value
     * @param name The scalar name.
@@ -46,6 +50,7 @@ object telemetry extends js.Object {
     * @param value The numeric value to set the scalar to. Only unsigned integers supported.
     */
   def keyedScalarSetMaximum(name: String, key: String, value: Double): js.Promise[_] = js.native
+  
   /**
     * Record an event in Telemetry. Throws when trying to record an unknown event.
     * @param category The category name.
@@ -64,6 +69,7 @@ object telemetry extends js.Object {
   ): js.Promise[_] = js.native
   def recordEvent(category: String, method: String, `object`: String, value: String): js.Promise[_] = js.native
   def recordEvent(category: String, method: String, `object`: String, value: String, extra: StringDictionary[String]): js.Promise[_] = js.native
+  
   /**
     * Register new events to record them from addons. See nsITelemetry.idl for more details.
     * @param category The unique category the events are registered in.
@@ -71,6 +77,7 @@ object telemetry extends js.Object {
     *     and the corresponding property value is an object of EventData type.
     */
   def registerEvents(category: String, data: StringDictionary[EventData]): js.Promise[_] = js.native
+  
   /**
     * Register new scalars to record them from addons. See nsITelemetry.idl for more details.
     * @param category The unique category the scalars are registered in.
@@ -78,12 +85,14 @@ object telemetry extends js.Object {
     *     name, and the corresponding property value is an object of ScalarData type.
     */
   def registerScalars(category: String, data: StringDictionary[ScalarData]): js.Promise[_] = js.native
+  
   /**
     * Adds the value to the given scalar.
     * @param name The scalar name.
     * @param value The numeric value to add to the scalar. Only unsigned integers supported.
     */
   def scalarAdd(name: String, value: Double): js.Promise[_] = js.native
+  
   /**
     * Sets the named scalar to the given value. Throws if the value type doesn't match the scalar type.
     * @param name The scalar name
@@ -93,12 +102,14 @@ object telemetry extends js.Object {
   def scalarSet(name: String, value: StringDictionary[js.Any]): js.Promise[_] = js.native
   def scalarSet(name: String, value: Boolean): js.Promise[_] = js.native
   def scalarSet(name: String, value: Double): js.Promise[_] = js.native
+  
   /**
     * Sets the scalar to the maximum of the current and the passed value
     * @param name The scalar name.
     * @param value The numeric value to set the scalar to. Only unsigned integers supported.
     */
   def scalarSetMaximum(name: String, value: Double): js.Promise[_] = js.native
+  
   /**
     * Enable recording of events in a category. Events default to recording disabled. This allows to toggle recording
     * for all events in the specified category.
@@ -106,6 +117,7 @@ object telemetry extends js.Object {
     * @param enabled Whether recording is enabled for events in that category.
     */
   def setEventRecordingEnabled(category: String, enabled: Boolean): js.Promise[_] = js.native
+  
   /**
     * Submits a custom ping to the Telemetry back-end, with an encrypted payload. Requires a telemetry entry in the
     * manifest to be used.
@@ -113,6 +125,7 @@ object telemetry extends js.Object {
     * @param options Options object.
     */
   def submitEncryptedPing(message: StringDictionary[js.Any], options: SchemaName): js.Promise[_] = js.native
+  
   /* telemetry functions */
   /**
     * Submits a custom ping to the Telemetry back-end. See `submitExternalPing` inside TelemetryController.jsm for
@@ -123,4 +136,3 @@ object telemetry extends js.Object {
     */
   def submitPing(`type`: String, message: StringDictionary[js.Any], options: AddClientId): js.Promise[_] = js.native
 }
-

@@ -9,10 +9,11 @@ import typingsSlinky.gapiClientClassroom.anon.QuotaUserStudentId
 import typingsSlinky.gapiClientClassroom.anon.StudentId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait GuardianInvitationsResource extends js.Object {
+  
   def create(request: QuotaUserStudentId, body: GuardianInvitation): Request[GuardianInvitation] = js.native
   /**
     * Creates a guardian invitation, and sends an email to the guardian asking
@@ -47,6 +48,7 @@ trait GuardianInvitationsResource extends js.Object {
     * `Guardian` for this user.
     */
   def create(request: StudentId): Request[GuardianInvitation] = js.native
+  
   /**
     * Returns a specific guardian invitation.
     *
@@ -65,6 +67,7 @@ trait GuardianInvitationsResource extends js.Object {
     */
   def get(): Request[GuardianInvitation] = js.native
   def get(request: InvitationId): Request[GuardianInvitation] = js.native
+  
   /**
     * Returns a list of guardian invitations that the requesting user is
     * permitted to view, filtered by the parameters provided.
@@ -85,6 +88,7 @@ trait GuardianInvitationsResource extends js.Object {
     */
   def list(): Request[ListGuardianInvitationsResponse] = js.native
   def list(request: InvitedEmailAddress): Request[ListGuardianInvitationsResponse] = js.native
+  
   /**
     * Modifies a guardian invitation.
     *
@@ -108,4 +112,3 @@ trait GuardianInvitationsResource extends js.Object {
   def patch(request: FieldsInvitationId): Request[GuardianInvitation] = js.native
   def patch(request: InvitationIdKey, body: GuardianInvitation): Request[GuardianInvitation] = js.native
 }
-

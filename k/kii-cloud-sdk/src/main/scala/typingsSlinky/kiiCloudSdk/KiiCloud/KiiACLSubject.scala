@@ -2,7 +2,7 @@ package typingsSlinky.kiiCloudSdk.KiiCloud
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.kiiCloudSdk.KiiCloud.KiiGroup
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.kiiCloudSdk.KiiCloud.KiiThing
 */
 trait KiiACLSubject extends js.Object
-

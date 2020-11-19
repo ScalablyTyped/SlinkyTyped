@@ -6,11 +6,12 @@ import typingsSlinky.typescript.mod.JsxTagNameExpression
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typedoc", "TypeScript.updateJsxOpeningElement")
 @js.native
 object updateJsxOpeningElement extends js.Object {
+  
   def apply(
     node: JsxOpeningElement,
     tagName: JsxTagNameExpression,
@@ -24,4 +25,3 @@ object updateJsxOpeningElement extends js.Object {
     attributes: JsxAttributes
   ): JsxOpeningElement = js.native
 }
-

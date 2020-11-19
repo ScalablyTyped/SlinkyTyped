@@ -8,11 +8,12 @@ import typingsSlinky.graphqlToolsUtils.interfacesMod.ExecutionResult
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@graphql-tools/delegate/transforms/CheckResultAndHandleErrors", "checkResultAndHandleErrors")
 @js.native
 object checkResultAndHandleErrors extends js.Object {
+  
   def apply(result: ExecutionResult[Record[String, _]], context: Record[String, _], info: GraphQLResolveInfo): js.Any = js.native
   def apply(
     result: ExecutionResult[Record[String, _]],
@@ -151,4 +152,3 @@ object checkResultAndHandleErrors extends js.Object {
     returnType: GraphQLOutputType
   ): js.Any = js.native
 }
-

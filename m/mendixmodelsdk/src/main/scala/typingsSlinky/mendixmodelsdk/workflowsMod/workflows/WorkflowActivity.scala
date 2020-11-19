@@ -10,7 +10,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.workflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -33,32 +33,37 @@ abstract class WorkflowActivity protected () extends Element {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  /**
-    * In version 8.12.0: added public
-    */
-  @JSName("caption")
-  val caption_FWorkflowActivity: String = js.native
-  @JSName("containerAsWorkflow")
-  val containerAsWorkflow_FWorkflowActivity: IWorkflow = js.native
-  @JSName("model")
-  var model_FWorkflowActivity: IModel = js.native
+  
   /**
     * In version 8.12.0: added public
     */
   def caption: String = js.native
   def caption_=(newValue: String): Unit = js.native
+  /**
+    * In version 8.12.0: added public
+    */
+  @JSName("caption")
+  val caption_FWorkflowActivity: String = js.native
+  
   def containerAsWorkflow: Workflow = js.native
+  @JSName("containerAsWorkflow")
+  val containerAsWorkflow_FWorkflowActivity: IWorkflow = js.native
+  
   def location: IPoint = js.native
   def location_=(newValue: IPoint): Unit = js.native
+  
+  @JSName("model")
+  var model_FWorkflowActivity: IModel = js.native
+  
   def size: ISize = js.native
   def size_=(newValue: ISize): Unit = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.WorkflowActivity")
 @js.native
 object WorkflowActivity extends js.Object {
+  
   var structureTypeName: String = js.native
+  
   var versionInfo: StructureVersionInfo = js.native
 }
-

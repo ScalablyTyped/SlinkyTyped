@@ -18,26 +18,41 @@ import typingsSlinky.leafletDraw.leafletDrawStrings.drawColontoolbarclosed
 import typingsSlinky.leafletDraw.leafletDrawStrings.drawColontoolbaropened
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("leaflet", "Draw.Event")
 @js.native
 object Event extends js.Object {
+  
   val CREATED: drawColoncreated = js.native
+  
   val DELETED: drawColondeleted = js.native
+  
   val DELETESTART: drawColondeletestart = js.native
+  
   val DELETESTOP: drawColondeletestop = js.native
+  
   val DRAWSTART: drawColondrawstart = js.native
+  
   val DRAWSTOP: drawColondrawstop = js.native
+  
   val DRAWVERTEX: drawColondrawvertex = js.native
+  
   val EDITED: drawColonedited = js.native
+  
   val EDITMOVE: drawColoneditmove = js.native
+  
   val EDITRESIZE: drawColoneditresize = js.native
+  
   val EDITSTART: drawColoneditstart = js.native
+  
   val EDITSTOP: drawColoneditstop = js.native
+  
   val EDITVERTEX: drawColoneditvertex = js.native
+  
   val MARKERCONTEXT: drawColonmarkercontext = js.native
+  
   val TOOLBARCLOSED: drawColontoolbarclosed = js.native
+  
   val TOOLBAROPENED: drawColontoolbaropened = js.native
 }
-

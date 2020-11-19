@@ -10,14 +10,16 @@ import typingsSlinky.ionicReact.routeInfoMod.RouteInfo
 import typingsSlinky.ionicReact.routerDirectionMod.RouterDirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object NavManager {
+  
   @JSImport("@ionic/react", "NavManager")
   @js.native
   object component extends js.Object
   
   def withProps(p: NavManagerProps): Default[tag.type, typingsSlinky.ionicReact.mod.NavManager] = new Default[tag.type, typingsSlinky.ionicReact.mod.NavManager](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     ionRedirect: js.Any,
@@ -35,4 +37,3 @@ object NavManager {
     new Default[tag.type, typingsSlinky.ionicReact.mod.NavManager](js.Array(this.component, __props.asInstanceOf[NavManagerProps]))
   }
 }
-

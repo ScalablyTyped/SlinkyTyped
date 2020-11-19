@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.MarkerSymbolProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.MarkerSymbol")
 @js.native
@@ -16,4 +16,3 @@ class MarkerSymbolCls ()
   extends typingsSlinky.arcgisJsApi.esri.MarkerSymbol {
   def this(properties: MarkerSymbolProperties) = this()
 }
-

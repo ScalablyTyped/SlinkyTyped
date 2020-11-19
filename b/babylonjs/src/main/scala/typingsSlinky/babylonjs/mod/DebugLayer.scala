@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs", "DebugLayer")
 @js.native
@@ -17,11 +17,11 @@ class DebugLayer protected ()
     */
   def this(scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
 }
-
 /* static members */
 @JSImport("babylonjs", "DebugLayer")
 @js.native
 object DebugLayer extends js.Object {
+  
   /**
     * Define the url to get the inspector script from.
     * By default it uses the babylonjs CDN.
@@ -29,4 +29,3 @@ object DebugLayer extends js.Object {
     */
   var InspectorURL: String = js.native
 }
-

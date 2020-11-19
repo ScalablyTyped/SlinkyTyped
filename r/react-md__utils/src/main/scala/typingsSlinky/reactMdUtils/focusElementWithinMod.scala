@@ -4,12 +4,11 @@ import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@react-md/utils/types/wia-aria/focusElementWithin", JSImport.Namespace)
 @js.native
 object focusElementWithinMod extends js.Object {
-  trait _Focus extends js.Object
   
   def default(container: Document, focus: Focus): Unit = js.native
   def default(
@@ -80,6 +79,9 @@ object focusElementWithinMod extends js.Object {
     preventScroll: Boolean,
     elements: js.Array[HTMLElement]
   ): Unit = js.native
+  
+  trait _Focus extends js.Object
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.reactMdUtils.reactMdUtilsStrings.first
     - typingsSlinky.reactMdUtils.reactMdUtilsStrings.last
@@ -87,4 +89,3 @@ object focusElementWithinMod extends js.Object {
   */
   type Focus = _Focus | String
 }
-

@@ -4,10 +4,11 @@ import typingsSlinky.gapiClient.gapi.client.Request
 import typingsSlinky.gapiClientScript.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ScriptsResource extends js.Object {
+  
   /**
     * Runs a function in an Apps Script project. The project must be deployed
     * for use with the Apps Script Execution API.
@@ -21,27 +22,30 @@ trait ScriptsResource extends js.Object {
     */
   def run(request: Accesstoken): Request[Operation] = js.native
 }
-
 object ScriptsResource {
+  
   @scala.inline
   def apply(run: Accesstoken => Request[Operation]): ScriptsResource = {
     val __obj = js.Dynamic.literal(run = js.Any.fromFunction1(run))
     __obj.asInstanceOf[ScriptsResource]
   }
+  
   @scala.inline
   implicit class ScriptsResourceOps[Self <: ScriptsResource] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
     def set(key: String, value: js.Any): Self = {
-        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-        x
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
     def setRun(value: Accesstoken => Request[Operation]): Self = this.set("run", js.Any.fromFunction1(value))
   }
-  
 }
-

@@ -70,7 +70,7 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.wmts
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.xor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Layer
@@ -79,6 +79,7 @@ trait Layer
      with Evented
      with IntersectItem
      with _HitTestItem {
+  
   /**
     * Blend modes are used to blend layers together to create an interesting effect in a layer, or even to produce what seems like a new layer. Unlike the method of using [transparency](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#opacity) which can result in a washed-out top layer, blend modes can create a variety of very vibrant and intriguing results by blending a layer with the layer(s) below it.  When blending layers, a `top layer` is a layer that has a blend mode applied. All layers underneath the top layer are `background layers`. The default blending mode is `normal` where the top layer is simply displayed over the background layer. While this default behavior is perfectly acceptable, the use of blend modes on layers open up a world of endless possibilities to generate creative maps.  The layers in a [GroupLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html) are blended together in isolation from the rest of the map.  In the following screenshots, the [vintage shaded relief](https://www.arcgis.com/home/item.html?id=a8588e0401e246469260f03ee44d69f1) layer is displayed over a [firefly world imagery](http://www.arcgis.com/home/item.html?id=a66bfb7dd3b14228bf7ba42b138fe2ea) layer. The `color` blend mode is applied to the vintage shaded relief and the result looks a new layer.  <img src="../../assets/img/apiref/layers/blendMode/color-blend.png" alt="color-blend" style="width:800px;"/>
     * > **Known Limitations**
@@ -246,18 +247,43 @@ trait Layer
     * @default normal
     */
   var blendMode: average | `color-burn` | `color-dodge` | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.color | darken | `destination-atop` | `destination-in` | `destination-out` | `destination-over` | difference | exclusion | `hard-light` | hue | invert | lighten | lighter | luminosity | minus | multiply | normal | overlay | plus | reflect | saturation | screen | `soft-light` | `source-atop` | `source-in` | `source-out` | `vivid-light` | xor = js.native
+  
+  /**
+    * Called by the views, such as [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) and [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html), when the layer is added to the [Map.layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#layers) collection and a layer view must be created for it. **This method is used internally and there is no use case for invoking it directly**.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#createLayerView)
+    *
+    * @param view The parent view.
+    * @param options An object specifying additional options. See the object specification table below for the required properties of this object.
+    * @param options.signal A signal to abort the creation of the layerview.
+    *
+    */
+  def createLayerView(view: js.Any): js.Promise[LayerView] = js.native
+  def createLayerView(view: js.Any, options: LayerCreateLayerViewOptions): js.Promise[LayerView] = js.native
+  
+  /**
+    * Fetches custom attribution data for the layer when it becomes available.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#fetchAttributionData)
+    *
+    *
+    */
+  def fetchAttributionData(): js.Promise[_] = js.native
+  
   /**
     * The full extent of the layer. By default, this is worldwide. This property may be used to set the extent of the view to match a layer's extent so that its features appear to fill the view. See the sample snippet below.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#fullExtent)
     */
   var fullExtent: Extent = js.native
+  
   /**
     * The unique ID assigned to the layer. If not set by the developer, it is automatically generated when the layer is loaded.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#id)
     */
   var id: String = js.native
+  
   /**
     * Indicates how the layer should display in the [LayerList](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html) widget. The possible values are listed below.
     *
@@ -273,6 +299,7 @@ trait Layer
     * @default show
     */
   var listMode: show | hide | `hide-children` = js.native
+  
   /**
     * Indicates whether the layer's resources have loaded. When `true`, all the properties of the object can be accessed.
     *
@@ -281,6 +308,14 @@ trait Layer
     * @default false
     */
   val loaded: Boolean = js.native
+  
+  @JSName("on")
+  def on_layerviewcreate(name: `layerview-create`, eventHandler: LayerLayerviewCreateEventHandler): IHandle = js.native
+  @JSName("on")
+  def on_layerviewcreateerror(name: `layerview-create-error`, eventHandler: LayerLayerviewCreateErrorEventHandler): IHandle = js.native
+  @JSName("on")
+  def on_layerviewdestroy(name: `layerview-destroy`, eventHandler: LayerLayerviewDestroyEventHandler): IHandle = js.native
+  
   /**
     * The opacity of the layer. This value can range between `1` and `0`, where `0` is 100 percent transparent and `1` is completely opaque.
     *
@@ -289,18 +324,21 @@ trait Layer
     * @default 1
     */
   var opacity: Double = js.native
+  
   /**
     * The title of the layer used to identify it in places such as the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) and [LayerList](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html) widgets.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#title)
     */
   var title: String = js.native
+  
   /**
     * The layer type provides a convenient way to check the type of the layer without the need to import specific layer modules.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#type)
     */
   val `type`: `base-dynamic` | `base-elevation` | `base-tile` | `bing-maps` | `building-scene` | csv | elevation | feature | geojson | `geo-rss` | graphics | group | imagery | `imagery-tile` | `integrated-mesh` | kml | `map-image` | `map-notes` | `ogc-feature` | `open-street-map` | `point-cloud` | route | scene | stream | tile | unknown | unsupported | `vector-tile` | `web-tile` | wms | wmts = js.native
+  
   /**
     * Indicates if the layer is visible in the [View](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html). When `false`, the layer may still be added to a [Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html) instance that is referenced in a view, but its features will not be visible in the view.
     *
@@ -309,31 +347,4 @@ trait Layer
     * @default true
     */
   var visible: Boolean = js.native
-  /**
-    * Called by the views, such as [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) and [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html), when the layer is added to the [Map.layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#layers) collection and a layer view must be created for it. **This method is used internally and there is no use case for invoking it directly**.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#createLayerView)
-    *
-    * @param view The parent view.
-    * @param options An object specifying additional options. See the object specification table below for the required properties of this object.
-    * @param options.signal A signal to abort the creation of the layerview.
-    *
-    */
-  def createLayerView(view: js.Any): js.Promise[LayerView] = js.native
-  def createLayerView(view: js.Any, options: LayerCreateLayerViewOptions): js.Promise[LayerView] = js.native
-  /**
-    * Fetches custom attribution data for the layer when it becomes available.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#fetchAttributionData)
-    *
-    *
-    */
-  def fetchAttributionData(): js.Promise[_] = js.native
-  @JSName("on")
-  def on_layerviewcreate(name: `layerview-create`, eventHandler: LayerLayerviewCreateEventHandler): IHandle = js.native
-  @JSName("on")
-  def on_layerviewcreateerror(name: `layerview-create-error`, eventHandler: LayerLayerviewCreateErrorEventHandler): IHandle = js.native
-  @JSName("on")
-  def on_layerviewdestroy(name: `layerview-destroy`, eventHandler: LayerLayerviewDestroyEventHandler): IHandle = js.native
 }
-

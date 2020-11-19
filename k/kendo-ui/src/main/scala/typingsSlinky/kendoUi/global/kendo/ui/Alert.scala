@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.ui.AlertOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("kendo.ui.Alert")
 @js.native
@@ -13,12 +13,12 @@ class Alert protected ()
   def this(element: Element) = this()
   def this(element: Element, options: AlertOptions) = this()
 }
-
 /* static members */
 @JSGlobal("kendo.ui.Alert")
 @js.native
 object Alert extends js.Object {
-  var fn: typingsSlinky.kendoUi.kendo.ui.Alert = js.native
+  
   def extend(proto: js.Object): typingsSlinky.kendoUi.kendo.ui.Alert = js.native
+  
+  var fn: typingsSlinky.kendoUi.kendo.ui.Alert = js.native
 }
-

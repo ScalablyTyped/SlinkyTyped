@@ -2,11 +2,12 @@ package typingsSlinky.openui5.global.sap.ui.layout
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("sap.ui.layout.form")
 @js.native
 object form extends js.Object {
+  
   @js.native
   class Form protected ()
     extends typingsSlinky.openui5.sap.ui.layout.form.Form {
@@ -159,12 +160,14 @@ object form extends js.Object {
     */
   @js.native
   object SimpleFormLayout extends js.Object {
-    /* 0 */ val GridLayout: typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.GridLayout with Double = js.native
-    /* 1 */ val ResponsiveGridLayout: typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.ResponsiveGridLayout with Double = js.native
-    /* 2 */ val ResponsiveLayout: typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.ResponsiveLayout with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout with Double] = js.native
+    
+    /* 0 */ val GridLayout: typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.GridLayout with Double = js.native
+    
+    /* 1 */ val ResponsiveGridLayout: typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.ResponsiveGridLayout with Double = js.native
+    
+    /* 2 */ val ResponsiveLayout: typingsSlinky.openui5.sap.ui.layout.form.SimpleFormLayout.ResponsiveLayout with Double = js.native
   }
-  
 }
-

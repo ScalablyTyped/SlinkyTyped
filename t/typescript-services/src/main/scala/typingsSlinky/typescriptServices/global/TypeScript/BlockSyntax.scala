@@ -4,7 +4,7 @@ import typingsSlinky.typescriptServices.TypeScript.ISyntaxList
 import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.BlockSyntax")
 @js.native
@@ -17,12 +17,12 @@ class BlockSyntax protected ()
     parsedInStrictMode: Boolean
   ) = this()
 }
-
 /* static members */
 @JSGlobal("TypeScript.BlockSyntax")
 @js.native
 object BlockSyntax extends js.Object {
+  
   def create(openBraceToken: ISyntaxToken, closeBraceToken: ISyntaxToken): typingsSlinky.typescriptServices.TypeScript.BlockSyntax = js.native
+  
   def create1(): typingsSlinky.typescriptServices.TypeScript.BlockSyntax = js.native
 }
-

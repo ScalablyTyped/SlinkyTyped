@@ -5,11 +5,11 @@ import typingsSlinky.d3.d3Strings.feImage
 import typingsSlinky.d3Selection.mod.BaseType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("d3", "creator")
 @js.native
 object creator_feImage extends js.Object {
+  
   def apply(name: feImage): js.ThisFunction0[/* this */ BaseType, SVGFEImageElement] = js.native
 }
-

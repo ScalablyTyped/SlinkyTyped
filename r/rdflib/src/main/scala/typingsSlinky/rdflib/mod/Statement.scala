@@ -8,7 +8,7 @@ import typingsSlinky.rdflib.typesMod.PredicateType
 import typingsSlinky.rdflib.typesMod.SubjectType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rdflib", "Statement")
 @js.native
@@ -34,4 +34,3 @@ class Statement[S /* <: SubjectType */, P /* <: PredicateType */, O /* <: Object
   def this(subject: S, predicate: P, `object`: O, graph: G) = this()
   def this(subject: S, predicate: P, `object`: O, graph: DefaultGraph) = this()
 }
-

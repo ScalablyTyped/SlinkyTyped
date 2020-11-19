@@ -121,16 +121,11 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ojMenuSelectMany_ extends JetElement[ojMenuSelectManySettableProperties] {
-  var disabled: Boolean = js.native
-  var onDisabledChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var onValueChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var options: js.Array[Option] | (DataProvider[_, _]) | Null = js.native
-  var value: js.Array[_] = js.native
+  
   @JSName("addEventListener")
   def addEventListener_abort(`type`: abort, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ UIEvent, _]): Unit = js.native
   @JSName("addEventListener")
@@ -927,6 +922,9 @@ trait ojMenuSelectMany_ extends JetElement[ojMenuSelectManySettableProperties] {
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ WheelEvent, _],
     useCapture: Boolean
   ): Unit = js.native
+  
+  var disabled: Boolean = js.native
+  
   def getProperty(property: String): js.Any = js.native
   @JSName("getProperty")
   def getProperty_disabled(property: disabled): Boolean = js.native
@@ -934,7 +932,17 @@ trait ojMenuSelectMany_ extends JetElement[ojMenuSelectManySettableProperties] {
   def getProperty_options(property: options): js.Array[Option] | (DataProvider[_, _]) | Null = js.native
   @JSName("getProperty")
   def getProperty_value(property: value): js.Array[_] = js.native
+  
+  var onDisabledChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onOptionsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var onValueChanged: (js.Function1[CustomEvent, _]) | Null = js.native
+  
+  var options: js.Array[Option] | (DataProvider[_, _]) | Null = js.native
+  
   def setProperties(properties: ojMenuSelectManySettablePropertiesLenient): Unit = js.native
+  
   def setProperty[T /* <: String */](property: T, value: JetSetPropertyType[T, ojMenuSelectManySettableProperties]): Unit = js.native
   @JSName("setProperty")
   def setProperty_disabled(property: disabled, value: Boolean): Unit = js.native
@@ -946,5 +954,6 @@ trait ojMenuSelectMany_ extends JetElement[ojMenuSelectManySettableProperties] {
   def setProperty_options(property: options, value: DataProvider[_, _]): Unit = js.native
   @JSName("setProperty")
   def setProperty_value(property: value, value: js.Array[_]): Unit = js.native
+  
+  var value: js.Array[_] = js.native
 }
-

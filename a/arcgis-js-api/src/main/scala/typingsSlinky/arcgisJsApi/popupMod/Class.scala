@@ -4,7 +4,7 @@ import typingsSlinky.arcgisJsApi.esri.Popup
 import typingsSlinky.arcgisJsApi.esri.PopupProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("esri/widgets/Popup", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ import scala.scalajs.js.annotation._
 class Class () extends Popup {
   def this(properties: PopupProperties) = this()
 }
-

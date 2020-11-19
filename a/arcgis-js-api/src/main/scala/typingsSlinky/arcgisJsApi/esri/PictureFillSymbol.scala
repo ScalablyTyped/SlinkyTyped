@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`picture-fill`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.arcgisJsApi.esri.Symbol2D3D because Already inherited
@@ -14,6 +14,7 @@ trait PictureFillSymbol
      with typingsSlinky.arcgisJsApi.esri.symbols.FillSymbol
      with typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D
      with symbolsFillSymbol {
+  
   /**
     * The height of the image in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
     *
@@ -22,6 +23,7 @@ trait PictureFillSymbol
     * @default 12
     */
   var height: Double = js.native
+  
   /**
     * The symbol type.
     *
@@ -29,12 +31,14 @@ trait PictureFillSymbol
     */
   @JSName("type")
   val type_PictureFillSymbol: `picture-fill` = js.native
+  
   /**
     * The URL to the image.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PictureFillSymbol.html#url)
     */
   var url: String = js.native
+  
   /**
     * The width of the image in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
     *
@@ -43,6 +47,7 @@ trait PictureFillSymbol
     * @default 12
     */
   var width: Double = js.native
+  
   /**
     * The offset on the x-axis in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
     *
@@ -51,6 +56,7 @@ trait PictureFillSymbol
     * @default 0
     */
   var xoffset: Double = js.native
+  
   /**
     * The scale factor on the x axis of the symbol.
     *
@@ -59,6 +65,7 @@ trait PictureFillSymbol
     * @default 1
     */
   var xscale: Double = js.native
+  
   /**
     * The offset on the y-axis in pixels or points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
     *
@@ -67,6 +74,7 @@ trait PictureFillSymbol
     * @default 0
     */
   var yoffset: Double = js.native
+  
   /**
     * The scale factor on the y axis of the symbol.
     *
@@ -76,4 +84,3 @@ trait PictureFillSymbol
     */
   var yscale: Double = js.native
 }
-

@@ -2,9 +2,55 @@ package typingsSlinky.htmlparser2
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object htmlparser2Strings {
+  
+  @scala.inline
+  def onattribdata: onattribdata = "onattribdata".asInstanceOf[onattribdata]
+  
+  @scala.inline
+  def onattribute: onattribute = "onattribute".asInstanceOf[onattribute]
+  
+  @scala.inline
+  def oncdataend: oncdataend = "oncdataend".asInstanceOf[oncdataend]
+  
+  @scala.inline
+  def oncdatastart: oncdatastart = "oncdatastart".asInstanceOf[oncdatastart]
+  
+  @scala.inline
+  def onclosetag: onclosetag = "onclosetag".asInstanceOf[onclosetag]
+  
+  @scala.inline
+  def oncomment: oncomment = "oncomment".asInstanceOf[oncomment]
+  
+  @scala.inline
+  def oncommentend: oncommentend = "oncommentend".asInstanceOf[oncommentend]
+  
+  @scala.inline
+  def onend: onend = "onend".asInstanceOf[onend]
+  
+  @scala.inline
+  def onerror: onerror = "onerror".asInstanceOf[onerror]
+  
+  @scala.inline
+  def onopentag: onopentag = "onopentag".asInstanceOf[onopentag]
+  
+  @scala.inline
+  def onopentagname: onopentagname = "onopentagname".asInstanceOf[onopentagname]
+  
+  @scala.inline
+  def onparserinit: onparserinit = "onparserinit".asInstanceOf[onparserinit]
+  
+  @scala.inline
+  def onprocessinginstruction: onprocessinginstruction = "onprocessinginstruction".asInstanceOf[onprocessinginstruction]
+  
+  @scala.inline
+  def onreset: onreset = "onreset".asInstanceOf[onreset]
+  
+  @scala.inline
+  def ontext: ontext = "ontext".asInstanceOf[ontext]
+  
   @js.native
   sealed trait onattribdata extends js.Object
   
@@ -49,36 +95,4 @@ object htmlparser2Strings {
   
   @js.native
   sealed trait ontext extends js.Object
-  
-  @scala.inline
-  def onattribdata: onattribdata = "onattribdata".asInstanceOf[onattribdata]
-  @scala.inline
-  def onattribute: onattribute = "onattribute".asInstanceOf[onattribute]
-  @scala.inline
-  def oncdataend: oncdataend = "oncdataend".asInstanceOf[oncdataend]
-  @scala.inline
-  def oncdatastart: oncdatastart = "oncdatastart".asInstanceOf[oncdatastart]
-  @scala.inline
-  def onclosetag: onclosetag = "onclosetag".asInstanceOf[onclosetag]
-  @scala.inline
-  def oncomment: oncomment = "oncomment".asInstanceOf[oncomment]
-  @scala.inline
-  def oncommentend: oncommentend = "oncommentend".asInstanceOf[oncommentend]
-  @scala.inline
-  def onend: onend = "onend".asInstanceOf[onend]
-  @scala.inline
-  def onerror: onerror = "onerror".asInstanceOf[onerror]
-  @scala.inline
-  def onopentag: onopentag = "onopentag".asInstanceOf[onopentag]
-  @scala.inline
-  def onopentagname: onopentagname = "onopentagname".asInstanceOf[onopentagname]
-  @scala.inline
-  def onparserinit: onparserinit = "onparserinit".asInstanceOf[onparserinit]
-  @scala.inline
-  def onprocessinginstruction: onprocessinginstruction = "onprocessinginstruction".asInstanceOf[onprocessinginstruction]
-  @scala.inline
-  def onreset: onreset = "onreset".asInstanceOf[onreset]
-  @scala.inline
-  def ontext: ontext = "ontext".asInstanceOf[ontext]
 }
-

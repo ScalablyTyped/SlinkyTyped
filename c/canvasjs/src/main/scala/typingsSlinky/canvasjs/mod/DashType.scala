@@ -2,7 +2,7 @@ package typingsSlinky.canvasjs.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.canvasjs.canvasjsStrings.solid
@@ -18,29 +18,38 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.canvasjs.canvasjsStrings.longDashDotDot
 */
 trait DashType extends js.Object
-
 object DashType {
+  
   @scala.inline
   def dash: typingsSlinky.canvasjs.canvasjsStrings.dash = "dash".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.dash]
+  
   @scala.inline
   def dashDot: typingsSlinky.canvasjs.canvasjsStrings.dashDot = "dashDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.dashDot]
+  
   @scala.inline
   def dot: typingsSlinky.canvasjs.canvasjsStrings.dot = "dot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.dot]
+  
   @scala.inline
   def longDash: typingsSlinky.canvasjs.canvasjsStrings.longDash = "longDash".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.longDash]
+  
   @scala.inline
   def longDashDot: typingsSlinky.canvasjs.canvasjsStrings.longDashDot = "longDashDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.longDashDot]
+  
   @scala.inline
   def longDashDotDot: typingsSlinky.canvasjs.canvasjsStrings.longDashDotDot = "longDashDotDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.longDashDotDot]
+  
   @scala.inline
   def shortDash: typingsSlinky.canvasjs.canvasjsStrings.shortDash = "shortDash".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.shortDash]
+  
   @scala.inline
   def shortDashDot: typingsSlinky.canvasjs.canvasjsStrings.shortDashDot = "shortDashDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.shortDashDot]
+  
   @scala.inline
   def shortDashDotDot: typingsSlinky.canvasjs.canvasjsStrings.shortDashDotDot = "shortDashDotDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.shortDashDotDot]
+  
   @scala.inline
   def shortDot: typingsSlinky.canvasjs.canvasjsStrings.shortDot = "shortDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.shortDot]
+  
   @scala.inline
   def solid: typingsSlinky.canvasjs.canvasjsStrings.solid = "solid".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.solid]
 }
-

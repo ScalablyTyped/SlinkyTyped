@@ -13,12 +13,12 @@ import typingsSlinky.electron.anon.TypeofTouchBar
 import typingsSlinky.electron.anon.TypeofWebContents
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait AllElectron extends CommonInterface
-
 object AllElectron {
+  
   @scala.inline
   def apply(
     BrowserView: TypeofBrowserView,
@@ -81,4 +81,3 @@ object AllElectron {
     __obj.asInstanceOf[AllElectron]
   }
 }
-

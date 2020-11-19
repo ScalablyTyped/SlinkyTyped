@@ -7,7 +7,7 @@ import typingsSlinky.videoJs.mod.videojs.Component.ReadyCallback
 import typingsSlinky.videoJs.mod.videojs.ComponentOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("video.js", "VolumeLevel")
 @js.native
@@ -44,4 +44,3 @@ Instantiable1[
       /* ready */ ReadyCallback, 
       typingsSlinky.videoJs.mod.videojs.VolumeLevel
     ]
-

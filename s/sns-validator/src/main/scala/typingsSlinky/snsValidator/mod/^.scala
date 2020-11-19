@@ -2,7 +2,7 @@ package typingsSlinky.snsValidator.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("sns-validator", JSImport.Namespace)
 @js.native
@@ -16,4 +16,3 @@ class ^ () extends MessageValidator {
   def this(hostPattern: js.UndefOr[scala.Nothing], encoding: String) = this()
   def this(hostPattern: js.RegExp, encoding: String) = this()
 }
-

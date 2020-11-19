@@ -2,18 +2,22 @@ package typingsSlinky.raphael
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type RaphaelBasicEventHandler[ThisContext, TEvent /* <: org.scalajs.dom.raw.Event */] = /**
     * @param event The original DOM event that triggered the event this handler was registered for.
     * @return A value that is returned as the return value of the `document.addEventListener` callback.
     */
   js.ThisFunction1[/* this */ ThisContext, /* event */ TEvent, js.Any]
+  
   type RaphaelConstructionOptionsArray4 = Array[
     java.lang.String | scala.Double | typingsSlinky.raphael.mod.RaphaelShapeDescriptor
   ]
+  
   type RaphaelConstructionOptionsArray5 = Array[scala.Double | typingsSlinky.raphael.mod.RaphaelShapeDescriptor]
+  
   type RaphaelCustomAttribute[TTechnology /* <: typingsSlinky.raphael.mod.RaphaelTechnology */, TArgs /* <: js.Array[scala.Double] */] = /**
     * @param values Numerical values for this custom attribute.
     * @return The SVG attributes for the given values.
@@ -26,12 +30,15 @@ package object mod {
     /* values */ TArgs, 
     typingsSlinky.raphael.anon.PartialRaphaelAttributes
   ]
+  
   type RaphaelCustomEasingFormula = java.lang.String with js.Object
+  
   type RaphaelDragOnEndHandler[ThisContext] = /**
     * @param event DOM event object
     * @return A value that is returned as the return value of the `document.addEventListener` callback.
     */
   js.ThisFunction1[/* this */ ThisContext, /* event */ org.scalajs.dom.raw.DragEvent, js.Any]
+  
   type RaphaelDragOnMoveHandler[ThisContext] = /**
     * @param deltaX How much the pointer has moved in the horizontal direction compared to when this handler was most
     * recently invoked.
@@ -50,6 +57,7 @@ package object mod {
     /* event */ org.scalajs.dom.raw.DragEvent, 
     js.Any
   ]
+  
   type RaphaelDragOnOverHandler[TTechnology /* <: typingsSlinky.raphael.mod.RaphaelTechnology */, ThisContext] = /**
     * @param targetElement The element you are dragging over.
     * @return A value that is returned as the return value of the `document.addEventListener` callback.
@@ -62,6 +70,7 @@ package object mod {
     ], 
     js.Any
   ]
+  
   type RaphaelDragOnStartHandler[ThisContext] = /**
     * @param x position of the mouse
     * @param y position of the mouse
@@ -75,6 +84,7 @@ package object mod {
     /* event */ org.scalajs.dom.raw.DragEvent, 
     js.Any
   ]
+  
   type RaphaelEasingFormula = /**
     * @param normalizedAnimationTime A percentage between `0` and `1`, with `0` representing the beginning and `1`
     * representing the end of the animation time.
@@ -82,6 +92,7 @@ package object mod {
     * the given animation time.
     */
   js.Function1[/* normalizedAnimationTime */ scala.Double, scala.Double]
+  
   type RaphaelElementPluginMethod[TTechnology /* <: typingsSlinky.raphael.mod.RaphaelTechnology */, TArgs /* <: js.Array[_] */, TRetVal] = /**
     * @param args The arguments, as required by this element plugin. They need to be passed when the plugin method
     * is called on a {@link RaphaelElement}.
@@ -96,7 +107,9 @@ package object mod {
     /* args */ TArgs, 
     TRetVal
   ]
+  
   type RaphaelOnAnimationCompleteHandler[ThisContext] = js.ThisFunction0[/* this */ ThisContext, scala.Unit]
+  
   type RaphaelPaperPluginMethod[TTechnology /* <: typingsSlinky.raphael.mod.RaphaelTechnology */, TArgs /* <: js.Array[_] */, TRetVal] = /**
     * @param args The arguments, as required by this paper plugin. They need to be passed when the plugin method
     * is called on a {@link RaphaelPaper}.
@@ -108,9 +121,11 @@ package object mod {
     /* args */ TArgs, 
     TRetVal
   ]
+  
   type RaphaelPaperPluginRegistry[TTechnology /* <: typingsSlinky.raphael.mod.RaphaelTechnology */, T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: T[P] extends (args : any): any? raphael.raphael.RaphaelPaperPluginMethod<TTechnology, std.Parameters<T[P]>, std.ReturnType<T[P]>> : / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias raphael.raphael.RaphaelPaperPluginRegistry<TTechnology, T[P]> * / object}
     */ typingsSlinky.raphael.raphaelStrings.RaphaelPaperPluginRegistry with org.scalablytyped.runtime.TopLevel[js.Any]
+  
   type RaphaelPathSegment = (js.Tuple3[
     typingsSlinky.raphael.raphaelStrings.M | typingsSlinky.raphael.raphaelStrings.m_ | typingsSlinky.raphael.raphaelStrings.L | typingsSlinky.raphael.raphaelStrings.l_ | typingsSlinky.raphael.raphaelStrings.T | typingsSlinky.raphael.raphaelStrings.t_ | typingsSlinky.raphael.raphaelStrings.R | typingsSlinky.raphael.raphaelStrings.r_, 
     scala.Double, 
@@ -142,7 +157,9 @@ package object mod {
     scala.Double, 
     scala.Double
   ]) | (js.Array[typingsSlinky.raphael.raphaelStrings.Z | typingsSlinky.raphael.raphaelStrings.z_])
+  
   type RaphaelPotentialFailure[T /* <: js.Object */] = T with typingsSlinky.raphael.anon.Error
+  
   type RaphaelSetPluginMethod[TTechnology /* <: typingsSlinky.raphael.mod.RaphaelTechnology */, TArgs /* <: js.Array[_] */, TRetVal] = /**
     * @param args The arguments, as required by this set plugin. They need to be passed when the plugin method
     * is called on a {@link RaphaelSet}.
@@ -154,6 +171,7 @@ package object mod {
     /* args */ TArgs, 
     TRetVal
   ]
+  
   type RaphaelTransformSegment = (js.Tuple3[
     typingsSlinky.raphael.raphaelStrings.t_ | typingsSlinky.raphael.raphaelStrings.s_, 
     scala.Double, 
@@ -173,15 +191,23 @@ package object mod {
     scala.Double, 
     scala.Double
   ])
+  
   type RaphaelUnwrapElement[TTechnology /* <: typingsSlinky.raphael.mod.RaphaelTechnology */, TBase /* <: typingsSlinky.raphael.mod.RaphaelBaseElement[TTechnology] */] = TBase | (typingsSlinky.raphael.mod.RaphaelElement[
     TTechnology, 
     /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
   ])
+  
   type VMLCircleElement = org.scalajs.dom.raw.Element
+  
   type VMLElement = org.scalajs.dom.raw.Element
+  
   type VMLEllipseElement = org.scalajs.dom.raw.Element
+  
   type VMLImageElement = org.scalajs.dom.raw.Element
+  
   type VMLPathElement = org.scalajs.dom.raw.Element
+  
   type VMLRectElement = org.scalajs.dom.raw.Element
+  
   type VMLTextElement = org.scalajs.dom.raw.Element
 }

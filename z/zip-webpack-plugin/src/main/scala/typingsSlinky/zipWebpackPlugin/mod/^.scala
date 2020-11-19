@@ -2,7 +2,7 @@ package typingsSlinky.zipWebpackPlugin.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Webpack plugin to zip emitted files. Compresses all assets into a zip file.
@@ -17,4 +17,3 @@ import scala.scalajs.js.annotation._
 class ^ () extends js.Object {
   def this(options: Options) = this()
 }
-

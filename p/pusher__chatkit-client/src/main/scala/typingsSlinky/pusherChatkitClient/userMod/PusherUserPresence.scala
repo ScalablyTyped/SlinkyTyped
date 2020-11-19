@@ -2,7 +2,7 @@ package typingsSlinky.pusherChatkitClient.userMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.online
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.unknown
 */
 trait PusherUserPresence extends js.Object
-
 object PusherUserPresence {
+  
   @scala.inline
   def offline: typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.offline = "offline".asInstanceOf[typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.offline]
+  
   @scala.inline
   def online: typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.online = "online".asInstanceOf[typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.online]
+  
   @scala.inline
   def unknown: typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.unknown = "unknown".asInstanceOf[typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.unknown]
 }
-

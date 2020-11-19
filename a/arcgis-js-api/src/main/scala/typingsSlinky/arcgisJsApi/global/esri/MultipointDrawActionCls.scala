@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.MultipointDrawActionProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.MultipointDrawAction")
 @js.native
@@ -16,4 +16,3 @@ class MultipointDrawActionCls ()
   extends typingsSlinky.arcgisJsApi.esri.MultipointDrawAction {
   def this(properties: MultipointDrawActionProperties) = this()
 }
-

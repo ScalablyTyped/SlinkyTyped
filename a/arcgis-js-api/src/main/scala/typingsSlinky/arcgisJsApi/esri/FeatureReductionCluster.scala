@@ -3,12 +3,13 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.cluster
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FeatureReductionCluster
   extends Accessor
      with JSONSupport {
+  
   /**
     * Defines the symbol size of the largest cluster in points (or pixels if specified). Adjusting `clusterMaxSize` generally should be considered if the [clusterRadius](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#clusterRadius) is modified.  For example, if you prefer cluster icons to not overlap, then the `clusterMaxSize` should be substantially smaller than the `clusterRadius`.
     *
@@ -17,6 +18,7 @@ trait FeatureReductionCluster
     * @default 37.5
     */
   var clusterMaxSize: Double = js.native
+  
   /**
     * Defines the symbol size of the smallest cluster in points (or pixels if specified). If [labeling](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#labelingInfo) clusters with a count or some other information in the center of the cluster, then having a `clusterMinSize` larger than the default is generally preferred.  Keep in mind that this size may be smaller than the symbol size of individual non-clustered features in the layer. In that scenario, you should either reduce the size of the symbol(s) in the layer's renderer or increase the `clusterMinSize` to be larger than the size of individual points to avoid confusion for the end user. This can most likely happen when cluster size represents feature count.
     *
@@ -25,6 +27,7 @@ trait FeatureReductionCluster
     * @default 9
     */
   var clusterMinSize: Double = js.native
+  
   /**
     * Defines the radius in points (or pixels if specified) of each area in which multiple points will be grouped and visualized as a single cluster. Adjusting `clusterRadius` generally should be considered if the [clusterMaxSize](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#clusterMaxSize) is modified.  For example, if you prefer cluster icons to not overlap, then the `clusterRadius` should be substantially larger than the `clusterMaxSize`.
     *
@@ -33,6 +36,7 @@ trait FeatureReductionCluster
     * @default 60
     */
   var clusterRadius: Double = js.native
+  
   /**
     * Defines labels for clusters as an array of [LabelClass](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-LabelClass.html). When set, labels independent of the [layer.labelingInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#labelingInfo) are used to convey information about the clusters, including the count of all features in the cluster, the average, or predominant values of fields mapped by the renderer.  It is advisable to turn off [label deconfliction](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-LabelClass.html#deconflictionStrategy) when labeling clusters with a count in the center of the cluster. To generate suggested labels for your cluster configuration based on the layer's renderer, see [clusterLabelCreator](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-labels-clusters.html).  The table below describes the aggregate fields used internally by the cluster renderer, which you can reference in the label expression.  Aggregate fields:
     *
@@ -47,6 +51,7 @@ trait FeatureReductionCluster
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#labelingInfo)
     */
   var labelingInfo: js.Array[LabelClass] = js.native
+  
   /**
     * Indicates whether to display labels for the clusters. If `true`, labels will appear as defined in the [labelingInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#labelingInfo) property.  Labels will not render for clusters if the [labelsVisible](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#labelsVisible) property on the layer is set to `false` even if `labelsVisible` on `featureReduction` is `true`.
     *
@@ -55,6 +60,7 @@ trait FeatureReductionCluster
     * @default true
     */
   var labelsVisible: Boolean = js.native
+  
   /**
     * Indicates whether to display the cluster popup. If `true`, popups will open when the user clicks or taps a cluster. If `false`, the popup as defined in the [popupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#popupTemplate) will be persisted, but won't be displayed on click/tap.
     *
@@ -63,6 +69,7 @@ trait FeatureReductionCluster
     * @default true
     */
   var popupEnabled: Boolean = js.native
+  
   /**
     * The [PopupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html) to apply to clustered graphics. When set, a popupTemplate independent of the [layer.popupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#popupTemplate) is used. This popup can display summary information for the cluster, including the count of all features in the cluster and the average or predominant values of fields mapped by the renderer.  To generate a suggested predefined popup template for your cluster configuration based on the layer's renderer, see [clusterPopupTemplateCreator](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-popup-clusters.html).  The table below describes the aggregate fields used internally by the cluster renderer, which you can reference in the cluster popup.  Aggregate fields:
     *
@@ -153,6 +160,7 @@ trait FeatureReductionCluster
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#popupTemplate)
     */
   var popupTemplate: PopupTemplate = js.native
+  
   /**
     * The feature reduction type.
     *
@@ -160,4 +168,3 @@ trait FeatureReductionCluster
     */
   var `type`: cluster = js.native
 }
-

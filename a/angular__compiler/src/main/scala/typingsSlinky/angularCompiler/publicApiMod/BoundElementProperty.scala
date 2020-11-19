@@ -4,7 +4,7 @@ import typingsSlinky.angularCompiler.astMod.BindingType
 import typingsSlinky.angularCompiler.coreMod.SecurityContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@angular/compiler/public_api", "BoundElementProperty")
 @js.native
@@ -45,4 +45,3 @@ class BoundElementProperty protected ()
     valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
 }
-

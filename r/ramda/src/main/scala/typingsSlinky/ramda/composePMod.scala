@@ -2,11 +2,12 @@ package typingsSlinky.ramda
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ramda/src/composeP", JSImport.Namespace)
 @js.native
 object composePMod extends js.Object {
+  
   def default[V0, T1](fn0: js.Function1[/* x0 */ V0, js.Promise[T1]]): js.Function1[/* x0 */ V0, js.Promise[T1]] = js.native
   def default[V0, T1, T2](fn1: js.Function1[/* x */ T1, js.Promise[T2]], fn0: js.Function1[/* x0 */ V0, js.Promise[T1]]): js.Function1[/* x0 */ V0, js.Promise[T2]] = js.native
   def default[V0, T1, T2, T3](
@@ -36,4 +37,3 @@ object composePMod extends js.Object {
     fn0: js.Function1[/* x */ V0, js.Promise[T1]]
   ): js.Function1[/* x */ V0, js.Promise[T6]] = js.native
 }
-

@@ -3,11 +3,11 @@ package typingsSlinky.awsSdkClientKinesisBrowser
 import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kinesis-browser/model/PutRecords", JSImport.Namespace)
 @js.native
 object putRecordsMod extends js.Object {
+  
   val PutRecords: OperationModel = js.native
 }
-

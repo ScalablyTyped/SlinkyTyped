@@ -2,7 +2,7 @@ package typingsSlinky.typescriptServices.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("typescript-services", "BuiltInType")
 @js.native
@@ -14,4 +14,3 @@ class BuiltInType protected ()
     _valueText: String
   ) = this()
 }
-

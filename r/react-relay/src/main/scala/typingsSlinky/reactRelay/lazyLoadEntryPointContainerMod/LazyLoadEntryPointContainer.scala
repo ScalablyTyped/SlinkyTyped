@@ -3,11 +3,12 @@ package typingsSlinky.reactRelay.lazyLoadEntryPointContainerMod
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-relay/lib/relay-experimental/LazyLoadEntryPointContainer", "LazyLoadEntryPointContainer")
 @js.native
 object LazyLoadEntryPointContainer extends js.Object {
+  
   def apply[TEntryPointParams /* <: js.Object */, TPreloadedQueries /* <: js.Object */, TPreloadedEntryPoints /* <: js.Object */, TRuntimeProps /* <: js.Object */, TExtraProps](
     hasEntryPointEntryPointParamsPropsEnvironmentProvider: EntryPointContainerProps[
       // tslint:disable-next-line no-unnecessary-generics
@@ -23,4 +24,3 @@ object LazyLoadEntryPointContainer extends js.Object {
     ]
   ): ReactElement = js.native
 }
-

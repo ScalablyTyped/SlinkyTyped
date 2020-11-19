@@ -4,7 +4,7 @@ import typingsSlinky.heredatalens.H.datalens.QueryProvider.Options
 import typingsSlinky.heredatalens.H.datalens.Service.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Defines the source of the data for layers from a Data Lens query.
@@ -24,4 +24,3 @@ class QueryProvider protected ()
   def this(data: Data) = this()
   def this(data: Data, options: Options) = this()
 }
-

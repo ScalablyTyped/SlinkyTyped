@@ -12,11 +12,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-s3-browser/commands/PutBucketAnalyticsConfigurationCommand", JSImport.Namespace)
 @js.native
 object putBucketAnalyticsConfigurationCommandMod extends js.Object {
+  
   @js.native
   class PutBucketAnalyticsConfigurationCommand protected () extends Command[
           InputTypesUnion, 
@@ -27,13 +28,14 @@ object putBucketAnalyticsConfigurationCommandMod extends js.Object {
           Blob
         ] {
     def this(input: PutBucketAnalyticsConfigurationInput) = this()
+    
     val middlewareStack: MiddlewareStack[PutBucketAnalyticsConfigurationInput, PutBucketAnalyticsConfigurationOutput, Blob] = js.native
+    
     val model: OperationModel = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: S3ResolvedConfiguration
     ): Handler[PutBucketAnalyticsConfigurationInput, PutBucketAnalyticsConfigurationOutput] = js.native
   }
-  
 }
-

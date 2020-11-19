@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.discoveryMod.ClientConfiguration
 import typingsSlinky.awsSdk.discoveryMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/clients/all", "Discovery")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 class Discovery () extends ^ {
   def this(options: ClientConfiguration) = this()
 }
-

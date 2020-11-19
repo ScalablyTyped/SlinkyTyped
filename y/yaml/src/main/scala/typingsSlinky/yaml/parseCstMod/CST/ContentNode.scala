@@ -15,7 +15,7 @@ import typingsSlinky.yaml.yamlStrings.KEEP
 import typingsSlinky.yaml.yamlStrings.STRIP
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.yaml.parseCstMod.CST.Alias
@@ -25,8 +25,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.yaml.parseCstMod.CST.FlowCollection
 */
 trait ContentNode extends js.Object
-
 object ContentNode {
+  
   @scala.inline
   def BlockValue(
     chomping: CLIP | KEEP | STRIP,
@@ -42,6 +42,7 @@ object ContentNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentNode]
   }
+  
   @scala.inline
   def QuoteValue(
     hasComment: Boolean,
@@ -55,6 +56,7 @@ object ContentNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentNode]
   }
+  
   @scala.inline
   def PlainValue(
     hasComment: Boolean,
@@ -68,6 +70,7 @@ object ContentNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentNode]
   }
+  
   @scala.inline
   def Map(
     hasComment: Boolean,
@@ -82,6 +85,7 @@ object ContentNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentNode]
   }
+  
   @scala.inline
   def Alias(
     hasComment: Boolean,
@@ -96,6 +100,7 @@ object ContentNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentNode]
   }
+  
   @scala.inline
   def FlowCollection(
     hasComment: Boolean,
@@ -112,6 +117,7 @@ object ContentNode {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentNode]
   }
+  
   @scala.inline
   def Seq(
     hasComment: Boolean,
@@ -127,4 +133,3 @@ object ContentNode {
     __obj.asInstanceOf[ContentNode]
   }
 }
-

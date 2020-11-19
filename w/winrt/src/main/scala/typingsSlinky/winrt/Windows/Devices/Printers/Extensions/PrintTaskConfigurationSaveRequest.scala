@@ -2,12 +2,12 @@ package typingsSlinky.winrt.Windows.Devices.Printers.Extensions
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PrintTaskConfigurationSaveRequest extends IPrintTaskConfigurationSaveRequest
-
 object PrintTaskConfigurationSaveRequest {
+  
   @scala.inline
   def apply(
     cancel: () => Unit,
@@ -19,4 +19,3 @@ object PrintTaskConfigurationSaveRequest {
     __obj.asInstanceOf[PrintTaskConfigurationSaveRequest]
   }
 }
-

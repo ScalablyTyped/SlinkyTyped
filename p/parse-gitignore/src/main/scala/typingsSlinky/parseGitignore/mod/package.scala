@@ -2,9 +2,10 @@ package typingsSlinky.parseGitignore
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mod {
+  
   type FormatLine = js.Function3[
     /* line */ java.lang.String, 
     /* section */ js.UndefOr[typingsSlinky.parseGitignore.mod.Section], 

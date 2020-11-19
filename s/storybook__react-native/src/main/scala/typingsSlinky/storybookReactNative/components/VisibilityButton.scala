@@ -6,18 +6,19 @@ import typingsSlinky.storybookReactNative.visibilityButtonMod.Props
 import typingsSlinky.storybookReactNative.visibilityButtonMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object VisibilityButton {
+  
   @JSImport("@storybook/react-native/dist/preview/components/OnDeviceUI/navigation/visibility-button", JSImport.Default)
   @js.native
   object component extends js.Object
   
   def withProps(p: Props): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(onPress: () => Unit): Default[tag.type, default] = {
     val __props = js.Dynamic.literal(onPress = js.Any.fromFunction0(onPress))
     new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }
-

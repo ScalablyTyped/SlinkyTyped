@@ -8,9 +8,10 @@ import typingsSlinky.antDesignPro.trendMod.ITrendProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Trend {
+  
   @JSImport("ant-design-pro", "Trend")
   @js.native
   object component extends js.Object
@@ -19,21 +20,25 @@ object Trend {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.antDesignPro.mod.Trend] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def colorful(value: Boolean): this.type = set("colorful", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def reverseColor(value: Boolean): this.type = set("reverseColor", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ITrendProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(flag: up | down): Builder = {
     val __props = js.Dynamic.literal(flag = flag.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ITrendProps]))
   }
 }
-

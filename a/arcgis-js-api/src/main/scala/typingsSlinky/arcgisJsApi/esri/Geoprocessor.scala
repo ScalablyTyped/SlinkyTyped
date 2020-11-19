@@ -2,50 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Geoprocessor extends Task {
-  /**
-    * The spatial reference of the output geometries. If not specified, the output geometries will be in the spatial reference of the input geometries. If [processSpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#processSpatialReference) is specified and `outSpatialReference` is not specified, the output geometries will be in the spatial reference of the process spatial reference.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#outSpatialReference)
-    *
-    * @default null
-    */
-  var outSpatialReference: SpatialReference = js.native
-  /**
-    * ProcessExtent, if specified, will only process features that overlap this extent.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#processExtent)
-    *
-    * @default null
-    */
-  var processExtent: Extent = js.native
-  /**
-    * The spatial reference that the model will use to perform geometry operations. If `processSpatialReference` is specified and [outputSpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#outputSpatialReference) is not specified, the output geometries will be in the spatial reference of the process spatial reference.  A possible common scenario for using `processSpatialReference` and `outputSpatialReference` is that you would like to perform spatial operations like buffer or clip on a projected coordinate system such as web mercator. And you would like to recieve the output based on a geographic coordinates such as WGS84.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#processSpatialReference)
-    *
-    * @default null
-    */
-  var processSpatialReference: SpatialReference = js.native
-  /**
-    * If `true`, m-values will be included in the results if the features have m-values. Otherwise, m-values are not returned. The default is false.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#returnM)
-    *
-    * @default false
-    */
-  var returnM: Boolean = js.native
-  /**
-    * If `true`, z-values will be included in the results if the features have z-values. Otherwise, z-values are not returned. The default is false.
-    *
-    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#returnZ)
-    *
-    * @default false
-    */
-  var returnZ: Boolean = js.native
+  
   /**
     * Cancels an asynchronous geoprocessing job. Requires an ArcGIS Server 10.1 service or greater.
     *
@@ -57,6 +18,7 @@ trait Geoprocessor extends Task {
     */
   def cancelJob(jobId: String): js.Promise[JobInfo] = js.native
   def cancelJob(jobId: String, requestOptions: js.Any): js.Promise[JobInfo] = js.native
+  
   /**
     * Sends a request to the GP Task for the current state of the job identified by `jobId`.
     *
@@ -68,6 +30,7 @@ trait Geoprocessor extends Task {
     */
   def checkJobStatus(jobId: String): js.Promise[JobInfo] = js.native
   def checkJobStatus(jobId: String, requestOptions: js.Any): js.Promise[JobInfo] = js.native
+  
   /**
     * Sends a request to the server to execute a synchronous GP task.
     *
@@ -91,6 +54,7 @@ trait Geoprocessor extends Task {
     */
   def execute(params: js.Any): js.Promise[_] = js.native
   def execute(params: js.Any, requestOptions: js.Any): js.Promise[_] = js.native
+  
   /**
     * Sends a request to the GP Task to get the task result identified by `jobId` and `resultName`.
     *
@@ -103,6 +67,7 @@ trait Geoprocessor extends Task {
     */
   def getResultData(jobId: String, resultName: String): js.Promise[ParameterValue] = js.native
   def getResultData(jobId: String, resultName: String, requestOptions: js.Any): js.Promise[ParameterValue] = js.native
+  
   /**
     * Sends a request to the GP Task to get the task result identified by `jobId` and `resultName` as an image.
     *
@@ -116,6 +81,7 @@ trait Geoprocessor extends Task {
     */
   def getResultImage(jobId: String, resultName: String, imageParams: ImageParameters): js.Promise[ParameterValue] = js.native
   def getResultImage(jobId: String, resultName: String, imageParams: ImageParameters, requestOptions: js.Any): js.Promise[ParameterValue] = js.native
+  
   /**
     * Get the task result identified by `jobId` as an [MapImageLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-MapImageLayer.html).
     *
@@ -125,6 +91,52 @@ trait Geoprocessor extends Task {
     *
     */
   def getResultMapImageLayer(jobId: String): js.Promise[MapImageLayer] = js.native
+  
+  /**
+    * The spatial reference of the output geometries. If not specified, the output geometries will be in the spatial reference of the input geometries. If [processSpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#processSpatialReference) is specified and `outSpatialReference` is not specified, the output geometries will be in the spatial reference of the process spatial reference.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#outSpatialReference)
+    *
+    * @default null
+    */
+  var outSpatialReference: SpatialReference = js.native
+  
+  /**
+    * ProcessExtent, if specified, will only process features that overlap this extent.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#processExtent)
+    *
+    * @default null
+    */
+  var processExtent: Extent = js.native
+  
+  /**
+    * The spatial reference that the model will use to perform geometry operations. If `processSpatialReference` is specified and [outputSpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#outputSpatialReference) is not specified, the output geometries will be in the spatial reference of the process spatial reference.  A possible common scenario for using `processSpatialReference` and `outputSpatialReference` is that you would like to perform spatial operations like buffer or clip on a projected coordinate system such as web mercator. And you would like to recieve the output based on a geographic coordinates such as WGS84.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#processSpatialReference)
+    *
+    * @default null
+    */
+  var processSpatialReference: SpatialReference = js.native
+  
+  /**
+    * If `true`, m-values will be included in the results if the features have m-values. Otherwise, m-values are not returned. The default is false.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#returnM)
+    *
+    * @default false
+    */
+  var returnM: Boolean = js.native
+  
+  /**
+    * If `true`, z-values will be included in the results if the features have z-values. Otherwise, z-values are not returned. The default is false.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#returnZ)
+    *
+    * @default false
+    */
+  var returnZ: Boolean = js.native
+  
   /**
     * Submits a job to the server for asynchronous processing by the GP task. The method will resolve immediately after the job has been submitted to the server. Use [waitForJobCompletion()](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#waitForJobCompletion) to be notified when the job has completed and optionally periodic job status.  The task execution results can be retrieved using the [getResultData()](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#getResultData), [getResultImage()](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#getResultImage), or [getResultMapImageLayer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#getResultMapImageLayer) methods.
     *
@@ -148,6 +160,7 @@ trait Geoprocessor extends Task {
     */
   def submitJob(params: js.Any): js.Promise[JobInfo] = js.native
   def submitJob(params: js.Any, requestOptions: js.Any): js.Promise[JobInfo] = js.native
+  
   /**
     * Resolves when an asynchronous job has completed. Optionally job progress can be monitored.
     *
@@ -163,4 +176,3 @@ trait Geoprocessor extends Task {
   def waitForJobCompletion(jobId: String): js.Promise[JobInfo] = js.native
   def waitForJobCompletion(jobId: String, options: GeoprocessorWaitForJobCompletionOptions): js.Promise[JobInfo] = js.native
 }
-

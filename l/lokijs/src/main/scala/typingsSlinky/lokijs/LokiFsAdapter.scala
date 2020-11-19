@@ -2,7 +2,7 @@ package typingsSlinky.lokijs
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A loki persistence adapter which persists using node fs module
@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait LokiFsAdapter extends LokiPersistenceAdapter {
+  
   /**
     * deleteDatabase() - delete the database file, will throw an error if the
     * file can't be deleted
@@ -18,6 +19,7 @@ trait LokiFsAdapter extends LokiPersistenceAdapter {
     */
   @JSName("deleteDatabase")
   def deleteDatabase_MLokiFsAdapter(dbname: String, callback: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  
   /**
     * saveDatabase() - save data to file, will throw an error if the file can't be saved
     * might want to expand this to avoid dataloss on partial save
@@ -37,4 +39,3 @@ trait LokiFsAdapter extends LokiPersistenceAdapter {
     callback: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]
   ): Unit = js.native
 }
-

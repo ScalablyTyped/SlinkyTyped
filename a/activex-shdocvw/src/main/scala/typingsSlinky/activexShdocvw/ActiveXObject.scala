@@ -146,10 +146,11 @@ import typingsSlinky.activexShdocvw.anon.PpDisp
 import typingsSlinky.activexShdocvw.anon.SzProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ActiveXObject extends js.Object {
+  
   def on(
     obj: InternetExplorerMedium,
     event: BeforeScriptExecute,
@@ -1646,4 +1647,3 @@ trait ActiveXObject extends js.Object {
     handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ js.Object, Unit]
   ): Unit = js.native
 }
-

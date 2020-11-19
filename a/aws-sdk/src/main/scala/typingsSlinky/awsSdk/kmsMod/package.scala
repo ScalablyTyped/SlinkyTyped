@@ -2,10 +2,12 @@ package typingsSlinky.awsSdk
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object kmsMod {
+  
   type AWSAccountIdType = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.RSAES_PKCS1_V1_5
     - typingsSlinky.awsSdk.awsSdkStrings.RSAES_OAEP_SHA_1
@@ -13,13 +15,21 @@ package object kmsMod {
     - java.lang.String
   */
   type AlgorithmSpec = typingsSlinky.awsSdk.kmsMod._AlgorithmSpec | java.lang.String
+  
   type AliasList = js.Array[typingsSlinky.awsSdk.kmsMod.AliasListEntry]
+  
   type AliasNameType = java.lang.String
+  
   type ArnType = java.lang.String
+  
   type BooleanType = scala.Boolean
+  
   type CiphertextType = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kmsMod.Blob | java.lang.String
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.kmsMod.ClientApiVersions
+  
   type CloudHsmClusterIdType = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.INVALID_CREDENTIALS
     - typingsSlinky.awsSdk.awsSdkStrings.CLUSTER_NOT_FOUND
@@ -33,6 +43,7 @@ package object kmsMod {
     - java.lang.String
   */
   type ConnectionErrorCodeType = typingsSlinky.awsSdk.kmsMod._ConnectionErrorCodeType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CONNECTED
     - typingsSlinky.awsSdk.awsSdkStrings.CONNECTING
@@ -42,9 +53,13 @@ package object kmsMod {
     - java.lang.String
   */
   type ConnectionStateType = typingsSlinky.awsSdk.kmsMod._ConnectionStateType | java.lang.String
+  
   type CustomKeyStoreIdType = java.lang.String
+  
   type CustomKeyStoreNameType = java.lang.String
+  
   type CustomKeyStoresList = js.Array[typingsSlinky.awsSdk.kmsMod.CustomKeyStoresListEntry]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.RSA_2048
     - typingsSlinky.awsSdk.awsSdkStrings.RSA_3072
@@ -57,6 +72,7 @@ package object kmsMod {
     - java.lang.String
   */
   type CustomerMasterKeySpec = typingsSlinky.awsSdk.kmsMod._CustomerMasterKeySpec | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.RSA_2048
     - typingsSlinky.awsSdk.awsSdkStrings.RSA_3072
@@ -68,14 +84,18 @@ package object kmsMod {
     - java.lang.String
   */
   type DataKeyPairSpec = typingsSlinky.awsSdk.kmsMod._DataKeyPairSpec | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AES_256
     - typingsSlinky.awsSdk.awsSdkStrings.AES_128
     - java.lang.String
   */
   type DataKeySpec = typingsSlinky.awsSdk.kmsMod._DataKeySpec | java.lang.String
+  
   type DateType = js.Date
+  
   type DescriptionType = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SYMMETRIC_DEFAULT
     - typingsSlinky.awsSdk.awsSdkStrings.RSAES_OAEP_SHA_1
@@ -83,19 +103,28 @@ package object kmsMod {
     - java.lang.String
   */
   type EncryptionAlgorithmSpec = typingsSlinky.awsSdk.kmsMod._EncryptionAlgorithmSpec | java.lang.String
+  
   type EncryptionAlgorithmSpecList = js.Array[typingsSlinky.awsSdk.kmsMod.EncryptionAlgorithmSpec]
+  
   type EncryptionContextKey = java.lang.String
+  
   type EncryptionContextType = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.kmsMod.EncryptionContextValue]
+  
   type EncryptionContextValue = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.KEY_MATERIAL_EXPIRES
     - typingsSlinky.awsSdk.awsSdkStrings.KEY_MATERIAL_DOES_NOT_EXPIRE
     - java.lang.String
   */
   type ExpirationModelType = typingsSlinky.awsSdk.kmsMod._ExpirationModelType | java.lang.String
+  
   type GrantIdType = java.lang.String
+  
   type GrantList = js.Array[typingsSlinky.awsSdk.kmsMod.GrantListEntry]
+  
   type GrantNameType = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Decrypt
     - typingsSlinky.awsSdk.awsSdkStrings.Encrypt
@@ -114,17 +143,24 @@ package object kmsMod {
     - java.lang.String
   */
   type GrantOperation = typingsSlinky.awsSdk.kmsMod._GrantOperation | java.lang.String
+  
   type GrantOperationList = js.Array[typingsSlinky.awsSdk.kmsMod.GrantOperation]
+  
   type GrantTokenList = js.Array[typingsSlinky.awsSdk.kmsMod.GrantTokenType]
+  
   type GrantTokenType = java.lang.String
+  
   type KeyIdType = java.lang.String
+  
   type KeyList = js.Array[typingsSlinky.awsSdk.kmsMod.KeyListEntry]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AWS
     - typingsSlinky.awsSdk.awsSdkStrings.CUSTOMER
     - java.lang.String
   */
   type KeyManagerType = typingsSlinky.awsSdk.kmsMod._KeyManagerType | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Enabled_
     - typingsSlinky.awsSdk.awsSdkStrings.Disabled_
@@ -134,22 +170,29 @@ package object kmsMod {
     - java.lang.String
   */
   type KeyState = typingsSlinky.awsSdk.kmsMod._KeyState | java.lang.String
+  
   type KeyStorePasswordType = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SIGN_VERIFY
     - typingsSlinky.awsSdk.awsSdkStrings.ENCRYPT_DECRYPT
     - java.lang.String
   */
   type KeyUsageType = typingsSlinky.awsSdk.kmsMod._KeyUsageType | java.lang.String
+  
   type LimitType = scala.Double
+  
   type MarkerType = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.RAW
     - typingsSlinky.awsSdk.awsSdkStrings.DIGEST
     - java.lang.String
   */
   type MessageType = typingsSlinky.awsSdk.kmsMod._MessageType | java.lang.String
+  
   type NumberOfBytesType = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AWS_KMS
     - typingsSlinky.awsSdk.awsSdkStrings.EXTERNAL
@@ -157,13 +200,21 @@ package object kmsMod {
     - java.lang.String
   */
   type OriginType = typingsSlinky.awsSdk.kmsMod._OriginType | java.lang.String
+  
   type PendingWindowInDaysType = scala.Double
+  
   type PlaintextType = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kmsMod.Blob | java.lang.String
+  
   type PolicyNameList = js.Array[typingsSlinky.awsSdk.kmsMod.PolicyNameType]
+  
   type PolicyNameType = java.lang.String
+  
   type PolicyType = java.lang.String
+  
   type PrincipalIdType = java.lang.String
+  
   type PublicKeyType = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kmsMod.Blob | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.RSASSA_PSS_SHA_256
     - typingsSlinky.awsSdk.awsSdkStrings.RSASSA_PSS_SHA_384
@@ -177,13 +228,21 @@ package object kmsMod {
     - java.lang.String
   */
   type SigningAlgorithmSpec = typingsSlinky.awsSdk.kmsMod._SigningAlgorithmSpec | java.lang.String
+  
   type SigningAlgorithmSpecList = js.Array[typingsSlinky.awsSdk.kmsMod.SigningAlgorithmSpec]
+  
   type TagKeyList = js.Array[typingsSlinky.awsSdk.kmsMod.TagKeyType]
+  
   type TagKeyType = java.lang.String
+  
   type TagList = js.Array[typingsSlinky.awsSdk.kmsMod.Tag]
+  
   type TagValueType = java.lang.String
+  
   type TrustAnchorCertificateType = java.lang.String
+  
   type WrappingKeySpec = typingsSlinky.awsSdk.awsSdkStrings.RSA_2048 | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2014-11-01`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

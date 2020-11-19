@@ -5,7 +5,7 @@ import typingsSlinky.grammarkdown.optionsMod.CompilerOptions
 import typingsSlinky.prex.mod.CancellationToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("grammarkdown", "Grammar")
 @js.native
@@ -44,11 +44,11 @@ class Grammar protected ()
     host: typingsSlinky.grammarkdown.hostMod.SyncHost
   ) = this()
 }
-
 /* static members */
 @JSImport("grammarkdown", "Grammar")
 @js.native
 object Grammar extends js.Object {
+  
   /** @deprecated since 2.1.0 - `prex.CancellationToken` may no longer be accepted in future releases. Please use a token that implements `@esfx/cancelable.Cancelable` */
   def convert(content: String): String = js.native
   def convert(
@@ -175,4 +175,3 @@ object Grammar extends js.Object {
     cancelable: CancellationToken
   ): String = js.native
 }
-

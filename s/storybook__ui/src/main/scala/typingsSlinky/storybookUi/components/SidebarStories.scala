@@ -5,9 +5,10 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookUi.sidebarSidebarStoriesMod.StoriesProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SidebarStories {
+  
   @JSImport("@storybook/ui/dist/components/sidebar/SidebarStories", JSImport.Default)
   @js.native
   object component extends js.Object
@@ -16,13 +17,16 @@ object SidebarStories {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
     @scala.inline
     def storyId(value: String): this.type = set("storyId", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: StoriesProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(
     loading: Boolean,
@@ -32,4 +36,3 @@ object SidebarStories {
     new Builder(js.Array(this.component, __props.asInstanceOf[StoriesProps]))
   }
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.vscode.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("vscode", "ThemeIcon")
 @js.native
@@ -13,18 +13,18 @@ class ThemeIcon protected () extends js.Object {
     */
   def this(id: String) = this()
 }
-
 /* static members */
 @JSImport("vscode", "ThemeIcon")
 @js.native
 object ThemeIcon extends js.Object {
+  
   /**
     * Reference to an icon representing a file. The icon is taken from the current file icon theme or a placeholder icon is used.
     */
   val File: ThemeIcon = js.native
+  
   /**
     * Reference to an icon representing a folder. The icon is taken from the current file icon theme or a placeholder icon is used.
     */
   val Folder: ThemeIcon = js.native
 }
-

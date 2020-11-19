@@ -2,7 +2,7 @@ package typingsSlinky.tstl.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("tstl", "ErrorCode")
 @js.native
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
   * Default Constructor.
   */
 class ErrorCode ()
-  extends typingsSlinky.tstl.exceptionMod.ErrorCode {
+  extends typingsSlinky.tstl.tstlModuleMod.ErrorCode {
   /**
     * Initializer Constructor.
     *
@@ -19,4 +19,3 @@ class ErrorCode ()
     */
   def this(`val`: Double, category: typingsSlinky.tstl.errorCategoryMod.ErrorCategory) = this()
 }
-

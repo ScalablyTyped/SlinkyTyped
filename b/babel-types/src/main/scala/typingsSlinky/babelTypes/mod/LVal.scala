@@ -8,7 +8,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.ObjectPattern
 import typingsSlinky.babelTypes.babelTypesStrings.RestElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babelTypes.mod.Identifier_
@@ -20,14 +20,15 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.TSParameterProperty
 */
 trait LVal extends js.Object
-
 object LVal {
+  
   @scala.inline
   def Identifier_(end: Double, loc: SourceLocation, name: String, start: Double, `type`: Identifier): LVal = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LVal]
   }
+  
   @scala.inline
   def ObjectPattern_(
     end: Double,
@@ -40,6 +41,7 @@ object LVal {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LVal]
   }
+  
   @scala.inline
   def MemberExpression_(
     computed: Boolean,
@@ -55,6 +57,7 @@ object LVal {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LVal]
   }
+  
   @scala.inline
   def ArrayPattern_(
     elements: js.Array[Expression],
@@ -67,6 +70,7 @@ object LVal {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LVal]
   }
+  
   @scala.inline
   def AssignmentPattern_(
     end: Double,
@@ -80,6 +84,7 @@ object LVal {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LVal]
   }
+  
   @scala.inline
   def TSParameterProperty(
     end: Double,
@@ -92,6 +97,7 @@ object LVal {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LVal]
   }
+  
   @scala.inline
   def RestElement_(argument: LVal, end: Double, loc: SourceLocation, start: Double, `type`: RestElement): LVal = {
     val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
@@ -99,4 +105,3 @@ object LVal {
     __obj.asInstanceOf[LVal]
   }
 }
-

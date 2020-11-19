@@ -2,11 +2,12 @@ package typingsSlinky.firebase.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("firebase", "registerVersion")
 @js.native
 object registerVersion extends js.Object {
+  
   /**
     * Registers a library's name and version for platform logging purposes.
     * @param library Name of 1p or 3p library (e.g. firestore, angularfire)
@@ -16,4 +17,3 @@ object registerVersion extends js.Object {
   def apply(library: String, version: String): Unit = js.native
   def apply(library: String, version: String, variant: String): Unit = js.native
 }
-

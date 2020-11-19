@@ -2,7 +2,7 @@ package typingsSlinky.playcanvas.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Represents XR hit test source, which provides access to hit results of real world geometry from AR session.
@@ -20,4 +20,3 @@ class XrHitTestSource protected ()
   extends typingsSlinky.playcanvas.pc.XrHitTestSource {
   def this(manager: typingsSlinky.playcanvas.pc.XrManager, xrHitTestSource: js.Any, transient: Boolean) = this()
 }
-

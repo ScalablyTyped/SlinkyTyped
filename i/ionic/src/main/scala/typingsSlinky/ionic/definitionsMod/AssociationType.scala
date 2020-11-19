@@ -2,7 +2,7 @@ package typingsSlinky.ionic.definitionsMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.ionic.ionicStrings.github
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.ionic.ionicStrings.bitbucket_server
 */
 trait AssociationType extends js.Object
-
 object AssociationType {
+  
   @scala.inline
   def bitbucket_cloud: typingsSlinky.ionic.ionicStrings.bitbucket_cloud = "bitbucket_cloud".asInstanceOf[typingsSlinky.ionic.ionicStrings.bitbucket_cloud]
+  
   @scala.inline
   def bitbucket_server: typingsSlinky.ionic.ionicStrings.bitbucket_server = "bitbucket_server".asInstanceOf[typingsSlinky.ionic.ionicStrings.bitbucket_server]
+  
   @scala.inline
   def github: typingsSlinky.ionic.ionicStrings.github = "github".asInstanceOf[typingsSlinky.ionic.ionicStrings.github]
 }
-

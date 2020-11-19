@@ -2,7 +2,7 @@ package typingsSlinky.chrome.global.chrome.cast
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("chrome.cast.ApiConfig")
 @js.native
@@ -56,4 +56,3 @@ class ApiConfig protected ()
     defaultActionPolicy: typingsSlinky.chrome.chrome.cast.DefaultActionPolicy
   ) = this()
 }
-

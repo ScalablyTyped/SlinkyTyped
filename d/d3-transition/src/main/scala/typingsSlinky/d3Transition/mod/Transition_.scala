@@ -7,10 +7,11 @@ import typingsSlinky.d3Selection.mod.ValueFn
 import typingsSlinky.d3Transition.d3TransitionStrings.important
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, PDatum] extends js.Object {
+  
   /**
     * For each selected element, assigns the attribute tween for the attribute with the specified name to the specified target value.
     * The starting value of the tween is the attribute’s value when the transition starts.
@@ -55,6 +56,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * A null value will clear the attribute at the start of the transition.
     */
   def attr(name: String, value: ValueFn[GElement, Datum, String | Double | Boolean | Null]): this.type = js.native
+  
   /**
     * Return the current interpolator factory for attribute with the specified name, or undefined if no such tween exists.
     *
@@ -81,6 +83,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * which takes as its argument eased time t, typically in the range [0, 1] and returns the interpolated string.
     */
   def attrTween(name: String, factory: ValueFn[GElement, Datum, js.Function1[/* t */ Double, String]]): this.type = js.native
+  
   /**
     * Invoke the specified function exactly once, passing in this transition along with any optional arguments.
     * Returns this transition.
@@ -96,6 +99,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     ],
     args: js.Any*
   ): this.type = js.native
+  
   // Transition Configuration ----------------------
   /**
     * Returns the current value of the delay for the first (non-null) element in the transition.
@@ -118,6 +122,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * specifying the delay in milliseconds.
     */
   def delay(milliseconds: ValueFn[GElement, Datum, Double]): this.type = js.native
+  
   /**
     * Returns the current value of the duration for the first (non-null) element in the transition.
     * This is generally useful only if you know that the transition contains exactly one element.
@@ -139,6 +144,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * specifying the duration in milliseconds.
     */
   def duration(milliseconds: ValueFn[GElement, Datum, Double]): this.type = js.native
+  
   // Control Flow ----------------------
   /**
     * Invoke the specified function for each selected element, passing the current datum (d),
@@ -149,6 +155,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     *             being passed the current datum (d), the current index (i), and the current group (nodes), with this of the current DOM element (nodes[i]).
     */
   def each(func: ValueFn[GElement, Datum, Unit]): this.type = js.native
+  
   /**
     * Returns the current easing function for the first (non-null) element in the transition.
     * This is generally useful only if you know that the transition contains exactly one element.
@@ -166,14 +173,17 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * A good easing function should return 0 if t = 0 and 1 if t = 1.
     */
   def ease(easingFn: js.Function1[/* normalizedTime */ Double, Double]): this.type = js.native
+  
   /**
     * Return true if this transition contains no (non-null) elements.
     */
   def empty(): Boolean = js.native
+  
   /**
     * Returns a promise that resolves when every selected element finishes transitioning. If any element’s transition is cancelled or interrupted, the promise rejects.
     */
   def end(): js.Promise[Unit] = js.native
+  
   /**
     * For each selected element, selects only the elements that match the specified filter, and returns a transition on the resulting selection.
     *
@@ -222,6 +232,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     */
   @JSName("filter")
   def filter_FilteredElement_BaseType[FilteredElement /* <: BaseType */](filter: ValueFn[GElement, Datum, Boolean]): Transition_[FilteredElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * Returns a new transition merging this transition with the specified other transition,
     * which must have the same id as this transition. The returned transition has the same number of groups,
@@ -231,14 +242,17 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * @param other The transition to be merged.
     */
   def merge(other: Transition_[GElement, Datum, PElement, PDatum]): Transition_[GElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * Return the first (non-null) element in this transition. If the transition is empty, returns null.
     */
   def node(): GElement | Null = js.native
+  
   /**
     * Return an array of all (non-null) elements in this transition.
     */
   def nodes(): js.Array[GElement] = js.native
+  
   // Event Handling -------------------
   /**
     * Return the currently-assigned listener for the specified event typename on the first (non-null) selected element, if any.
@@ -274,11 +288,13 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * @param listener Use null to remove listeners.
     */
   def on(typenames: String, listener: Null): this.type = js.native
+  
   /**
     * For each selected element, removes the element when the transition ends, as long as the element has no other active or pending transitions.
     * If the element has other active or pending transitions, does nothing.
     */
   def remove(): this.type = js.native
+  
   // Sub-selection -------------------------
   /**
     * For each selected element, select the first descendant element that matches the specified selector string, if any,
@@ -304,6 +320,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * It must return an element, or null if there is no matching element.
     */
   def select[DescElement /* <: BaseType */](selector: ValueFn[GElement, Datum, DescElement]): Transition_[DescElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * For each selected element, select all descendant elements that match the specified selector string, if any,
     * and returns a transition on the resulting selection. The new transition has the same id, name and timing as this transition;
@@ -328,14 +345,17 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * (or a pseudo-array, such as a NodeList), or the empty array if there are no matching elements.
     */
   def selectAll[DescElement /* <: BaseType */, OldDatum](selector: ValueFn[GElement, Datum, js.Array[DescElement] | ArrayLike[DescElement]]): Transition_[DescElement, OldDatum, GElement, Datum] = js.native
+  
   /**
     * Return the selection corresponding to this transition.
     */
   def selection(): Selection_[GElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * Returns the total number of elements in this transition.
     */
   def size(): Double = js.native
+  
   /**
     * For each selected element, assigns the style tween for the style with the specified name to the specified target value with the
     * specified priority.
@@ -383,6 +403,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * @param priority An optional priority flag, either null or the string important (without the exclamation point)
     */
   def style(name: String, value: ValueFn[GElement, Datum, String | Double | Boolean | Null]): this.type = js.native
+  
   /**
     * Return the current interpolator factory for style with the specified name, or undefined if no such tween exists.
     *
@@ -416,6 +437,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     factory: ValueFn[GElement, Datum, js.Function1[/* t */ Double, String]],
     priority: important
   ): this.type = js.native
+  
   @JSName("style")
   def style_important(name: String, value: String, priority: important): this.type = js.native
   @JSName("style")
@@ -428,6 +450,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     value: ValueFn[GElement, Datum, String | Double | Boolean | Null],
     priority: important
   ): this.type = js.native
+  
   /**
     * For each selected element, sets the text content to the specified target value when the transition starts.
     * To interpolate text rather than to set it on start, use transition.tween (for example) or
@@ -455,6 +478,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * A null value will clear the text content at the start of the transition.
     */
   def text(value: ValueFn[GElement, Datum, String | Double | Boolean]): this.type = js.native
+  
   /**
     * Returns a new transition on the same selected elements as this transition, scheduled to start when this transition ends.
     * The new transition inherits a reference time equal to this transition’s time plus its delay and duration.
@@ -464,6 +488,7 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     * A delay configured for the new transition will be relative to the previous transition.
     */
   def transition(): Transition_[GElement, Datum, PElement, PDatum] = js.native
+  
   /**
     * Returns the tween with the specified name, or undefined, if no tween was previously assigned to
     * that name.
@@ -493,4 +518,3 @@ trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */,
     */
   def tween(name: String, tweenFn: ValueFn[GElement, Datum, js.Function1[/* t */ Double, Unit]]): this.type = js.native
 }
-

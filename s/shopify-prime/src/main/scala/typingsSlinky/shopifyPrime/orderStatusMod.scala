@@ -2,11 +2,12 @@ package typingsSlinky.shopifyPrime
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("shopify-prime/dist/enums/order_status", JSImport.Namespace)
 @js.native
 object orderStatusMod extends js.Object {
+  
   trait _OrderStatus extends js.Object
   
   /* Rewritten from type alias, can be one of: 
@@ -18,4 +19,3 @@ object orderStatusMod extends js.Object {
   */
   type OrderStatus = _OrderStatus | String
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.jupyterlabServices.contentsMod.Contents
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A contents file format.
@@ -13,13 +13,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.base64
 */
 trait FileFormat extends js.Object
-
 object FileFormat {
+  
   @scala.inline
   def base64: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.base64 = "base64".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.base64]
+  
   @scala.inline
   def json: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.json = "json".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.json]
+  
   @scala.inline
   def text: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.text = "text".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.text]
 }
-

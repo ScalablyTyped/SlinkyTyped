@@ -6,11 +6,12 @@ import typingsSlinky.babylonjs.typesMod.DeepImmutable
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("babylonjs/Maths/math.plane", JSImport.Namespace)
 @js.native
 object mathPlaneMod extends js.Object {
+  
   @js.native
   class Plane protected () extends js.Object {
     /**
@@ -21,18 +22,12 @@ object mathPlaneMod extends js.Object {
       * @param d d component of the plane
       */
     def this(a: Double, b: Double, c: Double, d: Double) = this()
-    /**
-      * d component of the plane
-      */
-    var d: Double = js.native
-    /**
-      * Normal of the plane (a,b,c)
-      */
-    var normal: Vector3 = js.native
+    
     /**
       * @returns the plane coordinates as a new array of 4 elements [a, b, c, d].
       */
     def asArray(): js.Array[Double] = js.native
+    
     /**
       * Updates the current Plane from the plane defined by the three given points.
       * @param point1 one of the points used to contruct the plane
@@ -41,20 +36,29 @@ object mathPlaneMod extends js.Object {
       * @returns the updated Plane.
       */
     def copyFromPoints(point1: DeepImmutable[Vector3], point2: DeepImmutable[Vector3], point3: DeepImmutable[Vector3]): Plane = js.native
+    
+    /**
+      * d component of the plane
+      */
+    var d: Double = js.native
+    
     /**
       * Calcualtte the dot product between the point and the plane normal
       * @param point point to calculate the dot product with
       * @returns the dot product (float) of the point coordinates and the plane normal.
       */
     def dotCoordinate(point: DeepImmutable[Vector3]): Double = js.native
+    
     /**
       * @returns the string "Plane".
       */
     def getClassName(): String = js.native
+    
     /**
       * @returns the Plane hash code.
       */
     def getHashCode(): Double = js.native
+    
     /**
       * Checks if the plane is facing a given direction
       * @param direction the direction to check if the plane is facing
@@ -62,17 +66,25 @@ object mathPlaneMod extends js.Object {
       * @returns True is the vector "direction"  is the same side than the plane normal.
       */
     def isFrontFacingTo(direction: DeepImmutable[Vector3], epsilon: Double): Boolean = js.native
+    
+    /**
+      * Normal of the plane (a,b,c)
+      */
+    var normal: Vector3 = js.native
+    
     /**
       * Normalize the current Plane in place.
       * @returns the updated Plane.
       */
     def normalize(): Plane = js.native
+    
     /**
       * Calculates the distance to a point
       * @param point point to calculate distance to
       * @returns the signed distance (float) from the given point to the Plane.
       */
     def signedDistanceTo(point: DeepImmutable[Vector3]): Double = js.native
+    
     /**
       * Applies a transformation the plane and returns the result
       * @param transformation the transformation matrix to be applied to the plane
@@ -80,17 +92,17 @@ object mathPlaneMod extends js.Object {
       */
     def transform(transformation: DeepImmutable[Matrix]): Plane = js.native
   }
-  
   /* static members */
   @js.native
   object Plane extends js.Object {
-    var _TmpMatrix: js.Any = js.native
+    
     /**
       * Creates a plane from an  array
       * @param array the array to create a plane from
       * @returns a new Plane from the given array.
       */
     def FromArray(array: DeepImmutable[ArrayLike[Double]]): Plane = js.native
+    
     /**
       * Creates a plane from three points
       * @param point1 point used to create the plane
@@ -99,6 +111,7 @@ object mathPlaneMod extends js.Object {
       * @returns a new Plane defined by the three given points.
       */
     def FromPoints(point1: DeepImmutable[Vector3], point2: DeepImmutable[Vector3], point3: DeepImmutable[Vector3]): Plane = js.native
+    
     /**
       * Creates a plane from an origin point and a normal
       * @param origin origin of the plane to be constructed
@@ -107,6 +120,7 @@ object mathPlaneMod extends js.Object {
       * Note : the vector "normal" is updated because normalized.
       */
     def FromPositionAndNormal(origin: DeepImmutable[Vector3], normal: DeepImmutable[Vector3]): Plane = js.native
+    
     /**
       * Calculates the distance from a plane and a point
       * @param origin origin of the plane to be constructed
@@ -115,7 +129,7 @@ object mathPlaneMod extends js.Object {
       * @returns the signed distance between the plane defined by the normal vector at the "origin"" point and the given other point.
       */
     def SignedDistanceToPlaneFromPositionAndNormal(origin: DeepImmutable[Vector3], normal: DeepImmutable[Vector3], point: DeepImmutable[Vector3]): Double = js.native
+    
+    var _TmpMatrix: js.Any = js.native
   }
-  
 }
-

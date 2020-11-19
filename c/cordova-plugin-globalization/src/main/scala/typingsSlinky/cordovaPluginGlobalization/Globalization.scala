@@ -9,11 +9,12 @@ import typingsSlinky.cordovaPluginGlobalization.anon.ValueArray
 import typingsSlinky.cordovaPluginGlobalization.anon.ValueNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This plugin obtains information and performs operations specific to the user's locale and timezone. */
 @js.native
 trait Globalization extends js.Object {
+  
   /**
     * Returns a date formatted as a string according to the client's locale and timezone.
     * @param date      Date to format.
@@ -36,6 +37,7 @@ trait Globalization extends js.Object {
     onError: js.Function1[/* error */ GlobalizationError, Unit],
     options: FormatLength
   ): Unit = js.native
+  
   /**
     * Returns a pattern string to format and parse currency values according to the client's user preferences and ISO 4217 currency code.
     * @param currencyCode Should be a String of one of the ISO 4217 currency codes, for example 'USD'.
@@ -49,6 +51,7 @@ trait Globalization extends js.Object {
     onSuccess: js.Function1[/* result */ GlobalizationCurrencyPattern, Unit],
     onError: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
+  
   /**
     * Returns an array of the names of the months or days of the week, depending on the client's user preferences and calendar.
     * @param onSuccess Called on success getting names with a properties object,
@@ -66,6 +69,7 @@ trait Globalization extends js.Object {
     onError: js.Function1[/* error */ GlobalizationError, Unit],
     options: Item
   ): Unit = js.native
+  
   /**
     * Returns a pattern string to format and parse dates according to the client's user preferences.
     * @param onSuccess Called on success getting pattern with a GlobalizationDatePattern object
@@ -82,6 +86,7 @@ trait Globalization extends js.Object {
     onError: js.Function1[/* error */ GlobalizationError, Unit],
     options: Item
   ): Unit = js.native
+  
   /**
     * Returns the first day of the week according to the client's user preferences and calendar.
     * @param onSuccess Called on success with a day object,
@@ -93,6 +98,7 @@ trait Globalization extends js.Object {
     onSuccess: js.Function1[/* day */ ValueNumber, Unit],
     onError: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
+  
   /**
     * Get the string identifier for the client's current locale setting.
     * @param onSuccess Called on success getting the locale identifier with a properties object,
@@ -104,6 +110,7 @@ trait Globalization extends js.Object {
     onSuccess: js.Function1[/* locale */ Value, Unit],
     onError: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
+  
   /**
     * Returns a pattern string to format and parse numbers according to the client's user preferences.
     * @param onSuccess Called on success getting pattern with a GlobalizationNumberPattern object
@@ -120,6 +127,7 @@ trait Globalization extends js.Object {
     onError: js.Function1[/* error */ GlobalizationError, Unit],
     format: Type
   ): Unit = js.native
+  
   /**
     * Get the string identifier for the client's current language.
     * @param onSuccess Called on success getting the language with a properties object,
@@ -131,6 +139,7 @@ trait Globalization extends js.Object {
     onSuccess: js.Function1[/* language */ Value, Unit],
     onError: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
+  
   /**
     * Indicates whether daylight savings time is in effect for a given date using the client's time zone and calendar.
     * @param {Date}                   date Date to check
@@ -144,6 +153,7 @@ trait Globalization extends js.Object {
     onSuccess: js.Function1[/* result */ Dst, Unit],
     onError: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
+  
   /**
     * Returns a number formatted as a string according to the client's user preferences.
     * @param value     Number to format
@@ -164,6 +174,7 @@ trait Globalization extends js.Object {
     onError: js.Function1[/* error */ GlobalizationError, Unit],
     format: Type
   ): Unit = js.native
+  
   /**
     * Parses a date formatted as a string, according to the client's user preferences
     * and calendar using the time zone of the client, and returns the corresponding date object.
@@ -184,6 +195,7 @@ trait Globalization extends js.Object {
     onError: js.Function1[/* error */ GlobalizationError, Unit],
     options: Item
   ): Unit = js.native
+  
   /**
     * Parses a number formatted as a string according to the client's user preferences and returns the corresponding number.
     * @param value     String to parse
@@ -205,4 +217,3 @@ trait Globalization extends js.Object {
     format: Type
   ): Unit = js.native
 }
-

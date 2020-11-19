@@ -2,7 +2,7 @@ package typingsSlinky.openlayers.mod.source
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Request encoding. One of 'KVP', 'REST'.
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.openlayers.openlayersStrings.REST
 */
 trait WMTSRequestEncoding extends js.Object
-
 object WMTSRequestEncoding {
+  
   @scala.inline
   def KVP: typingsSlinky.openlayers.openlayersStrings.KVP = "KVP".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.KVP]
+  
   @scala.inline
   def REST: typingsSlinky.openlayers.openlayersStrings.REST = "REST".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.REST]
 }
-

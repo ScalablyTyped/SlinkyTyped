@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-dynamodb-browser/commands/UpdateTimeToLiveCommand", JSImport.Namespace)
 @js.native
 object updateTimeToLiveCommandMod extends js.Object {
+  
   @js.native
   class UpdateTimeToLiveCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object updateTimeToLiveCommandMod extends js.Object {
           Blob
         ] {
     def this(input: UpdateTimeToLiveInput) = this()
+    
     val middlewareStack: MiddlewareStack[UpdateTimeToLiveInput, UpdateTimeToLiveOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[UpdateTimeToLiveInput, UpdateTimeToLiveOutput] = js.native
   }
-  
 }
-

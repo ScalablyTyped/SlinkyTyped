@@ -2,10 +2,11 @@ package typingsSlinky.arcgisJsApi.esri
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Connection extends js.Object {
+  
   /**
     * A convenient method that invokes a method on each worker.
     *
@@ -21,6 +22,7 @@ trait Connection extends js.Object {
   def broadcast(methodName: String, data: js.UndefOr[scala.Nothing], options: ConnectionBroadcastOptions): js.Array[js.Promise[_]] = js.native
   def broadcast(methodName: String, data: js.Any): js.Array[js.Promise[_]] = js.native
   def broadcast(methodName: String, data: js.Any, options: ConnectionBroadcastOptions): js.Array[js.Promise[_]] = js.native
+  
   /**
     * Closes the existing connection instance to workers. Notifies all workers to destroy the connection instance and dispose the remote module.
     *
@@ -29,6 +31,7 @@ trait Connection extends js.Object {
     *
     */
   def close(): Unit = js.native
+  
   /**
     * Invokes a [method](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-workers-Connection.html#basic-invocation) on the remote module loaded with the worker.
     *
@@ -46,4 +49,3 @@ trait Connection extends js.Object {
   def invoke(methodName: String, data: js.Any): js.Promise[_] = js.native
   def invoke(methodName: String, data: js.Any, options: ConnectionInvokeOptions): js.Promise[_] = js.native
 }
-

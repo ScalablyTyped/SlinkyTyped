@@ -2,7 +2,7 @@ package typingsSlinky.rxjs.rxMod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rxjs/internal/Rx", "Subscription")
 @js.native
@@ -14,12 +14,11 @@ class Subscription ()
   extends typingsSlinky.rxjs.subscriptionMod.Subscription {
   def this(unsubscribe: js.Function0[Unit]) = this()
 }
-
 /* static members */
 @JSImport("rxjs/internal/Rx", "Subscription")
 @js.native
 object Subscription extends js.Object {
+  
   /** @nocollapse */
   var EMPTY: typingsSlinky.rxjs.subscriptionMod.Subscription = js.native
 }
-

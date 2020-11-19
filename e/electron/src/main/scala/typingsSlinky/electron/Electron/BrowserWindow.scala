@@ -66,36 +66,20 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait BrowserWindow extends EventEmitter {
+  
   var accessibleTitle: String = js.native
-  var autoHideMenuBar: Boolean = js.native
-  var closable: Boolean = js.native
-  var documentEdited: Boolean = js.native
-  var excludedFromShownWindowsMenu: Boolean = js.native
-  var fullScreen: Boolean = js.native
-  var fullScreenable: Boolean = js.native
-  val id: Double = js.native
-  var kiosk: Boolean = js.native
-  var maximizable: Boolean = js.native
-  var menuBarVisible: Boolean = js.native
-  var minimizable: Boolean = js.native
-  var movable: Boolean = js.native
-  var representedFilename: String = js.native
-  var resizable: Boolean = js.native
-  var shadow: Boolean = js.native
-  var simpleFullScreen: Boolean = js.native
-  var title: String = js.native
-  var visibleOnAllWorkspaces: Boolean = js.native
-  val webContents: WebContents_ = js.native
+  
   /**
     * Replacement API for setBrowserView supporting work with multi browser views.
     *
     * @experimental
     */
   def addBrowserView(browserView: BrowserView): Unit = js.native
+  
   @JSName("addListener")
   def addListener_alwaysontopchanged(
     event: `always-on-top-changed`,
@@ -170,17 +154,23 @@ trait BrowserWindow extends EventEmitter {
   def addListener_willmove(event: `will-move`, listener: js.Function2[/* event */ Event, /* newBounds */ Rectangle, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_willresize(event: `will-resize`, listener: js.Function2[/* event */ Event, /* newBounds */ Rectangle, Unit]): this.type = js.native
+  
   /**
     * Adds a window as a tab on this window, after the tab for the window instance.
     *
     * @platform darwin
     */
   def addTabbedWindow(browserWindow: BrowserWindow): Unit = js.native
+  
+  var autoHideMenuBar: Boolean = js.native
+  
   /**
     * Removes focus from the window.
     */
   def blur(): Unit = js.native
+  
   def blurWebView(): Unit = js.native
+  
   /**
     * Resolves with a NativeImage
     *
@@ -189,45 +179,65 @@ trait BrowserWindow extends EventEmitter {
     */
   def capturePage(): js.Promise[NativeImage_] = js.native
   def capturePage(rect: Rectangle): js.Promise[NativeImage_] = js.native
+  
   /**
     * Moves window to the center of the screen.
     */
   def center(): Unit = js.native
+  
+  var closable: Boolean = js.native
+  
   /**
     * Try to close the window. This has the same effect as a user manually clicking
     * the close button of the window. The web page may cancel the close though. See
     * the close event.
     */
   def close(): Unit = js.native
+  
   /**
     * Closes the currently open Quick Look panel.
     *
     * @platform darwin
     */
   def closeFilePreview(): Unit = js.native
+  
   /**
     * Force closing the window, the `unload` and `beforeunload` event won't be emitted
     * for the web page, and `close` event will also not be emitted for this window,
     * but it guarantees the `closed` event will be emitted.
     */
   def destroy(): Unit = js.native
+  
+  var documentEdited: Boolean = js.native
+  
+  var excludedFromShownWindowsMenu: Boolean = js.native
+  
   /**
     * Starts or stops flashing the window to attract user's attention.
     */
   def flashFrame(flag: Boolean): Unit = js.native
+  
   /**
     * Focuses on the window.
     */
   def focus(): Unit = js.native
+  
   def focusOnWebView(): Unit = js.native
+  
+  var fullScreen: Boolean = js.native
+  
+  var fullScreenable: Boolean = js.native
+  
   /**
     * Gets the background color of the window. See Setting `backgroundColor`.
     */
   def getBackgroundColor(): String = js.native
+  
   /**
     * The `bounds` of the window as `Object`.
     */
   def getBounds(): Rectangle = js.native
+  
   /**
     * The `BrowserView` attached to `win`. Returns `null` if one is not attached.
     * Throws an error if multiple `BrowserView`s are attached.
@@ -235,6 +245,7 @@ trait BrowserWindow extends EventEmitter {
     * @experimental
     */
   def getBrowserView(): BrowserView | Null = js.native
+  
   /**
     * an array of all BrowserViews that have been attached with `addBrowserView` or
     * `setBrowserView`.
@@ -245,22 +256,27 @@ trait BrowserWindow extends EventEmitter {
     * @experimental
     */
   def getBrowserViews(): js.Array[BrowserView] = js.native
+  
   /**
     * All child windows.
     */
   def getChildWindows(): js.Array[BrowserWindow] = js.native
+  
   /**
     * The `bounds` of the window's client area as `Object`.
     */
   def getContentBounds(): Rectangle = js.native
+  
   /**
     * Contains the window's client area's width and height.
     */
   def getContentSize(): js.Array[Double] = js.native
+  
   /**
     * Contains the window's maximum width and height.
     */
   def getMaximumSize(): js.Array[Double] = js.native
+  
   /**
     * Window id in the format of DesktopCapturerSource's id. For example
     * "window:1234:0".
@@ -271,10 +287,12 @@ trait BrowserWindow extends EventEmitter {
     * level window.
     */
   def getMediaSourceId(): String = js.native
+  
   /**
     * Contains the window's minimum width and height.
     */
   def getMinimumSize(): js.Array[Double] = js.native
+  
   /**
     * The platform-specific handle of the window.
     *
@@ -282,6 +300,7 @@ trait BrowserWindow extends EventEmitter {
     * `Window` (`unsigned long`) on Linux.
     */
   def getNativeWindowHandle(): Buffer = js.native
+  
   /**
     * Contains the window bounds of the normal state
     *
@@ -291,29 +310,35 @@ trait BrowserWindow extends EventEmitter {
     * `Rectangle`.
     */
   def getNormalBounds(): Rectangle = js.native
+  
   /**
     * between 0.0 (fully transparent) and 1.0 (fully opaque). On Linux, always returns
     * 1.
     */
   def getOpacity(): Double = js.native
+  
   /**
     * The parent window.
     */
   def getParentWindow(): BrowserWindow = js.native
+  
   /**
     * Contains the window's current position.
     */
   def getPosition(): js.Array[Double] = js.native
+  
   /**
     * The pathname of the file the window represents.
     *
     * @platform darwin
     */
   def getRepresentedFilename(): String = js.native
+  
   /**
     * Contains the window's width and height.
     */
   def getSize(): js.Array[Double] = js.native
+  
   /**
     * The title of the native window.
     *
@@ -321,6 +346,7 @@ trait BrowserWindow extends EventEmitter {
     * native window.
     */
   def getTitle(): String = js.native
+  
   /**
     * The current position for the traffic light buttons. Can only be used with
     * `titleBarStyle` set to `hidden`.
@@ -328,14 +354,17 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin
     */
   def getTrafficLightPosition(): Point = js.native
+  
   /**
     * Whether the window has a shadow.
     */
   def hasShadow(): Boolean = js.native
+  
   /**
     * Hides the window.
     */
   def hide(): Unit = js.native
+  
   /**
     * Hooks a windows message. The `callback` is called when the message is received
     * in the WndProc.
@@ -343,10 +372,14 @@ trait BrowserWindow extends EventEmitter {
     * @platform win32
     */
   def hookWindowMessage(message: Double, callback: js.Function0[Unit]): Unit = js.native
+  
+  val id: Double = js.native
+  
   /**
     * Whether the window is always on top of other windows.
     */
   def isAlwaysOnTop(): Boolean = js.native
+  
   /**
     * Whether the window can be manually closed by user.
     * 
@@ -355,37 +388,45 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin,win32
     */
   def isClosable(): Boolean = js.native
+  
   /**
     * Whether the window is destroyed.
     */
   def isDestroyed(): Boolean = js.native
+  
   /**
     * Whether the window's document has been edited.
     *
     * @platform darwin
     */
   def isDocumentEdited(): Boolean = js.native
+  
   /**
     * whether the window is enabled.
     */
   def isEnabled(): Boolean = js.native
+  
   /**
     * Whether the window is focused.
     */
   def isFocused(): Boolean = js.native
+  
   /**
     * Whether the window is in fullscreen mode.
     */
   def isFullScreen(): Boolean = js.native
+  
   /**
     * Whether the maximize/zoom window button toggles fullscreen mode or maximizes the
     * window.
     */
   def isFullScreenable(): Boolean = js.native
+  
   /**
     * Whether the window is in kiosk mode.
     */
   def isKiosk(): Boolean = js.native
+  
   /**
     * Whether the window can be manually maximized by user.
     * 
@@ -394,18 +435,22 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin,win32
     */
   def isMaximizable(): Boolean = js.native
+  
   /**
     * Whether the window is maximized.
     */
   def isMaximized(): Boolean = js.native
+  
   /**
     * Whether menu bar automatically hides itself.
     */
   def isMenuBarAutoHide(): Boolean = js.native
+  
   /**
     * Whether the menu bar is visible.
     */
   def isMenuBarVisible(): Boolean = js.native
+  
   /**
     * Whether the window can be manually minimized by the user.
     * 
@@ -414,14 +459,17 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin,win32
     */
   def isMinimizable(): Boolean = js.native
+  
   /**
     * Whether the window is minimized.
     */
   def isMinimized(): Boolean = js.native
+  
   /**
     * Whether current window is a modal window.
     */
   def isModal(): Boolean = js.native
+  
   /**
     * Whether the window can be moved by user.
   On Linux always returns `true`.
@@ -429,37 +477,46 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin,win32
     */
   def isMovable(): Boolean = js.native
+  
   /**
     * Whether the window is in normal state (not maximized, not minimized, not in
     * fullscreen mode).
     */
   def isNormal(): Boolean = js.native
+  
   /**
     * Whether the window can be manually resized by the user.
     */
   def isResizable(): Boolean = js.native
+  
   /**
     * Whether the window is in simple (pre-Lion) fullscreen mode.
     *
     * @platform darwin
     */
   def isSimpleFullScreen(): Boolean = js.native
+  
   /**
     * Whether the window is visible to the user.
     */
   def isVisible(): Boolean = js.native
+  
   /**
     * Whether the window is visible on all workspaces.
     * 
   **Note:** This API always returns false on Windows.
     */
   def isVisibleOnAllWorkspaces(): Boolean = js.native
+  
   /**
     * `true` or `false` depending on whether the message is hooked.
     *
     * @platform win32
     */
   def isWindowMessageHooked(message: Double): Boolean = js.native
+  
+  var kiosk: Boolean = js.native
+  
   /**
     * the promise will resolve when the page has finished loading (see
     * `did-finish-load`), and rejects if the page fails to load (see `did-fail-load`).
@@ -470,6 +527,7 @@ trait BrowserWindow extends EventEmitter {
     */
   def loadFile(filePath: String): js.Promise[Unit] = js.native
   def loadFile(filePath: String, options: LoadFileOptions): js.Promise[Unit] = js.native
+  
   /**
     * the promise will resolve when the page has finished loading (see
     * `did-finish-load`), and rejects if the page fails to load (see `did-fail-load`).
@@ -487,11 +545,17 @@ trait BrowserWindow extends EventEmitter {
     */
   def loadURL(url: String): js.Promise[Unit] = js.native
   def loadURL(url: String, options: LoadURLOptions): js.Promise[Unit] = js.native
+  
+  var maximizable: Boolean = js.native
+  
   /**
     * Maximizes the window. This will also show (but not focus) the window if it isn't
     * being displayed already.
     */
   def maximize(): Unit = js.native
+  
+  var menuBarVisible: Boolean = js.native
+  
   /**
     * Merges all windows into one window with multiple tabs when native tabs are
     * enabled and there is more than one open window.
@@ -499,17 +563,24 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin
     */
   def mergeAllWindows(): Unit = js.native
+  
+  var minimizable: Boolean = js.native
+  
   /**
     * Minimizes the window. On some platforms the minimized window will be shown in
     * the Dock.
     */
   def minimize(): Unit = js.native
+  
+  var movable: Boolean = js.native
+  
   /**
     * Moves window above the source window in the sense of z-order. If the
     * `mediaSourceId` is not of type window or if the window does not exist then this
     * method throws an error.
     */
   def moveAbove(mediaSourceId: String): Unit = js.native
+  
   /**
     * Moves the current tab into a new window if native tabs are enabled and there is
     * more than one tab in the current window.
@@ -517,10 +588,12 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin
     */
   def moveTabToNewWindow(): Unit = js.native
+  
   /**
     * Moves window to top(z-order) regardless of focus
     */
   def moveTop(): Unit = js.native
+  
   // Docs: http://electronjs.org/docs/api/browser-window
   /**
     * Emitted when the window is set or unset to show always on top of other windows.
@@ -779,6 +852,7 @@ trait BrowserWindow extends EventEmitter {
     */
   @JSName("on")
   def on_willresize(event: `will-resize`, listener: js.Function2[/* event */ Event, /* newBounds */ Rectangle, Unit]): this.type = js.native
+  
   @JSName("once")
   def once_alwaysontopchanged(
     event: `always-on-top-changed`,
@@ -853,6 +927,7 @@ trait BrowserWindow extends EventEmitter {
   def once_willmove(event: `will-move`, listener: js.Function2[/* event */ Event, /* newBounds */ Rectangle, Unit]): this.type = js.native
   @JSName("once")
   def once_willresize(event: `will-resize`, listener: js.Function2[/* event */ Event, /* newBounds */ Rectangle, Unit]): this.type = js.native
+  
   /**
     * Uses Quick Look to preview a file at a given path.
     *
@@ -860,11 +935,14 @@ trait BrowserWindow extends EventEmitter {
     */
   def previewFile(path: String): Unit = js.native
   def previewFile(path: String, displayName: String): Unit = js.native
+  
   /**
     * Same as `webContents.reload`.
     */
   def reload(): Unit = js.native
+  
   def removeBrowserView(browserView: BrowserView): Unit = js.native
+  
   @JSName("removeListener")
   def removeListener_alwaysontopchanged(
     event: `always-on-top-changed`,
@@ -939,16 +1017,23 @@ trait BrowserWindow extends EventEmitter {
   def removeListener_willmove(event: `will-move`, listener: js.Function2[/* event */ Event, /* newBounds */ Rectangle, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_willresize(event: `will-resize`, listener: js.Function2[/* event */ Event, /* newBounds */ Rectangle, Unit]): this.type = js.native
+  
   /**
     * Remove the window's menu bar.
     *
     * @platform linux,win32
     */
   def removeMenu(): Unit = js.native
+  
+  var representedFilename: String = js.native
+  
+  var resizable: Boolean = js.native
+  
   /**
     * Restores the window from minimized state to its previous state.
     */
   def restore(): Unit = js.native
+  
   /**
     * Selects the next tab when native tabs are enabled and there are other tabs in
     * the window.
@@ -956,6 +1041,7 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin
     */
   def selectNextTab(): Unit = js.native
+  
   /**
     * Selects the previous tab when native tabs are enabled and there are other tabs
     * in the window.
@@ -963,6 +1049,7 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin
     */
   def selectPreviousTab(): Unit = js.native
+  
   /**
     * Sets whether the window should show always on top of other windows. After
     * setting this, the window is still a normal window, not a toolbox window which
@@ -1002,6 +1089,7 @@ trait BrowserWindow extends EventEmitter {
   def setAlwaysOnTop_tornoffmenu(flag: Boolean, level: `torn-off-menu`): Unit = js.native
   @JSName("setAlwaysOnTop")
   def setAlwaysOnTop_tornoffmenu(flag: Boolean, level: `torn-off-menu`, relativeLevel: Double): Unit = js.native
+  
   /**
     * Sets the properties for the window's taskbar button.
     *
@@ -1011,6 +1099,7 @@ trait BrowserWindow extends EventEmitter {
     * @platform win32
     */
   def setAppDetails(options: AppDetailsOptions): Unit = js.native
+  
   /**
     * This will make a window maintain an aspect ratio. The extra size allows a
     * developer to have space, specified in pixels, not included within the aspect
@@ -1030,12 +1119,14 @@ trait BrowserWindow extends EventEmitter {
     */
   def setAspectRatio(aspectRatio: Double): Unit = js.native
   def setAspectRatio(aspectRatio: Double, extraSize: Size): Unit = js.native
+  
   /**
     * Controls whether to hide cursor when typing.
     *
     * @platform darwin
     */
   def setAutoHideCursor(autoHide: Boolean): Unit = js.native
+  
   /**
     * Sets whether the window menu bar should hide itself automatically. Once set the
     * menu bar will only show when users press the single `Alt` key.
@@ -1044,30 +1135,36 @@ trait BrowserWindow extends EventEmitter {
     * hide it immediately.
     */
   def setAutoHideMenuBar(hide: Boolean): Unit = js.native
+  
   /**
     * Sets the background color of the window. See Setting `backgroundColor`.
     */
   def setBackgroundColor(backgroundColor: String): Unit = js.native
+  
   /**
     * Resizes and moves the window to the supplied bounds. Any properties that are not
     * supplied will default to their current values.
     */
   def setBounds(bounds: PartialRectangle): Unit = js.native
   def setBounds(bounds: PartialRectangle, animate: Boolean): Unit = js.native
+  
   def setBrowserView(): Unit = js.native
   def setBrowserView(browserView: BrowserView): Unit = js.native
+  
   /**
     * Sets whether the window can be manually closed by user. On Linux does nothing.
     *
     * @platform darwin,win32
     */
   def setClosable(closable: Boolean): Unit = js.native
+  
   /**
     * Resizes and moves the window's client area (e.g. the web page) to the supplied
     * bounds.
     */
   def setContentBounds(bounds: Rectangle): Unit = js.native
   def setContentBounds(bounds: Rectangle, animate: Boolean): Unit = js.native
+  
   /**
     * Prevents the window contents from being captured by other apps.
     *
@@ -1077,11 +1174,13 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin,win32
     */
   def setContentProtection(enable: Boolean): Unit = js.native
+  
   /**
     * Resizes the window's client area (e.g. the web page) to `width` and `height`.
     */
   def setContentSize(width: Double, height: Double): Unit = js.native
   def setContentSize(width: Double, height: Double, animate: Boolean): Unit = js.native
+  
   /**
     * Specifies whether the window’s document has been edited, and the icon in title
     * bar will become gray when set to `true`.
@@ -1089,10 +1188,12 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin
     */
   def setDocumentEdited(edited: Boolean): Unit = js.native
+  
   /**
     * Disable or enable the window.
     */
   def setEnabled(enable: Boolean): Unit = js.native
+  
   /**
     * Changes whether the window can be focused.
     * 
@@ -1101,19 +1202,23 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin,win32
     */
   def setFocusable(focusable: Boolean): Unit = js.native
+  
   /**
     * Sets whether the window should be in fullscreen mode.
     */
   def setFullScreen(flag: Boolean): Unit = js.native
+  
   /**
     * Sets whether the maximize/zoom window button toggles fullscreen mode or
     * maximizes the window.
     */
   def setFullScreenable(fullscreenable: Boolean): Unit = js.native
+  
   /**
     * Sets whether the window should have a shadow.
     */
   def setHasShadow(hasShadow: Boolean): Unit = js.native
+  
   def setIcon(icon: String): Unit = js.native
   /**
     * Changes window icon.
@@ -1121,6 +1226,7 @@ trait BrowserWindow extends EventEmitter {
     * @platform win32,linux
     */
   def setIcon(icon: NativeImage_): Unit = js.native
+  
   /**
     * Makes the window ignore all mouse events.
     *
@@ -1129,10 +1235,12 @@ trait BrowserWindow extends EventEmitter {
     */
   def setIgnoreMouseEvents(ignore: Boolean): Unit = js.native
   def setIgnoreMouseEvents(ignore: Boolean, options: IgnoreMouseEventsOptions): Unit = js.native
+  
   /**
     * Enters or leaves kiosk mode.
     */
   def setKiosk(flag: Boolean): Unit = js.native
+  
   /**
     * Sets whether the window can be manually maximized by user. On Linux does
     * nothing.
@@ -1140,10 +1248,12 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin,win32
     */
   def setMaximizable(maximizable: Boolean): Unit = js.native
+  
   /**
     * Sets the maximum size of window to `width` and `height`.
     */
   def setMaximumSize(width: Double, height: Double): Unit = js.native
+  
   /**
     * Sets the `menu` as the window's menu bar.
     *
@@ -1151,6 +1261,7 @@ trait BrowserWindow extends EventEmitter {
     */
   def setMenu(): Unit = js.native
   def setMenu(menu: Menu): Unit = js.native
+  
   /**
     * Sets whether the menu bar should be visible. If the menu bar is auto-hide, users
     * can still bring up the menu bar by pressing the single `Alt` key.
@@ -1158,6 +1269,7 @@ trait BrowserWindow extends EventEmitter {
     * @platform win32,linux
     */
   def setMenuBarVisibility(visible: Boolean): Unit = js.native
+  
   /**
     * Sets whether the window can be manually minimized by user. On Linux does
     * nothing.
@@ -1165,16 +1277,19 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin,win32
     */
   def setMinimizable(minimizable: Boolean): Unit = js.native
+  
   /**
     * Sets the minimum size of window to `width` and `height`.
     */
   def setMinimumSize(width: Double, height: Double): Unit = js.native
+  
   /**
     * Sets whether the window can be moved by user. On Linux does nothing.
     *
     * @platform darwin,win32
     */
   def setMovable(movable: Boolean): Unit = js.native
+  
   /**
     * Sets the opacity of the window. On Linux, does nothing. Out of bound number
     * values are clamped to the [0, 1] range.
@@ -1182,6 +1297,7 @@ trait BrowserWindow extends EventEmitter {
     * @platform win32,darwin
     */
   def setOpacity(opacity: Double): Unit = js.native
+  
   def setOverlayIcon(overlay: Null, description: String): Unit = js.native
   /**
     * Sets a 16 x 16 pixel overlay onto the current taskbar icon, usually used to
@@ -1190,17 +1306,20 @@ trait BrowserWindow extends EventEmitter {
     * @platform win32
     */
   def setOverlayIcon(overlay: NativeImage_, description: String): Unit = js.native
+  
   /**
     * Sets `parent` as current window's parent window, passing `null` will turn
     * current window into a top-level window.
     */
   def setParentWindow(): Unit = js.native
   def setParentWindow(parent: BrowserWindow): Unit = js.native
+  
   /**
     * Moves window to `x` and `y`.
     */
   def setPosition(x: Double, y: Double): Unit = js.native
   def setPosition(x: Double, y: Double, animate: Boolean): Unit = js.native
+  
   /**
     * Sets progress value in progress bar. Valid range is [0, 1.0].
     *
@@ -1217,6 +1336,7 @@ trait BrowserWindow extends EventEmitter {
     */
   def setProgressBar(progress: Double): Unit = js.native
   def setProgressBar(progress: Double, options: ProgressBarOptions): Unit = js.native
+  
   /**
     * Sets the pathname of the file the window represents, and the icon of the file
     * will show in window's title bar.
@@ -1224,10 +1344,12 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin
     */
   def setRepresentedFilename(filename: String): Unit = js.native
+  
   /**
     * Sets whether the window can be manually resized by the user.
     */
   def setResizable(resizable: Boolean): Unit = js.native
+  
   /**
     * Setting a window shape determines the area within the window where the system
     * permits drawing and user interaction. Outside of the given region, no pixels
@@ -1239,6 +1361,7 @@ trait BrowserWindow extends EventEmitter {
     * @platform win32,linux
     */
   def setShape(rects: js.Array[Rectangle]): Unit = js.native
+  
   /**
     * Changes the attachment point for sheets on macOS. By default, sheets are
     * attached just below the window frame, but you may want to display them beneath a
@@ -1248,6 +1371,7 @@ trait BrowserWindow extends EventEmitter {
     */
   def setSheetOffset(offsetY: Double): Unit = js.native
   def setSheetOffset(offsetY: Double, offsetX: Double): Unit = js.native
+  
   /**
     * Enters or leaves simple fullscreen mode.
     *
@@ -1257,16 +1381,19 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin
     */
   def setSimpleFullScreen(flag: Boolean): Unit = js.native
+  
   /**
     * Resizes the window to `width` and `height`. If `width` or `height` are below any
     * set minimum size constraints the window will snap to its minimum size.
     */
   def setSize(width: Double, height: Double): Unit = js.native
   def setSize(width: Double, height: Double, animate: Boolean): Unit = js.native
+  
   /**
     * Makes the window not show in the taskbar.
     */
   def setSkipTaskbar(skip: Boolean): Unit = js.native
+  
   /**
     * Whether the buttons were added successfully
     *
@@ -1304,6 +1431,7 @@ trait BrowserWindow extends EventEmitter {
     * @platform win32
     */
   def setThumbarButtons(buttons: js.Array[ThumbarButton]): Boolean = js.native
+  
   /**
     * Sets the region of the window to show as the thumbnail image displayed when
     * hovering over the window in the taskbar. You can reset the thumbnail to be the
@@ -1313,6 +1441,7 @@ trait BrowserWindow extends EventEmitter {
     * @platform win32
     */
   def setThumbnailClip(region: Rectangle): Unit = js.native
+  
   /**
     * Sets the toolTip that is displayed when hovering over the window thumbnail in
     * the taskbar.
@@ -1320,10 +1449,12 @@ trait BrowserWindow extends EventEmitter {
     * @platform win32
     */
   def setThumbnailToolTip(toolTip: String): Unit = js.native
+  
   /**
     * Changes the title of native window to `title`.
     */
   def setTitle(title: String): Unit = js.native
+  
   /**
     * Sets the touchBar layout for the current window. Specifying `null` or
     * `undefined` clears the touch bar. This method only has an effect if the machine
@@ -1337,6 +1468,7 @@ trait BrowserWindow extends EventEmitter {
     */
   def setTouchBar(): Unit = js.native
   def setTouchBar(touchBar: TouchBar): Unit = js.native
+  
   /**
     * Set a custom position for the traffic light buttons. Can only be used with
     * `titleBarStyle` set to `hidden`.
@@ -1344,6 +1476,7 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin
     */
   def setTrafficLightPosition(position: Point): Unit = js.native
+  
   /**
     * Adds a vibrancy effect to the browser window. Passing `null` or an empty string
     * will remove the vibrancy effect on the window.
@@ -1392,12 +1525,14 @@ trait BrowserWindow extends EventEmitter {
   def setVibrancy_underwindow(`type`: `under-window`): Unit = js.native
   @JSName("setVibrancy")
   def setVibrancy_window(`type`: window): Unit = js.native
+  
   /**
     * Sets whether the window should be visible on all workspaces.
     * 
   **Note:** This API does nothing on Windows.
     */
   def setVisibleOnAllWorkspaces(visible: Boolean): Unit = js.native
+  
   /**
     * Sets whether the window traffic light buttons should be visible.
     * 
@@ -1406,20 +1541,30 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin
     */
   def setWindowButtonVisibility(visible: Boolean): Unit = js.native
+  
+  var shadow: Boolean = js.native
+  
   /**
     * Shows and gives focus to the window.
     */
   def show(): Unit = js.native
+  
   /**
     * Same as `webContents.showDefinitionForSelection()`.
     *
     * @platform darwin
     */
   def showDefinitionForSelection(): Unit = js.native
+  
   /**
     * Shows the window but doesn't focus on it.
     */
   def showInactive(): Unit = js.native
+  
+  var simpleFullScreen: Boolean = js.native
+  
+  var title: String = js.native
+  
   /**
     * Toggles the visibility of the tab bar if native tabs are enabled and there is
     * only one tab in the current window.
@@ -1427,21 +1572,27 @@ trait BrowserWindow extends EventEmitter {
     * @platform darwin
     */
   def toggleTabBar(): Unit = js.native
+  
   /**
     * Unhooks all of the window messages.
     *
     * @platform win32
     */
   def unhookAllWindowMessages(): Unit = js.native
+  
   /**
     * Unhook the window message.
     *
     * @platform win32
     */
   def unhookWindowMessage(message: Double): Unit = js.native
+  
   /**
     * Unmaximizes the window.
     */
   def unmaximize(): Unit = js.native
+  
+  var visibleOnAllWorkspaces: Boolean = js.native
+  
+  val webContents: WebContents_ = js.native
 }
-

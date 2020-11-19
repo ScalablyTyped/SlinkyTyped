@@ -4,15 +4,15 @@ import typingsSlinky.amapJsApi.AMap.Bounds
 import typingsSlinky.amapJsApi.AMap.LngLat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.amapJsApiLineSearch.AMap.LineSearch.LineInfoBase
   - typingsSlinky.amapJsApiLineSearch.AMap.LineSearch.LineInfoExt
 */
 trait LineInfo extends js.Object
-
 object LineInfo {
+  
   @scala.inline
   def LineInfoBase(
     citycode: String,
@@ -27,6 +27,7 @@ object LineInfo {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineInfo]
   }
+  
   @scala.inline
   def LineInfoExt(
     basic_price: String,
@@ -50,4 +51,3 @@ object LineInfo {
     __obj.asInstanceOf[LineInfo]
   }
 }
-

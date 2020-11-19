@@ -23,7 +23,7 @@ import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedOperatio
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedParameter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.9.0: introduced
@@ -41,19 +41,18 @@ class BooleanType protected ()
     container: AbstractElement
   ) = this()
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "datatypes.BooleanType")
 @js.native
 object BooleanType extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'parameterType' property
@@ -63,6 +62,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInAppServiceActionParameterUnderParameterType(container: AppServiceActionParameter): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'actionReturnType' property
@@ -72,6 +72,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInAppServiceActionUnderActionReturnType(container: AppServiceAction): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'type' property
@@ -81,6 +82,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInConstantUnderType(container: Constant): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'variableType' property
@@ -90,6 +92,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInCreateVariableActionUnderVariableType(container: CreateVariableAction): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'columnType' property
@@ -99,6 +102,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInDataSetColumnUnderColumnType(container: DataSetColumn): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'parameterType' property
@@ -108,6 +112,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInDataSetParameterUnderParameterType(container: DataSetParameter): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'parameterType' property
@@ -117,6 +122,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInDocumentTemplateParameterUnderParameterType(container: DocumentTemplateParameter): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'parameterType' property
@@ -126,6 +132,7 @@ object BooleanType extends js.Object {
     *  7.16.0 and higher
     */
   def createInImportMappingUnderParameterType(container: ImportMapping): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'microflowReturnType' property
@@ -135,6 +142,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInMicroflowBaseUnderMicroflowReturnType(container: MicroflowBase): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'parameterType' property
@@ -144,6 +152,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInMicroflowParameterBaseUnderParameterType(container: MicroflowParameterBase): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'variableType' property
@@ -153,6 +162,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInMicroflowParameterObjectUnderVariableType(container: MicroflowParameterObject): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'operationReturnType' property
@@ -162,6 +172,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInPublishedOperationUnderOperationReturnType(container: PublishedOperation): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'parameterType' property
@@ -171,6 +182,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInPublishedParameterUnderParameterType(container: PublishedParameter): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'type' property
@@ -180,6 +192,7 @@ object BooleanType extends js.Object {
     *  7.17.0 and higher
     */
   def createInRestOperationParameterUnderType(container: RestOperationParameter): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'variableType' property
@@ -189,6 +202,7 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInResultHandlingUnderVariableType(container: ResultHandling): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
   /**
     * Creates and returns a new BooleanType instance in the SDK and on the server.
     * The new BooleanType will be automatically stored in the 'type' property
@@ -198,5 +212,8 @@ object BooleanType extends js.Object {
     *  7.9.0 and higher
     */
   def createInValueMappingElementUnderType(container: ValueMappingElement): typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.BooleanType = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

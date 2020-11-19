@@ -2,11 +2,12 @@ package typingsSlinky.sharepoint.global.SP
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("SP.Discovery")
 @js.native
 object Discovery extends js.Object {
+  
   @js.native
   class Case protected ()
     extends typingsSlinky.sharepoint.SP.Discovery.Case {
@@ -24,13 +25,16 @@ object Discovery extends js.Object {
   
   @js.native
   object ExportStatus extends js.Object {
-    /* 2 */ val complete: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.complete with Double = js.native
-    /* 3 */ val failed: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.failed with Double = js.native
-    /* 0 */ val notStarted: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.notStarted with Double = js.native
-    /* 1 */ val started: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.started with Double = js.native
+    
     @JSBracketAccess
     def apply(value: Double): js.UndefOr[typingsSlinky.sharepoint.SP.Discovery.ExportStatus with Double] = js.native
+    
+    /* 2 */ val complete: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.complete with Double = js.native
+    
+    /* 3 */ val failed: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.failed with Double = js.native
+    
+    /* 0 */ val notStarted: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.notStarted with Double = js.native
+    
+    /* 1 */ val started: typingsSlinky.sharepoint.SP.Discovery.ExportStatus.started with Double = js.native
   }
-  
 }
-

@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-lambda-node/commands/UpdateEventSourceMappingCommand", JSImport.Namespace)
 @js.native
 object updateEventSourceMappingCommandMod extends js.Object {
+  
   @js.native
   class UpdateEventSourceMappingCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object updateEventSourceMappingCommandMod extends js.Object {
           Readable
         ] {
     def this(input: UpdateEventSourceMappingInput) = this()
+    
     val middlewareStack: MiddlewareStack[UpdateEventSourceMappingInput, UpdateEventSourceMappingOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: LambdaResolvedConfiguration
     ): Handler[UpdateEventSourceMappingInput, UpdateEventSourceMappingOutput] = js.native
   }
-  
 }
-

@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.pinpointsmsvoiceMod.ClientConfiguration
 import typingsSlinky.awsSdk.pinpointsmsvoiceMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("aws-sdk/clients/all", "PinpointSMSVoice")
 @js.native
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 class PinpointSMSVoice () extends ^ {
   def this(options: ClientConfiguration) = this()
 }
-

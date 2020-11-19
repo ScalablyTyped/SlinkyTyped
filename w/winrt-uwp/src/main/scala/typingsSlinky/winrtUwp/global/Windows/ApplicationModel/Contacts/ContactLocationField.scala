@@ -2,7 +2,7 @@ package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Contacts
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Contains information about a user's location and address. */
 @JSGlobal("Windows.ApplicationModel.Contacts.ContactLocationField")
@@ -43,4 +43,3 @@ class ContactLocationField protected ()
     postalCode: String
   ) = this()
 }
-

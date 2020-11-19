@@ -7,7 +7,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * In version 7.21.0: deleted
@@ -31,28 +31,31 @@ class StringType protected () extends PrimitiveType {
     unit: ModelUnit,
     container: AbstractElement
   ) = this()
-  @JSName("model")
-  var model_FStringType: IModel = js.native
+  
   @JSName("containerAsBasicParameterType")
   def containerAsBasicParameterType_MStringType: BasicParameterType = js.native
+  
   @JSName("containerAsJavaActionParameter")
   def containerAsJavaActionParameter_MStringType: JavaActionParameter = js.native
+  
   @JSName("containerAsJavaAction")
   def containerAsJavaAction_MStringType: JavaAction = js.native
+  
+  @JSName("model")
+  var model_FStringType: IModel = js.native
 }
-
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/javaactions", "javaactions.StringType")
 @js.native
 object StringType extends js.Object {
-  var structureTypeName: String = js.native
-  var versionInfo: StructureVersionInfo = js.native
+  
   /**
     * Creates and returns a new StringType instance in the SDK and on the server.
     * Expects one argument: the IModel object the instance will "live on".
     * After creation, assign or add this instance to a property that accepts this kind of objects.
     */
   def create(model: IModel): StringType = js.native
+  
   /**
     * Creates and returns a new StringType instance in the SDK and on the server.
     * The new StringType will be automatically stored in the 'type' property
@@ -62,6 +65,7 @@ object StringType extends js.Object {
     *  6.7.0 to 7.20.0
     */
   def createInBasicParameterTypeUnderType(container: BasicParameterType): StringType = js.native
+  
   /**
     * Creates and returns a new StringType instance in the SDK and on the server.
     * The new StringType will be automatically stored in the 'javaType' property
@@ -71,6 +75,7 @@ object StringType extends js.Object {
     *  6.6.0 to 6.6.0
     */
   def createInJavaActionParameterUnderJavaType(container: JavaActionParameter): StringType = js.native
+  
   /**
     * Creates and returns a new StringType instance in the SDK and on the server.
     * The new StringType will be automatically stored in the 'javaReturnType' property
@@ -80,5 +85,8 @@ object StringType extends js.Object {
     *  6.6.0 to 7.20.0
     */
   def createInJavaActionUnderJavaReturnType(container: JavaAction): StringType = js.native
+  
+  var structureTypeName: String = js.native
+  
+  var versionInfo: StructureVersionInfo = js.native
 }
-

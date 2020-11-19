@@ -8,7 +8,7 @@ import typingsSlinky.pluginError.anon.Optionsmessagestring
 import typingsSlinky.pluginError.anon.Optionspluginstringmessag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Constructor
@@ -52,4 +52,3 @@ Instantiable3[
   */ typingsSlinky.pluginError.pluginErrorStrings.Constructor with TopLevel[js.Any]) | js.Error
       ]
     ]
-

@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.MapProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.Map")
 @js.native
@@ -16,4 +16,3 @@ class MapCls ()
   extends typingsSlinky.arcgisJsApi.esri.Map {
   def this(properties: MapProperties) = this()
 }
-

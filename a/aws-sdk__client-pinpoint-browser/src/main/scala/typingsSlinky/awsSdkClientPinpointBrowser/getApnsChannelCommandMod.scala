@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-pinpoint-browser/commands/GetApnsChannelCommand", JSImport.Namespace)
 @js.native
 object getApnsChannelCommandMod extends js.Object {
+  
   @js.native
   class GetApnsChannelCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object getApnsChannelCommandMod extends js.Object {
           Blob
         ] {
     def this(input: GetApnsChannelInput) = this()
+    
     val middlewareStack: MiddlewareStack[GetApnsChannelInput, GetApnsChannelOutput, Blob] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[GetApnsChannelInput, GetApnsChannelOutput] = js.native
   }
-  
 }
-

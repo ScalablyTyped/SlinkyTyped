@@ -2,7 +2,7 @@ package typingsSlinky.three.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("three", "ShapeGeometry")
 @js.native
@@ -13,4 +13,3 @@ class ShapeGeometry protected ()
   def this(shapes: js.Array[typingsSlinky.three.shapeMod.Shape], curveSegments: Double) = this()
   def this(shapes: typingsSlinky.three.shapeMod.Shape, curveSegments: Double) = this()
 }
-

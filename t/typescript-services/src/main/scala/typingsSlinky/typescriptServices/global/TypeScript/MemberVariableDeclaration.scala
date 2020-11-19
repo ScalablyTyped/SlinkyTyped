@@ -2,7 +2,7 @@ package typingsSlinky.typescriptServices.global.TypeScript
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("TypeScript.MemberVariableDeclaration")
 @js.native
@@ -13,4 +13,3 @@ class MemberVariableDeclaration protected ()
     variableDeclarator: typingsSlinky.typescriptServices.TypeScript.VariableDeclarator
   ) = this()
 }
-

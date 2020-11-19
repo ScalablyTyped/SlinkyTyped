@@ -8,15 +8,20 @@ import typingsSlinky.electron.electronStrings.outline
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TouchBarScrubber extends EventEmitter {
+  
   var continuous: Boolean = js.native
+  
   var items: js.Array[ScrubberItem] = js.native
+  
   var mode: fixed | free = js.native
+  
   var overlayStyle: background | outline | none = js.native
+  
   var selectedStyle: background | outline | none = js.native
+  
   var showArrowButtons: Boolean = js.native
 }
-

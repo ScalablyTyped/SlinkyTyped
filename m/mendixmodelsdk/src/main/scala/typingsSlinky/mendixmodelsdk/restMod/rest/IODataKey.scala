@@ -5,7 +5,7 @@ import typingsSlinky.mendixmodelsdk.elementsMod.IElement
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
@@ -14,12 +14,14 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IODataKey extends IElement {
+  
   val containerAsODataRemoteEntitySource: IODataRemoteEntitySource = js.native
+  
   @JSName("model")
   val model_IODataKey: IModel = js.native
+  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     */
   val parts: IList[IODataKeyPart] = js.native
 }
-

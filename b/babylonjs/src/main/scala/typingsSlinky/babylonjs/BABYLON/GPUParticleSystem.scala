@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.BABYLON
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.babylonjs.BABYLON.IAnimatable because var conflicts: animations. Inlined 
@@ -10,76 +10,113 @@ import scala.scalajs.js.annotation._
 trait GPUParticleSystem
   extends BaseParticleSystem
      with IDisposable {
+  
   var _accumulatedCount: js.Any = js.native
+  
   var _activeCount: js.Any = js.native
+  
   var _actualFrame: js.Any = js.native
+  
   var _addFactorGradient: js.Any = js.native
+  
   var _angularSpeedGradientsTexture: js.Any = js.native
+  
   var _attributesStrideSize: js.Any = js.native
+  
   var _buffer0: js.Any = js.native
+  
   var _buffer1: js.Any = js.native
+  
   var _capacity: js.Any = js.native
+  
   var _colorGradientsTexture: js.Any = js.native
+  
   var _createAngularSpeedGradientTexture: js.Any = js.native
+  
   var _createColorGradientTexture: js.Any = js.native
+  
   var _createDragGradientTexture: js.Any = js.native
+  
   var _createFactorGradientTexture: js.Any = js.native
+  
   var _createLimitVelocityGradientTexture: js.Any = js.native
+  
   var _createRenderVAO: js.Any = js.native
+  
   var _createSizeGradientTexture: js.Any = js.native
+  
   var _createUpdateVAO: js.Any = js.native
+  
   var _createVelocityGradientTexture: js.Any = js.native
+  
   var _currentActiveCount: js.Any = js.native
+  
   var _currentRenderId: js.Any = js.native
+  
   var _dragGradientsTexture: js.Any = js.native
+  
   var _engine: js.Any = js.native
+  
   var _initialize: js.Any = js.native
+  
   var _limitVelocityGradientsTexture: js.Any = js.native
+  
   var _preWarmDone: js.Any = js.native
+  
   var _randomTexture: js.Any = js.native
+  
   var _randomTexture2: js.Any = js.native
+  
   var _randomTextureSize: js.Any = js.native
+  
   val _rawTextureWidth: js.Any = js.native
-  var _releaseBuffers: js.Any = js.native
-  var _releaseVAOs: js.Any = js.native
-  var _renderEffect: js.Any = js.native
-  var _renderVAO: js.Any = js.native
-  var _sizeGradientsTexture: js.Any = js.native
-  var _sourceBuffer: js.Any = js.native
-  var _spriteBuffer: js.Any = js.native
-  var _started: js.Any = js.native
-  var _stopped: js.Any = js.native
-  var _targetBuffer: js.Any = js.native
-  var _targetIndex: js.Any = js.native
-  var _timeDelta: js.Any = js.native
-  var _updateEffect: js.Any = js.native
-  var _updateEffectOptions: js.Any = js.native
-  var _updateVAO: js.Any = js.native
-  var _velocityGradientsTexture: js.Any = js.native
-  /**
-    * Specifies if the particles are updated in emitter local space or world space
-    */
-  @JSName("isLocal")
-  var isLocal_FGPUParticleSystem: Boolean = js.native
-  /**
-    * An event triggered when the system is disposed.
-    */
-  var onDisposeObservable: Observable[GPUParticleSystem] = js.native
-  /** Gets or sets a boolean indicating that ramp gradients must be used
-    * @see http://doc.babylonjs.com/babylon101/particles#ramp-gradients
-    */
-  @JSName("useRampGradients")
-  var useRampGradients_FGPUParticleSystem: Boolean = js.native
+  
   /** @hidden */
   def _recreateRenderEffect(): Unit = js.native
+  
   /** @hidden */
   def _recreateUpdateEffect(): Unit = js.native
+  
+  var _releaseBuffers: js.Any = js.native
+  
+  var _releaseVAOs: js.Any = js.native
+  
   /* protected */ def _removeGradientAndTexture(gradient: Double, gradients: Nullable[js.Array[IValueGradient]], texture: RawTexture): BaseParticleSystem = js.native
+  
+  var _renderEffect: js.Any = js.native
+  
+  var _renderVAO: js.Any = js.native
+  
+  var _sizeGradientsTexture: js.Any = js.native
+  
+  var _sourceBuffer: js.Any = js.native
+  
+  var _spriteBuffer: js.Any = js.native
+  
+  var _started: js.Any = js.native
+  
+  var _stopped: js.Any = js.native
+  
+  var _targetBuffer: js.Any = js.native
+  
+  var _targetIndex: js.Any = js.native
+  
+  var _timeDelta: js.Any = js.native
+  
+  var _updateEffect: js.Any = js.native
+  
+  var _updateEffectOptions: js.Any = js.native
+  
+  var _updateVAO: js.Any = js.native
+  
+  var _velocityGradientsTexture: js.Any = js.native
+  
   /**
     * Gets or set the number of active particles
     */
   def activeParticleCount: Double = js.native
-  def activeParticleCount(value: Double): js.Any = js.native
+  def activeParticleCount_=(value: Double): Unit = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -95,6 +132,7 @@ trait GPUParticleSystem
     * @returns the current particle system
     */
   def addAlphaRemapGradient(gradient: Double, min: Double, max: Double): IParticleSystem = js.native
+  
   /**
     * Adds a new angular speed gradient
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -112,6 +150,7 @@ trait GPUParticleSystem
     */
   @JSName("addAngularSpeedGradient")
   def addAngularSpeedGradient_GPUParticleSystem(gradient: Double, factor: Double): GPUParticleSystem = js.native
+  
   /**
     * Adds a new color gradient
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -132,6 +171,7 @@ trait GPUParticleSystem
   def addColorGradient_GPUParticleSystem(gradient: Double, color1: Color4): GPUParticleSystem = js.native
   @JSName("addColorGradient")
   def addColorGradient_GPUParticleSystem(gradient: Double, color1: Color4, color2: Color4): GPUParticleSystem = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -147,6 +187,7 @@ trait GPUParticleSystem
     * @returns the current particle system
     */
   def addColorRemapGradient(gradient: Double, min: Double, max: Double): IParticleSystem = js.native
+  
   /**
     * Adds a new drag gradient
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -164,6 +205,7 @@ trait GPUParticleSystem
     */
   @JSName("addDragGradient")
   def addDragGradient_GPUParticleSystem(gradient: Double, factor: Double): GPUParticleSystem = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -180,6 +222,7 @@ trait GPUParticleSystem
     */
   def addEmitRateGradient(gradient: Double, factor: Double): IParticleSystem = js.native
   def addEmitRateGradient(gradient: Double, factor: Double, factor2: Double): IParticleSystem = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -196,6 +239,7 @@ trait GPUParticleSystem
     */
   def addLifeTimeGradient(gradient: Double, factor: Double): IParticleSystem = js.native
   def addLifeTimeGradient(gradient: Double, factor: Double, factor2: Double): IParticleSystem = js.native
+  
   /**
     * Adds a new limit velocity gradient
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -213,6 +257,7 @@ trait GPUParticleSystem
     */
   @JSName("addLimitVelocityGradient")
   def addLimitVelocityGradient_GPUParticleSystem(gradient: Double, factor: Double): GPUParticleSystem = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -226,6 +271,7 @@ trait GPUParticleSystem
     * @returns the current particle system
     */
   def addRampGradient(gradient: Double, color: Color3): IParticleSystem = js.native
+  
   /**
     * Adds a new size gradient
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -243,6 +289,7 @@ trait GPUParticleSystem
     */
   @JSName("addSizeGradient")
   def addSizeGradient_GPUParticleSystem(gradient: Double, factor: Double): GPUParticleSystem = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -259,6 +306,7 @@ trait GPUParticleSystem
     */
   def addStartSizeGradient(gradient: Double, factor: Double): IParticleSystem = js.native
   def addStartSizeGradient(gradient: Double, factor: Double, factor2: Double): IParticleSystem = js.native
+  
   /**
     * Adds a new velocity gradient
     * @param gradient defines the gradient to use (between 0 and 1)
@@ -276,6 +324,7 @@ trait GPUParticleSystem
     */
   @JSName("addVelocityGradient")
   def addVelocityGradient_GPUParticleSystem(gradient: Double, factor: Double): GPUParticleSystem = js.native
+  
   /**
     * Animates the particle system for the current frame by emitting new particles and or animating the living ones.
     * @param preWarm defines if we are in the pre-warmimg phase
@@ -285,6 +334,7 @@ trait GPUParticleSystem
     */
   def animate(): Unit = js.native
   def animate(preWarm: Boolean): Unit = js.native
+  
   /**
     * Clones the particle system.
     * @param name The name of the cloned object
@@ -300,17 +350,21 @@ trait GPUParticleSystem
     */
   @JSName("clone")
   def clone_Nullable(name: String, newEmitter: js.Any): Nullable[IParticleSystem] = js.native
+  
   def dispose(disposeTexture: Boolean): Unit = js.native
+  
   /**
     * Gets the maximum number of particles active at the same time.
     * @returns The max number of active particles.
     */
   def getCapacity(): Double = js.native
+  
   /**
     * Returns the string "GPUParticleSystem"
     * @returns a string containing the class name
     */
   def getClassName(): String = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @returns the list of ramp gradients
@@ -321,22 +375,36 @@ trait GPUParticleSystem
     * @returns the list of ramp gradients
     */
   def getRampGradients(): Nullable[js.Array[Color3Gradient]] = js.native
+  
   /**
     * Specifies if the particles are updated in emitter local space or world space.
     * This is always false for GPU particles
     */
   def isLocal: Boolean = js.native
-  def isLocal(value: Boolean): js.Any = js.native
+  def isLocal_=(value: Boolean): Unit = js.native
+  /**
+    * Specifies if the particles are updated in emitter local space or world space
+    */
+  @JSName("isLocal")
+  var isLocal_FGPUParticleSystem: Boolean = js.native
+  
   /**
     * Is this system ready to be used/rendered
     * @return true if the system is ready
     */
   def isReady(): Boolean = js.native
+  
   /**
     * Gets if the system has been started. (Note: this will still be true after stop is called)
     * @returns True if it has been started, otherwise false.
     */
   def isStarted(): Boolean = js.native
+  
+  /**
+    * An event triggered when the system is disposed.
+    */
+  var onDisposeObservable: Observable[GPUParticleSystem] = js.native
+  
   /**
     * Rebuilds the particle system
     */
@@ -344,12 +412,14 @@ trait GPUParticleSystem
     * Rebuild the particle system
     */
   def rebuild(): Unit = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to remove
     * @returns the current particle system
     */
   def removeAlphaRemapGradient(): IParticleSystem = js.native
+  
   /**
     * Remove a specific angular speed gradient
     * @param gradient defines the gradient to remove
@@ -363,6 +433,7 @@ trait GPUParticleSystem
     */
   @JSName("removeAngularSpeedGradient")
   def removeAngularSpeedGradient_GPUParticleSystem(gradient: Double): GPUParticleSystem = js.native
+  
   /**
     * Remove a specific color gradient
     * @param gradient defines the gradient to remove
@@ -376,12 +447,14 @@ trait GPUParticleSystem
     */
   @JSName("removeColorGradient")
   def removeColorGradient_GPUParticleSystem(gradient: Double): GPUParticleSystem = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to remove
     * @returns the current particle system
     */
   def removeColorRemapGradient(): IParticleSystem = js.native
+  
   /**
     * Remove a specific drag gradient
     * @param gradient defines the gradient to remove
@@ -395,6 +468,7 @@ trait GPUParticleSystem
     */
   @JSName("removeDragGradient")
   def removeDragGradient_GPUParticleSystem(gradient: Double): GPUParticleSystem = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to remove
@@ -406,6 +480,7 @@ trait GPUParticleSystem
     * @returns the current particle system
     */
   def removeEmitRateGradient(gradient: Double): IParticleSystem = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to remove
@@ -417,6 +492,7 @@ trait GPUParticleSystem
     * @returns the current particle system
     */
   def removeLifeTimeGradient(gradient: Double): IParticleSystem = js.native
+  
   /**
     * Remove a specific limit velocity gradient
     * @param gradient defines the gradient to remove
@@ -430,12 +506,14 @@ trait GPUParticleSystem
     */
   @JSName("removeLimitVelocityGradient")
   def removeLimitVelocityGradient_GPUParticleSystem(gradient: Double): GPUParticleSystem = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to remove
     * @returns the current particle system
     */
   def removeRampGradient(): IParticleSystem = js.native
+  
   /**
     * Remove a specific size gradient
     * @param gradient defines the gradient to remove
@@ -449,6 +527,7 @@ trait GPUParticleSystem
     */
   @JSName("removeSizeGradient")
   def removeSizeGradient_GPUParticleSystem(gradient: Double): GPUParticleSystem = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * @param gradient defines the gradient to remove
@@ -460,6 +539,7 @@ trait GPUParticleSystem
     * @returns the current particle system
     */
   def removeStartSizeGradient(gradient: Double): IParticleSystem = js.native
+  
   /**
     * Remove a specific velocity gradient
     * @param gradient defines the gradient to remove
@@ -473,6 +553,7 @@ trait GPUParticleSystem
     */
   @JSName("removeVelocityGradient")
   def removeVelocityGradient_GPUParticleSystem(gradient: Double): GPUParticleSystem = js.native
+  
   /**
     * Renders the particle system in its current state
     * @param preWarm defines if the system should only update the particles but not render them
@@ -484,15 +565,18 @@ trait GPUParticleSystem
     */
   def render(): Double = js.native
   def render(preWarm: Boolean): Double = js.native
+  
   /**
     * Remove all active particles
     */
   def reset(): Unit = js.native
+  
   /**
     * Serializes the particle system to a JSON object.
     * @returns the JSON object
     */
   def serialize(): js.Any = js.native
+  
   /**
     * Starts the particle system and begins to emit
     * @param delay defines the delay in milliseconds before starting the system (this.startDelay by default)
@@ -503,16 +587,22 @@ trait GPUParticleSystem
     */
   def start(): Unit = js.native
   def start(delay: Double): Unit = js.native
+  
   /**
     * Stops the particle system.
     */
   def stop(): Unit = js.native
+  
   /**
     * Not supported by GPUParticleSystem
     * Gets or sets a boolean indicating that ramp gradients must be used
     * @see http://doc.babylonjs.com/babylon101/particles#ramp-gradients
     */
   def useRampGradients: Boolean = js.native
-  def useRampGradients(value: Boolean): js.Any = js.native
+  def useRampGradients_=(value: Boolean): Unit = js.native
+  /** Gets or sets a boolean indicating that ramp gradients must be used
+    * @see http://doc.babylonjs.com/babylon101/particles#ramp-gradients
+    */
+  @JSName("useRampGradients")
+  var useRampGradients_FGPUParticleSystem: Boolean = js.native
 }
-

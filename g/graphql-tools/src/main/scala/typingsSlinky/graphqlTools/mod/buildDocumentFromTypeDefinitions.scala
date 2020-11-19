@@ -5,12 +5,12 @@ import typingsSlinky.graphqlToolsUtils.interfacesMod.GraphQLParseOptions
 import typingsSlinky.graphqlToolsUtils.interfacesMod.ITypeDefinitions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("graphql-tools", "buildDocumentFromTypeDefinitions")
 @js.native
 object buildDocumentFromTypeDefinitions extends js.Object {
+  
   def apply(typeDefinitions: ITypeDefinitions): DocumentNode = js.native
   def apply(typeDefinitions: ITypeDefinitions, parseOptions: GraphQLParseOptions): DocumentNode = js.native
 }
-

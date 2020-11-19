@@ -4,11 +4,12 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ramda/src/mapObjIndexed", JSImport.Namespace)
 @js.native
 object mapObjIndexedMod extends js.Object {
+  
   def default[T, TResult](fn: js.Function3[/* value */ T, /* key */ String, /* obj */ js.UndefOr[js.Any], TResult]): js.Function1[/* obj */ js.Any, StringDictionary[TResult]] = js.native
   def default[T, TResult](
     fn: js.Function3[/* value */ T, /* key */ String, /* obj */ js.UndefOr[js.Any], TResult],
@@ -26,4 +27,3 @@ object mapObjIndexedMod extends js.Object {
     obj: Record[TKey, T]
   ): Record[TKey, TResult] = js.native
 }
-

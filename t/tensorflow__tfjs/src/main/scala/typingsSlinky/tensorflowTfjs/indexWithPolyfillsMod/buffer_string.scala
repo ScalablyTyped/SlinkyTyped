@@ -3,11 +3,12 @@ package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs/dist/index_with_polyfills", "buffer")
 @js.native
 object buffer_string extends js.Object {
+  
   def apply[R /* <: typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank */](
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any,
     dtype: string
@@ -18,4 +19,3 @@ object buffer_string extends js.Object {
     values: js.Array[String]
   ): typingsSlinky.tensorflowTfjsCore.tensorMod.TensorBuffer[R, string] = js.native
 }
-

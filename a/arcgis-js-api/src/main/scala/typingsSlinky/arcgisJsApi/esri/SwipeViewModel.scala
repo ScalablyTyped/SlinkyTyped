@@ -6,10 +6,11 @@ import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.vertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SwipeViewModel extends Accessor {
+  
   /**
     * The direction the Swipe widget moves across the view. If `"horizontal"`, the widget will move left and right and if `"vertical"`, the widget will move up and down.
     *
@@ -23,12 +24,14 @@ trait SwipeViewModel extends Accessor {
     * @default "horizontal"
     */
   var direction: horizontal | vertical = js.native
+  
   /**
     * A collection of [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html)s that will show on the left or top side of Swipe widget. See the image in the [Swipe](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html) class description. Currently, all layers are supported except GroupLayers.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe-SwipeViewModel.html#leadingLayers)
     */
   var leadingLayers: Collection[Layer] = js.native
+  
   /**
     * The position of the Swipe widget. This determines what percentage of the view will be taken up by the [leadingLayers](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe-SwipeViewModel.html#leadingLayers).
     *
@@ -37,6 +40,7 @@ trait SwipeViewModel extends Accessor {
     * @default 25
     */
   var position: Double = js.native
+  
   /**
     * The current state of the widget.
     *
@@ -45,12 +49,14 @@ trait SwipeViewModel extends Accessor {
     * @default disabled
     */
   val state: disabled | ready = js.native
+  
   /**
     * A collection of [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html)s that will show on the right or bottom side of Swipe widget. See the image in the [Swipe](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html) class description. Currently, all layers are supported except GroupLayers.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe-SwipeViewModel.html#trailingLayers)
     */
   var trailingLayers: Collection[Layer] = js.native
+  
   /**
     * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html). Set this to link the widget to a specific view.
     *
@@ -58,4 +64,3 @@ trait SwipeViewModel extends Accessor {
     */
   var view: MapView = js.native
 }
-

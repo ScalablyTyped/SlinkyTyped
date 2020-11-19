@@ -2,11 +2,12 @@ package typingsSlinky.pino.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("pino", "final")
 @js.native
 object `final` extends js.Object {
+  
   /**
     * The pino.final method can be used to acquire a final logger instance that synchronously flushes on every write.
     * @param [logger]: pino logger that serves as reference for the final logger
@@ -26,4 +27,3 @@ object `final` extends js.Object {
     handler: js.Function3[/* error */ js.Error, /* finalLogger */ Logger, /* repeated */ js.Any, Unit]
   ): js.Function2[/* error */ js.Error | Null, /* repeated */ js.Any, Unit] = js.native
 }
-

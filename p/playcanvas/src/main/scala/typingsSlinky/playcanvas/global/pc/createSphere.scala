@@ -3,11 +3,12 @@ package typingsSlinky.playcanvas.global.pc
 import typingsSlinky.playcanvas.anon.Radius
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("pc.createSphere")
 @js.native
 object createSphere extends js.Object {
+  
   /**
     * Creates a procedural sphere-shaped mesh.
     *
@@ -27,4 +28,3 @@ object createSphere extends js.Object {
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice): typingsSlinky.playcanvas.pc.Mesh = js.native
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, opts: Radius): typingsSlinky.playcanvas.pc.Mesh = js.native
 }
-

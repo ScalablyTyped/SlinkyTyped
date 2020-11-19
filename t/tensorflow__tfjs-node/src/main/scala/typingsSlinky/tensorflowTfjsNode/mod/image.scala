@@ -13,11 +13,12 @@ import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.bilinear
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.nearest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-node", "image")
 @js.native
 object image extends js.Object {
+  
   val cropAndResize: js.Function6[
     /* image */ Tensor4D | TensorLike, 
     /* boxes */ Tensor2D | TensorLike, 
@@ -27,6 +28,7 @@ object image extends js.Object {
     /* extrapolationValue */ js.UndefOr[Double], 
     Tensor4D
   ] = js.native
+  
   val nonMaxSuppression: js.Function5[
     /* boxes */ Tensor2D | TensorLike, 
     /* scores */ Tensor1D | TensorLike, 
@@ -35,6 +37,7 @@ object image extends js.Object {
     /* scoreThreshold */ js.UndefOr[Double], 
     Tensor1D
   ] = js.native
+  
   val nonMaxSuppressionAsync: js.Function5[
     /* boxes */ Tensor2D | TensorLike, 
     /* scores */ Tensor1D | TensorLike, 
@@ -43,6 +46,7 @@ object image extends js.Object {
     /* scoreThreshold */ js.UndefOr[Double], 
     js.Promise[Tensor1D]
   ] = js.native
+  
   val nonMaxSuppressionWithScore: js.Function6[
     /* boxes */ Tensor2D | TensorLike, 
     /* scores */ Tensor1D | TensorLike, 
@@ -52,6 +56,7 @@ object image extends js.Object {
     /* softNmsSigma */ js.UndefOr[Double], 
     NamedTensorMap
   ] = js.native
+  
   val nonMaxSuppressionWithScoreAsync: js.Function6[
     /* boxes */ Tensor2D | TensorLike, 
     /* scores */ Tensor1D | TensorLike, 
@@ -61,8 +66,10 @@ object image extends js.Object {
     /* softNmsSigma */ js.UndefOr[Double], 
     js.Promise[NamedTensorMap]
   ] = js.native
+  
   @js.native
   object resizeBilinear extends js.Object {
+    
     def apply(images: Tensor[R3 | R4], size: js.Tuple2[Double, Double]): Tensor[R3] = js.native
     def apply(images: Tensor[R3 | R4], size: js.Tuple2[Double, Double], alignCorners: Boolean): Tensor[R3] = js.native
     def apply[T /* <: Tensor3D | Tensor4D */](images: TensorLike, size: js.Tuple2[Double, Double]): T = js.native
@@ -71,11 +78,10 @@ object image extends js.Object {
   
   @js.native
   object resizeNearestNeighbor extends js.Object {
+    
     def apply(images: Tensor[R3 | R4], size: js.Tuple2[Double, Double]): Tensor[R3] = js.native
     def apply(images: Tensor[R3 | R4], size: js.Tuple2[Double, Double], alignCorners: Boolean): Tensor[R3] = js.native
     def apply[T /* <: Tensor3D | Tensor4D */](images: TensorLike, size: js.Tuple2[Double, Double]): T = js.native
     def apply[T /* <: Tensor3D | Tensor4D */](images: TensorLike, size: js.Tuple2[Double, Double], alignCorners: Boolean): T = js.native
   }
-  
 }
-

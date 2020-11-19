@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.highcharts.boostMod.highchartsAugmentingMod.Chart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("highcharts", "Chart")
 @js.native
@@ -41,162 +41,7 @@ class Chart_ protected () extends js.Object {
   def this(renderTo: HTMLElement, options: Options) = this()
   def this(renderTo: String, options: Options, callback: ChartCallbackFunction) = this()
   def this(renderTo: HTMLElement, options: Options, callback: ChartCallbackFunction) = this()
-  /**
-    * All the axes in the chart.
-    */
-  var axes: js.Array[Axis] = js.native
-  /**
-    * The current pixel height of the chart.
-    */
-  var chartHeight: Double = js.native
-  /**
-    * The current pixel width of the chart.
-    */
-  var chartWidth: Double = js.native
-  /**
-    * These collections (arrays) implement update() methods with support for
-    * one-to-one option.
-    */
-  var collectionsWithUpdate: js.Any = js.native
-  /**
-    * The containing HTML element of the chart. The container is dynamically
-    * inserted into the element given as the `renderTo` parameter in the
-    * Highcharts#chart constructor.
-    */
-  var container: HTMLElement = js.native
-  /**
-    * The chart's credits label. The label has an `update` method that allows
-    * setting new options as per the credits options set.
-    */
-  var credits: SVGElement = js.native
-  /**
-    * The data parser for this chart.
-    */
-  var data: js.UndefOr[typingsSlinky.highcharts.dataMod.highchartsAugmentingMod.Data] = js.native
-  var fullscreen: typingsSlinky.highcharts.exportingMod.highchartsAugmentingMod.Fullscreen with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Fullscreen */ js.Any) = js.native
-  /**
-    * Flag used in parallel coordinates plot to check if chart has
-    * ||-coords (parallel coords).
-    */
-  var hasParallelCoordinates: Boolean = js.native
-  /**
-    * Contains the original hovered point.
-    */
-  var hoverPoint: Point | Null = js.native
-  /**
-    * Contains all hovered points.
-    */
-  var hoverPoints: js.Array[Point] | Null = js.native
-  /**
-    * Contains the original hovered series.
-    */
-  var hoverSeries: Series | Null = js.native
-  /**
-    * Index position of the chart in the Highcharts#charts property.
-    */
-  val index: Double = js.native
-  /**
-    * The flag is set to `true` if a series of the chart is inverted.
-    */
-  var inverted: js.UndefOr[Boolean] = js.native
-  /**
-    * The overview of the chart's series.
-    */
-  var legend: Legend = js.native
-  /**
-    * Callback function to override the default function that formats all the
-    * numbers in the chart. Returns a string with the formatted number.
-    */
-  @JSName("numberFormatter")
-  var numberFormatter_Original: NumberFormatterCallbackFunction = js.native
-  /**
-    * The options structure for the chart after merging #defaultOptions and
-    * #userOptions. It contains members for the sub elements like series,
-    * legend, tooltip etc.
-    */
-  var options: Options = js.native
-  /**
-    * The current height of the plot area in pixels.
-    */
-  var plotHeight: Double = js.native
-  /**
-    * The current left position of the plot area in pixels.
-    */
-  var plotLeft: Double = js.native
-  /**
-    * The current top position of the plot area in pixels.
-    */
-  var plotTop: Double = js.native
-  /**
-    * The current width of the plot area in pixels.
-    */
-  var plotWidth: Double = js.native
-  /**
-    * The Pointer that keeps track of mouse and touch interaction.
-    */
-  var pointer: Pointer = js.native
-  /**
-    * These properties cause isDirtyBox to be set to true when updating. Can be
-    * extended from plugins.
-    */
-  var propsRequireDirtyBox: js.Any = js.native
-  /**
-    * These properties require a full reflow of chart elements, best
-    * implemented through running `Chart.setSize` internally (#8190).
-    */
-  var propsRequireReflow: js.Array[_] = js.native
-  /**
-    * These properties cause all series to be updated when updating. Can be
-    * extended from plugins.
-    */
-  var propsRequireUpdateSeries: js.Any = js.native
-  /**
-    * The renderer instance of the chart. Each chart instance has only one
-    * associated renderer.
-    */
-  var renderer: SVGRenderer = js.native
-  /**
-    * All the current series in the chart.
-    */
-  var series: js.Array[Series] = js.native
-  /**
-    * Whether the chart is in styled mode, meaning all presentatinoal
-    * attributes are avoided.
-    */
-  var styledMode: Boolean = js.native
-  /**
-    * The chart subtitle. The subtitle has an `update` method that allows
-    * modifying the options directly or indirectly via `chart.update`.
-    */
-  var subtitle: SubtitleObject = js.native
-  /**
-    * The `Time` object associated with the chart. Since v6.0.5, time settings
-    * can be applied individually for each chart. If no individual settings
-    * apply, the `Time` object is shared by all instances.
-    */
-  var time: Time_ = js.native
-  /**
-    * The chart title. The title has an `update` method that allows modifying
-    * the options directly or indirectly via `chart.update`.
-    */
-  var title: TitleObject = js.native
-  /**
-    * Tooltip object for points of series.
-    */
-  var tooltip: Tooltip = js.native
-  /**
-    * The original options given to the constructor or a chart factory like
-    * Highcharts.chart and Highcharts.stockChart.
-    */
-  var userOptions: Options = js.native
-  /**
-    * A collection of the X axes in the chart.
-    */
-  var xAxis: js.Array[Axis] = js.native
-  /**
-    * A collection of the Y axes in the chart.
-    */
-  var yAxis: js.Array[Axis] = js.native
+  
   /**
     * Add an annotation to the chart after render time.
     *
@@ -207,6 +52,7 @@ class Chart_ protected () extends js.Object {
     */
   def addAnnotation(options: AnnotationsOptions): Annotation = js.native
   def addAnnotation(options: AnnotationsOptions, redraw: Boolean): Annotation = js.native
+  
   /**
     * Add an axis to the chart after render time. Note that this method should
     * never be used when adding data synchronously at chart render time, as it
@@ -260,6 +106,7 @@ class Chart_ protected () extends js.Object {
   def addAxis(options: AxisOptions, isX: Boolean, redraw: Boolean): Axis = js.native
   def addAxis(options: AxisOptions, isX: Boolean, redraw: Boolean, animation: Boolean): Axis = js.native
   def addAxis(options: AxisOptions, isX: Boolean, redraw: Boolean, animation: AnimationOptionsObject): Axis = js.native
+  
   /**
     * Add a color axis to the chart after render time. Note that this method
     * should never be used when adding data synchronously at chart render time,
@@ -284,6 +131,7 @@ class Chart_ protected () extends js.Object {
   def addColorAxis(options: ColorAxisOptions, redraw: Boolean): ColorAxis = js.native
   def addColorAxis(options: ColorAxisOptions, redraw: Boolean, animation: Boolean): ColorAxis = js.native
   def addColorAxis(options: ColorAxisOptions, redraw: Boolean, animation: AnimationOptionsObject): ColorAxis = js.native
+  
   /**
     * Set a new credits label for the chart.
     *
@@ -292,6 +140,7 @@ class Chart_ protected () extends js.Object {
     */
   def addCredits(): Unit = js.native
   def addCredits(credits: CreditsOptions): Unit = js.native
+  
   /**
     * Add a series to the chart after render time. Note that this method should
     * never be used when adding data synchronously at chart render time, as it
@@ -320,6 +169,7 @@ class Chart_ protected () extends js.Object {
   def addSeries(options: SeriesOptionsType, redraw: Boolean): Series = js.native
   def addSeries(options: SeriesOptionsType, redraw: Boolean, animation: Boolean): Series = js.native
   def addSeries(options: SeriesOptionsType, redraw: Boolean, animation: AnimationOptionsObject): Series = js.native
+  
   /**
     * Add a series to the chart as drilldown from a specific point in the
     * parent series. This method is used for async drilldown, when clicking
@@ -334,6 +184,12 @@ class Chart_ protected () extends js.Object {
     *        The series options for the new, detailed series.
     */
   def addSeriesAsDrilldown(point: Point, options: SeriesOptionsType): Unit = js.native
+  
+  /**
+    * All the axes in the chart.
+    */
+  var axes: js.Array[Axis] = js.native
+  
   /**
     * Cancel current sonification and reset cursor.
     *
@@ -342,6 +198,41 @@ class Chart_ protected () extends js.Object {
     */
   def cancelSonify(): Unit = js.native
   def cancelSonify(fadeOut: Boolean): Unit = js.native
+  
+  /**
+    * The current pixel height of the chart.
+    */
+  var chartHeight: Double = js.native
+  
+  /**
+    * The current pixel width of the chart.
+    */
+  var chartWidth: Double = js.native
+  
+  /**
+    * These collections (arrays) implement update() methods with support for
+    * one-to-one option.
+    */
+  var collectionsWithUpdate: js.Any = js.native
+  
+  /**
+    * The containing HTML element of the chart. The container is dynamically
+    * inserted into the element given as the `renderTo` parameter in the
+    * Highcharts#chart constructor.
+    */
+  var container: HTMLElement = js.native
+  
+  /**
+    * The chart's credits label. The label has an `update` method that allows
+    * setting new options as per the credits options set.
+    */
+  var credits: SVGElement = js.native
+  
+  /**
+    * The data parser for this chart.
+    */
+  var data: js.UndefOr[typingsSlinky.highcharts.dataMod.highchartsAugmentingMod.Data] = js.native
+  
   /**
     * Remove the chart and purge memory. This method is called internally
     * before adding a second chart into the same container, as well as on
@@ -350,10 +241,12 @@ class Chart_ protected () extends js.Object {
     * @fires Highcharts.Chart#destroy
     */
   def destroy(): Unit = js.native
+  
   /**
     * Dismiss popup content in chart, including export menu and tooltip.
     */
   def dismissPopupContent(): Unit = js.native
+  
   /**
     * Generates a data URL of CSV for local download in the browser. This
     * is the default action for a click on the 'Download CSV' button.
@@ -361,6 +254,7 @@ class Chart_ protected () extends js.Object {
     * See Highcharts.Chart#getCSV to get the CSV data itself.
     */
   def downloadCSV(): Unit = js.native
+  
   /**
     * Generates a data URL of an XLS document for local download in the
     * browser. This is the default action for a click on the 'Download XLS'
@@ -369,11 +263,13 @@ class Chart_ protected () extends js.Object {
     * See Highcharts.Chart#getTable to get the table data itself.
     */
   def downloadXLS(): Unit = js.native
+  
   /**
     * When the chart is drilled down to a child series, calling
     * `chart.drillUp()` will drill up to the parent series.
     */
   def drillUp(): Unit = js.native
+  
   /**
     * Exporting module required. Submit an SVG version of the chart to a
     * server along with some parameters for conversion.
@@ -387,6 +283,7 @@ class Chart_ protected () extends js.Object {
     *        for export only.
     */
   def exportChart(exportingOptions: ExportingOptions, chartOptions: Options): Unit = js.native
+  
   /**
     * Exporting and offline-exporting modules required. Export a chart to
     * an image locally in the user's browser.
@@ -404,6 +301,7 @@ class Chart_ protected () extends js.Object {
   def exportChartLocal(exportingOptions: js.UndefOr[scala.Nothing], chartOptions: Options): Unit = js.native
   def exportChartLocal(exportingOptions: ExportingOptions): Unit = js.native
   def exportChartLocal(exportingOptions: ExportingOptions, chartOptions: Options): Unit = js.native
+  
   /**
     * Highmaps only. Get chart coordinates from latitude/longitude. Returns
     * an object with x and y values corresponding to the `xAxis` and
@@ -415,6 +313,7 @@ class Chart_ protected () extends js.Object {
     * @return X and Y coordinates in terms of chart axis values.
     */
   def fromLatLonToPoint(latLon: typingsSlinky.highcharts.mapMod.highchartsAugmentingMod.MapLatLonObject): typingsSlinky.highcharts.mapMod.highchartsAugmentingMod.MapCoordinateObject = js.native
+  
   /**
     * Highmaps only. Calculate latitude/longitude values for a point.
     * Returns an object with the numeric properties `lat` and `lon`.
@@ -427,6 +326,9 @@ class Chart_ protected () extends js.Object {
     */
   def fromPointToLatLon(point: typingsSlinky.highcharts.mapMod.highchartsAugmentingMod.MapCoordinateObject): js.UndefOr[typingsSlinky.highcharts.mapMod.highchartsAugmentingMod.MapLatLonObject] = js.native
   def fromPointToLatLon(point: typingsSlinky.highcharts.mapMod.highchartsAugmentingMod.Point): js.UndefOr[typingsSlinky.highcharts.mapMod.highchartsAugmentingMod.MapLatLonObject] = js.native
+  
+  var fullscreen: typingsSlinky.highcharts.exportingMod.highchartsAugmentingMod.Fullscreen with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Fullscreen */ js.Any) = js.native
+  
   /**
     * Get an axis, series or point object by `id` as given in the configuration
     * options. Returns `undefined` if no item is found.
@@ -437,6 +339,7 @@ class Chart_ protected () extends js.Object {
     * @return The retrieved item.
     */
   def get(id: String): js.UndefOr[Axis | Point | Series] = js.native
+  
   /**
     * Export-data module required. Returns the current chart data as a CSV
     * string.
@@ -450,6 +353,7 @@ class Chart_ protected () extends js.Object {
     */
   def getCSV(): String = js.native
   def getCSV(useLocalDecimalPoint: Boolean): String = js.native
+  
   /**
     * Return the unfiltered innerHTML of the chart container. Used as hook
     * for plugins. In styled mode, it also takes care of inlining CSS style
@@ -458,12 +362,14 @@ class Chart_ protected () extends js.Object {
     * @return The unfiltered SVG of the chart.
     */
   def getChartHTML(): String = js.native
+  
   /**
     * Get a list of the points currently under cursor.
     *
     * @return The points currently under the cursor.
     */
   def getCurrentSonifyPoints(): js.Array[typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.Point] = js.native
+  
   /**
     * Export-data module required. Returns a two-dimensional array
     * containing the current chart data.
@@ -479,6 +385,7 @@ class Chart_ protected () extends js.Object {
     */
   def getDataRows(): js.Array[js.Array[Double | String]] = js.native
   def getDataRows(multiLevelHeaders: Boolean): js.Array[js.Array[Double | String]] = js.native
+  
   /**
     * Get the default file name used for exported charts. By default it
     * creates a file name based on the chart title.
@@ -486,6 +393,7 @@ class Chart_ protected () extends js.Object {
     * @return A file name without extension.
     */
   def getFilename(): String = js.native
+  
   /**
     * Return an SVG representation of the chart.
     *
@@ -502,6 +410,7 @@ class Chart_ protected () extends js.Object {
     */
   def getSVG(): String = js.native
   def getSVG(chartOptions: Options): String = js.native
+  
   /**
     * Returns an array of all currently selected points in the chart. Points
     * can be selected by clicking or programmatically by the
@@ -510,6 +419,7 @@ class Chart_ protected () extends js.Object {
     * @return The currently selected points.
     */
   def getSelectedPoints(): js.Array[Point] = js.native
+  
   /**
     * Returns an array of all currently selected series in the chart. Series
     * can be selected either programmatically by the Highcharts.Series#select
@@ -519,6 +429,7 @@ class Chart_ protected () extends js.Object {
     * @return The currently selected series.
     */
   def getSelectedSeries(): js.Array[Series] = js.native
+  
   /**
     * Export-data module required. Build a HTML table with the chart's
     * current data.
@@ -534,10 +445,38 @@ class Chart_ protected () extends js.Object {
     */
   def getTable(): String = js.native
   def getTable(useLocalDecimalPoint: Boolean): String = js.native
+  
+  /**
+    * Flag used in parallel coordinates plot to check if chart has
+    * ||-coords (parallel coords).
+    */
+  var hasParallelCoordinates: Boolean = js.native
+  
   /**
     * Hide the loading layer.
     */
   def hideLoading(): Unit = js.native
+  
+  /**
+    * Contains the original hovered point.
+    */
+  var hoverPoint: Point | Null = js.native
+  
+  /**
+    * Contains all hovered points.
+    */
+  var hoverPoints: js.Array[Point] | Null = js.native
+  
+  /**
+    * Contains the original hovered series.
+    */
+  var hoverSeries: Series | Null = js.native
+  
+  /**
+    * Index position of the chart in the Highcharts#charts property.
+    */
+  val index: Double = js.native
+  
   /**
     * Overridable function that initializes the chart. The constructor's
     * arguments are passed on directly.
@@ -554,6 +493,12 @@ class Chart_ protected () extends js.Object {
     */
   def init(userOptions: Options): Unit = js.native
   def init(userOptions: Options, callback: js.Function): Unit = js.native
+  
+  /**
+    * The flag is set to `true` if a series of the chart is inverted.
+    */
+  var inverted: js.UndefOr[Boolean] = js.native
+  
   /**
     * Returns true if the chart is in series boost mode.
     *
@@ -563,6 +508,7 @@ class Chart_ protected () extends js.Object {
     * @return true if the chart is in series boost mode
     */
   def isChartSeriesBoosting(chart: Chart): Boolean = js.native
+  
   /**
     * Check whether a given point is within the plot area.
     *
@@ -579,6 +525,7 @@ class Chart_ protected () extends js.Object {
     */
   def isInsidePlot(plotX: Double, plotY: Double): Boolean = js.native
   def isInsidePlot(plotX: Double, plotY: Double, inverted: Boolean): Boolean = js.native
+  
   /**
     * Apply context to a format string from lang options of the chart.
     *
@@ -591,6 +538,12 @@ class Chart_ protected () extends js.Object {
     * @return The formatted string.
     */
   def langFormat(langKey: String, context: Dictionary[_]): String = js.native
+  
+  /**
+    * The overview of the chart's series.
+    */
+  var legend: Legend = js.native
+  
   /**
     * Highmaps only. Zoom in or out of the map. See also Point#zoomTo. See
     * Chart#fromLatLonToPoint for how to get the `centerX` and `centerY`
@@ -757,6 +710,7 @@ class Chart_ protected () extends js.Object {
   ): Unit = js.native
   def mapZoom(howMuch: Double, centerX: Double, centerY: Double, mouseX: Double): Unit = js.native
   def mapZoom(howMuch: Double, centerX: Double, centerY: Double, mouseX: Double, mouseY: Double): Unit = js.native
+  
   /**
     * Callback function to override the default function that formats all the
     * numbers in the chart. Returns a string with the formatted number.
@@ -766,6 +720,20 @@ class Chart_ protected () extends js.Object {
   def numberFormatter(number: Double, decimals: Double, decimalPoint: String): String = js.native
   def numberFormatter(number: Double, decimals: Double, decimalPoint: String, thousandsSep: String): String = js.native
   /**
+    * Callback function to override the default function that formats all the
+    * numbers in the chart. Returns a string with the formatted number.
+    */
+  @JSName("numberFormatter")
+  var numberFormatter_Original: NumberFormatterCallbackFunction = js.native
+  
+  /**
+    * The options structure for the chart after merging #defaultOptions and
+    * #userOptions. It contains members for the sub elements like series,
+    * legend, tooltip etc.
+    */
+  var options: Options = js.native
+  
+  /**
     * Pause the running sonification.
     *
     * @param fadeOut
@@ -773,6 +741,32 @@ class Chart_ protected () extends js.Object {
     */
   def pauseSonify(): Unit = js.native
   def pauseSonify(fadeOut: Boolean): Unit = js.native
+  
+  /**
+    * The current height of the plot area in pixels.
+    */
+  var plotHeight: Double = js.native
+  
+  /**
+    * The current left position of the plot area in pixels.
+    */
+  var plotLeft: Double = js.native
+  
+  /**
+    * The current top position of the plot area in pixels.
+    */
+  var plotTop: Double = js.native
+  
+  /**
+    * The current width of the plot area in pixels.
+    */
+  var plotWidth: Double = js.native
+  
+  /**
+    * The Pointer that keeps track of mouse and touch interaction.
+    */
+  var pointer: Pointer = js.native
+  
   /**
     * Exporting module required. Clears away other elements in the page and
     * prints the chart as it is displayed. By default, when the exporting
@@ -783,6 +777,25 @@ class Chart_ protected () extends js.Object {
     * @fires Highcharts.Chart#afterPrint
     */
   def print(): Unit = js.native
+  
+  /**
+    * These properties cause isDirtyBox to be set to true when updating. Can be
+    * extended from plugins.
+    */
+  var propsRequireDirtyBox: js.Any = js.native
+  
+  /**
+    * These properties require a full reflow of chart elements, best
+    * implemented through running `Chart.setSize` internally (#8190).
+    */
+  var propsRequireReflow: js.Array[_] = js.native
+  
+  /**
+    * These properties cause all series to be updated when updating. Can be
+    * extended from plugins.
+    */
+  var propsRequireUpdateSeries: js.Any = js.native
+  
   /**
     * Redraw the chart after changes have been done to the data, axis extremes
     * chart size or chart elements. All methods for updating axes, series or
@@ -805,6 +818,7 @@ class Chart_ protected () extends js.Object {
   def redraw(): Unit = js.native
   def redraw(animation: Boolean): Unit = js.native
   def redraw(animation: AnimationOptionsObject): Unit = js.native
+  
   /**
     * Reflows the chart to its container. By default, the chart reflows
     * automatically to its container following a `window.resize` event, as per
@@ -818,6 +832,7 @@ class Chart_ protected () extends js.Object {
     */
   def reflow(): Unit = js.native
   def reflow(e: Event): Unit = js.native
+  
   def removeAnnotation(idOrAnnotation: String): Unit = js.native
   /**
     * Remove an annotation from the chart.
@@ -827,16 +842,25 @@ class Chart_ protected () extends js.Object {
     */
   def removeAnnotation(idOrAnnotation: Double): Unit = js.native
   def removeAnnotation(idOrAnnotation: Annotation): Unit = js.native
+  
+  /**
+    * The renderer instance of the chart. Each chart instance has only one
+    * associated renderer.
+    */
+  var renderer: SVGRenderer = js.native
+  
   /**
     * Reset cursor to start. Requires series.sonify or chart.sonify to have
     * been played at some point earlier.
     */
   def resetSonifyCursor(): Unit = js.native
+  
   /**
     * Reset cursor to end. Requires series.sonify or chart.sonify to have
     * been played at some point earlier.
     */
   def resetSonifyCursorEnd(): Unit = js.native
+  
   /**
     * Resume the currently running sonification. Requires series.sonify or
     * chart.sonify to have been played at some point earlier.
@@ -845,6 +869,7 @@ class Chart_ protected () extends js.Object {
     *        Callback to call when play finished.
     */
   def resumeSonify(onEnd: js.Function): Unit = js.native
+  
   /**
     * Play backwards from cursor. Requires series.sonify or chart.sonify to
     * have been played at some point earlier.
@@ -853,6 +878,12 @@ class Chart_ protected () extends js.Object {
     *        Callback to call when play finished.
     */
   def rewindSonify(onEnd: js.Function): Unit = js.native
+  
+  /**
+    * All the current series in the chart.
+    */
+  var series: js.Array[Series] = js.native
+  
   /**
     * Set the caption options. This can also be done from Chart#update.
     *
@@ -861,6 +892,7 @@ class Chart_ protected () extends js.Object {
     *        `options.text` property.
     */
   def setCaption(options: CaptionOptions): Unit = js.native
+  
   /**
     * Set the chart container's class name, in addition to
     * `highcharts-container`.
@@ -870,6 +902,7 @@ class Chart_ protected () extends js.Object {
     */
   def setClassName(): Unit = js.native
   def setClassName(className: String): Unit = js.native
+  
   /**
     * Resize the chart to a given width and height. In order to set the width
     * only, the height argument may be skipped. To set the height only, pass
@@ -919,6 +952,7 @@ class Chart_ protected () extends js.Object {
   def setSize(width: Null, height: Double, animation: AnimationOptionsObject): Unit = js.native
   def setSize(width: Null, height: Null, animation: Boolean): Unit = js.native
   def setSize(width: Null, height: Null, animation: AnimationOptionsObject): Unit = js.native
+  
   def setSonifyCursor(points: js.Array[typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.Point]): Unit = js.native
   /**
     * Set the cursor to a point or set of points in different series.
@@ -929,6 +963,7 @@ class Chart_ protected () extends js.Object {
     *        series that are being played simultaneously.
     */
   def setSonifyCursor(points: typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.Point): Unit = js.native
+  
   /**
     * Shortcut to set the subtitle options. This can also be done from
     * Chart#update or Chart#setTitle.
@@ -938,6 +973,7 @@ class Chart_ protected () extends js.Object {
     *        `options.text` property.
     */
   def setSubtitle(options: SubtitleOptions): Unit = js.native
+  
   /**
     * Set a new title or subtitle for the chart.
     *
@@ -965,6 +1001,7 @@ class Chart_ protected () extends js.Object {
   def setTitle(titleOptions: TitleOptions, subtitleOptions: js.UndefOr[scala.Nothing], redraw: Boolean): Unit = js.native
   def setTitle(titleOptions: TitleOptions, subtitleOptions: SubtitleOptions): Unit = js.native
   def setTitle(titleOptions: TitleOptions, subtitleOptions: SubtitleOptions, redraw: Boolean): Unit = js.native
+  
   /**
     * Dim the chart and show a loading text or symbol. Options for the loading
     * screen are defined in the loading options.
@@ -975,6 +1012,7 @@ class Chart_ protected () extends js.Object {
     */
   def showLoading(): Unit = js.native
   def showLoading(str: String): Unit = js.native
+  
   /**
     * Display the zoom button, so users can reset zoom to the default view
     * settings.
@@ -983,6 +1021,7 @@ class Chart_ protected () extends js.Object {
     * @fires Highcharts.Chart#beforeShowResetZoom
     */
   def showResetZoom(): Unit = js.native
+  
   /**
     * Sonify a chart.
     *
@@ -990,6 +1029,37 @@ class Chart_ protected () extends js.Object {
     *        The options for sonifying this chart.
     */
   def sonify(options: typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.SonificationOptions): Unit = js.native
+  
+  /**
+    * Whether the chart is in styled mode, meaning all presentatinoal
+    * attributes are avoided.
+    */
+  var styledMode: Boolean = js.native
+  
+  /**
+    * The chart subtitle. The subtitle has an `update` method that allows
+    * modifying the options directly or indirectly via `chart.update`.
+    */
+  var subtitle: SubtitleObject = js.native
+  
+  /**
+    * The `Time` object associated with the chart. Since v6.0.5, time settings
+    * can be applied individually for each chart. If no individual settings
+    * apply, the `Time` object is shared by all instances.
+    */
+  var time: Time_ = js.native
+  
+  /**
+    * The chart title. The title has an `update` method that allows modifying
+    * the options directly or indirectly via `chart.update`.
+    */
+  var title: TitleObject = js.native
+  
+  /**
+    * Tooltip object for points of series.
+    */
+  var tooltip: Tooltip = js.native
+  
   /**
     * Highmaps only. Get point from latitude and longitude using specified
     * transform definition.
@@ -1004,6 +1074,7 @@ class Chart_ protected () extends js.Object {
     * @return An object with `x` and `y` properties.
     */
   def transformFromLatLon(latLon: typingsSlinky.highcharts.mapMod.highchartsAugmentingMod.MapLatLonObject, transform: js.Any): typingsSlinky.highcharts.mapMod.highchartsAugmentingMod.MapCoordinateObject = js.native
+  
   /**
     * Highmaps only. Get latLon from point using specified transform
     * definition. The method returns an object with the numeric properties
@@ -1024,6 +1095,7 @@ class Chart_ protected () extends js.Object {
     transform: js.Any
   ): js.UndefOr[typingsSlinky.highcharts.mapMod.highchartsAugmentingMod.MapLatLonObject] = js.native
   def transformToLatLon(point: typingsSlinky.highcharts.mapMod.highchartsAugmentingMod.Point, transform: js.Any): js.UndefOr[typingsSlinky.highcharts.mapMod.highchartsAugmentingMod.MapLatLonObject] = js.native
+  
   /**
     * A generic function to update any element of the chart. Elements can be
     * enabled and disabled, moved, re-styled, re-formatted etc.
@@ -1101,6 +1173,13 @@ class Chart_ protected () extends js.Object {
   def update(options: Options, redraw: Boolean, oneToOne: Boolean): Unit = js.native
   def update(options: Options, redraw: Boolean, oneToOne: Boolean, animation: Boolean): Unit = js.native
   def update(options: Options, redraw: Boolean, oneToOne: Boolean, animation: AnimationOptionsObject): Unit = js.native
+  
+  /**
+    * The original options given to the constructor or a chart factory like
+    * Highcharts.chart and Highcharts.stockChart.
+    */
+  var userOptions: Options = js.native
+  
   /**
     * Export-data module required. View the data in a table below the
     * chart.
@@ -1108,6 +1187,17 @@ class Chart_ protected () extends js.Object {
     * @fires Highcharts.Chart#afterViewData
     */
   def viewData(): Unit = js.native
+  
+  /**
+    * A collection of the X axes in the chart.
+    */
+  var xAxis: js.Array[Axis] = js.native
+  
+  /**
+    * A collection of the Y axes in the chart.
+    */
+  var yAxis: js.Array[Axis] = js.native
+  
   /**
     * Zoom the chart out after a user has zoomed in. See also Axis.setExtremes.
     *
@@ -1115,4 +1205,3 @@ class Chart_ protected () extends js.Object {
     */
   def zoomOut(): Unit = js.native
 }
-

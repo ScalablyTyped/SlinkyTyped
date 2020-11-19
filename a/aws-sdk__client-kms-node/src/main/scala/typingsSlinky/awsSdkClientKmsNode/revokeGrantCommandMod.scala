@@ -11,11 +11,12 @@ import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kms-node/commands/RevokeGrantCommand", JSImport.Namespace)
 @js.native
 object revokeGrantCommandMod extends js.Object {
+  
   @js.native
   class RevokeGrantCommand protected () extends Command[
           InputTypesUnion, 
@@ -26,12 +27,12 @@ object revokeGrantCommandMod extends js.Object {
           Readable
         ] {
     def this(input: RevokeGrantInput) = this()
+    
     val middlewareStack: MiddlewareStack[RevokeGrantInput, RevokeGrantOutput, Readable] = js.native
+    
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
       configuration: KMSResolvedConfiguration
     ): Handler[RevokeGrantInput, RevokeGrantOutput] = js.native
   }
-  
 }
-

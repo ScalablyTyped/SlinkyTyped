@@ -5,11 +5,12 @@ import typingsSlinky.node.cryptoMod.KeyLike
 import typingsSlinky.node.cryptoMod.VerifyKeyWithOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mz/crypto", "verify")
 @js.native
 object verify extends js.Object {
+  
   def apply(
     algorithm: js.UndefOr[scala.Nothing],
     data: ArrayBufferView,
@@ -35,4 +36,3 @@ object verify extends js.Object {
   def apply(algorithm: Null, data: ArrayBufferView, key: KeyLike, signature: ArrayBufferView): Boolean = js.native
   def apply(algorithm: Null, data: ArrayBufferView, key: VerifyKeyWithOptions, signature: ArrayBufferView): Boolean = js.native
 }
-

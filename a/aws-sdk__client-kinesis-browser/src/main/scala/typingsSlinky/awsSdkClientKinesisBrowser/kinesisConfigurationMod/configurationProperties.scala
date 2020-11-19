@@ -20,12 +20,14 @@ import typingsSlinky.awsSdkTypes.utilMod.RetryDecider
 import typingsSlinky.awsSdkTypes.utilMod.UrlParser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@aws-sdk/client-kinesis-browser/KinesisConfiguration", "configurationProperties")
 @js.native
 object configurationProperties extends js.Object {
+  
   val _user_injected_http_handler: ConfigurationPropertyDefinition[_, Boolean, KinesisResolvableConfiguration, KinesisResolvedConfiguration] = js.native
+  
   val base64Decoder: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[Decoder], 
@@ -34,6 +36,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val base64Encoder: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[Encoder], 
@@ -42,18 +45,21 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val bodyLengthChecker: ConfigurationPropertyDefinition[
     js.Function1[/* body */ _, js.UndefOr[Double]], 
     js.Function1[/* body */ _, js.UndefOr[Double]], 
     KinesisResolvableConfiguration, 
     KinesisResolvedConfiguration
   ] = js.native
+  
   val credentials: ConfigurationPropertyDefinition[
     Credentials | Provider[Credentials], 
     Provider[Credentials], 
     KinesisResolvableConfiguration, 
     KinesisResolvedConfiguration
   ] = js.native
+  
   val delayDecider: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[DelayDecider], 
@@ -62,6 +68,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val endpoint: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[String | HttpEndpoint | Provider[HttpEndpoint]], 
@@ -70,9 +77,11 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val endpointProvider: js.UndefOr[
     ConfigurationPropertyDefinition[js.UndefOr[_], _, KinesisResolvableConfiguration, KinesisResolvedConfiguration]
   ] = js.native
+  
   val handler: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[Terminalware[_, Blob]], 
@@ -81,6 +90,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val httpHandler: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[HttpHandler[Blob, HttpOptions]], 
@@ -89,6 +99,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val maxRedirects: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[Double], 
@@ -97,6 +108,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val maxRetries: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[Double], 
@@ -105,12 +117,14 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val parser: ConfigurationPropertyDefinition[
     ResponseParser[Blob], 
     ResponseParser[Blob], 
     KinesisResolvableConfiguration, 
     KinesisResolvedConfiguration
   ] = js.native
+  
   val profile: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[String], 
@@ -119,12 +133,14 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val region: ConfigurationPropertyDefinition[
     String | Provider[String], 
     Provider[String], 
     KinesisResolvableConfiguration, 
     KinesisResolvedConfiguration
   ] = js.native
+  
   val retryDecider: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[RetryDecider], 
@@ -133,12 +149,14 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val serializer: ConfigurationPropertyDefinition[
     Provider[RequestSerializer[Blob]], 
     Provider[RequestSerializer[Blob]], 
     KinesisResolvableConfiguration, 
     KinesisResolvedConfiguration
   ] = js.native
+  
   val sha256: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[HashConstructor], 
@@ -147,6 +165,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val signer: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[RequestSigner], 
@@ -155,6 +174,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val signingName: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[String], 
@@ -163,6 +183,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val sslEnabled: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[Boolean], 
@@ -171,6 +192,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val streamCollector: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[StreamCollector[Blob]], 
@@ -179,6 +201,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val urlParser: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[UrlParser], 
@@ -187,6 +210,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val utf8Decoder: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[Decoder], 
@@ -195,6 +219,7 @@ object configurationProperties extends js.Object {
       KinesisResolvedConfiguration
     ]
   ] = js.native
+  
   val utf8Encoder: js.UndefOr[
     ConfigurationPropertyDefinition[
       js.UndefOr[Encoder], 
@@ -204,4 +229,3 @@ object configurationProperties extends js.Object {
     ]
   ] = js.native
 }
-

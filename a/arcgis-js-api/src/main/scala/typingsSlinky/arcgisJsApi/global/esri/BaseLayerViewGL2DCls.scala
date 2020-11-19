@@ -3,7 +3,7 @@ package typingsSlinky.arcgisJsApi.global.esri
 import typingsSlinky.arcgisJsApi.esri.BaseLayerViewGL2DProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("__esri.BaseLayerViewGL2D")
 @js.native
@@ -16,4 +16,3 @@ class BaseLayerViewGL2DCls ()
   extends typingsSlinky.arcgisJsApi.esri.BaseLayerViewGL2D {
   def this(properties: BaseLayerViewGL2DProperties) = this()
 }
-

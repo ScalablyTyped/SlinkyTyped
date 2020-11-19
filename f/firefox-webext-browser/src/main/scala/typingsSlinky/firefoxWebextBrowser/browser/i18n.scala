@@ -2,7 +2,7 @@ package typingsSlinky.firefoxWebextBrowser.browser
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Use the `browser.i18n` infrastructure to implement internationalization across your whole app or extension.
@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("browser.i18n")
 @js.native
 object i18n extends js.Object {
+  
   /* i18n types */
   /**
     * An ISO language code such as `en` or `fr`. For a complete list of languages supported by this method, see
@@ -18,4 +19,3 @@ object i18n extends js.Object {
     */
   type LanguageCode = String
 }
-

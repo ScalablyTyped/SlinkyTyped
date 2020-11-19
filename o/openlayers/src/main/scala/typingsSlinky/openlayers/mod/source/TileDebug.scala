@@ -3,7 +3,7 @@ package typingsSlinky.openlayers.mod.source
 import typingsSlinky.openlayers.mod.olx.source.TileDebugOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * @classdesc
@@ -32,4 +32,3 @@ class TileDebug protected () extends Tile {
     */
   def this(options: TileDebugOptions) = this()
 }
-

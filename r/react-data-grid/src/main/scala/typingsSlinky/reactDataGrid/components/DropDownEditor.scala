@@ -6,9 +6,10 @@ import typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.DropDownEditorPro
 import typingsSlinky.reactDataGrid.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object DropDownEditor {
+  
   @JSGlobal("AdazzleReactDataGridPlugins.Editors.DropDownEditor")
   @js.native
   object component extends js.Object
@@ -20,6 +21,7 @@ object DropDownEditor {
     tag.type, 
     typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.DropDownEditor
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
   def apply(options: js.Array[String | Text]): Default[
     tag.type, 
@@ -27,9 +29,8 @@ object DropDownEditor {
   ] = {
     val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
     new Default[
-      tag.type, 
-      typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.DropDownEditor
-    ](js.Array(this.component, __props.asInstanceOf[DropDownEditorProps]))
+    tag.type, 
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.DropDownEditor
+  ](js.Array(this.component, __props.asInstanceOf[DropDownEditorProps]))
   }
 }
-

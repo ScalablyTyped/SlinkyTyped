@@ -2,11 +2,12 @@ package typingsSlinky.d3.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("d3", "min")
 @js.native
 object min extends js.Object {
+  
   def apply(array: js.Iterable[String]): js.UndefOr[String] = js.native
   def apply[T](
     array: js.Iterable[T],
@@ -18,4 +19,3 @@ object min extends js.Object {
     ]
   ): js.UndefOr[String] = js.native
 }
-

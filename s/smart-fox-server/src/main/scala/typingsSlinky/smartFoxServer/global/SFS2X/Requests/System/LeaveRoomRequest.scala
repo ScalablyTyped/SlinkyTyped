@@ -3,7 +3,7 @@ package typingsSlinky.smartFoxServer.global.SFS2X.Requests.System
 import typingsSlinky.smartFoxServer.SFS2X.Entities.SFSRoom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSGlobal("SFS2X.Requests.System.LeaveRoomRequest")
 @js.native
@@ -15,4 +15,3 @@ class LeaveRoomRequest ()
   extends typingsSlinky.smartFoxServer.SFS2X.Requests.System.LeaveRoomRequest {
   def this(room: SFSRoom) = this()
 }
-
